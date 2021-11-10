@@ -207,3 +207,5 @@ package-lock.json
 map-test/geckodriver
 map-test/geckodriver.log
 yarn.lock
+/.yarn/cache
+.yarn/install-state.gz
