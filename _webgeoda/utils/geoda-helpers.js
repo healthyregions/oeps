@@ -46,6 +46,15 @@ export const getBins = async ({
     return bins
 }
 
+const safeReverse = (arr) => {
+    if (arr.length < 2) return arr;
+    let duplicateArray = [];
+    for (let i = 0; i < arr.length; i++) {
+        duplicateArray.unshift(arr[i]);
+    }
+    return duplicateArray;
+}
+
 export const getColorScale = ({
     dataParams,
     bins
@@ -63,7 +72,7 @@ export const getColorScale = ({
         
     if (dataParams.categorical && colorScaleLength !== bins.breaks.length) colorScale = colorScale.slice(0,bins.breaks.length);
     
-    return dataParams.reverse ? [...colorScale].reverse() : colorScale
+    return dataParams.reverse ? safeReverse(colorScale) : colorScale
 }
 
 export const generateBins = async ({
