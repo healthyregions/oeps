@@ -50,7 +50,14 @@ const geomsDict = [{
     agg: 'Zip',
     folder: 'geometryFiles/tl_2018_zcta/',
     baseFileName: 'zctas2018'
-  }]
+  },{
+  agg: 'Crosswalk',
+  folder: 'geometryFiles/crosswalk/',
+  baseFileName: 'crosswalk'
+  }
+
+
+]
 
 const BASE_CSV_URL = 'https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/master/data_final/'
 
