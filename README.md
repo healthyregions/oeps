@@ -37,3 +37,34 @@ Keep in mind, some details of this implementation may change over the course of 
     This means that some datasets, like mouds, are excluded for now (for the sake of simplicity). We'll add more to the initialize script as the project progresses.
 
 Once initialized, you can create ETL scripts in the `scripts` directory to begin moving these local datasets into Google BigQuery.
+
+## contribution workflow
+
+For contributions we'll use a standard branching pattern--make a new branch from `main`, add commits to it, and then create a pull request to get those changes merged back into `main`.
+
+In the command line, this would look like the following steps. (VSCode and other editors have great git integrations as well, but the steps are generally the same):
+
+1. Make sure you are on the main branch locally
+
+        git branch
+
+2. Create a new branch from `main`
+
+        git checkout -b your_new_branch_name
+
+    You will now be on a new branch, as `git branch` will show you.
+
+3. Change code, add commits
+
+        git add path/to/your/new_file
+        git commit -m "short description of the change you made"
+
+    If you are addressing an open ticket with your commit, say ticket number 10, you should add `#10` to your commit message, like
+
+        git commit -m "update file list for initialization #10"
+
+4. Push your branch to the GitHub repo
+
+        git push --set-upstream origin your_new_branch_name
+
+5. Create the [Pull Request](https://github.com/healthyregions/pulls) in GitHub, including a description of the changes your branch contains.
