@@ -25,7 +25,7 @@ Keep in mind, some details of this implementation may change over the course of 
 
     For now, we will pull CSV, SHP, and metadata files directly from the GeoDaCenter/opioid-policy-scan repository, rather than committing these files to this repo. Run the following:
 
-        python initialize_data.py
+        python initialize.py
 
     The main reasons for this approach are
 
