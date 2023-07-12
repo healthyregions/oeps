@@ -1,0 +1,23 @@
+{
+  "table_name": {
+    "field_name":
+      [
+        {
+          "label": "",
+          "column_name": "column_name_a",
+          "data_type": "string"
+        },
+        {
+          "label": "",
+          "column_name": "column_name_b",
+          "data_type": "integer"
+        },
+        {
+          "label": "",
+          "column_name": "column_name_c",
+          "data_type": "boolean"
+        }
+      ]
+  }
+}
+  
