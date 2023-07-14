@@ -48,14 +48,17 @@ names = []
 data_types = []
 #set an empty schema
 schema = []
-for i in range(0, len(file["table_name"]["fields"])):
-    labels.append(file["table_name"]["fields"][i]["label"])
-    names.append(file["table_name"]["fields"][i]["column_name"])
-    data_types.append(file["table_name"]["fields"][i]["data_type"])
-for i in range(0, len(file["table_name"]["fields"])):
+schema = []
+for item in file["table_name"]["field_name"]:
+    labels.append(item["label"])
+    names.append(item["column_name"])
+    data_types.append(item["data_type"])
+for i in range(0, len(file["table_name"]["field_name"])):
     schema.append(bigquery.SchemaField(names[i], data_types[i]))
+    
 #create your table in your bigquery
 table_options = bigquery.BigtableOptions()
+
 #dataset name should not include project_name, or the name will be invalid
 dataset_ref = client.dataset('your-dataset-name')
 table_ref = dataset_ref.table('your-table-name')
