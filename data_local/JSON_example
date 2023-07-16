@@ -5,17 +5,17 @@
         {
           "label": "",
           "column_name": "column_name_a",
-          "data_type": "string"
+          "data_type": "STRING"
         },
         {
           "label": "",
           "column_name": "column_name_b",
-          "data_type": "integer"
+          "data_type": "INT64"
         },
         {
           "label": "",
           "column_name": "column_name_c",
-          "data_type": "boolean"
+          "data_type": "BOOL"
         }
       ]
   }
