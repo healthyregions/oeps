@@ -43,18 +43,11 @@ in JSON file example, there are label, names, and data type in json to descibe e
 and the data types of them are string, integer, boolean, respectively
 """
 
-labels = []
-names = []
-data_types = []
 #set an empty schema
 schema = []
 schema = []
 for item in file["table_name"]["field_name"]:
-    labels.append(item["label"])
-    names.append(item["column_name"])
-    data_types.append(item["data_type"])
-for i in range(0, len(file["table_name"]["field_name"])):
-    schema.append(bigquery.SchemaField(names[i], data_types[i]))
+    schema.append(bigquery.SchemaField(item["column_name"],item["data_type"]))
     
 #create your table in your bigquery
 table_options = bigquery.BigtableOptions()
