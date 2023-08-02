@@ -5,11 +5,9 @@
 [[redirects]]
   from = "https://oeps.ssd.uchicago.edu/"
   to = "https://oeps.healthyregions.org/"
-
-[[redirects]]
-  from = "https://oeps.ssd.uchicago.edu/map"
-  to = "https://oeps.healthyregions.org/map"
+  force = true
 
 [[redirects]]
   from = "https://oeps.ssd.uchicago.edu/*"
   to = "https://oeps.healthyregions.org/:splat"
+  force = true
