@@ -17,6 +17,7 @@ export default function Home() {
       <Head>
         <title>OEPS Explorer</title>
         <meta name="description" content="Web explorer for the Opioid Environment Policy Scan data warehouse." />
+        <script defer data-domain="oeps.healthyregions.org" src="https://plausible.io/js/script.js"></script>
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="preconnect"
