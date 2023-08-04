@@ -144,9 +144,9 @@ export default function Home() {
               our <a href="/methods"> methodology</a>, and our <a href="/standards">data standards</a>. 
             </p>
             <p>
-            The OEPS is led by the <a href="https://voices.uchicago.edu/herop/">Healthy Regions and Policies Lab</a>, based at the
-            Center for Spatial Data Science at University of Chicago. It was developed for the <a href="https://heal.nih.gov/research/research-to-practice/jcoin">Justice Community Opioid Innovation Network (JCOIN)</a>, 
-            an NIH HEAL Initiative, as part of the Methodology and Advanced Analytics Resource Center.
+            The OEPS is led by the <a href="https://healthyregions.org/">Healthy Regions and Policies Lab</a>, based at the
+            Department of Geography & GIScience at the University of Illinois at Urbana-Champaign. It was developed for the <a href="https://heal.nih.gov/research/research-to-practice/jcoin">Justice Community Opioid Innovation Network (JCOIN)</a>, 
+            an NIH HEAL Initiative, as part of the Methodology and Advanced Analytics Resource Center at the University of Chicago.
             </p>
           </div>
         </div>
