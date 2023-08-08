@@ -17,15 +17,15 @@ Keep in mind, some details of this implementation may change over the course of 
         git clone https://github.com/healthyregions/oeps-backend
         cd oeps-backend
 
-2. Install python requirements
+2. Install this package
 
-        pip install -r requirements.txt
+        pip install -e .
 
 3. Initialize the data locally
 
     For now, we will pull CSV, SHP, and metadata files directly from the GeoDaCenter/opioid-policy-scan repository, rather than committing these files to this repo. Run the following:
 
-        python initialize.py
+        python oeps_backend/initialize.py
 
     The main reasons for this approach are
 
