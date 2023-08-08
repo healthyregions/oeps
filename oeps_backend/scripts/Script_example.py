@@ -1,38 +1,20 @@
-#the modules you will use
-from google.cloud import bigquery
-from google.auth import impersonated_credentials
-from google.auth.transport.requests import Request
-from google.oauth2 import service_account
+import os
 import json
 
+from google.cloud import bigquery
+
+from oeps_backend.utils import make_credentials, LOCAL_DATA_DIR
+
 #set up project
-project_id = 'your-project-id'
+project_id = os.getenv("BQ_PROJECT_ID")
 
-#set up crendentials
-# (developer): Set key_path to the path to the service account key file.
-# key_path = "path/to/service_account.json"
-credentials_path = "key_path"
-credentials = service_account.Credentials.from_service_account_file(
-    credentials_path,
-    scopes=["https://www.googleapis.com/auth/cloud-platform"],
-)
-if credentials.expired and credentials.refresh_token:
-    credentials.refresh(Request())
-
-#impersonating a target service account
-target_principal = 'your-email-address-with-service-account'
-target_scopes = ["https://www.googleapis.com/auth/cloud-platform"]
-impersonated_creds = impersonated_credentials.Credentials(
-    source_credentials=credentials,
-    target_principal=target_principal,
-    target_scopes=target_scopes,
-)
+credentials = make_credentials()
 
 #create big query client
-client = bigquery.Client(project=project_id, credentials=impersonated_creds)
+client = bigquery.Client(project=project_id, credentials=credentials)
 
 #get the path of JSON file
-json_path = "absolute path for your json file"
+json_path = os.path.join(LOCAL_DATA_DIR, 'JSON_example')
 #read and open json file
 with open(json_path) as json_file:
     file = json.load(json_file)
@@ -53,8 +35,8 @@ for item in file["table_name"]["field_name"]:
 table_options = bigquery.BigtableOptions()
 
 #dataset name should not include project_name, or the name will be invalid
-dataset_ref = client.dataset('your-dataset-name')
-table_ref = dataset_ref.table('your-table-name')
+dataset_ref = client.dataset('ac_dataset')
+table_ref = dataset_ref.table('ac_table')
 table = bigquery.Table(table_ref)
 table.schema = schema
 table = client.create_table(table)

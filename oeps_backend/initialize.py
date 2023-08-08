@@ -2,9 +2,7 @@ import os
 import requests
 from datetime import datetime
 
-## DATA_DIR is the path of the local data directory that we'll keep (for now) outside of version
-## control.
-DATA_DIR = "data_local"
+from oeps_backend.utils import LOCAL_DATA_DIR
 
 ## CHANGESET is the specific commit on the GeoDaCenter/opioids-policy-scan repo
 ## to target for the version of files we need to work from.
@@ -207,7 +205,7 @@ DOWNLOAD_FILES = {
 
 def download_fileset(dir_name, file_list):
 
-    target_dir = os.path.join(DATA_DIR, dir_name)
+    target_dir = os.path.join(LOCAL_DATA_DIR, dir_name)
     if not os.path.isdir(target_dir):
         os.mkdir(target_dir)
     print(f"getting {dir_name} data...")
