@@ -9,5 +9,6 @@ setup(
         'python-dotenv==1.0.0',
         'google-cloud-bigquery==3.11.3',
         'urllib3<2.0',
+        'geopandas',
     ]
 )
