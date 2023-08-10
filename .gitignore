@@ -1,7 +1,7 @@
 # exclude local data directory
 # but explicitly keep the readme file in that directory
-data_local/*
-!data_local/README.md
+oeps_backend/data_local/*
+!oeps_backend/data_local/README.md
 
 
 # Byte-compiled / optimized / DLL files
