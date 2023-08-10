@@ -50,6 +50,28 @@ Enviroment variables allow us to keep BigQuery credentials outside of version co
     BQ_CREDENTIALS_FILE_PATH="/home/my_username/bq_credentials/oeps-391119-5783b2b59b83.json"
     ```
 
+## Loading CSVs and Shapefiles
+
+Use the following command to load a new table into BigQuery:
+
+    python oeps_backend/bq_load.py oeps_backend/table_definitions/table.json
+
+Where `table.json` is a table definition file as described in [table_definitions/README.md](oeps_backend/table_definitions/README.md).
+
+- `--table-only` will create the dataset and table, but will not attempt to load data into it.
+- `--overwrite` will drop the table if it already exists in the dataset.
+
+## Running Queries
+
+Use the following command to query the OEPS BigQuery tables:
+
+    python oeps_backend/bq_query.py --sql-file oeps_backend/example_queries/states.sql --output states.shp
+
+Where `states.sql` is an example of a file that holds the SQL query to perform against one or more tables. In the SQL, `PROJECT_ID` is a placeholder (it will be replaced with the actual project identifier before the query is performed), such that table references look like `PROJECT_ID.dataset_name.table_name`, or `PROJECT_ID.spatial.states2018` for the table that holds state boundaries.
+
+- `--sql-file` path to a file whose contents is a complete SQL query. 
+- `--output` is the name of a file to which the query results will be written. Either .csv or .shp files can be specified, and if a spatial result is written to CSV the geometries will be in WKT format. If this argument is omitted, the query results will be printed to the console (helpful for testing queries).
+
 ## contribution workflow
 
 For contributions we'll use a standard branching pattern--make a new branch from `main`, add commits to it, and then create a pull request to get those changes merged back into `main`.

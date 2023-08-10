@@ -92,16 +92,29 @@ def load_table(schema):
 
     print(df.head())
 
+    field_types = {f['name']: f['type'] for f in schema['fields']}
+
     rows = []
     for i in df.index:
-        row = {col: df.at[i, col] for col in df.columns}
+        row = {col: df.at[i, col] for col in df.columns if not col == "geom"}
+
+        # cast all values to strings for string fields. necessary because some
+        # NULL shapefile attribute values were interpreted as float('nan'), which
+        # breaks json parsing
+        for k in row:
+            if field_types[k] == "string":
+                row[k] = str(row[k])
+
+        # handle geometry column by dumping it to GeoJSON string. this fixes
+        # some Polygon format errors that occurred with the default WKT that
+        # GeoPandas returns for shapes. geom.__geo_interface__ is a shapely thing.
         if 'geom' in df.columns:
             row['geom'] = json.dumps(df.at[i, 'geom'].__geo_interface__)
         rows.append(json.dumps(row))
 
     print(f"Input rows: {len(rows)}")
+
     str_data = "\n".join(rows)
-    
     data_as_file = io.StringIO(str_data)
 
     full_table_id = f"{project_id}.{schema['bq_dataset_name']}.{schema['bq_table_name']}"
@@ -115,9 +128,17 @@ def load_table(schema):
         destination=table,
         job_config=load_job_config
     )
-    load_job.result()
+    print("Running job now...")
+    try:
+        load_job.result()
+    except Exception as e:
+        print(f"Errors encountered: {len(load_job.errors)}")
+        for error in load_job.errors:
+            print(error)
+        raise e
     print(f"Output rows: {load_job.output_rows}")
-    print(f"Errors: {load_job.errors}")
+    if load_job.errors:
+        print(f"Errors encountered: {len(load_job.errors)}")
     return load_job
 
 if __name__ == "__main__":
