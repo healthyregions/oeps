@@ -17,15 +17,15 @@ Keep in mind, some details of this implementation may change over the course of 
         git clone https://github.com/healthyregions/oeps-backend
         cd oeps-backend
 
-2. Install python requirements
+2. Install this package and its dependencies
 
-        pip install -r requirements.txt
+        pip install -e .
 
 3. Initialize the data locally
 
     For now, we will pull CSV, SHP, and metadata files directly from the GeoDaCenter/opioid-policy-scan repository, rather than committing these files to this repo. Run the following:
 
-        python initialize.py
+        python oeps_backend/initialize.py
 
     The main reasons for this approach are
 
@@ -36,7 +36,19 @@ Keep in mind, some details of this implementation may change over the course of 
     Datasets from the `data_final` directory in the [opioid-policy-scan](https://github.com/GeoDaCenter/opioid-policy-scan) will be copied into the `data` directory. **For now, only the state, county, tract, and zcta shapefiles are downloaded, plus all CSV and metadata files.**
     This means that some datasets, like mouds, are excluded for now (for the sake of simplicity). We'll add more to the initialize script as the project progresses.
 
-Once initialized, you can create ETL scripts in the `scripts` directory to begin moving these local datasets into Google BigQuery.
+## BigQuery credentials
+
+Enviroment variables allow us to keep BigQuery credentials outside of version control.
+
+- Make a copy of `.env.example` and name it `.env`. Any variables defined in this file will now be available via `os.getenv('VARIABLE_NAME')`
+
+- Obtain a set of JSON credentials for the project, and store the file anywhere on your computer (but outside of this repository).
+
+- In your `.env` file, update the `BQ_CREDENTIALS_FILE_PATH` variable with the full path to this file.
+
+    ```
+    BQ_CREDENTIALS_FILE_PATH="/home/my_username/bq_credentials/oeps-391119-5783b2b59b83.json"
+    ```
 
 ## contribution workflow
 

@@ -2,9 +2,7 @@ import os
 import requests
 from datetime import datetime
 
-## DATA_DIR is the path of the local data directory that we'll keep (for now) outside of version
-## control.
-DATA_DIR = "data_local"
+from oeps_backend.utils import LOCAL_DATA_DIR
 
 ## CHANGESET is the specific commit on the GeoDaCenter/opioids-policy-scan repo
 ## to target for the version of files we need to work from.
@@ -19,22 +17,22 @@ BASE_URL = f"https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/{C
 ## remote files, relative to BASE_URL that should be downloaded into that local directory
 DOWNLOAD_FILES = {
     "shp": [
-        "geometryFiles/county/counties2018.dbf",
-        "geometryFiles/county/counties2018.prj",
-        "geometryFiles/county/counties2018.shp",
-        "geometryFiles/county/counties2018.shx",
-        "geometryFiles/state/states2018.dbf",
-        "geometryFiles/state/states2018.prj",
-        "geometryFiles/state/states2018.shp",
-        "geometryFiles/state/states2018.shx",
-        "geometryFiles/tract/tracts2018.dbf",
-        "geometryFiles/tract/tracts2018.prj",
-        "geometryFiles/tract/tracts2018.shp",
-        "geometryFiles/tract/tracts2018.shx",
-        "geometryFiles/zcta/zctas2018.dbf",
-        "geometryFiles/zcta/zctas2018.prj",
-        "geometryFiles/zcta/zctas2018.shp",
-        "geometryFiles/zcta/zctas2018.shx",
+        "geometryFiles/tl_2018_county/counties2018.dbf",
+        "geometryFiles/tl_2018_county/counties2018.prj",
+        "geometryFiles/tl_2018_county/counties2018.shp",
+        "geometryFiles/tl_2018_county/counties2018.shx",
+        "geometryFiles/tl_2018_state/states2018.dbf",
+        "geometryFiles/tl_2018_state/states2018.prj",
+        "geometryFiles/tl_2018_state/states2018.shp",
+        "geometryFiles/tl_2018_state/states2018.shx",
+        "geometryFiles/tl_2018_tract/tracts2018.dbf",
+        "geometryFiles/tl_2018_tract/tracts2018.prj",
+        "geometryFiles/tl_2018_tract/tracts2018.shp",
+        "geometryFiles/tl_2018_tract/tracts2018.shx",
+        "geometryFiles/tl_2018_zcta/zctas2018.dbf",
+        "geometryFiles/tl_2018_zcta/zctas2018.prj",
+        "geometryFiles/tl_2018_zcta/zctas2018.shp",
+        "geometryFiles/tl_2018_zcta/zctas2018.shx",
     ],
     "csv": [
         "Access01_C.csv",
@@ -207,7 +205,7 @@ DOWNLOAD_FILES = {
 
 def download_fileset(dir_name, file_list):
 
-    target_dir = os.path.join(DATA_DIR, dir_name)
+    target_dir = os.path.join(LOCAL_DATA_DIR, dir_name)
     if not os.path.isdir(target_dir):
         os.mkdir(target_dir)
     print(f"getting {dir_name} data...")
