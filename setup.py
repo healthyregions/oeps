@@ -10,5 +10,6 @@ setup(
         'google-cloud-bigquery==3.11.3',
         'urllib3<2.0',
         'geopandas',
+        'db-dtypes',
     ]
 )
