@@ -1,0 +1,28 @@
+{
+    "bq_dataset_name": "spatial",
+    "bq_table_name": "states2018",
+    "data_source": "shp/states2018.shp",
+    "fields": [
+        {
+            "name": "geoid",
+            "title": "GeoId",
+            "type": "string",
+            "src_name": "GEOID",
+            "bq_data_type": "STRING"
+        },
+        {
+            "name": "name",
+            "title": "Name",
+            "type": "string",
+            "src_name": "NAME",
+            "bq_data_type": "STRING"
+        },
+        {
+            "name": "geom",
+            "title": "Geom",
+            "type": "string",
+            "src_name": "geometry",
+            "bq_data_type": "GEOGRAPHY"
+        }
+    ]
+}
