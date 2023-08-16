@@ -1,5 +1,6 @@
 import os
 import requests
+import argparse
 from datetime import datetime
 
 from oeps_backend.utils import LOCAL_DATA_DIR
@@ -8,7 +9,7 @@ from oeps_backend.utils import LOCAL_DATA_DIR
 ## to target for the version of files we need to work from.
 ## 115989bd1f6706e2b225da9a88c27c5e34e42692 is the version 1.0 release of the main branch.
 ## b8012a174a3e8e56930bb7b0359b4bc3cc8212cf is a prototype of the version 2.0 release. 
-CHANGESET = "b8012a174a3e8e56930bb7b0359b4bc3cc8212cf"
+CHANGESET = "306dc12140aa0505482d58365b6704d09c5ebf32"
 
 ## BASE_URL is the raw url for github content based on the CHANGESET provided,
 ## down to the data_final directory. All DOWNLOAD_FILES paths are relative to this url.
@@ -150,7 +151,15 @@ def download_fileset(dir_name, file_list):
 
 if __name__ == "__main__":
 
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument("--fileset")
+    args = parser.parse_args()
+
     start = datetime.now()
     for dir_name, file_list in DOWNLOAD_FILES.items():
+        if args.fileset and not dir_name == args.fileset:
+            continue
         download_fileset(dir_name, file_list)
+
     print(f"completed in {datetime.now() - start}")
