@@ -31,19 +31,45 @@ def make_fields(data_dict):
 def make_field_entry(data_dict_row):
 	field_dict = {
 		'name': data_dict_row.loc['Variable'],
-		'title': '',
-		'type': data_dict_row.loc['Type'],
-		'format': '',
+		'type': to_schema_type(data_dict_row.loc['Type']),
 		'example': str(data_dict_row.loc['Example']),
 		'description': data_dict_row.loc['Description'],
 		'constraints': data_dict_row.loc['Data Limitations'],
 		'theme': data_dict_row.loc['Theme'],
 		'source': data_dict_row.loc['Source Long'],
-		'comments': data_dict_row.loc['Comments']
+		'comments': data_dict_row.loc['Comments'],
+		'bq_data_type': to_bq_type(data_dict_row.loc['Type'])
 	}
 
 	return(field_dict)
 
+# Convert the type stored in the data dictionary to one that aligns
+# with the table schema.
+def to_schema_type(s):
+	match s:
+		case "Integer":
+			return 'integer'
+		case ('Date' | 'String' | 'Character / Factor' | 'String / Factor'):
+			return 'string'
+		case 'Binary':
+			return 'boolean'
+		case ('Float' | 'Double' | 'Numeric'):
+			return 'numeric'
+		case _:
+			raise TypeError("unrecognized type " + s + ".")
+
+# Convert the type stored in the data dictionary to one that aligns
+# with the big query data type list.
+def to_bq_type(s):
+	match s:
+		case "Date":
+			return "TIMESTAMP"
+		case ("Character / Factor" | "String / Factor"):
+			return "STRING"
+		case "Binary":
+			return "BOOLEAN"
+		case _:
+			return s.upper()
 
 #### Script ----
 
@@ -55,7 +81,7 @@ for exclusion in EXCLUDED_PAIRS:
 	if exclusion in pairs_to_grab:
 		pairs_to_grab.remove(exclusion)
 
-# 
+# Create and save a table for each pair.
 for geo, year in pairs_to_grab:
 
 	# Generate the relevant path.
