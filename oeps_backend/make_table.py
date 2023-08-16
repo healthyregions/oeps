@@ -29,7 +29,7 @@ def make_fields(data_dict):
 # make_field_entry is called row-by-row by make_fields 
 # to return an additional "field" for the fields array.
 def make_field_entry(data_dict_row):
-	field_dict = {
+	field = {
 		'name': data_dict_row.loc['Variable'],
 		'type': to_schema_type(data_dict_row.loc['Type']),
 		'example': str(data_dict_row.loc['Example']),
@@ -41,7 +41,7 @@ def make_field_entry(data_dict_row):
 		'bq_data_type': to_bq_type(data_dict_row.loc['Type'])
 	}
 
-	return(field_dict)
+	return(field)
 
 # Convert the type stored in the data dictionary to one that aligns
 # with the table schema.
