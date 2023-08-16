@@ -11,5 +11,6 @@ setup(
         'urllib3<2.0',
         'geopandas',
         'db-dtypes',
+        'openpyxl',
     ]
 )
