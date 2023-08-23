@@ -1,6 +1,9 @@
+import os
 from itertools import product
 import pandas as pd
 import json
+
+from oeps_backend.utils import LOCAL_DATA_DIR, TABLE_DEF_DIR
 
 #### Constants ----
 
@@ -46,30 +49,28 @@ def make_field_entry(data_dict_row):
 # Convert the type stored in the data dictionary to one that aligns
 # with the table schema.
 def to_schema_type(s):
-	match s:
-		case "Integer":
-			return 'integer'
-		case ('Date' | 'String' | 'Character / Factor' | 'String / Factor'):
-			return 'string'
-		case 'Binary':
-			return 'boolean'
-		case ('Float' | 'Double' | 'Numeric'):
-			return 'numeric'
-		case _:
-			raise TypeError("unrecognized type " + s + ".")
+	if s == "Integer":
+		return 'integer'
+	elif s in ['Date', 'String', 'Character / Factor', 'String / Factor']:
+		return 'string'
+	elif s == 'Binary':
+		return 'boolean'
+	elif s in ['Float', 'Double', 'Numeric']:
+		return 'numeric'
+	else:
+		raise TypeError("unrecognized type " + s + ".")
 
 # Convert the type stored in the data dictionary to one that aligns
 # with the big query data type list.
 def to_bq_type(s):
-	match s:
-		case "Date":
-			return "TIMESTAMP"
-		case ("Character / Factor" | "String / Factor"):
-			return "STRING"
-		case "Binary":
-			return "BOOLEAN"
-		case _:
-			return s.upper()
+	if s == "Date":
+		return "TIMESTAMP"
+	elif s in ["Character / Factor", "String / Factor"]:
+		return "STRING"
+	elif s == "Binary":
+		return "BOOLEAN"
+	else:
+		return s.upper()
 
 #### Script ----
 
@@ -85,7 +86,7 @@ for exclusion in EXCLUDED_PAIRS:
 for geo, year in pairs_to_grab:
 
 	# Generate the relevant path.
-	path = f'./data_local/dictionaries/{geo}_Dict.xlsx'
+	path = os.path.join(LOCAL_DATA_DIR, 'dictionaries', f'{geo}_Dict.xlsx')
 	print(f'working on {geo}_{year}.csv!')
 
 
@@ -102,5 +103,6 @@ for geo, year in pairs_to_grab:
 		'fields': make_fields(data_dict)
 	}
 
-	with open(f'table_definitions\\csv_{geo}_{year}.json', 'w+') as outfile:
+	out_path = os.path.join(TABLE_DEF_DIR, f'csv_{geo}_{year}.json')
+	with open(out_path, 'w+') as outfile:
 		json.dump(table, outfile, indent=4)

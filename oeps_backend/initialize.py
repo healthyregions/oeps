@@ -1,12 +1,11 @@
 import os
 import requests
+import argparse
 from datetime import datetime
 
 from oeps_backend.utils import LOCAL_DATA_DIR
 
 ## CHANGESET is the specific commit on the GeoDaCenter/opioids-policy-scan repo
-## to target for the version of files we need to work from.
-## 115989bd1f6706e2b225da9a88c27c5e34e42692 is the version 1.0 release of the main branch.
 ## 0deb3b54169268bfbeb3e53fdc7e0df1579a7922 corresponds to the commit immediately before 
 ## PR #66 to archive v1.1 datasets and promote v2.0 datasets, and should be changed in the
 ## future.
@@ -152,7 +151,15 @@ def download_fileset(dir_name, file_list):
 
 if __name__ == "__main__":
 
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument("--fileset")
+    args = parser.parse_args()
+
     start = datetime.now()
     for dir_name, file_list in DOWNLOAD_FILES.items():
+        if args.fileset and not dir_name == args.fileset:
+            continue
         download_fileset(dir_name, file_list)
+
     print(f"completed in {datetime.now() - start}")
