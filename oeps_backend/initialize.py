@@ -6,10 +6,10 @@ from datetime import datetime
 from oeps_backend.utils import LOCAL_DATA_DIR
 
 ## CHANGESET is the specific commit on the GeoDaCenter/opioids-policy-scan repo
-## to target for the version of files we need to work from.
-## 115989bd1f6706e2b225da9a88c27c5e34e42692 is the version 1.0 release of the main branch.
-## b8012a174a3e8e56930bb7b0359b4bc3cc8212cf is a prototype of the version 2.0 release. 
-CHANGESET = "306dc12140aa0505482d58365b6704d09c5ebf32"
+## 0deb3b54169268bfbeb3e53fdc7e0df1579a7922 corresponds to the commit immediately before 
+## PR #66 to archive v1.1 datasets and promote v2.0 datasets, and should be changed in the
+## future.
+CHANGESET = "0deb3b54169268bfbeb3e53fdc7e0df1579a7922"
 
 ## BASE_URL is the raw url for github content based on the CHANGESET provided,
 ## down to the data_final directory. All DOWNLOAD_FILES paths are relative to this url.
@@ -53,32 +53,32 @@ DOWNLOAD_FILES = {
 #        "geometryFiles/tl_2010_zcta510/zctas2010.shx",                               
     ],
     "csv": [
-        "consolidated/C_1980.csv",
-        "consolidated/C_1990.csv",
-        "consolidated/C_2000.csv",
-        "consolidated/C_2010.csv",
-#        "consolidated/C_Latest.csv", # placeholder
-        "consolidated/S_1980.csv",
-        "consolidated/S_1990.csv",
-        "consolidated/S_2000.csv",
-        "consolidated/S_2010.csv",
-        "consolidated/S_Latest.csv",
-        "consolidated/T_1980.csv",
-        "consolidated/T_1990.csv",
-        "consolidated/T_2000.csv",
-        "consolidated/T_2010.csv",
-        "consolidated/T_Latest.csv",
-        "consolidated/Z_1980.csv",
-        "consolidated/Z_1990.csv",
-        "consolidated/Z_2000.csv",
-        "consolidated/Z_2010.csv",
-        "consolidated/Z_Latest.csv",
+        "v2.0/tables/C_1980.csv",
+        "v2.0/tables/C_1990.csv",
+        "v2.0/tables/C_2000.csv",
+        "v2.0/tables/C_2010.csv",
+        "v2.0/tables/C_Latest.csv", 
+        "v2.0/tables/S_1980.csv",
+        "v2.0/tables/S_1990.csv",
+        "v2.0/tables/S_2000.csv",
+        "v2.0/tables/S_2010.csv",
+        "v2.0/tables/S_Latest.csv",
+        "v2.0/tables/T_1980.csv",
+        "v2.0/tables/T_1990.csv",
+        "v2.0/tables/T_2000.csv",
+        "v2.0/tables/T_2010.csv",
+        "v2.0/tables/T_Latest.csv",
+        "v2.0/tables/Z_1980.csv",
+        "v2.0/tables/Z_1990.csv",
+        "v2.0/tables/Z_2000.csv",
+        "v2.0/tables/Z_2010.csv",
+        "v2.0/tables/Z_Latest.csv",
     ],
     "dictionaries": [
-        "consolidated/dictionaries/S_Dict.xlsx",
-        "consolidated/dictionaries/T_Dict.xlsx",
-        "consolidated/dictionaries/Z_Dict.xlsx",
-#        "consolidated/dictionaries/C_Dict.xlsx",
+        "v2.0/dictionaries/S_Dict.xlsx",
+        "v2.0/dictionaries/T_Dict.xlsx",
+        "v2.0/dictionaries/Z_Dict.xlsx",
+        "v2.0/dictionaries/C_Dict.xlsx",
     ],
     "metadata": [
         "metadata/HepC_rate.md",
