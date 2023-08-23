@@ -21,9 +21,9 @@ def run_query_from_file(path):
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--sql-file")
+    parser.add_argument("--sql-file", "-f")
     parser.add_argument("--prepared")
-    parser.add_argument("--output")
+    parser.add_argument("--output", "-o")
     args = parser.parse_args()
 
     if args.sql_file:
