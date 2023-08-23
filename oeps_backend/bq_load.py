@@ -65,7 +65,13 @@ def load_table(schema):
 
     client = get_client()
 
-    df = gpd.read_file(dataset_path)
+    if dataset_path.endswith('.shp'):
+        df = gpd.read_file(dataset_path)
+    elif dataset_path.endswith('.csv'):
+        df = pd.read_csv(dataset_path)
+    else:
+        print(f"Invalid dataset: {dataset_path}")
+        return
     print(df.head())
 
     print("Preparing data frame...")
@@ -75,12 +81,25 @@ def load_table(schema):
         src_name = f.get('src_name')
         if src_name:
              field_mapping[src_name] = f['name']
+        else:
+            print(f"warning: {f['name']} missing required src_name attribute")
     if field_mapping:
         df.rename(columns=field_mapping, inplace=True)
 
     # remove any input columns that are not in the schema
     drop_columns = [i for i in df.columns if not i in field_mapping.values()]
+    if drop_columns:
+        print(f"{len(drop_columns)} source columns will be ignored:")
+        print(", ".join(drop_columns))
     df.drop(columns=drop_columns, inplace=True)
+
+    # check for schema columns that are not found in the source data
+    missing_columns = [i for i in field_mapping.values() if not i in df.columns]
+    if missing_columns:
+        print(f"{len(missing_columns)} schema fields are not found in the source dataset, which will result in empty columns:")
+        print(", ".join(missing_columns))
+        if input("continue anyway? Y/n > ").lower().startswith("n"):
+            exit()
 
     # iterate fields and zfill columns where needed
     for f in schema['fields']:
@@ -93,7 +112,10 @@ def load_table(schema):
     print(df.head())
 
     field_types = {f['name']: f['type'] for f in schema['fields']}
+    print(field_types)
 
+    # iterate the dataframe and turn each row into a dict that gets appened to rows.
+    # this list is later loaded as if it were a newline-delimited JSON file.
     rows = []
     for i in df.index:
         row = {col: df.at[i, col] for col in df.columns if not col == "geom"}
@@ -104,6 +126,8 @@ def load_table(schema):
         for k in row:
             if field_types[k] == "string":
                 row[k] = str(row[k])
+            if field_types[k] == "integer":
+                row[k] = int(row[k])
 
         # handle geometry column by dumping it to GeoJSON string. this fixes
         # some Polygon format errors that occurred with the default WKT that

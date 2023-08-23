@@ -34,6 +34,7 @@ def make_fields(data_dict):
 def make_field_entry(data_dict_row):
 	field = {
 		'name': data_dict_row.loc['Variable'],
+		'src_name': data_dict_row.loc['Variable'],
 		'type': to_schema_type(data_dict_row.loc['Type']),
 		'example': str(data_dict_row.loc['Example']),
 		'description': data_dict_row.loc['Description'],
@@ -44,6 +45,11 @@ def make_field_entry(data_dict_row):
 		'bq_data_type': to_bq_type(data_dict_row.loc['Type'])
 	}
 
+	# fix float('nan') ("not a number") values which seem to pop up.
+	# checking if a value equals itself is the best test for NaN (?!)
+	for k in field:
+		if field[k] != field[k]:
+			field[k] = None
 	return(field)
 
 # Convert the type stored in the data dictionary to one that aligns
@@ -87,8 +93,11 @@ for geo, year in pairs_to_grab:
 
 	# Generate the relevant path.
 	path = os.path.join(LOCAL_DATA_DIR, 'dictionaries', f'{geo}_Dict.xlsx')
-	print(f'working on {geo}_{year}.csv!')
+	csv_name = f'{geo}_{year}.csv'
+	print(f'working on {csv_name}!')
 
+	# Path to the CSV dataset itself
+	dataset_path = os.path.join('csv', csv_name)
 
 	# Read in data
 	data_dict = pd.read_excel(path)
@@ -96,13 +105,15 @@ for geo, year in pairs_to_grab:
 	# Filter to only relevant rows
 	data_dict = data_dict[(data_dict[year] == 'x')]
 
+	dataset = "tabular"
+
 	table = {
-		'bq_dataset_name': 'csv',
+		'bq_dataset_name': dataset,
 		'bq_table_name':  f'{geo}_{year}',
-		'data_source': path,
+		'data_source': dataset_path,
 		'fields': make_fields(data_dict)
 	}
 
-	out_path = os.path.join(TABLE_DEF_DIR, f'csv_{geo}_{year}.json')
+	out_path = os.path.join(TABLE_DEF_DIR, f'{dataset}_{geo}_{year}.json')
 	with open(out_path, 'w+') as outfile:
 		json.dump(table, outfile, indent=4)
