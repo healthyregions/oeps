@@ -1,4 +1,6 @@
 import os
+from glob import glob
+import argparse
 from itertools import product
 import pandas as pd
 import json
@@ -13,7 +15,7 @@ from oeps_backend.utils import LOCAL_DATA_DIR, TABLE_DEF_DIR
 
 GEOGRAPHY = ['T', 'Z', 'S', 'C']
 RELEVANT_YEAR = [1980, 1990, 2000, 2010, 'Latest']
-EXCLUDED_PAIRS = [('C', 'Latest'), ('C', 1980), ('C', 1990), ('C', 2000), ('C', 2010)]
+EXCLUDED_PAIRS = []
 
 #### Helper Functions ----
 
@@ -59,10 +61,10 @@ def to_schema_type(s):
 		return 'integer'
 	elif s in ['Date', 'String', 'Character / Factor', 'String / Factor']:
 		return 'string'
-	elif s == 'Binary':
+	elif s == 'Boolean':
 		return 'boolean'
 	elif s in ['Float', 'Double', 'Numeric']:
-		return 'numeric'
+		return 'number'
 	else:
 		raise TypeError("unrecognized type " + s + ".")
 
@@ -70,7 +72,7 @@ def to_schema_type(s):
 # with the big query data type list.
 def to_bq_type(s):
 	if s == "Date":
-		return "TIMESTAMP"
+		return "DATE"
 	elif s in ["Character / Factor", "String / Factor"]:
 		return "STRING"
 	elif s == "Binary":
@@ -78,42 +80,62 @@ def to_bq_type(s):
 	else:
 		return s.upper()
 
-#### Script ----
+def make_table_definitions(xlsx_file):
 
-# Acquire all relevant pairs of geography and year.
-pairs_to_grab = list(product(GEOGRAPHY, RELEVANT_YEAR))
+	#### Script ----
 
-# Exclude irrelevant pairs
-for exclusion in EXCLUDED_PAIRS:
-	if exclusion in pairs_to_grab:
-		pairs_to_grab.remove(exclusion)
+	# Acquire all relevant pairs of geography and year.
+	pairs_to_grab = list(product(GEOGRAPHY, RELEVANT_YEAR))
 
-# Create and save a table for each pair.
-for geo, year in pairs_to_grab:
+	# Exclude irrelevant pairs
+	for exclusion in EXCLUDED_PAIRS:
+		if exclusion in pairs_to_grab:
+			pairs_to_grab.remove(exclusion)
 
-	# Generate the relevant path.
-	path = os.path.join(LOCAL_DATA_DIR, 'dictionaries', f'{geo}_Dict.xlsx')
-	csv_name = f'{geo}_{year}.csv'
-	print(f'working on {csv_name}!')
+	# Create and save a table for each pair.
+	for year in RELEVANT_YEAR:
 
-	# Path to the CSV dataset itself
-	dataset_path = os.path.join('csv', csv_name)
+		# Generate the relevant path.
+		# path = os.path.join(LOCAL_DATA_DIR, 'dictionaries', f'{geo}_Dict.xlsx')
+		path = xlsx_file
+		geo = os.path.basename(xlsx_file).split("_")[0]
+		csv_name = f'{geo}_{year}.csv'
+		print(f'making table definition for {csv_name}!')
 
-	# Read in data
-	data_dict = pd.read_excel(path)
+		# Path to the CSV dataset itself
+		dataset_path = os.path.join('csv', csv_name)
 
-	# Filter to only relevant rows
-	data_dict = data_dict[(data_dict[year] == 'x')]
+		# Read in data
+		data_dict = pd.read_excel(path)
 
-	dataset = "tabular"
+		# Filter to only relevant rows
+		data_dict = data_dict[(data_dict[year] == 'x')]
 
-	table = {
-		'bq_dataset_name': dataset,
-		'bq_table_name':  f'{geo}_{year}',
-		'data_source': dataset_path,
-		'fields': make_fields(data_dict)
-	}
+		dataset = "tabular"
 
-	out_path = os.path.join(TABLE_DEF_DIR, f'{dataset}_{geo}_{year}.json')
-	with open(out_path, 'w+') as outfile:
-		json.dump(table, outfile, indent=4)
+		table = {
+			'bq_dataset_name': dataset,
+			'bq_table_name':  f'{geo}_{year}',
+			'data_source': dataset_path,
+			'fields': make_fields(data_dict)
+		}
+
+		out_path = os.path.join(TABLE_DEF_DIR, f'{dataset}_{geo}_{year}.json')
+		with open(out_path, 'w+') as outfile:
+			json.dump(table, outfile, indent=4)
+
+if __name__ == "__main__":
+	parser = argparse.ArgumentParser()
+	parser.add_argument("input")
+	args = parser.parse_args()
+
+	if os.path.isdir(args.input):
+		paths = glob(os.path.join(args.input, "*.xlsx"))
+	elif os.path.isfile(args.input):
+		paths = [args.input]
+	else:
+		print("invalid dict file input")
+		exit()
+
+	for path in paths:
+		make_table_definitions(path)
