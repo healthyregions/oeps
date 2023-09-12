@@ -129,7 +129,7 @@ export default function VariablePanel(props) {
                 className={styles.readMoreButton}
                 onClick={() =>
                   setActiveDocs(
-                    `https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/master/data_final/metadata/${
+                    `https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/v1.0/data_final/metadata/${
                       variableMeta.find((f) =>
                         f.markdownPrefix.includes(
                           dataParams.numerator.split("_")[0]
@@ -151,7 +151,7 @@ export default function VariablePanel(props) {
                 className={styles.readMoreButton}
                 onClick={() =>
                   setActiveDocs(
-                    `https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/master/data_final/metadata/${
+                    `https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/v1.0/data_final/metadata/${
                       variableMeta.find((f) =>
                         f.markdownPrefix.includes(
                           dataParams.numerator.split("_")[0]
