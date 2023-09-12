@@ -57,7 +57,7 @@ const geomsDict = [{
   }
 ]
 
-const BASE_CSV_URL = 'https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/master/data_final/'
+const BASE_CSV_URL = 'https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/v1.0/data_final/'
 
 export default function Download() {
   const [downloadMessage, setDownloadMessage] = useState('')

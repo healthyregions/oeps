@@ -6,7 +6,7 @@ const keys = ''
 const cors = initMiddleware(Cors({methods: ['GET', 'POST', 'OPTIONS'],}))
 function onlyUnique(value, index, self) {return self.indexOf(value) === index;}
   
-const baseUrl = 'https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/master/data_final/metadata/'
+const baseUrl = 'https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/v1.0/data_final/metadata/'
 
 const fetchMd = async (url) => {
     try {

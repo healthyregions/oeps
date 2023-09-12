@@ -55,11 +55,11 @@ const ResourceSection=() => {
               </div>
               <div className="col-xs-12 col-lg-9">
                 <ul>
-                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/moud">MOUD Provider Locations (SAMHSA, 2019)</a></li>
-                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/Resources">Opioid Treatment Program (OTP) Locations (SAMHSA, 2020)</a> </li>
-                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/Resources">FQHC Locations (HRSA, 2020)</a></li>
-                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/Resources">Hospital Locations (CovidCareMap, 2020)</a></li>
-                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/master/data_final/Resources">Mental Health Provider Locations (SAMHSA, 2020)</a></li>
+                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/v1.0/data_final/moud">MOUD Provider Locations (SAMHSA, 2019)</a></li>
+                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/v1.0/data_final/Resources">Opioid Treatment Program (OTP) Locations (SAMHSA, 2020)</a> </li>
+                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/v1.0/data_final/Resources">FQHC Locations (HRSA, 2020)</a></li>
+                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/v1.0/data_final/Resources">Hospital Locations (CovidCareMap, 2020)</a></li>
+                  <li> <a href="https://github.com/GeoDaCenter/opioid-policy-scan/tree/v1.0/data_final/Resources">Mental Health Provider Locations (SAMHSA, 2020)</a></li>
                 </ul>
               </div>
               </div>
