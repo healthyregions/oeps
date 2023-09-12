@@ -19,7 +19,7 @@ export default async (req, res) => {
     }
 
     try {
-        const response = await fetch("https://api.github.com/repos/GeoDaCenter/opioid-policy-scan/git/trees/master?recursive=1")
+        const response = await fetch("https://api.github.com/repos/GeoDaCenter/opioid-policy-scan/git/trees/v1.0?recursive=1")
             .then(r=>r.json())
         const datasets = response.tree.filter(f => (f.path.includes("data_final/") && f.path.includes(".csv")))
             .map(dataset => dataset.path.split('/').slice(-1)[0].split('_')[0])

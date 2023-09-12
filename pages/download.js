@@ -175,8 +175,8 @@ export default function Download() {
         <h1 className={styles.title}>Data Download</h1>
         <Gutter em={1} />
         <p>Download all data, or select particular topics or geographic scales.</p>
-        <a className={styles.fullDownload} href="https://github.com/GeoDaCenter/opioid-policy-scan/zipball/master">Download all data <span>ZIP File</span></a>
-        <a className={styles.fullDownload} href="https://github.com/GeoDaCenter/opioid-policy-scan/tarball/master">Download all data <span>TAR Ball</span></a>
+        <a className={styles.fullDownload} href="https://github.com/GeoDaCenter/opioid-policy-scan/zipball/v1.0">Download all data <span>ZIP File</span></a>
+        <a className={styles.fullDownload} href="https://github.com/GeoDaCenter/opioid-policy-scan/tarball/v1.0">Download all data <span>TAR Ball</span></a>
         <a className={styles.fullDownload} href="https://github.com/GeoDaCenter/opioid-policy-scan">View on <span>GitHub</span></a>
         <Gutter em={5} />
         
