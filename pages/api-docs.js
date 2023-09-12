@@ -89,7 +89,7 @@ export default function About() {
             <p>
               The <code>data</code> endpoint is the main endpoint for accessing datasets. It accepts the following parameters:
               <br/><br/>
-              <code>https://oeps.ssd.uchicago.edu/api/data/<b>dataset</b>/<b>spatial scale</b></code>
+              <code>https://oeps.healthyregions.org/api/data/<b>dataset</b>/<b>spatial scale</b></code>
               <br/><br/>
               Here, dataset should be one of the available tabular datasets, such as <code>Access01</code> or <code>BE02</code> for access metrics, and 
               Physical environment stats, respectively. Spatial scale represents the geographic unit you want to request, and currently we have available county, state, zip, and tract
@@ -115,21 +115,21 @@ export default function About() {
                 <li>
                   Zip code level access metrics for mental health services in Illinois:
                   <br/>
-                  <code>https://oeps.ssd.uchicago.edu/api/data/Access04/zip?key=abc123&amp;state=IL</code>
+                  <code>https://oeps.healthyregions.org/api/data/Access04/zip?key=abc123&amp;state=IL</code>
                   <br/>
                   <br/>
                 </li>
                 <li>
                   State level race and ethnicity data for Virginia, North Carolina, and South Carolina:
                   <br/>
-                  <code>https://oeps.ssd.uchicago.edu/api/data/DS01/state?key=abc123&amp;id=51,37,45</code>
+                  <code>https://oeps.healthyregions.org/api/data/DS01/state?key=abc123&amp;id=51,37,45</code>
                   <br/>
                   <br/>
                 </li>
                 <li>
                   A CSV of workers employed in different job industries by county:
                   <br/>
-                  <code>https://oeps.ssd.uchicago.edu/api/data/EC02/county?key=abc123&amp;format=csv</code>
+                  <code>https://oeps.healthyregions.org/api/data/EC02/county?key=abc123&amp;format=csv</code>
                   <br/>
                   <br/>
                 </li>
@@ -139,7 +139,7 @@ export default function About() {
             <p>
               The <code>docs</code> endpoint returns information on the datasets as markdown with the following parameters:
               <br/><br/>
-              <code>https://oeps.ssd.uchicago.edu/api/data/<b>dataset</b></code>
+              <code>https://oeps.healthyregions.org/api/data/<b>dataset</b></code>
               <br/><br/>
               Here, dataset should be one of the available tabular datasets, such as <code>Access01</code> or <code>BE02</code> for access metrics, and 
               Physical environment stats, respectively. 
@@ -150,14 +150,14 @@ export default function About() {
                 <li>
                   Docs for dataset Access01:
                   <br/>
-                  <code>https://oeps.ssd.uchicago.edu/api/docs/Access01?key=abc123</code>
+                  <code>https://oeps.healthyregions.org/api/docs/Access01?key=abc123</code>
                   <br/>
                   <br/>
                 </li>
                 <li>
                   Docs for dataset DS01:
                   <br/>
-                  <code>https://oeps.ssd.uchicago.edu/api/docs/DS01?key=abc123</code>
+                  <code>https://oeps.healthyregions.org/api/docs/DS01?key=abc123</code>
                   <br/>
                   <br/>
                 </li>
@@ -168,14 +168,14 @@ export default function About() {
               The <code>datasets</code> endpoint returns currently available dataset names. There are no parameters for this endpoint, but you 
               must provide an API key.
               <br/><br/>
-              <code>https://oeps.ssd.uchicago.edu/api/datasets</code>
+              <code>https://oeps.healthyregions.org/api/datasets</code>
               <br/><br/>
               Here is an example queries:
               <ul>
                 <li>
                   Available datasets:
                   <br/>
-                  <code>https://oeps.ssd.uchicago.edu/api/datasets?key=abc123</code>
+                  <code>https://oeps.healthyregions.org/api/datasets?key=abc123</code>
                 </li>
               </ul>
             </p>
