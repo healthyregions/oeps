@@ -53,7 +53,7 @@ export default async function handler(req, res) {
         return;
     }
     if (!keys.includes(key)) {
-        res.status(401).send('Unauthorized API Key. Please contact the UChicago HEROP lab if you are receiving this message in error. If you need an API key, please register at {url coming soon...}')
+        res.status(401).send('Unauthorized API Key. Please contact the Healthy Regions & Policies Lab if you are receiving this message in error. If you need an API key, please register at {url coming soon...}')
         return;
     }
         
@@ -63,7 +63,7 @@ export default async function handler(req, res) {
 
     const baseUrl = req.rawHeaders[req.rawHeaders.indexOf('Host')+1].includes('localhost')
         ? `http://${req.rawHeaders[req.rawHeaders.indexOf('Host')+1]}`
-        : `https://oeps.ssd.uchicago.edu`
+        : `https://oeps.healthyregions.org`
 
     const agg = dataConversion[param[1]]
 

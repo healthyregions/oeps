@@ -239,13 +239,13 @@ Explore, download, and map OEPS data on the [OEPS Explorer](https://oeps.netlify
 
 ## About
 
-The Opioid Environment Policy Scan (OEPS) is an open-source data warehouse that helps characterize helps characterize the multi-dimensional risk environment impacting opioid use and health outcomes across the United States. See the [master branch](https://github.com/GeoDaCenter/opioid-policy-scan) of this repo for more information.
+The Opioid Environment Policy Scan (OEPS) is an open-source data warehouse that helps characterize helps characterize the multi-dimensional risk environment impacting opioid use and health outcomes across the United States. See [GeoDaCenter/opioid-policy-scan](https://github.com/GeoDaCenter/opioid-policy-scan) for more info.
 
 The OEPS provides access to data at multiple spatial scales, from U.S. states down to Census tracts. It is designed to support research seeking to study environments impacting and impacted by opioid use and opioid use disorder (OUD), inform public policy, and reduce harm in communities nationwide. 
 
 This repository stores scripts used to create the OEPS Explorer dashboard. We rely on [webgeoda scaffolding](http://dhalpern.gitbook.io/webgeoda-templatesBtw) to generate this dashboard. 
 
-The OEPS Explorer lives at https://oeps.ssd.uchicago.edu/.
+The OEPS Explorer lives at https://oeps.healthyregions.org/.
 
 This project is led by the Healthy Regions & Policies Lab at the Center for Spatial Data Science, University of Chicago. 
 
