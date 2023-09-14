@@ -21,22 +21,11 @@ Keep in mind, some details of this implementation may change over the course of 
 
         pip install -e .
 
-3. Initialize the data locally
+3. Enter the `oeps_backend` directory, this is where you'll run scripts from.
 
-    For now, we will pull CSV, SHP, and metadata files directly from the GeoDaCenter/opioid-policy-scan repository, rather than committing these files to this repo. Run the following:
+        cd oeps_backend
 
-        python oeps_backend/initialize.py
-
-    The main reasons for this approach are
-
-    1) The relevant OEPS data is a small subset of that entire repo, so we don't want to download more than we need to
-    2) There are pending updates to that repository, so it may be better for us to not have to manually do those updates in two different locations
-    3) We should control our blank slate for beginning this work in a replicable way
-
-    Datasets from the `data_final` directory in the [opioid-policy-scan](https://github.com/GeoDaCenter/opioid-policy-scan) will be copied into the `data` directory. **For now, only the state, county, tract, and zcta shapefiles are downloaded, plus all CSV and metadata files.**
-    This means that some datasets, like mouds, are excluded for now (for the sake of simplicity). We'll add more to the initialize script as the project progresses.
-
-## BigQuery credentials
+### Setup BigQuery Credentials
 
 Enviroment variables allow us to keep BigQuery credentials outside of version control.
 
