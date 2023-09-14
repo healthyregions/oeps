@@ -1,11 +1,10 @@
 import os
 from glob import glob
 import argparse
-from itertools import product
 import pandas as pd
 import json
 
-from oeps_backend.utils import LOCAL_DATA_DIR, TABLE_DEF_DIR
+from oeps_backend.utils import TABLE_DEF_DIR
 
 #### Constants ----
 
@@ -13,9 +12,22 @@ from oeps_backend.utils import LOCAL_DATA_DIR, TABLE_DEF_DIR
 # All possible duples of GEOGRAPHY and RELEVANT_YEAR will be used by the program,
 # so set excluded pairings in EXCLUDED_COMBOS
 
-GEOGRAPHY = ['T', 'Z', 'S', 'C']
-RELEVANT_YEAR = [1980, 1990, 2000, 2010, 'Latest']
-EXCLUDED_PAIRS = []
+GY_LOOKUP = {
+	'S': [1980, 1990, 2000, 2010, 'Latest'],
+	'C': [1980, 1990, 2000, 2010, 'Latest'],
+	'T': [1980, 1990, 2000, 2010, 'Latest'],
+	'Z': ['Latest'],
+}
+
+SKIP_GEO_FIELDS = [
+	'GEOID',
+	'G_STATEFP',
+	'STUSPS',
+	'TRACTCE',
+	'STATEFP',
+	'COUNTYFP',
+	'ZIP',
+]
 
 #### Helper Functions ----
 
@@ -27,6 +39,9 @@ def make_fields(data_dict):
 	fields = []
 
 	for row in range(0, len(data_dict)):
+
+		if data_dict.iloc[row].loc['Variable'] in SKIP_GEO_FIELDS:
+			continue
 		fields.append(make_field_entry(data_dict.iloc[row]))
 
 	return(fields)
@@ -83,30 +98,22 @@ def to_bq_type(s):
 def make_table_definitions(xlsx_file):
 
 	#### Script ----
-
-	# Acquire all relevant pairs of geography and year.
-	pairs_to_grab = list(product(GEOGRAPHY, RELEVANT_YEAR))
-
-	# Exclude irrelevant pairs
-	for exclusion in EXCLUDED_PAIRS:
-		if exclusion in pairs_to_grab:
-			pairs_to_grab.remove(exclusion)
+	geo = os.path.basename(xlsx_file).split("_")[0]
 
 	# Create and save a table for each pair.
-	for year in RELEVANT_YEAR:
+	for year in GY_LOOKUP[geo]:
 
 		# Generate the relevant path.
-		# path = os.path.join(LOCAL_DATA_DIR, 'dictionaries', f'{geo}_Dict.xlsx')
-		path = xlsx_file
-		geo = os.path.basename(xlsx_file).split("_")[0]
 		csv_name = f'{geo}_{year}.csv'
 		print(f'making table definition for {csv_name}!')
 
 		# Path to the CSV dataset itself
 		dataset_path = os.path.join('csv', csv_name)
+		gh_raw_base = "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables"
+		dataset_path = f"{gh_raw_base}/{csv_name}"
 
 		# Read in data
-		data_dict = pd.read_excel(path)
+		data_dict = pd.read_excel(xlsx_file)
 
 		# Filter to only relevant rows
 		data_dict = data_dict[(data_dict[year] == 'x')]
@@ -126,16 +133,26 @@ def make_table_definitions(xlsx_file):
 
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
-	parser.add_argument("input")
+	parser.add_argument("--input")
 	args = parser.parse_args()
 
-	if os.path.isdir(args.input):
-		paths = glob(os.path.join(args.input, "*.xlsx"))
-	elif os.path.isfile(args.input):
-		paths = [args.input]
+	if args.input:
+		if os.path.isdir(args.input):
+			paths = glob(os.path.join(args.input, "*.xlsx"))
+		elif os.path.isfile(args.input):
+			paths = [args.input]
+		else:
+			print("invalid dict file input")
+			exit()
 	else:
-		print("invalid dict file input")
-		exit()
+		print("using preset remote dicts")
+		paths = [
+			"https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/dictionaries/S_Dict.xlsx",
+			"https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/dictionaries/C_Dict.xlsx",
+			"https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/dictionaries/T_Dict.xlsx",
+			"https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/dictionaries/Z_Dict.xlsx",
+		]
 
 	for path in paths:
+		print(path)
 		make_table_definitions(path)
