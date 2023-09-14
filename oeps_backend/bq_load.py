@@ -13,7 +13,7 @@ from google.cloud.bigquery import (
     LoadJobConfig,
 )
 
-from oeps_backend.utils import get_client
+from oeps_backend.helpers.credentials import get_client
 
 def create_table(schema, overwrite=False):
 

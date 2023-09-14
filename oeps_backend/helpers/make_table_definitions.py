@@ -1,10 +1,10 @@
 import os
-from glob import glob
-import argparse
-import pandas as pd
 import json
+import argparse
+from glob import glob
+import pandas as pd
 
-from oeps_backend.utils import TABLE_DEF_DIR
+TABLE_DEF_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'table_definitions')
 
 #### Constants ----
 

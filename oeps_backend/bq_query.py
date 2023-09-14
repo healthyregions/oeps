@@ -1,7 +1,7 @@
 import os
 import argparse
 
-from oeps_backend.utils import get_client
+from oeps_backend.helpers.credentials import get_client
 
 def run_query_from_file(path):
 
