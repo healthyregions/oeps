@@ -1,23 +1,19 @@
 import io
 import os
 import json
-import math
 import argparse
 import numpy
 import pandas as pd
 import geopandas as gpd
 from glob import glob
-
-from shapely import make_valid, is_valid, normalize, to_geojson
-from shapely.geometry import Polygon, MultiPolygon
-
+from datetime import datetime
 from google.cloud.bigquery import (
     Table,
     SchemaField,
     LoadJobConfig,
 )
 
-from oeps_backend.utils import get_client, LOCAL_DATA_DIR
+from oeps_backend.utils import get_client
 
 def create_table(schema, overwrite=False):
 
@@ -56,7 +52,7 @@ def load_rows_from_file(schema):
 
     rows, errors = [], []
 
-    dataset_path = os.path.join(LOCAL_DATA_DIR, schema['data_source'])
+    dataset_path = schema['data_source']
 
     try:
         if dataset_path.endswith('.shp'):
@@ -204,7 +200,6 @@ if __name__ == "__main__":
     parser.add_argument("--overwrite", action="store_true")
     parser.add_argument("--table-only", action="store_true")
     parser.add_argument("--dry-run", action="store_true")
-    parser.add_argument("--no-input", action="store_true")
     args = parser.parse_args()
 
     if os.path.isdir(args.path):
@@ -226,6 +221,7 @@ if __name__ == "__main__":
             exit()
 
         else:
+            start = datetime.now()
             print(f"\nVALIDATE INPUT SOURCE: {schema['data_source']}")
             rows, errors = load_rows_from_file(schema)
             all_errors += errors
@@ -238,3 +234,4 @@ if __name__ == "__main__":
                 table = create_table(schema, overwrite=args.overwrite)
                 print(f"TABLE CREATED: {table}")
                 load_job = load_table(rows, schema['bq_dataset_name'], schema['bq_table_name'])
+                print(f"TIME ELAPSED: {datetime.now()-start}")
