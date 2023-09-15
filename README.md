@@ -63,6 +63,9 @@ Where `states.sql` is an example of a file that holds the SQL query to perform a
 - `--sql-file` path to a file whose contents is a complete SQL query. 
 - `--output` is the name of a file to which the query results will be written. Either .csv or .shp files can be specified, and if a spatial result is written to CSV the geometries will be in WKT format. If this argument is omitted, the query results will be printed to the console (helpful for testing queries).
 
+You can write your own SQL into a file and use the same command to perform your query and export the results.
+
+Use the [BQ-Reference](BQ-Reference.md) page for quick access to all table and column names.
 
 ### Table Definitions
 
