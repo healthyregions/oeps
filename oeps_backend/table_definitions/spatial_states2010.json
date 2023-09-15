@@ -1,7 +1,7 @@
 {
     "bq_dataset_name": "spatial",
-    "bq_table_name": "states2018",
-    "data_source": "https://github.com/GeoDaCenter/opioid-policy-scan/raw/main/data_final/geometryFiles/state/states2018.shp",
+    "bq_table_name": "states2010",
+    "data_source": "https://github.com/GeoDaCenter/opioid-policy-scan/raw/main/data_final/geometryFiles/state/states2010.shp",
     "fields": [
         {
             "name": "HEROP_ID",
