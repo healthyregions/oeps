@@ -56,7 +56,7 @@ Where `table.json` is a [table definition file](#table-definitions). Optional fl
 
 Use the following command to query the OEPS BigQuery tables:
 
-    python bq_query.py --sql-file example_queries/states.sql --output states.shp
+    python bq_query.py --sql sql/states.sql --output states.shp
 
 Where `states.sql` is an example of a file that holds the SQL query to perform against one or more tables. In the SQL, `PROJECT_ID` is a placeholder (it will be replaced with the actual project identifier before the query is performed), such that table references look like `PROJECT_ID.dataset_name.table_name`, or `PROJECT_ID.spatial.states2018` for the table that holds state boundaries.
 
