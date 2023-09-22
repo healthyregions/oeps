@@ -1,7 +1,7 @@
 import os
 import argparse
 
-from oeps_backend.utils import get_client
+from oeps_backend.helpers.credentials import get_client
 
 def run_query_from_file(path):
 
@@ -21,13 +21,12 @@ def run_query_from_file(path):
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--sql-file", "-f")
-    parser.add_argument("--prepared")
-    parser.add_argument("--output", "-o")
+    parser.add_argument("--sql", "-s", help="Path to file with SQL statement to run.")
+    parser.add_argument("--output", "-o", help="Output path for export. Must end with .csv for CSV or .shp for shapefile.")
     args = parser.parse_args()
 
-    if args.sql_file:
-        data = run_query_from_file(args.sql_file)
+    if args.sql:
+        data = run_query_from_file(args.sql)
 
     if args.output:
         if args.output.lower().endswith(".csv"):
