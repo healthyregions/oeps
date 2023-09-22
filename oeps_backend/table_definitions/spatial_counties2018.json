@@ -1,16 +1,14 @@
 {
     "bq_dataset_name": "spatial",
     "bq_table_name": "counties2018",
-    "data_source": "shp/counties2018-fixed2.shp",
+    "data_source": "https://github.com/GeoDaCenter/opioid-policy-scan/raw/main/data_final/geometryFiles/county/counties2018.shp",
     "fields": [
         {
-            "name": "geoid",
-            "title": "GeoId",
+            "name": "HEROP_ID",
+            "title": "HEROP_ID",
             "type": "string",
-            "src_name": "GEOID",
-            "bq_data_type": "STRING",
-            "max_length": 5,
-            "zfill": true
+            "src_name": "HEROP_ID",
+            "bq_data_type": "STRING"
         },
         {
             "name": "name",

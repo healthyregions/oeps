@@ -1,1 +1,0 @@
-This directory can hold Jupyter notebooks or standalone scripts that will read from the data_local content and write to Google BigQuery.

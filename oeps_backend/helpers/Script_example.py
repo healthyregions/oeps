@@ -3,7 +3,7 @@ import json
 
 from google.cloud import bigquery
 
-from oeps_backend.utils import make_credentials, LOCAL_DATA_DIR
+from oeps_backend.helpers.credentials import make_credentials, LOCAL_DATA_DIR
 
 #set up project
 project_id = os.getenv("BQ_PROJECT_ID")

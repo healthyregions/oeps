@@ -2,19 +2,18 @@ import io
 import os
 import json
 import argparse
+import numpy
 import pandas as pd
 import geopandas as gpd
-
-from shapely import make_valid, is_valid, normalize, to_geojson
-from shapely.geometry import Polygon, MultiPolygon
-
+from glob import glob
+from datetime import datetime
 from google.cloud.bigquery import (
     Table,
     SchemaField,
     LoadJobConfig,
 )
 
-from oeps_backend.utils import get_client, LOCAL_DATA_DIR
+from oeps_backend.helpers.credentials import get_client
 
 def create_table(schema, overwrite=False):
 
@@ -43,38 +42,31 @@ def create_table(schema, overwrite=False):
     table = client.create_table(
         Table(full_table_id, schema=field_list),
     )
-    print(f'Table created: {table.full_table_id}')
     return table
 
-def load_table(schema):
-    """
-    Takes an input table_definition and loads the specified data source into
-    Google BigQuery, using the schema supplied. For spatial data, the BigQuery
-    GEOGRAPHY column must be named 'geom'.
+def load_rows_from_file(schema):
+    """Loads all data from the file indicated in the provided schema, and
+    performs some data validation and cleaning along the way.
 
-    The load mechanism used here is BQ's load_data_from_file, with a StringIO
-    object taking the place of an opened file. The StringIO object must contain
-    newline-delimited, stringified JSON objects. It took a long time to reach
-    that configuration successfully, because load_data_from_dataframe failed on
-    certain geometries without providing any way to debug which ones.
-    """
+    Returns a list of serialized JSON strings, and a list of error messages"""
 
-    project_id = os.getenv("BQ_PROJECT_ID")
+    rows, errors = [], []
 
-    dataset_path = os.path.join(LOCAL_DATA_DIR, schema['data_source'])
+    dataset_path = schema['data_source']
 
-    client = get_client()
+    try:
+        if dataset_path.endswith('.shp'):
+            df = gpd.read_file(dataset_path)
+        elif dataset_path.endswith('.csv'):
+            # set all columns as object type
+            df = pd.read_csv(dataset_path, dtype='object')
+        else:
+            print(f"Invalid dataset: {dataset_path}")
+            return
+    except Exception as e:
+        errors.append(str(e))
+        return rows, errors
 
-    if dataset_path.endswith('.shp'):
-        df = gpd.read_file(dataset_path)
-    elif dataset_path.endswith('.csv'):
-        df = pd.read_csv(dataset_path)
-    else:
-        print(f"Invalid dataset: {dataset_path}")
-        return
-    print(df.head())
-
-    print("Preparing data frame...")
     # use any src_name properties to rename columns where needed
     field_mapping = {}
     for f in schema['fields']:
@@ -82,37 +74,29 @@ def load_table(schema):
         if src_name:
              field_mapping[src_name] = f['name']
         else:
-            print(f"warning: {f['name']} missing required src_name attribute")
+            errors.append(f"warning: {f['name']} missing required src_name attribute")
     if field_mapping:
         df.rename(columns=field_mapping, inplace=True)
 
     # remove any input columns that are not in the schema
     drop_columns = [i for i in df.columns if not i in field_mapping.values()]
     if drop_columns:
-        print(f"{len(drop_columns)} source columns will be ignored:")
-        print(", ".join(drop_columns))
+        errors.append(f"{len(drop_columns)} source columns missing from schema: " + \
+                      ", ".join(drop_columns))
     df.drop(columns=drop_columns, inplace=True)
 
     # check for schema columns that are not found in the source data
     missing_columns = [i for i in field_mapping.values() if not i in df.columns]
     if missing_columns:
-        print(f"{len(missing_columns)} schema fields are not found in the source dataset, which will result in empty columns:")
-        print(", ".join(missing_columns))
-        if input("continue anyway? Y/n > ").lower().startswith("n"):
-            exit()
+        errors.append(f"{len(missing_columns)} schema fields missing from source: " +\
+                      ", ".join(missing_columns))
 
     # iterate fields and zfill columns where needed
     for f in schema['fields']:
         if f.get('zfill', False) is True:
-            if df.dtypes[f['name']] == 'float64':
-                df[f['name']] = df[f['name']].apply(lambda x: str(int(x)).zfill(f['max_length']))
-            else:
-                df[f['name']] = df[f['name']].apply(lambda x: str(x).zfill(f['max_length']))
-
-    print(df.head())
+            df[f['name']] = df[f['name']].apply(lambda x: str(x).zfill(f['max_length']))
 
     field_types = {f['name']: f['type'] for f in schema['fields']}
-    print(field_types)
 
     # iterate the dataframe and turn each row into a dict that gets appened to rows.
     # this list is later loaded as if it were a newline-delimited JSON file.
@@ -124,24 +108,68 @@ def load_table(schema):
         # NULL shapefile attribute values were interpreted as float('nan'), which
         # breaks json parsing
         for k in row:
-            if field_types[k] == "string":
-                row[k] = str(row[k])
-            if field_types[k] == "integer":
-                row[k] = int(row[k])
+            val_str = str(row[k])
+            # test for float('nan') type, set to None
+            if val_str == 'nan':
+                row[k] = None
+            if "NA" in val_str:
+                row[k] = None
+            # handle some infinite number variations
+            if 'inf' in val_str.lower():
+                row[k] = None
+            if row[k]:
+                if field_types[k] == "string":
+                    row[k] = val_str
+                if field_types[k] == "integer":
+                    try:
+                        row[k] = int(row[k])
+                    except ValueError:
+                        # special handle string values like '23493.3434'
+                        row[k] = int(round(float(row[k])))
+                if field_types[k] == "number":
+                    row[k] = float(row[k])
+                if field_types[k] == "boolean":
+                    if row[k] in [1, "1", "Yes", "YES", "yes", True, 'True', 'TRUE', 'true']:
+                        row[k] = True
+                    elif row[k] in [0, "0", "No", "NO", "no", False, 'False', 'FALSE', 'false']:
+                        row[k] = False
+                    else:
+                        row[k] = None
 
         # handle geometry column by dumping it to GeoJSON string. this fixes
         # some Polygon format errors that occurred with the default WKT that
         # GeoPandas returns for shapes. geom.__geo_interface__ is a shapely thing.
         if 'geom' in df.columns:
             row['geom'] = json.dumps(df.at[i, 'geom'].__geo_interface__)
-        rows.append(json.dumps(row))
+        try:
+            rows.append(json.dumps(row))
+        except Exception as e:
+            for k, v in row.items():
+                print(field_types[k])
+                print(k, v, type(v))
+                print(isinstance(v, numpy.int64))
+            raise(e)
+
+    return rows, errors
+
+def load_table(rows, dataset_name, table_name):
+    """
+    Takes an input list of serialized json strings, each representing a table
+    row, and loads them into the provided table name and dataset.
+
+    The schema for the rows must match the table schema, and the datset and
+    table must both already exist.
+    """
+
+    client = get_client()
 
     print(f"Input rows: {len(rows)}")
 
     str_data = "\n".join(rows)
     data_as_file = io.StringIO(str_data)
 
-    full_table_id = f"{project_id}.{schema['bq_dataset_name']}.{schema['bq_table_name']}"
+    project_id = os.getenv("BQ_PROJECT_ID")
+    full_table_id = f"{project_id}.{dataset_name}.{table_name}"
     table = client.get_table(full_table_id)
 
     load_job_config = LoadJobConfig(
@@ -168,16 +196,42 @@ def load_table(schema):
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("file_path")
+    parser.add_argument("path")
     parser.add_argument("--overwrite", action="store_true")
     parser.add_argument("--table-only", action="store_true")
+    parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
-    with open(args.file_path, "r") as o:
-        schema = json.load(o)
+    if os.path.isdir(args.path):
+        paths = glob(os.path.join(args.path, "*.json"))
+    elif os.path.isfile(args.path):
+        paths = [args.path]
+    else:
+        print('invalid path input')
+        exit()
 
-    table = create_table(schema, overwrite=args.overwrite)
+    all_errors = []
+    for path in paths:
+        with open(path, "r") as o:
+            schema = json.load(o)
 
-    if not args.table_only:
-        load_job = load_table(schema)
+        if args.table_only:
+            table = create_table(schema, overwrite=args.overwrite)
+            print(table)
+            exit()
 
+        else:
+            start = datetime.now()
+            print(f"\nVALIDATE INPUT SOURCE: {schema['data_source']}")
+            rows, errors = load_rows_from_file(schema)
+            all_errors += errors
+            print(f"WARNINGS ENCOUNTERED: {len(errors)}")
+            for e in errors:
+                print("  " + e)
+
+            if not args.dry_run:
+                print(f"\nBEGIN LOAD: {path}")
+                table = create_table(schema, overwrite=args.overwrite)
+                print(f"TABLE CREATED: {table}")
+                load_job = load_table(rows, schema['bq_dataset_name'], schema['bq_table_name'])
+                print(f"TIME ELAPSED: {datetime.now()-start}")
