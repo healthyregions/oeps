@@ -8,8 +8,8 @@ import MapTooltip from "../components/map/MapTooltip";
 
 // import useLoadData from '@webgeoda/hooks/useLoadData'
 // import useUpdateData from '@webgeoda/hooks/useUpdateData'
-import rootReducer from "@webgeoda/reducers";
-import {GeodaContext, ViewportProvider} from "@webgeoda/contexts";
+import rootReducer from "../_webgeoda/reducers";
+import {GeodaContext, ViewportProvider} from "../_webgeoda/contexts";
 
 import { createStore } from "redux";
 import { Provider } from "react-redux";

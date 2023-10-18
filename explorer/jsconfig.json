@@ -3,8 +3,8 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@webgeoda/*": ["_webgeoda/*"],
-      "@components/*": ["components/*"],
+      "@webgeoda/*": ["./_webgeoda/*"],
+      "@components/*": ["./components/*"],
       "@styles/*": ["styles/*"]
     }
   }

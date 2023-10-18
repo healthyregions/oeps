@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import styles from "./MainMap.module.css";
 import { useSelector } from "react-redux";
-import { handleLoadData } from '@webgeoda/utils/data'
+import { handleLoadData } from '../../_webgeoda/utils/data'
 
 const pad = (val, len, padChar) => `${val}`.length >= len ? ''+val : pad(`${padChar}${val}`, len, padChar)
 

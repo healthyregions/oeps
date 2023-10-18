@@ -6,7 +6,7 @@ import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 
 import { Gutter } from "../layout/Gutter";
-import RemoteMarkdownModal from "@components/markdown/RemoteMarkdownModal";
+import RemoteMarkdownModal from "../../components/markdown/RemoteMarkdownModal";
 import { Box, Button, Grid, Modal, Typography } from "@mui/material";
 import { variables } from "meta/variables";
 const variableMeta = Object.values(variables).flat();

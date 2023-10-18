@@ -1,5 +1,5 @@
 import { INITIAL_STATE } from "../constants/defaults";
-import * as colors from "@webgeoda/utils/colors";
+import * as colors from "../utils/colors";
 
 import {
   mapFnNb,

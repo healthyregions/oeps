@@ -6,7 +6,7 @@ import { faPlus, faMinus, faLocationArrow, faGlobe } from "@fortawesome/free-sol
 import Tooltip from "@reach/tooltip";
 import "@reach/tooltip/styles.css";
 
-import {  useSetViewport } from '@webgeoda/contexts';
+import {  useSetViewport } from '../../_webgeoda/contexts';
 
 const handleGeolocate = async (setViewport) => {
   navigator.geolocation.getCurrentPosition((position) => {
