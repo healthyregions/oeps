@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useContext, useEffect } from "react";
-import { GeodaContext } from "@webgeoda/contexts";
+import { GeodaContext } from "../contexts";
 
 import {
   generateBins

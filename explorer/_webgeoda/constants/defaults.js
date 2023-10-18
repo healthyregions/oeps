@@ -1,5 +1,5 @@
 import { dataPresets } from "../../map-config";
-import * as colors from "@webgeoda/utils/colors";
+import * as colors from "../utils/colors";
 
 const {
   style,

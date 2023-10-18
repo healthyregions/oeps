@@ -13,9 +13,9 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 
 import Loader from "../layout/Loader";
 
-import { useViewport, useSetViewport } from '@webgeoda/contexts';
-import useLoadData from "@webgeoda/hooks/useLoadData";
-import useUpdateMap from "@webgeoda/hooks/useUpdateMap";
+import { useViewport, useSetViewport } from '../../_webgeoda/contexts';
+import useLoadData from "../../_webgeoda/hooks/useLoadData";
+import useUpdateMap from "../../_webgeoda/hooks/useUpdateMap";
 // import usePanMap from "@webgeoda/hooks/usePanMap";
 
 import Legend from "./Legend";

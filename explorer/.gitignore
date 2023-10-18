@@ -168,19 +168,19 @@ cython_debug/
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
-/.pnp
+node_modules
+.pnp
 .pnp.js
 
 # testing
-/coverage
+coverage
 
 # next.js
-/.next/
-/out/
+.next/
+out/
 
 # production
-/build
+build
 
 # misc
 .DS_Store
@@ -202,12 +202,12 @@ env.local
 .vercel
 package-lock.json
 
-/map-test/chromedriver
-/map-test/screenshots
+map-test/chromedriver
+map-test/screenshots
 map-test/geckodriver
 map-test/geckodriver.log
 yarn.lock
-/.yarn/cache
+.yarn/cache
 .yarn/install-state.gz
 
 # Local Netlify folder
