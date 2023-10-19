@@ -1,6 +1,6 @@
 [build]
   base = "explorer"
-  publish = "explorer/.next/"
+  publish = ".next/"
   command = "npm run build:netlify"
 
 [[redirects]]
