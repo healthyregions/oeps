@@ -206,7 +206,6 @@ map-test/chromedriver
 map-test/screenshots
 map-test/geckodriver
 map-test/geckodriver.log
-yarn.lock
 .yarn/cache
 .yarn/install-state.gz
 
