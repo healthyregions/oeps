@@ -318,7 +318,7 @@ const data = [
   {
     name: 'US Zip Codes',
     geodata: 'US Zip Codes [tiles]',
-    tiles: `csds-hiplab.7quz45z3`,
+    tiles: process.env.NEXT_PUBLIC_TILESET_ID_ZCTA,
     id: 'ZCTA',
     bounds: [-125.109215,-66.925621,25.043926,49.295128],
     tables: {
@@ -444,7 +444,7 @@ const data = [
   {
     name: 'US Tracts',
     geodata: 'US Tracts [tiles]',
-    tiles: `csds-hiplab.3ezoql1c`,
+    tiles: process.env.NEXT_PUBLIC_TILESET_ID_TRACT,
     id: 'GEOID',
     bounds: [-125.109215,-66.925621,25.043926,49.295128],
     tables: {
