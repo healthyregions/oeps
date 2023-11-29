@@ -318,7 +318,7 @@ const data = [
   {
     name: 'US Zip Codes',
     geodata: 'US Zip Codes [tiles]',
-    tiles: process.env.NEXT_PUBLIC_TILESET_ID_ZCTA,
+    tiles: process.env.NEXT_PUBLIC_MAPBOX_TILESET_ID_ZCTA,
     id: 'ZCTA',
     bounds: [-125.109215,-66.925621,25.043926,49.295128],
     tables: {
@@ -444,8 +444,8 @@ const data = [
   {
     name: 'US Tracts',
     geodata: 'US Tracts [tiles]',
-    tiles: process.env.NEXT_PUBLIC_TILESET_ID_TRACT,
-    id: 'GEOID',
+    tiles: process.env.NEXT_PUBLIC_MAPBOX_TILESET_ID_TRACT,
+    id: 'N_GEOID',
     bounds: [-125.109215,-66.925621,25.043926,49.295128],
     tables: {
       // Test - MOUD Walk Access
@@ -621,7 +621,10 @@ let style = {
   variableHeaders: {},
   tooltip: {
     displayOnlyCurrentVariable: true
-  }
+  },
+  // this layer must be present in the style defined below
+  underLayerId: 'water',
+  mapboxStyle: process.env.NEXT_PUBLIC_MAPBOX_STYLE
 }
 
 // // 🦺 exports below -- you can safely ignore! 🦺 //

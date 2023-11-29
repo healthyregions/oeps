@@ -30,6 +30,15 @@ WebGeoDa focuses on enabling exploratory data dashboards with complex data, the 
 
 ## See the [full docs](https://dhalpern.gitbook.io/webgeoda-templates/) for more and [get started here](https://dhalpern.gitbook.io/webgeoda-templates/getting-started).
 
+## Mapbox Dependencies
 
+Two Mapbox Tilesets must be configured externally and linked within this app, one for Zip Code Tabulation Areas (ZCTAs) and one for Census Tracts. These geometries are joined with local CSV tables to drive map visualizations.
 
+Additionally, a basemap style must be provided, as well as a Mapbox access token. All of these elements are (currently) provided through environment variables, so make sure your `.env` file has the following:
 
+```
+NEXT_PUBLIC_MAPBOX_TOKEN=<your token>
+NEXT_PUBLIC_MAPBOX_TILESET_ID_ZCTA="<account id>.<tileset id>"
+NEXT_PUBLIC_MAPBOX_TILESET_ID_TRACT="<account id>.<tileset id>"
+NEXT_PUBLIC_MAPBOX_STYLE="mapbox://styles/<account id>/<style id>'
+```
