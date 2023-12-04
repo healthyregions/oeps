@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # oeps-backend
 
 This project builds from the Opioid Environment Policy Scan (OEPS) data warehouse stored in [github.com/GeoDaCenter/opioid-policy-scan](https://github.com/GeoDaCenter/opioid-policy-scan), and published on Zenodo at [doi.org/10.5281/zenodo.5842465](https://doi.org/10.5281/zenodo.5842465). This repo allows us to pull the final data from the latest OEPS release and push it into Google BigQuery, which will enable new ways of accessing and analyzing that data.
@@ -12,6 +11,7 @@ This project builds from the Opioid Environment Policy Scan (OEPS) data warehous
 1. Clone this repo
 
         git clone https://github.com/healthyregions/oeps-backend
+        cd backend
         cd oeps-backend
 
 2. Install this package and its dependencies
@@ -192,104 +192,3 @@ The following is a truncated version of a table definition for the 2010 State-le
     ]
 }
 ```
-
-## Contributing to this Repo
-
-For contributions we'll use a standard branching pattern--make a new branch from `main`, add commits to it, and then create a pull request to get those changes merged back into `main`.
-
-In the command line, this would look like the following steps. (VSCode and other editors have great git integrations as well, but the steps are generally the same):
-
-1. Make sure you are on the main branch locally
-
-        git branch
-
-2. Create a new branch from `main`
-
-        git checkout -b your_new_branch_name
-
-    You will now be on a new branch, as `git branch` will show you.
-
-3. Change code, add commits
-
-        git add path/to/your/new_file
-        git commit -m "short description of the change you made"
-
-    If you are addressing an open ticket with your commit, say ticket number 10, you should add `#10` to your commit message, like
-
-        git commit -m "update file list for initialization #10"
-
-4. Push your branch to the GitHub repo
-
-        git push --set-upstream origin your_new_branch_name
-
-5. Create the [Pull Request](https://github.com/healthyregions/pulls) in GitHub, including a description of the changes your branch contains.
-
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
-# Opioid Environment Policy Scan (OEPS) Database
-
-## Public Site - OEPS Explorer
-Explore, download, and map OEPS data on the [OEPS Explorer](https://oeps.netlify.app/). 
-# OEPS-dashboard
-*Updated August 2021*
-=======
-# OEPS Explorer
-*Updated January 2022*
->>>>>>> Update README.md
-
-## About
-
-The Opioid Environment Policy Scan (OEPS) is an open-source data warehouse that helps characterize helps characterize the multi-dimensional risk environment impacting opioid use and health outcomes across the United States. See [GeoDaCenter/opioid-policy-scan](https://github.com/GeoDaCenter/opioid-policy-scan) for more info.
-
-The OEPS provides access to data at multiple spatial scales, from U.S. states down to Census tracts. It is designed to support research seeking to study environments impacting and impacted by opioid use and opioid use disorder (OUD), inform public policy, and reduce harm in communities nationwide. 
-
-This repository stores scripts used to create the OEPS Explorer dashboard. We rely on [webgeoda scaffolding](http://dhalpern.gitbook.io/webgeoda-templatesBtw) to generate this dashboard. 
-
-The OEPS Explorer lives at https://oeps.healthyregions.org/.
-
-This project is led by the Healthy Regions & Policies Lab at the Center for Spatial Data Science, University of Chicago. 
-
-### Citation
-Susan Paykin, Dylan Halpern, Qinyun Lin, Moksha Menghaney, Angela Li, Rachel Vigil, Margot Bolanos Gamez, Alexa Jin, Ally Muszynski, and Marynia Kolak. (2021). GeoDaCenter/opioid-policy-scan: Opioid Environment Policy Scan Data Warehouse (v1.0). Zenodo. http://doi.org/10.5281/zenodo.4747876
-
-## Data Overview
-
-![](public/images/oeps-diagram.png)
-
-Variable constructs have been grouped thematically to highlight the multi-dimensional risk environment of opioid use in justice populations.  The variable themes are: **Geographic Boundaries, Policy, Health, Demographic, Economic, Physical Environment,** and **COVID-19**.
-
-View the full Data Overview in the table [here](https://github.com/GeoDaCenter/opioid-policy-scan#data-overview). 
-
-## WebGeoDa Scaffolding
-
-![A map of population density in texas](https://github.com/nofurtherinformation/webgeoda/blob/main/public/cover.png?raw=true)
-
-WebGeoDa Scaffolding is a set of easy-to-use frontend JavaScript toolkits to get started building and exploring client-side geospatial analytics.
-
-⚠️ Heads up! This repository is an _unstable_ work in progress. This means a lot will change in future releases. ⚠️
-
-## About Webgeoda Scaffolding
-
-**What is this thing?**
-
-WebGeoDa is a set of tools, templates, and scaffolding to quickly and easily develop geospatial data dashboards. WebGeoDa builds on the GeoDa suite of geospatial software and extends jsGeoDa through accessible and ready-to-go examples. WebGeoDa uses  [jsGeoDa](https://jsgeoda.libgeoda.org/) (Xun Li & Luc Anselin) as the core of it's geospatial engine, alongside a collection of modern and high-performance libraries for mapping, analysis, data handling, and UI matters.
-
-WebGeoDa capabilities have four areas of complexity. It's easy to learn, but with a high ceiling for customization:
-
-‍💻 Add your geospatial data (GeoJSON), join it to your tabular data (CSV) right in the browser. Specify your variables with a simple JSON specification, and your map is ready to be published!
-
-📑 Customize and add static pages to describe your data and the context of your dashboard. WebGeoDa provides some Physical-in styling tools using Plain CSS and a reasonably approachable JSX, similar to HTML.
-
-🗺 Add additional map features using Mapbox and Deck.gl, or explore additional data insights through interactive tooltip and sidebar functions.
-
-🦺 Dive directly into the WebGeoDa scaffolding with full control over custom react hooks, the jsGeoDa WebAssembly + WebWorker geospatial engine, a fast Redux-backed state, and extensible and accessible components. 
-
-## What can WebGeoDa do?
-
-WebGeoDa focuses on enabling exploratory data dashboards with complex data, the need for diverse variables, and high performance in-browser analytics. You can make maps with a variety of color-binning techniques and spatial statistical methods, like Hotspot cluster analysis, through a simple JSON based data and variable configuration.
-
-## See the [full docs](https://dhalpern.gitbook.io/webgeoda-templates/) for more and [get started here](https://dhalpern.gitbook.io/webgeoda-templates/getting-started).
-
-
-
-
