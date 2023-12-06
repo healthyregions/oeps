@@ -4,8 +4,6 @@ import numpy
 import pandas as pd
 import geopandas as gpd
 
-REPO_BASE_URL = "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables"
-
 
 class DataResource():
 
@@ -96,8 +94,9 @@ class DataResource():
         return fields
 
     def create_from_oeps_xlsx_data_dict(self, xlsx_file, dest_directory):
-        """ Creates a schema from our pre-made extrnal data dictionaries. """
+        """ Creates a schema from our pre-made external data dictionaries. """
 
+        REPO_BASE_URL = "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables"
         GY_LOOKUP = {
             'S': [1980, 1990, 2000, 2010, 'Latest'],
             'C': [1980, 1990, 2000, 2010, 'Latest'],
@@ -132,8 +131,11 @@ class DataResource():
             self.schema = {
                 'bq_dataset_name': dataset,
                 'bq_table_name':  f'{geo}_{year}',
-                'data_source': dataset_path,
-                'fields': self.make_fields(data_dict)
+                'name': f'{geo}-{year}'
+                'path': dataset_path,
+                'schema': {
+                    'fields': self.make_fields(data_dict)
+                }
             }
 
             out_path = os.path.join(dest_directory, f'{dataset}_{geo}_{year}.json')
@@ -144,6 +146,7 @@ class DataResource():
         return output_files
 
     def export_schema(self, path):
+        """ Dump this object's schema to a JSON file. """
             
         with open(path, 'w') as outfile:
             json.dump(self.schema, outfile, indent=4)

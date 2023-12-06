@@ -4,7 +4,7 @@ from glob import glob
 
 from oeps_backend.src.data_resource import DataResource
 
-SCHEMAS_DIR = os.path.join(os.path.dirname(__file__), 'schemas')
+RESOURCES_DIR = os.path.join(os.path.dirname(__file__), 'resources')
 
 if __name__ == "__main__":
 
@@ -23,7 +23,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if args.operation == "list":
-         for i in glob(os.path.join(SCHEMAS_DIR, '*.json')):\
+        for i in glob(os.path.join(RESOURCES_DIR, '*.json')):\
             print(os.path.basename(i))
                        
     elif args.operation == "generate-from-oeps-data_dicts":
@@ -51,11 +51,11 @@ if __name__ == "__main__":
             if not os.path.isdir(out_dir):
                 os.mkdir(out_dir)
         else:
-            out_dir = SCHEMAS_DIR
+            out_dir = RESOURCES_DIR
 
         for path in paths:
             print(path)
             files = DataResource().create_from_oeps_xlsx_data_dict(path, out_dir)
-            print("output schemas:")
+            print("output resources:")
             for f in files:
                 print(f)
