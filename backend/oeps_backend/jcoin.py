@@ -7,7 +7,7 @@ from pathlib import Path
 
 import requests
 
-from oeps_backend.src.utils import get_path_or_paths, download_file_or_shapefile
+from oeps_backend.src.utils import get_path_or_paths, download_path
 from oeps_backend.src.data_resource import DataResource
 
 RESOURCES_DIR = os.path.join(os.path.dirname(__file__), 'resources')
@@ -63,24 +63,29 @@ if __name__ == "__main__":
             print(f"processing schema: {i_path.name}")
             with open(i, "r") as f:
                 data = json.load(f)
-            del data["bq_dataset_name"]
-            del data["bq_table_name"]
-            for df in data["fields"]:
-                del df["bq_data_type"]
 
-            url = data.pop("data_source")
-            local = download_file_or_shapefile(url, d_path)
+            local_paths = download_path(data.pop("path"), d_path)
 
+            paths = [f"data/{i.name}" for i in local_paths]
             res_item = {
-                "path": f"data/{local.name}",
+                "name": data['name'],
+                "path": paths,
                 "schema": f"schemas/{i_path.name}"
             }
             data_package['resources'].append(res_item)
             
-            schema_out = Path(s_path, i_path.name)
+            fields = []
+            props = ['name', 'title', 'type', 'example', 'description']
+            for df in data['schema']["fields"]:
+                f = {}
+                for p in props:
+                    if df.get(p):
+                        f[p] = df.get(p)
+                fields.append(f)
+            schema_out = Path(s_path, f"{data['name']}{i_path.suffix}")
             print(schema_out)
             with open(schema_out, "w") as f:
-                json.dump(data, f, indent=4)
+                json.dump({"fields": fields}, f, indent=4)
 
         package_json_path = Path(dest, "data-package.json")
         with open(package_json_path, "w") as f:
@@ -88,6 +93,6 @@ if __name__ == "__main__":
 
         if args.zip:
             print("zipping output...")
-            shutil.make_archive(f"{dest.name}", 'zip', dest)
+            shutil.make_archive(f"{Path(dest.parent, dest.name)}", 'zip', dest)
 
         print("  done.")

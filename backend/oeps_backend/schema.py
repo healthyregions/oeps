@@ -13,7 +13,7 @@ if __name__ == "__main__":
     parser.add_argument("operation",
                         choices=[
                             "list",
-                            "generate-from-oeps-data_dicts",
+                            "generate-from-oeps-data-dicts",
                         ],
                         help="operation to run")
     parser.add_argument("--destination", "-d",
@@ -26,7 +26,7 @@ if __name__ == "__main__":
         for i in glob(os.path.join(RESOURCES_DIR, '*.json')):\
             print(os.path.basename(i))
                        
-    elif args.operation == "generate-from-oeps-data_dicts":
+    elif args.operation == "generate-from-oeps-data-dicts":
 
         if args.source:
             if os.path.isdir(args.source):
