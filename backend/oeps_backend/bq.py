@@ -71,7 +71,7 @@ if __name__ == "__main__":
 
             else:
                 start = datetime.now()
-                print(f"\nVALIDATE INPUT SOURCE: {dr.schema['data_source']}")
+                print(f"\nVALIDATE INPUT SOURCE: {dr.schema['path']}")
                 rows, errors = dr.load_rows_from_file()
                 all_errors += errors
                 print(f"WARNINGS ENCOUNTERED: {len(errors)}")

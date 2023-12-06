@@ -131,7 +131,7 @@ class DataResource():
             self.schema = {
                 'bq_dataset_name': dataset,
                 'bq_table_name':  f'{geo}_{year}',
-                'name': f'{geo}-{year}'
+                'name': f'{geo}-{year}',
                 'path': dataset_path,
                 'schema': {
                     'fields': self.make_fields(data_dict)
@@ -159,7 +159,7 @@ class DataResource():
 
         rows, errors = [], []
 
-        dataset_path = self.schema['data_source']
+        dataset_path = self.schema['path']
 
         try:
             if dataset_path.endswith('.shp'):
@@ -176,7 +176,7 @@ class DataResource():
 
         # use any src_name properties to rename columns where needed
         field_mapping = {}
-        for f in self.schema['fields']:
+        for f in self.schema['schema']['fields']:
             src_name = f.get('src_name')
             if src_name:
                 field_mapping[src_name] = f['name']
@@ -199,11 +199,11 @@ class DataResource():
                         ", ".join(missing_columns))
 
         # iterate fields and zfill columns where needed
-        for f in self.schema['fields']:
+        for f in self.schema['schema']['fields']:
             if f.get('zfill', False) is True:
                 df[f['name']] = df[f['name']].apply(lambda x: str(x).zfill(f['max_length']))
 
-        field_types = {f['name']: f['type'] for f in self.schema['fields']}
+        field_types = {f['name']: f['type'] for f in self.schema['schema']['fields']}
 
         # iterate the dataframe and turn each row into a dict that gets appened to rows.
         # this list is later loaded as if it were a newline-delimited JSON file.

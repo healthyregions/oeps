@@ -96,7 +96,7 @@ class BigQuery():
         self.client.create_dataset(schema['bq_dataset_name'], exists_ok=True)
 
         field_list = []
-        for f in schema["fields"]:
+        for f in schema["schema"]["fields"]:
             max_length = f.get('max_length')
             field_list.append(
                 SchemaField(
@@ -119,7 +119,7 @@ class BigQuery():
         Takes an input list of serialized json strings, each representing a table
         row, and loads them into the provided table name and dataset.
 
-        The schema for the rows must match the table schema, and the datset and
+        The schema for the rows must match the table schema, and the dataset and
         table must both already exist.
         """
 
