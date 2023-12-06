@@ -42,7 +42,7 @@ def download_file_or_shapefile(url, out_dir):
         response = requests.get(u, stream=True)
         if response.status_code == 200:
             out_path = Path(out_dir, name)
-            print(f"    {u} --> {out_path}")
+            print(f"  get: {u} --> {out_path}")
             with open(Path(out_dir, name), mode="wb") as file:
                 for chunk in response.iter_content(chunk_size=10 * 1024):
                     file.write(chunk)

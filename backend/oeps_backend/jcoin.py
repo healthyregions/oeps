@@ -10,7 +10,7 @@ import requests
 from oeps_backend.src.utils import get_path_or_paths, download_file_or_shapefile
 from oeps_backend.src.data_resource import DataResource
 
-SCHEMAS_DIR = os.path.join(os.path.dirname(__file__), 'schemas')
+RESOURCES_DIR = os.path.join(os.path.dirname(__file__), 'resources')
 
 if __name__ == "__main__":
 
@@ -52,12 +52,12 @@ if __name__ == "__main__":
         }
 
         if args.source:
-            schemas = get_path_or_paths(args.source, extension="json")
+            resources = get_path_or_paths(args.source, extension="json")
         else:
-            schemas = get_path_or_paths(SCHEMAS_DIR, extension="json")
-        schemas.sort()
+            resources = get_path_or_paths(RESOURCES_DIR, extension="json")
+        resources.sort()
 
-        for i in schemas:
+        for i in resources:
 
             i_path = Path(i)
             print(f"processing schema: {i_path.name}")

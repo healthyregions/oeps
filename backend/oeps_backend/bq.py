@@ -11,7 +11,7 @@ from oeps_backend.src.data_resource import DataResource
 
 dotenv.load_dotenv()
 
-SCHEMAS_DIR = os.path.join(os.path.dirname(__file__), 'schemas')
+RESOURCES_DIR = os.path.join(os.path.dirname(__file__), 'resources')
 
 if __name__ == "__main__":
 
@@ -101,7 +101,7 @@ if __name__ == "__main__":
 
         datasets = {}
 
-        files = glob(os.path.join(SCHEMAS_DIR, "*.json"))
+        files = glob(os.path.join(RESOURCES_DIR, "*.json"))
 
         for f in files:
             with open(f, "r") as openf:
