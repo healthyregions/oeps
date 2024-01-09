@@ -4,6 +4,7 @@
     "name": "S-Latest",
     "path": "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables/S_Latest.csv",
     "schema": {
+        "primaryKey": "HEROP_ID",
         "fields": [
             {
                 "name": "HEROP_ID",

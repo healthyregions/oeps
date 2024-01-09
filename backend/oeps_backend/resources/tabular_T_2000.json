@@ -4,6 +4,7 @@
     "name": "T-2000",
     "path": "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables/T_2000.csv",
     "schema": {
+        "primaryKey": "HEROP_ID",
         "fields": [
             {
                 "name": "HEROP_ID",
