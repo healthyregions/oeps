@@ -134,6 +134,7 @@ class DataResource():
                 'name': f'{geo}-{year}',
                 'path': dataset_path,
                 'schema': {
+                    'primaryKey': 'HEROP_ID',
                     'fields': self.make_fields(data_dict)
                 }
             }
