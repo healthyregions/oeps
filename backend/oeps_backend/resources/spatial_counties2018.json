@@ -10,6 +10,7 @@
         "https://github.com/GeoDaCenter/opioid-policy-scan/raw/main/data_final/geometryFiles/county/counties2018.cpg"
     ],
     "schema": {
+        "primaryKey": "HEROP_ID",
         "fields": [
             {
                 "name": "HEROP_ID",
