@@ -90,7 +90,7 @@ The top-level properties of a table definition are:
 
 Property|Format|Description
 -|-|-
-`data_source`|String|Path or URL for CSV or SHP dataset to load
+`path`|String|Path or URL for CSV or SHP dataset to load
 `bq_table_name`|String|Target table in BigQuery
 `bq_dataset_name`|String|Target dataset in BigQuery
 `fields`|List|List of definitions for all table fields
@@ -160,13 +160,13 @@ Note that for spatial data Table Schema only allows `geojson` or `geopoint` as v
 
 #### Example
 
-The following is a truncated version of a table definition for the 2010 State-level data published in OEPS v2.0. This defines a table `project_id.tabular.S_2010` with two fields, `HEROP_ID` and `TotPop`. Note also the direct URL to the raw `data_source` on GitHub.
+The following is a truncated version of a table definition for the 2010 State-level data published in OEPS v2.0. This defines a table `project_id.tabular.S_2010` with two fields, `HEROP_ID` and `TotPop`. Note also the direct URL to the raw `path` on GitHub.
 
 ```
 {
     "bq_dataset_name": "tabular",
     "bq_table_name": "S_2010",
-    "data_source": "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables/S_2010.csv",
+    "path": "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables/S_2010.csv",
     "fields": [
         {
             "name": "HEROP_ID",
