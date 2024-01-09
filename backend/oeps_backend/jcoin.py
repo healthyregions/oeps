@@ -2,13 +2,9 @@ import os
 import json
 import shutil
 import argparse
-from glob import glob
 from pathlib import Path
 
-import requests
-
 from oeps_backend.src.utils import get_path_or_paths, download_path
-from oeps_backend.src.data_resource import DataResource
 
 RESOURCES_DIR = os.path.join(os.path.dirname(__file__), 'resources')
 
@@ -64,28 +60,64 @@ if __name__ == "__main__":
             with open(i, "r") as f:
                 data = json.load(f)
 
+            out_filename = f"{data['name']}{i_path.suffix}"
+            out_relpath = f"schemas/{out_filename}"
+            out_abspath = Path(s_path, out_filename)
+
+            # copy the data files and generate the list of local paths
             local_paths = download_path(data.pop("path"), d_path)
 
+            # create the resource item that will be placed in the data package json
             paths = [f"data/{i.name}" for i in local_paths]
             res_item = {
                 "name": data['name'],
                 "path": paths,
-                "schema": f"schemas/{i_path.name}"
+                "schema": out_relpath
             }
             data_package['resources'].append(res_item)
+
+            # now create the schema that will be stored in the separate data resource file
+            out_schema = {
+                "primaryKey": data['schema'].get('primaryKey'),
+                "fields": [],
+            }
             
-            fields = []
+            # rebuild the field list here with only the necessary props
             props = ['name', 'title', 'type', 'example', 'description']
             for df in data['schema']["fields"]:
                 f = {}
                 for p in props:
                     if df.get(p):
                         f[p] = df.get(p)
-                fields.append(f)
-            schema_out = Path(s_path, f"{data['name']}{i_path.suffix}")
-            print(schema_out)
-            with open(schema_out, "w") as f:
-                json.dump({"fields": fields}, f, indent=4)
+                out_schema['fields'].append(f)
+
+            # finally, for csv resources generate foreignKeys linking back to the proper geometry files
+            if res_item['path'][0].endswith(".csv"):
+
+                # figure out which shapefile...
+                scale, year = res_item['name'].split("-")
+                if scale == "T":
+                    resname = f"tracts-{year}"
+                elif scale == "Z":
+                    resname = f"zctas-{year}"
+                elif scale == "C":
+                    resname = f"counties-{year}"
+                elif scale == "S":
+                    resname = f"states-{year}"
+                else:
+                    print(res_item)
+                    raise Exception("unanticipated res_item['name']")
+
+                out_schema['foreignKeys'] = [{
+                    'fields': 'HEROP_ID',
+                    'reference': {
+                        'resource': resname,
+                        'fields': 'HEROP_ID',
+                    }
+                }]
+
+            with open(out_abspath, "w") as f:
+                json.dump(out_schema, f, indent=4)
 
         package_json_path = Path(dest, "data-package.json")
         with open(package_json_path, "w") as f:
