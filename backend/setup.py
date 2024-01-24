@@ -12,5 +12,6 @@ setup(
         'geopandas',
         'db-dtypes',
         'openpyxl',
+        'boto3',
     ]
 )

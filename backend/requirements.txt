@@ -1,6 +1,0 @@
-# this is redundant with the install_requires list in setup.py, but I think it
-# should allow caching of these packages during CI / GitHub actions if we
-requests==2.31.0
-python-dotenv==1.0.0
-google-cloud-bigquery==3.11.3
-'urllib3<2.0'

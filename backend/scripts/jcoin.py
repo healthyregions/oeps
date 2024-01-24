@@ -4,9 +4,9 @@ import shutil
 import argparse
 from pathlib import Path
 
-from oeps_backend.src.utils import get_path_or_paths, download_path
+from oeps_backend.utils import get_path_or_paths, download_path
 
-RESOURCES_DIR = os.path.join(os.path.dirname(__file__), 'resources')
+RESOURCES_DIR = Path(__file__).parent.parent / 'resources'
 
 if __name__ == "__main__":
 

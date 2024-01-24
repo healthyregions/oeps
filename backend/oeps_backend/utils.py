@@ -1,7 +1,42 @@
 import os
+import sys
+import threading
+import boto3
 import requests
 from glob import glob
 from pathlib import Path
+
+class S3ProgressPercentage(object):
+
+    def __init__(self, filename):
+        self._filename = filename
+        self._size = float(os.path.getsize(filename))
+        self._seen_so_far = 0
+        self._lock = threading.Lock()
+
+    def __call__(self, bytes_amount):
+        # To simplify, assume this is hooked up to a single filename
+
+        def b_to_mb(bytes):
+            return round(bytes / (1024*1024), 2)
+
+        with self._lock:
+            self._seen_so_far += bytes_amount
+            percentage = (self._seen_so_far / self._size) * 100
+            sys.stdout.write(
+                "\r%s  %s / %s  (%.2f%%)" % (
+                    self._filename, b_to_mb(self._seen_so_far), b_to_mb(self._size),
+                    percentage))
+            sys.stdout.flush()
+
+def upload_to_s3(paths):
+
+    s3 = boto3.resource("s3")
+    bucket = os.getenv("AWS_BUCKET_NAME")
+
+    for path in paths:
+        s3.Bucket(bucket).upload_file(str(path), path.name, Callback=S3ProgressPercentage(str(path)))
+        print(" -- done")
 
 def get_path_or_paths(path_input, extension=None):
 
@@ -40,3 +75,4 @@ def download_path(path, out_dir):
             local_paths.append(out_path)
 
     return local_paths
+

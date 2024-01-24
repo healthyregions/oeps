@@ -6,12 +6,12 @@ from datetime import datetime
 from glob import glob
 from pathlib import Path
 
-from oeps_backend.src.bigquery import BigQuery, get_client
-from oeps_backend.src.data_resource import DataResource
+from oeps_backend.bigquery import BigQuery, get_client
+from oeps_backend.data_resource import DataResource
 
 dotenv.load_dotenv()
 
-RESOURCES_DIR = os.path.join(os.path.dirname(__file__), 'resources')
+RESOURCES_DIR = Path(__file__).parent.parent / 'resources'
 
 if __name__ == "__main__":
 
