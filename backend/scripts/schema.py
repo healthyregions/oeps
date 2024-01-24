@@ -1,10 +1,11 @@
 import os
 import argparse
 from glob import glob
+from pathlib import Path
 
-from oeps_backend.src.data_resource import DataResource
+from oeps_backend.data_resource import DataResource
 
-RESOURCES_DIR = os.path.join(os.path.dirname(__file__), 'resources')
+RESOURCES_DIR = Path(__file__).parent.parent / 'resources'
 
 if __name__ == "__main__":
 
