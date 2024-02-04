@@ -35,6 +35,8 @@ def upload_to_s3(paths):
     bucket = os.getenv("AWS_BUCKET_NAME")
 
     for path in paths:
+        print(path)
+        print(path.name)
         s3.Bucket(bucket).upload_file(str(path), path.name, Callback=S3ProgressPercentage(str(path)))
         print(" -- done")
 
