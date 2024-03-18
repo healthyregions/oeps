@@ -13,5 +13,6 @@ setup(
         'db-dtypes',
         'openpyxl',
         'boto3',
+        'duckdb',
     ]
 )
