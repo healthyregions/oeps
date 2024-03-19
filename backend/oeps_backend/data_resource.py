@@ -187,14 +187,14 @@ class DataResource():
             df.rename(columns=field_mapping, inplace=True)
 
         # remove any input columns that are not in the schema
-        drop_columns = [i for i in df.columns if not i in field_mapping.values()]
+        drop_columns = [i for i in df.columns if i not in field_mapping.values()]
         if drop_columns:
             errors.append(f"{len(drop_columns)} source columns missing from schema: " + \
                         ", ".join(drop_columns))
         df.drop(columns=drop_columns, inplace=True)
 
         # check for schema columns that are not found in the source data
-        missing_columns = [i for i in field_mapping.values() if not i in df.columns]
+        missing_columns = [i for i in field_mapping.values() if i not in df.columns]
         if missing_columns:
             errors.append(f"{len(missing_columns)} schema fields missing from source: " +\
                         ", ".join(missing_columns))
