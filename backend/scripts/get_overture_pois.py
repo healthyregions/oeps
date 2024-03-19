@@ -34,13 +34,6 @@ def get_data(outpath: Path = None, categories: list = [], confidence: str = ".8"
 
     connection = get_connection()
 
-    us_extent_rough = {
-        'xMin': -124.211606,
-        'xMax': -67.158958,
-        'yMin': 25.837377,
-        'yMax': 49.384359,
-    }
-
     con_clause = f"confidence >= {confidence} AND" if confidence != "-1" else ""
     print(f"confidence filter: {con_clause}")
 
