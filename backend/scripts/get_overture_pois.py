@@ -17,7 +17,9 @@ def get_connection():
 
     return connection
 
-def get_filter_shape(input_file: Path, filter_value: str):
+def get_filter_shape(input_file: str, filter_value: str):
+
+    print(input_file)
 
     gdf = gpd.read_file(input_file)
     filter_row = gdf[gdf["GEOID"] == filter_value]
@@ -138,7 +140,7 @@ if __name__ == "__main__":
 
     geom_filter = None
     if args.filter_file and args.filter_unit:
-        geom_filter = get_filter_shape(Path(args.filter_file), args.filter_unit)
+        geom_filter = get_filter_shape(args.filter_file, args.filter_unit)
 
     print(geom_filter)
 
