@@ -1,0 +1,33 @@
+{
+    "bq_dataset_name": "spatial",
+    "bq_table_name": "tracts2010",
+    "name": "tracts-2010",
+    "title": "Census Tract Boundaries, 2010",
+    "description": "Shapefile of census tract boundaries from the US Census Bureau, 2010.",
+    "path": [
+        "https://github.com/GeoDaCenter/opioid-policy-scan/raw/main/data_final/geometryFiles/tract/tracts2010.shp",
+        "https://github.com/GeoDaCenter/opioid-policy-scan/raw/main/data_final/geometryFiles/tract/tracts2010.shx",
+        "https://github.com/GeoDaCenter/opioid-policy-scan/raw/main/data_final/geometryFiles/tract/tracts2010.dbf",
+        "https://github.com/GeoDaCenter/opioid-policy-scan/raw/main/data_final/geometryFiles/tract/tracts2010.prj",
+        "https://github.com/GeoDaCenter/opioid-policy-scan/raw/main/data_final/geometryFiles/tract/tracts2010.cpg"
+    ],
+    "schema": {
+        "primaryKey": "HEROP_ID",
+        "fields": [
+            {
+                "name": "HEROP_ID",
+                "title": "HEROP_ID",
+                "type": "string",
+                "src_name": "HEROP_ID",
+                "bq_data_type": "STRING"
+            },
+            {
+                "name": "geom",
+                "title": "Geom",
+                "type": "string",
+                "src_name": "geometry",
+                "bq_data_type": "GEOGRAPHY"
+            }
+        ]
+    }
+}
