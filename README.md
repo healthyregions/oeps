@@ -5,7 +5,7 @@ This repo holds the OEPS explorer website, [oeps.healthyregions.org](https://oep
 - [explorer](./docs/explorer.md)
     - The OEPS Explorer is a NextJS app that uses WebGeoDa (built with [jsGeoDa](https://jsgeoda.libgeoda.org/)) for geospatial interactivity.
 - [backend](./docs/backend.md)
-    - The backend is a Python application that uses [Frictionless Standards](https://specs.frictionlessdata.io) to load and query data in Google BigQuery. This application pulls from (but does not replace) the datasets stored in the pending v2 release of the original OEPS repo, [GeoDaCenter/opioid-policy-scan](https://github.com/GeoDaCenter/opioid-policy-scan).
+    - The backend is a Flask application that uses [Frictionless Standards](https://specs.frictionlessdata.io) to load and query data in Google BigQuery. This application pulls from (but does not replace) the datasets stored in the pending v2 release of the original OEPS repo, [GeoDaCenter/opioid-policy-scan](https://github.com/GeoDaCenter/opioid-policy-scan).
 - see also: [repo migration history](./docs/legacy-migration.md)
     - More information about the summer 2023 reorganization.
 
