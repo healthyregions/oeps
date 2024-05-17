@@ -35,8 +35,9 @@ class CensusClient():
 
         print("getting connection")
         # server = self.ftp_connection()
-        server = ftplib.FTP('ftp2.census.gov', user="anonymous")
+        server = ftplib.FTP('ftp2.census.gov')
         server.connect()
+        print('connnected')
         files = server.nlst('/geo/tiger/GENZ2010')
         print(files)
 

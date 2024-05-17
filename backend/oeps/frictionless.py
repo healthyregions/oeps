@@ -9,115 +9,118 @@ from pathlib import Path
 from oeps.utils import get_path_or_paths, download_path
 
 
-def create_package(operation, destination, source, zip_):
-    """Commands related to JCOIN export."""
+class DataPackage():
+
+    def create(self, destination, source, zip_output: bool):
+        """ Single command to generate an output data package. Should be refactored to more
+        modular methods on this class."""
 
 
-    dest = Path(destination)
-    dest.mkdir(exist_ok=True)
-    s_path = Path(dest, "schemas")
-    s_path.mkdir(exist_ok=True)
-    d_path = Path(dest, "data")
-    d_path.mkdir(exist_ok=True)
+        dest = Path(destination)
+        dest.mkdir(exist_ok=True)
+        s_path = Path(dest, "schemas")
+        s_path.mkdir(exist_ok=True)
+        d_path = Path(dest, "data")
+        d_path.mkdir(exist_ok=True)
 
-    if not os.path.isdir(destination):
-        os.mkdir(destination)
+        if not os.path.isdir(destination):
+            os.mkdir(destination)
 
-    data_package = {
-        "profile": "data-package",
-        "name": "oeps",
-        "title": "Opioid Environment Policy Scan (OEPS) v2",
-        "homepage": "https://oeps.healthyregions.org",
-        "resources": [],
-        "licenses": [{
-            "name": "ODC-PDDL-1.0",
-            "path": "http://opendatacommons.org/licenses/pddl/",
-            "title": "Open Data Commons Public Domain Dedication and License v1.0"
-        }]
-    }
-
-    resources = get_path_or_paths(source, extension="json")
-    resources.sort()
-
-    for i in resources:
-
-        i_path = Path(i)
-        print(f"processing schema: {i_path.name}")
-        with open(i, "r") as f:
-            data = json.load(f)
-
-        out_filename = f"{data['name']}{i_path.suffix}"
-        out_relpath = f"schemas/{out_filename}"
-        out_abspath = Path(s_path, out_filename)
-
-        # copy the data files and generate the list of local paths
-        local_paths = download_path(data.pop("path"), d_path)
-
-        # create the resource item that will be placed in the data package json
-        paths = [f"data/{i.name}" for i in local_paths]
-        res_item = {
-            "name": data.get('name', ''),
-            "title": data.get('title', ''),
-            "description": data.get('description', ''),
-            "path": paths,
-            "schema": out_relpath
-        }
-        data_package['resources'].append(res_item)
-
-        # now create the schema that will be stored in the separate data resource file
-        out_schema = {
-            "primaryKey": data['schema'].get('primaryKey'),
-            "fields": [],
-        }
-        
-        # rebuild the field list here with only the necessary props
-        props = ['name', 'title', 'type', 'example', 'description']
-        for df in data['schema']["fields"]:
-            f = {}
-            for p in props:
-                if df.get(p):
-                    f[p] = df.get(p)
-            out_schema['fields'].append(f)
-
-        # finally, for csv resources generate foreignKeys linking back to the proper geometry files
-        if res_item['path'][0].endswith(".csv"):
-
-            # figure out which shapefile...
-            scale, year = res_item['name'].split("-")
-
-            year_to_use = "2018" if year == "Latest" else "2010"
-            if scale == "T":
-                resname = f"tracts-{year_to_use}"
-            elif scale == "Z":
-                resname = f"zctas-{year_to_use}"
-            elif scale == "C":
-                resname = f"counties-{year_to_use}"
-            elif scale == "S":
-                resname = f"states-{year_to_use}"
-            else:
-                print(res_item)
-                raise Exception("unanticipated res_item['name']")
-
-            out_schema['foreignKeys'] = [{
-                'fields': 'HEROP_ID',
-                'reference': {
-                    'resource': resname,
-                    'fields': 'HEROP_ID',
-                }
+        data_package = {
+            "profile": "data-package",
+            "name": "oeps",
+            "title": "Opioid Environment Policy Scan (OEPS) v2",
+            "homepage": "https://oeps.healthyregions.org",
+            "resources": [],
+            "licenses": [{
+                "name": "ODC-PDDL-1.0",
+                "path": "http://opendatacommons.org/licenses/pddl/",
+                "title": "Open Data Commons Public Domain Dedication and License v1.0"
             }]
+        }
 
-        with open(out_abspath, "w") as f:
-            json.dump(out_schema, f, indent=4)
+        resources = get_path_or_paths(source, extension="json")
+        resources.sort()
 
-    package_json_path = Path(dest, "data-package.json")
-    with open(package_json_path, "w") as f:
-        json.dump(data_package, f, indent=4)
+        for i in resources:
 
-    if zip_:
-        print("zipping output...")
-        shutil.make_archive(f"{Path(dest.parent, dest.name)}", 'zip', dest)
+            i_path = Path(i)
+            print(f"processing schema: {i_path.name}")
+            with open(i, "r") as f:
+                data = json.load(f)
 
-    print("  done.")
+            out_filename = f"{data['name']}{i_path.suffix}"
+            out_relpath = f"schemas/{out_filename}"
+            out_abspath = Path(s_path, out_filename)
+
+            # copy the data files and generate the list of local paths
+            local_paths = download_path(data.pop("path"), d_path)
+
+            # create the resource item that will be placed in the data package json
+            paths = [f"data/{i.name}" for i in local_paths]
+            res_item = {
+                "name": data.get('name', ''),
+                "title": data.get('title', ''),
+                "description": data.get('description', ''),
+                "path": paths,
+                "schema": out_relpath
+            }
+            data_package['resources'].append(res_item)
+
+            # now create the schema that will be stored in the separate data resource file
+            out_schema = {
+                "primaryKey": data['schema'].get('primaryKey'),
+                "fields": [],
+            }
+            
+            # rebuild the field list here with only the necessary props
+            props = ['name', 'title', 'type', 'example', 'description']
+            for df in data['schema']["fields"]:
+                f = {}
+                for p in props:
+                    if df.get(p):
+                        f[p] = df.get(p)
+                out_schema['fields'].append(f)
+
+            # finally, for csv resources generate foreignKeys linking back to the proper geometry files
+            if res_item['path'][0].endswith(".csv"):
+
+                # figure out which shapefile...
+                scale, year = res_item['name'].split("-")
+
+                year_to_use = "2018" if year == "Latest" else "2010"
+                if scale == "T":
+                    resname = f"tracts-{year_to_use}"
+                elif scale == "Z":
+                    resname = f"zctas-{year_to_use}"
+                elif scale == "C":
+                    resname = f"counties-{year_to_use}"
+                elif scale == "S":
+                    resname = f"states-{year_to_use}"
+                else:
+                    print(res_item)
+                    raise Exception("unanticipated res_item['name']")
+
+                out_schema['foreignKeys'] = [{
+                    'fields': 'HEROP_ID',
+                    'reference': {
+                        'resource': resname,
+                        'fields': 'HEROP_ID',
+                    }
+                }]
+
+            with open(out_abspath, "w") as f:
+                json.dump(out_schema, f, indent=4)
+
+        package_json_path = Path(dest, "data-package.json")
+        with open(package_json_path, "w") as f:
+            json.dump(data_package, f, indent=4)
+
+        if zip_output:
+            print("zipping output...")
+            shutil.make_archive(f"{Path(dest.parent, dest.name)}", 'zip', dest)
+
+        print("  done.")
 
 
 class DataResource():

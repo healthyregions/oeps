@@ -1,6 +1,5 @@
 import io
 import os
-import dotenv
 
 from google.auth.transport.requests import Request
 from google.oauth2 import service_account
@@ -10,8 +9,6 @@ from google.cloud.bigquery import (
     SchemaField,
     LoadJobConfig,
 )
-
-dotenv.load_dotenv()
 
 def get_client():
     """ Creates a BigQuery Client object and returns it, acquires credentials
