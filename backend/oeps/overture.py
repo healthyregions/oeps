@@ -5,9 +5,14 @@ import uuid
 import duckdb
 import geopandas as gpd
 
+
 def get_connection():
 
     connection = duckdb.connect()
+
+    # these props must be set to empty before the query to s3, otherwise it fails. See:
+    # https://github.com/duckdb/duckdb/issues/7970#issuecomment-2118343680
+    connection.execute("SET s3_access_key_id='';SET s3_secret_access_key='';")
 
     connection.install_extension('spatial')
     connection.install_extension('httpfs')
@@ -31,8 +36,6 @@ def get_filter_shape(input_file: str, filter_value: str):
 
 def get_data(outpath: Path = None, categories: list = [], confidence: str = ".8", geom_filter: dict = None, export_category_list=False):
 
-    connection = get_connection()
-
     con_clause = f"confidence >= {confidence} AND" if confidence != "-1" else ""
     print(f"confidence filter: {con_clause}")
 
@@ -49,6 +52,8 @@ def get_data(outpath: Path = None, categories: list = [], confidence: str = ".8"
     if geom_filter:
         print("-- result will be clipped to filter geometry")
 
+    overture_url = 's3://overturemaps-us-west-2/release/2023-11-14-alpha.0/theme=places/type=*/*'
+
     query_sql = """SELECT
         FILTER(names.common, x->x.language = 'local') [ 1 ].value as name,
         categories.main as category,
@@ -58,17 +63,18 @@ def get_data(outpath: Path = None, categories: list = [], confidence: str = ".8"
         addresses[1].region as state,
         ROUND(confidence,2) as confidence,
         ST_AsText(ST_GeomFromWKB(geometry)) as wkt
-    FROM read_parquet('s3://overturemaps-us-west-2/release/2023-11-14-alpha.0/theme=places/type=*/*', filename=true, hive_partitioning=1)
+    FROM read_parquet('{}', filename=true, hive_partitioning=1)
     WHERE
         {}
         {}
         bbox.minX BETWEEN {} AND {} AND
         bbox.minY BETWEEN {} AND {}
-        """.format(con_clause, cat_clause, filter_bbox[0], filter_bbox[2], filter_bbox[1], filter_bbox[3])
+        """.format(overture_url, con_clause, cat_clause, filter_bbox[0], filter_bbox[2], filter_bbox[1], filter_bbox[3])
 
     print(query_sql)
 
     start = datetime.now()
+    connection = get_connection()
     df = connection.execute(query_sql).df()
     print(datetime.now()-start)
 
@@ -82,7 +88,7 @@ def get_data(outpath: Path = None, categories: list = [], confidence: str = ".8"
 
         fpath = outpath.name + "__categories.csv" if outpath else f"categories__{uuid.uuid4().hex}.csv"
 
-        # Write the distinct values to a CSV file (replace 'distinct_values.csv' with your desired file name)
+        # Write the distinct values to a CSV file
         distinct_values.to_csv(fpath, index=False, header=None)
 
     print(df)
