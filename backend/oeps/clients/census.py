@@ -9,13 +9,12 @@ from pathlib import Path
 
 class CensusClient():
 
-    def __init__(self):
+    def __init__(self, lookups_dir=None):
 
-        self.lookups = self.get_lookups()
+        self.lookups = self.load_lookups(lookups_dir)
 
-    def get_lookups(self):
+    def load_lookups(self, lookups_dir):
         lookups = {}
-        lookups_dir = Path(__file__).parent / "lookups"
         for f in lookups_dir.glob("*.json"):
             with open(f, 'r') as o:
                 data = json.load(o)

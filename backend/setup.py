@@ -15,5 +15,6 @@ setup(
         'boto3',
         'duckdb',
         'ruff',
+        'frictionless',
     ]
 )

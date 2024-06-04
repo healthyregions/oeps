@@ -9,18 +9,20 @@ import click
 from flask import current_app
 from flask.cli import AppGroup
 
-from oeps.bigquery import BigQuery, get_client
-from oeps.frictionless import DataResource, DataPackage
-from oeps.overture import get_filter_shape, get_data
-from oeps.census.client import CensusClient
+from oeps.clients.bigquery import BigQuery, get_client
+from oeps.clients.jcoin import DataResource, DataPackage
+from oeps.clients.overture import get_filter_shape, get_data
+from oeps.clients.census import CensusClient
 from oeps.utils import upload_to_s3
 
-frictionless_grp = AppGroup('frictionless')
+jcoin_grp = AppGroup('jcoin')
 
-@frictionless_grp.command()
+@jcoin_grp.command()
 @click.option('--destination', "-d", help="Output path for export. Must end with .csv for CSV or .shp for shapefile.")
 @click.option('--source', "-s", help="Data Resource JSON file to export, or directory with multiple files.")
 @click.option("--zip", 'zip_', is_flag=True, default=False, help="Zip the output directory.")
+@click.option("--no-cache", is_flag=True, default=False, help="Force re-download of any remote files.")
+@click.option("--skip-foreign-keys", is_flag=True, default=False, help="Don't define foreign keys in the output data package.")
 def create_data_package(**kwargs):
 
     args = Namespace(**kwargs)
@@ -29,16 +31,16 @@ def create_data_package(**kwargs):
         args.source = current_app.config['RESOURCES_DIR']
 
     dp = DataPackage()
-    dp.create(args.operation, args.destination, args.source, args.zip_)
+    dp.create(args.destination, args.source, args.zip_, no_cache=args.no_cache, skip_foreign_keys=args.skip_foreign_keys)
 
-@frictionless_grp.command()
+@jcoin_grp.command()
 def list_resources():
 
     for i in glob(os.path.join(current_app.config['RESOURCES_DIR'], '*.json')):
         print(os.path.basename(i))
                        
 
-@frictionless_grp.command()
+@jcoin_grp.command()
 @click.option('--destination', "-d", help="Output path for export. Must end with .csv for CSV or .shp for shapefile.")
 def generate_resources_from_oeps_dicts(destination):
 
@@ -49,6 +51,13 @@ def generate_resources_from_oeps_dicts(destination):
         "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/dictionaries/Z_Dict.xlsx",
     ]
 
+    paths = [
+        "~/Projects/HEROP__OEPS/repo/opioid-policy-scan/data_final/dictionaries/S_Dict.xlsx",
+        "~/Projects/HEROP__OEPS/repo/opioid-policy-scan/data_final/dictionaries/C_Dict.xlsx",
+        "~/Projects/HEROP__OEPS/repo/opioid-policy-scan/data_final/dictionaries/T_Dict.xlsx",
+        "~/Projects/HEROP__OEPS/repo/opioid-policy-scan/data_final/dictionaries/Z_Dict.xlsx",
+    ]
+
     if destination:
         out_dir = destination
         if not os.path.isdir(out_dir):
@@ -57,11 +66,11 @@ def generate_resources_from_oeps_dicts(destination):
         out_dir = current_app.config['RESOURCES_DIR']
 
     for path in paths:
-        print(path)
+        print(f"\nINPUT: {path}")
         files = DataResource().create_from_oeps_xlsx_data_dict(path, out_dir)
-        print("output resources:")
+        print("OUTPUT:")
         for f in files:
-            print(f)
+            print(f"  {f}")
 
 
 overture_grp = AppGroup('overture')
@@ -123,7 +132,7 @@ census_grp = AppGroup('census')
 )
 def get_geodata(format, geography, year, tippecanoe_path, no_cache, upload):
 
-    client = CensusClient()
+    client = CensusClient(lookups_dir=current_app.config['LOOKUPS_DIR'])
 
     to_upload = []
 
