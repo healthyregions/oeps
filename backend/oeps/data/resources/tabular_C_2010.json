@@ -1,12 +1,21 @@
 {
     "bq_dataset_name": "tabular",
     "bq_table_name": "C_2010",
-    "name": "C-2010",
-    "path": "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables/C_2010.csv",
+    "name": "c-2010",
+    "path": "/home/adam/Projects/HEROP__OEPS/repo/opioid-policy-scan/data_final/full_tables/C_2010.csv",
     "title": "OEPS Data Aggregated by Census Tract (2010)",
     "description": "This CSV aggregates all 2010 data variables from the OEPS v2 release at the Census Tract level.",
+    "scheme": "file",
     "schema": {
         "primaryKey": "HEROP_ID",
+        "missingValues": [
+            "NA",
+            " NA",
+            "  NA",
+            "   NA",
+            "    NA",
+            ""
+        ],
         "fields": [
             {
                 "name": "HEROP_ID",
@@ -21,16 +30,28 @@
                 "bq_data_type": "STRING"
             },
             {
+                "name": "GEOID",
+                "src_name": "GEOID",
+                "type": "string",
+                "example": "36061",
+                "description": "Unique 11-digit ID for Census Tracts (state + county + tract)",
+                "constraints": null,
+                "theme": "Geography",
+                "source": null,
+                "comments": null,
+                "bq_data_type": "STRING"
+            },
+            {
                 "name": "TotPop",
                 "src_name": "TotPop",
-                "type": "integer",
+                "type": "number",
                 "example": "1632480",
                 "description": "Total population",
                 "constraints": "1980-2000 historic data was acquired from NHGIS and then interpolated to modern county boundaries through a population weighted interpolation using the tidycensus `interpolate_pw` function. For 1980, the underlying population weighting was county subdivisions, while for 1990 and 200 the underlying population weighting was tracts.",
                 "theme": "Social",
                 "source": "American Community Survey 2014-2018 5 Year Estimate; 2010 Decennial Census; Integrated Public Use Microdata Series National Historic Geographic Information System",
                 "comments": "For more information about how these data have been used in homelessness and housing stability research, please refer to https://www.census.gov/newsroom/press-releases/2020/special-operations-homelessness.html or https://www.americanprogress.org/issues/poverty/reports/2020/10/05/491122/count-people-where-they-are/.",
-                "bq_data_type": "INTEGER"
+                "bq_data_type": "FLOAT"
             },
             {
                 "name": "TotVetPop",
@@ -47,14 +68,14 @@
             {
                 "name": "TotUnits",
                 "src_name": "TotUnits",
-                "type": "integer",
+                "type": "number",
                 "example": "874237",
                 "description": "Count of total occupied housing units",
                 "constraints": "1980-2000 historic data was  interpolated onto 2010 county geographies by Social Explorer.",
                 "theme": "Environment",
                 "source": "American Community Survey 2014-2018 5 Year Estimate; American Community Survey 2008-2012; Social Explorer Historic Census Data on 2010 Geometries",
                 "comments": null,
-                "bq_data_type": "INTEGER"
+                "bq_data_type": "FLOAT"
             },
             {
                 "name": "WhiteP",
@@ -141,18 +162,6 @@
                 "bq_data_type": "FLOAT"
             },
             {
-                "name": "ChildrenP",
-                "src_name": "ChildrenP",
-                "type": "number",
-                "example": "0.14",
-                "description": "Percentage of population under age 18",
-                "constraints": "1980-2000 historic data was acquired from NHGIS and then interpolated to modern county boundaries through a population weighted interpolation using the tidycensus `interpolate_pw` function. For 1980, the underlying population weighting was county subdivisions, while for 1990 and 200 the underlying population weighting was tracts.",
-                "theme": "Social",
-                "source": "American Community Survey 2014-2018 5 Year Estimate; 2010 Decennial Census; Integrated Public Use Microdata Series National Historic Geographic Information System",
-                "comments": null,
-                "bq_data_type": "FLOAT"
-            },
-            {
                 "name": "Age15_24P",
                 "src_name": "Age15_24P",
                 "type": "number",
@@ -191,134 +200,134 @@
             {
                 "name": "Age0_4",
                 "src_name": "Age0_4",
-                "type": "integer",
+                "type": "number",
                 "example": "79897",
                 "description": "Total population between age 0-4",
                 "constraints": "1980-2000 historic data was acquired from NHGIS and then interpolated to modern county boundaries through a population weighted interpolation using the tidycensus `interpolate_pw` function. For 1980, the underlying population weighting was county subdivisions, while for 1990 and 200 the underlying population weighting was tracts.",
                 "theme": "Social",
                 "source": "American Community Survey 2014-2018 5 Year Estimate; 2010 Decennial Census; Integrated Public Use Microdata Series National Historic Geographic Information System",
                 "comments": null,
-                "bq_data_type": "INTEGER"
+                "bq_data_type": "FLOAT"
             },
             {
                 "name": "Age5_14",
                 "src_name": "Age5_14",
-                "type": "integer",
+                "type": "number",
                 "example": "122034",
                 "description": "Total population between age 5-14",
                 "constraints": "1980-2000 historic data was acquired from NHGIS and then interpolated to modern county boundaries through a population weighted interpolation using the tidycensus `interpolate_pw` function. For 1980, the underlying population weighting was county subdivisions, while for 1990 and 200 the underlying population weighting was tracts.",
                 "theme": "Social",
                 "source": "American Community Survey 2014-2018 5 Year Estimate; 2010 Decennial Census; Integrated Public Use Microdata Series National Historic Geographic Information System",
                 "comments": null,
-                "bq_data_type": "INTEGER"
+                "bq_data_type": "FLOAT"
             },
             {
                 "name": "Age15_19",
                 "src_name": "Age15_19",
-                "type": "integer",
+                "type": "number",
                 "example": "68706",
                 "description": "Total population between age 15-19",
                 "constraints": "1980-2000 historic data was acquired from NHGIS and then interpolated to modern county boundaries through a population weighted interpolation using the tidycensus `interpolate_pw` function. For 1980, the underlying population weighting was county subdivisions, while for 1990 and 200 the underlying population weighting was tracts.",
                 "theme": "Social",
                 "source": "American Community Survey 2014-2018 5 Year Estimate; 2010 Decennial Census; Integrated Public Use Microdata Series National Historic Geographic Information System",
                 "comments": null,
-                "bq_data_type": "INTEGER"
+                "bq_data_type": "FLOAT"
             },
             {
                 "name": "Age20_24",
                 "src_name": "Age20_24",
-                "type": "integer",
+                "type": "number",
                 "example": "114772",
                 "description": "Total population between age 20-24",
                 "constraints": "1980-2000 historic data was acquired from NHGIS and then interpolated to modern county boundaries through a population weighted interpolation using the tidycensus `interpolate_pw` function. For 1980, the underlying population weighting was county subdivisions, while for 1990 and 200 the underlying population weighting was tracts.",
                 "theme": "Social",
                 "source": "American Community Survey 2014-2018 5 Year Estimate; 2010 Decennial Census; Integrated Public Use Microdata Series National Historic Geographic Information System",
                 "comments": null,
-                "bq_data_type": "INTEGER"
+                "bq_data_type": "FLOAT"
             },
             {
                 "name": "Age15_44",
                 "src_name": "Age15_44",
-                "type": "integer",
+                "type": "number",
                 "example": "784568",
                 "description": "Total population between age 15-44",
                 "constraints": "1980-2000 historic data was acquired from NHGIS and then interpolated to modern county boundaries through a population weighted interpolation using the tidycensus `interpolate_pw` function. For 1980, the underlying population weighting was county subdivisions, while for 1990 and 200 the underlying population weighting was tracts.",
                 "theme": "Social",
                 "source": "American Community Survey 2014-2018 5 Year Estimate; 2010 Decennial Census; Integrated Public Use Microdata Series National Historic Geographic Information System",
                 "comments": null,
-                "bq_data_type": "INTEGER"
+                "bq_data_type": "FLOAT"
             },
             {
                 "name": "Age45_49",
                 "src_name": "Age45_49",
-                "type": "integer",
+                "type": "number",
                 "example": "103680",
                 "description": "Total population between age 45-49",
                 "constraints": "1980-2000 historic data was acquired from NHGIS and then interpolated to modern county boundaries through a population weighted interpolation using the tidycensus `interpolate_pw` function. For 1980, the underlying population weighting was county subdivisions, while for 1990 and 200 the underlying population weighting was tracts.",
                 "theme": "Social",
                 "source": "American Community Survey 2014-2018 5 Year Estimate",
                 "comments": null,
-                "bq_data_type": "INTEGER"
+                "bq_data_type": "FLOAT"
             },
             {
                 "name": "Age50_54",
                 "src_name": "Age50_54",
-                "type": "integer",
+                "type": "number",
                 "example": "100146",
                 "description": "Total population between age 50-54",
                 "constraints": "1980-2000 historic data was acquired from NHGIS and then interpolated to modern county boundaries through a population weighted interpolation using the tidycensus `interpolate_pw` function. For 1980, the underlying population weighting was county subdivisions, while for 1990 and 200 the underlying population weighting was tracts.",
                 "theme": "Social",
                 "source": "American Community Survey 2014-2018 5 Year Estimate",
                 "comments": null,
-                "bq_data_type": "INTEGER"
+                "bq_data_type": "FLOAT"
             },
             {
                 "name": "Age55_59",
                 "src_name": "Age55_59",
-                "type": "integer",
+                "type": "number",
                 "example": "94082",
                 "description": "Total population between age 55-59",
                 "constraints": "1980-2000 historic data was acquired from NHGIS and then interpolated to modern county boundaries through a population weighted interpolation using the tidycensus `interpolate_pw` function. For 1980, the underlying population weighting was county subdivisions, while for 1990 and 200 the underlying population weighting was tracts.",
                 "theme": "Social",
                 "source": "American Community Survey 2014-2018 5 Year Estimate; 2010 Decennial Census; Integrated Public Use Microdata Series National Historic Geographic Information System",
                 "comments": null,
-                "bq_data_type": "INTEGER"
+                "bq_data_type": "FLOAT"
             },
             {
                 "name": "Age60_64",
                 "src_name": "Age60_64",
-                "type": "integer",
+                "type": "number",
                 "example": "90711",
                 "description": "Total population between age 60-64",
                 "constraints": "1980-2000 historic data was acquired from NHGIS and then interpolated to modern county boundaries through a population weighted interpolation using the tidycensus `interpolate_pw` function. For 1980, the underlying population weighting was county subdivisions, while for 1990 and 200 the underlying population weighting was tracts.",
                 "theme": "Social",
                 "source": "American Community Survey 2014-2018 5 Year Estimate; 2010 Decennial Census; Integrated Public Use Microdata Series National Historic Geographic Information System",
                 "comments": null,
-                "bq_data_type": "INTEGER"
+                "bq_data_type": "FLOAT"
             },
             {
                 "name": "AgeOv65",
                 "src_name": "AgeOv65",
-                "type": "integer",
+                "type": "number",
                 "example": "257362",
                 "description": "Total population at or over age 65",
                 "constraints": "1980-2000 historic data was acquired from NHGIS and then interpolated to modern county boundaries through a population weighted interpolation using the tidycensus `interpolate_pw` function. For 1980, the underlying population weighting was county subdivisions, while for 1990 and 200 the underlying population weighting was tracts.",
                 "theme": "Social",
                 "source": "American Community Survey 2014-2018 5 Year Estimate; 2010 Decennial Census; Integrated Public Use Microdata Series National Historic Geographic Information System",
                 "comments": null,
-                "bq_data_type": "INTEGER"
+                "bq_data_type": "FLOAT"
             },
             {
                 "name": "Age18_64",
                 "src_name": "Age18_64",
-                "type": "integer",
+                "type": "number",
                 "example": "1139347",
                 "description": "Total adult population under age 65",
                 "constraints": "1980-2000 historic data was acquired from NHGIS and then interpolated to modern county boundaries through a population weighted interpolation using the tidycensus `interpolate_pw` function. For 1980, the underlying population weighting was county subdivisions, while for 1990 and 200 the underlying population weighting was tracts.",
                 "theme": "Social",
                 "source": "American Community Survey 2014-2018 5 Year Estimate; 2010 Decennial Census; Integrated Public Use Microdata Series National Historic Geographic Information System",
                 "comments": null,
-                "bq_data_type": "INTEGER"
+                "bq_data_type": "FLOAT"
             },
             {
                 "name": "DisbP",
@@ -425,6 +434,18 @@
                 "constraints": "1980-2000 historic data was  interpolated onto 2010 county geographies by Social Explorer.",
                 "theme": "Environment",
                 "source": "American Community Survey 2014-2018 5 Year Estimate; American Community Survey 2008-2012 5 Year Estimate; Social Explorer Historic Data on 2010 Geographies",
+                "comments": null,
+                "bq_data_type": "FLOAT"
+            },
+            {
+                "name": "ChildrenP",
+                "src_name": "ChildrenP",
+                "type": "number",
+                "example": "0.14",
+                "description": "Percentage of population under age 18",
+                "constraints": "1980-2000 historic data was acquired from NHGIS and then interpolated to modern county boundaries through a population weighted interpolation using the tidycensus `interpolate_pw` function. For 1980, the underlying population weighting was county subdivisions, while for 1990 and 200 the underlying population weighting was tracts.",
+                "theme": "Social",
+                "source": "American Community Survey 2014-2018 5 Year Estimate; 2010 Decennial Census; Integrated Public Use Microdata Series National Historic Geographic Information System",
                 "comments": null,
                 "bq_data_type": "FLOAT"
             }

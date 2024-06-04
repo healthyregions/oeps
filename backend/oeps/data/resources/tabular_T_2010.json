@@ -1,12 +1,21 @@
 {
     "bq_dataset_name": "tabular",
     "bq_table_name": "T_2010",
-    "name": "T-2010",
-    "path": "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables/T_2010.csv",
+    "name": "t-2010",
+    "path": "/home/adam/Projects/HEROP__OEPS/repo/opioid-policy-scan/data_final/full_tables/T_2010.csv",
     "title": "OEPS Data Aggregated by County (2010)",
     "description": "This CSV aggregates all 2010 data variables from the OEPS v2 release at the County level.",
+    "scheme": "file",
     "schema": {
         "primaryKey": "HEROP_ID",
+        "missingValues": [
+            "NA",
+            " NA",
+            "  NA",
+            "   NA",
+            "    NA",
+            ""
+        ],
         "fields": [
             {
                 "name": "HEROP_ID",
@@ -18,6 +27,18 @@
                 "theme": "Geography",
                 "source": null,
                 "comments": "The HEROP_ID is generated as follows: Summary Level Code + \"US\" + GEOID + \u201c-\u201d + Year. In the case of Census Tract geographies, Summary Level Code is 140 and GEOID is State FP + County FP + Tract CE.",
+                "bq_data_type": "STRING"
+            },
+            {
+                "name": "GEOID",
+                "src_name": "GEOID",
+                "type": "string",
+                "example": "01003010705",
+                "description": "Eleven digit unique geographic identifier consisting of the STATEFP, COUNTYFP, and TRACTCE.",
+                "constraints": null,
+                "theme": "Geography",
+                "source": "Tiger/Line 2018 Shapefiles; Tiger/Line 2010 Shapefiles",
+                "comments": null,
                 "bq_data_type": "STRING"
             },
             {

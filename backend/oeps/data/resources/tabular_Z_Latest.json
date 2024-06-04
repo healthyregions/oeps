@@ -1,12 +1,21 @@
 {
     "bq_dataset_name": "tabular",
     "bq_table_name": "Z_Latest",
-    "name": "Z-Latest",
-    "path": "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables/Z_Latest.csv",
+    "name": "z-latest",
+    "path": "/home/adam/Projects/HEROP__OEPS/repo/opioid-policy-scan/data_final/full_tables/Z_Latest.csv",
     "title": "OEPS Data Aggregated by Zip-Code Tabulation Area (ZCTA) (Latest)",
     "description": "This CSV aggregates all Latest data variables from the OEPS v2 release at the Zip-Code Tabulation Area (ZCTA) level.",
+    "scheme": "file",
     "schema": {
         "primaryKey": "HEROP_ID",
+        "missingValues": [
+            "NA",
+            " NA",
+            "  NA",
+            "   NA",
+            "    NA",
+            ""
+        ],
         "fields": [
             {
                 "name": "HEROP_ID",
@@ -18,6 +27,18 @@
                 "theme": "Geography",
                 "source": null,
                 "comments": "The HEROP_ID is generated as follows: Summary Level Code + \"US\" + GEOID + \u201c-\u201d + Year. In the case of ZCTA geographies, Summary Level Code is 860 and GEOID is the 5-digit Zip Code.",
+                "bq_data_type": "STRING"
+            },
+            {
+                "name": "GEOID",
+                "src_name": "GEOID",
+                "type": "string",
+                "example": "01001",
+                "description": "Five digit ZIP code identifier.",
+                "constraints": " ",
+                "theme": "Geography",
+                "source": "Tiger/Line 2018 Shapefiles",
+                "comments": null,
                 "bq_data_type": "STRING"
             },
             {
@@ -1403,14 +1424,14 @@
             {
                 "name": "OtpCntDr",
                 "src_name": "OtpCntDr",
-                "type": "integer",
-                "example": "8.84",
+                "type": "number",
+                "example": "1",
                 "description": "Count of OTPs within a 30-minute driving threshold",
                 "constraints": "*Euclidean distance or straight-line distance is a simple approximation of distance or travel time from an origin centroid to the nearest health center. It is not a precise calculation of real travel times or distances.",
                 "theme": "Environment",
                 "source": "U.S. Substance Abuse and Mental Health Services Administration Treatment Locator, 2021",
                 "comments": "This dataset includes all US states, Washington D.C., and Puerto Rico. It does not include the territories Guam, Northern Mariana Islands, American Samoa, Palau. Zip code and tract centroids are not population-weighted.",
-                "bq_data_type": "INTEGER"
+                "bq_data_type": "FLOAT"
             },
             {
                 "name": "SviTh1",
