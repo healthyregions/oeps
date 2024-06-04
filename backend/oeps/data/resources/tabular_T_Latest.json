@@ -1,12 +1,21 @@
 {
     "bq_dataset_name": "tabular",
     "bq_table_name": "T_Latest",
-    "name": "T-Latest",
-    "path": "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables/T_Latest.csv",
+    "name": "t-latest",
+    "path": "/home/adam/Projects/HEROP__OEPS/repo/opioid-policy-scan/data_final/full_tables/T_Latest.csv",
     "title": "OEPS Data Aggregated by County (Latest)",
     "description": "This CSV aggregates all Latest data variables from the OEPS v2 release at the County level.",
+    "scheme": "file",
     "schema": {
         "primaryKey": "HEROP_ID",
+        "missingValues": [
+            "NA",
+            " NA",
+            "  NA",
+            "   NA",
+            "    NA",
+            ""
+        ],
         "fields": [
             {
                 "name": "HEROP_ID",
@@ -18,6 +27,18 @@
                 "theme": "Geography",
                 "source": null,
                 "comments": "The HEROP_ID is generated as follows: Summary Level Code + \"US\" + GEOID + \u201c-\u201d + Year. In the case of Census Tract geographies, Summary Level Code is 140 and GEOID is State FP + County FP + Tract CE.",
+                "bq_data_type": "STRING"
+            },
+            {
+                "name": "GEOID",
+                "src_name": "GEOID",
+                "type": "string",
+                "example": "01003010705",
+                "description": "Eleven digit unique geographic identifier consisting of the STATEFP, COUNTYFP, and TRACTCE.",
+                "constraints": null,
+                "theme": "Geography",
+                "source": "Tiger/Line 2018 Shapefiles; Tiger/Line 2010 Shapefiles",
+                "comments": null,
                 "bq_data_type": "STRING"
             },
             {
@@ -515,14 +536,14 @@
             {
                 "name": "ForDqTot",
                 "src_name": "ForDqTot",
-                "type": "integer",
+                "type": "number",
                 "example": "128",
                 "description": "Estimated number of mortgages to start foreclosure process or be seriously delinquent during the 2008 Recession",
                 "constraints": "The data reflects 2007-2008 estimates. Note again, via NSP2 Data and Methodology: The estimated rate of foreclosure problems do not reflect \"real\" numbers of foreclosures but rather reflect neighborhood characteristics that are estimated to have a high level of risk for foreclosure.",
                 "theme": "Economic",
                 "source": "U.S. Department of Housing and Urban Development Neighborhood Stabilization Program",
                 "comments": "For more recent county, state, and metro area data on mortgage delinquencies, see Mortgage Performance Trends data from the U.S. Consumer Financial Protection Bureau.",
-                "bq_data_type": "INTEGER"
+                "bq_data_type": "FLOAT"
             },
             {
                 "name": "GiniCoeff",
