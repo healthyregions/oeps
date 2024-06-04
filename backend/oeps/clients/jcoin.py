@@ -1,4 +1,5 @@
 import os
+import csv
 import json
 import numpy
 import shutil
@@ -6,12 +7,17 @@ import pandas as pd
 import geopandas as gpd
 from pathlib import Path
 
-from oeps.utils import get_path_or_paths, download_path
+from frictionless import validate, Package
+
+from oeps.utils import get_path_or_paths, fetch_files
 
 
 class DataPackage():
 
-    def create(self, destination, source, zip_output: bool):
+    def create(self, destination, source,
+               zip_output: bool=False,
+               no_cache: bool=False,
+               skip_foreign_keys: bool=False):
         """ Single command to generate an output data package. Should be refactored to more
         modular methods on this class."""
 
@@ -54,7 +60,7 @@ class DataPackage():
             out_abspath = Path(s_path, out_filename)
 
             # copy the data files and generate the list of local paths
-            local_paths = download_path(data.pop("path"), d_path)
+            local_paths = fetch_files(data.pop("path"), d_path, no_cache=no_cache)
 
             # create the resource item that will be placed in the data package json
             paths = [f"data/{i.name}" for i in local_paths]
@@ -63,13 +69,14 @@ class DataPackage():
                 "title": data.get('title', ''),
                 "description": data.get('description', ''),
                 "path": paths,
-                "schema": out_relpath
+                "schema": out_relpath,
             }
             data_package['resources'].append(res_item)
 
             # now create the schema that will be stored in the separate data resource file
             out_schema = {
                 "primaryKey": data['schema'].get('primaryKey'),
+                "missingValues": data['schema'].get('missingValues', []),
                 "fields": [],
             }
             
@@ -83,31 +90,32 @@ class DataPackage():
                 out_schema['fields'].append(f)
 
             # finally, for csv resources generate foreignKeys linking back to the proper geometry files
-            if res_item['path'][0].endswith(".csv"):
+            if not skip_foreign_keys:
+                if res_item['path'][0].endswith(".csv"):
 
-                # figure out which shapefile...
-                scale, year = res_item['name'].split("-")
+                    # figure out which shapefile...
+                    scale, year = res_item['name'].split("-")
 
-                year_to_use = "2018" if year == "Latest" else "2010"
-                if scale == "T":
-                    resname = f"tracts-{year_to_use}"
-                elif scale == "Z":
-                    resname = f"zctas-{year_to_use}"
-                elif scale == "C":
-                    resname = f"counties-{year_to_use}"
-                elif scale == "S":
-                    resname = f"states-{year_to_use}"
-                else:
-                    print(res_item)
-                    raise Exception("unanticipated res_item['name']")
+                    year_to_use = "2018" if year == "Latest" else "2010"
+                    if scale == "t":
+                        resname = f"tracts-{year_to_use}"
+                    elif scale == "z":
+                        resname = f"zctas-{year_to_use}"
+                    elif scale == "c":
+                        resname = f"counties-{year_to_use}"
+                    elif scale == "s":
+                        resname = f"states-{year_to_use}"
+                    else:
+                        print(res_item)
+                        raise Exception("unanticipated res_item['name']")
 
-                out_schema['foreignKeys'] = [{
-                    'fields': 'HEROP_ID',
-                    'reference': {
-                        'resource': resname,
+                    out_schema['foreignKeys'] = [{
                         'fields': 'HEROP_ID',
-                    }
-                }]
+                        'reference': {
+                            'resource': resname,
+                            'fields': 'HEROP_ID',
+                        }
+                    }]
 
             with open(out_abspath, "w") as f:
                 json.dump(out_schema, f, indent=4)
@@ -116,11 +124,75 @@ class DataPackage():
         with open(package_json_path, "w") as f:
             json.dump(data_package, f, indent=4)
 
+        self.trim_fields(package_json_path)
+
+        print("\nvalidating output data package...")
+        report = validate(package_json_path, skip_errors=['type-error'])
+
+        print("VALIDATION REPORT SUMMARY:")
+        for t in report.tasks:
+            print(t.name, t.stats['errors'])
+            for n, err in enumerate(t.errors):
+                if n == 10:
+                    break
+                err_dict = err.to_dict()
+                try:
+                    err_dict.pop('cells')
+                except KeyError:
+                    pass
+                print(err_dict)
+        
+        print(f"Totals: {report.stats}")
+
+        report.to_json(Path(dest, "error-report.json"))
+
         if zip_output:
             print("zipping output...")
             shutil.make_archive(f"{Path(dest.parent, dest.name)}", 'zip', dest)
 
         print("  done.")
+
+    def trim_fields(self, package_json_path):
+
+        with open(package_json_path, "r") as o:
+            pkg = json.load(o)
+
+        for res in pkg['resources']:
+            if len(res['path']) > 1:
+                continue
+            data_path = package_json_path.parent / res['path'][0]
+            schema_path = package_json_path.parent / res['schema']
+        
+            with open(schema_path, "r") as o:
+                schema = json.load(o)
+                schema_field_names = [i['name'] for i in schema['fields']]
+            
+            with open(data_path, "r") as o:
+                dict_reader = csv.DictReader(o)
+                header_row = next(dict_reader)
+                data_headers = list(header_row.keys())
+                original_rows = [i for i in dict_reader]
+
+            extra_cols = [i for i in data_headers if i not in schema_field_names]
+            print(extra_cols)
+
+            if extra_cols:
+
+                clean_rows = []
+                for row in original_rows:
+                    for col in extra_cols:
+                        del row[col]
+                    clean_rows.append(row)
+
+                with open(data_path, 'w') as o:
+                    writer = csv.DictWriter(o, fieldnames=schema_field_names)
+                    writer.writeheader()
+                    writer.writerows(clean_rows)
+
+            #     fixed_df = csv_df.drop(columns=extra_cols)
+            #     fixed_df.to_csv(data_path, index=False)
+
+                # csv_df.to_csv(str(data_path.parent / data_path.stem) + "-fixed.csv", index=False)
 
 
 class DataResource():
@@ -175,7 +247,7 @@ class DataResource():
             'theme': data_dict_row.loc['Theme'],
             'source': data_dict_row.loc['Source Long'],
             'comments': data_dict_row.loc['Comments'],
-            'bq_data_type': self.oeps_type_to_bq_type(data_dict_row.loc['Type'])
+            'bq_data_type': self.oeps_type_to_bq_type(data_dict_row.loc['Type']),
         }
 
         # fix float('nan') ("not a number") values which seem to pop up.
@@ -192,7 +264,7 @@ class DataResource():
         "fields" array for the data dictionary.  """
 
         SKIP_FIELDS = [
-            'GEOID',
+            # 'GEOID',
             'G_STATEFP',
             'STUSPS',
             'TRACTCE',
@@ -210,11 +282,50 @@ class DataResource():
             fields.append(self.make_field_entry(data_dict.iloc[row]))
 
         return fields
+    
+    def sort_fields(self):
+        """ Look in the schema, find the source file, and sort the field list based on the file header."""
+
+        print(self.schema['path'])
+        df = pd.read_csv(self.schema['path'])
+        headers = list(df)
+        schema_fields = [i['name'] for i in self.schema['schema']['fields']]
+
+
+        ## CHECK WHETHER THERE ARE MISSING FIELDS IN THE CSV OR SCHEMA
+        extra_in_csv = [i for i in headers if i not in schema_fields]
+        extra_in_schema = [i for i in schema_fields if i not in headers]
+
+        presence_test_passed = False
+        if not extra_in_csv and not extra_in_schema:
+            print("  PASS: all expected fields are present in CSV and in schema")
+            presence_test_passed = True
+
+        else:
+            print("  FAIL: discrepancies between fields that are present in CSV and in schema")
+            print(f"    extra_in_csv: {extra_in_csv}")
+            print(f"    extra_in_schema: {extra_in_schema}")
+
+        if not presence_test_passed:
+            return
+        
+        ## SET THE ORDER OF THE FIELDS IN SCHEMA TO MATCH CSV
+        if not headers == schema_fields:
+            reordered_fields = []
+            for col_name in headers:
+                for field_def in self.schema['schema']['fields']:
+                    if field_def['name'] == col_name:
+                        reordered_fields.append(field_def)
+            self.schema['schema']['fields'] = reordered_fields
+            schema_fields = [i['name'] for i in self.schema['schema']['fields']]
+        
+        print(f"  FIELD ORDER MATCH: {headers == schema_fields}")
 
     def create_from_oeps_xlsx_data_dict(self, xlsx_file, dest_directory):
         """ Creates a schema from our pre-made external data dictionaries. """
 
         REPO_BASE_URL = "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables"
+        REPO_BASE_URL = "/home/adam/Projects/HEROP__OEPS/repo/opioid-policy-scan/data_final/full_tables"
         GY_LOOKUP = {
             'S': [1980, 1990, 2000, 2010, 'Latest'],
             'C': [1980, 1990, 2000, 2010, 'Latest'],
@@ -276,15 +387,20 @@ class DataResource():
             self.schema = {
                 'bq_dataset_name': dataset,
                 'bq_table_name':  f'{geo}_{year}',
-                'name': f'{geo}-{year}',
+                'name': f'{geo}-{year}'.lower(),
                 'path': dataset_path,
                 'title': title,
                 'description': description,
+                'scheme': 'file',
                 'schema': {
                     'primaryKey': 'HEROP_ID',
+                    # very sloppy way of handling sloppy data, for now.......
+                    'missingValues': ["NA", " NA", "  NA", "   NA", "    NA", ""],
                     'fields': self.make_fields(data_dict)
                 }
             }
+
+            self.sort_fields()
 
             out_path = os.path.join(dest_directory, f'{dataset}_{geo}_{year}.json')
             self.export_schema(out_path)

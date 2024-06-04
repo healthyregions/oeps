@@ -1,6 +1,7 @@
 import os
 import sys
 import json
+import shutil
 import threading
 import boto3
 import requests
@@ -61,26 +62,35 @@ def get_path_or_paths(path_input, extension=None):
     
     return paths
 
-def download_path(path, out_dir):
-    """ Takes an input url to a file and downloads it to specified dir.
-    If that url points to a .shp file, attempt to download sidecars
-    as well. Return only the path to the file from the original
-    url. """
+def fetch_files(paths, out_dir, no_cache: bool=False):
+    """ Takes an input list of urls or local paths to fetch into the specified dir.
+    Returns a list of paths to the new files.
+    
+    Will skip existing files unless no_cache=True."""
 
-    if not isinstance(path, list):
-        path = [path]
+    if not isinstance(paths, list):
+        paths = [paths]
 
     local_paths = []
-    for url in path:
-        name = url.split("/")[-1]
-        response = requests.get(url, stream=True)
-        if response.status_code == 200:
-            out_path = Path(out_dir, name)
-            print(f"  get: {url} --> {out_path}")
-            with open(Path(out_dir, name), mode="wb") as file:
-                for chunk in response.iter_content(chunk_size=10 * 1024):
-                    file.write(chunk)
-            local_paths.append(out_path)
+    for path in paths:
+        name = path.split("/")[-1]
+        out_path = Path(out_dir, name)
+        print(f"  get: {path} --> {out_path}")
+        if not out_path.exists() or no_cache:
+            if path.startswith("http"):
+                response = requests.get(path, stream=True)
+                if response.status_code == 200:
+                    with open(Path(out_dir, name), mode="wb") as file:
+                        for chunk in response.iter_content(chunk_size=10 * 1024):
+                            file.write(chunk)
+                else:
+                    print(response)
+            else:
+                shutil.copy(path, out_path)
+        else:
+            print("  -- using cached local file")
+                
+        local_paths.append(out_path)
 
     return local_paths
 
