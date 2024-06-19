@@ -8,7 +8,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm'
 import Footer from "../../components/layout/Footer";
 
-const BASE_DOCS_URL = 'https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/v1.0/data_final/metadata/'
+const BASE_DOCS_URL = 'https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/metadata/'
 const fetchMarkdown = async (url) => await fetch(url).then(r => r.text()).then(r => r.replace('[here](/data_final).', '[here](/download).'))
 
 export default function MarkdownDocs() {

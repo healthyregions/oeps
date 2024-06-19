@@ -31,12 +31,11 @@ const VariableTable = ({table, filters}) =>
 
 const tableNames = [
   "Geographic Boundaries",
-  "Policy Variables",
-  "Health Variables",
-  "Demographic Variables",
+  "Social Variables",
   "Economic Variables",
+  "Policy Variables",
   "Physical Environment Variables",
-  "COVID Variables"
+  "Outcome Variables"
 ]
 
 const uniqueScales = [
