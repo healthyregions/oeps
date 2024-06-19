@@ -22,7 +22,7 @@ const VariableTable = ({table, filters}) =>
       <td width="15%">{row['Variable Construct']}</td>
       <td width="25%">{row['Variable Proxy']}</td>
       <td width="15%">{row['Source']}</td>
-      <td width="15%">{row['markdownPrefix']}<a href={`docs/${row['markdown']}`}>{row['markdownText']}</a></td>
+      <td width="15%"><a href={`docs/${row['markdown']}`}>{row['markdownText']}</a></td>
       <td width="15%">{row['Spatial Scale']}</td>
     </tr> : null)}
     </tbody>
