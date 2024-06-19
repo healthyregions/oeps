@@ -11,15 +11,25 @@ export const variables = {
       'Variable Construct': 'Geographic Boundaries'
     },
     {
-      'Variable Proxy': 'County, Census Tract, Zip Code Tract Area (ZCTA)',
-      Source: 'HUD’s Office of Policy Development and Research (PD&R)',
-      Metadata: '<a href="https://github.com/GeoDaCenter/opioid-policy-scan/v1.0/data_final/metadata/crosswalk.md">Crosswalk Files</a>',
-      'Spatial Scale': 'County, Tract, Zip',
+      'Variable Proxy': 'State, County, Census Tract, Zip Code Tract Area (ZCTA)',
+      Source: 'US Census, 2010',
+      Metadata: '<a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/GeographicBoundaries_2018.md">Geographic Boundaries</a>',
+      'Spatial Scale': 'State, County, Tract, Zip',
       markdownPrefix: '',
-      markdownText: 'Crosswalk Files',
-      markdown: 'crosswalk',
-      'Variable Construct': 'Crosswalk files'
-    }
+      markdownText: 'Geographic Boundaries',
+      markdown: 'GeographicBoundaries_2010',
+      'Variable Construct': 'Geographic Boundaries'
+    }//,
+    // {
+    //   'Variable Proxy': 'County, Census Tract, Zip Code Tract Area (ZCTA)',
+    //   Source: 'HUD’s Office of Policy Development and Research (PD&R)',
+    //   Metadata: '<a href="https://github.com/GeoDaCenter/opioid-policy-scan/v1.0/data_final/metadata/crosswalk.md">Crosswalk Files</a>',
+    //   'Spatial Scale': 'County, Tract, Zip',
+    //   markdownPrefix: '',
+    //   markdownText: 'Crosswalk Files',
+    //   markdown: 'crosswalk',
+    //   'Variable Construct': 'Crosswalk files'
+    // }
   ],
   'Policy Variables': [
     {
@@ -75,23 +85,24 @@ export const variables = {
     {
       'Variable Proxy': 'Total Medicaid spending',
       Source: 'KFF, 2019',
-      Metadata: 'PS06 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/MedExp_2019.md">MedExp</a>',
+      Metadata: 'PS06 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/MedExp_2018_19.md">MedExp</a>',
       'Spatial Scale': 'State',
       markdownPrefix: 'PS06 / ',
       markdownText: 'MedExp',
-      markdown: 'MedExp_2019',
+      markdown: 'MedExp_2018_19',
       'Variable Construct': 'Medicaid Expenditure'
     },
-    {
-      'Variable Proxy': 'Spending for adults who have enrolled through Medicaid expansion',
-      Source: 'KFF, 2018',
-      Metadata: 'PS07 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/MedExpan_2018.md">MedExpan</a>',
-      'Spatial Scale': 'State',
-      markdownPrefix: 'PS07 / ',
-      markdownText: 'MedExpan',
-      markdown: 'MedExpan_2018',
-      'Variable Construct': 'Medicaid Expansion'
-    },
+    // This doesn't appear in the current suite of metadata files.
+    // {
+    //   'Variable Proxy': 'Spending for adults who have enrolled through Medicaid expansion',
+    //   Source: 'KFF, 2018',
+    //   Metadata: 'PS07 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/MedExpan_2018.md">MedExpan</a>',
+    //   'Spatial Scale': 'State',
+    //   markdownPrefix: 'PS07 / ',
+    //   markdownText: 'MedExpan',
+    //   markdown: 'MedExpan_2018',
+    //   'Variable Construct': 'Medicaid Expansion'
+    // },
     {
       'Variable Proxy': 'Laws clarifying legal status for syringe exchange, distribution, and possession programs',
       Source: 'LawAtlas, 2019',
@@ -124,7 +135,7 @@ export const variables = {
     }
   ],
 
-  'Health Variables': [
+  'Outcome Variables': [
     {
       'Variable Proxy': 'Death rate from drug-related causes',
       Source: 'CDC WONDER, 2009-2019',
@@ -138,26 +149,16 @@ export const variables = {
     {
       'Variable Proxy': 'HepC prevalence and mortality',
       Source: 'HepVu, 2017',
-      Metadata: 'Health02 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan//data_final/metadata/HepC_rate.md">Hepatitis C</a>',
+      Metadata: 'Health02 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan//data_final/metadata/HepC.md">Hepatitis C</a>',
       'Spatial Scale': 'State, County',
       markdownPrefix: 'Health02 / ',
       markdownText: 'Hepatitis C',
-      markdown: 'HepC_rate',
+      markdown: 'HepC',
       'Variable Construct': 'Hepatitis C rates'
     },
     {
-      'Variable Proxy': 'Number of Primary Care and Specialist Physicians',
-      Source: 'Dartmouth Atlas, 2010',
-      Metadata: 'Health03 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Health_PCPs.md">Physicians</a>',
-      'Spatial Scale': 'Tract, County, State',
-      markdownPrefix: 'Health03 / ',
-      markdownText: 'Physicians',
-      markdown: 'Health_PCPs',
-      'Variable Construct': 'Physicians'
-    },
-    {
       'Variable Proxy': 'Opioid Prescription Rates',
-      Source: 'HepVu, CDC, 2018-2019',
+      Source: 'HepVu 2020',
       Metadata: 'Health04 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/OpioidIndicators.md">Opioid Indicators</a>',
       'Spatial Scale': 'County, State',
       markdownPrefix: 'Health04 / ',
@@ -167,13 +168,311 @@ export const variables = {
     },
     {
       'Variable Proxy': 'Opioid Mortality Rates',
-      Source: 'HepVu, NVSS, 2014-2019',
+      Source: 'HepVu 2020',
       Metadata: 'Health04 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/OpioidIndicators.md">Opioid Indicators</a>',
       'Spatial Scale': 'County, State',
       markdownPrefix: 'Health04 / ',
       markdownText: 'Opioid Mortality Rates',
       markdown: 'OpioidIndicators',
       'Variable Construct': 'Opioid Mortality Rates'
+    },
+  ],
+
+  'Social Variables': [
+    {
+      'Variable Proxy': 'Percentages of population defined by categories of race and ethnicity',
+      Source: 'ACS 2018, 5-Year; Census 2010; IPUMS NHGIS',
+      Metadata: 'DS01/ <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Race_Ethnicity_2018.md">Race & Ethnicity Variables</a>',
+      'Spatial Scale': 'State, County, Tract, Zip',
+      markdownPrefix: 'DS01 / ',
+      markdownText: 'Race & Ethnicity Variables',
+      markdown: 'Race_Ethnicity_2018',
+      'Variable Construct': 'Race & Ethnicity'
+    },
+    {
+      'Variable Proxy': 'Age group estimates and percentages of population',
+      Source: 'ACS 2018, 5-Year; Census 2010; IPUMS NHGIS',
+      Metadata: 'DS01 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Age_2018.md">Age Variables</a>',
+      'Spatial Scale': 'State, County, Tract, Zip',
+      markdownPrefix: 'DS01 / ',
+      markdownText: 'Age Variables',
+      markdown: 'Age_2018',
+      'Variable Construct': 'Age'
+    },
+    {
+      'Variable Proxy': 'Percentage of population with a disability',
+      Source: 'ACS 2018, 5-Year; ACS 2012, 5-Year; IPUMS NHGIS',
+      Metadata: 'DS01 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Other_Demographic_2018.md">Other Demographic Variables</a>',
+      'Spatial Scale': 'State, County, Tract, Zip',
+      markdownPrefix: 'DS01 / ',
+      markdownText: 'Other Demographic Variables',
+      markdown: 'Other_Demographic_2018',
+      'Variable Construct': 'Population with a Disability'
+    },
+    {
+      'Variable Proxy': 'Population without a high school degree',
+      Source: 'ACS 2018, 5-Year; ACS 2012, 5-Year; IPUMS NHGIS',
+      Metadata: 'DS01 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Other_Demographic_2018.md">Other Demographic Variables</a>',
+      'Spatial Scale': 'State, County, Tract, Zip',
+      markdownPrefix: 'DS01 / ',
+      markdownText: 'Other Demographic Variables',
+      markdown: 'Other_Demographic_2018',
+      'Variable Construct': 'Educational Attainment'
+    },
+    {
+      'Variable Proxy': 'SDOH Neighborhood Typologies',
+      Source: 'Kolak et al, 2020',
+      Metadata: 'DS02 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/SDOH_2014.md">SDOH Typology</a>',
+      'Spatial Scale': 'Tract',
+      markdownPrefix: 'DS02 / ',
+      markdownText: 'SDOH Typology',
+      markdown: 'SDOH_2014',
+      'Variable Construct': 'Social Determinants of Health (SDOH)'
+    },
+    {
+      'Variable Proxy': 'SVI Rankings',
+      Source: 'CDC, 2018',
+      Metadata: 'DS03 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/SVI_2018.md">SVI</a>',
+      'Spatial Scale': 'County, Tract',
+      markdownPrefix: 'DS03 / ',
+      markdownText: 'SVI',
+      markdown: 'SVI_2018',
+      'Variable Construct': 'Social Vulnerability Index (SVI)'
+    },
+    {
+      'Variable Proxy': 'Population as defined by veteran status',
+      Source: 'ACS 2017, 5-Year; ACS 2012, 5-Year',
+      Metadata: 'DS04 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/VetPop.md">Veteran Population Variables</a>',
+      'Spatial Scale': 'State, County, Tract, Zip',
+      markdownPrefix: 'DS04 / ',
+      markdownText: 'Veteran Population Variables',
+      markdown: 'VetPop',
+      'Variable Construct': 'Veteran Population'
+    },
+    {
+      'Variable Proxy': 'Household types and group quarter populations',
+      Source: 'ACS 2018, 5-Year; ACS 2012, 5-Year',
+      Metadata: 'DS05 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/HouseholdType.md">Housing Type Variables</a>',
+      'Spatial Scale': 'State, County, Tract, Zip',
+      markdownPrefix: 'DS05 / ',
+      markdownText: 'Household Type',
+      markdown: 'HouseholdType',
+      'Variable Construct': 'Household Type'
+    },
+    {
+      'Variable Proxy': 'Homelessness as defined by US Homeless Census',
+      Source: 'HUD, 2018',
+      Metadata: 'DS06 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/HomelessPop.md">Homeless Population Variables</a>',
+      'Spatial Scale': 'State, County, Tract, Zip',
+      markdownPrefix: 'DS06 / ',
+      markdownText: 'Homeless Population Variables',
+      markdown: 'HomelessPop',
+      'Variable Construct': 'Homeless Population'
+    },
+    {
+      'Variable Proxy': 'US metropolitan areas where black residents experience hypersegregation',
+      Source: 'Massey et al, 2015',
+      Metadata: 'BE04 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Overlay.md">Community Overlays</a>',
+      'Spatial Scale': 'County',
+      markdownPrefix: 'BE04 / ',
+      markdownText: 'Community Overlays',
+      markdown: 'Overlay',
+      'Variable Construct': 'Hypersegregated Cities'
+    },
+    {
+      'Variable Proxy': 'US counties where 30% of the population identified as Black or African American',
+      Source: 'US Census, 2000',
+      Metadata: 'BE04 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Overlay.md">Community Overlays</a>',
+      'Spatial Scale': 'County',
+      markdownPrefix: 'BE04 / ',
+      markdownText: 'Community Overlays',
+      markdown: 'Overlay',
+      'Variable Construct': 'Southern Black Belt'
+    },
+    {
+      'Variable Proxy': 'Percent area of total land in Native American Reservations',
+      Source: 'US Census, TIGER/Line 2018',
+      Metadata: 'BE04 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Overlay.md">Community Overlays</a>',
+      'Spatial Scale': 'County',
+      markdownPrefix: 'BE04 / ',
+      markdownText: 'Community Overlays',
+      markdown: 'Overlay',
+      'Variable Construct': 'Native American Reservations'
+    },
+    {
+      'Variable Proxy': 'Three index measures of segregation: dissimilarity, interaction, isolation',
+      Source: 'ACS 2018, 5-Year',
+      Metadata: 'BE05 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Residential_Seg_Indices.md">Residential Segregation</a>',
+      'Spatial Scale': 'State, County, Zip',
+      markdownPrefix: 'BE05 / ',
+      markdownText: 'Residential Segregation',
+      markdown: 'Residential_Seg_Indices',
+      'Variable Construct': 'Residential Segregation Indices'
+    }
+  ],
+  'Economic Variables': [
+    {
+      'Variable Proxy': 'Percentage of population employed in High Risk of Injury Jobs, Educational Services, Health Care, Retail industries',
+      Source: 'ACS 2018, 5-Year',
+      Metadata: 'EC01 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Job_Categories_byIndustry_2018.md">Jobs by Industry</a>',
+      'Spatial Scale': 'State, County, Tract, Zip',
+      markdownPrefix: 'EC01 / ',
+      markdownText: 'Jobs by Industry',
+      markdown: 'Job_Categories_byIndustry_2018',
+      'Variable Construct': 'Employment Trends'
+    },
+    {
+      'Variable Proxy': 'Percentage of population employed in Essential Jobs as defined during the COVID-19 pandemic',
+      Source: 'ACS 2018, 5-Year',
+      Metadata: 'EC02 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Job_Categories_byIndustry_2018.md">Jobs by Industry</a>',
+      'Spatial Scale': 'State, County, Tract, Zip',
+      markdownPrefix: 'EC02 / ',
+      markdownText: 'Jobs by Industry',
+      markdown: 'Job_Categories_byIndustry_2018',
+      'Variable Construct': 'Essential Workers'
+    },
+    {
+      'Variable Proxy': 'Unemployment rate',
+      Source: 'ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer',
+      Metadata: 'EC03 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Economic_2018.md">Economic Variables</a>',
+      'Spatial Scale': 'State, County, Tract, Zip',
+      markdownPrefix: 'EC03 / ',
+      markdownText: 'Economic Variables',
+      markdown: 'Economic_2018',
+      'Variable Construct': 'Unemployment Rate'
+    },
+    {
+      'Variable Proxy': 'Percent classified as below poverty level, based on income',
+      Source: 'ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer',
+      Metadata: 'EC03 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Economic_2018.md">Economic Variables</a>',
+      'Spatial Scale': 'State, County, Tract, Zip',
+      markdownPrefix: 'EC03 / ',
+      markdownText: 'Economic Variables',
+      markdown: 'Economic_2018',
+      'Variable Construct': 'Poverty Rate'
+    },
+    {
+      'Variable Proxy': 'Per capita income in the past 12 months',
+      Source: 'ACS 2018, 5-Year; ACS 2012, 5-Year; IPUMS NHGIS',
+      Metadata: 'EC03 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Economic_2018.md">Economic Variables</a>',
+      'Spatial Scale': 'State, County, Tract, Zip',
+      markdownPrefix: 'EC03 / ',
+      markdownText: 'Economic Variables',
+      markdown: 'Economic_2018',
+      'Variable Construct': 'Per Capita Income'
+    },
+    {
+      'Variable Proxy': 'Mortgage foreclosure and severe delinquency rate',
+      Source: 'HUD, 2009',
+      Metadata: 'EC04 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/ForeclosureRate.md">Foreclosure Rate</a>',
+      'Spatial Scale': 'State, County, Tract',
+      markdownPrefix: 'EC04 / ',
+      markdownText: 'Foreclosure Rate',
+      markdown: 'ForeclosureRate',
+      'Variable Construct': 'Foreclosure Rate'
+    }
+  ],
+  'Physical Environment Variables': [
+    // We *technically* don't offer this variable
+    // {
+    //   'Variable Proxy': 'Percent occupied units',
+    //   Source: 'ACS 2018, 5-Year',
+    //   Metadata: 'BE01 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Housing_2018.md">Housing</a>',
+    //   'Spatial Scale': 'State, County, Tract, Zip',
+    //   markdownPrefix: 'BE01 / ',
+    //   markdownText: 'Housing',
+    //   markdown: 'Housing_2018',
+    //   'Variable Construct': 'Housing Occupancy Rate'
+    // },
+    {
+      'Variable Proxy': 'Percent vacant units',
+      Source: 'ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer',
+      Metadata: 'BE01 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Housing_2018.md">Housing</a>',
+      'Spatial Scale': 'State, County, Tract, Zip',
+      markdownPrefix: 'BE01 / ',
+      markdownText: 'Housing',
+      markdown: 'Housing_2018',
+      'Variable Construct': 'Housing Vacancy Rate'
+    },
+    {
+      'Variable Proxy': 'Percentage of population living in current housing for 20+ years',
+      Source: 'ACS 2018, 5-Year',
+      Metadata: 'BE01 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Housing_2018.md">Housing</a>',
+      'Spatial Scale': 'State, County, Tract, Zip',
+      markdownPrefix: 'BE01 / ',
+      markdownText: 'Housing',
+      markdown: 'Housing_2018',
+      'Variable Construct': 'Long Term Occupancy'
+    },
+    {
+      'Variable Proxy': 'Percent of housing units classified as mobile homes',
+      Source: 'ACS 2018, 5-Year',
+      Metadata: 'BE01 / <a href="/data_final/metadata/Housing_2018.md">Housing</a>',
+      'Spatial Scale': 'State, County, Tract, Zip',
+      markdownPrefix: 'BE01 / ',
+      markdownText: 'Housing',
+      markdown: 'BE01',
+      'Variable Construct': 'Mobile Homes'
+    },
+    {
+      'Variable Proxy': 'Percent of housing units occupied by renters',
+      Source: 'ACS 2018, 5-Year',
+      Metadata: 'BE01 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Housing_2018.md">Housing</a>',
+      'Spatial Scale': 'State, County, Tract, Zip',
+      markdownPrefix: 'BE01 / ',
+      markdownText: 'Housing',
+      markdown: 'Housing_2018',
+      'Variable Construct': 'Rental Rates'
+    },
+    {
+      'Variable Proxy': 'Housing units per square mile',
+      Source: 'ACS 2018, 5-Year',
+      Metadata: 'BE01 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Housing_2018.md">Housing</a>',
+      'Spatial Scale': 'State, County, Tract, Zip',
+      markdownPrefix: 'BE01 / ',
+      markdownText: 'Housing',
+      markdown: 'Housing_2018',
+      'Variable Construct': 'Housing Unit Density'
+    },
+    {
+      'Variable Proxy': 'Classification of areas as rural, urban or suburban using percent rurality (County)',
+      Source: 'USDA-ERS, 2010',
+      Metadata: 'BE02 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Rural_Urban_Classification_County.md">Rural-Urban Classifications (County)</a>',
+      'Spatial Scale': 'County',
+      markdownPrefix: 'BE02 / ',
+      markdownText: 'Rural-Urban Classifications',
+      markdown: 'Rural_Urban_Classification_County',
+      'Variable Construct': 'Urban/Suburban/Rural Classification (County)'
+    },
+    {
+      'Variable Proxy': 'Classification of areas as rural, urban or suburban using RUCA Codes (Tract, Zip)',
+      Source: 'USDA-ERS, 2010',
+      Metadata: 'BE02 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Rural_Urban_Classification_T_Z.md">Rural-Urban Classifications (Tract, Zip)</a>',
+      'Spatial Scale': 'Tract, Zip',
+      markdownPrefix: 'BE02 / ',
+      markdownText: 'Rural-Urban Classifications',
+      markdown: 'Rural_Urban_Classification_T_Z',
+      'Variable Construct': 'Urban/Suburban/Rural Classification (Tract, Zip)'
+    },
+    {
+      'Variable Proxy': 'Alcohol outlets per square mile, alcohol outlets per capita',
+      Source: 'InfoGroup, 2018',
+      Metadata: 'BE03 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/AlcoholOutlets_2018.md">Alcohol Outlets</a>',
+      'Spatial Scale': 'State, County, Tract, Zip',
+      markdownPrefix: 'BE03 / ',
+      markdownText: 'Alcohol Outlets',
+      markdown: 'AlcoholOutlets_2018',
+      'Variable Construct': 'Alcohol Outlet Density'
+    },
+    {
+      'Variable Proxy': 'Normalized Difference Vegetation Index (NDVI) average value',
+      Source: 'Sentinel-2 MSI, 2018',
+      Metadata: 'BE06 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/NDVI.md">NDVI</a>',
+      'Spatial Scale': 'State, County, Tract, Zip',
+      markdownPrefix: 'BE06 / ',
+      markdownText: 'NDVI',
+      markdown: 'NDVI',
+      'Variable Construct': 'NDVI'
     },
     {
       'Variable Proxy': 'Access to MOUDs',
@@ -244,320 +543,32 @@ export const variables = {
       markdownText: 'Access: Opioid Treatment Programs',
       markdown: 'Access_OpioidUseTreatment',
       'Variable Construct': 'Access to Opioid Treatment Programs'
-    }
-  ],
-
-  'Demographic Variables': [
-    {
-      'Variable Proxy': 'Percentages of population defined by categories of race and ethnicity',
-      Source: 'ACS, 2018 5-year',
-      Metadata: 'DS01/ <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Race_Ethnicity_2018.md">Race & Ethnicity Variables</a>',
-      'Spatial Scale': 'State, County, Tract, Zip',
-      markdownPrefix: '',
-      markdownText: 'Race & Ethnicity Variables',
-      markdown: 'Race_Ethnicity_2018',
-      'Variable Construct': 'Race & Ethnicity'
-    },
-    {
-      'Variable Proxy': 'Age group estimates and percentages of population',
-      Source: 'ACS, 2018 5-year',
-      Metadata: 'DS01 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Age_2018.md">Age Variables</a>',
-      'Spatial Scale': 'State, County, Tract, Zip',
-      markdownPrefix: 'DS01 / ',
-      markdownText: 'Age Variables',
-      markdown: 'Age_2018',
-      'Variable Construct': 'Age'
-    },
-    {
-      'Variable Proxy': 'Percentage of population with a disability',
-      Source: 'ACS, 2018 5-year',
-      Metadata: 'DS01 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Other_Demographic_2018.md">Other Demographic Variables</a>',
-      'Spatial Scale': 'State, County, Tract, Zip',
-      markdownPrefix: 'DS01 / ',
-      markdownText: 'Other Demographic Variables',
-      markdown: 'Other_Demographic_2018',
-      'Variable Construct': 'Population with a Disability'
-    },
-    {
-      'Variable Proxy': 'Population without a high school degree',
-      Source: 'ACS, 2018 5-year',
-      Metadata: 'DS01 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Other_Demographic_2018.md">Other Demographic Variables</a>',
-      'Spatial Scale': 'State, County, Tract, Zip',
-      markdownPrefix: 'DS01 / ',
-      markdownText: 'Other Demographic Variables',
-      markdown: 'Other_Demographic_2018',
-      'Variable Construct': 'Educational Attainment'
-    },
-    {
-      'Variable Proxy': 'SDOH Neighborhood Typologies',
-      Source: 'Kolak et al, 2020',
-      Metadata: 'DS02 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/SDOH_2014.md">SDOH Typology</a>',
-      'Spatial Scale': 'Tract',
-      markdownPrefix: 'DS02 / ',
-      markdownText: 'SDOH Typology',
-      markdown: 'SDOH_2014',
-      'Variable Construct': 'Social Determinants of Health (SDOH)'
-    },
-    {
-      'Variable Proxy': 'SVI Rankings',
-      Source: 'CDC, 2018',
-      Metadata: 'DS03 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/SVI_2018.md">SVI</a>',
-      'Spatial Scale': 'County, Tract',
-      markdownPrefix: 'DS03 / ',
-      markdownText: 'SVI',
-      markdown: 'SVI_2018',
-      'Variable Construct': 'Social Vulnerability Index (SVI)'
-    },
-    {
-      'Variable Proxy': 'Population as defined by veteran status',
-      Source: 'ACS, 2017 5-year',
-      Metadata: 'DS04 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/VetPop.md">Veteran Population Variables</a>',
-      'Spatial Scale': 'State, County, Tract, Zip',
-      markdownPrefix: 'DS04 / ',
-      markdownText: 'Veteran Population Variables',
-      markdown: 'VetPop',
-      'Variable Construct': 'Veteran Population'
-    },
-    {
-      'Variable Proxy': 'Household types and group quarter populations',
-      Source: 'ACS, 2018 5-year',
-      Metadata: 'DS05 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/HouseholdType.md">Housing Type Variables</a>',
-      'Spatial Scale': 'State, County, Tract, Zip',
-      markdownPrefix: 'DS05 / ',
-      markdownText: 'Household Type',
-      markdown: 'HouseholdType',
-      'Variable Construct': 'Household Type'
-    },
-    {
-      'Variable Proxy': 'Homelessness as defined by US Homeless Census',
-      Source: 'HUD, 2018',
-      Metadata: 'DS06 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/HomelessPop.md">Homeless Population Variables</a>',
-      'Spatial Scale': 'State, County, Tract, Zip',
-      markdownPrefix: 'DS06 / ',
-      markdownText: 'Homeless Population Variables',
-      markdown: 'HomelessPop',
-      'Variable Construct': 'Homeless Population'
-    }
-
-  ],
-  'Economic Variables': [
-    {
-      'Variable Proxy': 'Percentage of population employed in High Risk of Injury Jobs, Educational Services, Health Care, Retail industries',
-      Source: 'ACS, 2018 5-year',
-      Metadata: 'EC01 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Job_Categories_byIndustry_2018.md">Jobs by Industry</a>',
-      'Spatial Scale': 'State, County, Tract, Zip',
-      markdownPrefix: 'EC01 / ',
-      markdownText: 'Jobs by Industry',
-      markdown: 'Job_Categories_byIndustry_2018',
-      'Variable Construct': 'Employment Trends'
-    },
-    {
-      'Variable Proxy': 'Percentage of population employed in Essential Jobs as defined during the COVID-19 pandemic (see COVID-19 Variables, below)',
-      Source: 'ACS, 2018 5-year',
-      Metadata: 'EC02 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Job_Categories_byIndustry_2018.md">Jobs by Industry</a>',
-      'Spatial Scale': 'State, County, Tract, Zip',
-      markdownPrefix: 'EC02 / ',
-      markdownText: 'Jobs by Industry',
-      markdown: 'Job_Categories_byIndustry_2018',
-      'Variable Construct': 'Essential Workers'
-    },
-    {
-      'Variable Proxy': 'Unemployment rate',
-      Source: 'ACS, 2014-2018',
-      Metadata: 'EC03 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Economic_2018.md">Economic Variables</a>',
-      'Spatial Scale': 'State, County, Tract, Zip',
-      markdownPrefix: 'EC03 / ',
-      markdownText: 'Economic Variables',
-      markdown: 'Economic_2018',
-      'Variable Construct': 'Unemployment Rate'
-    },
-    {
-      'Variable Proxy': 'Percent classified as below poverty level, based on income',
-      Source: 'ACS, 2018 5-year',
-      Metadata: 'EC03 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Economic_2018.md">Economic Variables</a>',
-      'Spatial Scale': 'State, County, Tract, Zip',
-      markdownPrefix: 'EC03 / ',
-      markdownText: 'Economic Variables',
-      markdown: 'Economic_2018',
-      'Variable Construct': 'Poverty Rate'
-    },
-    {
-      'Variable Proxy': 'Per capita income in the past 12 months',
-      Source: 'ACS, 2018 5-year',
-      Metadata: 'EC03 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Economic_2018.md">Economic Variables</a>',
-      'Spatial Scale': 'State, County, Tract, Zip',
-      markdownPrefix: 'EC03 / ',
-      markdownText: 'Economic Variables',
-      markdown: 'Economic_2018',
-      'Variable Construct': 'Per Capita Income'
-    },
-    {
-      'Variable Proxy': 'Mortgage foreclosure and severe delinquency rate',
-      Source: 'HUD, 2009',
-      Metadata: 'EC04 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/ForeclosureRate.md">Foreclosure Rate</a>',
-      'Spatial Scale': 'State, County, Tract',
-      markdownPrefix: 'EC04 / ',
-      markdownText: 'Foreclosure Rate',
-      markdown: 'ForeclosureRate',
-      'Variable Construct': 'Foreclosure Rate'
     },
     {
       'Variable Proxy': 'Percent of households without internet access',
-      Source: 'ACS, 2019 5-year',
+      Source: 'ACS 2019, 5-year',
       Metadata: 'EC05 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Internet_2019.md">Internet Access</a>',
       'Spatial Scale': 'State, County, Tract, Zip',
       markdownPrefix: 'EC05 / ',
       markdownText: 'Internet Access',
       markdown: 'Internet_2019',
       'Variable Construct': 'Internet Access'
-    }
-  ],
-  'Physical Environment Variables': [
-    {
-      'Variable Proxy': 'Percent occupied units',
-      Source: 'ACS, 2018 5-year',
-      Metadata: 'BE01 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Housing_2018.md">Housing</a>',
-      'Spatial Scale': 'State, County, Tract, Zip',
-      markdownPrefix: 'BE01 / ',
-      markdownText: 'Housing',
-      markdown: 'Housing_2018',
-      'Variable Construct': 'Housing Occupancy Rate'
     },
     {
-      'Variable Proxy': 'Percent vacant units',
-      Source: 'ACS, 2018 5-year',
-      Metadata: 'BE01 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Housing_2018.md">Housing</a>',
-      'Spatial Scale': 'State, County, Tract, Zip',
-      markdownPrefix: 'BE01 / ',
-      markdownText: 'Housing',
-      markdown: 'Housing_2018',
-      'Variable Construct': 'Housing Vacancy Rate'
-    },
-    {
-      'Variable Proxy': 'Percentage of population living in current housing for 20+ years',
-      Source: 'ACS, 2018 5-year',
-      Metadata: 'BE01 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Housing_2018.md">Housing</a>',
-      'Spatial Scale': 'State, County, Tract, Zip',
-      markdownPrefix: 'BE01 / ',
-      markdownText: 'Housing',
-      markdown: 'Housing_2018',
-      'Variable Construct': 'Long Term Occupancy'
-    },
-    {
-      'Variable Proxy': 'Percent of housing units classified as mobile homes',
-      Source: 'ACS, 2018 5-year',
-      Metadata: 'BE01 / <a href="/data_final/metadata/Housing_2018.md">Housing</a>',
-      'Spatial Scale': 'State, County, Tract, Zip',
-      markdownPrefix: 'BE01 / ',
-      markdownText: 'Housing',
-      markdown: 'BE01',
-      'Variable Construct': 'Mobile Homes'
-    },
-    {
-      'Variable Proxy': 'Percent of housing units occupied by renters',
-      Source: 'ACS, 2018 5-year',
-      Metadata: 'BE01 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Housing_2018.md">Housing</a>',
-      'Spatial Scale': 'State, County, Tract, Zip',
-      markdownPrefix: 'BE01 / ',
-      markdownText: 'Housing',
-      markdown: 'Housing_2018',
-      'Variable Construct': 'Rental Rates'
-    },
-    {
-      'Variable Proxy': 'Housing units per square mile',
-      Source: 'ACS, 2018 5-year',
-      Metadata: 'BE01 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Housing_2018.md">Housing</a>',
-      'Spatial Scale': 'State, County, Tract, Zip',
-      markdownPrefix: 'BE01 / ',
-      markdownText: 'Housing',
-      markdown: 'Housing_2018',
-      'Variable Construct': 'Housing Unit Density'
-    },
-    {
-      'Variable Proxy': 'Classification of areas as rural, urban or suburban using percent rurality (County)',
-      Source: 'USDA-ERS, 2010 & ACS, 2018 5-year',
-      Metadata: 'BE02 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Rural_Urban_Classification_County.md">Rural-Urban Classifications (County)</a>',
-      'Spatial Scale': 'County',
-      markdownPrefix: 'BE02 / ',
-      markdownText: 'Rural-Urban Classifications',
-      markdown: 'Rural_Urban_Classification_County',
-      'Variable Construct': 'Urban/Suburban/Rural Classification (County)'
-    },
-    {
-      'Variable Proxy': 'Classification of areas as rural, urban or suburban using RUCA Codes (Tract, Zip)',
-      Source: 'USDA-ERS, 2010',
-      Metadata: 'BE02 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Rural_Urban_Classification_T_Z.md">Rural-Urban Classifications (Tract, Zip)</a>',
-      'Spatial Scale': 'Tract, Zip',
-      markdownPrefix: 'BE02 / ',
-      markdownText: 'Rural-Urban Classifications',
-      markdown: 'Rural_Urban_Classification_T_Z',
-      'Variable Construct': 'Urban/Suburban/Rural Classification (Tract, Zip)'
-    },
-    {
-      'Variable Proxy': 'Alcohol outlets per square mile, alcohol outlets per capita',
-      Source: 'InfoGroup, 2018',
-      Metadata: 'BE03 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/AlcoholOutlets_2018.md">Alcohol Outlets</a>',
-      'Spatial Scale': 'State, County, Tract, Zip',
-      markdownPrefix: 'BE03 / ',
-      markdownText: 'Alcohol Outlets',
-      markdown: 'AlcoholOutlets_2018',
-      'Variable Construct': 'Alcohol Outlet Density'
-    },
-    {
-      'Variable Proxy': 'US metropolitan areas where black residents experience hypersegregation',
-      Source: 'Massey et al, 2015',
-      Metadata: 'BE04 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Overlay.md">Community Overlays</a>',
-      'Spatial Scale': 'County',
-      markdownPrefix: 'BE04 / ',
-      markdownText: 'Community Overlays',
-      markdown: 'Overlay',
-      'Variable Construct': 'Hypersegregated Cities'
-    },
-    {
-      'Variable Proxy': 'US counties where 30% of the population identified as Black or African American',
-      Source: 'US Census, 2010',
-      Metadata: 'BE04 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Overlay.md">Community Overlays</a>',
-      'Spatial Scale': 'County',
-      markdownPrefix: 'BE04 / ',
-      markdownText: 'Community Overlays',
-      markdown: 'Overlay',
-      'Variable Construct': 'Southern Black Belt'
-    },
-    {
-      'Variable Proxy': 'Percent area of total land in Native American Reservations',
-      Source: 'US Census, TIGER/Line 2018',
-      Metadata: 'BE04 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Overlay.md">Community Overlays</a>',
-      'Spatial Scale': 'County',
-      markdownPrefix: 'BE04 / ',
-      markdownText: 'Community Overlays',
-      markdown: 'Overlay',
-      'Variable Construct': 'Native American Reservations'
-    },
-    {
-      'Variable Proxy': 'Three index measures of segregation: dissimilarity, interaction, isolation',
-      Source: 'ACS, 2018 5-year',
-      Metadata: 'BE05 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Residential_Seg_Indices.md">Residential Segregation</a>',
-      'Spatial Scale': 'State, County, Zip',
-      markdownPrefix: 'BE05 / ',
-      markdownText: 'Residential Segregation',
-      markdown: 'Residential_Seg_Indices',
-      'Variable Construct': 'Residential Segregation Indices'
-    },
-    {
-      'Variable Proxy': 'Normalized Difference Vegetation Index (NDVI) average value',
-      Source: 'Sentinel-2 MSI, 2018',
-      Metadata: 'BE06 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/NDVI.md">NDVI</a>',
-      'Spatial Scale': 'State, County, Tract, Zip',
-      markdownPrefix: 'BE06 / ',
-      markdownText: 'NDVI',
-      markdown: 'NDVI',
-      'Variable Construct': 'NDVI'
+      'Variable Proxy': 'Number of Primary Care and Specialist Physicians',
+      Source: 'Dartmouth Atlas, 2010; ACS 2018, 5-Year',
+      Metadata: 'Health03 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Health_PCPs.md">Physicians</a>',
+      'Spatial Scale': 'Tract, County, State',
+      markdownPrefix: 'Health03 / ',
+      markdownText: 'Physicians',
+      markdown: 'Health_PCPs',
+      'Variable Construct': 'Physicians'
     }
   ],
   'COVID Variables': [
     {
       'Variable Proxy': 'Percentage of population employed in Essential Jobs as defined during the COVID-19 pandemic',
-      Source: 'ACS, 2018 5-year',
+      Source: 'ACS 2018, 5-Year',
       Metadata: 'EC02 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Job_Categories_byOccupation_2018.md">Jobs by Occupation</a>',
       'Spatial Scale': 'State, County, Tract, Zip',
       markdownPrefix: 'EC02 / ',
