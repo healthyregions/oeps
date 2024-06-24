@@ -1,6 +1,6 @@
 # Opioid Environment Policy Scan (OEPS)
 
-This repo holds the OEPS explorer website, [oeps.healthyregions.org](https://oeps.healthyregions.org) as well as a backend system that handles integration with Google BigQuery.
+This repo holds the OEPS explorer website, [oeps.healthyregions.org](https://oeps.healthyregions.org), as well as a backend system that handles integration with Google BigQuery.
 
 - [explorer](./docs/explorer.md)
     - The OEPS Explorer is a NextJS app that uses WebGeoDa (built with [jsGeoDa](https://jsgeoda.libgeoda.org/)) for geospatial interactivity.
