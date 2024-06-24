@@ -148,7 +148,7 @@ export const variables = {
     },
     {
       'Variable Proxy': 'HepC prevalence and mortality',
-      Source: 'HepVu, 2017',
+      Source: 'HepVu 2017',
       Metadata: 'Health02 / <a href="https://github.com/GeoDaCenter/opioid-policy-scan//data_final/metadata/HepC.md">Hepatitis C</a>',
       'Spatial Scale': 'State, County',
       markdownPrefix: 'Health02 / ',
