@@ -2,7 +2,7 @@
     "bq_dataset_name": "tabular",
     "bq_table_name": "C_2000",
     "name": "c-2000",
-    "path": "/home/adam/Projects/HEROP__OEPS/repo/opioid-policy-scan/data_final/full_tables/C_2000.csv",
+    "path": "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables/C_2000.csv",
     "title": "OEPS Data Aggregated by Census Tract (2000)",
     "description": "This CSV aggregates all 2000 data variables from the OEPS v2 release at the Census Tract level.",
     "scheme": "file",

@@ -325,7 +325,6 @@ class DataResource():
         """ Creates a schema from our pre-made external data dictionaries. """
 
         REPO_BASE_URL = "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables"
-        REPO_BASE_URL = "/home/adam/Projects/HEROP__OEPS/repo/opioid-policy-scan/data_final/full_tables"
         GY_LOOKUP = {
             'S': [1980, 1990, 2000, 2010, 'Latest'],
             'C': [1980, 1990, 2000, 2010, 'Latest'],

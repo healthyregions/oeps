@@ -51,13 +51,6 @@ def generate_resources_from_oeps_dicts(destination):
         "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/dictionaries/Z_Dict.xlsx",
     ]
 
-    paths = [
-        "~/Projects/HEROP__OEPS/repo/opioid-policy-scan/data_final/dictionaries/S_Dict.xlsx",
-        "~/Projects/HEROP__OEPS/repo/opioid-policy-scan/data_final/dictionaries/C_Dict.xlsx",
-        "~/Projects/HEROP__OEPS/repo/opioid-policy-scan/data_final/dictionaries/T_Dict.xlsx",
-        "~/Projects/HEROP__OEPS/repo/opioid-policy-scan/data_final/dictionaries/Z_Dict.xlsx",
-    ]
-
     if destination:
         out_dir = destination
         if not os.path.isdir(out_dir):
