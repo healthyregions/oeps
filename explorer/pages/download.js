@@ -8,14 +8,12 @@ import { csvFiles } from '../meta/csvFiles';
 import * as JSZip from 'jszip';
 import { saveAs } from 'file-saver';
 
-const tableNames = [
-  "Geographic Boundaries",
-  "Policy Variables",
-  "Health Variables",
-  "Demographic Variables",
-  "Economic Variables",
-  "Physical Environment Variables",
-  "COVID Variables"
+const years = [
+  '1980',
+  '1990',
+  '2000',
+  '2010',
+  'Latest'
 ]
 
 const uniqueScales = [
@@ -32,39 +30,54 @@ const scalesDict = {
     'Z':'Zip'
 }
 
-const shpParts = ['.dbf','.prj','.shp', '.shx']
+const shpParts = ['.dbf','.prj','.shp', '.shx','.cpg']
 
 const geomsDict = [{
     agg: 'State',
-    folder: 'geometryFiles/tl_2018_state/',
+    year: "Latest",
+    folder: 'geometryFiles/state/',
     baseFileName: 'states2018'
   },{
     agg: 'County',
-    folder: 'geometryFiles/tl_2018_county/',
+    year: "Latest",
+    folder: 'geometryFiles/county/',
     baseFileName: 'counties2018'
   },{
     agg: 'Tract',
-    folder: 'geometryFiles/tl_2018_tract/',
+    year: "Latest",
+    folder: 'geometryFiles/tract/',
     baseFileName: 'tracts2018'
   },{
     agg: 'Zip',
-    folder: 'geometryFiles/tl_2018_zcta/',
+    year: "Latest",
+    folder: 'geometryFiles/zcta/',
     baseFileName: 'zctas2018'
-  },{
-  agg: 'Crosswalk',
-  folder: 'geometryFiles/crosswalk/',
-  baseFileName: 'crosswalk'
-  }
+ },{
+  agg: 'State',
+  year: "2010",
+  folder: 'geometryFiles/state/',
+  baseFileName: 'states2010'
+},{
+  agg: 'County',
+  year: "2010",
+  folder: 'geometryFiles/county/',
+  baseFileName: 'counties2010'
+},{
+  agg: 'Tract',
+  year: "2010",
+  folder: 'geometryFiles/tract/',
+  baseFileName: 'tracts2010'
+ }
 ]
 
-const BASE_CSV_URL = 'https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/v1.0/data_final/'
+const BASE_CSV_URL = 'https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/'
 
 export default function Download() {
   const [downloadMessage, setDownloadMessage] = useState('')
   const [zipPct, setZipPct] = useState(-1)
   const [activeFilters, setActiveFilters] = useState({
     scale: [],
-    topic: []
+    year: []
   })
   
     const MainHead = () => useMemo(() => <Head>
@@ -116,17 +129,22 @@ export default function Download() {
         filesToDownload = filesToDownload.filter(entry => activeFilters.scale.includes(scalesDict[entry.scale]))
       }
 
-      if (activeFilters.topic.length) {
-        filesToDownload = filesToDownload.filter(entry => activeFilters.topic.includes(entry.topic))
+      if (activeFilters.year.length) {
+        filesToDownload = filesToDownload.filter(entry => activeFilters.year.includes(entry.year))
       }
 
       let geomsToDownload = [...geomsDict]
-      if (activeFilters.topic.length !== 0 && !activeFilters.topic.includes('Geographic Boundaries')){
-        geomsToDownload = []
-      }
+//      if (activeFilters.year.length !== 0 && !activeFilters.year.includes('Geographic Boundaries')){
+//        geomsToDownload = []
+//      }
       
       if (activeFilters.scale.length){
         geomsToDownload = geomsToDownload.filter(f => activeFilters.scale.includes(f.agg))
+      }
+
+      if (activeFilters.year.length){
+        let historic_data_requested = activeFilters.year.some(yr => ['2010', '2000', '1990', '1980'].includes(yr))
+        geomsToDownload = geomsToDownload.filter(f => activeFilters.year.includes(f.year) || (historic_data_requested && f.year === '2010'))
       }
 
       let geomPromises = [];
@@ -137,7 +155,7 @@ export default function Download() {
       })
 
       // declare promises
-      const dataPromises = filesToDownload.map(entry => fetch(BASE_CSV_URL + entry.file + '.csv').then(r=>r.blob()))
+      const dataPromises = filesToDownload.map(entry => fetch(BASE_CSV_URL + entry.folder + entry.file + '.csv').then(r=>r.blob()))
       const docsLinks = await fetch('https://api.github.com/repos/geodacenter/opioid-policy-scan/contents/data_final/metadata').then(r=>r.json()).then(items => items.map(d => ({'name':d.name, 'url': d.download_url})).filter(f => f.url !== null))
       const docsPromises = await docsLinks.map(link => fetch(link.url).then(r=>r.blob()))
       
@@ -146,7 +164,7 @@ export default function Download() {
       setDownloadMessage(`Downloaded ${docs.length} documentation files. Downloading ${filesToDownload.length} CSV files...`)
       const data = await Promise.all(dataPromises).then(values => values.map((v,i) => ({'name':`${filesToDownload[i].file}.csv`, 'data':v})))
       setDownloadMessage(`Downloaded ${data.length} CSV files. Downloading ${geomsToDownload.length} geometr${geomsToDownload.length > 1 ? 'ies' : 'y'}...`)
-      const geom = await Promise.all(geomPromises).then(values => values.map((v,i) => ({'name':`${geomsToDownload[Math.floor(i/4)].baseFileName}${shpParts[i%4]}`, 'data':v})))
+      const geom = await Promise.all(geomPromises).then(values => values.map((v,i) => ({'name':`${geomsToDownload[Math.floor(i/7)].baseFileName}${shpParts[i%5]}`, 'data':v})))
 
       var zip = new JSZip();
       var dataFolder = zip.folder("data");
@@ -174,18 +192,18 @@ export default function Download() {
       <main className={styles.main}>
         <h1 className={styles.title}>Data Download</h1>
         <Gutter em={1} />
-        <p>Download all data, or select particular topics or geographic scales.</p>
-        <a className={styles.fullDownload} href="https://github.com/GeoDaCenter/opioid-policy-scan/zipball/v1.0">Download all data <span>ZIP File</span></a>
-        <a className={styles.fullDownload} href="https://github.com/GeoDaCenter/opioid-policy-scan/tarball/v1.0">Download all data <span>TAR Ball</span></a>
+        <p>Download all data, or select particular topics or geographic scales.</p>  
+        <a className={styles.fullDownload} href="https://github.com/GeoDaCenter/opioid-policy-scan/zipball/v1.0">Download all v1.0 data <span>ZIP File</span></a>
+        <a className={styles.fullDownload} href="https://github.com/GeoDaCenter/opioid-policy-scan/tarball/v1.0">Download all v1.0 data <span>TAR Ball</span></a>
         <a className={styles.fullDownload} href="https://github.com/GeoDaCenter/opioid-policy-scan">View on <span>GitHub</span></a>
         <Gutter em={5} />
         
-        <h2>Filter Data and Download</h2>
+        <h2>Filter v2.0 Data and Download</h2>
         
         <div className="row">
           <div className="col-xs-12 col-md-8">
-            <h3>Filter by Theme</h3>
-            {tableNames.map(topic => <button key={topic} onClick={() => handlefilter(topic, 'topic')} className={`${styles.filterButton} ${activeFilters.topic.includes(topic) ? styles.activeDownload : ' '}`}>{topic}</button>)}
+            <h3>Filter by Year</h3>
+            {years.map(year => <button key={year} onClick={() => handlefilter(year, 'year')} className={`${styles.filterButton} ${activeFilters.year.includes(year) ? styles.activeDownload : ' '}`}>{year}</button>)}
           </div>
           <div className="col-xs-12 col-md-4">
             <h3>Filter by Scale</h3>
