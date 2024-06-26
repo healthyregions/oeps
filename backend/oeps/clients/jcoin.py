@@ -9,18 +9,18 @@ from pathlib import Path
 
 from frictionless import validate, Package
 
-from oeps.utils import get_path_or_paths, fetch_files
+from oeps.utils import get_path_or_paths, fetch_files, upload_to_s3
 
 
 class DataPackage():
 
     def create(self, destination, source,
                zip_output: bool=False,
+               upload: bool=False,
                no_cache: bool=False,
                skip_foreign_keys: bool=False):
         """ Single command to generate an output data package. Should be refactored to more
         modular methods on this class."""
-
 
         dest = Path(destination)
         dest.mkdir(exist_ok=True)
@@ -146,9 +146,17 @@ class DataPackage():
 
         report.to_json(Path(dest, "error-report.json"))
 
-        if zip_output:
+        if zip_output or upload:
             print("zipping output...")
             shutil.make_archive(f"{Path(dest.parent, dest.name)}", 'zip', dest)
+            
+        if upload:
+            print(f"uploading zip to S3...")
+            upload_to_s3([Path(dest.parent, dest.name)], prefix='/oeps/')
+
+        if not zip_output:
+            print('deleting local copy of zippped output...')
+            os.remove(Path(dest.parent, dest.name))
 
         print("  done.")
 
