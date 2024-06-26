@@ -36,6 +36,7 @@ jcoin_grp = AppGroup('jcoin')
 @click.option('--destination', "-d", help="Output path for export. Must end with .csv for CSV or .shp for shapefile.")
 @click.option('--source', "-s", help="Data Resource JSON file to export, or directory with multiple files.")
 @click.option("--zip", 'zip_', is_flag=True, default=False, help="Zip the output directory.")
+@click.option("--upload", is_flag=True, default=False, help="Upload the processed files to S3.")
 @click.option("--no-cache", is_flag=True, default=False, help="Force re-download of any remote files.")
 @click.option("--skip-foreign-keys", is_flag=True, default=False, help="Don't define foreign keys in the output data package.")
 def create_data_package(**kwargs):
