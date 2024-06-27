@@ -13,7 +13,7 @@ from oeps.clients.bigquery import BigQuery, get_client
 from oeps.clients.jcoin import DataResource, DataPackage
 from oeps.clients.overture import get_filter_shape, get_data
 from oeps.clients.census import CensusClient
-from oeps.utils import upload_to_s3
+from oeps.utils import upload_to_s3, handle_overwrite
 
 jcoin_grp = AppGroup('jcoin')
 
@@ -24,6 +24,7 @@ jcoin_grp = AppGroup('jcoin')
 @click.option("--upload", is_flag=True, default=False, help="Upload the processed files to S3.")
 @click.option("--no-cache", is_flag=True, default=False, help="Force re-download of any remote files.")
 @click.option("--skip-foreign-keys", is_flag=True, default=False, help="Don't define foreign keys in the output data package.")
+@click.option("--overwrite", is_flag=True, default=False, help="Overwrite data packages with the same name.")
 def create_data_package(**kwargs):
 
     args = Namespace(**kwargs)
@@ -33,6 +34,9 @@ def create_data_package(**kwargs):
         file_name = file_name + "_no_foreign_keys" if args.skip_foreign_keys else file_name
         args.destination = f"{current_app.config['CACHE_DIR']}\\data-packages\\{file_name}"
 
+    if not args.overwrite:
+        handle_overwrite(args.destination)
+            
     if not args.source:
         args.source = current_app.config['RESOURCES_DIR']
 
