@@ -53,7 +53,7 @@ def upload_to_s3(paths, prefix: str=""):
     for path in paths:
         print(path)
         print(path.name)
-        s3.Bucket(bucket).upload_file(str(path), prefix + path.name, Callback=S3ProgressPercentage(str(path)))
+        s3.Bucket(bucket).upload_file(str(path), f"/{prefix}/{path.name}", Callback=S3ProgressPercentage(str(path)))
         print(" -- done")
 
 def get_path_or_paths(path_input, extension=None):
@@ -110,7 +110,7 @@ def handle_overwrite(path):
     if not Path(path).exists():
         return
     
-    if not os.listdir(path):
+    if not os.listdir(Path(path)):
         return
     
-    click.confirm(f'The folder {path} already exists and contains files which may be overwriten. Proceed?', abort=True)
+    click.confirm(f'The folder {Path(path)} already exists and contains files which may be overwriten. Proceed?', abort=True)
