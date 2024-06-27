@@ -127,25 +127,25 @@ class DataPackage():
 
         self.trim_fields(package_json_path)
 
-        # print("\nvalidating output data package...")
-        # report = validate(package_json_path, skip_errors=['type-error'])
+        print("\nvalidating output data package...")
+        report = validate(package_json_path, skip_errors=['type-error'])
 
-        # print("VALIDATION REPORT SUMMARY:")
-        # for t in report.tasks:
-        #     print(t.name, t.stats['errors'])
-        #     for n, err in enumerate(t.errors):
-        #         if n == 10:
-        #             break
-        #         err_dict = err.to_dict()
-        #         try:
-        #             err_dict.pop('cells')
-        #         except KeyError:
-        #             pass
-        #         print(err_dict)
+        print("VALIDATION REPORT SUMMARY:")
+        for t in report.tasks:
+            print(t.name, t.stats['errors'])
+            for n, err in enumerate(t.errors):
+                if n == 10:
+                    break
+                err_dict = err.to_dict()
+                try:
+                    err_dict.pop('cells')
+                except KeyError:
+                    pass
+                print(err_dict)
         
-        # print(f"Totals: {report.stats}")
+        print(f"Totals: {report.stats}")
 
-        # report.to_json(Path(dest, "error-report.json"))
+        report.to_json(Path(dest, "error-report.json"))
 
         if zip_output or upload:
             print("zipping output...")
