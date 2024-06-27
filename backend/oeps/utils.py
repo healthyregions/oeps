@@ -42,7 +42,7 @@ class S3ProgressPercentage(object):
                     percentage))
             sys.stdout.flush()
 
-def upload_to_s3(paths, prefix: str=""):
+def upload_to_s3(paths, prefix: str=None):
 
     s3 = boto3.resource("s3")
     bucket = os.getenv("AWS_BUCKET_NAME")
@@ -53,7 +53,8 @@ def upload_to_s3(paths, prefix: str=""):
     for path in paths:
         print(path)
         print(path.name)
-        s3.Bucket(bucket).upload_file(str(path), f"/{prefix}/{path.name}", Callback=S3ProgressPercentage(str(path)))
+        key = f"/{prefix}/{path.name}" if prefix else path.name
+        s3.Bucket(bucket).upload_file(str(path), key, Callback=S3ProgressPercentage(str(path)))
         print(" -- done")
 
 def get_path_or_paths(path_input, extension=None):
