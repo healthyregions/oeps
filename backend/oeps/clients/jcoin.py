@@ -152,7 +152,7 @@ class DataPackage():
             
         if upload:
             print(f"uploading zip to S3...")
-            upload_to_s3(Path(dest.parent, dest.name), prefix='/oeps/')
+            upload_to_s3(Path(dest.parent, dest.name), prefix='oeps')
 
         if not zip_output:
             print('deleting local copy of zippped output...')

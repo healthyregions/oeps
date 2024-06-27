@@ -32,7 +32,7 @@ def create_data_package(**kwargs):
     if not args.destination:
         file_name = f"oeps-data-package-v2_{datetime.now().date().isoformat()}"
         file_name = file_name + "_no_foreign_keys" if args.skip_foreign_keys else file_name
-        args.destination = f"{current_app.config['CACHE_DIR']}\\data-packages\\{file_name}"
+        args.destination = Path(current_app.config['CACHE_DIR'], "data-packages", file_name)
 
     if not args.overwrite:
         handle_overwrite(args.destination)
