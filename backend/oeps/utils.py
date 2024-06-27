@@ -41,6 +41,9 @@ def upload_to_s3(paths, prefix: str=""):
     s3 = boto3.resource("s3")
     bucket = os.getenv("AWS_BUCKET_NAME")
 
+    if not isinstance(paths, list):
+        paths = [paths]
+
     for path in paths:
         print(path)
         print(path.name)

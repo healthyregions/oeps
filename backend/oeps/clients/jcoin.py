@@ -23,7 +23,7 @@ class DataPackage():
         modular methods on this class."""
 
         dest = Path(destination)
-        dest.mkdir(exist_ok=True)
+        dest.mkdir(exist_ok=True, parents=True)
         s_path = Path(dest, "schemas")
         s_path.mkdir(exist_ok=True)
         d_path = Path(dest, "data")
@@ -126,25 +126,25 @@ class DataPackage():
 
         self.trim_fields(package_json_path)
 
-        print("\nvalidating output data package...")
-        report = validate(package_json_path, skip_errors=['type-error'])
+        # print("\nvalidating output data package...")
+        # report = validate(package_json_path, skip_errors=['type-error'])
 
-        print("VALIDATION REPORT SUMMARY:")
-        for t in report.tasks:
-            print(t.name, t.stats['errors'])
-            for n, err in enumerate(t.errors):
-                if n == 10:
-                    break
-                err_dict = err.to_dict()
-                try:
-                    err_dict.pop('cells')
-                except KeyError:
-                    pass
-                print(err_dict)
+        # print("VALIDATION REPORT SUMMARY:")
+        # for t in report.tasks:
+        #     print(t.name, t.stats['errors'])
+        #     for n, err in enumerate(t.errors):
+        #         if n == 10:
+        #             break
+        #         err_dict = err.to_dict()
+        #         try:
+        #             err_dict.pop('cells')
+        #         except KeyError:
+        #             pass
+        #         print(err_dict)
         
-        print(f"Totals: {report.stats}")
+        # print(f"Totals: {report.stats}")
 
-        report.to_json(Path(dest, "error-report.json"))
+        # report.to_json(Path(dest, "error-report.json"))
 
         if zip_output or upload:
             print("zipping output...")
@@ -152,11 +152,11 @@ class DataPackage():
             
         if upload:
             print(f"uploading zip to S3...")
-            upload_to_s3([Path(dest.parent, dest.name)], prefix='/oeps/')
+            upload_to_s3(Path(dest.parent, dest.name), prefix='/oeps/')
 
         if not zip_output:
             print('deleting local copy of zippped output...')
-            os.remove(Path(dest.parent, dest.name))
+            os.remove(f"{Path(dest.parent, dest.name)}.zip")
 
         print("  done.")
 
