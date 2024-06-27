@@ -1,6 +1,7 @@
 import os
 import sys
 import json
+import click
 import shutil
 import threading
 import boto3
@@ -97,3 +98,14 @@ def fetch_files(paths, out_dir, no_cache: bool=False):
 
     return local_paths
 
+def handle_overwrite(path):
+    ''' Takes a path to a folder and prompts the user on overwrite risk if the folder
+    exists and is nonempty.'''
+
+    if not Path(path).exists():
+        return
+    
+    if not os.listdir(path):
+        return
+    
+    click.confirm(f'The folder {path} already exists and contains files which may be overwriten. Proceed?', abort=True)
