@@ -43,11 +43,16 @@ def create_data_package(**kwargs):
 
     args = Namespace(**kwargs)
 
+    if not args.destination:
+        file_name = f"oeps-data-package-v2_{datetime.now().date().isoformat()}"
+        file_name = file_name + "_no_foreign_keys" if args.skip_foreign_keys else file_name
+        args.destination = f"{current_app.config['CACHE_DIR']}\\data-packages\\{file_name}"
+
     if not args.source:
         args.source = current_app.config['RESOURCES_DIR']
 
     dp = DataPackage()
-    dp.create(args.destination, args.source, args.zip_, no_cache=args.no_cache, skip_foreign_keys=args.skip_foreign_keys)
+    dp.create(args.destination, args.source, args.zip_, args.upload, no_cache=args.no_cache, skip_foreign_keys=args.skip_foreign_keys)
 
 @jcoin_grp.command()
 def list_resources():
