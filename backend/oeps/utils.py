@@ -1,6 +1,7 @@
 import os
 import sys
 import json
+import click
 import shutil
 import threading
 import boto3
@@ -36,15 +37,19 @@ class S3ProgressPercentage(object):
                     percentage))
             sys.stdout.flush()
 
-def upload_to_s3(paths):
+def upload_to_s3(paths, prefix: str=None):
 
     s3 = boto3.resource("s3")
     bucket = os.getenv("AWS_BUCKET_NAME")
 
+    if not isinstance(paths, list):
+        paths = [paths]
+
     for path in paths:
         print(path)
         print(path.name)
-        s3.Bucket(bucket).upload_file(str(path), path.name, Callback=S3ProgressPercentage(str(path)))
+        key = f"/{prefix}/{path.name}" if prefix else path.name
+        s3.Bucket(bucket).upload_file(str(path), key, Callback=S3ProgressPercentage(str(path)))
         print(" -- done")
 
 def get_path_or_paths(path_input, extension=None):
@@ -94,3 +99,14 @@ def fetch_files(paths, out_dir, no_cache: bool=False):
 
     return local_paths
 
+def handle_overwrite(path):
+    ''' Takes a path to a folder and prompts the user on overwrite risk if the folder
+    exists and is nonempty.'''
+
+    if not Path(path).exists():
+        return
+    
+    if not os.listdir(Path(path)):
+        return
+    
+    click.confirm(f'The folder {Path(path)} already exists and contains files which may be overwriten. Proceed?', abort=True)

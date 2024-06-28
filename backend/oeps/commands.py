@@ -13,7 +13,7 @@ from oeps.clients.bigquery import BigQuery, get_client
 from oeps.clients.jcoin import DataResource, DataPackage
 from oeps.clients.overture import get_filter_shape, get_data
 from oeps.clients.census import CensusClient
-from oeps.utils import upload_to_s3
+from oeps.utils import upload_to_s3, handle_overwrite
 
 jcoin_grp = AppGroup('jcoin')
 
@@ -21,17 +21,27 @@ jcoin_grp = AppGroup('jcoin')
 @click.option('--destination', "-d", help="Output path for export. Must end with .csv for CSV or .shp for shapefile.")
 @click.option('--source', "-s", help="Data Resource JSON file to export, or directory with multiple files.")
 @click.option("--zip", 'zip_', is_flag=True, default=False, help="Zip the output directory.")
+@click.option("--upload", is_flag=True, default=False, help="Upload the processed files to S3.")
 @click.option("--no-cache", is_flag=True, default=False, help="Force re-download of any remote files.")
 @click.option("--skip-foreign-keys", is_flag=True, default=False, help="Don't define foreign keys in the output data package.")
+@click.option("--overwrite", is_flag=True, default=False, help="Overwrite data packages with the same name.")
 def create_data_package(**kwargs):
 
     args = Namespace(**kwargs)
 
+    if not args.destination:
+        file_name = f"oeps-data-package-v2_{datetime.now().date().isoformat()}"
+        file_name = file_name + "_no_foreign_keys" if args.skip_foreign_keys else file_name
+        args.destination = Path(current_app.config['CACHE_DIR'], "data-packages", file_name)
+
+    if not args.overwrite:
+        handle_overwrite(args.destination)
+            
     if not args.source:
         args.source = current_app.config['RESOURCES_DIR']
 
     dp = DataPackage()
-    dp.create(args.destination, args.source, args.zip_, no_cache=args.no_cache, skip_foreign_keys=args.skip_foreign_keys)
+    dp.create(args.destination, args.source, args.zip_, args.upload, no_cache=args.no_cache, skip_foreign_keys=args.skip_foreign_keys)
 
 @jcoin_grp.command()
 def list_resources():
