@@ -34,18 +34,18 @@ class CensusClient():
 
         print("getting connection")
         # server = self.ftp_connection()
-        server = ftplib.FTP('ftp2.census.gov')
-        server.connect()
+        server = ftplib.FTP('ftp2.census.gov', user='anonymous')
+        #server.connect()
         print('connnected')
+        
         files = server.nlst('/geo/tiger/GENZ2010')
         print(files)
-
         # filter file list with simple string matching
         files = [i for i in files if scale in i]
         print(1)
 
         # use the summary level code as some older years only include that code
-        files = [i for i in files if geography in i or self.lookups['summary-levels'][geography] in i]
+        files = [i for i in files if geography in i or self.lookups['census-summary-levels'][geography] in i]
         print(2)
 
         # special handling for county, exclude the within_ua files (present in 2018)
@@ -111,7 +111,7 @@ class CensusClient():
 
     def add_herop_id_to_dataframe(self, df, geography, year, pk_field):
 
-        lvl = self.lookups['summary-levels'][geography]
+        lvl = self.lookups['census-summary-levels'][geography]
 
         if geography == "bg" and year == "2010":
             df['HEROP_ID'] = df.apply(lambda row: f"{lvl}US{str(row[pk_field][6:])}-{year}", axis = 1)
@@ -143,11 +143,11 @@ class CensusClient():
             if lsad:
                 # print(lsad)
                 position = None
-                if lsad in self.lookups['lsad']:
-                    lsad_value = self.lookups['lsad'][lsad]['value']
-                    position = self.lookups['lsad'][lsad]['position']
+                if lsad in self.lookups['census-lsad']:
+                    lsad_value = self.lookups['census-lsad'][lsad]['value']
+                    position = self.lookups['census-lsad'][lsad]['position']
                 else:
-                    for k, v in self.lookups['lsad'].items():
+                    for k, v in self.lookups['census-lsad'].items():
                         if lsad == v['value']:
                             lsad_value = lsad
                             position = v['position']
