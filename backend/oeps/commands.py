@@ -185,7 +185,6 @@ def get_geodata(format, geography, year, tippecanoe_path, no_cache, upload, dest
         print("creating dataframe...")
         df = client.create_dataframe_from_files(unzipped)
 
-        print(df.columns)
         print("add HEROP_ID...")
         df = client.add_herop_id_to_dataframe(df, geog, yr, v['id_field'])
 
