@@ -163,11 +163,11 @@ def get_geodata(format, geography, year, tippecanoe_path, no_cache, upload, dest
 
     for k, v in client.lookups['census-sources'].items():
 
-        file_geography, yr = k.split("-")
+        geog, yr = k.split("-")
 
         if year and not yr == year:
             continue
-        if geography and not file_geography == geography:
+        if geography and not geog == geography:
             continue
 
         print(f"PROCESSING: {k}")
@@ -178,7 +178,7 @@ def get_geodata(format, geography, year, tippecanoe_path, no_cache, upload, dest
         # ftp_paths = client.collect_ftp_paths(v['ftp_root'], geography=geography)
         # paths = client.download_from_census_ftp(ftp_paths, outdir=download_dir, no_cache=no_cache)
 
-        paths = client.download_all_files(geography, yr, current_app.config['CACHE_DIR'], no_cache=no_cache)
+        paths = client.download_all_files(geog, yr, current_app.config['CACHE_DIR'], no_cache=no_cache)
 
         unzipped = client.unzip_files(paths)
 
@@ -187,22 +187,22 @@ def get_geodata(format, geography, year, tippecanoe_path, no_cache, upload, dest
 
         print(df.columns)
         print("add HEROP_ID...")
-        df = client.add_herop_id_to_dataframe(df, file_geography, yr, v['id_field'])
+        df = client.add_herop_id_to_dataframe(df, geog, yr, v['id_field'])
 
         print("add BBOX...")
         df = client.add_bbox_to_dataframe(df)
 
         print("add DISPLAY_NAME...")
-        df = client.add_name_to_dataframe(df, file_geography, yr, v['name_field'])
+        df = client.add_name_to_dataframe(df, geog, yr, v['name_field'])
 
         if "shp" in format:
             print("generating shapefile...")
-            shp_paths = client.export_to_shapefile(df, file_geography, yr, destination)
+            shp_paths = client.export_to_shapefile(df, geog, yr, destination)
             to_upload += shp_paths
 
         if "geojson" in format:
             print("generating geojson...")
-            geojson_path = client.export_to_geojson(df, file_geography, yr, destination, overwrite=True)
+            geojson_path = client.export_to_geojson(df, geog, yr, destination, overwrite=True)
             to_upload.append(geojson_path)
 
         if "pmtiles" in format:
@@ -211,8 +211,8 @@ def get_geodata(format, geography, year, tippecanoe_path, no_cache, upload, dest
                 print("pmtiles output must be accompanied by --tippecanoe-path")
                 exit()
 
-            geojson_path = client.export_to_geojson(df, file_geography, yr, overwrite=True)
-            pmtiles_path = client.export_to_pmtiles(geojson_path, file_geography, yr, destination, tippecanoe_path)
+            geojson_path = client.export_to_geojson(df, geog, yr, overwrite=True)
+            pmtiles_path = client.export_to_pmtiles(geojson_path, geog, yr, destination, tippecanoe_path)
 
             to_upload.append(pmtiles_path)
 
