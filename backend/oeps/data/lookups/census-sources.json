@@ -21,27 +21,27 @@
     },
     "state-2018": {
         "ftp_root": "/geo/tiger/GENZ2018/shp",
-        "id_field": "GEOID",
+        "id_field": "GEO_ID",
         "name_field": "NAME"
     },
     "county-2018": {
         "ftp_root": "/geo/tiger/GENZ2018/shp",
-        "id_field": "GEOID",
+        "id_field": "GEO_ID",
         "name_field": "NAME"
     },
     "tract-2018": {
         "ftp_root": "/geo/tiger/GENZ2018/shp",
-        "id_field": "GEOID",
+        "id_field": "GEO_ID",
         "name_field": "NAME"
     },
     "bg-2018": {
         "ftp_root": "/geo/tiger/GENZ2018/shp",
-        "id_field": "GEOID",
+        "id_field": "GEO_ID",
         "name_field": "NAME"
     },
     "place-2018": {
         "ftp_root": "/geo/tiger/GENZ2018/shp",
-        "id_field": "PLACEFP",
+        "id_field": "PLACE",
         "name_field": "NAME"
     },
     "zcta-2018": {
