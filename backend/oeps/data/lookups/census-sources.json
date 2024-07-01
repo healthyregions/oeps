@@ -1,17 +1,17 @@
 {
     "state-2010": {
         "ftp_root": "/geo/tiger/GENZ2010",
-        "id_field": "STATE",
+        "id_field": "GEO_ID",
         "name_field": "NAME"
     },
     "county-2010": {
         "ftp_root": "/geo/tiger/GENZ2010",
-        "id_field": "COUNTY",
+        "id_field": "GEO_ID",
         "name_field": "NAME"
     },
     "tract-2010": {
         "ftp_root": "/geo/tiger/GENZ2010",
-        "id_field": "TRACT",
+        "id_field": "GEO_ID",
         "name_field": "NAME"
     },
     "bg-2010": {
@@ -41,7 +41,7 @@
     },
     "place-2018": {
         "ftp_root": "/geo/tiger/GENZ2018/shp",
-        "id_field": "PLACE",
+        "id_field": "GEO_ID",
         "name_field": "NAME"
     },
     "zcta-2018": {
