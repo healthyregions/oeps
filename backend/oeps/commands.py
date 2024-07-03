@@ -151,71 +151,60 @@ census_grp = AppGroup('census')
 @click.option("--destination", 
               default=False, 
               help='Output directory for export. Treated as a directory, and not a file path.')
-def get_geodata(format, geography, year, tippecanoe_path, no_cache, upload, destination):
+def get_geodata(**kwargs):
+
+    args = Namespace(**kwargs)
 
     client = CensusClient(lookups_dir=current_app.config['LOOKUPS_DIR'])
 
     to_upload = []
 
-    if not destination:
-        destination = Path(current_app.config['CACHE_DIR'], 'geodata')
-    os.makedirs(destination, exist_ok=True)
+    if not args.destination:
+        args.destination = Path(current_app.config['CACHE_DIR'], 'geodata')
+    os.makedirs(args.destination, exist_ok=True)
 
-    for k, v in client.lookups['census-sources'].items():
+    print(f"PROCESSING: {args.geography}, {args.year}")
 
-        geog, yr = k.split("-")
+    paths = client.download_all_files(args.geography, args.year, current_app.config['CACHE_DIR'], no_cache=args.no_cache)
 
-        if year and not yr == year:
-            continue
-        if geography and not geog == geography:
-            continue
+    unzipped = client.unzip_files(paths)
 
-        print(f"PROCESSING: {k}")
+    print("creating dataframe...")
+    df = client.create_dataframe_from_files(unzipped)
 
-        # download_dir = Path(current_app.config['CACHE_DIR'], geography, 'raw', str(yr))
-        # download_dir.mkdir(exist_ok=True, parents=True)
+    print("add HEROP_ID...")
+    id_field = client.lookups['census-sources'][str(args.year)]['configs'][args.geography]['id_field']
+    df = client.add_herop_id_to_dataframe(df, args.geography, args.year, id_field)
 
-        # ftp_paths = client.collect_ftp_paths(v['ftp_root'], geography=geography)
-        # paths = client.download_from_census_ftp(ftp_paths, outdir=download_dir, no_cache=no_cache)
+    print("add BBOX...")
+    df = client.add_bbox_to_dataframe(df)
 
-        paths = client.download_all_files(geog, yr, current_app.config['CACHE_DIR'], no_cache=no_cache)
+    print("add DISPLAY_NAME...")
+    name_field = client.lookups['census-sources'][str(args.year)]['configs'][args.geography]['name_field']
+    df = client.add_name_to_dataframe(df, args.geography, args.year, name_field)
 
-        unzipped = client.unzip_files(paths)
+    if "shp" in args.format:
+        print("generating shapefile...")
+        shp_paths = client.export_to_shapefile(df, args.geography, args.year, args.destination)
+        to_upload += shp_paths
 
-        print("creating dataframe...")
-        df = client.create_dataframe_from_files(unzipped)
+    if "geojson" in args.format:
+        print("generating geojson...")
+        geojson_path = client.export_to_geojson(df, args.geography, args.year, args.destination, overwrite=True)
+        to_upload.append(geojson_path)
 
-        print("add HEROP_ID...")
-        df = client.add_herop_id_to_dataframe(df, geog, yr, v['id_field'])
+    if "pmtiles" in args.format:
+        print("generating pmtiles...")
+        if not args.tippecanoe_path:
+            print("pmtiles output must be accompanied by --tippecanoe-path")
+            exit()
 
-        print("add BBOX...")
-        df = client.add_bbox_to_dataframe(df)
+        geojson_path = client.export_to_geojson(df, args.geography, args.year, overwrite=True)
+        pmtiles_path = client.export_to_pmtiles(geojson_path, args.geography, args.year, args.destination, args.tippecanoe_path)
 
-        print("add DISPLAY_NAME...")
-        df = client.add_name_to_dataframe(df, geog, yr, v['name_field'])
+        to_upload.append(pmtiles_path)
 
-        if "shp" in format:
-            print("generating shapefile...")
-            shp_paths = client.export_to_shapefile(df, geog, yr, destination)
-            to_upload += shp_paths
-
-        if "geojson" in format:
-            print("generating geojson...")
-            geojson_path = client.export_to_geojson(df, geog, yr, destination, overwrite=True)
-            to_upload.append(geojson_path)
-
-        if "pmtiles" in format:
-            print("generating pmtiles...")
-            if not tippecanoe_path:
-                print("pmtiles output must be accompanied by --tippecanoe-path")
-                exit()
-
-            geojson_path = client.export_to_geojson(df, geog, yr, overwrite=True)
-            pmtiles_path = client.export_to_pmtiles(geojson_path, geog, yr, destination, tippecanoe_path)
-
-            to_upload.append(pmtiles_path)
-
-    if upload:
+    if args.upload:
         print(f"uploading {len(to_upload)} files to S3...")
         upload_to_s3(to_upload)
 
