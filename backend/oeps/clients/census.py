@@ -1,3 +1,4 @@
+import csv
 import json
 import ftplib
 import shutil
@@ -12,6 +13,7 @@ class CensusClient():
     def __init__(self, lookups_dir=None):
 
         self.lookups = self.load_lookups(lookups_dir)
+        self.load_filelists(lookups_dir)
 
     def load_lookups(self, lookups_dir):
         lookups = {}
@@ -19,41 +21,55 @@ class CensusClient():
             with open(f, 'r') as o:
                 data = json.load(o)
                 lookups[f.stem] = data
+
         return lookups
+
+    def load_filelists(self, lookups_dir):
+        with open(Path(lookups_dir, 'census-2010-geo-files.csv'), 'r') as o:
+            reader = csv.DictReader(o)
+            self.lookups['census-sources']['2010']['files'] = [i for i in reader]
+        with open(Path(lookups_dir, 'census-2018-geo-files.csv'), 'r') as o:
+            reader = csv.DictReader(o)
+            self.lookups['census-sources']['2018']['files'] = [i for i in reader]
 
     def ftp_connection(self):
 
         return ftplib.FTP('ftp2.census.gov', user="anonymous")
 
-    def collect_ftp_paths(self, root: str, geography: str, scale="500k"):
+    def collect_ftp_paths(self, year: int, geography: str, scale="500k"):
         """ Connect to the census FTP site and get a list of all files download all cartographic boundary files
         that pertain to the given criteria.
 
         Valid geographies are "state", "county", "zcta", "tract", "bg", and "place".
         """
 
-        print("getting connection")
+        ## DEPRECATED -- originally these file lists were aquired by querying the FTP server directly,
+        ## however, the nlst() function (and any other list directory operations) stopped working for
+        ## me spring 2024, so for now we were just storing the file names in local CSVs.
+        # print("getting connection")
         # server = self.ftp_connection()
-        server = ftplib.FTP('ftp2.census.gov', user='anonymous')
-        #server.connect()
-        print('connnected')
-        
-        files = server.nlst('/geo/tiger/GENZ2010')
-        print(files)
+        # print('connnected')
+        # files = server.nlst('/geo/tiger/GENZ2010')
+
+        files = self.lookups['census-sources'][str(year)]['files']
+        if not files:
+            print(f"no files for this year {year}")
+            return []
+
         # filter file list with simple string matching
-        files = [i for i in files if scale in i]
-        print(1)
+        files = [i for i in files if scale in i['filename']]
 
         # use the summary level code as some older years only include that code
-        files = [i for i in files if geography in i or self.lookups['census-summary-levels'][geography] in i]
-        print(2)
+        files = [i for i in files if geography in i['filename'] or self.lookups['census-summary-levels'][geography] in i['filename']]
 
         # special handling for county, exclude the within_ua files (present in 2018)
         if geography == "county":
-            files = [i for i in files if "within" not in i]
+            files = [i for i in files if "within" not in i['filename']]
 
-        print(3)
-        return files
+        ftp_root = self.lookups['census-sources'][str(year)]['ftp_root']
+        http_base_url = "https://www2.census.gov"
+        paths = [f"{http_base_url}{ftp_root}{i['filename']}" for i in files]
+        return paths
 
     def download_from_census_ftp(self, ftp_paths, outdir=".", no_cache=False):
 
@@ -78,8 +94,7 @@ class CensusClient():
         download_dir = Path(destination, geography, 'raw', str(year))
         download_dir.mkdir(exist_ok=True, parents=True)
 
-        ftp_root = self.lookups['census-sources'][f'{geography}-{year}']['ftp_root']
-        ftp_paths = self.collect_ftp_paths(ftp_root, geography=geography)
+        ftp_paths = self.collect_ftp_paths(year=year, geography=geography)
         paths = self.download_from_census_ftp(ftp_paths, outdir=download_dir, no_cache=no_cache)
 
         return paths
