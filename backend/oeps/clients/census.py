@@ -68,7 +68,7 @@ class CensusClient():
 
         ftp_root = self.lookups['census-sources'][str(year)]['ftp_root']
         http_base_url = "https://www2.census.gov"
-        paths = [f"{http_base_url}{ftp_root}{i['filename']}" for i in files]
+        paths = [f"{ftp_root}{i['filename']}" for i in files]
         return paths
 
     def download_from_census_ftp(self, ftp_paths, outdir=".", no_cache=False):

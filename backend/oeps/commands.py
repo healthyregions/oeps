@@ -150,7 +150,7 @@ def get_geodata(**kwargs):
 
     print(f"PROCESSING: {args.geography}, {args.year}")
 
-    paths = client.download_all_files(args.geography, args.year, current_app.config['CACHE_DIR'], no_cache=args.no_cache)
+    paths = client.download_all_files(args.geography, args.year, args.destination, no_cache=args.no_cache)
 
     unzipped = client.unzip_files(paths)
 
