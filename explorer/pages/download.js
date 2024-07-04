@@ -171,12 +171,15 @@ export default function Download() {
       <MainHead />
       <MainNav />
       <main className={styles.main}>
-        <h1 className={styles.title}>Data Download</h1>
+        <h1 className={styles.title}>Data Download & Access</h1>
         <Gutter em={1} />
         <p>Download all data, or select particular topics or geographic scales.</p>  
-        <a className={styles.fullDownload} href="https://github.com/GeoDaCenter/opioid-policy-scan/zipball/v1.0">Download all v1.0 data <span>ZIP File</span></a>
-        <a className={styles.fullDownload} href="https://github.com/GeoDaCenter/opioid-policy-scan/tarball/v1.0">Download all v1.0 data <span>TAR Ball</span></a>
-        <a className={styles.fullDownload} href="https://github.com/GeoDaCenter/opioid-policy-scan">View on <span>GitHub</span></a>
+        <div classname={styles.downloadContainer}>
+          <a className={styles.fullDownload} href="">Download all data <span>CSVs and Data Dictionaries</span></a>
+          <a className={styles.fullDownload} href="https://github.com/GeoDaCenter/opioid-policy-scan/zipball/v1.0">Download all data <span>Full GitHub Archive</span></a>
+          <a className={styles.fullDownload} href="">Download all data<span>Frictionless Data Package (v1)</span></a>
+          <a className={styles.fullDownload} href="https://docs.google.com/forms/d/e/1FAIpQLSfTfrxpCoXeHEJMZ9mwRLNlFkWCxLzew_1ayEofK5W59VNKMw/viewform?usp=sf_link"> Google BigQuery <span>Request Access key</span></a>
+        </div>
         <Gutter em={5} />
         
         <h2>Filter v2.0 Data and Download</h2>
