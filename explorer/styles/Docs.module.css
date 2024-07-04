@@ -163,6 +163,8 @@
     display:inline-block;
     padding:0.25em 0.5em;
     border-radius:0.25em;
+    text-align: center;
+    max-width: clamp(180px, 15.5vw, 250px);
 }
 
 .fullDownload span {
@@ -172,9 +174,15 @@
     text-align:center;
     font-weight:bold;
 }
+
 @media (max-width:1024px){
     .main {
         font-size:125%;
+    }
+    .fullDownload {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
     }
 }
 @media (max-width:600px){
