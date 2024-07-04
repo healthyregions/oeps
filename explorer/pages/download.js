@@ -174,7 +174,7 @@ export default function Download() {
         <h1 className={styles.title}>Data Download & Access</h1>
         <Gutter em={1} />
         <p>Download all data, or select particular topics or geographic scales.</p>  
-        <div classname={styles.downloadContainer}>
+        <div className={styles.downloadContainer}>
           <a className={styles.fullDownload} href="">Download all data <span>CSVs and Data Dictionaries</span></a>
           <a className={styles.fullDownload} href="https://github.com/GeoDaCenter/opioid-policy-scan/zipball/v1.0">Download all data <span>Full GitHub Archive</span></a>
           <a className={styles.fullDownload} href="">Download all data<span>Frictionless Data Package (v1)</span></a>
