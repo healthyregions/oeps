@@ -160,24 +160,44 @@
     background-color: var(--selected-color);
     color:white;
     margin:0.25em;
-    display:inline-block;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding:0.25em 0.5em;
     border-radius:0.25em;
     text-align: center;
     max-width: clamp(180px, 15.5vw, 250px);
+    height: 100%;
 }
 
 .fullDownload span {
-    display:block;
+    display: inline-block;
     margin:0 auto;
     font-size:110%;
     text-align:center;
     font-weight:bold;
 }
 
+.downloadsContainer {
+    display: flex;
+    flex-direction: row;
+    height: 177px;
+    vertical-align: middle;
+}
+
+.downloadButton {
+    display: flex;
+    align-items: center;
+}
+
 @media (max-width:1024px){
     .main {
         font-size:125%;
+    }
+    .downloadsContainer {
+        flex-direction: column;
+        width: 100%;
     }
     .fullDownload {
         max-width: 100%;
