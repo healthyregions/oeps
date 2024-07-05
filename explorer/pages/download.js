@@ -209,7 +209,7 @@ export default function Download() {
         </div>
         <Gutter em={5} />
         
-        <h2>Filter v2.0 Data and Download</h2>
+        <h2>Filter Data and Download</h2>
         
         <div className="row">
           <div className="col-xs-12 col-md-8">
