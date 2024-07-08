@@ -1,9 +1,9 @@
-export const csvFiles = [
+[
   {
     "file": "C_Latest",
     "folder": "full_tables/",
     "year": "Latest",
-    "scale": "C",
+    "scale": "C"
   },
   {
     "file": "C_2010",
@@ -33,7 +33,7 @@ export const csvFiles = [
     "file": "S_Latest",
     "folder": "full_tables/",
     "year": "Latest",
-    "scale": "S",
+    "scale": "S"
   },
   {
     "file": "S_2010",
