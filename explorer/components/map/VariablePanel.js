@@ -8,7 +8,7 @@ import Autocomplete from "@mui/material/Autocomplete";
 import { Gutter } from "../layout/Gutter";
 import RemoteMarkdownModal from "../../components/markdown/RemoteMarkdownModal";
 import { Box, Button, Grid, Modal, Typography } from "@mui/material";
-import { variables } from "meta/variables";
+import variables from "meta/variables.json";
 const variableMeta = Object.values(variables).flat();
 
 const themeCategories = [

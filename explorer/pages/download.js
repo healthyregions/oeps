@@ -4,7 +4,7 @@ import styles from "../styles/Docs.module.css";
 import { Gutter } from "../components/layout/Gutter";
 import MainNav from "../components/layout/MainNav";
 import Footer from "../components/layout/Footer";
-import { csvFiles } from '../meta/csvFiles';
+import csvFiles from '../meta/csvFiles.json';
 import * as JSZip from 'jszip';
 import { saveAs } from 'file-saver';
 
