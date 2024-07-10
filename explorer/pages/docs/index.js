@@ -4,7 +4,7 @@ import styles from "../../styles/Docs.module.css";
 import { Gutter } from "../../components/layout/Gutter";
 import MainNav from "../../components/layout/MainNav";
 import Footer from "../../components/layout/Footer";
-import { variables } from '../../meta/variables';
+import variables from '../../meta/variables.json';
 // import RemoteMarkdownModal from "@components/markdown/RemoteMarkdownModal";
 
 const VariableTable = ({table, filters}) => 
