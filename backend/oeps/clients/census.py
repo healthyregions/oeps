@@ -7,15 +7,19 @@ import pandas as pd
 import geopandas as gpd
 from pathlib import Path
 
+from oeps.utils import download_file
+
 
 class CensusClient():
 
-    def __init__(self, lookups_dir=None):
+    def __init__(self, lookups_dir=None, verbose=False):
 
+        self.verbose = verbose
         self.lookups = self.load_lookups(lookups_dir)
         self.load_filelists(lookups_dir)
 
     def load_lookups(self, lookups_dir):
+        if self.verbose: print("loading lookups...")
         lookups = {}
         for f in lookups_dir.glob("*.json"):
             with open(f, 'r') as o:
@@ -25,6 +29,7 @@ class CensusClient():
         return lookups
 
     def load_filelists(self, lookups_dir):
+        if self.verbose: print("loading filelists...")
         with open(Path(lookups_dir, 'census-2010-geo-files.csv'), 'r') as o:
             reader = csv.DictReader(o)
             self.lookups['census-sources']['2010']['files'] = [i for i in reader]
@@ -33,8 +38,12 @@ class CensusClient():
             self.lookups['census-sources']['2018']['files'] = [i for i in reader]
 
     def ftp_connection(self):
-
-        return ftplib.FTP('ftp2.census.gov', user="anonymous")
+        """ DEPRECATED: had too much trouble with the ftp server, just using direct http gets for now """
+        if self.verbose: print("connecting to FTP server...")
+        ftp = ftplib.FTP('ftp2.census.gov')
+        ftp.login(user="anonymous", passwd="anonymous")
+        # ftp.connect()
+        return ftp
 
     def collect_ftp_paths(self, year: int, geography: str, scale="500k"):
         """ Connect to the census FTP site and get a list of all files download all cartographic boundary files
@@ -68,10 +77,11 @@ class CensusClient():
 
         ftp_root = self.lookups['census-sources'][str(year)]['ftp_root']
         http_base_url = "https://www2.census.gov"
-        paths = [f"{ftp_root}{i['filename']}" for i in files]
+        paths = [f"{http_base_url}{ftp_root}{i['filename']}" for i in files]
         return paths
 
     def download_from_census_ftp(self, ftp_paths, outdir=".", no_cache=False):
+        """ DEPRECATED: had too much trouble with the ftp server, just using direct http gets for now """
 
         server = self.ftp_connection()
 
@@ -94,10 +104,21 @@ class CensusClient():
         download_dir = Path(destination, geography, 'raw', str(year))
         download_dir.mkdir(exist_ok=True, parents=True)
 
+        if self.verbose: print("collecting download paths...")
         ftp_paths = self.collect_ftp_paths(year=year, geography=geography)
-        paths = self.download_from_census_ftp(ftp_paths, outdir=download_dir, no_cache=no_cache)
+        if self.verbose:
+            for i in ftp_paths:
+                print(" -", i)
+        if self.verbose: print("downloading...")
 
-        return paths
+        out_paths = []
+        for url in ftp_paths:
+            filename = url.split("/")[-1]
+            outpath = Path(download_dir, filename)
+            out_path = download_file(url, outpath, desc=f" - {filename}", progress_bar=self.verbose)
+            out_paths.append(out_path)
+
+        return out_paths
 
     def unzip_files(self, paths):
 
