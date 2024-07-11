@@ -6,6 +6,7 @@ import shutil
 import threading
 import boto3
 import requests
+from tqdm import tqdm
 from glob import glob
 from pathlib import Path
 
@@ -37,12 +38,12 @@ class S3ProgressPercentage(object):
             self._seen_so_far += bytes_amount
             percentage = (self._seen_so_far / self._size) * 100
             sys.stdout.write(
-                "\r%s  %s / %s  (%.2f%%)" % (
-                    self._filename, b_to_mb(self._seen_so_far), b_to_mb(self._size),
+                "\r - %s  %s / %s  (%.2f%%)" % (
+                    Path(self._filename).name, b_to_mb(self._seen_so_far), b_to_mb(self._size),
                     percentage))
             sys.stdout.flush()
 
-def upload_to_s3(paths, prefix: str=None):
+def upload_to_s3(paths, prefix: str=None, progress_bar: bool=False):
 
     s3 = boto3.resource("s3")
     bucket = os.getenv("AWS_BUCKET_NAME")
@@ -51,11 +52,32 @@ def upload_to_s3(paths, prefix: str=None):
         paths = [paths]
 
     for path in paths:
-        print(path)
-        print(path.name)
-        key = f"/{prefix}/{path.name}" if prefix else path.name
-        s3.Bucket(bucket).upload_file(str(path), key, Callback=S3ProgressPercentage(str(path)))
-        print(" -- done")
+        key = f"{prefix}/{path.name}" if prefix else path.name
+        cb = S3ProgressPercentage(str(path)) if progress_bar else None
+        s3.Bucket(bucket).upload_file(str(path), key, Callback=cb)
+
+def download_file(url, filepath, desc=None, progress_bar=False):
+
+    # Streaming, so we can iterate over the response.
+    r = requests.get(url, stream=True)
+
+    # Total size in bytes.
+    total_size = int(r.headers.get('content-length', 0))
+    block_size = 1024
+
+    if progress_bar:
+        t = tqdm(total=total_size, unit='iB', unit_scale=True, desc=desc)
+
+    with open(filepath, 'wb') as f:
+        for data in r.iter_content(block_size):
+            if progress_bar:
+                t.update(len(data))
+            f.write(data)
+    
+    if progress_bar:
+        t.close()
+
+    return filepath
 
 def get_path_or_paths(path_input, extension=None):
 
