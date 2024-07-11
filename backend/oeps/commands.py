@@ -114,7 +114,7 @@ census_grp = AppGroup('census')
     type=click.Choice(["shp","geojson","pmtiles"]), nargs=-1
 )
 @click.option("--geography", "-g",
-    type=click.Choice(["place", "bg", "tract", "zcta", "county", "state"]),
+    type=click.Choice(["place", "bg", "tract", "zcta", "county", "state"]), multiple=True,
     help="Specify a geography to prepare. If left empty, all geographies will be processed."
 )
 @click.option('--year', "-y",
@@ -133,67 +133,82 @@ census_grp = AppGroup('census')
     is_flag=True, default=False,
     help="Upload the processed files to S3."
 )
-@click.option("--destination", 
-              default=False, 
-              help='Output directory for export. Treated as a directory, and not a file path.')
+@click.option("--destination",
+    help='Output directory for export. Treated as a directory, and not a file path.'
+)
+@click.option("--verbose",
+    is_flag=True, default=False,
+    help='Enable verbose print statements'
+)
 def get_geodata(**kwargs):
 
     args = Namespace(**kwargs)
 
-    client = CensusClient(lookups_dir=current_app.config['LOOKUPS_DIR'])
-
-    to_upload = []
+    client = CensusClient(lookups_dir=current_app.config['LOOKUPS_DIR'], verbose=args.verbose)
 
     if not args.destination:
         args.destination = Path(current_app.config['CACHE_DIR'], 'geodata')
     os.makedirs(args.destination, exist_ok=True)
 
-    print(f"PROCESSING: {args.geography}, {args.year}")
+    geogs = args.geography
+    if not geogs:
+        geogs = ['state', 'county', 'tract', 'bg', 'tract', 'place', 'zcta']
 
-    paths = client.download_all_files(args.geography, args.year, args.destination, no_cache=args.no_cache)
+    for geog in geogs:
 
-    unzipped = client.unzip_files(paths)
+        to_upload = []
+        print(f"\nPROCESSING: {geog}, {args.year}")
 
-    print("creating dataframe...")
-    df = client.create_dataframe_from_files(unzipped)
+        print("downloading files...")
+        paths = client.download_all_files(geog, args.year, args.destination, no_cache=args.no_cache)
 
-    print("add HEROP_ID...")
-    id_field = client.lookups['census-sources'][str(args.year)]['configs'][args.geography]['id_field']
-    df = client.add_herop_id_to_dataframe(df, args.geography, args.year, id_field)
+        print("unzipping files...")
+        unzipped = client.unzip_files(paths)
 
-    print("add BBOX...")
-    df = client.add_bbox_to_dataframe(df)
+        print("creating dataframe...")
+        df = client.create_dataframe_from_files(unzipped)
 
-    print("add DISPLAY_NAME...")
-    name_field = client.lookups['census-sources'][str(args.year)]['configs'][args.geography]['name_field']
-    df = client.add_name_to_dataframe(df, args.geography, args.year, name_field)
+        print("add HEROP_ID...")
+        id_field = client.lookups['census-sources'][str(args.year)]['configs'][geog]['id_field']
+        df = client.add_herop_id_to_dataframe(df, geog, args.year, id_field)
 
-    if "shp" in args.format:
-        print("generating shapefile...")
-        shp_paths = client.export_to_shapefile(df, args.geography, args.year, args.destination)
-        to_upload += shp_paths
+        print("add BBOX...")
+        df = client.add_bbox_to_dataframe(df)
 
-    if "geojson" in args.format:
-        print("generating geojson...")
-        geojson_path = client.export_to_geojson(df, args.geography, args.year, args.destination, overwrite=True)
-        to_upload.append(geojson_path)
+        print("add DISPLAY_NAME...")
+        name_field = client.lookups['census-sources'][str(args.year)]['configs'][geog]['name_field']
+        df = client.add_name_to_dataframe(df, geog, args.year, name_field)
 
-    if "pmtiles" in args.format:
-        print("generating pmtiles...")
-        if not args.tippecanoe_path:
-            print("pmtiles output must be accompanied by --tippecanoe-path")
-            exit()
+        if "shp" in args.format:
+            print("generating shapefile...")
+            shp_paths = client.export_to_shapefile(df, geog, args.year, args.destination)
+            to_upload += shp_paths
 
-        geojson_path = client.export_to_geojson(df, args.geography, args.year, overwrite=True)
-        pmtiles_path = client.export_to_pmtiles(geojson_path, args.geography, args.year, args.destination, args.tippecanoe_path)
+        geojson_path = None
+        if "geojson" in args.format:
+            print("generating geojson...")
+            geojson_path = client.export_to_geojson(df, geog, args.year, args.destination, overwrite=True)
+            to_upload.append(geojson_path)
 
-        to_upload.append(pmtiles_path)
+        if "pmtiles" in args.format:
+            print("generating pmtiles...")
+            if not args.tippecanoe_path:
+                print("pmtiles output must be accompanied by --tippecanoe-path")
+                exit()
 
-    if args.upload:
-        print(f"uploading {len(to_upload)} files to S3...")
-        upload_to_s3(to_upload)
+            # need geojson for this, but use existing if it was created already
+            if not geojson_path:
+                geojson_path = client.export_to_geojson(df, geog, args.year, args.destination, overwrite=True)
+            pmtiles_path = client.export_to_pmtiles(geojson_path, geog, args.year, args.destination, args.tippecanoe_path)
 
-    print("done.")
+            to_upload.append(pmtiles_path)
+
+        if args.upload:
+            print(f"uploading {len(to_upload)} files to S3...")
+            for fpath in to_upload:
+                upload_to_s3(fpath, prefix='oeps', progress_bar=args.verbose)
+
+    print("\ndone.")
 
 
 ## Group of commands for Google Big Query operations
