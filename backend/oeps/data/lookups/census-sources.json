@@ -1,52 +1,52 @@
 {
-    "state-2010": {
-        "ftp_root": "/geo/tiger/GENZ2010",
-        "id_field": "STATE",
-        "name_field": "NAME"
+    "2010": {
+        "ftp_root": "/geo/tiger/GENZ2010/",
+        "configs": {
+            "state": {
+                "id_field": "STATE",
+                "name_field": "NAME"
+            },
+            "county": {
+                "id_field": "COUNTY",
+                "name_field": "NAME"
+            },
+            "tract": {
+                "id_field": "TRACT",
+                "name_field": "NAME"
+            },
+            "bg": {
+                "id_field": "GEO_ID",
+                "name_field": "NAME"
+            }
+        }
     },
-    "county-2010": {
-        "ftp_root": "/geo/tiger/GENZ2010",
-        "id_field": "COUNTY",
-        "name_field": "NAME"
-    },
-    "tract-2010": {
-        "ftp_root": "/geo/tiger/GENZ2010",
-        "id_field": "TRACT",
-        "name_field": "NAME"
-    },
-    "bg-2010": {
-        "ftp_root": "/geo/tiger/GENZ2010",
-        "id_field": "GEO_ID",
-        "name_field": "NAME"
-    },
-    "state-2018": {
-        "ftp_root": "/geo/tiger/GENZ2018/shp",
-        "id_field": "GEOID",
-        "name_field": "NAME"
-    },
-    "county-2018": {
-        "ftp_root": "/geo/tiger/GENZ2018/shp",
-        "id_field": "GEOID",
-        "name_field": "NAME"
-    },
-    "tract-2018": {
-        "ftp_root": "/geo/tiger/GENZ2018/shp",
-        "id_field": "GEOID",
-        "name_field": "NAME"
-    },
-    "bg-2018": {
-        "ftp_root": "/geo/tiger/GENZ2018/shp",
-        "id_field": "GEOID",
-        "name_field": "NAME"
-    },
-    "place-2018": {
-        "ftp_root": "/geo/tiger/GENZ2018/shp",
-        "id_field": "PLACEFP",
-        "name_field": "NAME"
-    },
-    "zcta-2018": {
-        "ftp_root": "/geo/tiger/GENZ2018/shp",
-        "id_field": "ZCTA5CE10",
-        "name_field": "ZCTA5CE10"
+    "2018": {
+        "ftp_root": "/geo/tiger/GENZ2018/shp/",
+        "configs": {
+            "state": {
+                "id_field": "GEOID",
+                "name_field": "NAME"
+            },
+            "county": {
+                "id_field": "GEOID",
+                "name_field": "NAME"
+            },
+            "tract": {
+                "id_field": "GEOID",
+                "name_field": "NAME"
+            },
+            "bg": {
+                "id_field": "GEOID",
+                "name_field": "NAME"
+            },
+            "place": {
+                "id_field": "PLACEFP",
+                "name_field": "NAME"
+            },
+            "zcta": {
+                "id_field": "ZCTA5CE10",
+                "name_field": "ZCTA5CE10"
+            }
+        }
     }
 }
