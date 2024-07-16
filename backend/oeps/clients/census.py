@@ -149,7 +149,10 @@ class CensusClient():
 
         lvl = self.lookups['census-summary-levels'][geography]
 
-        df['HEROP_ID'] = df.apply(lambda row: f"{lvl}US{str(row[pk_field][9:])}", axis = 1)
+        if geography == "bg" and year == "2010":
+            df['HEROP_ID'] = df.apply(lambda row: f"{lvl}US{str(row[pk_field][6:])}", axis = 1)
+        else:
+            df['HEROP_ID'] = df.apply(lambda row: f"{lvl}US{str(row[pk_field])}", axis = 1)
 
         return df
 
