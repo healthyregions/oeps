@@ -1,12 +1,19 @@
 import variables from './config/variables.json';
-import data from './config/map-config-data.json';
+
+import stateData from './config/sources/state.json';
+import countyData from './config/sources/county.json';
+import zctaData from './config/sources/zcta.json';
+import tractData from './config/sources/tract.json';
 
 const defaultVariable = "Opioid Mortality Rate";
 const defaultData = "US Counties";
 
-// 2 is zcta, 3 is tracts
-data[2]['tiles'] = process.env.NEXT_PUBLIC_MAPBOX_TILESET_ID_ZCTA
-data[3]['tiles'] = process.env.NEXT_PUBLIC_MAPBOX_TILESET_ID_TRACT
+const data = [
+  stateData,
+  countyData,
+  zctaData,
+  tractData
+]
 
 let style = {
   variableHeaders: {},
