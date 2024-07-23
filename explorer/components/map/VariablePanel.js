@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import styles from "./VariablePanel.module.css";
 
 import TextField from "@mui/material/TextField";
@@ -10,15 +10,6 @@ import RemoteMarkdownModal from "../../components/markdown/RemoteMarkdownModal";
 import { Box, Button, Grid, Modal, Typography } from "@mui/material";
 import variables from "meta/variables.json";
 const variableMeta = Object.values(variables).flat();
-
-const themeCategories = [
-  "Policy",
-  "Health",
-  "Demographic",
-  "Economic",
-  "Physical Environment",
-  "COVID-19",
-];
 
 const modalStyle = {
   position: "fixed",
@@ -43,7 +34,12 @@ export default function VariablePanel(props) {
   const currentData = useSelector((state) => state.currentData);
   const dataPresets = useSelector((state) => state.dataPresets);
   const [activeThemes, setActiveThemes] = useState([]);
+  const [activeYears, setActiveYears] = useState([]);
   const autocompleteRef = useRef(null);
+  const [variableOptions, setVariableOptions] = useState(dataPresets.variables);
+
+  const themeCategories = [...new Set(dataPresets.variables.map(f => f.theme))];
+  const yearFilters = [...new Set(dataPresets.variables.map(f => f.year))];
 
   const toggleTheme = (theme) => {
     setActiveThemes((activeThemes) => {
@@ -54,6 +50,22 @@ export default function VariablePanel(props) {
       }
     });
   };
+
+  const toggleYear = (year) => {
+    setActiveYears((activeYears) => {
+      if (activeYears.includes(year)) {
+        return activeYears.filter((t) => t !== year);
+      } else {
+        return [...activeYears, year];
+      }
+    });
+  };
+
+  useEffect(() => {
+    const filt1 = activeThemes.length ? dataPresets.variables.filter((f) => activeThemes.includes(f.theme)) : dataPresets.variables;
+    const filt2 = activeYears.length ? filt1.filter((f) => activeYears.includes(f.year)) : filt1;
+    setVariableOptions(filt2)
+  },[activeYears, activeThemes])
 
   const [activeDocs, setActiveDocs] = useState("");
   const [modalOpen, setModalOpen] = useState(false);
@@ -200,19 +212,24 @@ export default function VariablePanel(props) {
                 {cat}
               </Button>
             ))}
+            <Typography variant="h6">Filter by Year</Typography>
+            {yearFilters.map((yr, i) => (
+              <Button
+                key={i}
+                variant={activeYears.includes(yr) ? "contained" : "outlined"}
+                onClick={() => toggleYear(yr)}
+                sx={{ margin: ".25em", textTransform: "none" }}
+              >
+                {yr}
+              </Button>
+            ))}
             <Gutter em={0.5} />
             <Autocomplete
               disablePortal
               open={true}
               ref={autocompleteRef}
               id="combo-box-demo"
-              options={
-                activeThemes.length
-                  ? dataPresets.variables.filter((f) =>
-                      activeThemes.includes(f.theme)
-                    )
-                  : dataPresets.variables
-              }
+              options={variableOptions}
               getOptionLabel={(option) => option.variable}
               groupBy={(option) => option.theme}
               // sx={{ width: 300 }}
