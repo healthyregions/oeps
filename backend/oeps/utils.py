@@ -55,8 +55,15 @@ def upload_to_s3(paths, prefix: str=None, progress_bar: bool=False):
         key = f"{prefix}/{path.name}" if prefix else path.name
         cb = S3ProgressPercentage(str(path)) if progress_bar else None
         s3.Bucket(bucket).upload_file(str(path), key, Callback=cb)
+        if progress_bar:
+            print("")
 
-def download_file(url, filepath, desc=None, progress_bar=False):
+def download_file(url, filepath, desc=None, progress_bar=False, no_cache: bool=False):
+
+    if Path(filepath).is_file() and not no_cache:
+        if progress_bar:
+            print(f"{desc}: use cached file")
+        return filepath
 
     # Streaming, so we can iterate over the response.
     r = requests.get(url, stream=True)
