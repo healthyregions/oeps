@@ -1,6 +1,7 @@
 from flask import Flask
 
 from oeps.commands import (
+    explorer_grp,
     jcoin_grp,
     census_grp,
     bigquery_grp,
@@ -17,6 +18,7 @@ def create_app():
     app.config.from_object('oeps.config')
 
     # add all cli commands
+    app.cli.add_command(explorer_grp)
     app.cli.add_command(jcoin_grp)
     app.cli.add_command(census_grp)
     app.cli.add_command(bigquery_grp)
