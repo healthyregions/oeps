@@ -7,46 +7,57 @@ class Explorer():
 
     def build_config(self, schema_dir, output_dir):
 
-
+        # def gets put straight into the output (this allows for flexible keys within it)
         source_info = [
             {
                 "id": "state",
-                "name": "US States",
-                "dataset": "cb_2018_us_state_20m.geojson",
-                "join_id": "HEROP_ID",
-                "bounds": [
-                    -125.109215,
-                    -66.925621,
-                    25.043926,
-                    49.295128
-                ],
+                "def": {
+                    "name": "US States",
+                    "geodata": "cb_2018_us_state_20m.geojson",
+                    "id": "HEROP_ID",
+                    "bounds": [-125.109215, -66.925621, 25.043926, 49.295128],
+                },
                 "csv_abbrev": "S",
             },
             {
                 "id": "county",
-                "name": "US Counties",
-                "dataset": "cb_2018_us_county_20m.geojson",
-                "join_id": "HEROP_ID",
-                "bounds": [
-                    -125.109215,
-                    -66.925621,
-                    25.043926,
-                    49.295128
-                ],
+                "def": {
+                    "name": "US Counties",
+                    "geodata": "cb_2018_us_county_20m.geojson",
+                    "id": "HEROP_ID",
+                    "bounds": [-125.109215, -66.925621, 25.043926, 49.295128],
+                },
                 "csv_abbrev": "C",
+            },
+            {
+                "id": "zcta",
+                "def": {
+                    "name": "US Zip Codes",
+                    "geodata": "Zip Codes [tiles]",
+                    "tiles": "herop-lab.7o9tctx9",
+                    "id": "HEROP_ID",
+                    "bounds": [-125.109215, -66.925621, 25.043926, 49.295128],
+                },
+                "csv_abbrev": "Z",
+            },
+            {
+                "id": "tract",
+                "def": {
+                    "name": "US Tracts",
+                    "geodata": "Tracts [tiles]",
+                    "tiles": "herop-lab.0eeozlm3",
+                    "id": "HEROP_ID",
+                    "bounds": [-125.109215, -66.925621, 25.043926, 49.295128],
+                },
+                "csv_abbrev": "T",
             },
         ]
 
         out_variables = {}
         for source in source_info:
 
-            out_source = {
-                "name": source["name"],
-                "geodata": source["dataset"],
-                "id": source["join_id"],
-                "bounds": source["bounds"],
-                "tables": {}
-            }
+            out_source = source['def']
+            out_source["tables"] = {}
 
             table_files = Path(schema_dir).glob(f"*{source['csv_abbrev']}*.json")
             for path in table_files:
