@@ -6,6 +6,8 @@ import variables from './config/variables.json';
 // import tractData from './config/sources-v1/tract.json';
 import stateData from './config/sources/state.json';
 import countyData from './config/sources/county.json';
+import zctaData from './config/sources/zcta.json';
+import tractData from './config/sources/tract.json';
 
 // const defaultVariable = "Opioid Mortality Rate";
 // const defaultData = "US Counties";
@@ -17,8 +19,8 @@ variables.sort((a, b) => a.theme.localeCompare(b.theme));
 const data = [
   stateData,
   countyData,
-  // zctaData,
-  // tractData,
+  zctaData,
+  tractData,
 ]
 
 let style = {
