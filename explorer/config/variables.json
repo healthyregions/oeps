@@ -4518,5 +4518,555 @@
     "binning": "naturalBreaks",
     "numberOfBins": 8,
     "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "A15_24P (Latest)",
+    "numerator": "latest",
+    "nProperty": "A15_24P",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Ruca1 (Latest)",
+    "numerator": "latest",
+    "nProperty": "Ruca1",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Ruca2 (Latest)",
+    "numerator": "latest",
+    "nProperty": "Ruca2",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Rurality (Latest)",
+    "numerator": "latest",
+    "nProperty": "Rurality",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MoudMinDis (Latest)",
+    "numerator": "latest",
+    "nProperty": "MoudMinDis",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BupMinDis (Latest)",
+    "numerator": "latest",
+    "nProperty": "BupMinDis",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BupTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "BupTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BupCntDr30 (Latest)",
+    "numerator": "latest",
+    "nProperty": "BupCntDr30",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MetMinDis (Latest)",
+    "numerator": "latest",
+    "nProperty": "MetMinDis",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MetTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "MetTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MetCntDr30 (Latest)",
+    "numerator": "latest",
+    "nProperty": "MetCntDr30",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NalMinDis (Latest)",
+    "numerator": "latest",
+    "nProperty": "NalMinDis",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NalTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "NalTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NalCntDr30 (Latest)",
+    "numerator": "latest",
+    "nProperty": "NalCntDr30",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BupTmWk (Latest)",
+    "numerator": "latest",
+    "nProperty": "BupTmWk",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BupCntWk60 (Latest)",
+    "numerator": "latest",
+    "nProperty": "BupCntWk60",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BupCntWk30 (Latest)",
+    "numerator": "latest",
+    "nProperty": "BupCntWk30",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MetTmWk (Latest)",
+    "numerator": "latest",
+    "nProperty": "MetTmWk",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MetCntWk30 (Latest)",
+    "numerator": "latest",
+    "nProperty": "MetCntWk30",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MetCntWk60 (Latest)",
+    "numerator": "latest",
+    "nProperty": "MetCntWk60",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NalTmWk (Latest)",
+    "numerator": "latest",
+    "nProperty": "NalTmWk",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NalCntWk60 (Latest)",
+    "numerator": "latest",
+    "nProperty": "NalCntWk60",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NalCntWk30 (Latest)",
+    "numerator": "latest",
+    "nProperty": "NalCntWk30",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BupTmBk (Latest)",
+    "numerator": "latest",
+    "nProperty": "BupTmBk",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BupCntBk60 (Latest)",
+    "numerator": "latest",
+    "nProperty": "BupCntBk60",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BupCntBk30 (Latest)",
+    "numerator": "latest",
+    "nProperty": "BupCntBk30",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MetTmBk (Latest)",
+    "numerator": "latest",
+    "nProperty": "MetTmBk",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MetCntBk60 (Latest)",
+    "numerator": "latest",
+    "nProperty": "MetCntBk60",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MetCntBk30 (Latest)",
+    "numerator": "latest",
+    "nProperty": "MetCntBk30",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NalTmBk (Latest)",
+    "numerator": "latest",
+    "nProperty": "NalTmBk",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NalCntBk60 (Latest)",
+    "numerator": "latest",
+    "nProperty": "NalCntBk60",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NalCntBk30 (Latest)",
+    "numerator": "latest",
+    "nProperty": "NalCntBk30",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "FqhcMinDis (Latest)",
+    "numerator": "latest",
+    "nProperty": "FqhcMinDis",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "FqhcTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "FqhcTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "FqhcCntDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "FqhcCntDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "HospMinDis (Latest)",
+    "numerator": "latest",
+    "nProperty": "HospMinDis",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "HospTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "HospTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "HospCntDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "HospCntDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "RxMinDis (Latest)",
+    "numerator": "latest",
+    "nProperty": "RxMinDis",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "RxTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "RxTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "RxCntDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "RxCntDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MhMinDis (Latest)",
+    "numerator": "latest",
+    "nProperty": "MhMinDis",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MhTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "MhTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MhCntDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "MhCntDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "SutMinDis (Latest)",
+    "numerator": "latest",
+    "nProperty": "SutMinDis",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "SutTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "SutTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "SutCntDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "SutCntDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "OtpMinDis (Latest)",
+    "numerator": "latest",
+    "nProperty": "OtpMinDis",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "OtpTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "OtpTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "OtpCntDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "OtpCntDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "SocEcAdvIn (Latest)",
+    "numerator": "latest",
+    "nProperty": "SocEcAdvIn",
+    "theme": "Composite",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "LimMobInd (Latest)",
+    "numerator": "latest",
+    "nProperty": "LimMobInd",
+    "theme": "Composite",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "UrbCoreInd (Latest)",
+    "numerator": "latest",
+    "nProperty": "UrbCoreInd",
+    "theme": "Composite",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MicaInd (Latest)",
+    "numerator": "latest",
+    "nProperty": "MicaInd",
+    "theme": "Composite",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NeighbTyp (Latest)",
+    "numerator": "latest",
+    "nProperty": "NeighbTyp",
+    "theme": "Composite",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
   }
 ]

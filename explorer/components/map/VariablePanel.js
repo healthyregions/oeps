@@ -39,7 +39,9 @@ export default function VariablePanel(props) {
   const [variableOptions, setVariableOptions] = useState(dataPresets.variables);
 
   const themeCategories = [...new Set(dataPresets.variables.map(f => f.theme))];
+  themeCategories.sort((a, b) => a.localeCompare(b));
   const yearFilters = [...new Set(dataPresets.variables.map(f => f.year))];
+  yearFilters.sort((a, b) => a.localeCompare(b));
 
   const toggleTheme = (theme) => {
     setActiveThemes((activeThemes) => {
