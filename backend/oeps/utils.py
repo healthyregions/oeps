@@ -12,6 +12,11 @@ def load_json(path):
     with open(path, "r") as o:
         return json.load(o)
 
+def write_json(data, path):
+    with open(path, "w") as o:
+        return json.dump(data, o, indent=2)
+    return path
+
 
 class S3ProgressPercentage(object):
 
