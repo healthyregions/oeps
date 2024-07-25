@@ -323,7 +323,7 @@ def generate_reference_md():
         if t_name not in datasets[ds_name]:
             datasets[ds_name][t_name] = []
 
-        for f in d['fields']:
+        for f in d['schema']['fields']:
             datasets[ds_name][t_name].append({
                 'name': f.get('name'),
                 'data_type': f.get('bq_data_type'),
