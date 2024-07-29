@@ -148,8 +148,12 @@ class CensusClient():
     def add_herop_id_to_dataframe(self, df, geography, year, pk_field):
 
         lvl = self.lookups['census-summary-levels'][geography]
-
-        if geography == "bg" and year == "2010":
+        if geography == "county":
+            if year == "2010":
+                df['HEROP_ID'] = df.apply(lambda row: f"{lvl}US{str(row['STATE'])}{str(row['COUNTY'])}", axis = 1)
+            else:
+                df['HEROP_ID'] = df.apply(lambda row: f"{lvl}US{str(row['GEOID'])}", axis = 1)
+        elif geography == "bg" and year == "2010":
             df['HEROP_ID'] = df.apply(lambda row: f"{lvl}US{str(row[pk_field][6:])}", axis = 1)
         else:
             df['HEROP_ID'] = df.apply(lambda row: f"{lvl}US{str(row[pk_field])}", axis = 1)
