@@ -1,12 +1,27 @@
 import variables from './config/variables.json';
-import data from './config/map-config-data.json';
 
-const defaultVariable = "Opioid Mortality Rate";
-const defaultData = "US Counties";
+// import stateData from './config/sources-v1/state.json';
+// import countyData from './config/sources-v1/county.json';
+// import zctaData from './config/sources-v1/zcta.json';
+// import tractData from './config/sources-v1/tract.json';
+import stateData from './config/sources/state.json';
+import countyData from './config/sources/county.json';
+import zctaData from './config/sources/zcta.json';
+import tractData from './config/sources/tract.json';
 
-// 2 is zcta, 3 is tracts
-data[2]['tiles'] = process.env.NEXT_PUBLIC_MAPBOX_TILESET_ID_ZCTA
-data[3]['tiles'] = process.env.NEXT_PUBLIC_MAPBOX_TILESET_ID_TRACT
+// const defaultVariable = "Opioid Mortality Rate";
+// const defaultData = "US Counties";
+const defaultVariable = "TotPop (Latest)";
+const defaultData = "US States";
+
+variables.sort((a, b) => a.theme.localeCompare(b.theme));
+
+const data = [
+  stateData,
+  countyData,
+  zctaData,
+  tractData,
+]
 
 let style = {
   variableHeaders: {},

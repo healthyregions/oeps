@@ -3,6 +3,7 @@ import csv
 import json
 import numpy
 import shutil
+from datetime import datetime
 import pandas as pd
 import geopandas as gpd
 from pathlib import Path
@@ -425,6 +426,12 @@ class DataResource():
         dataset_path = self.schema['path']
 
         try:
+            # assume shapefile input if the path is a list, ultimately
+            # this should be updated to also combine multiple csvs as well,
+            # because multiple "chunked" csv files with the same set of headers
+            # would be valid here in a list of paths per Frictionless spec
+            if isinstance(dataset_path, list):
+                dataset_path = [i for i in dataset_path if i.endswith(".shp")][0]
             if dataset_path.endswith('.shp'):
                 df = gpd.read_file(dataset_path)
             elif dataset_path.endswith('.csv'):
@@ -467,6 +474,7 @@ class DataResource():
                 df[f['name']] = df[f['name']].apply(lambda x: str(x).zfill(f['max_length']))
 
         field_types = {f['name']: f['type'] for f in self.schema['schema']['fields']}
+        bq_field_types = {f['name']: f['bq_data_type'] for f in self.schema['schema']['fields']}
 
         # iterate the dataframe and turn each row into a dict that gets appened to rows.
         # this list is later loaded as if it were a newline-delimited JSON file.
@@ -505,6 +513,12 @@ class DataResource():
                             row[k] = False
                         else:
                             row[k] = None
+                    if bq_field_types[k] == "DATE":
+                        try:
+                            val = datetime.strptime(row[k], "%m/%d/%Y").strftime("%Y-%m-%d")
+                            row[k] = val
+                        except Exception as e:
+                            raise e
 
             # handle geometry column by dumping it to GeoJSON string. this fixes
             # some Polygon format errors that occurred with the default WKT that
