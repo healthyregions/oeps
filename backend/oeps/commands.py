@@ -9,11 +9,26 @@ import click
 from flask import current_app
 from flask.cli import AppGroup
 
+from oeps.clients.explorer import Explorer
 from oeps.clients.bigquery import BigQuery, get_client
 from oeps.clients.jcoin import DataResource, DataPackage
 from oeps.clients.overture import get_filter_shape, get_data
 from oeps.clients.census import CensusClient
 from oeps.utils import upload_to_s3
+
+explorer_grp = AppGroup('explorer')
+
+@explorer_grp.command()
+@click.option('--destination', "-d",
+              help="Output path for config files, will default to /explorer/config.",
+              default=Path(__file__).parent.parent.parent / 'explorer' / 'config')
+def build_config(**kwargs):
+
+    args = Namespace(**kwargs)
+
+    ex = Explorer()
+    ex.build_config(schema_dir=current_app.config['RESOURCES_DIR'], output_dir=args.destination)
+
 
 jcoin_grp = AppGroup('jcoin')
 
@@ -287,7 +302,7 @@ def generate_reference_md():
         if t_name not in datasets[ds_name]:
             datasets[ds_name][t_name] = []
 
-        for f in d['fields']:
+        for f in d['schema']['fields']:
             datasets[ds_name][t_name].append({
                 'name': f.get('name'),
                 'data_type': f.get('bq_data_type'),
