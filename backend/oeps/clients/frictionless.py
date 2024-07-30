@@ -243,29 +243,6 @@ class DataResource():
         else:
             return s.upper()
 
-    def make_field_entry(self, data_dict_row):
-        """ Compose a full field entry from a row of an oeps data dict. """
-
-        field = {
-            'name': data_dict_row.loc['Variable'],
-            'src_name': data_dict_row.loc['Variable'],
-            'type': self.oeps_type_to_schema_type(data_dict_row.loc['Type']),
-            'example': str(data_dict_row.loc['Example']),
-            'description': data_dict_row.loc['Description'],
-            'constraints': data_dict_row.loc['Data Limitations'],
-            'theme': data_dict_row.loc['Theme'],
-            'source': data_dict_row.loc['Source Long'],
-            'comments': data_dict_row.loc['Comments'],
-            'bq_data_type': self.oeps_type_to_bq_type(data_dict_row.loc['Type']),
-        }
-
-        # fix float('nan') ("not a number") values which seem to pop up.
-        # checking if a value equals itself is the best test for NaN (?!)
-        for k in field:
-            if field[k] != field[k]:
-                field[k] = None
-        return field
-
     def make_fields(self, data_dict):
         """ make_fields takes in a Pandas DataFrame with
         Variable, Type, Example, Description, Data Limitations,
@@ -283,12 +260,35 @@ class DataResource():
         ]
 
         fields = []
-
-        for row in range(0, len(data_dict)):
-
-            if data_dict.iloc[row].loc['Variable'] in SKIP_FIELDS:
+        records = data_dict.to_dict('records')
+        for record in records:
+            name = record.get('Variable')
+            if name in SKIP_FIELDS:
                 continue
-            fields.append(self.make_field_entry(data_dict.iloc[row]))
+
+            title = record.get('Title') if record.get('Title') else name
+            longitudinal = True if record.get('Longitudinal', "").lower() == "x" else False
+            analysis = True if record.get('Analysis', "").lower() == "x" else False
+            field = {
+                'title': title,
+                'name': name,
+                'src_name': record.get('Variable'),
+                'type': self.oeps_type_to_schema_type(record.get('Type')),
+                'example': str(record.get('Example')),
+                'description': record.get('Description'),
+                'constraints': record.get('Data Limitations'),
+                'theme': record.get('Theme'),
+                'source': record.get('Source'),
+                'source_long': record.get('Source Long'),
+                'oeps_v1_table': record.get('OEPS '),
+                'comments': record.get('Comments'),
+                'bq_data_type': self.oeps_type_to_bq_type(record.get('Type')),
+                'metadata_doc_url': record.get('Metadata Location'),
+                'longitudinal': longitudinal,
+                'analysis': analysis,
+            }
+
+            fields.append(field)
 
         return fields
     
@@ -378,11 +378,11 @@ class DataResource():
             print(f'making table definition for {csv_name}!')
 
             # Path to the CSV dataset itself
-            dataset_path = os.path.join('csv', csv_name)
             dataset_path = f"{REPO_BASE_URL}/{csv_name}"
 
             # Read in data
             data_dict = pd.read_excel(xlsx_file)
+            data_dict = data_dict.fillna("")
 
             # Filter to only relevant rows
             data_dict = data_dict[(data_dict[year] == 'x')]
