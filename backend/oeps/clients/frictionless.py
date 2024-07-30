@@ -46,7 +46,7 @@ class DataPackage():
             }]
         }
 
-        resources = get_path_or_paths(source, extension="json")
+        resources = get_path_or_paths(source, glob_pattern="*.json")
         resources.sort()
 
         for i in resources:
