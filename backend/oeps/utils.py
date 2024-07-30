@@ -86,13 +86,10 @@ def download_file(url, filepath, desc=None, progress_bar=False, no_cache: bool=F
 
     return filepath
 
-def get_path_or_paths(path_input, extension=None):
+def get_path_or_paths(path_input, glob_pattern="*"):
 
     if os.path.isdir(path_input):
-        if extension:
-            paths = glob(os.path.join(path_input, f"*.{extension}"))
-        else:
-            paths = glob(os.path.join(path_input))
+        paths = glob(os.path.join(path_input, glob_pattern))
     elif os.path.isfile(path_input):
         paths = [path_input]
     else:
