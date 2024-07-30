@@ -11,7 +11,7 @@ from flask.cli import AppGroup
 
 from oeps.clients.explorer import Explorer
 from oeps.clients.bigquery import BigQuery, get_client
-from oeps.clients.jcoin import DataResource, DataPackage
+from oeps.clients.frictionless import DataResource, DataPackage
 from oeps.clients.overture import get_filter_shape, get_data
 from oeps.clients.census import CensusClient
 from oeps.utils import upload_to_s3, handle_overwrite
@@ -30,9 +30,9 @@ def build_config(**kwargs):
     ex.build_config(schema_dir=current_app.config['RESOURCES_DIR'], output_dir=args.destination)
 
 
-jcoin_grp = AppGroup('jcoin')
+frictionless_grp = AppGroup('frictionless')
 
-@jcoin_grp.command()
+@frictionless_grp.command()
 @click.option('--destination', "-d", help="Output path for export. Must end with .csv for CSV or .shp for shapefile.")
 @click.option('--source', "-s", help="Data Resource JSON file to export, or directory with multiple files.")
 @click.option("--zip", 'zip_', is_flag=True, default=False, help="Zip the output directory.")
@@ -58,14 +58,14 @@ def create_data_package(**kwargs):
     dp = DataPackage()
     dp.create(args.destination, args.source, args.zip_, args.upload, no_cache=args.no_cache, skip_foreign_keys=args.skip_foreign_keys)
 
-@jcoin_grp.command()
+@frictionless_grp.command()
 def list_resources():
 
     for i in glob(os.path.join(current_app.config['RESOURCES_DIR'], '*.json')):
         print(os.path.basename(i))
                        
 
-@jcoin_grp.command()
+@frictionless_grp.command()
 @click.option('--destination', "-d", help="Output path for export. Must end with .csv for CSV or .shp for shapefile.")
 def generate_resources_from_oeps_dicts(destination):
 

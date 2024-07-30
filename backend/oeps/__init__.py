@@ -2,7 +2,7 @@ from flask import Flask
 
 from oeps.commands import (
     explorer_grp,
-    jcoin_grp,
+    frictionless_grp,
     census_grp,
     bigquery_grp,
     overture_grp,
@@ -19,7 +19,7 @@ def create_app():
 
     # add all cli commands
     app.cli.add_command(explorer_grp)
-    app.cli.add_command(jcoin_grp)
+    app.cli.add_command(frictionless_grp)
     app.cli.add_command(census_grp)
     app.cli.add_command(bigquery_grp)
     app.cli.add_command(overture_grp)
