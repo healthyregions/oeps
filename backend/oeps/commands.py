@@ -11,7 +11,7 @@ from flask.cli import AppGroup
 
 from oeps.clients.explorer import Explorer
 from oeps.clients.bigquery import BigQuery, get_client
-from oeps.clients.jcoin import DataResource, DataPackage
+from oeps.clients.frictionless import DataResource, DataPackage, create_data_dictionaries
 from oeps.clients.overture import get_filter_shape, get_data
 from oeps.clients.census import CensusClient
 from oeps.utils import upload_to_s3, handle_overwrite
@@ -30,9 +30,9 @@ def build_config(**kwargs):
     ex.build_config(schema_dir=current_app.config['RESOURCES_DIR'], output_dir=args.destination)
 
 
-jcoin_grp = AppGroup('jcoin')
+frictionless_grp = AppGroup('frictionless')
 
-@jcoin_grp.command()
+@frictionless_grp.command()
 @click.option('--destination', "-d", help="Output path for export. Must end with .csv for CSV or .shp for shapefile.")
 @click.option('--source', "-s", help="Data Resource JSON file to export, or directory with multiple files.")
 @click.option("--zip", 'zip_', is_flag=True, default=False, help="Zip the output directory.")
@@ -58,30 +58,30 @@ def create_data_package(**kwargs):
     dp = DataPackage()
     dp.create(args.destination, args.source, args.zip_, args.upload, no_cache=args.no_cache, skip_foreign_keys=args.skip_foreign_keys)
 
-@jcoin_grp.command()
+@frictionless_grp.command()
 def list_resources():
 
     for i in glob(os.path.join(current_app.config['RESOURCES_DIR'], '*.json')):
         print(os.path.basename(i))
                        
 
-@jcoin_grp.command()
+@frictionless_grp.command()
+@click.option('--source', "-s", help="Local path to directory with Excel data dictionaries in it.")
 @click.option('--destination', "-d", help="Output path for export. Must end with .csv for CSV or .shp for shapefile.")
-def generate_resources_from_oeps_dicts(destination):
+def generate_resources_from_oeps_dicts(**kwargs):
 
-    paths = [
+    args = Namespace(**kwargs)
+
+    remote_files = [
         "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/dictionaries/S_Dict.xlsx",
         "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/dictionaries/C_Dict.xlsx",
         "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/dictionaries/T_Dict.xlsx",
         "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/dictionaries/Z_Dict.xlsx",
     ]
+    paths = Path(args.source).glob("*_Dict.xlsx") if args.source else remote_files
 
-    if destination:
-        out_dir = destination
-        if not os.path.isdir(out_dir):
-            os.mkdir(out_dir)
-    else:
-        out_dir = current_app.config['RESOURCES_DIR']
+    out_dir = Path(args.destination) if args.destination else current_app.config['RESOURCES_DIR']
+    out_dir.mkdir(exist_ok=True)
 
     for path in paths:
         print(f"\nINPUT: {path}")
@@ -89,6 +89,18 @@ def generate_resources_from_oeps_dicts(destination):
         print("OUTPUT:")
         for f in files:
             print(f"  {f}")
+
+@frictionless_grp.command()
+@click.option('--destination', "-d", help="Output directory for new dictionaries. If not set, will be placed in CACHE_DIR/dicts.")
+def create_oeps_dicts(**kwargs):
+
+    args = Namespace(**kwargs)
+
+    dest_dir = args.destination if args.destination else current_app.config['CACHE_DIR'] / 'dicts'
+    if not os.path.isdir(dest_dir):
+        os.mkdir(dest_dir)
+
+    create_data_dictionaries(current_app.config['RESOURCES_DIR'], dest_dir)
 
 
 overture_grp = AppGroup('overture')

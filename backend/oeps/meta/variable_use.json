@@ -1,0 +1,683 @@
+{
+"TotPop":  {
+    "longitudinal": true
+  },
+"TotPopHh":  {
+    "longitudinal": false
+  },
+"TotVetPop":  {
+    "longitudinal": false
+  },
+"TotUnits":  {
+    "longitudinal": true
+  },
+"TotWrkE":  {
+    "longitudinal": false
+  },
+"WhiteP":  {
+    "longitudinal": true
+  },
+"BlackP":  {
+    "longitudinal": true
+  },
+"AmIndP":  {
+    "longitudinal": true
+  },
+"AsianP":  {
+    "longitudinal": true
+  },
+"PacIsP":  {
+    "longitudinal": true
+  },
+"OtherP":  {
+    "longitudinal": true
+  },
+"HispP":  {
+    "longitudinal": true
+  },
+"ChildrenP":  {
+    "longitudinal": true
+  },
+"Age15_24P":  {
+    "longitudinal": true
+  },
+"Und45P":  {
+    "longitudinal": true
+  },
+"Ovr65P":  {
+    "longitudinal": true
+  },
+"Age0_4":  {
+    "longitudinal": false
+  },
+"Age5_14":  {
+    "longitudinal": true
+  },
+"Age15_19":  {
+    "longitudinal": true
+  },
+"Age20_24":  {
+    "longitudinal": true
+  },
+"Age15_44":  {
+    "longitudinal": false
+  },
+"Age45_54":  {
+    "longitudinal": false
+  },
+"Age45_49":  {
+    "longitudinal": false
+  },
+"Age50_54":  {
+    "longitudinal": false
+  },
+"Age55_59":  {
+    "longitudinal": true
+  },
+"Age60_64":  {
+    "longitudinal": true
+  },
+"AgeOv65":  {
+    "longitudinal": true
+  },
+"AgeOv18":  {
+    "longitudinal": false
+  },
+"Age18_64":  {
+    "longitudinal": true
+  },
+"DisbP":  {
+    "longitudinal": false
+  },
+"NoHsP":  {
+    "longitudinal": true
+  },
+"VetP":  {
+    "longitudinal": false
+  },
+"NonRelFhhP":  {
+    "longitudinal": false
+  },
+"NonRelNfhhP":  {
+    "longitudinal": false
+  },
+"BedCnt":  {
+    "longitudinal": false
+  },
+"PntInTm":  {
+    "longitudinal": false
+  },
+"YrlyBedCnt":  {
+    "longitudinal": false
+  },
+"UnempP":  {
+    "longitudinal": true
+  },
+"PovP":  {
+    "longitudinal": true
+  },
+"MedInc":  {
+    "longitudinal": false
+  },
+"PciE":  {
+    "longitudinal": false
+  },
+"ForDqP":  {
+    "longitudinal": false
+  },
+"ForDqTot":  {
+    "longitudinal": false
+  },
+"GiniCoeff":  {
+    "longitudinal": false
+  },
+"EduP":  {
+    "longitudinal": false
+  },
+"HghRskP":  {
+    "longitudinal": false
+  },
+"HltCrP":  {
+    "longitudinal": false
+  },
+"RetailP":  {
+    "longitudinal": false
+  },
+"EssnWrkE":  {
+    "longitudinal": false
+  },
+"EssnWrkP":  {
+    "longitudinal": false
+  },
+"NoIntP":  {
+    "longitudinal": false
+  },
+"VacantP":  {
+    "longitudinal": true
+  },
+"MobileP":  {
+    "longitudinal": false
+  },
+"LngTermP":  {
+    "longitudinal": false
+  },
+"RentalP":  {
+    "longitudinal": false
+  },
+"UnitDens":  {
+    "longitudinal": false
+  },
+"AreaSqMi":  {
+    "longitudinal": false
+  },
+"AlcTot":  {
+    "longitudinal": false
+  },
+"AlcDens":  {
+    "longitudinal": false
+  },
+"AlcPerCap":  {
+    "longitudinal": false
+  },
+"DsmBlk":  {
+    "longitudinal": false
+  },
+"IntrBlkWht":  {
+    "longitudinal": false
+  },
+"IsoBlk":  {
+    "longitudinal": false
+  },
+"DsmHsp":  {
+    "longitudinal": false
+  },
+"IntrHspWht":  {
+    "longitudinal": false
+  },
+"IsoHsp":  {
+    "longitudinal": false
+  },
+"DsmAs":  {
+    "longitudinal": false
+  },
+"IntrAsWht":  {
+    "longitudinal": false
+  },
+"IsoAs":  {
+    "longitudinal": false
+  },
+"Ndvi":  {
+    "longitudinal": false
+  },
+"ParkArea":  {
+    "longitudinal": false
+  },
+"StateArea":  {
+    "longitudinal": false
+  },
+"Cover":  {
+    "longitudinal": false
+  },
+"TotTracts":  {
+    "longitudinal": false
+  },
+"CntBupT":  {
+    "longitudinal": false
+  },
+"CntMetT":  {
+    "longitudinal": false
+  },
+"CntNalT":  {
+    "longitudinal": false
+  },
+"AvBupTime":  {
+    "longitudinal": false
+  },
+"AvMetTime":  {
+    "longitudinal": false
+  },
+"AvNalTime":  {
+    "longitudinal": false
+  },
+"PctBupT":  {
+    "longitudinal": false
+  },
+"PctMetT":  {
+    "longitudinal": false
+  },
+"PctNalT":  {
+    "longitudinal": false
+  },
+"FqhcCtTmDr":  {
+    "longitudinal": false
+  },
+"FqhcAvTmDr":  {
+    "longitudinal": false
+  },
+"FqhcTmDrP":  {
+    "longitudinal": false
+  },
+"HospCtTmDr":  {
+    "longitudinal": false
+  },
+"HospAvTmDr":  {
+    "longitudinal": false
+  },
+"HospTmDrP":  {
+    "longitudinal": false
+  },
+"RxCtTmDr":  {
+    "longitudinal": false
+  },
+"RxAvTmDr":  {
+    "longitudinal": false
+  },
+"RxTmDrP":  {
+    "longitudinal": false
+  },
+"MhCtTmDr":  {
+    "longitudinal": false
+  },
+"MhAvTmDr":  {
+    "longitudinal": false
+  },
+"MhTmDrP":  {
+    "longitudinal": false
+  },
+"SutpCtTmDr":  {
+    "longitudinal": false
+  },
+"SutpAvTmDr":  {
+    "longitudinal": false
+  },
+"SutpTmDrP":  {
+    "longitudinal": false
+  },
+"OtpCtTmDr":  {
+    "longitudinal": false
+  },
+"OtpAvTmDr":  {
+    "longitudinal": false
+  },
+"OtpTmDrP":  {
+    "longitudinal": false
+  },
+"DrgRlDth":  {
+    "longitudinal": false
+  },
+"TotHcv":  {
+    "longitudinal": false
+  },
+"MlHcv":  {
+    "longitudinal": false
+  },
+"FmHcv":  {
+    "longitudinal": false
+  },
+"Un50Hcv":  {
+    "longitudinal": false
+  },
+"A50_74Hcv":  {
+    "longitudinal": false
+  },
+"Ov75Hcv":  {
+    "longitudinal": false
+  },
+"BlkHcv":  {
+    "longitudinal": false
+  },
+"NonBlkHcv":  {
+    "longitudinal": false
+  },
+"HcvD13":  {
+    "longitudinal": false
+  },
+"MlHcvD13":  {
+    "longitudinal": false
+  },
+"FlHcvD13":  {
+    "longitudinal": false
+  },
+"AmInHcvD13":  {
+    "longitudinal": false
+  },
+"AsPiHcvD13":  {
+    "longitudinal": false
+  },
+"BlkHcvD13":  {
+    "longitudinal": false
+  },
+"HspHcvD13":  {
+    "longitudinal": false
+  },
+"U50HcvD13":  {
+    "longitudinal": false
+  },
+"A50_74HcvD13":  {
+    "longitudinal": false
+  },
+"O75HcvD13":  {
+    "longitudinal": false
+  },
+"HcvD14":  {
+    "longitudinal": false
+  },
+"MlHcvD14":  {
+    "longitudinal": false
+  },
+"FlHcvD14":  {
+    "longitudinal": false
+  },
+"AmInHcvD14":  {
+    "longitudinal": false
+  },
+"AsPiHcvD14":  {
+    "longitudinal": false
+  },
+"BlkHcvD14":  {
+    "longitudinal": false
+  },
+"HspHcvD14":  {
+    "longitudinal": false
+  },
+"U50HcvD14":  {
+    "longitudinal": false
+  },
+"A50_74HcvD14":  {
+    "longitudinal": false
+  },
+"O75HcvD14":  {
+    "longitudinal": false
+  },
+"HcvD15":  {
+    "longitudinal": false
+  },
+"MlHcvD15":  {
+    "longitudinal": false
+  },
+"FlHcvD15":  {
+    "longitudinal": false
+  },
+"AmInHcvD15":  {
+    "longitudinal": false
+  },
+"AsPiHcvD15":  {
+    "longitudinal": false
+  },
+"BlkHcvD15":  {
+    "longitudinal": false
+  },
+"HspHcvD15":  {
+    "longitudinal": false
+  },
+"U50HcvD15":  {
+    "longitudinal": false
+  },
+"D50_74Hcv15":  {
+    "longitudinal": false
+  },
+"O75HcvD15":  {
+    "longitudinal": false
+  },
+"HcvD16":  {
+    "longitudinal": false
+  },
+"MlHcvD16":  {
+    "longitudinal": false
+  },
+"FlHcvD16":  {
+    "longitudinal": false
+  },
+"AmInHcvD16":  {
+    "longitudinal": false
+  },
+"AsPiHcvD16":  {
+    "longitudinal": false
+  },
+"BlkHcvD16":  {
+    "longitudinal": false
+  },
+"HspHcvD16":  {
+    "longitudinal": false
+  },
+"U50HcvD16":  {
+    "longitudinal": false
+  },
+"A50_74HcvD16":  {
+    "longitudinal": false
+  },
+"O75HcvD16":  {
+    "longitudinal": false
+  },
+"HcvD17":  {
+    "longitudinal": false
+  },
+"MlHcvD17":  {
+    "longitudinal": false
+  },
+"FlHcvD17":  {
+    "longitudinal": false
+  },
+"AmInHcvD17":  {
+    "longitudinal": false
+  },
+"AsPiHcvD17":  {
+    "longitudinal": false
+  },
+"BlkHcvD17":  {
+    "longitudinal": false
+  },
+"HspHcvD17":  {
+    "longitudinal": false
+  },
+"U50HcvD17":  {
+    "longitudinal": false
+  },
+"A50_74HcvD17":  {
+    "longitudinal": false
+  },
+"O75HcvD17":  {
+    "longitudinal": false
+  },
+"AvHcvD":  {
+    "longitudinal": false
+  },
+"AvMlHcvD":  {
+    "longitudinal": false
+  },
+"AvFlHcvD":  {
+    "longitudinal": false
+  },
+"AvAmInHcvD":  {
+    "longitudinal": false
+  },
+"AvAsPiHcvD":  {
+    "longitudinal": false
+  },
+"AvBlkHcvD":  {
+    "longitudinal": false
+  },
+"AvHspHcvD":  {
+    "longitudinal": false
+  },
+"AvU50HcvD":  {
+    "longitudinal": false
+  },
+"Av50_74HcvD":  {
+    "longitudinal": false
+  },
+"AvO75HcvD":  {
+    "longitudinal": false
+  },
+"TotPcp":  {
+    "longitudinal": false
+  },
+"TotSp":  {
+    "longitudinal": false
+  },
+"OpRxRt20":  {
+    "longitudinal": false
+  },
+"PrMsuse20P":  {
+    "longitudinal": false
+  },
+"OdMortRt14":  {
+    "longitudinal": false
+  },
+"OdMortRt15":  {
+    "longitudinal": false
+  },
+"OdMortRt16":  {
+    "longitudinal": false
+  },
+"OdMortRt17":  {
+    "longitudinal": false
+  },
+"OdMortRt18":  {
+    "longitudinal": false
+  },
+"OdMortRt19":  {
+    "longitudinal": false
+  },
+"OdMortRt20":  {
+    "longitudinal": false
+  },
+"OdMortRtAv":  {
+    "longitudinal": false
+  },
+"AnyPdmpFr":  {
+    "longitudinal": false
+  },
+"AnyPdmphFr":  {
+    "longitudinal": false
+  },
+"OpPdmpFr":  {
+    "longitudinal": false
+  },
+"MsAsPdmpFr":  {
+    "longitudinal": false
+  },
+"ElcPdmpFr":  {
+    "longitudinal": false
+  },
+"AnyPdmpDt":  {
+    "longitudinal": false
+  },
+"AnyPdmphDt":  {
+    "longitudinal": false
+  },
+"OpPdmpDt":  {
+    "longitudinal": false
+  },
+"MsAcPdmpDt":  {
+    "longitudinal": false
+  },
+"ElcPdmpDt":  {
+    "longitudinal": false
+  },
+"AnyGslDt":  {
+    "longitudinal": false
+  },
+"GslArrDt":  {
+    "longitudinal": false
+  },
+"AnyGslFr":  {
+    "longitudinal": false
+  },
+"GslArrFr":  {
+    "longitudinal": false
+  },
+"AnyNalDt":  {
+    "longitudinal": false
+  },
+"NalPrStDt":  {
+    "longitudinal": false
+  },
+"NalPresDt":  {
+    "longitudinal": false
+  },
+"AnyNalFr":  {
+    "longitudinal": false
+  },
+"NalPrStFr":  {
+    "longitudinal": false
+  },
+"NalPresFr":  {
+    "longitudinal": false
+  },
+"MedcdExp19":  {
+    "longitudinal": false
+  },
+"MedcdExp18":  {
+    "longitudinal": false
+  },
+"TradFedExp":  {
+    "longitudinal": false
+  },
+"TradSttExp":  {
+    "longitudinal": false
+  },
+"ExpnFedExp":  {
+    "longitudinal": false
+  },
+"ExpnSttExp":  {
+    "longitudinal": false
+  },
+"ExpSsp":  {
+    "longitudinal": false
+  },
+"NoPrphLw":  {
+    "longitudinal": false
+  },
+"NtPrFrDsSy":  {
+    "longitudinal": false
+  },
+"PrExcInj":  {
+    "longitudinal": false
+  },
+"PrNtRefInj":  {
+    "longitudinal": false
+  },
+"NoLwRmUnc":  {
+    "longitudinal": false
+  },
+"MdMarijLaw":  {
+    "longitudinal": false
+  },
+"CrrctExpS":  {
+    "longitudinal": false
+  },
+"PlcFyrExpS":  {
+    "longitudinal": false
+  },
+"HlthExpS":  {
+    "longitudinal": false
+  },
+"WlfrExpS":  {
+    "longitudinal": false
+  },
+"CrrctExpL":  {
+    "longitudinal": false
+  },
+"PlcFyrExpL":  {
+    "longitudinal": false
+  },
+"HlthExpL":  {
+    "longitudinal": false
+  },
+"WlfrExpL":  {
+    "longitudinal": false
+  },
+"CrrctExpT":  {
+    "longitudinal": false
+  },
+"PlcFyrExpT":  {
+    "longitudinal": false
+  },
+"HlthExpT":  {
+    "longitudinal": false
+  },
+"WlfrExpT":  {
+    "longitudinal": false
+  }
+}
