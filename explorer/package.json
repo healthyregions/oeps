@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "concurrently \"node lib/watchSpec\" \"next dev\"",
     "build": "next build",
+    "lint": "next lint",
     "export": "next export",
     "start": "next start",
     "watch:spec": "node lib/watchSpec",

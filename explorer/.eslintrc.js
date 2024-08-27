@@ -4,6 +4,7 @@ module.exports = {
         "es2021": true
     },
     "extends": [
+        "next/core-web-vitals",
         "eslint:recommended",
         "plugin:react/recommended"
     ],
@@ -21,6 +22,12 @@ module.exports = {
         "react/react-in-jsx-scope":"off",
         "react/prop-types":"off"
     },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    }
+  }
 };
 
 
