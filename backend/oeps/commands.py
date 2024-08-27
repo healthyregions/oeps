@@ -16,14 +16,29 @@ from oeps.clients.overture import get_filter_shape, get_data
 from oeps.clients.census import CensusClient
 from oeps.utils import upload_to_s3, handle_overwrite
 
-explorer_grp = AppGroup('explorer')
+module_overview = """# OEPS Backend -- CLI Commands
+
+The core of the OEPS backend is this suite of CLI commands, which handle data operations
+within a variety of different contexts.
+
+- [OEPS Explorer](#exlorer)
+- [BigQuery](#bigquery)
+- [Frcitionless Data](#frictionless)
+- [Overture](#overture)
+- [US Census Data](#census)"""
+
+
+explorer_grp = AppGroup('explorer',
+    help="""Commands for configuring the [OEPS Explorer](https://oeps.healthyregions.org) web
+application. The explorer is a NextJS app and can be found in the `explorer` directory of
+the [OEPS repo](https://github.com/healthyregions/oeps).""")
 
 @explorer_grp.command()
 @click.option('--destination', "-d",
               help="Output path for config files, will default to /explorer/config.",
               default=Path(__file__).parent.parent.parent / 'explorer' / 'config')
 def build_config(**kwargs):
-
+    """Build configs for the frontend OEPS Explorer application."""
     args = Namespace(**kwargs)
 
     ex = Explorer()
@@ -239,11 +254,11 @@ def get_geodata(**kwargs):
 
 
 ## Group of commands for Google Big Query operations
-bigquery_grp = AppGroup('bigquery')
+bigquery_grp = AppGroup('bigquery',)
 
 @bigquery_grp.command()
 def check_credentials():
-    """ Check the credentials for Big Query client. """
+    """ Check the credentials for Bsssig Query client. """
     get_client()
     print('ok')
     exit()
@@ -377,3 +392,35 @@ Name|Data Type|Description|Source
                     openf.write(f"{c['name']}|{c['data_type']}|{c['description']}|{c['source']}\n")
 
                 openf.write("\n")
+
+@click.command
+def generate_help_md():
+    """ Generates markdown-formatted documentation from all command groups."""
+
+    full_output = [module_overview]
+    for command_grp in [
+        bigquery_grp,
+        explorer_grp,
+        frictionless_grp,
+        overture_grp,
+        census_grp,
+    ]:
+        with click.core.Context(command_grp) as ctx:
+            info = ctx.to_info_dict()
+
+        grp_name = info['command']['name']
+        outlines = [f"## {grp_name}"]
+        outlines += [f"Usage: `flask {grp_name} [SUBCOMMAND]`"]
+        help_text = info['command']['help'] if info['command']['help'] else "_documentation needed_"
+        outlines += [help_text]
+
+        outlines += ["### Subcommands"]
+        for sub, details in info['command']['commands'].items():
+            outlines += [f"#### {grp_name} {sub}"]
+            outlines += [f"Usage: `flask {grp_name} {sub} [OPTS]`"]
+            help_text = details['help'] if details['help'] else "_documentation needed_"
+            outlines += [help_text]
+        full_output += outlines
+
+    with open("../docs/cli.md", "w") as f:
+        f.writelines([f"{i}\n\n" for i in full_output])
