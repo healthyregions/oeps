@@ -178,6 +178,10 @@ census_grp = AppGroup('census')
 @click.option("--destination",
     help='Output directory for export. Treated as a directory, and not a file path.'
 )
+@click.option("--prefix",
+    default="oeps",
+    help='If output is uploaded to S3, use this prefix for the objects.'
+)
 @click.option("--verbose",
     is_flag=True, default=False,
     help='Enable verbose print statements'
@@ -248,7 +252,7 @@ def get_geodata(**kwargs):
         if args.upload:
             print(f"uploading {len(to_upload)} files to S3...")
             for fpath in to_upload:
-                upload_to_s3(fpath, prefix='oeps', progress_bar=args.verbose)
+                upload_to_s3(fpath, prefix=args.prefix, progress_bar=args.verbose)
 
     print("\ndone.")
 
