@@ -89,7 +89,7 @@ export default function About() {
             <div className={"row " + styles.contributorsContainer}>
               {contributors.map(entry =>
                 <div className="col-xs-12 col-md-3 col-lg-3" key={entry.name}>
-                  <img src={`images/team/${entry.photo}`} aly={''}/>
+                  <img src={`images/team/${entry.photo}`} alt={''}/>
                   <h3><a href={entry.link}>{entry.name}</a></h3>
                   <h4>{entry.title}</h4>
                 </div>)}
