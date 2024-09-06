@@ -25,7 +25,7 @@ export default function Home() {
       <main className={styles.main}>
         <div className="row">
           <div className="col-xs-12 col-md-5 col-lg-4">
-            <img src="images/oeps_diagram_mk2.png" className={styles.titleDiagram} />
+            <img src="images/oeps_diagram_mk2.png" className={styles.titleDiagram} alt={''} />
             <Gutter em={3} />
           </div>
           <div className="col-xs-12 col-md-7 col-lg-8">
