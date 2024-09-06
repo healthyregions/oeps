@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import styles from "../styles/About.module.css";
 import { Gutter } from "../components/layout/Gutter";
 import MainNav from "../components/layout/MainNav";
@@ -171,7 +172,7 @@ export default function About() {
               API keys are available upon request for interested developers and researchers. To request access, fill out this form [coming soon].
             </p>
             <p>If you would prefer to not use an API key, you can use
-              the <a href="/download" target="blank" rel="noopener noreferrer">data downloader page</a> or access
+              the <Link href="/download" target="blank" rel="noopener noreferrer">data downloader page</Link> or access
               the <a href="https://github.com/GeoDaCenter/opioid-policy-scan" target="blank" rel="noopener noreferrer">repository directly</a>.
             </p>
           </div>

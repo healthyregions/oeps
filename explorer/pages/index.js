@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from "../styles/Home.module.css";
 import { Gutter } from "../components/layout/Gutter";
 import MainNav from "../components/layout/MainNav";
@@ -49,28 +50,28 @@ export default function Home() {
               Access data by theme or spatial scale and explore our methdology.
             </p>
             <p>
-            <a
+            <Link
                 className={styles.docsLink}
                 href="/download "
               >
                 Download &gt;
-                </a>
+                </Link>
             </p>
             <p>
-            <a
+            <Link
                 className={styles.docsLink}
                 href="/docs "
               >
               Documentation &gt;
-              </a>
+              </Link>
               </p>
               <p>
-            <a
+            <Link
                 className={styles.docsLink}
                 href="/methods "
               >
               Methodology &gt;
-              </a>
+              </Link>
               </p>
 
           </div>
@@ -82,7 +83,7 @@ export default function Home() {
             Visualize data with our interactive web map.
             </p>
             <p>
-            <a className={styles.docsLink} href="/map" > Start Mapping &gt;</a>
+            <Link className={styles.docsLink} href="/map" > Start Mapping &gt;</Link>
             </p>
           </div>
 
@@ -93,13 +94,13 @@ export default function Home() {
               Learn about the OEPS, code resources, and research insights .
             </p>
             <p>
-            <a className={styles.docsLink} href="/about ">About &gt;</a>
+            <Link className={styles.docsLink} href="/about ">About &gt;</Link>
             </p>
             <p>
-            <a className={styles.docsLink} href="/codeResources ">Code Resources &gt;</a>
+            <Link className={styles.docsLink} href="/codeResources ">Code Resources &gt;</Link>
             </p>
             <p>
-            <a className={styles.docsLink} href="/insights">Insights &gt;</a>
+            <Link className={styles.docsLink} href="/insights">Insights &gt;</Link>
             </p>
               <p></p>
           </div>
@@ -120,8 +121,8 @@ export default function Home() {
             inform public policy, and reduce harm in communities nationwide.
             </p>
             <p>
-              The OEPS Explorer makes it quick and easy to explore, visualize, and download data. Read more <a href="/about">about the project</a>,
-              our <a href="/methods"> methodology</a>, and our <a href="/standards">data standards</a>.
+              The OEPS Explorer makes it quick and easy to explore, visualize, and download data. Read more <Link href="/about">about the project</Link>,
+              our <Link href="/methods"> methodology</Link>, and our <Link href="/standards">data standards</Link>.
             </p>
             <p>
             The OEPS is led by the <a href="https://healthyregions.org/">Healthy Regions and Policies Lab</a>, based at the

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from "../styles/About.module.css";
 import { Gutter } from "../components/layout/Gutter";
 import MainNav from "../components/layout/MainNav";
@@ -59,9 +60,9 @@ export default function About() {
             <p>
             We developed the OEPS as a free, open-source platform to aggregate and share publicly-available data at the Census tract, zip code, county, and state levels.
             Geographic boundary shapefiles are provided for ease of merging datasets (csv files) for exploration, spatial analysis, or visualization.
-            <a href="/download"> Download</a> the entire data repository, or you can filter and download by theme or spatial scale.
-            All datasets are accompanied by <a href="/docs">documentation</a> detailing their source data, year, and more.
-            Learn more about our methods and approaches, including the risk environment framework, on the <a href="/methods">Methodology</a> page.
+            <Link href="/download"> Download</Link> the entire data repository, or you can filter and download by theme or spatial scale.
+            All datasets are accompanied by <Link href="/docs">documentation</Link> detailing their source data, year, and more.
+            Learn more about our methods and approaches, including the risk environment framework, on the <Link href="/methods">Methodology</Link> page.
             </p>
             </div>
         </div>
