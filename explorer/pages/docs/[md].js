@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from 'next/link';
 import { useRouter } from 'next/router'
 import styles from "./MarkdownDocs.module.css";
 import { useState, useEffect } from "react";
@@ -41,7 +42,7 @@ export default function MarkdownDocs() {
           {md}
         </h1>
         <div className={styles.markdownContainer}>
-          <a href='/docs'>Return to docs</a>
+          <Link href='/docs'>Return to docs</Link>
           <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdownText}</ReactMarkdown>
         </div>
         <Gutter em={5} />

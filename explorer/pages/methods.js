@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from 'next/link';
 import styles from "../styles/About.module.css";
 import { Gutter } from "../components/layout/Gutter";
 import MainNav from "../components/layout/MainNav";
@@ -54,7 +55,7 @@ export default function About() {
           <div className="col-xs-12 col-md-8 col-lg-9">
             <p>
                 Most datasets are available at multiple spatial scales, including Census tract,
-                ZIP Code or ZIP Code Tract Area (ZCTA), county, and state. You can filter and explore available datasets by spatial scale <a href="/docs">here</a>.
+                ZIP Code or ZIP Code Tract Area (ZCTA), county, and state. You can filter and explore available datasets by spatial scale <Link href="/docs">here</Link>.
             </p>
 
           </div>
@@ -80,7 +81,7 @@ export default function About() {
         <li> <b>Physical Environment:</b> Housing, urban-suburban-rural classification, community overlays</li>
         <li> <b>COVID-19:</b> Essential workers, daily infection rates and confirmed cases through March 2020.*</li>
 
-        <p> <i>*For complete case rate, mortality, and additional COVID-19 data, please visit the <a href="www.USCovidAtlas.org">US COVID Atlas</a> --
+        <p> <i>*For complete case rate, mortality, and additional COVID-19 data, please visit the <a href="https://www.USCovidAtlas.org">US COVID Atlas</a> --
         a free and open source pandemic data archive and visualization tool, also led by the Healthy Regions and Policies Lab.</i>  </p>
 
         <p> The OEPS also includes <b>geography boundary</b> shapefiles from the US Census Bureau’s TIGER/Line (2018) for Census tracts, ZCTAs, counties, and states.</p>
@@ -98,7 +99,7 @@ export default function About() {
         </div>
         <div className="col-xs-12 col-md-8 col-lg-9">
         <p>
-        Please see the <a href= "/standards">Data Standards</a> page for more on our file naming conventions, geographic identifiers, data formatting, and guidelines for contributors.
+        Please see the <Link href= "/standards">Data Standards</Link> page for more on our file naming conventions, geographic identifiers, data formatting, and guidelines for contributors.
         </p>
 
     </div>
@@ -112,7 +113,7 @@ export default function About() {
         </div>
         <div className="col-xs-12 col-md-8 col-lg-9">
         <p>
-        Please refer to the <a href= "/docs">Metadata Docs</a> or the complete <a href= "https://docs.google.com/document/d/18NPWpuUfFTrKll9_ERHzVDmpNCETTzwjJt_FsIvmSrc/edit?usp=sharing">Data Documentation </a>
+        Please refer to the <Link href= "/docs">Metadata Docs</Link> or the complete <a href= "https://docs.google.com/document/d/18NPWpuUfFTrKll9_ERHzVDmpNCETTzwjJt_FsIvmSrc/edit?usp=sharing">Data Documentation </a>
          for more information about individual datasets and variables.
         </p>
 
