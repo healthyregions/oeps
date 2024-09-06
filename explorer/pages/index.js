@@ -19,28 +19,7 @@ export default function Home() {
         <meta name="description" content="Web explorer for the Opioid Environment Policy Scan data warehouse." />
         <script defer data-domain="oeps.healthyregions.org" src="https://plausible.io/js/script.js"></script>
         <link rel="icon" href="/favicon.ico" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="true"
-        />
-        <link
-          rel="preload"
-          as="style"
-          href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,900;1,400;1,700&family=Lora:ital@0;1&display=swap"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,900;1,400;1,700&family=Lora:ital@0;1&display=swap"
-          media="print"
-          onLoad="this.media='all'"
-        />
-        <noscript>
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,900;1,400;1,700&family=Lora:ital@0;1&display=swap"
-          />
-        </noscript>
+
       </Head>
       <MainNav />
       <main className={styles.main}>
@@ -66,7 +45,7 @@ export default function Home() {
             <img src="images/data.svg" alt="Data Documentation and download." className={styles.threeUpIcon} />
             <h1 className={styles.subhead}>Data</h1>
             <p>
-              Access data by theme or spatial scale and explore our methdology. 
+              Access data by theme or spatial scale and explore our methdology.
             </p>
             <p>
             <a
@@ -82,24 +61,24 @@ export default function Home() {
                 href="/docs "
               >
               Documentation &gt;
-              </a> 
+              </a>
               </p>
               <p>
             <a
                 className={styles.docsLink}
                 href="/methods "
               >
-              Methodology &gt;  
-              </a> 
+              Methodology &gt;
+              </a>
               </p>
-              
+
           </div>
 
           <div className="col-xs-12 col-md-4 col-lg-4 rules-on">
             <img src="images/map.svg" alt="Map and explore data." className={styles.threeUpIcon} />
             <h1 className={styles.subhead}>Map</h1>
             <p>
-            Visualize data with our interactive web map. 
+            Visualize data with our interactive web map.
             </p>
             <p>
             <a className={styles.docsLink} href="/map" > Start Mapping &gt;</a>
@@ -110,13 +89,13 @@ export default function Home() {
             <img src="images/insights.svg" alt="Data findings and further information." className={styles.threeUpIcon} />
             <h1 className={styles.subhead}>Insights</h1>
             <p>
-              Learn about the OEPS, code resources, and research insights . 
+              Learn about the OEPS, code resources, and research insights .
             </p>
             <p>
-            <a className={styles.docsLink} href="/about ">About &gt;</a> 
+            <a className={styles.docsLink} href="/about ">About &gt;</a>
             </p>
             <p>
-            <a className={styles.docsLink} href="/codeResources ">Code Resources &gt;</a> 
+            <a className={styles.docsLink} href="/codeResources ">Code Resources &gt;</a>
             </p>
             <p>
             <a className={styles.docsLink} href="/insights">Insights &gt;</a>
@@ -131,27 +110,27 @@ export default function Home() {
           </div>
           <div className="col-xs-12 col-md-12 col-lg-10">
             <p>
-            The Opioid Environment Policy Scan (OEPS) is an open-source data warehouse focused on the 
-            multi-dimensional risk environment impacting opioid use and health outcomes across the United States. 
+            The Opioid Environment Policy Scan (OEPS) is an open-source data warehouse focused on the
+            multi-dimensional risk environment impacting opioid use and health outcomes across the United States.
             </p>
             <p>
-            The OEPS provides access to data at multiple spatial scales, from U.S. states down to Census tracts. It is designed 
-            to support research seeking to study environments impacting and impacted by opioid use and opioid use disorder (OUD), 
-            inform public policy, and reduce harm in communities nationwide. 
+            The OEPS provides access to data at multiple spatial scales, from U.S. states down to Census tracts. It is designed
+            to support research seeking to study environments impacting and impacted by opioid use and opioid use disorder (OUD),
+            inform public policy, and reduce harm in communities nationwide.
             </p>
             <p>
-              The OEPS Explorer makes it quick and easy to explore, visualize, and download data. Read more <a href="/about">about the project</a>,  
-              our <a href="/methods"> methodology</a>, and our <a href="/standards">data standards</a>. 
+              The OEPS Explorer makes it quick and easy to explore, visualize, and download data. Read more <a href="/about">about the project</a>,
+              our <a href="/methods"> methodology</a>, and our <a href="/standards">data standards</a>.
             </p>
             <p>
             The OEPS is led by the <a href="https://healthyregions.org/">Healthy Regions and Policies Lab</a>, based at the
-            Department of Geography & GIScience at the University of Illinois at Urbana-Champaign. It was developed for the <a href="https://heal.nih.gov/research/research-to-practice/jcoin">Justice Community Opioid Innovation Network (JCOIN)</a>, 
+            Department of Geography & GIScience at the University of Illinois at Urbana-Champaign. It was developed for the <a href="https://heal.nih.gov/research/research-to-practice/jcoin">Justice Community Opioid Innovation Network (JCOIN)</a>,
             an NIH HEAL Initiative, as part of the Methodology and Advanced Analytics Resource Center at the University of Chicago.
             </p>
           </div>
         </div>
 
-        
+
       </main>
       <Footer />
     </div>
