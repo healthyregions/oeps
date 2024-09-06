@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from 'next/image';
 import styles from "../styles/Home.module.css";
 import { Gutter } from "../components/layout/Gutter";
 import MainNav from "../components/layout/MainNav";
@@ -25,7 +26,7 @@ export default function Home() {
       <main className={styles.main}>
         <div className="row">
           <div className="col-xs-12 col-md-5 col-lg-4">
-            <img src="images/oeps_diagram_mk2.png" className={styles.titleDiagram} alt={''} />
+            <Image src="images/oeps_diagram_mk2.png" className={styles.titleDiagram} alt={''} />
             <Gutter em={3} />
           </div>
           <div className="col-xs-12 col-md-7 col-lg-8">
@@ -42,7 +43,7 @@ export default function Home() {
         <Gutter em={2} />
         <div className="row rules">
           <div className="col-xs-12 col-md-4 col-lg-4">
-            <img src="images/data.svg" alt="Data Documentation and download." className={styles.threeUpIcon} />
+            <Image src="images/data.svg" alt="Data Documentation and download." className={styles.threeUpIcon} />
             <h1 className={styles.subhead}>Data</h1>
             <p>
               Access data by theme or spatial scale and explore our methdology.
@@ -75,7 +76,7 @@ export default function Home() {
           </div>
 
           <div className="col-xs-12 col-md-4 col-lg-4 rules-on">
-            <img src="images/map.svg" alt="Map and explore data." className={styles.threeUpIcon} />
+            <Image src="images/map.svg" alt="Map and explore data." className={styles.threeUpIcon} />
             <h1 className={styles.subhead}>Map</h1>
             <p>
             Visualize data with our interactive web map.
@@ -86,7 +87,7 @@ export default function Home() {
           </div>
 
           <div className="col-xs-12 col-md-4 col-lg-4">
-            <img src="images/insights.svg" alt="Data findings and further information." className={styles.threeUpIcon} />
+            <Image src="images/insights.svg" alt="Data findings and further information." className={styles.threeUpIcon} />
             <h1 className={styles.subhead}>Insights</h1>
             <p>
               Learn about the OEPS, code resources, and research insights .

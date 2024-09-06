@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useState, useRef } from "react";
+import Image from 'next/image';
 import styles from "./VariablePanel.module.css";
 
 import TextField from "@mui/material/TextField";
@@ -87,7 +88,7 @@ export default function VariablePanel(props) {
                 letterSpacing: 0,
               }}
             >
-              <img
+              <Image
                 style={{ maxHeight: "1.25em", marginRight: ".5em" }}
                 alt="Search for variables"
                 src="/images/search.svg"
