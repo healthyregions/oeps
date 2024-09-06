@@ -175,7 +175,7 @@ export default function Download() {
         </div>
         <Gutter em={4} />
         {downloadMessage.length ? <div>
-            <img src='/images/globe_min.svg' className={styles.loader} />
+            <img src='/images/globe_min.svg' className={styles.loader} alt={''} />
             <h4>{downloadMessage}</h4>
             {zipPct > -1 && <div className={styles.progressContainer}>
               <span className={styles.progressBar} style={{width: `${zipPct}%`}}/>
