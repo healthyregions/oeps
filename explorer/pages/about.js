@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from 'next/image';
 import Link from 'next/link';
 import styles from "../styles/About.module.css";
 import { Gutter } from "../components/layout/Gutter";
@@ -91,7 +90,7 @@ export default function About() {
             <div className={"row " + styles.contributorsContainer}>
               {contributors.map(entry =>
                 <div className="col-xs-12 col-md-3 col-lg-3" key={entry.name}>
-                  <Image src={`images/team/${entry.photo}`} alt={''}/>
+                  <img src={`images/team/${entry.photo}`} alt={''}/>
                   <h3><a href={entry.link}>{entry.name}</a></h3>
                   <h4>{entry.title}</h4>
                 </div>)}
