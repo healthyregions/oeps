@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Menu, MenuList, MenuButton, MenuLink } from "@reach/menu-button";
 import "@reach/menu-button/styles.css";
 import styles from "./MainNav.module.css";
@@ -6,7 +7,7 @@ export default function MainNav() {
   return (
     <div className={styles.masthead}>
       <h3 className={styles.mastheadTitle}>
-        <a href="/">OEPS Explorer</a>
+        <Link href="/">OEPS Explorer</Link>
       </h3>
       <nav className={styles.mainNav}>
         <Menu>
@@ -41,8 +42,8 @@ export default function MainNav() {
             <MenuLink as="a" href="/codeResources">
               Code Resources
             </MenuLink>
-            
-            
+
+
           </MenuList>
         </Menu>
       </nav>
