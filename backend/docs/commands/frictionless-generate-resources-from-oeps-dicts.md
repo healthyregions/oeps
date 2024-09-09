@@ -1,0 +1,54 @@
+
+# frictionless generate-resources-from-oeps-dicts
+
+None
+
+## Usage
+
+```
+Usage: frictionless generate-resources-from-oeps-dicts [OPTIONS]
+```
+
+## Options
+* `source`: 
+  * Type: STRING 
+  * Default: `none`
+  * Usage: `--source
+-s`
+
+  Local path to directory with Excel data dictionaries in it.
+
+
+* `destination`: 
+  * Type: STRING 
+  * Default: `none`
+  * Usage: `--destination
+-d`
+
+  Output path for export. Must end with .csv for CSV or .shp for shapefile.
+
+
+* `help`: 
+  * Type: BOOL 
+  * Default: `false`
+  * Usage: `--help`
+
+  Show this message and exit.
+
+
+
+## CLI Help
+
+```
+Usage: frictionless generate-resources-from-oeps-dicts [OPTIONS]
+
+Options:
+  -s, --source TEXT       Local path to directory with Excel data dictionaries
+                          in it.
+
+  -d, --destination TEXT  Output path for export. Must end with .csv for CSV
+                          or .shp for shapefile.
+
+  --help                  Show this message and exit.
+```
+

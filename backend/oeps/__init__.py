@@ -30,7 +30,7 @@ from oeps.commands import (
     census_grp,
     bigquery_grp,
     overture_grp,
-    generate_help_md,
+    generate_cli_docs,
 )
 from oeps.routes import api
 
@@ -48,7 +48,7 @@ def create_app():
     app.cli.add_command(census_grp)
     app.cli.add_command(bigquery_grp)
     app.cli.add_command(overture_grp)
-    app.cli.add_command(generate_help_md)
+    app.cli.add_command(generate_cli_docs)
 
     # register routes via blueprints
     app.register_blueprint(api)
