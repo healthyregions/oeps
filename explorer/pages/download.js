@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import { useState, useMemo } from 'react';
 import styles from "../styles/Docs.module.css";
 import { Gutter } from "../components/layout/Gutter";
@@ -176,7 +175,7 @@ export default function Download() {
         </div>
         <Gutter em={4} />
         {downloadMessage.length ? <div>
-            <Image src='/images/globe_min.svg' className={styles.loader} alt={''} />
+            <img src='/images/globe_min.svg' className={styles.loader} alt={''} />
             <h4>{downloadMessage}</h4>
             {zipPct > -1 && <div className={styles.progressContainer}>
               <span className={styles.progressBar} style={{width: `${zipPct}%`}}/>
