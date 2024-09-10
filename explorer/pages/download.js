@@ -115,10 +115,10 @@ export default function Download() {
       }
 
       let geomsToDownload = [...geomsDict]
-      if (activeFilters.topic.length !== 0 && !activeFilters.topic.includes('Geographic Boundaries')){
-        geomsToDownload = []
-      }
-
+//      if (activeFilters.year.length !== 0 && !activeFilters.year.includes('Geographic Boundaries')){
+//        geomsToDownload = []
+//      }
+      
       if (activeFilters.scale.length){
         geomsToDownload = geomsToDownload.filter(f => activeFilters.scale.includes(f.agg))
       }
