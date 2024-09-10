@@ -31,8 +31,8 @@ const oepsTheme = {
 const store = createStore(
   rootReducer,
   // (
-  //   typeof window === 'object' 
-  //   && window.__REDUX_DEVTOOLS_EXTENSION__ 
+  //   typeof window === 'object'
+  //   && window.__REDUX_DEVTOOLS_EXTENSION__
   //   && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
   // ) && window.__REDUX_DEVTOOLS_EXTENSION__({
   //   stateSanitizer: (state) => state.storedGeojson ? { ...state, storedData: '<<EXCLUDED>>', storedGeojson: '<<EXCLUDED>>' } : state
@@ -60,35 +60,13 @@ export default function Map() {
         <script defer data-domain="oeps.healthyregions.org" src="https://plausible.io/js/script.js"></script>
         <link rel="icon" href="/favicon.ico" />
         <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="true"
-        />
-        <link
-          rel="preload"
-          as="style"
-          href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,900;1,400;1,700&family=Lora:ital@0;1&display=swap"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,900;1,400;1,700&family=Lora:ital@0;1&display=swap"
-          media="print"
-          onLoad="this.media='all'"
-        />
-        <link
           href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css"
           rel="stylesheet"
         />
-        <noscript>
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,900;1,400;1,700&family=Lora:ital@0;1&display=swap"
-          />
-        </noscript>
       </Head>
       <MainNav />
       {/* {!geodaReady && <div className={styles.preLoader}><Loader globe={true} /></div>} */}
-      
+
         <ViewportProvider>
           <Provider store={store}>
             {geodaReady && (

@@ -49,7 +49,7 @@ export default function MainMap() {
 
   const deckRef = useRef();
   const mapRef = useRef();
-  
+
   useEffect(() => {
     if (initialViewState.longitude)
       setViewport({
@@ -59,7 +59,7 @@ export default function MainMap() {
         bearing:0,
         pitch:0
       });
-  }, [initialViewState]);
+  }, [initialViewState, setViewport]);
 
   // const handleMapClick = (e) => e.object && panToGeoid(e.object?.properties[currentId])
 
@@ -106,7 +106,7 @@ export default function MainMap() {
   const onMapLoad = useCallback(() => {
     const map = mapRef.current.getMap();
     const deck = deckRef.current.deck;
-    
+
     map.addLayer(
       new MapboxLayer({ id: "choropleth", deck }),
       mapStyle.underLayerId
@@ -118,8 +118,8 @@ export default function MainMap() {
     map.addLayer(
       new MapboxLayer({ id: "choropleth-hover", deck })
     );
-  }, []);
-  
+  }, [mapStyle.underLayerId]);
+
   const layers = !mapData.params.includes(currentData)
     ? [new GeoJsonLayer({
       id: "choropleth",
@@ -128,7 +128,7 @@ export default function MainMap() {
     : currentData.includes('tiles')
     ? [new MVTLayer({
         id: "tiles layer",
-        // eslint-disable-next-line no-undef 
+        // eslint-disable-next-line no-undef
         data: `https://api.mapbox.com/v4/${currentTiles}/{z}/{x}/{y}.mvt?access_token=${process.env.NEXT_PUBLIC_MAPBOX_TOKEN}`,
         getFillColor: (d) => mapData.data[d.properties[currentId]]?.color||[0,0,0,0],
         pickable: true,
@@ -136,7 +136,7 @@ export default function MainMap() {
         updateTriggers: {
           getFillColor: [mapData.params, currentId, currentData, JSON.stringify(mapParams.bins)],
         },
-      })]  
+      })]
     : [
       new GeoJsonLayer({
         id: "choropleth",
@@ -170,7 +170,7 @@ export default function MainMap() {
     // h
   return (
     <div className={styles.mapContainer}>
-      
+
       {isLoading && <div className={styles.preLoader}><Loader globe={true} /></div>}
       <DeckGL
         layers={layers}
