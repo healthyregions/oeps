@@ -1,0 +1,38 @@
+{
+  "name": "US Counties",
+  "geodata": "cb_2018_us_county_20m.geojson",
+  "id": "HEROP_ID",
+  "bounds": [
+    -125.109215,
+    -66.925621,
+    25.043926,
+    49.295128
+  ],
+  "tables": {
+    "1980": {
+      "file": "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables/C_1980.csv",
+      "type": "characteristic",
+      "join": "HEROP_ID"
+    },
+    "1990": {
+      "file": "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables/C_1990.csv",
+      "type": "characteristic",
+      "join": "HEROP_ID"
+    },
+    "latest": {
+      "file": "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables/C_Latest.csv",
+      "type": "characteristic",
+      "join": "HEROP_ID"
+    },
+    "2010": {
+      "file": "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables/C_2010.csv",
+      "type": "characteristic",
+      "join": "HEROP_ID"
+    },
+    "2000": {
+      "file": "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables/C_2000.csv",
+      "type": "characteristic",
+      "join": "HEROP_ID"
+    }
+  }
+}

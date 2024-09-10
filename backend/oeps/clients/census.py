@@ -8,32 +8,33 @@ import geopandas as gpd
 from pathlib import Path
 
 from oeps.utils import download_file
+from oeps.config import LOOKUPS_DIR
 
 
 class CensusClient():
 
-    def __init__(self, lookups_dir=None, verbose=False):
+    def __init__(self, verbose=False):
 
         self.verbose = verbose
-        self.lookups = self.load_lookups(lookups_dir)
-        self.load_filelists(lookups_dir)
+        self.lookups = self.load_lookups()
+        self.load_filelists()
 
-    def load_lookups(self, lookups_dir):
+    def load_lookups(self):
         if self.verbose: print("loading lookups...")
         lookups = {}
-        for f in lookups_dir.glob("*.json"):
+        for f in LOOKUPS_DIR.glob("*.json"):
             with open(f, 'r') as o:
                 data = json.load(o)
                 lookups[f.stem] = data
 
         return lookups
 
-    def load_filelists(self, lookups_dir):
+    def load_filelists(self):
         if self.verbose: print("loading filelists...")
-        with open(Path(lookups_dir, 'census-2010-geo-files.csv'), 'r') as o:
+        with open(Path(LOOKUPS_DIR, 'census-2010-geo-files.csv'), 'r') as o:
             reader = csv.DictReader(o)
             self.lookups['census-sources']['2010']['files'] = [i for i in reader]
-        with open(Path(lookups_dir, 'census-2018-geo-files.csv'), 'r') as o:
+        with open(Path(LOOKUPS_DIR, 'census-2018-geo-files.csv'), 'r') as o:
             reader = csv.DictReader(o)
             self.lookups['census-sources']['2018']['files'] = [i for i in reader]
 

@@ -5,11 +5,11 @@
     "title": "Zip-Code Tabulation Areas, 2018",
     "description": "Shapefile of zip-code tabulation areas (ZCTAs) from the US Census Bureau, 2018.",
     "path": [
-        "https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zctas2018.shp",
-        "https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zctas2018.shx",
-        "https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zctas2018.dbf",
-        "https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zctas2018.prj",
-        "https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zctas2018.cpg"
+        "https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2018.shp",
+        "https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2018.shx",
+        "https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2018.dbf",
+        "https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2018.prj",
+        "https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2018.cpg"
     ],
     "schema": {
         "primaryKey": "HEROP_ID",

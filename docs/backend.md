@@ -28,6 +28,20 @@ The backend includes commands for managing data transformation to and from to di
 
         python ./scripts/script_name.py
 
+4. (for development only)
+
+        pip install -e .[dev]
+        pip install md-click@git+https://github.com/kid-116/md-click@support-arguments
+
+    The `md-click` library is used to generate documentation of the CLI commands, and the
+    particular branch is needed to handle Arguments on the commands that are being documented.
+    Hopefull, this PR will be merged at some point and this install process could be updated:
+    https://github.com/RiveryIO/md-click/pull/12.
+
+    There is a dependency resolution bug (or something) when putting that github reference 
+    directly in the `pyproject.toml` file, so it needs to be run separately after everything
+    else is installed.
+
 ## JCOIN
 
 *section in progress*

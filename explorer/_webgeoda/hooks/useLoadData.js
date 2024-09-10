@@ -115,7 +115,10 @@ export default function useLoadData(dateLists = {}) {
     if (geoda === undefined) location.reload();
     
     const notTiles = !datasetToLoad.includes('tiles')
+    const localFile = notTiles && !datasetToLoad.startsWith('http')
+    
     const currentDataPreset = find(dataPresets.data, f => f.geodata === datasetToLoad);
+    const dataLoadURL = localFile ? `${window.location.origin}/geojson/${currentDataPreset.geodata}` : datasetToLoad
     
     const numeratorTable =
       currentDataPreset.tables?.hasOwnProperty(dataParams.numerator) 
@@ -126,7 +129,7 @@ export default function useLoadData(dateLists = {}) {
       && currentDataPreset.tables[dataParams.denominator];
       
     const firstLoadPromises = [
-      notTiles ? geoda.loadGeoJSON(`${window.location.origin}/geojson/${currentDataPreset.geodata}`, currentDataPreset.id) : [false, false],
+      notTiles ? geoda.loadGeoJSON(dataLoadURL, currentDataPreset.id) : [false, false],
       numeratorTable && handleLoadData(numeratorTable),
       denominatorTable && handleLoadData(denominatorTable),
     ];

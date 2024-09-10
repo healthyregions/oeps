@@ -3,13 +3,143 @@ import csv
 import json
 import numpy
 import shutil
+from datetime import datetime
 import pandas as pd
 import geopandas as gpd
 from pathlib import Path
+from openpyxl import Workbook
+from openpyxl.utils import get_column_letter
+from openpyxl.styles import Font
 
 from frictionless import validate, Package
 
-from oeps.utils import get_path_or_paths, fetch_files, upload_to_s3
+from oeps.utils import get_path_or_paths, fetch_files, upload_to_s3, load_json
+
+def create_data_dictionaries(source, dest):
+
+    geographies = [
+        {
+            "id": "state",
+            "plural": "states",
+            "csv_abbreviation": "S"
+        },
+        {
+            "id": "county",
+            "plural": "counties",
+            "csv_abbreviation": "C"
+        },
+        {
+            "id": "tract",
+            "plural": "tracts",
+            "csv_abbreviation": "T"
+        },
+        {
+            "id": "zcta",
+            "plural": "zctas",
+            "csv_abbreviation": "Z"
+        },
+    ]
+
+    theme_list = [
+        "Geography",
+        "Social",
+        "Environment",
+        "Economy",
+    ]
+
+    for geo in geographies:
+        tabular = get_path_or_paths(source, glob_pattern=f"tabular_{geo['csv_abbreviation']}*.json")
+
+        all_fields_list = []
+        for t in tabular:
+            data = load_json(t)
+            file_year = data['name'].split("-")[1]
+            for f in data['schema']['fields']:
+                if not f.get('year'):
+                    f['year'] = file_year
+                all_fields_list.append(f)
+        sorted_fields = sorted(all_fields_list, key=lambda i: (i['theme'], i['name']))
+
+        ordered = []
+        for theme in theme_list:
+            ordered += sorted([i for i in sorted_fields if i['theme'] == theme], key=lambda i: i['metadata_doc_url'])
+
+        all_variables = {}
+        for f in ordered:
+            if f['name'] in all_variables:
+                print(f['year'])
+                all_variables[f['name']]['years'].append(f['year'])
+            else:
+                all_variables[f['name']] = {
+                    'years': [f['year']],
+                    'info': f
+                }
+
+        years_list = set()
+        for v in all_variables.values():
+            for y in v['years']:
+                years_list.add(y)
+
+        headers = {"Theme": 15}
+        for y in sorted(years_list):
+            headers[y] = 5
+        headers.update({
+            "Longitudinal": 10,
+            "Variable": 20,
+            "Description": 25,
+            "Metadata Location": 25,
+            "Source": 25,
+            "Source Long": 25,
+            "OEPS v1 Table": 25,
+            "Type": 25,
+            "Example": 25,
+            "Data Limitations": 25,
+            "Comments": 100
+        })
+
+        wb = Workbook()
+        ws = wb.active
+        ws.append(list(headers.keys()))
+        
+        ft = Font(bold=True, name='Calibri')
+        for row in ws["A1:Z1"]:
+            for cell in row:
+                cell.font = ft
+
+        def parse_attribute_from_variable(attribute, variable):
+            v = variable['info']
+            if attribute == "Longitudinal":
+                if v['longitudinal']:
+                    return "x"
+            elif attribute == "Analysis":
+                if v['analysis']:
+                    return "x"
+            elif attribute in variable.get('years', []):
+                return "x"
+            elif attribute == "Variable":
+                return v.get('name')
+            elif attribute == "Metadata Location":
+                return v.get('metadata_doc_url')
+            elif attribute == "Data Limitations":
+                return v.get('constraints')
+            elif attribute == "Source Long":
+                return v.get('source_long')
+            elif attribute == "OEPS v1 Table":
+                return v.get('oeps_v1_table')
+            elif attribute.lower() in v:
+                return v.get(attribute.lower())
+
+            return ""
+
+        for v in all_variables.values():
+            row = [parse_attribute_from_variable(i, v) for i in headers.keys()]
+            ws.append(row)
+
+        for n, k in enumerate(headers.keys()):
+            ws.column_dimensions[get_column_letter(n+1)].width = headers[k]
+
+        # Save the file
+        wb.save(Path(dest, f"{geo['csv_abbreviation']}_Dict.xlsx"))
 
 
 class DataPackage():
@@ -45,7 +175,7 @@ class DataPackage():
             }]
         }
 
-        resources = get_path_or_paths(source, extension="json")
+        resources = get_path_or_paths(source, glob_pattern="*.json")
         resources.sort()
 
         for i in resources:
@@ -242,29 +372,6 @@ class DataResource():
         else:
             return s.upper()
 
-    def make_field_entry(self, data_dict_row):
-        """ Compose a full field entry from a row of an oeps data dict. """
-
-        field = {
-            'name': data_dict_row.loc['Variable'],
-            'src_name': data_dict_row.loc['Variable'],
-            'type': self.oeps_type_to_schema_type(data_dict_row.loc['Type']),
-            'example': str(data_dict_row.loc['Example']),
-            'description': data_dict_row.loc['Description'],
-            'constraints': data_dict_row.loc['Data Limitations'],
-            'theme': data_dict_row.loc['Theme'],
-            'source': data_dict_row.loc['Source Long'],
-            'comments': data_dict_row.loc['Comments'],
-            'bq_data_type': self.oeps_type_to_bq_type(data_dict_row.loc['Type']),
-        }
-
-        # fix float('nan') ("not a number") values which seem to pop up.
-        # checking if a value equals itself is the best test for NaN (?!)
-        for k in field:
-            if field[k] != field[k]:
-                field[k] = None
-        return field
-
     def make_fields(self, data_dict):
         """ make_fields takes in a Pandas DataFrame with
         Variable, Type, Example, Description, Data Limitations,
@@ -282,12 +389,35 @@ class DataResource():
         ]
 
         fields = []
-
-        for row in range(0, len(data_dict)):
-
-            if data_dict.iloc[row].loc['Variable'] in SKIP_FIELDS:
+        records = data_dict.to_dict('records')
+        for record in records:
+            name = record.get('Variable')
+            if name in SKIP_FIELDS:
                 continue
-            fields.append(self.make_field_entry(data_dict.iloc[row]))
+
+            title = record.get('Title') if record.get('Title') else name
+            longitudinal = True if record.get('Longitudinal', "").lower() == "x" else False
+            analysis = True if record.get('Analysis', "").lower() == "x" else False
+            field = {
+                'title': title,
+                'name': name,
+                'src_name': record.get('Variable'),
+                'type': self.oeps_type_to_schema_type(record.get('Type')),
+                'example': str(record.get('Example')),
+                'description': record.get('Description'),
+                'constraints': record.get('Data Limitations'),
+                'theme': record.get('Theme'),
+                'source': record.get('Source'),
+                'source_long': record.get('Source Long'),
+                'oeps_v1_table': record.get('OEPS '),
+                'comments': record.get('Comments'),
+                'bq_data_type': self.oeps_type_to_bq_type(record.get('Type')),
+                'metadata_doc_url': record.get('Metadata Location'),
+                'longitudinal': longitudinal,
+                'analysis': analysis,
+            }
+
+            fields.append(field)
 
         return fields
     
@@ -377,11 +507,11 @@ class DataResource():
             print(f'making table definition for {csv_name}!')
 
             # Path to the CSV dataset itself
-            dataset_path = os.path.join('csv', csv_name)
             dataset_path = f"{REPO_BASE_URL}/{csv_name}"
 
             # Read in data
             data_dict = pd.read_excel(xlsx_file)
+            data_dict = data_dict.fillna("")
 
             # Filter to only relevant rows
             data_dict = data_dict[(data_dict[year] == 'x')]
@@ -433,6 +563,12 @@ class DataResource():
         dataset_path = self.schema['path']
 
         try:
+            # assume shapefile input if the path is a list, ultimately
+            # this should be updated to also combine multiple csvs as well,
+            # because multiple "chunked" csv files with the same set of headers
+            # would be valid here in a list of paths per Frictionless spec
+            if isinstance(dataset_path, list):
+                dataset_path = [i for i in dataset_path if i.endswith(".shp")][0]
             if dataset_path.endswith('.shp'):
                 df = gpd.read_file(dataset_path)
             elif dataset_path.endswith('.csv'):
@@ -475,6 +611,7 @@ class DataResource():
                 df[f['name']] = df[f['name']].apply(lambda x: str(x).zfill(f['max_length']))
 
         field_types = {f['name']: f['type'] for f in self.schema['schema']['fields']}
+        bq_field_types = {f['name']: f['bq_data_type'] for f in self.schema['schema']['fields']}
 
         # iterate the dataframe and turn each row into a dict that gets appened to rows.
         # this list is later loaded as if it were a newline-delimited JSON file.
@@ -513,6 +650,12 @@ class DataResource():
                             row[k] = False
                         else:
                             row[k] = None
+                    if bq_field_types[k] == "DATE":
+                        try:
+                            val = datetime.strptime(row[k], "%m/%d/%Y").strftime("%Y-%m-%d")
+                            row[k] = val
+                        except Exception as e:
+                            raise e
 
             # handle geometry column by dumping it to GeoJSON string. this fixes
             # some Polygon format errors that occurred with the default WKT that

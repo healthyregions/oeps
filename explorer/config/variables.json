@@ -1,1 +1,5072 @@
-[{"variable":"Essential Workers %","theme":"COVID-19","numerator":"EC02","nProperty":"essnWrkP","binning":"quantileBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"Count of Essential Workers","theme":"COVID-19","numerator":"EC02","nProperty":"essnWrkE","binning":"quantileBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"% White Population","theme":"Demographic","numerator":"DS01_data","nProperty":"whiteP","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"% Black/African American Population","theme":"Demographic","numerator":"DS01_data","nProperty":"blackP","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"% Hispanic/Latinx Population","theme":"Demographic","numerator":"DS01_data","nProperty":"hispP","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"% Native American/Alaska Native Population","theme":"Demographic","numerator":"DS01_data","nProperty":"amIndP","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"% Asian Population","theme":"Demographic","numerator":"DS01_data","nProperty":"asianP","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"% Native Hawaiian & Other PI Population","theme":"Demographic","numerator":"DS01_data","nProperty":"pacIsP","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"% Other (race) Population","theme":"Demographic","numerator":"DS01_data","nProperty":"otherP","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Population: Age 18-65","theme":"Demographic","numerator":"DS01_data","nProperty":"age18_64","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Population: Age 0-4","theme":"Demographic","numerator":"DS01_data","nProperty":"age0_4","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Population: Age 5-14","theme":"Demographic","numerator":"DS01_data","nProperty":"age5_14","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Population: Age 15-19","theme":"Demographic","numerator":"DS01_data","nProperty":"age15_19","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Population: Age 20-24","theme":"Demographic","numerator":"DS01_data","nProperty":"age20_24","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Population: Age 15-44","theme":"Demographic","numerator":"DS01_data","nProperty":"age15_44","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Population: Age 45-49","theme":"Demographic","numerator":"DS01_data","nProperty":"age45_49","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Population: Age 50-54","theme":"Demographic","numerator":"DS01_data","nProperty":"age50_54","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Population: Age 55-59","theme":"Demographic","numerator":"DS01_data","nProperty":"age55_59","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Population: Age 60-64","theme":"Demographic","numerator":"DS01_data","nProperty":"age60_64","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Population: Age 65+","theme":"Demographic","numerator":"DS01_data","nProperty":"ageOv65","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"% Population: Age 15-24","theme":"Demographic","numerator":"DS01_data","nProperty":"a15_24P","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"% Population: Age under 45","theme":"Demographic","numerator":"DS01_data","nProperty":"und45P","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"% Population: Age 65+","theme":"Demographic","numerator":"DS01_data","nProperty":"ovr65P","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"% Population with Disability","theme":"Demographic","numerator":"DS01_data","nProperty":"disbP","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"% Population without High School Degree","theme":"Demographic","numerator":"DS01_data","nProperty":"noHSP","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Social Vulnerability Index (SVI)","theme":"Demographic","numerator":"DS03_data","nProperty":"SVIS","binning":"naturalBreaks","numberOfBins":6,"colorScale":"YlOrBr"},{"variable":"Total Veteran Population","theme":"Demographic","numerator":"DS04_data","nProperty":"TotalVetPop","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"% Veteran Population","theme":"Demographic","numerator":"DS04_data","nProperty":"VetPercent","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Total Male Veteran Population","theme":"Demographic","numerator":"DS04_data","nProperty":"MaleVetPop","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Male Veteran Population: Age 18-34","theme":"Demographic","numerator":"DS04_data","nProperty":"MaleVet18To34","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Male Veteran Population: Age 35-54","theme":"Demographic","numerator":"DS04_data","nProperty":"MaleVet35To54","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Male Veteran Population: Age 55-64","theme":"Demographic","numerator":"DS04_data","nProperty":"MaleVet55To64","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Male Veteran Population: Age 65-74","theme":"Demographic","numerator":"DS04_data","nProperty":"MaleVet65To74","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Male Veteran Population: Age 75+","theme":"Demographic","numerator":"DS04_data","nProperty":"MaleVet75Plus","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Female Veteran Population: Age 18-34","theme":"Demographic","numerator":"DS04_data","nProperty":"FemaleVet18To34","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Female Veteran Population: Age 35-54","theme":"Demographic","numerator":"DS04_data","nProperty":"FemaleVet35To54","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Female Veteran Population: Age 55-64","theme":"Demographic","numerator":"DS04_data","nProperty":"FemaleVet55To64","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Female Veteran Population: Age 65-74","theme":"Demographic","numerator":"DS04_data","nProperty":"FemaleVet65To74","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Female Veteran Population: Age 75+","theme":"Demographic","numerator":"DS04_data","nProperty":"FemaleVet75Plus","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Total nonrelatives in family households","theme":"Demographic","numerator":"DS05_data","nProperty":"nonRel_fhh","binning":"naturalBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"% Nonrelatives in family households","theme":"Demographic","numerator":"DS05_data","nProperty":"nonRel_fhhR","binning":"naturalBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"Total nonrelatives in non-family households","theme":"Demographic","numerator":"DS05_data","nProperty":"nonRel_nfhh","binning":"naturalBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"% Nonrelatives in non-family households","theme":"Demographic","numerator":"DS05_data","nProperty":"nonRel_nfhhR","binning":"naturalBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"Total in group quarters","theme":"Demographic","numerator":"DS05_data","nProperty":"groupQuar","binning":"naturalBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"% in group quarters","theme":"Demographic","numerator":"DS05_data","nProperty":"groupQuarR","binning":"naturalBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"Homeless Shelter Available Bed Count","theme":"Demographic","numerator":"DS06_data","nProperty":"BED_COUNT","binning":"naturalBreaks","numberOfBins":7,"colorScale":"YlOrBr","reverse":true},{"variable":"Homeless Shelter Total Beds Available Annually","theme":"Demographic","numerator":"DS06_data","nProperty":"YEARLY_BED_COUNT","binning":"naturalBreaks","numberOfBins":7,"colorScale":"YlOrBr"},{"variable":"Total Individuals at a Shelter","theme":"Demographic","numerator":"DS06_data","nProperty":"POINT_IN_TIME","binning":"naturalBreaks","numberOfBins":7,"colorScale":"YlOrBr","reverse":true},{"variable":"Poverty %","theme":"Economic","numerator":"EC03","nProperty":"povP","binning":"quantileBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"Per Capita Income","theme":"Economic","numerator":"EC03","nProperty":"pciE","binning":"quantileBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"Unemployment %","theme":"Economic","numerator":"EC03","nProperty":"unempP","binning":"quantileBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"Count of Working Population","theme":"Economic","numerator":"EC01","nProperty":"totWrkE","binning":"quantileBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"Employed % - Education","theme":"Economic","numerator":"EC01","nProperty":"eduP","binning":"quantileBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"Employed % - High Risk of Injury","theme":"Economic","numerator":"EC01","nProperty":"hghRskP","binning":"quantileBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"Employed % - Health Care","theme":"Economic","numerator":"EC01","nProperty":"hltCrP","binning":"quantileBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"Employed % - Retail","theme":"Economic","numerator":"EC01","nProperty":"retailP","binning":"quantileBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"Foreclosure & Delinquency Count","theme":"Economic","numerator":"EC04","nProperty":"fordq_num","binning":"naturalBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"Foreclosure & Delinquency %","theme":"Economic","numerator":"EC04","nProperty":"fordq_rate","binning":"naturalBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"Households without Internet Access %","theme":"Economic","numerator":"EC05","nProperty":"NoIntPct","binning":"quantileBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"Drug-Related Death Rate","theme":"Health","numerator":"Health01_data","nProperty":"rawDeathRt","binning":"naturalBreaks","numberOfBins":6,"colorScale":"Reds"},{"variable":"Opioid Mortality Rate","theme":"Health","numerator":"Health04_data","nProperty":"odMortRtAv","binning":"naturalBreaks","numberOfBins":5,"colorScale":"PuRd"},{"variable":"Opioid Prescription Rate","theme":"Health","numerator":"Health04_data","nProperty":"opPrscRt","binning":"naturalBreaks","numberOfBins":5,"colorScale":"PuRd"},{"variable":"HCV Infection Rate","theme":"Health","numerator":"Health02_1_data","nProperty":"State Rate","binning":"naturalBreaks","numberOfBins":8,"colorScale":"Reds"},{"variable":"HCV Mortality Rate","theme":"Health","numerator":"Health02_2_data","nProperty":"State Death Rate_2017","binning":"naturalBreaks","numberOfBins":8,"colorScale":"Reds"},{"variable":"Count of Primary Care Physicians (PCPs)","theme":"Health","numerator":"Health03_data","nProperty":"pcp_total","binning":"naturalBreaks","numberOfBins":8,"colorScale":"Blues"},{"variable":"Count of Specialty Physicians","theme":"Health","numerator":"Health03_data","nProperty":"sp_total","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlGnBu"},{"variable":"Walking time (min) to nearest buprenorphine provider","theme":"Health","numerator":"MOUDWalkAccess_data","nProperty":"bupTimeWalk","binning":"naturalBreaks","numberOfBins":6,"colorScale":"RdBu","reverse":true},{"variable":"Walking time (min) to nearest methadone provider","theme":"Health","numerator":"MOUDWalkAccess_data","nProperty":"metTimeWalk","binning":"naturalBreaks","numberOfBins":6,"colorScale":"RdBu","reverse":true},{"variable":"Walking time (min) to nearest naltrexone provider","theme":"Health","numerator":"MOUDWalkAccess_data","nProperty":"nalTimeWalk","binning":"naturalBreaks","numberOfBins":6,"colorScale":"RdBu","reverse":true},{"variable":"Biking time (min) to nearest buprenorphine provider","theme":"Health","numerator":"MOUDBikeAccess_data","nProperty":"bupTimeBike","binning":"naturalBreaks","numberOfBins":6,"colorScale":"RdBu","reverse":true},{"variable":"Biking time (min) to nearest methadone provider","theme":"Health","numerator":"MOUDBikeAccess_data","nProperty":"metTimeBike","binning":"naturalBreaks","numberOfBins":6,"colorScale":"RdBu","reverse":true},{"variable":"Biking time (min) to nearest naltrexone provider","theme":"Health","numerator":"MOUDBikeAccess_data","nProperty":"nalTimeBike","binning":"naturalBreaks","numberOfBins":6,"colorScale":"RdBu","reverse":true},{"variable":"Driving time (min) to nearest buprenorphine provider","theme":"Health","numerator":"Access01_sub_data","nProperty":"bupTime","binning":"naturalBreaks","numberOfBins":6,"colorScale":"RdBu","reverse":true},{"variable":"Driving time (min) to nearest methadone provider","theme":"Health","numerator":"Access01_sub_data","nProperty":"metTime","binning":"naturalBreaks","numberOfBins":6,"colorScale":"RdBu","reverse":true},{"variable":"Driving time (min) to nearest naltrexone provider","theme":"Health","numerator":"Access01_sub_data","nProperty":"nalTime","binning":"naturalBreaks","numberOfBins":6,"colorScale":"RdBu","reverse":true},{"variable":"Count of buprenorphine providers in 30 minutes drive","theme":"Health","numerator":"Access01_sub_data","nProperty":"bupCount","binning":"quantileBreaks","numberOfBins":6,"colorScale":"RdBu"},{"variable":"Count of methadone providers in 30 minutes drive","theme":"Health","numerator":"Access01_sub_data","nProperty":"metCount","binning":"quantileBreaks","numberOfBins":4,"colorScale":"RdBu"},{"variable":"Count of naltrexone providers in 30 minutes drive","theme":"Health","numerator":"Access01_sub_data","nProperty":"nalCount","binning":"quantileBreaks","numberOfBins":4,"colorScale":"RdBu"},{"variable":"Distance (mi) to nearest buprenorphine provider","theme":"Health","numerator":"Access01_data","nProperty":"bupMinDis","binning":"naturalBreaks","numberOfBins":7,"colorScale":"RdBu","reverse":true},{"variable":"Distance (mi) to nearest methadone provider","theme":"Health","numerator":"Access01_data","nProperty":"metMinDis","binning":"naturalBreaks","numberOfBins":7,"colorScale":"RdBu","reverse":true},{"variable":"Distance (mi) to nearest naltrexone provider","theme":"Health","numerator":"Access01_data","nProperty":"nalMinDis","binning":"naturalBreaks","numberOfBins":7,"colorScale":"RdBu","reverse":true},{"variable":"Distance (mi) to nearest MOUD (any)","theme":"Health","numerator":"Access01_data","nProperty":"moudMinDis","binning":"naturalBreaks","numberOfBins":6,"colorScale":"RdBu","reverse":true},{"variable":"% tracts within 30-min drive of buprenorphine provider","theme":"Health","numerator":"Access01_CS_data","nProperty":"pctBupT","binning":"naturalBreaks","numberOfBins":4,"colorScale":"RdBu"},{"variable":"% tracts within 30-min drive of methadone provider","theme":"Health","numerator":"Access01_CS_data","nProperty":"pctMetT","binning":"naturalBreaks","numberOfBins":4,"colorScale":"RdBu"},{"variable":"% tracts within 30-min drive of naltrexone provider","theme":"Health","numerator":"Access01_CS_data","nProperty":"pctNalT","binning":"naturaleBreaks","numberOfBins":4,"colorScale":"RdBu"},{"variable":"Distance (mi) to nearest FQHC","theme":"Health","numerator":"Access02_data","nProperty":"minDisFQHC","binning":"naturalBreaks","numberOfBins":6,"colorScale":"RdBu","reverse":true},{"variable":"Driving time (mins) to nearest FQHC","theme":"Health","numerator":"Access02_data","nProperty":"timeDrive","binning":"naturalBreaks","numberOfBins":6,"colorScale":"RdBu","reverse":true},{"variable":"Count of FQHCs in 30-minute drive","theme":"Health","numerator":"Access02_data","nProperty":"countDrive","binning":"quantileBreaks","numberOfBins":5,"colorScale":"RdBu"},{"variable":"% tracts within 30-min drive of FQH","theme":"Health","numerator":"Access02_CS_data","nProperty":"pctTimeDrive","binning":"naturalBreaks","numberOfBins":4,"colorScale":"RdBu"},{"variable":"Distance (mi) to nearest hospital","theme":"Health","numerator":"Access03_data","nProperty":"minDisHosp","binning":"naturalBreaks","numberOfBins":7,"colorScale":"RdBu","reverse":true},{"variable":"Driving time (mins) to nearest hospital","theme":"Health","numerator":"Access03_data","nProperty":"timeDrive","binning":"naturalBreaks","numberOfBins":6,"colorScale":"RdBu","reverse":true},{"variable":"Count of hospitals in 30-minute drive","theme":"Health","numerator":"Access03_data","nProperty":"countDrive","binning":"quantileBreaks","numberOfBins":5,"colorScale":"RdBu"},{"variable":"% tracts within 30-min drive of hospital","theme":"Health","numerator":"Access03_CS_data","nProperty":"pctTimeDrive","binning":"naturalBreaks","numberOfBins":4,"colorScale":"RdBu"},{"variable":"Distance (mi) to nearest pharmacy","theme":"Health","numerator":"Access04_data","nProperty":"minDisRx","binning":"naturalBreaks","numberOfBins":7,"colorScale":"RdBu","reverse":true},{"variable":"Driving time (mins) to nearest pharmacy","theme":"Health","numerator":"Access04_data","nProperty":"timeDrive","binning":"naturalBreaks","numberOfBins":6,"colorScale":"RdBu","reverse":true},{"variable":"Count of pharmacies in 30-minute drive","theme":"Health","numerator":"Access04_data","nProperty":"countDrive","binning":"quantileBreaks","numberOfBins":5,"colorScale":"RdBu"},{"variable":"% tracts within 30-min drive of pharmacy","theme":"Health","numerator":"Access04_CS_data","nProperty":"pctTimeDrive","binning":"naturalBreaks","numberOfBins":4,"colorScale":"RdBu"},{"variable":"Distance (mi) to nearest mental health provider","theme":"Health","numerator":"Access05_data","nProperty":"minDisMH","binning":"naturalBreaks","numberOfBins":7,"colorScale":"RdBu","reverse":true},{"variable":"Driving time (mins) to nearest mental health provider","theme":"Health","numerator":"Access05_data","nProperty":"timeDrive","binning":"naturalBreaks","numberOfBins":6,"colorScale":"RdBu","reverse":true},{"variable":"Count of mental health providers in 30-minute drive","theme":"Health","numerator":"Access05_data","nProperty":"countDrive","binning":"quantileBreaks","numberOfBins":5,"colorScale":"RdBu"},{"variable":"% tracts within 30-min drive of mental health provider","theme":"Health","numerator":"Access05_CS_data","nProperty":"pctTimeDrive","binning":"naturalBreaks","numberOfBins":4,"colorScale":"RdBu"},{"variable":"Distance (mi) to substance use treatment (SUT) facility","theme":"Health","numerator":"Access06_data","nProperty":"minDisSUT","binning":"naturalBreaks","numberOfBins":7,"colorScale":"RdBu","reverse":true},{"variable":"Driving time (mins) to nearest SUT","theme":"Health","numerator":"Access06_data","nProperty":"timeDrive","binning":"naturalBreaks","numberOfBins":6,"colorScale":"RdBu","reverse":true},{"variable":"Count of SUTs in 30-minute drive","theme":"Health","numerator":"Access06_data","nProperty":"countDrive","binning":"quantileBreaks","numberOfBins":5,"colorScale":"RdBu"},{"variable":"% tracts within 30-min drive of SUT service","theme":"Health","numerator":"Access06_CS_data","nProperty":"pctTimeDrive","binning":"naturalBreaks","numberOfBins":4,"colorScale":"RdBu"},{"variable":"Distance (mi) to opioid use treatment facility","theme":"Health","numerator":"Access07_data","nProperty":"minDist_OTP","binning":"naturalBreaks","numberOfBins":7,"colorScale":"RdBu","reverse":true},{"variable":"Urban-Suburban-Rural","theme":"Physical Environment","numerator":"BE02","nProperty":"rurality","categorical":true,"fixedScale":["Rural","Suburban","Urban"],"colorScale":"Spectral"},{"variable":"Urban Population Total (2010)","theme":"Physical Environment","numerator":"BE02_C","nProperty":"urbPop10","binning":"quantileBreaks","numberOfBins":5,"colorScale":"Spectral"},{"variable":"Rural Population Total (2010)","theme":"Physical Environment","numerator":"BE02_C","nProperty":"rurlPop10","binning":"quantileBreaks","numberOfBins":5,"colorScale":"Spectral"},{"variable":"Rural Population % (2010)","theme":"Physical Environment","numerator":"BE02_C","nProperty":"cenRuralP","binning":"quantileBreaks","numberOfBins":5,"colorScale":"Spectral"},{"variable":"Total Occupied Housing Units","theme":"Physical Environment","numerator":"BE01","nProperty":"totUnits","binning":"quantileBreaks","numberOfBins":5,"colorScale":"BuPu"},{"variable":"Occupied Housing Units %","theme":"Physical Environment","numerator":"BE01","nProperty":"occP","binning":"quantileBreaks","numberOfBins":5,"colorScale":"BuPu"},{"variable":"Vacant Housing Units %","theme":"Physical Environment","numerator":"BE01","nProperty":"vacantP","binning":"quantileBreaks","numberOfBins":5,"colorScale":"BuPu"},{"variable":"Mobile Homes %","theme":"Physical Environment","numerator":"BE01","nProperty":"mobileP","binning":"quantileBreaks","numberOfBins":5,"colorScale":"BuPu"},{"variable":"Long-Term Occupancy %","theme":"Physical Environment","numerator":"BE01","nProperty":"lngTermP","binning":"quantileBreaks","numberOfBins":5,"colorScale":"BuPu"},{"variable":"Rentals %","theme":"Physical Environment","numerator":"BE01","nProperty":"rentalP","binning":"quantileBreaks","numberOfBins":5,"colorScale":"BuPu"},{"variable":"Housing Unit Density","theme":"Physical Environment","numerator":"BE01","nProperty":"unitDens","binning":"quantileBreaks","numberOfBins":5,"colorScale":"BuPu"},{"variable":"Land Area (Square Miles)","theme":"Physical Environment","numerator":"BE03","nProperty":"areaSqMi","binning":"quantileBreaks","numberOfBins":8,"colorScale":"BuPu"},{"variable":"Total Alcohol Outlets","theme":"Physical Environment","numerator":"BE03","nProperty":"alcTotal","binning":"naturalBreaks","numberOfBins":5,"colorScale":"BuPu"},{"variable":"Alcohol Outlets Density","theme":"Physical Environment","numerator":"BE03","nProperty":"alcDens","binning":"naturalBreaks","numberOfBins":5,"colorScale":"BuPu"},{"variable":"Segregation: Dissimilarity (Black)","theme":"Physical Environment","numerator":"BE05","nProperty":"dissim.b","binning":"quantileBreaks","numberOfBins":5,"colorScale":"RdPu"},{"variable":"Segregation: Interaction (Black)","theme":"Physical Environment","numerator":"BE05","nProperty":"inter.bw","binning":"quantileBreaks","numberOfBins":5,"colorScale":"RdPu"},{"variable":"Segregation: Isolation (Black)","theme":"Physical Environment","numerator":"BE05","nProperty":"iso.b","binning":"quantileBreaks","numberOfBins":5,"colorScale":"RdPu"},{"variable":"Segregation: Dissimilarity (Hispanic)","theme":"Physical Environment","numerator":"BE05","nProperty":"dissim.h","binning":"quantileBreaks","numberOfBins":5,"colorScale":"RdPu"},{"variable":"Segregation: Interaction (Hispanic)","theme":"Physical Environment","numerator":"BE05","nProperty":"inter.hw","binning":"quantileBreaks","numberOfBins":5,"colorScale":"RdPu"},{"variable":"Segregation: Isolation (Hispanic)","theme":"Physical Environment","numerator":"BE05","nProperty":"iso.h","binning":"quantileBreaks","numberOfBins":5,"colorScale":"RdPu"},{"variable":"Segregation: Dissimilarity (Asian)","theme":"Physical Environment","numerator":"BE05","nProperty":"dissim.a","binning":"quantileBreaks","numberOfBins":5,"colorScale":"RdPu"},{"variable":"Segregation: Interaction (Asian)","theme":"Physical Environment","numerator":"BE05","nProperty":"inter.aw","binning":"quantileBreaks","numberOfBins":5,"colorScale":"RdPu"},{"variable":"Segregation: Isolation (Asian)","theme":"Physical Environment","numerator":"BE05","nProperty":"iso.a","binning":"quantileBreaks","numberOfBins":5,"colorScale":"RdPu"},{"variable":"Hypersegregated Cities","theme":"Physical Environment","numerator":"BE04","nProperty":"DmySgrg","categorical":true,"fixedScale":[0,1],"fixedLabels":["Not hypersegregated city & metro area","Hypersegregated city & metro area"],"colorScale":[[102,194,165],[252,141,98]]},{"variable":"African American South","theme":"Physical Environment","numerator":"BE04","nProperty":"DmyBlckBlt","categorical":true,"fixedScale":[0,1],"fixedLabels":["Not African American South / \\Black Belt\\","African American South / \\Black Belt\\"],"colorScale":[[102,194,165],[252,141,98]]},{"variable":"Native American & Tribal Lands","theme":"Physical Environment","numerator":"BE04","nProperty":"PrcNtvRsrv","binning":"naturalBreaks","numberOfBins":5,"colorScale":"Purples"},{"variable":"NDVI","theme":"Physical Environment","numerator":"BE06","nProperty":"ndvi","binning":"naturalBreaks","numberOfBins":5,"colorScale":"Greens"},{"variable":"Medical Marijuana Laws","theme":"Policy","numerator":"PS09_data","nProperty":"MedMarijLaw","categorical":true,"fixedScale":[0,1],"fixedLabels":["No laws authorizing adults to use medical marijuana","Has laws authorizing adults to use medical marijuana"],"colorScale":[[252,141,98],[102,194,165]]},{"variable":"Public Health Expenditures","theme":"Policy","numerator":"PS11_data","nProperty":"healthExp_S","binning":"naturalBreaks","numberOfBins":8,"colorScale":"Blues"},{"variable":"Public Welfare Expenditures","theme":"Policy","numerator":"PS11_data","nProperty":"wlfrExp_S","binning":"naturalBreaks","numberOfBins":8,"colorScale":"Greens"},{"variable":"Corrections Expenditures","theme":"Policy","numerator":"PS11_data","nProperty":"crrctExp_S","binning":"naturalBreaks","numberOfBins":8,"colorScale":"Greens"},{"variable":"Police & Fire Expenditures","theme":"Policy","numerator":"PS11_data","nProperty":"plcFireExp_S","binning":"naturalBreaks","numberOfBins":8,"colorScale":"Greens"},{"variable":"Syringe Service Program (SSP) Authorization Laws","theme":"Policy","numerator":"PS08_data","nProperty":"expSSP","categorical":true,"fixedScale":[0,1],"fixedLabels":["No laws authorizing Syringe Service Programs","Has laws authorizing Syringe Service Programs"],"colorScale":[[252,141,98],[102,194,165]]},{"variable":"Drug Paraphernalia Laws","theme":"Policy","numerator":"PS08_data","nProperty":"noPrphLw","categorical":true,"fixedScale":[0,1],"fixedLabels":["Has drug paraphernalia laws","No drug paraphernalia laws"],"colorScale":[[102,194,165],[252,141,98]]},{"variable":"Distribution of Syringes Laws","theme":"Policy","numerator":"PS08_data","nProperty":"ntPrFrDsSy","categorical":true,"fixedScale":[0,1],"fixedLabels":["Laws Prohibit Free Distribution of Syringes","Law Does Not Prohibit Free Distribution of Syringes"],"colorScale":[[252,141,98],[102,194,165]]},{"variable":"Paraphernalia exludes objects used for injecting drugs","theme":"Policy","numerator":"PS08_data","nProperty":"PrExcInj","categorical":true,"fixedScale":[0,1],"fixedLabels":["Does NOT Explicitly Exlude Objects Used for Injecting Drugs","Explicitly Exludes Objects Used for Injecting Drugs"],"colorScale":[[252,141,98],[102,194,165]]},{"variable":"Paraphernalia does not refer to objects used for injecting drugs","theme":"Policy","numerator":"PS08_data","nProperty":"PrNtRefInj","categorical":true,"fixedScale":[0,1],"fixedLabels":["Paraphernalia Definition Refers to Objects Used For Injecting Drugs","Paraphernalia Definition Does NOT Refer to Objects Used For Injecting Drugs"],"colorScale":[[102,194,165],[252,141,98]]},{"variable":"Laws removing barriers to SSPs","theme":"Policy","numerator":"PS08_data","nProperty":"noLwRmUnc","categorical":true,"fixedScale":[0,1],"fixedLabels":["No Law Removing Barriers or Uncertainty as to SSP Legality","Has Law Removing Barriers or Uncertainty as to SSP Legality"],"colorScale":[[102,194,165],[252,141,98]]},{"variable":"Any PDMP (fraction of year in 2017)","theme":"Policy","numerator":"PS03_data","nProperty":"AnyPDMPfr","categorical":true,"fixedScale":[0.5,1],"fixedLabels":["Six months","Entire year"],"colorScale":[[252,141,98],[102,194,165]]},{"variable":"Any Horowitz PDMP (fraction of year in 2017)","theme":"Policy","numerator":"PS03_data","nProperty":"AnyPDMPHfr","categorical":true,"fixedScale":[0.5,1],"fixedLabels":["Six months","Entire year"],"colorScale":[[252,141,98],[102,194,165]]},{"variable":"Must-Access PDMP (fraction of year in 2017)","theme":"Policy","numerator":"PS03_data","nProperty":"MsAcPDMPfr","categorical":true,"fixedScale":[0,1],"fixedLabels":["None","Entire year"],"colorScale":[[252,141,98],[102,194,165]]},{"variable":"Operational PDMP (fraction of year in 2017)","theme":"Policy","numerator":"PS03_data","nProperty":"OpPDMPfr","categorical":true,"fixedScale":[0,1],"fixedLabels":["None","Entire year"],"colorScale":[[252,141,98],[102,194,165]]},{"variable":"Electronic PDMP (fraction of year in 2017)","theme":"Policy","numerator":"PS03_data","nProperty":"ElcPDMPfr","categorical":true,"fixedScale":[0.5,1],"fixedLabels":["Six months","Entire year"],"colorScale":[[252,141,98],[102,194,165]]},{"variable":"Total Jail Population Rate","theme":"Policy","numerator":"PS02_data","nProperty":"TtlJlPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Female Jail Population Rate","theme":"Policy","numerator":"PS02_data","nProperty":"FmlJlPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"Reds"},{"variable":"Male Jail Population Rate","theme":"Policy","numerator":"PS02_data","nProperty":"MlJlPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"AAPI Jail Population Rate","theme":"Policy","numerator":"PS02_data","nProperty":"AapiJlPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Black Jail Population Rate","theme":"Policy","numerator":"PS02_data","nProperty":"BlckJlPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Latinx Jail Population Rate","theme":"Policy","numerator":"PS02_data","nProperty":"LtnxJlPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Native American Jail Population Rate","theme":"Policy","numerator":"PS02_data","nProperty":"NtvJlPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"White (Non-Hispanic) Jail Population Rate","theme":"Policy","numerator":"PS02_data","nProperty":"WhtJlPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Total jail admission rate","theme":"Policy","numerator":"PS02_data","nProperty":"TtlJlAdmr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Pretrial Jail Population Rate","theme":"Policy","numerator":"PS02_data","nProperty":"TtlJlPrtr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Total Prison Population Rate","theme":"Policy","numerator":"PS01_data","nProperty":"TtlPrPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Female Prison Population Rate","theme":"Policy","numerator":"PS01_data","nProperty":"FmlPrPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Male Prison Population Rate","theme":"Policy","numerator":"PS01_data","nProperty":"MlPrPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"AAPI Prison Population Rate","theme":"Policy","numerator":"PS01_data","nProperty":"AapiPrPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Black Prison Population Rate","theme":"Policy","numerator":"PS01_data","nProperty":"BlckPrPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Latinx Prison Population Rate","theme":"Policy","numerator":"PS01_data","nProperty":"LtnxPrPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Native American Prison Population Rate","theme":"Policy","numerator":"PS01_data","nProperty":"NtvPrPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"White (Non-Hispanic) Prison Population Rate","theme":"Policy","numerator":"PS01_data","nProperty":"WhtPrPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Total Prison Admission Rate","theme":"Policy","numerator":"PS01_data","nProperty":"TtlPrAPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Female Prison Admission Rate","theme":"Policy","numerator":"PS01_data","nProperty":"FmlPrAPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Male Prison Admission Rate","theme":"Policy","numerator":"PS01_data","nProperty":"MlPrAPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"AAPI Prison Admission Rate","theme":"Policy","numerator":"PS01_data","nProperty":"AapiPrAPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Black Prison Admission Rate","theme":"Policy","numerator":"PS01_data","nProperty":"BlckPrAPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Latinx Prison Admission Rate","theme":"Policy","numerator":"PS01_data","nProperty":"LtnxPrAPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Native American Prison Admission Rate","theme":"Policy","numerator":"PS01_data","nProperty":"NtvPrAPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"White (Non-Hispanic) Prison Admission Rate","theme":"Policy","numerator":"PS01_data","nProperty":"WhtPrAPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Any Good Samaritan Law (fraction of year in 2018)","theme":"Policy","numerator":"PS04_data","nProperty":"AnyGSLfr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"Blues"},{"variable":"Good Samaritan Law Protecting Arrest (fraction of year in 2018)","theme":"Policy","numerator":"PS04_data","nProperty":"GSLArrfr","categorical":true,"fixedScale":[0,1],"fixedLabels":["1: Has Good Samaritan Law Protecting Arrest for entire year","0: No Good Samaritan Law Protecting Arrest"],"colorScale":[[102,194,165],[252,141,98]],"reverse":true},{"variable":"Naloxone Law in Effect (fraction of year in 2017)","theme":"Policy","numerator":"PS05_data","nProperty":"NalPrStfr","binning":"naturalBreaks","numberOfBins":6,"colorScale":"Blues"},{"variable":"Naloxone Law allowing distribution through a standing or order (fraction of year in 2017)","theme":"Policy","numerator":"PS05_data","nProperty":"AnyNalfr","binning":"naturalBreaks","numberOfBins":4,"colorScale":"Blues"},{"variable":"Naloxone Law allowing pharmacists prescriptive authority (fraction of year in 2017)","theme":"Policy","numerator":"PS05_data","nProperty":"NalPresfr","binning":"naturalBreaks","numberOfBins":4,"colorScale":"Blues"},{"variable":"Total Medicaid Spending","theme":"Policy","numerator":"PS06_data","nProperty":"TtlMedExpN","binning":"quantileBreaks","numberOfBins":8,"colorScale":"Blues"},{"variable":"Traditional Medicaid Federal Spending","theme":"Policy","numerator":"PS07_data","nProperty":"TradFedExp","binning":"quantileBreaks","numberOfBins":8,"colorScale":"Blues"},{"variable":"Traditional Medicaid State Spending","theme":"Policy","numerator":"PS07_data","nProperty":"TradSttExp","binning":"naturalBreaks","numberOfBins":8,"colorScale":"Blues"},{"variable":"Expansion Medicaid Federal Spending","theme":"Policy","numerator":"PS07_data","nProperty":"ExpnFedExp","binning":"naturalBreaks","numberOfBins":8,"colorScale":"Blues"},{"variable":"Expansion Medicaid State Spending","theme":"Policy","numerator":"PS07_data","nProperty":"ExpnSttExp","binning":"naturalBreaks","numberOfBins":8,"colorScale":"Blues"},{}]
+[
+  {
+    "variable": "HEROP_ID (Latest)",
+    "numerator": "latest",
+    "nProperty": "HEROP_ID",
+    "theme": "Geography",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "GEOID (Latest)",
+    "numerator": "latest",
+    "nProperty": "GEOID",
+    "theme": "Geography",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "TotPop (Latest)",
+    "numerator": "latest",
+    "nProperty": "TotPop",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "TotPopHh (Latest)",
+    "numerator": "latest",
+    "nProperty": "TotPopHh",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "TotVetPop (Latest)",
+    "numerator": "latest",
+    "nProperty": "TotVetPop",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "TotUnits (Latest)",
+    "numerator": "latest",
+    "nProperty": "TotUnits",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "TotWrkE (Latest)",
+    "numerator": "latest",
+    "nProperty": "TotWrkE",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "WhiteP (Latest)",
+    "numerator": "latest",
+    "nProperty": "WhiteP",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BlackP (Latest)",
+    "numerator": "latest",
+    "nProperty": "BlackP",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AmIndP (Latest)",
+    "numerator": "latest",
+    "nProperty": "AmIndP",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AsianP (Latest)",
+    "numerator": "latest",
+    "nProperty": "AsianP",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "PacIsP (Latest)",
+    "numerator": "latest",
+    "nProperty": "PacIsP",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "OtherP (Latest)",
+    "numerator": "latest",
+    "nProperty": "OtherP",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "HispP (Latest)",
+    "numerator": "latest",
+    "nProperty": "HispP",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "ChildrenP (Latest)",
+    "numerator": "latest",
+    "nProperty": "ChildrenP",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age15_24P (Latest)",
+    "numerator": "latest",
+    "nProperty": "Age15_24P",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Und45P (Latest)",
+    "numerator": "latest",
+    "nProperty": "Und45P",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Ovr65P (Latest)",
+    "numerator": "latest",
+    "nProperty": "Ovr65P",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age0_4 (Latest)",
+    "numerator": "latest",
+    "nProperty": "Age0_4",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age5_14 (Latest)",
+    "numerator": "latest",
+    "nProperty": "Age5_14",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age15_19 (Latest)",
+    "numerator": "latest",
+    "nProperty": "Age15_19",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age20_24 (Latest)",
+    "numerator": "latest",
+    "nProperty": "Age20_24",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age15_44 (Latest)",
+    "numerator": "latest",
+    "nProperty": "Age15_44",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age45_49 (Latest)",
+    "numerator": "latest",
+    "nProperty": "Age45_49",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age50_54 (Latest)",
+    "numerator": "latest",
+    "nProperty": "Age50_54",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age55_59 (Latest)",
+    "numerator": "latest",
+    "nProperty": "Age55_59",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age60_64 (Latest)",
+    "numerator": "latest",
+    "nProperty": "Age60_64",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AgeOv65 (Latest)",
+    "numerator": "latest",
+    "nProperty": "AgeOv65",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AgeOv18 (Latest)",
+    "numerator": "latest",
+    "nProperty": "AgeOv18",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age18_64 (Latest)",
+    "numerator": "latest",
+    "nProperty": "Age18_64",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "DisbP (Latest)",
+    "numerator": "latest",
+    "nProperty": "DisbP",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NoHsP (Latest)",
+    "numerator": "latest",
+    "nProperty": "NoHsP",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "VetP (Latest)",
+    "numerator": "latest",
+    "nProperty": "VetP",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NonRelFhhP (Latest)",
+    "numerator": "latest",
+    "nProperty": "NonRelFhhP",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NonRelNfhhP (Latest)",
+    "numerator": "latest",
+    "nProperty": "NonRelNfhhP",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BedCnt (Latest)",
+    "numerator": "latest",
+    "nProperty": "BedCnt",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "PntInTm (Latest)",
+    "numerator": "latest",
+    "nProperty": "PntInTm",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "YrlyBedCnt (Latest)",
+    "numerator": "latest",
+    "nProperty": "YrlyBedCnt",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "UnempP (Latest)",
+    "numerator": "latest",
+    "nProperty": "UnempP",
+    "theme": "Economic",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "PovP (Latest)",
+    "numerator": "latest",
+    "nProperty": "PovP",
+    "theme": "Economic",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MedInc (Latest)",
+    "numerator": "latest",
+    "nProperty": "MedInc",
+    "theme": "Economic",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "PciE (Latest)",
+    "numerator": "latest",
+    "nProperty": "PciE",
+    "theme": "Economic",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "ForDqP (Latest)",
+    "numerator": "latest",
+    "nProperty": "ForDqP",
+    "theme": "Economic",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "ForDqTot (Latest)",
+    "numerator": "latest",
+    "nProperty": "ForDqTot",
+    "theme": "Economic",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "GiniCoeff (Latest)",
+    "numerator": "latest",
+    "nProperty": "GiniCoeff",
+    "theme": "Economic",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "EduP (Latest)",
+    "numerator": "latest",
+    "nProperty": "EduP",
+    "theme": "Economic",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "HghRskP (Latest)",
+    "numerator": "latest",
+    "nProperty": "HghRskP",
+    "theme": "Economic",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "HltCrP (Latest)",
+    "numerator": "latest",
+    "nProperty": "HltCrP",
+    "theme": "Economic",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "RetailP (Latest)",
+    "numerator": "latest",
+    "nProperty": "RetailP",
+    "theme": "Economic",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "EssnWrkE (Latest)",
+    "numerator": "latest",
+    "nProperty": "EssnWrkE",
+    "theme": "Economic",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "EssnWrkP (Latest)",
+    "numerator": "latest",
+    "nProperty": "EssnWrkP",
+    "theme": "Economic",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NoIntP (Latest)",
+    "numerator": "latest",
+    "nProperty": "NoIntP",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "VacantP (Latest)",
+    "numerator": "latest",
+    "nProperty": "VacantP",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MobileP (Latest)",
+    "numerator": "latest",
+    "nProperty": "MobileP",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "LngTermP (Latest)",
+    "numerator": "latest",
+    "nProperty": "LngTermP",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "RentalP (Latest)",
+    "numerator": "latest",
+    "nProperty": "RentalP",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "UnitDens (Latest)",
+    "numerator": "latest",
+    "nProperty": "UnitDens",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AreaSqMi (Latest)",
+    "numerator": "latest",
+    "nProperty": "AreaSqMi",
+    "theme": "Geography",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AlcTot (Latest)",
+    "numerator": "latest",
+    "nProperty": "AlcTot",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AlcDens (Latest)",
+    "numerator": "latest",
+    "nProperty": "AlcDens",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AlcPerCap (Latest)",
+    "numerator": "latest",
+    "nProperty": "AlcPerCap",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "DsmBlk (Latest)",
+    "numerator": "latest",
+    "nProperty": "DsmBlk",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "IntrBlkWht (Latest)",
+    "numerator": "latest",
+    "nProperty": "IntrBlkWht",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "IsoBlk (Latest)",
+    "numerator": "latest",
+    "nProperty": "IsoBlk",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "DsmHsp (Latest)",
+    "numerator": "latest",
+    "nProperty": "DsmHsp",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "IntrHspWht (Latest)",
+    "numerator": "latest",
+    "nProperty": "IntrHspWht",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "IsoHsp (Latest)",
+    "numerator": "latest",
+    "nProperty": "IsoHsp",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "DsmAs (Latest)",
+    "numerator": "latest",
+    "nProperty": "DsmAs",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "IntrAsWht (Latest)",
+    "numerator": "latest",
+    "nProperty": "IntrAsWht",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "IsoAs (Latest)",
+    "numerator": "latest",
+    "nProperty": "IsoAs",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Ndvi (Latest)",
+    "numerator": "latest",
+    "nProperty": "Ndvi",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "ParkArea (Latest)",
+    "numerator": "latest",
+    "nProperty": "ParkArea",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "StateArea (Latest)",
+    "numerator": "latest",
+    "nProperty": "StateArea",
+    "theme": "Geography",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Cover (Latest)",
+    "numerator": "latest",
+    "nProperty": "Cover",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "TotTracts (Latest)",
+    "numerator": "latest",
+    "nProperty": "TotTracts",
+    "theme": "Geography",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "CntBupT (Latest)",
+    "numerator": "latest",
+    "nProperty": "CntBupT",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "CntMetT (Latest)",
+    "numerator": "latest",
+    "nProperty": "CntMetT",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "CntNalT (Latest)",
+    "numerator": "latest",
+    "nProperty": "CntNalT",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AvBupTime (Latest)",
+    "numerator": "latest",
+    "nProperty": "AvBupTime",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AvMetTime (Latest)",
+    "numerator": "latest",
+    "nProperty": "AvMetTime",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AvNalTime (Latest)",
+    "numerator": "latest",
+    "nProperty": "AvNalTime",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "PctBupT (Latest)",
+    "numerator": "latest",
+    "nProperty": "PctBupT",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "PctMetT (Latest)",
+    "numerator": "latest",
+    "nProperty": "PctMetT",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "PctNalT (Latest)",
+    "numerator": "latest",
+    "nProperty": "PctNalT",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "FqhcCtTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "FqhcCtTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "FqhcAvTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "FqhcAvTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "FqhcTmDrP (Latest)",
+    "numerator": "latest",
+    "nProperty": "FqhcTmDrP",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "HospCtTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "HospCtTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "HospAvTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "HospAvTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "HospTmDrP (Latest)",
+    "numerator": "latest",
+    "nProperty": "HospTmDrP",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "RxCtTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "RxCtTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "RxAvTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "RxAvTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "RxTmDrP (Latest)",
+    "numerator": "latest",
+    "nProperty": "RxTmDrP",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MhCtTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "MhCtTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MhAvTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "MhAvTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MhTmDrP (Latest)",
+    "numerator": "latest",
+    "nProperty": "MhTmDrP",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "SutpCtTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "SutpCtTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "SutpAvTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "SutpAvTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "SutpTmDrP (Latest)",
+    "numerator": "latest",
+    "nProperty": "SutpTmDrP",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "OtpCtTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "OtpCtTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "OtpAvTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "OtpAvTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "OtpTmDrP (Latest)",
+    "numerator": "latest",
+    "nProperty": "OtpTmDrP",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "DrgRlDth (Latest)",
+    "numerator": "latest",
+    "nProperty": "DrgRlDth",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "TotHcv (Latest)",
+    "numerator": "latest",
+    "nProperty": "TotHcv",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MlHcv (Latest)",
+    "numerator": "latest",
+    "nProperty": "MlHcv",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "FmHcv (Latest)",
+    "numerator": "latest",
+    "nProperty": "FmHcv",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Un50Hcv (Latest)",
+    "numerator": "latest",
+    "nProperty": "Un50Hcv",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "A50_74Hcv (Latest)",
+    "numerator": "latest",
+    "nProperty": "A50_74Hcv",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Ov75Hcv (Latest)",
+    "numerator": "latest",
+    "nProperty": "Ov75Hcv",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BlkHcv (Latest)",
+    "numerator": "latest",
+    "nProperty": "BlkHcv",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NonBlkHcv (Latest)",
+    "numerator": "latest",
+    "nProperty": "NonBlkHcv",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "HcvD13 (Latest)",
+    "numerator": "latest",
+    "nProperty": "HcvD13",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MlHcvD13 (Latest)",
+    "numerator": "latest",
+    "nProperty": "MlHcvD13",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "FlHcvD13 (Latest)",
+    "numerator": "latest",
+    "nProperty": "FlHcvD13",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AmInHcvD13 (Latest)",
+    "numerator": "latest",
+    "nProperty": "AmInHcvD13",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AsPiHcvD13 (Latest)",
+    "numerator": "latest",
+    "nProperty": "AsPiHcvD13",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BlkHcvD13 (Latest)",
+    "numerator": "latest",
+    "nProperty": "BlkHcvD13",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "HspHcvD13 (Latest)",
+    "numerator": "latest",
+    "nProperty": "HspHcvD13",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "U50HcvD13 (Latest)",
+    "numerator": "latest",
+    "nProperty": "U50HcvD13",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "A50_74HcvD13 (Latest)",
+    "numerator": "latest",
+    "nProperty": "A50_74HcvD13",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "O75HcvD13 (Latest)",
+    "numerator": "latest",
+    "nProperty": "O75HcvD13",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "HcvD14 (Latest)",
+    "numerator": "latest",
+    "nProperty": "HcvD14",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MlHcvD14 (Latest)",
+    "numerator": "latest",
+    "nProperty": "MlHcvD14",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "FlHcvD14 (Latest)",
+    "numerator": "latest",
+    "nProperty": "FlHcvD14",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AmInHcvD14 (Latest)",
+    "numerator": "latest",
+    "nProperty": "AmInHcvD14",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AsPiHcvD14 (Latest)",
+    "numerator": "latest",
+    "nProperty": "AsPiHcvD14",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BlkHcvD14 (Latest)",
+    "numerator": "latest",
+    "nProperty": "BlkHcvD14",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "HspHcvD14 (Latest)",
+    "numerator": "latest",
+    "nProperty": "HspHcvD14",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "U50HcvD14 (Latest)",
+    "numerator": "latest",
+    "nProperty": "U50HcvD14",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "A50_74HcvD14 (Latest)",
+    "numerator": "latest",
+    "nProperty": "A50_74HcvD14",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "O75HcvD14 (Latest)",
+    "numerator": "latest",
+    "nProperty": "O75HcvD14",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "HcvD15 (Latest)",
+    "numerator": "latest",
+    "nProperty": "HcvD15",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MlHcvD15 (Latest)",
+    "numerator": "latest",
+    "nProperty": "MlHcvD15",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "FlHcvD15 (Latest)",
+    "numerator": "latest",
+    "nProperty": "FlHcvD15",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AmInHcvD15 (Latest)",
+    "numerator": "latest",
+    "nProperty": "AmInHcvD15",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AsPiHcvD15 (Latest)",
+    "numerator": "latest",
+    "nProperty": "AsPiHcvD15",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BlkHcvD15 (Latest)",
+    "numerator": "latest",
+    "nProperty": "BlkHcvD15",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "HspHcvD15 (Latest)",
+    "numerator": "latest",
+    "nProperty": "HspHcvD15",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "U50HcvD15 (Latest)",
+    "numerator": "latest",
+    "nProperty": "U50HcvD15",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "D50_74Hcv15 (Latest)",
+    "numerator": "latest",
+    "nProperty": "D50_74Hcv15",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "O75HcvD15 (Latest)",
+    "numerator": "latest",
+    "nProperty": "O75HcvD15",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "HcvD16 (Latest)",
+    "numerator": "latest",
+    "nProperty": "HcvD16",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MlHcvD16 (Latest)",
+    "numerator": "latest",
+    "nProperty": "MlHcvD16",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "FlHcvD16 (Latest)",
+    "numerator": "latest",
+    "nProperty": "FlHcvD16",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AmInHcvD16 (Latest)",
+    "numerator": "latest",
+    "nProperty": "AmInHcvD16",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AsPiHcvD16 (Latest)",
+    "numerator": "latest",
+    "nProperty": "AsPiHcvD16",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BlkHcvD16 (Latest)",
+    "numerator": "latest",
+    "nProperty": "BlkHcvD16",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "HspHcvD16 (Latest)",
+    "numerator": "latest",
+    "nProperty": "HspHcvD16",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "U50HcvD16 (Latest)",
+    "numerator": "latest",
+    "nProperty": "U50HcvD16",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "A50_74HcvD16 (Latest)",
+    "numerator": "latest",
+    "nProperty": "A50_74HcvD16",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "O75HcvD16 (Latest)",
+    "numerator": "latest",
+    "nProperty": "O75HcvD16",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "HcvD17 (Latest)",
+    "numerator": "latest",
+    "nProperty": "HcvD17",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MlHcvD17 (Latest)",
+    "numerator": "latest",
+    "nProperty": "MlHcvD17",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "FlHcvD17 (Latest)",
+    "numerator": "latest",
+    "nProperty": "FlHcvD17",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AmInHcvD17 (Latest)",
+    "numerator": "latest",
+    "nProperty": "AmInHcvD17",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AsPiHcvD17 (Latest)",
+    "numerator": "latest",
+    "nProperty": "AsPiHcvD17",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BlkHcvD17 (Latest)",
+    "numerator": "latest",
+    "nProperty": "BlkHcvD17",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "HspHcvD17 (Latest)",
+    "numerator": "latest",
+    "nProperty": "HspHcvD17",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "U50HcvD17 (Latest)",
+    "numerator": "latest",
+    "nProperty": "U50HcvD17",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "A50_74HcvD17 (Latest)",
+    "numerator": "latest",
+    "nProperty": "A50_74HcvD17",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "O75HcvD17 (Latest)",
+    "numerator": "latest",
+    "nProperty": "O75HcvD17",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AvHcvD (Latest)",
+    "numerator": "latest",
+    "nProperty": "AvHcvD",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AvMlHcvD (Latest)",
+    "numerator": "latest",
+    "nProperty": "AvMlHcvD",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AvFlHcvD (Latest)",
+    "numerator": "latest",
+    "nProperty": "AvFlHcvD",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AvAmInHcvD (Latest)",
+    "numerator": "latest",
+    "nProperty": "AvAmInHcvD",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AvAsPiHcvD (Latest)",
+    "numerator": "latest",
+    "nProperty": "AvAsPiHcvD",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AvBlkHcvD (Latest)",
+    "numerator": "latest",
+    "nProperty": "AvBlkHcvD",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AvHspHcvD (Latest)",
+    "numerator": "latest",
+    "nProperty": "AvHspHcvD",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AvU50HcvD (Latest)",
+    "numerator": "latest",
+    "nProperty": "AvU50HcvD",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Av50_74HcvD (Latest)",
+    "numerator": "latest",
+    "nProperty": "Av50_74HcvD",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AvO75HcvD (Latest)",
+    "numerator": "latest",
+    "nProperty": "AvO75HcvD",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "TotPcp (Latest)",
+    "numerator": "latest",
+    "nProperty": "TotPcp",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "TotSp (Latest)",
+    "numerator": "latest",
+    "nProperty": "TotSp",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "OpRxRt20 (Latest)",
+    "numerator": "latest",
+    "nProperty": "OpRxRt20",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "PrMsuse20P (Latest)",
+    "numerator": "latest",
+    "nProperty": "PrMsuse20P",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "OdMortRt14 (Latest)",
+    "numerator": "latest",
+    "nProperty": "OdMortRt14",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "OdMortRt15 (Latest)",
+    "numerator": "latest",
+    "nProperty": "OdMortRt15",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "OdMortRt16 (Latest)",
+    "numerator": "latest",
+    "nProperty": "OdMortRt16",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "OdMortRt17 (Latest)",
+    "numerator": "latest",
+    "nProperty": "OdMortRt17",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "OdMortRt18 (Latest)",
+    "numerator": "latest",
+    "nProperty": "OdMortRt18",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "OdMortRt19 (Latest)",
+    "numerator": "latest",
+    "nProperty": "OdMortRt19",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "OdMortRt20 (Latest)",
+    "numerator": "latest",
+    "nProperty": "OdMortRt20",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "OdMortRtAv (Latest)",
+    "numerator": "latest",
+    "nProperty": "OdMortRtAv",
+    "theme": "Outcome",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AnyPdmpFr (Latest)",
+    "numerator": "latest",
+    "nProperty": "AnyPdmpFr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AnyPdmphFr (Latest)",
+    "numerator": "latest",
+    "nProperty": "AnyPdmphFr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "OpPdmpFr (Latest)",
+    "numerator": "latest",
+    "nProperty": "OpPdmpFr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MsAsPdmpFr (Latest)",
+    "numerator": "latest",
+    "nProperty": "MsAsPdmpFr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "ElcPdmpFr (Latest)",
+    "numerator": "latest",
+    "nProperty": "ElcPdmpFr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AnyPdmpDt (Latest)",
+    "numerator": "latest",
+    "nProperty": "AnyPdmpDt",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AnyPdmphDt (Latest)",
+    "numerator": "latest",
+    "nProperty": "AnyPdmphDt",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "OpPdmpDt (Latest)",
+    "numerator": "latest",
+    "nProperty": "OpPdmpDt",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MsAcPdmpDt (Latest)",
+    "numerator": "latest",
+    "nProperty": "MsAcPdmpDt",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "ElcPdmpDt (Latest)",
+    "numerator": "latest",
+    "nProperty": "ElcPdmpDt",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AnyGslDt (Latest)",
+    "numerator": "latest",
+    "nProperty": "AnyGslDt",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "GslArrDt (Latest)",
+    "numerator": "latest",
+    "nProperty": "GslArrDt",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AnyGslFr (Latest)",
+    "numerator": "latest",
+    "nProperty": "AnyGslFr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "GslArrFr (Latest)",
+    "numerator": "latest",
+    "nProperty": "GslArrFr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AnyNalDt (Latest)",
+    "numerator": "latest",
+    "nProperty": "AnyNalDt",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NalPrStDt (Latest)",
+    "numerator": "latest",
+    "nProperty": "NalPrStDt",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NalPresDt (Latest)",
+    "numerator": "latest",
+    "nProperty": "NalPresDt",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AnyNalFr (Latest)",
+    "numerator": "latest",
+    "nProperty": "AnyNalFr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NalPrStFr (Latest)",
+    "numerator": "latest",
+    "nProperty": "NalPrStFr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NalPresFr (Latest)",
+    "numerator": "latest",
+    "nProperty": "NalPresFr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MedcdExp19 (Latest)",
+    "numerator": "latest",
+    "nProperty": "MedcdExp19",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MedcdExp18 (Latest)",
+    "numerator": "latest",
+    "nProperty": "MedcdExp18",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "TradFedExp (Latest)",
+    "numerator": "latest",
+    "nProperty": "TradFedExp",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "TradSttExp (Latest)",
+    "numerator": "latest",
+    "nProperty": "TradSttExp",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "ExpnFedExp (Latest)",
+    "numerator": "latest",
+    "nProperty": "ExpnFedExp",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "ExpnSttExp (Latest)",
+    "numerator": "latest",
+    "nProperty": "ExpnSttExp",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "ExpSsp (Latest)",
+    "numerator": "latest",
+    "nProperty": "ExpSsp",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NoPrphLw (Latest)",
+    "numerator": "latest",
+    "nProperty": "NoPrphLw",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NtPrFrDsSy (Latest)",
+    "numerator": "latest",
+    "nProperty": "NtPrFrDsSy",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "PrExcInj (Latest)",
+    "numerator": "latest",
+    "nProperty": "PrExcInj",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "PrNtRefInj (Latest)",
+    "numerator": "latest",
+    "nProperty": "PrNtRefInj",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NoLwRmUnc (Latest)",
+    "numerator": "latest",
+    "nProperty": "NoLwRmUnc",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MdMarijLaw (Latest)",
+    "numerator": "latest",
+    "nProperty": "MdMarijLaw",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "CrrctExpS (Latest)",
+    "numerator": "latest",
+    "nProperty": "CrrctExpS",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "PlcFyrExpS (Latest)",
+    "numerator": "latest",
+    "nProperty": "PlcFyrExpS",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "HlthExpS (Latest)",
+    "numerator": "latest",
+    "nProperty": "HlthExpS",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "WlfrExpS (Latest)",
+    "numerator": "latest",
+    "nProperty": "WlfrExpS",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "CrrctExpL (Latest)",
+    "numerator": "latest",
+    "nProperty": "CrrctExpL",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "PlcFyrExpL (Latest)",
+    "numerator": "latest",
+    "nProperty": "PlcFyrExpL",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "HlthExpL (Latest)",
+    "numerator": "latest",
+    "nProperty": "HlthExpL",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "WlfrExpL (Latest)",
+    "numerator": "latest",
+    "nProperty": "WlfrExpL",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "CrrctExpT (Latest)",
+    "numerator": "latest",
+    "nProperty": "CrrctExpT",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "PlcFyrExpT (Latest)",
+    "numerator": "latest",
+    "nProperty": "PlcFyrExpT",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "HlthExpT (Latest)",
+    "numerator": "latest",
+    "nProperty": "HlthExpT",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "WlfrExpT (Latest)",
+    "numerator": "latest",
+    "nProperty": "WlfrExpT",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "HEROP_ID (2000)",
+    "numerator": "2000",
+    "nProperty": "HEROP_ID",
+    "theme": "Geography",
+    "year": "2000",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "GEOID (2000)",
+    "numerator": "2000",
+    "nProperty": "GEOID",
+    "theme": "Geography",
+    "year": "2000",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "TotPop (2000)",
+    "numerator": "2000",
+    "nProperty": "TotPop",
+    "theme": "Social",
+    "year": "2000",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "TotUnits (2000)",
+    "numerator": "2000",
+    "nProperty": "TotUnits",
+    "theme": "Social",
+    "year": "2000",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "ChildrenP (2000)",
+    "numerator": "2000",
+    "nProperty": "ChildrenP",
+    "theme": "Social",
+    "year": "2000",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age18_64 (2000)",
+    "numerator": "2000",
+    "nProperty": "Age18_64",
+    "theme": "Social",
+    "year": "2000",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age0_4 (2000)",
+    "numerator": "2000",
+    "nProperty": "Age0_4",
+    "theme": "Social",
+    "year": "2000",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age5_14 (2000)",
+    "numerator": "2000",
+    "nProperty": "Age5_14",
+    "theme": "Social",
+    "year": "2000",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age15_19 (2000)",
+    "numerator": "2000",
+    "nProperty": "Age15_19",
+    "theme": "Social",
+    "year": "2000",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age20_24 (2000)",
+    "numerator": "2000",
+    "nProperty": "Age20_24",
+    "theme": "Social",
+    "year": "2000",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age15_44 (2000)",
+    "numerator": "2000",
+    "nProperty": "Age15_44",
+    "theme": "Social",
+    "year": "2000",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age45_49 (2000)",
+    "numerator": "2000",
+    "nProperty": "Age45_49",
+    "theme": "Social",
+    "year": "2000",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age50_54 (2000)",
+    "numerator": "2000",
+    "nProperty": "Age50_54",
+    "theme": "Social",
+    "year": "2000",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age55_59 (2000)",
+    "numerator": "2000",
+    "nProperty": "Age55_59",
+    "theme": "Social",
+    "year": "2000",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age60_64 (2000)",
+    "numerator": "2000",
+    "nProperty": "Age60_64",
+    "theme": "Social",
+    "year": "2000",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AgeOv65 (2000)",
+    "numerator": "2000",
+    "nProperty": "AgeOv65",
+    "theme": "Social",
+    "year": "2000",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age15_24P (2000)",
+    "numerator": "2000",
+    "nProperty": "Age15_24P",
+    "theme": "Social",
+    "year": "2000",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Und45P (2000)",
+    "numerator": "2000",
+    "nProperty": "Und45P",
+    "theme": "Social",
+    "year": "2000",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Ovr65P (2000)",
+    "numerator": "2000",
+    "nProperty": "Ovr65P",
+    "theme": "Social",
+    "year": "2000",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "WhiteP (2000)",
+    "numerator": "2000",
+    "nProperty": "WhiteP",
+    "theme": "Social",
+    "year": "2000",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BlackP (2000)",
+    "numerator": "2000",
+    "nProperty": "BlackP",
+    "theme": "Social",
+    "year": "2000",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "HispP (2000)",
+    "numerator": "2000",
+    "nProperty": "HispP",
+    "theme": "Social",
+    "year": "2000",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AmIndP (2000)",
+    "numerator": "2000",
+    "nProperty": "AmIndP",
+    "theme": "Social",
+    "year": "2000",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AsianP (2000)",
+    "numerator": "2000",
+    "nProperty": "AsianP",
+    "theme": "Social",
+    "year": "2000",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "PacIsP (2000)",
+    "numerator": "2000",
+    "nProperty": "PacIsP",
+    "theme": "Social",
+    "year": "2000",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "OtherP (2000)",
+    "numerator": "2000",
+    "nProperty": "OtherP",
+    "theme": "Social",
+    "year": "2000",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NoHsP (2000)",
+    "numerator": "2000",
+    "nProperty": "NoHsP",
+    "theme": "Social",
+    "year": "2000",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "DisbP (2000)",
+    "numerator": "2000",
+    "nProperty": "DisbP",
+    "theme": "Social",
+    "year": "2000",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "PovP (2000)",
+    "numerator": "2000",
+    "nProperty": "PovP",
+    "theme": "Economic",
+    "year": "2000",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "UnempP (2000)",
+    "numerator": "2000",
+    "nProperty": "UnempP",
+    "theme": "Economic",
+    "year": "2000",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "VacantP (2000)",
+    "numerator": "2000",
+    "nProperty": "VacantP",
+    "theme": "Environment",
+    "year": "2000",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "HEROP_ID (1980)",
+    "numerator": "1980",
+    "nProperty": "HEROP_ID",
+    "theme": "Geography",
+    "year": "1980",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "GEOID (1980)",
+    "numerator": "1980",
+    "nProperty": "GEOID",
+    "theme": "Geography",
+    "year": "1980",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "TotPop (1980)",
+    "numerator": "1980",
+    "nProperty": "TotPop",
+    "theme": "Social",
+    "year": "1980",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "TotUnits (1980)",
+    "numerator": "1980",
+    "nProperty": "TotUnits",
+    "theme": "Social",
+    "year": "1980",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age18_64 (1980)",
+    "numerator": "1980",
+    "nProperty": "Age18_64",
+    "theme": "Social",
+    "year": "1980",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age0_4 (1980)",
+    "numerator": "1980",
+    "nProperty": "Age0_4",
+    "theme": "Social",
+    "year": "1980",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age5_14 (1980)",
+    "numerator": "1980",
+    "nProperty": "Age5_14",
+    "theme": "Social",
+    "year": "1980",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age15_19 (1980)",
+    "numerator": "1980",
+    "nProperty": "Age15_19",
+    "theme": "Social",
+    "year": "1980",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age20_24 (1980)",
+    "numerator": "1980",
+    "nProperty": "Age20_24",
+    "theme": "Social",
+    "year": "1980",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age15_44 (1980)",
+    "numerator": "1980",
+    "nProperty": "Age15_44",
+    "theme": "Social",
+    "year": "1980",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age45_54 (1980)",
+    "numerator": "1980",
+    "nProperty": "Age45_54",
+    "theme": "Social",
+    "year": "1980",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age55_59 (1980)",
+    "numerator": "1980",
+    "nProperty": "Age55_59",
+    "theme": "Social",
+    "year": "1980",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age60_64 (1980)",
+    "numerator": "1980",
+    "nProperty": "Age60_64",
+    "theme": "Social",
+    "year": "1980",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AgeOv65 (1980)",
+    "numerator": "1980",
+    "nProperty": "AgeOv65",
+    "theme": "Social",
+    "year": "1980",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age15_24P (1980)",
+    "numerator": "1980",
+    "nProperty": "Age15_24P",
+    "theme": "Social",
+    "year": "1980",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Und45P (1980)",
+    "numerator": "1980",
+    "nProperty": "Und45P",
+    "theme": "Social",
+    "year": "1980",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Ovr65P (1980)",
+    "numerator": "1980",
+    "nProperty": "Ovr65P",
+    "theme": "Social",
+    "year": "1980",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "WhiteP (1980)",
+    "numerator": "1980",
+    "nProperty": "WhiteP",
+    "theme": "Social",
+    "year": "1980",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BlackP (1980)",
+    "numerator": "1980",
+    "nProperty": "BlackP",
+    "theme": "Social",
+    "year": "1980",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "HispP (1980)",
+    "numerator": "1980",
+    "nProperty": "HispP",
+    "theme": "Social",
+    "year": "1980",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AmIndP (1980)",
+    "numerator": "1980",
+    "nProperty": "AmIndP",
+    "theme": "Social",
+    "year": "1980",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AsianP (1980)",
+    "numerator": "1980",
+    "nProperty": "AsianP",
+    "theme": "Social",
+    "year": "1980",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "PacIsP (1980)",
+    "numerator": "1980",
+    "nProperty": "PacIsP",
+    "theme": "Social",
+    "year": "1980",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "OtherP (1980)",
+    "numerator": "1980",
+    "nProperty": "OtherP",
+    "theme": "Social",
+    "year": "1980",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NoHsP (1980)",
+    "numerator": "1980",
+    "nProperty": "NoHsP",
+    "theme": "Social",
+    "year": "1980",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "ChildrenP (1980)",
+    "numerator": "1980",
+    "nProperty": "ChildrenP",
+    "theme": "Social",
+    "year": "1980",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "PovP (1980)",
+    "numerator": "1980",
+    "nProperty": "PovP",
+    "theme": "Economic",
+    "year": "1980",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "UnempP (1980)",
+    "numerator": "1980",
+    "nProperty": "UnempP",
+    "theme": "Economic",
+    "year": "1980",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "VacantP (1980)",
+    "numerator": "1980",
+    "nProperty": "VacantP",
+    "theme": "Environment",
+    "year": "1980",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "HEROP_ID (1990)",
+    "numerator": "1990",
+    "nProperty": "HEROP_ID",
+    "theme": "Geography",
+    "year": "1990",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "GEOID (1990)",
+    "numerator": "1990",
+    "nProperty": "GEOID",
+    "theme": "Geography",
+    "year": "1990",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "TotPop (1990)",
+    "numerator": "1990",
+    "nProperty": "TotPop",
+    "theme": "Social",
+    "year": "1990",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "TotUnits (1990)",
+    "numerator": "1990",
+    "nProperty": "TotUnits",
+    "theme": "Social",
+    "year": "1990",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age18_64 (1990)",
+    "numerator": "1990",
+    "nProperty": "Age18_64",
+    "theme": "Social",
+    "year": "1990",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age0_4 (1990)",
+    "numerator": "1990",
+    "nProperty": "Age0_4",
+    "theme": "Social",
+    "year": "1990",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age5_14 (1990)",
+    "numerator": "1990",
+    "nProperty": "Age5_14",
+    "theme": "Social",
+    "year": "1990",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age15_19 (1990)",
+    "numerator": "1990",
+    "nProperty": "Age15_19",
+    "theme": "Social",
+    "year": "1990",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age20_24 (1990)",
+    "numerator": "1990",
+    "nProperty": "Age20_24",
+    "theme": "Social",
+    "year": "1990",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age15_44 (1990)",
+    "numerator": "1990",
+    "nProperty": "Age15_44",
+    "theme": "Social",
+    "year": "1990",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age45_49 (1990)",
+    "numerator": "1990",
+    "nProperty": "Age45_49",
+    "theme": "Social",
+    "year": "1990",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age50_54 (1990)",
+    "numerator": "1990",
+    "nProperty": "Age50_54",
+    "theme": "Social",
+    "year": "1990",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age55_59 (1990)",
+    "numerator": "1990",
+    "nProperty": "Age55_59",
+    "theme": "Social",
+    "year": "1990",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age60_64 (1990)",
+    "numerator": "1990",
+    "nProperty": "Age60_64",
+    "theme": "Social",
+    "year": "1990",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AgeOv65 (1990)",
+    "numerator": "1990",
+    "nProperty": "AgeOv65",
+    "theme": "Social",
+    "year": "1990",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age15_24P (1990)",
+    "numerator": "1990",
+    "nProperty": "Age15_24P",
+    "theme": "Social",
+    "year": "1990",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Und45P (1990)",
+    "numerator": "1990",
+    "nProperty": "Und45P",
+    "theme": "Social",
+    "year": "1990",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Ovr65P (1990)",
+    "numerator": "1990",
+    "nProperty": "Ovr65P",
+    "theme": "Social",
+    "year": "1990",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "WhiteP (1990)",
+    "numerator": "1990",
+    "nProperty": "WhiteP",
+    "theme": "Social",
+    "year": "1990",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BlackP (1990)",
+    "numerator": "1990",
+    "nProperty": "BlackP",
+    "theme": "Social",
+    "year": "1990",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "HispP (1990)",
+    "numerator": "1990",
+    "nProperty": "HispP",
+    "theme": "Social",
+    "year": "1990",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AmIndP (1990)",
+    "numerator": "1990",
+    "nProperty": "AmIndP",
+    "theme": "Social",
+    "year": "1990",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AsianP (1990)",
+    "numerator": "1990",
+    "nProperty": "AsianP",
+    "theme": "Social",
+    "year": "1990",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "PacIsP (1990)",
+    "numerator": "1990",
+    "nProperty": "PacIsP",
+    "theme": "Social",
+    "year": "1990",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "OtherP (1990)",
+    "numerator": "1990",
+    "nProperty": "OtherP",
+    "theme": "Social",
+    "year": "1990",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NoHsP (1990)",
+    "numerator": "1990",
+    "nProperty": "NoHsP",
+    "theme": "Social",
+    "year": "1990",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "ChildrenP (1990)",
+    "numerator": "1990",
+    "nProperty": "ChildrenP",
+    "theme": "Social",
+    "year": "1990",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "PovP (1990)",
+    "numerator": "1990",
+    "nProperty": "PovP",
+    "theme": "Economic",
+    "year": "1990",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "UnempP (1990)",
+    "numerator": "1990",
+    "nProperty": "UnempP",
+    "theme": "Economic",
+    "year": "1990",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "VacantP (1990)",
+    "numerator": "1990",
+    "nProperty": "VacantP",
+    "theme": "Environment",
+    "year": "1990",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "HEROP_ID (2010)",
+    "numerator": "2010",
+    "nProperty": "HEROP_ID",
+    "theme": "Geography",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "GEOID (2010)",
+    "numerator": "2010",
+    "nProperty": "GEOID",
+    "theme": "Geography",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "TotPop (2010)",
+    "numerator": "2010",
+    "nProperty": "TotPop",
+    "theme": "Social",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "TotVetPop (2010)",
+    "numerator": "2010",
+    "nProperty": "TotVetPop",
+    "theme": "Social",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "TotUnits (2010)",
+    "numerator": "2010",
+    "nProperty": "TotUnits",
+    "theme": "Social",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "WhiteP (2010)",
+    "numerator": "2010",
+    "nProperty": "WhiteP",
+    "theme": "Social",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BlackP (2010)",
+    "numerator": "2010",
+    "nProperty": "BlackP",
+    "theme": "Social",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AmIndP (2010)",
+    "numerator": "2010",
+    "nProperty": "AmIndP",
+    "theme": "Social",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AsianP (2010)",
+    "numerator": "2010",
+    "nProperty": "AsianP",
+    "theme": "Social",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "PacIsP (2010)",
+    "numerator": "2010",
+    "nProperty": "PacIsP",
+    "theme": "Social",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "OtherP (2010)",
+    "numerator": "2010",
+    "nProperty": "OtherP",
+    "theme": "Social",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "HispP (2010)",
+    "numerator": "2010",
+    "nProperty": "HispP",
+    "theme": "Social",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age0_4 (2010)",
+    "numerator": "2010",
+    "nProperty": "Age0_4",
+    "theme": "Social",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age5_14 (2010)",
+    "numerator": "2010",
+    "nProperty": "Age5_14",
+    "theme": "Social",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age15_19 (2010)",
+    "numerator": "2010",
+    "nProperty": "Age15_19",
+    "theme": "Social",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age20_24 (2010)",
+    "numerator": "2010",
+    "nProperty": "Age20_24",
+    "theme": "Social",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age15_44 (2010)",
+    "numerator": "2010",
+    "nProperty": "Age15_44",
+    "theme": "Social",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age45_49 (2010)",
+    "numerator": "2010",
+    "nProperty": "Age45_49",
+    "theme": "Social",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age50_54 (2010)",
+    "numerator": "2010",
+    "nProperty": "Age50_54",
+    "theme": "Social",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age55_59 (2010)",
+    "numerator": "2010",
+    "nProperty": "Age55_59",
+    "theme": "Social",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age60_64 (2010)",
+    "numerator": "2010",
+    "nProperty": "Age60_64",
+    "theme": "Social",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AgeOv65 (2010)",
+    "numerator": "2010",
+    "nProperty": "AgeOv65",
+    "theme": "Social",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AgeOv18 (2010)",
+    "numerator": "2010",
+    "nProperty": "AgeOv18",
+    "theme": "Social",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age15_24P (2010)",
+    "numerator": "2010",
+    "nProperty": "Age15_24P",
+    "theme": "Social",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Und45P (2010)",
+    "numerator": "2010",
+    "nProperty": "Und45P",
+    "theme": "Social",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Ovr65P (2010)",
+    "numerator": "2010",
+    "nProperty": "Ovr65P",
+    "theme": "Social",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NoHsP (2010)",
+    "numerator": "2010",
+    "nProperty": "NoHsP",
+    "theme": "Social",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "DisbP (2010)",
+    "numerator": "2010",
+    "nProperty": "DisbP",
+    "theme": "Social",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "VetP (2010)",
+    "numerator": "2010",
+    "nProperty": "VetP",
+    "theme": "Social",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "UnempP (2010)",
+    "numerator": "2010",
+    "nProperty": "UnempP",
+    "theme": "Economic",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "PovP (2010)",
+    "numerator": "2010",
+    "nProperty": "PovP",
+    "theme": "Economic",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "PciE (2010)",
+    "numerator": "2010",
+    "nProperty": "PciE",
+    "theme": "Economic",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MedInc (2010)",
+    "numerator": "2010",
+    "nProperty": "MedInc",
+    "theme": "Economic",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "GiniCoeff (2010)",
+    "numerator": "2010",
+    "nProperty": "GiniCoeff",
+    "theme": "Economic",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "VacantP (2010)",
+    "numerator": "2010",
+    "nProperty": "VacantP",
+    "theme": "Environment",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BupCtTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "BupCtTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BupCtTmBk (Latest)",
+    "numerator": "latest",
+    "nProperty": "BupCtTmBk",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BupCtTmWk (Latest)",
+    "numerator": "latest",
+    "nProperty": "BupCtTmWk",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MetCtTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "MetCtTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MetCtTmBk (Latest)",
+    "numerator": "latest",
+    "nProperty": "MetCtTmBk",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MetCtTmWk (Latest)",
+    "numerator": "latest",
+    "nProperty": "MetCtTmWk",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NalCtTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "NalCtTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NalCtTmBk (Latest)",
+    "numerator": "latest",
+    "nProperty": "NalCtTmBk",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NalCtTmWk (Latest)",
+    "numerator": "latest",
+    "nProperty": "NalCtTmWk",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BupAvTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "BupAvTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BupAvTmBk (Latest)",
+    "numerator": "latest",
+    "nProperty": "BupAvTmBk",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BupAvTmWk (Latest)",
+    "numerator": "latest",
+    "nProperty": "BupAvTmWk",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MetAvTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "MetAvTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MetAvTmBk (Latest)",
+    "numerator": "latest",
+    "nProperty": "MetAvTmBk",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MetAvTmWk (Latest)",
+    "numerator": "latest",
+    "nProperty": "MetAvTmWk",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NalAvTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "NalAvTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NalAvTmBk (Latest)",
+    "numerator": "latest",
+    "nProperty": "NalAvTmBk",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NalAvTmWk (Latest)",
+    "numerator": "latest",
+    "nProperty": "NalAvTmWk",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BupTmDrP (Latest)",
+    "numerator": "latest",
+    "nProperty": "BupTmDrP",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BupTmBkP (Latest)",
+    "numerator": "latest",
+    "nProperty": "BupTmBkP",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BupTmWkP (Latest)",
+    "numerator": "latest",
+    "nProperty": "BupTmWkP",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MetTmDrP (Latest)",
+    "numerator": "latest",
+    "nProperty": "MetTmDrP",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MetTmBkP (Latest)",
+    "numerator": "latest",
+    "nProperty": "MetTmBkP",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MetTmWkP (Latest)",
+    "numerator": "latest",
+    "nProperty": "MetTmWkP",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NalTmDrP (Latest)",
+    "numerator": "latest",
+    "nProperty": "NalTmDrP",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NalTmBkP (Latest)",
+    "numerator": "latest",
+    "nProperty": "NalTmBkP",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NalTmWkP (Latest)",
+    "numerator": "latest",
+    "nProperty": "NalTmWkP",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "PcpPer100k (Latest)",
+    "numerator": "latest",
+    "nProperty": "PcpPer100k",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "SpPer100k (Latest)",
+    "numerator": "latest",
+    "nProperty": "SpPer100k",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "RcaUrbanP (Latest)",
+    "numerator": "latest",
+    "nProperty": "RcaUrbanP",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "RcaSubrbP (Latest)",
+    "numerator": "latest",
+    "nProperty": "RcaSubrbP",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "RcaRuralP (Latest)",
+    "numerator": "latest",
+    "nProperty": "RcaRuralP",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "CenFlags (Latest)",
+    "numerator": "latest",
+    "nProperty": "CenFlags",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "TotPop10 (Latest)",
+    "numerator": "latest",
+    "nProperty": "TotPop10",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "UrbPop10 (Latest)",
+    "numerator": "latest",
+    "nProperty": "UrbPop10",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "RuralPop10 (Latest)",
+    "numerator": "latest",
+    "nProperty": "RuralPop10",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "CenRuralP (Latest)",
+    "numerator": "latest",
+    "nProperty": "CenRuralP",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "DmySgrg (Latest)",
+    "numerator": "latest",
+    "nProperty": "DmySgrg",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "DmyBlckBlt (Latest)",
+    "numerator": "latest",
+    "nProperty": "DmyBlckBlt",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "PrcNtvRsrv (Latest)",
+    "numerator": "latest",
+    "nProperty": "PrcNtvRsrv",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "SviTh1 (Latest)",
+    "numerator": "latest",
+    "nProperty": "SviTh1",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "SviTh2 (Latest)",
+    "numerator": "latest",
+    "nProperty": "SviTh2",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "SviTh3 (Latest)",
+    "numerator": "latest",
+    "nProperty": "SviTh3",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "SviTh4 (Latest)",
+    "numerator": "latest",
+    "nProperty": "SviTh4",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "SviSmryRnk (Latest)",
+    "numerator": "latest",
+    "nProperty": "SviSmryRnk",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "TtlPrPpr (Latest)",
+    "numerator": "latest",
+    "nProperty": "TtlPrPpr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "FmlPrPpr (Latest)",
+    "numerator": "latest",
+    "nProperty": "FmlPrPpr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MlPrPpr (Latest)",
+    "numerator": "latest",
+    "nProperty": "MlPrPpr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AapiPrPpr (Latest)",
+    "numerator": "latest",
+    "nProperty": "AapiPrPpr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BlckPrPpr (Latest)",
+    "numerator": "latest",
+    "nProperty": "BlckPrPpr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "LtnxPrPpr (Latest)",
+    "numerator": "latest",
+    "nProperty": "LtnxPrPpr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NtvPrPpr (Latest)",
+    "numerator": "latest",
+    "nProperty": "NtvPrPpr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "WhtPrPpr (Latest)",
+    "numerator": "latest",
+    "nProperty": "WhtPrPpr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "TtlPrAPpr (Latest)",
+    "numerator": "latest",
+    "nProperty": "TtlPrAPpr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "FmlPrAPpr (Latest)",
+    "numerator": "latest",
+    "nProperty": "FmlPrAPpr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MlPrAPpr (Latest)",
+    "numerator": "latest",
+    "nProperty": "MlPrAPpr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AapiPrAPpr (Latest)",
+    "numerator": "latest",
+    "nProperty": "AapiPrAPpr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BlckPrAPpr (Latest)",
+    "numerator": "latest",
+    "nProperty": "BlckPrAPpr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "LtnxPrAPpr (Latest)",
+    "numerator": "latest",
+    "nProperty": "LtnxPrAPpr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NtvPrAPpr (Latest)",
+    "numerator": "latest",
+    "nProperty": "NtvPrAPpr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "WhtPrAPpr (Latest)",
+    "numerator": "latest",
+    "nProperty": "WhtPrAPpr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "TtlPrPp (Latest)",
+    "numerator": "latest",
+    "nProperty": "TtlPrPp",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "FmlPrPp (Latest)",
+    "numerator": "latest",
+    "nProperty": "FmlPrPp",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MlPrPp (Latest)",
+    "numerator": "latest",
+    "nProperty": "MlPrPp",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AapiPrPp (Latest)",
+    "numerator": "latest",
+    "nProperty": "AapiPrPp",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BlckPrPp (Latest)",
+    "numerator": "latest",
+    "nProperty": "BlckPrPp",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "LtnxPrPp (Latest)",
+    "numerator": "latest",
+    "nProperty": "LtnxPrPp",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NtvPrPp (Latest)",
+    "numerator": "latest",
+    "nProperty": "NtvPrPp",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "WhtPrPp (Latest)",
+    "numerator": "latest",
+    "nProperty": "WhtPrPp",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "TtlPrAPp (Latest)",
+    "numerator": "latest",
+    "nProperty": "TtlPrAPp",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "FmlPrAPp (Latest)",
+    "numerator": "latest",
+    "nProperty": "FmlPrAPp",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MlPrAPp (Latest)",
+    "numerator": "latest",
+    "nProperty": "MlPrAPp",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AapiPrAPp (Latest)",
+    "numerator": "latest",
+    "nProperty": "AapiPrAPp",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BlckPrAPp (Latest)",
+    "numerator": "latest",
+    "nProperty": "BlckPrAPp",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "LtnxPrAPp (Latest)",
+    "numerator": "latest",
+    "nProperty": "LtnxPrAPp",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NtvPrAPp (Latest)",
+    "numerator": "latest",
+    "nProperty": "NtvPrAPp",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "WhtPrAPp (Latest)",
+    "numerator": "latest",
+    "nProperty": "WhtPrAPp",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "TtlJlPpr (Latest)",
+    "numerator": "latest",
+    "nProperty": "TtlJlPpr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "FmlJlPpr (Latest)",
+    "numerator": "latest",
+    "nProperty": "FmlJlPpr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MlJlPpr (Latest)",
+    "numerator": "latest",
+    "nProperty": "MlJlPpr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AapiJlPpr (Latest)",
+    "numerator": "latest",
+    "nProperty": "AapiJlPpr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BlckJlPpr (Latest)",
+    "numerator": "latest",
+    "nProperty": "BlckJlPpr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "LtnxJlPpr (Latest)",
+    "numerator": "latest",
+    "nProperty": "LtnxJlPpr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NtvJlPpr (Latest)",
+    "numerator": "latest",
+    "nProperty": "NtvJlPpr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "WhtJlPpr (Latest)",
+    "numerator": "latest",
+    "nProperty": "WhtJlPpr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "TtlJlAdmr (Latest)",
+    "numerator": "latest",
+    "nProperty": "TtlJlAdmr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "TtlJlPrtr (Latest)",
+    "numerator": "latest",
+    "nProperty": "TtlJlPrtr",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "TtlJlPp (Latest)",
+    "numerator": "latest",
+    "nProperty": "TtlJlPp",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "FmlJlPp (Latest)",
+    "numerator": "latest",
+    "nProperty": "FmlJlPp",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MlJlPp (Latest)",
+    "numerator": "latest",
+    "nProperty": "MlJlPp",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "AapiJlPp (Latest)",
+    "numerator": "latest",
+    "nProperty": "AapiJlPp",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BlckJlPp (Latest)",
+    "numerator": "latest",
+    "nProperty": "BlckJlPp",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "LtnxJlPp (Latest)",
+    "numerator": "latest",
+    "nProperty": "LtnxJlPp",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NtvJlPp (Latest)",
+    "numerator": "latest",
+    "nProperty": "NtvJlPp",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "WhtJlPp (Latest)",
+    "numerator": "latest",
+    "nProperty": "WhtJlPp",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "TtlJlAdm (Latest)",
+    "numerator": "latest",
+    "nProperty": "TtlJlAdm",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "TtlJlPrt (Latest)",
+    "numerator": "latest",
+    "nProperty": "TtlJlPrt",
+    "theme": "Policy",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Age18_64 (2010)",
+    "numerator": "2010",
+    "nProperty": "Age18_64",
+    "theme": "Social",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "ChildrenP (2010)",
+    "numerator": "2010",
+    "nProperty": "ChildrenP",
+    "theme": "Social",
+    "year": "2010",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "A15_24P (Latest)",
+    "numerator": "latest",
+    "nProperty": "A15_24P",
+    "theme": "Social",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Ruca1 (Latest)",
+    "numerator": "latest",
+    "nProperty": "Ruca1",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Ruca2 (Latest)",
+    "numerator": "latest",
+    "nProperty": "Ruca2",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "Rurality (Latest)",
+    "numerator": "latest",
+    "nProperty": "Rurality",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MoudMinDis (Latest)",
+    "numerator": "latest",
+    "nProperty": "MoudMinDis",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BupMinDis (Latest)",
+    "numerator": "latest",
+    "nProperty": "BupMinDis",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BupTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "BupTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BupCntDr30 (Latest)",
+    "numerator": "latest",
+    "nProperty": "BupCntDr30",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MetMinDis (Latest)",
+    "numerator": "latest",
+    "nProperty": "MetMinDis",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MetTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "MetTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MetCntDr30 (Latest)",
+    "numerator": "latest",
+    "nProperty": "MetCntDr30",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NalMinDis (Latest)",
+    "numerator": "latest",
+    "nProperty": "NalMinDis",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NalTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "NalTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NalCntDr30 (Latest)",
+    "numerator": "latest",
+    "nProperty": "NalCntDr30",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BupTmWk (Latest)",
+    "numerator": "latest",
+    "nProperty": "BupTmWk",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BupCntWk60 (Latest)",
+    "numerator": "latest",
+    "nProperty": "BupCntWk60",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BupCntWk30 (Latest)",
+    "numerator": "latest",
+    "nProperty": "BupCntWk30",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MetTmWk (Latest)",
+    "numerator": "latest",
+    "nProperty": "MetTmWk",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MetCntWk30 (Latest)",
+    "numerator": "latest",
+    "nProperty": "MetCntWk30",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MetCntWk60 (Latest)",
+    "numerator": "latest",
+    "nProperty": "MetCntWk60",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NalTmWk (Latest)",
+    "numerator": "latest",
+    "nProperty": "NalTmWk",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NalCntWk60 (Latest)",
+    "numerator": "latest",
+    "nProperty": "NalCntWk60",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NalCntWk30 (Latest)",
+    "numerator": "latest",
+    "nProperty": "NalCntWk30",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BupTmBk (Latest)",
+    "numerator": "latest",
+    "nProperty": "BupTmBk",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BupCntBk60 (Latest)",
+    "numerator": "latest",
+    "nProperty": "BupCntBk60",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "BupCntBk30 (Latest)",
+    "numerator": "latest",
+    "nProperty": "BupCntBk30",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MetTmBk (Latest)",
+    "numerator": "latest",
+    "nProperty": "MetTmBk",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MetCntBk60 (Latest)",
+    "numerator": "latest",
+    "nProperty": "MetCntBk60",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MetCntBk30 (Latest)",
+    "numerator": "latest",
+    "nProperty": "MetCntBk30",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NalTmBk (Latest)",
+    "numerator": "latest",
+    "nProperty": "NalTmBk",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NalCntBk60 (Latest)",
+    "numerator": "latest",
+    "nProperty": "NalCntBk60",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NalCntBk30 (Latest)",
+    "numerator": "latest",
+    "nProperty": "NalCntBk30",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "FqhcMinDis (Latest)",
+    "numerator": "latest",
+    "nProperty": "FqhcMinDis",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "FqhcTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "FqhcTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "FqhcCntDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "FqhcCntDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "HospMinDis (Latest)",
+    "numerator": "latest",
+    "nProperty": "HospMinDis",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "HospTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "HospTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "HospCntDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "HospCntDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "RxMinDis (Latest)",
+    "numerator": "latest",
+    "nProperty": "RxMinDis",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "RxTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "RxTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "RxCntDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "RxCntDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MhMinDis (Latest)",
+    "numerator": "latest",
+    "nProperty": "MhMinDis",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MhTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "MhTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MhCntDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "MhCntDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "SutMinDis (Latest)",
+    "numerator": "latest",
+    "nProperty": "SutMinDis",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "SutTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "SutTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "SutCntDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "SutCntDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "OtpMinDis (Latest)",
+    "numerator": "latest",
+    "nProperty": "OtpMinDis",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "OtpTmDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "OtpTmDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "OtpCntDr (Latest)",
+    "numerator": "latest",
+    "nProperty": "OtpCntDr",
+    "theme": "Environment",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "SocEcAdvIn (Latest)",
+    "numerator": "latest",
+    "nProperty": "SocEcAdvIn",
+    "theme": "Composite",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "LimMobInd (Latest)",
+    "numerator": "latest",
+    "nProperty": "LimMobInd",
+    "theme": "Composite",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "UrbCoreInd (Latest)",
+    "numerator": "latest",
+    "nProperty": "UrbCoreInd",
+    "theme": "Composite",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "MicaInd (Latest)",
+    "numerator": "latest",
+    "nProperty": "MicaInd",
+    "theme": "Composite",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  {
+    "variable": "NeighbTyp (Latest)",
+    "numerator": "latest",
+    "nProperty": "NeighbTyp",
+    "theme": "Composite",
+    "year": "Latest",
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  }
+]

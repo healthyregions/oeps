@@ -1,0 +1,98 @@
+[
+  {
+    "file": "C_Latest",
+    "folder": "full_tables/",
+    "year": "Latest",
+    "scale": "C"
+  },
+  {
+    "file": "C_2010",
+    "folder": "full_tables/",
+    "year": "2010",
+    "scale": "C"
+  },
+  {
+    "file": "C_2000",
+    "folder": "full_tables/",
+    "year": "2000",
+    "scale": "C"
+  },
+  {
+    "file": "C_1990",
+    "folder": "full_tables/",
+    "year": "1990",
+    "scale": "C"
+  },
+  {
+    "file": "C_1980",
+    "folder": "full_tables/",
+    "year": "1980",
+    "scale": "C"
+  },
+  {
+    "file": "S_Latest",
+    "folder": "full_tables/",
+    "year": "Latest",
+    "scale": "S"
+  },
+  {
+    "file": "S_2010",
+    "folder": "full_tables/",
+    "year": "2010",
+    "scale": "S"
+  },
+  {
+    "file": "S_2000",
+    "folder": "full_tables/",
+    "year": "2000",
+    "scale": "S"
+  },
+  {
+    "file": "S_1990",
+    "folder": "full_tables/",
+    "year": "1990",
+    "scale": "S"
+  },
+  {
+    "file": "S_1980",
+    "folder": "full_tables/",
+    "year": "1980",
+    "scale": "S"
+  },
+  {
+    "file": "T_Latest",
+    "folder": "full_tables/",
+    "year": "Latest",
+    "scale": "T"
+  },
+  {
+    "file": "T_2010",
+    "folder": "full_tables/",
+    "year": "2010",
+    "scale": "T"
+  },
+  {
+    "file": "T_2000",
+    "folder": "full_tables/",
+    "year": "2000",
+    "scale": "T"
+  },
+  {
+    "file": "T_1990",
+    "folder": "full_tables/",
+    "year": "1990",
+    "scale": "T"
+  },
+  {
+    "file": "T_1980",
+    "folder": "full_tables/",
+    "year": "1980",
+    "scale": "T"
+  },
+  {
+    "file": "Z_Latest",
+    "folder": "full_tables/",
+    "year": "Latest",
+    "scale": "Z"
+  }
+  ]
