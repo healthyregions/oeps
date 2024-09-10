@@ -1,5 +1,6 @@
 import os
 import json
+import subprocess
 from datetime import datetime
 from glob import glob
 from pathlib import Path
@@ -14,77 +15,117 @@ from oeps.clients.bigquery import BigQuery, get_client
 from oeps.clients.frictionless import DataResource, DataPackage, create_data_dictionaries
 from oeps.clients.overture import get_filter_shape, get_data
 from oeps.clients.census import CensusClient
+from oeps.config import (
+    EXPLORER_CONFIG_DIR,
+    RESOURCES_DIR,
+    CACHE_DIR,
+)
 from oeps.utils import upload_to_s3, handle_overwrite
 
-module_overview = """# OEPS Backend -- CLI Commands
-
-The core of the OEPS backend is this suite of CLI commands, which handle data operations
-within a variety of different contexts.
-
-- [OEPS Explorer](#exlorer)
-- [BigQuery](#bigquery)
-- [Frcitionless Data](#frictionless)
-- [Overture](#overture)
-- [US Census Data](#census)"""
+# Make relative paths for directory configs so they can properly be used as default values for 
+# CLI arguments. Using absolute paths (e.g. those in the config) would result in absolute paths
+# in the generated docs... this would be incorrect on every system besides the one that had 
+# generated the docs.
+EXPLORER_CONFIG_DIR_rel = os.path.relpath(EXPLORER_CONFIG_DIR, start=os.path.dirname(__file__))
+RESOURCES_DIR_rel = os.path.relpath(RESOURCES_DIR, start=os.path.dirname(__file__))
+CACHE_DIR_rel = os.path.relpath(CACHE_DIR, start=os.path.dirname(__file__))
 
 
 explorer_grp = AppGroup('explorer',
-    help="""Commands for configuring the [OEPS Explorer](https://oeps.healthyregions.org) web
-application. The explorer is a NextJS app and can be found in the `explorer` directory of
-the [OEPS repo](https://github.com/healthyregions/oeps).""")
+    help="Commands for configuring the OEPS Explorer.")
 
 @explorer_grp.command()
 @click.option('--destination', "-d",
-              help="Output path for config files, will default to /explorer/config.",
-              default=Path(__file__).parent.parent.parent / 'explorer' / 'config')
+    help="Optional output path for config files. The default location will overwrite existing configs.",
+    default=EXPLORER_CONFIG_DIR_rel,
+)
 def build_config(**kwargs):
-    """Build configs for the frontend OEPS Explorer application."""
+    """Build configs for the frontend OEPS Explorer application, based on resource schemas stored
+in the `./data/resources` directory."""
+
     args = Namespace(**kwargs)
 
     ex = Explorer()
-    ex.build_config(schema_dir=current_app.config['RESOURCES_DIR'], output_dir=args.destination)
+    ex.build_config(schema_dir=RESOURCES_DIR_rel, output_dir=args.destination)
 
 
 frictionless_grp = AppGroup('frictionless')
 
 @frictionless_grp.command()
-@click.option('--destination', "-d", help="Output path for export. Must end with .csv for CSV or .shp for shapefile.")
-@click.option('--source', "-s", help="Data Resource JSON file to export, or directory with multiple files.")
-@click.option("--zip", 'zip_', is_flag=True, default=False, help="Zip the output directory.")
-@click.option("--upload", is_flag=True, default=False, help="Upload the processed files to S3.")
-@click.option("--no-cache", is_flag=True, default=False, help="Force re-download of any remote files.")
-@click.option("--skip-foreign-keys", is_flag=True, default=False, help="Don't define foreign keys in the output data package.")
-@click.option("--overwrite", is_flag=True, default=False, help="Overwrite data packages with the same name.")
+@click.option('--destination', "-d",
+    help="Output location for export directory. The package will be placed within this directory and given "\
+        "a name generated from the current date and time.",
+    default=CACHE_DIR_rel,
+)
+@click.option('--source', "-s",
+    default=RESOURCES_DIR_rel,
+    help="Path to a data resource JSON file to export, or a directory containing multiple data resources."
+)
+@click.option("--zip", 'zip_',
+    is_flag=True,
+    default=False,
+    help="Zip the output data package."
+)
+@click.option("--upload",
+    is_flag=True,
+    default=False,
+    help="Upload the zipped data package to S3. Bucket is determined by `AWS_BUCKET_NAME` environment variable."
+)
+@click.option("--no-cache",
+    is_flag=True,
+    default=False,
+    help="Force re-download of any remote files."
+)
+@click.option("--skip-foreign-keys",
+    is_flag=True,
+    default=False,
+    help="Don't define foreign keys in the output data package. This is needed to avoid validation errors that "\
+        "occur when Shapefiles are used in foreign keys.")
+@click.option("--overwrite",
+    is_flag=True,
+    default=False,
+    help="Overwrite existing data package with the same name."
+)
 def create_data_package(**kwargs):
+    """Generates a Frictionless data package from the Data Resource definitions in this backend. This export
+process was developed specifically to support integration of the OEPS data warehouse into the JCOIN commons.
+
+The resulting package will be validated against the `frictionless` standard using that Python library. Use
+`--no-foreign-keys` to allow validation to pass when shapefiles are involved in join fields.
+"""
 
     args = Namespace(**kwargs)
 
-    if not args.destination:
-        file_name = f"oeps-data-package-v2_{datetime.now().date().isoformat()}"
-        file_name = file_name + "_no_foreign_keys" if args.skip_foreign_keys else file_name
-        args.destination = Path(current_app.config['CACHE_DIR'], "data-packages", file_name)
+    out_name = f"oeps-data-package-v2_{datetime.now().date().isoformat()}"
+    out_name = out_name + "_no_foreign_keys" if args.skip_foreign_keys else out_name
+    out_path = Path(args.destination, out_name)
 
     if not args.overwrite:
-        handle_overwrite(args.destination)
-            
-    if not args.source:
-        args.source = current_app.config['RESOURCES_DIR']
+        handle_overwrite(out_path)
 
     dp = DataPackage()
-    dp.create(args.destination, args.source, args.zip_, args.upload, no_cache=args.no_cache, skip_foreign_keys=args.skip_foreign_keys)
+    dp.create(out_path, args.source, args.zip_, args.upload, no_cache=args.no_cache, skip_foreign_keys=args.skip_foreign_keys)
 
 @frictionless_grp.command()
 def list_resources():
-
-    for i in glob(os.path.join(current_app.config['RESOURCES_DIR'], '*.json')):
-        print(os.path.basename(i))
+    """Print a list of all data resources in the data/resources directory."""
+    for i in RESOURCES_DIR.glob('*.json'):
+        print(i.name)
                        
-
 @frictionless_grp.command()
-@click.option('--source', "-s", help="Local path to directory with Excel data dictionaries in it.")
-@click.option('--destination', "-d", help="Output path for export. Must end with .csv for CSV or .shp for shapefile.")
+@click.option('--source', "-s",
+    help="Local path to directory with Excel data dictionaries in it. If not provided, the dictionaries stored "\
+        "in the GeoDaCenter/opioid-policy-scan repo will be used."
+)
+@click.option('--destination', "-d",
+    default=RESOURCES_DIR_rel,
+    help="Output location for generated schema files.",
+)
 def generate_resources_from_oeps_dicts(**kwargs):
+    """Creates data resource schema files from external data dictionaries.
 
+TO DEPRECATE: Ultimately, this pattern will be deprecated in favor of the opposite: The Excel data dictionaries
+will be generated directly from the data resource schema files."""
     args = Namespace(**kwargs)
 
     remote_files = [
@@ -95,44 +136,81 @@ def generate_resources_from_oeps_dicts(**kwargs):
     ]
     paths = Path(args.source).glob("*_Dict.xlsx") if args.source else remote_files
 
-    out_dir = Path(args.destination) if args.destination else current_app.config['RESOURCES_DIR']
-    out_dir.mkdir(exist_ok=True)
+    Path(args.destination).mkdir(exist_ok=True)
 
     for path in paths:
         print(f"\nINPUT: {path}")
-        files = DataResource().create_from_oeps_xlsx_data_dict(path, out_dir)
+        files = DataResource().create_from_oeps_xlsx_data_dict(path, args.destination)
         print("OUTPUT:")
         for f in files:
             print(f"  {f}")
 
 @frictionless_grp.command()
-@click.option('--destination', "-d", help="Output directory for new dictionaries. If not set, will be placed in CACHE_DIR/dicts.")
+@click.option('--source', "-s",
+    default=RESOURCES_DIR_rel,
+    help="Input directory that holds the data resource JSON schemas to process.",
+)
+@click.option('--destination', "-d",
+    default=Path(CACHE_DIR_rel, "dicts"),
+    help="Output directory for new dictionaries.",
+)
 def create_oeps_dicts(**kwargs):
-
+    """Create the human readable, MS Excel data dictionaries from the data resource schemas."""
     args = Namespace(**kwargs)
 
-    dest_dir = args.destination if args.destination else current_app.config['CACHE_DIR'] / 'dicts'
-    if not os.path.isdir(dest_dir):
-        os.mkdir(dest_dir)
+    Path(args.destination).mkdir(exist_ok=True)
 
-    create_data_dictionaries(current_app.config['RESOURCES_DIR'], dest_dir)
+    create_data_dictionaries(args.source, args.destination)
 
 
 overture_grp = AppGroup('overture')
 
 @overture_grp.command()
-@click.argument('categories', nargs=-1)
-@click.option('--outfile', "-o", help="path to output file")
-@click.option('--confidence', default=".8", help="level of confidence to use (greater than or equal to)")
-@click.option('--filter-file', help="spatial file with geometry to filter against")
-@click.option('--filter-unit', help="GEOID of unit to filter out")
-@click.option("--category-list", is_flag=True, default=False, help="Export a list of all categeories.")
-@click.option("--separate-files", is_flag=True, default=False, help="Export a separate file for each category.")
+@click.option(
+    '--categories', "-c",
+    multiple=True,
+    help="The exact name of one or more categories to include in the query. If not provided, all points "\
+        "will be included in the export.",
+)
+@click.option(
+    '--outfile', "-o",
+    help="Path to output file. If not provided, a small preview of the query result will be printed to "\
+        "the console."
+)
+@click.option('--confidence',
+    default=".8",
+    help="level of confidence to use when querying Overture data (greater than or equal to)",
+)
+@click.option('--filter-file',
+    help="Geospatial dataset with geometry to filter against. Can be a shapefile or geojson dataset, either "
+    "a local path or a url to one stored in S3.",
+)
+@click.option('--filter-unit',
+    help="GEOID of unit to find in the filter-file and use as a spatial filter in the query."
+)
+@click.option(
+    "--export-category-list",
+    is_flag=True,
+    default=False,
+    help="Export a list of all categories included in the query to a CSV file. Only really useful if "\
+        "you don't include any categories in the filter."
+)
+@click.option("--separate-files",
+    is_flag=True,
+    default=False,
+    help="Write separate file for each category in the results."
+)
 def get_pois(**kwargs):
+    """This operation will query the Overture Places (a.k.a. Point of Interest) dataset and extract all points
+matching the specified categories that fall within the provided spatial boundary.
 
+Example:
+
+```
+flask overture get-pois --filter-file "https://herop-geodata.s3.us-east-2.amazonaws.com/place-2018.shp" -c hospital --filter-unit 3651000
+```
+"""
     args = Namespace(**kwargs)
-
-    # --filter-file "https://herop-geodata.s3.us-east-2.amazonaws.com/place-2018.shp" -c hospital --filter-unit 3651000
 
     geom_filter = None
     if args.filter_file and args.filter_unit:
@@ -152,11 +230,17 @@ def get_pois(**kwargs):
 census_grp = AppGroup('census')
 
 @census_grp.command()
-@click.argument('format',
-    type=click.Choice(["shp","geojson","pmtiles"]), nargs=-1
+@click.option('--format', '-f',
+    type=click.Choice(["shp","geojson","pmtiles"]),
+    default=["shp","geojson","pmtiles"],
+    multiple=True,
+    help="Choose what output formats will be created. Options are `shp` (shapefile), `geojson` "\
+        "(GeoJSON), and/or `pmtiles` (PMTiles)."
 )
 @click.option("--geography", "-g",
-    type=click.Choice(["place", "bg", "tract", "zcta", "county", "state"]), multiple=True,
+    type=click.Choice(["state", "county", "tract", "bg", "place", "zcta"]),
+    default=["state", "county", "tract", "bg", "place", "zcta"],
+    multiple=True,
     help="Specify a geography to prepare. If left empty, all geographies will be processed."
 )
 @click.option('--year', "-y",
@@ -168,14 +252,17 @@ census_grp = AppGroup('census')
 )
 @click.option(
     "--no-cache",
-    is_flag=True, default=False,
+    is_flag=True,
+    default=False,
     help="Force re-retrieval of files from FTP."
 )
 @click.option("--upload",
-    is_flag=True, default=False,
+    is_flag=True,
+    default=False,
     help="Upload the processed files to S3."
 )
 @click.option("--destination",
+    default=Path(CACHE_DIR_rel, "geodata"),
     help='Output directory for export. Treated as a directory, and not a file path.'
 )
 @click.option("--prefix",
@@ -183,17 +270,19 @@ census_grp = AppGroup('census')
     help='If output is uploaded to S3, use this prefix for the objects.'
 )
 @click.option("--verbose",
-    is_flag=True, default=False,
+    is_flag=True,
+    default=False,
     help='Enable verbose print statements'
 )
 def get_geodata(**kwargs):
+    """This command retrieves geodata from the US Census Bureau's FTP server, merges the files into single,
+nation-wide coverages, and then exports the merged files into various formats. Optionally upload these
+files directly to S3."""
 
     args = Namespace(**kwargs)
 
-    client = CensusClient(lookups_dir=current_app.config['LOOKUPS_DIR'], verbose=args.verbose)
+    client = CensusClient(verbose=args.verbose)
 
-    if not args.destination:
-        args.destination = Path(current_app.config['CACHE_DIR'], 'geodata')
     os.makedirs(args.destination, exist_ok=True)
 
     geogs = args.geography
@@ -262,26 +351,43 @@ bigquery_grp = AppGroup('bigquery',)
 
 @bigquery_grp.command()
 def check_credentials():
-    """ Check the credentials for Bsssig Query client. """
+    """Check provided credentials for BigQuery client."""
     get_client()
     print('ok')
-    exit()
 
 @bigquery_grp.command()
-@click.option('--source', "-s", help="Data Resource JSON file to export, or directory with multiple files.")
-@click.option("--overwrite", is_flag=True, default=False, help="Overwrite BQ table if it already exists.")
-@click.option("--table-only", is_flag=True, default=False, help="Only create the new table, don't load data into it.")
-@click.option("--dry-run", is_flag=True, default=False, help="Mock operation and perform no create/delete actions.")
+@click.option("--source", "-s",
+    default=RESOURCES_DIR_rel,
+    help="Data resource JSON file to load, or directory with multiple files to load. If no source "\
+        "is provided, will process all files in the data/resources directory.",
+)
+@click.option("--overwrite",
+    is_flag=True,
+    default=False,
+    help="Overwrite BQ table if it already exists."
+)
+@click.option("--table-only",
+    is_flag=True,
+    default=False,
+    help="Only create the new table, don't load data into it."
+)
+@click.option("--dry-run",
+    is_flag=True,
+    default=False,
+    help="Mock operation and perform no create/delete actions."
+)
 def load(**kwargs):
-    """ Load a source to a big query table. """
+    """Load a data resource to a big query table. The data resource schema should provide all field
+and table configuration information that is needed to create the table and load data into it."""
 
     args = Namespace(**kwargs)
     client = BigQuery()
 
-    if os.path.isdir(args.source):
-        paths = glob(os.path.join(args.source, "*.json"))
-    elif os.path.isfile(args.source):
-        paths = [args.source]
+    source = Path(args.source)
+    if source.isdir():
+        paths = source.glob("*.json")
+    elif source.isfile():
+        paths = [source]
     else:
         print('invalid path input')
         exit()
@@ -311,12 +417,19 @@ def load(**kwargs):
                 table = client.create_table(dr.schema, overwrite=args.overwrite)
                 print(f"TABLE CREATED: {table}")
                 load_job = client.load_table(rows, dr.schema['bq_dataset_name'], dr.schema['bq_table_name'])
+                print(F"JOB COMPLETE: {load_job}")
                 print(f"TIME ELAPSED: {datetime.now()-start}")
 
 @bigquery_grp.command()
-@click.option('--destination', "-d", help="Output path for export. Must end with .csv for CSV or .shp for shapefile.")
-@click.option('--sql-file', help="Path to file with SQL statement to run.")
+@click.option('--output', "-o",
+    help="Output file for export. Must end with .csv for CSV or .shp for ESRI Shapefile."
+)
+@click.option('--sql-file',
+    help="Path to file with SQL SELECT statement to run."
+)
 def export(**kwargs):
+    """ Runs a SQL statement, which must be provided in a .sql file, and the results are printed to the console
+or saved to a CSV or SHP output file, based on the destination argument."""
 
     args = Namespace(**kwargs)
 
@@ -334,6 +447,8 @@ def export(**kwargs):
 
 @bigquery_grp.command()
 def generate_reference_md():
+    """Generates a reference document for the BigQuery project schema, based on the
+locally stored resource JSON schema files. """
 
     project_id = os.getenv("BQ_PROJECT_ID")
 
@@ -397,34 +512,50 @@ Name|Data Type|Description|Source
 
                 openf.write("\n")
 
-@click.command
-def generate_help_md():
-    """ Generates markdown-formatted documentation from all command groups."""
+@click.command()
+def generate_cli_docs():
+    """ Generates markdown-formatted documentation from all CLI command groups."""
 
-    full_output = [module_overview]
-    for command_grp in [
-        bigquery_grp,
-        explorer_grp,
-        frictionless_grp,
-        overture_grp,
-        census_grp,
+    docs_path = Path("../docs/commands")
+
+    ## list of names of command group variables in this module
+    for base_command in [
+        'explorer_grp',
+        'frictionless_grp',
+        'census_grp',
+        'overture_grp',
+        'bigquery_grp',
     ]:
-        with click.core.Context(command_grp) as ctx:
-            info = ctx.to_info_dict()
+        mdclick_cmd = [
+            "mdclick", "dumps",
+            "--baseModule", "oeps.commands",
+            "--baseCommand", base_command,
+            "--docsPath", docs_path
+        ]
+        subprocess.run(mdclick_cmd)
 
-        grp_name = info['command']['name']
-        outlines = [f"## {grp_name}"]
-        outlines += [f"Usage: `flask {grp_name} [SUBCOMMAND]`"]
-        help_text = info['command']['help'] if info['command']['help'] else "_documentation needed_"
-        outlines += [help_text]
+    index_groups = set()
+    paths = sorted([i for i in docs_path.glob("*.md") if not i.name == 'README.md'])
+    for path in paths:
+        index_groups.add(path.stem.split("-")[0])
 
-        outlines += ["### Subcommands"]
-        for sub, details in info['command']['commands'].items():
-            outlines += [f"#### {grp_name} {sub}"]
-            outlines += [f"Usage: `flask {grp_name} {sub} [OPTS]`"]
-            help_text = details['help'] if details['help'] else "_documentation needed_"
-            outlines += [help_text]
-        full_output += outlines
+    index_content = [
+        "# OEPS Backend -- CLI Commands\n\n",
+        "The CLI provides the following groups of commands for managing OEPS data in different contexts.\n\n",
+        "All of these commands must be invoked with the prefix `flask`, for example:\n\n",
+        "```\nflask bigquery check-credentials\n```\n\n",
+        "Use `--help` to get detailed information for each command, or look at the auto-generated documentation below.\n\n",
+    ]
+    for group in sorted(index_groups):
+        index_content.append(f"- [{group}](./{group}.md)\n")
+        for path in sorted(docs_path.glob(f"{group}-*.md")):
+            subcommand = path.stem.replace(f"{group}-", "")
+            index_content.append(f"  - [{subcommand}](./{path.stem}.md)\n")
 
-    with open("../docs/cli.md", "w") as f:
-        f.writelines([f"{i}\n\n" for i in full_output])
+    with open(docs_path / 'README.md', "w") as o:
+        o.writelines("".join(index_content))
+
+    for path in docs_path.glob("*.md"):
+        with open(path, "a") as o:
+            o.write("\n_This documentation is automatically generated by "\
+                "[md-click](https://github.com/RiveryIo/md-click). Do not edit this file directly._\n")
