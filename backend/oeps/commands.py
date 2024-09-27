@@ -200,6 +200,20 @@ overture_grp = AppGroup('overture')
     default=False,
     help="Write separate file for each category in the results."
 )
+@click.option("--tippecanoe-path",
+    default=None,
+    help="Path to tippecanoe binary needed for conversion to PMTiles."
+)
+@click.option("--upload",
+    is_flag=True,
+    default=False,
+    help="Upload the output file to S3."
+)
+@click.option("--upload-prefix",
+    is_flag=True,
+    default=False,
+    help="Upload the output file to S3."
+)
 def get_pois(**kwargs):
     """This operation will query the Overture Places (a.k.a. Point of Interest) dataset and extract all points
 matching the specified categories that fall within the provided spatial boundary.
@@ -216,6 +230,10 @@ flask overture get-pois --filter-file "https://herop-geodata.s3.us-east-2.amazon
     if args.filter_file and args.filter_unit:
         geom_filter = get_filter_shape(args.filter_file, args.filter_unit)
 
+    if (args.outfile and Path(args.outfile).suffix == ".pmtiles") and args.tippecanoe_path is None:
+        print('Tippecanoe path needed for PMTiles output.')
+        exit()
+
     print(geom_filter)
 
     get_data(
@@ -223,7 +241,8 @@ flask overture get-pois --filter-file "https://herop-geodata.s3.us-east-2.amazon
         categories=args.categories,
         confidence=args.confidence,
         geom_filter=geom_filter,
-        export_category_list=args.category_list,
+        export_category_list=args.export_category_list,
+        tippecanoe_path=args.tippecanoe_path
     )
 
 
