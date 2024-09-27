@@ -9,12 +9,7 @@
     "schema": {
         "primaryKey": "HEROP_ID",
         "missingValues": [
-            "NA",
-            " NA",
-            "  NA",
-            "   NA",
-            "    NA",
-            ""
+            "NA"
         ],
         "fields": [
             {
