@@ -532,7 +532,7 @@ class DataResource():
                 'schema': {
                     'primaryKey': 'HEROP_ID',
                     # very sloppy way of handling sloppy data, for now.......
-                    'missingValues': ["NA", " NA", "  NA", "   NA", "    NA", ""],
+                    'missingValues': ["NA"],
                     'fields': self.make_fields(data_dict)
                 }
             }
