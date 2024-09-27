@@ -16,7 +16,7 @@ from oeps.clients.frictionless import DataResource, DataPackage, create_data_dic
 from oeps.clients.overture import get_filter_shape, get_data
 from oeps.clients.census import CensusClient
 from oeps.config import (
-    EXPLORER_CONFIG_DIR,
+    EXPLORER_ROOT_DIR,
     RESOURCES_DIR,
     CACHE_DIR,
 )
@@ -26,27 +26,42 @@ from oeps.utils import upload_to_s3, handle_overwrite
 # CLI arguments. Using absolute paths (e.g. those in the config) would result in absolute paths
 # in the generated docs... this would be incorrect on every system besides the one that had 
 # generated the docs.
-EXPLORER_CONFIG_DIR_rel = os.path.relpath(EXPLORER_CONFIG_DIR, start=os.path.dirname(__file__))
-RESOURCES_DIR_rel = os.path.relpath(RESOURCES_DIR, start=os.path.dirname(__file__))
-CACHE_DIR_rel = os.path.relpath(CACHE_DIR, start=os.path.dirname(__file__))
+EXPLORER_ROOT_DIR_rel = os.path.relpath(EXPLORER_ROOT_DIR, start=Path(__file__).parent)
+RESOURCES_DIR_rel = os.path.relpath(RESOURCES_DIR, start=Path(__file__).parent.parent)
+CACHE_DIR_rel = os.path.relpath(CACHE_DIR, start=Path(__file__).parent.parent)
 
 
 explorer_grp = AppGroup('explorer',
     help="Commands for configuring the OEPS Explorer.")
 
 @explorer_grp.command()
-@click.option('--destination', "-d",
-    help="Optional output path for config files. The default location will overwrite existing configs.",
-    default=EXPLORER_CONFIG_DIR_rel,
+@click.option('--source', "-s",
+    help="Optional input path for data resource schema files.",
+    default=RESOURCES_DIR_rel,
+    type=click.Path(
+        resolve_path=True,
+        path_type=Path,
+    ),
 )
-def build_config(**kwargs):
+@click.option('--root-dir',
+    help="Optional output path for config files. The default location will overwrite existing configs.",
+    default=EXPLORER_ROOT_DIR_rel,
+    type=click.Path(
+        resolve_path=True,
+        path_type=Path,
+    ),
+)
+@click.option('--config-only',
+    help="Only write new config JSON files, assumes CSV files are already generated.",
+    default=False,
+    is_flag=True,
+)
+def build_config(source: Path, root_dir: Path, config_only: bool=False):
     """Build configs for the frontend OEPS Explorer application, based on resource schemas stored
 in the `./data/resources` directory."""
 
-    args = Namespace(**kwargs)
-
-    ex = Explorer()
-    ex.build_config(schema_dir=RESOURCES_DIR_rel, output_dir=args.destination)
+    ex = Explorer(root_dir=root_dir)
+    ex.build_config(schema_dir=source, write_csvs=not config_only)
 
 
 frictionless_grp = AppGroup('frictionless')
