@@ -1,0 +1,971 @@
+{
+  "TotUnits": {
+    "binning": "quantileBreaks",
+    "numberOfBins": 5,
+    "colorScale": "BuPu"
+  },
+  "WhiteP": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "GnBu"
+  },
+  "BlackP": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "GnBu"
+  },
+  "AmIndP": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "GnBu"
+  },
+  "AsianP": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "GnBu"
+  },
+  "PacIsP": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "GnBu"
+  },
+  "OtherP": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "GnBu"
+  },
+  "HispP": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "GnBu"
+  },
+  "Und45P": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "GnBu"
+  },
+  "Ovr65P": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "GnBu"
+  },
+  "Age0_4": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "GnBu"
+  },
+  "Age5_14": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "GnBu"
+  },
+  "Age15_19": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "GnBu"
+  },
+  "Age15_44": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "GnBu"
+  },
+  "Age20_24": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "GnBu"
+  },
+  "Age45_54": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "GnBu"
+  },
+  "Age45_49": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "GnBu"
+  },
+  "Age50_54": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "GnBu"
+  },
+  "Age55_59": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "GnBu"
+  },
+  "Age60_64": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "GnBu"
+  },
+  "AgeOv65": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "GnBu"
+  },
+  "Age18_64": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "GnBu"
+  },
+  "DisbP": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "GnBu"
+  },
+  "NoHsP": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "GnBu"
+  },
+  "VetP": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "GnBu"
+  },
+  "NonRelFhhP": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 5,
+    "colorScale": "YlOrBr"
+  },
+  "NonRelNfhhP": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 5,
+    "colorScale": "YlOrBr"
+  },
+  "BedCnt": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 7,
+    "colorScale": "YlOrBr",
+    "reverse": true
+  },
+  "PntInTm": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 7,
+    "colorScale": "YlOrBr",
+    "reverse": true
+  },
+  "YrlyBedCnt": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 7,
+    "colorScale": "YlOrBr"
+  },
+  "UnempP": {
+    "binning": "quantileBreaks",
+    "numberOfBins": 5,
+    "colorScale": "YlOrBr"
+  },
+  "PovP": {
+    "binning": "quantileBreaks",
+    "numberOfBins": 5,
+    "colorScale": "YlOrBr"
+  },
+  "PciE": {
+    "binning": "quantileBreaks",
+    "numberOfBins": 5,
+    "colorScale": "YlOrBr"
+  },
+  "ForDqP": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 5,
+    "colorScale": "YlOrBr"
+  },
+  "ForDqTot": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 5,
+    "colorScale": "YlOrBr"
+  },
+  "EduP": {
+    "binning": "quantileBreaks",
+    "numberOfBins": 5,
+    "colorScale": "YlOrBr"
+  },
+  "HghRskP": {
+    "binning": "quantileBreaks",
+    "numberOfBins": 5,
+    "colorScale": "YlOrBr"
+  },
+  "HltCrP": {
+    "binning": "quantileBreaks",
+    "numberOfBins": 5,
+    "colorScale": "YlOrBr"
+  },
+  "RetailP": {
+    "binning": "quantileBreaks",
+    "numberOfBins": 5,
+    "colorScale": "YlOrBr"
+  },
+  "EssnWrkE": {
+    "binning": "quantileBreaks",
+    "numberOfBins": 5,
+    "colorScale": "YlOrBr"
+  },
+  "EssnWrkP": {
+    "binning": "quantileBreaks",
+    "numberOfBins": 5,
+    "colorScale": "YlOrBr"
+  },
+  "NoIntP": {
+    "binning": "quantileBreaks",
+    "numberOfBins": 5,
+    "colorScale": "YlOrBr"
+  },
+  "VacantP": {
+    "binning": "quantileBreaks",
+    "numberOfBins": 5,
+    "colorScale": "BuPu"
+  },
+  "MobileP": {
+    "binning": "quantileBreaks",
+    "numberOfBins": 5,
+    "colorScale": "BuPu"
+  },
+  "LngTermP": {
+    "binning": "quantileBreaks",
+    "numberOfBins": 5,
+    "colorScale": "BuPu"
+  },
+  "RentalP": {
+    "binning": "quantileBreaks",
+    "numberOfBins": 5,
+    "colorScale": "BuPu"
+  },
+  "UnitDens": {
+    "binning": "quantileBreaks",
+    "numberOfBins": 5,
+    "colorScale": "BuPu"
+  },
+  "AreaSqMi": {
+    "binning": "quantileBreaks",
+    "numberOfBins": 8,
+    "colorScale": "BuPu"
+  },
+  "AlcTot": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 5,
+    "colorScale": "BuPu"
+  },
+  "AlcDens": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 5,
+    "colorScale": "BuPu"
+  },
+  "DsmBlk": {
+    "binning": "quantileBreaks",
+    "numberOfBins": 5,
+    "colorScale": "RdPu"
+  },
+  "IntrBlkWht": {
+    "binning": "quantileBreaks",
+    "numberOfBins": 5,
+    "colorScale": "RdPu"
+  },
+  "IsoBlk": {
+    "binning": "quantileBreaks",
+    "numberOfBins": 5,
+    "colorScale": "RdPu"
+  },
+  "DsmHsp": {
+    "binning": "quantileBreaks",
+    "numberOfBins": 5,
+    "colorScale": "RdPu"
+  },
+  "IntrHspWht": {
+    "binning": "quantileBreaks",
+    "numberOfBins": 5,
+    "colorScale": "RdPu"
+  },
+  "IsoHsp": {
+    "binning": "quantileBreaks",
+    "numberOfBins": 5,
+    "colorScale": "RdPu"
+  },
+  "DsmAs": {
+    "binning": "quantileBreaks",
+    "numberOfBins": 5,
+    "colorScale": "RdPu"
+  },
+  "IntrAsWht": {
+    "binning": "quantileBreaks",
+    "numberOfBins": 5,
+    "colorScale": "RdPu"
+  },
+  "IsoAs": {
+    "binning": "quantileBreaks",
+    "numberOfBins": 5,
+    "colorScale": "RdPu"
+  },
+  "Ndvi": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 5,
+    "colorScale": "Greens"
+  },
+  "PctBupT": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 4,
+    "colorScale": "RdBu"
+  },
+  "PctMetT": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 4,
+    "colorScale": "RdBu"
+  },
+  "PctNalT": {
+    "binning": "naturaleBreaks",
+    "numberOfBins": 4,
+    "colorScale": "RdBu"
+  },
+  "TotPcp": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "Blues"
+  },
+  "TotSp": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlGnBu"
+  },
+  "OdMortRtAv": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 5,
+    "colorScale": "PuRd"
+  },
+  "AnyPdmpFr": {
+    "categorical": true,
+    "fixedScale": [
+      0.5,
+      1
+    ],
+    "fixedLabels": [
+      "Six months",
+      "Entire year"
+    ],
+    "colorScale": [
+      [
+        252,
+        141,
+        98
+      ],
+      [
+        102,
+        194,
+        165
+      ]
+    ]
+  },
+  "AnyPdmphFr": {
+    "categorical": true,
+    "fixedScale": [
+      0.5,
+      1
+    ],
+    "fixedLabels": [
+      "Six months",
+      "Entire year"
+    ],
+    "colorScale": [
+      [
+        252,
+        141,
+        98
+      ],
+      [
+        102,
+        194,
+        165
+      ]
+    ]
+  },
+  "OpPdmpFr": {
+    "categorical": true,
+    "fixedScale": [
+      0,
+      1
+    ],
+    "fixedLabels": [
+      "None",
+      "Entire year"
+    ],
+    "colorScale": [
+      [
+        252,
+        141,
+        98
+      ],
+      [
+        102,
+        194,
+        165
+      ]
+    ]
+  },
+  "MsAsPdmpFr": {
+    "categorical": true,
+    "fixedScale": [
+      0,
+      1
+    ],
+    "fixedLabels": [
+      "None",
+      "Entire year"
+    ],
+    "colorScale": [
+      [
+        252,
+        141,
+        98
+      ],
+      [
+        102,
+        194,
+        165
+      ]
+    ]
+  },
+  "ElcPdmpFr": {
+    "categorical": true,
+    "fixedScale": [
+      0.5,
+      1
+    ],
+    "fixedLabels": [
+      "Six months",
+      "Entire year"
+    ],
+    "colorScale": [
+      [
+        252,
+        141,
+        98
+      ],
+      [
+        102,
+        194,
+        165
+      ]
+    ]
+  },
+  "AnyGslFr": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "Blues"
+  },
+  "GslArrFr": {
+    "categorical": true,
+    "fixedScale": [
+      0,
+      1
+    ],
+    "fixedLabels": [
+      "1: Has Good Samaritan Law Protecting Arrest for entire year",
+      "0: No Good Samaritan Law Protecting Arrest"
+    ],
+    "colorScale": [
+      [
+        102,
+        194,
+        165
+      ],
+      [
+        252,
+        141,
+        98
+      ]
+    ],
+    "reverse": true
+  },
+  "AnyNalFr": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 4,
+    "colorScale": "Blues"
+  },
+  "NalPrStFr": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "Blues"
+  },
+  "NalPresFr": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 4,
+    "colorScale": "Blues"
+  },
+  "TradFedExp": {
+    "binning": "quantileBreaks",
+    "numberOfBins": 8,
+    "colorScale": "Blues"
+  },
+  "TradSttExp": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "Blues"
+  },
+  "ExpnFedExp": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "Blues"
+  },
+  "ExpnSttExp": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "Blues"
+  },
+  "ExpSsp": {
+    "categorical": true,
+    "fixedScale": [
+      0,
+      1
+    ],
+    "fixedLabels": [
+      "No laws authorizing Syringe Service Programs",
+      "Has laws authorizing Syringe Service Programs"
+    ],
+    "colorScale": [
+      [
+        252,
+        141,
+        98
+      ],
+      [
+        102,
+        194,
+        165
+      ]
+    ]
+  },
+  "NoPrphLw": {
+    "categorical": true,
+    "fixedScale": [
+      0,
+      1
+    ],
+    "fixedLabels": [
+      "Has drug paraphernalia laws",
+      "No drug paraphernalia laws"
+    ],
+    "colorScale": [
+      [
+        102,
+        194,
+        165
+      ],
+      [
+        252,
+        141,
+        98
+      ]
+    ]
+  },
+  "NtPrFrDsSy": {
+    "categorical": true,
+    "fixedScale": [
+      0,
+      1
+    ],
+    "fixedLabels": [
+      "Laws Prohibit Free Distribution of Syringes",
+      "Law Does Not Prohibit Free Distribution of Syringes"
+    ],
+    "colorScale": [
+      [
+        252,
+        141,
+        98
+      ],
+      [
+        102,
+        194,
+        165
+      ]
+    ]
+  },
+  "PrExcInj": {
+    "categorical": true,
+    "fixedScale": [
+      0,
+      1
+    ],
+    "fixedLabels": [
+      "Does NOT Explicitly Exlude Objects Used for Injecting Drugs",
+      "Explicitly Exludes Objects Used for Injecting Drugs"
+    ],
+    "colorScale": [
+      [
+        252,
+        141,
+        98
+      ],
+      [
+        102,
+        194,
+        165
+      ]
+    ]
+  },
+  "PrNtRefInj": {
+    "categorical": true,
+    "fixedScale": [
+      0,
+      1
+    ],
+    "fixedLabels": [
+      "Paraphernalia Definition Refers to Objects Used For Injecting Drugs",
+      "Paraphernalia Definition Does NOT Refer to Objects Used For Injecting Drugs"
+    ],
+    "colorScale": [
+      [
+        102,
+        194,
+        165
+      ],
+      [
+        252,
+        141,
+        98
+      ]
+    ]
+  },
+  "NoLwRmUnc": {
+    "categorical": true,
+    "fixedScale": [
+      0,
+      1
+    ],
+    "fixedLabels": [
+      "No Law Removing Barriers or Uncertainty as to SSP Legality",
+      "Has Law Removing Barriers or Uncertainty as to SSP Legality"
+    ],
+    "colorScale": [
+      [
+        102,
+        194,
+        165
+      ],
+      [
+        252,
+        141,
+        98
+      ]
+    ]
+  },
+  "CrrctExpS": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "Greens"
+  },
+  "PlcFyrExpS": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "Greens"
+  },
+  "HlthExpS": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "Blues"
+  },
+  "WlfrExpS": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "Greens"
+  },
+  "UrbPop10": {
+    "binning": "quantileBreaks",
+    "numberOfBins": 5,
+    "colorScale": "Spectral"
+  },
+  "CenRuralP": {
+    "binning": "quantileBreaks",
+    "numberOfBins": 5,
+    "colorScale": "Spectral"
+  },
+  "DmySgrg": {
+    "categorical": true,
+    "fixedScale": [
+      0,
+      1
+    ],
+    "fixedLabels": [
+      "Not hypersegregated city & metro area",
+      "Hypersegregated city & metro area"
+    ],
+    "colorScale": [
+      [
+        102,
+        194,
+        165
+      ],
+      [
+        252,
+        141,
+        98
+      ]
+    ]
+  },
+  "DmyBlckBlt": {
+    "categorical": true,
+    "fixedScale": [
+      0,
+      1
+    ],
+    "fixedLabels": [
+      "Not African American South / \\Black Belt\\",
+      "African American South / \\Black Belt\\"
+    ],
+    "colorScale": [
+      [
+        102,
+        194,
+        165
+      ],
+      [
+        252,
+        141,
+        98
+      ]
+    ]
+  },
+  "PrcNtvRsrv": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 5,
+    "colorScale": "Purples"
+  },
+  "SviTh1": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "YlOrBr"
+  },
+  "TtlPrPpr": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  "FmlPrPpr": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  "MlPrPpr": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  "AapiPrPpr": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  "BlckPrPpr": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  "LtnxPrPpr": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  "NtvPrPpr": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  "WhtPrPpr": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  "TtlPrAPpr": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  "FmlPrAPpr": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  "MlPrAPpr": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  "AapiPrAPpr": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  "BlckPrAPpr": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  "LtnxPrAPpr": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  "NtvPrAPpr": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  "WhtPrAPpr": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  "TtlJlPpr": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  "FmlJlPpr": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "Reds"
+  },
+  "MlJlPpr": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  "AapiJlPpr": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  "BlckJlPpr": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  "LtnxJlPpr": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  "NtvJlPpr": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  "WhtJlPpr": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  "TtlJlAdmr": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  "TtlJlPrtr": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 8,
+    "colorScale": "YlOrBr"
+  },
+  "A15_24P": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "GnBu"
+  },
+  "Rurality": {
+    "categorical": true,
+    "fixedScale": [
+      "Rural",
+      "Suburban",
+      "Urban"
+    ],
+    "colorScale": "Spectral"
+  },
+  "MoudMinDis": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "RdBu",
+    "reverse": true
+  },
+  "BupMinDis": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 7,
+    "colorScale": "RdBu",
+    "reverse": true
+  },
+  "MetMinDis": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 7,
+    "colorScale": "RdBu",
+    "reverse": true
+  },
+  "NalMinDis": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 7,
+    "colorScale": "RdBu",
+    "reverse": true
+  },
+  "BupTmWk": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "RdBu",
+    "reverse": true
+  },
+  "MetTmWk": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "RdBu",
+    "reverse": true
+  },
+  "NalTmWk": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "RdBu",
+    "reverse": true
+  },
+  "BupTmBk": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "RdBu",
+    "reverse": true
+  },
+  "MetTmBk": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "RdBu",
+    "reverse": true
+  },
+  "NalTmBk": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "RdBu",
+    "reverse": true
+  },
+  "FqhcMinDis": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 6,
+    "colorScale": "RdBu",
+    "reverse": true
+  },
+  "HospMinDis": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 7,
+    "colorScale": "RdBu",
+    "reverse": true
+  },
+  "RxMinDis": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 7,
+    "colorScale": "RdBu",
+    "reverse": true
+  },
+  "MhMinDis": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 7,
+    "colorScale": "RdBu",
+    "reverse": true
+  },
+  "SutMinDis": {
+    "binning": "naturalBreaks",
+    "numberOfBins": 7,
+    "colorScale": "RdBu",
+    "reverse": true
+  }
+}

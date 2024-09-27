@@ -1,5072 +1,2641 @@
 [
   {
-    "variable": "HEROP_ID (Latest)",
-    "numerator": "latest",
-    "nProperty": "HEROP_ID",
-    "theme": "Geography",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "GEOID (Latest)",
-    "numerator": "latest",
-    "nProperty": "GEOID",
-    "theme": "Geography",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "TotPop (Latest)",
-    "numerator": "latest",
+    "variable": "Total Population",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "TotPop",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
   },
   {
-    "variable": "TotPopHh (Latest)",
-    "numerator": "latest",
+    "variable": "Population: In Households",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "TotPopHh",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md"
   },
   {
-    "variable": "TotVetPop (Latest)",
-    "numerator": "latest",
+    "variable": "Population: Veterans",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "TotVetPop",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/VetPop.md"
   },
   {
-    "variable": "TotUnits (Latest)",
-    "numerator": "latest",
+    "variable": "Total Housing Units",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "TotUnits",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Housing_2018.md"
   },
   {
-    "variable": "TotWrkE (Latest)",
-    "numerator": "latest",
+    "variable": "EssentialWorkers",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "TotWrkE",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Job_Categories_byIndustry_2018.md"
   },
   {
-    "variable": "WhiteP (Latest)",
-    "numerator": "latest",
+    "variable": "Population: % White",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "WhiteP",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Race_Ethnicity_2018.md"
   },
   {
-    "variable": "BlackP (Latest)",
-    "numerator": "latest",
+    "variable": "Population: % Black/African American",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "BlackP",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Race_Ethnicity_2018.md"
   },
   {
-    "variable": "AmIndP (Latest)",
-    "numerator": "latest",
+    "variable": "Population: % Native American/Alaska Native",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "AmIndP",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Race_Ethnicity_2018.md"
   },
   {
-    "variable": "AsianP (Latest)",
-    "numerator": "latest",
+    "variable": "Population: % Asian",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "AsianP",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Race_Ethnicity_2018.md"
   },
   {
-    "variable": "PacIsP (Latest)",
-    "numerator": "latest",
+    "variable": "Population: % Native Hawaiian & Other PI",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "PacIsP",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Race_Ethnicity_2018.md"
   },
   {
-    "variable": "OtherP (Latest)",
-    "numerator": "latest",
+    "variable": "Population: % Other (race)",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "OtherP",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Race_Ethnicity_2018.md"
   },
   {
-    "variable": "HispP (Latest)",
-    "numerator": "latest",
+    "variable": "Population: % Hispanic/Latinx",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "HispP",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Race_Ethnicity_2018.md"
   },
   {
-    "variable": "ChildrenP (Latest)",
-    "numerator": "latest",
+    "variable": "Population: % Under 18",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "ChildrenP",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
   },
   {
-    "variable": "Age15_24P (Latest)",
-    "numerator": "latest",
+    "variable": "Population: % Age 15-24",
+    "numerator": "state-county-tract",
     "nProperty": "Age15_24P",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
   },
   {
-    "variable": "Und45P (Latest)",
-    "numerator": "latest",
+    "variable": "Population: % Under 45",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "Und45P",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
   },
   {
-    "variable": "Ovr65P (Latest)",
-    "numerator": "latest",
+    "variable": "Population: % Over 65",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "Ovr65P",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
   },
   {
-    "variable": "Age0_4 (Latest)",
-    "numerator": "latest",
+    "variable": "Population: Age 0-4",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "Age0_4",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
   },
   {
-    "variable": "Age5_14 (Latest)",
-    "numerator": "latest",
+    "variable": "Population: Age 5-14",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "Age5_14",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
   },
   {
-    "variable": "Age15_19 (Latest)",
-    "numerator": "latest",
+    "variable": "Population: Age 15-19",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "Age15_19",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
   },
   {
-    "variable": "Age20_24 (Latest)",
-    "numerator": "latest",
+    "variable": "Population: Age 20-24",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "Age20_24",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
   },
   {
-    "variable": "Age15_44 (Latest)",
-    "numerator": "latest",
+    "variable": "Population: Age 15-44",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "Age15_44",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
   },
   {
-    "variable": "Age45_49 (Latest)",
-    "numerator": "latest",
+    "variable": "Population: Age 45-49",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "Age45_49",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
   },
   {
-    "variable": "Age50_54 (Latest)",
-    "numerator": "latest",
+    "variable": "Population: Age 50-54",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "Age50_54",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
   },
   {
-    "variable": "Age55_59 (Latest)",
-    "numerator": "latest",
+    "variable": "Population: Age 55-59",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "Age55_59",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
   },
   {
-    "variable": "Age60_64 (Latest)",
-    "numerator": "latest",
+    "variable": "Population: Age 60-64",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "Age60_64",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
   },
   {
-    "variable": "AgeOv65 (Latest)",
-    "numerator": "latest",
+    "variable": "Population: Age Over 65",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "AgeOv65",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
   },
   {
-    "variable": "AgeOv18 (Latest)",
-    "numerator": "latest",
+    "variable": "Population: Age Over 65",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "AgeOv18",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
   },
   {
-    "variable": "Age18_64 (Latest)",
-    "numerator": "latest",
+    "variable": "Population: Age 18-64",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "Age18_64",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
   },
   {
-    "variable": "DisbP (Latest)",
-    "numerator": "latest",
+    "variable": "Population: % Disability",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "DisbP",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Other_Demographic_2018.md"
   },
   {
-    "variable": "NoHsP (Latest)",
-    "numerator": "latest",
+    "variable": "NoHsP",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "NoHsP",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Other_Demographic_2018.md"
   },
   {
-    "variable": "VetP (Latest)",
-    "numerator": "latest",
+    "variable": "VetP",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "VetP",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/VetPop.md"
   },
   {
-    "variable": "NonRelFhhP (Latest)",
-    "numerator": "latest",
+    "variable": "NonRelFhhP",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "NonRelFhhP",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md"
   },
   {
-    "variable": "NonRelNfhhP (Latest)",
-    "numerator": "latest",
+    "variable": "NonRelNfhhP",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "NonRelNfhhP",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md"
   },
   {
-    "variable": "BedCnt (Latest)",
-    "numerator": "latest",
+    "variable": "BedCnt",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "BedCnt",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HomelessPop.md"
   },
   {
-    "variable": "PntInTm (Latest)",
-    "numerator": "latest",
+    "variable": "PntInTm",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "PntInTm",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HomelessPop.md"
   },
   {
-    "variable": "YrlyBedCnt (Latest)",
-    "numerator": "latest",
+    "variable": "YrlyBedCnt",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "YrlyBedCnt",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HomelessPop.md"
   },
   {
-    "variable": "UnempP (Latest)",
-    "numerator": "latest",
+    "variable": "UnempP",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "UnempP",
     "theme": "Economic",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Economic_2018.md"
   },
   {
-    "variable": "PovP (Latest)",
-    "numerator": "latest",
+    "variable": "PovP",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "PovP",
     "theme": "Economic",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Economic_2018.md"
   },
   {
-    "variable": "MedInc (Latest)",
-    "numerator": "latest",
+    "variable": "MedInc",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "MedInc",
     "theme": "Economic",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Economic_2018.md"
   },
   {
-    "variable": "PciE (Latest)",
-    "numerator": "latest",
+    "variable": "PciE",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "PciE",
     "theme": "Economic",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Economic_2018.md"
   },
   {
-    "variable": "ForDqP (Latest)",
-    "numerator": "latest",
+    "variable": "ForDqP",
+    "numerator": "state-county-tract",
     "nProperty": "ForDqP",
     "theme": "Economic",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/ForeclosureRate.md"
   },
   {
-    "variable": "ForDqTot (Latest)",
-    "numerator": "latest",
+    "variable": "ForDqTot",
+    "numerator": "state-county-tract",
     "nProperty": "ForDqTot",
     "theme": "Economic",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/ForeclosureRate.md"
   },
   {
-    "variable": "GiniCoeff (Latest)",
-    "numerator": "latest",
+    "variable": "GiniCoeff",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "GiniCoeff",
     "theme": "Economic",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/ForeclosureRate.md"
   },
   {
-    "variable": "EduP (Latest)",
-    "numerator": "latest",
+    "variable": "EduP",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "EduP",
     "theme": "Economic",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Job_Categories_byIndustry_2018.md"
   },
   {
-    "variable": "HghRskP (Latest)",
-    "numerator": "latest",
+    "variable": "HghRskP",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "HghRskP",
     "theme": "Economic",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Job_Categories_byIndustry_2018.md"
   },
   {
-    "variable": "HltCrP (Latest)",
-    "numerator": "latest",
+    "variable": "HltCrP",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "HltCrP",
     "theme": "Economic",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Job_Categories_byIndustry_2018.md"
   },
   {
-    "variable": "RetailP (Latest)",
-    "numerator": "latest",
+    "variable": "RetailP",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "RetailP",
     "theme": "Economic",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Job_Categories_byIndustry_2018.md"
   },
   {
-    "variable": "EssnWrkE (Latest)",
-    "numerator": "latest",
+    "variable": "EssnWrkE",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "EssnWrkE",
     "theme": "Economic",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Job_Categories_byOccupation_2018.md"
   },
   {
-    "variable": "EssnWrkP (Latest)",
-    "numerator": "latest",
+    "variable": "EssnWrkP",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "EssnWrkP",
     "theme": "Economic",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Job_Categories_byOccupation_2018.md"
   },
   {
-    "variable": "NoIntP (Latest)",
-    "numerator": "latest",
+    "variable": "NoIntP",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "NoIntP",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Internet_2019.md"
   },
   {
-    "variable": "VacantP (Latest)",
-    "numerator": "latest",
+    "variable": "VacantP",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "VacantP",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Housing_2018.md"
   },
   {
-    "variable": "MobileP (Latest)",
-    "numerator": "latest",
+    "variable": "MobileP",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "MobileP",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Housing_2018.md"
   },
   {
-    "variable": "LngTermP (Latest)",
-    "numerator": "latest",
+    "variable": "LngTermP",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "LngTermP",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Housing_2018.md"
   },
   {
-    "variable": "RentalP (Latest)",
-    "numerator": "latest",
+    "variable": "RentalP",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "RentalP",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Housing_2018.md"
   },
   {
-    "variable": "UnitDens (Latest)",
-    "numerator": "latest",
+    "variable": "UnitDens",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "UnitDens",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Housing_2018.md"
   },
   {
-    "variable": "AreaSqMi (Latest)",
-    "numerator": "latest",
-    "nProperty": "AreaSqMi",
-    "theme": "Geography",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "AlcTot (Latest)",
-    "numerator": "latest",
+    "variable": "AlcTot",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "AlcTot",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/AlcoholOutlets_2018.md"
   },
   {
-    "variable": "AlcDens (Latest)",
-    "numerator": "latest",
+    "variable": "AlcDens",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "AlcDens",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/AlcoholOutlets_2018.md"
   },
   {
-    "variable": "AlcPerCap (Latest)",
-    "numerator": "latest",
+    "variable": "AlcPerCap",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "AlcPerCap",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/AlcoholOutlets_2018.md"
   },
   {
-    "variable": "DsmBlk (Latest)",
-    "numerator": "latest",
+    "variable": "DsmBlk",
+    "numerator": "state-county-zcta",
     "nProperty": "DsmBlk",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Residential_Seg_Indices.md"
   },
   {
-    "variable": "IntrBlkWht (Latest)",
-    "numerator": "latest",
+    "variable": "IntrBlkWht",
+    "numerator": "state-county-zcta",
     "nProperty": "IntrBlkWht",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Residential_Seg_Indices.md"
   },
   {
-    "variable": "IsoBlk (Latest)",
-    "numerator": "latest",
+    "variable": "IsoBlk",
+    "numerator": "state-county-zcta",
     "nProperty": "IsoBlk",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Residential_Seg_Indices.md"
   },
   {
-    "variable": "DsmHsp (Latest)",
-    "numerator": "latest",
+    "variable": "DsmHsp",
+    "numerator": "state-county-zcta",
     "nProperty": "DsmHsp",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Residential_Seg_Indices.md"
   },
   {
-    "variable": "IntrHspWht (Latest)",
-    "numerator": "latest",
+    "variable": "IntrHspWht",
+    "numerator": "state-county-zcta",
     "nProperty": "IntrHspWht",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Residential_Seg_Indices.md"
   },
   {
-    "variable": "IsoHsp (Latest)",
-    "numerator": "latest",
+    "variable": "IsoHsp",
+    "numerator": "state-county-zcta",
     "nProperty": "IsoHsp",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Residential_Seg_Indices.md"
   },
   {
-    "variable": "DsmAs (Latest)",
-    "numerator": "latest",
+    "variable": "DsmAs",
+    "numerator": "state-county-zcta",
     "nProperty": "DsmAs",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Residential_Seg_Indices.md"
   },
   {
-    "variable": "IntrAsWht (Latest)",
-    "numerator": "latest",
+    "variable": "IntrAsWht",
+    "numerator": "state-county-zcta",
     "nProperty": "IntrAsWht",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Residential_Seg_Indices.md"
   },
   {
-    "variable": "IsoAs (Latest)",
-    "numerator": "latest",
+    "variable": "IsoAs",
+    "numerator": "state-county-zcta",
     "nProperty": "IsoAs",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Residential_Seg_Indices.md"
   },
   {
-    "variable": "Ndvi (Latest)",
-    "numerator": "latest",
+    "variable": "Ndvi",
+    "numerator": "state-county-zcta-tract",
     "nProperty": "Ndvi",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/NDVI.md"
   },
   {
-    "variable": "ParkArea (Latest)",
-    "numerator": "latest",
+    "variable": "ParkArea",
+    "numerator": "state",
     "nProperty": "ParkArea",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Park_Cover.md"
   },
   {
-    "variable": "StateArea (Latest)",
-    "numerator": "latest",
-    "nProperty": "StateArea",
-    "theme": "Geography",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Cover (Latest)",
-    "numerator": "latest",
+    "variable": "Cover",
+    "numerator": "state",
     "nProperty": "Cover",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Park_Cover.md"
   },
   {
-    "variable": "TotTracts (Latest)",
-    "numerator": "latest",
-    "nProperty": "TotTracts",
-    "theme": "Geography",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "CntBupT (Latest)",
-    "numerator": "latest",
+    "variable": "CntBupT",
+    "numerator": "state",
     "nProperty": "CntBupT",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "CntMetT (Latest)",
-    "numerator": "latest",
+    "variable": "CntMetT",
+    "numerator": "state",
     "nProperty": "CntMetT",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "CntNalT (Latest)",
-    "numerator": "latest",
+    "variable": "CntNalT",
+    "numerator": "state",
     "nProperty": "CntNalT",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "AvBupTime (Latest)",
-    "numerator": "latest",
+    "variable": "AvBupTime",
+    "numerator": "state",
     "nProperty": "AvBupTime",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "AvMetTime (Latest)",
-    "numerator": "latest",
+    "variable": "AvMetTime",
+    "numerator": "state",
     "nProperty": "AvMetTime",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "AvNalTime (Latest)",
-    "numerator": "latest",
+    "variable": "AvNalTime",
+    "numerator": "state",
     "nProperty": "AvNalTime",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "PctBupT (Latest)",
-    "numerator": "latest",
+    "variable": "PctBupT",
+    "numerator": "state",
     "nProperty": "PctBupT",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "PctMetT (Latest)",
-    "numerator": "latest",
+    "variable": "PctMetT",
+    "numerator": "state",
     "nProperty": "PctMetT",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "PctNalT (Latest)",
-    "numerator": "latest",
+    "variable": "PctNalT",
+    "numerator": "state",
     "nProperty": "PctNalT",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "FqhcCtTmDr (Latest)",
-    "numerator": "latest",
+    "variable": "FqhcCtTmDr",
+    "numerator": "state-county",
     "nProperty": "FqhcCtTmDr",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_FQHCs_MinDistance.md"
   },
   {
-    "variable": "FqhcAvTmDr (Latest)",
-    "numerator": "latest",
+    "variable": "FqhcAvTmDr",
+    "numerator": "state-county",
     "nProperty": "FqhcAvTmDr",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_FQHCs_MinDistance.md"
   },
   {
-    "variable": "FqhcTmDrP (Latest)",
-    "numerator": "latest",
+    "variable": "FqhcTmDrP",
+    "numerator": "state-county",
     "nProperty": "FqhcTmDrP",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_FQHCs_MinDistance.md"
   },
   {
-    "variable": "HospCtTmDr (Latest)",
-    "numerator": "latest",
+    "variable": "HospCtTmDr",
+    "numerator": "state-county",
     "nProperty": "HospCtTmDr",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Acesss_Hospitals_MinDistance.md"
   },
   {
-    "variable": "HospAvTmDr (Latest)",
-    "numerator": "latest",
+    "variable": "HospAvTmDr",
+    "numerator": "state-county",
     "nProperty": "HospAvTmDr",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Acesss_Hospitals_MinDistance.md"
   },
   {
-    "variable": "HospTmDrP (Latest)",
-    "numerator": "latest",
+    "variable": "HospTmDrP",
+    "numerator": "state-county",
     "nProperty": "HospTmDrP",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Acesss_Hospitals_MinDistance.md"
   },
   {
-    "variable": "RxCtTmDr (Latest)",
-    "numerator": "latest",
+    "variable": "RxCtTmDr",
+    "numerator": "state-county",
     "nProperty": "RxCtTmDr",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_Pharmacies_MinDistance.md"
   },
   {
-    "variable": "RxAvTmDr (Latest)",
-    "numerator": "latest",
+    "variable": "RxAvTmDr",
+    "numerator": "state-county",
     "nProperty": "RxAvTmDr",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_Pharmacies_MinDistance.md"
   },
   {
-    "variable": "RxTmDrP (Latest)",
-    "numerator": "latest",
+    "variable": "RxTmDrP",
+    "numerator": "state-county",
     "nProperty": "RxTmDrP",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_Pharmacies_MinDistance.md"
   },
   {
-    "variable": "MhCtTmDr (Latest)",
-    "numerator": "latest",
+    "variable": "MhCtTmDr",
+    "numerator": "state-county",
     "nProperty": "MhCtTmDr",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MentalHealth_MinDistance.md"
   },
   {
-    "variable": "MhAvTmDr (Latest)",
-    "numerator": "latest",
+    "variable": "MhAvTmDr",
+    "numerator": "state-county",
     "nProperty": "MhAvTmDr",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MentalHealth_MinDistance.md"
   },
   {
-    "variable": "MhTmDrP (Latest)",
-    "numerator": "latest",
+    "variable": "MhTmDrP",
+    "numerator": "state-county",
     "nProperty": "MhTmDrP",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MentalHealth_MinDistance.md"
   },
   {
-    "variable": "SutpCtTmDr (Latest)",
-    "numerator": "latest",
+    "variable": "SutpCtTmDr",
+    "numerator": "state-county",
     "nProperty": "SutpCtTmDr",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_SubstanceUseTreatment.md"
   },
   {
-    "variable": "SutpAvTmDr (Latest)",
-    "numerator": "latest",
+    "variable": "SutpAvTmDr",
+    "numerator": "state-county",
     "nProperty": "SutpAvTmDr",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_SubstanceUseTreatment.md"
   },
   {
-    "variable": "SutpTmDrP (Latest)",
-    "numerator": "latest",
+    "variable": "SutpTmDrP",
+    "numerator": "state-county",
     "nProperty": "SutpTmDrP",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_SubstanceUseTreatment.md"
   },
   {
-    "variable": "OtpCtTmDr (Latest)",
-    "numerator": "latest",
+    "variable": "OtpCtTmDr",
+    "numerator": "state-county",
     "nProperty": "OtpCtTmDr",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_OpioidUseTreatment.md"
   },
   {
-    "variable": "OtpAvTmDr (Latest)",
-    "numerator": "latest",
+    "variable": "OtpAvTmDr",
+    "numerator": "state-county",
     "nProperty": "OtpAvTmDr",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_OpioidUseTreatment.md"
   },
   {
-    "variable": "OtpTmDrP (Latest)",
-    "numerator": "latest",
+    "variable": "OtpTmDrP",
+    "numerator": "state-county",
     "nProperty": "OtpTmDrP",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_OpioidUseTreatment.md"
   },
   {
-    "variable": "DrgRlDth (Latest)",
-    "numerator": "latest",
+    "variable": "DrgRlDth",
+    "numerator": "state-county",
     "nProperty": "DrgRlDth",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Health_DrugDeaths.md"
   },
   {
-    "variable": "TotHcv (Latest)",
-    "numerator": "latest",
+    "variable": "TotHcv",
+    "numerator": "state",
     "nProperty": "TotHcv",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "MlHcv (Latest)",
-    "numerator": "latest",
+    "variable": "MlHcv",
+    "numerator": "state",
     "nProperty": "MlHcv",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "FmHcv (Latest)",
-    "numerator": "latest",
+    "variable": "FmHcv",
+    "numerator": "state",
     "nProperty": "FmHcv",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "Un50Hcv (Latest)",
-    "numerator": "latest",
+    "variable": "Un50Hcv",
+    "numerator": "state",
     "nProperty": "Un50Hcv",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "A50_74Hcv (Latest)",
-    "numerator": "latest",
+    "variable": "A50_74Hcv",
+    "numerator": "state",
     "nProperty": "A50_74Hcv",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "Ov75Hcv (Latest)",
-    "numerator": "latest",
+    "variable": "Ov75Hcv",
+    "numerator": "state",
     "nProperty": "Ov75Hcv",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "BlkHcv (Latest)",
-    "numerator": "latest",
+    "variable": "BlkHcv",
+    "numerator": "state",
     "nProperty": "BlkHcv",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "NonBlkHcv (Latest)",
-    "numerator": "latest",
+    "variable": "NonBlkHcv",
+    "numerator": "state",
     "nProperty": "NonBlkHcv",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "HcvD13 (Latest)",
-    "numerator": "latest",
+    "variable": "HcvD13",
+    "numerator": "state",
     "nProperty": "HcvD13",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "MlHcvD13 (Latest)",
-    "numerator": "latest",
+    "variable": "MlHcvD13",
+    "numerator": "state",
     "nProperty": "MlHcvD13",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "FlHcvD13 (Latest)",
-    "numerator": "latest",
+    "variable": "FlHcvD13",
+    "numerator": "state",
     "nProperty": "FlHcvD13",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "AmInHcvD13 (Latest)",
-    "numerator": "latest",
+    "variable": "AmInHcvD13",
+    "numerator": "state",
     "nProperty": "AmInHcvD13",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "AsPiHcvD13 (Latest)",
-    "numerator": "latest",
+    "variable": "AsPiHcvD13",
+    "numerator": "state",
     "nProperty": "AsPiHcvD13",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "BlkHcvD13 (Latest)",
-    "numerator": "latest",
+    "variable": "BlkHcvD13",
+    "numerator": "state",
     "nProperty": "BlkHcvD13",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "HspHcvD13 (Latest)",
-    "numerator": "latest",
+    "variable": "HspHcvD13",
+    "numerator": "state",
     "nProperty": "HspHcvD13",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "U50HcvD13 (Latest)",
-    "numerator": "latest",
+    "variable": "U50HcvD13",
+    "numerator": "state",
     "nProperty": "U50HcvD13",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "A50_74HcvD13 (Latest)",
-    "numerator": "latest",
+    "variable": "A50_74HcvD13",
+    "numerator": "state",
     "nProperty": "A50_74HcvD13",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "O75HcvD13 (Latest)",
-    "numerator": "latest",
+    "variable": "O75HcvD13",
+    "numerator": "state",
     "nProperty": "O75HcvD13",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "HcvD14 (Latest)",
-    "numerator": "latest",
+    "variable": "HcvD14",
+    "numerator": "state",
     "nProperty": "HcvD14",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "MlHcvD14 (Latest)",
-    "numerator": "latest",
+    "variable": "MlHcvD14",
+    "numerator": "state",
     "nProperty": "MlHcvD14",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "FlHcvD14 (Latest)",
-    "numerator": "latest",
+    "variable": "FlHcvD14",
+    "numerator": "state",
     "nProperty": "FlHcvD14",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "AmInHcvD14 (Latest)",
-    "numerator": "latest",
+    "variable": "AmInHcvD14",
+    "numerator": "state",
     "nProperty": "AmInHcvD14",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "AsPiHcvD14 (Latest)",
-    "numerator": "latest",
+    "variable": "AsPiHcvD14",
+    "numerator": "state",
     "nProperty": "AsPiHcvD14",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "BlkHcvD14 (Latest)",
-    "numerator": "latest",
+    "variable": "BlkHcvD14",
+    "numerator": "state",
     "nProperty": "BlkHcvD14",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "HspHcvD14 (Latest)",
-    "numerator": "latest",
+    "variable": "HspHcvD14",
+    "numerator": "state",
     "nProperty": "HspHcvD14",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "U50HcvD14 (Latest)",
-    "numerator": "latest",
+    "variable": "U50HcvD14",
+    "numerator": "state",
     "nProperty": "U50HcvD14",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "A50_74HcvD14 (Latest)",
-    "numerator": "latest",
+    "variable": "A50_74HcvD14",
+    "numerator": "state",
     "nProperty": "A50_74HcvD14",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "O75HcvD14 (Latest)",
-    "numerator": "latest",
+    "variable": "O75HcvD14",
+    "numerator": "state",
     "nProperty": "O75HcvD14",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "HcvD15 (Latest)",
-    "numerator": "latest",
+    "variable": "HcvD15",
+    "numerator": "state",
     "nProperty": "HcvD15",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "MlHcvD15 (Latest)",
-    "numerator": "latest",
+    "variable": "MlHcvD15",
+    "numerator": "state",
     "nProperty": "MlHcvD15",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "FlHcvD15 (Latest)",
-    "numerator": "latest",
+    "variable": "FlHcvD15",
+    "numerator": "state",
     "nProperty": "FlHcvD15",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "AmInHcvD15 (Latest)",
-    "numerator": "latest",
+    "variable": "AmInHcvD15",
+    "numerator": "state",
     "nProperty": "AmInHcvD15",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "AsPiHcvD15 (Latest)",
-    "numerator": "latest",
+    "variable": "AsPiHcvD15",
+    "numerator": "state",
     "nProperty": "AsPiHcvD15",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "BlkHcvD15 (Latest)",
-    "numerator": "latest",
+    "variable": "BlkHcvD15",
+    "numerator": "state",
     "nProperty": "BlkHcvD15",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "HspHcvD15 (Latest)",
-    "numerator": "latest",
+    "variable": "HspHcvD15",
+    "numerator": "state",
     "nProperty": "HspHcvD15",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "U50HcvD15 (Latest)",
-    "numerator": "latest",
+    "variable": "U50HcvD15",
+    "numerator": "state",
     "nProperty": "U50HcvD15",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "D50_74Hcv15 (Latest)",
-    "numerator": "latest",
+    "variable": "D50_74Hcv15",
+    "numerator": "state",
     "nProperty": "D50_74Hcv15",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "O75HcvD15 (Latest)",
-    "numerator": "latest",
+    "variable": "O75HcvD15",
+    "numerator": "state",
     "nProperty": "O75HcvD15",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "HcvD16 (Latest)",
-    "numerator": "latest",
+    "variable": "HcvD16",
+    "numerator": "state",
     "nProperty": "HcvD16",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "MlHcvD16 (Latest)",
-    "numerator": "latest",
+    "variable": "MlHcvD16",
+    "numerator": "state",
     "nProperty": "MlHcvD16",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "FlHcvD16 (Latest)",
-    "numerator": "latest",
+    "variable": "FlHcvD16",
+    "numerator": "state",
     "nProperty": "FlHcvD16",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "AmInHcvD16 (Latest)",
-    "numerator": "latest",
+    "variable": "AmInHcvD16",
+    "numerator": "state",
     "nProperty": "AmInHcvD16",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "AsPiHcvD16 (Latest)",
-    "numerator": "latest",
+    "variable": "AsPiHcvD16",
+    "numerator": "state",
     "nProperty": "AsPiHcvD16",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "BlkHcvD16 (Latest)",
-    "numerator": "latest",
+    "variable": "BlkHcvD16",
+    "numerator": "state",
     "nProperty": "BlkHcvD16",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "HspHcvD16 (Latest)",
-    "numerator": "latest",
+    "variable": "HspHcvD16",
+    "numerator": "state",
     "nProperty": "HspHcvD16",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "U50HcvD16 (Latest)",
-    "numerator": "latest",
+    "variable": "U50HcvD16",
+    "numerator": "state",
     "nProperty": "U50HcvD16",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "A50_74HcvD16 (Latest)",
-    "numerator": "latest",
+    "variable": "A50_74HcvD16",
+    "numerator": "state",
     "nProperty": "A50_74HcvD16",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "O75HcvD16 (Latest)",
-    "numerator": "latest",
+    "variable": "O75HcvD16",
+    "numerator": "state",
     "nProperty": "O75HcvD16",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "HcvD17 (Latest)",
-    "numerator": "latest",
+    "variable": "HcvD17",
+    "numerator": "state",
     "nProperty": "HcvD17",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "MlHcvD17 (Latest)",
-    "numerator": "latest",
+    "variable": "MlHcvD17",
+    "numerator": "state",
     "nProperty": "MlHcvD17",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "FlHcvD17 (Latest)",
-    "numerator": "latest",
+    "variable": "FlHcvD17",
+    "numerator": "state",
     "nProperty": "FlHcvD17",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "AmInHcvD17 (Latest)",
-    "numerator": "latest",
+    "variable": "AmInHcvD17",
+    "numerator": "state",
     "nProperty": "AmInHcvD17",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "AsPiHcvD17 (Latest)",
-    "numerator": "latest",
+    "variable": "AsPiHcvD17",
+    "numerator": "state",
     "nProperty": "AsPiHcvD17",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "BlkHcvD17 (Latest)",
-    "numerator": "latest",
+    "variable": "BlkHcvD17",
+    "numerator": "state",
     "nProperty": "BlkHcvD17",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "HspHcvD17 (Latest)",
-    "numerator": "latest",
+    "variable": "HspHcvD17",
+    "numerator": "state",
     "nProperty": "HspHcvD17",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "U50HcvD17 (Latest)",
-    "numerator": "latest",
+    "variable": "U50HcvD17",
+    "numerator": "state",
     "nProperty": "U50HcvD17",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "A50_74HcvD17 (Latest)",
-    "numerator": "latest",
+    "variable": "A50_74HcvD17",
+    "numerator": "state",
     "nProperty": "A50_74HcvD17",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "O75HcvD17 (Latest)",
-    "numerator": "latest",
+    "variable": "O75HcvD17",
+    "numerator": "state",
     "nProperty": "O75HcvD17",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "AvHcvD (Latest)",
-    "numerator": "latest",
+    "variable": "AvHcvD",
+    "numerator": "state",
     "nProperty": "AvHcvD",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "AvMlHcvD (Latest)",
-    "numerator": "latest",
+    "variable": "AvMlHcvD",
+    "numerator": "state",
     "nProperty": "AvMlHcvD",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "AvFlHcvD (Latest)",
-    "numerator": "latest",
+    "variable": "AvFlHcvD",
+    "numerator": "state",
     "nProperty": "AvFlHcvD",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "AvAmInHcvD (Latest)",
-    "numerator": "latest",
+    "variable": "AvAmInHcvD",
+    "numerator": "state",
     "nProperty": "AvAmInHcvD",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "AvAsPiHcvD (Latest)",
-    "numerator": "latest",
+    "variable": "AvAsPiHcvD",
+    "numerator": "state",
     "nProperty": "AvAsPiHcvD",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "AvBlkHcvD (Latest)",
-    "numerator": "latest",
+    "variable": "AvBlkHcvD",
+    "numerator": "state",
     "nProperty": "AvBlkHcvD",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "AvHspHcvD (Latest)",
-    "numerator": "latest",
+    "variable": "AvHspHcvD",
+    "numerator": "state",
     "nProperty": "AvHspHcvD",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "AvU50HcvD (Latest)",
-    "numerator": "latest",
+    "variable": "AvU50HcvD",
+    "numerator": "state",
     "nProperty": "AvU50HcvD",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "Av50_74HcvD (Latest)",
-    "numerator": "latest",
+    "variable": "Av50_74HcvD",
+    "numerator": "state",
     "nProperty": "Av50_74HcvD",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "AvO75HcvD (Latest)",
-    "numerator": "latest",
+    "variable": "AvO75HcvD",
+    "numerator": "state",
     "nProperty": "AvO75HcvD",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
   },
   {
-    "variable": "TotPcp (Latest)",
-    "numerator": "latest",
+    "variable": "TotPcp",
+    "numerator": "state-county-tract",
     "nProperty": "TotPcp",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Health_PCPs.md"
   },
   {
-    "variable": "TotSp (Latest)",
-    "numerator": "latest",
+    "variable": "TotSp",
+    "numerator": "state-county-tract",
     "nProperty": "TotSp",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Health_PCPs.md"
   },
   {
-    "variable": "OpRxRt20 (Latest)",
-    "numerator": "latest",
+    "variable": "OpRxRt20",
+    "numerator": "state-county",
     "nProperty": "OpRxRt20",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/OpioidIndicators.md"
   },
   {
-    "variable": "PrMsuse20P (Latest)",
-    "numerator": "latest",
+    "variable": "PrMsuse20P",
+    "numerator": "state",
     "nProperty": "PrMsuse20P",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/OpioidIndicators.md"
   },
   {
-    "variable": "OdMortRt14 (Latest)",
-    "numerator": "latest",
+    "variable": "OdMortRt14",
+    "numerator": "state-county",
     "nProperty": "OdMortRt14",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/OpioidIndicators.md"
   },
   {
-    "variable": "OdMortRt15 (Latest)",
-    "numerator": "latest",
+    "variable": "OdMortRt15",
+    "numerator": "state-county",
     "nProperty": "OdMortRt15",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/OpioidIndicators.md"
   },
   {
-    "variable": "OdMortRt16 (Latest)",
-    "numerator": "latest",
+    "variable": "OdMortRt16",
+    "numerator": "state-county",
     "nProperty": "OdMortRt16",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/OpioidIndicators.md"
   },
   {
-    "variable": "OdMortRt17 (Latest)",
-    "numerator": "latest",
+    "variable": "OdMortRt17",
+    "numerator": "state-county",
     "nProperty": "OdMortRt17",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/OpioidIndicators.md"
   },
   {
-    "variable": "OdMortRt18 (Latest)",
-    "numerator": "latest",
+    "variable": "OdMortRt18",
+    "numerator": "state-county",
     "nProperty": "OdMortRt18",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/OpioidIndicators.md"
   },
   {
-    "variable": "OdMortRt19 (Latest)",
-    "numerator": "latest",
+    "variable": "OdMortRt19",
+    "numerator": "state-county",
     "nProperty": "OdMortRt19",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/OpioidIndicators.md"
   },
   {
-    "variable": "OdMortRt20 (Latest)",
-    "numerator": "latest",
+    "variable": "OdMortRt20",
+    "numerator": "state-county",
     "nProperty": "OdMortRt20",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/OpioidIndicators.md"
   },
   {
-    "variable": "OdMortRtAv (Latest)",
-    "numerator": "latest",
+    "variable": "OdMortRtAv",
+    "numerator": "state-county",
     "nProperty": "OdMortRtAv",
     "theme": "Outcome",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/OpioidIndicators.md"
   },
   {
-    "variable": "AnyPdmpFr (Latest)",
-    "numerator": "latest",
+    "variable": "AnyPdmpFr",
+    "numerator": "state",
     "nProperty": "AnyPdmpFr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PDMP_2017.md"
   },
   {
-    "variable": "AnyPdmphFr (Latest)",
-    "numerator": "latest",
+    "variable": "AnyPdmphFr",
+    "numerator": "state",
     "nProperty": "AnyPdmphFr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PDMP_2017.md"
   },
   {
-    "variable": "OpPdmpFr (Latest)",
-    "numerator": "latest",
+    "variable": "OpPdmpFr",
+    "numerator": "state",
     "nProperty": "OpPdmpFr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PDMP_2017.md"
   },
   {
-    "variable": "MsAsPdmpFr (Latest)",
-    "numerator": "latest",
+    "variable": "MsAsPdmpFr",
+    "numerator": "state",
     "nProperty": "MsAsPdmpFr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PDMP_2017.md"
   },
   {
-    "variable": "ElcPdmpFr (Latest)",
-    "numerator": "latest",
+    "variable": "ElcPdmpFr",
+    "numerator": "state",
     "nProperty": "ElcPdmpFr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PDMP_2017.md"
   },
   {
-    "variable": "AnyPdmpDt (Latest)",
-    "numerator": "latest",
+    "variable": "AnyPdmpDt",
+    "numerator": "state",
     "nProperty": "AnyPdmpDt",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PDMP_2017.md"
   },
   {
-    "variable": "AnyPdmphDt (Latest)",
-    "numerator": "latest",
+    "variable": "AnyPdmphDt",
+    "numerator": "state",
     "nProperty": "AnyPdmphDt",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PDMP_2017.md"
   },
   {
-    "variable": "OpPdmpDt (Latest)",
-    "numerator": "latest",
+    "variable": "OpPdmpDt",
+    "numerator": "state",
     "nProperty": "OpPdmpDt",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PDMP_2017.md"
   },
   {
-    "variable": "MsAcPdmpDt (Latest)",
-    "numerator": "latest",
+    "variable": "MsAcPdmpDt",
+    "numerator": "state",
     "nProperty": "MsAcPdmpDt",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PDMP_2017.md"
   },
   {
-    "variable": "ElcPdmpDt (Latest)",
-    "numerator": "latest",
+    "variable": "ElcPdmpDt",
+    "numerator": "state",
     "nProperty": "ElcPdmpDt",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PDMP_2017.md"
   },
   {
-    "variable": "AnyGslDt (Latest)",
-    "numerator": "latest",
+    "variable": "AnyGslDt",
+    "numerator": "state",
     "nProperty": "AnyGslDt",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/GSL_2018.md"
   },
   {
-    "variable": "GslArrDt (Latest)",
-    "numerator": "latest",
+    "variable": "GslArrDt",
+    "numerator": "state",
     "nProperty": "GslArrDt",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/GSL_2018.md"
   },
   {
-    "variable": "AnyGslFr (Latest)",
-    "numerator": "latest",
+    "variable": "AnyGslFr",
+    "numerator": "state",
     "nProperty": "AnyGslFr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/GSL_2018.md"
   },
   {
-    "variable": "GslArrFr (Latest)",
-    "numerator": "latest",
+    "variable": "GslArrFr",
+    "numerator": "state",
     "nProperty": "GslArrFr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/GSL_2018.md"
   },
   {
-    "variable": "AnyNalDt (Latest)",
-    "numerator": "latest",
+    "variable": "AnyNalDt",
+    "numerator": "state",
     "nProperty": "AnyNalDt",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/NAL_2017.md"
   },
   {
-    "variable": "NalPrStDt (Latest)",
-    "numerator": "latest",
+    "variable": "NalPrStDt",
+    "numerator": "state",
     "nProperty": "NalPrStDt",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/NAL_2017.md"
   },
   {
-    "variable": "NalPresDt (Latest)",
-    "numerator": "latest",
+    "variable": "NalPresDt",
+    "numerator": "state",
     "nProperty": "NalPresDt",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/NAL_2017.md"
   },
   {
-    "variable": "AnyNalFr (Latest)",
-    "numerator": "latest",
+    "variable": "AnyNalFr",
+    "numerator": "state",
     "nProperty": "AnyNalFr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/NAL_2017.md"
   },
   {
-    "variable": "NalPrStFr (Latest)",
-    "numerator": "latest",
+    "variable": "NalPrStFr",
+    "numerator": "state",
     "nProperty": "NalPrStFr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/NAL_2017.md"
   },
   {
-    "variable": "NalPresFr (Latest)",
-    "numerator": "latest",
+    "variable": "NalPresFr",
+    "numerator": "state",
     "nProperty": "NalPresFr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/NAL_2017.md"
   },
   {
-    "variable": "MedcdExp19 (Latest)",
-    "numerator": "latest",
+    "variable": "MedcdExp19",
+    "numerator": "state",
     "nProperty": "MedcdExp19",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/MedExp_2018_19.md"
   },
   {
-    "variable": "MedcdExp18 (Latest)",
-    "numerator": "latest",
+    "variable": "MedcdExp18",
+    "numerator": "state",
     "nProperty": "MedcdExp18",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/MedExp_2018_19.md"
   },
   {
-    "variable": "TradFedExp (Latest)",
-    "numerator": "latest",
+    "variable": "TradFedExp",
+    "numerator": "state",
     "nProperty": "TradFedExp",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/MedExp_2018_19.md"
   },
   {
-    "variable": "TradSttExp (Latest)",
-    "numerator": "latest",
+    "variable": "TradSttExp",
+    "numerator": "state",
     "nProperty": "TradSttExp",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/MedExp_2018_19.md"
   },
   {
-    "variable": "ExpnFedExp (Latest)",
-    "numerator": "latest",
+    "variable": "ExpnFedExp",
+    "numerator": "state",
     "nProperty": "ExpnFedExp",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/MedExp_2018_19.md"
   },
   {
-    "variable": "ExpnSttExp (Latest)",
-    "numerator": "latest",
+    "variable": "ExpnSttExp",
+    "numerator": "state",
     "nProperty": "ExpnSttExp",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/MedExp_2018_19.md"
   },
   {
-    "variable": "ExpSsp (Latest)",
-    "numerator": "latest",
+    "variable": "ExpSsp",
+    "numerator": "state",
     "nProperty": "ExpSsp",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Syringe.md"
   },
   {
-    "variable": "NoPrphLw (Latest)",
-    "numerator": "latest",
+    "variable": "NoPrphLw",
+    "numerator": "state",
     "nProperty": "NoPrphLw",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Syringe.md"
   },
   {
-    "variable": "NtPrFrDsSy (Latest)",
-    "numerator": "latest",
+    "variable": "NtPrFrDsSy",
+    "numerator": "state",
     "nProperty": "NtPrFrDsSy",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Syringe.md"
   },
   {
-    "variable": "PrExcInj (Latest)",
-    "numerator": "latest",
+    "variable": "PrExcInj",
+    "numerator": "state",
     "nProperty": "PrExcInj",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Syringe.md"
   },
   {
-    "variable": "PrNtRefInj (Latest)",
-    "numerator": "latest",
+    "variable": "PrNtRefInj",
+    "numerator": "state",
     "nProperty": "PrNtRefInj",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Syringe.md"
   },
   {
-    "variable": "NoLwRmUnc (Latest)",
-    "numerator": "latest",
+    "variable": "NoLwRmUnc",
+    "numerator": "state",
     "nProperty": "NoLwRmUnc",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Syringe.md"
   },
   {
-    "variable": "MdMarijLaw (Latest)",
-    "numerator": "latest",
+    "variable": "MdMarijLaw",
+    "numerator": "state",
     "nProperty": "MdMarijLaw",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/MedMarijLaw.md"
   },
   {
-    "variable": "CrrctExpS (Latest)",
-    "numerator": "latest",
+    "variable": "CrrctExpS",
+    "numerator": "state",
     "nProperty": "CrrctExpS",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PublicExpenditures.md"
   },
   {
-    "variable": "PlcFyrExpS (Latest)",
-    "numerator": "latest",
+    "variable": "PlcFyrExpS",
+    "numerator": "state",
     "nProperty": "PlcFyrExpS",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PublicExpenditures.md"
   },
   {
-    "variable": "HlthExpS (Latest)",
-    "numerator": "latest",
+    "variable": "HlthExpS",
+    "numerator": "state",
     "nProperty": "HlthExpS",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PublicExpenditures.md"
   },
   {
-    "variable": "WlfrExpS (Latest)",
-    "numerator": "latest",
+    "variable": "WlfrExpS",
+    "numerator": "state",
     "nProperty": "WlfrExpS",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PublicExpenditures.md"
   },
   {
-    "variable": "CrrctExpL (Latest)",
-    "numerator": "latest",
+    "variable": "CrrctExpL",
+    "numerator": "state",
     "nProperty": "CrrctExpL",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PublicExpenditures.md"
   },
   {
-    "variable": "PlcFyrExpL (Latest)",
-    "numerator": "latest",
+    "variable": "PlcFyrExpL",
+    "numerator": "state",
     "nProperty": "PlcFyrExpL",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PublicExpenditures.md"
   },
   {
-    "variable": "HlthExpL (Latest)",
-    "numerator": "latest",
+    "variable": "HlthExpL",
+    "numerator": "state",
     "nProperty": "HlthExpL",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PublicExpenditures.md"
   },
   {
-    "variable": "WlfrExpL (Latest)",
-    "numerator": "latest",
+    "variable": "WlfrExpL",
+    "numerator": "state",
     "nProperty": "WlfrExpL",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PublicExpenditures.md"
   },
   {
-    "variable": "CrrctExpT (Latest)",
-    "numerator": "latest",
+    "variable": "CrrctExpT",
+    "numerator": "state",
     "nProperty": "CrrctExpT",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PublicExpenditures.md"
   },
   {
-    "variable": "PlcFyrExpT (Latest)",
-    "numerator": "latest",
+    "variable": "PlcFyrExpT",
+    "numerator": "state",
     "nProperty": "PlcFyrExpT",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PublicExpenditures.md"
   },
   {
-    "variable": "HlthExpT (Latest)",
-    "numerator": "latest",
+    "variable": "HlthExpT",
+    "numerator": "state",
     "nProperty": "HlthExpT",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PublicExpenditures.md"
   },
   {
-    "variable": "WlfrExpT (Latest)",
-    "numerator": "latest",
+    "variable": "WlfrExpT",
+    "numerator": "state",
     "nProperty": "WlfrExpT",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PublicExpenditures.md"
   },
   {
-    "variable": "HEROP_ID (2000)",
-    "numerator": "2000",
-    "nProperty": "HEROP_ID",
-    "theme": "Geography",
-    "year": "2000",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "GEOID (2000)",
-    "numerator": "2000",
-    "nProperty": "GEOID",
-    "theme": "Geography",
-    "year": "2000",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "TotPop (2000)",
-    "numerator": "2000",
-    "nProperty": "TotPop",
-    "theme": "Social",
-    "year": "2000",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "TotUnits (2000)",
-    "numerator": "2000",
-    "nProperty": "TotUnits",
-    "theme": "Social",
-    "year": "2000",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "ChildrenP (2000)",
-    "numerator": "2000",
-    "nProperty": "ChildrenP",
-    "theme": "Social",
-    "year": "2000",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age18_64 (2000)",
-    "numerator": "2000",
-    "nProperty": "Age18_64",
-    "theme": "Social",
-    "year": "2000",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age0_4 (2000)",
-    "numerator": "2000",
-    "nProperty": "Age0_4",
-    "theme": "Social",
-    "year": "2000",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age5_14 (2000)",
-    "numerator": "2000",
-    "nProperty": "Age5_14",
-    "theme": "Social",
-    "year": "2000",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age15_19 (2000)",
-    "numerator": "2000",
-    "nProperty": "Age15_19",
-    "theme": "Social",
-    "year": "2000",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age20_24 (2000)",
-    "numerator": "2000",
-    "nProperty": "Age20_24",
-    "theme": "Social",
-    "year": "2000",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age15_44 (2000)",
-    "numerator": "2000",
-    "nProperty": "Age15_44",
-    "theme": "Social",
-    "year": "2000",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age45_49 (2000)",
-    "numerator": "2000",
-    "nProperty": "Age45_49",
-    "theme": "Social",
-    "year": "2000",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age50_54 (2000)",
-    "numerator": "2000",
-    "nProperty": "Age50_54",
-    "theme": "Social",
-    "year": "2000",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age55_59 (2000)",
-    "numerator": "2000",
-    "nProperty": "Age55_59",
-    "theme": "Social",
-    "year": "2000",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age60_64 (2000)",
-    "numerator": "2000",
-    "nProperty": "Age60_64",
-    "theme": "Social",
-    "year": "2000",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "AgeOv65 (2000)",
-    "numerator": "2000",
-    "nProperty": "AgeOv65",
-    "theme": "Social",
-    "year": "2000",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age15_24P (2000)",
-    "numerator": "2000",
-    "nProperty": "Age15_24P",
-    "theme": "Social",
-    "year": "2000",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Und45P (2000)",
-    "numerator": "2000",
-    "nProperty": "Und45P",
-    "theme": "Social",
-    "year": "2000",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Ovr65P (2000)",
-    "numerator": "2000",
-    "nProperty": "Ovr65P",
-    "theme": "Social",
-    "year": "2000",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "WhiteP (2000)",
-    "numerator": "2000",
-    "nProperty": "WhiteP",
-    "theme": "Social",
-    "year": "2000",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "BlackP (2000)",
-    "numerator": "2000",
-    "nProperty": "BlackP",
-    "theme": "Social",
-    "year": "2000",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "HispP (2000)",
-    "numerator": "2000",
-    "nProperty": "HispP",
-    "theme": "Social",
-    "year": "2000",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "AmIndP (2000)",
-    "numerator": "2000",
-    "nProperty": "AmIndP",
-    "theme": "Social",
-    "year": "2000",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "AsianP (2000)",
-    "numerator": "2000",
-    "nProperty": "AsianP",
-    "theme": "Social",
-    "year": "2000",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "PacIsP (2000)",
-    "numerator": "2000",
-    "nProperty": "PacIsP",
-    "theme": "Social",
-    "year": "2000",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "OtherP (2000)",
-    "numerator": "2000",
-    "nProperty": "OtherP",
-    "theme": "Social",
-    "year": "2000",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "NoHsP (2000)",
-    "numerator": "2000",
-    "nProperty": "NoHsP",
-    "theme": "Social",
-    "year": "2000",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "DisbP (2000)",
-    "numerator": "2000",
-    "nProperty": "DisbP",
-    "theme": "Social",
-    "year": "2000",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "PovP (2000)",
-    "numerator": "2000",
-    "nProperty": "PovP",
-    "theme": "Economic",
-    "year": "2000",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "UnempP (2000)",
-    "numerator": "2000",
-    "nProperty": "UnempP",
-    "theme": "Economic",
-    "year": "2000",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "VacantP (2000)",
-    "numerator": "2000",
-    "nProperty": "VacantP",
+    "variable": "AreaSqMi",
+    "numerator": "county",
+    "nProperty": "AreaSqMi",
     "theme": "Environment",
-    "year": "2000",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/AlcoholOutlets_2018.md"
   },
   {
-    "variable": "HEROP_ID (1980)",
-    "numerator": "1980",
-    "nProperty": "HEROP_ID",
-    "theme": "Geography",
-    "year": "1980",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "GEOID (1980)",
-    "numerator": "1980",
-    "nProperty": "GEOID",
-    "theme": "Geography",
-    "year": "1980",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "TotPop (1980)",
-    "numerator": "1980",
-    "nProperty": "TotPop",
-    "theme": "Social",
-    "year": "1980",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "TotUnits (1980)",
-    "numerator": "1980",
-    "nProperty": "TotUnits",
-    "theme": "Social",
-    "year": "1980",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age18_64 (1980)",
-    "numerator": "1980",
-    "nProperty": "Age18_64",
-    "theme": "Social",
-    "year": "1980",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age0_4 (1980)",
-    "numerator": "1980",
-    "nProperty": "Age0_4",
-    "theme": "Social",
-    "year": "1980",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age5_14 (1980)",
-    "numerator": "1980",
-    "nProperty": "Age5_14",
-    "theme": "Social",
-    "year": "1980",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age15_19 (1980)",
-    "numerator": "1980",
-    "nProperty": "Age15_19",
-    "theme": "Social",
-    "year": "1980",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age20_24 (1980)",
-    "numerator": "1980",
-    "nProperty": "Age20_24",
-    "theme": "Social",
-    "year": "1980",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age15_44 (1980)",
-    "numerator": "1980",
-    "nProperty": "Age15_44",
-    "theme": "Social",
-    "year": "1980",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age45_54 (1980)",
-    "numerator": "1980",
-    "nProperty": "Age45_54",
-    "theme": "Social",
-    "year": "1980",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age55_59 (1980)",
-    "numerator": "1980",
-    "nProperty": "Age55_59",
-    "theme": "Social",
-    "year": "1980",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age60_64 (1980)",
-    "numerator": "1980",
-    "nProperty": "Age60_64",
-    "theme": "Social",
-    "year": "1980",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "AgeOv65 (1980)",
-    "numerator": "1980",
-    "nProperty": "AgeOv65",
-    "theme": "Social",
-    "year": "1980",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age15_24P (1980)",
-    "numerator": "1980",
-    "nProperty": "Age15_24P",
-    "theme": "Social",
-    "year": "1980",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Und45P (1980)",
-    "numerator": "1980",
-    "nProperty": "Und45P",
-    "theme": "Social",
-    "year": "1980",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Ovr65P (1980)",
-    "numerator": "1980",
-    "nProperty": "Ovr65P",
-    "theme": "Social",
-    "year": "1980",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "WhiteP (1980)",
-    "numerator": "1980",
-    "nProperty": "WhiteP",
-    "theme": "Social",
-    "year": "1980",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "BlackP (1980)",
-    "numerator": "1980",
-    "nProperty": "BlackP",
-    "theme": "Social",
-    "year": "1980",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "HispP (1980)",
-    "numerator": "1980",
-    "nProperty": "HispP",
-    "theme": "Social",
-    "year": "1980",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "AmIndP (1980)",
-    "numerator": "1980",
-    "nProperty": "AmIndP",
-    "theme": "Social",
-    "year": "1980",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "AsianP (1980)",
-    "numerator": "1980",
-    "nProperty": "AsianP",
-    "theme": "Social",
-    "year": "1980",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "PacIsP (1980)",
-    "numerator": "1980",
-    "nProperty": "PacIsP",
-    "theme": "Social",
-    "year": "1980",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "OtherP (1980)",
-    "numerator": "1980",
-    "nProperty": "OtherP",
-    "theme": "Social",
-    "year": "1980",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "NoHsP (1980)",
-    "numerator": "1980",
-    "nProperty": "NoHsP",
-    "theme": "Social",
-    "year": "1980",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "ChildrenP (1980)",
-    "numerator": "1980",
-    "nProperty": "ChildrenP",
-    "theme": "Social",
-    "year": "1980",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "PovP (1980)",
-    "numerator": "1980",
-    "nProperty": "PovP",
-    "theme": "Economic",
-    "year": "1980",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "UnempP (1980)",
-    "numerator": "1980",
-    "nProperty": "UnempP",
-    "theme": "Economic",
-    "year": "1980",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "VacantP (1980)",
-    "numerator": "1980",
-    "nProperty": "VacantP",
+    "variable": "TotTracts",
+    "numerator": "county",
+    "nProperty": "TotTracts",
     "theme": "Environment",
-    "year": "1980",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_FQHCs_MinDistance.md"
   },
   {
-    "variable": "HEROP_ID (1990)",
-    "numerator": "1990",
-    "nProperty": "HEROP_ID",
-    "theme": "Geography",
-    "year": "1990",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "GEOID (1990)",
-    "numerator": "1990",
-    "nProperty": "GEOID",
-    "theme": "Geography",
-    "year": "1990",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "TotPop (1990)",
-    "numerator": "1990",
-    "nProperty": "TotPop",
-    "theme": "Social",
-    "year": "1990",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "TotUnits (1990)",
-    "numerator": "1990",
-    "nProperty": "TotUnits",
-    "theme": "Social",
-    "year": "1990",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age18_64 (1990)",
-    "numerator": "1990",
-    "nProperty": "Age18_64",
-    "theme": "Social",
-    "year": "1990",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age0_4 (1990)",
-    "numerator": "1990",
-    "nProperty": "Age0_4",
-    "theme": "Social",
-    "year": "1990",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age5_14 (1990)",
-    "numerator": "1990",
-    "nProperty": "Age5_14",
-    "theme": "Social",
-    "year": "1990",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age15_19 (1990)",
-    "numerator": "1990",
-    "nProperty": "Age15_19",
-    "theme": "Social",
-    "year": "1990",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age20_24 (1990)",
-    "numerator": "1990",
-    "nProperty": "Age20_24",
-    "theme": "Social",
-    "year": "1990",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age15_44 (1990)",
-    "numerator": "1990",
-    "nProperty": "Age15_44",
-    "theme": "Social",
-    "year": "1990",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age45_49 (1990)",
-    "numerator": "1990",
-    "nProperty": "Age45_49",
-    "theme": "Social",
-    "year": "1990",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age50_54 (1990)",
-    "numerator": "1990",
-    "nProperty": "Age50_54",
-    "theme": "Social",
-    "year": "1990",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age55_59 (1990)",
-    "numerator": "1990",
-    "nProperty": "Age55_59",
-    "theme": "Social",
-    "year": "1990",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age60_64 (1990)",
-    "numerator": "1990",
-    "nProperty": "Age60_64",
-    "theme": "Social",
-    "year": "1990",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "AgeOv65 (1990)",
-    "numerator": "1990",
-    "nProperty": "AgeOv65",
-    "theme": "Social",
-    "year": "1990",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age15_24P (1990)",
-    "numerator": "1990",
-    "nProperty": "Age15_24P",
-    "theme": "Social",
-    "year": "1990",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Und45P (1990)",
-    "numerator": "1990",
-    "nProperty": "Und45P",
-    "theme": "Social",
-    "year": "1990",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Ovr65P (1990)",
-    "numerator": "1990",
-    "nProperty": "Ovr65P",
-    "theme": "Social",
-    "year": "1990",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "WhiteP (1990)",
-    "numerator": "1990",
-    "nProperty": "WhiteP",
-    "theme": "Social",
-    "year": "1990",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "BlackP (1990)",
-    "numerator": "1990",
-    "nProperty": "BlackP",
-    "theme": "Social",
-    "year": "1990",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "HispP (1990)",
-    "numerator": "1990",
-    "nProperty": "HispP",
-    "theme": "Social",
-    "year": "1990",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "AmIndP (1990)",
-    "numerator": "1990",
-    "nProperty": "AmIndP",
-    "theme": "Social",
-    "year": "1990",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "AsianP (1990)",
-    "numerator": "1990",
-    "nProperty": "AsianP",
-    "theme": "Social",
-    "year": "1990",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "PacIsP (1990)",
-    "numerator": "1990",
-    "nProperty": "PacIsP",
-    "theme": "Social",
-    "year": "1990",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "OtherP (1990)",
-    "numerator": "1990",
-    "nProperty": "OtherP",
-    "theme": "Social",
-    "year": "1990",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "NoHsP (1990)",
-    "numerator": "1990",
-    "nProperty": "NoHsP",
-    "theme": "Social",
-    "year": "1990",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "ChildrenP (1990)",
-    "numerator": "1990",
-    "nProperty": "ChildrenP",
-    "theme": "Social",
-    "year": "1990",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "PovP (1990)",
-    "numerator": "1990",
-    "nProperty": "PovP",
-    "theme": "Economic",
-    "year": "1990",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "UnempP (1990)",
-    "numerator": "1990",
-    "nProperty": "UnempP",
-    "theme": "Economic",
-    "year": "1990",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "VacantP (1990)",
-    "numerator": "1990",
-    "nProperty": "VacantP",
-    "theme": "Environment",
-    "year": "1990",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "HEROP_ID (2010)",
-    "numerator": "2010",
-    "nProperty": "HEROP_ID",
-    "theme": "Geography",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "GEOID (2010)",
-    "numerator": "2010",
-    "nProperty": "GEOID",
-    "theme": "Geography",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "TotPop (2010)",
-    "numerator": "2010",
-    "nProperty": "TotPop",
-    "theme": "Social",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "TotVetPop (2010)",
-    "numerator": "2010",
-    "nProperty": "TotVetPop",
-    "theme": "Social",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "TotUnits (2010)",
-    "numerator": "2010",
-    "nProperty": "TotUnits",
-    "theme": "Social",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "WhiteP (2010)",
-    "numerator": "2010",
-    "nProperty": "WhiteP",
-    "theme": "Social",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "BlackP (2010)",
-    "numerator": "2010",
-    "nProperty": "BlackP",
-    "theme": "Social",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "AmIndP (2010)",
-    "numerator": "2010",
-    "nProperty": "AmIndP",
-    "theme": "Social",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "AsianP (2010)",
-    "numerator": "2010",
-    "nProperty": "AsianP",
-    "theme": "Social",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "PacIsP (2010)",
-    "numerator": "2010",
-    "nProperty": "PacIsP",
-    "theme": "Social",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "OtherP (2010)",
-    "numerator": "2010",
-    "nProperty": "OtherP",
-    "theme": "Social",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "HispP (2010)",
-    "numerator": "2010",
-    "nProperty": "HispP",
-    "theme": "Social",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age0_4 (2010)",
-    "numerator": "2010",
-    "nProperty": "Age0_4",
-    "theme": "Social",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age5_14 (2010)",
-    "numerator": "2010",
-    "nProperty": "Age5_14",
-    "theme": "Social",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age15_19 (2010)",
-    "numerator": "2010",
-    "nProperty": "Age15_19",
-    "theme": "Social",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age20_24 (2010)",
-    "numerator": "2010",
-    "nProperty": "Age20_24",
-    "theme": "Social",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age15_44 (2010)",
-    "numerator": "2010",
-    "nProperty": "Age15_44",
-    "theme": "Social",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age45_49 (2010)",
-    "numerator": "2010",
-    "nProperty": "Age45_49",
-    "theme": "Social",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age50_54 (2010)",
-    "numerator": "2010",
-    "nProperty": "Age50_54",
-    "theme": "Social",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age55_59 (2010)",
-    "numerator": "2010",
-    "nProperty": "Age55_59",
-    "theme": "Social",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age60_64 (2010)",
-    "numerator": "2010",
-    "nProperty": "Age60_64",
-    "theme": "Social",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "AgeOv65 (2010)",
-    "numerator": "2010",
-    "nProperty": "AgeOv65",
-    "theme": "Social",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "AgeOv18 (2010)",
-    "numerator": "2010",
-    "nProperty": "AgeOv18",
-    "theme": "Social",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Age15_24P (2010)",
-    "numerator": "2010",
-    "nProperty": "Age15_24P",
-    "theme": "Social",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Und45P (2010)",
-    "numerator": "2010",
-    "nProperty": "Und45P",
-    "theme": "Social",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "Ovr65P (2010)",
-    "numerator": "2010",
-    "nProperty": "Ovr65P",
-    "theme": "Social",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "NoHsP (2010)",
-    "numerator": "2010",
-    "nProperty": "NoHsP",
-    "theme": "Social",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "DisbP (2010)",
-    "numerator": "2010",
-    "nProperty": "DisbP",
-    "theme": "Social",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "VetP (2010)",
-    "numerator": "2010",
-    "nProperty": "VetP",
-    "theme": "Social",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "UnempP (2010)",
-    "numerator": "2010",
-    "nProperty": "UnempP",
-    "theme": "Economic",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "PovP (2010)",
-    "numerator": "2010",
-    "nProperty": "PovP",
-    "theme": "Economic",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "PciE (2010)",
-    "numerator": "2010",
-    "nProperty": "PciE",
-    "theme": "Economic",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "MedInc (2010)",
-    "numerator": "2010",
-    "nProperty": "MedInc",
-    "theme": "Economic",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "GiniCoeff (2010)",
-    "numerator": "2010",
-    "nProperty": "GiniCoeff",
-    "theme": "Economic",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "VacantP (2010)",
-    "numerator": "2010",
-    "nProperty": "VacantP",
-    "theme": "Environment",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "BupCtTmDr (Latest)",
-    "numerator": "latest",
+    "variable": "BupCtTmDr",
+    "numerator": "county",
     "nProperty": "BupCtTmDr",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "BupCtTmBk (Latest)",
-    "numerator": "latest",
+    "variable": "BupCtTmBk",
+    "numerator": "county",
     "nProperty": "BupCtTmBk",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "BupCtTmWk (Latest)",
-    "numerator": "latest",
+    "variable": "BupCtTmWk",
+    "numerator": "county",
     "nProperty": "BupCtTmWk",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "MetCtTmDr (Latest)",
-    "numerator": "latest",
+    "variable": "MetCtTmDr",
+    "numerator": "county",
     "nProperty": "MetCtTmDr",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "MetCtTmBk (Latest)",
-    "numerator": "latest",
+    "variable": "MetCtTmBk",
+    "numerator": "county",
     "nProperty": "MetCtTmBk",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "MetCtTmWk (Latest)",
-    "numerator": "latest",
+    "variable": "MetCtTmWk",
+    "numerator": "county",
     "nProperty": "MetCtTmWk",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "NalCtTmDr (Latest)",
-    "numerator": "latest",
+    "variable": "NalCtTmDr",
+    "numerator": "county",
     "nProperty": "NalCtTmDr",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "NalCtTmBk (Latest)",
-    "numerator": "latest",
+    "variable": "NalCtTmBk",
+    "numerator": "county",
     "nProperty": "NalCtTmBk",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "NalCtTmWk (Latest)",
-    "numerator": "latest",
+    "variable": "NalCtTmWk",
+    "numerator": "county",
     "nProperty": "NalCtTmWk",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "BupAvTmDr (Latest)",
-    "numerator": "latest",
+    "variable": "BupAvTmDr",
+    "numerator": "county",
     "nProperty": "BupAvTmDr",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "BupAvTmBk (Latest)",
-    "numerator": "latest",
+    "variable": "BupAvTmBk",
+    "numerator": "county",
     "nProperty": "BupAvTmBk",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "BupAvTmWk (Latest)",
-    "numerator": "latest",
+    "variable": "BupAvTmWk",
+    "numerator": "county",
     "nProperty": "BupAvTmWk",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "MetAvTmDr (Latest)",
-    "numerator": "latest",
+    "variable": "MetAvTmDr",
+    "numerator": "county",
     "nProperty": "MetAvTmDr",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "MetAvTmBk (Latest)",
-    "numerator": "latest",
+    "variable": "MetAvTmBk",
+    "numerator": "county",
     "nProperty": "MetAvTmBk",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "MetAvTmWk (Latest)",
-    "numerator": "latest",
+    "variable": "MetAvTmWk",
+    "numerator": "county",
     "nProperty": "MetAvTmWk",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "NalAvTmDr (Latest)",
-    "numerator": "latest",
+    "variable": "NalAvTmDr",
+    "numerator": "county",
     "nProperty": "NalAvTmDr",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "NalAvTmBk (Latest)",
-    "numerator": "latest",
+    "variable": "NalAvTmBk",
+    "numerator": "county",
     "nProperty": "NalAvTmBk",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "NalAvTmWk (Latest)",
-    "numerator": "latest",
+    "variable": "NalAvTmWk",
+    "numerator": "county",
     "nProperty": "NalAvTmWk",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "BupTmDrP (Latest)",
-    "numerator": "latest",
+    "variable": "BupTmDrP",
+    "numerator": "county",
     "nProperty": "BupTmDrP",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "BupTmBkP (Latest)",
-    "numerator": "latest",
+    "variable": "BupTmBkP",
+    "numerator": "county",
     "nProperty": "BupTmBkP",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "BupTmWkP (Latest)",
-    "numerator": "latest",
+    "variable": "BupTmWkP",
+    "numerator": "county",
     "nProperty": "BupTmWkP",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "MetTmDrP (Latest)",
-    "numerator": "latest",
+    "variable": "MetTmDrP",
+    "numerator": "county",
     "nProperty": "MetTmDrP",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "MetTmBkP (Latest)",
-    "numerator": "latest",
+    "variable": "MetTmBkP",
+    "numerator": "county",
     "nProperty": "MetTmBkP",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "MetTmWkP (Latest)",
-    "numerator": "latest",
+    "variable": "MetTmWkP",
+    "numerator": "county",
     "nProperty": "MetTmWkP",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "NalTmDrP (Latest)",
-    "numerator": "latest",
+    "variable": "NalTmDrP",
+    "numerator": "county",
     "nProperty": "NalTmDrP",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "NalTmBkP (Latest)",
-    "numerator": "latest",
+    "variable": "NalTmBkP",
+    "numerator": "county",
     "nProperty": "NalTmBkP",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "NalTmWkP (Latest)",
-    "numerator": "latest",
+    "variable": "NalTmWkP",
+    "numerator": "county",
     "nProperty": "NalTmWkP",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "PcpPer100k (Latest)",
-    "numerator": "latest",
+    "variable": "PcpPer100k",
+    "numerator": "county-tract",
     "nProperty": "PcpPer100k",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Health_PCPs.md"
   },
   {
-    "variable": "SpPer100k (Latest)",
-    "numerator": "latest",
+    "variable": "SpPer100k",
+    "numerator": "county-tract",
     "nProperty": "SpPer100k",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Health_PCPs.md"
   },
   {
-    "variable": "RcaUrbanP (Latest)",
-    "numerator": "latest",
+    "variable": "RcaUrbanP",
+    "numerator": "county",
     "nProperty": "RcaUrbanP",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Rural_Urban_Classification_County.md"
   },
   {
-    "variable": "RcaSubrbP (Latest)",
-    "numerator": "latest",
+    "variable": "RcaSubrbP",
+    "numerator": "county",
     "nProperty": "RcaSubrbP",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Rural_Urban_Classification_County.md"
   },
   {
-    "variable": "RcaRuralP (Latest)",
-    "numerator": "latest",
+    "variable": "RcaRuralP",
+    "numerator": "county",
     "nProperty": "RcaRuralP",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Rural_Urban_Classification_County.md"
   },
   {
-    "variable": "CenFlags (Latest)",
-    "numerator": "latest",
+    "variable": "CenFlags",
+    "numerator": "county",
     "nProperty": "CenFlags",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Rural_Urban_Classification_County.md"
   },
   {
-    "variable": "TotPop10 (Latest)",
-    "numerator": "latest",
+    "variable": "TotPop10",
+    "numerator": "county",
     "nProperty": "TotPop10",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Rural_Urban_Classification_County.md"
   },
   {
-    "variable": "UrbPop10 (Latest)",
-    "numerator": "latest",
+    "variable": "UrbPop10",
+    "numerator": "county",
     "nProperty": "UrbPop10",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Rural_Urban_Classification_County.md"
   },
   {
-    "variable": "RuralPop10 (Latest)",
-    "numerator": "latest",
+    "variable": "RuralPop10",
+    "numerator": "county",
     "nProperty": "RuralPop10",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Rural_Urban_Classification_County.md"
   },
   {
-    "variable": "CenRuralP (Latest)",
-    "numerator": "latest",
+    "variable": "CenRuralP",
+    "numerator": "county",
     "nProperty": "CenRuralP",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Rural_Urban_Classification_County.md"
   },
   {
-    "variable": "DmySgrg (Latest)",
-    "numerator": "latest",
+    "variable": "DmySgrg",
+    "numerator": "county",
     "nProperty": "DmySgrg",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Overlay.md"
   },
   {
-    "variable": "DmyBlckBlt (Latest)",
-    "numerator": "latest",
+    "variable": "DmyBlckBlt",
+    "numerator": "county",
     "nProperty": "DmyBlckBlt",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Overlay.md"
   },
   {
-    "variable": "PrcNtvRsrv (Latest)",
-    "numerator": "latest",
+    "variable": "PrcNtvRsrv",
+    "numerator": "county",
     "nProperty": "PrcNtvRsrv",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Overlay.md"
   },
   {
-    "variable": "SviTh1 (Latest)",
-    "numerator": "latest",
+    "variable": "SviTh1",
+    "numerator": "county-zcta-tract",
     "nProperty": "SviTh1",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/SVI_2018.md"
   },
   {
-    "variable": "SviTh2 (Latest)",
-    "numerator": "latest",
+    "variable": "SviTh2",
+    "numerator": "county-zcta-tract",
     "nProperty": "SviTh2",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/SVI_2018.md"
   },
   {
-    "variable": "SviTh3 (Latest)",
-    "numerator": "latest",
+    "variable": "SviTh3",
+    "numerator": "county-zcta-tract",
     "nProperty": "SviTh3",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/SVI_2018.md"
   },
   {
-    "variable": "SviTh4 (Latest)",
-    "numerator": "latest",
+    "variable": "SviTh4",
+    "numerator": "county-zcta-tract",
     "nProperty": "SviTh4",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/SVI_2018.md"
   },
   {
-    "variable": "SviSmryRnk (Latest)",
-    "numerator": "latest",
+    "variable": "SviSmryRnk",
+    "numerator": "county-zcta-tract",
     "nProperty": "SviSmryRnk",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/SVI_2018.md"
   },
   {
-    "variable": "TtlPrPpr (Latest)",
-    "numerator": "latest",
+    "variable": "TtlPrPpr",
+    "numerator": "county",
     "nProperty": "TtlPrPpr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
   },
   {
-    "variable": "FmlPrPpr (Latest)",
-    "numerator": "latest",
+    "variable": "FmlPrPpr",
+    "numerator": "county",
     "nProperty": "FmlPrPpr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
   },
   {
-    "variable": "MlPrPpr (Latest)",
-    "numerator": "latest",
+    "variable": "MlPrPpr",
+    "numerator": "county",
     "nProperty": "MlPrPpr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
   },
   {
-    "variable": "AapiPrPpr (Latest)",
-    "numerator": "latest",
+    "variable": "AapiPrPpr",
+    "numerator": "county",
     "nProperty": "AapiPrPpr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
   },
   {
-    "variable": "BlckPrPpr (Latest)",
-    "numerator": "latest",
+    "variable": "BlckPrPpr",
+    "numerator": "county",
     "nProperty": "BlckPrPpr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
   },
   {
-    "variable": "LtnxPrPpr (Latest)",
-    "numerator": "latest",
+    "variable": "LtnxPrPpr",
+    "numerator": "county",
     "nProperty": "LtnxPrPpr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
   },
   {
-    "variable": "NtvPrPpr (Latest)",
-    "numerator": "latest",
+    "variable": "NtvPrPpr",
+    "numerator": "county",
     "nProperty": "NtvPrPpr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
   },
   {
-    "variable": "WhtPrPpr (Latest)",
-    "numerator": "latest",
+    "variable": "WhtPrPpr",
+    "numerator": "county",
     "nProperty": "WhtPrPpr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
   },
   {
-    "variable": "TtlPrAPpr (Latest)",
-    "numerator": "latest",
+    "variable": "TtlPrAPpr",
+    "numerator": "county",
     "nProperty": "TtlPrAPpr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
   },
   {
-    "variable": "FmlPrAPpr (Latest)",
-    "numerator": "latest",
+    "variable": "FmlPrAPpr",
+    "numerator": "county",
     "nProperty": "FmlPrAPpr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
   },
   {
-    "variable": "MlPrAPpr (Latest)",
-    "numerator": "latest",
+    "variable": "MlPrAPpr",
+    "numerator": "county",
     "nProperty": "MlPrAPpr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
   },
   {
-    "variable": "AapiPrAPpr (Latest)",
-    "numerator": "latest",
+    "variable": "AapiPrAPpr",
+    "numerator": "county",
     "nProperty": "AapiPrAPpr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
   },
   {
-    "variable": "BlckPrAPpr (Latest)",
-    "numerator": "latest",
+    "variable": "BlckPrAPpr",
+    "numerator": "county",
     "nProperty": "BlckPrAPpr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
   },
   {
-    "variable": "LtnxPrAPpr (Latest)",
-    "numerator": "latest",
+    "variable": "LtnxPrAPpr",
+    "numerator": "county",
     "nProperty": "LtnxPrAPpr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
   },
   {
-    "variable": "NtvPrAPpr (Latest)",
-    "numerator": "latest",
+    "variable": "NtvPrAPpr",
+    "numerator": "county",
     "nProperty": "NtvPrAPpr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
   },
   {
-    "variable": "WhtPrAPpr (Latest)",
-    "numerator": "latest",
+    "variable": "WhtPrAPpr",
+    "numerator": "county",
     "nProperty": "WhtPrAPpr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
   },
   {
-    "variable": "TtlPrPp (Latest)",
-    "numerator": "latest",
+    "variable": "TtlPrPp",
+    "numerator": "county",
     "nProperty": "TtlPrPp",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
   },
   {
-    "variable": "FmlPrPp (Latest)",
-    "numerator": "latest",
+    "variable": "FmlPrPp",
+    "numerator": "county",
     "nProperty": "FmlPrPp",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
   },
   {
-    "variable": "MlPrPp (Latest)",
-    "numerator": "latest",
+    "variable": "MlPrPp",
+    "numerator": "county",
     "nProperty": "MlPrPp",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
   },
   {
-    "variable": "AapiPrPp (Latest)",
-    "numerator": "latest",
+    "variable": "AapiPrPp",
+    "numerator": "county",
     "nProperty": "AapiPrPp",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
   },
   {
-    "variable": "BlckPrPp (Latest)",
-    "numerator": "latest",
+    "variable": "BlckPrPp",
+    "numerator": "county",
     "nProperty": "BlckPrPp",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
   },
   {
-    "variable": "LtnxPrPp (Latest)",
-    "numerator": "latest",
+    "variable": "LtnxPrPp",
+    "numerator": "county",
     "nProperty": "LtnxPrPp",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
   },
   {
-    "variable": "NtvPrPp (Latest)",
-    "numerator": "latest",
+    "variable": "NtvPrPp",
+    "numerator": "county",
     "nProperty": "NtvPrPp",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
   },
   {
-    "variable": "WhtPrPp (Latest)",
-    "numerator": "latest",
+    "variable": "WhtPrPp",
+    "numerator": "county",
     "nProperty": "WhtPrPp",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
   },
   {
-    "variable": "TtlPrAPp (Latest)",
-    "numerator": "latest",
+    "variable": "TtlPrAPp",
+    "numerator": "county",
     "nProperty": "TtlPrAPp",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
   },
   {
-    "variable": "FmlPrAPp (Latest)",
-    "numerator": "latest",
+    "variable": "FmlPrAPp",
+    "numerator": "county",
     "nProperty": "FmlPrAPp",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
   },
   {
-    "variable": "MlPrAPp (Latest)",
-    "numerator": "latest",
+    "variable": "MlPrAPp",
+    "numerator": "county",
     "nProperty": "MlPrAPp",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
   },
   {
-    "variable": "AapiPrAPp (Latest)",
-    "numerator": "latest",
+    "variable": "AapiPrAPp",
+    "numerator": "county",
     "nProperty": "AapiPrAPp",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
   },
   {
-    "variable": "BlckPrAPp (Latest)",
-    "numerator": "latest",
+    "variable": "BlckPrAPp",
+    "numerator": "county",
     "nProperty": "BlckPrAPp",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
   },
   {
-    "variable": "LtnxPrAPp (Latest)",
-    "numerator": "latest",
+    "variable": "LtnxPrAPp",
+    "numerator": "county",
     "nProperty": "LtnxPrAPp",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
   },
   {
-    "variable": "NtvPrAPp (Latest)",
-    "numerator": "latest",
+    "variable": "NtvPrAPp",
+    "numerator": "county",
     "nProperty": "NtvPrAPp",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
   },
   {
-    "variable": "WhtPrAPp (Latest)",
-    "numerator": "latest",
+    "variable": "WhtPrAPp",
+    "numerator": "county",
     "nProperty": "WhtPrAPp",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
   },
   {
-    "variable": "TtlJlPpr (Latest)",
-    "numerator": "latest",
+    "variable": "TtlJlPpr",
+    "numerator": "county",
     "nProperty": "TtlJlPpr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Jail%20variables_2017.md"
   },
   {
-    "variable": "FmlJlPpr (Latest)",
-    "numerator": "latest",
+    "variable": "FmlJlPpr",
+    "numerator": "county",
     "nProperty": "FmlJlPpr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Jail%20variables_2017.md"
   },
   {
-    "variable": "MlJlPpr (Latest)",
-    "numerator": "latest",
+    "variable": "MlJlPpr",
+    "numerator": "county",
     "nProperty": "MlJlPpr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Jail%20variables_2017.md"
   },
   {
-    "variable": "AapiJlPpr (Latest)",
-    "numerator": "latest",
+    "variable": "AapiJlPpr",
+    "numerator": "county",
     "nProperty": "AapiJlPpr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Jail%20variables_2017.md"
   },
   {
-    "variable": "BlckJlPpr (Latest)",
-    "numerator": "latest",
+    "variable": "BlckJlPpr",
+    "numerator": "county",
     "nProperty": "BlckJlPpr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Jail%20variables_2017.md"
   },
   {
-    "variable": "LtnxJlPpr (Latest)",
-    "numerator": "latest",
+    "variable": "LtnxJlPpr",
+    "numerator": "county",
     "nProperty": "LtnxJlPpr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Jail%20variables_2017.md"
   },
   {
-    "variable": "NtvJlPpr (Latest)",
-    "numerator": "latest",
+    "variable": "NtvJlPpr",
+    "numerator": "county",
     "nProperty": "NtvJlPpr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Jail%20variables_2017.md"
   },
   {
-    "variable": "WhtJlPpr (Latest)",
-    "numerator": "latest",
+    "variable": "WhtJlPpr",
+    "numerator": "county",
     "nProperty": "WhtJlPpr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Jail%20variables_2017.md"
   },
   {
-    "variable": "TtlJlAdmr (Latest)",
-    "numerator": "latest",
+    "variable": "TtlJlAdmr",
+    "numerator": "county",
     "nProperty": "TtlJlAdmr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Jail%20variables_2017.md"
   },
   {
-    "variable": "TtlJlPrtr (Latest)",
-    "numerator": "latest",
+    "variable": "TtlJlPrtr",
+    "numerator": "county",
     "nProperty": "TtlJlPrtr",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Jail%20variables_2017.md"
   },
   {
-    "variable": "TtlJlPp (Latest)",
-    "numerator": "latest",
+    "variable": "TtlJlPp",
+    "numerator": "county",
     "nProperty": "TtlJlPp",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Jail%20variables_2017.md"
   },
   {
-    "variable": "FmlJlPp (Latest)",
-    "numerator": "latest",
+    "variable": "FmlJlPp",
+    "numerator": "county",
     "nProperty": "FmlJlPp",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Jail%20variables_2017.md"
   },
   {
-    "variable": "MlJlPp (Latest)",
-    "numerator": "latest",
+    "variable": "MlJlPp",
+    "numerator": "county",
     "nProperty": "MlJlPp",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Jail%20variables_2017.md"
   },
   {
-    "variable": "AapiJlPp (Latest)",
-    "numerator": "latest",
+    "variable": "AapiJlPp",
+    "numerator": "county",
     "nProperty": "AapiJlPp",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Jail%20variables_2017.md"
   },
   {
-    "variable": "BlckJlPp (Latest)",
-    "numerator": "latest",
+    "variable": "BlckJlPp",
+    "numerator": "county",
     "nProperty": "BlckJlPp",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Jail%20variables_2017.md"
   },
   {
-    "variable": "LtnxJlPp (Latest)",
-    "numerator": "latest",
+    "variable": "LtnxJlPp",
+    "numerator": "county",
     "nProperty": "LtnxJlPp",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Jail%20variables_2017.md"
   },
   {
-    "variable": "NtvJlPp (Latest)",
-    "numerator": "latest",
+    "variable": "NtvJlPp",
+    "numerator": "county",
     "nProperty": "NtvJlPp",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Jail%20variables_2017.md"
   },
   {
-    "variable": "WhtJlPp (Latest)",
-    "numerator": "latest",
+    "variable": "WhtJlPp",
+    "numerator": "county",
     "nProperty": "WhtJlPp",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Jail%20variables_2017.md"
   },
   {
-    "variable": "TtlJlAdm (Latest)",
-    "numerator": "latest",
+    "variable": "TtlJlAdm",
+    "numerator": "county",
     "nProperty": "TtlJlAdm",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Jail%20variables_2017.md"
   },
   {
-    "variable": "TtlJlPrt (Latest)",
-    "numerator": "latest",
+    "variable": "TtlJlPrt",
+    "numerator": "county",
     "nProperty": "TtlJlPrt",
     "theme": "Policy",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Jail%20variables_2017.md"
   },
   {
-    "variable": "Age18_64 (2010)",
-    "numerator": "2010",
-    "nProperty": "Age18_64",
-    "theme": "Social",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "ChildrenP (2010)",
-    "numerator": "2010",
-    "nProperty": "ChildrenP",
-    "theme": "Social",
-    "year": "2010",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
-  },
-  {
-    "variable": "A15_24P (Latest)",
-    "numerator": "latest",
+    "variable": "A15_24P",
+    "numerator": "zcta",
     "nProperty": "A15_24P",
     "theme": "Social",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
   },
   {
-    "variable": "Ruca1 (Latest)",
-    "numerator": "latest",
+    "variable": "Ruca1",
+    "numerator": "zcta-tract",
     "nProperty": "Ruca1",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Rural_Urban_Classification_T_Z.md"
   },
   {
-    "variable": "Ruca2 (Latest)",
-    "numerator": "latest",
+    "variable": "Ruca2",
+    "numerator": "zcta-tract",
     "nProperty": "Ruca2",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Rural_Urban_Classification_T_Z.md"
   },
   {
-    "variable": "Rurality (Latest)",
-    "numerator": "latest",
+    "variable": "Rurality",
+    "numerator": "zcta-tract",
     "nProperty": "Rurality",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Rural_Urban_Classification_T_Z.md"
   },
   {
-    "variable": "MoudMinDis (Latest)",
-    "numerator": "latest",
+    "variable": "MoudMinDis",
+    "numerator": "zcta-tract",
     "nProperty": "MoudMinDis",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "BupMinDis (Latest)",
-    "numerator": "latest",
+    "variable": "BupMinDis",
+    "numerator": "zcta-tract",
     "nProperty": "BupMinDis",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "BupTmDr (Latest)",
-    "numerator": "latest",
+    "variable": "BupTmDr",
+    "numerator": "zcta-tract",
     "nProperty": "BupTmDr",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "BupCntDr30 (Latest)",
-    "numerator": "latest",
+    "variable": "BupCntDr30",
+    "numerator": "zcta-tract",
     "nProperty": "BupCntDr30",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "MetMinDis (Latest)",
-    "numerator": "latest",
+    "variable": "MetMinDis",
+    "numerator": "zcta-tract",
     "nProperty": "MetMinDis",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "MetTmDr (Latest)",
-    "numerator": "latest",
+    "variable": "MetTmDr",
+    "numerator": "zcta-tract",
     "nProperty": "MetTmDr",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "MetCntDr30 (Latest)",
-    "numerator": "latest",
+    "variable": "MetCntDr30",
+    "numerator": "zcta-tract",
     "nProperty": "MetCntDr30",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "NalMinDis (Latest)",
-    "numerator": "latest",
+    "variable": "NalMinDis",
+    "numerator": "zcta-tract",
     "nProperty": "NalMinDis",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "NalTmDr (Latest)",
-    "numerator": "latest",
+    "variable": "NalTmDr",
+    "numerator": "zcta-tract",
     "nProperty": "NalTmDr",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "NalCntDr30 (Latest)",
-    "numerator": "latest",
+    "variable": "NalCntDr30",
+    "numerator": "zcta-tract",
     "nProperty": "NalCntDr30",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "BupTmWk (Latest)",
-    "numerator": "latest",
+    "variable": "BupTmWk",
+    "numerator": "zcta-tract",
     "nProperty": "BupTmWk",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "BupCntWk60 (Latest)",
-    "numerator": "latest",
+    "variable": "BupCntWk60",
+    "numerator": "zcta-tract",
     "nProperty": "BupCntWk60",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "BupCntWk30 (Latest)",
-    "numerator": "latest",
+    "variable": "BupCntWk30",
+    "numerator": "zcta-tract",
     "nProperty": "BupCntWk30",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "MetTmWk (Latest)",
-    "numerator": "latest",
+    "variable": "MetTmWk",
+    "numerator": "zcta-tract",
     "nProperty": "MetTmWk",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "MetCntWk30 (Latest)",
-    "numerator": "latest",
+    "variable": "MetCntWk30",
+    "numerator": "zcta-tract",
     "nProperty": "MetCntWk30",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "MetCntWk60 (Latest)",
-    "numerator": "latest",
+    "variable": "MetCntWk60",
+    "numerator": "zcta-tract",
     "nProperty": "MetCntWk60",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "NalTmWk (Latest)",
-    "numerator": "latest",
+    "variable": "NalTmWk",
+    "numerator": "zcta-tract",
     "nProperty": "NalTmWk",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "NalCntWk60 (Latest)",
-    "numerator": "latest",
+    "variable": "NalCntWk60",
+    "numerator": "zcta-tract",
     "nProperty": "NalCntWk60",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "NalCntWk30 (Latest)",
-    "numerator": "latest",
+    "variable": "NalCntWk30",
+    "numerator": "zcta-tract",
     "nProperty": "NalCntWk30",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "BupTmBk (Latest)",
-    "numerator": "latest",
+    "variable": "BupTmBk",
+    "numerator": "zcta-tract",
     "nProperty": "BupTmBk",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "BupCntBk60 (Latest)",
-    "numerator": "latest",
+    "variable": "BupCntBk60",
+    "numerator": "zcta-tract",
     "nProperty": "BupCntBk60",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "BupCntBk30 (Latest)",
-    "numerator": "latest",
+    "variable": "BupCntBk30",
+    "numerator": "zcta-tract",
     "nProperty": "BupCntBk30",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "MetTmBk (Latest)",
-    "numerator": "latest",
+    "variable": "MetTmBk",
+    "numerator": "zcta-tract",
     "nProperty": "MetTmBk",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "MetCntBk60 (Latest)",
-    "numerator": "latest",
+    "variable": "MetCntBk60",
+    "numerator": "zcta-tract",
     "nProperty": "MetCntBk60",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "MetCntBk30 (Latest)",
-    "numerator": "latest",
+    "variable": "MetCntBk30",
+    "numerator": "zcta-tract",
     "nProperty": "MetCntBk30",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "NalTmBk (Latest)",
-    "numerator": "latest",
+    "variable": "NalTmBk",
+    "numerator": "zcta-tract",
     "nProperty": "NalTmBk",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "NalCntBk60 (Latest)",
-    "numerator": "latest",
+    "variable": "NalCntBk60",
+    "numerator": "zcta-tract",
     "nProperty": "NalCntBk60",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "NalCntBk30 (Latest)",
-    "numerator": "latest",
+    "variable": "NalCntBk30",
+    "numerator": "zcta-tract",
     "nProperty": "NalCntBk30",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "FqhcMinDis (Latest)",
-    "numerator": "latest",
+    "variable": "FqhcMinDis",
+    "numerator": "zcta-tract",
     "nProperty": "FqhcMinDis",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_FQHCs_MinDistance.md"
   },
   {
-    "variable": "FqhcTmDr (Latest)",
-    "numerator": "latest",
+    "variable": "FqhcTmDr",
+    "numerator": "zcta-tract",
     "nProperty": "FqhcTmDr",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_FQHCs_MinDistance.md"
   },
   {
-    "variable": "FqhcCntDr (Latest)",
-    "numerator": "latest",
+    "variable": "FqhcCntDr",
+    "numerator": "zcta-tract",
     "nProperty": "FqhcCntDr",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_FQHCs_MinDistance.md"
   },
   {
-    "variable": "HospMinDis (Latest)",
-    "numerator": "latest",
+    "variable": "HospMinDis",
+    "numerator": "zcta-tract",
     "nProperty": "HospMinDis",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Acesss_Hospitals_MinDistance.md"
   },
   {
-    "variable": "HospTmDr (Latest)",
-    "numerator": "latest",
+    "variable": "HospTmDr",
+    "numerator": "zcta-tract",
     "nProperty": "HospTmDr",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Acesss_Hospitals_MinDistance.md"
   },
   {
-    "variable": "HospCntDr (Latest)",
-    "numerator": "latest",
+    "variable": "HospCntDr",
+    "numerator": "zcta-tract",
     "nProperty": "HospCntDr",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Acesss_Hospitals_MinDistance.md"
   },
   {
-    "variable": "RxMinDis (Latest)",
-    "numerator": "latest",
+    "variable": "RxMinDis",
+    "numerator": "zcta-tract",
     "nProperty": "RxMinDis",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_Pharmacies_MinDistance.md"
   },
   {
-    "variable": "RxTmDr (Latest)",
-    "numerator": "latest",
+    "variable": "RxTmDr",
+    "numerator": "zcta-tract",
     "nProperty": "RxTmDr",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_Pharmacies_MinDistance.md"
   },
   {
-    "variable": "RxCntDr (Latest)",
-    "numerator": "latest",
+    "variable": "RxCntDr",
+    "numerator": "zcta-tract",
     "nProperty": "RxCntDr",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_Pharmacies_MinDistance.md"
   },
   {
-    "variable": "MhMinDis (Latest)",
-    "numerator": "latest",
+    "variable": "MhMinDis",
+    "numerator": "zcta-tract",
     "nProperty": "MhMinDis",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MentalHealth_MinDistance.md"
   },
   {
-    "variable": "MhTmDr (Latest)",
-    "numerator": "latest",
+    "variable": "MhTmDr",
+    "numerator": "zcta-tract",
     "nProperty": "MhTmDr",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MentalHealth_MinDistance.md"
   },
   {
-    "variable": "MhCntDr (Latest)",
-    "numerator": "latest",
+    "variable": "MhCntDr",
+    "numerator": "zcta-tract",
     "nProperty": "MhCntDr",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MentalHealth_MinDistance.md"
   },
   {
-    "variable": "SutMinDis (Latest)",
-    "numerator": "latest",
+    "variable": "SutMinDis",
+    "numerator": "zcta-tract",
     "nProperty": "SutMinDis",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_SubstanceUseTreatment.md"
   },
   {
-    "variable": "SutTmDr (Latest)",
-    "numerator": "latest",
+    "variable": "SutTmDr",
+    "numerator": "zcta-tract",
     "nProperty": "SutTmDr",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_SubstanceUseTreatment.md"
   },
   {
-    "variable": "SutCntDr (Latest)",
-    "numerator": "latest",
+    "variable": "SutCntDr",
+    "numerator": "zcta-tract",
     "nProperty": "SutCntDr",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_SubstanceUseTreatment.md"
   },
   {
-    "variable": "OtpMinDis (Latest)",
-    "numerator": "latest",
+    "variable": "OtpMinDis",
+    "numerator": "zcta-tract",
     "nProperty": "OtpMinDis",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_OpioidUseTreatment.md"
   },
   {
-    "variable": "OtpTmDr (Latest)",
-    "numerator": "latest",
+    "variable": "OtpTmDr",
+    "numerator": "zcta-tract",
     "nProperty": "OtpTmDr",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_OpioidUseTreatment.md"
   },
   {
-    "variable": "OtpCntDr (Latest)",
-    "numerator": "latest",
+    "variable": "OtpCntDr",
+    "numerator": "zcta-tract",
     "nProperty": "OtpCntDr",
     "theme": "Environment",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_OpioidUseTreatment.md"
   },
   {
-    "variable": "SocEcAdvIn (Latest)",
-    "numerator": "latest",
+    "variable": "SocEcAdvIn",
+    "numerator": "tract",
     "nProperty": "SocEcAdvIn",
     "theme": "Composite",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": ""
   },
   {
-    "variable": "LimMobInd (Latest)",
-    "numerator": "latest",
+    "variable": "LimMobInd",
+    "numerator": "tract",
     "nProperty": "LimMobInd",
     "theme": "Composite",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": ""
   },
   {
-    "variable": "UrbCoreInd (Latest)",
-    "numerator": "latest",
+    "variable": "UrbCoreInd",
+    "numerator": "tract",
     "nProperty": "UrbCoreInd",
     "theme": "Composite",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": ""
   },
   {
-    "variable": "MicaInd (Latest)",
-    "numerator": "latest",
+    "variable": "MicaInd",
+    "numerator": "tract",
     "nProperty": "MicaInd",
     "theme": "Composite",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": ""
   },
   {
-    "variable": "NeighbTyp (Latest)",
-    "numerator": "latest",
+    "variable": "NeighbTyp",
+    "numerator": "tract",
     "nProperty": "NeighbTyp",
     "theme": "Composite",
-    "year": "Latest",
-    "binning": "naturalBreaks",
-    "numberOfBins": 8,
-    "colorScale": "YlOrBr"
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/SDOH_2014.md"
   }
 ]
