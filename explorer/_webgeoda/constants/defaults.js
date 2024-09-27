@@ -9,16 +9,16 @@ const {
   data
 } = dataPresets;
 
-const dataParams = variables.find(f => f.variable === defaultVariable)
+const dataParams = variables.find(f => f.nProperty === defaultVariable)
 const colorScale = typeof dataParams?.colorScale === "string"
   ? colors.colorbrewer[dataParams.colorScale][dataParams.numberOfBins || 5]
   : dataParams.colorScale;
-
+const geomParams = dataPresets.data.find(f => f.name === defaultData)
 
 export const INITIAL_STATE = {
   storedGeojson: {},
   storedData: {},
-  currentData: dataPresets.data[0].geodata,
+  currentData: geomParams.geodata,
   currentMethod: "natural_breaks",
   currentOverlay: "",
   currentResource: "",

@@ -104,7 +104,7 @@ export default function useLoadData(dateLists = {}) {
   },[datasetToLoad])
 
   useEffect(() => {
-    loadData(dataPresets, dataPresets.data[0].geodata)
+    loadData(dataPresets, dataPresets.data.find((i) => i.name === dataPresets.defaultData).geodata)
   },[])
 
   useEffect(() => {
