@@ -141,16 +141,8 @@ export default function VariablePanel(props) {
             {dataParams.numerator ? (
               <button
                 className={styles.readMoreButton}
-                onClick={() =>
-                  setActiveDocs(
-                    `https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/v1.0/data_final/metadata/${
-                      variableMeta.find((f) =>
-                        f.markdownPrefix.includes(
-                          dataParams.numerator.split("_")[0]
-                        )
-                      ).markdown
-                    }.md`
-                  )
+                onClick={() => {
+                  setActiveDocs(dataParams.metadataUrl.replace("github.com", "raw.githubusercontent.com").replace("/blob", ""))}
                 }
               >
                 Read more about this data
@@ -164,15 +156,7 @@ export default function VariablePanel(props) {
               <button
                 className={styles.readMoreButton}
                 onClick={() =>
-                  setActiveDocs(
-                    `https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/v1.0/data_final/metadata/${
-                      variableMeta.find((f) =>
-                        f.markdownPrefix.includes(
-                          dataParams.numerator.split("_")[0]
-                        )
-                      ).markdown
-                    }.md`
-                  )
+                  setActiveDocs(dataParams.metadataUrl.replace("github.com", "raw.githubusercontent.com").replace("/blob", ""))
                 }
               >
                 Read more about this data
