@@ -9,28 +9,38 @@
     49.295128
   ],
   "tables": {
-    "1980": {
-      "file": "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables/C_1980.csv",
+    "state-county-zcta-tract": {
+      "file": "state-county-zcta-tract_C.csv",
       "type": "characteristic",
       "join": "HEROP_ID"
     },
-    "1990": {
-      "file": "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables/C_1990.csv",
+    "state-county-tract": {
+      "file": "state-county-tract_C.csv",
       "type": "characteristic",
       "join": "HEROP_ID"
     },
-    "latest": {
-      "file": "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables/C_Latest.csv",
+    "state-county-zcta": {
+      "file": "state-county-zcta_C.csv",
       "type": "characteristic",
       "join": "HEROP_ID"
     },
-    "2010": {
-      "file": "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables/C_2010.csv",
+    "state-county": {
+      "file": "state-county_C.csv",
       "type": "characteristic",
       "join": "HEROP_ID"
     },
-    "2000": {
-      "file": "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables/C_2000.csv",
+    "county": {
+      "file": "county_C.csv",
+      "type": "characteristic",
+      "join": "HEROP_ID"
+    },
+    "county-tract": {
+      "file": "county-tract_C.csv",
+      "type": "characteristic",
+      "join": "HEROP_ID"
+    },
+    "county-zcta-tract": {
+      "file": "county-zcta-tract_C.csv",
       "type": "characteristic",
       "join": "HEROP_ID"
     }
