@@ -34,7 +34,7 @@ export default function VariablePanel(props) {
   const currentData = useSelector((state) => state.currentData);
   const dataPresets = useSelector((state) => state.dataPresets);
   const [activeThemes, setActiveThemes] = useState([]);
-  const [activeYears, setActiveYears] = useState([]);
+  // const [activeYear, setActiveYear] = useState();
   const autocompleteRef = useRef(null);
   const [variableOptions, setVariableOptions] = useState(dataPresets.variables);
 
@@ -53,21 +53,22 @@ export default function VariablePanel(props) {
     });
   };
 
-  const toggleYear = (year) => {
-    setActiveYears((activeYears) => {
-      if (activeYears.includes(year)) {
-        return activeYears.filter((t) => t !== year);
-      } else {
-        return [...activeYears, year];
-      }
-    });
-  };
+  // const toggleYear = (year) => {
+  //   if (activeYear == year) {
+  //     setActiveYear(null)
+  //   } else {
+  //     setActiveYear(year)
+  //   }
+  // };
 
   useEffect(() => {
     const filt1 = activeThemes.length ? dataPresets.variables.filter((f) => activeThemes.includes(f.theme)) : dataPresets.variables;
-    const filt2 = activeYears.length ? filt1.filter((f) => activeYears.includes(f.year)) : filt1;
-    setVariableOptions(filt2)
-  },[activeYears, activeThemes])
+    // const filt2 = activeYear != null ? filt1.filter((f) => activeYear == f.year) : filt1;
+    setVariableOptions(filt1)
+  },[
+    // activeYear,
+    activeThemes
+  ])
 
   const [activeDocs, setActiveDocs] = useState("");
   const [modalOpen, setModalOpen] = useState(false);
@@ -89,7 +90,9 @@ export default function VariablePanel(props) {
             <Typography variant="h5" sx={{ py: 0, my: 0, mb:1 }} fontFamily="'Lato', Verdana, sans-serif;" fontWeight="bold">
               {dataParams.variable}
             </Typography>
-
+            {/* <Typography sx={{ py: 0, my: 0, mb:1 }} fontFamily="'Lato', Verdana, sans-serif;">
+              <em>Year: {dataParams.year}</em>
+            </Typography> */}
             <Button
               onClick={toggleModal}
               variant="contained"
@@ -198,17 +201,17 @@ export default function VariablePanel(props) {
                 {cat}
               </Button>
             ))}
-            <Typography variant="h6">Filter by Year</Typography>
+            {/* <Typography variant="h6">Filter by Year</Typography>
             {yearFilters.map((yr, i) => (
               <Button
                 key={i}
-                variant={activeYears.includes(yr) ? "contained" : "outlined"}
+                variant={activeYear == yr ? "contained" : "outlined"}
                 onClick={() => toggleYear(yr)}
                 sx={{ margin: ".25em", textTransform: "none" }}
               >
                 {yr}
               </Button>
-            ))}
+            ))} */}
             <Gutter em={0.5} />
             <Autocomplete
               disablePortal
