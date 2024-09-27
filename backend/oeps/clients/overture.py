@@ -1,6 +1,7 @@
 from datetime import datetime
 from pathlib import Path
 import uuid
+import subprocess
 
 import duckdb
 import geopandas as gpd
@@ -34,7 +35,14 @@ def get_filter_shape(input_file: str, filter_value: str):
         "series": filter_row
     }
 
-def get_data(outpath: Path = None, categories: list = [], confidence: str = ".8", geom_filter: dict = None, export_category_list=False):
+def get_data(
+        outpath: Path = None,
+        categories: list = [],
+        confidence: str = ".8",
+        geom_filter: dict = None,
+        export_category_list=False,
+        tippecanoe_path: str=None,
+    ):
 
     con_clause = f"confidence >= {confidence} AND" if confidence != "-1" else ""
     print(f"confidence filter: {con_clause}")
@@ -62,7 +70,7 @@ def get_data(outpath: Path = None, categories: list = [], confidence: str = ".8"
         addresses[1].postcode as zip,
         addresses[1].region as state,
         ROUND(confidence,2) as confidence,
-        ST_AsText(ST_GeomFromWKB(geometry)) as wkt
+        ST_AsText(geometry) as wkt
     FROM read_parquet('{}', filename=true, hive_partitioning=1)
     WHERE
         {}
@@ -108,3 +116,24 @@ def get_data(outpath: Path = None, categories: list = [], confidence: str = ".8"
             gdf.to_file(outpath, driver="GeoJSON")
         elif outpath.suffix == ".shp":
             gdf.to_file(outpath)
+        elif outpath.suffix == ".pmtiles":
+            if not tippecanoe_path:
+                print("tippecanoe_path required for pmtiles output")
+                return
+            json_path = outpath.stem + ".pmtiles"
+            gdf.to_file(json_path, driver="GeoJSON")
+            cmd = [
+                tippecanoe_path,
+                # "-zg",
+                # tried a lot of zoom level directives, and seems like for block group
+                # (which I believe is the densest)shp_paths 10 is needed to preserve shapes well enough.
+                "-z10",
+                "--projection", "EPSG:4326",
+                "-o", str(outpath),
+                "-l", "resources",
+                "--force",
+                str(json_path)
+            ]
+            subprocess.run(cmd)
+    
+    return outpath
