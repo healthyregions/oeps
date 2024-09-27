@@ -221,16 +221,29 @@ export default function VariablePanel(props) {
               options={variableOptions}
               getOptionLabel={(option) => option.variable}
               groupBy={(option) => option.theme}
-              // sx={{ width: 300 }}
               fullWidth
               renderInput={(params) => (
                 <TextField {...params} label="Type to search" />
               )}
+              // use renderOption to add a custom key so it is not duplicated for
+              // variables that have the same titles (but different years)
+              // when we upgrade to MUI 6x we can use getOptionKey instead:
+              // getOptionKey={(option) => `${option.variable}-${option.year}`}
+              renderOption={(props, option) => {
+                return (
+                  <li {...props} key={`${option.nProperty}`}>
+                    {option.variable}
+                  </li>
+                );
+              }}
               onChange={(_event, option) => {
                 if (option != undefined && option.variable != undefined) {
                   dispatch({
                     type: "CHANGE_VARIABLE",
-                    payload: option.variable,
+                    payload: {
+                      nProperty: option.nProperty,
+                      numerator: option.numerator,
+                    },
                   });
                   toggleModal();
                 }

@@ -74,9 +74,8 @@ export default function reducer(state = INITIAL_STATE, action) {
       };
     }
     case "CHANGE_VARIABLE": {
-      let dataParams = find(
-        dataPresets.variables,
-        (o) => o.variable === action.payload
+      let dataParams = dataPresets.variables.find(
+        (o) => (o.nProperty === action.payload.nProperty) && (o.numerator === action.payload.numerator)
       );
       if (typeof dataParams?.colorScale === "string") {
         dataParams.colorScale = colors.colorbrewer[dataParams.colorScale]
