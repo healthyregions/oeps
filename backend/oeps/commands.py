@@ -51,17 +51,17 @@ explorer_grp = AppGroup('explorer',
         path_type=Path,
     ),
 )
-@click.option('--config-only',
+@click.option('--make-csvs',
     help="Only write new config JSON files, assumes CSV files are already generated.",
     default=False,
     is_flag=True,
 )
-def build_config(source: Path, root_dir: Path, config_only: bool=False):
+def build_config(source: Path, root_dir: Path, make_csvs: bool=False):
     """Build configs for the frontend OEPS Explorer application, based on resource schemas stored
 in the `./data/resources` directory."""
 
     ex = Explorer(root_dir=root_dir)
-    ex.build_config(schema_dir=source, write_csvs=not config_only)
+    ex.build_config(schema_dir=source, write_csvs=make_csvs)
 
 
 frictionless_grp = AppGroup('frictionless')

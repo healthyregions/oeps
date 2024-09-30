@@ -11,8 +11,9 @@ from openpyxl import Workbook
 from openpyxl.utils import get_column_letter
 from openpyxl.styles import Font
 
-from frictionless import validate, Package
+from frictionless import validate
 
+from oeps.config import DATA_DIR
 from oeps.utils import get_path_or_paths, fetch_files, upload_to_s3, load_json
 
 def create_data_dictionaries(source, dest):
@@ -281,7 +282,7 @@ class DataPackage():
             shutil.make_archive(f"{Path(dest.parent, dest.name)}", 'zip', dest)
             
         if upload:
-            print(f"uploading zip to S3...")
+            print("uploading zip to S3...")
             upload_to_s3(Path(dest.parent, dest.name), prefix='oeps')
 
         if not zip_output:
@@ -343,6 +344,13 @@ class DataResource():
             self.schema = data
         else:
             self.schema = None
+        self.variable_extras = self._load_variable_extras()
+
+    def _load_variable_extras(self):
+        data = {}
+        with open(DATA_DIR / "registry" / "variables.json", "r") as o:
+            data = json.load(o)
+        return data
 
     def oeps_type_to_schema_type(self, s):
         """ Convert the type stored in the data dictionary to one that aligns
@@ -395,7 +403,9 @@ class DataResource():
             if name in SKIP_FIELDS:
                 continue
 
-            title = record.get('Title') if record.get('Title') else name
+            title = name
+            if name in self.variable_extras and self.variable_extras[name]['title']:
+                title = self.variable_extras[name]['title']
             longitudinal = True if record.get('Longitudinal', "").lower() == "x" else False
             analysis = True if record.get('Analysis', "").lower() == "x" else False
             field = {
