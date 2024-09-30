@@ -77,36 +77,32 @@ class Explorer():
             v['variables'] = [i['src_name'] for i in res_data['schema']['fields'] if i['theme'] != "Geography"]
             # v['variables'].insert(0, "HEROP_ID")
 
-            print(k, len(v['variables']))
-            print(len(v['variables']), len(set(v['variables'])))
+            print(f"{k}: {len(v['variables'])} variables")
 
         ## create a lookup of all variables and the source geogs that they exist for
         variables_to_geog_combos = {}
         for k, v in source_lookup.items():
             for i in v['variables']:
                 variables_to_geog_combos[i] = variables_to_geog_combos.get(i, []) + [k]
-        print(variables_to_geog_combos)
 
         ## reverse the above lookup, so concatenate source geog list is linked to all its variables
         geog_combos_to_variables = {}
         for k, v in variables_to_geog_combos.items():
             group_code = "-".join(v)
             geog_combos_to_variables[group_code] = geog_combos_to_variables.get(group_code, []) + [k]
-        print(geog_combos_to_variables)
 
         ## need to create a single CSV for each geog in the list, that only has the relevant fields
         ## and add these to the table entries in the source definition
         for k, field_list in geog_combos_to_variables.items():
             field_list.insert(0, "HEROP_ID")
-            print(f"splitting {k}:")
             for geog in k.split("-"):
                 out_path = Path(csv_dir, f"{k}_{source_lookup[geog]['csv_abbrev']}.csv")
-                print(out_path)
 
                 latest_schema_path = Path(schema_dir, f"tabular_{source_lookup[geog]['csv_abbrev']}_Latest.json")
                 latest_schema = load_json(latest_schema_path)
 
                 if write_csvs:
+                    print(f"writing {out_path}")
                     df = self.df_lookup.get(geog, pd.read_csv(latest_schema['path']))
                     df_filtered = df.filter(field_list)
                     df_filtered.to_csv(out_path, index=False)
