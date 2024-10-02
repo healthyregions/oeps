@@ -3,13 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"node lib/watchSpec\" \"next dev\"",
+    "dev": "next dev",
     "build": "next build",
     "lint": "next lint",
     "export": "next export",
     "start": "next start",
-    "watch:spec": "node lib/watchSpec",
-    "build:spec": "node lib/buildSpec",
     "build:worker": "node _webgeoda/build-scripts/build-sw",
     "build:netlify": "node context && npm run build"
   },
