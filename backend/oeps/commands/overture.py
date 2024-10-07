@@ -6,7 +6,9 @@ from flask.cli import AppGroup
 
 from oeps.clients.overture import get_filter_shape, get_data
 
-overture_grp = AppGroup('overture')
+overture_grp = AppGroup('overture',
+    help="Extract data from the Overture Foundation's public data releases."
+)
 
 @overture_grp.command()
 @click.option(

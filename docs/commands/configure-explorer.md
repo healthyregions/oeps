@@ -15,7 +15,7 @@ Usage: configure-explorer [OPTIONS]
 ## Options
 
 * `source`:
-    * Type: <click.types.Path object at 0x74063e7c0d60>
+    * Type: <click.types.Path object at 0x725c6c6c0d60>
     * Default: `data/resources`
     * Usage: `--source
 -s`
@@ -25,7 +25,7 @@ Usage: configure-explorer [OPTIONS]
 
 
 * `root_dir`:
-    * Type: <click.types.Path object at 0x74060eb959c0>
+    * Type: <click.types.Path object at 0x725c4058d9c0>
     * Default: `../../explorer`
     * Usage: `--root-dir`
 
