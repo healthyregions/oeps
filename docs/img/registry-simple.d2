@@ -1,0 +1,24 @@
+# render with --pad 25
+
+direction: right
+grid-columns: 3
+classes: {
+    container: {
+        style: {
+            fill: transparent
+            stroke-dash: 3
+        }
+    }
+}
+
+v: Variables {
+    class: container
+}
+s: Data Sources {
+    class: container
+}
+g: Geo Sources {
+    class: container
+}
+
+v -> s <-> g
