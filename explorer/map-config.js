@@ -2,10 +2,7 @@ import * as colors from "./_webgeoda/utils/colors.js";
 import variablesBase from './config/variables.json';
 import variableSymbology from './config/symbology.json';
 
-import stateData from './config/sources/state.json';
-import countyData from './config/sources/county.json';
-import zctaData from './config/sources/zcta.json';
-import tractData from './config/sources/tract.json';
+import geodataSources from './config/sources.json';
 
 const defaultVariable = "OdMortRtAv";
 const defaultData = "US States";
@@ -31,12 +28,7 @@ const addDisplayConfig = (v) => {
 
 const variables = variablesBase.map(addDisplayConfig)
 
-const data = [
-  stateData,
-  countyData,
-  zctaData,
-  tractData,
-]
+const data = geodataSources.sources
 
 let style = {
   variableHeaders: {},
