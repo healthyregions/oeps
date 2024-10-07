@@ -129,19 +129,27 @@ def list_resources():
                        
 @frictionless_grp.command()
 @click.option('--source', "-s",
-    help="Local path to directory with Excel data dictionaries in it. If not provided, the dictionaries stored "\
-        "in the GeoDaCenter/opioid-policy-scan repo will be used."
+    help="Local path to directory with Excel data dictionaries in it, or the path to a single dictionary "\
+        "file. If not provided, all dictionaries stored in the GeoDaCenter/opioid-policy-scan repo will "\
+        "be used.",
+    type=click.Path(
+        resolve_path=True,
+        path_type=Path,
+    )
 )
 @click.option('--destination', "-d",
     default=RESOURCES_DIR_rel,
     help="Output location for generated schema files.",
+    type=click.Path(
+        resolve_path=True,
+        path_type=Path,
+    )
 )
-def generate_resources_from_oeps_dicts(**kwargs):
+def generate_resources_from_oeps_dicts(destination: Path, source: Path=None):
     """Creates data resource schema files from external data dictionaries.
 
 TO DEPRECATE: Ultimately, this pattern will be deprecated in favor of the opposite: The Excel data dictionaries
 will be generated directly from the data resource schema files."""
-    args = Namespace(**kwargs)
 
     remote_files = [
         "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/dictionaries/S_Dict.xlsx",
@@ -149,13 +157,19 @@ will be generated directly from the data resource schema files."""
         "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/dictionaries/T_Dict.xlsx",
         "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/dictionaries/Z_Dict.xlsx",
     ]
-    paths = Path(args.source).glob("*_Dict.xlsx") if args.source else remote_files
+    if source:
+        if source.is_file():
+            paths = [source]
+        if source.is_dir():
+            paths = source.glob("*_Dict.xlsx")
+    else:
+        paths = remote_files
 
-    Path(args.destination).mkdir(exist_ok=True)
+    destination.mkdir(exist_ok=True)
 
     for path in paths:
         print(f"\nINPUT: {path}")
-        files = DataResource().create_from_oeps_xlsx_data_dict(path, args.destination)
+        files = DataResource().create_from_oeps_xlsx_data_dict(path, destination)
         print("OUTPUT:")
         for f in files:
             print(f"  {f}")
