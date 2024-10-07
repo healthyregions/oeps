@@ -20,7 +20,10 @@ from oeps.utils import handle_overwrite
 RESOURCES_DIR_rel = os.path.relpath(RESOURCES_DIR, start=Path(__file__).parent.parent)
 CACHE_DIR_rel = os.path.relpath(CACHE_DIR, start=Path(__file__).parent.parent)
 
-frictionless_grp = AppGroup('frictionless')
+frictionless_grp = AppGroup('frictionless',
+    help="A group of operations for interacting with Frictionless data specs. These commands allow us to "\
+    "export Frictionless-compliant derivations of the data in OEPS."
+)
 
 @frictionless_grp.command()
 @click.option('--destination', "-d",

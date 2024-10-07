@@ -16,7 +16,9 @@ from oeps.utils import upload_to_s3
 # generated the docs.
 CACHE_DIR_rel = os.path.relpath(CACHE_DIR, start=Path(__file__).parent.parent)
 
-census_grp = AppGroup('census')
+census_grp = AppGroup('census',
+    help="A group of commands for obtaining and managing geospatial data from the US Census Bureau."
+)
 
 @census_grp.command()
 @click.option('--format', '-f',

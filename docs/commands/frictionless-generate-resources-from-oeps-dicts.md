@@ -18,7 +18,7 @@ Usage: frictionless generate-resources-from-oeps-dicts [OPTIONS]
 ## Options
 
 * `source`:
-    * Type: <click.types.Path object at 0x7a90c7189630>
+    * Type: <click.types.Path object at 0x7b65c8691900>
     * Default: `None`
     * Usage: `--source
 -s`
@@ -28,7 +28,7 @@ Usage: frictionless generate-resources-from-oeps-dicts [OPTIONS]
 
 
 * `destination`:
-    * Type: <click.types.Path object at 0x7a90c7189480>
+    * Type: <click.types.Path object at 0x7b65c8691750>
     * Default: `data/resources`
     * Usage: `--destination
 -d`

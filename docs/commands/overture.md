@@ -1,7 +1,7 @@
 
 # overture
 
-None
+Extract data from the Overture Foundation's public data releases.
 
 ## Usage
 
@@ -27,6 +27,8 @@ Usage: overture [OPTIONS] COMMAND [ARGS]...
 
 ```
 Usage: overture [OPTIONS] COMMAND [ARGS]...
+
+  Extract data from the Overture Foundation's public data releases.
 
 Options:
   --help  Show this message and exit.

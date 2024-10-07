@@ -26,7 +26,9 @@ RESOURCES_DIR_rel = os.path.relpath(RESOURCES_DIR, start=Path(__file__).parent.p
 CACHE_DIR_rel = os.path.relpath(CACHE_DIR, start=Path(__file__).parent.parent)
 
 ## Group of commands for Google Big Query operations
-bigquery_grp = AppGroup('bigquery',)
+bigquery_grp = AppGroup('bigquery',
+    help="A group of operations for loading, querying, and exporting data to Google Big Query."
+)
 
 @bigquery_grp.command()
 def check_credentials():
