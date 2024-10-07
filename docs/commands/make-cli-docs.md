@@ -1,12 +1,12 @@
 
-# explorer
+# make-cli-docs
 
-Commands for configuring the OEPS Explorer.
+Generates markdown-formatted documentation from all CLI commands groups.
 
 ## Usage
 
 ```
-Usage: explorer [OPTIONS] COMMAND [ARGS]...
+Usage: make-cli-docs [OPTIONS]
 ```
 
 ## Arguments
@@ -26,15 +26,12 @@ Usage: explorer [OPTIONS] COMMAND [ARGS]...
 ## CLI Help
 
 ```
-Usage: explorer [OPTIONS] COMMAND [ARGS]...
+Usage: make-cli-docs [OPTIONS]
 
-  Commands for configuring the OEPS Explorer.
+  Generates markdown-formatted documentation from all CLI commands groups.
 
 Options:
   --help  Show this message and exit.
-
-Commands:
-  build-config  Build configs for the frontend OEPS Explorer application,...
 ```
 
 

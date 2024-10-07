@@ -24,14 +24,14 @@ pip install -e .
 
 from flask import Flask
 
-from oeps.commands import (
-    explorer_grp,
-    frictionless_grp,
-    census_grp,
-    bigquery_grp,
-    overture_grp,
-    generate_cli_docs,
+from oeps.commands.general import (
+    configure_explorer,
+    make_cli_docs,
 )
+from oeps.commands.bigquery import bigquery_grp
+from oeps.commands.census import census_grp
+from oeps.commands.frictionless import frictionless_grp
+from oeps.commands.overture import overture_grp
 from oeps.routes import api
 
 def create_app():
@@ -43,12 +43,12 @@ def create_app():
     app.config.from_object('oeps.config')
 
     # add all cli commands
-    app.cli.add_command(explorer_grp)
+    app.cli.add_command(configure_explorer)
+    app.cli.add_command(make_cli_docs)
     app.cli.add_command(frictionless_grp)
     app.cli.add_command(census_grp)
     app.cli.add_command(bigquery_grp)
     app.cli.add_command(overture_grp)
-    app.cli.add_command(generate_cli_docs)
 
     # register routes via blueprints
     app.register_blueprint(api)
