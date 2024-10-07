@@ -7,23 +7,21 @@ import click
 from oeps.clients.explorer import Explorer
 from oeps.config import (
     EXPLORER_ROOT_DIR,
-    RESOURCES_DIR,
-    CACHE_DIR,
+    REGISTRY_DIR,
 )
 
 # Make relative paths for directory configs so they can properly be used as default values for 
 # CLI arguments. Using absolute paths (e.g. those in the config) would result in absolute paths
 # in the generated docs... this would be incorrect on every system besides the one that had 
 # generated the docs.
-EXPLORER_ROOT_DIR_rel = os.path.relpath(EXPLORER_ROOT_DIR, start=Path(__file__).parent)
-RESOURCES_DIR_rel = os.path.relpath(RESOURCES_DIR, start=Path(__file__).parent.parent)
-CACHE_DIR_rel = os.path.relpath(CACHE_DIR, start=Path(__file__).parent.parent)
+EXPLORER_ROOT_DIR_rel = os.path.relpath(EXPLORER_ROOT_DIR, start=Path(__file__).parent.parent)
+REGISTRY_DIR_rel = os.path.relpath(REGISTRY_DIR, start=Path(__file__).parent.parent.parent)
 
 
 @click.command()
-@click.option('--source', "-s",
-    help="Optional input path for data resource schema files.",
-    default=RESOURCES_DIR_rel,
+@click.option('--registry',
+    help="Optional input path for the registry directory.",
+    default=REGISTRY_DIR_rel,
     type=click.Path(
         resolve_path=True,
         path_type=Path,
@@ -42,11 +40,11 @@ CACHE_DIR_rel = os.path.relpath(CACHE_DIR, start=Path(__file__).parent.parent)
     default=False,
     is_flag=True,
 )
-def configure_explorer(source: Path, root_dir: Path, make_csvs: bool=False):
+def configure_explorer(registry: Path, root_dir: Path, make_csvs: bool=False):
     """Builds configuration files for the frontend OEPS Explorer application."""
 
     ex = Explorer(root_dir=root_dir)
-    ex.build_config(schema_dir=source, write_csvs=make_csvs)
+    ex.build_config(registry_dir=registry, write_csvs=make_csvs)
 
 
 @click.command()

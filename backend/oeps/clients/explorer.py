@@ -2,108 +2,82 @@ from pathlib import Path
 
 import pandas as pd
 
-from oeps.utils import load_json, write_json
-
+from oeps.utils import write_json
+from .registry import Registry
 
 class Explorer():
 
     def __init__(self, root_dir: Path=None):
 
         self.root_dir = root_dir if root_dir else Path(".explorer")
-        self.df_lookup = {}
+        self.dataframe_lookup = {}
 
-    def build_config(self, schema_dir: Path, write_csvs: bool=True):
+    def build_config(self, registry_dir: Path=None, write_csvs: bool=True):
+
+        registry = Registry(registry_dir) if registry_dir else Registry()
 
         csv_dir = Path(self.root_dir, "public", "csv")
-        config_dir = Path(self.root_dir, "config")
-
         csv_dir.mkdir(parents=True, exist_ok=True)
+
+        config_dir = Path(self.root_dir, "config")
         config_dir.mkdir(parents=True, exist_ok=True)
 
-        source_lookup = {
-            "state": {
-                "csv_abbrev": "S",
-                "variables": [],
-                "explorer_config": {
-                    "name": "US States",
-                    "geodata": "cb_2018_us_state_20m.geojson",
-                    "id": "HEROP_ID",
-                    "bounds": [-125.109215, -66.925621, 25.043926, 49.295128],
-                    "tables": {},
-                },
-            },
-            "county": {
-                "csv_abbrev": "C",
-                "variables": [],
-                "explorer_config": {
-                    "name": "US Counties",
-                    "geodata": "cb_2018_us_county_20m.geojson",
-                    "id": "HEROP_ID",
-                    "bounds": [-125.109215, -66.925621, 25.043926, 49.295128],
-                    "tables": {},
-                },
-            },
-            "zcta": {
-                "csv_abbrev": "Z",
-                "variables": [],
-                "explorer_config": {
-                    "name": "US Zip Codes",
-                    "geodata": "Zip Codes [tiles]",
-                    "tiles": "herop-lab.7o9tctx9",
-                    "id": "HEROP_ID",
-                    "bounds": [-125.109215, -66.925621, 25.043926, 49.295128],
-                    "tables": {},
-                },
-            },
-            "tract": {
-                "csv_abbrev": "T",
-                "variables": [],
-                "explorer_config": {
-                    "name": "US Tracts",
-                    "geodata": "Tracts [tiles]",
-                    "tiles": "herop-lab.0eeozlm3",
-                    "id": "HEROP_ID",
-                    "bounds": [-125.109215, -66.925621, 25.043926, 49.295128],
-                    "tables": {},
-                },
-            },
-        }
+        # begin by creating a lookup for all geodata sources that will be used in the explorer.
+        # only source files with an "explorer_config" entry will be used
+        geodata_lookup = {}
+        for id, data in registry.geodata_lookup.items():
+            entry = data.get("explorer_config")
+            if entry:
+                entry["csv_abbrev"] = id[0]
+                geodata_lookup[id] = entry
+        
+        # create lookup of all table data sources
+        # only table sources that link to a geodata source will be used
+        table_lookup = {}
+        for id, data in registry.table_lookup.items():
+            ds_name = data["name"]
+            joins = data["schema"].get("foreignKeys", [])
+            if not joins:
+                print(f"warning: data source {ds_name} has no foreignKeys...")
+                continue
+            geodata_id = joins[0]["reference"]["resource"]
+            if geodata_id in geodata_lookup:
+                data['geodata_source'] = geodata_id
+                table_lookup[ds_name] = data
 
-        ## load the schemas for all items and pull out the variable names
-        for k, v in source_lookup.items():
+        # iterate all variables and create a lookuo for all combinations of data sources
+        # in which each variable has a value
+        variables = {k: v for k, v in registry.variable_lookup.items() if not v["theme"] == "Geography"}
+        ds_combo_lookup = {}
+        for k, v in variables.items():
+            usable_sources = []
+            for ds in v['data_sources']:
+                if ds in table_lookup:
+                    # geodata_lookup[table_lookup[ds]['geodata_source']]["variables"].append(k)
+                    usable_sources.append(ds)
 
-            latest_csv = Path(schema_dir, f"tabular_{v['csv_abbrev']}_Latest.json")
-            res_data = load_json(latest_csv)
-            v['variables'] = [i['src_name'] for i in res_data['schema']['fields'] if i['theme'] != "Geography"]
-            # v['variables'].insert(0, "HEROP_ID")
+            if len(usable_sources) > 0:
+                ds_group_code = "__".join(usable_sources)
+                ds_combo_lookup[ds_group_code] = ds_combo_lookup.get(ds_group_code, []) + [k]
 
-            print(f"{k}: {len(v['variables'])} variables")
-
-        ## create a lookup of all variables and the source geogs that they exist for
-        variables_to_geog_combos = {}
-        for k, v in source_lookup.items():
-            for i in v['variables']:
-                variables_to_geog_combos[i] = variables_to_geog_combos.get(i, []) + [k]
-
-        ## reverse the above lookup, so concatenate source geog list is linked to all its variables
-        geog_combos_to_variables = {}
-        for k, v in variables_to_geog_combos.items():
-            group_code = "-".join(v)
-            geog_combos_to_variables[group_code] = geog_combos_to_variables.get(group_code, []) + [k]
+        ## create a lookup of all variables and the combined data sources that they exist for
+        variables_to_ds_combos = {}
+        for k, v in ds_combo_lookup.items():
+            for i in v:
+                variables_to_ds_combos[i] = k
 
         ## need to create a single CSV for each geog in the list, that only has the relevant fields
         ## and add these to the table entries in the source definition
-        for k, field_list in geog_combos_to_variables.items():
+        for k, field_list in ds_combo_lookup.items():
             field_list.insert(0, "HEROP_ID")
-            for geog in k.split("-"):
-                out_path = Path(csv_dir, f"{k}_{source_lookup[geog]['csv_abbrev']}.csv")
-
-                latest_schema_path = Path(schema_dir, f"tabular_{source_lookup[geog]['csv_abbrev']}_Latest.json")
-                latest_schema = load_json(latest_schema_path)
+            for ds in k.split("__"):
+                ds_schema = table_lookup[ds]
+                abbrev = ds_schema["geodata_source"][0]
+                out_path = Path(csv_dir, f"{k}_{abbrev}.csv")
 
                 if write_csvs:
                     print(f"writing {out_path}")
-                    df = self.df_lookup.get(geog, pd.read_csv(latest_schema['path']))
+                    df = self.dataframe_lookup.get(ds, pd.read_csv(ds_schema['path']))
                     df_filtered = df.filter(field_list)
                     df_filtered.to_csv(out_path, index=False)
 
@@ -112,30 +86,32 @@ class Explorer():
                     "type": "characteristic",
                     "join": "HEROP_ID",
                 }
-                source_lookup[geog]['explorer_config']['tables'][k] = table_entry
+                geodata_lookup[ds_schema["geodata_source"]]['tables'][k] = table_entry
 
-        ## Collect all variables, now that the numerator is known
-        out_variables2 = {}
-        for k, v in source_lookup.items():
+        out_variables = {k: {
+                "variable": v['title'],
+                "numerator": variables_to_ds_combos[k],
+                "nProperty": k,
+                "theme": v['theme'],
+                "metadataUrl": v.get('metadata_doc_url')
+        } for k, v in variables.items() if k in variables_to_ds_combos}
 
-            latest_csv = Path(schema_dir, f"tabular_{v['csv_abbrev']}_Latest.json")
-            res_data = load_json(latest_csv)
-            for field in res_data['schema']['fields']:
-                if field['theme'] == "Geography":
-                    continue
-                id = field['src_name']
-                if id not in out_variables2:
-                    field_entry = {
-                        "variable": field['title'],
-                        "numerator": "-".join(variables_to_geog_combos[id]),
-                        "nProperty": id,
-                        "theme": field['theme'],
-                        "metadataUrl": field.get('metadata_doc_url')
-                    }
-                    out_variables2[id] = field_entry
+        # hacky method for creating the output geodata source list in descending order of 
+        # spatial resolution
+        out_sources = {"sources": []}
+        for v in geodata_lookup.values():
+            if v['csv_abbrev'] == "s":
+                out_sources['sources'].append(v)
+        for v in geodata_lookup.values():
+            if v['csv_abbrev'] == "c":
+                out_sources['sources'].append(v)
+        for v in geodata_lookup.values():
+            if v['csv_abbrev'] == "z":
+                out_sources['sources'].append(v)
+        for v in geodata_lookup.values():
+            if v['csv_abbrev'] == "t":
+                out_sources['sources'].append(v)
 
+        write_json(out_sources, Path(config_dir, "sources.json"))
 
-        for k, v in source_lookup.items():
-            write_json(v['explorer_config'], Path(config_dir, 'sources', f"{k}.json"))
-
-        write_json(list(out_variables2.values()), Path(config_dir, 'variables.json'))
+        write_json(list(out_variables.values()), Path(config_dir, 'variables.json'))
