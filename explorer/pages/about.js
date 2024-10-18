@@ -51,6 +51,10 @@ export default function About() {
             The Opioid Environment Policy Scan (OEPS) is an open-source data warehouse to help characterize
             the multi-dimensional risk environment impacting opioid use and health outcomes across the United States.
             </p>
+            <p> <b> Update Notes:</b> The OEPS
+            Project is currently under development, with a major release (v2.0) planned for November 1, 2024. Release updates include a 
+            new R Data Package and data across multiple time periods. Updated data will be released in May 2025 for (v2.1).
+            </p>
             <p>
              The OEPS provides access to data at multiple spatial scales, from U.S. states down to Census tracts. It is designed
             to support research seeking to study environments impacting and impacted by opioid use and opioid use disorder (OUD),
@@ -59,6 +63,8 @@ export default function About() {
             <p>
             We developed the OEPS as a free, open-source platform to aggregate and share publicly-available data at the Census tract, zip code, county, and state levels.
             Geographic boundary shapefiles are provided for ease of merging datasets (csv files) for exploration, spatial analysis, or visualization.
+            </p>
+            <p>
             <Link href="/download"> Download</Link> the entire data repository, or you can filter and download by theme or spatial scale.
             All datasets are accompanied by <Link href="/docs">documentation</Link> detailing their source data, year, and more.
             Learn more about our methods and approaches, including the risk environment framework, on the <Link href="/methods">Methodology</Link> page.
@@ -98,7 +104,8 @@ export default function About() {
             <p>
             The OEPS is led by the <a href="https://www.healthyregions.org">Healthy Regions and Policies Lab</a> (HEROP) at the
             Department of Geography & GIScience at the University of Illinois at Urbana-Champaign. It was developed for the <a href="https://heal.nih.gov/research/research-to-practice/jcoin">Justice Community Opioid Innovation Network (JCOIN)</a>,
-            an NIH HEAL Initiative, as part of the Methodology and Advanced Analytics Resource Center (MAARC).
+            an NIH HEAL Initiative, as part of the Methodology and Advanced Analytics Resource Center (MAARC). The HEROP Lab leads the Geospatial Core of the MAARC, 
+            which is otherwise based out of University of Chicago Medicine.
             Data and additional resources are also available to the JCOIN Network through the
             <a href="https://jcoin.datacommons.io/login"> JCOIN Data Commons</a>. The OEPS Project was originally developed at the University of Chicago in 2019
             before moving to UIUC in 2022.
@@ -120,7 +127,7 @@ export default function About() {
           <div className="col-xs-12 col-md-8 col-lg-9">
             <p>
             Submit an issue on <a href="https://github.com/healthyregions/oeps">GitHub</a>,
-            or email lead Engineer <a href="mailto:acfc@illinois.edu">Adam Cox</a> with any questions.
+            or email <a href="mailto:acfc@illinois.edu">Adam Cox</a> with any questions.
             </p>
           </div>
         </div>
