@@ -9,17 +9,17 @@ const contributors = [
   {
     name:'Adam Cox',
     photo: 'adam.jpg',
-    link: '#'
+    link: 'https://github.com/mradamcox'
   },
   {
     name:'Ashlynn Wimer',
     photo: 'ashlynn.jpg',
-    link: '#'
+    link: 'https://www.linkedin.com/in/ashlynn-wimer-980798206'
   },
   {
     name:'Sara Lambert',
     photo: 'sara.jpg',
-    link: '#'
+    link: 'https://github.com/bodom0015'
   },
   {
     name:'Marynia Kolak',
@@ -53,15 +53,15 @@ export default function About() {
             </p>
             <p> <b> Update Notes:</b> The OEPS
             Project is currently under development, with a major release (v2.0) planned for November 1, 2024. Release updates include a 
-            new R Data Package and data across multiple time periods. Updated data will be released in May 2025 for (v2.1).
+            new R Data Package and data across multiple time periods. Updated data will be released in May 2025 (v2.1), and every year thereafter through 2029.
             </p>
             <p>
-             The OEPS provides access to data at multiple spatial scales, from U.S. states down to Census tracts. It is designed
+            OEPS provides access to data at multiple spatial scales, from U.S. states down to Census tracts. It is designed
             to support research seeking to study environments impacting and impacted by opioid use and opioid use disorder (OUD),
             inform public policy, and reduce harm in communities nationwide.
             </p>
             <p>
-            We developed the OEPS as a free, open-source platform to aggregate and share publicly-available data at the Census tract, zip code, county, and state levels.
+            We developed OEPS as a free, open-source platform to aggregate and share publicly-available data at the Census tract, zip code, county, and state levels.
             Geographic boundary shapefiles are provided for ease of merging datasets (csv files) for exploration, spatial analysis, or visualization.
             </p>
             <p>
@@ -102,12 +102,13 @@ export default function About() {
                 </div>)}
             </div>
             <p>
-            The OEPS is led by the <a href="https://www.healthyregions.org">Healthy Regions and Policies Lab</a> (HEROP) at the
-            Department of Geography & GIScience at the University of Illinois at Urbana-Champaign. It was developed for the <a href="https://heal.nih.gov/research/research-to-practice/jcoin">Justice Community Opioid Innovation Network (JCOIN)</a>,
-            an NIH HEAL Initiative, as part of the Methodology and Advanced Analytics Resource Center (MAARC). The HEROP Lab leads the Geospatial Core of the MAARC, 
+            The OEPS Project is led by the <a href="https://www.healthyregions.org">Healthy Regions and Policies Lab</a> (HEROP) at the
+            Department of Geography & GIScience at the University of Illinois at Urbana-Champaign. 
+            It was developed for the <a href="https://heal.nih.gov/research/research-to-practice/jcoin">Justice Community Opioid Innovation Network (JCOIN)</a>,
+            a NIH HEAL Initiative, as part of the Methodology and Advanced Analytics Resource Center (MAARC). The HEROP Lab leads the Geospatial Core of the MAARC, 
             which is otherwise based out of University of Chicago Medicine.
             Data and additional resources are also available to the JCOIN Network through the
-            <a href="https://jcoin.datacommons.io/login"> JCOIN Data Commons</a>. The OEPS Project was originally developed at the University of Chicago in 2019
+            <a href="https://jcoin.datacommons.io/login"> JCOIN Data Commons</a>. OEPS was originally developed at the University of Chicago in 2019
             before moving to UIUC in 2022.
             </p>
             <p>
@@ -141,7 +142,7 @@ export default function About() {
             Adam Cox, Ashlynn Wimer, Sara Lambert, Susan Paykin, Dylan Halpern, Qinyun Lin, Moksha Menghaney, Angela Li,
             Rachel Vigil, Margot Bolanos Gamez, Alexa Jin, Ally Muszynski, and Marynia Kolak. (2024).
             healthyregions/oeps: Opioid Environment Policy Scan (OEPS) Data Warehouse (v2.0). Zenodo.
-            <a href= "https://zenodo.org/record/5842465#.YeHj8H3MKHF">https://doi.org/10.5281/zenodo.5842465</a>
+            <a href= "https://zenodo.org/record/5842465#.YeHj8H3MKHF"> https://doi.org/10.5281/zenodo.5842465</a>
             </p>
             <p>
             <i>This research was supported by the National Institute on Drug Abuse, National Institutes of Health,
