@@ -111,18 +111,19 @@ export default function About() {
                 </div>)}
             </div>
             <p>
-            The OEPS is led by the <a href="https://voices.uchicago.edu/herop/">Healthy Regions and Policies Lab</a> (HEROP) at the
-            Center for Spatial Data Science at University of Chicago. It was developed for the <a href="https://heal.nih.gov/research/research-to-practice/jcoin">Justice Community Opioid Innovation Network (JCOIN)</a>,
+            The OEPS is led by the <a href="https://www.healthyregions.org">Healthy Regions and Policies Lab</a> (HEROP) at the
+            Department of Geography & GIScience at the University of Illinois at Urbana-Champaign. It was developed for the <a href="https://heal.nih.gov/research/research-to-practice/jcoin">Justice Community Opioid Innovation Network (JCOIN)</a>,
             an NIH HEAL Initiative, as part of the Methodology and Advanced Analytics Resource Center (MAARC).
             Data and additional resources are also available to the JCOIN Network through the
-            <a href="https://jcoin.datacommons.io/login"> JCOIN Data Commons</a>.
+            <a href="https://jcoin.datacommons.io/login"> JCOIN Data Commons</a>. The OEPS Project was originally developed at the University of Chicago in 2019
+            before moving to UIUC in 2022.
             </p>
             <p>
               Contributors include Moksha Menghaney and Angela Li, as well as Research Assistants (RAs)
               Margot Bolanos Gamez, Alexa Jin, Ally Muszynski, and Rachel Vigil.
             </p>
             <p>
-              <a href="https://voices.uchicago.edu/herop/team/">Learn more</a> about the HEROP team.
+              <a href="https://www.healthyregions.org/team">Learn more</a> about the current HEROP team.
             </p>
           </div>
         </div>
