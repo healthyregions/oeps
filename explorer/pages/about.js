@@ -7,6 +7,21 @@ import Footer from "../components/layout/Footer";
 
 const contributors = [
   {
+    name:'Adam Cox',
+    photo: 'adam.jpg',
+    link: '#'
+  },
+  {
+    name:'Ashlynn Wimer',
+    photo: 'ashlynn.jpg',
+    link: '#'
+  },
+  {
+    name:'Sara Lambert',
+    photo: 'sara.jpg',
+    link: '#'
+  },
+  {
     name:'Marynia Kolak',
     photo: 'marynia.jpg',
     link: 'https://github.com/Makosak'
