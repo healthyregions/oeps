@@ -26,21 +26,6 @@ const contributors = [
     photo: 'marynia.jpg',
     link: 'https://github.com/Makosak'
   },
-  {
-    name:'Susan Paykin',
-    photo: 'susan.jpg',
-    link: 'https://github.com/spaykin'
-  },
-  {
-    name:'Qinyun Lin',
-    photo: 'qlin.jpg',
-    link: 'https://github.com/linqinyu'
-  },
-  {
-    name:'Dylan Halpern',
-    photo: 'dylan.jpg',
-    link: 'https://github.com/nofurtherinformation'
-  }
 ]
 
 export default function About() {
@@ -119,7 +104,7 @@ export default function About() {
             before moving to UIUC in 2022.
             </p>
             <p>
-              Contributors include Moksha Menghaney and Angela Li, as well as Research Assistants (RAs)
+              Contributors include Susan Paykin, Dylan Halpern, Qinyun Lin, Moksha Menghaney, and Angela Lin, as well as Research Assistants (RAs)
               Margot Bolanos Gamez, Alexa Jin, Ally Muszynski, and Rachel Vigil.
             </p>
             <p>
@@ -134,8 +119,8 @@ export default function About() {
           </div>
           <div className="col-xs-12 col-md-8 col-lg-9">
             <p>
-            Submit an issue on <a href="https://github.com/GeoDaCenter/opioid-policy-scan">GitHub</a>,
-            or email <a href="mailto:spaykin@uchicago.edu">Susan Paykin</a> with any questions.
+            Submit an issue on <a href="https://github.com/healthyregions/oeps">GitHub</a>,
+            or email lead Engineer <a href="mailto:acfc@illinois.edu">Adam Cox</a> with any questions.
             </p>
           </div>
         </div>
@@ -145,10 +130,10 @@ export default function About() {
             <h2>Citation</h2>
           </div>
           <div className="col-xs-12 col-md-8 col-lg-9">
-            <p>
-            Susan Paykin, Dylan Halpern, Qinyun Lin, Moksha Menghaney, Angela Li,
-            Rachel Vigil, Margot Bolanos Gamez, Alexa Jin, Ally Muszynski, and Marynia Kolak. (2022).
-            GeoDaCenter/opioid-policy-scan: Opioid Environment Policy Scan (OEPS) Data Warehouse (v1.0). Zenodo.
+          <p>
+            Adam Cox, Ashlynn Wimer, Sara Lambert, Susan Paykin, Dylan Halpern, Qinyun Lin, Moksha Menghaney, Angela Li,
+            Rachel Vigil, Margot Bolanos Gamez, Alexa Jin, Ally Muszynski, and Marynia Kolak. (2024).
+            healthyregions/oeps: Opioid Environment Policy Scan (OEPS) Data Warehouse (v2.0). Zenodo.
             <a href= "https://zenodo.org/record/5842465#.YeHj8H3MKHF">https://doi.org/10.5281/zenodo.5842465</a>
             </p>
             <p>
