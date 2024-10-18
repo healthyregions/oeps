@@ -35,7 +35,7 @@ export default function Home() {
           </h1>
           <p className={styles.description}>
           An open data warehouse exploring the multi-dimensional risk environment, from neighborhoods to states,
-          impacting opioid use and health outcomes across the United States.
+          impacting opioid use and health outcomes across the United States. The OEPS Project is currently under development, with a major release (v2.0) planned for November 2024. 
           </p>
           </div>
         </div>
