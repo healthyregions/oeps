@@ -3,19 +3,33 @@
         "ftp_root": "/geo/tiger/GENZ2010/",
         "configs": {
             "state": {
-                "id_field": "STATE",
+                "herop_id_suffixes": [
+                    "STATE"
+                ],
                 "name_field": "NAME"
             },
             "county": {
-                "id_field": "COUNTY",
+                "herop_id_suffixes": [
+                    "STATE",
+                    "COUNTY"
+                ],
                 "name_field": "NAME"
             },
             "tract": {
-                "id_field": "TRACT",
+                "herop_id_suffixes": [
+                    "STATE",
+                    "COUNTY",
+                    "TRACT"
+                ],
                 "name_field": "NAME"
             },
             "bg": {
-                "id_field": "GEO_ID",
+                "herop_id_suffixes": [
+                    "STATE",
+                    "COUNTY",
+                    "TRACT",
+                    "BLKGRP"
+                ],
                 "name_field": "NAME"
             }
         }
@@ -24,27 +38,39 @@
         "ftp_root": "/geo/tiger/GENZ2018/shp/",
         "configs": {
             "state": {
-                "id_field": "GEOID",
+                "herop_id_suffixes": [
+                    "GEOID"
+                ],
                 "name_field": "NAME"
             },
             "county": {
-                "id_field": "GEOID",
+                "herop_id_suffixes": [
+                    "GEOID"
+                ],
                 "name_field": "NAME"
             },
             "tract": {
-                "id_field": "GEOID",
+                "herop_id_suffixes": [
+                    "GEOID"
+                ],
                 "name_field": "NAME"
             },
             "bg": {
-                "id_field": "GEOID",
+                "herop_id_suffixes": [
+                    "GEOID"
+                ],
                 "name_field": "NAME"
             },
             "place": {
-                "id_field": "PLACEFP",
+                "herop_id_suffixes": [
+                    "GEOID"
+                ],
                 "name_field": "NAME"
             },
             "zcta": {
-                "id_field": "ZCTA5CE10",
+                "herop_id_suffixes": [
+                    "ZCTA5CE10"
+                ],
                 "name_field": "ZCTA5CE10"
             }
         }
