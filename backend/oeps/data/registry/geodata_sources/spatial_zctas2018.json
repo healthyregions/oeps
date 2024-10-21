@@ -1,0 +1,41 @@
+{
+    "bq_dataset_name": "spatial",
+    "bq_table_name": "zctas2018",
+    "name": "zctas-2018",
+    "title": "Zip-Code Tabulation Areas, 2018",
+    "description": "Shapefile of zip-code tabulation areas (ZCTAs) from the US Census Bureau, 2018.",
+    "explorer_config": {
+        "name": "US Zip Codes",
+        "geodata": "Zip Codes [tiles]",
+        "tiles": "herop-lab.7o9tctx9",
+        "id": "HEROP_ID",
+        "bounds": [-125.109215, -66.925621, 25.043926, 49.295128],
+        "tables": {}
+    },
+    "path": [
+        "https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2018.shp",
+        "https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2018.shx",
+        "https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2018.dbf",
+        "https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2018.prj",
+        "https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2018.cpg"
+    ],
+    "schema": {
+        "primaryKey": "HEROP_ID",
+        "fields": [
+            {
+                "name": "HEROP_ID",
+                "title": "HEROP_ID",
+                "type": "string",
+                "src_name": "HEROP_ID",
+                "bq_data_type": "STRING"
+            },
+            {
+                "name": "geom",
+                "title": "Geom",
+                "type": "string",
+                "src_name": "geometry",
+                "bq_data_type": "GEOGRAPHY"
+            }
+        ]
+    }
+}
