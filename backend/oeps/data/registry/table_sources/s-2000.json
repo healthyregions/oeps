@@ -1,0 +1,9 @@
+{
+    "bq_dataset_name": "tabular",
+    "bq_table_name": "S_2000",
+    "name": "s-2000",
+    "path": "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables/S_2000.csv",
+    "title": "OEPS Data Aggregated by State (2000)",
+    "description": "This CSV aggregates all 2000 data variables from the OEPS v2 release at the State level.",
+    "geodata_source": "states-2010"
+}
