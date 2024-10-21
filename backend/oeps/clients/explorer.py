@@ -51,7 +51,7 @@ class Explorer():
         ds_combo_lookup = {}
         for k, v in variables.items():
             usable_sources = []
-            for ds in v['data_sources']:
+            for ds in v['table_sources']:
                 if ds in table_lookup:
                     # geodata_lookup[table_lookup[ds]['geodata_source']]["variables"].append(k)
                     usable_sources.append(ds)

@@ -12,8 +12,7 @@ class Registry():
         self.variable_lookup = None
         self.geodata_lookup = None
         self.table_lookup = None
-        if directory:
-            self.load_variables()
+        self.load_variables()
 
     def load_geodata_sources(self):
         """ Creates a lookup of all geodata sources in the registry. If explorer_only=True,
@@ -37,7 +36,7 @@ class Registry():
             self.load_geodata_sources()
 
         lookup = {}
-        paths = Path(self.directory, "data_sources").glob('*.json')
+        paths = Path(self.directory, "table_sources").glob('*.json')
         for path in paths:
             data = load_json(path)
             ds_name = data["name"]
@@ -62,7 +61,7 @@ class Registry():
         variables = load_json(Path(self.directory, "variables.json"))
         for k, v in variables.items():
             usable_sources = []
-            for ds in v['data_sources']:
+            for ds in v['table_sources']:
                 if ds in self.table_lookup:
                     # geodata_lookup[table_lookup[ds]['geodata_source']]["variables"].append(k)
                     usable_sources.append(ds)
