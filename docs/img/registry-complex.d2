@@ -1,5 +1,6 @@
 # render with --pad 25
 direction: right
+grid-columns: 3
 classes: {
     container: {
         style: {
@@ -10,31 +11,34 @@ classes: {
 }
 title: |md
 
-  # Connecting variables, sources, and geodata
+  # Connecting variables, tables, and geodata
 | {near: top-center}
 
 v: Variables {
     class: container
+    grid-rows: 3
 }
-s: Data Sources {
+t: Table Sources {
     class: container
+    grid-rows: 4
 }
 g: Geodata Sources {
     class: container
+    grid-rows: 3
 }
 
 v.ParkArea: {
     shape: class
     name: ParkArea
     title: Park Area
-    data_sources: s-2010
+    table_sources: s-2010
 }
 
 v.TotPop: {
     shape: class
     name: TotPop
     title: Total Population
-    data_sources: s-2010
+    table_sources: s-2010
     "": s-2000
     " ": c-2010
     "  ": t-2010
@@ -44,31 +48,33 @@ v.MetTmDr: {
     shape: class
     name: MetTmDr
     title: Drive Time to Methadone Provider
-    data_sources: t-2010
+    table_sources: t-2010
 }
 
-s.s-2010: {
+t.s-2010: {
     shape: class
     name: s-2010
     path: <URL to CSV>
+    geodata_source: states
 
 }
-s.s-2000: {
+t.s-2000: {
     shape: class
     name: s-2000
     path: <URL to CSV>
-
+    geodata_source: states
 }
-s.c-2010: {
+t.c-2010: {
     shape: class
     name: c-2010
     path: <URL to CSV>
-
+    geodata_source: counties
 }
-s.t-2010: {
+t.t-2010: {
     shape: class
     name: t-2010
     path: <URL to CSV>
+    geodata_source: tracts
 }
 
 g.s: states {
@@ -87,14 +93,14 @@ g.t: tracts {
     path: <URL to SHP>
 }
 
-s.s-2010 <-> g.s: HEROP_ID
-s.s-2000 <-> g.s: HEROP_ID
-s.c-2010 <-> g.c: HEROP_ID
-s.t-2010 <-> g.t: HEROP_ID
+t.s-2010 <-> g.s: HEROP_ID
+t.s-2000 <-> g.s: HEROP_ID
+t.c-2010 <-> g.c: HEROP_ID
+t.t-2010 <-> g.t: HEROP_ID
 
-v.ParkArea -> s.s-2010
-v.TotPop -> s.s-2010
-v.TotPop -> s.s-2000
-v.TotPop -> s.c-2010
-v.TotPop -> s.t-2010
-v.MetTmDr -> s.t-2010
+v.ParkArea -> t.s-2010
+v.TotPop -> t.s-2010
+v.TotPop -> t.s-2000
+v.TotPop -> t.c-2010
+v.TotPop -> t.t-2010
+v.MetTmDr -> t.t-2010

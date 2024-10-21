@@ -13,8 +13,8 @@ The composition of the registry is largely inspired by [Frictionless](https://fr
 
 The registry is broken into three parts:
 
-- [variables.json](#variablesjson)
-- [variable_sources](#variable-sources)
+- [variables](#variables)
+- [table_sources](#table-sources)
 - [geodata_sources](#geodata-sources)
 
 ![basic registry diagram](./img/registry-simple.png)
@@ -25,11 +25,9 @@ The core rationale for this setup is to treat individual variables as the lowest
 
 ## Structure
 
-The `variables.json` file holds a comprehensive lookup of *all* individual variables that are present in any source file, each defined by a suite of metadata properties that describe. One of these properties, `data_sources` is a list of ids for all data sources in which a value for this variable can be found.
+The `variables.json` file holds a comprehensive lookup of *all* individual variables that are present in any source file, each defined by a suite of metadata properties that describe. One of these properties, `table_sources` is a list of ids for all table sources in which a value for this variable can be found.
 
-Each source table (CSV) that holds data is described by its own JSON file in the `variables_sources` directory. These JSON definitions follow the [Data Resource spec](https://specs.frictionlessdata.io/data-resource/), with one important difference: All `fields` lists are empty. Where traditionally the `fields` list would have a definition of each field, "fields" are what we are calling "variables", so this list is populated at "run-time" (by whatever operation is interrogating the files) based on the `data_sources` property of each variable.
-
-Spatial data to which each data source must be joined is defined in the `geodata_sources` directory. *All joins must be performed on the HEROP_ID field.*
+Each table source (CSV) is in turn described by a JSON file in the `table_sources` directory, and linked via a `geodata_source` property to a similar entry in the `geodata_sources` directory. *All joins must be performed on the HEROP_ID field.*
 
 ![illustration of connections between registry content](./img/registry-complex.png)
 
@@ -38,23 +36,23 @@ The diagram above illustrates how three different example variables would be def
 To explain the example:
 
 - **`ParkArea`** is a state level calculation (area of parks within a state) and it has only been calculated for 2010, so it is only stored in one table, called `s-2010` here.
-- **`TotPop`** (total population) has a value in many different tables: at the state, county, and tract level in 2010 (`s-2010`, `c-2010`, and `t-2010`, respectively), as well as at the state level in 2000 (`s-2000`). As you can see, the `data_sources` field in `TotPop` lists all of these table ids.
+- **`TotPop`** (total population) has a value in many different tables: at the state, county, and tract level in 2010 (`s-2010`, `c-2010`, and `t-2010`, respectively), as well as at the state level in 2000 (`s-2000`). As you can see, the `table_sources` field in `TotPop` lists all of these table ids.
 - **`MetTmDr`** is the average drive time (in minutes) for how long it takes to access a methadone provider. This variable has only been calculated at the tract level, using 2010 data.
 
 Though these three variables are present in four different data source tables, you will notice that these tables only link to three different geodata sources. This is because both of the state-level data sources, 2010 and 2000, can be joined to the same single `states` geodata source.
 
 While this is a very small example (currently we have well over 350 variables), it should be enough to show the flexibility of the system.
 
-### `variables.json`
+### `variables`
 
-This file is a lookup for all variables, each one being defined as a Frictionless [Field Descriptor](https://specs.frictionlessdata.io/table-schema/#field-descriptors), with some extra properties that we have added for our own needs. The key for each field in the lookup must be the same as its `name` property, which must be CamelCase and &lt;= 10 characters long.
+A single file, `variable.json`, serves as a central lookup for all variables, each one being defined as a Frictionless [Field Descriptor](https://specs.frictionlessdata.io/table-schema/#field-descriptors), with some extra properties that we have added for our own needs. The key for each item in the lookup must be the same as its `name` property.
 
-- `name` - Canonical name of the variable. Same as identifier above.
-- `title` * - Human-readable title.
-- `type` * - The type of data in this column, must be one of Frictionless [field types](https://specs.frictionlessdata.io/table-schema/#types-and-formats).
-- `example` * - An example value in this field.
-- `description` * - A one or two sentence description.
-- `constraints` * - Any data usage constraints that are relevant for this variable.
+- `name` - Canonical name of the variable, same as key for this item, must be CamelCase and &lt;= 10 characters long.
+- `title` - Human-readable title.
+- `type` - The type of data in this column, must be one of Frictionless [field types](https://specs.frictionlessdata.io/table-schema/#types-and-formats).
+- `example` - An example value in this field.
+- `description` - A one or two sentence description.
+- `constraints` - Any data usage constraints that are relevant for this variable.
 - `comments` - Any extra comments about this variable's creation that don't fit into other properties.
 - `src_name` - The name of this column in its data sources (this _should_ be the same as name above anyway).
 - `bq_data_type` - The type of column that this variable will be placed into in BigQuery, must be one of [these types](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types).
@@ -65,7 +63,7 @@ This file is a lookup for all variables, each one being defined as a Frictionles
 - `metadata_doc_url` - URL to raw content for a Markdown-formatted metadata document (this content is read and loaded directly into the explorer webpages).
 - `longitudinal` - `true`/`false`, appropriate for longitudinal comparison.
 - `analysis` - `true`/`false`
-- `data_sources` - A list of data_source identifiers, must match identiers in the `sources.json` file.
+- `table_sources` - A list of data_source identifiers, must match identiers in the `sources.json` file.
 
 <summary>
   See full example, <code>TotPop</code>
@@ -88,7 +86,7 @@ This file is a lookup for all variables, each one being defined as a Frictionles
       "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md",
       "longitudinal": true,
       "analysis": false,
-      "data_sources": [
+      "table_sources": [
         "c-1980",
         "s-latest",
         "t-2010",
@@ -110,44 +108,37 @@ This file is a lookup for all variables, each one being defined as a Frictionles
   </pre>
 </details></summary>
 
-### `data_sources`
+### `table_sources`
 
-Each variable source file is a [Tabular Data Resource](https://specs.frictionlessdata.io/tabular-data-resource/) that links to a single data table (CSV). However, while a typical data resource would have a list of `fields` that reflect the columns in the CSV, that field should always be empty because a variable's presence in a CSV will be indicated by adding the source's `name` to the variable's entry in the single `variables.json` registry.
+Each table source file is essentially a [Tabular Data Resource](https://specs.frictionlessdata.io/tabular-data-resource/) that links to a single data table (CSV), but without a `schema` property. Where the `schema` typically defines a primary key, foreign key (for joins), and a list of all fields, all of this information is inferred or standardized elsewhere and need not be stored in these files.
 
 There are a few rules for how a CSV can be constructed:
 
 1. It must have a `HEROP_ID` column that joins each row to a geography unit.
 2. It must only have data for a single geography category within it.
-3. It must only have variables in it that correspond to a single publication year.
-
-Incoming CSVs that hold a variable's value across multiple years must be split into separate files, each will be defined separately as a data source.
+3. *Ideally* it will only have values for a single publication year.
 
 #### Example
 
 ```json
-"c-1980": {
+{
     "name": "c-1980",
     "path": "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables/C_1980.csv",
     "title": "OEPS Data Aggregated by Census Tract (1980)",
     "description": "This CSV aggregates all 1980 data variables from the OEPS v2 release at the Census Tract level.",
-    "year": "1980",
-    "geography": "county",
     "bq_dataset_name": "tabular",
     "bq_table_name": "C_1980",
 }
 ```
 
-- `c-1980` - This is the identifier for the source, and is referenced in the variables file below. It can be any string value (no spaces though!)
-- `name` - Name of the source. Same as identifier above.
+- `name` - Identifier for this table source. This ID is referenced by entries in the variables file.
 - `path` - URL to publicly hosted CSV file.
 - `title` - Human reaadable title of this source.
 - `description` - A short, informative description of the data source.
-- `year`- The year of the data variables in this source (ideally they are all the same year).
-- `geography` - The geography that these variable values correspond to.
 - `bq_dataset_name` - The "dataset" (i.e. database) name in BigQuery that this source will be loaded into.
 - `bq_table_name` - The table name that this dataset will be loaded into.
 
-### `geo_sources`
+### `geodata_sources`
 
 This directory holds Frictionless [Data Resource](https://specs.frictionlessdata.io/data-resource/) definitions of shapefiles, that are used as base data for all joins. There are 4 different geographies--States, Counties, Tracts, and Zip Code Tabulation Areas (ZCTAs)--and (currently) all but the ZCTAs have data for both 2010 and 2018.
 
