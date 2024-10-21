@@ -116,7 +116,7 @@ class CensusClient():
         for url in ftp_paths:
             filename = url.split("/")[-1]
             outpath = Path(download_dir, filename)
-            out_path = download_file(url, outpath, desc=f" - {filename}", progress_bar=self.verbose)
+            out_path = download_file(url, outpath, desc=f" - {filename}", progress_bar=self.verbose, no_cache=no_cache)
             out_paths.append(out_path)
 
         return out_paths
@@ -146,18 +146,15 @@ class CensusClient():
             
         return out_df
 
-    def add_herop_id_to_dataframe(self, df, geography, year, pk_field):
+    def add_herop_id_to_dataframe(self, df: pd.DataFrame, geography: str, year: str):
 
-        lvl = self.lookups['census-summary-levels'][geography]
-        if geography == "county":
-            if year == "2010":
-                df['HEROP_ID'] = df.apply(lambda row: f"{lvl}US{str(row['STATE'])}{str(row['COUNTY'])}", axis = 1)
-            else:
-                df['HEROP_ID'] = df.apply(lambda row: f"{lvl}US{str(row['GEOID'])}", axis = 1)
-        elif geography == "bg" and year == "2010":
-            df['HEROP_ID'] = df.apply(lambda row: f"{lvl}US{str(row[pk_field][6:])}", axis = 1)
-        else:
-            df['HEROP_ID'] = df.apply(lambda row: f"{lvl}US{str(row[pk_field])}", axis = 1)
+        def generate_herop_id(row, geography, year):
+
+            lvl = self.lookups['census-summary-levels'][geography]
+            suffixes = self.lookups['census-sources'][str(year)]['configs'][geography]['herop_id_suffixes']
+            return f"{lvl}US{''.join([row[i] for i in suffixes])}"
+
+        df['HEROP_ID'] = df.apply(lambda row: generate_herop_id(row, geography, year), axis = 1)
 
         return df
 

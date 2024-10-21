@@ -17,8 +17,8 @@ from oeps.utils import handle_overwrite
 # CLI arguments. Using absolute paths (e.g. those in the config) would result in absolute paths
 # in the generated docs... this would be incorrect on every system besides the one that had 
 # generated the docs.
-RESOURCES_DIR_rel = os.path.relpath(RESOURCES_DIR, start=Path(__file__).parent.parent)
-CACHE_DIR_rel = os.path.relpath(CACHE_DIR, start=Path(__file__).parent.parent)
+RESOURCES_DIR_rel = os.path.relpath(RESOURCES_DIR, start=Path(__file__).parent.parent.parent)
+CACHE_DIR_rel = os.path.relpath(CACHE_DIR, start=Path(__file__).parent.parent.parent)
 
 frictionless_grp = AppGroup('frictionless',
     help="A group of operations for interacting with Frictionless data specs. These commands allow us to "\
@@ -29,11 +29,11 @@ frictionless_grp = AppGroup('frictionless',
 @click.option('--destination', "-d",
     help="Output location for export directory. The package will be placed within this directory and given "\
         "a name generated from the current date and time.",
-    default=CACHE_DIR_rel,
-)
-@click.option('--source', "-s",
-    default=RESOURCES_DIR_rel,
-    help="Path to a data resource JSON file to export, or a directory containing multiple data resources."
+    default=Path(CACHE_DIR_rel, "data-packages"),
+    type=click.Path(
+        resolve_path=True,
+        path_type=Path,
+    ),
 )
 @click.option("--zip", 'zip_',
     is_flag=True,
@@ -55,30 +55,50 @@ frictionless_grp = AppGroup('frictionless',
     default=False,
     help="Don't define foreign keys in the output data package. This is needed to avoid validation errors that "\
         "occur when Shapefiles are used in foreign keys.")
+@click.option("--skip-validation",
+    is_flag=True,
+    default=False,
+    help="Don't run data package validation on the final output.")
 @click.option("--overwrite",
     is_flag=True,
     default=False,
     help="Overwrite existing data package with the same name."
 )
-def create_data_package(**kwargs):
+def create_data_package(
+    destination: Path,
+    zip_: bool=False,
+    upload: bool=False,
+    no_cache: bool=False,
+    skip_foreign_keys: bool=False,
+    skip_validation: bool=False,
+    overwrite: bool=False,
+):
     """Generates a Frictionless data package from the Data Resource definitions in this backend. This export
 process was developed specifically to support integration of the OEPS data warehouse into the JCOIN commons.
 
-The resulting package will be validated against the `frictionless` standard using that Python library. Use
-`--no-foreign-keys` to allow validation to pass when shapefiles are involved in join fields.
+The resulting package will be validated against the `frictionless` standard using that Python library.
+
+`--skip-foreign-keys` to skip the creation of foreign keys--useful because foreign keys to shapefiles break
+validation.
+
+`--skip-validation` to skip the final step of running validation on the output package.
 """
 
-    args = Namespace(**kwargs)
-
     out_name = f"oeps-data-package-v2_{datetime.now().date().isoformat()}"
-    out_name = out_name + "_no_foreign_keys" if args.skip_foreign_keys else out_name
-    out_path = Path(args.destination, out_name)
+    out_name = out_name + "_no_foreign_keys" if skip_foreign_keys else out_name
+    out_path = Path(destination, out_name)
 
-    if not args.overwrite:
+    if not overwrite:
         handle_overwrite(out_path)
 
     dp = DataPackage()
-    dp.create(out_path, args.source, args.zip_, args.upload, no_cache=args.no_cache, skip_foreign_keys=args.skip_foreign_keys)
+    dp.create(out_path,
+        zip_,
+        upload,
+        no_cache=no_cache,
+        skip_foreign_keys=skip_foreign_keys,
+        run_validation=not skip_validation,
+    )
 
 @frictionless_grp.command()
 def list_resources():

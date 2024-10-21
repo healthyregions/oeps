@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from oeps.utils import load_json
+from oeps.utils import load_json, write_json
 
 REGISTRY_DIR = Path(Path(__file__).parent.parent, "data", "registry")
 
@@ -39,15 +39,8 @@ class Registry():
         paths = Path(self.directory, "table_sources").glob('*.json')
         for path in paths:
             data = load_json(path)
-            ds_name = data["name"]
-            joins = data["schema"].get("foreignKeys", [])
-            if not joins:
-                print(f"warning: data source {ds_name} has no foreignKeys...")
-                continue
-            geodata_id = joins[0]["reference"]["resource"]
-            if geodata_id in self.geodata_lookup:
-                data['geodata_source'] = geodata_id
-                lookup[ds_name] = data
+            if data['geodata_source'] in self.geodata_lookup:
+                lookup[data["name"]] = data
 
         self.table_lookup = lookup
         print(f"registry: {len(self.table_lookup)} table sources loaded")
@@ -58,15 +51,88 @@ class Registry():
             self.load_table_sources()
 
         lookup = {}
-        variables = load_json(Path(self.directory, "variables.json"))
+        variables = self.get_variables()
         for k, v in variables.items():
             usable_sources = []
             for ds in v['table_sources']:
                 if ds in self.table_lookup:
-                    # geodata_lookup[table_lookup[ds]['geodata_source']]["variables"].append(k)
                     usable_sources.append(ds)
 
             if len(usable_sources) > 0:
                 lookup[k] = v
         self.variable_lookup = lookup
         print(f"registry: {len(self.variable_lookup)} variables loaded")
+
+    def get_variables(self, include_disabled=False):
+
+        variables = load_json(Path(self.directory, "variables.json"))
+        if not include_disabled:
+            variables = {k: v for k, v
+                in variables.items()
+                if v.get("enabled", True) is True
+            }
+        return variables
+
+    def create_tabular_resource(self, source_id: str):
+
+        resource = self.table_lookup.get(source_id)
+        if resource is None:
+            print(f"can't find this table source: {source_id}")
+            return
+
+        schema =  {
+            "primaryKey": "HEROP_ID",
+            "foreignKeys": [
+                {
+                    "fields": "HEROP_ID",
+                    "reference": {
+                        "resource": resource["geodata_source"],
+                        "fields": "HEROP_ID"
+                    }
+                }
+            ],
+            "missingValues": [
+                "NA"
+            ],
+            "fields": []
+        }
+
+        variables = load_json(Path(self.directory, "variables.json"))
+        for field in variables.values():
+            if source_id in field["table_sources"]:
+                schema["fields"].append(field)
+
+        for field in schema["fields"]:
+            field.pop("bq_data_type", None)
+            field.pop("table_sources", None)
+            constraint = field.pop("constraints", "")
+            if not constraint == "":
+                field["data_note"] = constraint
+
+        resource.pop("bq_table_name", None)
+        resource.pop("bq_dataset_name", None)
+        resource.pop("geodata_source", None)
+
+        resource["schema"] = schema
+        return resource
+    
+    def create_geodata_resource(self, source_id: str):
+
+        resource = self.geodata_lookup.get(source_id)
+        if resource is None:
+            print(f"can't find this geodata source: {source_id}")
+            return
+
+        resource.pop("bq_table_name", None)
+        resource.pop("bq_dataset_name", None)
+        resource.pop("explorer_config", None)
+
+        return resource
+
+    def get_all_table_resources(self):
+
+        return [self.create_tabular_resource(i) for i in self.table_lookup.keys()]
+    
+    def get_all_geodata_resources(self):
+
+        return [self.create_geodata_resource(i) for i in self.geodata_lookup.keys()]

@@ -14,7 +14,8 @@ from openpyxl.styles import Font
 from frictionless import validate
 
 from oeps.config import DATA_DIR
-from oeps.utils import get_path_or_paths, fetch_files, upload_to_s3, load_json
+from oeps.utils import get_path_or_paths, fetch_files, upload_to_s3, load_json, write_json
+from oeps.clients.registry import Registry
 
 def create_data_dictionaries(source, dest):
 
@@ -145,13 +146,18 @@ def create_data_dictionaries(source, dest):
 
 class DataPackage():
 
-    def create(self, destination, source,
-               zip_output: bool=False,
-               upload: bool=False,
-               no_cache: bool=False,
-               skip_foreign_keys: bool=False):
-        """ Single command to generate an output data package. Should be refactored to more
-        modular methods on this class."""
+    def create(self,
+            destination,
+            zip_output: bool=False,
+            upload: bool=False,
+            no_cache: bool=False,
+            skip_foreign_keys: bool=False,
+            run_validation: bool=True,
+        ):
+        """ Single command to generate an output data package. Should probably be
+        refactored to more modular methods on this class."""
+
+        registry = Registry()
 
         dest = Path(destination)
         dest.mkdir(exist_ok=True, parents=True)
@@ -160,179 +166,113 @@ class DataPackage():
         d_path = Path(dest, "data")
         d_path.mkdir(exist_ok=True)
 
-        if not os.path.isdir(destination):
-            os.mkdir(destination)
-
         data_package = {
             "profile": "data-package",
             "name": "oeps",
             "title": "Opioid Environment Policy Scan (OEPS) v2",
             "homepage": "https://oeps.healthyregions.org",
-            "resources": [],
             "licenses": [{
                 "name": "ODC-PDDL-1.0",
                 "path": "http://opendatacommons.org/licenses/pddl/",
                 "title": "Open Data Commons Public Domain Dedication and License v1.0"
-            }]
+            }],
+            "resources": []
         }
 
-        resources = get_path_or_paths(source, glob_pattern="*.json")
-        resources.sort()
+        resources = registry.get_all_geodata_resources() + registry.get_all_table_resources()
+        for res in resources:
 
-        for i in resources:
+            # remove foreignKeys from schema if needed
+            if skip_foreign_keys:
+                res["schema"].pop("foreignKeys", None)
 
-            i_path = Path(i)
-            print(f"processing schema: {i_path.name}")
-            with open(i, "r") as f:
-                data = json.load(f)
+            # write the schema out to its own file in the schemas dir
+            schema = res.pop("schema")
+            schema_filename = f"{res['name']}.json"
 
-            out_filename = f"{data['name']}{i_path.suffix}"
-            out_relpath = f"schemas/{out_filename}"
-            out_abspath = Path(s_path, out_filename)
+            write_json(schema, Path(s_path, schema_filename))
 
             # copy the data files and generate the list of local paths
-            local_paths = fetch_files(data.pop("path"), d_path, no_cache=no_cache)
+            local_paths = fetch_files(res.pop("path"), d_path, no_cache=no_cache)
 
-            # create the resource item that will be placed in the data package json
-            paths = [f"data/{i.name}" for i in local_paths]
-            res_item = {
-                "name": data.get('name', ''),
-                "title": data.get('title', ''),
-                "description": data.get('description', ''),
-                "path": paths,
-                "schema": out_relpath,
-            }
-            data_package['resources'].append(res_item)
+            res["path"] = [f"data/{i.name}" for i in local_paths]
+            res["schema"] = f"schemas/{schema_filename}"
 
-            # now create the schema that will be stored in the separate data resource file
-            out_schema = {
-                "primaryKey": data['schema'].get('primaryKey'),
-                "missingValues": data['schema'].get('missingValues', []),
-                "fields": [],
-            }
-            
-            # rebuild the field list here with only the necessary props
-            props = ['name', 'title', 'type', 'example', 'description']
-            for df in data['schema']["fields"]:
-                f = {}
-                for p in props:
-                    if df.get(p):
-                        f[p] = df.get(p)
-                out_schema['fields'].append(f)
-
-            # finally, for csv resources generate foreignKeys linking back to the proper geometry files
-            if not skip_foreign_keys:
-                if res_item['path'][0].endswith(".csv"):
-
-                    # figure out which shapefile...
-                    scale, year = res_item['name'].split("-")
-
-                    year_to_use = "2018" if year == "Latest" else "2010"
-                    if scale == "t":
-                        resname = f"tracts-{year_to_use}"
-                    elif scale == "z":
-                        resname = f"zctas-{year_to_use}"
-                    elif scale == "c":
-                        resname = f"counties-{year_to_use}"
-                    elif scale == "s":
-                        resname = f"states-{year_to_use}"
-                    else:
-                        print(res_item)
-                        raise Exception("unanticipated res_item['name']")
-
-                    out_schema['foreignKeys'] = [{
-                        'fields': 'HEROP_ID',
-                        'reference': {
-                            'resource': resname,
-                            'fields': 'HEROP_ID',
-                        }
-                    }]
-
-            with open(out_abspath, "w") as f:
-                json.dump(out_schema, f, indent=4)
+            data_package["resources"].append(res)
 
         package_json_path = Path(dest, "data-package.json")
-        with open(package_json_path, "w") as f:
-            json.dump(data_package, f, indent=4)
+        write_json(data_package, package_json_path)
 
-        self.trim_fields(package_json_path)
+        self.clean_datasets(package_json_path)
 
-        print("\nvalidating output data package...")
-        report = validate(package_json_path, skip_errors=['type-error'])
+        if run_validation:
+            print("\nvalidating output data package...")
+            report = validate(package_json_path, skip_errors=['type-error'])
 
-        print("VALIDATION REPORT SUMMARY:")
-        for t in report.tasks:
-            print(t.name, t.stats['errors'])
-            for n, err in enumerate(t.errors):
-                if n == 10:
-                    break
-                err_dict = err.to_dict()
-                try:
-                    err_dict.pop('cells')
-                except KeyError:
-                    pass
-                print(err_dict)
+            print("VALIDATION REPORT SUMMARY:")
+            for t in report.tasks:
+                print(t.name, t.stats['errors'])
+            
+            print(f"Totals: {report.stats}")
+
+            report.to_json(Path(dest, "error-report.json"))
         
-        print(f"Totals: {report.stats}")
-
-        report.to_json(Path(dest, "error-report.json"))
+        else:
+            print("skipping data package validation...")
 
         if zip_output or upload:
             print("zipping output...")
             shutil.make_archive(f"{Path(dest.parent, dest.name)}", 'zip', dest)
-            
-        if upload:
-            print("uploading zip to S3...")
-            upload_to_s3(Path(dest.parent, dest.name), prefix='oeps')
 
-        if not zip_output:
-            print('deleting local copy of zippped output...')
-            os.remove(f"{Path(dest.parent, dest.name)}.zip")
+            zip_path = dest.with_suffix(".zip")
 
-        print("  done.")
+            if upload:
+                print("uploading zip to S3...")
+                upload_to_s3([zip_path], prefix='oeps', progress_bar=True)
 
-    def trim_fields(self, package_json_path):
+            if not zip_output:
+                print('deleting local copy of zipped output...')
+                os.remove(zip_path)
 
-        with open(package_json_path, "r") as o:
-            pkg = json.load(o)
+        print("done.")
+
+    def clean_datasets(self, package_json_path):
+
+        pkg = load_json(package_json_path)
 
         for res in pkg['resources']:
+            # only run this on resources with single file paths (i.e. skip shapefiles)
             if len(res['path']) > 1:
                 continue
+
+            print(f"cleaning data for {res['name']}")
+
             data_path = package_json_path.parent / res['path'][0]
             schema_path = package_json_path.parent / res['schema']
-        
-            with open(schema_path, "r") as o:
-                schema = json.load(o)
-                schema_field_names = [i['name'] for i in schema['fields']]
-            
-            with open(data_path, "r") as o:
-                dict_reader = csv.DictReader(o)
-                header_row = next(dict_reader)
-                data_headers = list(header_row.keys())
-                original_rows = [i for i in dict_reader]
 
-            extra_cols = [i for i in data_headers if i not in schema_field_names]
-            print(extra_cols)
+            schema = load_json(schema_path)
+            fields = {i["name"]: i for i in schema["fields"]}
 
-            if extra_cols:
+            df = pd.read_csv(data_path)
 
-                clean_rows = []
-                for row in original_rows:
-                    for col in extra_cols:
-                        del row[col]
-                    clean_rows.append(row)
+            # create new dataframe with only fields as defined in the schema
+            # (this takes care of ordering the fields properly as well)
+            clean_df = df[fields.keys()]
 
-                with open(data_path, 'w') as o:
-                    writer = csv.DictWriter(o, fieldnames=schema_field_names)
-                    writer.writeheader()
-                    writer.writerows(clean_rows)
+            # set all dtypes to generic "object" so they can hold "NA"
+            clean_df = clean_df.astype(object)
 
-            #     fixed_df = csv_df.drop(columns=extra_cols)
-            #     fixed_df.to_csv(data_path, index=False)
+            # convert all NaN to NA, use this context and infer_objects to avoid a warning
+            # see: https://stackoverflow.com/a/78066237/3873885
+            with pd.option_context("future.no_silent_downcasting", True):
+                clean_df = clean_df.fillna("NA").infer_objects(copy=False)
 
-                # csv_df.to_csv(str(data_path.parent / data_path.stem) + "-fixed.csv", index=False)
+            # iterate all fields and if integer, cast to int to remove .0
+            for k, v in fields.items():
+                if v["type"] == "integer":
+                    clean_df[k] = clean_df[k].apply(lambda x: int(x) if x != "NA" else "NA")
 
+            clean_df.to_csv(data_path, index=False)
 
 class DataResource():
 
