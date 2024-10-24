@@ -38,6 +38,11 @@ census_grp = AppGroup('census',
     type=click.Choice(["2018", "2010"]),
     help="Specify a year."
 )
+@click.option('--scale', "-s",
+    type=click.Choice(["500k", "tiger"]),
+    default="500k",
+    help="Specify a scale of geographic boundary file."
+)
 @click.option('--tippecanoe-path',
     help="Full path to tippecanoe binary, required for PMTiles generation.",
     type=click.Path(
@@ -57,8 +62,8 @@ census_grp = AppGroup('census',
     help="Upload the processed files to S3."
 )
 @click.option("--destination",
-    default=Path(CACHE_DIR_rel, "geodata"),
-    help='Output directory for export. Treated as a directory, and not a file path.',
+    default=None,
+    help='Output directory for export. If not provided, results will be in .cache/geodata.',
     type=click.Path(
         resolve_path=True,
         path_type=Path,
@@ -77,6 +82,7 @@ def get_geodata(
         format: List[str],
         year: str,
         destination: Path,
+        scale: str,
         geography: List[str]=['state', 'county', 'tract', 'bg', 'tract', 'place', 'zcta'],
         tippecanoe_path: str=None,
         upload: bool=False,
@@ -90,21 +96,32 @@ files directly to S3."""
 
     client = CensusClient(verbose=verbose)
 
-    os.makedirs(destination, exist_ok=True)
+    print("year:", year)
+    print("format(s):", format)
+    print("geography(s):", geography)
+    print("scale:", scale)
+
+    if "pmtiles" in format and not tippecanoe_path:
+        print("pmtiles output must be accompanied by --tippecanoe-path")
+        exit()
 
     for geog in geography:
 
         to_upload = []
-        print(f"\nPROCESSING: {geog}, {year}")
+        print(f"\nPROCESSING: {geog}, {scale}, {year}")
+
+        client.year = year
+        client.geography = geog
+        client.scale = scale
 
         # skip if there isn't a config entry for this geography/year combo
         if year not in client.lookups['census-sources'] or \
-            geog not in client.lookups['census-sources'][year]["configs"]:
+            geog not in client.lookups['census-sources'][year][scale]:
             print("no source configuration for this combo, skipping")
             continue
 
         print("downloading files...")
-        paths = client.download_all_files(geog, year, destination, no_cache=no_cache)
+        paths = client.download_all_files(no_cache=no_cache)
 
         print("unzipping files...")
         unzipped = client.unzip_files(paths)
@@ -113,36 +130,32 @@ files directly to S3."""
         df = client.create_dataframe_from_files(unzipped)
 
         print("add HEROP_ID...")
-        df = client.add_herop_id_to_dataframe(df, geog, year)
+        df = client.add_herop_id_to_dataframe(df)
 
         print("add BBOX...")
         df = client.add_bbox_to_dataframe(df)
 
-        print("add DISPLAY_NAME...")
-        name_field = client.lookups['census-sources'][str(year)]['configs'][geog]['name_field']
-        df = client.add_name_to_dataframe(df, geog, year, name_field)
+        print("add LABEL...")
+        df = client.add_label_to_dataframe(df)
 
         if "shp" in format:
             print("generating shapefile...")
-            shp_paths = client.export_to_shapefile(df, geog, year, destination)
-            to_upload += shp_paths
+            shp_output = client.export_to_shapefile(df, destination)
+            to_upload.append(shp_output["zipped"])
 
         geojson_path = None
         if "geojson" in format:
             print("generating geojson...")
-            geojson_path = client.export_to_geojson(df, geog, year, destination, overwrite=True)
+            geojson_path = client.export_to_geojson(df, destination, overwrite=True)
             to_upload.append(geojson_path)
 
         if "pmtiles" in format:
             print("generating pmtiles...")
-            if not tippecanoe_path:
-                print("pmtiles output must be accompanied by --tippecanoe-path")
-                exit()
 
             # need geojson for this, but use existing if it was created already
             if not geojson_path:
-                geojson_path = client.export_to_geojson(df, geog, year, destination, overwrite=True)
-            pmtiles_path = client.export_to_pmtiles(geojson_path, geog, year, destination, tippecanoe_path)
+                geojson_path = client.export_to_geojson(df, destination, overwrite=True)
+            pmtiles_path = client.export_to_pmtiles(geojson_path, tippecanoe_path, destination)
 
             to_upload.append(pmtiles_path)
 
