@@ -1,19 +1,24 @@
 {
     "2010": {
-        "ftp_root": "/geo/tiger/GENZ2010/",
-        "configs": {
+        "500k": {
             "state": {
                 "herop_id_suffixes": [
                     "STATE"
                 ],
-                "name_field": "NAME"
+                "name_field": "NAME",
+                "file_list": [
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_us_040_00_500k.zip"
+                ]
             },
             "county": {
                 "herop_id_suffixes": [
                     "STATE",
                     "COUNTY"
                 ],
-                "name_field": "NAME"
+                "name_field": "NAME",
+                "file_list": [
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_us_050_00_500k.zip"
+                ]
             },
             "tract": {
                 "herop_id_suffixes": [
@@ -21,7 +26,61 @@
                     "COUNTY",
                     "TRACT"
                 ],
-                "name_field": "NAME"
+                "name_field": "NAME",
+                "file_list": [
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_01_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_02_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_04_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_05_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_06_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_08_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_09_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_10_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_11_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_12_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_13_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_15_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_16_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_17_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_18_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_19_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_20_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_21_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_22_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_23_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_24_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_25_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_26_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_27_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_28_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_29_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_30_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_31_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_32_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_33_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_34_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_35_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_36_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_37_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_38_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_39_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_40_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_41_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_42_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_44_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_45_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_46_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_47_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_48_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_49_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_50_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_51_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_53_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_54_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_55_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_56_140_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_72_140_00_500k.zip"
+                ]
             },
             "bg": {
                 "herop_id_suffixes": [
@@ -30,48 +89,304 @@
                     "TRACT",
                     "BLKGRP"
                 ],
-                "name_field": "NAME"
+                "name_field": "NAME",
+                "file_list": [
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_01_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_02_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_04_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_05_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_06_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_08_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_09_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_10_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_11_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_12_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_13_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_15_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_16_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_17_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_18_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_19_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_20_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_21_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_22_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_23_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_24_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_25_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_26_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_27_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_28_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_29_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_30_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_31_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_32_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_33_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_34_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_35_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_36_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_37_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_38_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_39_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_40_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_41_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_42_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_44_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_45_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_46_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_47_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_48_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_49_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_50_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_51_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_53_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_54_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_55_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_56_150_00_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2010/gz_2010_72_150_00_500k.zip"
+                ]
+            }
+        },
+        "tiger": {
+            "state": {
+                "herop_id_suffixes": [
+                    "GEOID10"
+                ],
+                "name_field": "NAME10",
+                "file_list": [
+                    "https://www2.census.gov/geo/tiger/TIGER2010/STATE/2010/tl_2010_us_state10.zip"
+                ]
+            },
+            "county": {
+                "herop_id_suffixes": [
+                    "GEOID10"
+                ],
+                "name_field": "NAME10",
+                "file_list": [
+                    "https://www2.census.gov/geo/tiger/TIGER2010/COUNTY/2010/tl_2010_us_county10.zip"
+                ]
             }
         }
     },
     "2018": {
-        "ftp_root": "/geo/tiger/GENZ2018/shp/",
-        "configs": {
+        "500k": {
             "state": {
                 "herop_id_suffixes": [
                     "GEOID"
                 ],
-                "name_field": "NAME"
+                "name_field": "NAME",
+                "file_list": [
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_us_state_500k.zip"
+                ]
             },
             "county": {
                 "herop_id_suffixes": [
                     "GEOID"
                 ],
-                "name_field": "NAME"
+                "name_field": "NAME",
+                "file_list": [
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_us_county_500k.zip"
+                ]
             },
             "tract": {
                 "herop_id_suffixes": [
                     "GEOID"
                 ],
-                "name_field": "NAME"
+                "name_field": "NAME",
+                "file_list": [
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_01_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_02_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_04_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_05_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_06_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_08_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_09_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_10_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_11_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_12_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_13_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_15_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_16_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_17_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_18_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_19_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_20_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_21_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_22_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_23_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_24_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_25_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_26_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_27_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_28_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_29_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_30_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_31_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_32_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_33_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_34_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_35_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_36_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_37_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_38_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_39_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_40_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_41_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_42_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_44_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_45_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_46_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_47_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_48_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_49_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_50_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_51_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_53_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_54_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_55_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_56_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_60_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_66_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_69_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_72_tract_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_78_tract_500k.zip"
+                ]
             },
             "bg": {
                 "herop_id_suffixes": [
                     "GEOID"
                 ],
-                "name_field": "NAME"
+                "name_field": "NAME",
+                "file_list": [
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_01_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_02_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_04_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_05_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_06_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_08_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_09_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_10_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_11_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_12_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_13_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_15_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_16_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_17_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_18_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_19_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_20_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_21_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_22_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_23_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_24_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_25_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_26_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_27_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_28_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_29_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_30_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_31_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_32_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_33_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_34_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_35_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_36_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_37_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_38_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_39_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_40_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_41_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_42_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_44_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_45_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_46_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_47_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_48_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_49_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_50_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_51_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_53_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_54_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_55_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_56_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_60_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_66_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_69_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_72_bg_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_78_bg_500k.zip"
+                ]
             },
             "place": {
                 "herop_id_suffixes": [
                     "GEOID"
                 ],
-                "name_field": "NAME"
+                "name_field": "NAME",
+                "file_list": [
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_01_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_02_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_04_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_05_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_06_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_08_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_09_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_10_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_11_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_12_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_13_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_15_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_16_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_17_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_18_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_19_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_20_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_21_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_22_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_23_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_24_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_25_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_26_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_27_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_28_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_29_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_30_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_31_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_32_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_33_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_34_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_35_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_36_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_37_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_38_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_39_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_40_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_41_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_42_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_44_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_45_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_46_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_47_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_48_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_49_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_50_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_51_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_53_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_54_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_55_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_56_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_60_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_66_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_69_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_72_place_500k.zip",
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_78_place_500k.zip"
+                ]
             },
             "zcta": {
                 "herop_id_suffixes": [
                     "ZCTA5CE10"
                 ],
-                "name_field": "ZCTA5CE10"
+                "name_field": "ZCTA5CE10",
+                "file_list": [
+                    "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_us_zcta510_500k.zip"
+                ]
             }
         }
     }
