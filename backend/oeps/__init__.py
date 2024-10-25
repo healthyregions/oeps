@@ -24,14 +24,14 @@ pip install -e .
 
 from flask import Flask
 
-from oeps.commands.general import (
+from oeps.commands import (
     configure_explorer,
     make_cli_docs,
+    bigquery_grp,
+    census_grp,
+    frictionless_grp,
+    overture_grp,
 )
-from oeps.commands.bigquery import bigquery_grp
-from oeps.commands.census import census_grp
-from oeps.commands.frictionless import frictionless_grp
-from oeps.commands.overture import overture_grp
 from oeps.routes import api
 
 def create_app():
