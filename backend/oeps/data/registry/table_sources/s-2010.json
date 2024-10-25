@@ -3,6 +3,8 @@
     "bq_table_name": "S_2010",
     "name": "s-2010",
     "path": "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables/S_2010.csv",
+    "format": "csv",
+    "mediatype": "text/csv",
     "title": "OEPS Data Aggregated by State (2010)",
     "description": "This CSV aggregates all 2010 data variables from the OEPS v2 release at the State level.",
     "geodata_source": "states-2010"

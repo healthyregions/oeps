@@ -3,6 +3,8 @@
     "bq_table_name": "T_Latest",
     "name": "t-latest",
     "path": "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables/T_Latest.csv",
+    "format": "csv",
+    "mediatype": "text/csv",
     "title": "OEPS Data Aggregated by Census Tract (Latest)",
     "description": "This CSV aggregates all Latest data variables from the OEPS v2 release at the County level.",
     "geodata_source": "tracts-2018"

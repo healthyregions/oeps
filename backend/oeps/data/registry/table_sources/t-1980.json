@@ -3,6 +3,8 @@
     "bq_table_name": "T_1980",
     "name": "t-1980",
     "path": "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables/T_1980.csv",
+    "format": "csv",
+    "mediatype": "text/csv",
     "title": "OEPS Data Aggregated by Census Tract (1980)",
     "description": "This CSV aggregates all 1980 data variables from the OEPS v2 release at the County level.",
     "geodata_source": "tracts-2010"

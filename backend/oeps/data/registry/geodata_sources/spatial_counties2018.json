@@ -11,13 +11,9 @@
         "bounds": [-125.109215, -66.925621, 25.043926, 49.295128],
         "tables": {}
     },
-    "path": [
-        "https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018.shp",
-        "https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018.shx",
-        "https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018.dbf",
-        "https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018.prj",
-        "https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018.cpg"
-    ],
+    "path": "https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018-500k-shp.zip",
+    "format": "shp",
+    "mediatype": "application/vnd.shp",
     "schema": {
         "primaryKey": "HEROP_ID",
         "fields": [
@@ -34,13 +30,6 @@
                 "type": "string",
                 "src_name": "NAME",
                 "bq_data_type": "STRING"
-            },
-            {
-                "name": "geom",
-                "title": "Geom",
-                "type": "string",
-                "src_name": "geometry",
-                "bq_data_type": "GEOGRAPHY"
             }
         ]
     }
