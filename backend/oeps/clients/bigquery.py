@@ -1,5 +1,6 @@
 import io
 import os
+from pathlib import Path
 
 from google.auth.transport.requests import Request
 from google.oauth2 import service_account
@@ -9,6 +10,8 @@ from google.cloud.bigquery import (
     SchemaField,
     LoadJobConfig,
 )
+
+from oeps.utils import BQ_TYPE_LOOKUP
 
 def get_client():
     """ Creates a BigQuery Client object and returns it, acquires credentials
@@ -98,8 +101,17 @@ class BigQuery():
             field_list.append(
                 SchemaField(
                     name=f["name"],
-                    field_type=f["bq_data_type"],
+                    field_type=BQ_TYPE_LOOKUP[f["type"]],
                     max_length=max_length,
+                )
+            )
+
+        # if loading a shapefile, create and extra field for the geometry
+        if schema["format"] == "shp":
+            field_list.append(
+                SchemaField(
+                    name="geom",
+                    field_type="GEOGRAPHY",
                 )
             )
 
@@ -204,3 +216,61 @@ class BigQuery():
                 clean_row.append(v)
             print(clean_row)
 
+    def generate_reference_doc(self, resources, outfile: Path):
+
+        project_id = os.getenv("BQ_PROJECT_ID")
+
+        datasets = {}
+
+        for d in resources:
+
+            ds_name = d['bq_dataset_name']
+            t_name = d['bq_table_name']
+
+            if ds_name not in datasets:
+                datasets[ds_name] = {}
+
+            if t_name not in datasets[ds_name]:
+                datasets[ds_name][t_name] = []
+
+            for f in d['schema']['fields']:
+                datasets[ds_name][t_name].append({
+                    'name': f.get('name'),
+                    'data_type': BQ_TYPE_LOOKUP[f.get('type')],
+                    'description': f.get('description'),
+                    'source': f.get('source')
+                })
+
+        with open(outfile, 'w') as openf:
+
+            ds_ct = len(datasets)
+            openf.write(f"""# Project Id: {project_id}
+
+    {ds_ct} dataset{'s' if ds_ct != 1 else ''} in this project: {', '.join(datasets.keys())}
+
+    """)
+            for ds in datasets:
+                t_ct = len(datasets[ds])
+                openf.write(f"""## {ds}
+
+    {t_ct} table{'s' if t_ct != 1 else ''} in this dataset.
+
+    """)
+
+                for t in datasets[ds]:
+
+                    c_ct = len(datasets[ds][t])
+                    openf.write(f"""### {t}
+
+    ID: `{project_id}.{ds}.{t}`
+
+    {c_ct} column{'s' if c_ct != 1 else ''} in this table.
+
+    Name|Data Type|Description|Source
+    -|-|-|-
+    """)
+
+                    for c in datasets[ds][t]:
+                        openf.write(f"{c['name']}|{c['data_type']}|{c['description']}|{c['source']}\n")
+
+                    openf.write("\n")

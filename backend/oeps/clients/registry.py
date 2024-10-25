@@ -73,7 +73,7 @@ class Registry():
             }
         return variables
 
-    def create_tabular_resource(self, source_id: str):
+    def create_tabular_resource(self, source_id: str, trim_props: bool=False):
 
         resource = self.table_lookup.get(source_id)
         if resource is None:
@@ -109,30 +109,32 @@ class Registry():
             if not constraint == "":
                 field["data_note"] = constraint
 
-        resource.pop("bq_table_name", None)
-        resource.pop("bq_dataset_name", None)
-        resource.pop("geodata_source", None)
+        if trim_props:
+            resource.pop("bq_table_name", None)
+            resource.pop("bq_dataset_name", None)
+            resource.pop("geodata_source", None)
 
         resource["schema"] = schema
         return resource
     
-    def create_geodata_resource(self, source_id: str):
+    def create_geodata_resource(self, source_id: str, trim_props: bool=False):
 
         resource = self.geodata_lookup.get(source_id)
         if resource is None:
             print(f"can't find this geodata source: {source_id}")
             return
 
-        resource.pop("bq_table_name", None)
-        resource.pop("bq_dataset_name", None)
-        resource.pop("explorer_config", None)
+        if trim_props:
+            resource.pop("bq_table_name", None)
+            resource.pop("bq_dataset_name", None)
+            resource.pop("explorer_config", None)
 
         return resource
 
-    def get_all_table_resources(self):
+    def get_all_table_resources(self, trim_props: bool=False):
 
-        return [self.create_tabular_resource(i) for i in self.table_lookup.keys()]
+        return [self.create_tabular_resource(i, trim_props=trim_props) for i in self.table_lookup.keys()]
     
-    def get_all_geodata_resources(self):
+    def get_all_geodata_resources(self, trim_props: bool=False):
 
-        return [self.create_geodata_resource(i) for i in self.geodata_lookup.keys()]
+        return [self.create_geodata_resource(i, trim_props=trim_props) for i in self.geodata_lookup.keys()]

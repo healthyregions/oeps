@@ -8,7 +8,6 @@ from typing import List
 import subprocess
 
 import click
-from flask import current_app
 from flask.cli import AppGroup
 
 from oeps.clients.bigquery import BigQuery, get_client
@@ -16,6 +15,7 @@ from oeps.clients.census import CensusClient
 from oeps.clients.explorer import Explorer
 from oeps.clients.frictionless import DataResource, DataPackage, create_data_dictionaries
 from oeps.clients.overture import get_filter_shape, get_data
+from oeps.clients.registry import Registry
 from oeps.config import (
     CACHE_DIR,
     EXPLORER_ROOT_DIR,
@@ -28,7 +28,6 @@ from oeps.utils import (
     handle_overwrite,
 )
 
-
 # Make relative paths for directory configs so they can properly be used as default values for 
 # CLI arguments. Using absolute paths (e.g. those in the config) would result in absolute paths
 # in the generated docs... this would be incorrect on every system besides the one that had 
@@ -36,6 +35,9 @@ from oeps.utils import (
 EXPLORER_ROOT_DIR_rel = os.path.relpath(EXPLORER_ROOT_DIR, start=Path(__file__).parent)
 RESOURCES_DIR_rel = os.path.relpath(RESOURCES_DIR, start=Path(__file__).parent.parent)
 CACHE_DIR_rel = os.path.relpath(CACHE_DIR, start=Path(__file__).parent.parent)
+REGISTRY_DIR_rel = os.path.relpath(REGISTRY_DIR, start=Path(__file__).parent.parent)
+
+## ~~ Big Query Commands ~~
 
 ## Group of commands for Google Big Query operations
 bigquery_grp = AppGroup('bigquery',
@@ -49,10 +51,8 @@ def check_credentials():
     print('ok')
 
 @bigquery_grp.command()
-@click.option("--source", "-s",
-    default=RESOURCES_DIR_rel,
-    help="Data resource JSON file to load, or directory with multiple files to load. If no source "\
-        "is provided, will process all files in the data/resources directory.",
+@click.option("--name", "-n",
+    help="Name can be provided to load a single Data Resource to Big Query (instead of everything in the registry)",
 )
 @click.option("--overwrite",
     is_flag=True,
@@ -69,30 +69,27 @@ def check_credentials():
     default=False,
     help="Mock operation and perform no create/delete actions."
 )
-def load(**kwargs):
+def load(name, overwrite, table_only, dry_run):
     """Load a data resource to a big query table. The data resource schema should provide all field
 and table configuration information that is needed to create the table and load data into it."""
 
-    args = Namespace(**kwargs)
     client = BigQuery()
 
-    source = Path(args.source)
-    if source.isdir():
-        paths = source.glob("*.json")
-    elif source.isfile():
-        paths = [source]
-    else:
-        print('invalid path input')
-        exit()
-
     all_errors = []
-    
-    for path in paths:
-        
-        dr = DataResource(path)
 
-        if args.table_only:
-            table = client.create_table(dr.schema, overwrite=args.overwrite)
+    registry = Registry()
+
+    data_resources = registry.get_all_geodata_resources()
+    data_resources += registry.get_all_table_resources()
+
+    for res in data_resources:
+        
+        dr = DataResource(json_definition=res)
+        if name and dr.schema["name"] != name:
+            continue
+
+        if table_only:
+            table = client.create_table(dr.schema, overwrite=overwrite)
             print(table)
             exit()
 
@@ -105,13 +102,14 @@ and table configuration information that is needed to create the table and load 
             for e in errors:
                 print("  " + e)
 
-            if not args.dry_run:
-                print(f"\nBEGIN LOAD: {path}")
-                table = client.create_table(dr.schema, overwrite=args.overwrite)
+            if not dry_run:
+                print(f"\nBEGIN LOAD: {dr.schema['name']}")
+                table = client.create_table(dr.schema, overwrite=overwrite)
                 print(f"TABLE CREATED: {table}")
                 load_job = client.load_table(rows, dr.schema['bq_dataset_name'], dr.schema['bq_table_name'])
                 print(F"JOB COMPLETE: {load_job}")
                 print(f"TIME ELAPSED: {datetime.now()-start}")
+
 
 @bigquery_grp.command()
 @click.option('--output', "-o",
@@ -120,19 +118,17 @@ and table configuration information that is needed to create the table and load 
 @click.option('--sql-file',
     help="Path to file with SQL SELECT statement to run."
 )
-def export(**kwargs):
+def export(output, sql_file):
     """ Runs a SQL statement, which must be provided in a .sql file, and the results are printed to the console
 or saved to a CSV or SHP output file, based on the destination argument."""
 
-    args = Namespace(**kwargs)
-
     client = BigQuery()
 
-    if args.sql_file:
-        client.run_query_from_file(args.sql_file)
+    if sql_file:
+        client.run_query_from_file(sql_file)
 
-    if args.destination:
-        client.export_results(args.destination)
+    if output:
+        client.export_results(output)
 
     else:
         client.print_results()
@@ -143,74 +139,14 @@ def generate_reference_md():
     """Generates a reference document for the BigQuery project schema, based on the
 locally stored resource JSON schema files. """
 
-    project_id = os.getenv("BQ_PROJECT_ID")
+    client = BigQuery()
+    registry = Registry()
 
-    datasets = {}
+    resources = registry.get_all_geodata_resources() + registry.get_all_table_resources()
 
-    files = glob(os.path.join(current_app.config['RESOURCES_DIR'], "*.json"))
+    outfile = Path("../docs/BQ-Reference.md").absolute()
+    client.generate_reference_doc(resources, outfile)
 
-    for f in files:
-        with open(f, "r") as openf:
-            d = json.load(openf)
-
-        ds_name = d['bq_dataset_name']
-        t_name = d['bq_table_name']
-
-        if ds_name not in datasets:
-            datasets[ds_name] = {}
-
-        if t_name not in datasets[ds_name]:
-            datasets[ds_name][t_name] = []
-
-        for f in d['schema']['fields']:
-            datasets[ds_name][t_name].append({
-                'name': f.get('name'),
-                'data_type': f.get('bq_data_type'),
-                'description': f.get('description'),
-                'source': f.get('source')
-            })
-
-    out_path = Path(Path(__file__).resolve()).parent.parent / "BQ-Reference.md"
-    with open(out_path, 'w') as openf:
-
-        ds_ct = len(datasets)
-        openf.write(f"""# Project Id: {project_id}
-
-{ds_ct} dataset{'s' if ds_ct != 1 else ''} in this project: {', '.join(datasets.keys())}
-
-""")
-        for ds in datasets:
-            t_ct = len(datasets[ds])
-            openf.write(f"""## {ds}
-
-{t_ct} table{'s' if t_ct != 1 else ''} in this dataset.
-
-""")
-
-            for t in datasets[ds]:
-
-                c_ct = len(datasets[ds][t])
-                openf.write(f"""### {t}
-
-ID: `{project_id}.{ds}.{t}`
-
-{c_ct} column{'s' if c_ct != 1 else ''} in this table.
-
-Name|Data Type|Description|Source
--|-|-|-
-""")
-
-                for c in datasets[ds][t]:
-                    openf.write(f"{c['name']}|{c['data_type']}|{c['description']}|{c['source']}\n")
-
-                openf.write("\n")
-
-
-# Make relative paths for directory configs so they can properly be used as default values for 
-# CLI arguments. Using absolute paths (e.g. those in the config) would result in absolute paths
-# in the generated docs... this would be incorrect on every system besides the one that had 
-# generated the docs.
-CACHE_DIR_rel = os.path.relpath(CACHE_DIR, start=Path(__file__).parent.parent.parent)
 
 census_grp = AppGroup('census',
     help="A group of commands for obtaining and managing geospatial data from the US Census Bureau."
@@ -362,12 +298,7 @@ files directly to S3."""
     print("\ndone.")
 
 
-# Make relative paths for directory configs so they can properly be used as default values for 
-# CLI arguments. Using absolute paths (e.g. those in the config) would result in absolute paths
-# in the generated docs... this would be incorrect on every system besides the one that had 
-# generated the docs.
-RESOURCES_DIR_rel = os.path.relpath(RESOURCES_DIR, start=Path(__file__).parent.parent.parent)
-CACHE_DIR_rel = os.path.relpath(CACHE_DIR, start=Path(__file__).parent.parent.parent)
+## ~~ Frictionless Data Commands ~~
 
 frictionless_grp = AppGroup('frictionless',
     help="A group of operations for interacting with Frictionless data specs. These commands allow us to "\
@@ -518,14 +449,6 @@ def create_oeps_dicts(**kwargs):
     Path(args.destination).mkdir(exist_ok=True)
 
     create_data_dictionaries(args.source, args.destination)
-
-
-# Make relative paths for directory configs so they can properly be used as default values for 
-# CLI arguments. Using absolute paths (e.g. those in the config) would result in absolute paths
-# in the generated docs... this would be incorrect on every system besides the one that had 
-# generated the docs.
-EXPLORER_ROOT_DIR_rel = os.path.relpath(EXPLORER_ROOT_DIR, start=Path(__file__).parent.parent)
-REGISTRY_DIR_rel = os.path.relpath(REGISTRY_DIR, start=Path(__file__).parent.parent.parent)
 
 
 @click.command()

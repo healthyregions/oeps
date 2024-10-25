@@ -14,7 +14,7 @@ from openpyxl.styles import Font
 from frictionless import validate
 
 from oeps.config import DATA_DIR
-from oeps.utils import get_path_or_paths, fetch_files, upload_to_s3, load_json, write_json
+from oeps.utils import get_path_or_paths, fetch_files, upload_to_s3, load_json, write_json, BQ_TYPE_LOOKUP
 from oeps.clients.registry import Registry
 
 def create_data_dictionaries(source, dest):
@@ -179,7 +179,7 @@ class DataPackage():
             "resources": []
         }
 
-        resources = registry.get_all_geodata_resources() + registry.get_all_table_resources()
+        resources = registry.get_all_geodata_resources(trim_props=True) + registry.get_all_table_resources(trim_props=True)
         for res in resources:
 
             # remove foreignKeys from schema if needed
@@ -276,12 +276,14 @@ class DataPackage():
 
 class DataResource():
 
-    def __init__(self, resource_file=None):
+    def __init__(self, resource_file=None, json_definition=None):
 
         if resource_file:
             with open(resource_file, "r") as o:
                 data = json.load(o)
             self.schema = data
+        elif json_definition:
+            self.schema = json_definition
         else:
             self.schema = None
         self.variable_extras = self._load_variable_extras()
@@ -361,7 +363,6 @@ class DataResource():
                 'source_long': record.get('Source Long'),
                 'oeps_v1_table': record.get('OEPS '),
                 'comments': record.get('Comments'),
-                'bq_data_type': self.oeps_type_to_bq_type(record.get('Type')),
                 'metadata_doc_url': record.get('Metadata Location'),
                 'longitudinal': longitudinal,
                 'analysis': analysis,
@@ -502,7 +503,7 @@ class DataResource():
         with open(path, 'w') as outfile:
             json.dump(self.schema, outfile, indent=4)
 
-    def load_rows_from_file(self):
+    def load_rows_from_file(self, verbose=False):
         """Loads all data from the file indicated in the provided schema, and
         performs some data validation and cleaning along the way.
 
@@ -512,23 +513,25 @@ class DataResource():
 
         dataset_path = self.schema['path']
 
+        # get the format, assume CSV if not present
+        format = self.schema.get("format", "csv")
+
+        if format not in ["csv", "shp"]:
+            errors.append(f"Invalid dataset format: {format}")
+            return rows, errors
+
         try:
-            # assume shapefile input if the path is a list, ultimately
-            # this should be updated to also combine multiple csvs as well,
-            # because multiple "chunked" csv files with the same set of headers
-            # would be valid here in a list of paths per Frictionless spec
-            if isinstance(dataset_path, list):
-                dataset_path = [i for i in dataset_path if i.endswith(".shp")][0]
-            if dataset_path.endswith('.shp'):
-                df = gpd.read_file(dataset_path)
-            elif dataset_path.endswith('.csv'):
-                # set all columns as object type
+            if format == "shp":
+                if isinstance(dataset_path, list):
+                    dataset_path = [i for i in dataset_path if i.endswith(".shp")][0]
+                    df = gpd.read_file(dataset_path)
+                elif dataset_path.endswith(".zip"):
+                    df = gpd.read_file(f"/vsizip/vsicurl/{dataset_path}")
+            elif format == "csv":
                 df = pd.read_csv(dataset_path, dtype='object')
-            else:
-                print(f"Invalid dataset: {dataset_path}")
-                return
+
         except Exception as e:
-            errors.append(str(e))
+            errors.append(f"error reading file: {str(e)}")
             return rows, errors
 
         # use any src_name properties to rename columns where needed
@@ -561,7 +564,7 @@ class DataResource():
                 df[f['name']] = df[f['name']].apply(lambda x: str(x).zfill(f['max_length']))
 
         field_types = {f['name']: f['type'] for f in self.schema['schema']['fields']}
-        bq_field_types = {f['name']: f['bq_data_type'] for f in self.schema['schema']['fields']}
+        bq_field_types = {f['name']: BQ_TYPE_LOOKUP[f['type']] for f in self.schema['schema']['fields']}
 
         # iterate the dataframe and turn each row into a dict that gets appened to rows.
         # this list is later loaded as if it were a newline-delimited JSON file.

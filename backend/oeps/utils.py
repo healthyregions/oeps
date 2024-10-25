@@ -11,6 +11,14 @@ from tqdm import tqdm
 from glob import glob
 from pathlib import Path
 
+BQ_TYPE_LOOKUP = {
+    "string": "STRING",
+    "boolean": "BOOLEAN",
+    "integer": "INTEGER",
+    "date": "DATE",
+    "number": "NUMERIC",
+}
+
 def load_json(path):
     with open(path, "r") as o:
         return json.load(o)
