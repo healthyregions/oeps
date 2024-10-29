@@ -2177,7 +2177,7 @@
     ]
   },
   "AvMetTime": {
-    "title": "AvMetTime",
+    "title": "Driving Time to Methadone Provider (driving time across all tracts)",
     "name": "AvMetTime",
     "src_name": "AvMetTime",
     "type": "number",
@@ -2197,7 +2197,7 @@
     ]
   },
   "AvNalTime": {
-    "title": "AvNalTime",
+    "title": "Driving Time to Naltrexone Provider (driving time across all tracts)",
     "name": "AvNalTime",
     "src_name": "AvNalTime",
     "type": "number",
@@ -2217,7 +2217,7 @@
     ]
   },
   "PctBupT": {
-    "title": "% tracts within 30-min drive of buprenorphine provider",
+    "title": "% Tracts within 30-min Drive of Buprenorphine Provider",
     "name": "PctBupT",
     "src_name": "PctBupT",
     "type": "number",
@@ -2237,7 +2237,7 @@
     ]
   },
   "PctMetT": {
-    "title": "% tracts within 30-min drive of methadone provider",
+    "title": "% Tracts within 30-min Drive of Methadone Provider",
     "name": "PctMetT",
     "src_name": "PctMetT",
     "type": "number",
@@ -2257,7 +2257,7 @@
     ]
   },
   "PctNalT": {
-    "title": "% tracts within 30-min drive of naltrexone provider",
+    "title": "% Tracts within 30-min Drive of Naltrexone Provider",
     "name": "PctNalT",
     "src_name": "PctNalT",
     "type": "number",
@@ -2277,7 +2277,7 @@
     ]
   },
   "FqhcCtTmDr": {
-    "title": "FqhcCtTmDr",
+    "title": "Tracts with Federally Qualified Health Center (30-min driving)",
     "name": "FqhcCtTmDr",
     "src_name": "FqhcCtTmDr",
     "type": "integer",
@@ -2298,7 +2298,7 @@
     ]
   },
   "FqhcAvTmDr": {
-    "title": "FqhcAvTmDr",
+    "title": "Driving Time to nearest Federally Qualified Health Center",
     "name": "FqhcAvTmDr",
     "src_name": "FqhcAvTmDr",
     "type": "number",
@@ -2319,7 +2319,7 @@
     ]
   },
   "FqhcTmDrP": {
-    "title": "FqhcTmDrP",
+    "title": "% tracts within 30-min drive of Federally Qualified Health Center",
     "name": "FqhcTmDrP",
     "src_name": "FqhcTmDrP",
     "type": "number",
@@ -2340,7 +2340,7 @@
     ]
   },
   "HospCtTmDr": {
-    "title": "HospCtTmDr",
+    "title": "Tracts with Hospital (30-min drive)",
     "name": "HospCtTmDr",
     "src_name": "HospCtTmDr",
     "type": "integer",
@@ -2361,7 +2361,7 @@
     ]
   },
   "HospAvTmDr": {
-    "title": "HospAvTmDr",
+    "title": "Driving Time to nearest Hospital",
     "name": "HospAvTmDr",
     "src_name": "HospAvTmDr",
     "type": "number",
@@ -2382,7 +2382,7 @@
     ]
   },
   "HospTmDrP": {
-    "title": "HospTmDrP",
+    "title": "% Tracts within 30-min Drive of Hospital",
     "name": "HospTmDrP",
     "src_name": "HospTmDrP",
     "type": "number",
@@ -2403,7 +2403,7 @@
     ]
   },
   "RxCtTmDr": {
-    "title": "RxCtTmDr",
+    "title": "Tracts with Pharmacy (30-min drive)",
     "name": "RxCtTmDr",
     "src_name": "RxCtTmDr",
     "type": "integer",
@@ -2424,7 +2424,7 @@
     ]
   },
   "RxAvTmDr": {
-    "title": "RxAvTmDr",
+    "title": "Driving Time (min) to nearest Pharmacy ",
     "name": "RxAvTmDr",
     "src_name": "RxAvTmDr",
     "type": "number",
@@ -2445,7 +2445,7 @@
     ]
   },
   "RxTmDrP": {
-    "title": "RxTmDrP",
+    "title": "% tracts with Pharmacy (30-min drive)",
     "name": "RxTmDrP",
     "src_name": "RxTmDrP",
     "type": "number",
@@ -2466,7 +2466,7 @@
     ]
   },
   "MhCtTmDr": {
-    "title": "MhCtTmDr",
+    "title": "Tracts with Mental Health Provider (30-min drive)",
     "name": "MhCtTmDr",
     "src_name": "MhCtTmDr",
     "type": "integer",
@@ -2487,7 +2487,7 @@
     ]
   },
   "MhAvTmDr": {
-    "title": "MhAvTmDr",
+    "title": "Driving Time (min) to nearest Mental Health Provider",
     "name": "MhAvTmDr",
     "src_name": "MhAvTmDr",
     "type": "number",
@@ -2508,7 +2508,7 @@
     ]
   },
   "MhTmDrP": {
-    "title": "MhTmDrP",
+    "title": "% Tracts with Mental Health Provider (30-min drive)",
     "name": "MhTmDrP",
     "src_name": "MhTmDrP",
     "type": "number",
@@ -2529,7 +2529,7 @@
     ]
   },
   "SutpCtTmDr": {
-    "title": "SutpCtTmDr",
+    "title": "Tracts with Substance Use Treatment (SUT) program (30-min drive)",
     "name": "SutpCtTmDr",
     "src_name": "SutpCtTmDr",
     "type": "integer",
@@ -2550,7 +2550,7 @@
     ]
   },
   "SutpAvTmDr": {
-    "title": "SutpAvTmDr",
+    "title": "Driving Time (min) to nearest Substance Use Treatment program",
     "name": "SutpAvTmDr",
     "src_name": "SutpAvTmDr",
     "type": "number",
@@ -2571,7 +2571,7 @@
     ]
   },
   "SutpTmDrP": {
-    "title": "SutpTmDrP",
+    "title": "% tracts with Substance Use Treatment program (30-min drive)",
     "name": "SutpTmDrP",
     "src_name": "SutpTmDrP",
     "type": "number",
@@ -2592,7 +2592,7 @@
     ]
   },
   "OtpCtTmDr": {
-    "title": "OtpCtTmDr",
+    "title": "Tracts with Opioid Treatment Program (OTP) (30-min drive)",
     "name": "OtpCtTmDr",
     "src_name": "OtpCtTmDr",
     "type": "integer",
@@ -2613,7 +2613,7 @@
     ]
   },
   "OtpAvTmDr": {
-    "title": "OtpAvTmDr",
+    "title": "Driving Time (min) to nearest Opioid Treatment Program (OTP)",
     "name": "OtpAvTmDr",
     "src_name": "OtpAvTmDr",
     "type": "number",
@@ -2634,7 +2634,7 @@
     ]
   },
   "OtpTmDrP": {
-    "title": "OtpTmDrP",
+    "title": "% Tracts with Opioid Treatment Program (OTP) (30-min drive)",
     "name": "OtpTmDrP",
     "src_name": "OtpTmDrP",
     "type": "number",
@@ -2655,7 +2655,7 @@
     ]
   },
   "DrgRlDth": {
-    "title": "DrgRlDth",
+    "title": "Deaths from drug-related causes (2009-2018)",
     "name": "DrgRlDth",
     "src_name": "DrgRlDth",
     "type": "number",
@@ -2676,7 +2676,7 @@
     ]
   },
   "TotHcv": {
-    "title": "TotHcv",
+    "title": "Yearly Hepatitis C cases (2013-2016)",
     "name": "TotHcv",
     "src_name": "TotHcv",
     "type": "number",
@@ -2696,7 +2696,7 @@
     ]
   },
   "MlHcv": {
-    "title": "MlHcv",
+    "title": "Yearly Hepatitis C cases - Men (2013-2016)",
     "name": "MlHcv",
     "src_name": "MlHcv",
     "type": "number",
@@ -2716,7 +2716,7 @@
     ]
   },
   "FmHcv": {
-    "title": "FmHcv",
+    "title": "Yearly Hepatitis C cases - Women (2013-2016)",
     "name": "FmHcv",
     "src_name": "FmHcv",
     "type": "number",
@@ -2736,7 +2736,7 @@
     ]
   },
   "Un50Hcv": {
-    "title": "Un50Hcv",
+    "title": "Yearly Hepatitis C cases - Under 50 years old (2013-2016)",
     "name": "Un50Hcv",
     "src_name": "Un50Hcv",
     "type": "number",
@@ -2756,7 +2756,7 @@
     ]
   },
   "A50_74Hcv": {
-    "title": "A50_74Hcv",
+    "title": "Yearly Hepatitis C cases - 50 to 74 years old (2013-2016)",
     "name": "A50_74Hcv",
     "src_name": "A50_74Hcv",
     "type": "number",
@@ -2776,7 +2776,7 @@
     ]
   },
   "Ov75Hcv": {
-    "title": "Ov75Hcv",
+    "title": "Yearly Hepatitis C cases - Over 75 years old (2013-2016)",
     "name": "Ov75Hcv",
     "src_name": "Ov75Hcv",
     "type": "number",
@@ -2796,7 +2796,7 @@
     ]
   },
   "BlkHcv": {
-    "title": "BlkHcv",
+    "title": "Yearly Hepatitis C cases - Black (2013-2016)",
     "name": "BlkHcv",
     "src_name": "BlkHcv",
     "type": "number",
@@ -2816,7 +2816,7 @@
     ]
   },
   "NonBlkHcv": {
-    "title": "NonBlkHcv",
+    "title": "Yearly Hepatitis C cases - non-Black (2013-2016)",
     "name": "NonBlkHcv",
     "src_name": "NonBlkHcv",
     "type": "number",
@@ -2836,7 +2836,7 @@
     ]
   },
   "HcvD13": {
-    "title": "HcvD13",
+    "title": "Hepatitis C Deaths (2013)",
     "name": "HcvD13",
     "src_name": "HcvD13",
     "type": "integer",
@@ -2856,7 +2856,7 @@
     ]
   },
   "MlHcvD13": {
-    "title": "MlHcvD13",
+    "title": "Hepatitis C Deaths - Men (2013)",
     "name": "MlHcvD13",
     "src_name": "MlHcvD13",
     "type": "integer",
@@ -2876,7 +2876,7 @@
     ]
   },
   "FlHcvD13": {
-    "title": "FlHcvD13",
+    "title": "Hepatitis C Deaths - Women (2013)",
     "name": "FlHcvD13",
     "src_name": "FlHcvD13",
     "type": "integer",
@@ -2896,7 +2896,7 @@
     ]
   },
   "AmInHcvD13": {
-    "title": "AmInHcvD13",
+    "title": "Hepatitis C Deaths - American Indian (2013)",
     "name": "AmInHcvD13",
     "src_name": "AmInHcvD13",
     "type": "integer",
@@ -2916,7 +2916,7 @@
     ]
   },
   "AsPiHcvD13": {
-    "title": "AsPiHcvD13",
+    "title": "Hepatitis C Deaths - Asian & Pacific Islander (2013)",
     "name": "AsPiHcvD13",
     "src_name": "AsPiHcvD13",
     "type": "integer",
@@ -2936,7 +2936,7 @@
     ]
   },
   "BlkHcvD13": {
-    "title": "BlkHcvD13",
+    "title": "Hepatitis C Deaths - Black (2013)",
     "name": "BlkHcvD13",
     "src_name": "BlkHcvD13",
     "type": "integer",
@@ -2956,7 +2956,7 @@
     ]
   },
   "HspHcvD13": {
-    "title": "HspHcvD13",
+    "title": "Hepatitis C Deaths - Hispanic (2013)",
     "name": "HspHcvD13",
     "src_name": "HspHcvD13",
     "type": "integer",
@@ -2976,7 +2976,7 @@
     ]
   },
   "U50HcvD13": {
-    "title": "U50HcvD13",
+    "title": "Hepatitis C Deaths - Under 50 years old (2013)",
     "name": "U50HcvD13",
     "src_name": "U50HcvD13",
     "type": "integer",
@@ -2996,7 +2996,7 @@
     ]
   },
   "A50_74HcvD13": {
-    "title": "A50_74HcvD13",
+    "title": "Hepatitis C Deaths - 50 to 74 years old (2013)",
     "name": "A50_74HcvD13",
     "src_name": "A50_74HcvD13",
     "type": "integer",
@@ -3016,7 +3016,7 @@
     ]
   },
   "O75HcvD13": {
-    "title": "O75HcvD13",
+    "title": "Hepatitis C Deaths - Over 75 years old (2013)",
     "name": "O75HcvD13",
     "src_name": "O75HcvD13",
     "type": "integer",
@@ -3036,7 +3036,7 @@
     ]
   },
   "HcvD14": {
-    "title": "HcvD14",
+    "title": "Hepatitis C Deaths (2014)",
     "name": "HcvD14",
     "src_name": "HcvD14",
     "type": "integer",
@@ -3056,7 +3056,7 @@
     ]
   },
   "MlHcvD14": {
-    "title": "MlHcvD14",
+    "title": "Hepatitis C Deaths - Men (2014)",
     "name": "MlHcvD14",
     "src_name": "MlHcvD14",
     "type": "integer",
@@ -3076,7 +3076,7 @@
     ]
   },
   "FlHcvD14": {
-    "title": "FlHcvD14",
+    "title": "Hepatitis C Deaths - Women (2014)",
     "name": "FlHcvD14",
     "src_name": "FlHcvD14",
     "type": "integer",
@@ -3096,7 +3096,7 @@
     ]
   },
   "AmInHcvD14": {
-    "title": "AmInHcvD14",
+    "title": "Hepatitis C Deaths - American Indian (2014)",
     "name": "AmInHcvD14",
     "src_name": "AmInHcvD14",
     "type": "integer",
@@ -3116,7 +3116,7 @@
     ]
   },
   "AsPiHcvD14": {
-    "title": "AsPiHcvD14",
+    "title": "Hepatitis C Deaths - Asian & Pacific Islander (2014)",
     "name": "AsPiHcvD14",
     "src_name": "AsPiHcvD14",
     "type": "integer",
@@ -3136,7 +3136,7 @@
     ]
   },
   "BlkHcvD14": {
-    "title": "BlkHcvD14",
+    "title": "Hepatitis C Deaths - Black (2014)",
     "name": "BlkHcvD14",
     "src_name": "BlkHcvD14",
     "type": "integer",
@@ -3156,7 +3156,7 @@
     ]
   },
   "HspHcvD14": {
-    "title": "HspHcvD14",
+    "title": "Hepatitis C Deaths - Hispanic (2014)",
     "name": "HspHcvD14",
     "src_name": "HspHcvD14",
     "type": "integer",
@@ -3176,7 +3176,7 @@
     ]
   },
   "U50HcvD14": {
-    "title": "U50HcvD14",
+    "title": "Hepatitis C Deaths - Under 50 years old (2014)",
     "name": "U50HcvD14",
     "src_name": "U50HcvD14",
     "type": "integer",
@@ -3196,7 +3196,7 @@
     ]
   },
   "A50_74HcvD14": {
-    "title": "A50_74HcvD14",
+    "title": "Hepatitis C Deaths - 50 to 74 years old (2014)",
     "name": "A50_74HcvD14",
     "src_name": "A50_74HcvD14",
     "type": "integer",
@@ -3216,7 +3216,7 @@
     ]
   },
   "O75HcvD14": {
-    "title": "O75HcvD14",
+    "title": "Hepatitis C Deaths - Over 75 years old (2014)",
     "name": "O75HcvD14",
     "src_name": "O75HcvD14",
     "type": "integer",
@@ -3236,7 +3236,7 @@
     ]
   },
   "HcvD15": {
-    "title": "HcvD15",
+    "title": "Hepatitis C Deaths (2015)",
     "name": "HcvD15",
     "src_name": "HcvD15",
     "type": "integer",
@@ -3256,7 +3256,7 @@
     ]
   },
   "MlHcvD15": {
-    "title": "MlHcvD15",
+    "title": "Hepatitis C Deaths - Men (2015)",
     "name": "MlHcvD15",
     "src_name": "MlHcvD15",
     "type": "integer",
@@ -3276,7 +3276,7 @@
     ]
   },
   "FlHcvD15": {
-    "title": "FlHcvD15",
+    "title": "Hepatitis C Deaths - Women (2015)",
     "name": "FlHcvD15",
     "src_name": "FlHcvD15",
     "type": "integer",
@@ -3296,7 +3296,7 @@
     ]
   },
   "AmInHcvD15": {
-    "title": "AmInHcvD15",
+    "title": "Hepatitis C Deaths - American Indian (2015)",
     "name": "AmInHcvD15",
     "src_name": "AmInHcvD15",
     "type": "integer",
@@ -3316,7 +3316,7 @@
     ]
   },
   "AsPiHcvD15": {
-    "title": "AsPiHcvD15",
+    "title": "Hepatitis C Deaths - Asian & Pacific Islander (2015)",
     "name": "AsPiHcvD15",
     "src_name": "AsPiHcvD15",
     "type": "integer",
@@ -3336,7 +3336,7 @@
     ]
   },
   "BlkHcvD15": {
-    "title": "BlkHcvD15",
+    "title": "Hepatitis C Deaths - Black (2015)",
     "name": "BlkHcvD15",
     "src_name": "BlkHcvD15",
     "type": "integer",
@@ -3356,7 +3356,7 @@
     ]
   },
   "HspHcvD15": {
-    "title": "HspHcvD15",
+    "title": "Hepatitis C Deaths - Hispanic (2015)",
     "name": "HspHcvD15",
     "src_name": "HspHcvD15",
     "type": "integer",
@@ -3376,7 +3376,7 @@
     ]
   },
   "U50HcvD15": {
-    "title": "U50HcvD15",
+    "title": "Hepatitis C Deaths - Under 50 years old (2015)",
     "name": "U50HcvD15",
     "src_name": "U50HcvD15",
     "type": "integer",
@@ -3396,7 +3396,7 @@
     ]
   },
   "D50_74Hcv15": {
-    "title": "D50_74Hcv15",
+    "title": "Hepatitis C Deaths - 50 to 74 years old (2015)",
     "name": "D50_74Hcv15",
     "src_name": "D50_74Hcv15",
     "type": "integer",
@@ -3416,7 +3416,7 @@
     ]
   },
   "O75HcvD15": {
-    "title": "O75HcvD15",
+    "title": "Hepatitis C Deaths - Over 75 years old (2015)",
     "name": "O75HcvD15",
     "src_name": "O75HcvD15",
     "type": "integer",
@@ -3436,7 +3436,7 @@
     ]
   },
   "HcvD16": {
-    "title": "HcvD16",
+    "title": "Hepatitis C Deaths (2016)",
     "name": "HcvD16",
     "src_name": "HcvD16",
     "type": "integer",
@@ -3456,7 +3456,7 @@
     ]
   },
   "MlHcvD16": {
-    "title": "MlHcvD16",
+    "title": "Hepatitis C Deaths - Men (2016)",
     "name": "MlHcvD16",
     "src_name": "MlHcvD16",
     "type": "integer",
@@ -3476,7 +3476,7 @@
     ]
   },
   "FlHcvD16": {
-    "title": "FlHcvD16",
+    "title": "Hepatitis C Deaths - Women (2016)",
     "name": "FlHcvD16",
     "src_name": "FlHcvD16",
     "type": "integer",
@@ -3496,7 +3496,7 @@
     ]
   },
   "AmInHcvD16": {
-    "title": "AmInHcvD16",
+    "title": "Hepatitis C Deaths - American Indian (2016)",
     "name": "AmInHcvD16",
     "src_name": "AmInHcvD16",
     "type": "integer",
@@ -3516,7 +3516,7 @@
     ]
   },
   "AsPiHcvD16": {
-    "title": "AsPiHcvD16",
+    "title": "Hepatitis C Deaths - Asian & Pacific Islander (2016)",
     "name": "AsPiHcvD16",
     "src_name": "AsPiHcvD16",
     "type": "integer",
@@ -3536,7 +3536,7 @@
     ]
   },
   "BlkHcvD16": {
-    "title": "BlkHcvD16",
+    "title": "Hepatitis C Deaths - Black (2016)",
     "name": "BlkHcvD16",
     "src_name": "BlkHcvD16",
     "type": "integer",
@@ -3556,7 +3556,7 @@
     ]
   },
   "HspHcvD16": {
-    "title": "HspHcvD16",
+    "title": "Hepatitis C Deaths - Hispanic (2016)",
     "name": "HspHcvD16",
     "src_name": "HspHcvD16",
     "type": "integer",
@@ -3576,7 +3576,7 @@
     ]
   },
   "U50HcvD16": {
-    "title": "U50HcvD16",
+    "title": "Hepatitis C Deaths - Under 50 years old (2016)",
     "name": "U50HcvD16",
     "src_name": "U50HcvD16",
     "type": "integer",
@@ -3596,7 +3596,7 @@
     ]
   },
   "A50_74HcvD16": {
-    "title": "A50_74HcvD16",
+    "title": "Hepatitis C Deaths - 50 to 74 years old (2016)",
     "name": "A50_74HcvD16",
     "src_name": "A50_74HcvD16",
     "type": "integer",
@@ -3616,7 +3616,7 @@
     ]
   },
   "O75HcvD16": {
-    "title": "O75HcvD16",
+    "title": "Hepatitis C Deaths - Over 75 years old (2016)",
     "name": "O75HcvD16",
     "src_name": "O75HcvD16",
     "type": "integer",
@@ -3636,7 +3636,7 @@
     ]
   },
   "HcvD17": {
-    "title": "HcvD17",
+    "title": "Hepatitis C Deaths (2017)",
     "name": "HcvD17",
     "src_name": "HcvD17",
     "type": "integer",
@@ -3656,7 +3656,7 @@
     ]
   },
   "MlHcvD17": {
-    "title": "MlHcvD17",
+    "title": "Hepatitis C Deaths - Men (2017)",
     "name": "MlHcvD17",
     "src_name": "MlHcvD17",
     "type": "integer",
@@ -3676,7 +3676,7 @@
     ]
   },
   "FlHcvD17": {
-    "title": "FlHcvD17",
+    "title": "Hepatitis C Deaths - Women (2017)",
     "name": "FlHcvD17",
     "src_name": "FlHcvD17",
     "type": "integer",
@@ -3696,7 +3696,7 @@
     ]
   },
   "AmInHcvD17": {
-    "title": "AmInHcvD17",
+    "title": "Hepatitis C Deaths - American Indian (2017)",
     "name": "AmInHcvD17",
     "src_name": "AmInHcvD17",
     "type": "integer",
@@ -3716,7 +3716,7 @@
     ]
   },
   "AsPiHcvD17": {
-    "title": "AsPiHcvD17",
+    "title": "Hepatitis C Deaths - Asian & Pacific Islander (2017)",
     "name": "AsPiHcvD17",
     "src_name": "AsPiHcvD17",
     "type": "integer",
@@ -3736,7 +3736,7 @@
     ]
   },
   "BlkHcvD17": {
-    "title": "BlkHcvD17",
+    "title": "Hepatitis C Deaths - Black (2017)",
     "name": "BlkHcvD17",
     "src_name": "BlkHcvD17",
     "type": "integer",
@@ -3756,7 +3756,7 @@
     ]
   },
   "HspHcvD17": {
-    "title": "HspHcvD17",
+    "title": "Hepatitis C Deaths - Hispanic (2017)",
     "name": "HspHcvD17",
     "src_name": "HspHcvD17",
     "type": "integer",
@@ -3776,7 +3776,7 @@
     ]
   },
   "U50HcvD17": {
-    "title": "U50HcvD17",
+    "title": "Hepatitis C Deaths - Under 50 years old (2017)",
     "name": "U50HcvD17",
     "src_name": "U50HcvD17",
     "type": "integer",
@@ -3796,7 +3796,7 @@
     ]
   },
   "A50_74HcvD17": {
-    "title": "A50_74HcvD17",
+    "title": "Hepatitis C Deaths - 50 to 74 years old (2017)",
     "name": "A50_74HcvD17",
     "src_name": "A50_74HcvD17",
     "type": "integer",
@@ -3816,7 +3816,7 @@
     ]
   },
   "O75HcvD17": {
-    "title": "O75HcvD17",
+    "title": "Hepatitis C Deaths - Over 75 years old (2016)",
     "name": "O75HcvD17",
     "src_name": "O75HcvD17",
     "type": "integer",
@@ -3836,7 +3836,7 @@
     ]
   },
   "AvHcvD": {
-    "title": "AvHcvD",
+    "title": "Hepatitis C Deaths (2013 - 2017)",
     "name": "AvHcvD",
     "src_name": "AvHcvD",
     "type": "number",
@@ -3856,7 +3856,7 @@
     ]
   },
   "AvMlHcvD": {
-    "title": "AvMlHcvD",
+    "title": "Hepatitis C Deaths - Men (2013 - 2017)",
     "name": "AvMlHcvD",
     "src_name": "AvMlHcvD",
     "type": "number",
@@ -3876,7 +3876,7 @@
     ]
   },
   "AvFlHcvD": {
-    "title": "AvFlHcvD",
+    "title": "Hepatitis C Deaths - Women (2013 - 2017)",
     "name": "AvFlHcvD",
     "src_name": "AvFlHcvD",
     "type": "number",
@@ -3896,7 +3896,7 @@
     ]
   },
   "AvAmInHcvD": {
-    "title": "AvAmInHcvD",
+    "title": "Hepatitis C Deaths - American Indian (2013 - 2017)",
     "name": "AvAmInHcvD",
     "src_name": "AvAmInHcvD",
     "type": "number",
@@ -3916,7 +3916,7 @@
     ]
   },
   "AvAsPiHcvD": {
-    "title": "AvAsPiHcvD",
+    "title": "Hepatitis C Deaths - Asian & Pacific Islander (2013 - 2017)",
     "name": "AvAsPiHcvD",
     "src_name": "AvAsPiHcvD",
     "type": "number",
@@ -3936,7 +3936,7 @@
     ]
   },
   "AvBlkHcvD": {
-    "title": "AvBlkHcvD",
+    "title": "Hepatitis C Deaths - Black (2013 - 2017)",
     "name": "AvBlkHcvD",
     "src_name": "AvBlkHcvD",
     "type": "number",
@@ -3956,7 +3956,7 @@
     ]
   },
   "AvHspHcvD": {
-    "title": "AvHspHcvD",
+    "title": "Hepatitis C Deaths - Hispanic (2013 - 2017)",
     "name": "AvHspHcvD",
     "src_name": "AvHspHcvD",
     "type": "number",
@@ -3976,7 +3976,7 @@
     ]
   },
   "AvU50HcvD": {
-    "title": "AvU50HcvD",
+    "title": "Hepatitis C Deaths - Age Under 50 (2013 - 2017)",
     "name": "AvU50HcvD",
     "src_name": "AvU50HcvD",
     "type": "number",
@@ -3996,7 +3996,7 @@
     ]
   },
   "Av50_74HcvD": {
-    "title": "Av50_74HcvD",
+    "title": "Hepatitis C Deaths - Age 50 to 74 (2013 - 2017)",
     "name": "Av50_74HcvD",
     "src_name": "Av50_74HcvD",
     "type": "number",
@@ -4016,7 +4016,7 @@
     ]
   },
   "AvO75HcvD": {
-    "title": "AvO75HcvD",
+    "title": "Hepatitis C Deaths - Age Over 75  (2013 - 2017)",
     "name": "AvO75HcvD",
     "src_name": "AvO75HcvD",
     "type": "number",
@@ -4080,7 +4080,7 @@
     ]
   },
   "OpRxRt20": {
-    "title": "OpRxRt20",
+    "title": "Opioid Prescription Rate (2020)",
     "name": "OpRxRt20",
     "src_name": "OpRxRt20",
     "type": "number",
@@ -4101,7 +4101,7 @@
     ]
   },
   "PrMsuse20P": {
-    "title": "PrMsuse20P",
+    "title": "% Self-Report Misuse of Prescription Pain Medication (2020)",
     "name": "PrMsuse20P",
     "src_name": "PrMsuse20P",
     "type": "number",
@@ -4121,7 +4121,7 @@
     ]
   },
   "OdMortRt14": {
-    "title": "OdMortRt14",
+    "title": "Opioid Mortality Rate (2014)",
     "name": "OdMortRt14",
     "src_name": "OdMortRt14",
     "type": "number",
@@ -4142,7 +4142,7 @@
     ]
   },
   "OdMortRt15": {
-    "title": "OdMortRt15",
+    "title": "Opioid Mortality Rate (2015)",
     "name": "OdMortRt15",
     "src_name": "OdMortRt15",
     "type": "number",
@@ -4163,7 +4163,7 @@
     ]
   },
   "OdMortRt16": {
-    "title": "OdMortRt16",
+    "title": "Opioid Mortality Rate (2016)",
     "name": "OdMortRt16",
     "src_name": "OdMortRt16",
     "type": "number",
@@ -4184,7 +4184,7 @@
     ]
   },
   "OdMortRt17": {
-    "title": "OdMortRt17",
+    "title": "Opioid Mortality Rate (2017)",
     "name": "OdMortRt17",
     "src_name": "OdMortRt17",
     "type": "number",
@@ -4205,7 +4205,7 @@
     ]
   },
   "OdMortRt18": {
-    "title": "OdMortRt18",
+    "title": "Opioid Mortality Rate (2018)",
     "name": "OdMortRt18",
     "src_name": "OdMortRt18",
     "type": "number",
@@ -4226,7 +4226,7 @@
     ]
   },
   "OdMortRt19": {
-    "title": "OdMortRt19",
+    "title": "Opioid Mortality Rate (2019)",
     "name": "OdMortRt19",
     "src_name": "OdMortRt19",
     "type": "number",
@@ -4247,7 +4247,7 @@
     ]
   },
   "OdMortRt20": {
-    "title": "OdMortRt20",
+    "title": "Opioid Mortality Rate (2020)",
     "name": "OdMortRt20",
     "src_name": "OdMortRt20",
     "type": "number",
@@ -4389,7 +4389,7 @@
     ]
   },
   "AnyPdmpDt": {
-    "title": "AnyPdmpDt",
+    "title": "Any PDMP start date",
     "name": "AnyPdmpDt",
     "src_name": "AnyPdmpDt",
     "type": "date",
@@ -4409,7 +4409,7 @@
     ]
   },
   "AnyPdmphDt": {
-    "title": "AnyPdmphDt",
+    "title": "Any Horowitz PDMP start date",
     "name": "AnyPdmphDt",
     "src_name": "AnyPdmphDt",
     "type": "date",
@@ -4429,7 +4429,7 @@
     ]
   },
   "OpPdmpDt": {
-    "title": "OpPdmpDt",
+    "title": "Operational PDMP start date",
     "name": "OpPdmpDt",
     "src_name": "OpPdmpDt",
     "type": "date",
@@ -4449,7 +4449,7 @@
     ]
   },
   "MsAcPdmpDt": {
-    "title": "MsAcPdmpDt",
+    "title": "Must-Access PDMP start date",
     "name": "MsAcPdmpDt",
     "src_name": "MsAcPdmpDt",
     "type": "date",
@@ -4469,7 +4469,7 @@
     ]
   },
   "ElcPdmpDt": {
-    "title": "ElcPdmpDt",
+    "title": "Electronic PDMP start date",
     "name": "ElcPdmpDt",
     "src_name": "ElcPdmpDt",
     "type": "date",
@@ -4489,7 +4489,7 @@
     ]
   },
   "AnyGslDt": {
-    "title": "AnyGslDt",
+    "title": "Any Good Samaritan Law (date)",
     "name": "AnyGslDt",
     "src_name": "AnyGslDt",
     "type": "date",
@@ -4509,7 +4509,7 @@
     ]
   },
   "GslArrDt": {
-    "title": "GslArrDt",
+    "title": "Good Samaritan Law Protecting Arrest (date)",
     "name": "GslArrDt",
     "src_name": "GslArrDt",
     "type": "date",
@@ -4569,7 +4569,7 @@
     ]
   },
   "AnyNalDt": {
-    "title": "AnyNalDt",
+    "title": "Any Naloxone Law (date)",
     "name": "AnyNalDt",
     "src_name": "AnyNalDt",
     "type": "date",
@@ -4589,7 +4589,7 @@
     ]
   },
   "NalPrStDt": {
-    "title": "NalPrStDt",
+    "title": "Naloxone Law allowing distribution through a standing or order (date)",
     "name": "NalPrStDt",
     "src_name": "NalPrStDt",
     "type": "date",
@@ -4609,7 +4609,7 @@
     ]
   },
   "NalPresDt": {
-    "title": "NalPresDt",
+    "title": "Naloxone Law allowing pharmacists prescriptive authority (date)",
     "name": "NalPresDt",
     "src_name": "NalPresDt",
     "type": "date",
@@ -4689,7 +4689,7 @@
     ]
   },
   "MedcdExp19": {
-    "title": "MedcdExp19",
+    "title": "Total Medicaid Spending (FY 2019)",
     "name": "MedcdExp19",
     "src_name": "MedcdExp19",
     "type": "integer",
@@ -4709,7 +4709,7 @@
     ]
   },
   "MedcdExp18": {
-    "title": "MedcdExp18",
+    "title": "Total Medicaid Spending (FY 2018)",
     "name": "MedcdExp18",
     "src_name": "MedcdExp18",
     "type": "integer",
@@ -4929,7 +4929,7 @@
     ]
   },
   "MdMarijLaw": {
-    "title": "MdMarijLaw",
+    "title": "Laws authorizing medical marijuana use ",
     "name": "MdMarijLaw",
     "src_name": "MdMarijLaw",
     "type": "boolean",
@@ -5029,7 +5029,7 @@
     ]
   },
   "CrrctExpL": {
-    "title": "CrrctExpL",
+    "title": "Corrections Expenditures (Local)",
     "name": "CrrctExpL",
     "src_name": "CrrctExpL",
     "type": "integer",
@@ -5049,7 +5049,7 @@
     ]
   },
   "PlcFyrExpL": {
-    "title": "PlcFyrExpL",
+    "title": "Police & Fire Expenditures (Local)",
     "name": "PlcFyrExpL",
     "src_name": "PlcFyrExpL",
     "type": "integer",
@@ -5069,7 +5069,7 @@
     ]
   },
   "HlthExpL": {
-    "title": "HlthExpL",
+    "title": "Public Health Expenditures (Local)",
     "name": "HlthExpL",
     "src_name": "HlthExpL",
     "type": "integer",
@@ -5089,7 +5089,7 @@
     ]
   },
   "WlfrExpL": {
-    "title": "WlfrExpL",
+    "title": "Public Welfare Expenditures (Local)",
     "name": "WlfrExpL",
     "src_name": "WlfrExpL",
     "type": "integer",
@@ -5109,7 +5109,7 @@
     ]
   },
   "CrrctExpT": {
-    "title": "CrrctExpT",
+    "title": "Total Corrections Expenditures",
     "name": "CrrctExpT",
     "src_name": "CrrctExpT",
     "type": "integer",
@@ -5129,7 +5129,7 @@
     ]
   },
   "PlcFyrExpT": {
-    "title": "PlcFyrExpT",
+    "title": "Total Police & Fire Expenditures",
     "name": "PlcFyrExpT",
     "src_name": "PlcFyrExpT",
     "type": "integer",
@@ -5149,7 +5149,7 @@
     ]
   },
   "HlthExpT": {
-    "title": "HlthExpT",
+    "title": "Total Public Health & Welfare Expenditures",
     "name": "HlthExpT",
     "src_name": "HlthExpT",
     "type": "integer",
@@ -5169,7 +5169,7 @@
     ]
   },
   "WlfrExpT": {
-    "title": "WlfrExpT",
+    "title": "Total Public Welfare Expenditures",
     "name": "WlfrExpT",
     "src_name": "WlfrExpT",
     "type": "integer",
@@ -5189,7 +5189,7 @@
     ]
   },
   "Ruca1": {
-    "title": "Ruca1",
+    "title": "Primary RUCA Code",
     "name": "Ruca1",
     "src_name": "Ruca1",
     "type": "string",
@@ -5210,7 +5210,7 @@
     ]
   },
   "Ruca2": {
-    "title": "Ruca2",
+    "title": "Secondary RUCA Code",
     "name": "Ruca2",
     "src_name": "Ruca2",
     "type": "string",
@@ -5273,7 +5273,7 @@
     ]
   },
   "BupMinDis": {
-    "title": "Distance (mi) to nearest buprenorphine provider",
+    "title": "Distance (mi) to nearest Buprenorphine Provider",
     "name": "BupMinDis",
     "src_name": "BupMinDis",
     "type": "number",
@@ -5294,7 +5294,7 @@
     ]
   },
   "BupTmDr": {
-    "title": "BupTmDr",
+    "title": "Driving Time (min) to nearest Buprenorphine Provider",
     "name": "BupTmDr",
     "src_name": "BupTmDr",
     "type": "number",
@@ -5315,7 +5315,7 @@
     ]
   },
   "BupCntDr30": {
-    "title": "BupCntDr30",
+    "title": "Count of Buprenorphine Providers (30-min drive)",
     "name": "BupCntDr30",
     "src_name": "BupCntDr30",
     "type": "integer",
@@ -5336,7 +5336,7 @@
     ]
   },
   "MetMinDis": {
-    "title": "Distance (mi) to nearest methadone provider",
+    "title": "Distance (mi) to nearest Methadone Provider",
     "name": "MetMinDis",
     "src_name": "MetMinDis",
     "type": "number",
@@ -5357,7 +5357,7 @@
     ]
   },
   "MetTmDr": {
-    "title": "MetTmDr",
+    "title": "Driving Time (min) to nearest Methadone Provider",
     "name": "MetTmDr",
     "src_name": "MetTmDr",
     "type": "number",
@@ -5378,7 +5378,7 @@
     ]
   },
   "MetCntDr30": {
-    "title": "MetCntDr30",
+    "title": "Count of Methadone Providers (30-min drive)",
     "name": "MetCntDr30",
     "src_name": "MetCntDr30",
     "type": "integer",
@@ -5399,7 +5399,7 @@
     ]
   },
   "NalMinDis": {
-    "title": "Distance (mi) to nearest naltrexone provider",
+    "title": "Distance (mi) to nearest Naltrexone Provider",
     "name": "NalMinDis",
     "src_name": "NalMinDis",
     "type": "number",
@@ -5420,7 +5420,7 @@
     ]
   },
   "NalTmDr": {
-    "title": "NalTmDr",
+    "title": "Driving Time (min) to nearest Naltrexone Provider",
     "name": "NalTmDr",
     "src_name": "NalTmDr",
     "type": "number",
@@ -5441,7 +5441,7 @@
     ]
   },
   "NalCntDr30": {
-    "title": "NalCntDr30",
+    "title": "Count of Naltrexone Providers (30-min drive)",
     "name": "NalCntDr30",
     "src_name": "NalCntDr30",
     "type": "integer",
@@ -5462,7 +5462,7 @@
     ]
   },
   "BupTmWk": {
-    "title": "Walking time (min) to nearest buprenorphine provider",
+    "title": "Walking Time (min) to nearest Buprenorphine Provider",
     "name": "BupTmWk",
     "src_name": "BupTmWk",
     "type": "number",
@@ -5483,7 +5483,7 @@
     ]
   },
   "BupCntWk60": {
-    "title": "BupCntWk60",
+    "title": "Count of Buprenorphine Providers (60-min walk)",
     "name": "BupCntWk60",
     "src_name": "BupCntWk60",
     "type": "integer",
@@ -5504,7 +5504,7 @@
     ]
   },
   "BupCntWk30": {
-    "title": "BupCntWk30",
+    "title": "Count of Buprenorphine Providers (30-min walk)",
     "name": "BupCntWk30",
     "src_name": "BupCntWk30",
     "type": "integer",
@@ -5525,7 +5525,7 @@
     ]
   },
   "MetTmWk": {
-    "title": "Walking time (min) to nearest methadone provider",
+    "title": "Walking Time (min) to nearest Methadone Provider",
     "name": "MetTmWk",
     "src_name": "MetTmWk",
     "type": "number",
@@ -5546,7 +5546,7 @@
     ]
   },
   "MetCntWk30": {
-    "title": "MetCntWk30",
+    "title": "Count of Methadone Providers (60-min walk)",
     "name": "MetCntWk30",
     "src_name": "MetCntWk30",
     "type": "integer",
@@ -5567,7 +5567,7 @@
     ]
   },
   "MetCntWk60": {
-    "title": "MetCntWk60",
+    "title": "Count of Methadone Providers (30-min walk)",
     "name": "MetCntWk60",
     "src_name": "MetCntWk60",
     "type": "integer",
@@ -5588,7 +5588,7 @@
     ]
   },
   "NalTmWk": {
-    "title": "Walking time (min) to nearest naltrexone provider",
+    "title": "Walking Time (min) to nearest Naltrexone Provider",
     "name": "NalTmWk",
     "src_name": "NalTmWk",
     "type": "number",
@@ -5609,7 +5609,7 @@
     ]
   },
   "NalCntWk60": {
-    "title": "NalCntWk60",
+    "title": "Count of Naltrexone Providers (60-min walk)",
     "name": "NalCntWk60",
     "src_name": "NalCntWk60",
     "type": "integer",
@@ -5630,7 +5630,7 @@
     ]
   },
   "NalCntWk30": {
-    "title": "NalCntWk30",
+    "title": "Count of Naltrexone Providers (30-min walk)",
     "name": "NalCntWk30",
     "src_name": "NalCntWk30",
     "type": "integer",
@@ -5651,7 +5651,7 @@
     ]
   },
   "BupTmBk": {
-    "title": "Biking time (min) to nearest buprenorphine provider",
+    "title": "Biking Time (min) to nearest Buprenorphine Provider",
     "name": "BupTmBk",
     "src_name": "BupTmBk",
     "type": "number",
@@ -5672,7 +5672,7 @@
     ]
   },
   "BupCntBk60": {
-    "title": "BupCntBk60",
+    "title": "Count of Buprenorphine Providers (60-min bike)",
     "name": "BupCntBk60",
     "src_name": "BupCntBk60",
     "type": "integer",
@@ -5693,7 +5693,7 @@
     ]
   },
   "BupCntBk30": {
-    "title": "BupCntBk30",
+    "title": "Count of Buprenorphine Providers (30-min bike)",
     "name": "BupCntBk30",
     "src_name": "BupCntBk30",
     "type": "integer",
@@ -5714,7 +5714,7 @@
     ]
   },
   "MetTmBk": {
-    "title": "Biking time (min) to nearest methadone provider",
+    "title": "Biking Time (min) to nearest Methadone Provider",
     "name": "MetTmBk",
     "src_name": "MetTmBk",
     "type": "number",
@@ -5735,7 +5735,7 @@
     ]
   },
   "MetCntBk60": {
-    "title": "MetCntBk60",
+    "title": "Count of Methadone Providers (60-min bike)",
     "name": "MetCntBk60",
     "src_name": "MetCntBk60",
     "type": "integer",
@@ -5756,7 +5756,7 @@
     ]
   },
   "MetCntBk30": {
-    "title": "MetCntBk30",
+    "title": "Count of methadone providers (30-min bike)",
     "name": "MetCntBk30",
     "src_name": "MetCntBk30",
     "type": "integer",
@@ -5777,7 +5777,7 @@
     ]
   },
   "NalTmBk": {
-    "title": "Biking time (min) to nearest naltrexone provider",
+    "title": "Biking Time (min) to nearest Naltrexone Provider",
     "name": "NalTmBk",
     "src_name": "NalTmBk",
     "type": "number",
@@ -5798,7 +5798,7 @@
     ]
   },
   "NalCntBk60": {
-    "title": "NalCntBk60",
+    "title": "Count of Naltrexone Providers (60-min bike)",
     "name": "NalCntBk60",
     "src_name": "NalCntBk60",
     "type": "integer",
@@ -5819,7 +5819,7 @@
     ]
   },
   "NalCntBk30": {
-    "title": "NalCntBk30",
+    "title": "Count of Naltrexone Providers (30-min bike)",
     "name": "NalCntBk30",
     "src_name": "NalCntBk30",
     "type": "integer",
@@ -5861,7 +5861,7 @@
     ]
   },
   "FqhcTmDr": {
-    "title": "FqhcTmDr",
+    "title": "Driving time (min) to nearest FQHC",
     "name": "FqhcTmDr",
     "src_name": "FqhcTmDr",
     "type": "number",
@@ -5882,7 +5882,7 @@
     ]
   },
   "FqhcCntDr": {
-    "title": "FqhcCntDr",
+    "title": "Count of FQHCs (30-min drive)",
     "name": "FqhcCntDr",
     "src_name": "FqhcCntDr",
     "type": "integer",
@@ -5903,7 +5903,7 @@
     ]
   },
   "HospMinDis": {
-    "title": "Distance (mi) to nearest hospital",
+    "title": "Distance (mi) to nearest Hospital",
     "name": "HospMinDis",
     "src_name": "HospMinDis",
     "type": "number",
@@ -5924,7 +5924,7 @@
     ]
   },
   "HospTmDr": {
-    "title": "HospTmDr",
+    "title": "Driving time (min) to nearest Hospital",
     "name": "HospTmDr",
     "src_name": "HospTmDr",
     "type": "number",
@@ -5945,7 +5945,7 @@
     ]
   },
   "HospCntDr": {
-    "title": "HospCntDr",
+    "title": "Count of Hospitals (30-min drive)",
     "name": "HospCntDr",
     "src_name": "HospCntDr",
     "type": "integer",
@@ -5966,7 +5966,7 @@
     ]
   },
   "RxMinDis": {
-    "title": "Distance (mi) to nearest pharmacy",
+    "title": "Distance (mi) to nearest Pharmacy",
     "name": "RxMinDis",
     "src_name": "RxMinDis",
     "type": "number",
@@ -5987,7 +5987,7 @@
     ]
   },
   "RxTmDr": {
-    "title": "RxTmDr",
+    "title": "Driving Time (min) to nearest Pharmacy ",
     "name": "RxTmDr",
     "src_name": "RxTmDr",
     "type": "number",
@@ -6008,7 +6008,7 @@
     ]
   },
   "RxCntDr": {
-    "title": "RxCntDr",
+    "title": "Count of Pharmacies (30-min drive)",
     "name": "RxCntDr",
     "src_name": "RxCntDr",
     "type": "integer",
@@ -6029,7 +6029,7 @@
     ]
   },
   "MhMinDis": {
-    "title": "Distance (mi) to nearest mental health provider",
+    "title": "Distance (mi) to nearest Mental Health Provider",
     "name": "MhMinDis",
     "src_name": "MhMinDis",
     "type": "number",
@@ -6050,7 +6050,7 @@
     ]
   },
   "MhTmDr": {
-    "title": "MhTmDr",
+    "title": "Driving Time (min) to nearest Mental Health Provider",
     "name": "MhTmDr",
     "src_name": "MhTmDr",
     "type": "number",
@@ -6071,7 +6071,7 @@
     ]
   },
   "MhCntDr": {
-    "title": "MhCntDr",
+    "title": "Count of Mental Health Providers (30-min drive)",
     "name": "MhCntDr",
     "src_name": "MhCntDr",
     "type": "integer",
@@ -6092,7 +6092,7 @@
     ]
   },
   "SutMinDis": {
-    "title": "Distance (mi) to substance use treatment (SUT) facility",
+    "title": "Distance (mi) to Substance Use Treatment (SUT) facility",
     "name": "SutMinDis",
     "src_name": "SutMinDis",
     "type": "number",
@@ -6113,7 +6113,7 @@
     ]
   },
   "SutTmDr": {
-    "title": "SutTmDr",
+    "title": "Driving time (min) to Substance Use Treatment (SUT) facility",
     "name": "SutTmDr",
     "src_name": "SutTmDr",
     "type": "number",
@@ -6134,7 +6134,7 @@
     ]
   },
   "SutCntDr": {
-    "title": "SutCntDr",
+    "title": "Count of Substance Use Treatment (SUT) facility (30-min drive)",
     "name": "SutCntDr",
     "src_name": "SutCntDr",
     "type": "integer",
@@ -6155,7 +6155,7 @@
     ]
   },
   "OtpMinDis": {
-    "title": "OtpMinDis",
+    "title": "Distance (mi) to nearest Opioid Treatment Program (OTP)",
     "name": "OtpMinDis",
     "src_name": "OtpMinDis",
     "type": "number",
@@ -6176,7 +6176,7 @@
     ]
   },
   "OtpTmDr": {
-    "title": "OtpTmDr",
+    "title": "Driving Time (min) to nearest Opioid Treatment Program (OTP)",
     "name": "OtpTmDr",
     "src_name": "OtpTmDr",
     "type": "number",
@@ -6197,7 +6197,7 @@
     ]
   },
   "OtpCntDr": {
-    "title": "OtpCntDr",
+    "title": "Count of Opioid Treatment Programs (OTP) (30-min drive)",
     "name": "OtpCntDr",
     "src_name": "OtpCntDr",
     "type": "integer",
@@ -6218,7 +6218,7 @@
     ]
   },
   "PcpPer100k": {
-    "title": "PcpPer100k",
+    "title": "Primary Care Physicians (PCP) per 100k",
     "name": "PcpPer100k",
     "src_name": "PcpPer100k",
     "type": "number",
@@ -6239,7 +6239,7 @@
     ]
   },
   "SpPer100k": {
-    "title": "SpPer100k",
+    "title": "Specialty Physicians per 100k",
     "name": "SpPer100k",
     "src_name": "SpPer100k",
     "type": "number",
@@ -6260,7 +6260,7 @@
     ]
   },
   "SocEcAdvIn": {
-    "title": "SocEcAdvIn",
+    "title": "Socioeconomic Advantage Index",
     "name": "SocEcAdvIn",
     "src_name": "SocEcAdvIn",
     "type": "number",
@@ -6280,7 +6280,7 @@
     ]
   },
   "LimMobInd": {
-    "title": "LimMobInd",
+    "title": "Limited Moblility Index",
     "name": "LimMobInd",
     "src_name": "LimMobInd",
     "type": "number",
@@ -6300,7 +6300,7 @@
     ]
   },
   "UrbCoreInd": {
-    "title": "UrbCoreInd",
+    "title": "Urban Core Opportunity Index",
     "name": "UrbCoreInd",
     "src_name": "UrbCoreInd",
     "type": "number",
@@ -6320,7 +6320,7 @@
     ]
   },
   "MicaInd": {
-    "title": "MicaInd",
+    "title": "Mixed Immigrant Cohesion and Accesibility (MICA) Index",
     "name": "MicaInd",
     "src_name": "MicaInd",
     "type": "number",
@@ -6340,7 +6340,7 @@
     ]
   },
   "NeighbTyp": {
-    "title": "NeighbTyp",
+    "title": "Neighborhood Type",
     "name": "NeighbTyp",
     "src_name": "NeighbTyp",
     "type": "string",
@@ -6360,7 +6360,7 @@
     ]
   },
   "SviTh1": {
-    "title": "Social Vulnerability Index (SVI)",
+    "title": "Social Vulnerability Index (SVI) 1",
     "name": "SviTh1",
     "src_name": "SviTh1",
     "type": "number",
@@ -6382,7 +6382,7 @@
     ]
   },
   "SviTh2": {
-    "title": "SviTh2",
+    "title": "Social Vulnerability Index (SVI) 2",
     "name": "SviTh2",
     "src_name": "SviTh2",
     "type": "number",
@@ -6404,7 +6404,7 @@
     ]
   },
   "SviTh3": {
-    "title": "SviTh3",
+    "title": "Social Vulnerability Index (SVI) 3",
     "name": "SviTh3",
     "src_name": "SviTh3",
     "type": "number",
@@ -6426,7 +6426,7 @@
     ]
   },
   "SviTh4": {
-    "title": "SviTh4",
+    "title": "Social Vulnerability Index (SVI) 4",
     "name": "SviTh4",
     "src_name": "SviTh4",
     "type": "number",
@@ -6448,7 +6448,7 @@
     ]
   },
   "SviSmryRnk": {
-    "title": "SviSmryRnk",
+    "title": "Social Vulnerability Index (SVI) Summary Ranking",
     "name": "SviSmryRnk",
     "src_name": "SviSmryRnk",
     "type": "number",
@@ -6490,7 +6490,7 @@
     ]
   },
   "BupCtTmDr": {
-    "title": "BupCtTmDr",
+    "title": "Tracts with Buprenorphine Provider within 30-min (driving)",
     "name": "BupCtTmDr",
     "src_name": "BupCtTmDr",
     "type": "integer",
@@ -6510,7 +6510,7 @@
     ]
   },
   "BupCtTmBk": {
-    "title": "BupCtTmBk",
+    "title": "Tracts with Buprenorphine Provider within 30-min (biking)",
     "name": "BupCtTmBk",
     "src_name": "BupCtTmBk",
     "type": "integer",
@@ -6530,7 +6530,7 @@
     ]
   },
   "BupCtTmWk": {
-    "title": "BupCtTmWk",
+    "title": "Tracts with Buprenorphine Provider within 30-min (walking)",
     "name": "BupCtTmWk",
     "src_name": "BupCtTmWk",
     "type": "integer",
@@ -6550,7 +6550,7 @@
     ]
   },
   "MetCtTmDr": {
-    "title": "MetCtTmDr",
+    "title": "Tracts with Methadone Provider within 30-min (driving)",
     "name": "MetCtTmDr",
     "src_name": "MetCtTmDr",
     "type": "integer",
@@ -6570,7 +6570,7 @@
     ]
   },
   "MetCtTmBk": {
-    "title": "MetCtTmBk",
+    "title": "Tracts with Methadone Provider within 30-min (biking)",
     "name": "MetCtTmBk",
     "src_name": "MetCtTmBk",
     "type": "integer",
@@ -6590,7 +6590,7 @@
     ]
   },
   "MetCtTmWk": {
-    "title": "MetCtTmWk",
+    "title": "Tracts with Methadone Provider within 30-min (walking)",
     "name": "MetCtTmWk",
     "src_name": "MetCtTmWk",
     "type": "integer",
@@ -6610,7 +6610,7 @@
     ]
   },
   "NalCtTmDr": {
-    "title": "NalCtTmDr",
+    "title": "Tracts with Naltrexone Provider within 30-min (driving)",
     "name": "NalCtTmDr",
     "src_name": "NalCtTmDr",
     "type": "integer",
@@ -6630,7 +6630,7 @@
     ]
   },
   "NalCtTmBk": {
-    "title": "NalCtTmBk",
+    "title": "Tracts with Naltrexone Provider within 30-min (biking)",
     "name": "NalCtTmBk",
     "src_name": "NalCtTmBk",
     "type": "integer",
@@ -6650,7 +6650,7 @@
     ]
   },
   "NalCtTmWk": {
-    "title": "NalCtTmWk",
+    "title": "Tracts with Naltrexone Provider within 30-min (walking)",
     "name": "NalCtTmWk",
     "src_name": "NalCtTmWk",
     "type": "integer",
@@ -6670,7 +6670,7 @@
     ]
   },
   "BupAvTmDr": {
-    "title": "BupAvTmDr",
+    "title": "Driving Time (min) to Nearest Buprenorphine Provider",
     "name": "BupAvTmDr",
     "src_name": "BupAvTmDr",
     "type": "number",
@@ -6690,7 +6690,7 @@
     ]
   },
   "BupAvTmBk": {
-    "title": "BupAvTmBk",
+    "title": "Biking Time (min) to Nearest Buprenorphine Provider",
     "name": "BupAvTmBk",
     "src_name": "BupAvTmBk",
     "type": "number",
@@ -6710,7 +6710,7 @@
     ]
   },
   "BupAvTmWk": {
-    "title": "BupAvTmWk",
+    "title": "Walking Time (min) to Nearest Buprenorphine Provider",
     "name": "BupAvTmWk",
     "src_name": "BupAvTmWk",
     "type": "number",
@@ -6730,7 +6730,7 @@
     ]
   },
   "MetAvTmDr": {
-    "title": "MetAvTmDr",
+    "title": "Driving Time (min) to Nearest Methadone Provider",
     "name": "MetAvTmDr",
     "src_name": "MetAvTmDr",
     "type": "number",
@@ -6750,7 +6750,7 @@
     ]
   },
   "MetAvTmBk": {
-    "title": "MetAvTmBk",
+    "title": "Biking Time (min) to Nearest Methadone Provider",
     "name": "MetAvTmBk",
     "src_name": "MetAvTmBk",
     "type": "number",
@@ -6770,7 +6770,7 @@
     ]
   },
   "MetAvTmWk": {
-    "title": "MetAvTmWk",
+    "title": "Walking Time (min) to Nearest Methadone Provide",
     "name": "MetAvTmWk",
     "src_name": "MetAvTmWk",
     "type": "number",
@@ -6790,7 +6790,7 @@
     ]
   },
   "NalAvTmDr": {
-    "title": "NalAvTmDr",
+    "title": "Driving Time (min) to Nearest Naltrexone Provider",
     "name": "NalAvTmDr",
     "src_name": "NalAvTmDr",
     "type": "number",
@@ -6810,7 +6810,7 @@
     ]
   },
   "NalAvTmBk": {
-    "title": "NalAvTmBk",
+    "title": "Biking Time (min) to Nearest Naltrexone Provider",
     "name": "NalAvTmBk",
     "src_name": "NalAvTmBk",
     "type": "number",
@@ -6830,7 +6830,7 @@
     ]
   },
   "NalAvTmWk": {
-    "title": "NalAvTmWk",
+    "title": "Walking Time (min) to Nearest Naltrexone Provider",
     "name": "NalAvTmWk",
     "src_name": "NalAvTmWk",
     "type": "number",
@@ -6850,7 +6850,7 @@
     ]
   },
   "BupTmDrP": {
-    "title": "BupTmDrP",
+    "title": "% Tracts With Buprenorphine Provider (30-min drive)",
     "name": "BupTmDrP",
     "src_name": "BupTmDrP",
     "type": "number",
@@ -6870,7 +6870,7 @@
     ]
   },
   "BupTmBkP": {
-    "title": "BupTmBkP",
+    "title": "% Tracts With Buprenorphine Provider (30-min bike)",
     "name": "BupTmBkP",
     "src_name": "BupTmBkP",
     "type": "number",
@@ -6890,7 +6890,7 @@
     ]
   },
   "BupTmWkP": {
-    "title": "BupTmWkP",
+    "title": "% Tracts With Buprenorphine Provider (30-min walk)",
     "name": "BupTmWkP",
     "src_name": "BupTmWkP",
     "type": "number",
@@ -6910,7 +6910,7 @@
     ]
   },
   "MetTmDrP": {
-    "title": "MetTmDrP",
+    "title": "% Tracts With Methadone Provider (30-min drive)",
     "name": "MetTmDrP",
     "src_name": "MetTmDrP",
     "type": "number",
@@ -6930,7 +6930,7 @@
     ]
   },
   "MetTmBkP": {
-    "title": "MetTmBkP",
+    "title": "% Tracts With Methadone Provider (30-min bike)",
     "name": "MetTmBkP",
     "src_name": "MetTmBkP",
     "type": "number",
@@ -6950,7 +6950,7 @@
     ]
   },
   "MetTmWkP": {
-    "title": "MetTmWkP",
+    "title": "% Tracts With Methadone Provider (30-min walk)",
     "name": "MetTmWkP",
     "src_name": "MetTmWkP",
     "type": "number",
@@ -6970,7 +6970,7 @@
     ]
   },
   "NalTmDrP": {
-    "title": "NalTmDrP",
+    "title": "% Tracts With Naltrexone Provider (30-min drive)",
     "name": "NalTmDrP",
     "src_name": "NalTmDrP",
     "type": "number",
@@ -6990,7 +6990,7 @@
     ]
   },
   "NalTmBkP": {
-    "title": "NalTmBkP",
+    "title": "% Tracts With Naltrexone Provider (30-min bike)",
     "name": "NalTmBkP",
     "src_name": "NalTmBkP",
     "type": "number",
@@ -7010,7 +7010,7 @@
     ]
   },
   "NalTmWkP": {
-    "title": "NalTmWkP",
+    "title": "% Tracts With Naltrexone Provider (30-min walk)",
     "name": "NalTmWkP",
     "src_name": "NalTmWkP",
     "type": "number",
@@ -7030,7 +7030,7 @@
     ]
   },
   "RcaUrbanP": {
-    "title": "RcaUrbanP",
+    "title": "% Tracts Urban (RUCA)",
     "name": "RcaUrbanP",
     "src_name": "RcaUrbanP",
     "type": "number",
@@ -7050,7 +7050,7 @@
     ]
   },
   "RcaSubrbP": {
-    "title": "RcaSubrbP",
+    "title": "% Tracts Suburban (RUCA)",
     "name": "RcaSubrbP",
     "src_name": "RcaSubrbP",
     "type": "number",
@@ -7070,7 +7070,7 @@
     ]
   },
   "RcaRuralP": {
-    "title": "RcaRuralP",
+    "title": "% Tracts Rural (RUCA)",
     "name": "RcaRuralP",
     "src_name": "RcaRuralP",
     "type": "number",
@@ -7090,7 +7090,7 @@
     ]
   },
   "CenFlags": {
-    "title": "CenFlags",
+    "title": "Census Flags",
     "name": "CenFlags",
     "src_name": "CenFlags",
     "type": "string",
@@ -7110,7 +7110,7 @@
     ]
   },
   "TotPop10": {
-    "title": "TotPop10",
+    "title": "Total Population (2010)",
     "name": "TotPop10",
     "src_name": "TotPop10",
     "type": "integer",
@@ -7150,7 +7150,7 @@
     ]
   },
   "RuralPop10": {
-    "title": "RuralPop10",
+    "title": "Rural Population (2010)",
     "name": "RuralPop10",
     "src_name": "RuralPop10",
     "type": "integer",
@@ -7570,7 +7570,7 @@
     ]
   },
   "TtlPrPp": {
-    "title": "TtlPrPp",
+    "title": "Total Prison Population Count",
     "name": "TtlPrPp",
     "src_name": "TtlPrPp",
     "type": "integer",
@@ -7590,7 +7590,7 @@
     ]
   },
   "FmlPrPp": {
-    "title": "FmlPrPp",
+    "title": "Prison Population Count, Female",
     "name": "FmlPrPp",
     "src_name": "FmlPrPp",
     "type": "integer",
@@ -7610,7 +7610,7 @@
     ]
   },
   "MlPrPp": {
-    "title": "MlPrPp",
+    "title": "Prison Population Count, Male",
     "name": "MlPrPp",
     "src_name": "MlPrPp",
     "type": "integer",
@@ -7630,7 +7630,7 @@
     ]
   },
   "AapiPrPp": {
-    "title": "AapiPrPp",
+    "title": "Prison Population Count, Asian American / Pacific Islander",
     "name": "AapiPrPp",
     "src_name": "AapiPrPp",
     "type": "integer",
@@ -7650,7 +7650,7 @@
     ]
   },
   "BlckPrPp": {
-    "title": "BlckPrPp",
+    "title": "Prison Population Count, Black",
     "name": "BlckPrPp",
     "src_name": "BlckPrPp",
     "type": "integer",
@@ -7670,7 +7670,7 @@
     ]
   },
   "LtnxPrPp": {
-    "title": "LtnxPrPp",
+    "title": "Prison Population Count, Latinx",
     "name": "LtnxPrPp",
     "src_name": "LtnxPrPp",
     "type": "integer",
@@ -7690,7 +7690,7 @@
     ]
   },
   "NtvPrPp": {
-    "title": "NtvPrPp",
+    "title": "Prison Population Count, Native American",
     "name": "NtvPrPp",
     "src_name": "NtvPrPp",
     "type": "integer",
@@ -7710,7 +7710,7 @@
     ]
   },
   "WhtPrPp": {
-    "title": "WhtPrPp",
+    "title": "Prison Population Count, White",
     "name": "WhtPrPp",
     "src_name": "WhtPrPp",
     "type": "integer",
@@ -7730,7 +7730,7 @@
     ]
   },
   "TtlPrAPp": {
-    "title": "TtlPrAPp",
+    "title": "Prison Prison Admissions Count",
     "name": "TtlPrAPp",
     "src_name": "TtlPrAPp",
     "type": "integer",
@@ -7750,7 +7750,7 @@
     ]
   },
   "FmlPrAPp": {
-    "title": "FmlPrAPp",
+    "title": "Prison Admission Count, Female",
     "name": "FmlPrAPp",
     "src_name": "FmlPrAPp",
     "type": "integer",
@@ -7770,7 +7770,7 @@
     ]
   },
   "MlPrAPp": {
-    "title": "MlPrAPp",
+    "title": "Prison Admission Count, Male",
     "name": "MlPrAPp",
     "src_name": "MlPrAPp",
     "type": "integer",
@@ -7790,7 +7790,7 @@
     ]
   },
   "AapiPrAPp": {
-    "title": "AapiPrAPp",
+    "title": "Prison Admission Count, Asian American / Pacific Islander",
     "name": "AapiPrAPp",
     "src_name": "AapiPrAPp",
     "type": "integer",
@@ -7810,7 +7810,7 @@
     ]
   },
   "BlckPrAPp": {
-    "title": "BlckPrAPp",
+    "title": "Prison Admission Count, Black",
     "name": "BlckPrAPp",
     "src_name": "BlckPrAPp",
     "type": "integer",
@@ -7830,7 +7830,7 @@
     ]
   },
   "LtnxPrAPp": {
-    "title": "LtnxPrAPp",
+    "title": "Prison Admission Count, Latinx",
     "name": "LtnxPrAPp",
     "src_name": "LtnxPrAPp",
     "type": "integer",
@@ -7850,7 +7850,7 @@
     ]
   },
   "NtvPrAPp": {
-    "title": "NtvPrAPp",
+    "title": "Prison Admission Count, Native American",
     "name": "NtvPrAPp",
     "src_name": "NtvPrAPp",
     "type": "integer",
@@ -7870,7 +7870,7 @@
     ]
   },
   "WhtPrAPp": {
-    "title": "WhtPrAPp",
+    "title": "Prison Admission Count, White",
     "name": "WhtPrAPp",
     "src_name": "WhtPrAPp",
     "type": "integer",
@@ -8090,7 +8090,7 @@
     ]
   },
   "TtlJlPp": {
-    "title": "TtlJlPp",
+    "title": "Total Jail Population Count, ASJ/COJ Data",
     "name": "TtlJlPp",
     "src_name": "TtlJlPp",
     "type": "number",
@@ -8110,7 +8110,7 @@
     ]
   },
   "FmlJlPp": {
-    "title": "FmlJlPp",
+    "title": "\tJail Population Count, Female",
     "name": "FmlJlPp",
     "src_name": "FmlJlPp",
     "type": "number",
@@ -8130,7 +8130,7 @@
     ]
   },
   "MlJlPp": {
-    "title": "MlJlPp",
+    "title": "Jail Population Count, Male",
     "name": "MlJlPp",
     "src_name": "MlJlPp",
     "type": "number",
@@ -8150,7 +8150,7 @@
     ]
   },
   "AapiJlPp": {
-    "title": "AapiJlPp",
+    "title": "Jail Population Count, Asian American / Pacific Islander",
     "name": "AapiJlPp",
     "src_name": "AapiJlPp",
     "type": "number",
@@ -8170,7 +8170,7 @@
     ]
   },
   "BlckJlPp": {
-    "title": "BlckJlPp",
+    "title": "Jail Population Count, Black",
     "name": "BlckJlPp",
     "src_name": "BlckJlPp",
     "type": "number",
@@ -8190,7 +8190,7 @@
     ]
   },
   "LtnxJlPp": {
-    "title": "LtnxJlPp",
+    "title": "Jail Population Count, Latinx",
     "name": "LtnxJlPp",
     "src_name": "LtnxJlPp",
     "type": "number",
@@ -8210,7 +8210,7 @@
     ]
   },
   "NtvJlPp": {
-    "title": "NtvJlPp",
+    "title": "Jail Population Count, Native American",
     "name": "NtvJlPp",
     "src_name": "NtvJlPp",
     "type": "number",
@@ -8230,7 +8230,7 @@
     ]
   },
   "WhtJlPp": {
-    "title": "WhtJlPp",
+    "title": "Jail Population Count, White",
     "name": "WhtJlPp",
     "src_name": "WhtJlPp",
     "type": "number",
@@ -8250,7 +8250,7 @@
     ]
   },
   "TtlJlAdm": {
-    "title": "TtlJlAdm",
+    "title": "Total Jail Admissions Count, ASJ/COJ Data",
     "name": "TtlJlAdm",
     "src_name": "TtlJlAdm",
     "type": "number",
