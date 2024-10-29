@@ -13,7 +13,7 @@ from flask.cli import AppGroup
 from oeps.clients.bigquery import BigQuery, get_client
 from oeps.clients.census import CensusClient
 from oeps.clients.explorer import Explorer
-from oeps.clients.frictionless import DataResource, DataPackage
+from oeps.clients.frictionless import DataPackage
 from oeps.clients.overture import get_filter_shape, get_data
 from oeps.clients.registry import Registry
 from oeps.config import (
@@ -73,42 +73,42 @@ def load(name, overwrite, table_only, dry_run):
     """Load a data resource to a big query table. The data resource schema should provide all field
 and table configuration information that is needed to create the table and load data into it."""
 
-    client = BigQuery()
-
-    all_errors = []
-
+    bq = BigQuery()
     registry = Registry()
+
+    messages = []
 
     data_resources = registry.get_all_geodata_resources()
     data_resources += registry.get_all_table_resources()
 
-    for res in data_resources:
-        
-        dr = DataResource(json_definition=res)
-        if name and dr.schema["name"] != name:
+    for resource in data_resources:
+
+        if name and resource["name"] != name:
             continue
 
         if table_only:
-            table = client.create_table(dr.schema, overwrite=overwrite)
+            table = bq.create_table(resource, overwrite=overwrite)
             print(table)
             exit()
 
         else:
             start = datetime.now()
-            print(f"\nVALIDATE INPUT SOURCE: {dr.schema['path']}")
-            rows, errors = dr.load_rows_from_file()
-            all_errors += errors
+            print(f"\nVALIDATE INPUT SOURCE: {resource['path']}")
+            rows, errors = bq.load_rows_from_resource(resource)
+            messages += errors
             print(f"WARNINGS ENCOUNTERED: {len(errors)}")
             for e in errors:
                 print("  " + e)
 
             if not dry_run:
-                print(f"\nBEGIN LOAD: {dr.schema['name']}")
-                table = client.create_table(dr.schema, overwrite=overwrite)
+                print(f"\nBEGIN LOAD: {resource['name']}")
+                table = bq.create_table(resource, overwrite=overwrite)
                 print(f"TABLE CREATED: {table}")
-                load_job = client.load_table(rows, dr.schema['bq_dataset_name'], dr.schema['bq_table_name'])
+                load_job = bq.load_table(rows, resource['bq_dataset_name'], resource['bq_table_name'])
                 print(F"JOB COMPLETE: {load_job}")
                 print(f"TIME ELAPSED: {datetime.now()-start}")
+
+    print(f"ERRORS/WARNINGS ENCOUNTERED: {len(messages)}")
 
 
 @bigquery_grp.command()
@@ -379,59 +379,53 @@ validation.
         skip_foreign_keys=skip_foreign_keys,
         run_validation=not skip_validation,
     )
-
-@frictionless_grp.command()
-def list_resources():
-    """Print a list of all data resources in the data/resources directory."""
-    for i in RESOURCES_DIR.glob('*.json'):
-        print(i.name)
                        
-@frictionless_grp.command()
-@click.option('--source', "-s",
-    help="Local path to directory with Excel data dictionaries in it, or the path to a single dictionary "\
-        "file. If not provided, all dictionaries stored in the GeoDaCenter/opioid-policy-scan repo will "\
-        "be used.",
-    type=click.Path(
-        resolve_path=True,
-        path_type=Path,
-    )
-)
-@click.option('--destination', "-d",
-    default=RESOURCES_DIR_rel,
-    help="Output location for generated schema files.",
-    type=click.Path(
-        resolve_path=True,
-        path_type=Path,
-    )
-)
-def generate_resources_from_oeps_dicts(destination: Path, source: Path=None):
-    """Creates data resource schema files from external data dictionaries.
+# @frictionless_grp.command()
+# @click.option('--source', "-s",
+#     help="Local path to directory with Excel data dictionaries in it, or the path to a single dictionary "\
+#         "file. If not provided, all dictionaries stored in the GeoDaCenter/opioid-policy-scan repo will "\
+#         "be used.",
+#     type=click.Path(
+#         resolve_path=True,
+#         path_type=Path,
+#     )
+# )
+# @click.option('--destination', "-d",
+#     default=RESOURCES_DIR_rel,
+#     help="Output location for generated schema files.",
+#     type=click.Path(
+#         resolve_path=True,
+#         path_type=Path,
+#     )
+# )
+# def generate_resources_from_oeps_dicts(destination: Path, source: Path=None):
+#     """Creates data resource schema files from external data dictionaries.
 
-TO DEPRECATE: Ultimately, this pattern will be deprecated in favor of the opposite: The Excel data dictionaries
-will be generated directly from the data resource schema files."""
+# TO DEPRECATE: Ultimately, this pattern will be deprecated in favor of the opposite: The Excel data dictionaries
+# will be generated directly from the data resource schema files."""
 
-    remote_files = [
-        "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/dictionaries/S_Dict.xlsx",
-        "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/dictionaries/C_Dict.xlsx",
-        "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/dictionaries/T_Dict.xlsx",
-        "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/dictionaries/Z_Dict.xlsx",
-    ]
-    if source:
-        if source.is_file():
-            paths = [source]
-        if source.is_dir():
-            paths = source.glob("*_Dict.xlsx")
-    else:
-        paths = remote_files
+#     remote_files = [
+#         "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/dictionaries/S_Dict.xlsx",
+#         "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/dictionaries/C_Dict.xlsx",
+#         "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/dictionaries/T_Dict.xlsx",
+#         "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/dictionaries/Z_Dict.xlsx",
+#     ]
+#     if source:
+#         if source.is_file():
+#             paths = [source]
+#         if source.is_dir():
+#             paths = source.glob("*_Dict.xlsx")
+#     else:
+#         paths = remote_files
 
-    destination.mkdir(exist_ok=True)
+#     destination.mkdir(exist_ok=True)
 
-    for path in paths:
-        print(f"\nINPUT: {path}")
-        files = DataResource().create_from_oeps_xlsx_data_dict(path, destination)
-        print("OUTPUT:")
-        for f in files:
-            print(f"  {f}")
+#     for path in paths:
+#         print(f"\nINPUT: {path}")
+#         files = DataResource().create_from_oeps_xlsx_data_dict(path, destination)
+#         print("OUTPUT:")
+#         for f in files:
+#             print(f"  {f}")
 
 
 registry_grp = AppGroup('registry',
