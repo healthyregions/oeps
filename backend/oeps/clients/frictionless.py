@@ -1,5 +1,4 @@
 import os
-import csv
 import json
 import numpy
 import shutil
@@ -7,141 +6,12 @@ from datetime import datetime
 import pandas as pd
 import geopandas as gpd
 from pathlib import Path
-from openpyxl import Workbook
-from openpyxl.utils import get_column_letter
-from openpyxl.styles import Font
 
 from frictionless import validate
 
 from oeps.config import DATA_DIR
-from oeps.utils import get_path_or_paths, fetch_files, upload_to_s3, load_json, write_json, BQ_TYPE_LOOKUP
+from oeps.utils import fetch_files, upload_to_s3, load_json, write_json, BQ_TYPE_LOOKUP
 from oeps.clients.registry import Registry
-
-def create_data_dictionaries(source, dest):
-
-    geographies = [
-        {
-            "id": "state",
-            "plural": "states",
-            "csv_abbreviation": "S"
-        },
-        {
-            "id": "county",
-            "plural": "counties",
-            "csv_abbreviation": "C"
-        },
-        {
-            "id": "tract",
-            "plural": "tracts",
-            "csv_abbreviation": "T"
-        },
-        {
-            "id": "zcta",
-            "plural": "zctas",
-            "csv_abbreviation": "Z"
-        },
-    ]
-
-    theme_list = [
-        "Geography",
-        "Social",
-        "Environment",
-        "Economy",
-    ]
-
-    for geo in geographies:
-        tabular = get_path_or_paths(source, glob_pattern=f"tabular_{geo['csv_abbreviation']}*.json")
-
-        all_fields_list = []
-        for t in tabular:
-            data = load_json(t)
-            file_year = data['name'].split("-")[1]
-            for f in data['schema']['fields']:
-                if not f.get('year'):
-                    f['year'] = file_year
-                all_fields_list.append(f)
-        sorted_fields = sorted(all_fields_list, key=lambda i: (i['theme'], i['name']))
-
-        ordered = []
-        for theme in theme_list:
-            ordered += sorted([i for i in sorted_fields if i['theme'] == theme], key=lambda i: i['metadata_doc_url'])
-
-        all_variables = {}
-        for f in ordered:
-            if f['name'] in all_variables:
-                print(f['year'])
-                all_variables[f['name']]['years'].append(f['year'])
-            else:
-                all_variables[f['name']] = {
-                    'years': [f['year']],
-                    'info': f
-                }
-
-        years_list = set()
-        for v in all_variables.values():
-            for y in v['years']:
-                years_list.add(y)
-
-        headers = {"Theme": 15}
-        for y in sorted(years_list):
-            headers[y] = 5
-        headers.update({
-            "Longitudinal": 10,
-            "Variable": 20,
-            "Description": 25,
-            "Metadata Location": 25,
-            "Source": 25,
-            "Source Long": 25,
-            "OEPS v1 Table": 25,
-            "Type": 25,
-            "Example": 25,
-            "Data Limitations": 25,
-            "Comments": 100
-        })
-
-        wb = Workbook()
-        ws = wb.active
-        ws.append(list(headers.keys()))
-        
-        ft = Font(bold=True, name='Calibri')
-        for row in ws["A1:Z1"]:
-            for cell in row:
-                cell.font = ft
-
-        def parse_attribute_from_variable(attribute, variable):
-            v = variable['info']
-            if attribute == "Longitudinal":
-                if v['longitudinal']:
-                    return "x"
-            elif attribute == "Analysis":
-                if v['analysis']:
-                    return "x"
-            elif attribute in variable.get('years', []):
-                return "x"
-            elif attribute == "Variable":
-                return v.get('name')
-            elif attribute == "Metadata Location":
-                return v.get('metadata_doc_url')
-            elif attribute == "Data Limitations":
-                return v.get('constraints')
-            elif attribute == "Source Long":
-                return v.get('source_long')
-            elif attribute == "OEPS v1 Table":
-                return v.get('oeps_v1_table')
-            elif attribute.lower() in v:
-                return v.get(attribute.lower())
-
-            return ""
-
-        for v in all_variables.values():
-            row = [parse_attribute_from_variable(i, v) for i in headers.keys()]
-            ws.append(row)
-
-        for n, k in enumerate(headers.keys()):
-            ws.column_dimensions[get_column_letter(n+1)].width = headers[k]
-
-        # Save the file
-        wb.save(Path(dest, f"{geo['csv_abbreviation']}_Dict.xlsx"))
 
 
 class DataPackage():
