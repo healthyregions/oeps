@@ -13,7 +13,7 @@ from flask.cli import AppGroup
 from oeps.clients.bigquery import BigQuery, get_client
 from oeps.clients.census import CensusClient
 from oeps.clients.explorer import Explorer
-from oeps.clients.frictionless import DataResource, DataPackage, create_data_dictionaries
+from oeps.clients.frictionless import DataResource, DataPackage
 from oeps.clients.overture import get_filter_shape, get_data
 from oeps.clients.registry import Registry
 from oeps.config import (
@@ -433,23 +433,25 @@ will be generated directly from the data resource schema files."""
         for f in files:
             print(f"  {f}")
 
-@frictionless_grp.command()
-@click.option('--source', "-s",
-    default=RESOURCES_DIR_rel,
-    help="Input directory that holds the data resource JSON schemas to process.",
+
+registry_grp = AppGroup('registry',
+    help="A group of operations for interacting with all data stored in the backend registry."
 )
+
+@registry_grp.command()
 @click.option('--destination', "-d",
-    default=Path(CACHE_DIR_rel, "dicts"),
-    help="Output directory for new dictionaries.",
+    default=None,
+    help="Output directory for new dictionaries, if not supplied will be placed within data dir.",
+    type=click.Path(
+        resolve_path=True,
+        path_type=Path,
+    ),
 )
-def create_oeps_dicts(**kwargs):
-    """Create the human readable, MS Excel data dictionaries from the data resource schemas."""
-    args = Namespace(**kwargs)
+def create_data_dictionaries(destination):
+    """Create the human readable, MS Excel data dictionaries based on registry content."""
 
-    Path(args.destination).mkdir(exist_ok=True)
-
-    create_data_dictionaries(args.source, args.destination)
-
+    registry = Registry()
+    registry.create_data_dictionaries(destination)
 
 @click.command()
 @click.option('--registry',

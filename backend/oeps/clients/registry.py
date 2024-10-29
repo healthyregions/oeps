@@ -1,10 +1,24 @@
 from pathlib import Path
 
-from oeps.utils import load_json, write_json
+from openpyxl import Workbook
+from openpyxl.utils import get_column_letter
+from openpyxl.styles import Font
+
+from oeps.utils import load_json
 
 REGISTRY_DIR = Path(Path(__file__).parent.parent, "data", "registry")
 
 class Registry():
+
+    THEMES = [
+        'Geography',
+        'Social',
+        'Environment',
+        'Economic',
+        'Policy',
+        'Outcome',
+        'Composite',
+    ]
 
     def __init__(self, directory: Path=REGISTRY_DIR):
 
@@ -134,7 +148,127 @@ class Registry():
     def get_all_table_resources(self, trim_props: bool=False):
 
         return [self.create_tabular_resource(i, trim_props=trim_props) for i in self.table_lookup.keys()]
-    
+
     def get_all_geodata_resources(self, trim_props: bool=False):
 
         return [self.create_geodata_resource(i, trim_props=trim_props) for i in self.geodata_lookup.keys()]
+
+    def create_data_dictionaries(self, destination: Path=None):
+        """ Generate MS Excel formatted data dictionaries for all content. """
+
+        if not destination:
+            destination = Path(REGISTRY_DIR.parent, "dictionaries")
+        destination.mkdir(exist_ok=True)
+
+        summary_levels = [{
+            "id": v["summary_level"],
+            "csv_abbreviation": v["summary_level"][0].upper(),
+        } for v in self.geodata_lookup.values()]
+
+        all_table_sources = self.get_all_table_resources()
+
+        all_fields = []
+        for v in self.variable_lookup.values():
+            years = list(set([i.split("-")[1] for i in v['table_sources']]))
+            v['years'] = years
+            all_fields.append(v)
+
+        for geo in summary_levels:
+
+            tabular = [i for i in all_table_sources if self.geodata_lookup[i['geodata_source']]['summary_level'] == geo['id']]
+
+            # get all variables (fields) that are in any of these tables
+            fields = []
+            for table in tabular:
+                for i in all_fields:
+                    if table['name'] in i['table_sources']:
+                        fields.append(i)
+
+            all_fields_list = []
+            for t in tabular:
+                file_year = t['name'].split("-")[1]
+                for f in t['schema']['fields']:
+                    if not f.get('year'):
+                        f['year'] = file_year
+                    all_fields_list.append(f)
+
+            ordered = []
+            for theme in self.THEMES:
+                matched = [i for i in fields if i['theme'] == theme]
+                ordered += sorted(matched, key=lambda i: i['metadata_doc_url'])
+
+            all_variables = {}
+            for f in ordered:
+                all_variables[f['name']] = {
+                        'years': f['years'],
+                        'info': f
+                    }
+
+            years_list = set()
+            for v in all_variables.values():
+                for y in v['years']:
+                    years_list.add(y)
+
+            headers = {"Theme": 15}
+            for y in sorted(years_list):
+                headers[y] = 5
+            headers.update({
+                "Longitudinal": 10,
+                "Variable": 20,
+                "Title": 30,
+                "Description": 25,
+                "Metadata Location": 25,
+                "Source": 25,
+                "Source Long": 25,
+                "OEPS v1 Table": 25,
+                "Type": 25,
+                "Example": 25,
+                "Data Limitations": 25,
+                "Comments": 100
+            })
+
+            wb = Workbook()
+            ws = wb.active
+            ws.append(list(headers.keys()))
+
+            ft = Font(bold=True, name='Calibri')
+            for row in ws["A1:Z1"]:
+                for cell in row:
+                    cell.font = ft
+
+            def parse_attribute_from_variable(attribute, variable):
+                v = variable['info']
+                if attribute == "Longitudinal":
+                    if v['longitudinal']:
+                        return "x"
+                elif attribute == "Analysis":
+                    if v['analysis']:
+                        return "x"
+                elif attribute in variable.get('years', []):
+                    return "x"
+                elif attribute == "Title":
+                    return v.get('title')
+                elif attribute == "Variable":
+                    return v.get('name')
+                elif attribute == "Metadata Location":
+                    return v.get('metadata_doc_url')
+                elif attribute == "Data Limitations":
+                    return v.get('constraints')
+                elif attribute == "Source Long":
+                    return v.get('source_long')
+                elif attribute == "OEPS v1 Table":
+                    return v.get('oeps_v1_table')
+                elif attribute.lower() in v:
+                    return v.get(attribute.lower())
+
+                return ""
+
+            for v in all_variables.values():
+                row = [parse_attribute_from_variable(i, v) for i in headers.keys()]
+                ws.append(row)
+
+            for n, k in enumerate(headers.keys()):
+                ws.column_dimensions[get_column_letter(n+1)].width = headers[k]
+
+            # Save the file
+            wb.save(Path(destination, f"{geo['csv_abbreviation']}_Dict.xlsx"))
