@@ -5,8 +5,8 @@ from openpyxl.utils import get_column_letter
 from openpyxl.styles import Font
 
 from oeps.utils import load_json
+from oeps.config import REGISTRY_DIR
 
-REGISTRY_DIR = Path(Path(__file__).parent.parent, "data", "registry")
 
 class Registry():
 
