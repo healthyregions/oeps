@@ -31,21 +31,10 @@ class Explorer():
                 entry["csv_abbrev"] = id[0]
                 geodata_lookup[id] = entry
         
-        # create lookup of all table data sources
-        # only table sources that link to a geodata source will be used
-        table_lookup = {}
-        for id, data in registry.table_lookup.items():
-            ds_name = data["name"]
-            joins = data["schema"].get("foreignKeys", [])
-            if not joins:
-                print(f"warning: data source {ds_name} has no foreignKeys...")
-                continue
-            geodata_id = joins[0]["reference"]["resource"]
-            if geodata_id in geodata_lookup:
-                data['geodata_source'] = geodata_id
-                table_lookup[ds_name] = data
+        # create lookup of all table data sources that are linked to a valid geodata_source
+        table_lookup = {k:v for k, v in registry.table_lookup.items() if v.get('geodata_source') in geodata_lookup}
 
-        # iterate all variables and create a lookuo for all combinations of data sources
+        # iterate all variables and create a lookup for all combinations of data sources
         # in which each variable has a value
         variables = {k: v for k, v in registry.variable_lookup.items() if not v["theme"] == "Geography"}
         ds_combo_lookup = {}
