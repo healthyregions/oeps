@@ -12,7 +12,7 @@ class Explorer():
         self.root_dir = root_dir if root_dir else Path(".explorer")
         self.dataframe_lookup = {}
 
-    def build_config(self, registry_dir: Path=None, write_csvs: bool=True):
+    def build_map_config(self, registry_dir: Path=None, write_csvs: bool=True):
 
         registry = Registry(registry_dir) if registry_dir else Registry()
 
@@ -104,3 +104,14 @@ class Explorer():
         write_json(out_sources, Path(config_dir, "sources.json"))
 
         write_json(list(out_variables.values()), Path(config_dir, 'variables.json'))
+
+    def build_docs_config(self, registry_dir: Path=None):
+
+        registry = Registry(registry_dir) if registry_dir else Registry()
+        theme_lookup = {}
+        for theme in registry.THEMES:
+            theme_lookup[theme] = [i for i in registry.variable_lookup.values() if i['theme'] == theme]
+        
+
+        meta_dir = Path(self.root_dir, "meta")
+        write_json(theme_lookup, Path(meta_dir, 'variables.json'))

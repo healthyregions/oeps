@@ -420,11 +420,39 @@ def create_data_dictionaries(destination):
     default=False,
     is_flag=True,
 )
-def configure_explorer(registry: Path, root_dir: Path, make_csvs: bool=False):
+def configure_explorer_map(registry: Path, root_dir: Path, make_csvs: bool=False):
     """Builds configuration files for the frontend OEPS Explorer application."""
 
     ex = Explorer(root_dir=root_dir)
-    ex.build_config(registry_dir=registry, write_csvs=make_csvs)
+    ex.build_map_config(registry_dir=registry, write_csvs=make_csvs)
+
+@click.command()
+@click.option('--registry',
+    help="Optional input path for the registry directory.",
+    default=REGISTRY_DIR_rel,
+    type=click.Path(
+        resolve_path=True,
+        path_type=Path,
+    ),
+)
+@click.option('--root-dir',
+    help="Optional output path for config files. The default location will overwrite existing configs.",
+    default=EXPLORER_ROOT_DIR_rel,
+    type=click.Path(
+        resolve_path=True,
+        path_type=Path,
+    ),
+)
+@click.option('--make-csvs',
+    help="Only write new config JSON files, assumes CSV files are already generated.",
+    default=False,
+    is_flag=True,
+)
+def configure_explorer_docs(registry: Path, root_dir: Path, make_csvs: bool=False):
+    """Builds configuration files for the frontend OEPS Explorer application."""
+
+    ex = Explorer(root_dir=root_dir)
+    ex.build_docs_config(registry_dir=registry)
 
 
 @click.command()

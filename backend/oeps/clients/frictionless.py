@@ -1,16 +1,11 @@
 import os
-import json
-import numpy
 import shutil
-from datetime import datetime
 import pandas as pd
-import geopandas as gpd
 from pathlib import Path
 
 from frictionless import validate
 
-from oeps.config import DATA_DIR
-from oeps.utils import fetch_files, upload_to_s3, load_json, write_json, BQ_TYPE_LOOKUP
+from oeps.utils import fetch_files, upload_to_s3, load_json, write_json
 from oeps.clients.registry import Registry
 
 
