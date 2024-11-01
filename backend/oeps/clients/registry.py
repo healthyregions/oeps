@@ -213,6 +213,7 @@ class Registry():
             for y in sorted(years_list):
                 headers[y] = 5
             headers.update({
+                "Analysis": 10,
                 "Longitudinal": 10,
                 "Variable": 20,
                 "Title": 30,
