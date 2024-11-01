@@ -2585,27 +2585,6 @@
       "c-latest"
     ]
   },
-  "DrgRlDth": {
-    "title": "Deaths from drug-related causes (2009-2018)",
-    "name": "DrgRlDth",
-    "src_name": "DrgRlDth",
-    "type": "number",
-    "example": "9691",
-    "description": "Total deaths from drug-related causes, 2009-2018",
-    "constraints": "County-level and other subnational data representing fewer than ten persons (0-9) are suppressed for year 1989 and later years, including our years of interest 2009-2018. Furthermore, rates may be considered \"unreliable\" when the death count is less than 20. For more information, see CDC.",
-    "theme": "Outcome",
-    "source": "CDC WONDER, 2009-2019",
-    "source_long": "United States CDC's Underlying Cause of Death, 2009-2019 dataset via CDC Wonder.",
-    "oeps_v1_table": null,
-    "comments": "This dataset includes data for the 48 contiguous U.S. states and Washington, D.C. It does not include Alaska, Hawaii, or the U.S. territories: Puerto Rico, Guam, American Samoa, Northern Mariana Islands, U.S. Virgin Islands.",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Health_DrugDeaths.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "s-latest",
-      "c-latest"
-    ]
-  },
   "TotHcv": {
     "title": "Yearly Hepatitis C cases (2013-2016)",
     "name": "TotHcv",
