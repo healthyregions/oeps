@@ -19,7 +19,6 @@ from oeps.clients.registry import Registry
 from oeps.config import (
     CACHE_DIR,
     EXPLORER_ROOT_DIR,
-    RESOURCES_DIR,
     REGISTRY_DIR,
 )
 
@@ -33,7 +32,6 @@ from oeps.utils import (
 # in the generated docs... this would be incorrect on every system besides the one that had 
 # generated the docs.
 EXPLORER_ROOT_DIR_rel = os.path.relpath(EXPLORER_ROOT_DIR, start=Path(__file__).parent)
-RESOURCES_DIR_rel = os.path.relpath(RESOURCES_DIR, start=Path(__file__).parent.parent)
 CACHE_DIR_rel = os.path.relpath(CACHE_DIR, start=Path(__file__).parent.parent)
 REGISTRY_DIR_rel = os.path.relpath(REGISTRY_DIR, start=Path(__file__).parent.parent)
 
@@ -379,53 +377,6 @@ validation.
         skip_foreign_keys=skip_foreign_keys,
         run_validation=not skip_validation,
     )
-                       
-# @frictionless_grp.command()
-# @click.option('--source', "-s",
-#     help="Local path to directory with Excel data dictionaries in it, or the path to a single dictionary "\
-#         "file. If not provided, all dictionaries stored in the GeoDaCenter/opioid-policy-scan repo will "\
-#         "be used.",
-#     type=click.Path(
-#         resolve_path=True,
-#         path_type=Path,
-#     )
-# )
-# @click.option('--destination', "-d",
-#     default=RESOURCES_DIR_rel,
-#     help="Output location for generated schema files.",
-#     type=click.Path(
-#         resolve_path=True,
-#         path_type=Path,
-#     )
-# )
-# def generate_resources_from_oeps_dicts(destination: Path, source: Path=None):
-#     """Creates data resource schema files from external data dictionaries.
-
-# TO DEPRECATE: Ultimately, this pattern will be deprecated in favor of the opposite: The Excel data dictionaries
-# will be generated directly from the data resource schema files."""
-
-#     remote_files = [
-#         "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/dictionaries/S_Dict.xlsx",
-#         "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/dictionaries/C_Dict.xlsx",
-#         "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/dictionaries/T_Dict.xlsx",
-#         "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/dictionaries/Z_Dict.xlsx",
-#     ]
-#     if source:
-#         if source.is_file():
-#             paths = [source]
-#         if source.is_dir():
-#             paths = source.glob("*_Dict.xlsx")
-#     else:
-#         paths = remote_files
-
-#     destination.mkdir(exist_ok=True)
-
-#     for path in paths:
-#         print(f"\nINPUT: {path}")
-#         files = DataResource().create_from_oeps_xlsx_data_dict(path, destination)
-#         print("OUTPUT:")
-#         for f in files:
-#             print(f"  {f}")
 
 
 registry_grp = AppGroup('registry',
