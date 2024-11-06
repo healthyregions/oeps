@@ -10,33 +10,24 @@ from oeps.config import REGISTRY_DIR, DATA_DIR
 
 class Registry():
 
-    THEMES = [
-        'Geography',
-        'Social',
-        'Environment',
-        'Economic',
-        'Policy',
-        'Outcome',
-        'Composite',
-    ]
-
     def __init__(self, directory: Path=REGISTRY_DIR):
 
         self.directory = directory
         self.variable_lookup = None
         self.geodata_lookup = None
         self.table_lookup = None
-        self.theme_constructs = None
+        self.themes = None
         self.construct_lookup = None
         self.load_variables()
 
         # load in the theme and construct structure used in certain exports
-        self.theme_constructs = load_json(Path(self.directory, "themes.json"))
-        theme_lookup = {}
-        for theme, constructs in self.theme_constructs.items():
-            for construct in constructs:
-                theme_lookup[construct] = theme
-        self.theme_lookup = theme_lookup
+        self.themes = load_json(Path(self.directory, "themes.json"))
+        self.theme_lookup = {}
+        self.proxy_lookup = {}
+        for theme, constructs in self.themes.items():
+            for construct, proxy in constructs.items():
+                self.theme_lookup[construct] = theme
+                self.proxy_lookup[construct] = proxy
 
     def load_geodata_sources(self):
         """ Creates a lookup of all geodata sources in the registry. If explorer_only=True,
@@ -205,7 +196,7 @@ class Registry():
                     all_fields_list.append(f)
 
             ordered = []
-            for theme in self.theme_constructs.keys():
+            for theme in self.themes.keys():
                 matched = [i for i in fields if self.theme_lookup[i['construct']] == theme]
                 ordered += sorted(matched, key=lambda i: i['metadata_doc_url'])
 
@@ -291,8 +282,8 @@ class Registry():
     def validate(self):
 
         valid_constructs = []
-        for c in self.theme_constructs.values():
-            valid_constructs += c
+        for c in self.themes.values():
+            valid_constructs += list(c.keys())
 
         missing = 0
         used = set()

@@ -43,22 +43,35 @@ To explain the example:
 
 Though these three variables are present in four different data source tables, you will notice that these tables only link to three different geodata sources. This is because both of the state-level data sources, 2010 and 2000, can be joined to the same single `states` geodata source.
 
-While this is a very small example (currently we have well over 350 variables), it should be enough to show the flexibility of the system.
+While this is a very small example (currently we have over 300 variables), it should be enough to illustrate the theoretical flexibility of the setup.
 
 ### `themes`
 
-Themes are a very lightweight grouping of "contructs" that represent a variable (or a group of variables) at a conceptual level. Themes and constructs are only used in certain export formats. The structure of the `themes.json` file is very simple:
+Themes are a very lightweight grouping of "constructs" that represent a variable (or a group of variables) at a conceptual level. Alongside each construct is a "proxy"; this is just a short description of all variables that fit within this construct. The structure of the `themes.json` file is very simple:
 
 ```json
 {
-  <theme name>: [
-    <construct 1>,
-    <construct 2>,
-  ]
+  "<theme name>": {
+    "<construct 1>": "<proxy for concept 1>",
+    "<construct 2>": "<proxy for concept 2>",
+  }
 }
 ```
 
-and variables (as described below) have a `construct` field that must be matched to a construct present under one of the themes.
+and with some real example values:
+
+```json
+{
+  "Social": {
+    "Age": "Age group estimates and percentages of population",
+    "Race & Ethnicity": "Percentages of population defined by categories of race and ethnicity",
+  }
+}
+```
+
+Each variable is matched to one construct via its `construct` propert (see below).
+
+Themes, construct, and proxies are only used in certain export formats, and are not a structurally central aspect of the registry.
 
 ### `variables`
 
@@ -71,9 +84,8 @@ A single file, `variable.json`, serves as a central lookup for all variables, ea
 - `description` - A one or two sentence description.
 - `constraints` - Any data usage constraints that are relevant for this variable.
 - `comments` - Any extra comments about this variable's creation that don't fit into other properties.
-- `src_name` - The name of this column in its data sources (this _should_ be the same as name above anyway).
 - `bq_data_type` - The type of column that this variable will be placed into in BigQuery, must be one of [these types](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types).
-- `construct` - A "construct" string that is present within the `themes.json` file.
+- `construct` - A "construct" string that is present within the `themes.json` file (see above)
 - `source` - Creator of this variable, abbreviations ok.
 - `source_long` - Long-form version of source
 - `oeps_v1_table` - If applicable, the name of the data table that this variable was stored in in OEPS v1.
@@ -83,18 +95,17 @@ A single file, `variable.json`, serves as a central lookup for all variables, ea
 - `table_sources` - A list of data_source identifiers, must match identiers in the `sources.json` file.
 
 <summary>
-  See full example (<code>TotPop</code>)
+  <strong>Full Example</strong> (<code>TotPop</code>):
   <details>
   <pre>
   "TotPop": {
       "name": "TotPop",
       "title": "Total Population",
-      "src_name": "TotPop",
       "type": "number",
       "example": "1632480",
       "description": "Total population",
       "constraints": "1980-2000 historic data was acquired from NHGIS and then interpolated to modern county boundaries through a population weighted interpolation using the tidycensus `interpolate_pw` function. For 1980, the underlying population weighting was county subdivisions, while for 1990 and 200 the underlying population weighting was tracts.",
-      "theme": "Social",
+      "construct": "Population",
       "source": "ACS 2018, 5-Year; Census 2010; IPUMS NHGIS",
       "source_long": "American Community Survey 2014-2018 5 Year Estimate; 2010 Decennial Census; Integrated Public Use Microdata Series National Historic Geographic Information System",
       "oeps_v1_table": null,
@@ -133,7 +144,7 @@ There are a few rules for how a CSV can be constructed:
 
 1. It must have a `HEROP_ID` column that joins each row to a geography unit.
 2. It must only have data for a single geography category within it.
-3. *Ideally* it will only have values for a single publication year.
+3. *Ideally* it will only have values for a single publication year (though we don't yet have this enforced).
 
 #### Example
 
