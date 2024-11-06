@@ -7,12 +7,12 @@
         "GEOID",
         "HEROP_ID"
       ],
-      "Source": "USDA-ERS 2010 & ACS 2018 5-Year; Tiger/Line 2018; Tiger/Line 2010; Healthy Regions & Policies Lab, UIUC",
+      "Source": "Tiger/Line 2018; Tiger/Line 2010; Healthy Regions & Policies Lab, UIUC; USDA-ERS 2010 & ACS 2018 5-Year",
       "Metadata": [
         "",
         "Rural_Urban_Classification_County"
       ],
-      "Spatial Scale": "County, Tract, State, Zip",
+      "Spatial Scale": "Tract, Zip, County, State",
       "Years": "1980, 1990, 2000, 2010, latest"
     },
     {
@@ -23,13 +23,13 @@
         "State Area",
         "Total Census Tract Count"
       ],
-      "Source": "Tiger/Line 2018; InfoGroup, 2018; OSM",
+      "Source": "InfoGroup, 2018; OSM; Tiger/Line 2018",
       "Metadata": [
         "Park_Cover",
-        "Access_FQHCs_MinDistance",
-        "AlcoholOutlets_2018"
+        "AlcoholOutlets_2018",
+        "Access_FQHCs_MinDistance"
       ],
-      "Spatial Scale": "County, Tract, State, Zip",
+      "Spatial Scale": "Tract, Zip, County, State",
       "Years": "latest"
     }
   ],
@@ -41,12 +41,12 @@
         "Total Population (2010)",
         "Urban Population Total (2010)"
       ],
-      "Source": "USDA-ERS 2010 & ACS 2018 5-Year; ACS 2018, 5-Year; Census 2010; IPUMS NHGIS",
+      "Source": "ACS 2018, 5-Year; Census 2010; IPUMS NHGIS; USDA-ERS 2010 & ACS 2018 5-Year",
       "Metadata": [
-        "Age_2018",
-        "Rural_Urban_Classification_County"
+        "Rural_Urban_Classification_County",
+        "Age_2018"
       ],
-      "Spatial Scale": "County, Tract, State, Zip",
+      "Spatial Scale": "Tract, Zip, County, State",
       "Years": "1980, 1990, 2000, 2010, latest"
     },
     {
@@ -64,7 +64,7 @@
       "Metadata": [
         "Race_Ethnicity_2018"
       ],
-      "Spatial Scale": "County, Tract, State, Zip",
+      "Spatial Scale": "Tract, Zip, County, State",
       "Years": "1980, 1990, 2000, 2010, latest"
     },
     {
@@ -88,11 +88,11 @@
         "Population: Age 60-64",
         "Population: Age 65+"
       ],
-      "Source": "ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS; ACS 2018, 5-Year; Census 2010; IPUMS NHGIS; ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS",
+      "Source": "IPUMS NHGIS; ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS; ACS 2018, 5-Year; 2010 Decennial Census; ACS 2018, 5-Year; Census 2010; IPUMS NHGIS",
       "Metadata": [
         "Age_2018"
       ],
-      "Spatial Scale": "County, Tract, State, Zip",
+      "Spatial Scale": "Tract, Zip, County, State",
       "Years": "1980, 1990, 2000, 2010, latest"
     },
     {
@@ -104,7 +104,7 @@
       "Metadata": [
         "Other_Demographic_2018"
       ],
-      "Spatial Scale": "County, Tract, State, Zip",
+      "Spatial Scale": "Tract, Zip, County, State",
       "Years": "2000, 2010, latest"
     },
     {
@@ -116,7 +116,7 @@
       "Metadata": [
         "Other_Demographic_2018"
       ],
-      "Spatial Scale": "County, Tract, State, Zip",
+      "Spatial Scale": "Tract, Zip, County, State",
       "Years": "1980, 1990, 2000, 2010, latest"
     },
     {
@@ -129,7 +129,7 @@
       "Metadata": [
         "VetPop"
       ],
-      "Spatial Scale": "County, Tract, State, Zip",
+      "Spatial Scale": "Tract, Zip, County, State",
       "Years": "2010, latest"
     },
     {
@@ -143,7 +143,7 @@
       "Metadata": [
         "HouseholdType"
       ],
-      "Spatial Scale": "County, Tract, State, Zip",
+      "Spatial Scale": "Tract, Zip, County, State",
       "Years": "latest"
     },
     {
@@ -199,7 +199,7 @@
       "Metadata": [
         "Residential_Seg_Indices"
       ],
-      "Spatial Scale": "County, State, Zip",
+      "Spatial Scale": "Zip, County, State",
       "Years": "latest"
     }
   ],
@@ -213,7 +213,7 @@
       "Metadata": [
         "Housing_2018"
       ],
-      "Spatial Scale": "County, Tract, State, Zip",
+      "Spatial Scale": "Tract, Zip, County, State",
       "Years": "1980, 1990, 2000, 2010, latest"
     },
     {
@@ -225,7 +225,7 @@
       "Metadata": [
         "Housing_2018"
       ],
-      "Spatial Scale": "County, Tract, State, Zip",
+      "Spatial Scale": "Tract, Zip, County, State",
       "Years": "latest"
     },
     {
@@ -237,7 +237,7 @@
       "Metadata": [
         "Housing_2018"
       ],
-      "Spatial Scale": "County, Tract, State, Zip",
+      "Spatial Scale": "Tract, Zip, County, State",
       "Years": "latest"
     },
     {
@@ -249,7 +249,7 @@
       "Metadata": [
         "Housing_2018"
       ],
-      "Spatial Scale": "County, Tract, State, Zip",
+      "Spatial Scale": "Tract, Zip, County, State",
       "Years": "latest"
     },
     {
@@ -258,11 +258,11 @@
         "Housing Unit Density",
         "Total Occupied Housing Units"
       ],
-      "Source": "ACS 2018, 5-Year; Census 2010; Social Explorer; ACS 2018, 5-Year",
+      "Source": "ACS 2018, 5-Year; ACS 2018, 5-Year; Census 2010; Social Explorer",
       "Metadata": [
         "Housing_2018"
       ],
-      "Spatial Scale": "County, Tract, State, Zip",
+      "Spatial Scale": "Tract, Zip, County, State",
       "Years": "1980, 1990, 2000, 2010, latest"
     },
     {
@@ -281,7 +281,7 @@
       "Metadata": [
         "Rural_Urban_Classification_County"
       ],
-      "Spatial Scale": "County, Tract, Zip",
+      "Spatial Scale": "Tract, Zip, County",
       "Years": "latest"
     },
     {
@@ -295,7 +295,7 @@
       "Metadata": [
         "AlcoholOutlets_2018"
       ],
-      "Spatial Scale": "County, Tract, State, Zip",
+      "Spatial Scale": "Tract, Zip, County, State",
       "Years": "latest"
     },
     {
@@ -307,7 +307,7 @@
       "Metadata": [
         "NDVI"
       ],
-      "Spatial Scale": "County, Tract, State, Zip",
+      "Spatial Scale": "Tract, Zip, County, State",
       "Years": "latest"
     },
     {
@@ -399,12 +399,12 @@
         "Walking Time (min) to nearest Methadone Provider",
         "Walking Time (min) to nearest Naltrexone Provider"
       ],
-      "Source": "; SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020; SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020",
+      "Source": "; SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020; SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020",
       "Metadata": [
         "",
         "Access_MOUDs"
       ],
-      "Spatial Scale": "County, Tract, State, Zip",
+      "Spatial Scale": "Tract, Zip, County, State",
       "Years": "1980, 1990, 2000, 2010, latest"
     },
     {
@@ -421,7 +421,7 @@
       "Metadata": [
         "Access_FQHCs_MinDistance"
       ],
-      "Spatial Scale": "County, Tract, State, Zip",
+      "Spatial Scale": "Tract, Zip, County, State",
       "Years": "latest"
     },
     {
@@ -438,7 +438,7 @@
       "Metadata": [
         "Acesss_Hospitals_MinDistance"
       ],
-      "Spatial Scale": "County, Tract, State, Zip",
+      "Spatial Scale": "Tract, Zip, County, State",
       "Years": "latest"
     },
     {
@@ -454,7 +454,7 @@
       "Metadata": [
         "Access_Pharmacies_MinDistance"
       ],
-      "Spatial Scale": "County, Tract, State, Zip",
+      "Spatial Scale": "Tract, Zip, County, State",
       "Years": "latest"
     },
     {
@@ -470,7 +470,7 @@
       "Metadata": [
         "Access_MentalHealth_MinDistance"
       ],
-      "Spatial Scale": "County, Tract, State, Zip",
+      "Spatial Scale": "Tract, Zip, County, State",
       "Years": "latest"
     },
     {
@@ -487,7 +487,7 @@
       "Metadata": [
         "Access_SubstanceUseTreatment"
       ],
-      "Spatial Scale": "County, Tract, State, Zip",
+      "Spatial Scale": "Tract, Zip, County, State",
       "Years": "latest"
     },
     {
@@ -503,7 +503,7 @@
       "Metadata": [
         "Access_OpioidUseTreatment"
       ],
-      "Spatial Scale": "County, Tract, State, Zip",
+      "Spatial Scale": "Tract, Zip, County, State",
       "Years": "latest"
     },
     {
@@ -515,7 +515,7 @@
       "Metadata": [
         "Internet_2019"
       ],
-      "Spatial Scale": "County, Tract, State, Zip",
+      "Spatial Scale": "Tract, Zip, County, State",
       "Years": "latest"
     },
     {
@@ -530,7 +530,7 @@
       "Metadata": [
         "Health_PCPs"
       ],
-      "Spatial Scale": "County, Tract, State",
+      "Spatial Scale": "Tract, County, State",
       "Years": "latest"
     }
   ],
@@ -548,7 +548,7 @@
       "Metadata": [
         "Job_Categories_byIndustry_2018"
       ],
-      "Spatial Scale": "County, Tract, State, Zip",
+      "Spatial Scale": "Tract, Zip, County, State",
       "Years": "latest"
     },
     {
@@ -561,7 +561,7 @@
       "Metadata": [
         "Job_Categories_byOccupation_2018"
       ],
-      "Spatial Scale": "County, Tract, State, Zip",
+      "Spatial Scale": "Tract, Zip, County, State",
       "Years": "latest"
     },
     {
@@ -573,7 +573,7 @@
       "Metadata": [
         "Economic_2018"
       ],
-      "Spatial Scale": "County, Tract, State, Zip",
+      "Spatial Scale": "Tract, Zip, County, State",
       "Years": "1980, 1990, 2000, 2010, latest"
     },
     {
@@ -585,7 +585,7 @@
       "Metadata": [
         "Economic_2018"
       ],
-      "Spatial Scale": "County, Tract, State, Zip",
+      "Spatial Scale": "Tract, Zip, County, State",
       "Years": "1980, 1990, 2000, 2010, latest"
     },
     {
@@ -598,7 +598,7 @@
       "Metadata": [
         "Economic_2018"
       ],
-      "Spatial Scale": "County, Tract, State, Zip",
+      "Spatial Scale": "Tract, Zip, County, State",
       "Years": "2010, latest"
     },
     {
@@ -611,7 +611,7 @@
       "Metadata": [
         "ForeclosureRate"
       ],
-      "Spatial Scale": "County, Tract, State",
+      "Spatial Scale": "Tract, County, State",
       "Years": "latest"
     },
     {
@@ -623,7 +623,7 @@
       "Metadata": [
         "ForeclosureRate"
       ],
-      "Spatial Scale": "County, Tract, State, Zip",
+      "Spatial Scale": "Tract, Zip, County, State",
       "Years": "2010, latest"
     }
   ],
@@ -920,7 +920,7 @@
       "Metadata": [
         "SVI_2018"
       ],
-      "Spatial Scale": "County, Tract, Zip",
+      "Spatial Scale": "Tract, Zip, County",
       "Years": "latest"
     },
     {
@@ -932,7 +932,7 @@
         "Socioeconomic Advantage Index",
         "Urban Core Opportunity Index"
       ],
-      "Source": "GeoDa Data and Lab; SDOH Atlas; Kolak et al., 2020",
+      "Source": "Kolak et al., 2020; GeoDa Data and Lab; SDOH Atlas",
       "Metadata": [
         "SDOH_2014"
       ],
