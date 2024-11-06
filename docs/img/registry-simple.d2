@@ -1,7 +1,7 @@
-# render with --pad 25
+# d2 ./registry-simple.d2 registry-simple.png --pad 25
 
 direction: right
-grid-columns: 3
+grid-columns: 4
 classes: {
     container: {
         style: {
@@ -11,14 +11,17 @@ classes: {
     }
 }
 
+t: Themes &\nConstructs {
+    class: container
+}
 v: Variables {
     class: container
 }
-s: Data Sources {
+s: Table\nSources {
     class: container
 }
-g: Geo Sources {
+g: Geodata\nSources {
     class: container
 }
 
-v -> s -> g
+t -> v -> s -> g
