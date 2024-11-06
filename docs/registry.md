@@ -11,8 +11,9 @@ The backend app includes a **registry** directory that holds a structured repres
 
 The composition of the registry is largely inspired by [Frictionless](https://frictionlessdata.io/) data specs, which are used to generate [Data Packages](https://specs.frictionlessdata.io/data-package/), [Data Resources](https://specs.frictionlessdata.io/data-resource/), and other forms of data dictionaries and downloadable content.
 
-The registry is broken into three parts:
+The registry is broken into four parts:
 
+- [themes](#themes)
 - [variables](#variables)
 - [table_sources](#table-sources)
 - [geodata_sources](#geodata-sources)
@@ -43,6 +44,21 @@ Though these three variables are present in four different data source tables, y
 
 While this is a very small example (currently we have well over 350 variables), it should be enough to show the flexibility of the system.
 
+### `themes`
+
+Themes are a very lightweight grouping of "contructs" that represent a variable (or a group of variables) at a conceptual level. Themes and constructs are only used in certain export formats. The structure of the `themes.json` file is very simple:
+
+```
+{
+  <theme name>: [
+    <construct 1>,
+    <construct 2>,
+  ]
+}
+```
+
+and variables (as described below) have a `construct` field that must be matched to a construct present under one of the themes.
+
 ### `variables`
 
 A single file, `variable.json`, serves as a central lookup for all variables, each one being defined as a Frictionless [Field Descriptor](https://specs.frictionlessdata.io/table-schema/#field-descriptors), with some extra properties that we have added for our own needs. The key for each item in the lookup must be the same as its `name` property.
@@ -56,7 +72,7 @@ A single file, `variable.json`, serves as a central lookup for all variables, ea
 - `comments` - Any extra comments about this variable's creation that don't fit into other properties.
 - `src_name` - The name of this column in its data sources (this _should_ be the same as name above anyway).
 - `bq_data_type` - The type of column that this variable will be placed into in BigQuery, must be one of [these types](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types).
-- `theme` - One of: _Social_, _Economic_, _Policy_, _Physical Environment_, _Outcome_
+- `construct` - A "construct" string that is present within the `themes.json` file.
 - `source` - Creator of this variable, abbreviations ok.
 - `source_long` - Long-form version of source
 - `oeps_v1_table` - If applicable, the name of the data table that this variable was stored in in OEPS v1.

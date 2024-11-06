@@ -1,6 +1,7 @@
-# render with --pad 25
+# d2 ./registry-complex.d2 registry-complex.png --pad 25
+
 direction: right
-grid-columns: 3
+grid-columns: 4
 classes: {
     container: {
         style: {
@@ -11,9 +12,14 @@ classes: {
 }
 title: |md
 
-  # Connecting variables, tables, and geodata
+  # Connecting themes, variables, tables, and geodata
 | {near: top-center}
 
+tc: Themes &\nConstructs {
+    class: container
+    grid-rows: 3
+    grid-gap: 50
+}
 v: Variables {
     class: container
     grid-rows: 3
@@ -27,11 +33,30 @@ g: Geodata Sources {
     grid-rows: 3
 }
 
+tc.Geography: {
+    shape: class
+    construct: Geographic Boundaries
+    "": Geographic Characteristics
+}
+tc.Social: {
+    shape: class
+    construct: Population
+    "": Age
+    " ": Race & Demographics
+}
+tc.Environment: {
+    shape: class
+    construct: Access to MOUDs
+    "": Access to Health Centers
+    " ": Access to Hospitals
+}
+
 v.ParkArea: {
     shape: class
     name: ParkArea
     title: Park Area
     table_sources: s-2010
+    construct: Geographic Characteristics
 }
 
 v.TotPop: {
@@ -42,6 +67,7 @@ v.TotPop: {
     "": s-2000
     " ": c-2010
     "  ": t-2010
+    construct: Population
 }
 
 v.MetTmDr: {
@@ -49,6 +75,7 @@ v.MetTmDr: {
     name: MetTmDr
     title: Drive Time to Methadone Provider
     table_sources: t-2010
+    construct: Access to MOUDs
 }
 
 t.s-2010: {
@@ -104,3 +131,7 @@ v.TotPop -> t.s-2000
 v.TotPop -> t.c-2010
 v.TotPop -> t.t-2010
 v.MetTmDr -> t.t-2010
+
+v.ParkArea -> tc.Geography
+v.TotPop -> tc.Social
+v.MetTmDr -> tc.Environment
