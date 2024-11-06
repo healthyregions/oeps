@@ -1,0 +1,69 @@
+{
+  "Geography": [
+    "Geographic Boundaries",
+    "Geographic Characteristics"
+  ],
+  "Social": [
+    "Population",
+    "Race & Ethnicity",
+    "Age",
+    "Population with a Disability",
+    "Educational Attainment",    
+    "Veteran Population",
+    "Household Type",
+    "Hypersegregated Cities",
+    "Southern Black Belt",
+    "Native American Reservations",
+    "Residential Segregation Indices"
+  ],
+  "Environment": [
+    "Housing Vacancy Rate",
+    "Long Term Occupancy",
+    "Mobile Homes",
+    "Rental Rates",
+    "Housing Unit Density",
+    "Urban/Suburban/Rural Classification",
+    "Alcohol Outlet Density",
+    "NDVI",
+    "Greenspace Coverage",
+    "Access to MOUDs",
+    "Access to Health Centers",
+    "Access to Hospitals",
+    "Access to Pharmacies",
+    "Access to Mental Health Providers",
+    "Access to Substance Use Treatment Programs",
+    "Access to Opioid Treatment Programs",
+    "Internet Access",
+    "Physicians"
+  ],
+  "Economic": [
+    "Employment Trends",
+    "Essential Workers",
+    "Unemployment Rate",
+    "Poverty Rate",
+    "Per Capita Income",
+    "Foreclosure Rate",
+    "Income Inequality"
+  ],
+  "Policy": [
+    "Prison Incarceration Rates",
+    "Jail Incarceration Rates",
+    "Prescription Drug Monitoring Programs (PDMP)",
+    "Good Samaritan Laws",
+    "Naloxone Access Laws",
+    "Medicaid Expenditure",
+    "Syringe & Paraphernalia Laws",
+    "Medical Marijuana Laws",
+    "State & Local Government Expenditures"
+  ],
+  "Outcome": [
+    "Hepatitis C Rates",
+    "Opioid Prescription Rates",
+    "Opioid Mortality Rates",
+    "Prescription Pain Medication Misuse"
+  ],
+  "Composite": [
+    "Social Vulnerability Index (SVI)",
+    "Social Determinants of Health (SDOH)"
+  ]
+}
