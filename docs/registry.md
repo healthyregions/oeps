@@ -4,6 +4,7 @@ The backend app includes a **registry** directory that holds a structured repres
 
 - Reduce duplicative variable and source metadata representations
 - Facilitate export to multiple configurations and formats, specifically
+  - MS Excel Data Dictionaries (for general reference)
   - OEPS Explorer
   - JCOIN data commons
   - Google BigQuery
@@ -48,7 +49,7 @@ While this is a very small example (currently we have well over 350 variables), 
 
 Themes are a very lightweight grouping of "contructs" that represent a variable (or a group of variables) at a conceptual level. Themes and constructs are only used in certain export formats. The structure of the `themes.json` file is very simple:
 
-```
+```json
 {
   <theme name>: [
     <construct 1>,
@@ -82,7 +83,7 @@ A single file, `variable.json`, serves as a central lookup for all variables, ea
 - `table_sources` - A list of data_source identifiers, must match identiers in the `sources.json` file.
 
 <summary>
-  See full example, <code>TotPop</code>
+  See full example (<code>TotPop</code>)
   <details>
   <pre>
   "TotPop": {
