@@ -110,7 +110,7 @@ class Explorer():
 
         registry = Registry(registry_dir) if registry_dir else Registry()
         output = {}
-        for theme, constructs in registry.theme_constructs.items():
+        for theme, constructs in registry.themes.items():
             output[theme] = []
             for construct in constructs:
                 geodata = set()
@@ -138,7 +138,8 @@ class Explorer():
 
                 output[theme].append({
                     "Variable Construct": construct,
-                    "Variable Proxy": natsorted(list(titles)),
+                    "Variable Proxy": registry.proxy_lookup[construct],
+                    "Variables": natsorted(list(titles)),
                     "Source": "; ".join(sources),
                     "Metadata": list(metadata_docs),
                     "Spatial Scale": ", ".join(geodata),

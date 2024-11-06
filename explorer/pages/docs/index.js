@@ -20,7 +20,7 @@ const VariableTable = ({table, filters}) =>
     </tr>
     {table.map(row => (!filters.scale.length || filters.scale.some(scale => row['Spatial Scale'].includes(scale))) ? <tr key={row['Variable Construct']}>
       <td width="15%">{row['Variable Construct']}</td>
-      <td width="25%"><ul>{row['Variable Proxy'].map(title => <li key={title}>{title}</li>)}</ul></td>
+      <td width="25%">{row['Variable Proxy']}</td>
       <td width="15%">{row['Source']}</td>
       <td width="15%"><ul>{row['Metadata'].map((docTitle, index) => <li key={`${docTitle}-${index}`}><a href={`docs/${docTitle}`}>{docTitle}</a></li>)}</ul></td>
       <td width="15%">{row['Spatial Scale']}</td>
