@@ -5,7 +5,7 @@ from openpyxl.utils import get_column_letter
 from openpyxl.styles import Font
 
 from oeps.utils import load_json
-from oeps.config import REGISTRY_DIR
+from oeps.config import REGISTRY_DIR, DATA_DIR
 
 
 class Registry():
@@ -171,7 +171,7 @@ class Registry():
         """ Generate MS Excel formatted data dictionaries for all content. """
 
         if not destination:
-            destination = Path(REGISTRY_DIR.parent, "dictionaries")
+            destination = Path(DATA_DIR, "dictionaries")
         destination.mkdir(exist_ok=True)
 
         summary_levels = [{
@@ -208,7 +208,7 @@ class Registry():
 
             ordered = []
             for theme in self.theme_constructs.keys():
-                matched = [i for i in fields if i['theme'] == theme]
+                matched = [i for i in fields if self.theme_lookup[i['theme_construct']] == theme]
                 ordered += sorted(matched, key=lambda i: i['metadata_doc_url'])
 
             all_variables = {}
@@ -260,7 +260,7 @@ class Registry():
                     if v['analysis']:
                         return "x"
                 elif attribute == "Theme":
-                    return self.theme_lookup.get(v['name'])
+                    return self.theme_lookup.get(v['theme_construct'])
                 elif attribute in variable.get('years', []):
                     return "x"
                 elif attribute == "Title":
