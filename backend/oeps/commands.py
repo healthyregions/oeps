@@ -398,7 +398,18 @@ def create_data_dictionaries(destination):
     registry = Registry()
     registry.create_data_dictionaries(destination)
 
-@click.command()
+@registry_grp.command()
+def validate():
+    """Create the human readable, MS Excel data dictionaries based on registry content."""
+
+    registry = Registry()
+    registry.validate()
+
+explorer_grp = AppGroup('explorer',
+    help="Operations used to provision the fronted explorer app with static assets."
+)
+
+@explorer_grp.command()
 @click.option('--registry',
     help="Optional input path for the registry directory.",
     default=REGISTRY_DIR_rel,
@@ -420,13 +431,13 @@ def create_data_dictionaries(destination):
     default=False,
     is_flag=True,
 )
-def configure_explorer_map(registry: Path, root_dir: Path, make_csvs: bool=False):
+def build_map(registry: Path, root_dir: Path, make_csvs: bool=False):
     """Builds configuration files for the frontend OEPS Explorer application."""
 
     ex = Explorer(root_dir=root_dir)
     ex.build_map_config(registry_dir=registry, write_csvs=make_csvs)
 
-@click.command()
+@explorer_grp.command()
 @click.option('--registry',
     help="Optional input path for the registry directory.",
     default=REGISTRY_DIR_rel,
@@ -443,12 +454,7 @@ def configure_explorer_map(registry: Path, root_dir: Path, make_csvs: bool=False
         path_type=Path,
     ),
 )
-@click.option('--make-csvs',
-    help="Only write new config JSON files, assumes CSV files are already generated.",
-    default=False,
-    is_flag=True,
-)
-def configure_explorer_docs(registry: Path, root_dir: Path, make_csvs: bool=False):
+def build_docs(registry: Path, root_dir: Path):
     """Builds configuration files for the frontend OEPS Explorer application."""
 
     ex = Explorer(root_dir=root_dir)

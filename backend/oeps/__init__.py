@@ -25,11 +25,10 @@ pip install -e .
 from flask import Flask
 
 from oeps.commands import (
-    configure_explorer_map,
-    configure_explorer_docs,
     make_cli_docs,
     bigquery_grp,
     census_grp,
+    explorer_grp,
     frictionless_grp,
     overture_grp,
     registry_grp,
@@ -45,12 +44,11 @@ def create_app():
     app.config.from_object('oeps.config')
 
     # add all cli commands
-    app.cli.add_command(configure_explorer_map)
-    app.cli.add_command(configure_explorer_docs)
     app.cli.add_command(make_cli_docs)
-    app.cli.add_command(frictionless_grp)
-    app.cli.add_command(census_grp)
     app.cli.add_command(bigquery_grp)
+    app.cli.add_command(census_grp)
+    app.cli.add_command(explorer_grp)
+    app.cli.add_command(frictionless_grp)
     app.cli.add_command(overture_grp)
     app.cli.add_command(registry_grp)
 
