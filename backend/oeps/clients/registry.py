@@ -31,7 +31,7 @@ class Registry():
         self.load_variables()
 
         # load in the theme and construct structure used in certain exports
-        self.theme_constructs = load_json(Path(self.directory, "theme_constructs.json"))
+        self.theme_constructs = load_json(Path(self.directory, "themes.json"))
         theme_lookup = {}
         for theme, constructs in self.theme_constructs.items():
             for construct in constructs:
@@ -138,9 +138,7 @@ class Registry():
             resource.pop("bq_dataset_name", None)
             resource.pop("geodata_source", None)
 
-        construct = resource.pop('theme_construct', None)
-        resource['theme'] = self.theme_lookup.get(construct)
-        resource['construct'] = construct
+        resource['theme'] = self.theme_lookup.get(resource['construct'])
 
         resource["schema"] = schema
         return resource
@@ -208,7 +206,7 @@ class Registry():
 
             ordered = []
             for theme in self.theme_constructs.keys():
-                matched = [i for i in fields if self.theme_lookup[i['theme_construct']] == theme]
+                matched = [i for i in fields if self.theme_lookup[i['construct']] == theme]
                 ordered += sorted(matched, key=lambda i: i['metadata_doc_url'])
 
             all_variables = {}
@@ -260,7 +258,7 @@ class Registry():
                     if v['analysis']:
                         return "x"
                 elif attribute == "Theme":
-                    return self.theme_lookup.get(v['theme_construct'])
+                    return self.theme_lookup.get(v['construct'])
                 elif attribute in variable.get('years', []):
                     return "x"
                 elif attribute == "Title":
@@ -299,14 +297,14 @@ class Registry():
         missing = 0
         used = set()
         for v in self.variable_lookup.values():
-            construct = v.get("theme_construct")
+            construct = v.get("construct")
             if construct not in valid_constructs:
                 print(f"{v['name']}: invalid construct {construct}")
                 missing += 1
             else:
                 used.add(construct)
         unused = [i for i in valid_constructs if i not in used]
-        print(f"{missing} variables with invalid 'theme_construct'")
-        print(f"{len(unused)} unused 'theme_construct':")
+        print(f"{missing} variables with invalid 'construct'")
+        print(f"{len(unused)} unused 'construct':")
         if unused:
             print(unused)
