@@ -26,7 +26,17 @@ class Registry():
         self.variable_lookup = None
         self.geodata_lookup = None
         self.table_lookup = None
+        self.theme_constructs = None
+        self.construct_lookup = None
         self.load_variables()
+
+        # load in the theme and construct structure used in certain exports
+        self.theme_constructs = load_json(Path(self.directory, "theme_constructs.json"))
+        theme_lookup = {}
+        for theme, constructs in self.theme_constructs.items():
+            for construct in constructs:
+                theme_lookup[construct] = theme
+        self.theme_lookup = theme_lookup
 
     def load_geodata_sources(self):
         """ Creates a lookup of all geodata sources in the registry. If explorer_only=True,
@@ -128,6 +138,10 @@ class Registry():
             resource.pop("bq_dataset_name", None)
             resource.pop("geodata_source", None)
 
+        construct = resource.pop('theme_construct', None)
+        resource['theme'] = self.theme_lookup.get(construct)
+        resource['construct'] = construct
+
         resource["schema"] = schema
         return resource
     
@@ -193,7 +207,7 @@ class Registry():
                     all_fields_list.append(f)
 
             ordered = []
-            for theme in self.THEMES:
+            for theme in self.theme_constructs.keys():
                 matched = [i for i in fields if i['theme'] == theme]
                 ordered += sorted(matched, key=lambda i: i['metadata_doc_url'])
 
@@ -245,6 +259,8 @@ class Registry():
                 elif attribute == "Analysis":
                     if v['analysis']:
                         return "x"
+                elif attribute == "Theme":
+                    return self.theme_lookup.get(v['name'])
                 elif attribute in variable.get('years', []):
                     return "x"
                 elif attribute == "Title":
@@ -273,3 +289,24 @@ class Registry():
 
             # Save the file
             wb.save(Path(destination, f"{geo['csv_abbreviation']}_Dict.xlsx"))
+
+    def validate(self):
+
+        valid_constructs = []
+        for c in self.theme_constructs.values():
+            valid_constructs += c
+
+        missing = 0
+        used = set()
+        for v in self.variable_lookup.values():
+            construct = v.get("theme_construct")
+            if construct not in valid_constructs:
+                print(f"{v['name']}: invalid construct {construct}")
+                missing += 1
+            else:
+                used.add(construct)
+        unused = [i for i in valid_constructs if i not in used]
+        print(f"{missing} variables with invalid 'theme_construct'")
+        print(f"{len(unused)} unused 'theme_construct':")
+        if unused:
+            print(unused)

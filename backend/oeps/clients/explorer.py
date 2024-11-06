@@ -1,5 +1,6 @@
 from pathlib import Path
 
+from natsort import natsorted
 import pandas as pd
 
 from oeps.utils import write_json
@@ -108,10 +109,41 @@ class Explorer():
     def build_docs_config(self, registry_dir: Path=None):
 
         registry = Registry(registry_dir) if registry_dir else Registry()
-        theme_lookup = {}
-        for theme in registry.THEMES:
-            theme_lookup[theme] = [i for i in registry.variable_lookup.values() if i['theme'] == theme]
-        
+        output = {}
+        for theme, constructs in registry.theme_constructs.items():
+            output[theme] = []
+            for construct in constructs:
+                geodata = set()
+                titles = set()
+                sources = set()
+                metadata_docs = set()
+                years = set()
+                for v in registry.variable_lookup.values():
+                    if v['theme_construct'] == construct:
+                        for ts in v['table_sources']:
+                            years.add(ts.split("-")[1])
+                            for p in [
+                                ("state", "State"),
+                                ("count", "County"),
+                                ("tract", "Tract"),
+                                ("zcta", "Zip"),
+                            ]:
+                                if p[0] in registry.table_lookup[ts]['geodata_source']:
+                                    geodata.add(p[1])
+                        sources.add(v['source'])
+                        titles.add(v['title'])
+                        md_url = v['metadata_doc_url']
+                        md_name = md_url.split("/")[-1].rstrip(".md")
+                        metadata_docs.add(md_name)
+
+                output[theme].append({
+                    "Variable Construct": construct,
+                    "Variable Proxy": natsorted(list(titles)),
+                    "Source": "; ".join(sources),
+                    "Metadata": list(metadata_docs),
+                    "Spatial Scale": ", ".join(geodata),
+                    "Years": ", ".join(natsorted(years))
+                })
 
         meta_dir = Path(self.root_dir, "meta")
-        write_json(theme_lookup, Path(meta_dir, 'variables.json'))
+        write_json(output, Path(meta_dir, 'variables.json'))
