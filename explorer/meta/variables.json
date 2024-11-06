@@ -1,588 +1,943 @@
 {
-  "Geographic Boundaries": [
+  "Geography": [
     {
-      "Variable Proxy": "State, County, Census Tract, Zip Code Tract Area (ZCTA)",
-      "Source": "US Census, 2018",
-      "Metadata": "<a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/GeographicBoundaries_2018.md'>Geographic Boundaries</a>",
-      "Spatial Scale": "State, County, Tract, Zip",
-      "markdownPrefix": "",
-      "markdownText": "Geographic Boundaries",
-      "markdown": "GeographicBoundaries_2018",
-      "Variable Construct": "Geographic Boundaries"
+      "Variable Construct": "Geographic Boundaries",
+      "Variable Proxy": [
+        "Census Flags",
+        "GEOID",
+        "HEROP_ID"
+      ],
+      "Source": "USDA-ERS 2010 & ACS 2018 5-Year; Tiger/Line 2018; Tiger/Line 2010; Healthy Regions & Policies Lab, UIUC",
+      "Metadata": [
+        "",
+        "Rural_Urban_Classification_County"
+      ],
+      "Spatial Scale": "County, Tract, State, Zip",
+      "Years": "1980, 1990, 2000, 2010, latest"
     },
     {
-      "Variable Proxy": "State, County, Census Tract, Zip Code Tract Area (ZCTA)",
-      "Source": "US Census, 2010",
-      "Metadata": "<a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/GeographicBoundaries_2018.md'>Geographic Boundaries</a>",
-      "Spatial Scale": "State, County, Tract, Zip",
-      "markdownPrefix": "",
-      "markdownText": "Geographic Boundaries",
-      "markdown": "GeographicBoundaries_2010",
-      "Variable Construct": "Geographic Boundaries"
+      "Variable Construct": "Geographic Characteristics",
+      "Variable Proxy": [
+        "Land Area (Square Miles)",
+        "Park Area",
+        "State Area",
+        "Total Census Tract Count"
+      ],
+      "Source": "Tiger/Line 2018; InfoGroup, 2018; OSM",
+      "Metadata": [
+        "Park_Cover",
+        "Access_FQHCs_MinDistance",
+        "AlcoholOutlets_2018"
+      ],
+      "Spatial Scale": "County, Tract, State, Zip",
+      "Years": "latest"
     }
   ],
-  "Policy Variables": [
+  "Social": [
     {
-      "Variable Proxy": "Prison population rate and prison admission rate by gender and ethnicity",
-      "Source": "Vera Institute of Justice, 2016",
-      "Metadata": "PS01 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Prison%20variables_2016.md'>Prison Variables</a>",
-      "Spatial Scale": "County",
-      "markdownPrefix": "PS01 / ",
-      "markdownText": "Prison Variables",
-      "markdown": "Prison%20variables_2016",
-      "Variable Construct": "Prison Incarceration Rates"
+      "Variable Construct": "Population",
+      "Variable Proxy": [
+        "Total Population",
+        "Total Population (2010)",
+        "Urban Population Total (2010)"
+      ],
+      "Source": "USDA-ERS 2010 & ACS 2018 5-Year; ACS 2018, 5-Year; Census 2010; IPUMS NHGIS",
+      "Metadata": [
+        "Age_2018",
+        "Rural_Urban_Classification_County"
+      ],
+      "Spatial Scale": "County, Tract, State, Zip",
+      "Years": "1980, 1990, 2000, 2010, latest"
     },
     {
-      "Variable Proxy": "Jail population rate by gender and ethnicity",
-      "Source": "Vera Institute of Justice, 2017",
-      "Metadata": "PS02 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Jail%20variables_2017.md'>Jail Variables</a>",
-      "Spatial Scale": "County",
-      "markdownPrefix": "PS02 / ",
-      "markdownText": "Jail Variables",
-      "markdown": "Jail%20variables_2017",
-      "Variable Construct": "Jail Incarceration Rates"
-    },
-    {
-      "Variable Proxy": "Any PDMP; Operational PDMP; Must-access PDMP; Electronic PDMP",
-      "Source": "OPTIC, 2017",
-      "Metadata": "PS03 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/PDMP_2017.md'>PDMP</a>",
-      "Spatial Scale": "State",
-      "markdownPrefix": "PS03 / ",
-      "markdownText": "PDMP",
-      "markdown": "PDMP_2017",
-      "Variable Construct": "Prescription Drug Monitoring Programs (PDMP)"
-    },
-    {
-      "Variable Proxy": "Any Good Samaritan Law; Good Samaritan Law protecting arrest",
-      "Source": "OPTIC, 2017",
-      "Metadata": "PS04 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/GSL_2018.md'>GSL</a>",
-      "Spatial Scale": "State",
-      "markdownPrefix": "PS04 / ",
-      "markdownText": "GSL_2018",
-      "markdown": "GSL_2018",
-      "Variable Construct": "Good Samaritan Laws"
-    },
-    {
-      "Variable Proxy": "Any Naloxone law; law allowing distribution through a standing or protocal order; law allowing pharmacists prescriptive authority",
-      "Source": "OPTIC, 2017",
-      "Metadata": "PS05 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/NAL_2017.md'>NAL</a>",
-      "Spatial Scale": "State",
-      "markdownPrefix": "PS05 / ",
-      "markdownText": "NAL",
-      "markdown": "NAL_2017",
-      "Variable Construct": "Naloxone Access Laws"
-    },
-    {
-      "Variable Proxy": "Total Medicaid spending",
-      "Source": "KFF, 2019",
-      "Metadata": "PS06 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/MedExp_2018_19.md'>MedExp</a>",
-      "Spatial Scale": "State",
-      "markdownPrefix": "PS06 / ",
-      "markdownText": "MedExp",
-      "markdown": "MedExp_2018_19",
-      "Variable Construct": "Medicaid Expenditure"
-    },
-    {
-      "Variable Proxy": "Laws clarifying legal status for syringe exchange, distribution, and possession programs",
-      "Source": "LawAtlas, 2019",
-      "Metadata": "PS08 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Syringe.md'>Syringe</a>",
-      "Spatial Scale": "State",
-      "markdownPrefix": "PS08 / ",
-      "markdownText": "Syringe",
-      "markdown": "Syringe",
-      "Variable Construct": "Syringe Services Laws"
-    },
-    {
-      "Variable Proxy": "Law authorizing adults to use medical marijuana",
-      "Source": "PDAPS, 2017",
-      "Metadata": "PS09 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan//data_final/metadata/MedMarijLaw.md'>MedMarijLaw</a>",
-      "Spatial Scale": "State",
-      "markdownPrefix": "PS09 / ",
-      "markdownText": "MedMarijLaw",
-      "markdown": "MedMarijLaw",
-      "Variable Construct": "Medical Marijuana Laws"
-    },
-    {
-      "Variable Proxy": "Government spending on public health, welfare, public safety, and corrections",
-      "Source": "US Census, 2018",
-      "Metadata": "PS11 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan//data_final/metadata/PublicExpenditures.md'>Government Expenditures</a>",
-      "Spatial Scale": "State, Local",
-      "markdownPrefix": "PS11 / ",
-      "markdownText": "Government Expenditures",
-      "markdown": "PublicExpenditures",
-      "Variable Construct": "State & Local Government Expenditures"
-    }
-  ],
-
-  "Outcome Variables": [
-    {
-      "Variable Proxy": "Death rate from drug-related causes",
-      "Source": "CDC WONDER, 2009-2019",
-      "Metadata": "Health01 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Health_DrugDeaths.md'>Drug-Related Death Rate</a>",
-      "Spatial Scale": "State, County",
-      "markdownPrefix": "Health01 / ",
-      "markdownText": "Drug-Related Death Rate",
-      "markdown": "Health_DrugDeaths",
-      "Variable Construct": "Drug-related death rate"
-    },
-    {
-      "Variable Proxy": "HepC prevalence and mortality",
-      "Source": "HepVu 2017",
-      "Metadata": "Health02 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan//data_final/metadata/HepC.md'>Hepatitis C</a>",
-      "Spatial Scale": "State, County",
-      "markdownPrefix": "Health02 / ",
-      "markdownText": "Hepatitis C",
-      "markdown": "HepC",
-      "Variable Construct": "Hepatitis C rates"
-    },
-    {
-      "Variable Proxy": "Opioid Prescription Rates",
-      "Source": "HepVu 2020",
-      "Metadata": "Health04 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/OpioidIndicators.md'>Opioid Indicators</a>",
-      "Spatial Scale": "County, State",
-      "markdownPrefix": "Health04 / ",
-      "markdownText": "Opioid Prescription Rates",
-      "markdown": "OpioidIndicators",
-      "Variable Construct": "Opioid Prescription Rates"
-    },
-    {
-      "Variable Proxy": "Opioid Mortality Rates",
-      "Source": "HepVu 2020",
-      "Metadata": "Health04 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/OpioidIndicators.md'>Opioid Indicators</a>",
-      "Spatial Scale": "County, State",
-      "markdownPrefix": "Health04 / ",
-      "markdownText": "Opioid Mortality Rates",
-      "markdown": "OpioidIndicators",
-      "Variable Construct": "Opioid Mortality Rates"
-    }
-  ],
-
-  "Social Variables": [
-    {
-      "Variable Proxy": "Percentages of population defined by categories of race and ethnicity",
+      "Variable Construct": "Race & Ethnicity",
+      "Variable Proxy": [
+        "% Asian Population",
+        "% Black/African American Population",
+        "% Hispanic/Latinx Population",
+        "% Native American/Alaska Native Population",
+        "% Native Hawaiian & Other PI Population",
+        "% Other (race) Population",
+        "% White Population"
+      ],
       "Source": "ACS 2018, 5-Year; Census 2010; IPUMS NHGIS",
-      "Metadata": "DS01/ <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Race_Ethnicity_2018.md'>Race & Ethnicity Variables</a>",
-      "Spatial Scale": "State, County, Tract, Zip",
-      "markdownPrefix": "DS01 / ",
-      "markdownText": "Race & Ethnicity Variables",
-      "markdown": "Race_Ethnicity_2018",
-      "Variable Construct": "Race & Ethnicity"
+      "Metadata": [
+        "Race_Ethnicity_2018"
+      ],
+      "Spatial Scale": "County, Tract, State, Zip",
+      "Years": "1980, 1990, 2000, 2010, latest"
     },
     {
-      "Variable Proxy": "Age group estimates and percentages of population",
-      "Source": "ACS 2018, 5-Year; Census 2010; IPUMS NHGIS",
-      "Metadata": "DS01 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Age_2018.md'>Age Variables</a>",
-      "Spatial Scale": "State, County, Tract, Zip",
-      "markdownPrefix": "DS01 / ",
-      "markdownText": "Age Variables",
-      "markdown": "Age_2018",
-      "Variable Construct": "Age"
+      "Variable Construct": "Age",
+      "Variable Proxy": [
+        "% Population: Age 15-24",
+        "% Population: Age 65+",
+        "% Population: Age under 45",
+        "Children %",
+        "Population: Age 0-4",
+        "Population: Age 5-14",
+        "Population: Age 15-19",
+        "Population: Age 15-44",
+        "Population: Age 18+",
+        "Population: Age 18-64",
+        "Population: Age 20-24",
+        "Population: Age 45-49",
+        "Population: Age 45-54",
+        "Population: Age 50-54",
+        "Population: Age 55-59",
+        "Population: Age 60-64",
+        "Population: Age 65+"
+      ],
+      "Source": "ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS; ACS 2018, 5-Year; Census 2010; IPUMS NHGIS; ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS",
+      "Metadata": [
+        "Age_2018"
+      ],
+      "Spatial Scale": "County, Tract, State, Zip",
+      "Years": "1980, 1990, 2000, 2010, latest"
     },
     {
-      "Variable Proxy": "Percentage of population with a disability",
-      "Source": "ACS 2018, 5-Year; ACS 2012, 5-Year; IPUMS NHGIS",
-      "Metadata": "DS01 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Other_Demographic_2018.md'>Other Demographic Variables</a>",
-      "Spatial Scale": "State, County, Tract, Zip",
-      "markdownPrefix": "DS01 / ",
-      "markdownText": "Other Demographic Variables",
-      "markdown": "Other_Demographic_2018",
-      "Variable Construct": "Population with a Disability"
-    },
-    {
-      "Variable Proxy": "Population without a high school degree",
-      "Source": "ACS 2018, 5-Year; ACS 2012, 5-Year; IPUMS NHGIS",
-      "Metadata": "DS01 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Other_Demographic_2018.md'>Other Demographic Variables</a>",
-      "Spatial Scale": "State, County, Tract, Zip",
-      "markdownPrefix": "DS01 / ",
-      "markdownText": "Other Demographic Variables",
-      "markdown": "Other_Demographic_2018",
-      "Variable Construct": "Educational Attainment"
-    },
-    {
-      "Variable Proxy": "SDOH Neighborhood Typologies",
-      "Source": "Kolak et al, 2020",
-      "Metadata": "DS02 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/SDOH_2014.md'>SDOH Typology</a>",
-      "Spatial Scale": "Tract",
-      "markdownPrefix": "DS02 / ",
-      "markdownText": "SDOH Typology",
-      "markdown": "SDOH_2014",
-      "Variable Construct": "Social Determinants of Health (SDOH)"
-    },
-    {
-      "Variable Proxy": "SVI Rankings",
-      "Source": "CDC, 2018",
-      "Metadata": "DS03 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/SVI_2018.md'>SVI</a>",
-      "Spatial Scale": "County, Tract",
-      "markdownPrefix": "DS03 / ",
-      "markdownText": "SVI",
-      "markdown": "SVI_2018",
-      "Variable Construct": "Social Vulnerability Index (SVI)"
-    },
-    {
-      "Variable Proxy": "Population as defined by veteran status",
-      "Source": "ACS 2017, 5-Year; ACS 2012, 5-Year",
-      "Metadata": "DS04 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/VetPop.md'>Veteran Population Variables</a>",
-      "Spatial Scale": "State, County, Tract, Zip",
-      "markdownPrefix": "DS04 / ",
-      "markdownText": "Veteran Population Variables",
-      "markdown": "VetPop",
-      "Variable Construct": "Veteran Population"
-    },
-    {
-      "Variable Proxy": "Household types and group quarter populations",
+      "Variable Construct": "Population with a Disability",
+      "Variable Proxy": [
+        "% Population with Disability"
+      ],
       "Source": "ACS 2018, 5-Year; ACS 2012, 5-Year",
-      "Metadata": "DS05 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/HouseholdType.md'>Housing Type Variables</a>",
-      "Spatial Scale": "State, County, Tract, Zip",
-      "markdownPrefix": "DS05 / ",
-      "markdownText": "Household Type",
-      "markdown": "HouseholdType",
-      "Variable Construct": "Household Type"
+      "Metadata": [
+        "Other_Demographic_2018"
+      ],
+      "Spatial Scale": "County, Tract, State, Zip",
+      "Years": "2000, 2010, latest"
     },
     {
-      "Variable Proxy": "Homelessness as defined by US Homeless Census",
-      "Source": "HUD, 2018",
-      "Metadata": "DS06 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/HomelessPop.md'>Homeless Population Variables</a>",
-      "Spatial Scale": "State, County, Tract, Zip",
-      "markdownPrefix": "DS06 / ",
-      "markdownText": "Homeless Population Variables",
-      "markdown": "HomelessPop",
-      "Variable Construct": "Homeless Population"
-    },
-    {
-      "Variable Proxy": "US metropolitan areas where black residents experience hypersegregation",
-      "Source": "Massey et al, 2015",
-      "Metadata": "BE04 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Overlay.md'>Community Overlays</a>",
-      "Spatial Scale": "County",
-      "markdownPrefix": "BE04 / ",
-      "markdownText": "Community Overlays",
-      "markdown": "Overlay",
-      "Variable Construct": "Hypersegregated Cities"
-    },
-    {
-      "Variable Proxy": "US counties where 30% of the population identified as Black or African American",
-      "Source": "US Census, 2000",
-      "Metadata": "BE04 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Overlay.md'>Community Overlays</a>",
-      "Spatial Scale": "County",
-      "markdownPrefix": "BE04 / ",
-      "markdownText": "Community Overlays",
-      "markdown": "Overlay",
-      "Variable Construct": "Southern Black Belt"
-    },
-    {
-      "Variable Proxy": "Percent area of total land in Native American Reservations",
-      "Source": "US Census, TIGER/Line 2018",
-      "Metadata": "BE04 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Overlay.md'>Community Overlays</a>",
-      "Spatial Scale": "County",
-      "markdownPrefix": "BE04 / ",
-      "markdownText": "Community Overlays",
-      "markdown": "Overlay",
-      "Variable Construct": "Native American Reservations"
-    },
-    {
-      "Variable Proxy": "Three index measures of segregation: dissimilarity, interaction, isolation",
-      "Source": "ACS 2018, 5-Year",
-      "Metadata": "BE05 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Residential_Seg_Indices.md'>Residential Segregation</a>",
-      "Spatial Scale": "State, County, Zip",
-      "markdownPrefix": "BE05 / ",
-      "markdownText": "Residential Segregation",
-      "markdown": "Residential_Seg_Indices",
-      "Variable Construct": "Residential Segregation Indices"
-    }
-  ],
-  "Economic Variables": [
-    {
-      "Variable Proxy": "Percentage of population employed in High Risk of Injury Jobs, Educational Services, Health Care, Retail industries",
-      "Source": "ACS 2018, 5-Year",
-      "Metadata": "EC01 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Job_Categories_byIndustry_2018.md'>Jobs by Industry</a>",
-      "Spatial Scale": "State, County, Tract, Zip",
-      "markdownPrefix": "EC01 / ",
-      "markdownText": "Jobs by Industry",
-      "markdown": "Job_Categories_byIndustry_2018",
-      "Variable Construct": "Employment Trends"
-    },
-    {
-      "Variable Proxy": "Percentage of population employed in Essential Jobs as defined during the COVID-19 pandemic",
-      "Source": "ACS 2018, 5-Year",
-      "Metadata": "EC02 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Job_Categories_byIndustry_2018.md'>Jobs by Industry</a>",
-      "Spatial Scale": "State, County, Tract, Zip",
-      "markdownPrefix": "EC02 / ",
-      "markdownText": "Jobs by Industry",
-      "markdown": "Job_Categories_byIndustry_2018",
-      "Variable Construct": "Essential Workers"
-    },
-    {
-      "Variable Proxy": "Unemployment rate",
-      "Source": "ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer",
-      "Metadata": "EC03 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Economic_2018.md'>Economic Variables</a>",
-      "Spatial Scale": "State, County, Tract, Zip",
-      "markdownPrefix": "EC03 / ",
-      "markdownText": "Economic Variables",
-      "markdown": "Economic_2018",
-      "Variable Construct": "Unemployment Rate"
-    },
-    {
-      "Variable Proxy": "Percent classified as below poverty level, based on income",
-      "Source": "ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer",
-      "Metadata": "EC03 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Economic_2018.md'>Economic Variables</a>",
-      "Spatial Scale": "State, County, Tract, Zip",
-      "markdownPrefix": "EC03 / ",
-      "markdownText": "Economic Variables",
-      "markdown": "Economic_2018",
-      "Variable Construct": "Poverty Rate"
-    },
-    {
-      "Variable Proxy": "Per capita income in the past 12 months",
+      "Variable Construct": "Educational Attainment",
+      "Variable Proxy": [
+        "% Population without High School Degree"
+      ],
       "Source": "ACS 2018, 5-Year; ACS 2012, 5-Year; IPUMS NHGIS",
-      "Metadata": "EC03 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Economic_2018.md'>Economic Variables</a>",
-      "Spatial Scale": "State, County, Tract, Zip",
-      "markdownPrefix": "EC03 / ",
-      "markdownText": "Economic Variables",
-      "markdown": "Economic_2018",
-      "Variable Construct": "Per Capita Income"
+      "Metadata": [
+        "Other_Demographic_2018"
+      ],
+      "Spatial Scale": "County, Tract, State, Zip",
+      "Years": "1980, 1990, 2000, 2010, latest"
     },
     {
-      "Variable Proxy": "Mortgage foreclosure and severe delinquency rate",
-      "Source": "HUD, 2009",
-      "Metadata": "EC04 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/ForeclosureRate.md'>Foreclosure Rate</a>",
-      "Spatial Scale": "State, County, Tract",
-      "markdownPrefix": "EC04 / ",
-      "markdownText": "Foreclosure Rate",
-      "markdown": "ForeclosureRate",
-      "Variable Construct": "Foreclosure Rate"
-    }
-  ],
-  "Physical Environment Variables": [
-    {
-      "Variable Proxy": "Percent vacant units",
-      "Source": "ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer",
-      "Metadata": "BE01 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Housing_2018.md'>Housing</a>",
-      "Spatial Scale": "State, County, Tract, Zip",
-      "markdownPrefix": "BE01 / ",
-      "markdownText": "Housing",
-      "markdown": "Housing_2018",
-      "Variable Construct": "Housing Vacancy Rate"
+      "Variable Construct": "Veteran Population",
+      "Variable Proxy": [
+        "% Veteran Population",
+        "Total Veteran Population"
+      ],
+      "Source": "ACS 2018, 5-Year; ACS 2012, 5-Year; ACS 2017, 5-Year; ACS 2012, 5-Year",
+      "Metadata": [
+        "VetPop"
+      ],
+      "Spatial Scale": "County, Tract, State, Zip",
+      "Years": "2010, latest"
     },
     {
-      "Variable Proxy": "Percentage of population living in current housing for 20+ years",
+      "Variable Construct": "Household Type",
+      "Variable Proxy": [
+        "% Nonrelatives in Family Households",
+        "% Nonrelatives in Non-family Households",
+        "Total Population in Households"
+      ],
       "Source": "ACS 2018, 5-Year",
-      "Metadata": "BE01 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Housing_2018.md'>Housing</a>",
-      "Spatial Scale": "State, County, Tract, Zip",
-      "markdownPrefix": "BE01 / ",
-      "markdownText": "Housing",
-      "markdown": "Housing_2018",
-      "Variable Construct": "Long Term Occupancy"
+      "Metadata": [
+        "HouseholdType"
+      ],
+      "Spatial Scale": "County, Tract, State, Zip",
+      "Years": "latest"
     },
     {
-      "Variable Proxy": "Percent of housing units classified as mobile homes",
-      "Source": "ACS 2018, 5-Year",
-      "Metadata": "BE01 / <a href='/data_final/metadata/Housing_2018.md'>Housing</a>",
-      "Spatial Scale": "State, County, Tract, Zip",
-      "markdownPrefix": "BE01 / ",
-      "markdownText": "Housing",
-      "markdown": "BE01",
-      "Variable Construct": "Mobile Homes"
-    },
-    {
-      "Variable Proxy": "Percent of housing units occupied by renters",
-      "Source": "ACS 2018, 5-Year",
-      "Metadata": "BE01 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Housing_2018.md'>Housing</a>",
-      "Spatial Scale": "State, County, Tract, Zip",
-      "markdownPrefix": "BE01 / ",
-      "markdownText": "Housing",
-      "markdown": "Housing_2018",
-      "Variable Construct": "Rental Rates"
-    },
-    {
-      "Variable Proxy": "Housing units per square mile",
-      "Source": "ACS 2018, 5-Year",
-      "Metadata": "BE01 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Housing_2018.md'>Housing</a>",
-      "Spatial Scale": "State, County, Tract, Zip",
-      "markdownPrefix": "BE01 / ",
-      "markdownText": "Housing",
-      "markdown": "Housing_2018",
-      "Variable Construct": "Housing Unit Density"
-    },
-    {
-      "Variable Proxy": "Classification of areas as rural, urban or suburban using percent rurality (County)",
-      "Source": "USDA-ERS, 2010",
-      "Metadata": "BE02 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Rural_Urban_Classification_County.md'>Rural-Urban Classifications (County)</a>",
+      "Variable Construct": "Hypersegregated Cities",
+      "Variable Proxy": [
+        "Hypersegregated Cities"
+      ],
+      "Source": "Massey et al, 2015",
+      "Metadata": [
+        "Overlay"
+      ],
       "Spatial Scale": "County",
-      "markdownPrefix": "BE02 / ",
-      "markdownText": "Rural-Urban Classifications",
-      "markdown": "Rural_Urban_Classification_County",
-      "Variable Construct": "Urban/Suburban/Rural Classification (County)"
+      "Years": "latest"
     },
     {
-      "Variable Proxy": "Classification of areas as rural, urban or suburban using RUCA Codes (Tract, Zip)",
-      "Source": "USDA-ERS, 2010",
-      "Metadata": "BE02 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Rural_Urban_Classification_T_Z.md'>Rural-Urban Classifications (Tract, Zip)</a>",
-      "Spatial Scale": "Tract, Zip",
-      "markdownPrefix": "BE02 / ",
-      "markdownText": "Rural-Urban Classifications",
-      "markdown": "Rural_Urban_Classification_T_Z",
-      "Variable Construct": "Urban/Suburban/Rural Classification (Tract, Zip)"
+      "Variable Construct": "Southern Black Belt",
+      "Variable Proxy": [
+        "African American South"
+      ],
+      "Source": "US Census, 2000",
+      "Metadata": [
+        "Overlay"
+      ],
+      "Spatial Scale": "County",
+      "Years": "latest"
     },
     {
-      "Variable Proxy": "Alcohol outlets per square mile, alcohol outlets per capita",
-      "Source": "InfoGroup, 2018",
-      "Metadata": "BE03 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/AlcoholOutlets_2018.md'>Alcohol Outlets</a>",
-      "Spatial Scale": "State, County, Tract, Zip",
-      "markdownPrefix": "BE03 / ",
-      "markdownText": "Alcohol Outlets",
-      "markdown": "AlcoholOutlets_2018",
-      "Variable Construct": "Alcohol Outlet Density"
+      "Variable Construct": "Native American Reservations",
+      "Variable Proxy": [
+        "Native American & Tribal Lands"
+      ],
+      "Source": "TIGER/Line 2017",
+      "Metadata": [
+        "Overlay"
+      ],
+      "Spatial Scale": "County",
+      "Years": "latest"
     },
     {
-      "Variable Proxy": "Normalized Difference Vegetation Index (NDVI) average value",
-      "Source": "Sentinel-2 MSI, 2018",
-      "Metadata": "BE06 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/NDVI.md'>NDVI</a>",
-      "Spatial Scale": "State, County, Tract, Zip",
-      "markdownPrefix": "BE06 / ",
-      "markdownText": "NDVI",
-      "markdown": "NDVI",
-      "Variable Construct": "NDVI"
-    },
-    {
-      "Variable Proxy": "Access to MOUDs",
-      "Source": "SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020",
-      "Metadata": "Access01 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan//data_final/metadata/Access_MOUDs.md'>Access: MOUDs</a>",
-      "Spatial Scale": "Tract, Zip, County, State",
-      "markdownPrefix": "Access01 / ",
-      "markdownText": "Access: MOUDs",
-      "markdown": "Access_MOUDs",
-      "Variable Construct": "Access to MOUDs"
-    },
-    {
-      "Variable Proxy": "Access to FQHCs",
-      "Source": "US Covid Atlas via HRSA, 2020",
-      "Metadata": "Access02 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Access_FQHCs_MinDistance.md'>Access: FQHCs</a>",
-      "Spatial Scale": "Tract, Zip, County, State",
-      "markdownPrefix": "Access02 / ",
-      "markdownText": "Access: FQHCs",
-      "markdown": "Access_FQHCs_MinDistance",
-      "Variable Construct": "Access to Health Centers"
-    },
-    {
-      "Variable Proxy": "Access to hospitals",
-      "Source": "CovidCareMap, 2020",
-      "Metadata": "Access03 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Acesss_Hospitals_MinDistance.md'>Access: Hospitals</a>",
-      "Spatial Scale": "Tract, Zip, County, State",
-      "markdownPrefix": "Access03 / ",
-      "markdownText": "Access: Hospitals",
-      "markdown": "Acesss_Hospitals_MinDistance",
-      "Variable Construct": "Access to Hospitals"
-    },
-    {
-      "Variable Proxy": "Access to pharmacies",
-      "Source": "InfoGroup, 2019",
-      "Metadata": "Access04 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Access_Pharmacies_MinDistance.md'>Access: Pharmacies</a>",
-      "Spatial Scale": "Tract, Zip, County, State",
-      "markdownPrefix": "Access04 / ",
-      "markdownText": "Access: Pharmacies",
-      "markdown": "Access_Pharmacies_MinDistance",
-      "Variable Construct": "Access to Pharmacies"
-    },
-    {
-      "Variable Proxy": "Access to mental health providers",
-      "Source": "SAMHSA, 2020",
-      "Metadata": "Access05 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Access_MentalHealth_MinDistance.md'>Access: Mental Health Providers</a>",
-      "Spatial Scale": "Tract, Zip, County, State",
-      "markdownPrefix": "Access05 / ",
-      "markdownText": "Access: Mental Health Providers",
-      "markdown": "Access_MentalHealth_MinDistance",
-      "Variable Construct": "Access to Mental Health Providers"
-    },
-    {
-      "Variable Proxy": "Access substance use treatment (SUT) programs",
-      "Source": "SAMHSA, 2020",
-      "Metadata": "Access06 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Access_SubstanceUseTreatment.md'>Access: SUT</a>",
-      "Spatial Scale": "Tract, Zip, County, State",
-      "markdownPrefix": "Access06 / ",
-      "markdownText": "Access: Substance Use Treatment Programs",
-      "markdown": "Access_SubstanceUseTreatment",
-      "Variable Construct": "Access to Substance Use Treatment Programs"
-    },
-    {
-      "Variable Proxy": "Access to opioid treatment programs (OTP)",
-      "Source": "SAMHSA, 2021",
-      "Metadata": "Access07 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Access_OpioidUseTreatment.md'>Access: OTP</a>",
-      "Spatial Scale": "Tract, Zip",
-      "markdownPrefix": "Access07 / ",
-      "markdownText": "Access: Opioid Treatment Programs",
-      "markdown": "Access_OpioidUseTreatment",
-      "Variable Construct": "Access to Opioid Treatment Programs"
-    },
-    {
-      "Variable Proxy": "Percent of households without internet access",
-      "Source": "ACS 2019, 5-year",
-      "Metadata": "EC05 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Internet_2019.md'>Internet Access</a>",
-      "Spatial Scale": "State, County, Tract, Zip",
-      "markdownPrefix": "EC05 / ",
-      "markdownText": "Internet Access",
-      "markdown": "Internet_2019",
-      "Variable Construct": "Internet Access"
-    },
-    {
-      "Variable Proxy": "Number of Primary Care and Specialist Physicians",
-      "Source": "Dartmouth Atlas, 2010; ACS 2018, 5-Year",
-      "Metadata": "Health03 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Health_PCPs.md'>Physicians</a>",
-      "Spatial Scale": "Tract, County, State",
-      "markdownPrefix": "Health03 / ",
-      "markdownText": "Physicians",
-      "markdown": "Health_PCPs",
-      "Variable Construct": "Physicians"
+      "Variable Construct": "Residential Segregation Indices",
+      "Variable Proxy": [
+        "Segregation: Dissimilarity (Asian)",
+        "Segregation: Dissimilarity (Black)",
+        "Segregation: Dissimilarity (Hispanic)",
+        "Segregation: Interaction (Asian)",
+        "Segregation: Interaction (Black)",
+        "Segregation: Interaction (Hispanic)",
+        "Segregation: Isolation (Asian)",
+        "Segregation: Isolation (Black)",
+        "Segregation: Isolation (Hispanic)"
+      ],
+      "Source": "ACS 2018, 5-Year",
+      "Metadata": [
+        "Residential_Seg_Indices"
+      ],
+      "Spatial Scale": "County, State, Zip",
+      "Years": "latest"
     }
   ],
-  "COVID Variables": [
+  "Environment": [
     {
-      "Variable Proxy": "Percentage of population employed in Essential Jobs as defined during the COVID-19 pandemic",
+      "Variable Construct": "Housing Vacancy Rate",
+      "Variable Proxy": [
+        "Vacant Housing Units %"
+      ],
+      "Source": "ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer",
+      "Metadata": [
+        "Housing_2018"
+      ],
+      "Spatial Scale": "County, Tract, State, Zip",
+      "Years": "1980, 1990, 2000, 2010, latest"
+    },
+    {
+      "Variable Construct": "Long Term Occupancy",
+      "Variable Proxy": [
+        "Long-Term Occupancy %"
+      ],
       "Source": "ACS 2018, 5-Year",
-      "Metadata": "EC02 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/Job_Categories_byOccupation_2018.md'>Jobs by Occupation</a>",
-      "Spatial Scale": "State, County, Tract, Zip",
-      "markdownPrefix": "EC02 / ",
-      "markdownText": "Jobs by Occupation",
-      "markdown": "Job_Categories_byOccupation_2018",
-      "Variable Construct": "Essential Worker Jobs"
+      "Metadata": [
+        "Housing_2018"
+      ],
+      "Spatial Scale": "County, Tract, State, Zip",
+      "Years": "latest"
     },
     {
-      "Variable Proxy": "Daily cumulative raw case count (01/21/20 - 03/03/2021)",
-      "Source": "The New York Times, 2021",
-      "Metadata": "COVID01 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/COVID.md'>COVID Variables</a>",
-      "Spatial Scale": "State, County",
-      "markdownPrefix": "COVID01 / ",
-      "markdownText": "COVID Variables",
-      "markdown": "COVID",
-      "Variable Construct": "Cumulative Case Count"
+      "Variable Construct": "Mobile Homes",
+      "Variable Proxy": [
+        "Mobile Homes %"
+      ],
+      "Source": "ACS 2018, 5-Year",
+      "Metadata": [
+        "Housing_2018"
+      ],
+      "Spatial Scale": "County, Tract, State, Zip",
+      "Years": "latest"
     },
     {
-      "Variable Proxy": "Daily cumulative adjusted case count per 100K population (01/21/20 - 03/03/2021)",
-      "Source": "The New York Times, 2021",
-      "Metadata": "COVID02 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/COVID.md'>COVID Variables</a>",
-      "Spatial Scale": "State, County",
-      "markdownPrefix": "COVID02 / ",
-      "markdownText": "COVID Variables",
-      "markdown": "COVID",
-      "Variable Construct": "Adjusted Case Count per 100K"
+      "Variable Construct": "Rental Rates",
+      "Variable Proxy": [
+        "Rentals %"
+      ],
+      "Source": "ACS 2018, 5-Year",
+      "Metadata": [
+        "Housing_2018"
+      ],
+      "Spatial Scale": "County, Tract, State, Zip",
+      "Years": "latest"
     },
     {
-      "Variable Proxy": "7-day average case count (01/21/20 - 03/03/2021)",
-      "Source": "The New York Times, 2021",
-      "Metadata": "COVID03 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/COVID.md'>COVID Variables</a>",
-      "Spatial Scale": "State, County",
-      "markdownPrefix": "COVID03 / ",
-      "markdownText": "COVID Variables",
-      "markdown": "COVID",
-      "Variable Construct": "7-day Average Case Count"
+      "Variable Construct": "Housing Unit Density",
+      "Variable Proxy": [
+        "Housing Unit Density",
+        "Total Occupied Housing Units"
+      ],
+      "Source": "ACS 2018, 5-Year; Census 2010; Social Explorer; ACS 2018, 5-Year",
+      "Metadata": [
+        "Housing_2018"
+      ],
+      "Spatial Scale": "County, Tract, State, Zip",
+      "Years": "1980, 1990, 2000, 2010, latest"
     },
     {
-      "Variable Proxy": "7-day average adjusted case count per 100K population (01/21/20 - 03/03/2021)",
-      "Source": "The New York Times, 2021",
-      "Metadata": "COVID04 / <a href='https://github.com/GeoDaCenter/opioid-policy-scan/blob/v1.0/data_final/metadata/COVID.md'>COVID Variables</a>",
-      "Spatial Scale": "State, County",
-      "markdownPrefix": "COVID04 / ",
-      "markdownText": "COVID Variables",
-      "markdown": "COVID",
-      "Variable Construct": "Historical 7-day Average Adjusted Case Count per 100K"
+      "Variable Construct": "Urban/Suburban/Rural Classification",
+      "Variable Proxy": [
+        "% Tracts Rural (RUCA)",
+        "% Tracts Suburban (RUCA)",
+        "% Tracts Urban (RUCA)",
+        "Primary RUCA Code",
+        "Rural Population % (2010)",
+        "Rural Population (2010)",
+        "Secondary RUCA Code",
+        "Urban-Suburban-Rural"
+      ],
+      "Source": "USDA-ERS 2010 & ACS 2018 5-Year",
+      "Metadata": [
+        "Rural_Urban_Classification_County"
+      ],
+      "Spatial Scale": "County, Tract, Zip",
+      "Years": "latest"
+    },
+    {
+      "Variable Construct": "Alcohol Outlet Density",
+      "Variable Proxy": [
+        "Alcohol Outlets Density",
+        "Alcohol Outlets per Capita",
+        "Total Alcohol Outlets"
+      ],
+      "Source": "InfoGroup, 2018",
+      "Metadata": [
+        "AlcoholOutlets_2018"
+      ],
+      "Spatial Scale": "County, Tract, State, Zip",
+      "Years": "latest"
+    },
+    {
+      "Variable Construct": "NDVI",
+      "Variable Proxy": [
+        "NDVI Average"
+      ],
+      "Source": "Sentinel-2 MSI, 2018",
+      "Metadata": [
+        "NDVI"
+      ],
+      "Spatial Scale": "County, Tract, State, Zip",
+      "Years": "latest"
+    },
+    {
+      "Variable Construct": "Greenspace Coverage",
+      "Variable Proxy": [
+        "Greenspace Coverage"
+      ],
+      "Source": "OSM",
+      "Metadata": [
+        "Park_Cover"
+      ],
+      "Spatial Scale": "State",
+      "Years": "latest"
+    },
+    {
+      "Variable Construct": "Access to MOUDs",
+      "Variable Proxy": [
+        "% Tracts With Buprenorphine Provider (30-min bike)",
+        "% Tracts With Buprenorphine Provider (30-min drive)",
+        "% Tracts With Buprenorphine Provider (30-min walk)",
+        "% Tracts With Methadone Provider (30-min bike)",
+        "% Tracts With Methadone Provider (30-min drive)",
+        "% Tracts With Methadone Provider (30-min walk)",
+        "% Tracts With Naltrexone Provider (30-min bike)",
+        "% Tracts With Naltrexone Provider (30-min drive)",
+        "% Tracts With Naltrexone Provider (30-min walk)",
+        "% Tracts within 30-min Drive of Buprenorphine Provider",
+        "% Tracts within 30-min Drive of Methadone Provider",
+        "% Tracts within 30-min Drive of Naltrexone Provider",
+        "Biking Time (min) to Nearest Buprenorphine Provider",
+        "Biking Time (min) to Nearest Methadone Provider",
+        "Biking Time (min) to Nearest Naltrexone Provider",
+        "Biking Time (min) to nearest Buprenorphine Provider",
+        "Biking Time (min) to nearest Methadone Provider",
+        "Biking Time (min) to nearest Naltrexone Provider",
+        "Buprenorphine access 30 minutes (RAAM)",
+        "Buprenorphine access 60 minutes (RAAM)",
+        "Buprenorphine access 90 minutes (RAAM)",
+        "Count of Buprenorphine Providers (30-min bike)",
+        "Count of Buprenorphine Providers (30-min drive)",
+        "Count of Buprenorphine Providers (30-min walk)",
+        "Count of Buprenorphine Providers (60-min bike)",
+        "Count of Buprenorphine Providers (60-min walk)",
+        "Count of Methadone Providers (30-min drive)",
+        "Count of Methadone Providers (30-min walk)",
+        "Count of Methadone Providers (60-min bike)",
+        "Count of Methadone Providers (60-min walk)",
+        "Count of Naltrexone Providers (30-min bike)",
+        "Count of Naltrexone Providers (30-min drive)",
+        "Count of Naltrexone Providers (30-min walk)",
+        "Count of Naltrexone Providers (60-min bike)",
+        "Count of Naltrexone Providers (60-min walk)",
+        "Count of methadone providers (30-min bike)",
+        "Distance (mi) to nearest Buprenorphine Provider",
+        "Distance (mi) to nearest MOUD (any)",
+        "Distance (mi) to nearest Methadone Provider",
+        "Distance (mi) to nearest Naltrexone Provider",
+        "Driving Time (min) to Nearest Buprenorphine Provider",
+        "Driving Time (min) to Nearest Methadone Provider",
+        "Driving Time (min) to Nearest Naltrexone Provider",
+        "Driving Time (min) to nearest Buprenorphine Provider",
+        "Driving Time (min) to nearest Methadone Provider",
+        "Driving Time (min) to nearest Naltrexone Provider",
+        "Driving Time to Buprenorphine Provider (driving time across all tracts)",
+        "Driving Time to Methadone Provider (driving time across all tracts)",
+        "Driving Time to Naltrexone Provider (driving time across all tracts)",
+        "Methadone access 30 minutes (RAAM)",
+        "Methadone access 60 minutes (RAAM)",
+        "Methadone access 90 minutes (RAAM)",
+        "Naltrexone access 30 minutes (RAAM)",
+        "Naltrexone access 60 minutes (RAAM)",
+        "Naltrexone access 90 minutes (RAAM)",
+        "Tracts with Buprenorphine Provider (30-min driving)",
+        "Tracts with Buprenorphine Provider within 30-min (biking)",
+        "Tracts with Buprenorphine Provider within 30-min (driving)",
+        "Tracts with Buprenorphine Provider within 30-min (walking)",
+        "Tracts with Methadone Provider (30-min driving)",
+        "Tracts with Methadone Provider within 30-min (biking)",
+        "Tracts with Methadone Provider within 30-min (driving)",
+        "Tracts with Methadone Provider within 30-min (walking)",
+        "Tracts with Naltrexone Provider (30-min driving)",
+        "Tracts with Naltrexone Provider within 30-min (biking)",
+        "Tracts with Naltrexone Provider within 30-min (driving)",
+        "Tracts with Naltrexone Provider within 30-min (walking)",
+        "Walking Time (min) to Nearest Buprenorphine Provider",
+        "Walking Time (min) to Nearest Methadone Provide",
+        "Walking Time (min) to Nearest Naltrexone Provider",
+        "Walking Time (min) to nearest Buprenorphine Provider",
+        "Walking Time (min) to nearest Methadone Provider",
+        "Walking Time (min) to nearest Naltrexone Provider"
+      ],
+      "Source": "; SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020; SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020",
+      "Metadata": [
+        "",
+        "Access_MOUDs"
+      ],
+      "Spatial Scale": "County, Tract, State, Zip",
+      "Years": "1980, 1990, 2000, 2010, latest"
+    },
+    {
+      "Variable Construct": "Access to Health Centers",
+      "Variable Proxy": [
+        "% tracts within 30-min drive of Federally Qualified Health Center",
+        "Count of FQHCs (30-min drive)",
+        "Distance (mi) to nearest FQHC",
+        "Driving Time to nearest Federally Qualified Health Center",
+        "Driving time (min) to nearest FQHC",
+        "Tracts with Federally Qualified Health Center (30-min driving)"
+      ],
+      "Source": "US Covid Atlas via HRSA, 2020",
+      "Metadata": [
+        "Access_FQHCs_MinDistance"
+      ],
+      "Spatial Scale": "County, Tract, State, Zip",
+      "Years": "latest"
+    },
+    {
+      "Variable Construct": "Access to Hospitals",
+      "Variable Proxy": [
+        "% Tracts within 30-min Drive of Hospital",
+        "Count of Hospitals (30-min drive)",
+        "Distance (mi) to nearest Hospital",
+        "Driving Time to nearest Hospital",
+        "Driving time (min) to nearest Hospital",
+        "Tracts with Hospital (30-min drive)"
+      ],
+      "Source": "CovidCareMap, 2020",
+      "Metadata": [
+        "Acesss_Hospitals_MinDistance"
+      ],
+      "Spatial Scale": "County, Tract, State, Zip",
+      "Years": "latest"
+    },
+    {
+      "Variable Construct": "Access to Pharmacies",
+      "Variable Proxy": [
+        "% tracts with Pharmacy (30-min drive)",
+        "Count of Pharmacies (30-min drive)",
+        "Distance (mi) to nearest Pharmacy",
+        "Driving Time (min) to nearest Pharmacy ",
+        "Tracts with Pharmacy (30-min drive)"
+      ],
+      "Source": "InfoGroup, 2019",
+      "Metadata": [
+        "Access_Pharmacies_MinDistance"
+      ],
+      "Spatial Scale": "County, Tract, State, Zip",
+      "Years": "latest"
+    },
+    {
+      "Variable Construct": "Access to Mental Health Providers",
+      "Variable Proxy": [
+        "% Tracts with Mental Health Provider (30-min drive)",
+        "Count of Mental Health Providers (30-min drive)",
+        "Distance (mi) to nearest Mental Health Provider",
+        "Driving Time (min) to nearest Mental Health Provider",
+        "Tracts with Mental Health Provider (30-min drive)"
+      ],
+      "Source": "SAMHSA, 2020",
+      "Metadata": [
+        "Access_MentalHealth_MinDistance"
+      ],
+      "Spatial Scale": "County, Tract, State, Zip",
+      "Years": "latest"
+    },
+    {
+      "Variable Construct": "Access to Substance Use Treatment Programs",
+      "Variable Proxy": [
+        "% tracts with Substance Use Treatment program (30-min drive)",
+        "Count of Substance Use Treatment (SUT) facility (30-min drive)",
+        "Distance (mi) to Substance Use Treatment (SUT) facility",
+        "Driving Time (min) to nearest Substance Use Treatment program",
+        "Driving time (min) to Substance Use Treatment (SUT) facility",
+        "Tracts with Substance Use Treatment (SUT) program (30-min drive)"
+      ],
+      "Source": "SAMHSA, 2020",
+      "Metadata": [
+        "Access_SubstanceUseTreatment"
+      ],
+      "Spatial Scale": "County, Tract, State, Zip",
+      "Years": "latest"
+    },
+    {
+      "Variable Construct": "Access to Opioid Treatment Programs",
+      "Variable Proxy": [
+        "% Tracts with Opioid Treatment Program (OTP) (30-min drive)",
+        "Count of Opioid Treatment Programs (OTP) (30-min drive)",
+        "Distance (mi) to nearest Opioid Treatment Program (OTP)",
+        "Driving Time (min) to nearest Opioid Treatment Program (OTP)",
+        "Tracts with Opioid Treatment Program (OTP) (30-min drive)"
+      ],
+      "Source": "SAMSHA, 2021",
+      "Metadata": [
+        "Access_OpioidUseTreatment"
+      ],
+      "Spatial Scale": "County, Tract, State, Zip",
+      "Years": "latest"
+    },
+    {
+      "Variable Construct": "Internet Access",
+      "Variable Proxy": [
+        "Households without Internet Access %"
+      ],
+      "Source": "ACS, 2019",
+      "Metadata": [
+        "Internet_2019"
+      ],
+      "Spatial Scale": "County, Tract, State, Zip",
+      "Years": "latest"
+    },
+    {
+      "Variable Construct": "Physicians",
+      "Variable Proxy": [
+        "Count of Primary Care Physicians (PCPs)",
+        "Count of Specialty Physicians",
+        "Primary Care Physicians (PCP) per 100k",
+        "Specialty Physicians per 100k"
+      ],
+      "Source": "Dartmouth Atlas, 2010",
+      "Metadata": [
+        "Health_PCPs"
+      ],
+      "Spatial Scale": "County, Tract, State",
+      "Years": "latest"
+    }
+  ],
+  "Economic": [
+    {
+      "Variable Construct": "Employment Trends",
+      "Variable Proxy": [
+        "Count of Working Population",
+        "Employed % - Education",
+        "Employed % - Health Care",
+        "Employed % - High Risk of Injury",
+        "Employed % - Retail"
+      ],
+      "Source": "ACS 2018, 5-Year",
+      "Metadata": [
+        "Job_Categories_byIndustry_2018"
+      ],
+      "Spatial Scale": "County, Tract, State, Zip",
+      "Years": "latest"
+    },
+    {
+      "Variable Construct": "Essential Workers",
+      "Variable Proxy": [
+        "Count of Essential Workers",
+        "Essential Workers %"
+      ],
+      "Source": "ACS 2018, 5-Year",
+      "Metadata": [
+        "Job_Categories_byOccupation_2018"
+      ],
+      "Spatial Scale": "County, Tract, State, Zip",
+      "Years": "latest"
+    },
+    {
+      "Variable Construct": "Unemployment Rate",
+      "Variable Proxy": [
+        "Unemployment %"
+      ],
+      "Source": "ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer",
+      "Metadata": [
+        "Economic_2018"
+      ],
+      "Spatial Scale": "County, Tract, State, Zip",
+      "Years": "1980, 1990, 2000, 2010, latest"
+    },
+    {
+      "Variable Construct": "Poverty Rate",
+      "Variable Proxy": [
+        "Poverty %"
+      ],
+      "Source": "ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer",
+      "Metadata": [
+        "Economic_2018"
+      ],
+      "Spatial Scale": "County, Tract, State, Zip",
+      "Years": "1980, 1990, 2000, 2010, latest"
+    },
+    {
+      "Variable Construct": "Per Capita Income",
+      "Variable Proxy": [
+        "Median Income",
+        "Per Capita Income"
+      ],
+      "Source": "ACS 2018, 5-Year; ACS 2012, 5-Year",
+      "Metadata": [
+        "Economic_2018"
+      ],
+      "Spatial Scale": "County, Tract, State, Zip",
+      "Years": "2010, latest"
+    },
+    {
+      "Variable Construct": "Foreclosure Rate",
+      "Variable Proxy": [
+        "Foreclosure & Delinquency %",
+        "Foreclosure & Delinquency Count"
+      ],
+      "Source": "HUD, 2018",
+      "Metadata": [
+        "ForeclosureRate"
+      ],
+      "Spatial Scale": "County, Tract, State",
+      "Years": "latest"
+    },
+    {
+      "Variable Construct": "Income Inequality",
+      "Variable Proxy": [
+        "Income Inequality (Gini Coefficient)"
+      ],
+      "Source": "ACS 2018, 5-Year; ACS 2012, 5-Year",
+      "Metadata": [
+        "ForeclosureRate"
+      ],
+      "Spatial Scale": "County, Tract, State, Zip",
+      "Years": "2010, latest"
+    }
+  ],
+  "Policy": [
+    {
+      "Variable Construct": "Prison Incarceration Rates",
+      "Variable Proxy": [
+        "Prison Prison Admissions Count",
+        "Total Prison Admission Rate",
+        "Total Prison Population Count",
+        "Total Prison Population Rate"
+      ],
+      "Source": "Vera Institute of Justice, 2016",
+      "Metadata": [
+        "Prison%20variables_2016"
+      ],
+      "Spatial Scale": "County",
+      "Years": "latest"
+    },
+    {
+      "Variable Construct": "Jail Incarceration Rates",
+      "Variable Proxy": [
+        "Pretrial Jail Population Count",
+        "Pretrial Jail Population Rate",
+        "Total Jail Admissions Count, ASJ/COJ Data",
+        "Total Jail Population Count, ASJ/COJ Data",
+        "Total Jail Population Rate",
+        "Total jail admission rate"
+      ],
+      "Source": "Vera Institute of Justice, 2017",
+      "Metadata": [
+        "Jail%20variables_2017"
+      ],
+      "Spatial Scale": "County",
+      "Years": "latest"
+    },
+    {
+      "Variable Construct": "Prescription Drug Monitoring Programs (PDMP)",
+      "Variable Proxy": [
+        "Any Horowitz PDMP (fraction of year in 2017)",
+        "Any Horowitz PDMP start date",
+        "Any PDMP (fraction of year in 2017)",
+        "Any PDMP start date",
+        "Electronic PDMP (fraction of year in 2017)",
+        "Electronic PDMP start date",
+        "Must-Access PDMP (fraction of year in 2017)",
+        "Must-Access PDMP start date",
+        "Operational PDMP (fraction of year in 2017)",
+        "Operational PDMP start date"
+      ],
+      "Source": "OPTIC, 2017",
+      "Metadata": [
+        "PDMP_2017"
+      ],
+      "Spatial Scale": "State",
+      "Years": "latest"
+    },
+    {
+      "Variable Construct": "Good Samaritan Laws",
+      "Variable Proxy": [
+        "Any Good Samaritan Law (date)",
+        "Any Good Samaritan Law (fraction of year in 2018)",
+        "Good Samaritan Law Protecting Arrest (date)",
+        "Good Samaritan Law Protecting Arrest (fraction of year in 2018)"
+      ],
+      "Source": "OPTIC, 2017",
+      "Metadata": [
+        "GSL_2018"
+      ],
+      "Spatial Scale": "State",
+      "Years": "latest"
+    },
+    {
+      "Variable Construct": "Naloxone Access Laws",
+      "Variable Proxy": [
+        "Any Naloxone Law (date)",
+        "Naloxone Law allowing distribution through a standing or order (date)",
+        "Naloxone Law allowing distribution through a standing or order (fraction of year in 2017)",
+        "Naloxone Law allowing pharmacists prescriptive authority (date)",
+        "Naloxone Law allowing pharmacists prescriptive authority (fraction of year in 2017)",
+        "Naloxone Law in Effect (fraction of year in 2017)"
+      ],
+      "Source": "OPTIC, 2017",
+      "Metadata": [
+        "NAL_2017"
+      ],
+      "Spatial Scale": "State",
+      "Years": "latest"
+    },
+    {
+      "Variable Construct": "Medicaid Expenditure",
+      "Variable Proxy": [
+        "Expansion Medicaid Federal Spending",
+        "Expansion Medicaid State Spending",
+        "Total Medicaid Spending (FY 2018)",
+        "Total Medicaid Spending (FY 2019)",
+        "Traditional Medicaid Federal Spending",
+        "Traditional Medicaid State Spending"
+      ],
+      "Source": "KFF, 2019; KFF, 2018",
+      "Metadata": [
+        "MedExp_2018_19"
+      ],
+      "Spatial Scale": "State",
+      "Years": "latest"
+    },
+    {
+      "Variable Construct": "Syringe & Paraphernalia Laws",
+      "Variable Proxy": [
+        "Distribution of Syringes Laws",
+        "Drug Paraphernalia Laws",
+        "Laws removing barriers to SSPs",
+        "Paraphernalia does not refer to objects used for injecting drugs",
+        "Paraphernalia exludes objects used for injecting drugs",
+        "Syringe Service Program (SSP) Authorization Laws"
+      ],
+      "Source": "LawAtlas, 2019",
+      "Metadata": [
+        "Syringe"
+      ],
+      "Spatial Scale": "State",
+      "Years": "latest"
+    },
+    {
+      "Variable Construct": "Medical Marijuana Laws",
+      "Variable Proxy": [
+        "Laws authorizing medical marijuana use "
+      ],
+      "Source": "PDAPS, 2017",
+      "Metadata": [
+        "MedMarijLaw"
+      ],
+      "Spatial Scale": "State",
+      "Years": "latest"
+    },
+    {
+      "Variable Construct": "State & Local Government Expenditures",
+      "Variable Proxy": [
+        "Corrections Expenditures",
+        "Corrections Expenditures (Local)",
+        "Police & Fire Expenditures",
+        "Police & Fire Expenditures (Local)",
+        "Public Health Expenditures",
+        "Public Health Expenditures (Local)",
+        "Public Welfare Expenditures",
+        "Public Welfare Expenditures (Local)",
+        "Total Corrections Expenditures",
+        "Total Police & Fire Expenditures",
+        "Total Public Health & Welfare Expenditures",
+        "Total Public Welfare Expenditures"
+      ],
+      "Source": "US Census, 2018",
+      "Metadata": [
+        "PublicExpenditures"
+      ],
+      "Spatial Scale": "State",
+      "Years": "latest"
+    }
+  ],
+  "Outcome": [
+    {
+      "Variable Construct": "Hepatitis C Rates",
+      "Variable Proxy": [
+        "Hepatitis C Deaths (2013 - 2017)",
+        "Hepatitis C Deaths (2013)",
+        "Hepatitis C Deaths (2014)",
+        "Hepatitis C Deaths (2015)",
+        "Hepatitis C Deaths (2016)",
+        "Hepatitis C Deaths (2017)",
+        "Hepatitis C Deaths - 50 to 74 years old (2013)",
+        "Hepatitis C Deaths - 50 to 74 years old (2014)",
+        "Hepatitis C Deaths - 50 to 74 years old (2015)",
+        "Hepatitis C Deaths - 50 to 74 years old (2016)",
+        "Hepatitis C Deaths - 50 to 74 years old (2017)",
+        "Hepatitis C Deaths - Age 50 to 74 (2013 - 2017)",
+        "Hepatitis C Deaths - Age Over 75  (2013 - 2017)",
+        "Hepatitis C Deaths - Age Under 50 (2013 - 2017)",
+        "Hepatitis C Deaths - American Indian (2013 - 2017)",
+        "Hepatitis C Deaths - American Indian (2013)",
+        "Hepatitis C Deaths - American Indian (2014)",
+        "Hepatitis C Deaths - American Indian (2015)",
+        "Hepatitis C Deaths - American Indian (2016)",
+        "Hepatitis C Deaths - American Indian (2017)",
+        "Hepatitis C Deaths - Asian & Pacific Islander (2013 - 2017)",
+        "Hepatitis C Deaths - Asian & Pacific Islander (2013)",
+        "Hepatitis C Deaths - Asian & Pacific Islander (2014)",
+        "Hepatitis C Deaths - Asian & Pacific Islander (2015)",
+        "Hepatitis C Deaths - Asian & Pacific Islander (2016)",
+        "Hepatitis C Deaths - Asian & Pacific Islander (2017)",
+        "Hepatitis C Deaths - Black (2013 - 2017)",
+        "Hepatitis C Deaths - Black (2013)",
+        "Hepatitis C Deaths - Black (2014)",
+        "Hepatitis C Deaths - Black (2015)",
+        "Hepatitis C Deaths - Black (2016)",
+        "Hepatitis C Deaths - Black (2017)",
+        "Hepatitis C Deaths - Hispanic (2013 - 2017)",
+        "Hepatitis C Deaths - Hispanic (2013)",
+        "Hepatitis C Deaths - Hispanic (2014)",
+        "Hepatitis C Deaths - Hispanic (2015)",
+        "Hepatitis C Deaths - Hispanic (2016)",
+        "Hepatitis C Deaths - Hispanic (2017)",
+        "Hepatitis C Deaths - Men (2013 - 2017)",
+        "Hepatitis C Deaths - Men (2013)",
+        "Hepatitis C Deaths - Men (2014)",
+        "Hepatitis C Deaths - Men (2015)",
+        "Hepatitis C Deaths - Men (2016)",
+        "Hepatitis C Deaths - Men (2017)",
+        "Hepatitis C Deaths - Over 75 years old (2013)",
+        "Hepatitis C Deaths - Over 75 years old (2014)",
+        "Hepatitis C Deaths - Over 75 years old (2015)",
+        "Hepatitis C Deaths - Over 75 years old (2016)",
+        "Hepatitis C Deaths - Under 50 years old (2013)",
+        "Hepatitis C Deaths - Under 50 years old (2014)",
+        "Hepatitis C Deaths - Under 50 years old (2015)",
+        "Hepatitis C Deaths - Under 50 years old (2016)",
+        "Hepatitis C Deaths - Under 50 years old (2017)",
+        "Hepatitis C Deaths - Women (2013 - 2017)",
+        "Hepatitis C Deaths - Women (2013)",
+        "Hepatitis C Deaths - Women (2014)",
+        "Hepatitis C Deaths - Women (2015)",
+        "Hepatitis C Deaths - Women (2016)",
+        "Hepatitis C Deaths - Women (2017)",
+        "Yearly Hepatitis C cases (2013-2016)",
+        "Yearly Hepatitis C cases - 50 to 74 years old (2013-2016)",
+        "Yearly Hepatitis C cases - Black (2013-2016)",
+        "Yearly Hepatitis C cases - Men (2013-2016)",
+        "Yearly Hepatitis C cases - Over 75 years old (2013-2016)",
+        "Yearly Hepatitis C cases - Under 50 years old (2013-2016)",
+        "Yearly Hepatitis C cases - Women (2013-2016)",
+        "Yearly Hepatitis C cases - non-Black (2013-2016)"
+      ],
+      "Source": "HepVu, 2017",
+      "Metadata": [
+        "HepC"
+      ],
+      "Spatial Scale": "State",
+      "Years": "latest"
+    },
+    {
+      "Variable Construct": "Opioid Prescription Rates",
+      "Variable Proxy": [
+        "Opioid Prescription Rate (2020)"
+      ],
+      "Source": "HepVu, 2020",
+      "Metadata": [
+        "OpioidIndicators"
+      ],
+      "Spatial Scale": "County, State",
+      "Years": "latest"
+    },
+    {
+      "Variable Construct": "Opioid Mortality Rates",
+      "Variable Proxy": [
+        "Opioid Mortality Rate",
+        "Opioid Mortality Rate (2014)",
+        "Opioid Mortality Rate (2015)",
+        "Opioid Mortality Rate (2016)",
+        "Opioid Mortality Rate (2017)",
+        "Opioid Mortality Rate (2018)",
+        "Opioid Mortality Rate (2019)",
+        "Opioid Mortality Rate (2020)"
+      ],
+      "Source": "HepVu, 2020",
+      "Metadata": [
+        "OpioidIndicators"
+      ],
+      "Spatial Scale": "County, State",
+      "Years": "latest"
+    },
+    {
+      "Variable Construct": "Prescription Pain Medication Misuse",
+      "Variable Proxy": [
+        "% Self-Report Misuse of Prescription Pain Medication (2020)"
+      ],
+      "Source": "HepVu, 2020",
+      "Metadata": [
+        "OpioidIndicators"
+      ],
+      "Spatial Scale": "State",
+      "Years": "latest"
+    }
+  ],
+  "Composite": [
+    {
+      "Variable Construct": "Social Vulnerability Index (SVI)",
+      "Variable Proxy": [
+        "Social Vulnerability Index (SVI) 1",
+        "Social Vulnerability Index (SVI) 2",
+        "Social Vulnerability Index (SVI) 3",
+        "Social Vulnerability Index (SVI) 4",
+        "Social Vulnerability Index (SVI) Summary Ranking"
+      ],
+      "Source": "CDC, 2018",
+      "Metadata": [
+        "SVI_2018"
+      ],
+      "Spatial Scale": "County, Tract, Zip",
+      "Years": "latest"
+    },
+    {
+      "Variable Construct": "Social Determinants of Health (SDOH)",
+      "Variable Proxy": [
+        "Limited Moblility Index",
+        "Mixed Immigrant Cohesion and Accesibility (MICA) Index",
+        "Neighborhood Type",
+        "Socioeconomic Advantage Index",
+        "Urban Core Opportunity Index"
+      ],
+      "Source": "GeoDa Data and Lab; SDOH Atlas; Kolak et al., 2020",
+      "Metadata": [
+        "SDOH_2014"
+      ],
+      "Spatial Scale": "Tract",
+      "Years": "latest"
     }
   ]
 }

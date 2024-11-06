@@ -97,6 +97,24 @@
     border-width: 2px;
 }
 
+.variableTable td {
+    vertical-align: top;
+}
+
+.variableTable td ul {
+    margin: 0;
+    padding: 0;
+}
+
+.variableTable td ul li {
+    list-style: none;
+    border-bottom: dashed .5px grey;
+}
+
+.variableTable td ul li:last-child {
+    border-bottom: none;
+}
+
 .variableTable button, .filterButton, .downloadButton {
     border: medium none;
     font-size:100%;
