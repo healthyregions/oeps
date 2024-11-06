@@ -27,6 +27,7 @@ dependencies = [
     'duckdb',
     'frictionless',
     'python-dotenv',
+    'natsort',
 ]
 
 

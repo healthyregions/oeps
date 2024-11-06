@@ -1,0 +1,31 @@
+{
+    "bq_dataset_name": "spatial",
+    "bq_table_name": "tracts2018",
+    "name": "tracts-2018",
+    "title": "Census Tract Boundaries, 2018",
+    "description": "Shapefile of census tract boundaries from the US Census Bureau, 2018.",
+    "explorer_config": {
+        "name": "US Tracts",
+        "geodata": "Tracts [tiles]",
+        "tiles": "herop-lab.0eeozlm3",
+        "id": "HEROP_ID",
+        "bounds": [-125.109215, -66.925621, 25.043926, 49.295128],
+        "tables": {}
+    },
+    "path": "https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2018-500k-shp.zip",
+    "format": "shp",
+    "mediatype": "application/vnd.shp",
+    "summary_level": "tract",
+    "schema": {
+        "primaryKey": "HEROP_ID",
+        "fields": [
+            {
+                "name": "HEROP_ID",
+                "title": "HEROP_ID",
+                "type": "string",
+                "src_name": "HEROP_ID",
+                "bq_data_type": "STRING"
+            }
+        ]
+    }
+}

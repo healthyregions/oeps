@@ -6,9 +6,18 @@ import shutil
 import threading
 import boto3
 import requests
+from typing import List
 from tqdm import tqdm
 from glob import glob
 from pathlib import Path
+
+BQ_TYPE_LOOKUP = {
+    "string": "STRING",
+    "boolean": "BOOLEAN",
+    "integer": "INTEGER",
+    "date": "DATE",
+    "number": "NUMERIC",
+}
 
 def load_json(path):
     with open(path, "r") as o:
@@ -43,20 +52,18 @@ class S3ProgressPercentage(object):
                     percentage))
             sys.stdout.flush()
 
-def upload_to_s3(paths, prefix: str=None, progress_bar: bool=False):
+def upload_to_s3(paths: List[Path], prefix: str=None, progress_bar: bool=False):
 
     s3 = boto3.resource("s3")
     bucket = os.getenv("AWS_BUCKET_NAME")
-
-    if not isinstance(paths, list):
-        paths = [paths]
+    region = "us-east-2"
 
     for path in paths:
         key = f"{prefix}/{path.name}" if prefix else path.name
         cb = S3ProgressPercentage(str(path)) if progress_bar else None
         s3.Bucket(bucket).upload_file(str(path), key, Callback=cb)
         if progress_bar:
-            print("")
+            print(f"\n  https://{bucket}.s3.{region}.amazonaws.com/{key}")
 
 def download_file(url, filepath, desc=None, progress_bar=False, no_cache: bool=False):
 
@@ -111,8 +118,8 @@ def fetch_files(paths, out_dir, no_cache: bool=False):
     for path in paths:
         name = path.split("/")[-1]
         out_path = Path(out_dir, name)
-        print(f"  get: {path} --> {out_path}")
         if not out_path.exists() or no_cache:
+            print(f"  get: {path} --> {out_path}")
             if path.startswith("http"):
                 response = requests.get(path, stream=True)
                 if response.status_code == 200:
@@ -124,7 +131,7 @@ def fetch_files(paths, out_dir, no_cache: bool=False):
             else:
                 shutil.copy(path, out_path)
         else:
-            print("  -- using cached local file")
+            print(f"  cached: {path} --> {out_path}")
                 
         local_paths.append(out_path)
 
@@ -140,4 +147,4 @@ def handle_overwrite(path):
     if not os.listdir(Path(path)):
         return
     
-    click.confirm(f'The folder {Path(path)} already exists and contains files which may be overwriten. Proceed?', abort=True)
+    click.confirm(f'The folder {Path(path)} already exists and contains files which may be overwritten. Proceed?', default=True, abort=True)

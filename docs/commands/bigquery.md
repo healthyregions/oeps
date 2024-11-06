@@ -1,7 +1,7 @@
 
 # bigquery
 
-None
+A group of operations for loading, querying, and exporting data to Google Big Query.
 
 ## Usage
 
@@ -27,6 +27,9 @@ Usage: bigquery [OPTIONS] COMMAND [ARGS]...
 
 ```
 Usage: bigquery [OPTIONS] COMMAND [ARGS]...
+
+  A group of operations for loading, querying, and exporting data to Google
+  Big Query.
 
 Options:
   --help  Show this message and exit.
