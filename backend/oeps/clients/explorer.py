@@ -119,7 +119,7 @@ class Explorer():
                 metadata_docs = set()
                 years = set()
                 for v in registry.variable_lookup.values():
-                    if v['theme_construct'] == construct:
+                    if v['construct'] == construct:
                         for ts in v['table_sources']:
                             years.add(ts.split("-")[1])
                             for p in [
