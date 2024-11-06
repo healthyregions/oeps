@@ -17,26 +17,30 @@ const VariableTable = ({table, filters}) =>
       <th>Source</th>
       <th>Metadata</th>
       <th>Spatial Scale</th>
+      <th>Years</th>
     </tr>
     {table.map(row => (!filters.scale.length || filters.scale.some(scale => row['Spatial Scale'].includes(scale))) ? <tr key={row['Variable Construct']}>
       <td width="15%">{row['Variable Construct']}</td>
-      <td width="25%">{row['Variable Proxy']}</td>
+      <td width="25%"><ul>{row['Variable Proxy'].map(title => <li>{title}</li>)}</ul></td>
       <td width="15%">{row['Source']}</td>
-      <td width="15%"><a href={`docs/${row['markdown']}`}>{row['markdownText']}</a></td>
+      <td width="15%"><ul>{row['Metadata'].map(docTitle => <li><a href={`docs/${docTitle}`}>{docTitle}</a></li>)}</ul></td>
       <td width="15%">{row['Spatial Scale']}</td>
+      <td width="15%">{row['Years']}</td>
     </tr> : null)}
     </tbody>
   </table>
 </div>
 
-const tableNames = [
-  "Geographic Boundaries",
-  "Social Variables",
-  "Economic Variables",
-  "Policy Variables",
-  "Physical Environment Variables",
-  "Outcome Variables"
-]
+// const tableNames = [
+//   "Geographic Boundaries",
+//   "Social Variables",
+//   "Economic Variables",
+//   "Policy Variables",
+//   "Physical Environment Variables",
+//   "Outcome Variables"
+// ]
+
+const tableNames = Object.keys(variables);
 
 const uniqueScales = [
   'State',
@@ -158,10 +162,10 @@ export default function DataDocs() {
           <>
           <div className={styles.rowContainer} key={header}>
               <div className="row">
-                <div className="col-xs-12 col-lg-3">
-                  <h2>{header}</h2>
+                <div className="col-xs-12 col-lg-2">
+                  <h3>{header}</h3>
                 </div>
-                <div className="col-xs-12 col-lg-9">
+                <div className="col-xs-12 col-lg-10">
                   <VariableTable table={variables[header]} setActive={setActiveMd} filters={activeFilters} />
                 </div>
                 <Gutter em={2} />
