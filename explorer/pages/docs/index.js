@@ -5,7 +5,6 @@ import { Gutter } from "../../components/layout/Gutter";
 import MainNav from "../../components/layout/MainNav";
 import Footer from "../../components/layout/Footer";
 import variables from '../../meta/variables.json';
-// import RemoteMarkdownModal from "@components/markdown/RemoteMarkdownModal";
 
 const VariableTable = ({table, filters}) =>
 <div className={styles.tableContainer}>
@@ -21,24 +20,15 @@ const VariableTable = ({table, filters}) =>
     </tr>
     {table.map(row => (!filters.scale.length || filters.scale.some(scale => row['Spatial Scale'].includes(scale))) ? <tr key={row['Variable Construct']}>
       <td width="15%">{row['Variable Construct']}</td>
-      <td width="25%"><ul>{row['Variable Proxy'].map(title => <li>{title}</li>)}</ul></td>
+      <td width="25%"><ul>{row['Variable Proxy'].map(title => <li key={title}>{title}</li>)}</ul></td>
       <td width="15%">{row['Source']}</td>
-      <td width="15%"><ul>{row['Metadata'].map(docTitle => <li><a href={`docs/${docTitle}`}>{docTitle}</a></li>)}</ul></td>
+      <td width="15%"><ul>{row['Metadata'].map((docTitle, index) => <li key={`${docTitle}-${index}`}><a href={`docs/${docTitle}`}>{docTitle}</a></li>)}</ul></td>
       <td width="15%">{row['Spatial Scale']}</td>
       <td width="15%">{row['Years']}</td>
     </tr> : null)}
     </tbody>
   </table>
 </div>
-
-// const tableNames = [
-//   "Geographic Boundaries",
-//   "Social Variables",
-//   "Economic Variables",
-//   "Policy Variables",
-//   "Physical Environment Variables",
-//   "Outcome Variables"
-// ]
 
 const tableNames = Object.keys(variables);
 
