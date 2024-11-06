@@ -150,7 +150,7 @@ export default function VariablePanel(props) {
               >
                 Read more about this data
                 <span className={styles.desktop}>
-                  Dataset: <code>{dataParams.numerator.split("_")[0]}</code> |
+                  Dataset: <code>{dataParams.numerator}</code> |
                   Column: <code>{dataParams.nProperty}</code>
                 </span>
               </button>

@@ -1,7 +1,7 @@
 
 # frictionless
 
-None
+A group of operations for interacting with Frictionless data specs. These commands allow us to export Frictionless-compliant derivations of the data in OEPS.
 
 ## Usage
 
@@ -27,6 +27,10 @@ Usage: frictionless [OPTIONS] COMMAND [ARGS]...
 
 ```
 Usage: frictionless [OPTIONS] COMMAND [ARGS]...
+
+  A group of operations for interacting with Frictionless data specs. These
+  commands allow us to export Frictionless-compliant derivations of the data
+  in OEPS.
 
 Options:
   --help  Show this message and exit.

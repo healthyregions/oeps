@@ -18,17 +18,17 @@ Usage: frictionless generate-resources-from-oeps-dicts [OPTIONS]
 ## Options
 
 * `source`:
-    * Type: STRING
+    * Type: <click.types.Path object at 0x7b65c8691900>
     * Default: `None`
     * Usage: `--source
 -s`
 
-    Local path to directory with Excel data dictionaries in it. If not provided, the dictionaries stored in the GeoDaCenter/opioid-policy-scan repo will be used.
+    Local path to directory with Excel data dictionaries in it, or the path to a single dictionary file. If not provided, all dictionaries stored in the GeoDaCenter/opioid-policy-scan repo will be used.
 
 
 
 * `destination`:
-    * Type: STRING
+    * Type: <click.types.Path object at 0x7b65c8691750>
     * Default: `data/resources`
     * Usage: `--destination
 -d`
@@ -58,11 +58,11 @@ Usage: frictionless generate-resources-from-oeps-dicts [OPTIONS]
   data resource schema files.
 
 Options:
-  -s, --source TEXT       Local path to directory with Excel data dictionaries
-                          in it. If not provided, the dictionaries stored in
-                          the GeoDaCenter/opioid-policy-scan repo will be
-                          used.
-  -d, --destination TEXT  Output location for generated schema files.
+  -s, --source PATH       Local path to directory with Excel data dictionaries
+                          in it, or the path to a single dictionary file. If
+                          not provided, all dictionaries stored in the
+                          GeoDaCenter/opioid-policy-scan repo will be used.
+  -d, --destination PATH  Output location for generated schema files.
   --help                  Show this message and exit.
 ```
 

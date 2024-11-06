@@ -1,0 +1,11 @@
+{
+    "bq_dataset_name": "tabular",
+    "bq_table_name": "Z_Latest",
+    "name": "z-latest",
+    "path": "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables/Z_Latest.csv",
+    "format": "csv",
+    "mediatype": "text/csv",
+    "title": "OEPS Data Aggregated by Zip Code Tabulation Area (ZCTA) (Latest)",
+    "description": "This CSV aggregates all Latest data variables from the OEPS v2 release at the Zip-Code Tabulation Area (ZCTA) level.",
+    "geodata_source": "zctas-2018"
+}

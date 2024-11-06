@@ -1,7 +1,7 @@
 
 # census
 
-None
+A group of commands for obtaining and managing geospatial data from the US Census Bureau.
 
 ## Usage
 
@@ -27,6 +27,9 @@ Usage: census [OPTIONS] COMMAND [ARGS]...
 
 ```
 Usage: census [OPTIONS] COMMAND [ARGS]...
+
+  A group of commands for obtaining and managing geospatial data from the US
+  Census Bureau.
 
 Options:
   --help  Show this message and exit.

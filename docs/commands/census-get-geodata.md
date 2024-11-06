@@ -82,6 +82,15 @@ Usage: census get-geodata [OPTIONS]
 
 
 
+* `prefix`:
+    * Type: STRING
+    * Default: `oeps`
+    * Usage: `--prefix`
+
+    If output is uploaded to S3, use this prefix for the objects.
+
+
+
 * `verbose`:
     * Type: BOOL
     * Default: `False`
@@ -126,6 +135,8 @@ Options:
   --upload                        Upload the processed files to S3.
   --destination TEXT              Output directory for export. Treated as a
                                   directory, and not a file path.
+  --prefix TEXT                   If output is uploaded to S3, use this prefix
+                                  for the objects.
   --verbose                       Enable verbose print statements
   --help                          Show this message and exit.
 ```

@@ -87,6 +87,33 @@ Usage: overture get-pois [OPTIONS]
 
 
 
+* `tippecanoe_path`:
+    * Type: STRING
+    * Default: `None`
+    * Usage: `--tippecanoe-path`
+
+    Path to tippecanoe binary needed for conversion to PMTiles.
+
+
+
+* `upload`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--upload`
+
+    Upload the output file to S3.
+
+
+
+* `upload_prefix`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--upload-prefix`
+
+    Upload the output file to S3.
+
+
+
 * `help`:
     * Type: BOOL
     * Default: `False`
@@ -129,6 +156,10 @@ Options:
                           include any categories in the filter.
   --separate-files        Write separate file for each category in the
                           results.
+  --tippecanoe-path TEXT  Path to tippecanoe binary needed for conversion to
+                          PMTiles.
+  --upload                Upload the output file to S3.
+  --upload-prefix         Upload the output file to S3.
   --help                  Show this message and exit.
 ```
 

@@ -1,0 +1,137 @@
+# d2 ./registry-complex.d2 registry-complex.png --pad 25
+
+direction: right
+grid-columns: 4
+classes: {
+    container: {
+        style: {
+            fill: transparent
+            stroke-dash: 3
+        }
+    }
+}
+title: |md
+
+  # Connecting themes, variables, tables, and geodata
+| {near: top-center}
+
+tc: Themes &\nConstructs {
+    class: container
+    grid-rows: 3
+    grid-gap: 50
+}
+v: Variables {
+    class: container
+    grid-rows: 3
+}
+t: Table Sources {
+    class: container
+    grid-rows: 4
+}
+g: Geodata Sources {
+    class: container
+    grid-rows: 3
+}
+
+tc.Geography: {
+    shape: class
+    construct: Geographic Boundaries
+    "": Geographic Characteristics
+}
+tc.Social: {
+    shape: class
+    construct: Population
+    "": Age
+    " ": Race & Demographics
+}
+tc.Environment: {
+    shape: class
+    construct: Access to MOUDs
+    "": Access to Health Centers
+    " ": Access to Hospitals
+}
+
+v.ParkArea: {
+    shape: class
+    name: ParkArea
+    title: Park Area
+    table_sources: s-2010
+    construct: Geographic Characteristics
+}
+
+v.TotPop: {
+    shape: class
+    name: TotPop
+    title: Total Population
+    table_sources: s-2010
+    "": s-2000
+    " ": c-2010
+    "  ": t-2010
+    construct: Population
+}
+
+v.MetTmDr: {
+    shape: class
+    name: MetTmDr
+    title: Drive Time to Methadone Provider
+    table_sources: t-2010
+    construct: Access to MOUDs
+}
+
+t.s-2010: {
+    shape: class
+    name: s-2010
+    path: <URL to CSV>
+    geodata_source: states
+
+}
+t.s-2000: {
+    shape: class
+    name: s-2000
+    path: <URL to CSV>
+    geodata_source: states
+}
+t.c-2010: {
+    shape: class
+    name: c-2010
+    path: <URL to CSV>
+    geodata_source: counties
+}
+t.t-2010: {
+    shape: class
+    name: t-2010
+    path: <URL to CSV>
+    geodata_source: tracts
+}
+
+g.s: states {
+    shape: class
+    name: states
+    path: <URL to SHP>
+}
+g.c: counties {
+    shape: class
+    name: counties
+    path: <URL to SHP>
+}
+g.t: tracts {
+    shape: class
+    name: tracts
+    path: <URL to SHP>
+}
+
+t.s-2010 <-> g.s: HEROP_ID
+t.s-2000 <-> g.s: HEROP_ID
+t.c-2010 <-> g.c: HEROP_ID
+t.t-2010 <-> g.t: HEROP_ID
+
+v.ParkArea -> t.s-2010
+v.TotPop -> t.s-2010
+v.TotPop -> t.s-2000
+v.TotPop -> t.c-2010
+v.TotPop -> t.t-2010
+v.MetTmDr -> t.t-2010
+
+v.ParkArea -> tc.Geography
+v.TotPop -> tc.Social
+v.MetTmDr -> tc.Environment
