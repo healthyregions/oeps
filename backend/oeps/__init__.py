@@ -35,13 +35,13 @@ from oeps.commands import (
 )
 from oeps.routes import api
 
-def create_app():
 
+def create_app():
     # create app instance
     app = Flask(__name__)
 
     # configure from config.py file
-    app.config.from_object('oeps.config')
+    app.config.from_object("oeps.config")
 
     # add all cli commands
     app.cli.add_command(make_cli_docs)
@@ -56,4 +56,3 @@ def create_app():
     app.register_blueprint(api)
 
     return app
-
