@@ -2,11 +2,15 @@
 # frictionless create-data-package
 
 Generates a Frictionless data package from the Data Resource definitions in this backend. This export
-process was developed specifically to support integration of the OEPS data warehouse into the JCOIN commons.
+    process was developed specifically to support integration of the OEPS data warehouse into the JCOIN commons.
 
-The resulting package will be validated against the `frictionless` standard using that Python library. Use
-`--no-foreign-keys` to allow validation to pass when shapefiles are involved in join fields.
+    The resulting package will be validated against the `frictionless` standard using that Python library.
 
+    `--skip-foreign-keys` to skip the creation of foreign keys--useful because foreign keys to shapefiles break
+    validation.
+
+    `--skip-validation` to skip the final step of running validation on the output package.
+    
 
 ## Usage
 
@@ -20,22 +24,12 @@ Usage: frictionless create-data-package [OPTIONS]
 ## Options
 
 * `destination`:
-    * Type: STRING
-    * Default: `../.cache`
+    * Type: <click.types.Path object at 0x7a1db2509cc0>
+    * Default: `.cache/data-packages`
     * Usage: `--destination
 -d`
 
     Output location for export directory. The package will be placed within this directory and given a name generated from the current date and time.
-
-
-
-* `source`:
-    * Type: STRING
-    * Default: `data/resources`
-    * Usage: `--source
--s`
-
-    Path to a data resource JSON file to export, or a directory containing multiple data resources.
 
 
 
@@ -75,6 +69,15 @@ Usage: frictionless create-data-package [OPTIONS]
 
 
 
+* `skip_validation`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--skip-validation`
+
+    Don't run data package validation on the final output.
+
+
+
 * `overwrite`:
     * Type: BOOL
     * Default: `False`
@@ -103,15 +106,18 @@ Usage: frictionless create-data-package [OPTIONS]
   integration of the OEPS data warehouse into the JCOIN commons.
 
   The resulting package will be validated against the `frictionless` standard
-  using that Python library. Use `--no-foreign-keys` to allow validation to
-  pass when shapefiles are involved in join fields.
+  using that Python library.
+
+  `--skip-foreign-keys` to skip the creation of foreign keys--useful because
+  foreign keys to shapefiles break validation.
+
+  `--skip-validation` to skip the final step of running validation on the
+  output package.
 
 Options:
-  -d, --destination TEXT  Output location for export directory. The package
+  -d, --destination PATH  Output location for export directory. The package
                           will be placed within this directory and given a
                           name generated from the current date and time.
-  -s, --source TEXT       Path to a data resource JSON file to export, or a
-                          directory containing multiple data resources.
   --zip                   Zip the output data package.
   --upload                Upload the zipped data package to S3. Bucket is
                           determined by `AWS_BUCKET_NAME` environment
@@ -120,6 +126,8 @@ Options:
   --skip-foreign-keys     Don't define foreign keys in the output data
                           package. This is needed to avoid validation errors
                           that occur when Shapefiles are used in foreign keys.
+  --skip-validation       Don't run data package validation on the final
+                          output.
   --overwrite             Overwrite existing data package with the same name.
   --help                  Show this message and exit.
 ```

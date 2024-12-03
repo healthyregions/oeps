@@ -2,7 +2,7 @@
 # bigquery generate-reference-md
 
 Generates a reference document for the BigQuery project schema, based on the
-locally stored resource JSON schema files. 
+    locally stored resource JSON schema files.
 
 ## Usage
 

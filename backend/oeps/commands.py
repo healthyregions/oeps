@@ -511,10 +511,10 @@ def make_cli_docs():
 
     ## list of base modules and commands to process
     command_list = [
-        ("oeps.commands", "configure_explorer"),
         ("oeps.commands", "make_cli_docs"),
         ("oeps.commands", "bigquery_grp"),
         ("oeps.commands", "census_grp"),
+        ("oeps.commands", "explorer_grp"),
         ("oeps.commands", "frictionless_grp"),
         ("oeps.commands", "overture_grp"),
     ]

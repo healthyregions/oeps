@@ -2,14 +2,14 @@
 # overture get-pois
 
 This operation will query the Overture Places (a.k.a. Point of Interest) dataset and extract all points
-matching the specified categories that fall within the provided spatial boundary.
+    matching the specified categories that fall within the provided spatial boundary.
 
-Example:
+    Example:
 
-```
-flask overture get-pois --filter-file "https://herop-geodata.s3.us-east-2.amazonaws.com/place-2018.shp" -c hospital --filter-unit 3651000
-```
-
+    ```
+    flask overture get-pois --filter-file "https://herop-geodata.s3.us-east-2.amazonaws.com/place-2018.shp" -c hospital --filter-unit 3651000
+    ```
+    
 
 ## Usage
 
