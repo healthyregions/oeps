@@ -2,7 +2,7 @@
 # bigquery load
 
 Load a data resource to a big query table. The data resource schema should provide all field
-and table configuration information that is needed to create the table and load data into it.
+    and table configuration information that is needed to create the table and load data into it.
 
 ## Usage
 
@@ -15,13 +15,13 @@ Usage: bigquery load [OPTIONS]
 
 ## Options
 
-* `source`:
+* `name`:
     * Type: STRING
-    * Default: `data/resources`
-    * Usage: `--source
--s`
+    * Default: `None`
+    * Usage: `--name
+-n`
 
-    Data resource JSON file to load, or directory with multiple files to load. If no source is provided, will process all files in the data/resources directory.
+    Name can be provided to load a single Data Resource to Big Query (instead of everything in the registry)
 
 
 
@@ -71,13 +71,12 @@ Usage: bigquery load [OPTIONS]
   create the table and load data into it.
 
 Options:
-  -s, --source TEXT  Data resource JSON file to load, or directory with
-                     multiple files to load. If no source is provided, will
-                     process all files in the data/resources directory.
-  --overwrite        Overwrite BQ table if it already exists.
-  --table-only       Only create the new table, don't load data into it.
-  --dry-run          Mock operation and perform no create/delete actions.
-  --help             Show this message and exit.
+  -n, --name TEXT  Name can be provided to load a single Data Resource to Big
+                   Query (instead of everything in the registry)
+  --overwrite      Overwrite BQ table if it already exists.
+  --table-only     Only create the new table, don't load data into it.
+  --dry-run        Mock operation and perform no create/delete actions.
+  --help           Show this message and exit.
 ```
 
 

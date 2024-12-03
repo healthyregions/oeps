@@ -2,8 +2,8 @@
 # census get-geodata
 
 This command retrieves geodata from the US Census Bureau's FTP server, merges the files into single,
-nation-wide coverages, and then exports the merged files into various formats. Optionally upload these
-files directly to S3.
+    nation-wide coverages, and then exports the merged files into various formats. Optionally upload these
+    files directly to S3.
 
 ## Usage
 
@@ -42,12 +42,22 @@ Usage: census get-geodata [OPTIONS]
     * Usage: `--year
 -y`
 
-    Specify a year. If left empty, both 2010 and 2018 will be processed.
+    Specify a year.
+
+
+
+* `scale`:
+    * Type: Choice(['500k', 'tiger'])
+    * Default: `500k`
+    * Usage: `--scale
+-s`
+
+    Specify a scale of geographic boundary file.
 
 
 
 * `tippecanoe_path`:
-    * Type: STRING
+    * Type: <click.types.Path object at 0x7b0888c21930>
     * Default: `None`
     * Usage: `--tippecanoe-path`
 
@@ -74,11 +84,11 @@ Usage: census get-geodata [OPTIONS]
 
 
 * `destination`:
-    * Type: STRING
-    * Default: `../.cache/geodata`
+    * Type: <click.types.Path object at 0x7b0888c21b10>
+    * Default: `None`
     * Usage: `--destination`
 
-    Output directory for export. Treated as a directory, and not a file path.
+    Output directory for export. If not provided, results will be in .cache/geodata.
 
 
 
@@ -127,14 +137,14 @@ Options:
   -g, --geography [state|county|tract|bg|place|zcta]
                                   Specify a geography to prepare. If left
                                   empty, all geographies will be processed.
-  -y, --year [2018|2010]          Specify a year. If left empty, both 2010 and
-                                  2018 will be processed.
-  --tippecanoe-path TEXT          Full path to tippecanoe binary, required for
+  -y, --year [2018|2010]          Specify a year.
+  -s, --scale [500k|tiger]        Specify a scale of geographic boundary file.
+  --tippecanoe-path PATH          Full path to tippecanoe binary, required for
                                   PMTiles generation.
   --no-cache                      Force re-retrieval of files from FTP.
   --upload                        Upload the processed files to S3.
-  --destination TEXT              Output directory for export. Treated as a
-                                  directory, and not a file path.
+  --destination PATH              Output directory for export. If not
+                                  provided, results will be in .cache/geodata.
   --prefix TEXT                   If output is uploaded to S3, use this prefix
                                   for the objects.
   --verbose                       Enable verbose print statements

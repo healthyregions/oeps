@@ -35,9 +35,14 @@ dependencies = [
 dev = [
     "ruff",
     "pre-commit",
+    "pytest",
 ]
 
 [tool.setuptools]
 packages = [
     "oeps"
 ]
+
+# [tool.pytest.ini_options]
+# log_cli = "True"
+# log_cli_level = "DEBUG"

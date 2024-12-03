@@ -1,12 +1,12 @@
 
-# configure-explorer
+# explorer build-map
 
 Builds configuration files for the frontend OEPS Explorer application.
 
 ## Usage
 
 ```
-Usage: configure-explorer [OPTIONS]
+Usage: explorer build-map [OPTIONS]
 ```
 
 ## Arguments
@@ -14,19 +14,18 @@ Usage: configure-explorer [OPTIONS]
 
 ## Options
 
-* `source`:
-    * Type: <click.types.Path object at 0x725c6c6c0d60>
-    * Default: `data/resources`
-    * Usage: `--source
--s`
+* `registry`:
+    * Type: <click.types.Path object at 0x7ec9c1a0a800>
+    * Default: `oeps/registry`
+    * Usage: `--registry`
 
-    Optional input path for data resource schema files.
+    Optional input path for the registry directory.
 
 
 
 * `root_dir`:
-    * Type: <click.types.Path object at 0x725c4058d9c0>
-    * Default: `../../explorer`
+    * Type: <click.types.Path object at 0x7ec9c1a0a8f0>
+    * Default: `../explorer`
     * Usage: `--root-dir`
 
     Optional output path for config files. The default location will overwrite existing configs.
@@ -54,17 +53,17 @@ Usage: configure-explorer [OPTIONS]
 ## CLI Help
 
 ```
-Usage: configure-explorer [OPTIONS]
+Usage: explorer build-map [OPTIONS]
 
   Builds configuration files for the frontend OEPS Explorer application.
 
 Options:
-  -s, --source PATH  Optional input path for data resource schema files.
-  --root-dir PATH    Optional output path for config files. The default
-                     location will overwrite existing configs.
-  --make-csvs        Only write new config JSON files, assumes CSV files are
-                     already generated.
-  --help             Show this message and exit.
+  --registry PATH  Optional input path for the registry directory.
+  --root-dir PATH  Optional output path for config files. The default location
+                   will overwrite existing configs.
+  --make-csvs      Only write new config JSON files, assumes CSV files are
+                   already generated.
+  --help           Show this message and exit.
 ```
 
 

@@ -1,8 +1,8 @@
 
 # bigquery export
 
- Runs a SQL statement, which must be provided in a .sql file, and the results are printed to the console
-or saved to a CSV or SHP output file, based on the destination argument.
+Runs a SQL statement, which must be provided in a .sql file, and the results are printed to the console
+    or saved to a CSV or SHP output file, based on the destination argument.
 
 ## Usage
 
