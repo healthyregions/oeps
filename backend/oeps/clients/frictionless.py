@@ -9,17 +9,17 @@ from oeps.utils import fetch_files, upload_to_s3, load_json, write_json
 from oeps.clients.registry import Registry
 
 
-class DataPackage():
-
-    def create(self,
-            destination,
-            zip_output: bool=False,
-            upload: bool=False,
-            no_cache: bool=False,
-            skip_foreign_keys: bool=False,
-            run_validation: bool=True,
-        ):
-        """ Single command to generate an output data package. Should probably be
+class DataPackage:
+    def create(
+        self,
+        destination,
+        zip_output: bool = False,
+        upload: bool = False,
+        no_cache: bool = False,
+        skip_foreign_keys: bool = False,
+        run_validation: bool = True,
+    ):
+        """Single command to generate an output data package. Should probably be
         refactored to more modular methods on this class."""
 
         registry = Registry()
@@ -36,17 +36,20 @@ class DataPackage():
             "name": "oeps",
             "title": "Opioid Environment Policy Scan (OEPS) v2",
             "homepage": "https://oeps.healthyregions.org",
-            "licenses": [{
-                "name": "ODC-PDDL-1.0",
-                "path": "http://opendatacommons.org/licenses/pddl/",
-                "title": "Open Data Commons Public Domain Dedication and License v1.0"
-            }],
-            "resources": []
+            "licenses": [
+                {
+                    "name": "ODC-PDDL-1.0",
+                    "path": "http://opendatacommons.org/licenses/pddl/",
+                    "title": "Open Data Commons Public Domain Dedication and License v1.0",
+                }
+            ],
+            "resources": [],
         }
 
-        resources = registry.get_all_geodata_resources(trim_props=True) + registry.get_all_table_resources(trim_props=True)
+        resources = registry.get_all_geodata_resources(
+            trim_props=True
+        ) + registry.get_all_table_resources(trim_props=True)
         for res in resources:
-
             # remove foreignKeys from schema if needed
             if skip_foreign_keys:
                 res["schema"].pop("foreignKeys", None)
@@ -72,48 +75,47 @@ class DataPackage():
 
         if run_validation:
             print("\nvalidating output data package...")
-            report = validate(package_json_path, skip_errors=['type-error'])
+            report = validate(package_json_path, skip_errors=["type-error"])
 
             print("VALIDATION REPORT SUMMARY:")
             for t in report.tasks:
-                print(t.name, t.stats['errors'])
-            
+                print(t.name, t.stats["errors"])
+
             print(f"Totals: {report.stats}")
 
             report.to_json(Path(dest, "error-report.json"))
-        
+
         else:
             print("skipping data package validation...")
 
         if zip_output or upload:
             print("zipping output...")
-            shutil.make_archive(f"{Path(dest.parent, dest.name)}", 'zip', dest)
+            shutil.make_archive(f"{Path(dest.parent, dest.name)}", "zip", dest)
 
             zip_path = dest.with_suffix(".zip")
 
             if upload:
                 print("uploading zip to S3...")
-                upload_to_s3([zip_path], prefix='oeps', progress_bar=True)
+                upload_to_s3([zip_path], prefix="oeps", progress_bar=True)
 
             if not zip_output:
-                print('deleting local copy of zipped output...')
+                print("deleting local copy of zipped output...")
                 os.remove(zip_path)
 
         print("done.")
 
     def clean_datasets(self, package_json_path):
-
         pkg = load_json(package_json_path)
 
-        for res in pkg['resources']:
+        for res in pkg["resources"]:
             # only run this on resources with single file paths (i.e. skip shapefiles)
-            if len(res['path']) > 1:
+            if len(res["path"]) > 1:
                 continue
 
             print(f"cleaning data for {res['name']}")
 
-            data_path = package_json_path.parent / res['path'][0]
-            schema_path = package_json_path.parent / res['schema']
+            data_path = package_json_path.parent / res["path"][0]
+            schema_path = package_json_path.parent / res["schema"]
 
             schema = load_json(schema_path)
             fields = {i["name"]: i for i in schema["fields"]}
@@ -135,6 +137,8 @@ class DataPackage():
             # iterate all fields and if integer, cast to int to remove .0
             for k, v in fields.items():
                 if v["type"] == "integer":
-                    clean_df[k] = clean_df[k].apply(lambda x: int(x) if x != "NA" else "NA")
+                    clean_df[k] = clean_df[k].apply(
+                        lambda x: int(x) if x != "NA" else "NA"
+                    )
 
             clean_df.to_csv(data_path, index=False)
