@@ -1,5 +1,19 @@
 [
   {
+    "variable": "HEROP_ID",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "HEROP_ID",
+    "theme": "Geography",
+    "metadataUrl": ""
+  },
+  {
+    "variable": "GEOID",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "GEOID",
+    "theme": "Geography",
+    "metadataUrl": ""
+  },
+  {
     "variable": "Total Population",
     "numerator": "s-latest__t-latest__z-latest__c-latest",
     "nProperty": "TotPop",
@@ -199,7 +213,7 @@
     "variable": "Count of Working Population",
     "numerator": "s-latest__t-latest__z-latest__c-latest",
     "nProperty": "TotWrkE",
-    "theme": "Social",
+    "theme": "Economic",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Job_Categories_byIndustry_2018.md"
   },
   {
@@ -364,6 +378,13 @@
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Housing_2018.md"
   },
   {
+    "variable": "Land Area (Square Miles)",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "AreaSqMi",
+    "theme": "Geography",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/AlcoholOutlets_2018.md"
+  },
+  {
     "variable": "Total Alcohol Outlets",
     "numerator": "s-latest__t-latest__z-latest__c-latest",
     "nProperty": "AlcTot",
@@ -458,7 +479,14 @@
     "variable": "Park Area",
     "numerator": "s-latest",
     "nProperty": "ParkArea",
-    "theme": "Environment",
+    "theme": "Geography",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Park_Cover.md"
+  },
+  {
+    "variable": "State Area",
+    "numerator": "s-latest",
+    "nProperty": "StateArea",
+    "theme": "Geography",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Park_Cover.md"
   },
   {
@@ -467,6 +495,13 @@
     "nProperty": "Cover",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Park_Cover.md"
+  },
+  {
+    "variable": "Total Census Tract Count",
+    "numerator": "s-latest__c-latest",
+    "nProperty": "TotTracts",
+    "theme": "Geography",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_FQHCs_MinDistance.md"
   },
   {
     "variable": "Tracts with Buprenorphine Provider (30-min driving)",
@@ -2180,21 +2215,21 @@
     "variable": "Census Flags",
     "numerator": "c-latest",
     "nProperty": "CenFlags",
-    "theme": "Environment",
+    "theme": "Geography",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Rural_Urban_Classification_County.md"
   },
   {
     "variable": "Total Population (2010)",
     "numerator": "c-latest",
     "nProperty": "TotPop10",
-    "theme": "Environment",
+    "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Rural_Urban_Classification_County.md"
   },
   {
     "variable": "Urban Population Total (2010)",
     "numerator": "c-latest",
     "nProperty": "UrbPop10",
-    "theme": "Environment",
+    "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Rural_Urban_Classification_County.md"
   },
   {
@@ -2303,63 +2338,63 @@
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Jail%20variables_2017.md"
   },
   {
-    "variable": "MetRm30",
+    "variable": "Methadone access 30 minutes (RAAM)",
     "numerator": "t-latest",
     "nProperty": "MetRm30",
     "theme": "Environment",
     "metadataUrl": ""
   },
   {
-    "variable": "MetRm60",
+    "variable": "Methadone access 60 minutes (RAAM)",
     "numerator": "t-latest",
     "nProperty": "MetRm60",
     "theme": "Environment",
     "metadataUrl": ""
   },
   {
-    "variable": "MetRm90",
+    "variable": "Methadone access 90 minutes (RAAM)",
     "numerator": "t-latest",
     "nProperty": "MetRm90",
     "theme": "Environment",
     "metadataUrl": ""
   },
   {
-    "variable": "NalRm30",
+    "variable": "Naltrexone access 30 minutes (RAAM)",
     "numerator": "t-latest",
     "nProperty": "NalRm30",
     "theme": "Environment",
     "metadataUrl": ""
   },
   {
-    "variable": "NalRm60",
+    "variable": "Naltrexone access 60 minutes (RAAM)",
     "numerator": "t-latest",
     "nProperty": "NalRm60",
     "theme": "Environment",
     "metadataUrl": ""
   },
   {
-    "variable": "NalRm90",
+    "variable": "Naltrexone access 90 minutes (RAAM)",
     "numerator": "t-latest",
     "nProperty": "NalRm90",
     "theme": "Environment",
     "metadataUrl": ""
   },
   {
-    "variable": "BupRm30",
+    "variable": "Buprenorphine access 30 minutes (RAAM)",
     "numerator": "t-latest",
     "nProperty": "BupRm30",
     "theme": "Environment",
     "metadataUrl": ""
   },
   {
-    "variable": "BupRm60",
+    "variable": "Buprenorphine access 60 minutes (RAAM)",
     "numerator": "t-latest",
     "nProperty": "BupRm60",
     "theme": "Environment",
     "metadataUrl": ""
   },
   {
-    "variable": "BupRm90",
+    "variable": "Buprenorphine access 90 minutes (RAAM)",
     "numerator": "t-latest",
     "nProperty": "BupRm90",
     "theme": "Environment",
