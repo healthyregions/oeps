@@ -107,11 +107,8 @@ class DataPackage:
     def clean_datasets(self, package_json_path):
         pkg = load_json(package_json_path)
 
-        for res in pkg["resources"]:
-            # only run this on resources with single file paths (i.e. skip shapefiles)
-            if len(res["path"]) > 1:
-                continue
-
+        # skip shapefiles
+        for res in [i for i in pkg["resources"] if i["format"] != "shp"]:
             print(f"cleaning data for {res['name']}")
 
             data_path = package_json_path.parent / res["path"][0]

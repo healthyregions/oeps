@@ -121,8 +121,6 @@ class Registry:
             resource.pop("bq_dataset_name", None)
             resource.pop("geodata_source", None)
 
-        resource["theme"] = self.theme_lookup.get(resource["construct"])
-
         resource["schema"] = schema
         return resource
 
