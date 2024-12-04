@@ -42,7 +42,7 @@ class Explorer:
         variables = {
             k: v
             for k, v in registry.variable_lookup.items()
-            if not v["theme"] == "Geography"
+            if not registry.themes["Geography"] == v["construct"]
         }
         ds_combo_lookup = {}
         for k, v in variables.items():
@@ -91,7 +91,7 @@ class Explorer:
                 "variable": v["title"],
                 "numerator": variables_to_ds_combos[k],
                 "nProperty": k,
-                "theme": v["theme"],
+                "theme": registry.theme_lookup[v["construct"]],
                 "metadataUrl": v.get("metadata_doc_url"),
             }
             for k, v in variables.items()
