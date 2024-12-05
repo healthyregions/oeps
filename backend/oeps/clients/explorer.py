@@ -8,13 +8,14 @@ from .registry import Registry
 
 
 class Explorer:
-    def __init__(self, root_dir: Path = None):
-        self.root_dir = root_dir if root_dir else Path(".explorer")
+    def __init__(
+        self, registry: Registry = Registry(), root_dir: Path = Path(".explorer")
+    ):
+        self.registry = registry
+        self.root_dir = root_dir
         self.dataframe_lookup = {}
 
-    def build_map_config(self, registry_dir: Path = None, write_csvs: bool = True):
-        registry = Registry(registry_dir) if registry_dir else Registry()
-
+    def build_map_config(self, write_csvs: bool = True):
         csv_dir = Path(self.root_dir, "public", "csv")
         csv_dir.mkdir(parents=True, exist_ok=True)
 
@@ -24,7 +25,7 @@ class Explorer:
         # begin by creating a lookup for all geodata sources that will be used in the explorer.
         # only source files with an "explorer_config" entry will be used
         geodata_lookup = {}
-        for id, data in registry.geodata_lookup.items():
+        for id, data in self.registry.geodata_lookup.items():
             entry = data.get("explorer_config")
             if entry:
                 entry["csv_abbrev"] = id[0]
@@ -33,7 +34,7 @@ class Explorer:
         # create lookup of all table data sources that are linked to a valid geodata_source
         table_lookup = {
             k: v
-            for k, v in registry.table_lookup.items()
+            for k, v in self.registry.table_lookup.items()
             if v.get("geodata_source") in geodata_lookup
         }
 
@@ -41,8 +42,8 @@ class Explorer:
         # in which each variable has a value
         variables = {
             k: v
-            for k, v in registry.variable_lookup.items()
-            if not registry.themes["Geography"] == v["construct"]
+            for k, v in self.registry.variable_lookup.items()
+            if not self.registry.themes["Geography"] == v["construct"]
         }
         ds_combo_lookup = {}
         for k, v in variables.items():
@@ -91,7 +92,7 @@ class Explorer:
                 "variable": v["title"],
                 "numerator": variables_to_ds_combos[k],
                 "nProperty": k,
-                "theme": registry.theme_lookup[v["construct"]],
+                "theme": self.registry.theme_lookup[v["construct"]],
                 "metadataUrl": v.get("metadata_doc_url"),
             }
             for k, v in variables.items()
@@ -118,10 +119,9 @@ class Explorer:
 
         write_json(list(out_variables.values()), Path(config_dir, "variables.json"))
 
-    def build_docs_config(self, registry_dir: Path = None):
-        registry = Registry(registry_dir) if registry_dir else Registry()
+    def build_docs_config(self):
         output = {}
-        for theme, constructs in registry.themes.items():
+        for theme, constructs in self.registry.themes.items():
             output[theme] = []
             for construct in constructs:
                 geodata = set()
@@ -129,7 +129,7 @@ class Explorer:
                 sources = set()
                 metadata_docs = set()
                 years = set()
-                for v in registry.variable_lookup.values():
+                for v in self.registry.variable_lookup.values():
                     if v["construct"] == construct:
                         for ts in v["table_sources"]:
                             years.add(ts.split("-")[1])
@@ -139,7 +139,10 @@ class Explorer:
                                 ("tract", "Tract"),
                                 ("zcta", "Zip"),
                             ]:
-                                if p[0] in registry.table_lookup[ts]["geodata_source"]:
+                                if (
+                                    p[0]
+                                    in self.registry.table_lookup[ts]["geodata_source"]
+                                ):
                                     geodata.add(p[1])
                         sources.add(v["source"])
                         titles.add(v["title"])
@@ -150,7 +153,7 @@ class Explorer:
                 output[theme].append(
                     {
                         "Variable Construct": construct,
-                        "Variable Proxy": registry.proxy_lookup[construct],
+                        "Variable Proxy": self.registry.proxy_lookup[construct],
                         "Variables": natsorted(list(titles)),
                         "Source": "; ".join(sources),
                         "Metadata": list(metadata_docs),
@@ -160,4 +163,5 @@ class Explorer:
                 )
 
         meta_dir = Path(self.root_dir, "meta")
+        meta_dir.mkdir(exist_ok=True)
         write_json(output, Path(meta_dir, "variables.json"))
