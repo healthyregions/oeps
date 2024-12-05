@@ -1,0 +1,37 @@
+{
+    "bq_dataset_name": "spatial",
+    "bq_table_name": "states2010",
+    "name": "states",
+    "title": "State Boundaries, 2010",
+    "description": "Shapefile of state boundaries from the US Census Bureau, 2010.",
+    "explorer_config": {
+        "name": "US States",
+        "geodata": "cb_2018_us_state_20m.geojson",
+        "id": "HEROP_ID",
+        "bounds": [-125.109215, -66.925621, 25.043926, 49.295128],
+        "tables": {}
+    },
+    "path": "https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2010-500k-shp.zip",
+    "format": "shp",
+    "mediatype": "application/vnd.shp",
+    "summary_level": "state",
+    "schema": {
+        "primaryKey": "HEROP_ID",
+        "fields": [
+            {
+                "name": "HEROP_ID",
+                "title": "HEROP_ID",
+                "type": "string",
+                "src_name": "HEROP_ID",
+                "bq_data_type": "STRING"
+            },
+            {
+                "name": "name",
+                "title": "Name",
+                "type": "string",
+                "src_name": "NAME",
+                "bq_data_type": "STRING"
+            }
+        ]
+    }
+}

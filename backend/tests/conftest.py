@@ -1,4 +1,7 @@
+from pathlib import Path
+
 import pytest
+
 from oeps import create_app
 
 
@@ -8,6 +11,8 @@ def app():
     app.config.update(
         {
             "TESTING": True,
+            "TEST_OUTPUT_DIR": str(Path(Path(__file__).parent, "test_output")),
+            "TEST_REGISTRY_DIR": str(Path(Path(__file__).parent, "test_registry")),
         }
     )
 

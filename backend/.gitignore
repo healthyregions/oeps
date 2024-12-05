@@ -1,3 +1,4 @@
+tests/test_output
 .ruff_cache
 
 # Byte-compiled / optimized / DLL files
