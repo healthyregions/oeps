@@ -6,12 +6,12 @@ from pathlib import Path
 from frictionless import validate
 
 from oeps.utils import fetch_files, upload_to_s3, load_json, write_json
-from oeps.clients.registry import Registry
 
 
 class DataPackage:
-    def create(
+    def create_from_registry(
         self,
+        registry,
         destination,
         zip_output: bool = False,
         upload: bool = False,
@@ -21,8 +21,6 @@ class DataPackage:
     ):
         """Single command to generate an output data package. Should probably be
         refactored to more modular methods on this class."""
-
-        registry = Registry()
 
         dest = Path(destination)
         dest.mkdir(exist_ok=True, parents=True)
@@ -108,7 +106,8 @@ class DataPackage:
         pkg = load_json(package_json_path)
 
         # skip shapefiles
-        for res in [i for i in pkg["resources"] if i["format"] != "shp"]:
+        non_shps = [i for i in pkg["resources"] if i["format"] != "shp"]
+        for res in non_shps:
             print(f"cleaning data for {res['name']}")
 
             data_path = package_json_path.parent / res["path"][0]
