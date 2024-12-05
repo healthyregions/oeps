@@ -2,7 +2,6 @@ import os
 from datetime import datetime
 from pathlib import Path
 from argparse import Namespace
-from typing import List
 import subprocess
 
 import click
@@ -33,6 +32,51 @@ EXPLORER_ROOT_DIR_rel = os.path.relpath(EXPLORER_ROOT_DIR, start=Path(__file__).
 CACHE_DIR_rel = os.path.relpath(CACHE_DIR, start=Path(__file__).parent.parent)
 REGISTRY_DIR_rel = os.path.relpath(REGISTRY_DIR, start=Path(__file__).parent.parent)
 
+
+def add_common_opts(*options):
+    """Helper function for grouping multiple options into a single decorator
+    so they can easily be applied multiple commands.
+    see: https://stackoverflow.com/a/67138197/3873885"""
+
+    def wrapper(function):
+        for option in reversed(options):
+            function = option(function)
+        return function
+
+    return wrapper
+
+
+## define some basic command options that can be reused in many places.
+verbose_opt = click.option(
+    "--verbose",
+    is_flag=True,
+    help="Enable verbose logging.",
+)
+overwrite_opt = click.option(
+    "--overwrite",
+    is_flag=True,
+    help="Overwrite output content if it already exists.",
+)
+registry_opt = click.option(
+    "--registry-path",
+    help="Optional override for the registry directory.",
+    default=REGISTRY_DIR_rel,
+    type=click.Path(
+        resolve_path=True,
+        path_type=Path,
+    ),
+)
+explorer_opt = click.option(
+    "--explorer-path",
+    help="Optional override for the root directory of the explorer.",
+    default=EXPLORER_ROOT_DIR_rel,
+    type=click.Path(
+        resolve_path=True,
+        path_type=Path,
+    ),
+)
+
+
 ## ~~ Big Query Commands ~~
 
 ## Group of commands for Google Big Query operations
@@ -56,12 +100,6 @@ def check_credentials():
     help="Name can be provided to load a single Data Resource to Big Query (instead of everything in the registry)",
 )
 @click.option(
-    "--overwrite",
-    is_flag=True,
-    default=False,
-    help="Overwrite BQ table if it already exists.",
-)
-@click.option(
     "--table-only",
     is_flag=True,
     default=False,
@@ -73,19 +111,28 @@ def check_credentials():
     default=False,
     help="Mock operation and perform no create/delete actions.",
 )
-def load(name, overwrite, table_only, dry_run):
+@add_common_opts(overwrite_opt, registry_opt)
+def load(name, table_only, dry_run, overwrite, registry_path):
     """Load a data resource to a big query table. The data resource schema should provide all field
     and table configuration information that is needed to create the table and load data into it."""
 
     bq = BigQuery()
-    registry = Registry()
+    registry = Registry(registry_path)
 
     messages = []
 
     data_resources = registry.get_all_geodata_resources()
     data_resources += registry.get_all_table_resources()
 
-    for resource in data_resources:
+    if name:
+        to_load = [i for i in data_resources if i["name"] == name]
+        if len(to_load) == 0:
+            print("no resource by that name in registry. cancelling load.")
+            exit()
+    else:
+        to_load = data_resources
+
+    for resource in to_load:
         if name and resource["name"] != name:
             continue
 
@@ -140,12 +187,13 @@ def export(output, sql_file):
 
 
 @bigquery_grp.command()
-def generate_reference_md():
+@add_common_opts(registry_opt)
+def generate_reference_md(registry_path):
     """Generates a reference document for the BigQuery project schema, based on the
     locally stored resource JSON schema files."""
 
     client = BigQuery()
-    registry = Registry()
+    registry = Registry(registry_path)
 
     resources = (
         registry.get_all_geodata_resources() + registry.get_all_table_resources()
@@ -220,20 +268,18 @@ census_grp = AppGroup(
     default="oeps",
     help="If output is uploaded to S3, use this prefix for the objects.",
 )
-@click.option(
-    "--verbose", is_flag=True, default=False, help="Enable verbose print statements"
-)
+@add_common_opts(verbose_opt)
 def get_geodata(
-    format: List[str],
-    year: str,
-    destination: Path,
-    scale: str,
-    geography: List[str] = ["state", "county", "tract", "bg", "tract", "place", "zcta"],
-    tippecanoe_path: str = None,
-    upload: bool = False,
-    no_cache: bool = False,
-    prefix: str = None,
-    verbose: bool = False,
+    format,
+    year,
+    destination,
+    scale,
+    geography,
+    tippecanoe_path,
+    upload,
+    no_cache,
+    prefix,
+    verbose,
 ):
     """This command retrieves geodata from the US Census Bureau's FTP server, merges the files into single,
     nation-wide coverages, and then exports the merged files into various formats. Optionally upload these
@@ -363,20 +409,16 @@ frictionless_grp = AppGroup(
     default=False,
     help="Don't run data package validation on the final output.",
 )
-@click.option(
-    "--overwrite",
-    is_flag=True,
-    default=False,
-    help="Overwrite existing data package with the same name.",
-)
+@add_common_opts(overwrite_opt, registry_opt)
 def create_data_package(
-    destination: Path,
-    zip_: bool = False,
-    upload: bool = False,
-    no_cache: bool = False,
-    skip_foreign_keys: bool = False,
-    skip_validation: bool = False,
-    overwrite: bool = False,
+    destination,
+    zip_,
+    upload,
+    no_cache,
+    skip_foreign_keys,
+    skip_validation,
+    overwrite,
+    registry_path,
 ):
     """Generates a Frictionless data package from the Data Resource definitions in this backend. This export
     process was developed specifically to support integration of the OEPS data warehouse into the JCOIN commons.
@@ -396,8 +438,10 @@ def create_data_package(
     if not overwrite:
         handle_overwrite(out_path)
 
+    registry = Registry(registry_path)
     dp = DataPackage()
-    dp.create(
+    dp.create_from_registry(
+        registry,
         out_path,
         zip_,
         upload,
@@ -424,18 +468,20 @@ registry_grp = AppGroup(
         path_type=Path,
     ),
 )
-def create_data_dictionaries(destination):
+@add_common_opts(registry_opt)
+def create_data_dictionaries(destination, registry_path):
     """Create the human readable, MS Excel data dictionaries based on registry content."""
 
-    registry = Registry()
+    registry = Registry(registry_path)
     registry.create_data_dictionaries(destination)
 
 
 @registry_grp.command()
-def validate():
+@add_common_opts(registry_opt)
+def validate(registry_path):
     """Create the human readable, MS Excel data dictionaries based on registry content."""
 
-    registry = Registry()
+    registry = Registry(registry_path)
     registry.validate()
 
 
@@ -447,60 +493,32 @@ explorer_grp = AppGroup(
 
 @explorer_grp.command()
 @click.option(
-    "--registry",
-    help="Optional input path for the registry directory.",
-    default=REGISTRY_DIR_rel,
-    type=click.Path(
-        resolve_path=True,
-        path_type=Path,
-    ),
-)
-@click.option(
-    "--root-dir",
-    help="Optional output path for config files. The default location will overwrite existing configs.",
-    default=EXPLORER_ROOT_DIR_rel,
-    type=click.Path(
-        resolve_path=True,
-        path_type=Path,
-    ),
-)
-@click.option(
     "--make-csvs",
     help="Only write new config JSON files, assumes CSV files are already generated.",
     default=False,
     is_flag=True,
 )
-def build_map(registry: Path, root_dir: Path, make_csvs: bool = False):
+@add_common_opts(registry_opt, explorer_opt)
+def build_map(
+    make_csvs: bool,
+    registry_path: Path,
+    explorer_path: Path,
+):
     """Builds configuration files for the frontend OEPS Explorer application."""
 
-    ex = Explorer(root_dir=root_dir)
-    ex.build_map_config(registry_dir=registry, write_csvs=make_csvs)
+    registry = Registry(registry_path)
+    ex = Explorer(registry=registry, root_dir=explorer_path)
+    ex.build_map_config(write_csvs=make_csvs)
 
 
 @explorer_grp.command()
-@click.option(
-    "--registry",
-    help="Optional input path for the registry directory.",
-    default=REGISTRY_DIR_rel,
-    type=click.Path(
-        resolve_path=True,
-        path_type=Path,
-    ),
-)
-@click.option(
-    "--root-dir",
-    help="Optional output path for config files. The default location will overwrite existing configs.",
-    default=EXPLORER_ROOT_DIR_rel,
-    type=click.Path(
-        resolve_path=True,
-        path_type=Path,
-    ),
-)
-def build_docs(registry: Path, root_dir: Path):
+@add_common_opts(registry_opt, explorer_opt)
+def build_docs(registry_path: Path, explorer_path: Path):
     """Builds configuration files for the frontend OEPS Explorer application."""
 
-    ex = Explorer(root_dir=root_dir)
-    ex.build_docs_config(registry_dir=registry)
+    registry = Registry(registry_path)
+    ex = Explorer(registry=registry, root_dir=explorer_path)
+    ex.build_docs_config()
 
 
 @click.command()
@@ -508,6 +526,8 @@ def make_cli_docs():
     """Generates markdown-formatted documentation from all CLI commands groups."""
 
     docs_path = Path("../docs/commands")
+    for path in docs_path.glob("*.md"):
+        os.remove(path)
 
     ## list of base modules and commands to process
     command_list = [
@@ -517,6 +537,7 @@ def make_cli_docs():
         ("oeps.commands", "explorer_grp"),
         ("oeps.commands", "frictionless_grp"),
         ("oeps.commands", "overture_grp"),
+        ("oeps.commands", "registry_grp"),
     ]
 
     for mod, com in command_list:
