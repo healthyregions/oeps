@@ -409,7 +409,7 @@ frictionless_grp = AppGroup(
     default=False,
     help="Don't run data package validation on the final output.",
 )
-@add_common_opts(overwrite_opt, registry_opt)
+@add_common_opts(overwrite_opt, registry_opt, verbose_opt)
 def create_data_package(
     destination,
     zip_,
@@ -419,6 +419,7 @@ def create_data_package(
     skip_validation,
     overwrite,
     registry_path,
+    verbose,
 ):
     """Generates a Frictionless data package from the Data Resource definitions in this backend. This export
     process was developed specifically to support integration of the OEPS data warehouse into the JCOIN commons.
@@ -439,15 +440,15 @@ def create_data_package(
         handle_overwrite(out_path)
 
     registry = Registry(registry_path)
-    dp = DataPackage()
+    dp = DataPackage(out_path)
     dp.create_from_registry(
         registry,
-        out_path,
         zip_,
         upload,
         no_cache=no_cache,
         skip_foreign_keys=skip_foreign_keys,
         run_validation=not skip_validation,
+        verbose=verbose,
     )
 
 
