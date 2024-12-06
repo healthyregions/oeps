@@ -2292,7 +2292,7 @@
     ]
   },
   "HospAvTmDr": {
-    "title": "Driving Time to nearest Hospital",
+    "title": "Avg. Driving Time to nearest Hospital",
     "name": "HospAvTmDr",
     "src_name": "HospAvTmDr",
     "type": "number",
@@ -2355,7 +2355,7 @@
     ]
   },
   "RxAvTmDr": {
-    "title": "Driving Time (min) to nearest Pharmacy ",
+    "title": "Avg. Driving Time (min) to nearest Pharmacy ",
     "name": "RxAvTmDr",
     "src_name": "RxAvTmDr",
     "type": "number",
