@@ -475,6 +475,36 @@
     ],
     "reverse": true
   },
+  "NeighbTyp": {
+    "categorical": true,
+    "fixedScale": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "fixedLabels": [
+      "1: Rural Affordable",
+      "2: Suburban Affluent",
+      "3: Suburban Affordable",
+      "4: Extreme Poverty",
+      "5: Multilingual Working",
+      "6: Urban Core Opportunity",
+      "7: Sparse Areas"
+    ],
+    "colorScale": [
+      [141,211,199],
+      [255,255,179],
+      [190,186,218],
+      [255,204,204],
+      [128,177,211],
+      [253,180,98],
+      [179,222,105]
+    ]
+  },
   "AnyNalFr": {
     "binning": "naturalBreaks",
     "numberOfBins": 4,
