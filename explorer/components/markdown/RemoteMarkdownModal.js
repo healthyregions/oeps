@@ -10,10 +10,12 @@ export default function RemoteMarkdownModal({
     reset=() => {}
 }){
     const [markdownText, setMarkdownText] = useState('')
+    const [loading, setLoading] = useState(false)
 
     useEffect(() => {
         try {
-            fetchMarkdown(url).then(result => setMarkdownText(result))
+            setLoading(true)
+            fetchMarkdown(url).then(result => {setMarkdownText(result); setLoading(false)})
         } catch(e) {
             console.log(e)
         }
@@ -26,7 +28,10 @@ export default function RemoteMarkdownModal({
             </span>
         </button>
         <div className={styles.modalContainer}>
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdownText}</ReactMarkdown>
+            {loading ? 
+                <em>loading...</em> :
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdownText}</ReactMarkdown>
+            }
         </div>
     </div>
 }

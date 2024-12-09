@@ -1,6 +1,6 @@
 # OEPS Explorer
 
-The OEPS Explorer is a NextJS app that uses [WebGeoDa](#about-webgeoda) (built with [jsGeoDa](https://jsgeoda.libgeoda.org/)) for geospatial interactivity.
+The OEPS Explorer is a NextJS app that built from [WebGeoDa Scaffolding](https://docs.webgeoda.org/), a configurable web map application that implements [jsGeoDa](https://jsgeoda.libgeoda.org/)) for geospatial interactivity.
 
 ## Install & Develop
 
@@ -29,38 +29,13 @@ Additionally, a basemap style must be provided, as well as a Mapbox access token
 
 ```
 NEXT_PUBLIC_MAPBOX_TOKEN=<your token>
-NEXT_PUBLIC_MAPBOX_TILESET_ID_ZCTA="<account id>.<tileset id>"
-NEXT_PUBLIC_MAPBOX_TILESET_ID_TRACT="<account id>.<tileset id>"
 NEXT_PUBLIC_MAPBOX_STYLE="mapbox://styles/<account id>/<style id>'
 ```
 
+## Data Configuration
 
-## About WebGeoDa
+The entire map interface is driven by a collection of files in the `config` directory. This content is (almost) all generated automatically from the backend, and should not be edited directly. This is because the number of variables we now have in the system has become very large (over 350). The one exception to this is the `config/symbology.json` file. In this file, we store map display configurations for each variable.
 
-![A map of population density in texas](https://github.com/nofurtherinformation/webgeoda/blob/main/public/cover.png?raw=true)
+All of the actual data is stored in CSVs files located in `public/csv`.
 
-WebGeoDa Scaffolding is a set of easy-to-use frontend JavaScript toolkits to get started building and exploring client-side geospatial analytics.
-
-⚠️ Heads up! WebGeoDa is an _unstable_ work in progress. This means a lot will change in future releases. ⚠️
-
-### About Webgeoda Scaffolding
-
-**What is this thing?**
-
-WebGeoDa is a set of tools, templates, and scaffolding to quickly and easily develop geospatial data dashboards. WebGeoDa builds on the GeoDa suite of geospatial software and extends jsGeoDa through accessible and ready-to-go examples. WebGeoDa uses  [jsGeoDa](https://jsgeoda.libgeoda.org/) (Xun Li & Luc Anselin) as the core of it's geospatial engine, alongside a collection of modern and high-performance libraries for mapping, analysis, data handling, and UI matters.
-
-WebGeoDa capabilities have four areas of complexity. It's easy to learn, but with a high ceiling for customization:
-
-‍💻 Add your geospatial data (GeoJSON), join it to your tabular data (CSV) right in the browser. Specify your variables with a simple JSON specification, and your map is ready to be published!
-
-📑 Customize and add static pages to describe your data and the context of your dashboard. WebGeoDa provides some Physical-in styling tools using Plain CSS and a reasonably approachable JSX, similar to HTML.
-
-🗺 Add additional map features using Mapbox and Deck.gl, or explore additional data insights through interactive tooltip and sidebar functions.
-
-🦺 Dive directly into the WebGeoDa scaffolding with full control over custom react hooks, the jsGeoDa WebAssembly + WebWorker geospatial engine, a fast Redux-backed state, and extensible and accessible components. 
-
-### What can WebGeoDa do?
-
-WebGeoDa focuses on enabling exploratory data dashboards with complex data, the need for diverse variables, and high performance in-browser analytics. You can make maps with a variety of color-binning techniques and spatial statistical methods, like Hotspot cluster analysis, through a simple JSON based data and variable configuration.
-
-### See the [full docs](https://dhalpern.gitbook.io/webgeoda-templates/) for more and [get started here](https://dhalpern.gitbook.io/webgeoda-templates/getting-started).
+![breakdown of config content](./img/explorer-build-process.png)

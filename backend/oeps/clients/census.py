@@ -1,6 +1,4 @@
-import csv
 import json
-import ftplib
 import shutil
 import subprocess
 import pandas as pd
@@ -8,262 +6,242 @@ import geopandas as gpd
 from pathlib import Path
 
 from oeps.utils import download_file
+from oeps.config import LOOKUPS_DIR, CACHE_DIR
+
+GEODATA_CACHE_DIR = Path(CACHE_DIR, "geodata")
 
 
-class CensusClient():
-
-    def __init__(self, lookups_dir=None, verbose=False):
-
+class CensusClient:
+    def __init__(self, verbose=False):
         self.verbose = verbose
-        self.lookups = self.load_lookups(lookups_dir)
-        self.load_filelists(lookups_dir)
+        self.lookups = self.load_lookups()
 
-    def load_lookups(self, lookups_dir):
-        if self.verbose: print("loading lookups...")
+        self.year = ""
+        self.geography = ""
+        self.scale = ""
+
+    @property
+    def name_string(self):
+        return f"{self.geography}-{self.year}-{self.scale}"
+
+    def load_lookups(self):
+        if self.verbose:
+            print("loading lookups...")
         lookups = {}
-        for f in lookups_dir.glob("*.json"):
-            with open(f, 'r') as o:
+        for f in LOOKUPS_DIR.glob("*.json"):
+            with open(f, "r") as o:
                 data = json.load(o)
                 lookups[f.stem] = data
 
         return lookups
 
-    def load_filelists(self, lookups_dir):
-        if self.verbose: print("loading filelists...")
-        with open(Path(lookups_dir, 'census-2010-geo-files.csv'), 'r') as o:
-            reader = csv.DictReader(o)
-            self.lookups['census-sources']['2010']['files'] = [i for i in reader]
-        with open(Path(lookups_dir, 'census-2018-geo-files.csv'), 'r') as o:
-            reader = csv.DictReader(o)
-            self.lookups['census-sources']['2018']['files'] = [i for i in reader]
-
-    def ftp_connection(self):
-        """ DEPRECATED: had too much trouble with the ftp server, just using direct http gets for now """
-        if self.verbose: print("connecting to FTP server...")
-        ftp = ftplib.FTP('ftp2.census.gov')
-        ftp.login(user="anonymous", passwd="anonymous")
-        # ftp.connect()
-        return ftp
-
-    def collect_ftp_paths(self, year: int, geography: str, scale="500k"):
-        """ Connect to the census FTP site and get a list of all files download all cartographic boundary files
-        that pertain to the given criteria.
-
-        Valid geographies are "state", "county", "zcta", "tract", "bg", and "place".
-        """
-
-        ## DEPRECATED -- originally these file lists were aquired by querying the FTP server directly,
-        ## however, the nlst() function (and any other list directory operations) stopped working for
-        ## me spring 2024, so for now we were just storing the file names in local CSVs.
-        # print("getting connection")
-        # server = self.ftp_connection()
-        # print('connnected')
-        # files = server.nlst('/geo/tiger/GENZ2010')
-
-        files = self.lookups['census-sources'][str(year)]['files']
-        if not files:
-            print(f"no files for this year {year}")
-            return []
-
-        # filter file list with simple string matching
-        files = [i for i in files if scale in i['filename']]
-
-        # use the summary level code as some older years only include that code
-        files = [i for i in files if geography in i['filename'] or self.lookups['census-summary-levels'][geography] in i['filename']]
-
-        # special handling for county, exclude the within_ua files (present in 2018)
-        if geography == "county":
-            files = [i for i in files if "within" not in i['filename']]
-
-        ftp_root = self.lookups['census-sources'][str(year)]['ftp_root']
-        http_base_url = "https://www2.census.gov"
-        paths = [f"{http_base_url}{ftp_root}{i['filename']}" for i in files]
-        return paths
-
-    def download_from_census_ftp(self, ftp_paths, outdir=".", no_cache=False):
-        """ DEPRECATED: had too much trouble with the ftp server, just using direct http gets for now """
-
-        server = self.ftp_connection()
-
-        outpaths = []
-        for ftp_path in ftp_paths:
-            print(ftp_path)
-            filename = ftp_path.split("/")[-1]
-            outpath = Path(outdir, filename)
-            if not outpath.is_file() or no_cache is True:
-                with open(outpath, 'wb' ) as file:
-                    server.retrbinary('RETR %s' % ftp_path, file.write)
-            else:
-                print("  using local file.")
-            outpaths.append(outpath)
-
-        return outpaths
-
-    def download_all_files(self, geography, year, destination, no_cache=False):
-
-        download_dir = Path(destination, geography, 'raw', str(year))
+    def download_all_files(self, no_cache=False):
+        download_dir = Path(
+            GEODATA_CACHE_DIR, self.geography, "raw", self.year, self.scale
+        )
         download_dir.mkdir(exist_ok=True, parents=True)
 
-        if self.verbose: print("collecting download paths...")
-        ftp_paths = self.collect_ftp_paths(year=year, geography=geography)
+        download_urls = self.lookups["census-sources"][self.year][self.scale][
+            self.geography
+        ]["file_list"]
         if self.verbose:
-            for i in ftp_paths:
+            for i in download_urls:
                 print(" -", i)
-        if self.verbose: print("downloading...")
+            print("downloading...")
 
         out_paths = []
-        for url in ftp_paths:
+        for url in download_urls:
             filename = url.split("/")[-1]
             outpath = Path(download_dir, filename)
-            out_path = download_file(url, outpath, desc=f" - {filename}", progress_bar=self.verbose)
+            out_path = download_file(
+                url,
+                outpath,
+                desc=f" - {filename}",
+                progress_bar=self.verbose,
+                no_cache=no_cache,
+            )
             out_paths.append(out_path)
 
         return out_paths
 
     def unzip_files(self, paths):
-
         shp_paths = []
         for p in paths:
             name = p.name
-            shp_file = Path(p.parent, name.replace("zip","shp"))
+            shp_file = Path(p.parent, name.replace("zip", "shp"))
             shutil.unpack_archive(p, p.parent)
             shp_paths.append(shp_file)
-            
+
         return shp_paths
 
     def create_dataframe_from_files(self, paths):
-
         df_list = []
         for p in paths:
             df = gpd.read_file(p)
             df_list.append(df)
 
         if len(df_list) > 1:
-            out_df = gpd.GeoDataFrame(pd.concat(df_list, ignore_index=True), crs=df_list[0].crs)
+            out_df = gpd.GeoDataFrame(
+                pd.concat(df_list, ignore_index=True), crs=df_list[0].crs
+            )
         else:
             out_df = df_list[0]
-            
+
         return out_df
 
-    def add_herop_id_to_dataframe(self, df, geography, year, pk_field):
+    def add_herop_id_to_dataframe(self, df: pd.DataFrame):
+        lvl = self.lookups["census-summary-levels"][self.geography]
+        suffixes = self.lookups["census-sources"][self.year][self.scale][
+            self.geography
+        ]["herop_id_suffixes"]
 
-        lvl = self.lookups['census-summary-levels'][geography]
-        if geography == "county":
-            if year == "2010":
-                df['HEROP_ID'] = df.apply(lambda row: f"{lvl}US{str(row['STATE'])}{str(row['COUNTY'])}", axis = 1)
-            else:
-                df['HEROP_ID'] = df.apply(lambda row: f"{lvl}US{str(row['GEOID'])}", axis = 1)
-        elif geography == "bg" and year == "2010":
-            df['HEROP_ID'] = df.apply(lambda row: f"{lvl}US{str(row[pk_field][6:])}", axis = 1)
-        else:
-            df['HEROP_ID'] = df.apply(lambda row: f"{lvl}US{str(row[pk_field])}", axis = 1)
+        df["HEROP_ID"] = df.apply(
+            lambda row: f"{lvl}US{''.join([row[i] for i in suffixes])}", axis=1
+        )
 
         return df
 
     def add_bbox_to_dataframe(self, df: pd.DataFrame):
-
         df = pd.concat([df, df.bounds], axis=1)
 
         def concat_bounds(row):
-            minx = round(row['minx'], 3)
-            miny = round(row['miny'], 3)
-            maxx = round(row['maxx'], 3)
-            maxy = round(row['maxy'], 3)
+            minx = round(row["minx"], 3)
+            miny = round(row["miny"], 3)
+            maxx = round(row["maxx"], 3)
+            maxy = round(row["maxy"], 3)
             return f"{minx},{miny},{maxx},{maxy}"
 
-        df['BBOX'] = df.apply(concat_bounds, axis = 1)
+        df["BBOX"] = df.apply(concat_bounds, axis=1)
 
         return df
 
-    def add_name_to_dataframe(self, df: pd.DataFrame, geography: str, year: str, name_field: str):
+    def add_label_to_dataframe(self, df: pd.DataFrame):
+        name_field = self.lookups["census-sources"][self.year][self.scale][
+            self.geography
+        ]["name_field"]
 
-        def generate_display_name(row):
-            lsad = row.get('LSAD')
-            name = row.get('NAME')
+        def generate_label(row):
+            lsad = row.get("LSAD")
+            name = row.get(name_field)
             if lsad:
-                # print(lsad)
                 position = None
-                if lsad in self.lookups['census-lsad']:
-                    lsad_value = self.lookups['census-lsad'][lsad]['value']
-                    position = self.lookups['census-lsad'][lsad]['position']
+                if lsad in self.lookups["census-lsad"]:
+                    lsad_value = self.lookups["census-lsad"][lsad]["value"]
+                    position = self.lookups["census-lsad"][lsad]["position"]
                 else:
-                    for k, v in self.lookups['census-lsad'].items():
-                        if lsad == v['value']:
+                    for k, v in self.lookups["census-lsad"].items():
+                        if lsad == v["value"]:
                             lsad_value = lsad
-                            position = v['position']
-                
+                            position = v["position"]
+
                 if position:
                     if position == "prefix":
                         name = f"{lsad_value} {name}"
                     else:
                         name = f"{name} {lsad_value}"
-                
+
             return name
 
-        df['DISPLAY_NAME'] = df.apply(generate_display_name, axis=1)
+        df["LABEL"] = df.apply(generate_label, axis=1)
 
         return df
 
-    def export_to_shapefile(self, df: pd.DataFrame, geography, year, destination):
+    def export_to_shapefile(self, df: pd.DataFrame, output_dir=None):
+        if not output_dir:
+            output_dir = Path(GEODATA_CACHE_DIR, self.geography, "processed")
+        output_dir.mkdir(exist_ok=True, parents=True)
 
-        processed_dir = Path(destination, f"{geography}-{year}-shp")
+        processed_dir = Path(output_dir, f"{self.name_string}-shp")
         processed_dir.mkdir(parents=True, exist_ok=True)
-        outfile_shp = Path(processed_dir, f"{geography}-{year}.shp")
+        outfile_shp = Path(processed_dir, f"{self.name_string}.shp")
         df.to_file(outfile_shp)
 
-        shutil.make_archive(processed_dir, 'zip', processed_dir)
+        shutil.make_archive(processed_dir, "zip", processed_dir)
 
         shp_files = list(processed_dir.glob("*"))
-        shp_files.append(Path(f"{processed_dir}.zip"))
+        zip_file = Path(f"{processed_dir}.zip")
 
-        return shp_files
+        return {
+            "files": shp_files,
+            "zipped": zip_file,
+        }
 
-    def export_to_geojson(self, df: pd.DataFrame, geography: str, year: str, destination, overwrite=False):
+    def export_to_geojson(self, df: pd.DataFrame, output_dir=None, overwrite=False):
+        if not output_dir:
+            output_dir = Path(GEODATA_CACHE_DIR, self.geography, "processed")
+        output_dir.mkdir(exist_ok=True, parents=True)
+
         df = df.to_crs("EPSG:4326")
-        outfile = Path(destination, f"{geography}-{year}.geojson")
+        outfile = Path(output_dir, f"{self.name_string}.geojson")
 
         if not outfile.is_file() or overwrite:
             df.to_file(outfile, driver="GeoJSON")
 
         return outfile
 
-    def export_to_pmtiles(self, geojson_path, geography, year, destination, tippecanoe_path):
+    def export_to_pmtiles(self, geojson_path, tippecanoe_path, output_dir=None):
+        if not output_dir:
+            output_dir = Path(GEODATA_CACHE_DIR, self.geography, "processed")
+        output_dir.mkdir(exist_ok=True, parents=True)
 
-        outfile_pmtiles = Path(destination, f"{geography}-{year}.pmtiles")
+        outfile_pmtiles = Path(output_dir, f"{self.name_string}.pmtiles")
         cmd = [
             tippecanoe_path,
             # "-zg",
             # tried a lot of zoom level directives, and seems like for block group
             # (which I believe is the densest)shp_paths 10 is needed to preserve shapes well enough.
             "-z10",
-            "-x", "STATEFP",
-            "-x", "COUNTYFP",
-            "-x", "COUNTYNS",
-            "-x", "TRACTCE",
-            "-x", "BLKGRPCE",
-            "-x", "STATENS",
-            "-x", "STATE",
-            "-x", "AFFGEOID",
-            "-x", "CENSUSAREA",
-            "-x", "GEOID",
-            "-x", "GEO_ID",
-            "-x", "STUSPS",
-            "-x", "NAME",
-            "-x", "LSAD",
-            "-x", "ALAND",
-            "-x", "AWATER",
-            "-x", "minx",
-            "-x", "miny",
-            "-x", "maxx",
-            "-x", "maxy",
+            "-x",
+            "STATEFP",
+            "-x",
+            "COUNTYFP",
+            "-x",
+            "COUNTYNS",
+            "-x",
+            "TRACTCE",
+            "-x",
+            "BLKGRPCE",
+            "-x",
+            "STATENS",
+            "-x",
+            "STATE",
+            "-x",
+            "AFFGEOID",
+            "-x",
+            "CENSUSAREA",
+            "-x",
+            "GEOID",
+            "-x",
+            "GEO_ID",
+            "-x",
+            "STUSPS",
+            "-x",
+            "NAME",
+            "-x",
+            "LSAD",
+            "-x",
+            "ALAND",
+            "-x",
+            "AWATER",
+            "-x",
+            "minx",
+            "-x",
+            "miny",
+            "-x",
+            "maxx",
+            "-x",
+            "maxy",
             "--no-simplification-of-shared-nodes",
             "--coalesce-densest-as-needed",
             "--extend-zooms-if-still-dropping",
-            "--projection", "EPSG:4326",
-            "-o", str(outfile_pmtiles),
-            "-l", f"{geography}-{year}",
+            "--projection",
+            "EPSG:4326",
+            "-o",
+            str(outfile_pmtiles),
+            "-l",
+            f"{self.name_string}",
             "--force",
-            str(geojson_path)
+            str(geojson_path),
         ]
         subprocess.run(cmd)
 

@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools >= 40.6.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oeps"
+description = "Backend to support the Opioid Policy Environment Scan data warehouse and explorer."
+version = "0.1.0"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Adam Cox", email = "acfc@illinois.edu"},
+]
+dependencies = [
+    'requests',
+    'google-cloud-bigquery==3.11.3',
+    'urllib3<2.0',
+    'Flask==2.0.3',
+    'click',
+    'Werkzeug==2.2.2',
+    'tqdm',
+    'geopandas',
+    'db-dtypes',
+    'openpyxl',
+    'boto3',
+    'duckdb',
+    'frictionless',
+    'python-dotenv',
+    'natsort',
+]
+
+
+[project.optional-dependencies]
+dev = [
+    "ruff",
+    "pre-commit",
+    "pytest",
+]
+
+[tool.setuptools]
+packages = [
+    "oeps"
+]
+
+# [tool.pytest.ini_options]
+# log_cli = "True"
+# log_cli_level = "DEBUG"

@@ -1,0 +1,177 @@
+{
+  "sources": [
+    {
+      "name": "US States",
+      "geodata": "cb_2018_us_state_20m.geojson",
+      "id": "HEROP_ID",
+      "bounds": [
+        -125.109215,
+        -66.925621,
+        25.043926,
+        49.295128
+      ],
+      "tables": {
+        "s-latest__t-latest__z-latest__c-latest": {
+          "file": "s-latest__t-latest__z-latest__c-latest_s.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "s-latest__t-latest__c-latest": {
+          "file": "s-latest__t-latest__c-latest_s.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "s-latest__z-latest__c-latest": {
+          "file": "s-latest__z-latest__c-latest_s.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "s-latest": {
+          "file": "s-latest_s.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "s-latest__c-latest": {
+          "file": "s-latest__c-latest_s.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        }
+      },
+      "csv_abbrev": "s"
+    },
+    {
+      "name": "US Counties",
+      "geodata": "cb_2018_us_county_20m.geojson",
+      "id": "HEROP_ID",
+      "bounds": [
+        -125.109215,
+        -66.925621,
+        25.043926,
+        49.295128
+      ],
+      "tables": {
+        "s-latest__t-latest__z-latest__c-latest": {
+          "file": "s-latest__t-latest__z-latest__c-latest_c.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "s-latest__t-latest__c-latest": {
+          "file": "s-latest__t-latest__c-latest_c.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "s-latest__z-latest__c-latest": {
+          "file": "s-latest__z-latest__c-latest_c.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "s-latest__c-latest": {
+          "file": "s-latest__c-latest_c.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "t-latest__c-latest": {
+          "file": "t-latest__c-latest_c.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "t-latest__z-latest__c-latest": {
+          "file": "t-latest__z-latest__c-latest_c.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "c-latest": {
+          "file": "c-latest_c.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        }
+      },
+      "csv_abbrev": "c"
+    },
+    {
+      "name": "US Zip Codes",
+      "geodata": "Zip Codes [tiles]",
+      "tiles": "herop-lab.7o9tctx9",
+      "id": "HEROP_ID",
+      "bounds": [
+        -125.109215,
+        -66.925621,
+        25.043926,
+        49.295128
+      ],
+      "tables": {
+        "s-latest__t-latest__z-latest__c-latest": {
+          "file": "s-latest__t-latest__z-latest__c-latest_z.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "s-latest__z-latest__c-latest": {
+          "file": "s-latest__z-latest__c-latest_z.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "t-latest__z-latest": {
+          "file": "t-latest__z-latest_z.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "t-latest__z-latest__c-latest": {
+          "file": "t-latest__z-latest__c-latest_z.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "z-latest": {
+          "file": "z-latest_z.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        }
+      },
+      "csv_abbrev": "z"
+    },
+    {
+      "name": "US Tracts",
+      "geodata": "Tracts [tiles]",
+      "tiles": "herop-lab.0eeozlm3",
+      "id": "HEROP_ID",
+      "bounds": [
+        -125.109215,
+        -66.925621,
+        25.043926,
+        49.295128
+      ],
+      "tables": {
+        "s-latest__t-latest__z-latest__c-latest": {
+          "file": "s-latest__t-latest__z-latest__c-latest_t.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "s-latest__t-latest__c-latest": {
+          "file": "s-latest__t-latest__c-latest_t.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "t-latest__z-latest": {
+          "file": "t-latest__z-latest_t.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "t-latest__c-latest": {
+          "file": "t-latest__c-latest_t.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "t-latest": {
+          "file": "t-latest_t.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "t-latest__z-latest__c-latest": {
+          "file": "t-latest__z-latest__c-latest_t.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        }
+      },
+      "csv_abbrev": "t"
+    }
+  ]
+}
