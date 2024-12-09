@@ -14,16 +14,18 @@ The composition of the registry is largely inspired by [Frictionless](https://fr
 
 The registry is broken into four parts:
 
-- [themes](#themes)
+- [themes & constructs](#themes-constructs)
 - [variables](#variables)
-- [table_sources](#table-sources)
-- [geodata_sources](#geodata-sources)
+- [table sources](#table-sources)
+- [geodata sources](#geodata-sources)
 
 ![basic registry diagram](./img/registry-simple.png)
 
 ## Rationale
 
 The core rationale for this setup is to treat individual variables as the lowest common denominator within the system, allowing the concept of a variable to be shared across as many tables and data sources as needed. For example, "Total Population" is a variable that has a value in 16 different tables--by state in 2010, by county in 2010, by state in 2000, etc. The registry allows us to define this variable one time, and then link it with multiple data sources, each of which in turn links to the proper geospatial dataset.
+
+Themes and constructs provide a mechanism through which variables can be organized within the risk environment framework, creating a thematic hierarchy without directly affecting the structure of the data or datasets themselves.
 
 ## Structure
 
