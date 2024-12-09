@@ -72,21 +72,18 @@ export default function About() {
         Data included in the OEPS is grouped thematically for ease of exploration, indices development, and model integration.
         Data is stratfied across six themes:
         </p>
-        <p>
-
+        <ul>
         <li> <b> Policy:</b> State, county, and local policies that may influence access to treatment and/or criminal justice </li>
         <li> <b>Health:</b> Health outcomes, physicians, access to MOUDs and healthcare resources, and more </li>
         <li> <b>Demographic:</b> Age, gender, race/ethnicity, social vulnerability, social determinants of health, and more</li>
         <li> <b>Economic:</b> Employment trends, income, poverty, foreclosure rates, and more</li>
         <li> <b>Physical Environment:</b> Housing, urban-suburban-rural classification, community overlays</li>
         <li> <b>COVID-19:</b> Essential workers, daily infection rates and confirmed cases through March 2020.*</li>
-
+        </ul>
         <p> <i>*For complete case rate, mortality, and additional COVID-19 data, please visit the <a href="https://www.USCovidAtlas.org">US COVID Atlas</a> --
         a free and open source pandemic data archive and visualization tool, also led by the Healthy Regions and Policies Lab.</i>  </p>
 
         <p> The OEPS also includes <b>geography boundary</b> shapefiles from the US Census Bureau’s TIGER/Line (2018) for Census tracts, ZCTAs, counties, and states.</p>
-
-        </p>
 
     </div>
   </div>
