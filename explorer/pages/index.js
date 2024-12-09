@@ -53,7 +53,7 @@ export default function Home() {
                 className={styles.docsLink}
                 href="/download "
               >
-                Download &gt;
+                Data Access & Download &gt;
                 </Link>
             </p>
             <p>
