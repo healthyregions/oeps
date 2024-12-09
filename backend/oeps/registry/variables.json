@@ -11,8 +11,8 @@
     "source": "Healthy Regions & Policies Lab, UIUC",
     "source_long": "",
     "oeps_v1_table": null,
-    "comments": "The HEROP_ID is generated as follows: Summary Level Code + \"US\" + GEOID + \u201c-\u201d + Year",
-    "metadata_doc_url": "",
+    "comments": "The HEROP_ID is generated as follows: Summary Level Code + \"US\" + GEOID",
+    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Geographic_Boundaries.md",
     "longitudinal": true,
     "analysis": false,
     "table_sources": [
@@ -47,7 +47,7 @@
     "source_long": "",
     "oeps_v1_table": null,
     "comments": "",
-    "metadata_doc_url": "",
+    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Geographic_Boundaries.md",
     "longitudinal": true,
     "analysis": false,
     "table_sources": [
