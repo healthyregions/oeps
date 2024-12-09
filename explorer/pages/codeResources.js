@@ -24,10 +24,7 @@ export default function About() {
         <Gutter em={3} />
 
         <div className="row">
-        <div className="col-xs-12 col-md-8 col-lg-12">
-        </div>
 
-        <div className="row">
           <div className="col-xs-12 col-md-4 col-lg-3">
             <h2> Notebooks and Sample Code </h2>
           </div>
@@ -52,7 +49,6 @@ export default function About() {
             implements a new spatial access measure, Rational Agent Access Model (RAAM), that simultaneously <b>accounts for travel time and congestion at the destination</b>.
             This package also calculates <b>five classic spatial access models</b> for easy comparison, including Floating Catchment Areas (FCA), Two-Step FCAs, and Access Score.
             </p>
-        </div>
           </div>
         </div>
 

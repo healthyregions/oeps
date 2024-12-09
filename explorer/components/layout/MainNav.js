@@ -24,8 +24,8 @@ export default function MainNav() {
             <MenuLink as="a" href="/map">
               Map
             </MenuLink>
-            <MenuLink as="a" href="/about">
-              About
+            <MenuLink as="a" href="/insights">
+              Insights
             </MenuLink>
             <MenuLink as="a" href="/methods">
               Methodology
@@ -34,16 +34,14 @@ export default function MainNav() {
               Data Docs
             </MenuLink>
             <MenuLink as="a" href="/download">
-              Download
-            </MenuLink>
-            <MenuLink as="a" href="/insights">
-              Insights
+              Data Access
             </MenuLink>
             <MenuLink as="a" href="/codeResources">
               Code Resources
             </MenuLink>
-
-
+            <MenuLink as="a" href="/about">
+              About
+            </MenuLink>
           </MenuList>
         </Menu>
       </nav>
