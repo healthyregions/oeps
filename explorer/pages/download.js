@@ -1,84 +1,86 @@
 import Head from "next/head";
-import { useState, useMemo } from 'react';
+import { 
+  // useState, 
+  useMemo } from 'react';
 import styles from "../styles/Docs.module.css";
 import { Gutter } from "../components/layout/Gutter";
 import MainNav from "../components/layout/MainNav";
 import Footer from "../components/layout/Footer";
-import csvFiles from '../meta/csvFiles.json';
-import * as JSZip from 'jszip';
-import { saveAs } from 'file-saver';
+// import csvFiles from '../meta/csvFiles.json';
+// import * as JSZip from 'jszip';
+// import { saveAs } from 'file-saver';
 
-const years = [
-  '1980',
-  '1990',
-  '2000',
-  '2010',
-  'Latest'
-]
+// const years = [
+//   '1980',
+//   '1990',
+//   '2000',
+//   '2010',
+//   'Latest'
+// ]
 
-const uniqueScales = [
-  'State',
-  'County',
-  'Tract',
-  'Zip'
-]
+// const uniqueScales = [
+//   'State',
+//   'County',
+//   'Tract',
+//   'Zip'
+// ]
 
-const scalesDict = {
-    'S':'State',
-    'C':'County',
-    'T':'Tract',
-    'Z':'Zip'
-}
+// const scalesDict = {
+//     'S':'State',
+//     'C':'County',
+//     'T':'Tract',
+//     'Z':'Zip'
+// }
 
-const shpParts = ['.dbf','.prj','.shp', '.shx','.cpg']
+// const shpParts = ['.dbf','.prj','.shp', '.shx','.cpg']
 
-const geomsDict = [{
-    agg: 'State',
-    year: "Latest",
-    folder: 'geometryFiles/state/',
-    baseFileName: 'states2018'
-  },{
-    agg: 'County',
-    year: "Latest",
-    folder: 'geometryFiles/county/',
-    baseFileName: 'counties2018'
-  },{
-    agg: 'Tract',
-    year: "Latest",
-    folder: 'geometryFiles/tract/',
-    baseFileName: 'tracts2018'
-  },{
-    agg: 'Zip',
-    year: "Latest",
-    folder: 'geometryFiles/zcta/',
-    baseFileName: 'zctas2018'
- },{
-  agg: 'State',
-  year: "2010",
-  folder: 'geometryFiles/state/',
-  baseFileName: 'states2010'
-},{
-  agg: 'County',
-  year: "2010",
-  folder: 'geometryFiles/county/',
-  baseFileName: 'counties2010'
-},{
-  agg: 'Tract',
-  year: "2010",
-  folder: 'geometryFiles/tract/',
-  baseFileName: 'tracts2010'
- }
-]
+// const geomsDict = [{
+//     agg: 'State',
+//     year: "Latest",
+//     folder: 'geometryFiles/state/',
+//     baseFileName: 'states2018'
+//   },{
+//     agg: 'County',
+//     year: "Latest",
+//     folder: 'geometryFiles/county/',
+//     baseFileName: 'counties2018'
+//   },{
+//     agg: 'Tract',
+//     year: "Latest",
+//     folder: 'geometryFiles/tract/',
+//     baseFileName: 'tracts2018'
+//   },{
+//     agg: 'Zip',
+//     year: "Latest",
+//     folder: 'geometryFiles/zcta/',
+//     baseFileName: 'zctas2018'
+//  },{
+//   agg: 'State',
+//   year: "2010",
+//   folder: 'geometryFiles/state/',
+//   baseFileName: 'states2010'
+// },{
+//   agg: 'County',
+//   year: "2010",
+//   folder: 'geometryFiles/county/',
+//   baseFileName: 'counties2010'
+// },{
+//   agg: 'Tract',
+//   year: "2010",
+//   folder: 'geometryFiles/tract/',
+//   baseFileName: 'tracts2010'
+//  }
+// ]
 
-const BASE_CSV_URL = 'https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/'
+// const BASE_CSV_URL = 'https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/'
 
 export default function Download() {
-  const [downloadMessage, setDownloadMessage] = useState('')
-  const [zipPct, setZipPct] = useState(-1)
-  const [activeFilters, setActiveFilters] = useState({
-    scale: [],
-    year: []
-  })
+  // const [downloadMessage, setDownloadMessage] = useState('')
+  // const [zipPct, setZipPct] = useState(-1)
+//   const [activeFilters, setActiveFilters] = useState({
+//     scale: [],
+//     year: []
+//   })
 
     const MainHead = () => useMemo(() => <Head>
         <title>Download :: OEPS </title>
@@ -88,83 +90,83 @@ export default function Download() {
 
     </Head>,[])
 
-    const handlefilter = (val, type) => {
-        setActiveFilters(prev => {
-        let previousType = prev[type].length ? [...prev[type]] : [];
-        let parsed = previousType.includes(val)
-            ? [...previousType.slice(0, previousType.indexOf(val)), ...previousType.slice(previousType.indexOf(val)+1, previousType.length)]
-            : [...previousType, val]
+//     const handlefilter = (val, type) => {
+//         setActiveFilters(prev => {
+//         let previousType = prev[type].length ? [...prev[type]] : [];
+//         let parsed = previousType.includes(val)
+//             ? [...previousType.slice(0, previousType.indexOf(val)), ...previousType.slice(previousType.indexOf(val)+1, previousType.length)]
+//             : [...previousType, val]
 
-        return {
-            ...prev,
-            [type]: parsed
-        }
-        })
-    }
+//         return {
+//             ...prev,
+//             [type]: parsed
+//         }
+//         })
+//     }
 
-    const handleDownload = async () => {
-      setDownloadMessage('Starting download...')
-      let filesToDownload = [...csvFiles]
+//     const handleDownload = async () => {
+//       setDownloadMessage('Starting download...')
+//       let filesToDownload = [...csvFiles]
 
-      if (activeFilters.scale.length) {
-        filesToDownload = filesToDownload.filter(entry => activeFilters.scale.includes(scalesDict[entry.scale]))
-      }
+//       if (activeFilters.scale.length) {
+//         filesToDownload = filesToDownload.filter(entry => activeFilters.scale.includes(scalesDict[entry.scale]))
+//       }
 
-      if (activeFilters.year.length) {
-        filesToDownload = filesToDownload.filter(entry => activeFilters.year.includes(entry.year))
-      }
+//       if (activeFilters.year.length) {
+//         filesToDownload = filesToDownload.filter(entry => activeFilters.year.includes(entry.year))
+//       }
 
-      let geomsToDownload = [...geomsDict]
-//      if (activeFilters.year.length !== 0 && !activeFilters.year.includes('Geographic Boundaries')){
-//        geomsToDownload = []
-//      }
+//       let geomsToDownload = [...geomsDict]
+// //      if (activeFilters.year.length !== 0 && !activeFilters.year.includes('Geographic Boundaries')){
+// //        geomsToDownload = []
+// //      }
       
-      if (activeFilters.scale.length){
-        geomsToDownload = geomsToDownload.filter(f => activeFilters.scale.includes(f.agg))
-      }
+//       if (activeFilters.scale.length){
+//         geomsToDownload = geomsToDownload.filter(f => activeFilters.scale.includes(f.agg))
+//       }
 
-      if (activeFilters.year.length){
-        let historic_data_requested = activeFilters.year.some(yr => ['2010', '2000', '1990', '1980'].includes(yr))
-        geomsToDownload = geomsToDownload.filter(f => activeFilters.year.includes(f.year) || (historic_data_requested && f.year === '2010'))
-      }
+//       if (activeFilters.year.length){
+//         let historic_data_requested = activeFilters.year.some(yr => ['2010', '2000', '1990', '1980'].includes(yr))
+//         geomsToDownload = geomsToDownload.filter(f => activeFilters.year.includes(f.year) || (historic_data_requested && f.year === '2010'))
+//       }
 
-      let geomPromises = [];
-      geomsToDownload.forEach(geometry => {
-        shpParts.forEach(shpPart => {
-          geomPromises.push(fetch(BASE_CSV_URL + geometry.folder + geometry.baseFileName + shpPart).then(r=>r.blob()))
-        })
-      })
+//       let geomPromises = [];
+//       geomsToDownload.forEach(geometry => {
+//         shpParts.forEach(shpPart => {
+//           geomPromises.push(fetch(BASE_CSV_URL + geometry.folder + geometry.baseFileName + shpPart).then(r=>r.blob()))
+//         })
+//       })
 
-      // declare promises
-      const dataPromises = filesToDownload.map(entry => fetch(BASE_CSV_URL + entry.folder + entry.file + '.csv').then(r=>r.blob()))
-      const docsLinks = await fetch('https://api.github.com/repos/geodacenter/opioid-policy-scan/contents/data_final/metadata').then(r=>r.json()).then(items => items.map(d => ({'name':d.name, 'url': d.download_url})).filter(f => f.url !== null))
-      const docsPromises = await docsLinks.map(link => fetch(link.url).then(r=>r.blob()))
+//       // declare promises
+//       const dataPromises = filesToDownload.map(entry => fetch(BASE_CSV_URL + entry.folder + entry.file + '.csv').then(r=>r.blob()))
+//       const docsLinks = await fetch('https://api.github.com/repos/geodacenter/opioid-policy-scan/contents/data_final/metadata').then(r=>r.json()).then(items => items.map(d => ({'name':d.name, 'url': d.download_url})).filter(f => f.url !== null))
+//       const docsPromises = await docsLinks.map(link => fetch(link.url).then(r=>r.blob()))
 
-      // fetch data and docs
-      const docs = await Promise.all(docsPromises).then(values => values.map((v,i) => ({'name':docsLinks[i].name, 'data':v})))
-      setDownloadMessage(`Downloaded ${docs.length} documentation files. Downloading ${filesToDownload.length} CSV files...`)
-      const data = await Promise.all(dataPromises).then(values => values.map((v,i) => ({'name':`${filesToDownload[i].file}.csv`, 'data':v})))
-      setDownloadMessage(`Downloaded ${data.length} CSV files. Downloading ${geomsToDownload.length} geometr${geomsToDownload.length > 1 ? 'ies' : 'y'}...`)
-      const geom = await Promise.all(geomPromises).then(values => values.map((v,i) => ({'name':`${geomsToDownload[Math.floor(i/7)].baseFileName}${shpParts[i%5]}`, 'data':v})))
+//       // fetch data and docs
+//       const docs = await Promise.all(docsPromises).then(values => values.map((v,i) => ({'name':docsLinks[i].name, 'data':v})))
+//       setDownloadMessage(`Downloaded ${docs.length} documentation files. Downloading ${filesToDownload.length} CSV files...`)
+//       const data = await Promise.all(dataPromises).then(values => values.map((v,i) => ({'name':`${filesToDownload[i].file}.csv`, 'data':v})))
+//       setDownloadMessage(`Downloaded ${data.length} CSV files. Downloading ${geomsToDownload.length} geometr${geomsToDownload.length > 1 ? 'ies' : 'y'}...`)
+//       const geom = await Promise.all(geomPromises).then(values => values.map((v,i) => ({'name':`${geomsToDownload[Math.floor(i/7)].baseFileName}${shpParts[i%5]}`, 'data':v})))
 
-      var zip = new JSZip();
-      var dataFolder = zip.folder("data");
-      var docsFolder = zip.folder("docs");
-      var geomFolder = zip.folder("geometry");
+//       var zip = new JSZip();
+//       var dataFolder = zip.folder("data");
+//       var docsFolder = zip.folder("docs");
+//       var geomFolder = zip.folder("geometry");
 
-      data.forEach(d => dataFolder.file(d.name, d.data))
-      docs.forEach(d => docsFolder.file(d.name, d.data))
-      geom.forEach(d => geomFolder.file(d.name, d.data))
-      setDownloadMessage(`Building your ZIP archive, this may take a minute...`)
+//       data.forEach(d => dataFolder.file(d.name, d.data))
+//       docs.forEach(d => docsFolder.file(d.name, d.data))
+//       geom.forEach(d => geomFolder.file(d.name, d.data))
+//       setDownloadMessage(`Building your ZIP archive, this may take a minute...`)
 
-      zip.generateAsync(
-        {
-          type:"blob",
-          compression: "STORE",
-      }, (meta) => setZipPct(meta.percent)).then(content => {
-        saveAs(content, `OEPS_DOWNLOAD_${new Date().toISOString().slice(0,10)}.zip`);
-      }).then(() => {setDownloadMessage(''); setZipPct(-1)})
-    }
+//       zip.generateAsync(
+//         {
+//           type:"blob",
+//           compression: "STORE",
+//       }, (meta) => setZipPct(meta.percent)).then(content => {
+//         saveAs(content, `OEPS_DOWNLOAD_${new Date().toISOString().slice(0,10)}.zip`);
+//       }).then(() => {setDownloadMessage(''); setZipPct(-1)})
+//     }
 
   return (
     <div className={styles.container}>
@@ -348,7 +350,7 @@ export default function Download() {
                 </table>
               </div>
             <h4 id="geometry-files">Geometry Files</h4>
-            <p>For spatial analysis we provide our geographic datasets generated from the US Census Bureau's Cartographic Boundary files (500k scale). We provide the following formats: Shapefile, GeoJSON, or PMTiles.</p>
+            <p>For spatial analysis we provide our geographic datasets generated from the US Census Bureau&apos;s Cartographic Boundary files (500k scale). We provide the following formats: Shapefile, GeoJSON, or PMTiles.</p>
             <ul>
                 <li><a href="https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/GeographicBoundaries.md">Go to all download links and metadata</a></li>
               </ul>
@@ -377,7 +379,7 @@ export default function Download() {
               </ul>
               <p><em>Current release: v0.1</em></p>
             <h3 id="big-query">Google BigQuery</h3>
-              <p>We have loaded the OEPS data warehouse into Google BigQuery, a data storage platgorm that provides the ability for researchers to run SQL queries (including spatial queries) to retrieve or perform analysis on specific data subsets. Google publishes many <a href="https://cloud.google.com/bigquery/docs/reference/libraries">different clients</a> through which you can access a BigQuery database, and for R users there is <a href="https://bigrquery.r-dbi.org/">bigrquery</a>. Here's how to get started:</p>
+              <p>We have loaded the OEPS data warehouse into Google BigQuery, a data storage platgorm that provides the ability for researchers to run SQL queries (including spatial queries) to retrieve or perform analysis on specific data subsets. Google publishes many <a href="https://cloud.google.com/bigquery/docs/reference/libraries">different clients</a> through which you can access a BigQuery database, and for R users there is <a href="https://bigrquery.r-dbi.org/">bigrquery</a>. Here&apos;s how to get started:</p>
               <ul>
                 <li><a href="https://oepsdata.healthyregions.org/getting-oeps-data-from-bigquery.html">Introduction to OEPS in Google BigQuery</a>: The oepsData documentation includes a detailed overview that is relevant no matter what client you use.</li>
                 <li><a href="https://oepsdata.healthyregions.org/getting-oeps-data-from-bigquery.html#setting-up-bigquery">Setting up BigQuery in R</a>: The oepsData documentation also has a walkthrough guide illustrating how R users can connect directly to our data in BigQuery.</li>
