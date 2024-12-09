@@ -1,0 +1,13 @@
+from oeps.commands import bigquery_grp
+
+def test_check_credentials(runner):
+    result = runner.invoke(bigquery_grp, ["check-credentials"])
+    assert result.exit_code == 0
+
+def test_generate_reference_md(runner):
+    result = runner.invoke(bigquery_grp, ["generate-reference-md"])
+    assert result.exit_code == 0
+
+def test_load_tabular(runner):
+    result = runner.invoke(bigquery_grp, ["load", "-n", "c-latest", "--dry-run"])
+    assert result.exit_code == 0

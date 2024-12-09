@@ -4,7 +4,8 @@ title: |md
 - Data releases v1 and v2 are tagged in the original repo, and these are both directly linked to Zenodo.
 - v1 was transferred directly to JCOIN, where v2 will be augmented through the new backend and then exported to JCOIN.
 - The OEPS Explorer pulls CSV data directly from the original repo.
-- (placeholder text used for d2 spacing issue)
+- The oepsData R Package curates the process of loading raw data into an R environment for analysis
+- asdf
 |
 classes {
     gh-repo: {
@@ -49,7 +50,7 @@ jcoin.class: data-repo
 jcoin.v1: OEPS v1
 jcoin.v1.class: freeze
 jcoin.v2: OEPS v2
-jcoin.v2.class: [freeze; todo]
+jcoin.v2.class: [freeze]
 
 zenodo: Zenodo
 zenodo.class: data-repo
@@ -58,8 +59,6 @@ zenodo.v1.class: freeze
 zenodo.v2: OEPS v2
 zenodo.v2.class: [freeze; todo]
 
-
-
 oeps: healthyregions/oeps
 oeps.class: gh-repo
 oeps.main: main branch
@@ -67,8 +66,24 @@ oeps.main.class: branch
 oeps.main.backend: /backend
 oeps.main.explorer: /explorer
 
+oepsData.text: |md
+# oepsData R Package
+oepsdata.healthyregions.org
+- Curated access to OEPS data
+- OS codebase: healthyregions/oepsData
+|
+oepsData.shape: page
+oepsData.label: ""
+
 bq: Google BigQuery
 bq.shape: cylinder
+
+geoda.main.r2 -> oepsData: ingest via scripts {
+    style: {
+        stroke-dash: 2
+    }
+}
+bq -> oepsData
 
 netlify: Netlify
 netlify.shape: cloud
@@ -99,13 +114,7 @@ geoda.main.r2 -> explorer: ingest via scripts {
         stroke-dash: 2
     }
 }
-oeps.main.backend -> jcoin.v2: |md
-TODO: export using 
-Frictionless schema| {
-    style: {
-        stroke: lightcoral
-    }
-}
+oeps.main.backend -> jcoin.v2
 oeps.main.backend <-> bq
 oeps.main.explorer -> netlify
 netlify -> explorer

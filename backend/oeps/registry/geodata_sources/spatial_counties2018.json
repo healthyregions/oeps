@@ -1,0 +1,37 @@
+{
+    "bq_dataset_name": "spatial",
+    "bq_table_name": "counties2018",
+    "name": "counties-2018",
+    "title": "County Boundaries, 2018",
+    "description": "Shapefile of county boundaries from the US Census Bureau, 2018.",
+    "explorer_config": {
+        "name": "US Counties",
+        "geodata": "cb_2018_us_county_20m.geojson",
+        "id": "HEROP_ID",
+        "bounds": [-125.109215, -66.925621, 25.043926, 49.295128],
+        "tables": {}
+    },
+    "path": "https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018-500k-shp.zip",
+    "format": "shp",
+    "mediatype": "application/vnd.shp",
+    "summary_level": "county",
+    "schema": {
+        "primaryKey": "HEROP_ID",
+        "fields": [
+            {
+                "name": "HEROP_ID",
+                "title": "HEROP_ID",
+                "type": "string",
+                "src_name": "HEROP_ID",
+                "bq_data_type": "STRING"
+            },
+            {
+                "name": "name",
+                "title": "Name",
+                "type": "string",
+                "src_name": "NAME",
+                "bq_data_type": "STRING"
+            }
+        ]
+    }
+}

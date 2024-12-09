@@ -1,1 +1,2403 @@
-[{"variable":"Essential Workers %","theme":"COVID-19","numerator":"EC02","nProperty":"essnWrkP","binning":"quantileBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"Count of Essential Workers","theme":"COVID-19","numerator":"EC02","nProperty":"essnWrkE","binning":"quantileBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"% White Population","theme":"Demographic","numerator":"DS01_data","nProperty":"whiteP","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"% Black/African American Population","theme":"Demographic","numerator":"DS01_data","nProperty":"blackP","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"% Hispanic/Latinx Population","theme":"Demographic","numerator":"DS01_data","nProperty":"hispP","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"% Native American/Alaska Native Population","theme":"Demographic","numerator":"DS01_data","nProperty":"amIndP","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"% Asian Population","theme":"Demographic","numerator":"DS01_data","nProperty":"asianP","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"% Native Hawaiian & Other PI Population","theme":"Demographic","numerator":"DS01_data","nProperty":"pacIsP","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"% Other (race) Population","theme":"Demographic","numerator":"DS01_data","nProperty":"otherP","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Population: Age 18-65","theme":"Demographic","numerator":"DS01_data","nProperty":"age18_64","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Population: Age 0-4","theme":"Demographic","numerator":"DS01_data","nProperty":"age0_4","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Population: Age 5-14","theme":"Demographic","numerator":"DS01_data","nProperty":"age5_14","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Population: Age 15-19","theme":"Demographic","numerator":"DS01_data","nProperty":"age15_19","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Population: Age 20-24","theme":"Demographic","numerator":"DS01_data","nProperty":"age20_24","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Population: Age 15-44","theme":"Demographic","numerator":"DS01_data","nProperty":"age15_44","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Population: Age 45-49","theme":"Demographic","numerator":"DS01_data","nProperty":"age45_49","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Population: Age 50-54","theme":"Demographic","numerator":"DS01_data","nProperty":"age50_54","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Population: Age 55-59","theme":"Demographic","numerator":"DS01_data","nProperty":"age55_59","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Population: Age 60-64","theme":"Demographic","numerator":"DS01_data","nProperty":"age60_64","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Population: Age 65+","theme":"Demographic","numerator":"DS01_data","nProperty":"ageOv65","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"% Population: Age 15-24","theme":"Demographic","numerator":"DS01_data","nProperty":"a15_24P","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"% Population: Age under 45","theme":"Demographic","numerator":"DS01_data","nProperty":"und45P","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"% Population: Age 65+","theme":"Demographic","numerator":"DS01_data","nProperty":"ovr65P","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"% Population with Disability","theme":"Demographic","numerator":"DS01_data","nProperty":"disbP","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"% Population without High School Degree","theme":"Demographic","numerator":"DS01_data","nProperty":"noHSP","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Social Vulnerability Index (SVI)","theme":"Demographic","numerator":"DS03_data","nProperty":"SVIS","binning":"naturalBreaks","numberOfBins":6,"colorScale":"YlOrBr"},{"variable":"Total Veteran Population","theme":"Demographic","numerator":"DS04_data","nProperty":"TotalVetPop","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"% Veteran Population","theme":"Demographic","numerator":"DS04_data","nProperty":"VetPercent","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Total Male Veteran Population","theme":"Demographic","numerator":"DS04_data","nProperty":"MaleVetPop","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Male Veteran Population: Age 18-34","theme":"Demographic","numerator":"DS04_data","nProperty":"MaleVet18To34","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Male Veteran Population: Age 35-54","theme":"Demographic","numerator":"DS04_data","nProperty":"MaleVet35To54","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Male Veteran Population: Age 55-64","theme":"Demographic","numerator":"DS04_data","nProperty":"MaleVet55To64","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Male Veteran Population: Age 65-74","theme":"Demographic","numerator":"DS04_data","nProperty":"MaleVet65To74","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Male Veteran Population: Age 75+","theme":"Demographic","numerator":"DS04_data","nProperty":"MaleVet75Plus","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Female Veteran Population: Age 18-34","theme":"Demographic","numerator":"DS04_data","nProperty":"FemaleVet18To34","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Female Veteran Population: Age 35-54","theme":"Demographic","numerator":"DS04_data","nProperty":"FemaleVet35To54","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Female Veteran Population: Age 55-64","theme":"Demographic","numerator":"DS04_data","nProperty":"FemaleVet55To64","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Female Veteran Population: Age 65-74","theme":"Demographic","numerator":"DS04_data","nProperty":"FemaleVet65To74","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Female Veteran Population: Age 75+","theme":"Demographic","numerator":"DS04_data","nProperty":"FemaleVet75Plus","binning":"naturalBreaks","numberOfBins":6,"colorScale":"GnBu"},{"variable":"Total nonrelatives in family households","theme":"Demographic","numerator":"DS05_data","nProperty":"nonRel_fhh","binning":"naturalBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"% Nonrelatives in family households","theme":"Demographic","numerator":"DS05_data","nProperty":"nonRel_fhhR","binning":"naturalBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"Total nonrelatives in non-family households","theme":"Demographic","numerator":"DS05_data","nProperty":"nonRel_nfhh","binning":"naturalBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"% Nonrelatives in non-family households","theme":"Demographic","numerator":"DS05_data","nProperty":"nonRel_nfhhR","binning":"naturalBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"Total in group quarters","theme":"Demographic","numerator":"DS05_data","nProperty":"groupQuar","binning":"naturalBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"% in group quarters","theme":"Demographic","numerator":"DS05_data","nProperty":"groupQuarR","binning":"naturalBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"Homeless Shelter Available Bed Count","theme":"Demographic","numerator":"DS06_data","nProperty":"BED_COUNT","binning":"naturalBreaks","numberOfBins":7,"colorScale":"YlOrBr","reverse":true},{"variable":"Homeless Shelter Total Beds Available Annually","theme":"Demographic","numerator":"DS06_data","nProperty":"YEARLY_BED_COUNT","binning":"naturalBreaks","numberOfBins":7,"colorScale":"YlOrBr"},{"variable":"Total Individuals at a Shelter","theme":"Demographic","numerator":"DS06_data","nProperty":"POINT_IN_TIME","binning":"naturalBreaks","numberOfBins":7,"colorScale":"YlOrBr","reverse":true},{"variable":"Poverty %","theme":"Economic","numerator":"EC03","nProperty":"povP","binning":"quantileBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"Per Capita Income","theme":"Economic","numerator":"EC03","nProperty":"pciE","binning":"quantileBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"Unemployment %","theme":"Economic","numerator":"EC03","nProperty":"unempP","binning":"quantileBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"Count of Working Population","theme":"Economic","numerator":"EC01","nProperty":"totWrkE","binning":"quantileBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"Employed % - Education","theme":"Economic","numerator":"EC01","nProperty":"eduP","binning":"quantileBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"Employed % - High Risk of Injury","theme":"Economic","numerator":"EC01","nProperty":"hghRskP","binning":"quantileBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"Employed % - Health Care","theme":"Economic","numerator":"EC01","nProperty":"hltCrP","binning":"quantileBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"Employed % - Retail","theme":"Economic","numerator":"EC01","nProperty":"retailP","binning":"quantileBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"Foreclosure & Delinquency Count","theme":"Economic","numerator":"EC04","nProperty":"fordq_num","binning":"naturalBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"Foreclosure & Delinquency %","theme":"Economic","numerator":"EC04","nProperty":"fordq_rate","binning":"naturalBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"Households without Internet Access %","theme":"Economic","numerator":"EC05","nProperty":"NoIntPct","binning":"quantileBreaks","numberOfBins":5,"colorScale":"YlOrBr"},{"variable":"Drug-Related Death Rate","theme":"Health","numerator":"Health01_data","nProperty":"rawDeathRt","binning":"naturalBreaks","numberOfBins":6,"colorScale":"Reds"},{"variable":"Opioid Mortality Rate","theme":"Health","numerator":"Health04_data","nProperty":"odMortRtAv","binning":"naturalBreaks","numberOfBins":5,"colorScale":"PuRd"},{"variable":"Opioid Prescription Rate","theme":"Health","numerator":"Health04_data","nProperty":"opPrscRt","binning":"naturalBreaks","numberOfBins":5,"colorScale":"PuRd"},{"variable":"HCV Infection Rate","theme":"Health","numerator":"Health02_1_data","nProperty":"State Rate","binning":"naturalBreaks","numberOfBins":8,"colorScale":"Reds"},{"variable":"HCV Mortality Rate","theme":"Health","numerator":"Health02_2_data","nProperty":"State Death Rate_2017","binning":"naturalBreaks","numberOfBins":8,"colorScale":"Reds"},{"variable":"Count of Primary Care Physicians (PCPs)","theme":"Health","numerator":"Health03_data","nProperty":"pcp_total","binning":"naturalBreaks","numberOfBins":8,"colorScale":"Blues"},{"variable":"Count of Specialty Physicians","theme":"Health","numerator":"Health03_data","nProperty":"sp_total","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlGnBu"},{"variable":"Walking time (min) to nearest buprenorphine provider","theme":"Health","numerator":"MOUDWalkAccess_data","nProperty":"bupTimeWalk","binning":"naturalBreaks","numberOfBins":6,"colorScale":"RdBu","reverse":true},{"variable":"Walking time (min) to nearest methadone provider","theme":"Health","numerator":"MOUDWalkAccess_data","nProperty":"metTimeWalk","binning":"naturalBreaks","numberOfBins":6,"colorScale":"RdBu","reverse":true},{"variable":"Walking time (min) to nearest naltrexone provider","theme":"Health","numerator":"MOUDWalkAccess_data","nProperty":"nalTimeWalk","binning":"naturalBreaks","numberOfBins":6,"colorScale":"RdBu","reverse":true},{"variable":"Biking time (min) to nearest buprenorphine provider","theme":"Health","numerator":"MOUDBikeAccess_data","nProperty":"bupTimeBike","binning":"naturalBreaks","numberOfBins":6,"colorScale":"RdBu","reverse":true},{"variable":"Biking time (min) to nearest methadone provider","theme":"Health","numerator":"MOUDBikeAccess_data","nProperty":"metTimeBike","binning":"naturalBreaks","numberOfBins":6,"colorScale":"RdBu","reverse":true},{"variable":"Biking time (min) to nearest naltrexone provider","theme":"Health","numerator":"MOUDBikeAccess_data","nProperty":"nalTimeBike","binning":"naturalBreaks","numberOfBins":6,"colorScale":"RdBu","reverse":true},{"variable":"Driving time (min) to nearest buprenorphine provider","theme":"Health","numerator":"Access01_sub_data","nProperty":"bupTime","binning":"naturalBreaks","numberOfBins":6,"colorScale":"RdBu","reverse":true},{"variable":"Driving time (min) to nearest methadone provider","theme":"Health","numerator":"Access01_sub_data","nProperty":"metTime","binning":"naturalBreaks","numberOfBins":6,"colorScale":"RdBu","reverse":true},{"variable":"Driving time (min) to nearest naltrexone provider","theme":"Health","numerator":"Access01_sub_data","nProperty":"nalTime","binning":"naturalBreaks","numberOfBins":6,"colorScale":"RdBu","reverse":true},{"variable":"Count of buprenorphine providers in 30 minutes drive","theme":"Health","numerator":"Access01_sub_data","nProperty":"bupCount","binning":"quantileBreaks","numberOfBins":6,"colorScale":"RdBu"},{"variable":"Count of methadone providers in 30 minutes drive","theme":"Health","numerator":"Access01_sub_data","nProperty":"metCount","binning":"quantileBreaks","numberOfBins":4,"colorScale":"RdBu"},{"variable":"Count of naltrexone providers in 30 minutes drive","theme":"Health","numerator":"Access01_sub_data","nProperty":"nalCount","binning":"quantileBreaks","numberOfBins":4,"colorScale":"RdBu"},{"variable":"Distance (mi) to nearest buprenorphine provider","theme":"Health","numerator":"Access01_data","nProperty":"bupMinDis","binning":"naturalBreaks","numberOfBins":7,"colorScale":"RdBu","reverse":true},{"variable":"Distance (mi) to nearest methadone provider","theme":"Health","numerator":"Access01_data","nProperty":"metMinDis","binning":"naturalBreaks","numberOfBins":7,"colorScale":"RdBu","reverse":true},{"variable":"Distance (mi) to nearest naltrexone provider","theme":"Health","numerator":"Access01_data","nProperty":"nalMinDis","binning":"naturalBreaks","numberOfBins":7,"colorScale":"RdBu","reverse":true},{"variable":"Distance (mi) to nearest MOUD (any)","theme":"Health","numerator":"Access01_data","nProperty":"moudMinDis","binning":"naturalBreaks","numberOfBins":6,"colorScale":"RdBu","reverse":true},{"variable":"% tracts within 30-min drive of buprenorphine provider","theme":"Health","numerator":"Access01_CS_data","nProperty":"pctBupT","binning":"naturalBreaks","numberOfBins":4,"colorScale":"RdBu"},{"variable":"% tracts within 30-min drive of methadone provider","theme":"Health","numerator":"Access01_CS_data","nProperty":"pctMetT","binning":"naturalBreaks","numberOfBins":4,"colorScale":"RdBu"},{"variable":"% tracts within 30-min drive of naltrexone provider","theme":"Health","numerator":"Access01_CS_data","nProperty":"pctNalT","binning":"naturaleBreaks","numberOfBins":4,"colorScale":"RdBu"},{"variable":"Distance (mi) to nearest FQHC","theme":"Health","numerator":"Access02_data","nProperty":"minDisFQHC","binning":"naturalBreaks","numberOfBins":6,"colorScale":"RdBu","reverse":true},{"variable":"Driving time (mins) to nearest FQHC","theme":"Health","numerator":"Access02_data","nProperty":"timeDrive","binning":"naturalBreaks","numberOfBins":6,"colorScale":"RdBu","reverse":true},{"variable":"Count of FQHCs in 30-minute drive","theme":"Health","numerator":"Access02_data","nProperty":"countDrive","binning":"quantileBreaks","numberOfBins":5,"colorScale":"RdBu"},{"variable":"% tracts within 30-min drive of FQH","theme":"Health","numerator":"Access02_CS_data","nProperty":"pctTimeDrive","binning":"naturalBreaks","numberOfBins":4,"colorScale":"RdBu"},{"variable":"Distance (mi) to nearest hospital","theme":"Health","numerator":"Access03_data","nProperty":"minDisHosp","binning":"naturalBreaks","numberOfBins":7,"colorScale":"RdBu","reverse":true},{"variable":"Driving time (mins) to nearest hospital","theme":"Health","numerator":"Access03_data","nProperty":"timeDrive","binning":"naturalBreaks","numberOfBins":6,"colorScale":"RdBu","reverse":true},{"variable":"Count of hospitals in 30-minute drive","theme":"Health","numerator":"Access03_data","nProperty":"countDrive","binning":"quantileBreaks","numberOfBins":5,"colorScale":"RdBu"},{"variable":"% tracts within 30-min drive of hospital","theme":"Health","numerator":"Access03_CS_data","nProperty":"pctTimeDrive","binning":"naturalBreaks","numberOfBins":4,"colorScale":"RdBu"},{"variable":"Distance (mi) to nearest pharmacy","theme":"Health","numerator":"Access04_data","nProperty":"minDisRx","binning":"naturalBreaks","numberOfBins":7,"colorScale":"RdBu","reverse":true},{"variable":"Driving time (mins) to nearest pharmacy","theme":"Health","numerator":"Access04_data","nProperty":"timeDrive","binning":"naturalBreaks","numberOfBins":6,"colorScale":"RdBu","reverse":true},{"variable":"Count of pharmacies in 30-minute drive","theme":"Health","numerator":"Access04_data","nProperty":"countDrive","binning":"quantileBreaks","numberOfBins":5,"colorScale":"RdBu"},{"variable":"% tracts within 30-min drive of pharmacy","theme":"Health","numerator":"Access04_CS_data","nProperty":"pctTimeDrive","binning":"naturalBreaks","numberOfBins":4,"colorScale":"RdBu"},{"variable":"Distance (mi) to nearest mental health provider","theme":"Health","numerator":"Access05_data","nProperty":"minDisMH","binning":"naturalBreaks","numberOfBins":7,"colorScale":"RdBu","reverse":true},{"variable":"Driving time (mins) to nearest mental health provider","theme":"Health","numerator":"Access05_data","nProperty":"timeDrive","binning":"naturalBreaks","numberOfBins":6,"colorScale":"RdBu","reverse":true},{"variable":"Count of mental health providers in 30-minute drive","theme":"Health","numerator":"Access05_data","nProperty":"countDrive","binning":"quantileBreaks","numberOfBins":5,"colorScale":"RdBu"},{"variable":"% tracts within 30-min drive of mental health provider","theme":"Health","numerator":"Access05_CS_data","nProperty":"pctTimeDrive","binning":"naturalBreaks","numberOfBins":4,"colorScale":"RdBu"},{"variable":"Distance (mi) to substance use treatment (SUT) facility","theme":"Health","numerator":"Access06_data","nProperty":"minDisSUT","binning":"naturalBreaks","numberOfBins":7,"colorScale":"RdBu","reverse":true},{"variable":"Driving time (mins) to nearest SUT","theme":"Health","numerator":"Access06_data","nProperty":"timeDrive","binning":"naturalBreaks","numberOfBins":6,"colorScale":"RdBu","reverse":true},{"variable":"Count of SUTs in 30-minute drive","theme":"Health","numerator":"Access06_data","nProperty":"countDrive","binning":"quantileBreaks","numberOfBins":5,"colorScale":"RdBu"},{"variable":"% tracts within 30-min drive of SUT service","theme":"Health","numerator":"Access06_CS_data","nProperty":"pctTimeDrive","binning":"naturalBreaks","numberOfBins":4,"colorScale":"RdBu"},{"variable":"Distance (mi) to opioid use treatment facility","theme":"Health","numerator":"Access07_data","nProperty":"minDist_OTP","binning":"naturalBreaks","numberOfBins":7,"colorScale":"RdBu","reverse":true},{"variable":"Urban-Suburban-Rural","theme":"Physical Environment","numerator":"BE02","nProperty":"rurality","categorical":true,"fixedScale":["Rural","Suburban","Urban"],"colorScale":"Spectral"},{"variable":"Urban Population Total (2010)","theme":"Physical Environment","numerator":"BE02_C","nProperty":"urbPop10","binning":"quantileBreaks","numberOfBins":5,"colorScale":"Spectral"},{"variable":"Rural Population Total (2010)","theme":"Physical Environment","numerator":"BE02_C","nProperty":"rurlPop10","binning":"quantileBreaks","numberOfBins":5,"colorScale":"Spectral"},{"variable":"Rural Population % (2010)","theme":"Physical Environment","numerator":"BE02_C","nProperty":"cenRuralP","binning":"quantileBreaks","numberOfBins":5,"colorScale":"Spectral"},{"variable":"Total Occupied Housing Units","theme":"Physical Environment","numerator":"BE01","nProperty":"totUnits","binning":"quantileBreaks","numberOfBins":5,"colorScale":"BuPu"},{"variable":"Occupied Housing Units %","theme":"Physical Environment","numerator":"BE01","nProperty":"occP","binning":"quantileBreaks","numberOfBins":5,"colorScale":"BuPu"},{"variable":"Vacant Housing Units %","theme":"Physical Environment","numerator":"BE01","nProperty":"vacantP","binning":"quantileBreaks","numberOfBins":5,"colorScale":"BuPu"},{"variable":"Mobile Homes %","theme":"Physical Environment","numerator":"BE01","nProperty":"mobileP","binning":"quantileBreaks","numberOfBins":5,"colorScale":"BuPu"},{"variable":"Long-Term Occupancy %","theme":"Physical Environment","numerator":"BE01","nProperty":"lngTermP","binning":"quantileBreaks","numberOfBins":5,"colorScale":"BuPu"},{"variable":"Rentals %","theme":"Physical Environment","numerator":"BE01","nProperty":"rentalP","binning":"quantileBreaks","numberOfBins":5,"colorScale":"BuPu"},{"variable":"Housing Unit Density","theme":"Physical Environment","numerator":"BE01","nProperty":"unitDens","binning":"quantileBreaks","numberOfBins":5,"colorScale":"BuPu"},{"variable":"Land Area (Square Miles)","theme":"Physical Environment","numerator":"BE03","nProperty":"areaSqMi","binning":"quantileBreaks","numberOfBins":8,"colorScale":"BuPu"},{"variable":"Total Alcohol Outlets","theme":"Physical Environment","numerator":"BE03","nProperty":"alcTotal","binning":"naturalBreaks","numberOfBins":5,"colorScale":"BuPu"},{"variable":"Alcohol Outlets Density","theme":"Physical Environment","numerator":"BE03","nProperty":"alcDens","binning":"naturalBreaks","numberOfBins":5,"colorScale":"BuPu"},{"variable":"Segregation: Dissimilarity (Black)","theme":"Physical Environment","numerator":"BE05","nProperty":"dissim.b","binning":"quantileBreaks","numberOfBins":5,"colorScale":"RdPu"},{"variable":"Segregation: Interaction (Black)","theme":"Physical Environment","numerator":"BE05","nProperty":"inter.bw","binning":"quantileBreaks","numberOfBins":5,"colorScale":"RdPu"},{"variable":"Segregation: Isolation (Black)","theme":"Physical Environment","numerator":"BE05","nProperty":"iso.b","binning":"quantileBreaks","numberOfBins":5,"colorScale":"RdPu"},{"variable":"Segregation: Dissimilarity (Hispanic)","theme":"Physical Environment","numerator":"BE05","nProperty":"dissim.h","binning":"quantileBreaks","numberOfBins":5,"colorScale":"RdPu"},{"variable":"Segregation: Interaction (Hispanic)","theme":"Physical Environment","numerator":"BE05","nProperty":"inter.hw","binning":"quantileBreaks","numberOfBins":5,"colorScale":"RdPu"},{"variable":"Segregation: Isolation (Hispanic)","theme":"Physical Environment","numerator":"BE05","nProperty":"iso.h","binning":"quantileBreaks","numberOfBins":5,"colorScale":"RdPu"},{"variable":"Segregation: Dissimilarity (Asian)","theme":"Physical Environment","numerator":"BE05","nProperty":"dissim.a","binning":"quantileBreaks","numberOfBins":5,"colorScale":"RdPu"},{"variable":"Segregation: Interaction (Asian)","theme":"Physical Environment","numerator":"BE05","nProperty":"inter.aw","binning":"quantileBreaks","numberOfBins":5,"colorScale":"RdPu"},{"variable":"Segregation: Isolation (Asian)","theme":"Physical Environment","numerator":"BE05","nProperty":"iso.a","binning":"quantileBreaks","numberOfBins":5,"colorScale":"RdPu"},{"variable":"Hypersegregated Cities","theme":"Physical Environment","numerator":"BE04","nProperty":"DmySgrg","categorical":true,"fixedScale":[0,1],"fixedLabels":["Not hypersegregated city & metro area","Hypersegregated city & metro area"],"colorScale":[[102,194,165],[252,141,98]]},{"variable":"African American South","theme":"Physical Environment","numerator":"BE04","nProperty":"DmyBlckBlt","categorical":true,"fixedScale":[0,1],"fixedLabels":["Not African American South / \\Black Belt\\","African American South / \\Black Belt\\"],"colorScale":[[102,194,165],[252,141,98]]},{"variable":"Native American & Tribal Lands","theme":"Physical Environment","numerator":"BE04","nProperty":"PrcNtvRsrv","binning":"naturalBreaks","numberOfBins":5,"colorScale":"Purples"},{"variable":"NDVI","theme":"Physical Environment","numerator":"BE06","nProperty":"ndvi","binning":"naturalBreaks","numberOfBins":5,"colorScale":"Greens"},{"variable":"Medical Marijuana Laws","theme":"Policy","numerator":"PS09_data","nProperty":"MedMarijLaw","categorical":true,"fixedScale":[0,1],"fixedLabels":["No laws authorizing adults to use medical marijuana","Has laws authorizing adults to use medical marijuana"],"colorScale":[[252,141,98],[102,194,165]]},{"variable":"Public Health Expenditures","theme":"Policy","numerator":"PS11_data","nProperty":"healthExp_S","binning":"naturalBreaks","numberOfBins":8,"colorScale":"Blues"},{"variable":"Public Welfare Expenditures","theme":"Policy","numerator":"PS11_data","nProperty":"wlfrExp_S","binning":"naturalBreaks","numberOfBins":8,"colorScale":"Greens"},{"variable":"Corrections Expenditures","theme":"Policy","numerator":"PS11_data","nProperty":"crrctExp_S","binning":"naturalBreaks","numberOfBins":8,"colorScale":"Greens"},{"variable":"Police & Fire Expenditures","theme":"Policy","numerator":"PS11_data","nProperty":"plcFireExp_S","binning":"naturalBreaks","numberOfBins":8,"colorScale":"Greens"},{"variable":"Syringe Service Program (SSP) Authorization Laws","theme":"Policy","numerator":"PS08_data","nProperty":"expSSP","categorical":true,"fixedScale":[0,1],"fixedLabels":["No laws authorizing Syringe Service Programs","Has laws authorizing Syringe Service Programs"],"colorScale":[[252,141,98],[102,194,165]]},{"variable":"Drug Paraphernalia Laws","theme":"Policy","numerator":"PS08_data","nProperty":"noPrphLw","categorical":true,"fixedScale":[0,1],"fixedLabels":["Has drug paraphernalia laws","No drug paraphernalia laws"],"colorScale":[[102,194,165],[252,141,98]]},{"variable":"Distribution of Syringes Laws","theme":"Policy","numerator":"PS08_data","nProperty":"ntPrFrDsSy","categorical":true,"fixedScale":[0,1],"fixedLabels":["Laws Prohibit Free Distribution of Syringes","Law Does Not Prohibit Free Distribution of Syringes"],"colorScale":[[252,141,98],[102,194,165]]},{"variable":"Paraphernalia exludes objects used for injecting drugs","theme":"Policy","numerator":"PS08_data","nProperty":"PrExcInj","categorical":true,"fixedScale":[0,1],"fixedLabels":["Does NOT Explicitly Exlude Objects Used for Injecting Drugs","Explicitly Exludes Objects Used for Injecting Drugs"],"colorScale":[[252,141,98],[102,194,165]]},{"variable":"Paraphernalia does not refer to objects used for injecting drugs","theme":"Policy","numerator":"PS08_data","nProperty":"PrNtRefInj","categorical":true,"fixedScale":[0,1],"fixedLabels":["Paraphernalia Definition Refers to Objects Used For Injecting Drugs","Paraphernalia Definition Does NOT Refer to Objects Used For Injecting Drugs"],"colorScale":[[102,194,165],[252,141,98]]},{"variable":"Laws removing barriers to SSPs","theme":"Policy","numerator":"PS08_data","nProperty":"noLwRmUnc","categorical":true,"fixedScale":[0,1],"fixedLabels":["No Law Removing Barriers or Uncertainty as to SSP Legality","Has Law Removing Barriers or Uncertainty as to SSP Legality"],"colorScale":[[102,194,165],[252,141,98]]},{"variable":"Any PDMP (fraction of year in 2017)","theme":"Policy","numerator":"PS03_data","nProperty":"AnyPDMPfr","categorical":true,"fixedScale":[0.5,1],"fixedLabels":["Six months","Entire year"],"colorScale":[[252,141,98],[102,194,165]]},{"variable":"Any Horowitz PDMP (fraction of year in 2017)","theme":"Policy","numerator":"PS03_data","nProperty":"AnyPDMPHfr","categorical":true,"fixedScale":[0.5,1],"fixedLabels":["Six months","Entire year"],"colorScale":[[252,141,98],[102,194,165]]},{"variable":"Must-Access PDMP (fraction of year in 2017)","theme":"Policy","numerator":"PS03_data","nProperty":"MsAcPDMPfr","categorical":true,"fixedScale":[0,1],"fixedLabels":["None","Entire year"],"colorScale":[[252,141,98],[102,194,165]]},{"variable":"Operational PDMP (fraction of year in 2017)","theme":"Policy","numerator":"PS03_data","nProperty":"OpPDMPfr","categorical":true,"fixedScale":[0,1],"fixedLabels":["None","Entire year"],"colorScale":[[252,141,98],[102,194,165]]},{"variable":"Electronic PDMP (fraction of year in 2017)","theme":"Policy","numerator":"PS03_data","nProperty":"ElcPDMPfr","categorical":true,"fixedScale":[0.5,1],"fixedLabels":["Six months","Entire year"],"colorScale":[[252,141,98],[102,194,165]]},{"variable":"Total Jail Population Rate","theme":"Policy","numerator":"PS02_data","nProperty":"TtlJlPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Female Jail Population Rate","theme":"Policy","numerator":"PS02_data","nProperty":"FmlJlPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"Reds"},{"variable":"Male Jail Population Rate","theme":"Policy","numerator":"PS02_data","nProperty":"MlJlPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"AAPI Jail Population Rate","theme":"Policy","numerator":"PS02_data","nProperty":"AapiJlPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Black Jail Population Rate","theme":"Policy","numerator":"PS02_data","nProperty":"BlckJlPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Latinx Jail Population Rate","theme":"Policy","numerator":"PS02_data","nProperty":"LtnxJlPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Native American Jail Population Rate","theme":"Policy","numerator":"PS02_data","nProperty":"NtvJlPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"White (Non-Hispanic) Jail Population Rate","theme":"Policy","numerator":"PS02_data","nProperty":"WhtJlPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Total jail admission rate","theme":"Policy","numerator":"PS02_data","nProperty":"TtlJlAdmr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Pretrial Jail Population Rate","theme":"Policy","numerator":"PS02_data","nProperty":"TtlJlPrtr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Total Prison Population Rate","theme":"Policy","numerator":"PS01_data","nProperty":"TtlPrPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Female Prison Population Rate","theme":"Policy","numerator":"PS01_data","nProperty":"FmlPrPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Male Prison Population Rate","theme":"Policy","numerator":"PS01_data","nProperty":"MlPrPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"AAPI Prison Population Rate","theme":"Policy","numerator":"PS01_data","nProperty":"AapiPrPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Black Prison Population Rate","theme":"Policy","numerator":"PS01_data","nProperty":"BlckPrPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Latinx Prison Population Rate","theme":"Policy","numerator":"PS01_data","nProperty":"LtnxPrPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Native American Prison Population Rate","theme":"Policy","numerator":"PS01_data","nProperty":"NtvPrPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"White (Non-Hispanic) Prison Population Rate","theme":"Policy","numerator":"PS01_data","nProperty":"WhtPrPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Total Prison Admission Rate","theme":"Policy","numerator":"PS01_data","nProperty":"TtlPrAPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Female Prison Admission Rate","theme":"Policy","numerator":"PS01_data","nProperty":"FmlPrAPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Male Prison Admission Rate","theme":"Policy","numerator":"PS01_data","nProperty":"MlPrAPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"AAPI Prison Admission Rate","theme":"Policy","numerator":"PS01_data","nProperty":"AapiPrAPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Black Prison Admission Rate","theme":"Policy","numerator":"PS01_data","nProperty":"BlckPrAPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Latinx Prison Admission Rate","theme":"Policy","numerator":"PS01_data","nProperty":"LtnxPrAPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Native American Prison Admission Rate","theme":"Policy","numerator":"PS01_data","nProperty":"NtvPrAPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"White (Non-Hispanic) Prison Admission Rate","theme":"Policy","numerator":"PS01_data","nProperty":"WhtPrAPpr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"YlOrBr"},{"variable":"Any Good Samaritan Law (fraction of year in 2018)","theme":"Policy","numerator":"PS04_data","nProperty":"AnyGSLfr","binning":"naturalBreaks","numberOfBins":8,"colorScale":"Blues"},{"variable":"Good Samaritan Law Protecting Arrest (fraction of year in 2018)","theme":"Policy","numerator":"PS04_data","nProperty":"GSLArrfr","categorical":true,"fixedScale":[0,1],"fixedLabels":["1: Has Good Samaritan Law Protecting Arrest for entire year","0: No Good Samaritan Law Protecting Arrest"],"colorScale":[[102,194,165],[252,141,98]],"reverse":true},{"variable":"Naloxone Law in Effect (fraction of year in 2017)","theme":"Policy","numerator":"PS05_data","nProperty":"NalPrStfr","binning":"naturalBreaks","numberOfBins":6,"colorScale":"Blues"},{"variable":"Naloxone Law allowing distribution through a standing or order (fraction of year in 2017)","theme":"Policy","numerator":"PS05_data","nProperty":"AnyNalfr","binning":"naturalBreaks","numberOfBins":4,"colorScale":"Blues"},{"variable":"Naloxone Law allowing pharmacists prescriptive authority (fraction of year in 2017)","theme":"Policy","numerator":"PS05_data","nProperty":"NalPresfr","binning":"naturalBreaks","numberOfBins":4,"colorScale":"Blues"},{"variable":"Total Medicaid Spending","theme":"Policy","numerator":"PS06_data","nProperty":"TtlMedExpN","binning":"quantileBreaks","numberOfBins":8,"colorScale":"Blues"},{"variable":"Traditional Medicaid Federal Spending","theme":"Policy","numerator":"PS07_data","nProperty":"TradFedExp","binning":"quantileBreaks","numberOfBins":8,"colorScale":"Blues"},{"variable":"Traditional Medicaid State Spending","theme":"Policy","numerator":"PS07_data","nProperty":"TradSttExp","binning":"naturalBreaks","numberOfBins":8,"colorScale":"Blues"},{"variable":"Expansion Medicaid Federal Spending","theme":"Policy","numerator":"PS07_data","nProperty":"ExpnFedExp","binning":"naturalBreaks","numberOfBins":8,"colorScale":"Blues"},{"variable":"Expansion Medicaid State Spending","theme":"Policy","numerator":"PS07_data","nProperty":"ExpnSttExp","binning":"naturalBreaks","numberOfBins":8,"colorScale":"Blues"},{}]
+[
+  {
+    "variable": "HEROP_ID",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "HEROP_ID",
+    "theme": "Geography",
+    "metadataUrl": ""
+  },
+  {
+    "variable": "GEOID",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "GEOID",
+    "theme": "Geography",
+    "metadataUrl": ""
+  },
+  {
+    "variable": "Total Population",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "TotPop",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
+  },
+  {
+    "variable": "Total Occupied Housing Units",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "TotUnits",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Housing_2018.md"
+  },
+  {
+    "variable": "Population: Age 18-64",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "Age18_64",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
+  },
+  {
+    "variable": "Population: Age 0-4",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "Age0_4",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
+  },
+  {
+    "variable": "Population: Age 5-14",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "Age5_14",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
+  },
+  {
+    "variable": "Population: Age 15-19",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "Age15_19",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
+  },
+  {
+    "variable": "Population: Age 20-24",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "Age20_24",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
+  },
+  {
+    "variable": "Population: Age 15-44",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "Age15_44",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
+  },
+  {
+    "variable": "Population: Age 55-59",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "Age55_59",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
+  },
+  {
+    "variable": "Population: Age 60-64",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "Age60_64",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
+  },
+  {
+    "variable": "Population: Age 65+",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "AgeOv65",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
+  },
+  {
+    "variable": "% Population: Age 15-24",
+    "numerator": "s-latest__t-latest__c-latest",
+    "nProperty": "Age15_24P",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
+  },
+  {
+    "variable": "% Population: Age under 45",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "Und45P",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
+  },
+  {
+    "variable": "% Population: Age 65+",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "Ovr65P",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
+  },
+  {
+    "variable": "% White Population",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "WhiteP",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Race_Ethnicity_2018.md"
+  },
+  {
+    "variable": "% Black/African American Population",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "BlackP",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Race_Ethnicity_2018.md"
+  },
+  {
+    "variable": "% Hispanic/Latinx Population",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "HispP",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Race_Ethnicity_2018.md"
+  },
+  {
+    "variable": "% Native American/Alaska Native Population",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "AmIndP",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Race_Ethnicity_2018.md"
+  },
+  {
+    "variable": "% Asian Population",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "AsianP",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Race_Ethnicity_2018.md"
+  },
+  {
+    "variable": "% Native Hawaiian & Other PI Population",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "PacIsP",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Race_Ethnicity_2018.md"
+  },
+  {
+    "variable": "% Other (race) Population",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "OtherP",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Race_Ethnicity_2018.md"
+  },
+  {
+    "variable": "% Population without High School Degree",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "NoHsP",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Other_Demographic_2018.md"
+  },
+  {
+    "variable": "Children %",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "ChildrenP",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
+  },
+  {
+    "variable": "Poverty %",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "PovP",
+    "theme": "Economic",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Economic_2018.md"
+  },
+  {
+    "variable": "Unemployment %",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "UnempP",
+    "theme": "Economic",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Economic_2018.md"
+  },
+  {
+    "variable": "Vacant Housing Units %",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "VacantP",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Housing_2018.md"
+  },
+  {
+    "variable": "Total Population in Households",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "TotPopHh",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md"
+  },
+  {
+    "variable": "Total Veteran Population",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "TotVetPop",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/VetPop.md"
+  },
+  {
+    "variable": "Count of Working Population",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "TotWrkE",
+    "theme": "Economic",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Job_Categories_byIndustry_2018.md"
+  },
+  {
+    "variable": "Population: Age 45-49",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "Age45_49",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
+  },
+  {
+    "variable": "Population: Age 50-54",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "Age50_54",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
+  },
+  {
+    "variable": "Population: Age 18+",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "AgeOv18",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
+  },
+  {
+    "variable": "% Population with Disability",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "DisbP",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Other_Demographic_2018.md"
+  },
+  {
+    "variable": "% Veteran Population",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "VetP",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/VetPop.md"
+  },
+  {
+    "variable": "% Nonrelatives in Family Households",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "NonRelFhhP",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md"
+  },
+  {
+    "variable": "% Nonrelatives in Non-family Households",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "NonRelNfhhP",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md"
+  },
+  {
+    "variable": "Median Income",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "MedInc",
+    "theme": "Economic",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Economic_2018.md"
+  },
+  {
+    "variable": "Per Capita Income",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "PciE",
+    "theme": "Economic",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Economic_2018.md"
+  },
+  {
+    "variable": "Foreclosure & Delinquency %",
+    "numerator": "s-latest__t-latest__c-latest",
+    "nProperty": "ForDqP",
+    "theme": "Economic",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/ForeclosureRate.md"
+  },
+  {
+    "variable": "Foreclosure & Delinquency Count",
+    "numerator": "s-latest__t-latest__c-latest",
+    "nProperty": "ForDqTot",
+    "theme": "Economic",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/ForeclosureRate.md"
+  },
+  {
+    "variable": "Income Inequality (Gini Coefficient)",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "GiniCoeff",
+    "theme": "Economic",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/ForeclosureRate.md"
+  },
+  {
+    "variable": "Employed % - Education",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "EduP",
+    "theme": "Economic",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Job_Categories_byIndustry_2018.md"
+  },
+  {
+    "variable": "Employed % - High Risk of Injury",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "HghRskP",
+    "theme": "Economic",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Job_Categories_byIndustry_2018.md"
+  },
+  {
+    "variable": "Employed % - Health Care",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "HltCrP",
+    "theme": "Economic",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Job_Categories_byIndustry_2018.md"
+  },
+  {
+    "variable": "Employed % - Retail",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "RetailP",
+    "theme": "Economic",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Job_Categories_byIndustry_2018.md"
+  },
+  {
+    "variable": "Count of Essential Workers",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "EssnWrkE",
+    "theme": "Economic",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Job_Categories_byOccupation_2018.md"
+  },
+  {
+    "variable": "Essential Workers %",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "EssnWrkP",
+    "theme": "Economic",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Job_Categories_byOccupation_2018.md"
+  },
+  {
+    "variable": "Households without Internet Access %",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "NoIntP",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Internet_2019.md"
+  },
+  {
+    "variable": "Mobile Homes %",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "MobileP",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Housing_2018.md"
+  },
+  {
+    "variable": "Long-Term Occupancy %",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "LngTermP",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Housing_2018.md"
+  },
+  {
+    "variable": "Rentals %",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "RentalP",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Housing_2018.md"
+  },
+  {
+    "variable": "Housing Unit Density",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "UnitDens",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Housing_2018.md"
+  },
+  {
+    "variable": "Land Area (Square Miles)",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "AreaSqMi",
+    "theme": "Geography",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/AlcoholOutlets_2018.md"
+  },
+  {
+    "variable": "Total Alcohol Outlets",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "AlcTot",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/AlcoholOutlets_2018.md"
+  },
+  {
+    "variable": "Alcohol Outlets Density",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "AlcDens",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/AlcoholOutlets_2018.md"
+  },
+  {
+    "variable": "Alcohol Outlets per Capita",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "AlcPerCap",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/AlcoholOutlets_2018.md"
+  },
+  {
+    "variable": "Segregation: Dissimilarity (Black)",
+    "numerator": "s-latest__z-latest__c-latest",
+    "nProperty": "DsmBlk",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Residential_Seg_Indices.md"
+  },
+  {
+    "variable": "Segregation: Interaction (Black)",
+    "numerator": "s-latest__z-latest__c-latest",
+    "nProperty": "IntrBlkWht",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Residential_Seg_Indices.md"
+  },
+  {
+    "variable": "Segregation: Isolation (Black)",
+    "numerator": "s-latest__z-latest__c-latest",
+    "nProperty": "IsoBlk",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Residential_Seg_Indices.md"
+  },
+  {
+    "variable": "Segregation: Dissimilarity (Hispanic)",
+    "numerator": "s-latest__z-latest__c-latest",
+    "nProperty": "DsmHsp",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Residential_Seg_Indices.md"
+  },
+  {
+    "variable": "Segregation: Interaction (Hispanic)",
+    "numerator": "s-latest__z-latest__c-latest",
+    "nProperty": "IntrHspWht",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Residential_Seg_Indices.md"
+  },
+  {
+    "variable": "Segregation: Isolation (Hispanic)",
+    "numerator": "s-latest__z-latest__c-latest",
+    "nProperty": "IsoHsp",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Residential_Seg_Indices.md"
+  },
+  {
+    "variable": "Segregation: Dissimilarity (Asian)",
+    "numerator": "s-latest__z-latest__c-latest",
+    "nProperty": "DsmAs",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Residential_Seg_Indices.md"
+  },
+  {
+    "variable": "Segregation: Interaction (Asian)",
+    "numerator": "s-latest__z-latest__c-latest",
+    "nProperty": "IntrAsWht",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Residential_Seg_Indices.md"
+  },
+  {
+    "variable": "Segregation: Isolation (Asian)",
+    "numerator": "s-latest__z-latest__c-latest",
+    "nProperty": "IsoAs",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Residential_Seg_Indices.md"
+  },
+  {
+    "variable": "NDVI Average",
+    "numerator": "s-latest__t-latest__z-latest__c-latest",
+    "nProperty": "Ndvi",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/NDVI.md"
+  },
+  {
+    "variable": "Park Area",
+    "numerator": "s-latest",
+    "nProperty": "ParkArea",
+    "theme": "Geography",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Park_Cover.md"
+  },
+  {
+    "variable": "State Area",
+    "numerator": "s-latest",
+    "nProperty": "StateArea",
+    "theme": "Geography",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Park_Cover.md"
+  },
+  {
+    "variable": "Greenspace Coverage",
+    "numerator": "s-latest",
+    "nProperty": "Cover",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Park_Cover.md"
+  },
+  {
+    "variable": "Total Census Tract Count",
+    "numerator": "s-latest__c-latest",
+    "nProperty": "TotTracts",
+    "theme": "Geography",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_FQHCs_MinDistance.md"
+  },
+  {
+    "variable": "Tracts with Buprenorphine Provider (30-min driving)",
+    "numerator": "s-latest",
+    "nProperty": "CntBupT",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Tracts with Methadone Provider (30-min driving)",
+    "numerator": "s-latest",
+    "nProperty": "CntMetT",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Tracts with Naltrexone Provider (30-min driving)",
+    "numerator": "s-latest",
+    "nProperty": "CntNalT",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Driving Time to Buprenorphine Provider (driving time across all tracts)",
+    "numerator": "s-latest",
+    "nProperty": "AvBupTime",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Driving Time to Methadone Provider (driving time across all tracts)",
+    "numerator": "s-latest",
+    "nProperty": "AvMetTime",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Driving Time to Naltrexone Provider (driving time across all tracts)",
+    "numerator": "s-latest",
+    "nProperty": "AvNalTime",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "% Tracts within 30-min Drive of Buprenorphine Provider",
+    "numerator": "s-latest",
+    "nProperty": "PctBupT",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "% Tracts within 30-min Drive of Methadone Provider",
+    "numerator": "s-latest",
+    "nProperty": "PctMetT",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "% Tracts within 30-min Drive of Naltrexone Provider",
+    "numerator": "s-latest",
+    "nProperty": "PctNalT",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Tracts with Federally Qualified Health Center (30-min driving)",
+    "numerator": "s-latest__c-latest",
+    "nProperty": "FqhcCtTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_FQHCs_MinDistance.md"
+  },
+  {
+    "variable": "Driving Time to nearest Federally Qualified Health Center",
+    "numerator": "s-latest__c-latest",
+    "nProperty": "FqhcAvTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_FQHCs_MinDistance.md"
+  },
+  {
+    "variable": "% tracts within 30-min drive of Federally Qualified Health Center",
+    "numerator": "s-latest__c-latest",
+    "nProperty": "FqhcTmDrP",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_FQHCs_MinDistance.md"
+  },
+  {
+    "variable": "Tracts with Hospital (30-min drive)",
+    "numerator": "s-latest__c-latest",
+    "nProperty": "HospCtTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Acesss_Hospitals_MinDistance.md"
+  },
+  {
+    "variable": "Avg. Driving Time to nearest Hospital",
+    "numerator": "s-latest__c-latest",
+    "nProperty": "HospAvTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Acesss_Hospitals_MinDistance.md"
+  },
+  {
+    "variable": "% Tracts within 30-min Drive of Hospital",
+    "numerator": "s-latest__c-latest",
+    "nProperty": "HospTmDrP",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Acesss_Hospitals_MinDistance.md"
+  },
+  {
+    "variable": "Tracts with Pharmacy (30-min drive)",
+    "numerator": "s-latest__c-latest",
+    "nProperty": "RxCtTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_Pharmacies_MinDistance.md"
+  },
+  {
+    "variable": "Avg. Driving Time (min) to nearest Pharmacy ",
+    "numerator": "s-latest__c-latest",
+    "nProperty": "RxAvTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_Pharmacies_MinDistance.md"
+  },
+  {
+    "variable": "% tracts with Pharmacy (30-min drive)",
+    "numerator": "s-latest__c-latest",
+    "nProperty": "RxTmDrP",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_Pharmacies_MinDistance.md"
+  },
+  {
+    "variable": "Tracts with Mental Health Provider (30-min drive)",
+    "numerator": "s-latest__c-latest",
+    "nProperty": "MhCtTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MentalHealth_MinDistance.md"
+  },
+  {
+    "variable": "Driving Time (min) to nearest Mental Health Provider",
+    "numerator": "s-latest__c-latest",
+    "nProperty": "MhAvTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MentalHealth_MinDistance.md"
+  },
+  {
+    "variable": "% Tracts with Mental Health Provider (30-min drive)",
+    "numerator": "s-latest__c-latest",
+    "nProperty": "MhTmDrP",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MentalHealth_MinDistance.md"
+  },
+  {
+    "variable": "Tracts with Substance Use Treatment (SUT) program (30-min drive)",
+    "numerator": "s-latest__c-latest",
+    "nProperty": "SutpCtTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_SubstanceUseTreatment.md"
+  },
+  {
+    "variable": "Driving Time (min) to nearest Substance Use Treatment program",
+    "numerator": "s-latest__c-latest",
+    "nProperty": "SutpAvTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_SubstanceUseTreatment.md"
+  },
+  {
+    "variable": "% tracts with Substance Use Treatment program (30-min drive)",
+    "numerator": "s-latest__c-latest",
+    "nProperty": "SutpTmDrP",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_SubstanceUseTreatment.md"
+  },
+  {
+    "variable": "Tracts with Opioid Treatment Program (OTP) (30-min drive)",
+    "numerator": "s-latest__c-latest",
+    "nProperty": "OtpCtTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_OpioidUseTreatment.md"
+  },
+  {
+    "variable": "Driving Time (min) to nearest Opioid Treatment Program (OTP)",
+    "numerator": "s-latest__c-latest",
+    "nProperty": "OtpAvTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_OpioidUseTreatment.md"
+  },
+  {
+    "variable": "% Tracts with Opioid Treatment Program (OTP) (30-min drive)",
+    "numerator": "s-latest__c-latest",
+    "nProperty": "OtpTmDrP",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_OpioidUseTreatment.md"
+  },
+  {
+    "variable": "Yearly Hepatitis C cases (2013-2016)",
+    "numerator": "s-latest",
+    "nProperty": "TotHcv",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Yearly Hepatitis C cases - Men (2013-2016)",
+    "numerator": "s-latest",
+    "nProperty": "MlHcv",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Yearly Hepatitis C cases - Women (2013-2016)",
+    "numerator": "s-latest",
+    "nProperty": "FmHcv",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Yearly Hepatitis C cases - Under 50 years old (2013-2016)",
+    "numerator": "s-latest",
+    "nProperty": "Un50Hcv",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Yearly Hepatitis C cases - 50 to 74 years old (2013-2016)",
+    "numerator": "s-latest",
+    "nProperty": "A50_74Hcv",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Yearly Hepatitis C cases - Over 75 years old (2013-2016)",
+    "numerator": "s-latest",
+    "nProperty": "Ov75Hcv",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Yearly Hepatitis C cases - Black (2013-2016)",
+    "numerator": "s-latest",
+    "nProperty": "BlkHcv",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Yearly Hepatitis C cases - non-Black (2013-2016)",
+    "numerator": "s-latest",
+    "nProperty": "NonBlkHcv",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths (2013)",
+    "numerator": "s-latest",
+    "nProperty": "HcvD13",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Men (2013)",
+    "numerator": "s-latest",
+    "nProperty": "MlHcvD13",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Women (2013)",
+    "numerator": "s-latest",
+    "nProperty": "FlHcvD13",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - American Indian (2013)",
+    "numerator": "s-latest",
+    "nProperty": "AmInHcvD13",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Asian & Pacific Islander (2013)",
+    "numerator": "s-latest",
+    "nProperty": "AsPiHcvD13",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Black (2013)",
+    "numerator": "s-latest",
+    "nProperty": "BlkHcvD13",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Hispanic (2013)",
+    "numerator": "s-latest",
+    "nProperty": "HspHcvD13",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Under 50 years old (2013)",
+    "numerator": "s-latest",
+    "nProperty": "U50HcvD13",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - 50 to 74 years old (2013)",
+    "numerator": "s-latest",
+    "nProperty": "A50_74HcvD13",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Over 75 years old (2013)",
+    "numerator": "s-latest",
+    "nProperty": "O75HcvD13",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths (2014)",
+    "numerator": "s-latest",
+    "nProperty": "HcvD14",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Men (2014)",
+    "numerator": "s-latest",
+    "nProperty": "MlHcvD14",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Women (2014)",
+    "numerator": "s-latest",
+    "nProperty": "FlHcvD14",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - American Indian (2014)",
+    "numerator": "s-latest",
+    "nProperty": "AmInHcvD14",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Asian & Pacific Islander (2014)",
+    "numerator": "s-latest",
+    "nProperty": "AsPiHcvD14",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Black (2014)",
+    "numerator": "s-latest",
+    "nProperty": "BlkHcvD14",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Hispanic (2014)",
+    "numerator": "s-latest",
+    "nProperty": "HspHcvD14",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Under 50 years old (2014)",
+    "numerator": "s-latest",
+    "nProperty": "U50HcvD14",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - 50 to 74 years old (2014)",
+    "numerator": "s-latest",
+    "nProperty": "A50_74HcvD14",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Over 75 years old (2014)",
+    "numerator": "s-latest",
+    "nProperty": "O75HcvD14",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths (2015)",
+    "numerator": "s-latest",
+    "nProperty": "HcvD15",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Men (2015)",
+    "numerator": "s-latest",
+    "nProperty": "MlHcvD15",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Women (2015)",
+    "numerator": "s-latest",
+    "nProperty": "FlHcvD15",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - American Indian (2015)",
+    "numerator": "s-latest",
+    "nProperty": "AmInHcvD15",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Asian & Pacific Islander (2015)",
+    "numerator": "s-latest",
+    "nProperty": "AsPiHcvD15",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Black (2015)",
+    "numerator": "s-latest",
+    "nProperty": "BlkHcvD15",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Hispanic (2015)",
+    "numerator": "s-latest",
+    "nProperty": "HspHcvD15",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Under 50 years old (2015)",
+    "numerator": "s-latest",
+    "nProperty": "U50HcvD15",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - 50 to 74 years old (2015)",
+    "numerator": "s-latest",
+    "nProperty": "D50_74Hcv15",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Over 75 years old (2015)",
+    "numerator": "s-latest",
+    "nProperty": "O75HcvD15",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths (2016)",
+    "numerator": "s-latest",
+    "nProperty": "HcvD16",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Men (2016)",
+    "numerator": "s-latest",
+    "nProperty": "MlHcvD16",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Women (2016)",
+    "numerator": "s-latest",
+    "nProperty": "FlHcvD16",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - American Indian (2016)",
+    "numerator": "s-latest",
+    "nProperty": "AmInHcvD16",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Asian & Pacific Islander (2016)",
+    "numerator": "s-latest",
+    "nProperty": "AsPiHcvD16",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Black (2016)",
+    "numerator": "s-latest",
+    "nProperty": "BlkHcvD16",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Hispanic (2016)",
+    "numerator": "s-latest",
+    "nProperty": "HspHcvD16",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Under 50 years old (2016)",
+    "numerator": "s-latest",
+    "nProperty": "U50HcvD16",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - 50 to 74 years old (2016)",
+    "numerator": "s-latest",
+    "nProperty": "A50_74HcvD16",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Over 75 years old (2016)",
+    "numerator": "s-latest",
+    "nProperty": "O75HcvD16",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths (2017)",
+    "numerator": "s-latest",
+    "nProperty": "HcvD17",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Men (2017)",
+    "numerator": "s-latest",
+    "nProperty": "MlHcvD17",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Women (2017)",
+    "numerator": "s-latest",
+    "nProperty": "FlHcvD17",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - American Indian (2017)",
+    "numerator": "s-latest",
+    "nProperty": "AmInHcvD17",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Asian & Pacific Islander (2017)",
+    "numerator": "s-latest",
+    "nProperty": "AsPiHcvD17",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Black (2017)",
+    "numerator": "s-latest",
+    "nProperty": "BlkHcvD17",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Hispanic (2017)",
+    "numerator": "s-latest",
+    "nProperty": "HspHcvD17",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Under 50 years old (2017)",
+    "numerator": "s-latest",
+    "nProperty": "U50HcvD17",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - 50 to 74 years old (2017)",
+    "numerator": "s-latest",
+    "nProperty": "A50_74HcvD17",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Over 75 years old (2016)",
+    "numerator": "s-latest",
+    "nProperty": "O75HcvD17",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths (2013 - 2017)",
+    "numerator": "s-latest",
+    "nProperty": "AvHcvD",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Men (2013 - 2017)",
+    "numerator": "s-latest",
+    "nProperty": "AvMlHcvD",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Women (2013 - 2017)",
+    "numerator": "s-latest",
+    "nProperty": "AvFlHcvD",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - American Indian (2013 - 2017)",
+    "numerator": "s-latest",
+    "nProperty": "AvAmInHcvD",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Asian & Pacific Islander (2013 - 2017)",
+    "numerator": "s-latest",
+    "nProperty": "AvAsPiHcvD",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Black (2013 - 2017)",
+    "numerator": "s-latest",
+    "nProperty": "AvBlkHcvD",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Hispanic (2013 - 2017)",
+    "numerator": "s-latest",
+    "nProperty": "AvHspHcvD",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Age Under 50 (2013 - 2017)",
+    "numerator": "s-latest",
+    "nProperty": "AvU50HcvD",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Age 50 to 74 (2013 - 2017)",
+    "numerator": "s-latest",
+    "nProperty": "Av50_74HcvD",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Hepatitis C Deaths - Age Over 75  (2013 - 2017)",
+    "numerator": "s-latest",
+    "nProperty": "AvO75HcvD",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Count of Primary Care Physicians (PCPs)",
+    "numerator": "s-latest__t-latest__c-latest",
+    "nProperty": "TotPcp",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Health_PCPs.md"
+  },
+  {
+    "variable": "Count of Specialty Physicians",
+    "numerator": "s-latest__t-latest__c-latest",
+    "nProperty": "TotSp",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Health_PCPs.md"
+  },
+  {
+    "variable": "Opioid Prescription Rate (2020)",
+    "numerator": "s-latest__c-latest",
+    "nProperty": "OpRxRt20",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/OpioidIndicators.md"
+  },
+  {
+    "variable": "% Self-Report Misuse of Prescription Pain Medication (2020)",
+    "numerator": "s-latest",
+    "nProperty": "PrMsuse20P",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/OpioidIndicators.md"
+  },
+  {
+    "variable": "Opioid Mortality Rate (2014)",
+    "numerator": "s-latest__c-latest",
+    "nProperty": "OdMortRt14",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/OpioidIndicators.md"
+  },
+  {
+    "variable": "Opioid Mortality Rate (2015)",
+    "numerator": "s-latest__c-latest",
+    "nProperty": "OdMortRt15",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/OpioidIndicators.md"
+  },
+  {
+    "variable": "Opioid Mortality Rate (2016)",
+    "numerator": "s-latest__c-latest",
+    "nProperty": "OdMortRt16",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/OpioidIndicators.md"
+  },
+  {
+    "variable": "Opioid Mortality Rate (2017)",
+    "numerator": "s-latest__c-latest",
+    "nProperty": "OdMortRt17",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/OpioidIndicators.md"
+  },
+  {
+    "variable": "Opioid Mortality Rate (2018)",
+    "numerator": "s-latest__c-latest",
+    "nProperty": "OdMortRt18",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/OpioidIndicators.md"
+  },
+  {
+    "variable": "Opioid Mortality Rate (2019)",
+    "numerator": "s-latest__c-latest",
+    "nProperty": "OdMortRt19",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/OpioidIndicators.md"
+  },
+  {
+    "variable": "Opioid Mortality Rate (2020)",
+    "numerator": "s-latest__c-latest",
+    "nProperty": "OdMortRt20",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/OpioidIndicators.md"
+  },
+  {
+    "variable": "Opioid Mortality Rate",
+    "numerator": "s-latest__c-latest",
+    "nProperty": "OdMortRtAv",
+    "theme": "Outcome",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/OpioidIndicators.md"
+  },
+  {
+    "variable": "Any PDMP (fraction of year in 2017)",
+    "numerator": "s-latest",
+    "nProperty": "AnyPdmpFr",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PDMP_2017.md"
+  },
+  {
+    "variable": "Any Horowitz PDMP (fraction of year in 2017)",
+    "numerator": "s-latest",
+    "nProperty": "AnyPdmphFr",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PDMP_2017.md"
+  },
+  {
+    "variable": "Operational PDMP (fraction of year in 2017)",
+    "numerator": "s-latest",
+    "nProperty": "OpPdmpFr",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PDMP_2017.md"
+  },
+  {
+    "variable": "Must-Access PDMP (fraction of year in 2017)",
+    "numerator": "s-latest",
+    "nProperty": "MsAcPdmpFr",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PDMP_2017.md"
+  },
+  {
+    "variable": "Electronic PDMP (fraction of year in 2017)",
+    "numerator": "s-latest",
+    "nProperty": "ElcPdmpFr",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PDMP_2017.md"
+  },
+  {
+    "variable": "Any PDMP start date",
+    "numerator": "s-latest",
+    "nProperty": "AnyPdmpDt",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PDMP_2017.md"
+  },
+  {
+    "variable": "Any Horowitz PDMP start date",
+    "numerator": "s-latest",
+    "nProperty": "AnyPdmphDt",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PDMP_2017.md"
+  },
+  {
+    "variable": "Operational PDMP start date",
+    "numerator": "s-latest",
+    "nProperty": "OpPdmpDt",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PDMP_2017.md"
+  },
+  {
+    "variable": "Must-Access PDMP start date",
+    "numerator": "s-latest",
+    "nProperty": "MsAcPdmpDt",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PDMP_2017.md"
+  },
+  {
+    "variable": "Electronic PDMP start date",
+    "numerator": "s-latest",
+    "nProperty": "ElcPdmpDt",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PDMP_2017.md"
+  },
+  {
+    "variable": "Any Good Samaritan Law (date)",
+    "numerator": "s-latest",
+    "nProperty": "AnyGslDt",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/GSL_2018.md"
+  },
+  {
+    "variable": "Good Samaritan Law Protecting Arrest (date)",
+    "numerator": "s-latest",
+    "nProperty": "GslArrDt",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/GSL_2018.md"
+  },
+  {
+    "variable": "Any Good Samaritan Law (fraction of year in 2018)",
+    "numerator": "s-latest",
+    "nProperty": "AnyGslFr",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/GSL_2018.md"
+  },
+  {
+    "variable": "Good Samaritan Law Protecting Arrest (fraction of year in 2018)",
+    "numerator": "s-latest",
+    "nProperty": "GslArrFr",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/GSL_2018.md"
+  },
+  {
+    "variable": "Any Naloxone Law (date)",
+    "numerator": "s-latest",
+    "nProperty": "AnyNalDt",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/NAL_2017.md"
+  },
+  {
+    "variable": "Naloxone Law allowing distribution through a standing or order (date)",
+    "numerator": "s-latest",
+    "nProperty": "NalPrStDt",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/NAL_2017.md"
+  },
+  {
+    "variable": "Naloxone Law allowing pharmacists prescriptive authority (date)",
+    "numerator": "s-latest",
+    "nProperty": "NalPresDt",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/NAL_2017.md"
+  },
+  {
+    "variable": "Naloxone Law allowing distribution through a standing or order (fraction of year in 2017)",
+    "numerator": "s-latest",
+    "nProperty": "AnyNalFr",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/NAL_2017.md"
+  },
+  {
+    "variable": "Naloxone Law in Effect (fraction of year in 2017)",
+    "numerator": "s-latest",
+    "nProperty": "NalPrStFr",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/NAL_2017.md"
+  },
+  {
+    "variable": "Naloxone Law allowing pharmacists prescriptive authority (fraction of year in 2017)",
+    "numerator": "s-latest",
+    "nProperty": "NalPresFr",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/NAL_2017.md"
+  },
+  {
+    "variable": "Total Medicaid Spending (FY 2019)",
+    "numerator": "s-latest",
+    "nProperty": "MedcdExp19",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/MedExp_2018_19.md"
+  },
+  {
+    "variable": "Total Medicaid Spending (FY 2018)",
+    "numerator": "s-latest",
+    "nProperty": "MedcdExp18",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/MedExp_2018_19.md"
+  },
+  {
+    "variable": "Traditional Medicaid Federal Spending",
+    "numerator": "s-latest",
+    "nProperty": "TradFedExp",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/MedExp_2018_19.md"
+  },
+  {
+    "variable": "Traditional Medicaid State Spending",
+    "numerator": "s-latest",
+    "nProperty": "TradSttExp",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/MedExp_2018_19.md"
+  },
+  {
+    "variable": "Expansion Medicaid Federal Spending",
+    "numerator": "s-latest",
+    "nProperty": "ExpnFedExp",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/MedExp_2018_19.md"
+  },
+  {
+    "variable": "Expansion Medicaid State Spending",
+    "numerator": "s-latest",
+    "nProperty": "ExpnSttExp",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/MedExp_2018_19.md"
+  },
+  {
+    "variable": "Syringe Service Program (SSP) Authorization Laws",
+    "numerator": "s-latest",
+    "nProperty": "ExpSsp",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Syringe.md"
+  },
+  {
+    "variable": "Drug Paraphernalia Laws",
+    "numerator": "s-latest",
+    "nProperty": "NoPrphLw",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Syringe.md"
+  },
+  {
+    "variable": "Distribution of Syringes Laws",
+    "numerator": "s-latest",
+    "nProperty": "NtPrFrDsSy",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Syringe.md"
+  },
+  {
+    "variable": "Paraphernalia exludes objects used for injecting drugs",
+    "numerator": "s-latest",
+    "nProperty": "PrExcInj",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Syringe.md"
+  },
+  {
+    "variable": "Paraphernalia does not refer to objects used for injecting drugs",
+    "numerator": "s-latest",
+    "nProperty": "PrNtRefInj",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Syringe.md"
+  },
+  {
+    "variable": "Laws removing barriers to SSPs",
+    "numerator": "s-latest",
+    "nProperty": "NoLwRmUnc",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Syringe.md"
+  },
+  {
+    "variable": "Laws authorizing medical marijuana use ",
+    "numerator": "s-latest",
+    "nProperty": "MdMarijLaw",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/MedMarijLaw.md"
+  },
+  {
+    "variable": "Corrections Expenditures",
+    "numerator": "s-latest",
+    "nProperty": "CrrctExpS",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PublicExpenditures.md"
+  },
+  {
+    "variable": "Police & Fire Expenditures",
+    "numerator": "s-latest",
+    "nProperty": "PlcFyrExpS",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PublicExpenditures.md"
+  },
+  {
+    "variable": "Public Health Expenditures",
+    "numerator": "s-latest",
+    "nProperty": "HlthExpS",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PublicExpenditures.md"
+  },
+  {
+    "variable": "Public Welfare Expenditures",
+    "numerator": "s-latest",
+    "nProperty": "WlfrExpS",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PublicExpenditures.md"
+  },
+  {
+    "variable": "Corrections Expenditures (Local)",
+    "numerator": "s-latest",
+    "nProperty": "CrrctExpL",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PublicExpenditures.md"
+  },
+  {
+    "variable": "Police & Fire Expenditures (Local)",
+    "numerator": "s-latest",
+    "nProperty": "PlcFyrExpL",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PublicExpenditures.md"
+  },
+  {
+    "variable": "Public Health Expenditures (Local)",
+    "numerator": "s-latest",
+    "nProperty": "HlthExpL",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PublicExpenditures.md"
+  },
+  {
+    "variable": "Public Welfare Expenditures (Local)",
+    "numerator": "s-latest",
+    "nProperty": "WlfrExpL",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PublicExpenditures.md"
+  },
+  {
+    "variable": "Total Corrections Expenditures",
+    "numerator": "s-latest",
+    "nProperty": "CrrctExpT",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PublicExpenditures.md"
+  },
+  {
+    "variable": "Total Police & Fire Expenditures",
+    "numerator": "s-latest",
+    "nProperty": "PlcFyrExpT",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PublicExpenditures.md"
+  },
+  {
+    "variable": "Total Public Health & Welfare Expenditures",
+    "numerator": "s-latest",
+    "nProperty": "HlthExpT",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PublicExpenditures.md"
+  },
+  {
+    "variable": "Total Public Welfare Expenditures",
+    "numerator": "s-latest",
+    "nProperty": "WlfrExpT",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PublicExpenditures.md"
+  },
+  {
+    "variable": "Primary RUCA Code",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "Ruca1",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Rural_Urban_Classification_County.md"
+  },
+  {
+    "variable": "Secondary RUCA Code",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "Ruca2",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Rural_Urban_Classification_County.md"
+  },
+  {
+    "variable": "Urban-Suburban-Rural",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "Rurality",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Rural_Urban_Classification_County.md"
+  },
+  {
+    "variable": "Distance (mi) to nearest MOUD (any)",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "MoudMinDis",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Distance (mi) to nearest Buprenorphine Provider",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "BupMinDis",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Driving Time (min) to nearest Buprenorphine Provider",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "BupTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Count of Buprenorphine Providers (30-min drive)",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "BupCntDr30",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Distance (mi) to nearest Methadone Provider",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "MetMinDis",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Driving Time (min) to nearest Methadone Provider",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "MetTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Count of Methadone Providers (30-min drive)",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "MetCntDr30",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Distance (mi) to nearest Naltrexone Provider",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "NalMinDis",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Driving Time (min) to nearest Naltrexone Provider",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "NalTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Count of Naltrexone Providers (30-min drive)",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "NalCntDr30",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Walking Time (min) to nearest Buprenorphine Provider",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "BupTmWk",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Count of Buprenorphine Providers (60-min walk)",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "BupCntWk60",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Count of Buprenorphine Providers (30-min walk)",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "BupCntWk30",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Walking Time (min) to nearest Methadone Provider",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "MetTmWk",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Count of Methadone Providers (60-min walk)",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "MetCntWk30",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Count of Methadone Providers (30-min walk)",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "MetCntWk60",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Walking Time (min) to nearest Naltrexone Provider",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "NalTmWk",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Count of Naltrexone Providers (60-min walk)",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "NalCntWk60",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Count of Naltrexone Providers (30-min walk)",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "NalCntWk30",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Biking Time (min) to nearest Buprenorphine Provider",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "BupTmBk",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Count of Buprenorphine Providers (60-min bike)",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "BupCntBk60",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Count of Buprenorphine Providers (30-min bike)",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "BupCntBk30",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Biking Time (min) to nearest Methadone Provider",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "MetTmBk",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Count of Methadone Providers (60-min bike)",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "MetCntBk60",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Count of methadone providers (30-min bike)",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "MetCntBk30",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Biking Time (min) to nearest Naltrexone Provider",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "NalTmBk",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Count of Naltrexone Providers (60-min bike)",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "NalCntBk60",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Count of Naltrexone Providers (30-min bike)",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "NalCntBk30",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Distance (mi) to nearest FQHC",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "FqhcMinDis",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_FQHCs_MinDistance.md"
+  },
+  {
+    "variable": "Driving time (min) to nearest FQHC",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "FqhcTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_FQHCs_MinDistance.md"
+  },
+  {
+    "variable": "Count of FQHCs (30-min drive)",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "FqhcCntDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_FQHCs_MinDistance.md"
+  },
+  {
+    "variable": "Distance (mi) to nearest Hospital",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "HospMinDis",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Acesss_Hospitals_MinDistance.md"
+  },
+  {
+    "variable": "Driving time (min) to nearest Hospital",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "HospTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Acesss_Hospitals_MinDistance.md"
+  },
+  {
+    "variable": "Count of Hospitals (30-min drive)",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "HospCntDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Acesss_Hospitals_MinDistance.md"
+  },
+  {
+    "variable": "Distance (mi) to nearest Pharmacy",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "RxMinDis",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_Pharmacies_MinDistance.md"
+  },
+  {
+    "variable": "Driving Time (min) to nearest Pharmacy ",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "RxTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_Pharmacies_MinDistance.md"
+  },
+  {
+    "variable": "Count of Pharmacies (30-min drive)",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "RxCntDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_Pharmacies_MinDistance.md"
+  },
+  {
+    "variable": "Distance (mi) to nearest Mental Health Provider",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "MhMinDis",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MentalHealth_MinDistance.md"
+  },
+  {
+    "variable": "Driving Time (min) to nearest Mental Health Provider",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "MhTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MentalHealth_MinDistance.md"
+  },
+  {
+    "variable": "Count of Mental Health Providers (30-min drive)",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "MhCntDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MentalHealth_MinDistance.md"
+  },
+  {
+    "variable": "Distance (mi) to Substance Use Treatment (SUT) facility",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "SutMinDis",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_SubstanceUseTreatment.md"
+  },
+  {
+    "variable": "Driving time (min) to Substance Use Treatment (SUT) facility",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "SutTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_SubstanceUseTreatment.md"
+  },
+  {
+    "variable": "Count of Substance Use Treatment (SUT) facility (30-min drive)",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "SutCntDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_SubstanceUseTreatment.md"
+  },
+  {
+    "variable": "Distance (mi) to nearest Opioid Treatment Program (OTP)",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "OtpMinDis",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_OpioidUseTreatment.md"
+  },
+  {
+    "variable": "Driving Time (min) to nearest Opioid Treatment Program (OTP)",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "OtpTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_OpioidUseTreatment.md"
+  },
+  {
+    "variable": "Count of Opioid Treatment Programs (OTP) (30-min drive)",
+    "numerator": "t-latest__z-latest",
+    "nProperty": "OtpCntDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_OpioidUseTreatment.md"
+  },
+  {
+    "variable": "Primary Care Physicians (PCP) per 100k",
+    "numerator": "t-latest__c-latest",
+    "nProperty": "PcpPer100k",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Health_PCPs.md"
+  },
+  {
+    "variable": "Specialty Physicians per 100k",
+    "numerator": "t-latest__c-latest",
+    "nProperty": "SpPer100k",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Health_PCPs.md"
+  },
+  {
+    "variable": "Socioeconomic Advantage Index",
+    "numerator": "t-latest",
+    "nProperty": "SocEcAdvIn",
+    "theme": "Composite",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/SDOH_2014.md"
+  },
+  {
+    "variable": "Limited Moblility Index",
+    "numerator": "t-latest",
+    "nProperty": "LimMobInd",
+    "theme": "Composite",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/SDOH_2014.md"
+  },
+  {
+    "variable": "Urban Core Opportunity Index",
+    "numerator": "t-latest",
+    "nProperty": "UrbCoreInd",
+    "theme": "Composite",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/SDOH_2014.md"
+  },
+  {
+    "variable": "Mixed Immigrant Cohesion and Accesibility (MICA) Index",
+    "numerator": "t-latest",
+    "nProperty": "MicaInd",
+    "theme": "Composite",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/SDOH_2014.md"
+  },
+  {
+    "variable": "Neighborhood Type",
+    "numerator": "t-latest",
+    "nProperty": "NeighbTyp",
+    "theme": "Composite",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/SDOH_2014.md"
+  },
+  {
+    "variable": "Social Vulnerability Index (SVI) 1",
+    "numerator": "t-latest__z-latest__c-latest",
+    "nProperty": "SviTh1",
+    "theme": "Composite",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/SVI_2018.md"
+  },
+  {
+    "variable": "Social Vulnerability Index (SVI) 2",
+    "numerator": "t-latest__z-latest__c-latest",
+    "nProperty": "SviTh2",
+    "theme": "Composite",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/SVI_2018.md"
+  },
+  {
+    "variable": "Social Vulnerability Index (SVI) 3",
+    "numerator": "t-latest__z-latest__c-latest",
+    "nProperty": "SviTh3",
+    "theme": "Composite",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/SVI_2018.md"
+  },
+  {
+    "variable": "Social Vulnerability Index (SVI) 4",
+    "numerator": "t-latest__z-latest__c-latest",
+    "nProperty": "SviTh4",
+    "theme": "Composite",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/SVI_2018.md"
+  },
+  {
+    "variable": "Social Vulnerability Index (SVI) Summary Ranking",
+    "numerator": "t-latest__z-latest__c-latest",
+    "nProperty": "SviSmryRnk",
+    "theme": "Composite",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/SVI_2018.md"
+  },
+  {
+    "variable": "% Population: Age 15-24",
+    "numerator": "z-latest",
+    "nProperty": "A15_24P",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md"
+  },
+  {
+    "variable": "Tracts with Buprenorphine Provider within 30-min (driving)",
+    "numerator": "c-latest",
+    "nProperty": "BupCtTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Tracts with Buprenorphine Provider within 30-min (biking)",
+    "numerator": "c-latest",
+    "nProperty": "BupCtTmBk",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Tracts with Buprenorphine Provider within 30-min (walking)",
+    "numerator": "c-latest",
+    "nProperty": "BupCtTmWk",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Tracts with Methadone Provider within 30-min (driving)",
+    "numerator": "c-latest",
+    "nProperty": "MetCtTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Tracts with Methadone Provider within 30-min (biking)",
+    "numerator": "c-latest",
+    "nProperty": "MetCtTmBk",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Tracts with Methadone Provider within 30-min (walking)",
+    "numerator": "c-latest",
+    "nProperty": "MetCtTmWk",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Tracts with Naltrexone Provider within 30-min (driving)",
+    "numerator": "c-latest",
+    "nProperty": "NalCtTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Tracts with Naltrexone Provider within 30-min (biking)",
+    "numerator": "c-latest",
+    "nProperty": "NalCtTmBk",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Tracts with Naltrexone Provider within 30-min (walking)",
+    "numerator": "c-latest",
+    "nProperty": "NalCtTmWk",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Driving Time (min) to Nearest Buprenorphine Provider",
+    "numerator": "c-latest",
+    "nProperty": "BupAvTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Biking Time (min) to Nearest Buprenorphine Provider",
+    "numerator": "c-latest",
+    "nProperty": "BupAvTmBk",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Walking Time (min) to Nearest Buprenorphine Provider",
+    "numerator": "c-latest",
+    "nProperty": "BupAvTmWk",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Driving Time (min) to Nearest Methadone Provider",
+    "numerator": "c-latest",
+    "nProperty": "MetAvTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Biking Time (min) to Nearest Methadone Provider",
+    "numerator": "c-latest",
+    "nProperty": "MetAvTmBk",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Walking Time (min) to Nearest Methadone Provide",
+    "numerator": "c-latest",
+    "nProperty": "MetAvTmWk",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Driving Time (min) to Nearest Naltrexone Provider",
+    "numerator": "c-latest",
+    "nProperty": "NalAvTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Biking Time (min) to Nearest Naltrexone Provider",
+    "numerator": "c-latest",
+    "nProperty": "NalAvTmBk",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Walking Time (min) to Nearest Naltrexone Provider",
+    "numerator": "c-latest",
+    "nProperty": "NalAvTmWk",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "% Tracts With Buprenorphine Provider (30-min drive)",
+    "numerator": "c-latest",
+    "nProperty": "BupTmDrP",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "% Tracts With Buprenorphine Provider (30-min bike)",
+    "numerator": "c-latest",
+    "nProperty": "BupTmBkP",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "% Tracts With Buprenorphine Provider (30-min walk)",
+    "numerator": "c-latest",
+    "nProperty": "BupTmWkP",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "% Tracts With Methadone Provider (30-min drive)",
+    "numerator": "c-latest",
+    "nProperty": "MetTmDrP",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "% Tracts With Methadone Provider (30-min bike)",
+    "numerator": "c-latest",
+    "nProperty": "MetTmBkP",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "% Tracts With Methadone Provider (30-min walk)",
+    "numerator": "c-latest",
+    "nProperty": "MetTmWkP",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "% Tracts With Naltrexone Provider (30-min drive)",
+    "numerator": "c-latest",
+    "nProperty": "NalTmDrP",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "% Tracts With Naltrexone Provider (30-min bike)",
+    "numerator": "c-latest",
+    "nProperty": "NalTmBkP",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "% Tracts With Naltrexone Provider (30-min walk)",
+    "numerator": "c-latest",
+    "nProperty": "NalTmWkP",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "% Tracts Urban (RUCA)",
+    "numerator": "c-latest",
+    "nProperty": "RcaUrbanP",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Rural_Urban_Classification_County.md"
+  },
+  {
+    "variable": "% Tracts Suburban (RUCA)",
+    "numerator": "c-latest",
+    "nProperty": "RcaSubrbP",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Rural_Urban_Classification_County.md"
+  },
+  {
+    "variable": "% Tracts Rural (RUCA)",
+    "numerator": "c-latest",
+    "nProperty": "RcaRuralP",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Rural_Urban_Classification_County.md"
+  },
+  {
+    "variable": "Census Flags",
+    "numerator": "c-latest",
+    "nProperty": "CenFlags",
+    "theme": "Geography",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Rural_Urban_Classification_County.md"
+  },
+  {
+    "variable": "Total Population (2010)",
+    "numerator": "c-latest",
+    "nProperty": "TotPop10",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Rural_Urban_Classification_County.md"
+  },
+  {
+    "variable": "Urban Population Total (2010)",
+    "numerator": "c-latest",
+    "nProperty": "UrbPop10",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Rural_Urban_Classification_County.md"
+  },
+  {
+    "variable": "Rural Population (2010)",
+    "numerator": "c-latest",
+    "nProperty": "RuralPop10",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Rural_Urban_Classification_County.md"
+  },
+  {
+    "variable": "Rural Population % (2010)",
+    "numerator": "c-latest",
+    "nProperty": "CenRuralP",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Rural_Urban_Classification_County.md"
+  },
+  {
+    "variable": "Hypersegregated Cities",
+    "numerator": "c-latest",
+    "nProperty": "DmySgrg",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Overlay.md"
+  },
+  {
+    "variable": "African American South",
+    "numerator": "c-latest",
+    "nProperty": "DmyBlckBlt",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Overlay.md"
+  },
+  {
+    "variable": "Native American & Tribal Lands",
+    "numerator": "c-latest",
+    "nProperty": "PrcNtvRsrv",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Overlay.md"
+  },
+  {
+    "variable": "Total Prison Population Rate",
+    "numerator": "c-latest",
+    "nProperty": "TtlPrPpr",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
+  },
+  {
+    "variable": "Total Prison Admission Rate",
+    "numerator": "c-latest",
+    "nProperty": "TtlPrAPpr",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
+  },
+  {
+    "variable": "Total Prison Population Count",
+    "numerator": "c-latest",
+    "nProperty": "TtlPrPp",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
+  },
+  {
+    "variable": "Prison Prison Admissions Count",
+    "numerator": "c-latest",
+    "nProperty": "TtlPrAPp",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Prison%20variables_2016.md"
+  },
+  {
+    "variable": "Total Jail Population Rate",
+    "numerator": "c-latest",
+    "nProperty": "TtlJlPpr",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Jail%20variables_2017.md"
+  },
+  {
+    "variable": "Total jail admission rate",
+    "numerator": "c-latest",
+    "nProperty": "TtlJlAdmr",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Jail%20variables_2017.md"
+  },
+  {
+    "variable": "Pretrial Jail Population Rate",
+    "numerator": "c-latest",
+    "nProperty": "TtlJlPrtr",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Jail%20variables_2017.md"
+  },
+  {
+    "variable": "Total Jail Population Count, ASJ/COJ Data",
+    "numerator": "c-latest",
+    "nProperty": "TtlJlPp",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Jail%20variables_2017.md"
+  },
+  {
+    "variable": "Total Jail Admissions Count, ASJ/COJ Data",
+    "numerator": "c-latest",
+    "nProperty": "TtlJlAdm",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Jail%20variables_2017.md"
+  },
+  {
+    "variable": "Pretrial Jail Population Count",
+    "numerator": "c-latest",
+    "nProperty": "TtlJlPrt",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Jail%20variables_2017.md"
+  },
+  {
+    "variable": "Methadone access 30 minutes (RAAM)",
+    "numerator": "t-latest",
+    "nProperty": "MetRm30",
+    "theme": "Environment",
+    "metadataUrl": ""
+  },
+  {
+    "variable": "Methadone access 60 minutes (RAAM)",
+    "numerator": "t-latest",
+    "nProperty": "MetRm60",
+    "theme": "Environment",
+    "metadataUrl": ""
+  },
+  {
+    "variable": "Methadone access 90 minutes (RAAM)",
+    "numerator": "t-latest",
+    "nProperty": "MetRm90",
+    "theme": "Environment",
+    "metadataUrl": ""
+  },
+  {
+    "variable": "Naltrexone access 30 minutes (RAAM)",
+    "numerator": "t-latest",
+    "nProperty": "NalRm30",
+    "theme": "Environment",
+    "metadataUrl": ""
+  },
+  {
+    "variable": "Naltrexone access 60 minutes (RAAM)",
+    "numerator": "t-latest",
+    "nProperty": "NalRm60",
+    "theme": "Environment",
+    "metadataUrl": ""
+  },
+  {
+    "variable": "Naltrexone access 90 minutes (RAAM)",
+    "numerator": "t-latest",
+    "nProperty": "NalRm90",
+    "theme": "Environment",
+    "metadataUrl": ""
+  },
+  {
+    "variable": "Buprenorphine access 30 minutes (RAAM)",
+    "numerator": "t-latest",
+    "nProperty": "BupRm30",
+    "theme": "Environment",
+    "metadataUrl": ""
+  },
+  {
+    "variable": "Buprenorphine access 60 minutes (RAAM)",
+    "numerator": "t-latest",
+    "nProperty": "BupRm60",
+    "theme": "Environment",
+    "metadataUrl": ""
+  },
+  {
+    "variable": "Buprenorphine access 90 minutes (RAAM)",
+    "numerator": "t-latest",
+    "nProperty": "BupRm90",
+    "theme": "Environment",
+    "metadataUrl": ""
+  }
+]

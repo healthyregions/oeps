@@ -4,8 +4,7 @@ import styles from "../../styles/Docs.module.css";
 import { Gutter } from "../../components/layout/Gutter";
 import MainNav from "../../components/layout/MainNav";
 import Footer from "../../components/layout/Footer";
-import { variables } from '../../meta/variables';
-// import RemoteMarkdownModal from "@components/markdown/RemoteMarkdownModal";
+import variables from '../../meta/variables.json';
 
 const VariableTable = ({table, filters}) =>
 <div className={styles.tableContainer}>
@@ -17,27 +16,21 @@ const VariableTable = ({table, filters}) =>
       <th>Source</th>
       <th>Metadata</th>
       <th>Spatial Scale</th>
+      <th>Years</th>
     </tr>
     {table.map(row => (!filters.scale.length || filters.scale.some(scale => row['Spatial Scale'].includes(scale))) ? <tr key={row['Variable Construct']}>
       <td width="15%">{row['Variable Construct']}</td>
       <td width="25%">{row['Variable Proxy']}</td>
       <td width="15%">{row['Source']}</td>
-      <td width="15%">{row['markdownPrefix']}<a href={`docs/${row['markdown']}`}>{row['markdownText']}</a></td>
+      <td width="15%"><ul>{row['Metadata'].map((docTitle, index) => <li key={`${docTitle}-${index}`}><a href={`docs/${docTitle}`}>{docTitle}</a></li>)}</ul></td>
       <td width="15%">{row['Spatial Scale']}</td>
+      <td width="15%">{row['Years']}</td>
     </tr> : null)}
     </tbody>
   </table>
 </div>
 
-const tableNames = [
-  "Geographic Boundaries",
-  "Policy Variables",
-  "Health Variables",
-  "Demographic Variables",
-  "Economic Variables",
-  "Physical Environment Variables",
-  "COVID Variables"
-]
+const tableNames = Object.keys(variables);
 
 const uniqueScales = [
   'State',
@@ -159,10 +152,10 @@ export default function DataDocs() {
           <>
           <div className={styles.rowContainer} key={header}>
               <div className="row">
-                <div className="col-xs-12 col-lg-3">
-                  <h2>{header}</h2>
+                <div className="col-xs-12 col-lg-2">
+                  <h3>{header}</h3>
                 </div>
-                <div className="col-xs-12 col-lg-9">
+                <div className="col-xs-12 col-lg-10">
                   <VariableTable table={variables[header]} setActive={setActiveMd} filters={activeFilters} />
                 </div>
                 <Gutter em={2} />

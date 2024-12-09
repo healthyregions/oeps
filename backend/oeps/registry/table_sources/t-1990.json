@@ -1,0 +1,11 @@
+{
+    "bq_dataset_name": "tabular",
+    "bq_table_name": "T_1990",
+    "name": "t-1990",
+    "path": "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables/T_1990.csv",
+    "format": "csv",
+    "mediatype": "text/csv",
+    "title": "OEPS Data Aggregated by Census Tract (1990)",
+    "description": "This CSV aggregates all 1990 data variables from the OEPS v2 release at the County level.",
+    "geodata_source": "tracts-2010"
+}

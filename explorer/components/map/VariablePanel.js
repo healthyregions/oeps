@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import styles from "./VariablePanel.module.css";
 
 import TextField from "@mui/material/TextField";
@@ -8,17 +8,7 @@ import Autocomplete from "@mui/material/Autocomplete";
 import { Gutter } from "../layout/Gutter";
 import RemoteMarkdownModal from "../../components/markdown/RemoteMarkdownModal";
 import { Box, Button, Grid, Modal, Typography } from "@mui/material";
-import { variables } from "meta/variables";
-const variableMeta = Object.values(variables).flat();
-
-const themeCategories = [
-  "Policy",
-  "Health",
-  "Demographic",
-  "Economic",
-  "Physical Environment",
-  "COVID-19",
-];
+// import variables from "meta/variables.json";
 
 const modalStyle = {
   position: "fixed",
@@ -43,7 +33,14 @@ export default function VariablePanel(props) {
   const currentData = useSelector((state) => state.currentData);
   const dataPresets = useSelector((state) => state.dataPresets);
   const [activeThemes, setActiveThemes] = useState([]);
+  // const [activeYear, setActiveYear] = useState();
   const autocompleteRef = useRef(null);
+  const [variableOptions, setVariableOptions] = useState(dataPresets.variables);
+
+  const themeCategories = [...new Set(dataPresets.variables.map(f => f.theme))];
+  themeCategories.sort((a, b) => a.localeCompare(b));
+  const yearFilters = [...new Set(dataPresets.variables.map(f => f.year))];
+  yearFilters.sort((a, b) => a.localeCompare(b));
 
   const toggleTheme = (theme) => {
     setActiveThemes((activeThemes) => {
@@ -54,6 +51,23 @@ export default function VariablePanel(props) {
       }
     });
   };
+
+  // const toggleYear = (year) => {
+  //   if (activeYear == year) {
+  //     setActiveYear(null)
+  //   } else {
+  //     setActiveYear(year)
+  //   }
+  // };
+
+  useEffect(() => {
+    const filt1 = activeThemes.length ? dataPresets.variables.filter((f) => activeThemes.includes(f.theme)) : dataPresets.variables;
+    // const filt2 = activeYear != null ? filt1.filter((f) => activeYear == f.year) : filt1;
+    setVariableOptions(filt1)
+  },[
+    // activeYear,
+    activeThemes
+  ])
 
   const [activeDocs, setActiveDocs] = useState("");
   const [modalOpen, setModalOpen] = useState(false);
@@ -75,7 +89,9 @@ export default function VariablePanel(props) {
             <Typography variant="h5" sx={{ py: 0, my: 0, mb:1 }} fontFamily="'Lato', Verdana, sans-serif;" fontWeight="bold">
               {dataParams.variable}
             </Typography>
-
+            {/* <Typography sx={{ py: 0, my: 0, mb:1 }} fontFamily="'Lato', Verdana, sans-serif;">
+              <em>Year: {dataParams.year}</em>
+            </Typography> */}
             <Button
               onClick={toggleModal}
               variant="contained"
@@ -127,21 +143,13 @@ export default function VariablePanel(props) {
             {dataParams.numerator ? (
               <button
                 className={styles.readMoreButton}
-                onClick={() =>
-                  setActiveDocs(
-                    `https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/v1.0/data_final/metadata/${
-                      variableMeta.find((f) =>
-                        f.markdownPrefix.includes(
-                          dataParams.numerator.split("_")[0]
-                        )
-                      ).markdown
-                    }.md`
-                  )
+                onClick={() => {
+                  setActiveDocs(dataParams.metadataUrl.replace("github.com", "raw.githubusercontent.com").replace("/blob", ""))}
                 }
               >
                 Read more about this data
                 <span className={styles.desktop}>
-                  Dataset: <code>{dataParams.numerator.split("_")[0]}</code> |
+                  Dataset: <code>{dataParams.numerator}</code> |
                   Column: <code>{dataParams.nProperty}</code>
                 </span>
               </button>
@@ -150,15 +158,7 @@ export default function VariablePanel(props) {
               <button
                 className={styles.readMoreButton}
                 onClick={() =>
-                  setActiveDocs(
-                    `https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/v1.0/data_final/metadata/${
-                      variableMeta.find((f) =>
-                        f.markdownPrefix.includes(
-                          dataParams.numerator.split("_")[0]
-                        )
-                      ).markdown
-                    }.md`
-                  )
+                  setActiveDocs(dataParams.metadataUrl.replace("github.com", "raw.githubusercontent.com").replace("/blob", ""))
                 }
               >
                 Read more about this data
@@ -200,31 +200,49 @@ export default function VariablePanel(props) {
                 {cat}
               </Button>
             ))}
+            {/* <Typography variant="h6">Filter by Year</Typography>
+            {yearFilters.map((yr, i) => (
+              <Button
+                key={i}
+                variant={activeYear == yr ? "contained" : "outlined"}
+                onClick={() => toggleYear(yr)}
+                sx={{ margin: ".25em", textTransform: "none" }}
+              >
+                {yr}
+              </Button>
+            ))} */}
             <Gutter em={0.5} />
             <Autocomplete
               disablePortal
               open={true}
               ref={autocompleteRef}
               id="combo-box-demo"
-              options={
-                activeThemes.length
-                  ? dataPresets.variables.filter((f) =>
-                      activeThemes.includes(f.theme)
-                    )
-                  : dataPresets.variables
-              }
+              options={variableOptions}
               getOptionLabel={(option) => option.variable}
               groupBy={(option) => option.theme}
-              // sx={{ width: 300 }}
               fullWidth
               renderInput={(params) => (
                 <TextField {...params} label="Type to search" />
               )}
+              // use renderOption to add a custom key so it is not duplicated for
+              // variables that have the same titles (but different years)
+              // when we upgrade to MUI 6x we can use getOptionKey instead:
+              // getOptionKey={(option) => `${option.variable}-${option.year}`}
+              renderOption={(props, option) => {
+                return (
+                  <li {...props} key={`${option.nProperty}`}>
+                    {option.variable}
+                  </li>
+                );
+              }}
               onChange={(_event, option) => {
                 if (option != undefined && option.variable != undefined) {
                   dispatch({
                     type: "CHANGE_VARIABLE",
-                    payload: option.variable,
+                    payload: {
+                      nProperty: option.nProperty,
+                      numerator: option.numerator,
+                    },
                   });
                   toggleModal();
                 }

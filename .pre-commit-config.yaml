@@ -1,0 +1,14 @@
+repos:
+-   repo: https://github.com/abravalheri/validate-pyproject
+    rev: v0.12.1
+    hooks:
+        - id: validate-pyproject
+          files: ^backend/pyproject.toml
+-   repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.8.1
+    hooks:
+        - id: ruff
+          args: [ --fix ]
+          files: ^backend/
+        - id: ruff-format
+          files: ^backend/
