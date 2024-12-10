@@ -51,10 +51,6 @@ export default function About() {
             The Opioid Environment Policy Scan (OEPS) is an open-source data warehouse to help characterize
             the multi-dimensional risk environment impacting opioid use and health outcomes across the United States.
             </p>
-            <p> <b> Update Notes:</b> The OEPS
-            Project is currently under development, with a major release (v2.0) planned for November 1, 2024. Release updates include a 
-            new R Data Package and data across multiple time periods. Updated data will be released in May 2025 (v2.1), and every year thereafter through 2029.
-            </p>
             <p>
             OEPS provides access to data at multiple spatial scales, from U.S. states down to Census tracts. It is designed
             to support research seeking to study environments impacting and impacted by opioid use and opioid use disorder (OUD),
@@ -65,11 +61,23 @@ export default function About() {
             Geographic boundary shapefiles are provided for ease of merging datasets (csv files) for exploration, spatial analysis, or visualization.
             </p>
             <p>
-            <Link href="/download"> Download</Link> the entire data repository, or you can filter and download by theme or spatial scale.
-            All datasets are accompanied by <Link href="/docs">documentation</Link> detailing their source data, year, and more.
+            Visit the <Link href="/download"> Data Access</Link> page for download links and introduction to libraries that provide programmatic access to OEPS data, or 
+            <Link href="/codeResources"> Code Resources</Link> for tutorials and notebooks.
             Learn more about our methods and approaches, including the risk environment framework, on the <Link href="/methods">Methodology</Link> page.
             </p>
-            </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-xs-12 col-md-4 col-lg-3">
+            <h2>Releases</h2>
+          </div>
+          <div className="col-xs-12 col-md-8 col-lg-9">
+            <ul>
+              <li><strong>v2.1</strong> (planned) Spring, 2025</li>
+              <li><strong>v2.0</strong> (current) December, 2024 [<Link href="https://github.com/GeoDaCenter/opioid-policy-scan/releases/tag/v2.0">release notes</Link>]</li>
+              <li><strong>v1.0</strong> January, 2022 [<Link href="https://github.com/GeoDaCenter/opioid-policy-scan/releases/tag/v1.0">release notes</Link>]</li>
+            </ul>
+          </div>
         </div>
         <Gutter em={2} />
             <div className="row">
