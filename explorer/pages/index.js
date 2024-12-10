@@ -35,7 +35,11 @@ export default function Home() {
           </h1>
           <p className={styles.description}>
           An open data warehouse exploring the multi-dimensional risk environment, from neighborhoods to states,
-          impacting opioid use and health outcomes across the United States. The OEPS Project is currently under development, with a major release (v2.0) planned for November 2024. 
+          impacting opioid use and health outcomes across the United States.
+          </p>
+          <p className={styles.description}>
+          <em><strong>New Release!</strong></em> In December 2024, we released v2.0 of the OEPS data warehouse. Oearn more in the <Link href="https://github.com/GeoDaCenter/opioid-policy-scan/releases/tag/v2.0">release notes</Link>.
+          The v2.0 release is also accompanied by the initial release of <Link href="https://oepsdata.healthyregions.org">oepsData</Link>, an R package specifically designed to facilitate easy access to OEPS data.
           </p>
           </div>
         </div>
