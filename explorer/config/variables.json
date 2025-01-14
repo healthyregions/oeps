@@ -4,14 +4,14 @@
     "numerator": "s-latest__t-latest__z-latest__c-latest",
     "nProperty": "HEROP_ID",
     "theme": "Geography",
-    "metadataUrl": ""
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Geographic_Boundaries.md"
   },
   {
     "variable": "GEOID",
     "numerator": "s-latest__t-latest__z-latest__c-latest",
     "nProperty": "GEOID",
     "theme": "Geography",
-    "metadataUrl": ""
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Geographic_Boundaries.md"
   },
   {
     "variable": "Total Population",
@@ -1834,7 +1834,7 @@
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_Pharmacies_MinDistance.md"
   },
   {
-    "variable": "Driving Time (min) to nearest Pharmacy ",
+    "variable": "Driving Time (min) to nearest Pharmacy",
     "numerator": "t-latest__z-latest",
     "nProperty": "RxTmDr",
     "theme": "Environment",
