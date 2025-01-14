@@ -11,14 +11,78 @@ from oeps.config import REGISTRY_DIR, DATA_DIR
 class Registry:
     def __init__(self, directory: Path = REGISTRY_DIR):
         self.directory = directory
-        self.variable_lookup = None
-        self.geodata_lookup = None
-        self.table_lookup = None
-        self.themes = None
-        self.construct_lookup = None
-        self.load_variables()
 
-        # load in the theme and construct structure used in certain exports
+        self.variables = self._load_variables()
+        self.table_sources = self._load_table_sources()
+        self.geodata_sources = self._load_geodata_sources()
+
+        ## declare public attributes for type hinting
+        self.themes = {}
+        self.theme_lookup = {}
+        self.proxy_lookup = {}
+        self._load_themes()  # updates self.themes, self.theme_lookup, and self.proxy_lookup
+
+        self._add_years_to_variables()
+        print(
+            f"registry initialized | variables: {len(self.variables)}, tables: {len(self.table_sources)}, geodata: {len(self.geodata_sources)}"
+        )
+
+    def _load_variables(self) -> dict:
+        """Creates a lookup of all variables."""
+
+        return load_json(Path(self.directory, "variables.json"))
+
+    def _load_table_sources(self) -> dict:
+        """Creates a lookup of all table sources in the registry."""
+
+        output = {}
+        paths = Path(self.directory, "table_sources").glob("*.json")
+        for path in paths:
+            resource = load_json(path)
+            resource_id = resource["name"]
+
+            schema = {
+                "primaryKey": "HEROP_ID",
+                "missingValues": ["NA"],
+                "foreignKeys": [],
+                "fields": [
+                    i
+                    for i in self.variables.values()
+                    if resource_id in i.get("table_sources", [])
+                ],
+            }
+
+            join_resource = resource.get("geodata_source")
+            if join_resource:
+                schema["foreignKeys"].append(
+                    {
+                        "fields": "HEROP_ID",
+                        "reference": {
+                            "resource": join_resource,
+                            "fields": "HEROP_ID",
+                        },
+                    }
+                )
+
+            resource["schema"] = schema
+            output[resource_id] = resource
+
+        return output
+
+    def _load_geodata_sources(self) -> dict:
+        """Creates a lookup of all geodata sources in the registry."""
+
+        output = {}
+        paths = Path(self.directory, "geodata_sources").glob("*.json")
+        for path in paths:
+            data = load_json(path)
+            data["csv_abbrev"] = data["name"][0]
+            output[data["name"]] = data
+        return output
+
+    def _load_themes(self):
+        """load in the theme and construct structure used in certain exports."""
+
         self.themes = load_json(Path(self.directory, "themes.json"))
         self.theme_lookup = {}
         self.proxy_lookup = {}
@@ -27,127 +91,22 @@ class Registry:
                 self.theme_lookup[construct] = theme
                 self.proxy_lookup[construct] = proxy
 
-    def load_geodata_sources(self):
-        """Creates a lookup of all geodata sources in the registry. If explorer_only=True,
-        then only include sources that have the extra `explorer_config` section in them."""
+    def _add_years_to_variables(self):
+        """Looks for presence of each variable across all table_sources and creates a list
+        of all table_source['year']."""
 
-        lookup = {}
-        paths = Path(self.directory, "geodata_sources").glob("*.json")
-        for path in paths:
-            data = load_json(path)
-            data["csv_abbrev"] = data["name"][0]
-            lookup[data["name"]] = data
+        for v in self.variables.values():
+            sources = [
+                i
+                for i in self.table_sources.values()
+                if i["name"] in v.get("table_sources", [])
+            ]
+            v["years"] = list(set([i["year"] for i in sources]))
 
-        self.geodata_lookup = lookup
-        print(f"registry: {len(self.geodata_lookup)} geodata sources loaded")
-
-    def load_table_sources(self):
-        """Creates a lookup of all table sources in the registry. Only tables sources
-        that link to geodata in the current geodata_lookup will be included."""
-
-        if self.geodata_lookup is None:
-            self.load_geodata_sources()
-
-        lookup = {}
-        paths = Path(self.directory, "table_sources").glob("*.json")
-        for path in paths:
-            data = load_json(path)
-            if data["geodata_source"] in self.geodata_lookup:
-                lookup[data["name"]] = data
-
-        self.table_lookup = lookup
-        print(f"registry: {len(self.table_lookup)} table sources loaded")
-
-    def load_variables(self):
-        if self.table_lookup is None:
-            self.load_table_sources()
-
-        lookup = {}
-        variables = self.get_variables()
-        for k, v in variables.items():
-            usable_sources = []
-            for ds in v["table_sources"]:
-                if ds in self.table_lookup:
-                    usable_sources.append(ds)
-
-            if len(usable_sources) > 0:
-                lookup[k] = v
-        self.variable_lookup = lookup
-        print(f"registry: {len(self.variable_lookup)} variables loaded")
-
-    def get_variables(self, include_disabled=False):
-        variables = load_json(Path(self.directory, "variables.json"))
-        if not include_disabled:
-            variables = {
-                k: v for k, v in variables.items() if v.get("enabled", True) is True
-            }
-        return variables
-
-    def create_tabular_resource(self, source_id: str, trim_props: bool = False):
-        resource = self.table_lookup.get(source_id)
-        if resource is None:
-            print(f"can't find this table source: {source_id}")
-            return
-
-        schema = {
-            "primaryKey": "HEROP_ID",
-            "foreignKeys": [
-                {
-                    "fields": "HEROP_ID",
-                    "reference": {
-                        "resource": resource["geodata_source"],
-                        "fields": "HEROP_ID",
-                    },
-                }
-            ],
-            "missingValues": ["NA"],
-            "fields": [],
-        }
-
-        variables = load_json(Path(self.directory, "variables.json"))
-        for field in variables.values():
-            if source_id in field["table_sources"]:
-                schema["fields"].append(field)
-
-        for field in schema["fields"]:
-            field.pop("bq_data_type", None)
-            field.pop("table_sources", None)
-            constraint = field.pop("constraints", "")
-            if not constraint == "":
-                field["data_note"] = constraint
-
-        if trim_props:
-            resource.pop("bq_table_name", None)
-            resource.pop("bq_dataset_name", None)
-            resource.pop("geodata_source", None)
-
-        resource["schema"] = schema
-        return resource
-
-    def create_geodata_resource(self, source_id: str, trim_props: bool = False):
-        resource = self.geodata_lookup.get(source_id)
-        if resource is None:
-            print(f"can't find this geodata source: {source_id}")
-            return
-
-        if trim_props:
-            resource.pop("bq_table_name", None)
-            resource.pop("bq_dataset_name", None)
-            resource.pop("explorer_config", None)
-
-        return resource
-
-    def get_all_table_resources(self, trim_props: bool = False):
-        return [
-            self.create_tabular_resource(i, trim_props=trim_props)
-            for i in self.table_lookup.keys()
-        ]
-
-    def get_all_geodata_resources(self, trim_props: bool = False):
-        return [
-            self.create_geodata_resource(i, trim_props=trim_props)
-            for i in self.geodata_lookup.keys()
-        ]
+    def get_all_sources(self):
+        sources = list(self.table_sources.values())
+        sources += list(self.geodata_sources.values())
+        return sources
 
     def create_data_dictionaries(self, destination: Path = None):
         """Generate MS Excel formatted data dictionaries for all content."""
@@ -156,44 +115,25 @@ class Registry:
             destination = Path(DATA_DIR, "dictionaries")
         destination.mkdir(exist_ok=True)
 
-        summary_levels = [
-            {
-                "id": v["summary_level"],
-                "csv_abbreviation": v["summary_level"][0].upper(),
-            }
-            for v in self.geodata_lookup.values()
-        ]
+        summary_levels = {}
+        for geodata in self.geodata_sources.values():
+            summary_levels[geodata["summary_level"][0].upper()] = geodata[
+                "summary_level"
+            ]
 
-        all_table_sources = self.get_all_table_resources()
-
-        all_fields = []
-        for v in self.variable_lookup.values():
-            years = list(set([i.split("-")[1] for i in v["table_sources"]]))
-            v["years"] = years
-            all_fields.append(v)
-
-        for geo in summary_levels:
+        for id, label in summary_levels.items():
             tabular = [
                 i
-                for i in all_table_sources
-                if self.geodata_lookup[i["geodata_source"]]["summary_level"]
-                == geo["id"]
+                for i in self.table_sources.values()
+                if self.geodata_sources[i["geodata_source"]]["summary_level"] == label
             ]
 
             # get all variables (fields) that are in any of these tables
             fields = []
             for table in tabular:
-                for i in all_fields:
-                    if table["name"] in i["table_sources"]:
+                for i in self.variables.values():
+                    if table["name"] in i.get("table_sources", {}):
                         fields.append(i)
-
-            all_fields_list = []
-            for t in tabular:
-                file_year = t["name"].split("-")[1]
-                for f in t["schema"]["fields"]:
-                    if not f.get("year"):
-                        f["year"] = file_year
-                    all_fields_list.append(f)
 
             ordered = []
             for theme in self.themes.keys():
@@ -278,7 +218,7 @@ class Registry:
                 ws.column_dimensions[get_column_letter(n + 1)].width = headers[k]
 
             # Save the file
-            wb.save(Path(destination, f"{geo['csv_abbreviation']}_Dict.xlsx"))
+            wb.save(Path(destination, f"{id}_Dict.xlsx"))
 
     def validate(self):
         valid_constructs = []
@@ -287,7 +227,7 @@ class Registry:
 
         missing = 0
         used = set()
-        for v in self.variable_lookup.values():
+        for v in self.variables.values():
             construct = v.get("construct")
             if construct not in valid_constructs:
                 print(f"{v['name']}: invalid construct {construct}")

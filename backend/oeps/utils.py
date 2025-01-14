@@ -20,7 +20,7 @@ BQ_TYPE_LOOKUP = {
 }
 
 
-def load_json(path):
+def load_json(path) -> dict:
     with open(path, "r") as o:
         return json.load(o)
 

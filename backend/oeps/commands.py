@@ -121,8 +121,7 @@ def load(name, table_only, dry_run, overwrite, registry_path):
 
     messages = []
 
-    data_resources = registry.get_all_geodata_resources()
-    data_resources += registry.get_all_table_resources()
+    data_resources = registry.get_all_sources()
 
     if name:
         to_load = [i for i in data_resources if i["name"] == name]
@@ -195,12 +194,8 @@ def generate_reference_md(registry_path):
     client = BigQuery()
     registry = Registry(registry_path)
 
-    resources = (
-        registry.get_all_geodata_resources() + registry.get_all_table_resources()
-    )
-
     outfile = Path("../docs/BQ-Reference.md").absolute()
-    client.generate_reference_doc(resources, outfile)
+    client.generate_reference_doc(registry.get_all_sources(), outfile)
 
 
 census_grp = AppGroup(
