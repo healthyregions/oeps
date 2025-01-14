@@ -7,5 +7,6 @@
     "mediatype": "text/csv",
     "title": "OEPS Data Aggregated by State (Latest)",
     "description": "This CSV aggregates all latest data variables from the OEPS v2 release at the State level.",
+    "year": "latest",
     "geodata_source": "states"
 }

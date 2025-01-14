@@ -7,5 +7,6 @@
     "mediatype": "text/csv",
     "title": "OEPS Data Aggregated by State (1980)",
     "description": "This CSV aggregates all 1980 data variables from the OEPS v2 release at the State level.",
+    "year": "1980",
     "geodata_source": "states-2010"
 }

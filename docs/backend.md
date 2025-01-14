@@ -150,8 +150,6 @@ The following additional attributes are also supported and in some cases require
 
 Property|Format|Description|OEPS Use
 -|-|-|-
-`src_name`|String|Name of column in source dataset|Required
-`bq_data_type`|String|[Field type for BigQuery schema](https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#TableFieldSchema.FIELDS.type)|Required
 `theme`|String|One of `Social`, `Environment`, `Economic`, `Policy`, `Outcome`, or `Geography`. See [OEPS docs](https://oeps.healthyregions.org/docs).|Optional
 `comment`|String|Additional information about the data in this field|Optional
 `source`|String|Source of the data in this field|Optional
@@ -166,12 +164,10 @@ A field descriptor for this field will look something like this:
 ```
 {
     "name": "HEROP_ID",
-    "src_name": "HEROP_ID",
     "type": "string",
     "example": "040US01-2018",
     "description": "A derived unique id corresponding to the relevant geographic unit.",
     "theme": "Geography",
-    "bq_data_type": "STRING"
 }
 ```
 
@@ -183,9 +179,7 @@ To load a shapefile you must include the following field descriptor in your `fie
 {
     "name": "geom",
     "title": "Geom",
-    "type": "string",
-    "src_name": "geometry",
-    "bq_data_type": "GEOGRAPHY"
+    "type": "string"
 }
 ```
 
@@ -202,25 +196,21 @@ The following is a truncated version of a table definition for the 2010 State-le
     "path": "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables/S_2010.csv",
     "fields": [
         {
-            "name": "HEROP_ID",
-            "src_name": "HEROP_ID",
+            "name": "HEROP_ID"
             "type": "string",
             "description": "A derived unique id corresponding to the relevant geographic unit.",
             "constraints": null,
-            "theme": "Geography",
-            "bq_data_type": "STRING"
+            "theme": "Geography"
         },
         {
-            "name": "TotPop",
-            "src_name": "TotPop",
+            "name": "TotPop"
             "type": "integer",
             "example": "7294336",
             "description": "Estimated total population",
             "constraints": null,
             "theme": "Social",
             "source": "American Community Survey 2014-2018 5 Year Estimates; 2010 Decennial Census; Integrated Public Use Microdata Service National Historic Geographic Information Systems",
-            "comments": "1980, 1990, and 2000 data from respective decennial censuses downloaded from IPUMS NHGIS and aggregated upwards.",
-            "bq_data_type": "INTEGER"
+            "comments": "1980, 1990, and 2000 data from respective decennial censuses downloaded from IPUMS NHGIS and aggregated upwards."
         }
     ]
 }
