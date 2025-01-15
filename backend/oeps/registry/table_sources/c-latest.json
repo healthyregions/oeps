@@ -7,5 +7,6 @@
     "mediatype": "text/csv",
     "title": "OEPS Data Aggregated by County (Latest)",
     "description": "This CSV aggregates all Latest data variables from the OEPS v2 release at the Census Tract level.",
+    "year": "latest",
     "geodata_source": "counties-2018"
 }

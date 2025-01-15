@@ -9,7 +9,7 @@ from .registry import Registry
 
 class Explorer:
     def __init__(
-        self, registry: Registry = Registry(), root_dir: Path = Path(".explorer")
+        self, registry: Registry = Registry, root_dir: Path = Path(".explorer")
     ):
         self.registry = registry
         self.root_dir = root_dir
@@ -25,7 +25,7 @@ class Explorer:
         # begin by creating a lookup for all geodata sources that will be used in the explorer.
         # only source files with an "explorer_config" entry will be used
         geodata_lookup = {}
-        for id, data in self.registry.geodata_lookup.items():
+        for id, data in self.registry.geodata_sources.items():
             entry = data.get("explorer_config")
             if entry:
                 entry["csv_abbrev"] = id[0]
@@ -34,7 +34,7 @@ class Explorer:
         # create lookup of all table data sources that are linked to a valid geodata_source
         table_lookup = {
             k: v
-            for k, v in self.registry.table_lookup.items()
+            for k, v in self.registry.table_sources.items()
             if v.get("geodata_source") in geodata_lookup
         }
 
@@ -42,7 +42,7 @@ class Explorer:
         # in which each variable has a value
         variables = {
             k: v
-            for k, v in self.registry.variable_lookup.items()
+            for k, v in self.registry.variables.items()
             if not self.registry.themes["Geography"] == v["construct"]
         }
         ds_combo_lookup = {}
@@ -50,7 +50,6 @@ class Explorer:
             usable_sources = []
             for ds in v["table_sources"]:
                 if ds in table_lookup:
-                    # geodata_lookup[table_lookup[ds]['geodata_source']]["variables"].append(k)
                     usable_sources.append(ds)
 
             if len(usable_sources) > 0:
@@ -129,7 +128,7 @@ class Explorer:
                 sources = set()
                 metadata_docs = set()
                 years = set()
-                for v in self.registry.variable_lookup.values():
+                for v in self.registry.variables.values():
                     if v["construct"] == construct:
                         for ts in v["table_sources"]:
                             years.add(ts.split("-")[1])
@@ -141,7 +140,7 @@ class Explorer:
                             ]:
                                 if (
                                     p[0]
-                                    in self.registry.table_lookup[ts]["geodata_source"]
+                                    in self.registry.table_sources[ts]["geodata_source"]
                                 ):
                                     geodata.add(p[1])
                         sources.add(v["source"])
@@ -150,6 +149,10 @@ class Explorer:
                         md_name = md_url.split("/")[-1].rstrip(".md")
                         metadata_docs.add(md_name)
 
+                sorted_geodata = [
+                    i for i in ["Tract", "Zip", "County", "State"] if i in geodata
+                ]
+
                 output[theme].append(
                     {
                         "Variable Construct": construct,
@@ -157,7 +160,7 @@ class Explorer:
                         "Variables": natsorted(list(titles)),
                         "Source": "; ".join(sources),
                         "Metadata": list(metadata_docs),
-                        "Spatial Scale": ", ".join(geodata),
+                        "Spatial Scale": ", ".join(sorted_geodata),
                         "Years": ", ".join(natsorted(years)),
                     }
                 )

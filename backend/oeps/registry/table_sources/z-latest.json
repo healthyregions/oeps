@@ -7,5 +7,6 @@
     "mediatype": "text/csv",
     "title": "OEPS Data Aggregated by Zip Code Tabulation Area (ZCTA) (Latest)",
     "description": "This CSV aggregates all Latest data variables from the OEPS v2 release at the Zip-Code Tabulation Area (ZCTA) level.",
+    "year": "latest",
     "geodata_source": "zctas-2018"
 }

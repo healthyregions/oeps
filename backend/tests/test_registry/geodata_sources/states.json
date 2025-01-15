@@ -21,16 +21,12 @@
             {
                 "name": "HEROP_ID",
                 "title": "HEROP_ID",
-                "type": "string",
-                "src_name": "HEROP_ID",
-                "bq_data_type": "STRING"
+                "type": "string"
             },
             {
                 "name": "name",
                 "title": "Name",
-                "type": "string",
-                "src_name": "NAME",
-                "bq_data_type": "STRING"
+                "type": "string"
             }
         ]
     }

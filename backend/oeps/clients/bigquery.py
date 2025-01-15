@@ -165,21 +165,10 @@ class BigQuery:
             errors.append(f"error reading file: {str(e)}")
             return rows, errors
 
-        # use any src_name properties to rename columns where needed
-        field_mapping = {}
-        for f in data_resource["schema"]["fields"]:
-            src_name = f.get("src_name")
-            if src_name:
-                field_mapping[src_name] = f["name"]
-            else:
-                errors.append(
-                    f"warning: {f['name']} missing required src_name attribute"
-                )
-        if field_mapping:
-            df.rename(columns=field_mapping, inplace=True)
+        field_names = [i["name"] for i in data_resource["schema"]["fields"]]
 
         # remove any input columns that are not in the schema
-        drop_columns = [i for i in df.columns if i not in field_mapping.values()]
+        drop_columns = [i for i in df.columns if i not in field_names]
         if drop_columns:
             errors.append(
                 f"{len(drop_columns)} source columns missing from schema: "
@@ -188,7 +177,7 @@ class BigQuery:
         df.drop(columns=drop_columns, inplace=True)
 
         # check for schema columns that are not found in the source data
-        missing_columns = [i for i in field_mapping.values() if i not in df.columns]
+        missing_columns = [i for i in field_names if i not in df.columns]
         if missing_columns:
             errors.append(
                 f"{len(missing_columns)} schema fields missing from source: "
@@ -403,37 +392,40 @@ class BigQuery:
                         "source": f.get("source"),
                     }
                 )
-
+        # fmt: off
         with open(outfile, "w") as openf:
             ds_ct = len(datasets)
             openf.write(f"""# Project Id: {project_id}
 
-    {ds_ct} dataset{'s' if ds_ct != 1 else ''} in this project: {', '.join(datasets.keys())}
+{ds_ct} dataset{'s' if ds_ct != 1 else ''} in this project: {', '.join(datasets.keys())}
 
-    """)
+""")
             for ds in datasets:
                 t_ct = len(datasets[ds])
                 openf.write(f"""## {ds}
 
-    {t_ct} table{'s' if t_ct != 1 else ''} in this dataset.
+{t_ct} table{'s' if t_ct != 1 else ''} in this dataset.
 
-    """)
+""")
 
                 for t in datasets[ds]:
                     c_ct = len(datasets[ds][t])
                     openf.write(f"""### {t}
 
-    ID: `{project_id}.{ds}.{t}`
+ID: `{project_id}.{ds}.{t}`
 
-    {c_ct} column{'s' if c_ct != 1 else ''} in this table.
+{c_ct} column{'s' if c_ct != 1 else ''} in this table.
 
-    Name|Data Type|Description|Source
-    -|-|-|-
-    """)
+Name|Data Type|Description|Source
+-|-|-|-
+""")
 
                     for c in datasets[ds][t]:
                         openf.write(
-                            f"{c['name']}|{c['data_type']}|{c['description']}|{c['source']}\n"
+f"{c['name']}|{c['data_type']}|{c['description']}|{c['source']}\n"
                         )
 
                     openf.write("\n")
+
+
+# fmt: on

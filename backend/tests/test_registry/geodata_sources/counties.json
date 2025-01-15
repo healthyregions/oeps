@@ -21,14 +21,12 @@
             {
                 "name": "HEROP_ID",
                 "title": "HEROP_ID",
-                "type": "string",
-                "src_name": "HEROP_ID"
+                "type": "string"
             },
             {
                 "name": "name",
                 "title": "Name",
-                "type": "string",
-                "src_name": "NAME"
+                "type": "string"
             }
         ]
     }

@@ -2,7 +2,6 @@
   "HEROP_ID": {
     "title": "HEROP_ID",
     "name": "HEROP_ID",
-    "src_name": "HEROP_ID",
     "type": "string",
     "example": "050US01001-2018",
     "description": "A derived unique id corresponding to the relevant geographic unit.",
@@ -37,7 +36,6 @@
   "GEOID": {
     "title": "GEOID",
     "name": "GEOID",
-    "src_name": "GEOID",
     "type": "string",
     "example": "36061",
     "description": "Unique identifer for the geography unit to which this value should be attached",
@@ -72,7 +70,6 @@
   "TotPop": {
     "title": "Total Population",
     "name": "TotPop",
-    "src_name": "TotPop",
     "type": "integer",
     "example": "1632480",
     "description": "Total population",
@@ -107,7 +104,6 @@
   "TotUnits": {
     "title": "Total Occupied Housing Units",
     "name": "TotUnits",
-    "src_name": "TotUnits",
     "type": "integer",
     "example": "874237",
     "description": "Count of total occupied housing units",
@@ -142,7 +138,6 @@
   "Age18_64": {
     "title": "Population: Age 18-64",
     "name": "Age18_64",
-    "src_name": "Age18_64",
     "type": "integer",
     "example": "1139347",
     "description": "Total adult population under age 65",
@@ -176,7 +171,6 @@
   "Age0_4": {
     "title": "Population: Age 0-4",
     "name": "Age0_4",
-    "src_name": "Age0_4",
     "type": "integer",
     "example": "79897",
     "description": "Total population between age 0-4",
@@ -211,7 +205,6 @@
   "Age5_14": {
     "title": "Population: Age 5-14",
     "name": "Age5_14",
-    "src_name": "Age5_14",
     "type": "integer",
     "example": "122034",
     "description": "Total population between age 5-14",
@@ -246,7 +239,6 @@
   "Age15_19": {
     "title": "Population: Age 15-19",
     "name": "Age15_19",
-    "src_name": "Age15_19",
     "type": "integer",
     "example": "68706",
     "description": "Total population between age 15-19",
@@ -281,7 +273,6 @@
   "Age20_24": {
     "title": "Population: Age 20-24",
     "name": "Age20_24",
-    "src_name": "Age20_24",
     "type": "integer",
     "example": "114772",
     "description": "Total population between age 20-24",
@@ -316,7 +307,6 @@
   "Age15_44": {
     "title": "Population: Age 15-44",
     "name": "Age15_44",
-    "src_name": "Age15_44",
     "type": "integer",
     "example": "784568",
     "description": "Total population between age 15-44",
@@ -351,7 +341,6 @@
   "Age45_54": {
     "title": "Population: Age 45-54",
     "name": "Age45_54",
-    "src_name": "Age45_54",
     "type": "integer",
     "example": "105",
     "description": "Total population between age 45-54",
@@ -373,7 +362,6 @@
   "Age55_59": {
     "title": "Population: Age 55-59",
     "name": "Age55_59",
-    "src_name": "Age55_59",
     "type": "integer",
     "example": "94082",
     "description": "Total population between age 55-59",
@@ -408,7 +396,6 @@
   "Age60_64": {
     "title": "Population: Age 60-64",
     "name": "Age60_64",
-    "src_name": "Age60_64",
     "type": "integer",
     "example": "90711",
     "description": "Total population between age 60-64",
@@ -443,7 +430,6 @@
   "AgeOv65": {
     "title": "Population: Age 65+",
     "name": "AgeOv65",
-    "src_name": "AgeOv65",
     "type": "integer",
     "example": "257362",
     "description": "Total population at or over age 65",
@@ -478,7 +464,6 @@
   "Age15_24P": {
     "title": "% Population: Age 15-24",
     "name": "Age15_24P",
-    "src_name": "Age15_24P",
     "type": "number",
     "example": "11.24",
     "description": "Percentage of population between ages of 15 & 24",
@@ -512,7 +497,6 @@
   "Und45P": {
     "title": "% Population: Age under 45",
     "name": "Und45P",
-    "src_name": "Und45P",
     "type": "number",
     "example": "60.43",
     "description": "\tPercentage of population below 45 years of age",
@@ -547,7 +531,6 @@
   "Ovr65P": {
     "title": "% Population: Age 65+",
     "name": "Ovr65P",
-    "src_name": "Ovr65P",
     "type": "number",
     "example": "15.77",
     "description": "Percentage of population over 65",
@@ -582,7 +565,6 @@
   "WhiteP": {
     "title": "% White Population",
     "name": "WhiteP",
-    "src_name": "WhiteP",
     "type": "number",
     "example": "56.2",
     "description": "Percentage of population with race identified as white alone",
@@ -617,7 +599,6 @@
   "BlackP": {
     "title": "% Black/African American Population",
     "name": "BlackP",
-    "src_name": "BlackP",
     "type": "number",
     "example": "14.81",
     "description": "Percentage of population with race identified as Black or African American alone",
@@ -652,7 +633,6 @@
   "HispP": {
     "title": "% Hispanic/Latinx Population",
     "name": "HispP",
-    "src_name": "HispP",
     "type": "number",
     "example": "25.95",
     "description": "Percentage of population with ethnicity identified as of Hispanic or Latinx origin",
@@ -687,7 +667,6 @@
   "AmIndP": {
     "title": "% Native American/Alaska Native Population",
     "name": "AmIndP",
-    "src_name": "AmIndP",
     "type": "number",
     "example": "0.43",
     "description": "Percentage of population with race identified as Native American or Alaska Native alone",
@@ -722,7 +701,6 @@
   "AsianP": {
     "title": "% Asian Population",
     "name": "AsianP",
-    "src_name": "AsianP",
     "type": "number",
     "example": "12.03",
     "description": "Percentage of population with race identified as Asian alone",
@@ -757,7 +735,6 @@
   "PacIsP": {
     "title": "% Native Hawaiian & Other PI Population",
     "name": "PacIsP",
-    "src_name": "PacIsP",
     "type": "number",
     "example": "0.05",
     "description": "Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone",
@@ -792,7 +769,6 @@
   "OtherP": {
     "title": "% Other (race) Population",
     "name": "OtherP",
-    "src_name": "OtherP",
     "type": "number",
     "example": "16.48",
     "description": "Percentage of Population with race not mentioned in any of the options above (includes two race or more races)",
@@ -827,7 +803,6 @@
   "NoHsP": {
     "title": "% Population without High School Degree",
     "name": "NoHsP",
-    "src_name": "NoHsP",
     "type": "number",
     "example": "13.01",
     "description": "Percentage of population 25 years and over, less than a high school degree",
@@ -862,7 +837,6 @@
   "ChildrenP": {
     "title": "Children %",
     "name": "ChildrenP",
-    "src_name": "ChildrenP",
     "type": "number",
     "example": "0.14",
     "description": "Percentage of population under age 18",
@@ -895,7 +869,6 @@
   "PovP": {
     "title": "Poverty %",
     "name": "PovP",
-    "src_name": "PovP",
     "type": "number",
     "example": "16.6",
     "description": "Number of individuals earning below the poverty income threshold as a percentage of the total population",
@@ -930,7 +903,6 @@
   "UnempP": {
     "title": "Unemployment %",
     "name": "UnempP",
-    "src_name": "UnempP",
     "type": "number",
     "example": "5.7",
     "description": "The number of unemployed individuals as a percentage of the civilian labor force",
@@ -965,7 +937,6 @@
   "VacantP": {
     "title": "Vacant Housing Units %",
     "name": "VacantP",
-    "src_name": "VacantP",
     "type": "number",
     "example": "13.28",
     "description": "Percentage of vacant housing units",
@@ -1000,7 +971,6 @@
   "TotPopHh": {
     "title": "Total Population in Households",
     "name": "TotPopHh",
-    "src_name": "TotPopHh",
     "type": "integer",
     "example": "7151776",
     "description": "Total number of people in households",
@@ -1023,7 +993,6 @@
   "TotVetPop": {
     "title": "Total Veteran Population",
     "name": "TotVetPop",
-    "src_name": "TotVetPop",
     "type": "integer",
     "example": "537713",
     "description": "Total Veteran population",
@@ -1049,7 +1018,6 @@
   "TotWrkE": {
     "title": "Count of Working Population",
     "name": "TotWrkE",
-    "src_name": "TotWrkE",
     "type": "integer",
     "example": "3513856",
     "description": "Estimated count of working population",
@@ -1072,7 +1040,6 @@
   "Age45_49": {
     "title": "Population: Age 45-49",
     "name": "Age45_49",
-    "src_name": "Age45_49",
     "type": "integer",
     "example": "467768",
     "description": "Total population between age 45-49",
@@ -1104,7 +1071,6 @@
   "Age50_54": {
     "title": "Population: Age 50-54",
     "name": "Age50_54",
-    "src_name": "Age50_54",
     "type": "number",
     "example": "476486",
     "description": "Total population between age 50-54",
@@ -1136,7 +1102,6 @@
   "AgeOv18": {
     "title": "Population: Age 18+",
     "name": "AgeOv18",
-    "src_name": "AgeOv18",
     "type": "number",
     "example": "5661461",
     "description": "Total population at or over age 18",
@@ -1160,7 +1125,6 @@
   "DisbP": {
     "title": "% Population with Disability",
     "name": "DisbP",
-    "src_name": "DisbP",
     "type": "number",
     "example": "12.7",
     "description": "Percentage of civilian non institutionalized population with a disability",
@@ -1189,7 +1153,6 @@
   "VetP": {
     "title": "% Veteran Population",
     "name": "VetP",
-    "src_name": "VetP",
     "type": "number",
     "example": "9.58",
     "description": "Percent of population that are veterans",
@@ -1215,7 +1178,6 @@
   "NonRelFhhP": {
     "title": "% Nonrelatives in Family Households",
     "name": "NonRelFhhP",
-    "src_name": "NonRelFhhP",
     "type": "number",
     "example": "3.35",
     "description": "Percent of people living in family households that are not related to family",
@@ -1238,7 +1200,6 @@
   "NonRelNfhhP": {
     "title": "% Nonrelatives in Non-family Households",
     "name": "NonRelNfhhP",
-    "src_name": "NonRelNfhhP",
     "type": "number",
     "example": "25.61",
     "description": "Percent of people living in non-family households that are not related",
@@ -1261,7 +1222,6 @@
   "MedInc": {
     "title": "Median Income",
     "name": "MedInc",
-    "src_name": "MedInc",
     "type": "integer",
     "example": "34148",
     "description": "Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)",
@@ -1287,7 +1247,6 @@
   "PciE": {
     "title": "Per Capita Income",
     "name": "PciE",
-    "src_name": "PciE",
     "type": "integer",
     "example": "36888",
     "description": "Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)",
@@ -1313,7 +1272,6 @@
   "ForDqP": {
     "title": "Foreclosure & Delinquency %",
     "name": "ForDqP",
-    "src_name": "ForDqP",
     "type": "number",
     "example": "5.53",
     "description": "Estimated percent of mortgages to start foreclosure process or be seriously delinquent during the 2008 Recession",
@@ -1335,7 +1293,6 @@
   "ForDqTot": {
     "title": "Foreclosure & Delinquency Count",
     "name": "ForDqTot",
-    "src_name": "ForDqTot",
     "type": "number",
     "example": "48.09",
     "description": "Estimated number of mortgages to start foreclosure process or be seriously delinquent during the 2008 Recession",
@@ -1357,7 +1314,6 @@
   "GiniCoeff": {
     "title": "Income Inequality (Gini Coefficient)",
     "name": "GiniCoeff",
-    "src_name": "GiniCoeff",
     "type": "number",
     "example": "0.46",
     "description": "Income Inequality (Gini Coefficient)",
@@ -1383,7 +1339,6 @@
   "EduP": {
     "title": "Employed % - Education",
     "name": "EduP",
-    "src_name": "EduP",
     "type": "number",
     "example": "8.44",
     "description": "Percentage of population employed in educational services industry",
@@ -1406,7 +1361,6 @@
   "HghRskP": {
     "title": "Employed % - High Risk of Injury",
     "name": "HghRskP",
-    "src_name": "HghRskP",
     "type": "number",
     "example": "20",
     "description": "Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities",
@@ -1429,7 +1383,6 @@
   "HltCrP": {
     "title": "Employed % - Health Care",
     "name": "HltCrP",
-    "src_name": "HltCrP",
     "type": "number",
     "example": "13.13",
     "description": "Percentage of population employed in health care and social assistance industries",
@@ -1452,7 +1405,6 @@
   "RetailP": {
     "title": "Employed % - Retail",
     "name": "RetailP",
-    "src_name": "RetailP",
     "type": "number",
     "example": "11.7",
     "description": "Percentage of population employed in retail trade industry",
@@ -1475,7 +1427,6 @@
   "EssnWrkE": {
     "title": "Count of Essential Workers",
     "name": "EssnWrkE",
-    "src_name": "EssnWrkE",
     "type": "integer",
     "example": "1509709",
     "description": "Estimated count of population employed in essential occupations.",
@@ -1498,7 +1449,6 @@
   "EssnWrkP": {
     "title": "Essential Workers %",
     "name": "EssnWrkP",
-    "src_name": "EssnWrkP",
     "type": "number",
     "example": "42.96",
     "description": "Percentage of population employed in essential occupations.",
@@ -1521,7 +1471,6 @@
   "NoIntP": {
     "title": "Households without Internet Access %",
     "name": "NoIntP",
-    "src_name": "NoIntP",
     "type": "number",
     "example": "8.79",
     "description": "Percentage of Households without Internet access",
@@ -1544,7 +1493,6 @@
   "MobileP": {
     "title": "Mobile Homes %",
     "name": "MobileP",
-    "src_name": "MobileP",
     "type": "number",
     "example": "6.39",
     "description": "Percentage of total housing units categorized as mobile housing structures",
@@ -1567,7 +1515,6 @@
   "LngTermP": {
     "title": "Long-Term Occupancy %",
     "name": "LngTermP",
-    "src_name": "LngTermP",
     "type": "number",
     "example": "19.99",
     "description": "Percentage of population who moved into their current housing more than 20 years ago",
@@ -1590,7 +1537,6 @@
   "RentalP": {
     "title": "Rentals %",
     "name": "RentalP",
-    "src_name": "RentalP",
     "type": "number",
     "example": "37.28",
     "description": "Percentage of occupied housing units that are rented",
@@ -1613,7 +1559,6 @@
   "UnitDens": {
     "title": "Housing Unit Density",
     "name": "UnitDens",
-    "src_name": "UnitDens",
     "type": "number",
     "example": "46.11",
     "description": "Number of housing units per square mile of land area",
@@ -1636,7 +1581,6 @@
   "AreaSqMi": {
     "title": "Land Area (Square Miles)",
     "name": "AreaSqMi",
-    "src_name": "AreaSqMi",
     "type": "number",
     "example": "66452.74",
     "description": "Land area of geography in sq miles",
@@ -1659,7 +1603,6 @@
   "AlcTot": {
     "title": "Total Alcohol Outlets",
     "name": "AlcTot",
-    "src_name": "AlcTot",
     "type": "integer",
     "example": "421",
     "description": "Total number of alcohol outlets",
@@ -1682,7 +1625,6 @@
   "AlcDens": {
     "title": "Alcohol Outlets Density",
     "name": "AlcDens",
-    "src_name": "AlcDens",
     "type": "number",
     "example": "0.01",
     "description": "Number of alcohol outlets per square mile",
@@ -1705,7 +1647,6 @@
   "AlcPerCap": {
     "title": "Alcohol Outlets per Capita",
     "name": "AlcPerCap",
-    "src_name": "AlcPerCap",
     "type": "number",
     "example": "0",
     "description": "Number of alcohol outlets per capita",
@@ -1728,7 +1669,6 @@
   "DsmBlk": {
     "title": "Segregation: Dissimilarity (Black)",
     "name": "DsmBlk",
-    "src_name": "DsmBlk",
     "type": "number",
     "example": "0.42",
     "description": "Dissimilarity index for Black and non-Hispanic White residents",
@@ -1750,7 +1690,6 @@
   "IntrBlkWht": {
     "title": "Segregation: Interaction (Black)",
     "name": "IntrBlkWht",
-    "src_name": "IntrBlkWht",
     "type": "number",
     "example": "0.71",
     "description": "Interaction index for Black and non-Hispanic White residents",
@@ -1772,7 +1711,6 @@
   "IsoBlk": {
     "title": "Segregation: Isolation (Black)",
     "name": "IsoBlk",
-    "src_name": "IsoBlk",
     "type": "number",
     "example": "0.03",
     "description": "Isolation index for Black and non-Hispanic White residents",
@@ -1794,7 +1732,6 @@
   "DsmHsp": {
     "title": "Segregation: Dissimilarity (Hispanic)",
     "name": "DsmHsp",
-    "src_name": "DsmHsp",
     "type": "number",
     "example": "0.28",
     "description": "Dissimilarity index for Hispanic and non-Hispanic White residents",
@@ -1816,7 +1753,6 @@
   "IntrHspWht": {
     "title": "Segregation: Interaction (Hispanic)",
     "name": "IntrHspWht",
-    "src_name": "IntrHspWht",
     "type": "number",
     "example": "0.71",
     "description": "Interaction index for Hispanic and non-Hispanic White residents",
@@ -1838,7 +1774,6 @@
   "IsoHsp": {
     "title": "Segregation: Isolation (Hispanic)",
     "name": "IsoHsp",
-    "src_name": "IsoHsp",
     "type": "number",
     "example": "0.19",
     "description": "Isolation index for Hispanic and non-Hispanic White residents",
@@ -1860,7 +1795,6 @@
   "DsmAs": {
     "title": "Segregation: Dissimilarity (Asian)",
     "name": "DsmAs",
-    "src_name": "DsmAs",
     "type": "number",
     "example": "0.33",
     "description": "Dissimilarity index for Asian and non-Hispanic White residents",
@@ -1882,7 +1816,6 @@
   "IntrAsWht": {
     "title": "Segregation: Interaction (Asian)",
     "name": "IntrAsWht",
-    "src_name": "IntrAsWht",
     "type": "number",
     "example": "0.75",
     "description": "Area (in square meters) of park or green space in a state).",
@@ -1904,7 +1837,6 @@
   "IsoAs": {
     "title": "Segregation: Isolation (Asian)",
     "name": "IsoAs",
-    "src_name": "IsoAs",
     "type": "number",
     "example": "0.04",
     "description": "Isolation index for Asian and non-Hispanic White residents",
@@ -1926,7 +1858,6 @@
   "Ndvi": {
     "title": "NDVI Average",
     "name": "Ndvi",
-    "src_name": "Ndvi",
     "type": "number",
     "example": "0.06",
     "description": "Average normalized difference vegetation index, a measure of greenness used to determine the amount of vegetation in an area, value from all pixel values in each Census tract",
@@ -1949,7 +1880,6 @@
   "ParkArea": {
     "title": "Park Area",
     "name": "ParkArea",
-    "src_name": "ParkArea",
     "type": "number",
     "example": "39296898972.47",
     "description": "Area (in square meters) of park or green space in a state).",
@@ -1969,7 +1899,6 @@
   "StateArea": {
     "title": "State Area",
     "name": "StateArea",
-    "src_name": "StateArea",
     "type": "number",
     "example": "4486028684.18",
     "description": "Area (in square meters) of state",
@@ -1989,7 +1918,6 @@
   "Cover": {
     "title": "Greenspace Coverage",
     "name": "Cover",
-    "src_name": "Cover",
     "type": "number",
     "example": "8.76",
     "description": "Percent of state covered by park or green space",
@@ -2009,7 +1937,6 @@
   "TotTracts": {
     "title": "Total Census Tract Count",
     "name": "TotTracts",
-    "src_name": "TotTracts",
     "type": "integer",
     "example": "1458",
     "description": "Total number of census tracts within the state.",
@@ -2030,7 +1957,6 @@
   "CntBupT": {
     "title": "Tracts with Buprenorphine Provider (30-min driving)",
     "name": "CntBupT",
-    "src_name": "CntBupT",
     "type": "integer",
     "example": "1400",
     "description": "Number of tracts with buprenorphine provider within a 30-min driving range",
@@ -2050,7 +1976,6 @@
   "CntMetT": {
     "title": "Tracts with Methadone Provider (30-min driving)",
     "name": "CntMetT",
-    "src_name": "CntMetT",
     "type": "integer",
     "example": "996",
     "description": "Number of tracts with methadone provider within a 30-min driving range",
@@ -2070,7 +1995,6 @@
   "CntNalT": {
     "title": "Tracts with Naltrexone Provider (30-min driving)",
     "name": "CntNalT",
-    "src_name": "CntNalT",
     "type": "integer",
     "example": "1323",
     "description": "Number of tracts within 30 -min of naltrexone driving range",
@@ -2090,7 +2014,6 @@
   "AvBupTime": {
     "title": "Driving Time to Buprenorphine Provider (driving time across all tracts)",
     "name": "AvBupTime",
-    "src_name": "AvBupTime",
     "type": "number",
     "example": "6.9",
     "description": "Average driving time (minutes) across tracts in state to nearest buprenorphine provider.",
@@ -2110,7 +2033,6 @@
   "AvMetTime": {
     "title": "Driving Time to Methadone Provider (driving time across all tracts)",
     "name": "AvMetTime",
-    "src_name": "AvMetTime",
     "type": "number",
     "example": "29.15",
     "description": "Average driving time (minutes) across tracts in state to nearest methadone provider.",
@@ -2130,7 +2052,6 @@
   "AvNalTime": {
     "title": "Driving Time to Naltrexone Provider (driving time across all tracts)",
     "name": "AvNalTime",
-    "src_name": "AvNalTime",
     "type": "number",
     "example": "11.68",
     "description": "Average driving time (minutes) across tracts in state to nearest naltrexone provider.",
@@ -2150,7 +2071,6 @@
   "PctBupT": {
     "title": "% Tracts within 30-min Drive of Buprenorphine Provider",
     "name": "PctBupT",
-    "src_name": "PctBupT",
     "type": "number",
     "example": "0.96",
     "description": "Percent of tracts with buprenorphine provider within a 30-min driving range",
@@ -2170,7 +2090,6 @@
   "PctMetT": {
     "title": "% Tracts within 30-min Drive of Methadone Provider",
     "name": "PctMetT",
-    "src_name": "PctMetT",
     "type": "number",
     "example": "0.68",
     "description": "Percent of tracts with methadone provider within a 30-min driving range",
@@ -2190,7 +2109,6 @@
   "PctNalT": {
     "title": "% Tracts within 30-min Drive of Naltrexone Provider",
     "name": "PctNalT",
-    "src_name": "PctNalT",
     "type": "number",
     "example": "0.91",
     "description": "Percent of tracts with naltrexone provider within a 30-min driving range",
@@ -2210,7 +2128,6 @@
   "FqhcCtTmDr": {
     "title": "Tracts with Federally Qualified Health Center (30-min driving)",
     "name": "FqhcCtTmDr",
-    "src_name": "FqhcCtTmDr",
     "type": "integer",
     "example": "1359",
     "description": "Number of tracts with Federally Qualified Health Center within a 30-min driving range",
@@ -2231,7 +2148,6 @@
   "FqhcAvTmDr": {
     "title": "Driving Time to nearest Federally Qualified Health Center",
     "name": "FqhcAvTmDr",
-    "src_name": "FqhcAvTmDr",
     "type": "number",
     "example": "10.65",
     "description": "Average driving time (minutes) across tracts in state to nearest Federally Qualified Health Center",
@@ -2252,7 +2168,6 @@
   "FqhcTmDrP": {
     "title": "% tracts within 30-min drive of Federally Qualified Health Center",
     "name": "FqhcTmDrP",
-    "src_name": "FqhcTmDrP",
     "type": "number",
     "example": "0.93",
     "description": "Percent of tracts with Federally Qualified Health Center within a 30-min driving range.",
@@ -2273,7 +2188,6 @@
   "HospCtTmDr": {
     "title": "Tracts with Hospital (30-min drive)",
     "name": "HospCtTmDr",
-    "src_name": "HospCtTmDr",
     "type": "integer",
     "example": "1334",
     "description": "Number of tracts with hospital within a 30-min driving range",
@@ -2294,7 +2208,6 @@
   "HospAvTmDr": {
     "title": "Avg. Driving Time to nearest Hospital",
     "name": "HospAvTmDr",
-    "src_name": "HospAvTmDr",
     "type": "number",
     "example": "13.13",
     "description": "Average driving time (minutes) across tracts in state to nearest hospital.",
@@ -2315,7 +2228,6 @@
   "HospTmDrP": {
     "title": "% Tracts within 30-min Drive of Hospital",
     "name": "HospTmDrP",
-    "src_name": "HospTmDrP",
     "type": "number",
     "example": "0.92",
     "description": "Percent of tracts with hospital within a 30-mini driving range",
@@ -2336,7 +2248,6 @@
   "RxCtTmDr": {
     "title": "Tracts with Pharmacy (30-min drive)",
     "name": "RxCtTmDr",
-    "src_name": "RxCtTmDr",
     "type": "integer",
     "example": "1406",
     "description": "Number of tracts with pharmacy within a 30-min driving range",
@@ -2357,7 +2268,6 @@
   "RxAvTmDr": {
     "title": "Avg. Driving Time (min) to nearest Pharmacy ",
     "name": "RxAvTmDr",
-    "src_name": "RxAvTmDr",
     "type": "number",
     "example": "5.97",
     "description": "Average driving time (minutes) across tracts in state to nearest pharmacy.",
@@ -2378,7 +2288,6 @@
   "RxTmDrP": {
     "title": "% tracts with Pharmacy (30-min drive)",
     "name": "RxTmDrP",
-    "src_name": "RxTmDrP",
     "type": "number",
     "example": "0.96",
     "description": "Percent of tracts with pharmacy within a 30-min driving range",
@@ -2399,7 +2308,6 @@
   "MhCtTmDr": {
     "title": "Tracts with Mental Health Provider (30-min drive)",
     "name": "MhCtTmDr",
-    "src_name": "MhCtTmDr",
     "type": "integer",
     "example": "1342",
     "description": "Number of tracts with a mental health provider within a 30-min driving range.",
@@ -2420,7 +2328,6 @@
   "MhAvTmDr": {
     "title": "Driving Time (min) to nearest Mental Health Provider",
     "name": "MhAvTmDr",
-    "src_name": "MhAvTmDr",
     "type": "number",
     "example": "11.42",
     "description": "Average driving time (minutes) across tracts in state to nearest mental health provider.",
@@ -2441,7 +2348,6 @@
   "MhTmDrP": {
     "title": "% Tracts with Mental Health Provider (30-min drive)",
     "name": "MhTmDrP",
-    "src_name": "MhTmDrP",
     "type": "number",
     "example": "0.92",
     "description": "Percent of tracts with a mental health provider within a 30-min driving range.",
@@ -2462,7 +2368,6 @@
   "SutpCtTmDr": {
     "title": "Tracts with Substance Use Treatment (SUT) program (30-min drive)",
     "name": "SutpCtTmDr",
-    "src_name": "SutpCtTmDr",
     "type": "integer",
     "example": "1364",
     "description": "Number of tracts with Substance Use Treatment within a 30-min driving range.",
@@ -2483,7 +2388,6 @@
   "SutpAvTmDr": {
     "title": "Driving Time (min) to nearest Substance Use Treatment program",
     "name": "SutpAvTmDr",
-    "src_name": "SutpAvTmDr",
     "type": "number",
     "example": "9.96",
     "description": "Average driving time (minutes) across tracts in state to nearest Substance Use Treatment program.",
@@ -2504,7 +2408,6 @@
   "SutpTmDrP": {
     "title": "% tracts with Substance Use Treatment program (30-min drive)",
     "name": "SutpTmDrP",
-    "src_name": "SutpTmDrP",
     "type": "number",
     "example": "0.94",
     "description": "Percent of tracts with Substance Use Treatment program within a 30-minute driving range.",
@@ -2525,7 +2428,6 @@
   "OtpCtTmDr": {
     "title": "Tracts with Opioid Treatment Program (OTP) (30-min drive)",
     "name": "OtpCtTmDr",
-    "src_name": "OtpCtTmDr",
     "type": "integer",
     "example": "1092",
     "description": "Number of tracts within 30-min of opioid treatment program driving range",
@@ -2546,7 +2448,6 @@
   "OtpAvTmDr": {
     "title": "Driving Time (min) to nearest Opioid Treatment Program (OTP)",
     "name": "OtpAvTmDr",
-    "src_name": "OtpAvTmDr",
     "type": "number",
     "example": "24.18",
     "description": "Average driving time (minutes) across tracts to nearest opioid treatment program.",
@@ -2567,7 +2468,6 @@
   "OtpTmDrP": {
     "title": "% Tracts with Opioid Treatment Program (OTP) (30-min drive)",
     "name": "OtpTmDrP",
-    "src_name": "OtpTmDrP",
     "type": "number",
     "example": "0.75",
     "description": "Percent of tracts within a 30-minute drive time of an opioid treatment program.",
@@ -2588,7 +2488,6 @@
   "TotHcv": {
     "title": "Yearly Hepatitis C cases (2013-2016)",
     "name": "TotHcv",
-    "src_name": "TotHcv",
     "type": "number",
     "example": "54200",
     "description": "Mean total yearly Hepitatis C cases from 2013-2016",
@@ -2608,7 +2507,6 @@
   "MlHcv": {
     "title": "Yearly Hepatitis C cases - Men (2013-2016)",
     "name": "MlHcv",
-    "src_name": "MlHcv",
     "type": "number",
     "example": "37500",
     "description": "Mean yearly Hepatitis C cases in men from 2013-2016",
@@ -2628,7 +2526,6 @@
   "FmHcv": {
     "title": "Yearly Hepatitis C cases - Women (2013-2016)",
     "name": "FmHcv",
-    "src_name": "FmHcv",
     "type": "number",
     "example": "16900",
     "description": "Mean yearly Hepatitis C cases in women from 2013-2016",
@@ -2648,7 +2545,6 @@
   "Un50Hcv": {
     "title": "Yearly Hepatitis C cases - Under 50 years old (2013-2016)",
     "name": "Un50Hcv",
-    "src_name": "Un50Hcv",
     "type": "number",
     "example": "9400",
     "description": "Mean yearly Hepatatis C cases in people under 50 years of age from 2013-2016",
@@ -2668,7 +2564,6 @@
   "A50_74Hcv": {
     "title": "Yearly Hepatitis C cases - 50 to 74 years old (2013-2016)",
     "name": "A50_74Hcv",
-    "src_name": "A50_74Hcv",
     "type": "number",
     "example": "43300",
     "description": "Mean yearly Hepatitis C cases in people between 50 to 74 years of age from 2013-2016",
@@ -2688,7 +2583,6 @@
   "Ov75Hcv": {
     "title": "Yearly Hepatitis C cases - Over 75 years old (2013-2016)",
     "name": "Ov75Hcv",
-    "src_name": "Ov75Hcv",
     "type": "number",
     "example": "1600",
     "description": "Mean yearly Hepatitis C cases in people over 75 years of age from 2013-2016",
@@ -2708,7 +2602,6 @@
   "BlkHcv": {
     "title": "Yearly Hepatitis C cases - Black (2013-2016)",
     "name": "BlkHcv",
-    "src_name": "BlkHcv",
     "type": "number",
     "example": "5600",
     "description": "Mean yearly Hepatitis C cases in populations identified as non-hispanic Black alone across 2013-2016",
@@ -2728,7 +2621,6 @@
   "NonBlkHcv": {
     "title": "Yearly Hepatitis C cases - non-Black (2013-2016)",
     "name": "NonBlkHcv",
-    "src_name": "NonBlkHcv",
     "type": "number",
     "example": "49000",
     "description": "Mean yearly Hepatitis C cases in populations non-Black other race/ethnicity populations 2013-2016",
@@ -2748,7 +2640,6 @@
   "HcvD13": {
     "title": "Hepatitis C Deaths (2013)",
     "name": "HcvD13",
-    "src_name": "HcvD13",
     "type": "integer",
     "example": "592",
     "description": "Total Hepatitis C deaths in 2013",
@@ -2768,7 +2659,6 @@
   "MlHcvD13": {
     "title": "Hepatitis C Deaths - Men (2013)",
     "name": "MlHcvD13",
-    "src_name": "MlHcvD13",
     "type": "integer",
     "example": "417",
     "description": "Hepatitis C deaths among men in 2013",
@@ -2788,7 +2678,6 @@
   "FlHcvD13": {
     "title": "Hepatitis C Deaths - Women (2013)",
     "name": "FlHcvD13",
-    "src_name": "FlHcvD13",
     "type": "integer",
     "example": "175",
     "description": "Hepatitis C deaths among women in 2013",
@@ -2808,7 +2697,6 @@
   "AmInHcvD13": {
     "title": "Hepatitis C Deaths - American Indian (2013)",
     "name": "AmInHcvD13",
-    "src_name": "AmInHcvD13",
     "type": "integer",
     "example": "20",
     "description": "Hepatitis C deaths among American Indian populations in 2013",
@@ -2828,7 +2716,6 @@
   "AsPiHcvD13": {
     "title": "Hepatitis C Deaths - Asian & Pacific Islander (2013)",
     "name": "AsPiHcvD13",
-    "src_name": "AsPiHcvD13",
     "type": "integer",
     "example": "29",
     "description": "Hepatitis C deaths among Asian and Pacific Islander populations in 2013",
@@ -2848,7 +2735,6 @@
   "BlkHcvD13": {
     "title": "Hepatitis C Deaths - Black (2013)",
     "name": "BlkHcvD13",
-    "src_name": "BlkHcvD13",
     "type": "integer",
     "example": "48",
     "description": "Hepatitis C deaths among Black population in 2013",
@@ -2868,7 +2754,6 @@
   "HspHcvD13": {
     "title": "Hepatitis C Deaths - Hispanic (2013)",
     "name": "HspHcvD13",
-    "src_name": "HspHcvD13",
     "type": "integer",
     "example": "32",
     "description": "Hepatitis C deaths among hispanic populations in 2013",
@@ -2888,7 +2773,6 @@
   "U50HcvD13": {
     "title": "Hepatitis C Deaths - Under 50 years old (2013)",
     "name": "U50HcvD13",
-    "src_name": "U50HcvD13",
     "type": "integer",
     "example": "40",
     "description": "Hepatitis C deaths in populations under 50 years of age in 2013",
@@ -2908,7 +2792,6 @@
   "A50_74HcvD13": {
     "title": "Hepatitis C Deaths - 50 to 74 years old (2013)",
     "name": "A50_74HcvD13",
-    "src_name": "A50_74HcvD13",
     "type": "integer",
     "example": "515",
     "description": "Hepatitis C deaths among populations between 50 and 74 years of age in 2013",
@@ -2928,7 +2811,6 @@
   "O75HcvD13": {
     "title": "Hepatitis C Deaths - Over 75 years old (2013)",
     "name": "O75HcvD13",
-    "src_name": "O75HcvD13",
     "type": "integer",
     "example": "17",
     "description": "Hepatitis C deaths among populations over 75 years of age in 2013",
@@ -2948,7 +2830,6 @@
   "HcvD14": {
     "title": "Hepatitis C Deaths (2014)",
     "name": "HcvD14",
-    "src_name": "HcvD14",
     "type": "integer",
     "example": "644",
     "description": "Total Hepatitis C deaths in 2014",
@@ -2968,7 +2849,6 @@
   "MlHcvD14": {
     "title": "Hepatitis C Deaths - Men (2014)",
     "name": "MlHcvD14",
-    "src_name": "MlHcvD14",
     "type": "integer",
     "example": "438",
     "description": "Hepatitis C deaths among men in 2014",
@@ -2988,7 +2868,6 @@
   "FlHcvD14": {
     "title": "Hepatitis C Deaths - Women (2014)",
     "name": "FlHcvD14",
-    "src_name": "FlHcvD14",
     "type": "integer",
     "example": "206",
     "description": "Hepatitis C deaths among women in 2014",
@@ -3008,7 +2887,6 @@
   "AmInHcvD14": {
     "title": "Hepatitis C Deaths - American Indian (2014)",
     "name": "AmInHcvD14",
-    "src_name": "AmInHcvD14",
     "type": "integer",
     "example": "27",
     "description": "Hepatitis C deaths among American Indian populations in 2014",
@@ -3028,7 +2906,6 @@
   "AsPiHcvD14": {
     "title": "Hepatitis C Deaths - Asian & Pacific Islander (2014)",
     "name": "AsPiHcvD14",
-    "src_name": "AsPiHcvD14",
     "type": "integer",
     "example": "25",
     "description": "Hepatitis C deaths among Asian and Pacific Islander populations in 2014",
@@ -3048,7 +2925,6 @@
   "BlkHcvD14": {
     "title": "Hepatitis C Deaths - Black (2014)",
     "name": "BlkHcvD14",
-    "src_name": "BlkHcvD14",
     "type": "integer",
     "example": "38",
     "description": "Hepatitis C deaths among Black population in 2014",
@@ -3068,7 +2944,6 @@
   "HspHcvD14": {
     "title": "Hepatitis C Deaths - Hispanic (2014)",
     "name": "HspHcvD14",
-    "src_name": "HspHcvD14",
     "type": "integer",
     "example": "41",
     "description": "Hepatitis C deaths among hispanic populations in 2014",
@@ -3088,7 +2963,6 @@
   "U50HcvD14": {
     "title": "Hepatitis C Deaths - Under 50 years old (2014)",
     "name": "U50HcvD14",
-    "src_name": "U50HcvD14",
     "type": "integer",
     "example": "34",
     "description": "Hepatitis C deaths in populations under 50 years of age in 2014",
@@ -3108,7 +2982,6 @@
   "A50_74HcvD14": {
     "title": "Hepatitis C Deaths - 50 to 74 years old (2014)",
     "name": "A50_74HcvD14",
-    "src_name": "A50_74HcvD14",
     "type": "integer",
     "example": "546",
     "description": "Hepatitis C deaths among populations between 50 and 74 years of age in 2014",
@@ -3128,7 +3001,6 @@
   "O75HcvD14": {
     "title": "Hepatitis C Deaths - Over 75 years old (2014)",
     "name": "O75HcvD14",
-    "src_name": "O75HcvD14",
     "type": "integer",
     "example": "34",
     "description": "Hepatitis C deaths among populations over 75 years of age in 2014",
@@ -3148,7 +3020,6 @@
   "HcvD15": {
     "title": "Hepatitis C Deaths (2015)",
     "name": "HcvD15",
-    "src_name": "HcvD15",
     "type": "integer",
     "example": "651",
     "description": "Total Hepatitis C deaths in 2015",
@@ -3168,7 +3039,6 @@
   "MlHcvD15": {
     "title": "Hepatitis C Deaths - Men (2015)",
     "name": "MlHcvD15",
-    "src_name": "MlHcvD15",
     "type": "integer",
     "example": "462",
     "description": "Hepatitis C deaths among men in 2015",
@@ -3188,7 +3058,6 @@
   "FlHcvD15": {
     "title": "Hepatitis C Deaths - Women (2015)",
     "name": "FlHcvD15",
-    "src_name": "FlHcvD15",
     "type": "integer",
     "example": "189",
     "description": "Hepatitis C deaths among women in 2015",
@@ -3208,7 +3077,6 @@
   "AmInHcvD15": {
     "title": "Hepatitis C Deaths - American Indian (2015)",
     "name": "AmInHcvD15",
-    "src_name": "AmInHcvD15",
     "type": "integer",
     "example": "21",
     "description": "Hepatitis C deaths among American Indian populations in 2015",
@@ -3228,7 +3096,6 @@
   "AsPiHcvD15": {
     "title": "Hepatitis C Deaths - Asian & Pacific Islander (2015)",
     "name": "AsPiHcvD15",
-    "src_name": "AsPiHcvD15",
     "type": "integer",
     "example": "27",
     "description": "Hepatitis C deaths among Asian and Pacific Islander populations in 2015",
@@ -3248,7 +3115,6 @@
   "BlkHcvD15": {
     "title": "Hepatitis C Deaths - Black (2015)",
     "name": "BlkHcvD15",
-    "src_name": "BlkHcvD15",
     "type": "integer",
     "example": "48",
     "description": "Hepatitis C deaths among Black population in 2015",
@@ -3268,7 +3134,6 @@
   "HspHcvD15": {
     "title": "Hepatitis C Deaths - Hispanic (2015)",
     "name": "HspHcvD15",
-    "src_name": "HspHcvD15",
     "type": "integer",
     "example": "37",
     "description": "Hepatitis C deaths among hispanic populations in 2015",
@@ -3288,7 +3153,6 @@
   "U50HcvD15": {
     "title": "Hepatitis C Deaths - Under 50 years old (2015)",
     "name": "U50HcvD15",
-    "src_name": "U50HcvD15",
     "type": "integer",
     "example": "25",
     "description": "Hepatitis C deaths in populations under 50 years of age in 2015",
@@ -3308,7 +3172,6 @@
   "D50_74Hcv15": {
     "title": "Hepatitis C Deaths - 50 to 74 years old (2015)",
     "name": "D50_74Hcv15",
-    "src_name": "D50_74Hcv15",
     "type": "integer",
     "example": "568",
     "description": "Hepatitis C deaths among populations between 50 and 74 years of age in 2015",
@@ -3328,7 +3191,6 @@
   "O75HcvD15": {
     "title": "Hepatitis C Deaths - Over 75 years old (2015)",
     "name": "O75HcvD15",
-    "src_name": "O75HcvD15",
     "type": "integer",
     "example": "46",
     "description": "Hepatitis C deaths among populations over 75 years of age in 2015",
@@ -3348,7 +3210,6 @@
   "HcvD16": {
     "title": "Hepatitis C Deaths (2016)",
     "name": "HcvD16",
-    "src_name": "HcvD16",
     "type": "integer",
     "example": "517",
     "description": "Total Hepatitis C deaths in 2016",
@@ -3368,7 +3229,6 @@
   "MlHcvD16": {
     "title": "Hepatitis C Deaths - Men (2016)",
     "name": "MlHcvD16",
-    "src_name": "MlHcvD16",
     "type": "integer",
     "example": "354",
     "description": "Hepatitis C deaths among men in 2016",
@@ -3388,7 +3248,6 @@
   "FlHcvD16": {
     "title": "Hepatitis C Deaths - Women (2016)",
     "name": "FlHcvD16",
-    "src_name": "FlHcvD16",
     "type": "integer",
     "example": "163",
     "description": "Hepatitis C deaths among women in 2016",
@@ -3408,7 +3267,6 @@
   "AmInHcvD16": {
     "title": "Hepatitis C Deaths - American Indian (2016)",
     "name": "AmInHcvD16",
-    "src_name": "AmInHcvD16",
     "type": "integer",
     "example": "24",
     "description": "Hepatitis C deaths among American Indian populations in 2016",
@@ -3428,7 +3286,6 @@
   "AsPiHcvD16": {
     "title": "Hepatitis C Deaths - Asian & Pacific Islander (2016)",
     "name": "AsPiHcvD16",
-    "src_name": "AsPiHcvD16",
     "type": "integer",
     "example": "24",
     "description": "Hepatitis C deaths among Asian and Pacific Islander populations in 2016",
@@ -3448,7 +3305,6 @@
   "BlkHcvD16": {
     "title": "Hepatitis C Deaths - Black (2016)",
     "name": "BlkHcvD16",
-    "src_name": "BlkHcvD16",
     "type": "integer",
     "example": "38",
     "description": "Hepatitis C deaths among Black population in 2016",
@@ -3468,7 +3324,6 @@
   "HspHcvD16": {
     "title": "Hepatitis C Deaths - Hispanic (2016)",
     "name": "HspHcvD16",
-    "src_name": "HspHcvD16",
     "type": "integer",
     "example": "27",
     "description": "Hepatitis C deaths among hispanic populations in 2016",
@@ -3488,7 +3343,6 @@
   "U50HcvD16": {
     "title": "Hepatitis C Deaths - Under 50 years old (2016)",
     "name": "U50HcvD16",
-    "src_name": "U50HcvD16",
     "type": "integer",
     "example": "17",
     "description": "Hepatitis C deaths in populations under 50 years of age in 2016",
@@ -3508,7 +3362,6 @@
   "A50_74HcvD16": {
     "title": "Hepatitis C Deaths - 50 to 74 years old (2016)",
     "name": "A50_74HcvD16",
-    "src_name": "A50_74HcvD16",
     "type": "integer",
     "example": "453",
     "description": "Hepatitis C deaths among populations between 50 and 74 years of age in 2016",
@@ -3528,7 +3381,6 @@
   "O75HcvD16": {
     "title": "Hepatitis C Deaths - Over 75 years old (2016)",
     "name": "O75HcvD16",
-    "src_name": "O75HcvD16",
     "type": "integer",
     "example": "26",
     "description": "Hepatitis C deaths among populations over 75 years of age in 2016",
@@ -3548,7 +3400,6 @@
   "HcvD17": {
     "title": "Hepatitis C Deaths (2017)",
     "name": "HcvD17",
-    "src_name": "HcvD17",
     "type": "integer",
     "example": "528",
     "description": "Total Hepatitis C deaths in 2017",
@@ -3568,7 +3419,6 @@
   "MlHcvD17": {
     "title": "Hepatitis C Deaths - Men (2017)",
     "name": "MlHcvD17",
-    "src_name": "MlHcvD17",
     "type": "integer",
     "example": "375",
     "description": "Hepatitis C deaths among men in 2017",
@@ -3588,7 +3438,6 @@
   "FlHcvD17": {
     "title": "Hepatitis C Deaths - Women (2017)",
     "name": "FlHcvD17",
-    "src_name": "FlHcvD17",
     "type": "integer",
     "example": "153",
     "description": "Hepatitis C deaths among women in 2017",
@@ -3608,7 +3457,6 @@
   "AmInHcvD17": {
     "title": "Hepatitis C Deaths - American Indian (2017)",
     "name": "AmInHcvD17",
-    "src_name": "AmInHcvD17",
     "type": "integer",
     "example": "26",
     "description": "Hepatitis C deaths among American Indian populations in 2017",
@@ -3628,7 +3476,6 @@
   "AsPiHcvD17": {
     "title": "Hepatitis C Deaths - Asian & Pacific Islander (2017)",
     "name": "AsPiHcvD17",
-    "src_name": "AsPiHcvD17",
     "type": "integer",
     "example": "17",
     "description": "Hepatitis C deaths among Asian and Pacific Islander populations in 2017",
@@ -3648,7 +3495,6 @@
   "BlkHcvD17": {
     "title": "Hepatitis C Deaths - Black (2017)",
     "name": "BlkHcvD17",
-    "src_name": "BlkHcvD17",
     "type": "integer",
     "example": "39",
     "description": "Hepatitis C deaths among Black population in 2017",
@@ -3668,7 +3514,6 @@
   "HspHcvD17": {
     "title": "Hepatitis C Deaths - Hispanic (2017)",
     "name": "HspHcvD17",
-    "src_name": "HspHcvD17",
     "type": "integer",
     "example": "35",
     "description": "Hepatitis C deaths among hispanic populations in 2017",
@@ -3688,7 +3533,6 @@
   "U50HcvD17": {
     "title": "Hepatitis C Deaths - Under 50 years old (2017)",
     "name": "U50HcvD17",
-    "src_name": "U50HcvD17",
     "type": "integer",
     "example": "17",
     "description": "Hepatitis C deaths in populations under 50 years of age in 2017",
@@ -3708,7 +3552,6 @@
   "A50_74HcvD17": {
     "title": "Hepatitis C Deaths - 50 to 74 years old (2017)",
     "name": "A50_74HcvD17",
-    "src_name": "A50_74HcvD17",
     "type": "integer",
     "example": "472",
     "description": "Hepatitis C deaths among populations between 50 and 74 years of age in 2017",
@@ -3728,7 +3571,6 @@
   "O75HcvD17": {
     "title": "Hepatitis C Deaths - Over 75 years old (2016)",
     "name": "O75HcvD17",
-    "src_name": "O75HcvD17",
     "type": "integer",
     "example": "12",
     "description": "Hepatitis C deaths among populations over 75 years of age in 2017",
@@ -3748,7 +3590,6 @@
   "AvHcvD": {
     "title": "Hepatitis C Deaths (2013 - 2017)",
     "name": "AvHcvD",
-    "src_name": "AvHcvD",
     "type": "number",
     "example": "586.4",
     "description": "Mean total yearly Hepatitis C deaths from 2013-2017",
@@ -3768,7 +3609,6 @@
   "AvMlHcvD": {
     "title": "Hepatitis C Deaths - Men (2013 - 2017)",
     "name": "AvMlHcvD",
-    "src_name": "AvMlHcvD",
     "type": "number",
     "example": "409.2",
     "description": "Mean yearly Hepatitis C deaths among men from 2013-2017",
@@ -3788,7 +3628,6 @@
   "AvFlHcvD": {
     "title": "Hepatitis C Deaths - Women (2013 - 2017)",
     "name": "AvFlHcvD",
-    "src_name": "AvFlHcvD",
     "type": "number",
     "example": "177.2",
     "description": "Mean yearly Hepatitis C deaths among women from 2013-2017",
@@ -3808,7 +3647,6 @@
   "AvAmInHcvD": {
     "title": "Hepatitis C Deaths - American Indian (2013 - 2017)",
     "name": "AvAmInHcvD",
-    "src_name": "AvAmInHcvD",
     "type": "number",
     "example": "23.6",
     "description": "Mean yearly Hepatitis C deaths among American Indian population from 2013-2017",
@@ -3828,7 +3666,6 @@
   "AvAsPiHcvD": {
     "title": "Hepatitis C Deaths - Asian & Pacific Islander (2013 - 2017)",
     "name": "AvAsPiHcvD",
-    "src_name": "AvAsPiHcvD",
     "type": "number",
     "example": "24.4",
     "description": "Mean yearly Hepatitis C deaths among Asian and Pacific Islanders population from 2013-2017",
@@ -3848,7 +3685,6 @@
   "AvBlkHcvD": {
     "title": "Hepatitis C Deaths - Black (2013 - 2017)",
     "name": "AvBlkHcvD",
-    "src_name": "AvBlkHcvD",
     "type": "number",
     "example": "42.2",
     "description": "Mean yearly Hepatitis C deaths among Black populations from 2013-2017",
@@ -3868,7 +3704,6 @@
   "AvHspHcvD": {
     "title": "Hepatitis C Deaths - Hispanic (2013 - 2017)",
     "name": "AvHspHcvD",
-    "src_name": "AvHspHcvD",
     "type": "number",
     "example": "34.4",
     "description": "Mean yearly Hepatitis C deaths among Hispanic populations from 2013-2017",
@@ -3888,7 +3723,6 @@
   "AvU50HcvD": {
     "title": "Hepatitis C Deaths - Age Under 50 (2013 - 2017)",
     "name": "AvU50HcvD",
-    "src_name": "AvU50HcvD",
     "type": "number",
     "example": "26.6",
     "description": "Mean yearly Hepatitis C deaths among people under 50 years of age from 2013-2017",
@@ -3908,7 +3742,6 @@
   "Av50_74HcvD": {
     "title": "Hepatitis C Deaths - Age 50 to 74 (2013 - 2017)",
     "name": "Av50_74HcvD",
-    "src_name": "Av50_74HcvD",
     "type": "number",
     "example": "510.8",
     "description": "Mean yearly Hepatitis C deaths among people between 50 and 74 years of age from 2013-2017",
@@ -3928,7 +3761,6 @@
   "AvO75HcvD": {
     "title": "Hepatitis C Deaths - Age Over 75  (2013 - 2017)",
     "name": "AvO75HcvD",
-    "src_name": "AvO75HcvD",
     "type": "number",
     "example": "27",
     "description": "Mean yearly Hepatitis C deaths among people over 75 years of age",
@@ -3948,7 +3780,6 @@
   "TotPcp": {
     "title": "Count of Primary Care Physicians (PCPs)",
     "name": "TotPcp",
-    "src_name": "TotPcp",
     "type": "integer",
     "example": "5904",
     "description": "Number of primary care providers in area",
@@ -3970,7 +3801,6 @@
   "TotSp": {
     "title": "Count of Specialty Physicians",
     "name": "TotSp",
-    "src_name": "TotSp",
     "type": "integer",
     "example": "9499",
     "description": "Number of specialty physicians in area",
@@ -3992,7 +3822,6 @@
   "OpRxRt20": {
     "title": "Opioid Prescription Rate (2020)",
     "name": "OpRxRt20",
-    "src_name": "OpRxRt20",
     "type": "number",
     "example": "39.5",
     "description": "Opioid prescription rate in 2020",
@@ -4013,7 +3842,6 @@
   "PrMsuse20P": {
     "title": "% Self-Report Misuse of Prescription Pain Medication (2020)",
     "name": "PrMsuse20P",
-    "src_name": "PrMsuse20P",
     "type": "number",
     "example": "4.15",
     "description": "Percent of persons who self-report misusing prescription pain relief medication in 2020.",
@@ -4033,7 +3861,6 @@
   "OdMortRt14": {
     "title": "Opioid Mortality Rate (2014)",
     "name": "OdMortRt14",
-    "src_name": "OdMortRt14",
     "type": "number",
     "example": "13.3",
     "description": "Overdose mortality rate in 2014",
@@ -4054,7 +3881,6 @@
   "OdMortRt15": {
     "title": "Opioid Mortality Rate (2015)",
     "name": "OdMortRt15",
-    "src_name": "OdMortRt15",
     "type": "number",
     "example": "14.7",
     "description": "Overdose mortality rate in 2015",
@@ -4075,7 +3901,6 @@
   "OdMortRt16": {
     "title": "Opioid Mortality Rate (2016)",
     "name": "OdMortRt16",
-    "src_name": "OdMortRt16",
     "type": "number",
     "example": "14.5",
     "description": "Overdose mortality rate in 2016",
@@ -4096,7 +3921,6 @@
   "OdMortRt17": {
     "title": "Opioid Mortality Rate (2017)",
     "name": "OdMortRt17",
-    "src_name": "OdMortRt17",
     "type": "number",
     "example": "15.2",
     "description": "Overdose mortality rate in 2017",
@@ -4117,7 +3941,6 @@
   "OdMortRt18": {
     "title": "Opioid Mortality Rate (2018)",
     "name": "OdMortRt18",
-    "src_name": "OdMortRt18",
     "type": "number",
     "example": "35.4",
     "description": "Overdose mortality rate in 2018",
@@ -4138,7 +3961,6 @@
   "OdMortRt19": {
     "title": "Opioid Mortality Rate (2019)",
     "name": "OdMortRt19",
-    "src_name": "OdMortRt19",
     "type": "number",
     "example": "15.8",
     "description": "Overdose mortality rate in 2019",
@@ -4159,7 +3981,6 @@
   "OdMortRt20": {
     "title": "Opioid Mortality Rate (2020)",
     "name": "OdMortRt20",
-    "src_name": "OdMortRt20",
     "type": "number",
     "example": "22",
     "description": "Overdose mortality rate in 2020",
@@ -4180,7 +4001,6 @@
   "OdMortRtAv": {
     "title": "Opioid Mortality Rate",
     "name": "OdMortRtAv",
-    "src_name": "OdMortRtAv",
     "type": "number",
     "example": "20.58",
     "description": "Average overdose mortality rate from 2016-2020",
@@ -4201,7 +4021,6 @@
   "AnyPdmpFr": {
     "title": "Any PDMP (fraction of year in 2017)",
     "name": "AnyPdmpFr",
-    "src_name": "AnyPdmpFr",
     "type": "number",
     "example": "1",
     "description": "Fraction of year that state has any prescription drug monitoring program operating.",
@@ -4221,7 +4040,6 @@
   "AnyPdmphFr": {
     "title": "Any Horowitz PDMP (fraction of year in 2017)",
     "name": "AnyPdmphFr",
-    "src_name": "AnyPdmphFr",
     "type": "number",
     "example": "1",
     "description": "Fraction of year that state has prescription drug monitoring program enabling legislation for any type of prescription drug monitoring program in effect ,including paper-based systems (as determined by Horowitz et al., 2018) enacted",
@@ -4241,7 +4059,6 @@
   "OpPdmpFr": {
     "title": "Operational PDMP (fraction of year in 2017)",
     "name": "OpPdmpFr",
-    "src_name": "OpPdmpFr",
     "type": "number",
     "example": "1",
     "description": "Fraction of year that state has a \u201cmodern system\u201d operational and users could access (as determined by Horowitz et al., 2018).",
@@ -4261,7 +4078,6 @@
   "MsAcPdmpFr": {
     "title": "Must-Access PDMP (fraction of year in 2017)",
     "name": "MsAcPdmpFr",
-    "src_name": "MsAcPdmpFr",
     "type": "number",
     "example": "0",
     "description": "Fraction of year that state has any legislation requiring Prescribers to access PDMP before prescribing (as interpreted by PDAPS) enacted.",
@@ -4281,7 +4097,6 @@
   "ElcPdmpFr": {
     "title": "Electronic PDMP (fraction of year in 2017)",
     "name": "ElcPdmpFr",
-    "src_name": "ElcPdmpFr",
     "type": "number",
     "example": "1",
     "description": "Fraction of year that state has an electronic PDMP system operating.",
@@ -4301,7 +4116,6 @@
   "AnyPdmpDt": {
     "title": "Any PDMP start date",
     "name": "AnyPdmpDt",
-    "src_name": "AnyPdmpDt",
     "type": "date",
     "example": "7/22/2007",
     "format": "%m/%d/%Y",
@@ -4322,7 +4136,6 @@
   "AnyPdmphDt": {
     "title": "Any Horowitz PDMP start date",
     "name": "AnyPdmphDt",
-    "src_name": "AnyPdmphDt",
     "type": "date",
     "example": "8/1/2011",
     "format": "%m/%d/%Y",
@@ -4343,7 +4156,6 @@
   "OpPdmpDt": {
     "title": "Operational PDMP start date",
     "name": "OpPdmpDt",
-    "src_name": "OpPdmpDt",
     "type": "date",
     "example": "1/1/2012",
     "format": "%m/%d/%Y",
@@ -4364,7 +4176,6 @@
   "MsAcPdmpDt": {
     "title": "Must-Access PDMP start date",
     "name": "MsAcPdmpDt",
-    "src_name": "MsAcPdmpDt",
     "type": "date",
     "example": "7/1/2014",
     "format": "%m/%d/%Y",
@@ -4385,7 +4196,6 @@
   "ElcPdmpDt": {
     "title": "Electronic PDMP start date",
     "name": "ElcPdmpDt",
-    "src_name": "ElcPdmpDt",
     "type": "date",
     "example": "7/22/2007",
     "format": "%m/%d/%Y",
@@ -4406,7 +4216,6 @@
   "AnyGslDt": {
     "title": "Any Good Samaritan Law (date)",
     "name": "AnyGslDt",
-    "src_name": "AnyGslDt",
     "type": "date",
     "example": "6/10/2010",
     "format": "%m/%d/%Y",
@@ -4427,7 +4236,6 @@
   "GslArrDt": {
     "title": "Good Samaritan Law Protecting Arrest (date)",
     "name": "GslArrDt",
-    "src_name": "GslArrDt",
     "type": "date",
     "example": "10/1/2015",
     "format": "%m/%d/%Y",
@@ -4448,7 +4256,6 @@
   "AnyGslFr": {
     "title": "Any Good Samaritan Law (fraction of year in 2018)",
     "name": "AnyGslFr",
-    "src_name": "AnyGslFr",
     "type": "number",
     "example": "1",
     "description": "Fraction of year any type of Good Samaritan Law is effective",
@@ -4468,7 +4275,6 @@
   "GslArrFr": {
     "title": "Good Samaritan Law Protecting Arrest (fraction of year in 2018)",
     "name": "GslArrFr",
-    "src_name": "GslArrFr",
     "type": "number",
     "example": "0",
     "description": "Fraction of year that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective",
@@ -4488,7 +4294,6 @@
   "AnyNalDt": {
     "title": "Any Naloxone Law (date)",
     "name": "AnyNalDt",
-    "src_name": "AnyNalDt",
     "type": "date",
     "example": "7/1/2010",
     "format": "%m/%d/%Y",
@@ -4509,7 +4314,6 @@
   "NalPrStDt": {
     "title": "Naloxone Law allowing distribution through a standing or order (date)",
     "name": "NalPrStDt",
-    "src_name": "NalPrStDt",
     "type": "date",
     "example": "8/1/2015",
     "format": "%m/%d/%Y",
@@ -4530,7 +4334,6 @@
   "NalPresDt": {
     "title": "Naloxone Law allowing pharmacists prescriptive authority (date)",
     "name": "NalPresDt",
-    "src_name": "NalPresDt",
     "type": "date",
     "example": "5/1/2014",
     "format": "%m/%d/%Y",
@@ -4551,7 +4354,6 @@
   "AnyNalFr": {
     "title": "Naloxone Law allowing distribution through a standing or order (fraction of year in 2017)",
     "name": "AnyNalFr",
-    "src_name": "AnyNalFr",
     "type": "number",
     "example": "1",
     "description": "Fraction of year any type of Naloxone law is effective",
@@ -4571,7 +4373,6 @@
   "NalPrStFr": {
     "title": "Naloxone Law in Effect (fraction of year in 2017)",
     "name": "NalPrStFr",
-    "src_name": "NalPrStFr",
     "type": "number",
     "example": "1",
     "description": "Fraction of year state has an effective Naloxone law allowing distribution through a standing or protocol order",
@@ -4591,7 +4392,6 @@
   "NalPresFr": {
     "title": "Naloxone Law allowing pharmacists prescriptive authority (fraction of year in 2017)",
     "name": "NalPresFr",
-    "src_name": "NalPresFr",
     "type": "number",
     "example": "0",
     "description": "Fraction of year state has an effective Naloxone law allowing pharmacists prescriptive authority",
@@ -4611,7 +4411,6 @@
   "MedcdExp19": {
     "title": "Total Medicaid Spending (FY 2019)",
     "name": "MedcdExp19",
-    "src_name": "MedcdExp19",
     "type": "integer",
     "example": "14959703300",
     "description": "Total medicaid spending in FY2019",
@@ -4631,7 +4430,6 @@
   "MedcdExp18": {
     "title": "Total Medicaid Spending (FY 2018)",
     "name": "MedcdExp18",
-    "src_name": "MedcdExp18",
     "type": "integer",
     "example": "12037465400",
     "description": "Total medicaid spending in FY2018",
@@ -4651,7 +4449,6 @@
   "TradFedExp": {
     "title": "Traditional Medicaid Federal Spending",
     "name": "TradFedExp",
-    "src_name": "TradFedExp",
     "type": "integer",
     "example": "4610569600",
     "description": "Traditional medicaid - federal spending",
@@ -4671,7 +4468,6 @@
   "TradSttExp": {
     "title": "Traditional Medicaid State Spending",
     "name": "TradSttExp",
-    "src_name": "TradSttExp",
     "type": "integer",
     "example": "4349828600",
     "description": "Traditional medicaid - state spending",
@@ -4691,7 +4487,6 @@
   "ExpnFedExp": {
     "title": "Expansion Medicaid Federal Spending",
     "name": "ExpnFedExp",
-    "src_name": "ExpnFedExp",
     "type": "integer",
     "example": "2902387900",
     "description": "Expansion Group - Federal Spending",
@@ -4711,7 +4506,6 @@
   "ExpnSttExp": {
     "title": "Expansion Medicaid State Spending",
     "name": "ExpnSttExp",
-    "src_name": "ExpnSttExp",
     "type": "integer",
     "example": "174679300",
     "description": "Expansion Group - State Spending",
@@ -4731,7 +4525,6 @@
   "ExpSsp": {
     "title": "Syringe Service Program (SSP) Authorization Laws",
     "name": "ExpSsp",
-    "src_name": "ExpSsp",
     "type": "boolean",
     "example": "1",
     "description": "Dummy variable indicating whether the state has law that explicitly authorizes Syringe Service Programs (0=no, 1=yes)",
@@ -4751,7 +4544,6 @@
   "NoPrphLw": {
     "title": "Drug Paraphernalia Laws",
     "name": "NoPrphLw",
-    "src_name": "NoPrphLw",
     "type": "boolean",
     "example": "0",
     "description": "Dummy variable indicating whether the state has no state drug paraphernalia law (0=no, 1=yes)",
@@ -4771,7 +4563,6 @@
   "NtPrFrDsSy": {
     "title": "Distribution of Syringes Laws",
     "name": "NtPrFrDsSy",
-    "src_name": "NtPrFrDsSy",
     "type": "boolean",
     "example": "0",
     "description": "Dummy variable indicating whether the state law does not prohibit free distribution of syringes (0=no, 1=yes)",
@@ -4791,7 +4582,6 @@
   "PrExcInj": {
     "title": "Paraphernalia exludes objects used for injecting drugs",
     "name": "PrExcInj",
-    "src_name": "PrExcInj",
     "type": "boolean",
     "example": "0",
     "description": "Dummy variable indicating whether the paraphernalia definition in the state law explicitly exludes objects used for injecting drugs (0=no, 1=yes)",
@@ -4811,7 +4601,6 @@
   "PrNtRefInj": {
     "title": "Paraphernalia does not refer to objects used for injecting drugs",
     "name": "PrNtRefInj",
-    "src_name": "PrNtRefInj",
     "type": "boolean",
     "example": "0",
     "description": "Dummy variable indicating whether the paraphernalia definition in the state law does not refer to objects used for injecting drugs (0=no, 1=yes)",
@@ -4831,7 +4620,6 @@
   "NoLwRmUnc": {
     "title": "Laws removing barriers to SSPs",
     "name": "NoLwRmUnc",
-    "src_name": "NoLwRmUnc",
     "type": "boolean",
     "example": "0",
     "description": "Dummy variable indicating whether the state has no law removing barriers or uncertainty as to SSP legality (0=no, 1=yes)",
@@ -4851,7 +4639,6 @@
   "MdMarijLaw": {
     "title": "Laws authorizing medical marijuana use ",
     "name": "MdMarijLaw",
-    "src_name": "MdMarijLaw",
     "type": "boolean",
     "example": "1",
     "description": "Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (0=no, 1=yes)",
@@ -4871,7 +4658,6 @@
   "CrrctExpS": {
     "title": "Corrections Expenditures",
     "name": "CrrctExpS",
-    "src_name": "CrrctExpS",
     "type": "integer",
     "example": "915105",
     "description": "Expenditures on corrections system and operation by the State alone",
@@ -4891,7 +4677,6 @@
   "PlcFyrExpS": {
     "title": "Police & Fire Expenditures",
     "name": "PlcFyrExpS",
-    "src_name": "PlcFyrExpS",
     "type": "integer",
     "example": "305035",
     "description": "Expenditures on police and fire protection by the State alone",
@@ -4911,7 +4696,6 @@
   "HlthExpS": {
     "title": "Public Health Expenditures",
     "name": "HlthExpS",
-    "src_name": "HlthExpS",
     "type": "integer",
     "example": "915105",
     "description": "Expenditures on public health and hospitals by the State alone",
@@ -4931,7 +4715,6 @@
   "WlfrExpS": {
     "title": "Public Welfare Expenditures",
     "name": "WlfrExpS",
-    "src_name": "WlfrExpS",
     "type": "integer",
     "example": "1830210",
     "description": "Expenditures on public welfare progrmas by the State alone",
@@ -4951,7 +4734,6 @@
   "CrrctExpL": {
     "title": "Corrections Expenditures (Local)",
     "name": "CrrctExpL",
-    "src_name": "CrrctExpL",
     "type": "integer",
     "example": "2196606",
     "description": "Expenditures on corrections system and operation by local governments alone",
@@ -4971,7 +4753,6 @@
   "PlcFyrExpL": {
     "title": "Police & Fire Expenditures (Local)",
     "name": "PlcFyrExpL",
-    "src_name": "PlcFyrExpL",
     "type": "integer",
     "example": "3385247",
     "description": "Expenditures on police and fire protection by the local government alone",
@@ -4991,7 +4772,6 @@
   "HlthExpL": {
     "title": "Public Health Expenditures (Local)",
     "name": "HlthExpL",
-    "src_name": "HlthExpL",
     "type": "integer",
     "example": "2196606",
     "description": "Expenditures on public health and hospitals by the local government alone",
@@ -5011,7 +4791,6 @@
   "WlfrExpL": {
     "title": "Public Welfare Expenditures (Local)",
     "name": "WlfrExpL",
-    "src_name": "WlfrExpL",
     "type": "integer",
     "example": "4393212",
     "description": "Expenditures on public welfare progrmas by the local government alone",
@@ -5031,7 +4810,6 @@
   "CrrctExpT": {
     "title": "Total Corrections Expenditures",
     "name": "CrrctExpT",
-    "src_name": "CrrctExpT",
     "type": "integer",
     "example": "3111711",
     "description": "Total expenditures on corrections system and operations",
@@ -5051,7 +4829,6 @@
   "PlcFyrExpT": {
     "title": "Total Police & Fire Expenditures",
     "name": "PlcFyrExpT",
-    "src_name": "PlcFyrExpT",
     "type": "integer",
     "example": "3690282",
     "description": "Total expenditures on police and fire protection",
@@ -5071,7 +4848,6 @@
   "HlthExpT": {
     "title": "Total Public Health & Welfare Expenditures",
     "name": "HlthExpT",
-    "src_name": "HlthExpT",
     "type": "integer",
     "example": "3111711",
     "description": "Total expenditures on public health and welfare",
@@ -5091,7 +4867,6 @@
   "WlfrExpT": {
     "title": "Total Public Welfare Expenditures",
     "name": "WlfrExpT",
-    "src_name": "WlfrExpT",
     "type": "integer",
     "example": "6223422",
     "description": "Total expenditures on public welfare programs",
@@ -5111,7 +4886,6 @@
   "Ruca1": {
     "title": "Primary RUCA Code",
     "name": "Ruca1",
-    "src_name": "Ruca1",
     "type": "string",
     "example": "1",
     "description": "Primary RUCA Code",
@@ -5132,7 +4906,6 @@
   "Ruca2": {
     "title": "Secondary RUCA Code",
     "name": "Ruca2",
-    "src_name": "Ruca2",
     "type": "string",
     "example": "1.1",
     "description": "Secondary RUCA Code",
@@ -5153,7 +4926,6 @@
   "Rurality": {
     "title": "Urban-Suburban-Rural",
     "name": "Rurality",
-    "src_name": "Rurality",
     "type": "string",
     "example": "Urban",
     "description": "Urban/Suburban/Rural",
@@ -5174,7 +4946,6 @@
   "MoudMinDis": {
     "title": "Distance (mi) to nearest MOUD (any)",
     "name": "MoudMinDis",
-    "src_name": "MoudMinDis",
     "type": "number",
     "example": "0.81",
     "description": "Euclidean distance (miles) to nearest MOUD (all types)",
@@ -5195,7 +4966,6 @@
   "BupMinDis": {
     "title": "Distance (mi) to nearest Buprenorphine Provider",
     "name": "BupMinDis",
-    "src_name": "BupMinDis",
     "type": "number",
     "example": "0.81",
     "description": "Euclidean distance (miles) to nearest buprenorphine provider",
@@ -5216,7 +4986,6 @@
   "BupTmDr": {
     "title": "Driving Time (min) to nearest Buprenorphine Provider",
     "name": "BupTmDr",
-    "src_name": "BupTmDr",
     "type": "number",
     "example": "0",
     "description": "Driving time (minutes) to nearest buprenorphine provider",
@@ -5237,7 +5006,6 @@
   "BupCntDr30": {
     "title": "Count of Buprenorphine Providers (30-min drive)",
     "name": "BupCntDr30",
-    "src_name": "BupCntDr30",
     "type": "integer",
     "example": "21",
     "description": "Count of methadone providers in 30 minute drive time threshold",
@@ -5258,7 +5026,6 @@
   "MetMinDis": {
     "title": "Distance (mi) to nearest Methadone Provider",
     "name": "MetMinDis",
-    "src_name": "MetMinDis",
     "type": "number",
     "example": "13.22",
     "description": "Euclidean distance (miles) to nearest methadone provider",
@@ -5279,7 +5046,6 @@
   "MetTmDr": {
     "title": "Driving Time (min) to nearest Methadone Provider",
     "name": "MetTmDr",
-    "src_name": "MetTmDr",
     "type": "number",
     "example": "27.39",
     "description": "Driving time (minutes) to nearest methadone provider",
@@ -5300,7 +5066,6 @@
   "MetCntDr30": {
     "title": "Count of Methadone Providers (30-min drive)",
     "name": "MetCntDr30",
-    "src_name": "MetCntDr30",
     "type": "integer",
     "example": "1",
     "description": "Count of methadone providers in 30 minute drive time threshold",
@@ -5321,7 +5086,6 @@
   "NalMinDis": {
     "title": "Distance (mi) to nearest Naltrexone Provider",
     "name": "NalMinDis",
-    "src_name": "NalMinDis",
     "type": "number",
     "example": "18.04",
     "description": "Euclidean distance (miles) to nearest naltrexone/Vivitrol provider",
@@ -5342,7 +5106,6 @@
   "NalTmDr": {
     "title": "Driving Time (min) to nearest Naltrexone Provider",
     "name": "NalTmDr",
-    "src_name": "NalTmDr",
     "type": "number",
     "example": "35.34",
     "description": "Driving time (minutes) to nearest naltrexone provider",
@@ -5363,7 +5126,6 @@
   "NalCntDr30": {
     "title": "Count of Naltrexone Providers (30-min drive)",
     "name": "NalCntDr30",
-    "src_name": "NalCntDr30",
     "type": "integer",
     "example": "0",
     "description": "Count of naltrexone providers in 30 minute drive time threshold",
@@ -5384,7 +5146,6 @@
   "BupTmWk": {
     "title": "Walking Time (min) to nearest Buprenorphine Provider",
     "name": "BupTmWk",
-    "src_name": "BupTmWk",
     "type": "number",
     "example": "0",
     "description": "Walking time (minutes) to nearest buprenorphine provider",
@@ -5405,7 +5166,6 @@
   "BupCntWk60": {
     "title": "Count of Buprenorphine Providers (60-min walk)",
     "name": "BupCntWk60",
-    "src_name": "BupCntWk60",
     "type": "integer",
     "example": "2",
     "description": "Count of buprenorphine providers in 60 minute walking time threshold",
@@ -5426,7 +5186,6 @@
   "BupCntWk30": {
     "title": "Count of Buprenorphine Providers (30-min walk)",
     "name": "BupCntWk30",
-    "src_name": "BupCntWk30",
     "type": "integer",
     "example": "2",
     "description": "Count of buprenorphine providers in 30 minute walking time threshold",
@@ -5447,7 +5206,6 @@
   "MetTmWk": {
     "title": "Walking Time (min) to nearest Methadone Provider",
     "name": "MetTmWk",
-    "src_name": "MetTmWk",
     "type": "number",
     "example": "1744.66",
     "description": "Walking time (minutes) to nearest methadone provider",
@@ -5468,7 +5226,6 @@
   "MetCntWk30": {
     "title": "Count of Methadone Providers (60-min walk)",
     "name": "MetCntWk30",
-    "src_name": "MetCntWk30",
     "type": "integer",
     "example": "0",
     "description": "Count of methadone providers in 60 minute walking time threshold",
@@ -5489,7 +5246,6 @@
   "MetCntWk60": {
     "title": "Count of Methadone Providers (30-min walk)",
     "name": "MetCntWk60",
-    "src_name": "MetCntWk60",
     "type": "integer",
     "example": "0",
     "description": "Count of methadone providers in 30 minute walking time threshold",
@@ -5510,7 +5266,6 @@
   "NalTmWk": {
     "title": "Walking Time (min) to nearest Naltrexone Provider",
     "name": "NalTmWk",
-    "src_name": "NalTmWk",
     "type": "number",
     "example": "",
     "description": "Walking time (minutes) to nearest naltrexone provider",
@@ -5531,7 +5286,6 @@
   "NalCntWk60": {
     "title": "Count of Naltrexone Providers (60-min walk)",
     "name": "NalCntWk60",
-    "src_name": "NalCntWk60",
     "type": "integer",
     "example": "0",
     "description": "Count of naltrexone providers in 60 minute walking time threshold",
@@ -5552,7 +5306,6 @@
   "NalCntWk30": {
     "title": "Count of Naltrexone Providers (30-min walk)",
     "name": "NalCntWk30",
-    "src_name": "NalCntWk30",
     "type": "integer",
     "example": "0",
     "description": "Count of naltrexone providers in 30 minute walking time threshold",
@@ -5573,7 +5326,6 @@
   "BupTmBk": {
     "title": "Biking Time (min) to nearest Buprenorphine Provider",
     "name": "BupTmBk",
-    "src_name": "BupTmBk",
     "type": "number",
     "example": "0",
     "description": "Biking time (minutes) to nearest buprenorphine provider",
@@ -5594,7 +5346,6 @@
   "BupCntBk60": {
     "title": "Count of Buprenorphine Providers (60-min bike)",
     "name": "BupCntBk60",
-    "src_name": "BupCntBk60",
     "type": "integer",
     "example": "4",
     "description": "Count of buprenorphine providers in 60 minute biking time threshold",
@@ -5615,7 +5366,6 @@
   "BupCntBk30": {
     "title": "Count of Buprenorphine Providers (30-min bike)",
     "name": "BupCntBk30",
-    "src_name": "BupCntBk30",
     "type": "integer",
     "example": "3",
     "description": "Count of buprenorphine providers in 30 minute biking time threshold",
@@ -5636,7 +5386,6 @@
   "MetTmBk": {
     "title": "Biking Time (min) to nearest Methadone Provider",
     "name": "MetTmBk",
-    "src_name": "MetTmBk",
     "type": "number",
     "example": "148.18",
     "description": "Biking time (minutes) to nearest methadone provider",
@@ -5657,7 +5406,6 @@
   "MetCntBk60": {
     "title": "Count of Methadone Providers (60-min bike)",
     "name": "MetCntBk60",
-    "src_name": "MetCntBk60",
     "type": "integer",
     "example": "0",
     "description": "Count of methadone providers in 60 minute biking time threshold",
@@ -5678,7 +5426,6 @@
   "MetCntBk30": {
     "title": "Count of methadone providers (30-min bike)",
     "name": "MetCntBk30",
-    "src_name": "MetCntBk30",
     "type": "integer",
     "example": "0",
     "description": "Count of methadone providers in 30 minute biking time threshold",
@@ -5699,7 +5446,6 @@
   "NalTmBk": {
     "title": "Biking Time (min) to nearest Naltrexone Provider",
     "name": "NalTmBk",
-    "src_name": "NalTmBk",
     "type": "number",
     "example": "165.18",
     "description": "Biking time (minutes) to nearest naltrexone provider",
@@ -5720,7 +5466,6 @@
   "NalCntBk60": {
     "title": "Count of Naltrexone Providers (60-min bike)",
     "name": "NalCntBk60",
-    "src_name": "NalCntBk60",
     "type": "integer",
     "example": "0",
     "description": "Count of naltrexone providers in 60 minute biking time threshold",
@@ -5741,7 +5486,6 @@
   "NalCntBk30": {
     "title": "Count of Naltrexone Providers (30-min bike)",
     "name": "NalCntBk30",
-    "src_name": "NalCntBk30",
     "type": "integer",
     "example": "0",
     "description": "Count of naltrexone providers in 30 minute biking time threshold",
@@ -5762,7 +5506,6 @@
   "FqhcMinDis": {
     "title": "Distance (mi) to nearest FQHC",
     "name": "FqhcMinDis",
-    "src_name": "FqhcMinDis",
     "type": "number",
     "example": "10.23",
     "description": "Euclidean distance* from tract/zip centroid to nearest FQHC, in miles",
@@ -5783,7 +5526,6 @@
   "FqhcTmDr": {
     "title": "Driving time (min) to nearest FQHC",
     "name": "FqhcTmDr",
-    "src_name": "FqhcTmDr",
     "type": "number",
     "example": "19.16",
     "description": "Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes",
@@ -5804,7 +5546,6 @@
   "FqhcCntDr": {
     "title": "Count of FQHCs (30-min drive)",
     "name": "FqhcCntDr",
-    "src_name": "FqhcCntDr",
     "type": "integer",
     "example": "17",
     "description": "Count of FQHCs within a 30-minute driving threshold",
@@ -5825,7 +5566,6 @@
   "HospMinDis": {
     "title": "Distance (mi) to nearest Hospital",
     "name": "HospMinDis",
-    "src_name": "HospMinDis",
     "type": "number",
     "example": "0.31",
     "description": "Euclidean distance* from tract/zip centroid to nearest hospital, in miles",
@@ -5846,7 +5586,6 @@
   "HospTmDr": {
     "title": "Driving time (min) to nearest Hospital",
     "name": "HospTmDr",
-    "src_name": "HospTmDr",
     "type": "number",
     "example": "0",
     "description": "Driving time from tract/zip origin centroid to the nearest tract/zip hospital destination centroid, in minutes",
@@ -5867,7 +5606,6 @@
   "HospCntDr": {
     "title": "Count of Hospitals (30-min drive)",
     "name": "HospCntDr",
-    "src_name": "HospCntDr",
     "type": "integer",
     "example": "6",
     "description": "Count of hospitals within a 30-minute driving threshold",
@@ -5888,7 +5626,6 @@
   "RxMinDis": {
     "title": "Distance (mi) to nearest Pharmacy",
     "name": "RxMinDis",
-    "src_name": "RxMinDis",
     "type": "number",
     "example": "0.84",
     "description": "Euclidean distance* from tract/zip centroid to nearest pharmacy, in miles",
@@ -5909,7 +5646,6 @@
   "RxTmDr": {
     "title": "Driving Time (min) to nearest Pharmacy",
     "name": "RxTmDr",
-    "src_name": "RxTmDr",
     "type": "number",
     "example": "0",
     "description": "Driving time from tract/zip origin centroid to the nearest tract/zip pharmacy destination centroid, in minutes",
@@ -5930,7 +5666,6 @@
   "RxCntDr": {
     "title": "Count of Pharmacies (30-min drive)",
     "name": "RxCntDr",
-    "src_name": "RxCntDr",
     "type": "integer",
     "example": "58",
     "description": "Count of pharmacies within a 30-minute driving threshold",
@@ -5951,7 +5686,6 @@
   "MhMinDis": {
     "title": "Distance (mi) to nearest Mental Health Provider",
     "name": "MhMinDis",
-    "src_name": "MhMinDis",
     "type": "number",
     "example": "0.2",
     "description": "Euclidean distance* from tract/zip centroid to nearest mental health provider, in miles",
@@ -5972,7 +5706,6 @@
   "MhTmDr": {
     "title": "Driving Time (min) to nearest Mental Health Provider",
     "name": "MhTmDr",
-    "src_name": "MhTmDr",
     "type": "number",
     "example": "0",
     "description": "Driving time from tract/zip origin centroid to the nearest tract/zip mental health provider destination centroid, in minutes",
@@ -5993,7 +5726,6 @@
   "MhCntDr": {
     "title": "Count of Mental Health Providers (30-min drive)",
     "name": "MhCntDr",
-    "src_name": "MhCntDr",
     "type": "integer",
     "example": "3",
     "description": "Count of MH providers within a 30-minute driving threshold",
@@ -6014,7 +5746,6 @@
   "SutMinDis": {
     "title": "Distance (mi) to Substance Use Treatment (SUT) facility",
     "name": "SutMinDis",
-    "src_name": "SutMinDis",
     "type": "number",
     "example": "4.99",
     "description": "Euclidean distance* from tract/zip centroid to nearest SUT service location, in miles",
@@ -6035,7 +5766,6 @@
   "SutTmDr": {
     "title": "Driving time (min) to Substance Use Treatment (SUT) facility",
     "name": "SutTmDr",
-    "src_name": "SutTmDr",
     "type": "number",
     "example": "17.76",
     "description": "Driving time from tract/zip origin centroid to the nearest tract/zip SUT destination centroid, in minutes",
@@ -6056,7 +5786,6 @@
   "SutCntDr": {
     "title": "Count of Substance Use Treatment (SUT) facility (30-min drive)",
     "name": "SutCntDr",
-    "src_name": "SutCntDr",
     "type": "integer",
     "example": "4",
     "description": "Count of SUT services within a 30-minute driving threshold",
@@ -6077,7 +5806,6 @@
   "OtpMinDis": {
     "title": "Distance (mi) to nearest Opioid Treatment Program (OTP)",
     "name": "OtpMinDis",
-    "src_name": "OtpMinDis",
     "type": "number",
     "example": "13.12",
     "description": "Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles",
@@ -6098,7 +5826,6 @@
   "OtpTmDr": {
     "title": "Driving Time (min) to nearest Opioid Treatment Program (OTP)",
     "name": "OtpTmDr",
-    "src_name": "OtpTmDr",
     "type": "number",
     "example": "27.39",
     "description": "Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes",
@@ -6119,7 +5846,6 @@
   "OtpCntDr": {
     "title": "Count of Opioid Treatment Programs (OTP) (30-min drive)",
     "name": "OtpCntDr",
-    "src_name": "OtpCntDr",
     "type": "integer",
     "example": "1",
     "description": "Count of OTPs within a 30-minute driving threshold",
@@ -6140,7 +5866,6 @@
   "PcpPer100k": {
     "title": "Primary Care Physicians (PCP) per 100k",
     "name": "PcpPer100k",
-    "src_name": "PcpPer100k",
     "type": "number",
     "example": "133.42",
     "description": "PCPs per total Population X 100,000",
@@ -6161,7 +5886,6 @@
   "SpPer100k": {
     "title": "Specialty Physicians per 100k",
     "name": "SpPer100k",
-    "src_name": "SpPer100k",
     "type": "number",
     "example": "41.05",
     "description": "Specialty Physicians per total Population X 100,000",
@@ -6182,7 +5906,6 @@
   "SocEcAdvIn": {
     "title": "Socioeconomic Advantage Index",
     "name": "SocEcAdvIn",
-    "src_name": "SocEcAdvIn",
     "type": "number",
     "example": "1.17",
     "description": "Raw Socioeconomic Advantage Index (https://sdohatlas.github.io/)",
@@ -6202,7 +5925,6 @@
   "LimMobInd": {
     "title": "Limited Moblility Index",
     "name": "LimMobInd",
-    "src_name": "LimMobInd",
     "type": "number",
     "example": "0.54",
     "description": "Raw Limited Mobility Index (https://sdohatlas.github.io/)",
@@ -6222,7 +5944,6 @@
   "UrbCoreInd": {
     "title": "Urban Core Opportunity Index",
     "name": "UrbCoreInd",
-    "src_name": "UrbCoreInd",
     "type": "number",
     "example": "-0.06",
     "description": "Raw Urban Core Opportunity Index (https://sdohatlas.github.io/)",
@@ -6242,7 +5963,6 @@
   "MicaInd": {
     "title": "Mixed Immigrant Cohesion and Accesibility (MICA) Index",
     "name": "MicaInd",
-    "src_name": "MicaInd",
     "type": "number",
     "example": "0.59",
     "description": "Raw Mixed Immigrant Cohesion and Accessibility (MICA) Index (https://sdohatlas.github.io/)",
@@ -6262,7 +5982,6 @@
   "NeighbTyp": {
     "title": "Neighborhood Type",
     "name": "NeighbTyp",
-    "src_name": "NeighbTyp",
     "type": "string",
     "example": "3",
     "description": "Categorical, one of seven neighborhood (tract-level) typologies: 1 = Rural Affordable; 2 = Suburban Affluent; 3 = Suburban Affordable; 4 = Extreme Poverty; 5 = Multilingual Working; 6 = Urban Core Opportunity; 7 = Sparse Areas",
@@ -6282,7 +6001,6 @@
   "SviTh1": {
     "title": "Social Vulnerability Index (SVI) 1",
     "name": "SviTh1",
-    "src_name": "SviTh1",
     "type": "number",
     "example": "0.43",
     "description": "SVI Ranking, Theme 1: Socioeconomic",
@@ -6304,7 +6022,6 @@
   "SviTh2": {
     "title": "Social Vulnerability Index (SVI) 2",
     "name": "SviTh2",
-    "src_name": "SviTh2",
     "type": "number",
     "example": "0.3",
     "description": "SVI Ranking, Theme 2: Household Composition & Disability",
@@ -6326,7 +6043,6 @@
   "SviTh3": {
     "title": "Social Vulnerability Index (SVI) 3",
     "name": "SviTh3",
-    "src_name": "SviTh3",
     "type": "number",
     "example": "0.2",
     "description": "SVI Ranking, Theme 3: Minority Status & Language",
@@ -6348,7 +6064,6 @@
   "SviTh4": {
     "title": "Social Vulnerability Index (SVI) 4",
     "name": "SviTh4",
-    "src_name": "SviTh4",
     "type": "number",
     "example": "0.61",
     "description": "SVI Ranking, Theme 4: Housing Type & Transportation",
@@ -6370,7 +6085,6 @@
   "SviSmryRnk": {
     "title": "Social Vulnerability Index (SVI) Summary Ranking",
     "name": "SviSmryRnk",
-    "src_name": "SviSmryRnk",
     "type": "number",
     "example": "0.38",
     "description": "Overall summary ranking",
@@ -6392,7 +6106,6 @@
   "A15_24P": {
     "title": "% Population: Age 15-24",
     "name": "A15_24P",
-    "src_name": "A15_24P",
     "type": "number",
     "example": "7.33",
     "description": "Percentage of population between ages of 15 & 24",
@@ -6412,7 +6125,6 @@
   "BupCtTmDr": {
     "title": "Tracts with Buprenorphine Provider within 30-min (driving)",
     "name": "BupCtTmDr",
-    "src_name": "BupCtTmDr",
     "type": "integer",
     "example": "288",
     "description": "Number of tracts with buprenorphine provider within a 30-min driving range",
@@ -6432,7 +6144,6 @@
   "BupCtTmBk": {
     "title": "Tracts with Buprenorphine Provider within 30-min (biking)",
     "name": "BupCtTmBk",
-    "src_name": "BupCtTmBk",
     "type": "integer",
     "example": "287",
     "description": "Number of tracts with buprenorphine provider within a 30-min biking range",
@@ -6452,7 +6163,6 @@
   "BupCtTmWk": {
     "title": "Tracts with Buprenorphine Provider within 30-min (walking)",
     "name": "BupCtTmWk",
-    "src_name": "BupCtTmWk",
     "type": "integer",
     "example": "287",
     "description": "Number of tracts with buprenorphine provider within a 30-min walking range",
@@ -6472,7 +6182,6 @@
   "MetCtTmDr": {
     "title": "Tracts with Methadone Provider within 30-min (driving)",
     "name": "MetCtTmDr",
-    "src_name": "MetCtTmDr",
     "type": "integer",
     "example": "288",
     "description": "Number of tracts with methadone provider within a 30-min driving range",
@@ -6492,7 +6201,6 @@
   "MetCtTmBk": {
     "title": "Tracts with Methadone Provider within 30-min (biking)",
     "name": "MetCtTmBk",
-    "src_name": "MetCtTmBk",
     "type": "integer",
     "example": "285",
     "description": "Number of tracts with methadone provider within a 30-min biking range",
@@ -6512,7 +6220,6 @@
   "MetCtTmWk": {
     "title": "Tracts with Methadone Provider within 30-min (walking)",
     "name": "MetCtTmWk",
-    "src_name": "MetCtTmWk",
     "type": "integer",
     "example": "272",
     "description": "Number of tracts with methadone provider within a 30-min walking range",
@@ -6532,7 +6239,6 @@
   "NalCtTmDr": {
     "title": "Tracts with Naltrexone Provider within 30-min (driving)",
     "name": "NalCtTmDr",
-    "src_name": "NalCtTmDr",
     "type": "integer",
     "example": "288",
     "description": "Number of tracts with naltrexone provider within a 30-min driving range",
@@ -6552,7 +6258,6 @@
   "NalCtTmBk": {
     "title": "Tracts with Naltrexone Provider within 30-min (biking)",
     "name": "NalCtTmBk",
-    "src_name": "NalCtTmBk",
     "type": "integer",
     "example": "287",
     "description": "Number of tracts with naltrexone provider within a 30-min biking range",
@@ -6572,7 +6277,6 @@
   "NalCtTmWk": {
     "title": "Tracts with Naltrexone Provider within 30-min (walking)",
     "name": "NalCtTmWk",
-    "src_name": "NalCtTmWk",
     "type": "integer",
     "example": "287",
     "description": "Number of tracts with naltrexone provider within a 30-min walking range",
@@ -6592,7 +6296,6 @@
   "BupAvTmDr": {
     "title": "Driving Time (min) to Nearest Buprenorphine Provider",
     "name": "BupAvTmDr",
-    "src_name": "BupAvTmDr",
     "type": "number",
     "example": "0.42",
     "description": "Average driving time (minutes) across tracts in county to nearest buprenorphine provider",
@@ -6612,7 +6315,6 @@
   "BupAvTmBk": {
     "title": "Biking Time (min) to Nearest Buprenorphine Provider",
     "name": "BupAvTmBk",
-    "src_name": "BupAvTmBk",
     "type": "number",
     "example": "1.12569444444444",
     "description": "Average biking time (minutes) across tracts in county to nearest buprenorphine provider",
@@ -6632,7 +6334,6 @@
   "BupAvTmWk": {
     "title": "Walking Time (min) to Nearest Buprenorphine Provider",
     "name": "BupAvTmWk",
-    "src_name": "BupAvTmWk",
     "type": "number",
     "example": "1.87725694444444",
     "description": "Average walking time (minutes) across tracts in county to nearest buprenorphine provider",
@@ -6652,7 +6353,6 @@
   "MetAvTmDr": {
     "title": "Driving Time (min) to Nearest Methadone Provider",
     "name": "MetAvTmDr",
-    "src_name": "MetAvTmDr",
     "type": "number",
     "example": "2.6",
     "description": "Average driving time (minutes) across tracts in county to nearest methadone provider",
@@ -6672,7 +6372,6 @@
   "MetAvTmBk": {
     "title": "Biking Time (min) to Nearest Methadone Provider",
     "name": "MetAvTmBk",
-    "src_name": "MetAvTmBk",
     "type": "number",
     "example": "6.32958333333333",
     "description": "Average biking time (minutes) across tracts in county to nearest methadone provider",
@@ -6692,7 +6391,6 @@
   "MetAvTmWk": {
     "title": "Walking Time (min) to Nearest Methadone Provide",
     "name": "MetAvTmWk",
-    "src_name": "MetAvTmWk",
     "type": "number",
     "example": "13.7240277777778",
     "description": "Average walking time (minutes) across tracts in county to nearest methadone provider",
@@ -6712,7 +6410,6 @@
   "NalAvTmDr": {
     "title": "Driving Time (min) to Nearest Naltrexone Provider",
     "name": "NalAvTmDr",
-    "src_name": "NalAvTmDr",
     "type": "number",
     "example": "1.61",
     "description": "Average driving time (minutes) across tracts in county to nearest naltrexone provider",
@@ -6732,7 +6429,6 @@
   "NalAvTmBk": {
     "title": "Biking Time (min) to Nearest Naltrexone Provider",
     "name": "NalAvTmBk",
-    "src_name": "NalAvTmBk",
     "type": "number",
     "example": "3.80180555555556",
     "description": "Average biking time (minutes) across tracts in county to nearest naltrexone provider",
@@ -6752,7 +6448,6 @@
   "NalAvTmWk": {
     "title": "Walking Time (min) to Nearest Naltrexone Provider",
     "name": "NalAvTmWk",
-    "src_name": "NalAvTmWk",
     "type": "number",
     "example": "7.40684027777778",
     "description": "Average walking time (minutes) across tracts in county to nearest naltrexone provider",
@@ -6772,7 +6467,6 @@
   "BupTmDrP": {
     "title": "% Tracts With Buprenorphine Provider (30-min drive)",
     "name": "BupTmDrP",
-    "src_name": "BupTmDrP",
     "type": "number",
     "example": "1",
     "description": "Percent of tracts with buprenorphine provider within a 30-min driving range",
@@ -6792,7 +6486,6 @@
   "BupTmBkP": {
     "title": "% Tracts With Buprenorphine Provider (30-min bike)",
     "name": "BupTmBkP",
-    "src_name": "BupTmBkP",
     "type": "number",
     "example": "1",
     "description": "Percent of tracts with buprenorphine provider within a 30-min biking range",
@@ -6812,7 +6505,6 @@
   "BupTmWkP": {
     "title": "% Tracts With Buprenorphine Provider (30-min walk)",
     "name": "BupTmWkP",
-    "src_name": "BupTmWkP",
     "type": "number",
     "example": "1",
     "description": "Percent of tracts with buprenorphine provider within a 30-min walking range",
@@ -6832,7 +6524,6 @@
   "MetTmDrP": {
     "title": "% Tracts With Methadone Provider (30-min drive)",
     "name": "MetTmDrP",
-    "src_name": "MetTmDrP",
     "type": "number",
     "example": "1",
     "description": "Percent of tracts with methadone provider within a 30-min driving range",
@@ -6852,7 +6543,6 @@
   "MetTmBkP": {
     "title": "% Tracts With Methadone Provider (30-min bike)",
     "name": "MetTmBkP",
-    "src_name": "MetTmBkP",
     "type": "number",
     "example": "0.99",
     "description": "Percent of tracts with methadone provider within a 30-min biking range",
@@ -6872,7 +6562,6 @@
   "MetTmWkP": {
     "title": "% Tracts With Methadone Provider (30-min walk)",
     "name": "MetTmWkP",
-    "src_name": "MetTmWkP",
     "type": "number",
     "example": "0.94",
     "description": "Percent of tracts with methadone provider within a 30-min walking range",
@@ -6892,7 +6581,6 @@
   "NalTmDrP": {
     "title": "% Tracts With Naltrexone Provider (30-min drive)",
     "name": "NalTmDrP",
-    "src_name": "NalTmDrP",
     "type": "number",
     "example": "1",
     "description": "Percent of tracts with naltrexone provider within a 30-min driving range",
@@ -6912,7 +6600,6 @@
   "NalTmBkP": {
     "title": "% Tracts With Naltrexone Provider (30-min bike)",
     "name": "NalTmBkP",
-    "src_name": "NalTmBkP",
     "type": "number",
     "example": "1",
     "description": "Percent of tracts with naltrexone provider within a 30-min biking range",
@@ -6932,7 +6619,6 @@
   "NalTmWkP": {
     "title": "% Tracts With Naltrexone Provider (30-min walk)",
     "name": "NalTmWkP",
-    "src_name": "NalTmWkP",
     "type": "number",
     "example": "1",
     "description": "Percent of tracts with naltrexone provider within a 30-min walking range",
@@ -6952,7 +6638,6 @@
   "RcaUrbanP": {
     "title": "% Tracts Urban (RUCA)",
     "name": "RcaUrbanP",
-    "src_name": "RcaUrbanP",
     "type": "number",
     "example": "0.99",
     "description": "Percent census tracts in the county classified as Urban using RUCA codes",
@@ -6972,7 +6657,6 @@
   "RcaSubrbP": {
     "title": "% Tracts Suburban (RUCA)",
     "name": "RcaSubrbP",
-    "src_name": "RcaSubrbP",
     "type": "number",
     "example": "0",
     "description": "Percent census tracts in the county classified as Suburban using RUCA codes",
@@ -6992,7 +6676,6 @@
   "RcaRuralP": {
     "title": "% Tracts Rural (RUCA)",
     "name": "RcaRuralP",
-    "src_name": "RcaRuralP",
     "type": "number",
     "example": "0.01",
     "description": "Percent census tracts in the county classified as Rural using RUCA codes",
@@ -7012,7 +6695,6 @@
   "CenFlags": {
     "title": "Census Flags",
     "name": "CenFlags",
-    "src_name": "CenFlags",
     "type": "string",
     "example": "",
     "description": "Three different values indicating three things:\n1 - Revised count, so urban and rural components will not add to total. \n2 - Geography name and FIPS code were changed since 2010. Shannon County, Sotuh Dakota name changed to Oglala Lakota County, new FIPS 46102. Wade Hampton Census Area, Alaska, name changed to Kusilvak CEnsus Area, nwe FIPS 02158\n3 - Bedford City, Virginia, was consolidated with Bedford County, Virginia (FIPS 51019) since 2010.",
@@ -7032,7 +6714,6 @@
   "TotPop10": {
     "title": "Total Population (2010)",
     "name": "TotPop10",
-    "src_name": "TotPop10",
     "type": "integer",
     "example": "1585873",
     "description": "2010 total population",
@@ -7052,7 +6733,6 @@
   "UrbPop10": {
     "title": "Urban Population Total (2010)",
     "name": "UrbPop10",
-    "src_name": "UrbPop10",
     "type": "integer",
     "example": "1585873",
     "description": "2010 Population living in urban areas, as defined by Census Bureau",
@@ -7072,7 +6752,6 @@
   "RuralPop10": {
     "title": "Rural Population (2010)",
     "name": "RuralPop10",
-    "src_name": "RuralPop10",
     "type": "integer",
     "example": "0",
     "description": "2010 Population living in non urban areas, as defined by Census Bureau",
@@ -7092,7 +6771,6 @@
   "CenRuralP": {
     "title": "Rural Population % (2010)",
     "name": "CenRuralP",
-    "src_name": "CenRuralP",
     "type": "number",
     "example": "0",
     "description": "% of 2010 Population living in non urban areas, as defined by Census Bureau",
@@ -7112,7 +6790,6 @@
   "DmySgrg": {
     "title": "Hypersegregated Cities",
     "name": "DmySgrg",
-    "src_name": "DmySgrg",
     "type": "boolean",
     "example": "1",
     "description": "Dummy variable for whether county is part of a hypersegregated city or its metropolitan area",
@@ -7132,7 +6809,6 @@
   "DmyBlckBlt": {
     "title": "African American South",
     "name": "DmyBlckBlt",
-    "src_name": "DmyBlckBlt",
     "type": "boolean",
     "example": "0",
     "description": "Dummy variable for whether county is in the Southern Black Belt region",
@@ -7152,7 +6828,6 @@
   "PrcNtvRsrv": {
     "title": "Native American & Tribal Lands",
     "name": "PrcNtvRsrv",
-    "src_name": "PrcNtvRsrv",
     "type": "number",
     "example": "0.42",
     "description": "Percentage of county land area that belongs to Native American reservation(s)",
@@ -7172,7 +6847,6 @@
   "TtlPrPpr": {
     "title": "Total Prison Population Rate",
     "name": "TtlPrPpr",
-    "src_name": "TtlPrPpr",
     "type": "number",
     "example": "373.6",
     "description": "Total Prison Population Rate",
@@ -7192,7 +6866,6 @@
   "TtlPrAPpr": {
     "title": "Total Prison Admission Rate",
     "name": "TtlPrAPpr",
-    "src_name": "TtlPrAPpr",
     "type": "number",
     "example": "140.33",
     "description": "Prison Prison Admissions Rate",
@@ -7212,7 +6885,6 @@
   "TtlPrPp": {
     "title": "Total Prison Population Count",
     "name": "TtlPrPp",
-    "src_name": "TtlPrPp",
     "type": "integer",
     "example": "21605",
     "description": "Total Prison Population Count",
@@ -7232,7 +6904,6 @@
   "TtlPrAPp": {
     "title": "Prison Prison Admissions Count",
     "name": "TtlPrAPp",
-    "src_name": "TtlPrAPp",
     "type": "integer",
     "example": "8115",
     "description": "Prison Prison Admissions Count",
@@ -7252,7 +6923,6 @@
   "TtlJlPpr": {
     "title": "Total Jail Population Rate",
     "name": "TtlJlPpr",
-    "src_name": "TtlJlPpr",
     "type": "number",
     "example": "230.32",
     "description": "Total Jail Population Rate, ASJ/COJ Data",
@@ -7272,7 +6942,6 @@
   "TtlJlAdmr": {
     "title": "Total jail admission rate",
     "name": "TtlJlAdmr",
-    "src_name": "TtlJlAdmr",
     "type": "number",
     "example": "1260.84",
     "description": "Total Jail Admissions Rate, ASJ/COJ Data",
@@ -7292,7 +6961,6 @@
   "TtlJlPrtr": {
     "title": "Pretrial Jail Population Rate",
     "name": "TtlJlPrtr",
-    "src_name": "TtlJlPrtr",
     "type": "number",
     "example": "107.3",
     "description": "Pretrial Jail Population Rate",
@@ -7312,7 +6980,6 @@
   "TtlJlPp": {
     "title": "Total Jail Population Count, ASJ/COJ Data",
     "name": "TtlJlPp",
-    "src_name": "TtlJlPp",
     "type": "number",
     "example": "13201",
     "description": "Total Jail Population Count, ASJ/COJ Data",
@@ -7332,7 +6999,6 @@
   "TtlJlAdm": {
     "title": "Total Jail Admissions Count, ASJ/COJ Data",
     "name": "TtlJlAdm",
-    "src_name": "TtlJlAdm",
     "type": "number",
     "example": "72266",
     "description": "Total Jail Admissions Count, ASJ/COJ Data",
@@ -7352,7 +7018,6 @@
   "TtlJlPrt": {
     "title": "Pretrial Jail Population Count",
     "name": "TtlJlPrt",
-    "src_name": "TtlJlPrt",
     "type": "number",
     "example": "6150",
     "description": "Pretrial Jail Population Count",
@@ -7372,7 +7037,6 @@
   "MetRm30": {
     "title": "Methadone access 30 minutes (RAAM)",
     "name": "MetRm30",
-    "src_name": "MetRm30",
     "type": "number",
     "example": "1.232",
     "description": "Methadone access 30 minutes (RAAM)",
@@ -7396,7 +7060,6 @@
   "MetRm60": {
     "title": "Methadone access 60 minutes (RAAM)",
     "name": "MetRm60",
-    "src_name": "MetRm60",
     "type": "number",
     "example": "1.232",
     "description": "Methadone access 60 minutes (RAAM)",
@@ -7420,7 +7083,6 @@
   "MetRm90": {
     "title": "Methadone access 90 minutes (RAAM)",
     "name": "MetRm90",
-    "src_name": "MetRm90",
     "type": "number",
     "example": "1.232",
     "description": "Methadone access 90 minutes (RAAM)",
@@ -7444,7 +7106,6 @@
   "NalRm30": {
     "title": "Naltrexone access 30 minutes (RAAM)",
     "name": "NalRm30",
-    "src_name": "NalRm30",
     "type": "number",
     "example": "1.232",
     "description": "Naltrexone access 30 minutes (RAAM)",
@@ -7464,7 +7125,6 @@
   "NalRm60": {
     "title": "Naltrexone access 60 minutes (RAAM)",
     "name": "NalRm60",
-    "src_name": "NalRm60",
     "type": "number",
     "example": "1.232",
     "description": "Naltrexone access 60 minutes (RAAM)",
@@ -7484,7 +7144,6 @@
   "NalRm90": {
     "title": "Naltrexone access 90 minutes (RAAM)",
     "name": "NalRm90",
-    "src_name": "NalRm90",
     "type": "number",
     "example": "1.232",
     "description": "Naltrexone access 90 minutes (RAAM)",
@@ -7504,7 +7163,6 @@
   "BupRm30": {
     "title": "Buprenorphine access 30 minutes (RAAM)",
     "name": "BupRm30",
-    "src_name": "BupRm30",
     "type": "number",
     "example": "1.232",
     "description": "Buprenorphine access 30 minutes (RAAM)",
@@ -7524,7 +7182,6 @@
   "BupRm60": {
     "title": "Buprenorphine access 60 minutes (RAAM)",
     "name": "BupRm60",
-    "src_name": "BupRm60",
     "type": "number",
     "example": "1.232",
     "description": "Buprenorphine access 60 minutes (RAAM)",
@@ -7544,7 +7201,6 @@
   "BupRm90": {
     "title": "Buprenorphine access 90 minutes (RAAM)",
     "name": "BupRm90",
-    "src_name": "BupRm90",
     "type": "number",
     "example": "1.232",
     "description": "Buprenorphine access 90 minutes (RAAM)",

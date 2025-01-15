@@ -2,7 +2,6 @@
   "TotPop": {
     "title": "Total Population",
     "name": "TotPop",
-    "src_name": "TotPop",
     "type": "integer",
     "example": "1632480",
     "description": "Total population",
@@ -25,7 +24,6 @@
   "ParkArea": {
     "title": "Park Area",
     "name": "ParkArea",
-    "src_name": "ParkArea",
     "type": "number",
     "example": "39296898972.47",
     "description": "Area (in square meters) of park or green space in a state).",
@@ -45,7 +43,6 @@
   "MetTmDr": {
     "title": "Driving Time (min) to nearest Methadone Provider",
     "name": "MetTmDr",
-    "src_name": "MetTmDr",
     "type": "number",
     "example": "27.39",
     "description": "Driving time (minutes) to nearest methadone provider",
