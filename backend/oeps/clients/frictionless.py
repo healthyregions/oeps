@@ -5,6 +5,7 @@ from pathlib import Path
 
 from frictionless import validate
 
+from oeps.clients.registry import Registry
 from oeps.utils import fetch_files, upload_to_s3, load_json, write_json
 
 
@@ -14,7 +15,7 @@ class DataPackage:
 
     def create_from_registry(
         self,
-        registry,
+        registry: Registry,
         zip_output: bool = False,
         upload: bool = False,
         no_cache: bool = False,
@@ -46,13 +47,29 @@ class DataPackage:
             "resources": [],
         }
 
-        resources = registry.get_all_geodata_resources(
-            trim_props=True
-        ) + registry.get_all_table_resources(trim_props=True)
-        for res in resources:
+        for res in registry.get_all_sources():
+            ## remove unneeded top-level attributes (outside of Data Package spec)
+            res.pop("bq_table_name", None)
+            res.pop("bq_dataset_name", None)
+            res.pop("geodata_source", None)
+            res.pop("explorer_config", None)
+
             # remove foreignKeys from schema if needed
             if skip_foreign_keys:
                 res["schema"].pop("foreignKeys", None)
+
+            ## remove unneeded attributes from each field (outside of Data Package spec)
+            for field in res["schema"]["fields"]:
+                field.pop("table_sources", None)
+                field.pop("years", None)
+                field.pop("analysis", None)
+                field.pop("longitudinal", None)
+
+                ## convert our "constraints" field to generic "data_note"
+                ## because our "constraints" doesn't match Data Package specs
+                constraint = field.pop("constraints", "")
+                if not constraint == "":
+                    field["data_note"] = constraint
 
             # write the schema out to its own file in the schemas dir
             schema = res.pop("schema")
@@ -120,7 +137,6 @@ class DataPackage:
 
         schema = load_json(schema_path)
         fields = {i["name"]: i for i in schema["fields"]}
-
         df = pd.read_csv(data_path)
 
         # create new dataframe with only fields as defined in the schema

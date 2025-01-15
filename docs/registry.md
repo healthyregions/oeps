@@ -86,7 +86,6 @@ A single file, `variable.json`, serves as a central lookup for all variables, ea
 - `description` - A one or two sentence description.
 - `constraints` - Any data usage constraints that are relevant for this variable.
 - `comments` - Any extra comments about this variable's creation that don't fit into other properties.
-- `bq_data_type` - The type of column that this variable will be placed into in BigQuery, must be one of [these types](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types).
 - `construct` - A "construct" string that is present within the `themes.json` file (see above)
 - `source` - Creator of this variable, abbreviations ok.
 - `source_long` - Long-form version of source
@@ -112,7 +111,6 @@ A single file, `variable.json`, serves as a central lookup for all variables, ea
       "source_long": "American Community Survey 2014-2018 5 Year Estimate; 2010 Decennial Census; Integrated Public Use Microdata Series National Historic Geographic Information System",
       "oeps_v1_table": null,
       "comments": "For more information about how these data have been used in homelessness and housing stability research, please refer to https://www.census.gov/newsroom/press-releases/2020/special-operations-homelessness.html or https://www.americanprogress.org/issues/poverty/reports/2020/10/05/491122/count-people-where-they-are/.",
-      "bq_data_type": "FLOAT",
       "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md",
       "longitudinal": true,
       "analysis": false,

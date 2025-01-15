@@ -22,9 +22,7 @@
             {
                 "name": "HEROP_ID",
                 "title": "HEROP_ID",
-                "type": "string",
-                "src_name": "HEROP_ID",
-                "bq_data_type": "STRING"
+                "type": "string"
             }
         ]
     }

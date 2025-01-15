@@ -7,5 +7,6 @@
     "mediatype": "text/csv",
     "title": "OEPS Data Aggregated by County (1980)",
     "description": "This CSV aggregates all 1980 data variables from the OEPS v2 release at the Census Tract level.",
+    "year": "1980",
     "geodata_source": "counties-2010"
 }
