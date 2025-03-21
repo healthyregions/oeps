@@ -14,30 +14,30 @@ Usage: explorer build-map [OPTIONS]
 
 ## Options
 
-* `registry`:
-    * Type: <click.types.Path object at 0x7ec9c1a0a800>
-    * Default: `oeps/registry`
-    * Usage: `--registry`
-
-    Optional input path for the registry directory.
-
-
-
-* `root_dir`:
-    * Type: <click.types.Path object at 0x7ec9c1a0a8f0>
-    * Default: `../explorer`
-    * Usage: `--root-dir`
-
-    Optional output path for config files. The default location will overwrite existing configs.
-
-
-
 * `make_csvs`:
     * Type: BOOL
     * Default: `False`
     * Usage: `--make-csvs`
 
     Only write new config JSON files, assumes CSV files are already generated.
+
+
+
+* `registry_path`:
+    * Type: <click.types.Path object at 0x7fca98168040>
+    * Default: `oeps/registry`
+    * Usage: `--registry-path`
+
+    Optional override for the registry directory.
+
+
+
+* `explorer_path`:
+    * Type: <click.types.Path object at 0x7fca98153d00>
+    * Default: `../explorer`
+    * Usage: `--explorer-path`
+
+    Optional override for the root directory of the explorer.
 
 
 
@@ -58,12 +58,12 @@ Usage: explorer build-map [OPTIONS]
   Builds configuration files for the frontend OEPS Explorer application.
 
 Options:
-  --registry PATH  Optional input path for the registry directory.
-  --root-dir PATH  Optional output path for config files. The default location
-                   will overwrite existing configs.
-  --make-csvs      Only write new config JSON files, assumes CSV files are
-                   already generated.
-  --help           Show this message and exit.
+  --make-csvs           Only write new config JSON files, assumes CSV files
+                        are already generated.
+  --registry-path PATH  Optional override for the registry directory.
+  --explorer-path PATH  Optional override for the root directory of the
+                        explorer.
+  --help                Show this message and exit.
 ```
 
 
