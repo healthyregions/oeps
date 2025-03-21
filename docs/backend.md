@@ -7,7 +7,6 @@ The backend includes commands for managing data transformation to and from to di
 - [JCOIN](#jcoin)
 - [Google BigQuery](#google-bigquery)
 - [US Census Data](#us-census-data)
-- [Overture POIs](#overture-pois)
 
 ## Getting Started
 
@@ -247,7 +246,3 @@ flask census get-geodata shp pmtiles geojson -y 2010 --upload --no-cache --verbo
 - `--no-cache` (optional) will force re-download of the source files from the FTP
 - `--verbose` (optional) extra print statements during the process
 - `--tippecanoe-path` (required for pmtiles output) provide a full path to a local [tippecanoe](https://github.com/felt/tippecanoe) binary, used to generate PMTiles
-
-## Overture POIs
-
-*section in progress*
