@@ -57,7 +57,7 @@ Usage: census get-geodata [OPTIONS]
 
 
 * `tippecanoe_path`:
-    * Type: <click.types.Path object at 0x7b0888c21930>
+    * Type: <click.types.Path object at 0x7d7b0bcb1300>
     * Default: `None`
     * Usage: `--tippecanoe-path`
 
@@ -84,7 +84,7 @@ Usage: census get-geodata [OPTIONS]
 
 
 * `destination`:
-    * Type: <click.types.Path object at 0x7b0888c21b10>
+    * Type: <click.types.Path object at 0x7d7b0bcb1a20>
     * Default: `None`
     * Usage: `--destination`
 
@@ -106,7 +106,7 @@ Usage: census get-geodata [OPTIONS]
     * Default: `False`
     * Usage: `--verbose`
 
-    Enable verbose print statements
+    Enable verbose logging.
 
 
 
@@ -147,7 +147,7 @@ Options:
                                   provided, results will be in .cache/geodata.
   --prefix TEXT                   If output is uploaded to S3, use this prefix
                                   for the objects.
-  --verbose                       Enable verbose print statements
+  --verbose                       Enable verbose logging.
   --help                          Show this message and exit.
 ```
 

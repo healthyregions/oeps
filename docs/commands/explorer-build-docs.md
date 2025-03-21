@@ -14,21 +14,21 @@ Usage: explorer build-docs [OPTIONS]
 
 ## Options
 
-* `registry`:
-    * Type: <click.types.Path object at 0x7ec9c1a0a8c0>
+* `registry_path`:
+    * Type: <click.types.Path object at 0x7fca98168040>
     * Default: `oeps/registry`
-    * Usage: `--registry`
+    * Usage: `--registry-path`
 
-    Optional input path for the registry directory.
+    Optional override for the registry directory.
 
 
 
-* `root_dir`:
-    * Type: <click.types.Path object at 0x7ec9c1a0aa10>
+* `explorer_path`:
+    * Type: <click.types.Path object at 0x7fca98153d00>
     * Default: `../explorer`
-    * Usage: `--root-dir`
+    * Usage: `--explorer-path`
 
-    Optional output path for config files. The default location will overwrite existing configs.
+    Optional override for the root directory of the explorer.
 
 
 
@@ -49,10 +49,10 @@ Usage: explorer build-docs [OPTIONS]
   Builds configuration files for the frontend OEPS Explorer application.
 
 Options:
-  --registry PATH  Optional input path for the registry directory.
-  --root-dir PATH  Optional output path for config files. The default location
-                   will overwrite existing configs.
-  --help           Show this message and exit.
+  --registry-path PATH  Optional override for the registry directory.
+  --explorer-path PATH  Optional override for the root directory of the
+                        explorer.
+  --help                Show this message and exit.
 ```
 
 

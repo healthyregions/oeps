@@ -25,15 +25,6 @@ Usage: bigquery load [OPTIONS]
 
 
 
-* `overwrite`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--overwrite`
-
-    Overwrite BQ table if it already exists.
-
-
-
 * `table_only`:
     * Type: BOOL
     * Default: `False`
@@ -49,6 +40,24 @@ Usage: bigquery load [OPTIONS]
     * Usage: `--dry-run`
 
     Mock operation and perform no create/delete actions.
+
+
+
+* `overwrite`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--overwrite`
+
+    Overwrite output content if it already exists.
+
+
+
+* `registry_path`:
+    * Type: <click.types.Path object at 0x7bfb09550310>
+    * Default: `oeps/registry`
+    * Usage: `--registry-path`
+
+    Optional override for the registry directory.
 
 
 
@@ -71,12 +80,13 @@ Usage: bigquery load [OPTIONS]
   create the table and load data into it.
 
 Options:
-  -n, --name TEXT  Name can be provided to load a single Data Resource to Big
-                   Query (instead of everything in the registry)
-  --overwrite      Overwrite BQ table if it already exists.
-  --table-only     Only create the new table, don't load data into it.
-  --dry-run        Mock operation and perform no create/delete actions.
-  --help           Show this message and exit.
+  -n, --name TEXT       Name can be provided to load a single Data Resource to
+                        Big Query (instead of everything in the registry)
+  --table-only          Only create the new table, don't load data into it.
+  --dry-run             Mock operation and perform no create/delete actions.
+  --overwrite           Overwrite output content if it already exists.
+  --registry-path PATH  Optional override for the registry directory.
+  --help                Show this message and exit.
 ```
 
 
