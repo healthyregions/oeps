@@ -24,7 +24,7 @@ Usage: frictionless create-data-package [OPTIONS]
 ## Options
 
 * `destination`:
-    * Type: <click.types.Path object at 0x7a1db2509cc0>
+    * Type: <click.types.Path object at 0x74b6929da350>
     * Default: `.cache/data-packages`
     * Usage: `--destination
 -d`
@@ -83,7 +83,25 @@ Usage: frictionless create-data-package [OPTIONS]
     * Default: `False`
     * Usage: `--overwrite`
 
-    Overwrite existing data package with the same name.
+    Overwrite output content if it already exists.
+
+
+
+* `registry_path`:
+    * Type: <click.types.Path object at 0x74b6981dfee0>
+    * Default: `oeps/registry`
+    * Usage: `--registry-path`
+
+    Optional override for the registry directory.
+
+
+
+* `verbose`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--verbose`
+
+    Enable verbose logging.
 
 
 
@@ -128,7 +146,9 @@ Options:
                           that occur when Shapefiles are used in foreign keys.
   --skip-validation       Don't run data package validation on the final
                           output.
-  --overwrite             Overwrite existing data package with the same name.
+  --overwrite             Overwrite output content if it already exists.
+  --registry-path PATH    Optional override for the registry directory.
+  --verbose               Enable verbose logging.
   --help                  Show this message and exit.
 ```
 

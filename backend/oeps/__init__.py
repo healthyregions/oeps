@@ -30,7 +30,6 @@ from oeps.commands import (
     census_grp,
     explorer_grp,
     frictionless_grp,
-    overture_grp,
     registry_grp,
 )
 from oeps.routes import api
@@ -49,7 +48,6 @@ def create_app():
     app.cli.add_command(census_grp)
     app.cli.add_command(explorer_grp)
     app.cli.add_command(frictionless_grp)
-    app.cli.add_command(overture_grp)
     app.cli.add_command(registry_grp)
 
     # register routes via blueprints
