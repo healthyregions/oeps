@@ -98,7 +98,7 @@ Where `states.sql` is an example of a file that holds the SQL query to perform a
 
 You can write your own SQL into a file and use the same command to perform your query and export the results.
 
-Use the [BQ-Reference](BQ-Reference.md) page for quick access to all table and column names.
+Use the [big-query-tables](./reference/big-query-tables.md) page for quick access to all table and column names.
 
 ### Table Definitions
 
