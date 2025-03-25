@@ -24,7 +24,7 @@ Usage: frictionless create-data-package [OPTIONS]
 ## Options
 
 * `destination`:
-    * Type: <click.types.Path object at 0x74b6929da350>
+    * Type: <click.types.Path object at 0x7d803f1abf40>
     * Default: `.cache/data-packages`
     * Usage: `--destination
 -d`
@@ -88,7 +88,7 @@ Usage: frictionless create-data-package [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x74b6981dfee0>
+    * Type: <click.types.Path object at 0x7d803f913be0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 

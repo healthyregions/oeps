@@ -15,7 +15,7 @@ Usage: explorer build-docs [OPTIONS]
 ## Options
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7fca98168040>
+    * Type: <click.types.Path object at 0x7877ac606f50>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -24,7 +24,7 @@ Usage: explorer build-docs [OPTIONS]
 
 
 * `explorer_path`:
-    * Type: <click.types.Path object at 0x7fca98153d00>
+    * Type: <click.types.Path object at 0x7877ac729b40>
     * Default: `../explorer`
     * Usage: `--explorer-path`
 

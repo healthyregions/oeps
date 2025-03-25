@@ -1,12 +1,13 @@
 
-# registry validate
+# bigquery generate-reference-md
 
-Create the human readable, MS Excel data dictionaries based on registry content.
+Generates a reference document for the BigQuery project schema, based on the
+    locally stored resource JSON schema files.
 
 ## Usage
 
 ```
-Usage: registry validate [OPTIONS]
+Usage: bigquery generate-reference-md [OPTIONS]
 ```
 
 ## Arguments
@@ -15,7 +16,7 @@ Usage: registry validate [OPTIONS]
 ## Options
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7806107501f0>
+    * Type: <click.types.Path object at 0x752477903910>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -35,10 +36,10 @@ Usage: registry validate [OPTIONS]
 ## CLI Help
 
 ```
-Usage: registry validate [OPTIONS]
+Usage: bigquery generate-reference-md [OPTIONS]
 
-  Create the human readable, MS Excel data dictionaries based on registry
-  content.
+  Generates a reference document for the BigQuery project schema, based on the
+  locally stored resource JSON schema files.
 
 Options:
   --registry-path PATH  Optional override for the registry directory.

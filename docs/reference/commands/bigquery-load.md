@@ -53,7 +53,7 @@ Usage: bigquery load [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7bfb09550310>
+    * Type: <click.types.Path object at 0x752477903910>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 

@@ -383,7 +383,7 @@ export default function Download() {
               <ul>
                 <li><a href="https://oepsdata.healthyregions.org/getting-oeps-data-from-bigquery.html">Introduction to OEPS in Google BigQuery</a>: The oepsData documentation includes a detailed overview that is relevant no matter what client you use.</li>
                 <li><a href="https://oepsdata.healthyregions.org/getting-oeps-data-from-bigquery.html#setting-up-bigquery">Setting up BigQuery in R</a>: The oepsData documentation also has a walkthrough guide illustrating how R users can connect directly to our data in BigQuery.</li>
-                <li><a href="https://github.com/healthyregions/oeps/blob/main/docs/BQ-Reference.md">Database Table Reference</a>: Full reference document, provides the project id and the names of all tables and columns.</li>
+                <li><a href="https://github.com/healthyregions/oeps/blob/main/docs/reference/big-query-tables.md">Database Table Reference</a>: Full reference document, provides the project id and the names of all tables and columns.</li>
               </ul>
           </div>
         </div>

@@ -192,7 +192,7 @@ def generate_reference_md(registry_path):
     client = BigQuery()
     registry = Registry(registry_path)
 
-    outfile = Path("../docs/BQ-Reference.md").absolute()
+    outfile = Path("../docs/reference/big-query-tables.md").absolute()
     client.generate_reference_doc(registry.get_all_sources(), outfile)
 
 
@@ -519,7 +519,7 @@ def build_docs(registry_path: Path, explorer_path: Path):
 def make_cli_docs():
     """Generates markdown-formatted documentation from all CLI commands groups."""
 
-    docs_path = Path("../docs/commands")
+    docs_path = Path("../docs/reference/commands")
     for path in docs_path.glob("*.md"):
         os.remove(path)
 
