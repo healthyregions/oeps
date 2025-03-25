@@ -26,6 +26,7 @@ from flask import Flask
 
 from oeps.commands import (
     make_cli_docs,
+    make_registry_summary,
     bigquery_grp,
     census_grp,
     explorer_grp,
@@ -44,6 +45,7 @@ def create_app():
 
     # add all cli commands
     app.cli.add_command(make_cli_docs)
+    app.cli.add_command(make_registry_summary)
     app.cli.add_command(bigquery_grp)
     app.cli.add_command(census_grp)
     app.cli.add_command(explorer_grp)
