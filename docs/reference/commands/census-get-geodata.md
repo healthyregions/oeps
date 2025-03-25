@@ -57,7 +57,7 @@ Usage: census get-geodata [OPTIONS]
 
 
 * `tippecanoe_path`:
-    * Type: <click.types.Path object at 0x7d7b0bcb1300>
+    * Type: <click.types.Path object at 0x726f4fdaa110>
     * Default: `None`
     * Usage: `--tippecanoe-path`
 
@@ -84,7 +84,7 @@ Usage: census get-geodata [OPTIONS]
 
 
 * `destination`:
-    * Type: <click.types.Path object at 0x7d7b0bcb1a20>
+    * Type: <click.types.Path object at 0x726f4fda8910>
     * Default: `None`
     * Usage: `--destination`
 
