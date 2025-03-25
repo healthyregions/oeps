@@ -11,11 +11,13 @@ table source|A structured description of a CSV that holds data values for one or
 
 For a detailed description of how the entire data registry is put together, see [registry.md](./registry.md).
 
-With this in mind, there are two general scenarios in which you will be adding data to OEPS.
+With this in mind, the most first consideration to begin with is:
 
-With this in mind, the most important consideration to begin with is:
+### Am I adding data for new or existing variables?
 
-### What variables am I adding new data for?
+You can see a full list of all variables that are already in the system here: [all-content.md](./reference/registry/all-content.md)
+
+_If you are adding data for existing variables, the variable names in your CSV (column headers) must exactly match the existing variable names in registry._
 
 #### Scenario 1:
 
