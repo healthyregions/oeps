@@ -21,7 +21,7 @@ See also:
 
 OEPS provides access to data at multiple spatial scales, from U.S. states down to Census tracts, as well different time periods, with data from 1980 to today. It is designed to support research seeking to study environments impacting and impacted by opioid use and opioid use disorder (OUD), inform public policy, and reduce harm in communities nationwide.
 
-![](./explorer/public/images/oeps-diagram.png)
+![](./explorer/public/images/logo-factors.png)
 
 Variable constructs have been grouped thematically to highlight the multi-dimensional risk environment of opioid use in justice populations.  The variable themes are: **Geography, Social, Environment, Economic, Policy, Outcome,** and **Composite**.
 
