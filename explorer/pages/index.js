@@ -38,8 +38,8 @@ export default function Home() {
           impacting opioid use and health outcomes across the United States.
           </p>
           <p className={styles.description}>
-          <em><strong>New Release!</strong></em> In December 2024, we released v2.0 of the OEPS data warehouse. Oearn more in the <Link href="https://github.com/GeoDaCenter/opioid-policy-scan/releases/tag/v2.0">release notes</Link>.
-          The v2.0 release is also accompanied by the initial release of <Link href="https://oepsdata.healthyregions.org">oepsData</Link>, an R package specifically designed to facilitate easy access to OEPS data.
+          <em><strong>Update:</strong></em> In December 2024, we released v2.0 of the OEPS data warehouse. Learn more in the <Link href="https://github.com/GeoDaCenter/opioid-policy-scan/releases/tag/v2.0">release notes</Link>.
+          The v2.0 release is also accompanied by the initial release of <Link href="https://oepsdata.healthyregions.org">oepsData</Link>, an R package specifically designed to facilitate easy access to OEPS data. Check back on May 31, 2025 for v3.0 of OEPS with measures updated to 2023 and beyond.
           </p>
           </div>
         </div>
