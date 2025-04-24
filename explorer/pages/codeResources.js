@@ -36,12 +36,12 @@ export default function About() {
               in the R software environment. It includes geocoding MOUD resource locations, linking community contextual data,
               conducting a nearest distance analysis calculating <b>straight line (Euclidean) distance metrics</b>, and more.
             </p>
-            <h3><a href="https://colab.research.google.com/drive/1KXdKgKnXiRlKOuiSDVaBzplr7nrKy64B?usp=sharing#scrollTo=WbFT_hJQvdMP">Calculating Advanced Spatial Access Metrics</a></h3>
+            <h3><a href="https://colab.research.google.com/drive/1YoX5R6Qeb5gXPVmBSPwyMxw9zza2nFeA?usp=sharing">Calculating Advanced Spatial Access Metrics</a></h3>
             <p>
             This Python notebook provides an overview of how to calculate two spatial access metrics, <b>travel time to the nearest resource </b>
             (i.e. MOUD provider location), and <b>count of resources</b> within a customizable driving time range. Using this beginner-friendly script
             available as a Google Colab notebook, calculate travel time access metrics for different modes of transit and spatial scales. We provide <a href="https://uchicago.box.com/s/ae2mtsw7f5tb4rhciczufdxd0owc23as">pre-computed travel time matrices </a>
-            for driving, walking, and biking travel networks, for all Census tracts and zip codes (ZCTA).
+            for driving, walking, and biking travel networks, for all 2010 Census tracts and zip codes (ZCTA). <i>Note:</i>: The code was update in 2025 to update several parameters. Updated vintage files of 2020 boundaries and expanded metrics will be available over the summer of 2025.
             </p>
             <h3><a href="https://access.readthedocs.io/en/latest/index.html">Spatial Access for PySAL</a></h3>
             <p>
