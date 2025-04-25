@@ -15,8 +15,6 @@ Use `--help` to get detailed information for each command, or look at the auto-g
   - [export](./bigquery-export.md)
   - [generate-reference-md](./bigquery-generate-reference-md.md)
   - [load](./bigquery-load.md)
-- [census](./census.md)
-  - [get-geodata](./census-get-geodata.md)
 - [explorer](./explorer.md)
   - [build-docs](./explorer-build-docs.md)
   - [build-map](./explorer-build-map.md)
