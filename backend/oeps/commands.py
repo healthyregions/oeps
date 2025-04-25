@@ -369,7 +369,6 @@ def make_cli_docs():
     command_list = [
         ("oeps.commands", "make_cli_docs"),
         ("oeps.commands", "bigquery_grp"),
-        ("oeps.commands", "census_grp"),
         ("oeps.commands", "explorer_grp"),
         ("oeps.commands", "frictionless_grp"),
         ("oeps.commands", "registry_grp"),
