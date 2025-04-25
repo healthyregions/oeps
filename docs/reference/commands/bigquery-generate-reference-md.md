@@ -16,7 +16,7 @@ Usage: bigquery generate-reference-md [OPTIONS]
 ## Options
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x752477903910>
+    * Type: <click.types.Path object at 0x7d8a7690e920>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
