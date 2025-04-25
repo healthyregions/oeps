@@ -214,35 +214,3 @@ The following is a truncated version of a table definition for the 2010 State-le
     ]
 }
 ```
-
-## US Census Data
-
-A processing pipeline pulls cartographic boundary files from the Census FTP site and does the following:
-
-- Merges all state subsets into a single nation-wide dataset
-- Adds a couple of useful fields
-- Exports to GeoJSON, Shapefile, and PMTiles formats
-- Uploads to our S3 bucket for remote access
-
-Only 500k resolution files are used.
-
-A comprehensive example of the command is:
-
-```
-flask census get-geodata shp pmtiles geojson -y 2010 --upload --no-cache --verbose --tippecanoe-path /opt/tippecanoe/tippecanoe
-```
-
-- `census` is the command group
-- `get-geodata` is this particular operation
-- `shp` indicates that shapefiles will be generated. other valid formats are `geojson` and `pmtiles`
-- `-g tract` (multiple allowed) specifies that tract geographies should be processed. other geographies are:
-    - `state`
-    - `county`
-    - `zcta` (zip code tabulation area)
-    - `bg` (block group)
-    - `place` (place geographies: cities, towns, villages)
-- `-y 2010` indicates that 2010 files should be used. 2018 is also supported.
-- `--upload` (optional) will upload to S3 (credentials and bucket name are set elsewhere)
-- `--no-cache` (optional) will force re-download of the source files from the FTP
-- `--verbose` (optional) extra print statements during the process
-- `--tippecanoe-path` (required for pmtiles output) provide a full path to a local [tippecanoe](https://github.com/felt/tippecanoe) binary, used to generate PMTiles
