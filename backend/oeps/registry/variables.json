@@ -6788,7 +6788,7 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "2018-c-latest-split"
+      "2010-c-latest-split"
     ]
   },
   "CenRuralP": {
