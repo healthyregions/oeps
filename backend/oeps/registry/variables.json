@@ -16,21 +16,48 @@
     "analysis": false,
     "table_sources": [
       "c-1980",
-      "s-latest",
       "t-2010",
-      "t-latest",
       "s-2000",
       "t-2000",
       "c-1990",
-      "z-latest",
       "t-1990",
       "s-1980",
-      "c-latest",
       "s-1990",
       "s-2010",
       "t-1980",
       "c-2010",
-      "c-2000"
+      "c-2000",
+      "2018-s-latest-split",
+      "2022-s-latest-split",
+      "2020-s-latest-split",
+      "2021-s-latest-split",
+      "2019-s-latest-split",
+      "2010-s-latest-split",
+      "2017-s-latest-split",
+      "2013-s-latest-split",
+      "2014-s-latest-split",
+      "2015-s-latest-split",
+      "2016-s-latest-split",
+      "2018-c-latest-split",
+      "2015-c-latest-split",
+      "2000-c-latest-split",
+      "2017-c-latest-split",
+      "2010-c-latest-split",
+      "2020-c-latest-split",
+      "2021-c-latest-split",
+      "2019-c-latest-split",
+      "2016-c-latest-split",
+      "2014-c-latest-split",
+      "2018-t-latest-split",
+      "2020-t-latest-split",
+      "2021-t-latest-split",
+      "2019-t-latest-split",
+      "2010-t-latest-split",
+      "2014-t-latest-split",
+      "2018-z-latest-split",
+      "2020-z-latest-split",
+      "2021-z-latest-split",
+      "2019-z-latest-split"
     ]
   },
   "GEOID": {
@@ -50,16 +77,12 @@
     "analysis": false,
     "table_sources": [
       "c-1980",
-      "s-latest",
       "t-2010",
-      "t-latest",
       "s-2000",
       "t-2000",
       "c-1990",
-      "z-latest",
       "t-1990",
       "s-1980",
-      "c-latest",
       "s-1990",
       "s-2010",
       "t-1980",
@@ -84,21 +107,25 @@
     "analysis": false,
     "table_sources": [
       "c-1980",
-      "s-latest",
       "t-2010",
-      "t-latest",
       "s-2000",
       "t-2000",
       "c-1990",
-      "z-latest",
       "t-1990",
       "s-1980",
-      "c-latest",
       "s-1990",
       "s-2010",
       "t-1980",
       "c-2010",
-      "c-2000"
+      "c-2000",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "TotUnits": {
@@ -118,21 +145,25 @@
     "analysis": false,
     "table_sources": [
       "c-1980",
-      "s-latest",
       "t-2010",
-      "t-latest",
       "s-2000",
       "t-2000",
       "c-1990",
-      "z-latest",
       "t-1990",
       "s-1980",
-      "c-latest",
       "s-1990",
       "s-2010",
       "t-1980",
       "c-2010",
-      "c-2000"
+      "c-2000",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "Age18_64": {
@@ -152,20 +183,24 @@
     "analysis": false,
     "table_sources": [
       "c-1980",
-      "s-latest",
       "t-2010",
-      "t-latest",
       "s-2000",
       "t-2000",
       "c-1990",
-      "z-latest",
       "t-1990",
       "s-1980",
-      "c-latest",
       "s-1990",
       "t-1980",
       "c-2010",
-      "c-2000"
+      "c-2000",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "Age0_4": {
@@ -185,21 +220,25 @@
     "analysis": false,
     "table_sources": [
       "c-1980",
-      "s-latest",
       "t-2010",
-      "t-latest",
       "s-2000",
       "t-2000",
       "c-1990",
-      "z-latest",
       "t-1990",
       "s-1980",
-      "c-latest",
       "s-1990",
       "s-2010",
       "t-1980",
       "c-2010",
-      "c-2000"
+      "c-2000",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "Age5_14": {
@@ -219,21 +258,25 @@
     "analysis": false,
     "table_sources": [
       "c-1980",
-      "s-latest",
       "t-2010",
-      "t-latest",
       "s-2000",
       "t-2000",
       "c-1990",
-      "z-latest",
       "t-1990",
       "s-1980",
-      "c-latest",
       "s-1990",
       "s-2010",
       "t-1980",
       "c-2010",
-      "c-2000"
+      "c-2000",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "Age15_19": {
@@ -253,21 +296,25 @@
     "analysis": false,
     "table_sources": [
       "c-1980",
-      "s-latest",
       "t-2010",
-      "t-latest",
       "s-2000",
       "t-2000",
       "c-1990",
-      "z-latest",
       "t-1990",
       "s-1980",
-      "c-latest",
       "s-1990",
       "s-2010",
       "t-1980",
       "c-2010",
-      "c-2000"
+      "c-2000",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "Age20_24": {
@@ -287,21 +334,25 @@
     "analysis": false,
     "table_sources": [
       "c-1980",
-      "s-latest",
       "t-2010",
-      "t-latest",
       "s-2000",
       "t-2000",
       "c-1990",
-      "z-latest",
       "t-1990",
       "s-1980",
-      "c-latest",
       "s-1990",
       "s-2010",
       "t-1980",
       "c-2010",
-      "c-2000"
+      "c-2000",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "Age15_44": {
@@ -321,21 +372,25 @@
     "analysis": false,
     "table_sources": [
       "c-1980",
-      "s-latest",
       "t-2010",
-      "t-latest",
       "s-2000",
       "t-2000",
       "c-1990",
-      "z-latest",
       "t-1990",
       "s-1980",
-      "c-latest",
       "s-1990",
       "s-2010",
       "t-1980",
       "c-2010",
-      "c-2000"
+      "c-2000",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "Age45_54": {
@@ -376,21 +431,25 @@
     "analysis": false,
     "table_sources": [
       "c-1980",
-      "s-latest",
       "t-2010",
-      "t-latest",
       "s-2000",
       "t-2000",
       "c-1990",
-      "z-latest",
       "t-1990",
       "s-1980",
-      "c-latest",
       "s-1990",
       "s-2010",
       "t-1980",
       "c-2010",
-      "c-2000"
+      "c-2000",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "Age60_64": {
@@ -410,21 +469,25 @@
     "analysis": false,
     "table_sources": [
       "c-1980",
-      "s-latest",
       "t-2010",
-      "t-latest",
       "s-2000",
       "t-2000",
       "c-1990",
-      "z-latest",
       "t-1990",
       "s-1980",
-      "c-latest",
       "s-1990",
       "s-2010",
       "t-1980",
       "c-2010",
-      "c-2000"
+      "c-2000",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "AgeOv65": {
@@ -444,21 +507,25 @@
     "analysis": false,
     "table_sources": [
       "c-1980",
-      "s-latest",
       "t-2010",
-      "t-latest",
       "s-2000",
       "t-2000",
       "c-1990",
-      "z-latest",
       "t-1990",
       "s-1980",
-      "c-latest",
       "s-1990",
       "s-2010",
       "t-1980",
       "c-2010",
-      "c-2000"
+      "c-2000",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "Age15_24P": {
@@ -478,20 +545,23 @@
     "analysis": false,
     "table_sources": [
       "c-1980",
-      "s-latest",
       "t-2010",
-      "t-latest",
       "s-2000",
       "t-2000",
       "c-1990",
       "t-1990",
       "s-1980",
-      "c-latest",
       "s-1990",
       "s-2010",
       "t-1980",
       "c-2010",
-      "c-2000"
+      "c-2000",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split"
     ]
   },
   "Und45P": {
@@ -511,21 +581,25 @@
     "analysis": false,
     "table_sources": [
       "c-1980",
-      "s-latest",
       "t-2010",
-      "t-latest",
       "s-2000",
       "t-2000",
       "c-1990",
-      "z-latest",
       "t-1990",
       "s-1980",
-      "c-latest",
       "s-1990",
       "s-2010",
       "t-1980",
       "c-2010",
-      "c-2000"
+      "c-2000",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "Ovr65P": {
@@ -545,21 +619,25 @@
     "analysis": false,
     "table_sources": [
       "c-1980",
-      "s-latest",
       "t-2010",
-      "t-latest",
       "s-2000",
       "t-2000",
       "c-1990",
-      "z-latest",
       "t-1990",
       "s-1980",
-      "c-latest",
       "s-1990",
       "s-2010",
       "t-1980",
       "c-2010",
-      "c-2000"
+      "c-2000",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "WhiteP": {
@@ -579,21 +657,25 @@
     "analysis": false,
     "table_sources": [
       "c-1980",
-      "s-latest",
       "t-2010",
-      "t-latest",
       "s-2000",
       "t-2000",
       "c-1990",
-      "z-latest",
       "t-1990",
       "s-1980",
-      "c-latest",
       "s-1990",
       "s-2010",
       "t-1980",
       "c-2010",
-      "c-2000"
+      "c-2000",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "BlackP": {
@@ -613,21 +695,25 @@
     "analysis": false,
     "table_sources": [
       "c-1980",
-      "s-latest",
       "t-2010",
-      "t-latest",
       "s-2000",
       "t-2000",
       "c-1990",
-      "z-latest",
       "t-1990",
       "s-1980",
-      "c-latest",
       "s-1990",
       "s-2010",
       "t-1980",
       "c-2010",
-      "c-2000"
+      "c-2000",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "HispP": {
@@ -647,21 +733,25 @@
     "analysis": false,
     "table_sources": [
       "c-1980",
-      "s-latest",
       "t-2010",
-      "t-latest",
       "s-2000",
       "t-2000",
       "c-1990",
-      "z-latest",
       "t-1990",
       "s-1980",
-      "c-latest",
       "s-1990",
       "s-2010",
       "t-1980",
       "c-2010",
-      "c-2000"
+      "c-2000",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "AmIndP": {
@@ -681,21 +771,25 @@
     "analysis": false,
     "table_sources": [
       "c-1980",
-      "s-latest",
       "t-2010",
-      "t-latest",
       "s-2000",
       "t-2000",
       "c-1990",
-      "z-latest",
       "t-1990",
       "s-1980",
-      "c-latest",
       "s-1990",
       "s-2010",
       "t-1980",
       "c-2010",
-      "c-2000"
+      "c-2000",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "AsianP": {
@@ -715,21 +809,25 @@
     "analysis": false,
     "table_sources": [
       "c-1980",
-      "s-latest",
       "t-2010",
-      "t-latest",
       "s-2000",
       "t-2000",
       "c-1990",
-      "z-latest",
       "t-1990",
       "s-1980",
-      "c-latest",
       "s-1990",
       "s-2010",
       "t-1980",
       "c-2010",
-      "c-2000"
+      "c-2000",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "PacIsP": {
@@ -749,21 +847,25 @@
     "analysis": false,
     "table_sources": [
       "c-1980",
-      "s-latest",
       "t-2010",
-      "t-latest",
       "s-2000",
       "t-2000",
       "c-1990",
-      "z-latest",
       "t-1990",
       "s-1980",
-      "c-latest",
       "s-1990",
       "s-2010",
       "t-1980",
       "c-2010",
-      "c-2000"
+      "c-2000",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "OtherP": {
@@ -783,21 +885,25 @@
     "analysis": false,
     "table_sources": [
       "c-1980",
-      "s-latest",
       "t-2010",
-      "t-latest",
       "s-2000",
       "t-2000",
       "c-1990",
-      "z-latest",
       "t-1990",
       "s-1980",
-      "c-latest",
       "s-1990",
       "s-2010",
       "t-1980",
       "c-2010",
-      "c-2000"
+      "c-2000",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "NoHsP": {
@@ -817,21 +923,25 @@
     "analysis": false,
     "table_sources": [
       "c-1980",
-      "s-latest",
       "t-2010",
-      "t-latest",
       "s-2000",
       "t-2000",
       "c-1990",
-      "z-latest",
       "t-1990",
       "s-1980",
-      "c-latest",
       "s-1990",
       "s-2010",
       "t-1980",
       "c-2010",
-      "c-2000"
+      "c-2000",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "ChildrenP": {
@@ -851,19 +961,23 @@
     "analysis": false,
     "table_sources": [
       "c-1980",
-      "s-latest",
-      "t-latest",
       "s-2000",
       "t-2000",
       "c-1990",
-      "z-latest",
       "t-1990",
       "s-1980",
-      "c-latest",
       "s-1990",
       "t-1980",
       "c-2010",
-      "c-2000"
+      "c-2000",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "PovP": {
@@ -883,21 +997,25 @@
     "analysis": false,
     "table_sources": [
       "c-1980",
-      "s-latest",
       "t-2010",
-      "t-latest",
       "s-2000",
       "t-2000",
       "c-1990",
-      "z-latest",
       "t-1990",
       "s-1980",
-      "c-latest",
       "s-1990",
       "s-2010",
       "t-1980",
       "c-2010",
-      "c-2000"
+      "c-2000",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "UnempP": {
@@ -917,21 +1035,25 @@
     "analysis": false,
     "table_sources": [
       "c-1980",
-      "s-latest",
       "t-2010",
-      "t-latest",
       "s-2000",
       "t-2000",
       "c-1990",
-      "z-latest",
       "t-1990",
       "s-1980",
-      "c-latest",
       "s-1990",
       "s-2010",
       "t-1980",
       "c-2010",
-      "c-2000"
+      "c-2000",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "VacantP": {
@@ -951,21 +1073,25 @@
     "analysis": false,
     "table_sources": [
       "c-1980",
-      "s-latest",
       "t-2010",
-      "t-latest",
       "s-2000",
       "t-2000",
       "c-1990",
-      "z-latest",
       "t-1990",
       "s-1980",
-      "c-latest",
       "s-1990",
       "s-2010",
       "t-1980",
       "c-2010",
-      "c-2000"
+      "c-2000",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "TotPopHh": {
@@ -984,10 +1110,14 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "t-latest",
-      "z-latest",
-      "c-latest"
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "TotVetPop": {
@@ -1006,13 +1136,17 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
       "t-2010",
-      "t-latest",
-      "z-latest",
-      "c-latest",
       "s-2010",
-      "c-2010"
+      "c-2010",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "TotWrkE": {
@@ -1031,10 +1165,14 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "t-latest",
-      "z-latest",
-      "c-latest"
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "Age45_49": {
@@ -1053,19 +1191,23 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
       "t-2010",
-      "t-latest",
       "s-2000",
       "t-2000",
       "c-1990",
-      "z-latest",
       "t-1990",
-      "c-latest",
       "s-1990",
       "s-2010",
       "c-2010",
-      "c-2000"
+      "c-2000",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "Age50_54": {
@@ -1084,19 +1226,23 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
       "t-2010",
-      "t-latest",
       "s-2000",
       "t-2000",
       "c-1990",
-      "z-latest",
       "t-1990",
-      "c-latest",
       "s-1990",
       "s-2010",
       "c-2010",
-      "c-2000"
+      "c-2000",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "AgeOv18": {
@@ -1115,11 +1261,15 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "t-latest",
-      "z-latest",
-      "c-latest",
-      "s-2010"
+      "s-2010",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "DisbP": {
@@ -1138,16 +1288,20 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
       "t-2010",
-      "t-latest",
       "s-2000",
       "t-2000",
-      "z-latest",
-      "c-latest",
       "s-2010",
       "c-2010",
-      "c-2000"
+      "c-2000",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "VetP": {
@@ -1166,13 +1320,17 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
       "t-2010",
-      "t-latest",
-      "z-latest",
-      "c-latest",
       "s-2010",
-      "c-2010"
+      "c-2010",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "NonRelFhhP": {
@@ -1191,10 +1349,14 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "t-latest",
-      "z-latest",
-      "c-latest"
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "NonRelNfhhP": {
@@ -1213,10 +1375,14 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "t-latest",
-      "z-latest",
-      "c-latest"
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "MedInc": {
@@ -1235,13 +1401,17 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
       "t-2010",
-      "t-latest",
-      "z-latest",
-      "c-latest",
       "s-2010",
-      "c-2010"
+      "c-2010",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "PciE": {
@@ -1260,13 +1430,17 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
       "t-2010",
-      "t-latest",
-      "z-latest",
-      "c-latest",
       "s-2010",
-      "c-2010"
+      "c-2010",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "ForDqP": {
@@ -1285,9 +1459,12 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "t-latest",
-      "c-latest"
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split"
     ]
   },
   "ForDqTot": {
@@ -1306,9 +1483,12 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "t-latest",
-      "c-latest"
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split"
     ]
   },
   "GiniCoeff": {
@@ -1327,13 +1507,17 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
       "t-2010",
-      "t-latest",
-      "z-latest",
-      "c-latest",
       "s-2010",
-      "c-2010"
+      "c-2010",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "EduP": {
@@ -1352,10 +1536,14 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "t-latest",
-      "z-latest",
-      "c-latest"
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "HghRskP": {
@@ -1374,10 +1562,14 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "t-latest",
-      "z-latest",
-      "c-latest"
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "HltCrP": {
@@ -1396,10 +1588,14 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "t-latest",
-      "z-latest",
-      "c-latest"
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "RetailP": {
@@ -1418,10 +1614,14 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "t-latest",
-      "z-latest",
-      "c-latest"
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "EssnWrkE": {
@@ -1440,10 +1640,14 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "t-latest",
-      "z-latest",
-      "c-latest"
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "EssnWrkP": {
@@ -1462,10 +1666,14 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "t-latest",
-      "z-latest",
-      "c-latest"
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "NoIntP": {
@@ -1484,10 +1692,14 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "t-latest",
-      "z-latest",
-      "c-latest"
+      "2019-s-latest-split",
+      "2019-c-latest-split",
+      "2019-t-latest-split",
+      "2019-z-latest-split",
+      "2019-s-latest-split",
+      "2019-c-latest-split",
+      "2019-t-latest-split",
+      "2019-z-latest-split"
     ]
   },
   "MobileP": {
@@ -1506,10 +1718,14 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "t-latest",
-      "z-latest",
-      "c-latest"
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "LngTermP": {
@@ -1528,10 +1744,14 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "t-latest",
-      "z-latest",
-      "c-latest"
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "RentalP": {
@@ -1550,10 +1770,14 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "t-latest",
-      "z-latest",
-      "c-latest"
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "UnitDens": {
@@ -1572,10 +1796,14 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "t-latest",
-      "z-latest",
-      "c-latest"
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "AreaSqMi": {
@@ -1594,10 +1822,14 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "t-latest",
-      "z-latest",
-      "c-latest"
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "AlcTot": {
@@ -1616,10 +1848,14 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "t-latest",
-      "z-latest",
-      "c-latest"
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "AlcDens": {
@@ -1638,10 +1874,14 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "t-latest",
-      "z-latest",
-      "c-latest"
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "AlcPerCap": {
@@ -1660,10 +1900,14 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "t-latest",
-      "z-latest",
-      "c-latest"
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "DsmBlk": {
@@ -1682,9 +1926,12 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "z-latest",
-      "c-latest"
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "IntrBlkWht": {
@@ -1703,9 +1950,12 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "z-latest",
-      "c-latest"
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "IsoBlk": {
@@ -1724,9 +1974,12 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "z-latest",
-      "c-latest"
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "DsmHsp": {
@@ -1745,9 +1998,12 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "z-latest",
-      "c-latest"
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "IntrHspWht": {
@@ -1766,9 +2022,12 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "z-latest",
-      "c-latest"
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "IsoHsp": {
@@ -1787,9 +2046,12 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "z-latest",
-      "c-latest"
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "DsmAs": {
@@ -1808,9 +2070,12 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "z-latest",
-      "c-latest"
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "IntrAsWht": {
@@ -1829,9 +2094,12 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "z-latest",
-      "c-latest"
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "IsoAs": {
@@ -1850,9 +2118,12 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "z-latest",
-      "c-latest"
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "Ndvi": {
@@ -1871,10 +2142,14 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "t-latest",
-      "z-latest",
-      "c-latest"
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "ParkArea": {
@@ -1893,7 +2168,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2022-s-latest-split",
+      "2022-s-latest-split"
     ]
   },
   "StateArea": {
@@ -1912,7 +2188,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2018-s-latest-split",
+      "2018-s-latest-split"
     ]
   },
   "Cover": {
@@ -1931,7 +2208,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2022-s-latest-split",
+      "2022-s-latest-split"
     ]
   },
   "TotTracts": {
@@ -1950,8 +2228,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "c-latest"
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split"
     ]
   },
   "CntBupT": {
@@ -1970,7 +2250,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2020-s-latest-split",
+      "2020-s-latest-split"
     ]
   },
   "CntMetT": {
@@ -1989,7 +2270,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2020-s-latest-split",
+      "2020-s-latest-split"
     ]
   },
   "CntNalT": {
@@ -2008,7 +2290,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2020-s-latest-split",
+      "2020-s-latest-split"
     ]
   },
   "AvBupTime": {
@@ -2027,7 +2310,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2020-s-latest-split",
+      "2020-s-latest-split"
     ]
   },
   "AvMetTime": {
@@ -2046,7 +2330,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2020-s-latest-split",
+      "2020-s-latest-split"
     ]
   },
   "AvNalTime": {
@@ -2065,7 +2350,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2020-s-latest-split",
+      "2020-s-latest-split"
     ]
   },
   "PctBupT": {
@@ -2084,7 +2370,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2020-s-latest-split",
+      "2020-s-latest-split"
     ]
   },
   "PctMetT": {
@@ -2103,7 +2390,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2020-s-latest-split",
+      "2020-s-latest-split"
     ]
   },
   "PctNalT": {
@@ -2122,7 +2410,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2020-s-latest-split",
+      "2020-s-latest-split"
     ]
   },
   "FqhcCtTmDr": {
@@ -2141,8 +2430,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "c-latest"
+      "2020-s-latest-split",
+      "2020-c-latest-split",
+      "2020-s-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "FqhcAvTmDr": {
@@ -2161,8 +2452,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "c-latest"
+      "2020-s-latest-split",
+      "2020-c-latest-split",
+      "2020-s-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "FqhcTmDrP": {
@@ -2181,8 +2474,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "c-latest"
+      "2020-s-latest-split",
+      "2020-c-latest-split",
+      "2020-s-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "HospCtTmDr": {
@@ -2201,8 +2496,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "c-latest"
+      "2020-s-latest-split",
+      "2020-c-latest-split",
+      "2020-s-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "HospAvTmDr": {
@@ -2221,8 +2518,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "c-latest"
+      "2020-s-latest-split",
+      "2020-c-latest-split",
+      "2020-s-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "HospTmDrP": {
@@ -2241,8 +2540,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "c-latest"
+      "2020-s-latest-split",
+      "2020-c-latest-split",
+      "2020-s-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "RxCtTmDr": {
@@ -2261,8 +2562,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "c-latest"
+      "2019-s-latest-split",
+      "2019-c-latest-split",
+      "2019-s-latest-split",
+      "2019-c-latest-split"
     ]
   },
   "RxAvTmDr": {
@@ -2281,8 +2584,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "c-latest"
+      "2019-s-latest-split",
+      "2019-c-latest-split",
+      "2019-s-latest-split",
+      "2019-c-latest-split"
     ]
   },
   "RxTmDrP": {
@@ -2301,8 +2606,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "c-latest"
+      "2019-s-latest-split",
+      "2019-c-latest-split",
+      "2019-s-latest-split",
+      "2019-c-latest-split"
     ]
   },
   "MhCtTmDr": {
@@ -2321,8 +2628,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "c-latest"
+      "2020-s-latest-split",
+      "2020-c-latest-split",
+      "2020-s-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "MhAvTmDr": {
@@ -2341,8 +2650,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "c-latest"
+      "2020-s-latest-split",
+      "2020-c-latest-split",
+      "2020-s-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "MhTmDrP": {
@@ -2361,8 +2672,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "c-latest"
+      "2020-s-latest-split",
+      "2020-c-latest-split",
+      "2020-s-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "SutpCtTmDr": {
@@ -2381,8 +2694,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "c-latest"
+      "2020-s-latest-split",
+      "2020-c-latest-split",
+      "2020-s-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "SutpAvTmDr": {
@@ -2401,8 +2716,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "c-latest"
+      "2020-s-latest-split",
+      "2020-c-latest-split",
+      "2020-s-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "SutpTmDrP": {
@@ -2421,8 +2738,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "c-latest"
+      "2020-s-latest-split",
+      "2020-c-latest-split",
+      "2020-s-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "OtpCtTmDr": {
@@ -2441,8 +2760,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "c-latest"
+      "2021-s-latest-split",
+      "2021-c-latest-split",
+      "2021-s-latest-split",
+      "2021-c-latest-split"
     ]
   },
   "OtpAvTmDr": {
@@ -2461,8 +2782,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "c-latest"
+      "2021-s-latest-split",
+      "2021-c-latest-split",
+      "2021-s-latest-split",
+      "2021-c-latest-split"
     ]
   },
   "OtpTmDrP": {
@@ -2481,8 +2804,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "c-latest"
+      "2021-s-latest-split",
+      "2021-c-latest-split",
+      "2021-s-latest-split",
+      "2021-c-latest-split"
     ]
   },
   "TotHcv": {
@@ -2501,7 +2826,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "MlHcv": {
@@ -2520,7 +2846,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "FmHcv": {
@@ -2539,7 +2866,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "Un50Hcv": {
@@ -2558,7 +2886,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "A50_74Hcv": {
@@ -2577,7 +2906,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "Ov75Hcv": {
@@ -2596,7 +2926,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "BlkHcv": {
@@ -2615,7 +2946,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "NonBlkHcv": {
@@ -2634,7 +2966,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "HcvD13": {
@@ -2653,7 +2986,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2013-s-latest-split",
+      "2013-s-latest-split"
     ]
   },
   "MlHcvD13": {
@@ -2672,7 +3006,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2013-s-latest-split",
+      "2013-s-latest-split"
     ]
   },
   "FlHcvD13": {
@@ -2691,7 +3026,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2013-s-latest-split",
+      "2013-s-latest-split"
     ]
   },
   "AmInHcvD13": {
@@ -2710,7 +3046,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2013-s-latest-split",
+      "2013-s-latest-split"
     ]
   },
   "AsPiHcvD13": {
@@ -2729,7 +3066,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2013-s-latest-split",
+      "2013-s-latest-split"
     ]
   },
   "BlkHcvD13": {
@@ -2748,7 +3086,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2013-s-latest-split",
+      "2013-s-latest-split"
     ]
   },
   "HspHcvD13": {
@@ -2767,7 +3106,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2013-s-latest-split",
+      "2013-s-latest-split"
     ]
   },
   "U50HcvD13": {
@@ -2786,7 +3126,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2013-s-latest-split",
+      "2013-s-latest-split"
     ]
   },
   "A50_74HcvD13": {
@@ -2805,7 +3146,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2013-s-latest-split",
+      "2013-s-latest-split"
     ]
   },
   "O75HcvD13": {
@@ -2824,7 +3166,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2013-s-latest-split",
+      "2013-s-latest-split"
     ]
   },
   "HcvD14": {
@@ -2843,7 +3186,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2014-s-latest-split",
+      "2014-s-latest-split"
     ]
   },
   "MlHcvD14": {
@@ -2862,7 +3206,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2014-s-latest-split",
+      "2014-s-latest-split"
     ]
   },
   "FlHcvD14": {
@@ -2881,7 +3226,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2014-s-latest-split",
+      "2014-s-latest-split"
     ]
   },
   "AmInHcvD14": {
@@ -2900,7 +3246,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2014-s-latest-split",
+      "2014-s-latest-split"
     ]
   },
   "AsPiHcvD14": {
@@ -2919,7 +3266,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2014-s-latest-split",
+      "2014-s-latest-split"
     ]
   },
   "BlkHcvD14": {
@@ -2938,7 +3286,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2014-s-latest-split",
+      "2014-s-latest-split"
     ]
   },
   "HspHcvD14": {
@@ -2957,7 +3306,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2014-s-latest-split",
+      "2014-s-latest-split"
     ]
   },
   "U50HcvD14": {
@@ -2976,7 +3326,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2014-s-latest-split",
+      "2014-s-latest-split"
     ]
   },
   "A50_74HcvD14": {
@@ -2995,7 +3346,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2014-s-latest-split",
+      "2014-s-latest-split"
     ]
   },
   "O75HcvD14": {
@@ -3014,7 +3366,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2014-s-latest-split",
+      "2014-s-latest-split"
     ]
   },
   "HcvD15": {
@@ -3033,7 +3386,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2015-s-latest-split",
+      "2015-s-latest-split"
     ]
   },
   "MlHcvD15": {
@@ -3052,7 +3406,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2015-s-latest-split",
+      "2015-s-latest-split"
     ]
   },
   "FlHcvD15": {
@@ -3071,7 +3426,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2015-s-latest-split",
+      "2015-s-latest-split"
     ]
   },
   "AmInHcvD15": {
@@ -3090,7 +3446,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2015-s-latest-split",
+      "2015-s-latest-split"
     ]
   },
   "AsPiHcvD15": {
@@ -3109,7 +3466,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2015-s-latest-split",
+      "2015-s-latest-split"
     ]
   },
   "BlkHcvD15": {
@@ -3128,7 +3486,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2015-s-latest-split",
+      "2015-s-latest-split"
     ]
   },
   "HspHcvD15": {
@@ -3147,7 +3506,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2015-s-latest-split",
+      "2015-s-latest-split"
     ]
   },
   "U50HcvD15": {
@@ -3166,7 +3526,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2015-s-latest-split",
+      "2015-s-latest-split"
     ]
   },
   "D50_74Hcv15": {
@@ -3185,7 +3546,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2015-s-latest-split",
+      "2015-s-latest-split"
     ]
   },
   "O75HcvD15": {
@@ -3204,7 +3566,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2015-s-latest-split",
+      "2015-s-latest-split"
     ]
   },
   "HcvD16": {
@@ -3223,7 +3586,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2016-s-latest-split",
+      "2016-s-latest-split"
     ]
   },
   "MlHcvD16": {
@@ -3242,7 +3606,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2016-s-latest-split",
+      "2016-s-latest-split"
     ]
   },
   "FlHcvD16": {
@@ -3261,7 +3626,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2016-s-latest-split",
+      "2016-s-latest-split"
     ]
   },
   "AmInHcvD16": {
@@ -3280,7 +3646,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2016-s-latest-split",
+      "2016-s-latest-split"
     ]
   },
   "AsPiHcvD16": {
@@ -3299,7 +3666,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2016-s-latest-split",
+      "2016-s-latest-split"
     ]
   },
   "BlkHcvD16": {
@@ -3318,7 +3686,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2016-s-latest-split",
+      "2016-s-latest-split"
     ]
   },
   "HspHcvD16": {
@@ -3337,7 +3706,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2016-s-latest-split",
+      "2016-s-latest-split"
     ]
   },
   "U50HcvD16": {
@@ -3356,7 +3726,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2016-s-latest-split",
+      "2016-s-latest-split"
     ]
   },
   "A50_74HcvD16": {
@@ -3375,7 +3746,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2016-s-latest-split",
+      "2016-s-latest-split"
     ]
   },
   "O75HcvD16": {
@@ -3394,7 +3766,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2016-s-latest-split",
+      "2016-s-latest-split"
     ]
   },
   "HcvD17": {
@@ -3413,7 +3786,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "MlHcvD17": {
@@ -3432,7 +3806,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "FlHcvD17": {
@@ -3451,7 +3826,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "AmInHcvD17": {
@@ -3470,7 +3846,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "AsPiHcvD17": {
@@ -3489,7 +3866,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "BlkHcvD17": {
@@ -3508,7 +3886,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "HspHcvD17": {
@@ -3527,7 +3906,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "U50HcvD17": {
@@ -3546,7 +3926,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "A50_74HcvD17": {
@@ -3565,7 +3946,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "O75HcvD17": {
@@ -3584,7 +3966,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "AvHcvD": {
@@ -3603,7 +3986,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "AvMlHcvD": {
@@ -3622,7 +4006,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "AvFlHcvD": {
@@ -3641,7 +4026,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "AvAmInHcvD": {
@@ -3660,7 +4046,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "AvAsPiHcvD": {
@@ -3679,7 +4066,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "AvBlkHcvD": {
@@ -3698,7 +4086,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "AvHspHcvD": {
@@ -3717,7 +4106,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "AvU50HcvD": {
@@ -3736,7 +4126,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "Av50_74HcvD": {
@@ -3755,7 +4146,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "AvO75HcvD": {
@@ -3774,7 +4166,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "TotPcp": {
@@ -3793,9 +4186,12 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "t-latest",
-      "c-latest"
+      "2010-s-latest-split",
+      "2010-c-latest-split",
+      "2010-t-latest-split",
+      "2010-s-latest-split",
+      "2010-c-latest-split",
+      "2010-t-latest-split"
     ]
   },
   "TotSp": {
@@ -3814,9 +4210,12 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "t-latest",
-      "c-latest"
+      "2010-s-latest-split",
+      "2010-c-latest-split",
+      "2010-t-latest-split",
+      "2010-s-latest-split",
+      "2010-c-latest-split",
+      "2010-t-latest-split"
     ]
   },
   "OpRxRt20": {
@@ -3835,8 +4234,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "c-latest"
+      "2020-s-latest-split",
+      "2020-c-latest-split",
+      "2020-s-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "PrMsuse20P": {
@@ -3855,7 +4256,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2020-s-latest-split",
+      "2020-s-latest-split"
     ]
   },
   "OdMortRt14": {
@@ -3874,8 +4276,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "c-latest"
+      "2014-s-latest-split",
+      "2014-c-latest-split",
+      "2014-s-latest-split",
+      "2014-c-latest-split"
     ]
   },
   "OdMortRt15": {
@@ -3894,8 +4298,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "c-latest"
+      "2015-s-latest-split",
+      "2015-c-latest-split",
+      "2015-s-latest-split",
+      "2015-c-latest-split"
     ]
   },
   "OdMortRt16": {
@@ -3914,8 +4320,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "c-latest"
+      "2016-s-latest-split",
+      "2016-c-latest-split",
+      "2016-s-latest-split",
+      "2016-c-latest-split"
     ]
   },
   "OdMortRt17": {
@@ -3934,8 +4342,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "c-latest"
+      "2017-s-latest-split",
+      "2017-c-latest-split",
+      "2017-s-latest-split",
+      "2017-c-latest-split"
     ]
   },
   "OdMortRt18": {
@@ -3954,8 +4364,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "c-latest"
+      "2018-s-latest-split",
+      "2018-c-latest-split",
+      "2018-s-latest-split",
+      "2018-c-latest-split"
     ]
   },
   "OdMortRt19": {
@@ -3974,8 +4386,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "c-latest"
+      "2019-s-latest-split",
+      "2019-c-latest-split",
+      "2019-s-latest-split",
+      "2019-c-latest-split"
     ]
   },
   "OdMortRt20": {
@@ -3994,8 +4408,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "c-latest"
+      "2020-s-latest-split",
+      "2020-c-latest-split",
+      "2020-s-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "OdMortRtAv": {
@@ -4014,8 +4430,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest",
-      "c-latest"
+      "2020-s-latest-split",
+      "2020-c-latest-split",
+      "2020-s-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "AnyPdmpFr": {
@@ -4034,7 +4452,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "AnyPdmphFr": {
@@ -4053,7 +4472,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "OpPdmpFr": {
@@ -4072,7 +4492,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "MsAcPdmpFr": {
@@ -4091,7 +4512,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "ElcPdmpFr": {
@@ -4110,7 +4532,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "AnyPdmpDt": {
@@ -4130,7 +4553,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "AnyPdmphDt": {
@@ -4150,7 +4574,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "OpPdmpDt": {
@@ -4170,7 +4595,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "MsAcPdmpDt": {
@@ -4190,7 +4616,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "ElcPdmpDt": {
@@ -4210,7 +4637,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "AnyGslDt": {
@@ -4230,7 +4658,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "GslArrDt": {
@@ -4250,7 +4679,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "AnyGslFr": {
@@ -4269,7 +4699,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "GslArrFr": {
@@ -4288,7 +4719,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "AnyNalDt": {
@@ -4308,7 +4740,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "NalPrStDt": {
@@ -4328,7 +4761,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "NalPresDt": {
@@ -4348,7 +4782,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "AnyNalFr": {
@@ -4367,7 +4802,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "NalPrStFr": {
@@ -4386,7 +4822,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "NalPresFr": {
@@ -4405,7 +4842,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "MedcdExp19": {
@@ -4424,7 +4862,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2019-s-latest-split",
+      "2019-s-latest-split"
     ]
   },
   "MedcdExp18": {
@@ -4443,7 +4882,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2018-s-latest-split",
+      "2018-s-latest-split"
     ]
   },
   "TradFedExp": {
@@ -4462,7 +4902,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2018-s-latest-split",
+      "2018-s-latest-split"
     ]
   },
   "TradSttExp": {
@@ -4481,7 +4922,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2018-s-latest-split",
+      "2018-s-latest-split"
     ]
   },
   "ExpnFedExp": {
@@ -4500,7 +4942,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2018-s-latest-split",
+      "2018-s-latest-split"
     ]
   },
   "ExpnSttExp": {
@@ -4519,7 +4962,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2018-s-latest-split",
+      "2018-s-latest-split"
     ]
   },
   "ExpSsp": {
@@ -4538,7 +4982,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2019-s-latest-split",
+      "2019-s-latest-split"
     ]
   },
   "NoPrphLw": {
@@ -4557,7 +5002,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2019-s-latest-split",
+      "2019-s-latest-split"
     ]
   },
   "NtPrFrDsSy": {
@@ -4576,7 +5022,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2019-s-latest-split",
+      "2019-s-latest-split"
     ]
   },
   "PrExcInj": {
@@ -4595,7 +5042,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2019-s-latest-split",
+      "2019-s-latest-split"
     ]
   },
   "PrNtRefInj": {
@@ -4614,7 +5062,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2019-s-latest-split",
+      "2019-s-latest-split"
     ]
   },
   "NoLwRmUnc": {
@@ -4633,7 +5082,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2019-s-latest-split",
+      "2019-s-latest-split"
     ]
   },
   "MdMarijLaw": {
@@ -4652,7 +5102,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2017-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
   "CrrctExpS": {
@@ -4671,7 +5122,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2018-s-latest-split",
+      "2018-s-latest-split"
     ]
   },
   "PlcFyrExpS": {
@@ -4690,7 +5142,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2018-s-latest-split",
+      "2018-s-latest-split"
     ]
   },
   "HlthExpS": {
@@ -4709,7 +5162,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2018-s-latest-split",
+      "2018-s-latest-split"
     ]
   },
   "WlfrExpS": {
@@ -4728,7 +5182,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2018-s-latest-split",
+      "2018-s-latest-split"
     ]
   },
   "CrrctExpL": {
@@ -4747,7 +5202,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2018-s-latest-split",
+      "2018-s-latest-split"
     ]
   },
   "PlcFyrExpL": {
@@ -4766,7 +5222,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2018-s-latest-split",
+      "2018-s-latest-split"
     ]
   },
   "HlthExpL": {
@@ -4785,7 +5242,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2018-s-latest-split",
+      "2018-s-latest-split"
     ]
   },
   "WlfrExpL": {
@@ -4804,7 +5262,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2018-s-latest-split",
+      "2018-s-latest-split"
     ]
   },
   "CrrctExpT": {
@@ -4823,7 +5282,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2018-s-latest-split",
+      "2018-s-latest-split"
     ]
   },
   "PlcFyrExpT": {
@@ -4842,7 +5302,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2018-s-latest-split",
+      "2018-s-latest-split"
     ]
   },
   "HlthExpT": {
@@ -4861,7 +5322,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2018-s-latest-split",
+      "2018-s-latest-split"
     ]
   },
   "WlfrExpT": {
@@ -4880,7 +5342,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "s-latest"
+      "2018-s-latest-split",
+      "2018-s-latest-split"
     ]
   },
   "Ruca1": {
@@ -4899,8 +5362,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "Ruca2": {
@@ -4919,8 +5384,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "Rurality": {
@@ -4939,8 +5406,10 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "MoudMinDis": {
@@ -4959,8 +5428,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "BupMinDis": {
@@ -4979,8 +5450,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "BupTmDr": {
@@ -4999,8 +5472,10 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "BupCntDr30": {
@@ -5019,8 +5494,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "MetMinDis": {
@@ -5039,8 +5516,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "MetTmDr": {
@@ -5059,8 +5538,10 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "MetCntDr30": {
@@ -5079,8 +5560,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "NalMinDis": {
@@ -5099,8 +5582,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "NalTmDr": {
@@ -5119,8 +5604,10 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "NalCntDr30": {
@@ -5139,8 +5626,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "BupTmWk": {
@@ -5159,8 +5648,10 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "BupCntWk60": {
@@ -5179,8 +5670,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "BupCntWk30": {
@@ -5199,8 +5692,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "MetTmWk": {
@@ -5219,8 +5714,10 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "MetCntWk30": {
@@ -5239,8 +5736,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "MetCntWk60": {
@@ -5259,8 +5758,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "NalTmWk": {
@@ -5279,8 +5780,10 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "NalCntWk60": {
@@ -5299,8 +5802,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "NalCntWk30": {
@@ -5319,8 +5824,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "BupTmBk": {
@@ -5339,8 +5846,10 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "BupCntBk60": {
@@ -5359,8 +5868,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "BupCntBk30": {
@@ -5379,8 +5890,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "MetTmBk": {
@@ -5399,8 +5912,10 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "MetCntBk60": {
@@ -5419,8 +5934,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "MetCntBk30": {
@@ -5439,8 +5956,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "NalTmBk": {
@@ -5459,8 +5978,10 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "NalCntBk60": {
@@ -5479,8 +6000,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "NalCntBk30": {
@@ -5499,8 +6022,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "FqhcMinDis": {
@@ -5519,8 +6044,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "FqhcTmDr": {
@@ -5539,8 +6066,10 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "FqhcCntDr": {
@@ -5559,8 +6088,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "HospMinDis": {
@@ -5579,8 +6110,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "HospTmDr": {
@@ -5599,8 +6132,10 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "HospCntDr": {
@@ -5619,8 +6154,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "RxMinDis": {
@@ -5639,8 +6176,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2019-t-latest-split",
+      "2019-z-latest-split",
+      "2019-t-latest-split",
+      "2019-z-latest-split"
     ]
   },
   "RxTmDr": {
@@ -5659,8 +6198,10 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2019-t-latest-split",
+      "2019-z-latest-split",
+      "2019-t-latest-split",
+      "2019-z-latest-split"
     ]
   },
   "RxCntDr": {
@@ -5679,8 +6220,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2019-t-latest-split",
+      "2019-z-latest-split",
+      "2019-t-latest-split",
+      "2019-z-latest-split"
     ]
   },
   "MhMinDis": {
@@ -5699,8 +6242,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "MhTmDr": {
@@ -5719,8 +6264,10 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "MhCntDr": {
@@ -5739,8 +6286,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "SutMinDis": {
@@ -5759,8 +6308,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "SutTmDr": {
@@ -5779,8 +6330,10 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "SutCntDr": {
@@ -5799,8 +6352,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2020-t-latest-split",
+      "2020-z-latest-split",
+      "2020-t-latest-split",
+      "2020-z-latest-split"
     ]
   },
   "OtpMinDis": {
@@ -5819,8 +6374,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2021-t-latest-split",
+      "2021-z-latest-split",
+      "2021-t-latest-split",
+      "2021-z-latest-split"
     ]
   },
   "OtpTmDr": {
@@ -5839,8 +6396,10 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2021-t-latest-split",
+      "2021-z-latest-split",
+      "2021-t-latest-split",
+      "2021-z-latest-split"
     ]
   },
   "OtpCntDr": {
@@ -5859,8 +6418,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest"
+      "2021-t-latest-split",
+      "2021-z-latest-split",
+      "2021-t-latest-split",
+      "2021-z-latest-split"
     ]
   },
   "PcpPer100k": {
@@ -5879,8 +6440,10 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "t-latest",
-      "c-latest"
+      "2010-c-latest-split",
+      "2010-t-latest-split",
+      "2010-c-latest-split",
+      "2010-t-latest-split"
     ]
   },
   "SpPer100k": {
@@ -5899,8 +6462,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "c-latest"
+      "2010-c-latest-split",
+      "2010-t-latest-split",
+      "2010-c-latest-split",
+      "2010-t-latest-split"
     ]
   },
   "SocEcAdvIn": {
@@ -5919,7 +6484,8 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "t-latest"
+      "2014-t-latest-split",
+      "2014-t-latest-split"
     ]
   },
   "LimMobInd": {
@@ -5938,7 +6504,8 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "t-latest"
+      "2014-t-latest-split",
+      "2014-t-latest-split"
     ]
   },
   "UrbCoreInd": {
@@ -5957,7 +6524,8 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "t-latest"
+      "2014-t-latest-split",
+      "2014-t-latest-split"
     ]
   },
   "MicaInd": {
@@ -5976,7 +6544,8 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "t-latest"
+      "2014-t-latest-split",
+      "2014-t-latest-split"
     ]
   },
   "NeighbTyp": {
@@ -5995,7 +6564,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest"
+      "2020-t-latest-split",
+      "2020-t-latest-split"
     ]
   },
   "SviTh1": {
@@ -6014,9 +6584,12 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "t-latest",
-      "z-latest",
-      "c-latest"
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "SviTh2": {
@@ -6035,9 +6608,12 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest",
-      "c-latest"
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "SviTh3": {
@@ -6056,9 +6632,12 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest",
-      "c-latest"
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "SviTh4": {
@@ -6077,9 +6656,12 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "t-latest",
-      "z-latest",
-      "c-latest"
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "SviSmryRnk": {
@@ -6098,9 +6680,12 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
-      "z-latest",
-      "c-latest"
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split",
+      "2018-c-latest-split",
+      "2018-t-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "A15_24P": {
@@ -6119,7 +6704,8 @@
     "longitudinal": true,
     "analysis": false,
     "table_sources": [
-      "z-latest"
+      "2018-z-latest-split",
+      "2018-z-latest-split"
     ]
   },
   "BupCtTmDr": {
@@ -6138,7 +6724,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2020-c-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "BupCtTmBk": {
@@ -6157,7 +6744,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2020-c-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "BupCtTmWk": {
@@ -6176,7 +6764,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2020-c-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "MetCtTmDr": {
@@ -6195,7 +6784,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2020-c-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "MetCtTmBk": {
@@ -6214,7 +6804,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2020-c-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "MetCtTmWk": {
@@ -6233,7 +6824,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2020-c-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "NalCtTmDr": {
@@ -6252,7 +6844,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2020-c-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "NalCtTmBk": {
@@ -6271,7 +6864,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2020-c-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "NalCtTmWk": {
@@ -6290,7 +6884,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2020-c-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "BupAvTmDr": {
@@ -6309,7 +6904,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2020-c-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "BupAvTmBk": {
@@ -6328,7 +6924,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2020-c-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "BupAvTmWk": {
@@ -6347,7 +6944,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2020-c-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "MetAvTmDr": {
@@ -6366,7 +6964,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2020-c-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "MetAvTmBk": {
@@ -6385,7 +6984,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2020-c-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "MetAvTmWk": {
@@ -6404,7 +7004,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2020-c-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "NalAvTmDr": {
@@ -6423,7 +7024,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2020-c-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "NalAvTmBk": {
@@ -6442,7 +7044,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2020-c-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "NalAvTmWk": {
@@ -6461,7 +7064,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2020-c-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "BupTmDrP": {
@@ -6480,7 +7084,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2020-c-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "BupTmBkP": {
@@ -6499,7 +7104,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2020-c-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "BupTmWkP": {
@@ -6518,7 +7124,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2020-c-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "MetTmDrP": {
@@ -6537,7 +7144,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2020-c-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "MetTmBkP": {
@@ -6556,7 +7164,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2020-c-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "MetTmWkP": {
@@ -6575,7 +7184,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2020-c-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "NalTmDrP": {
@@ -6594,7 +7204,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2020-c-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "NalTmBkP": {
@@ -6613,7 +7224,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2020-c-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "NalTmWkP": {
@@ -6632,7 +7244,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2020-c-latest-split",
+      "2020-c-latest-split"
     ]
   },
   "RcaUrbanP": {
@@ -6651,7 +7264,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2018-c-latest-split",
+      "2018-c-latest-split"
     ]
   },
   "RcaSubrbP": {
@@ -6670,7 +7284,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2018-c-latest-split",
+      "2018-c-latest-split"
     ]
   },
   "RcaRuralP": {
@@ -6689,7 +7304,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2018-c-latest-split",
+      "2018-c-latest-split"
     ]
   },
   "CenFlags": {
@@ -6708,7 +7324,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2018-c-latest-split",
+      "2018-c-latest-split"
     ]
   },
   "TotPop10": {
@@ -6727,7 +7344,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2010-c-latest-split",
+      "2010-c-latest-split"
     ]
   },
   "UrbPop10": {
@@ -6746,7 +7364,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2010-c-latest-split",
+      "2010-c-latest-split"
     ]
   },
   "RuralPop10": {
@@ -6765,7 +7384,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2018-c-latest-split",
+      "2018-c-latest-split"
     ]
   },
   "CenRuralP": {
@@ -6784,7 +7404,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2018-c-latest-split",
+      "2018-c-latest-split"
     ]
   },
   "DmySgrg": {
@@ -6803,7 +7424,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2015-c-latest-split",
+      "2015-c-latest-split"
     ]
   },
   "DmyBlckBlt": {
@@ -6822,7 +7444,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2000-c-latest-split",
+      "2000-c-latest-split"
     ]
   },
   "PrcNtvRsrv": {
@@ -6841,7 +7464,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2017-c-latest-split",
+      "2017-c-latest-split"
     ]
   },
   "TtlPrPpr": {
@@ -6860,7 +7484,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2016-c-latest-split",
+      "2016-c-latest-split"
     ]
   },
   "TtlPrAPpr": {
@@ -6879,7 +7504,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2016-c-latest-split",
+      "2016-c-latest-split"
     ]
   },
   "TtlPrPp": {
@@ -6898,7 +7524,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2016-c-latest-split",
+      "2016-c-latest-split"
     ]
   },
   "TtlPrAPp": {
@@ -6917,7 +7544,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2016-c-latest-split",
+      "2016-c-latest-split"
     ]
   },
   "TtlJlPpr": {
@@ -6936,7 +7564,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2017-c-latest-split",
+      "2017-c-latest-split"
     ]
   },
   "TtlJlAdmr": {
@@ -6955,7 +7584,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2017-c-latest-split",
+      "2017-c-latest-split"
     ]
   },
   "TtlJlPrtr": {
@@ -6974,7 +7604,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2017-c-latest-split",
+      "2017-c-latest-split"
     ]
   },
   "TtlJlPp": {
@@ -6993,7 +7624,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2017-c-latest-split",
+      "2017-c-latest-split"
     ]
   },
   "TtlJlAdm": {
@@ -7012,7 +7644,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2017-c-latest-split",
+      "2017-c-latest-split"
     ]
   },
   "TtlJlPrt": {
@@ -7031,7 +7664,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "c-latest"
+      "2017-c-latest-split",
+      "2017-c-latest-split"
     ]
   },
   "MetRm30": {
@@ -7050,11 +7684,12 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
       "t-2010",
       "t-2000",
       "t-1990",
-      "t-1980"
+      "t-1980",
+      "2020-t-latest-split",
+      "2020-t-latest-split"
     ]
   },
   "MetRm60": {
@@ -7073,11 +7708,12 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
       "t-2010",
       "t-2000",
       "t-1990",
-      "t-1980"
+      "t-1980",
+      "2020-t-latest-split",
+      "2020-t-latest-split"
     ]
   },
   "MetRm90": {
@@ -7096,11 +7732,12 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest",
       "t-2010",
       "t-2000",
       "t-1990",
-      "t-1980"
+      "t-1980",
+      "2020-t-latest-split",
+      "2020-t-latest-split"
     ]
   },
   "NalRm30": {
@@ -7119,7 +7756,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest"
+      "2020-t-latest-split",
+      "2020-t-latest-split"
     ]
   },
   "NalRm60": {
@@ -7138,7 +7776,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest"
+      "2020-t-latest-split",
+      "2020-t-latest-split"
     ]
   },
   "NalRm90": {
@@ -7157,7 +7796,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest"
+      "2020-t-latest-split",
+      "2020-t-latest-split"
     ]
   },
   "BupRm30": {
@@ -7176,7 +7816,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest"
+      "2020-t-latest-split",
+      "2020-t-latest-split"
     ]
   },
   "BupRm60": {
@@ -7195,7 +7836,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest"
+      "2020-t-latest-split",
+      "2020-t-latest-split"
     ]
   },
   "BupRm90": {
@@ -7214,7 +7856,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "t-latest"
+      "2020-t-latest-split",
+      "2020-t-latest-split"
     ]
   }
 }
