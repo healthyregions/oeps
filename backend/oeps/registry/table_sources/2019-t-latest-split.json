@@ -1,0 +1,12 @@
+{
+  "bq_dataset_name": "tabular",
+  "bq_table_name": "2019-t-latest-split",
+  "name": "2019-t-latest-split",
+  "path": "https://herop-oeps.s3.us-east-2.amazonaws.com/data/tables/2019-t-latest-split.csv",
+  "format": "csv",
+  "mediatype": "text/csv",
+  "title": "2019-t-latest-split",
+  "description": "This CSV aggregates all 1980 data variables from the OEPS v2 release at the T level.",
+  "year": "1980",
+  "geodata_source": "tracts-2018"
+}
