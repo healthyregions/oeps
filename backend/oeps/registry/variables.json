@@ -2660,9 +2660,9 @@
       "2017-s-latest-split"
     ]
   },
-  "HcvD13": {
+  "HcvD": {
     "title": "Hepatitis C Deaths (2013)",
-    "name": "HcvD13",
+    "name": "HcvD",
     "type": "integer",
     "example": "592",
     "description": "Total Hepatitis C deaths in 2013",
@@ -2676,12 +2676,16 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "2013-s-latest-split"
+      "2013-s-latest-split",
+      "2014-s-latest-split",
+      "2015-s-latest-split",
+      "2016-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
-  "MlHcvD13": {
+  "MlHcvD": {
     "title": "Hepatitis C Deaths - Men (2013)",
-    "name": "MlHcvD13",
+    "name": "MlHcvD",
     "type": "integer",
     "example": "417",
     "description": "Hepatitis C deaths among men in 2013",
@@ -2695,12 +2699,16 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "2013-s-latest-split"
+      "2013-s-latest-split",
+      "2014-s-latest-split",
+      "2015-s-latest-split",
+      "2016-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
-  "FlHcvD13": {
+  "FlHcvD": {
     "title": "Hepatitis C Deaths - Women (2013)",
-    "name": "FlHcvD13",
+    "name": "FlHcvD",
     "type": "integer",
     "example": "175",
     "description": "Hepatitis C deaths among women in 2013",
@@ -2714,12 +2722,16 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "2013-s-latest-split"
+      "2013-s-latest-split",
+      "2014-s-latest-split",
+      "2015-s-latest-split",
+      "2016-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
-  "AmInHcvD13": {
+  "AmInHcvD": {
     "title": "Hepatitis C Deaths - American Indian (2013)",
-    "name": "AmInHcvD13",
+    "name": "AmInHcvD",
     "type": "integer",
     "example": "20",
     "description": "Hepatitis C deaths among American Indian populations in 2013",
@@ -2733,12 +2745,16 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "2013-s-latest-split"
+      "2013-s-latest-split",
+      "2014-s-latest-split",
+      "2015-s-latest-split",
+      "2016-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
-  "AsPiHcvD13": {
+  "AsPiHcvD": {
     "title": "Hepatitis C Deaths - Asian & Pacific Islander (2013)",
-    "name": "AsPiHcvD13",
+    "name": "AsPiHcvD",
     "type": "integer",
     "example": "29",
     "description": "Hepatitis C deaths among Asian and Pacific Islander populations in 2013",
@@ -2752,12 +2768,16 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "2013-s-latest-split"
+      "2013-s-latest-split",
+      "2014-s-latest-split",
+      "2015-s-latest-split",
+      "2016-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
-  "BlkHcvD13": {
+  "BlkHcvD": {
     "title": "Hepatitis C Deaths - Black (2013)",
-    "name": "BlkHcvD13",
+    "name": "BlkHcvD",
     "type": "integer",
     "example": "48",
     "description": "Hepatitis C deaths among Black population in 2013",
@@ -2771,12 +2791,16 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "2013-s-latest-split"
+      "2013-s-latest-split",
+      "2014-s-latest-split",
+      "2015-s-latest-split",
+      "2016-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
-  "HspHcvD13": {
+  "HspHcvD": {
     "title": "Hepatitis C Deaths - Hispanic (2013)",
-    "name": "HspHcvD13",
+    "name": "HspHcvD",
     "type": "integer",
     "example": "32",
     "description": "Hepatitis C deaths among hispanic populations in 2013",
@@ -2790,12 +2814,16 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "2013-s-latest-split"
+      "2013-s-latest-split",
+      "2014-s-latest-split",
+      "2015-s-latest-split",
+      "2016-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
-  "U50HcvD13": {
+  "U50HcvD": {
     "title": "Hepatitis C Deaths - Under 50 years old (2013)",
-    "name": "U50HcvD13",
+    "name": "U50HcvD",
     "type": "integer",
     "example": "40",
     "description": "Hepatitis C deaths in populations under 50 years of age in 2013",
@@ -2809,12 +2837,16 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "2013-s-latest-split"
+      "2013-s-latest-split",
+      "2014-s-latest-split",
+      "2015-s-latest-split",
+      "2016-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
-  "A50_74HcvD13": {
+  "A50_74HcvD": {
     "title": "Hepatitis C Deaths - 50 to 74 years old (2013)",
-    "name": "A50_74HcvD13",
+    "name": "A50_74HcvD",
     "type": "integer",
     "example": "515",
     "description": "Hepatitis C deaths among populations between 50 and 74 years of age in 2013",
@@ -2828,12 +2860,16 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "2013-s-latest-split"
+      "2013-s-latest-split",
+      "2014-s-latest-split",
+      "2015-s-latest-split",
+      "2016-s-latest-split",
+      "2017-s-latest-split"
     ]
   },
-  "O75HcvD13": {
+  "O75HcvD": {
     "title": "Hepatitis C Deaths - Over 75 years old (2013)",
-    "name": "O75HcvD13",
+    "name": "O75HcvD",
     "type": "integer",
     "example": "17",
     "description": "Hepatitis C deaths among populations over 75 years of age in 2013",
@@ -2847,766 +2883,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "2013-s-latest-split"
-    ]
-  },
-  "HcvD14": {
-    "title": "Hepatitis C Deaths (2014)",
-    "name": "HcvD14",
-    "type": "integer",
-    "example": "644",
-    "description": "Total Hepatitis C deaths in 2014",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2014-s-latest-split"
-    ]
-  },
-  "MlHcvD14": {
-    "title": "Hepatitis C Deaths - Men (2014)",
-    "name": "MlHcvD14",
-    "type": "integer",
-    "example": "438",
-    "description": "Hepatitis C deaths among men in 2014",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2014-s-latest-split"
-    ]
-  },
-  "FlHcvD14": {
-    "title": "Hepatitis C Deaths - Women (2014)",
-    "name": "FlHcvD14",
-    "type": "integer",
-    "example": "206",
-    "description": "Hepatitis C deaths among women in 2014",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2014-s-latest-split"
-    ]
-  },
-  "AmInHcvD14": {
-    "title": "Hepatitis C Deaths - American Indian (2014)",
-    "name": "AmInHcvD14",
-    "type": "integer",
-    "example": "27",
-    "description": "Hepatitis C deaths among American Indian populations in 2014",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2014-s-latest-split"
-    ]
-  },
-  "AsPiHcvD14": {
-    "title": "Hepatitis C Deaths - Asian & Pacific Islander (2014)",
-    "name": "AsPiHcvD14",
-    "type": "integer",
-    "example": "25",
-    "description": "Hepatitis C deaths among Asian and Pacific Islander populations in 2014",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2014-s-latest-split"
-    ]
-  },
-  "BlkHcvD14": {
-    "title": "Hepatitis C Deaths - Black (2014)",
-    "name": "BlkHcvD14",
-    "type": "integer",
-    "example": "38",
-    "description": "Hepatitis C deaths among Black population in 2014",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2014-s-latest-split"
-    ]
-  },
-  "HspHcvD14": {
-    "title": "Hepatitis C Deaths - Hispanic (2014)",
-    "name": "HspHcvD14",
-    "type": "integer",
-    "example": "41",
-    "description": "Hepatitis C deaths among hispanic populations in 2014",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2014-s-latest-split"
-    ]
-  },
-  "U50HcvD14": {
-    "title": "Hepatitis C Deaths - Under 50 years old (2014)",
-    "name": "U50HcvD14",
-    "type": "integer",
-    "example": "34",
-    "description": "Hepatitis C deaths in populations under 50 years of age in 2014",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2014-s-latest-split"
-    ]
-  },
-  "A50_74HcvD14": {
-    "title": "Hepatitis C Deaths - 50 to 74 years old (2014)",
-    "name": "A50_74HcvD14",
-    "type": "integer",
-    "example": "546",
-    "description": "Hepatitis C deaths among populations between 50 and 74 years of age in 2014",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2014-s-latest-split"
-    ]
-  },
-  "O75HcvD14": {
-    "title": "Hepatitis C Deaths - Over 75 years old (2014)",
-    "name": "O75HcvD14",
-    "type": "integer",
-    "example": "34",
-    "description": "Hepatitis C deaths among populations over 75 years of age in 2014",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2014-s-latest-split"
-    ]
-  },
-  "HcvD15": {
-    "title": "Hepatitis C Deaths (2015)",
-    "name": "HcvD15",
-    "type": "integer",
-    "example": "651",
-    "description": "Total Hepatitis C deaths in 2015",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2015-s-latest-split"
-    ]
-  },
-  "MlHcvD15": {
-    "title": "Hepatitis C Deaths - Men (2015)",
-    "name": "MlHcvD15",
-    "type": "integer",
-    "example": "462",
-    "description": "Hepatitis C deaths among men in 2015",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2015-s-latest-split"
-    ]
-  },
-  "FlHcvD15": {
-    "title": "Hepatitis C Deaths - Women (2015)",
-    "name": "FlHcvD15",
-    "type": "integer",
-    "example": "189",
-    "description": "Hepatitis C deaths among women in 2015",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2015-s-latest-split"
-    ]
-  },
-  "AmInHcvD15": {
-    "title": "Hepatitis C Deaths - American Indian (2015)",
-    "name": "AmInHcvD15",
-    "type": "integer",
-    "example": "21",
-    "description": "Hepatitis C deaths among American Indian populations in 2015",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2015-s-latest-split"
-    ]
-  },
-  "AsPiHcvD15": {
-    "title": "Hepatitis C Deaths - Asian & Pacific Islander (2015)",
-    "name": "AsPiHcvD15",
-    "type": "integer",
-    "example": "27",
-    "description": "Hepatitis C deaths among Asian and Pacific Islander populations in 2015",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2015-s-latest-split"
-    ]
-  },
-  "BlkHcvD15": {
-    "title": "Hepatitis C Deaths - Black (2015)",
-    "name": "BlkHcvD15",
-    "type": "integer",
-    "example": "48",
-    "description": "Hepatitis C deaths among Black population in 2015",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2015-s-latest-split"
-    ]
-  },
-  "HspHcvD15": {
-    "title": "Hepatitis C Deaths - Hispanic (2015)",
-    "name": "HspHcvD15",
-    "type": "integer",
-    "example": "37",
-    "description": "Hepatitis C deaths among hispanic populations in 2015",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2015-s-latest-split"
-    ]
-  },
-  "U50HcvD15": {
-    "title": "Hepatitis C Deaths - Under 50 years old (2015)",
-    "name": "U50HcvD15",
-    "type": "integer",
-    "example": "25",
-    "description": "Hepatitis C deaths in populations under 50 years of age in 2015",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2015-s-latest-split"
-    ]
-  },
-  "D50_74Hcv15": {
-    "title": "Hepatitis C Deaths - 50 to 74 years old (2015)",
-    "name": "D50_74Hcv15",
-    "type": "integer",
-    "example": "568",
-    "description": "Hepatitis C deaths among populations between 50 and 74 years of age in 2015",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2015-s-latest-split"
-    ]
-  },
-  "O75HcvD15": {
-    "title": "Hepatitis C Deaths - Over 75 years old (2015)",
-    "name": "O75HcvD15",
-    "type": "integer",
-    "example": "46",
-    "description": "Hepatitis C deaths among populations over 75 years of age in 2015",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2015-s-latest-split"
-    ]
-  },
-  "HcvD16": {
-    "title": "Hepatitis C Deaths (2016)",
-    "name": "HcvD16",
-    "type": "integer",
-    "example": "517",
-    "description": "Total Hepatitis C deaths in 2016",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2016-s-latest-split"
-    ]
-  },
-  "MlHcvD16": {
-    "title": "Hepatitis C Deaths - Men (2016)",
-    "name": "MlHcvD16",
-    "type": "integer",
-    "example": "354",
-    "description": "Hepatitis C deaths among men in 2016",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2016-s-latest-split"
-    ]
-  },
-  "FlHcvD16": {
-    "title": "Hepatitis C Deaths - Women (2016)",
-    "name": "FlHcvD16",
-    "type": "integer",
-    "example": "163",
-    "description": "Hepatitis C deaths among women in 2016",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2016-s-latest-split"
-    ]
-  },
-  "AmInHcvD16": {
-    "title": "Hepatitis C Deaths - American Indian (2016)",
-    "name": "AmInHcvD16",
-    "type": "integer",
-    "example": "24",
-    "description": "Hepatitis C deaths among American Indian populations in 2016",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2016-s-latest-split"
-    ]
-  },
-  "AsPiHcvD16": {
-    "title": "Hepatitis C Deaths - Asian & Pacific Islander (2016)",
-    "name": "AsPiHcvD16",
-    "type": "integer",
-    "example": "24",
-    "description": "Hepatitis C deaths among Asian and Pacific Islander populations in 2016",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2016-s-latest-split"
-    ]
-  },
-  "BlkHcvD16": {
-    "title": "Hepatitis C Deaths - Black (2016)",
-    "name": "BlkHcvD16",
-    "type": "integer",
-    "example": "38",
-    "description": "Hepatitis C deaths among Black population in 2016",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2016-s-latest-split"
-    ]
-  },
-  "HspHcvD16": {
-    "title": "Hepatitis C Deaths - Hispanic (2016)",
-    "name": "HspHcvD16",
-    "type": "integer",
-    "example": "27",
-    "description": "Hepatitis C deaths among hispanic populations in 2016",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2016-s-latest-split"
-    ]
-  },
-  "U50HcvD16": {
-    "title": "Hepatitis C Deaths - Under 50 years old (2016)",
-    "name": "U50HcvD16",
-    "type": "integer",
-    "example": "17",
-    "description": "Hepatitis C deaths in populations under 50 years of age in 2016",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2016-s-latest-split"
-    ]
-  },
-  "A50_74HcvD16": {
-    "title": "Hepatitis C Deaths - 50 to 74 years old (2016)",
-    "name": "A50_74HcvD16",
-    "type": "integer",
-    "example": "453",
-    "description": "Hepatitis C deaths among populations between 50 and 74 years of age in 2016",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2016-s-latest-split"
-    ]
-  },
-  "O75HcvD16": {
-    "title": "Hepatitis C Deaths - Over 75 years old (2016)",
-    "name": "O75HcvD16",
-    "type": "integer",
-    "example": "26",
-    "description": "Hepatitis C deaths among populations over 75 years of age in 2016",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2016-s-latest-split"
-    ]
-  },
-  "HcvD17": {
-    "title": "Hepatitis C Deaths (2017)",
-    "name": "HcvD17",
-    "type": "integer",
-    "example": "528",
-    "description": "Total Hepatitis C deaths in 2017",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2017-s-latest-split"
-    ]
-  },
-  "MlHcvD17": {
-    "title": "Hepatitis C Deaths - Men (2017)",
-    "name": "MlHcvD17",
-    "type": "integer",
-    "example": "375",
-    "description": "Hepatitis C deaths among men in 2017",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2017-s-latest-split"
-    ]
-  },
-  "FlHcvD17": {
-    "title": "Hepatitis C Deaths - Women (2017)",
-    "name": "FlHcvD17",
-    "type": "integer",
-    "example": "153",
-    "description": "Hepatitis C deaths among women in 2017",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2017-s-latest-split"
-    ]
-  },
-  "AmInHcvD17": {
-    "title": "Hepatitis C Deaths - American Indian (2017)",
-    "name": "AmInHcvD17",
-    "type": "integer",
-    "example": "26",
-    "description": "Hepatitis C deaths among American Indian populations in 2017",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2017-s-latest-split"
-    ]
-  },
-  "AsPiHcvD17": {
-    "title": "Hepatitis C Deaths - Asian & Pacific Islander (2017)",
-    "name": "AsPiHcvD17",
-    "type": "integer",
-    "example": "17",
-    "description": "Hepatitis C deaths among Asian and Pacific Islander populations in 2017",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2017-s-latest-split"
-    ]
-  },
-  "BlkHcvD17": {
-    "title": "Hepatitis C Deaths - Black (2017)",
-    "name": "BlkHcvD17",
-    "type": "integer",
-    "example": "39",
-    "description": "Hepatitis C deaths among Black population in 2017",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2017-s-latest-split"
-    ]
-  },
-  "HspHcvD17": {
-    "title": "Hepatitis C Deaths - Hispanic (2017)",
-    "name": "HspHcvD17",
-    "type": "integer",
-    "example": "35",
-    "description": "Hepatitis C deaths among hispanic populations in 2017",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2017-s-latest-split"
-    ]
-  },
-  "U50HcvD17": {
-    "title": "Hepatitis C Deaths - Under 50 years old (2017)",
-    "name": "U50HcvD17",
-    "type": "integer",
-    "example": "17",
-    "description": "Hepatitis C deaths in populations under 50 years of age in 2017",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2017-s-latest-split"
-    ]
-  },
-  "A50_74HcvD17": {
-    "title": "Hepatitis C Deaths - 50 to 74 years old (2017)",
-    "name": "A50_74HcvD17",
-    "type": "integer",
-    "example": "472",
-    "description": "Hepatitis C deaths among populations between 50 and 74 years of age in 2017",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2017-s-latest-split"
-    ]
-  },
-  "O75HcvD17": {
-    "title": "Hepatitis C Deaths - Over 75 years old (2016)",
-    "name": "O75HcvD17",
-    "type": "integer",
-    "example": "12",
-    "description": "Hepatitis C deaths among populations over 75 years of age in 2017",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
-    "oeps_v1_table": null,
-    "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
+      "2013-s-latest-split",
+      "2014-s-latest-split",
+      "2015-s-latest-split",
+      "2016-s-latest-split",
       "2017-s-latest-split"
     ]
   },
@@ -3842,9 +3122,9 @@
       "2010-t-latest-split"
     ]
   },
-  "OpRxRt20": {
+  "OpRxRt": {
     "title": "Opioid Prescription Rate (2020)",
-    "name": "OpRxRt20",
+    "name": "OpRxRt",
     "type": "number",
     "example": "39.5",
     "description": "Opioid prescription rate in 2020",
@@ -3862,9 +3142,9 @@
       "2020-c-latest-split"
     ]
   },
-  "PrMsuse20P": {
+  "PrMsuseP": {
     "title": "% Self-Report Misuse of Prescription Pain Medication (2020)",
-    "name": "PrMsuse20P",
+    "name": "PrMsuseP",
     "type": "number",
     "example": "4.15",
     "description": "Percent of persons who self-report misusing prescription pain relief medication in 2020.",
@@ -3881,9 +3161,9 @@
       "2020-s-latest-split"
     ]
   },
-  "OdMortRt14": {
+  "OdMortRt": {
     "title": "Opioid Mortality Rate (2014)",
-    "name": "OdMortRt14",
+    "name": "OdMortRt",
     "type": "number",
     "example": "13.3",
     "description": "Overdose mortality rate in 2014",
@@ -3898,125 +3178,17 @@
     "analysis": false,
     "table_sources": [
       "2014-s-latest-split",
-      "2014-c-latest-split"
-    ]
-  },
-  "OdMortRt15": {
-    "title": "Opioid Mortality Rate (2015)",
-    "name": "OdMortRt15",
-    "type": "number",
-    "example": "14.7",
-    "description": "Overdose mortality rate in 2015",
-    "constraints": "",
-    "construct": "Opioid Mortality Rates",
-    "source": "HepVu, 2020",
-    "source_long": "HepVu, 2020",
-    "oeps_v1_table": null,
-    "comments": "",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/OpioidIndicators.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
+      "2014-c-latest-split",
       "2015-s-latest-split",
-      "2015-c-latest-split"
-    ]
-  },
-  "OdMortRt16": {
-    "title": "Opioid Mortality Rate (2016)",
-    "name": "OdMortRt16",
-    "type": "number",
-    "example": "14.5",
-    "description": "Overdose mortality rate in 2016",
-    "constraints": "",
-    "construct": "Opioid Mortality Rates",
-    "source": "HepVu, 2020",
-    "source_long": "HepVu, 2020",
-    "oeps_v1_table": null,
-    "comments": "",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/OpioidIndicators.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
+      "2015-c-latest-split",
       "2016-s-latest-split",
-      "2016-c-latest-split"
-    ]
-  },
-  "OdMortRt17": {
-    "title": "Opioid Mortality Rate (2017)",
-    "name": "OdMortRt17",
-    "type": "number",
-    "example": "15.2",
-    "description": "Overdose mortality rate in 2017",
-    "constraints": "",
-    "construct": "Opioid Mortality Rates",
-    "source": "HepVu, 2020",
-    "source_long": "HepVu, 2020",
-    "oeps_v1_table": null,
-    "comments": "",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/OpioidIndicators.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
+      "2016-c-latest-split",
       "2017-s-latest-split",
-      "2017-c-latest-split"
-    ]
-  },
-  "OdMortRt18": {
-    "title": "Opioid Mortality Rate (2018)",
-    "name": "OdMortRt18",
-    "type": "number",
-    "example": "35.4",
-    "description": "Overdose mortality rate in 2018",
-    "constraints": "",
-    "construct": "Opioid Mortality Rates",
-    "source": "HepVu, 2020",
-    "source_long": "HepVu, 2020",
-    "oeps_v1_table": null,
-    "comments": "",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/OpioidIndicators.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
+      "2017-c-latest-split",
       "2018-s-latest-split",
-      "2018-c-latest-split"
-    ]
-  },
-  "OdMortRt19": {
-    "title": "Opioid Mortality Rate (2019)",
-    "name": "OdMortRt19",
-    "type": "number",
-    "example": "15.8",
-    "description": "Overdose mortality rate in 2019",
-    "constraints": "",
-    "construct": "Opioid Mortality Rates",
-    "source": "HepVu, 2020",
-    "source_long": "HepVu, 2020",
-    "oeps_v1_table": null,
-    "comments": "",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/OpioidIndicators.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
+      "2018-c-latest-split",
       "2019-s-latest-split",
-      "2019-c-latest-split"
-    ]
-  },
-  "OdMortRt20": {
-    "title": "Opioid Mortality Rate (2020)",
-    "name": "OdMortRt20",
-    "type": "number",
-    "example": "22",
-    "description": "Overdose mortality rate in 2020",
-    "constraints": "",
-    "construct": "Opioid Mortality Rates",
-    "source": "HepVu, 2020",
-    "source_long": "HepVu, 2020",
-    "oeps_v1_table": null,
-    "comments": "",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/OpioidIndicators.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
+      "2019-c-latest-split",
       "2020-s-latest-split",
       "2020-c-latest-split"
     ]
@@ -4431,28 +3603,9 @@
       "2017-s-latest-split"
     ]
   },
-  "MedcdExp19": {
-    "title": "Total Medicaid Spending (FY 2019)",
-    "name": "MedcdExp19",
-    "type": "integer",
-    "example": "14959703300",
-    "description": "Total medicaid spending in FY2019",
-    "constraints": "",
-    "construct": "Medicaid Expenditure",
-    "source": "KFF, 2019",
-    "source_long": "Kaiser Family Foundation, 2019",
-    "oeps_v1_table": null,
-    "comments": "1. Medicaid expenditures do not include administrative costs, accounting adjustments, or the U.S. Territories. Total Medicaid spending including these additional items was $626 billion in FY 2019.\n2. Federal Fiscal Year: Unless otherwise noted, years preceded by \"FY\" refer to the Federal Fiscal Year, which runs from October 1 through September 30. FY 2019 refers to the period from October 1, 2018 through September 30, 2019.\n3. New York data may reflect anomalous spending due to adjustments, change in expenditures, and lags in state claims.",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/MedExp_2018_19.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": [
-      "2019-s-latest-split"
-    ]
-  },
-  "MedcdExp18": {
+  "MedcdExp": {
     "title": "Total Medicaid Spending (FY 2018)",
-    "name": "MedcdExp18",
+    "name": "MedcdExp",
     "type": "integer",
     "example": "12037465400",
     "description": "Total medicaid spending in FY2018",
@@ -4466,7 +3619,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "2018-s-latest-split"
+      "2018-s-latest-split",
+      "2019-s-latest-split"
     ]
   },
   "TradFedExp": {
@@ -6753,9 +5907,9 @@
       "2010-c-latest-split"
     ]
   },
-  "UrbPop10": {
+  "UrbPop": {
     "title": "Urban Population Total (2010)",
-    "name": "UrbPop10",
+    "name": "UrbPop",
     "type": "integer",
     "example": "1585873",
     "description": "2010 Population living in urban areas, as defined by Census Bureau",
@@ -6772,9 +5926,9 @@
       "2010-c-latest-split"
     ]
   },
-  "RuralPop10": {
+  "RuralPop": {
     "title": "Rural Population (2010)",
-    "name": "RuralPop10",
+    "name": "RuralPop",
     "type": "integer",
     "example": "0",
     "description": "2010 Population living in non urban areas, as defined by Census Bureau",
