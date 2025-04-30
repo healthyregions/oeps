@@ -2661,11 +2661,11 @@
     ]
   },
   "HcvD": {
-    "title": "Hepatitis C Deaths (2013)",
+    "title": "Hepatitis C Deaths",
     "name": "HcvD",
     "type": "integer",
     "example": "592",
-    "description": "Total Hepatitis C deaths in 2013",
+    "description": "Total Hepatitis C deaths",
     "constraints": "",
     "construct": "Hepatitis C Rates",
     "source": "HepVu, 2017",
@@ -2684,11 +2684,11 @@
     ]
   },
   "MlHcvD": {
-    "title": "Hepatitis C Deaths - Men (2013)",
+    "title": "Hepatitis C Deaths - Men",
     "name": "MlHcvD",
     "type": "integer",
     "example": "417",
-    "description": "Hepatitis C deaths among men in 2013",
+    "description": "Hepatitis C deaths among men",
     "constraints": "",
     "construct": "Hepatitis C Rates",
     "source": "HepVu, 2017",
@@ -2707,11 +2707,11 @@
     ]
   },
   "FlHcvD": {
-    "title": "Hepatitis C Deaths - Women (2013)",
+    "title": "Hepatitis C Deaths - Women",
     "name": "FlHcvD",
     "type": "integer",
     "example": "175",
-    "description": "Hepatitis C deaths among women in 2013",
+    "description": "Hepatitis C deaths among women",
     "constraints": "",
     "construct": "Hepatitis C Rates",
     "source": "HepVu, 2017",
@@ -2730,11 +2730,11 @@
     ]
   },
   "AmInHcvD": {
-    "title": "Hepatitis C Deaths - American Indian (2013)",
+    "title": "Hepatitis C Deaths - American Indian",
     "name": "AmInHcvD",
     "type": "integer",
     "example": "20",
-    "description": "Hepatitis C deaths among American Indian populations in 2013",
+    "description": "Hepatitis C deaths among American Indian populations",
     "constraints": "",
     "construct": "Hepatitis C Rates",
     "source": "HepVu, 2017",
@@ -2753,11 +2753,11 @@
     ]
   },
   "AsPiHcvD": {
-    "title": "Hepatitis C Deaths - Asian & Pacific Islander (2013)",
+    "title": "Hepatitis C Deaths - Asian & Pacific Islander",
     "name": "AsPiHcvD",
     "type": "integer",
     "example": "29",
-    "description": "Hepatitis C deaths among Asian and Pacific Islander populations in 2013",
+    "description": "Hepatitis C deaths among Asian and Pacific Islander populations",
     "constraints": "",
     "construct": "Hepatitis C Rates",
     "source": "HepVu, 2017",
@@ -2776,11 +2776,11 @@
     ]
   },
   "BlkHcvD": {
-    "title": "Hepatitis C Deaths - Black (2013)",
+    "title": "Hepatitis C Deaths - Black",
     "name": "BlkHcvD",
     "type": "integer",
     "example": "48",
-    "description": "Hepatitis C deaths among Black population in 2013",
+    "description": "Hepatitis C deaths among Black population",
     "constraints": "",
     "construct": "Hepatitis C Rates",
     "source": "HepVu, 2017",
@@ -2799,11 +2799,11 @@
     ]
   },
   "HspHcvD": {
-    "title": "Hepatitis C Deaths - Hispanic (2013)",
+    "title": "Hepatitis C Deaths - Hispanic",
     "name": "HspHcvD",
     "type": "integer",
     "example": "32",
-    "description": "Hepatitis C deaths among hispanic populations in 2013",
+    "description": "Hepatitis C deaths among hispanic populations",
     "constraints": "",
     "construct": "Hepatitis C Rates",
     "source": "HepVu, 2017",
@@ -2822,11 +2822,11 @@
     ]
   },
   "U50HcvD": {
-    "title": "Hepatitis C Deaths - Under 50 years old (2013)",
+    "title": "Hepatitis C Deaths - Under 50 years old",
     "name": "U50HcvD",
     "type": "integer",
     "example": "40",
-    "description": "Hepatitis C deaths in populations under 50 years of age in 2013",
+    "description": "Hepatitis C deaths in populations under 50 years of age",
     "constraints": "",
     "construct": "Hepatitis C Rates",
     "source": "HepVu, 2017",
@@ -2845,11 +2845,11 @@
     ]
   },
   "A50_74HcvD": {
-    "title": "Hepatitis C Deaths - 50 to 74 years old (2013)",
+    "title": "Hepatitis C Deaths - 50 to 74 years old",
     "name": "A50_74HcvD",
     "type": "integer",
     "example": "515",
-    "description": "Hepatitis C deaths among populations between 50 and 74 years of age in 2013",
+    "description": "Hepatitis C deaths among populations between 50 and 74 years of age",
     "constraints": "",
     "construct": "Hepatitis C Rates",
     "source": "HepVu, 2017",
@@ -2868,11 +2868,11 @@
     ]
   },
   "O75HcvD": {
-    "title": "Hepatitis C Deaths - Over 75 years old (2013)",
+    "title": "Hepatitis C Deaths - Over 75 years old",
     "name": "O75HcvD",
     "type": "integer",
     "example": "17",
-    "description": "Hepatitis C deaths among populations over 75 years of age in 2013",
+    "description": "Hepatitis C deaths among populations over 75 years of age",
     "constraints": "",
     "construct": "Hepatitis C Rates",
     "source": "HepVu, 2017",
@@ -3123,11 +3123,11 @@
     ]
   },
   "OpRxRt": {
-    "title": "Opioid Prescription Rate (2020)",
+    "title": "Opioid Prescription Rate",
     "name": "OpRxRt",
     "type": "number",
     "example": "39.5",
-    "description": "Opioid prescription rate in 2020",
+    "description": "Opioid prescription rate",
     "constraints": "",
     "construct": "Opioid Prescription Rates",
     "source": "HepVu, 2020",
@@ -3162,11 +3162,11 @@
     ]
   },
   "OdMortRt": {
-    "title": "Opioid Mortality Rate (2014)",
+    "title": "Overdose Mortality Rate",
     "name": "OdMortRt",
     "type": "number",
     "example": "13.3",
-    "description": "Overdose mortality rate in 2014",
+    "description": "Overdose mortality rate",
     "constraints": "",
     "construct": "Opioid Mortality Rates",
     "source": "HepVu, 2020",
@@ -3194,7 +3194,7 @@
     ]
   },
   "OdMortRtAv": {
-    "title": "Opioid Mortality Rate",
+    "title": "Overdose Mortality Rate Average (2016-2020)",
     "name": "OdMortRtAv",
     "type": "number",
     "example": "20.58",
@@ -3604,15 +3604,15 @@
     ]
   },
   "MedcdExp": {
-    "title": "Total Medicaid Spending (FY 2018)",
+    "title": "Total Medicaid Spending",
     "name": "MedcdExp",
     "type": "integer",
     "example": "12037465400",
-    "description": "Total medicaid spending in FY2018",
+    "description": "Total medicaid spending",
     "constraints": "",
     "construct": "Medicaid Expenditure",
-    "source": "KFF, 2018",
-    "source_long": "Kaiser Family Foundation, 2018",
+    "source": "KFF, 2019",
+    "source_long": "Kaiser Family Foundation, 2019",
     "oeps_v1_table": null,
     "comments": "\n1. Medicaid is financed by both the federal government and the states using a formula that is based on a state's per capita income. The federal share (FMAP) varies by state from a floor of 50% to a high of 74% with exceptions for certain services or populations. The Affordable Care Act (ACA) expanded Medicaid eligibility for adults under age 65 and provided the states that chose to expand with an Enhanced FMAP of 100% federal funding through 2016 for the newly eligible adults. The federal share for the expansion population phased down to 95% in 2017 and to 90% by 2020 and beyond.\n2. Spending is rounded to the nearest 100. States totals may not sum to national total due to rounding.\n3. Traditional medicaid spending refers to medicaid spending that does not include spending on adults enrolled in the ACA expansion group.\n4. Expansion group spending refers to spending for adults who have enrolled in Medicaid through the ACA's expansion of the program.\n5. N/A: Not applicable. State did not expand Medicaid as of September 2018.",
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/MedExp_2018_19.md",
@@ -5908,7 +5908,7 @@
     ]
   },
   "UrbPop": {
-    "title": "Urban Population Total (2010)",
+    "title": "Urban Population Total",
     "name": "UrbPop",
     "type": "integer",
     "example": "1585873",
@@ -5927,7 +5927,7 @@
     ]
   },
   "RuralPop": {
-    "title": "Rural Population (2010)",
+    "title": "Rural Population",
     "name": "RuralPop",
     "type": "integer",
     "example": "0",
