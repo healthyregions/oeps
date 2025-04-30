@@ -1,0 +1,318 @@
+{
+  "2020-s-latest-split": [
+    {
+      "old-name": "OpRxRt20",
+      "new-name": "OpRxRt"
+    },
+    {
+      "old-name": "PrMsuse20P",
+      "new-name": "PrMsuseP"
+    },
+    {
+      "old-name": "OdMortRt20",
+      "new-name": "OdMortRt"
+    }
+  ],
+  "2020-c-latest-split": [
+    {
+      "old-name": "OpRxRt20",
+      "new-name": "OpRxRt"
+    },
+    {
+      "old-name": "OdMortRt20",
+      "new-name": "OdMortRt"
+    }
+  ],
+  "2014-s-latest-split": [
+    {
+      "old-name": "OdMortRt14",
+      "new-name": "OdMortRt"
+    },
+    {
+      "old-name": "HcvD14",
+      "new-name": "HcvD"
+    },
+    {
+      "old-name": "MlHcvD14",
+      "new-name": "MlHcvD"
+    },
+    {
+      "old-name": "FlHcvD14",
+      "new-name": "FlHcvD"
+    },
+    {
+      "old-name": "AmInHcvD14",
+      "new-name": "AmInHcvD"
+    },
+    {
+      "old-name": "AsPiHcvD14",
+      "new-name": "AsPiHcvD"
+    },
+    {
+      "old-name": "BlkHcvD14",
+      "new-name": "BlkHcvD"
+    },
+    {
+      "old-name": "HspHcvD14",
+      "new-name": "HspHcvD"
+    },
+    {
+      "old-name": "U50HcvD14",
+      "new-name": "U50HcvD"
+    },
+    {
+      "old-name": "A50_74HcvD14",
+      "new-name": "A50_74HcvD"
+    },
+    {
+      "old-name": "O75HcvD14",
+      "new-name": "O75HcvD"
+    }
+  ],
+  "2014-c-latest-split": [
+    {
+      "old-name": "OdMortRt14",
+      "new-name": "OdMortRt"
+    }
+  ],
+  "2015-s-latest-split": [
+    {
+      "old-name": "OdMortRt15",
+      "new-name": "OdMortRt"
+    },
+    {
+      "old-name": "HcvD15",
+      "new-name": "HcvD"
+    },
+    {
+      "old-name": "MlHcvD15",
+      "new-name": "MlHcvD"
+    },
+    {
+      "old-name": "FlHcvD15",
+      "new-name": "FlHcvD"
+    },
+    {
+      "old-name": "AmInHcvD15",
+      "new-name": "AmInHcvD"
+    },
+    {
+      "old-name": "AsPiHcvD15",
+      "new-name": "AsPiHcvD"
+    },
+    {
+      "old-name": "BlkHcvD15",
+      "new-name": "BlkHcvD"
+    },
+    {
+      "old-name": "HspHcvD15",
+      "new-name": "HspHcvD"
+    },
+    {
+      "old-name": "U50HcvD15",
+      "new-name": "U50HcvD"
+    },
+    {
+      "old-name": "D50_74Hcv15",
+      "new-name": "A50_74HcvD"
+    },
+    {
+      "old-name": "O75HcvD15",
+      "new-name": "O75HcvD"
+    }
+  ],
+  "2015-c-latest-split": [
+    {
+      "old-name": "OdMortRt15",
+      "new-name": "OdMortRt"
+    }
+  ],
+  "2016-s-latest-split": [
+    {
+      "old-name": "OdMortRt16",
+      "new-name": "OdMortRt"
+    },
+    {
+      "old-name": "HcvD16",
+      "new-name": "HcvD"
+    },
+    {
+      "old-name": "MlHcvD16",
+      "new-name": "MlHcvD"
+    },
+    {
+      "old-name": "FlHcvD16",
+      "new-name": "FlHcvD"
+    },
+    {
+      "old-name": "AmInHcvD16",
+      "new-name": "AmInHcvD"
+    },
+    {
+      "old-name": "AsPiHcvD16",
+      "new-name": "AsPiHcvD"
+    },
+    {
+      "old-name": "BlkHcvD16",
+      "new-name": "BlkHcvD"
+    },
+    {
+      "old-name": "HspHcvD16",
+      "new-name": "HspHcvD"
+    },
+    {
+      "old-name": "U50HcvD16",
+      "new-name": "U50HcvD"
+    },
+    {
+      "old-name": "A50_74HcvD16",
+      "new-name": "A50_74HcvD"
+    },
+    {
+      "old-name": "O75HcvD16",
+      "new-name": "O75HcvD"
+    }
+  ],
+  "2016-c-latest-split": [
+    {
+      "old-name": "OdMortRt16",
+      "new-name": "OdMortRt"
+    }
+  ],
+  "2017-s-latest-split": [
+    {
+      "old-name": "OdMortRt17",
+      "new-name": "OdMortRt"
+    },
+    {
+      "old-name": "HcvD17",
+      "new-name": "HcvD"
+    },
+    {
+      "old-name": "MlHcvD17",
+      "new-name": "MlHcvD"
+    },
+    {
+      "old-name": "FlHcvD17",
+      "new-name": "FlHcvD"
+    },
+    {
+      "old-name": "AmInHcvD17",
+      "new-name": "AmInHcvD"
+    },
+    {
+      "old-name": "AsPiHcvD17",
+      "new-name": "AsPiHcvD"
+    },
+    {
+      "old-name": "BlkHcvD17",
+      "new-name": "BlkHcvD"
+    },
+    {
+      "old-name": "HspHcvD17",
+      "new-name": "HspHcvD"
+    },
+    {
+      "old-name": "U50HcvD17",
+      "new-name": "U50HcvD"
+    },
+    {
+      "old-name": "A50_74HcvD17",
+      "new-name": "A50_74HcvD"
+    },
+    {
+      "old-name": "O75HcvD17",
+      "new-name": "O75HcvD"
+    }
+  ],
+  "2017-c-latest-split": [
+    {
+      "old-name": "OdMortRt17",
+      "new-name": "OdMortRt"
+    }
+  ],
+  "2018-s-latest-split": [
+    {
+      "old-name": "OdMortRt18",
+      "new-name": "OdMortRt"
+    },
+    {
+      "old-name": "MedcdExp18",
+      "new-name": "MedcdExp"
+    }
+  ],
+  "2018-c-latest-split": [
+    {
+      "old-name": "OdMortRt18",
+      "new-name": "OdMortRt"
+    }
+  ],
+  "2019-s-latest-split": [
+    {
+      "old-name": "OdMortRt19",
+      "new-name": "OdMortRt"
+    },
+    {
+      "old-name": "MedcdExp19",
+      "new-name": "MedcdExp"
+    }
+  ],
+  "2019-c-latest-split": [
+    {
+      "old-name": "OdMortRt19",
+      "new-name": "OdMortRt"
+    }
+  ],
+  "2013-s-latest-split": [
+    {
+      "old-name": "HcvD13",
+      "new-name": "HcvD"
+    },
+    {
+      "old-name": "MlHcvD13",
+      "new-name": "MlHcvD"
+    },
+    {
+      "old-name": "FlHcvD13",
+      "new-name": "FlHcvD"
+    },
+    {
+      "old-name": "AmInHcvD13",
+      "new-name": "AmInHcvD"
+    },
+    {
+      "old-name": "AsPiHcvD13",
+      "new-name": "AsPiHcvD"
+    },
+    {
+      "old-name": "BlkHcvD13",
+      "new-name": "BlkHcvD"
+    },
+    {
+      "old-name": "HspHcvD13",
+      "new-name": "HspHcvD"
+    },
+    {
+      "old-name": "U50HcvD13",
+      "new-name": "U50HcvD"
+    },
+    {
+      "old-name": "A50_74HcvD13",
+      "new-name": "A50_74HcvD"
+    },
+    {
+      "old-name": "O75HcvD13",
+      "new-name": "O75HcvD"
+    }
+  ],
+  "2010-c-latest-split": [
+    {
+      "old-name": "UrbPop10",
+      "new-name": "UrbPop"
+    },
+    {
+      "old-name": "RuralPop10",
+      "new-name": "RuralPop"
+    }
+  ]
+}
