@@ -2,7 +2,7 @@
     "bq_dataset_name": "tabular",
     "bq_table_name": "T_1980",
     "name": "t-1980",
-    "path": "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables/T_1980.csv",
+    "path": "https://herop-oeps.s3.us-east-2.amazonaws.com/data/tables/T_1980.csv",
     "format": "csv",
     "mediatype": "text/csv",
     "title": "OEPS Data Aggregated by Census Tract (1980)",

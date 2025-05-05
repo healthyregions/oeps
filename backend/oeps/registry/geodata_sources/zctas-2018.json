@@ -12,7 +12,7 @@
         "bounds": [-125.109215, -66.925621, 25.043926, 49.295128],
         "tables": {}
     },
-    "path": "https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2018-500k-shp.zip",
+    "path": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/zcta-2018-500k-shp.zip",
     "format": "shp",
     "mediatype": "application/vnd.shp",
     "summary_level": "zcta",
