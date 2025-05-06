@@ -7,6 +7,6 @@
   "mediatype": "text/csv",
   "title": "2019-t-latest-split",
   "description": "This CSV aggregates all 1980 data variables from the OEPS v2 release at the T level.",
-  "year": "1980",
+  "year": "2019",
   "geodata_source": "tracts-2018"
 }

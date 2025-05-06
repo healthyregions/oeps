@@ -7,6 +7,6 @@
   "mediatype": "text/csv",
   "title": "2017-s-latest-split",
   "description": "This CSV aggregates all 1980 data variables from the OEPS v2 release at the S level.",
-  "year": "1980",
+  "year": "2017",
   "geodata_source": "states-2018"
 }

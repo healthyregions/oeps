@@ -7,6 +7,6 @@
   "mediatype": "text/csv",
   "title": "2020-c-latest-split",
   "description": "This CSV aggregates all 1980 data variables from the OEPS v2 release at the C level.",
-  "year": "1980",
+  "year": "2020",
   "geodata_source": "counties-2018"
 }
