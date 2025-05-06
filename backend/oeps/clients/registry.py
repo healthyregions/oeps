@@ -76,7 +76,6 @@ class Registry:
         paths = Path(self.directory, "geodata_sources").glob("*.json")
         for path in paths:
             data = load_json(path)
-            data["csv_abbrev"] = data["name"][0]
             output[data["name"]] = data
         return output
 

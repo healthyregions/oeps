@@ -28,7 +28,7 @@ class Explorer:
         for id, data in self.registry.geodata_sources.items():
             entry = data.get("explorer_config")
             if entry:
-                entry["csv_abbrev"] = id[0]
+                entry["summary_level"] = data["summary_level"]
                 geodata_lookup[id] = entry
 
         # create lookup of all table data sources that are linked to a valid geodata_source
@@ -101,16 +101,16 @@ class Explorer:
         # spatial resolution
         out_sources = {"sources": []}
         for v in geodata_lookup.values():
-            if v["csv_abbrev"] == "s":
+            if v["summary_level"] == "state":
                 out_sources["sources"].append(v)
         for v in geodata_lookup.values():
-            if v["csv_abbrev"] == "c":
+            if v["summary_level"] == "county":
                 out_sources["sources"].append(v)
         for v in geodata_lookup.values():
-            if v["csv_abbrev"] == "z":
+            if v["summary_level"] == "zcta":
                 out_sources["sources"].append(v)
         for v in geodata_lookup.values():
-            if v["csv_abbrev"] == "t":
+            if v["summary_level"] == "tract":
                 out_sources["sources"].append(v)
 
         write_json(out_sources, Path(config_dir, "sources.json"))
