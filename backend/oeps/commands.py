@@ -328,15 +328,8 @@ explorer_grp = AppGroup(
 
 
 @explorer_grp.command()
-@click.option(
-    "--make-csvs",
-    help="Only write new config JSON files, assumes CSV files are already generated.",
-    default=False,
-    is_flag=True,
-)
 @add_common_opts(registry_opt, explorer_opt)
 def build_map(
-    make_csvs: bool,
     registry_path: Path,
     explorer_path: Path,
 ):
@@ -344,7 +337,7 @@ def build_map(
 
     registry = Registry(registry_path)
     ex = Explorer(registry=registry, root_dir=explorer_path)
-    ex.build_map_config(write_csvs=make_csvs)
+    ex.build_map_config()
 
 
 @explorer_grp.command()

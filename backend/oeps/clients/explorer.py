@@ -15,7 +15,7 @@ class Explorer:
         self.root_dir = root_dir
         self.dataframe_lookup = {}
 
-    def build_map_config(self, write_csvs: bool = True):
+    def build_map_config(self):
         csv_dir = Path(self.root_dir, "public", "csv")
         csv_dir.mkdir(parents=True, exist_ok=True)
 
@@ -73,11 +73,10 @@ class Explorer:
                 abbrev = ds_schema["geodata_source"][0]
                 out_path = Path(csv_dir, f"{k}_{abbrev}.csv")
 
-                if write_csvs:
-                    print(f"writing {out_path}")
-                    df = self.dataframe_lookup.get(ds, pd.read_csv(ds_schema["path"]))
-                    df_filtered = df.filter(field_list)
-                    df_filtered.to_csv(out_path, index=False)
+                print(f"writing {out_path}")
+                df = self.dataframe_lookup.get(ds, pd.read_csv(ds_schema["path"]))
+                df_filtered = df.filter(field_list)
+                df_filtered.to_csv(out_path, index=False)
 
                 table_entry = {
                     "file": out_path.name,
