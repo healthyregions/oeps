@@ -38,8 +38,6 @@ def test_init(runner):
     )
     assert len(registry.geodata_sources) == len(geodata_sources)
     for gs_path in geodata_sources:
-        ## "csv_abbrev "is a deriv"  key/value that is added on load, and isn't present in the source JSON
-        del registry.geodata_sources[gs_path.stem]["csv_abbrev"]
         assert registry.geodata_sources[gs_path.stem] == load_json(gs_path)
 
 
