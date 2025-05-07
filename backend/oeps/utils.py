@@ -10,6 +10,7 @@ from typing import List
 from tqdm import tqdm
 from glob import glob
 from pathlib import Path
+import random
 
 BQ_TYPE_LOOKUP = {
     "string": "STRING",
@@ -18,6 +19,10 @@ BQ_TYPE_LOOKUP = {
     "date": "DATE",
     "number": "NUMERIC",
 }
+
+
+def make_id(length: int = 6):
+    return "".join(random.choices("0123456789ABCDEF", k=length))
 
 
 def load_json(path) -> dict:
