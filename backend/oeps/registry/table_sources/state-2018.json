@@ -1,0 +1,12 @@
+{
+  "bq_dataset_name": "tabular",
+  "bq_table_name": "state-2018",
+  "name": "state-2018",
+  "path": "tables/state-2018.csv",
+  "format": "csv",
+  "mediatype": "text/csv",
+  "title": "state-2018",
+  "description": "This CSV aggregates all OEPS data values from 2018 at the state level.",
+  "year": "2018",
+  "geodata_source": "states-2018"
+}
