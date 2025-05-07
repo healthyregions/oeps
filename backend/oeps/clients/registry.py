@@ -1,11 +1,21 @@
+from enum import Enum
 from pathlib import Path
 
 from openpyxl import Workbook
 from openpyxl.utils import get_column_letter
 from openpyxl.styles import Font
+import pandas as pd
+import geopandas as gpd
 
-from oeps.utils import load_json
+from oeps.utils import load_json, write_json
 from oeps.config import REGISTRY_DIR, DATA_DIR
+
+
+class SummaryLevel(Enum):
+    state = "state"
+    county = "county"
+    zcta = "zcta"
+    tract = "tract"
 
 
 class Registry:
@@ -244,3 +254,88 @@ class Registry:
         print(f"{len(unused)} unused 'construct':")
         if unused:
             print(unused)
+
+        for k, v in self.geodata_sources.items():
+            try:
+                SummaryLevel(v["summary_level"])
+            except Exception as e:
+                print(k)
+                raise e
+
+    def get_or_create_table_source(self, name: str, geodata_source: str):
+        lvl, year = name.split("-")
+
+        ## validate these components
+        lvl = SummaryLevel(lvl)
+        int(year)
+        gs = self.geodata_sources[geodata_source]
+
+        ts = self.table_sources.get(name)
+        if not ts:
+            ts = {
+                "bq_dataset_name": "tabular",
+                "bq_table_name": name,
+                "name": name,
+                "path": f"tables/{name}.csv",
+                "format": "csv",
+                "mediatype": "text/csv",
+                "title": name,
+                "description": f"This CSV aggregates all OEPS data values from {year} at the {gs['summary_level']} level.",
+                "year": str(year),
+                "geodata_source": geodata_source,
+            }
+
+            ## write the definition to a new JSON file
+            outpath = Path(REGISTRY_DIR, "table_sources", f"{name}.json")
+            write_json(ts, outpath)
+            self.table_sources[name] = ts
+
+        ## now (if needed) create a dummy CSV with all HEROP_IDs, based on the geodata_source
+        local_path = Path(DATA_DIR, ts["path"])
+        if not local_path.is_file():
+            gdf = gpd.read_file(gs["path"])
+            gdf_sm = gdf["HEROP_ID"]
+            gdf_sm.to_csv(local_path, index=False)
+
+        return ts
+
+    def check_input_table(self, input_path: Path):
+        df = pd.read_csv(input_path)
+        all_fields = list(df.columns)
+        matched = [i for i in all_fields if i in self.variables]
+        missed = [i for i in all_fields if i not in self.variables]
+
+        return (matched, missed)
+
+    def merge_table(self, input_path: str, geodata_source: str, year: int):
+        source_df = pd.read_csv(input_path)
+
+        target_ts_name = (
+            f"{self.geodata_sources[geodata_source]['summary_level']}-{year}"
+        )
+        target_ts = self.get_or_create_table_source(target_ts_name, geodata_source)
+
+        target_df = pd.read_csv(Path(DATA_DIR, target_ts["path"]))
+
+        ## determine which columns to take from the incoming dataframe
+        matched = [i for i in source_df.columns if i in self.variables]
+        new = [i for i in matched if i not in target_df.columns]
+        if not new:
+            print("No new columns to add from this input CSV.")
+            return
+
+        print(f"{len(new)} new column(s) will be added to the existing CSV")
+        source_df_trim = source_df[["HEROP_ID"] + new]
+        print(f"shape of incoming data: {source_df_trim.shape}")
+        merged_df = pd.merge(target_df, source_df_trim, on="HEROP_ID")
+
+        merged_df.to_csv(Path(DATA_DIR, target_ts["path"]), index=False)
+
+        for col in source_df_trim.columns:
+            var = self.variables[col]
+            if target_ts_name not in var["table_sources"]:
+                var["table_sources"].append(target_ts_name)
+
+        for k, v in self.variables.items():
+            del v["years"]
+        write_json(self.variables, Path(self.directory, "variables.json"))

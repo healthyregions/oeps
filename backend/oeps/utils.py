@@ -31,6 +31,10 @@ def write_json(data, path):
     return path
 
 
+def print_json(data):
+    print(json.dumps(data, indent=2))
+
+
 class S3ProgressPercentage(object):
     def __init__(self, filename):
         self._filename = filename
