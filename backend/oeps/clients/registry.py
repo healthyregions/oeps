@@ -12,9 +12,10 @@ class Registry:
     def __init__(self, directory: Path = REGISTRY_DIR):
         self.directory = directory
 
-        self.variables = self._load_variables()
-        self.table_sources = self._load_table_sources()
+        ## load in this order so that some attributes can be cascaded
         self.geodata_sources = self._load_geodata_sources()
+        self.table_sources = self._load_table_sources()
+        self.variables = self._load_variables()
 
         ## declare public attributes for type hinting
         self.themes = {}
@@ -22,15 +23,19 @@ class Registry:
         self.proxy_lookup = {}
         self._load_themes()  # updates self.themes, self.theme_lookup, and self.proxy_lookup
 
-        self._add_years_to_variables()
         print(
             f"registry initialized | variables: {len(self.variables)}, tables: {len(self.table_sources)}, geodata: {len(self.geodata_sources)}"
         )
 
-    def _load_variables(self) -> dict:
-        """Creates a lookup of all variables."""
+    def _load_geodata_sources(self) -> dict:
+        """Creates a lookup of all geodata sources in the registry."""
 
-        return load_json(Path(self.directory, "variables.json"))
+        output = {}
+        paths = Path(self.directory, "geodata_sources").glob("*.json")
+        for path in paths:
+            data = load_json(path)
+            output[data["name"]] = data
+        return output
 
     def _load_table_sources(self) -> dict:
         """Creates a lookup of all table sources in the registry."""
@@ -45,13 +50,11 @@ class Registry:
                 "primaryKey": "HEROP_ID",
                 "missingValues": ["NA"],
                 "foreignKeys": [],
-                "fields": [
-                    i
-                    for i in self.variables.values()
-                    if resource_id in i.get("table_sources", [])
-                ],
+                "fields": [],
             }
 
+            ## if there is a geodata_source (which there should be), then
+            ## attach information from it to this table_source
             join_resource = resource.get("geodata_source")
             if join_resource:
                 schema["foreignKeys"].append(
@@ -63,21 +66,36 @@ class Registry:
                         },
                     }
                 )
+                geodata = self.geodata_sources[join_resource]
+                resource["summary_level"] = geodata["summary_level"]
 
             resource["schema"] = schema
             output[resource_id] = resource
 
         return output
 
-    def _load_geodata_sources(self) -> dict:
-        """Creates a lookup of all geodata sources in the registry."""
+    def _load_variables(self) -> dict:
+        """Creates a lookup of all variables."""
 
-        output = {}
-        paths = Path(self.directory, "geodata_sources").glob("*.json")
-        for path in paths:
-            data = load_json(path)
-            output[data["name"]] = data
-        return output
+        variables = load_json(Path(self.directory, "variables.json"))
+
+        ## iterate all table_sources and add field lists to their schema
+        ## using these variables.
+        for k, v in self.table_sources.items():
+            v["schema"]["fields"] = [
+                i for i in variables.values() if k in i["table_sources"]
+            ]
+
+        ## add year
+        for v in variables.values():
+            sources = [
+                i
+                for i in self.table_sources.values()
+                if i["name"] in v.get("table_sources", [])
+            ]
+            v["years"] = list(set([i["year"] for i in sources]))
+
+        return variables
 
     def _load_themes(self):
         """load in the theme and construct structure used in certain exports."""
@@ -89,18 +107,6 @@ class Registry:
             for construct, proxy in constructs.items():
                 self.theme_lookup[construct] = theme
                 self.proxy_lookup[construct] = proxy
-
-    def _add_years_to_variables(self):
-        """Looks for presence of each variable across all table_sources and creates a list
-        of all table_source['year']."""
-
-        for v in self.variables.values():
-            sources = [
-                i
-                for i in self.table_sources.values()
-                if i["name"] in v.get("table_sources", [])
-            ]
-            v["years"] = list(set([i["year"] for i in sources]))
 
     def get_all_sources(self):
         sources = list(self.table_sources.values())
