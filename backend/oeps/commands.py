@@ -15,10 +15,12 @@ from oeps.config import (
     CACHE_DIR,
     EXPLORER_ROOT_DIR,
     REGISTRY_DIR,
+    DATA_DIR,
 )
 
 from oeps.utils import (
     handle_overwrite,
+    write_json,
 )
 
 # Make relative paths for directory configs so they can properly be used as default values for
@@ -310,6 +312,76 @@ def create_data_dictionaries(destination, registry_path):
 
     registry = Registry(registry_path)
     registry.create_data_dictionaries(destination)
+
+
+@registry_grp.command()
+@click.option(
+    "--source",
+    "-s",
+    help="Path to CSV that will be merged into the data registry.",
+)
+@click.option(
+    "--geodata-source",
+    "-g",
+    help="Name of the geodata source this table will be joined to.",
+)
+@click.option(
+    "--year",
+    "-y",
+    help="Name of the geodata source this table will be joined to.",
+)
+@click.option(
+    "--force",
+    is_flag=True,
+    default=False,
+    help="Continue without any prompts",
+)
+@add_common_opts(registry_opt)
+def merge_data_table(source, geodata_source, year, force, registry_path):
+    """Merge data from an external CSV into the canonical CSVs in OEPS."""
+
+    registry = Registry(registry_path)
+    if geodata_source not in registry.geodata_sources:
+        raise ValueError(
+            f"Invalid geodata_source name: {geodata_source}. Must be one of: {', '.join(registry.geodata_sources.keys())}"
+        )
+
+    matched, missing = registry.check_input_table(source)
+    print(f"{len(matched)} columns match to variables already in the registry")
+    print(
+        f"{len(missing)} columns are not yet in the registry and will be ignored. List of unmatched columns:"
+    )
+    for i in missing:
+        print(i)
+    if len(missing) > 0 and not force:
+        c = input("continue? Y/n ")
+        if c and c.lower().startswith("n"):
+            exit()
+    registry.merge_table(source, geodata_source, year)
+
+
+@registry_grp.command()
+@add_common_opts(registry_opt)
+def reset_variable_sources(registry_path):
+    """Merge data from an external CSV into the canonical CSVs in OEPS."""
+
+    registry = Registry(registry_path)
+    import pandas as pd
+
+    col_lookup = {}
+    for ts, td in registry.table_sources.items():
+        path = td["path"]
+        if path.startswith("tables"):
+            path = Path(DATA_DIR, path)
+        col_lookup[ts] = pd.read_csv(path).columns
+
+    for k, v in registry.variables.items():
+        v["table_sources"] = []
+        for ts, cols in col_lookup.items():
+            if k in cols:
+                v["table_sources"].append(ts)
+        del v["years"]
+    write_json(registry.variables, Path(registry_path, "variables.json"))
 
 
 @registry_grp.command()
