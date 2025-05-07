@@ -3,7 +3,8 @@ from pathlib import Path
 from natsort import natsorted
 import pandas as pd
 
-from oeps.utils import write_json
+from oeps.config import DATA_DIR
+from oeps.utils import write_json, make_id
 from .registry import Registry
 
 
@@ -47,16 +48,30 @@ class Explorer:
         }
         ds_combo_lookup = {}
         for k, v in variables.items():
-            usable_sources = []
-            for ds in v["table_sources"]:
-                if ds in table_lookup:
-                    usable_sources.append(ds)
+            if v["table_sources"]:
+                summ_latest = {
+                    "state": None,
+                    "county": None,
+                    "zcta": None,
+                    "tract": None,
+                }
+                for ds in v["table_sources"]:
+                    entry = table_lookup.get(ds)
 
-            if len(usable_sources) > 0:
-                ds_group_code = "__".join(usable_sources)
-                ds_combo_lookup[ds_group_code] = ds_combo_lookup.get(
-                    ds_group_code, []
-                ) + [k]
+                    if entry:
+                        if (
+                            not summ_latest[entry["summary_level"]]
+                            or summ_latest[entry["summary_level"]]["year"]
+                            < entry["year"]
+                        ):
+                            summ_latest[entry["summary_level"]] = entry
+
+                latest_sources = [i for i in summ_latest.values() if i]
+                if latest_sources:
+                    ds_group_code = "__".join([i["name"] for i in latest_sources])
+                    ds_combo_lookup[ds_group_code] = ds_combo_lookup.get(
+                        ds_group_code, []
+                    ) + [k]
 
         ## create a lookup of all variables and the combined data sources that they exist for
         variables_to_ds_combos = {}
@@ -70,11 +85,15 @@ class Explorer:
             field_list.insert(0, "HEROP_ID")
             for ds in k.split("__"):
                 ds_schema = table_lookup[ds]
-                abbrev = ds_schema["geodata_source"][0]
-                out_path = Path(csv_dir, f"{k}_{abbrev}.csv")
+
+                filename = make_id()
+                out_path = Path(csv_dir, f"{filename}.csv")
 
                 print(f"writing {out_path}")
-                df = self.dataframe_lookup.get(ds, pd.read_csv(ds_schema["path"]))
+                read_path = ds_schema["path"]
+                if read_path.startswith("tables"):
+                    read_path = Path(DATA_DIR, read_path)
+                df = self.dataframe_lookup.get(ds, pd.read_csv(read_path))
                 df_filtered = df.filter(field_list)
                 df_filtered.to_csv(out_path, index=False)
 
