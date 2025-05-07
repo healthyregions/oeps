@@ -11,33 +11,93 @@
         49.295128
       ],
       "tables": {
-        "s-latest__t-latest__z-latest__c-latest": {
-          "file": "s-latest__t-latest__z-latest__c-latest_s.csv",
+        "state-2022__county-2021__zcta-2021__tract-2021": {
+          "file": "F02B4D.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
-        "s-latest__t-latest__c-latest": {
-          "file": "s-latest__t-latest__c-latest_s.csv",
+        "state-2010__county-2020__tract-2010": {
+          "file": "C67E03.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
-        "s-latest__z-latest__c-latest": {
-          "file": "s-latest__z-latest__c-latest_s.csv",
+        "state-2018__county-2020__zcta-2018__tract-2018": {
+          "file": "6EF4B7.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
-        "s-latest": {
-          "file": "s-latest_s.csv",
+        "state-2018__county-2018__zcta-2018__tract-2018": {
+          "file": "48ACBE.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
-        "s-latest__c-latest": {
-          "file": "s-latest__c-latest_s.csv",
+        "state-2018__county-2018__tract-2018": {
+          "file": "644D78.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2019__county-2019__zcta-2019__tract-2019": {
+          "file": "ECA510.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2018__county-2018__zcta-2018": {
+          "file": "56282B.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2022": {
+          "file": "0D8743.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2018": {
+          "file": "6354F1.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2018__county-2018": {
+          "file": "CB66D1.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2020": {
+          "file": "E7194D.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2020__county-2020": {
+          "file": "73EBF6.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2019__county-2019": {
+          "file": "92F381.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2021__county-2021": {
+          "file": "662F8D.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2017": {
+          "file": "7BDCDB.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2010__tract-2010": {
+          "file": "2C9DC1.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2019": {
+          "file": "6403BE.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         }
       },
-      "csv_abbrev": "s"
+      "summary_level": "state"
     },
     {
       "name": "US Counties",
@@ -50,43 +110,93 @@
         49.295128
       ],
       "tables": {
-        "s-latest__t-latest__z-latest__c-latest": {
-          "file": "s-latest__t-latest__z-latest__c-latest_c.csv",
+        "state-2022__county-2021__zcta-2021__tract-2021": {
+          "file": "117B98.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
-        "s-latest__t-latest__c-latest": {
-          "file": "s-latest__t-latest__c-latest_c.csv",
+        "state-2010__county-2020__tract-2010": {
+          "file": "48C969.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
-        "s-latest__z-latest__c-latest": {
-          "file": "s-latest__z-latest__c-latest_c.csv",
+        "state-2018__county-2020__zcta-2018__tract-2018": {
+          "file": "8B327D.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
-        "s-latest__c-latest": {
-          "file": "s-latest__c-latest_c.csv",
+        "state-2018__county-2018__zcta-2018__tract-2018": {
+          "file": "19A62A.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
-        "t-latest__c-latest": {
-          "file": "t-latest__c-latest_c.csv",
+        "state-2018__county-2018__tract-2018": {
+          "file": "D47AFC.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
-        "t-latest__z-latest__c-latest": {
-          "file": "t-latest__z-latest__c-latest_c.csv",
+        "state-2019__county-2019__zcta-2019__tract-2019": {
+          "file": "77CAB7.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
-        "c-latest": {
-          "file": "c-latest_c.csv",
+        "state-2018__county-2018__zcta-2018": {
+          "file": "6CA1A9.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2018__county-2018": {
+          "file": "46002C.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2020__county-2020": {
+          "file": "563233.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2019__county-2019": {
+          "file": "B15CB7.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2021__county-2021": {
+          "file": "1FB726.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "county-2018__zcta-2018__tract-2018": {
+          "file": "10A9AD.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "county-2020": {
+          "file": "D42293.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "county-2018": {
+          "file": "E5C127.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "county-2015": {
+          "file": "C3747D.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "county-2017": {
+          "file": "DE52C4.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "county-2016": {
+          "file": "C684F7.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         }
       },
-      "csv_abbrev": "c"
+      "summary_level": "county"
     },
     {
       "name": "US Zip Codes",
@@ -100,33 +210,63 @@
         49.295128
       ],
       "tables": {
-        "s-latest__t-latest__z-latest__c-latest": {
-          "file": "s-latest__t-latest__z-latest__c-latest_z.csv",
+        "state-2022__county-2021__zcta-2021__tract-2021": {
+          "file": "E27EE9.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
-        "s-latest__z-latest__c-latest": {
-          "file": "s-latest__z-latest__c-latest_z.csv",
+        "state-2018__county-2020__zcta-2018__tract-2018": {
+          "file": "F6C91D.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
-        "t-latest__z-latest": {
-          "file": "t-latest__z-latest_z.csv",
+        "state-2018__county-2018__zcta-2018__tract-2018": {
+          "file": "B55E96.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
-        "t-latest__z-latest__c-latest": {
-          "file": "t-latest__z-latest__c-latest_z.csv",
+        "state-2019__county-2019__zcta-2019__tract-2019": {
+          "file": "35EA7E.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
-        "z-latest": {
-          "file": "z-latest_z.csv",
+        "state-2018__county-2018__zcta-2018": {
+          "file": "3513A6.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "zcta-2018__tract-2018": {
+          "file": "9BFF83.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "zcta-2020__tract-2020": {
+          "file": "8D8662.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "zcta-2019__tract-2019": {
+          "file": "5C5582.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "zcta-2021__tract-2021": {
+          "file": "8076BD.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "county-2018__zcta-2018__tract-2018": {
+          "file": "9D1216.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "zcta-2018": {
+          "file": "5FB1D8.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         }
       },
-      "csv_abbrev": "z"
+      "summary_level": "zcta"
     },
     {
       "name": "US Tracts",
@@ -140,38 +280,83 @@
         49.295128
       ],
       "tables": {
-        "s-latest__t-latest__z-latest__c-latest": {
-          "file": "s-latest__t-latest__z-latest__c-latest_t.csv",
+        "state-2022__county-2021__zcta-2021__tract-2021": {
+          "file": "B90D9C.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
-        "s-latest__t-latest__c-latest": {
-          "file": "s-latest__t-latest__c-latest_t.csv",
+        "state-2010__county-2020__tract-2010": {
+          "file": "E2D571.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
-        "t-latest__z-latest": {
-          "file": "t-latest__z-latest_t.csv",
+        "state-2018__county-2020__zcta-2018__tract-2018": {
+          "file": "4089E1.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
-        "t-latest__c-latest": {
-          "file": "t-latest__c-latest_t.csv",
+        "state-2018__county-2018__zcta-2018__tract-2018": {
+          "file": "E9AF7B.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
-        "t-latest": {
-          "file": "t-latest_t.csv",
+        "state-2018__county-2018__tract-2018": {
+          "file": "659875.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
-        "t-latest__z-latest__c-latest": {
-          "file": "t-latest__z-latest__c-latest_t.csv",
+        "state-2019__county-2019__zcta-2019__tract-2019": {
+          "file": "AAC540.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2010__tract-2010": {
+          "file": "C1773A.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "zcta-2018__tract-2018": {
+          "file": "3A4DFE.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "zcta-2020__tract-2020": {
+          "file": "E4C101.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "zcta-2019__tract-2019": {
+          "file": "431762.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "zcta-2021__tract-2021": {
+          "file": "A4A746.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "tract-2010": {
+          "file": "81FA81.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "tract-2014": {
+          "file": "49E18C.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "tract-2020": {
+          "file": "8BB0DA.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "county-2018__zcta-2018__tract-2018": {
+          "file": "385AAC.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         }
       },
-      "csv_abbrev": "t"
+      "summary_level": "tract"
     }
   ]
 }
