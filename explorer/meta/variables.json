@@ -8,13 +8,13 @@
         "GEOID",
         "HEROP_ID"
       ],
-      "Source": "Tiger/Line 2018; Tiger/Line 2010; Healthy Regions & Policies Lab, UIUC; USDA-ERS 2010 & ACS 2018 5-Year",
+      "Source": "USDA-ERS 2010 & ACS 2018 5-Year; Healthy Regions & Policies Lab, UIUC; Tiger/Line 2018; Tiger/Line 2010",
       "Metadata": [
         "Geographic_Boundaries",
         "Rural_Urban_Classification_County"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
-      "Years": "1980, 1990, 2000, 2010, latest"
+      "Years": "1980, 1990, 2000, 2010, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022"
     },
     {
       "Variable Construct": "Geographic Characteristics",
@@ -25,14 +25,14 @@
         "State Area",
         "Total Census Tract Count"
       ],
-      "Source": "InfoGroup, 2018; Tiger/Line 2018; OSM",
+      "Source": "InfoGroup, 2018; OSM; Tiger/Line 2018",
       "Metadata": [
-        "Park_Cover",
+        "Access_FQHCs_MinDistance",
         "AlcoholOutlets_2018",
-        "Access_FQHCs_MinDistance"
+        "Park_Cover"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
-      "Years": "latest"
+      "Years": "2018, 2022"
     }
   ],
   "Social": [
@@ -42,15 +42,15 @@
       "Variables": [
         "Total Population",
         "Total Population (2010)",
-        "Urban Population Total (2010)"
+        "Urban Population Total"
       ],
       "Source": "ACS 2018, 5-Year; Census 2010; IPUMS NHGIS; USDA-ERS 2010 & ACS 2018 5-Year",
       "Metadata": [
-        "Age_2018",
-        "Rural_Urban_Classification_County"
+        "Rural_Urban_Classification_County",
+        "Age_2018"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
-      "Years": "1980, 1990, 2000, 2010, latest"
+      "Years": "1980, 1990, 2000, 2010, 2018, 2020"
     },
     {
       "Variable Construct": "Race & Ethnicity",
@@ -69,7 +69,7 @@
         "Race_Ethnicity_2018"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
-      "Years": "1980, 1990, 2000, 2010, latest"
+      "Years": "1980, 1990, 2000, 2010, 2018, 2020"
     },
     {
       "Variable Construct": "Age",
@@ -93,12 +93,12 @@
         "Population: Age 60-64",
         "Population: Age 65+"
       ],
-      "Source": "ACS 2018, 5-Year; Census 2010; IPUMS NHGIS; ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS; IPUMS NHGIS; ACS 2018, 5-Year; 2010 Decennial Census",
+      "Source": "ACS 2018, 5-Year; Census 2010; IPUMS NHGIS; IPUMS NHGIS; ACS 2018, 5-Year; 2010 Decennial Census; ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS",
       "Metadata": [
         "Age_2018"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
-      "Years": "1980, 1990, 2000, 2010, latest"
+      "Years": "1980, 1990, 2000, 2010, 2018, 2020"
     },
     {
       "Variable Construct": "Population with a Disability",
@@ -111,7 +111,7 @@
         "Other_Demographic_2018"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
-      "Years": "2000, 2010, latest"
+      "Years": "2000, 2010, 2018, 2020"
     },
     {
       "Variable Construct": "Educational Attainment",
@@ -124,7 +124,7 @@
         "Other_Demographic_2018"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
-      "Years": "1980, 1990, 2000, 2010, latest"
+      "Years": "1980, 1990, 2000, 2010, 2018"
     },
     {
       "Variable Construct": "Veteran Population",
@@ -138,7 +138,7 @@
         "VetPop"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
-      "Years": "2010, latest"
+      "Years": "2010, 2018, 2020"
     },
     {
       "Variable Construct": "Household Type",
@@ -153,7 +153,7 @@
         "HouseholdType"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
-      "Years": "latest"
+      "Years": "2018, 2020"
     },
     {
       "Variable Construct": "Hypersegregated Cities",
@@ -166,7 +166,7 @@
         "Overlay"
       ],
       "Spatial Scale": "County",
-      "Years": "latest"
+      "Years": "2015"
     },
     {
       "Variable Construct": "Southern Black Belt",
@@ -179,7 +179,7 @@
         "Overlay"
       ],
       "Spatial Scale": "County",
-      "Years": "latest"
+      "Years": "2000"
     },
     {
       "Variable Construct": "Native American Reservations",
@@ -192,7 +192,7 @@
         "Overlay"
       ],
       "Spatial Scale": "County",
-      "Years": "latest"
+      "Years": "2017"
     },
     {
       "Variable Construct": "Residential Segregation Indices",
@@ -213,7 +213,7 @@
         "Residential_Seg_Indices"
       ],
       "Spatial Scale": "Zip, County, State",
-      "Years": "latest"
+      "Years": "2018"
     }
   ],
   "Environment": [
@@ -228,7 +228,7 @@
         "Housing_2018"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
-      "Years": "1980, 1990, 2000, 2010, latest"
+      "Years": "1980, 1990, 2000, 2010, 2018, 2020"
     },
     {
       "Variable Construct": "Long Term Occupancy",
@@ -241,7 +241,7 @@
         "Housing_2018"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
-      "Years": "latest"
+      "Years": "2018, 2020"
     },
     {
       "Variable Construct": "Mobile Homes",
@@ -254,7 +254,7 @@
         "Housing_2018"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
-      "Years": "latest"
+      "Years": "2018, 2020"
     },
     {
       "Variable Construct": "Rental Rates",
@@ -267,7 +267,7 @@
         "Housing_2018"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
-      "Years": "latest"
+      "Years": "2018, 2020"
     },
     {
       "Variable Construct": "Housing Unit Density",
@@ -281,7 +281,7 @@
         "Housing_2018"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
-      "Years": "1980, 1990, 2000, 2010, latest"
+      "Years": "1980, 1990, 2000, 2010, 2018, 2020"
     },
     {
       "Variable Construct": "Urban/Suburban/Rural Classification",
@@ -291,8 +291,8 @@
         "% Tracts Suburban (RUCA)",
         "% Tracts Urban (RUCA)",
         "Primary RUCA Code",
+        "Rural Population",
         "Rural Population % (2010)",
-        "Rural Population (2010)",
         "Secondary RUCA Code",
         "Urban-Suburban-Rural"
       ],
@@ -301,7 +301,7 @@
         "Rural_Urban_Classification_County"
       ],
       "Spatial Scale": "Tract, Zip, County",
-      "Years": "latest"
+      "Years": "2010, 2018"
     },
     {
       "Variable Construct": "Alcohol Outlet Density",
@@ -316,7 +316,7 @@
         "AlcoholOutlets_2018"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
-      "Years": "latest"
+      "Years": "2018"
     },
     {
       "Variable Construct": "NDVI",
@@ -329,7 +329,7 @@
         "NDVI"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
-      "Years": "latest"
+      "Years": "2018"
     },
     {
       "Variable Construct": "Greenspace Coverage",
@@ -342,7 +342,7 @@
         "Park_Cover"
       ],
       "Spatial Scale": "State",
-      "Years": "latest"
+      "Years": "2022"
     },
     {
       "Variable Construct": "Access to MOUDs",
@@ -422,13 +422,13 @@
         "Walking Time (min) to nearest Methadone Provider",
         "Walking Time (min) to nearest Naltrexone Provider"
       ],
-      "Source": "; SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020; SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020",
+      "Source": "SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020; ; SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020",
       "Metadata": [
         "",
         "Access_MOUDs"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
-      "Years": "1980, 1990, 2000, 2010, latest"
+      "Years": "1980, 1990, 2000, 2010, 2020"
     },
     {
       "Variable Construct": "Access to Health Centers",
@@ -446,7 +446,7 @@
         "Access_FQHCs_MinDistance"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
-      "Years": "latest"
+      "Years": "2020"
     },
     {
       "Variable Construct": "Access to Hospitals",
@@ -464,7 +464,7 @@
         "Acesss_Hospitals_MinDistance"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
-      "Years": "latest"
+      "Years": "2020"
     },
     {
       "Variable Construct": "Access to Pharmacies",
@@ -482,7 +482,7 @@
         "Access_Pharmacies_MinDistance"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
-      "Years": "latest"
+      "Years": "2019"
     },
     {
       "Variable Construct": "Access to Mental Health Providers",
@@ -499,7 +499,7 @@
         "Access_MentalHealth_MinDistance"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
-      "Years": "latest"
+      "Years": "2020"
     },
     {
       "Variable Construct": "Access to Substance Use Treatment Programs",
@@ -517,7 +517,7 @@
         "Access_SubstanceUseTreatment"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
-      "Years": "latest"
+      "Years": "2020"
     },
     {
       "Variable Construct": "Access to Opioid Treatment Programs",
@@ -534,7 +534,7 @@
         "Access_OpioidUseTreatment"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
-      "Years": "latest"
+      "Years": "2021"
     },
     {
       "Variable Construct": "Internet Access",
@@ -547,7 +547,7 @@
         "Internet_2019"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
-      "Years": "latest"
+      "Years": "2019"
     },
     {
       "Variable Construct": "Physicians",
@@ -563,7 +563,7 @@
         "Health_PCPs"
       ],
       "Spatial Scale": "Tract, County, State",
-      "Years": "latest"
+      "Years": "2010"
     }
   ],
   "Economic": [
@@ -582,7 +582,7 @@
         "Job_Categories_byIndustry_2018"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
-      "Years": "latest"
+      "Years": "2018, 2020"
     },
     {
       "Variable Construct": "Essential Workers",
@@ -596,7 +596,7 @@
         "Job_Categories_byOccupation_2018"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
-      "Years": "latest"
+      "Years": "2018, 2020"
     },
     {
       "Variable Construct": "Unemployment Rate",
@@ -609,7 +609,7 @@
         "Economic_2018"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
-      "Years": "1980, 1990, 2000, 2010, latest"
+      "Years": "1980, 1990, 2000, 2010, 2018, 2020"
     },
     {
       "Variable Construct": "Poverty Rate",
@@ -622,7 +622,7 @@
         "Economic_2018"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
-      "Years": "1980, 1990, 2000, 2010, latest"
+      "Years": "1980, 1990, 2000, 2010, 2018, 2020"
     },
     {
       "Variable Construct": "Per Capita Income",
@@ -636,7 +636,7 @@
         "Economic_2018"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
-      "Years": "2010, latest"
+      "Years": "2010, 2018, 2020"
     },
     {
       "Variable Construct": "Foreclosure Rate",
@@ -650,7 +650,7 @@
         "ForeclosureRate"
       ],
       "Spatial Scale": "Tract, County, State",
-      "Years": "latest"
+      "Years": "2018"
     },
     {
       "Variable Construct": "Income Inequality",
@@ -663,7 +663,7 @@
         "ForeclosureRate"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
-      "Years": "2010, latest"
+      "Years": "2010, 2018, 2020"
     }
   ],
   "Policy": [
@@ -681,7 +681,7 @@
         "Prison%20variables_2016"
       ],
       "Spatial Scale": "County",
-      "Years": "latest"
+      "Years": "2016"
     },
     {
       "Variable Construct": "Jail Incarceration Rates",
@@ -699,7 +699,7 @@
         "Jail%20variables_2017"
       ],
       "Spatial Scale": "County",
-      "Years": "latest"
+      "Years": "2017"
     },
     {
       "Variable Construct": "Prescription Drug Monitoring Programs (PDMP)",
@@ -721,7 +721,7 @@
         "PDMP_2017"
       ],
       "Spatial Scale": "State",
-      "Years": "latest"
+      "Years": "2017"
     },
     {
       "Variable Construct": "Good Samaritan Laws",
@@ -737,7 +737,7 @@
         "GSL_2018"
       ],
       "Spatial Scale": "State",
-      "Years": "latest"
+      "Years": "2017"
     },
     {
       "Variable Construct": "Naloxone Access Laws",
@@ -755,7 +755,7 @@
         "NAL_2017"
       ],
       "Spatial Scale": "State",
-      "Years": "latest"
+      "Years": "2017"
     },
     {
       "Variable Construct": "Medicaid Expenditure",
@@ -763,8 +763,7 @@
       "Variables": [
         "Expansion Medicaid Federal Spending",
         "Expansion Medicaid State Spending",
-        "Total Medicaid Spending (FY 2018)",
-        "Total Medicaid Spending (FY 2019)",
+        "Total Medicaid Spending",
         "Traditional Medicaid Federal Spending",
         "Traditional Medicaid State Spending"
       ],
@@ -773,7 +772,7 @@
         "MedExp_2018_19"
       ],
       "Spatial Scale": "State",
-      "Years": "latest"
+      "Years": "2018, 2019"
     },
     {
       "Variable Construct": "Syringe & Paraphernalia Laws",
@@ -791,7 +790,7 @@
         "Syringe"
       ],
       "Spatial Scale": "State",
-      "Years": "latest"
+      "Years": "2019"
     },
     {
       "Variable Construct": "Medical Marijuana Laws",
@@ -804,7 +803,7 @@
         "MedMarijLaw"
       ],
       "Spatial Scale": "State",
-      "Years": "latest"
+      "Years": "2017"
     },
     {
       "Variable Construct": "State & Local Government Expenditures",
@@ -828,7 +827,7 @@
         "PublicExpenditures"
       ],
       "Spatial Scale": "State",
-      "Years": "latest"
+      "Years": "2018"
     }
   ],
   "Outcome": [
@@ -836,65 +835,26 @@
       "Variable Construct": "Hepatitis C Rates",
       "Variable Proxy": "Yearly Hepatitis C cases (2013-2016); Yearly Hepatitis C cases - Men (2013-2016); Yearly Hepatitis C cases - Women (2013-2016); Yearly Hepatitis C cases - Under 50 years old (2013-2016); Yearly Hepatitis C cases - 50 to 74 years old (2013-2016); Yearly Hepatitis C cases - Over 75 years old (2013-2016); Yearly Hepatitis C cases - Black (2013-2016); Yearly Hepatitis C cases - non-Black (2013-2016); Hepatitis C Deaths (2013); Hepatitis C Deaths - Men (2013); Hepatitis C Deaths - Women (2013); Hepatitis C Deaths - American Indian (2013); Hepatitis C Deaths - Asian & Pacific Islander (2013); Hepatitis C Deaths - Black (2013); Hepatitis C Deaths - Hispanic (2013); Hepatitis C Deaths - Under 50 years old (2013); Hepatitis C Deaths - 50 to 74 years old (2013); Hepatitis C Deaths - Over 75 years old (2013); Hepatitis C Deaths (2014); Hepatitis C Deaths - Men (2014); Hepatitis C Deaths - Women (2014); Hepatitis C Deaths - American Indian (2014); Hepatitis C Deaths - Asian & Pacific Islander (2014); Hepatitis C Deaths - Black (2014); Hepatitis C Deaths - Hispanic (2014); Hepatitis C Deaths - Under 50 years old (2014); Hepatitis C Deaths - 50 to 74 years old (2014); Hepatitis C Deaths - Over 75 years old (2014); Hepatitis C Deaths (2015); Hepatitis C Deaths - Men (2015); Hepatitis C Deaths - Women (2015); Hepatitis C Deaths - American Indian (2015); Hepatitis C Deaths - Asian & Pacific Islander (2015); Hepatitis C Deaths - Black (2015); Hepatitis C Deaths - Hispanic (2015); Hepatitis C Deaths - Under 50 years old (2015); Hepatitis C Deaths - 50 to 74 years old (2015); Hepatitis C Deaths - Over 75 years old (2015); Hepatitis C Deaths (2016); Hepatitis C Deaths - Men (2016); Hepatitis C Deaths - Women (2016); Hepatitis C Deaths - American Indian (2016); Hepatitis C Deaths - Asian & Pacific Islander (2016); Hepatitis C Deaths - Black (2016); Hepatitis C Deaths - Hispanic (2016); Hepatitis C Deaths - Under 50 years old (2016); Hepatitis C Deaths - 50 to 74 years old (2016); Hepatitis C Deaths - Over 75 years old (2016); Hepatitis C Deaths (2017); Hepatitis C Deaths - Men (2017); Hepatitis C Deaths - Women (2017); Hepatitis C Deaths - American Indian (2017); Hepatitis C Deaths - Asian & Pacific Islander (2017); Hepatitis C Deaths - Black (2017); Hepatitis C Deaths - Hispanic (2017); Hepatitis C Deaths - Under 50 years old (2017); Hepatitis C Deaths - 50 to 74 years old (2017); Hepatitis C Deaths - Over 75 years old (2016); Hepatitis C Deaths (2013 - 2017); Hepatitis C Deaths - Men (2013 - 2017); Hepatitis C Deaths - Women (2013 - 2017); Hepatitis C Deaths - American Indian (2013 - 2017); Hepatitis C Deaths - Asian & Pacific Islander (2013 - 2017); Hepatitis C Deaths - Black (2013 - 2017); Hepatitis C Deaths - Hispanic (2013 - 2017); Hepatitis C Deaths - Age Under 50 (2013 - 2017); Hepatitis C Deaths - Age 50 to 74 (2013 - 2017); Hepatitis C Deaths - Age Over 75  (2013 - 2017)",
       "Variables": [
+        "Hepatitis C Deaths",
         "Hepatitis C Deaths (2013 - 2017)",
-        "Hepatitis C Deaths (2013)",
-        "Hepatitis C Deaths (2014)",
-        "Hepatitis C Deaths (2015)",
-        "Hepatitis C Deaths (2016)",
-        "Hepatitis C Deaths (2017)",
-        "Hepatitis C Deaths - 50 to 74 years old (2013)",
-        "Hepatitis C Deaths - 50 to 74 years old (2014)",
-        "Hepatitis C Deaths - 50 to 74 years old (2015)",
-        "Hepatitis C Deaths - 50 to 74 years old (2016)",
-        "Hepatitis C Deaths - 50 to 74 years old (2017)",
+        "Hepatitis C Deaths - 50 to 74 years old",
         "Hepatitis C Deaths - Age 50 to 74 (2013 - 2017)",
         "Hepatitis C Deaths - Age Over 75  (2013 - 2017)",
         "Hepatitis C Deaths - Age Under 50 (2013 - 2017)",
+        "Hepatitis C Deaths - American Indian",
         "Hepatitis C Deaths - American Indian (2013 - 2017)",
-        "Hepatitis C Deaths - American Indian (2013)",
-        "Hepatitis C Deaths - American Indian (2014)",
-        "Hepatitis C Deaths - American Indian (2015)",
-        "Hepatitis C Deaths - American Indian (2016)",
-        "Hepatitis C Deaths - American Indian (2017)",
+        "Hepatitis C Deaths - Asian & Pacific Islander",
         "Hepatitis C Deaths - Asian & Pacific Islander (2013 - 2017)",
-        "Hepatitis C Deaths - Asian & Pacific Islander (2013)",
-        "Hepatitis C Deaths - Asian & Pacific Islander (2014)",
-        "Hepatitis C Deaths - Asian & Pacific Islander (2015)",
-        "Hepatitis C Deaths - Asian & Pacific Islander (2016)",
-        "Hepatitis C Deaths - Asian & Pacific Islander (2017)",
+        "Hepatitis C Deaths - Black",
         "Hepatitis C Deaths - Black (2013 - 2017)",
-        "Hepatitis C Deaths - Black (2013)",
-        "Hepatitis C Deaths - Black (2014)",
-        "Hepatitis C Deaths - Black (2015)",
-        "Hepatitis C Deaths - Black (2016)",
-        "Hepatitis C Deaths - Black (2017)",
+        "Hepatitis C Deaths - Hispanic",
         "Hepatitis C Deaths - Hispanic (2013 - 2017)",
-        "Hepatitis C Deaths - Hispanic (2013)",
-        "Hepatitis C Deaths - Hispanic (2014)",
-        "Hepatitis C Deaths - Hispanic (2015)",
-        "Hepatitis C Deaths - Hispanic (2016)",
-        "Hepatitis C Deaths - Hispanic (2017)",
+        "Hepatitis C Deaths - Men",
         "Hepatitis C Deaths - Men (2013 - 2017)",
-        "Hepatitis C Deaths - Men (2013)",
-        "Hepatitis C Deaths - Men (2014)",
-        "Hepatitis C Deaths - Men (2015)",
-        "Hepatitis C Deaths - Men (2016)",
-        "Hepatitis C Deaths - Men (2017)",
-        "Hepatitis C Deaths - Over 75 years old (2013)",
-        "Hepatitis C Deaths - Over 75 years old (2014)",
-        "Hepatitis C Deaths - Over 75 years old (2015)",
-        "Hepatitis C Deaths - Over 75 years old (2016)",
-        "Hepatitis C Deaths - Under 50 years old (2013)",
-        "Hepatitis C Deaths - Under 50 years old (2014)",
-        "Hepatitis C Deaths - Under 50 years old (2015)",
-        "Hepatitis C Deaths - Under 50 years old (2016)",
-        "Hepatitis C Deaths - Under 50 years old (2017)",
+        "Hepatitis C Deaths - Over 75 years old",
+        "Hepatitis C Deaths - Under 50 years old",
+        "Hepatitis C Deaths - Women",
         "Hepatitis C Deaths - Women (2013 - 2017)",
-        "Hepatitis C Deaths - Women (2013)",
-        "Hepatitis C Deaths - Women (2014)",
-        "Hepatitis C Deaths - Women (2015)",
-        "Hepatitis C Deaths - Women (2016)",
-        "Hepatitis C Deaths - Women (2017)",
         "Yearly Hepatitis C cases (2013-2016)",
         "Yearly Hepatitis C cases - 50 to 74 years old (2013-2016)",
         "Yearly Hepatitis C cases - Black (2013-2016)",
@@ -909,40 +869,34 @@
         "HepC"
       ],
       "Spatial Scale": "State",
-      "Years": "latest"
+      "Years": "2013, 2014, 2015, 2016, 2017"
     },
     {
       "Variable Construct": "Opioid Prescription Rates",
       "Variable Proxy": "Opioid Prescription Rate (2020)",
       "Variables": [
-        "Opioid Prescription Rate (2020)"
+        "Opioid Prescription Rate"
       ],
       "Source": "HepVu, 2020",
       "Metadata": [
         "OpioidIndicators"
       ],
       "Spatial Scale": "County, State",
-      "Years": "latest"
+      "Years": "2020"
     },
     {
       "Variable Construct": "Opioid Mortality Rates",
       "Variable Proxy": "Opioid Mortality Rate (2014); Opioid Mortality Rate (2015); Opioid Mortality Rate (2016); Opioid Mortality Rate (2017); Opioid Mortality Rate (2018); Opioid Mortality Rate (2019); Opioid Mortality Rate (2020); Opioid Mortality Rate",
       "Variables": [
-        "Opioid Mortality Rate",
-        "Opioid Mortality Rate (2014)",
-        "Opioid Mortality Rate (2015)",
-        "Opioid Mortality Rate (2016)",
-        "Opioid Mortality Rate (2017)",
-        "Opioid Mortality Rate (2018)",
-        "Opioid Mortality Rate (2019)",
-        "Opioid Mortality Rate (2020)"
+        "Overdose Mortality Rate",
+        "Overdose Mortality Rate Average (2016-2020)"
       ],
       "Source": "HepVu, 2020",
       "Metadata": [
         "OpioidIndicators"
       ],
       "Spatial Scale": "County, State",
-      "Years": "latest"
+      "Years": "2014, 2015, 2016, 2017, 2018, 2019, 2020"
     },
     {
       "Variable Construct": "Prescription Pain Medication Misuse",
@@ -955,7 +909,7 @@
         "OpioidIndicators"
       ],
       "Spatial Scale": "State",
-      "Years": "latest"
+      "Years": "2020"
     }
   ],
   "Composite": [
@@ -974,7 +928,7 @@
         "SVI_2018"
       ],
       "Spatial Scale": "Tract, Zip, County",
-      "Years": "latest"
+      "Years": "2018"
     },
     {
       "Variable Construct": "Social Determinants of Health (SDOH)",
@@ -991,7 +945,7 @@
         "SDOH_2014"
       ],
       "Spatial Scale": "Tract",
-      "Years": "latest"
+      "Years": "2014, 2020"
     }
   ]
 }
