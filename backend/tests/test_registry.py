@@ -29,8 +29,9 @@ def test_init(runner):
     )
     assert len(registry.table_sources) == len(table_sources)
     for ts_path in table_sources:
-        ## delete "schema" which is created during load and not in source JSON
+        ## delete "schema" and "summary_level" which are added during load and not in source JSON
         del registry.table_sources[ts_path.stem]["schema"]
+        del registry.table_sources[ts_path.stem]["summary_level"]
         assert registry.table_sources[ts_path.stem] == load_json(ts_path)
 
     geodata_sources = list(
