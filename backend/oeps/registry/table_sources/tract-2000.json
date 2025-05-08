@@ -2,7 +2,7 @@
   "bq_dataset_name": "tabular",
   "bq_table_name": "tract-2000",
   "name": "tract-2000",
-  "path": "tables/tract-2000.csv",
+  "path": "https://herop-oeps.s3.us-east-2.amazonaws.com/data/tables/tract-2000.csv",
   "format": "csv",
   "mediatype": "text/csv",
   "title": "tract-2000",
