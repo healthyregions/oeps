@@ -1,9 +1,11 @@
 from pathlib import Path
+import shutil
 
 from natsort import natsorted
 import pandas as pd
 
-from oeps.config import DATA_DIR
+from oeps.clients.s3 import sync_to_s3, get_base_url
+from oeps.config import DATA_DIR, CACHE_DIR
 from oeps.utils import write_json, make_id
 from .registry import Registry
 
@@ -16,9 +18,10 @@ class Explorer:
         self.root_dir = root_dir
         self.dataframe_lookup = {}
 
-    def build_map_config(self):
-        csv_dir = Path(self.root_dir, "public", "csv")
-        csv_dir.mkdir(parents=True, exist_ok=True)
+    def build_map_config(self, upload: bool = False):
+        csv_dir = Path(CACHE_DIR, "explorer", "csv")
+        shutil.rmtree(csv_dir, ignore_errors=True)
+        csv_dir.mkdir(parents=True)
 
         config_dir = Path(self.root_dir, "config")
         config_dir.mkdir(parents=True, exist_ok=True)
@@ -131,6 +134,15 @@ class Explorer:
         for v in geodata_lookup.values():
             if v["summary_level"] == "tract":
                 out_sources["sources"].append(v)
+
+        if upload:
+            prefix = "explorer/csvs"
+            sync_to_s3(csv_dir, prefix, True)
+
+            base_url = get_base_url()
+            for source in out_sources["sources"]:
+                for t in source["tables"].values():
+                    t["file"] = f"{base_url}{prefix}/{t['file']}"
 
         write_json(out_sources, Path(config_dir, "sources.json"))
 

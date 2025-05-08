@@ -5,6 +5,9 @@ import boto3
 from typing import List
 from pathlib import Path
 
+BUCKET_NAME = os.getenv("AWS_BUCKET_NAME")
+REGION = os.getenv("AWS_REGION")
+
 
 class S3ProgressPercentage(object):
     def __init__(self, filename):
@@ -36,14 +39,12 @@ class S3ProgressPercentage(object):
 
 def upload_to_s3(path: Path, prefix: str = None, progress_bar: bool = False):
     s3 = boto3.resource("s3")
-    bucket = os.getenv("AWS_BUCKET_NAME")
-    region = "us-east-2"
 
     key = f"{prefix}/{path.name}" if prefix else path.name
     cb = S3ProgressPercentage(str(path)) if progress_bar else None
-    s3.Bucket(bucket).upload_file(str(path), key, Callback=cb)
+    s3.Bucket(BUCKET_NAME).upload_file(str(path), key, Callback=cb)
     if progress_bar:
-        print(f"\n  https://{bucket}.s3.{region}.amazonaws.com/{key}")
+        print(f"\n  {get_base_url()}{key}")
 
 
 def batch_upload_to_s3(
@@ -55,11 +56,14 @@ def batch_upload_to_s3(
 
 def sync_to_s3(local_dir: Path, prefix: str = None, progress_bar: bool = False):
     s3 = boto3.resource("s3")
-    bucket = os.getenv("AWS_BUCKET_NAME")
 
-    for i in s3.Bucket(bucket).objects.filter(Prefix=prefix):
+    for i in s3.Bucket(BUCKET_NAME).objects.filter(Prefix=prefix):
         print(i)
         i.delete()
 
     paths = local_dir.glob("*")
     batch_upload_to_s3(paths, prefix, progress_bar)
+
+
+def get_base_url():
+    return f"https://{BUCKET_NAME}.s3.{REGION}.amazonaws.com/"
