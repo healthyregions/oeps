@@ -2,7 +2,7 @@
   "bq_dataset_name": "tabular",
   "bq_table_name": "state-2021",
   "name": "state-2021",
-  "path": "tables/state-2021.csv",
+  "path": "https://herop-oeps.s3.us-east-2.amazonaws.com/data/tables/state-2021.csv",
   "format": "csv",
   "mediatype": "text/csv",
   "title": "state-2021",
