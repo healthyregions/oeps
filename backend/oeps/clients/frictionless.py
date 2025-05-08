@@ -6,7 +6,8 @@ from pathlib import Path
 from frictionless import validate
 
 from oeps.clients.registry import Registry
-from oeps.utils import fetch_files, upload_to_s3, load_json, write_json
+from oeps.clients.s3 import upload_to_s3
+from oeps.utils import fetch_files, load_json, write_json
 
 
 class DataPackage:
@@ -121,7 +122,7 @@ class DataPackage:
 
             if upload:
                 print("uploading zip to S3...")
-                upload_to_s3([zip_path], prefix="oeps", progress_bar=True)
+                upload_to_s3(zip_path, prefix="oeps", progress_bar=True)
 
             if not zip_output:
                 print("deleting local copy of zipped output...")
