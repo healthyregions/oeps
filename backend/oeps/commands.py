@@ -15,7 +15,6 @@ from oeps.config import (
     TEMP_DIR,
     EXPLORER_ROOT_DIR,
     REGISTRY_DIR,
-    DATA_DIR,
 )
 
 from oeps.utils import (
@@ -336,8 +335,14 @@ def create_data_dictionaries(destination, registry_path):
     default=False,
     help="Continue without any prompts",
 )
+@click.option(
+    "--dry-run",
+    is_flag=True,
+    default=False,
+    help="Continue without any prompts",
+)
 @add_common_opts(registry_opt)
-def merge_data_table(source, geodata_source, year, force, registry_path):
+def merge_data_table(source, geodata_source, year, force, registry_path, dry_run):
     """Merge data from an external CSV into the canonical CSVs in OEPS."""
 
     registry = Registry(registry_path)
@@ -357,7 +362,7 @@ def merge_data_table(source, geodata_source, year, force, registry_path):
         c = input("continue? Y/n ")
         if c and c.lower().startswith("n"):
             exit()
-    registry.merge_table(source, geodata_source, year)
+    registry.merge_table(source, geodata_source, year, dry_run=dry_run)
 
 
 @registry_grp.command()
@@ -371,8 +376,6 @@ def reset_variable_sources(registry_path):
     col_lookup = {}
     for ts, td in registry.table_sources.items():
         path = td["path"]
-        if path.startswith("tables"):
-            path = Path(DATA_DIR, path)
         col_lookup[ts] = pd.read_csv(path).columns
 
     for k, v in registry.variables.items():
