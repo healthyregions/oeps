@@ -1,5 +1,6 @@
 from enum import Enum
 from pathlib import Path
+import shutil
 
 from openpyxl import Workbook
 from openpyxl.utils import get_column_letter
@@ -7,8 +8,9 @@ from openpyxl.styles import Font
 import pandas as pd
 import geopandas as gpd
 
+from oeps.clients.s3 import get_base_url
+from oeps.config import REGISTRY_DIR, TEMP_DIR, DATA_DIR
 from oeps.utils import load_json, write_json
-from oeps.config import REGISTRY_DIR, DATA_DIR
 
 
 class SummaryLevel(Enum):
@@ -127,7 +129,7 @@ class Registry:
         """Generate MS Excel formatted data dictionaries for all content."""
 
         if not destination:
-            destination = Path(DATA_DIR, "dictionaries")
+            destination = Path(TEMP_DIR, "dictionaries")
         destination.mkdir(exist_ok=True)
 
         summary_levels = {}
@@ -262,7 +264,7 @@ class Registry:
                 print(k)
                 raise e
 
-    def get_or_create_table_source(self, name: str, geodata_source: str):
+    def get_or_create_table_source(self, name: str, geodata_source: str, dry_run=True):
         lvl, year = name.split("-")
 
         ## validate these components
@@ -271,12 +273,17 @@ class Registry:
         gs = self.geodata_sources[geodata_source]
 
         ts = self.table_sources.get(name)
+
+        file_name = f"{name}.csv"
+        temp_path = Path(TEMP_DIR, "tables", file_name)
+        local_path = Path(DATA_DIR, "tables", file_name)
+        s3_path = f"{get_base_url()}data/tables/{file_name}"
         if not ts:
             ts = {
                 "bq_dataset_name": "tabular",
                 "bq_table_name": name,
                 "name": name,
-                "path": f"tables/{name}.csv",
+                "path": temp_path.absolute() if dry_run else s3_path,
                 "format": "csv",
                 "mediatype": "text/csv",
                 "title": name,
@@ -286,16 +293,20 @@ class Registry:
             }
 
             ## write the definition to a new JSON file
-            outpath = Path(REGISTRY_DIR, "table_sources", f"{name}.json")
-            write_json(ts, outpath)
+            if not dry_run:
+                outpath = Path(REGISTRY_DIR, "table_sources", f"{name}.json")
+                write_json(ts, outpath)
             self.table_sources[name] = ts
 
-        ## now (if needed) create a dummy CSV with all HEROP_IDs, based on the geodata_source
-        local_path = Path(DATA_DIR, ts["path"])
-        if not local_path.is_file():
+            ## now create and upload a dummy CSV with all HEROP_IDs, based on the geodata_source
+            temp_path = Path(TEMP_DIR, "tables", file_name)
             gdf = gpd.read_file(gs["path"])
             gdf_sm = gdf["HEROP_ID"]
-            gdf_sm.to_csv(local_path, index=False)
+            gdf_sm.to_csv(temp_path, index=False)
+
+            if not dry_run:
+                shutil.copy(temp_path, local_path)
+                # upload_to_s3(temp_path, "data/tables", True)
 
         return ts
 
@@ -307,15 +318,24 @@ class Registry:
 
         return (matched, missed)
 
-    def merge_table(self, input_path: str, geodata_source: str, year: int):
+    def merge_table(
+        self, input_path: str, geodata_source: str, year: int, dry_run=True
+    ):
+        temp_out = Path(TEMP_DIR, "tables")
+        temp_out.mkdir(parents=True, exist_ok=True)
+
         source_df = pd.read_csv(input_path)
 
         target_ts_name = (
             f"{self.geodata_sources[geodata_source]['summary_level']}-{year}"
         )
-        target_ts = self.get_or_create_table_source(target_ts_name, geodata_source)
+        target_ts = self.table_sources.get(target_ts_name)
+        if not target_ts:
+            target_ts = self.create_table_source(
+                target_ts_name, geodata_source, dry_run=dry_run
+            )
 
-        target_df = pd.read_csv(Path(DATA_DIR, target_ts["path"]))
+        target_df = pd.read_csv(target_ts["path"])
 
         ## determine which columns to take from the incoming dataframe
         matched = [i for i in source_df.columns if i in self.variables]
@@ -329,7 +349,13 @@ class Registry:
         print(f"shape of incoming data: {source_df_trim.shape}")
         merged_df = pd.merge(target_df, source_df_trim, on="HEROP_ID")
 
-        merged_df.to_csv(Path(DATA_DIR, target_ts["path"]), index=False)
+        temp_path = Path(temp_out, f"{target_ts_name}.csv")
+        local_path = Path(DATA_DIR, "tables", f"{target_ts_name}.csv")
+        merged_df.to_csv(temp_path, index=False)
+
+        if not dry_run:
+            shutil.copy(temp_path, local_path)
+            # upload_to_s3(temp_path, "data/tables", True)
 
         for col in source_df_trim.columns:
             var = self.variables[col]
@@ -338,4 +364,6 @@ class Registry:
 
         for k, v in self.variables.items():
             del v["years"]
-        write_json(self.variables, Path(self.directory, "variables.json"))
+
+        if not dry_run:
+            write_json(self.variables, Path(self.directory, "variables.json"))
