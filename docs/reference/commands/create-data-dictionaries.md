@@ -1,12 +1,12 @@
 
-# registry create-data-dictionaries
+# create-data-dictionaries
 
 Create the human readable, MS Excel data dictionaries based on registry content.
 
 ## Usage
 
 ```
-Usage: registry create-data-dictionaries [OPTIONS]
+Usage: create-data-dictionaries [OPTIONS]
 ```
 
 ## Arguments
@@ -15,7 +15,7 @@ Usage: registry create-data-dictionaries [OPTIONS]
 ## Options
 
 * `destination`:
-    * Type: <click.types.Path object at 0x75b1356a2170>
+    * Type: <click.types.Path object at 0x7fd84aad9c30>
     * Default: `None`
     * Usage: `--destination
 -d`
@@ -25,7 +25,7 @@ Usage: registry create-data-dictionaries [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x75b1361fa860>
+    * Type: <click.types.Path object at 0x7fd84aaa5870>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -45,7 +45,7 @@ Usage: registry create-data-dictionaries [OPTIONS]
 ## CLI Help
 
 ```
-Usage: registry create-data-dictionaries [OPTIONS]
+Usage: create-data-dictionaries [OPTIONS]
 
   Create the human readable, MS Excel data dictionaries based on registry
   content.
