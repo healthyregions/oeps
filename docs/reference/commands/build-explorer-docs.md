@@ -1,12 +1,12 @@
 
-# explorer build-docs
+# build-explorer-docs
 
 Builds configuration files for the frontend OEPS Explorer application.
 
 ## Usage
 
 ```
-Usage: explorer build-docs [OPTIONS]
+Usage: build-explorer-docs [OPTIONS]
 ```
 
 ## Arguments
@@ -15,7 +15,7 @@ Usage: explorer build-docs [OPTIONS]
 ## Options
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7da2c5a137c0>
+    * Type: <click.types.Path object at 0x75f2322a9a50>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -24,7 +24,7 @@ Usage: explorer build-docs [OPTIONS]
 
 
 * `explorer_path`:
-    * Type: <click.types.Path object at 0x7da2c5b2d720>
+    * Type: <click.types.Path object at 0x75f2322a9b10>
     * Default: `../explorer`
     * Usage: `--explorer-path`
 
@@ -44,7 +44,7 @@ Usage: explorer build-docs [OPTIONS]
 ## CLI Help
 
 ```
-Usage: explorer build-docs [OPTIONS]
+Usage: build-explorer-docs [OPTIONS]
 
   Builds configuration files for the frontend OEPS Explorer application.
 
