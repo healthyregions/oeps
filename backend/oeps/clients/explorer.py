@@ -1,11 +1,11 @@
+import os
 from pathlib import Path
-import shutil
 
 from natsort import natsorted
 import pandas as pd
 
 from oeps.clients.s3 import sync_to_s3, get_base_url
-from oeps.config import DATA_DIR, TEMP_DIR
+from oeps.config import DATA_DIR
 from oeps.utils import write_json, make_id
 from .registry import Registry
 
@@ -19,9 +19,9 @@ class Explorer:
         self.dataframe_lookup = {}
 
     def build_map_config(self, upload: bool = False):
-        csv_dir = Path(TEMP_DIR, "explorer", "csv")
-        shutil.rmtree(csv_dir, ignore_errors=True)
-        csv_dir.mkdir(parents=True)
+        csv_dir = Path(self.root_dir, "public", "csv")
+        for f in csv_dir.glob("_*.csv"):
+            os.remove(f)
 
         config_dir = Path(self.root_dir, "config")
         config_dir.mkdir(parents=True, exist_ok=True)
@@ -89,7 +89,7 @@ class Explorer:
             for ds in k.split("__"):
                 ds_schema = table_lookup[ds]
 
-                filename = make_id()
+                filename = f"_{make_id()}"
                 out_path = Path(csv_dir, f"{filename}.csv")
 
                 print(f"writing {out_path}")
@@ -98,6 +98,8 @@ class Explorer:
                     read_path = Path(DATA_DIR, read_path)
                 df = self.dataframe_lookup.get(ds, pd.read_csv(read_path))
                 df_filtered = df.filter(field_list)
+
+                ## write CSV to local
                 df_filtered.to_csv(out_path, index=False)
 
                 table_entry = {

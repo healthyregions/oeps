@@ -2,7 +2,7 @@
   "bq_dataset_name": "tabular",
   "bq_table_name": "county-2017",
   "name": "county-2017",
-  "path": "https://herop-oeps.s3.us-east-2.amazonaws.com/data/tables/county-2017.csv",
+  "path": "tables/county-2017.csv",
   "format": "csv",
   "mediatype": "text/csv",
   "title": "county-2017",

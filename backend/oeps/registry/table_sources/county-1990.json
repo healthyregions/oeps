@@ -2,7 +2,7 @@
   "bq_dataset_name": "tabular",
   "bq_table_name": "county-1990",
   "name": "county-1990",
-  "path": "https://herop-oeps.s3.us-east-2.amazonaws.com/data/tables/county-1990.csv",
+  "path": "tables/county-1990.csv",
   "format": "csv",
   "mediatype": "text/csv",
   "title": "county-1990",
