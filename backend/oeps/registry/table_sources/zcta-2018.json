@@ -2,7 +2,7 @@
   "bq_dataset_name": "tabular",
   "bq_table_name": "zcta-2018",
   "name": "zcta-2018",
-  "path": "https://herop-oeps.s3.us-east-2.amazonaws.com/data/tables/zcta-2018.csv",
+  "path": "tables/zcta-2018.csv",
   "format": "csv",
   "mediatype": "text/csv",
   "title": "zcta-2018",

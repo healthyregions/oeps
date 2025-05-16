@@ -13,6 +13,26 @@ from oeps.config import REGISTRY_DIR, TEMP_DIR, DATA_DIR
 from oeps.utils import load_json, write_json
 
 
+summary_lookup = {
+    "state": {
+        "code": "040",
+        "geoid_length": 2,
+    },
+    "county": {
+        "code": "050",
+        "geoid_length": 5,
+    },
+    "zcta": {
+        "code": "0860",
+        "geoid_length": 5,
+    },
+    "tract": {
+        "code": "140",
+        "geoid_length": 11,
+    },
+}
+
+
 class SummaryLevel(Enum):
     state = "state"
     county = "county"
@@ -129,7 +149,7 @@ class Registry:
         """Generate MS Excel formatted data dictionaries for all content."""
 
         if not destination:
-            destination = Path(TEMP_DIR, "dictionaries")
+            destination = Path(DATA_DIR, "dictionaries")
         destination.mkdir(exist_ok=True)
 
         summary_levels = {}
@@ -310,8 +330,33 @@ class Registry:
 
         return ts
 
-    def check_input_table(self, input_path: Path):
-        df = pd.read_csv(input_path)
+    def load_to_data_frame(self, path: Path, summary_level: str):
+        df = pd.read_csv(path)
+
+        lvl = summary_lookup[summary_level]
+
+        ## all good if HEROP_ID already exists in the data frame
+        if "HEROP_IP" not in df.columns:
+            for id in ["GEOID", "GEO ID", "GEO_ID", "FIPS"]:
+                if id in df.columns:
+                    df["HEROP_ID"] = f"{lvl['code']}US" + df[id].astype(str).str.zfill(
+                        lvl["geoid_length"]
+                    )
+
+        print("incoming data frame loaded")
+        print(df)
+
+        if "HEROP_ID" in df.columns:
+            return df
+        ## if it wasn't added above based on other incoming fields, abort process
+        else:
+            print(
+                "input data frame must have one of these fields: HEROP_ID, GEOID, GEO ID, GEO_ID, FIPS"
+            )
+            return None
+
+    def validate_input_table(self, input_path: Path, summary_level: str):
+        df = self.load_to_data_frame(input_path, summary_level)
         all_fields = list(df.columns)
         matched = [i for i in all_fields if i in self.variables]
         missed = [i for i in all_fields if i not in self.variables]
@@ -324,18 +369,22 @@ class Registry:
         temp_out = Path(TEMP_DIR, "tables")
         temp_out.mkdir(parents=True, exist_ok=True)
 
-        source_df = pd.read_csv(input_path)
+        summary_level = self.geodata_sources[geodata_source]["summary_level"]
 
-        target_ts_name = (
-            f"{self.geodata_sources[geodata_source]['summary_level']}-{year}"
-        )
+        # need to pass in summary level in order to generate HEROP_ID (if necessary)
+        source_df = self.load_to_data_frame(input_path, summary_level)
+
+        target_ts_name = f"{summary_level}-{year}"
         target_ts = self.table_sources.get(target_ts_name)
         if not target_ts:
             target_ts = self.create_table_source(
                 target_ts_name, geodata_source, dry_run=dry_run
             )
 
-        target_df = pd.read_csv(target_ts["path"])
+        ts_path = target_ts["path"]
+        if not ts_path.startswith("http"):
+            ts_path = Path(DATA_DIR, ts_path)
+        target_df = pd.read_csv(ts_path)
 
         ## determine which columns to take from the incoming dataframe
         matched = [i for i in source_df.columns if i in self.variables]
