@@ -23,15 +23,15 @@ from ._common_opts import (
 def build_explorer_map(
     registry_path: Path,
     explorer_path: Path,
-    skip_upload: bool = False,
+    upload: bool = False,
 ):
     """Builds configuration files for the frontend OEPS Explorer application,
-    and uploads them to S3 bucket for direct access from the frontend.
+    and ptionally upload them to S3 bucket for direct access from the frontend.
 
-    Optionally skip the upload step if you just want to inspect the output files
-    locally. They will be in .cache/explorer/csvs.
+    If not uploaded, they will be in .cache/explorer/csvs and the frontend will
+    read them from there.
     """
 
     registry = Registry(registry_path)
     ex = Explorer(registry=registry, root_dir=explorer_path)
-    ex.build_map_config(upload=not skip_upload)
+    ex.build_map_config(upload=upload)
