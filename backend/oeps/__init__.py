@@ -17,6 +17,7 @@ from oeps.commands.create_data_package import create_data_package
 from oeps.commands.create_data_dictionaries import create_data_dictionaries
 from oeps.commands.merge_data_table import merge_data_table
 from oeps.commands.validate_registry import validate_registry
+from oeps.commands.inspect_csv import inspect_csv
 from oeps.routes import api
 
 
@@ -37,6 +38,7 @@ def create_app():
     app.cli.add_command(create_data_package)
     app.cli.add_command(merge_data_table)
     app.cli.add_command(validate_registry)
+    app.cli.add_command(inspect_csv)
 
     # register routes via blueprints
     app.register_blueprint(api)
