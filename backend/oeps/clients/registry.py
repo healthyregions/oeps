@@ -258,6 +258,31 @@ class Registry:
             wb.save(Path(destination, f"{id}_Dict.xlsx"))
 
     def validate(self):
+        print("\n## Checking variables against table source data")
+
+        df_lookup = {}
+        variables_valid = True
+        for k, v in self.variables.items():
+            for ts in v["table_sources"]:
+                if ts not in self.table_sources:
+                    print(f"{k} references a table_source not in the registry: {ts}")
+                    variables_valid = False
+                    continue
+
+                df = df_lookup.get(ts)
+                if df is None:
+                    df = self.load_table_source(ts)
+                    df_lookup[ts] = df
+
+                if k not in df.columns:
+                    print(
+                        f"{k} should be in table_source {ts} but that column is not present in the CSV"
+                    )
+                    variables_valid = False
+        if variables_valid:
+            print("all good")
+
+        print("\n## Checking constructs & themes")
         valid_constructs = []
         for c in self.themes.values():
             valid_constructs += list(c.keys())
@@ -272,17 +297,24 @@ class Registry:
             else:
                 used.add(construct)
         unused = [i for i in valid_constructs if i not in used]
-        print(f"{missing} variables with invalid 'construct'")
-        print(f"{len(unused)} unused 'construct':")
+        if missing:
+            print(f"{missing} variables with invalid 'construct'")
         if unused:
+            print(f"{len(unused)} unused 'construct':")
             print(unused)
+        if missing == 0 and len(unused) == 0:
+            print("all good")
 
+        print("\n## Checking geodata sources")
+        geodata_valid = True
         for k, v in self.geodata_sources.items():
             try:
                 SummaryLevel(v["summary_level"])
-            except Exception as e:
+            except Exception:
                 print(k)
-                raise e
+                geodata_valid = False
+        if geodata_valid:
+            print("all good")
 
     def get_or_create_table_source(self, name: str, geodata_source: str, dry_run=True):
         lvl, year = name.split("-")
@@ -330,7 +362,18 @@ class Registry:
 
         return ts
 
-    def load_to_data_frame(self, path: Path, summary_level: str):
+    def load_table_source(self, table_source_name: str) -> pd.DataFrame:
+        if table_source_name not in self.table_sources:
+            print(f"invalid table_source name: {table_source_name}")
+            return None
+
+        path = self.table_sources[table_source_name]["path"]
+        if not path.startswith("http"):
+            path = Path(DATA_DIR, path)
+
+        return pd.read_csv(path)
+
+    def load_incoming_csv_to_data_frame(self, path: Path, summary_level: str):
         df = pd.read_csv(path)
 
         lvl = summary_lookup[summary_level]
@@ -356,7 +399,7 @@ class Registry:
             return None
 
     def validate_input_table(self, input_path: Path, summary_level: str):
-        df = self.load_to_data_frame(input_path, summary_level)
+        df = self.load_incoming_csv_to_data_frame(input_path, summary_level)
         all_fields = list(df.columns)
         matched = [i for i in all_fields if i in self.variables]
         missed = [i for i in all_fields if i not in self.variables]
@@ -372,7 +415,7 @@ class Registry:
         summary_level = self.geodata_sources[geodata_source]["summary_level"]
 
         # need to pass in summary level in order to generate HEROP_ID (if necessary)
-        source_df = self.load_to_data_frame(input_path, summary_level)
+        source_df = self.load_incoming_csv_to_data_frame(input_path, summary_level)
 
         target_ts_name = f"{summary_level}-{year}"
         target_ts = self.table_sources.get(target_ts_name)
