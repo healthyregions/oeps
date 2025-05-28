@@ -1,12 +1,12 @@
 
-# validate-registry
+# inspect-csv
 
-Runs a series of validation processes against the current registry content.
+Inspects an incoming CSV, or directory of CSVs, to test their columns against existing variables in the registry.
 
 ## Usage
 
 ```
-Usage: validate-registry [OPTIONS]
+Usage: inspect-csv [OPTIONS]
 ```
 
 ## Arguments
@@ -14,8 +14,18 @@ Usage: validate-registry [OPTIONS]
 
 ## Options
 
+* `source`:
+    * Type: STRING
+    * Default: `None`
+    * Usage: `--source
+-s`
+
+    Path to CSV or directory of CSVs to be inspected.
+
+
+
 * `registry_path`:
-    * Type: <click.types.Path object at 0x77359a5b1ea0>
+    * Type: <click.types.Path object at 0x7bfd2eccd840>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -35,11 +45,13 @@ Usage: validate-registry [OPTIONS]
 ## CLI Help
 
 ```
-Usage: validate-registry [OPTIONS]
+Usage: inspect-csv [OPTIONS]
 
-  Runs a series of validation processes against the current registry content.
+  Inspects an incoming CSV, or directory of CSVs, to test their columns
+  against existing variables in the registry.
 
 Options:
+  -s, --source TEXT     Path to CSV or directory of CSVs to be inspected.
   --registry-path PATH  Optional override for the registry directory.
   --help                Show this message and exit.
 ```

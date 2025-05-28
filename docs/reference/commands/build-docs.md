@@ -3,10 +3,12 @@
 
 Generates verious documentation pages based on the data content.
 
-    OPERATION
+    OPERATION (choose one)
 
     bq-reference: build reference file for Big Query tables
+
     cli: create all documentation for the CLI interface
+
     registry-summary: build summary CSV files of all content in the registry
 
     
@@ -28,7 +30,7 @@ Usage: build-docs [OPTIONS] OPERATION
 ## Options
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x78fd3deadf30>
+    * Type: <click.types.Path object at 0x7e60c24a5570>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -52,11 +54,13 @@ Usage: build-docs [OPTIONS] OPERATION
 
   Generates verious documentation pages based on the data content.
 
-  OPERATION
+  OPERATION (choose one)
 
-  bq-reference: build reference file for Big Query tables cli: create all
-  documentation for the CLI interface registry-summary: build summary CSV
-  files of all content in the registry
+  bq-reference: build reference file for Big Query tables
+
+  cli: create all documentation for the CLI interface
+
+  registry-summary: build summary CSV files of all content in the registry
 
 Options:
   --registry-path PATH  Optional override for the registry directory.

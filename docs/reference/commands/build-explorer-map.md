@@ -1,11 +1,11 @@
 
 # build-explorer-map
 
-Builds configuration files for the frontend OEPS Explorer application,
-    and uploads them to S3 bucket for direct access from the frontend.
+Builds web map configuration files for the frontend OEPS Explorer application,
+    and optionally upload them to S3 bucket for direct access from the frontend.
 
-    Optionally skip the upload step if you just want to inspect the output files
-    locally. They will be in .cache/explorer/csvs.
+    If not uploaded, they will be in .cache/explorer/csvs and the frontend will
+    read them from there.
     
 
 ## Usage
@@ -20,7 +20,7 @@ Usage: build-explorer-map [OPTIONS]
 ## Options
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7e193a495a80>
+    * Type: <click.types.Path object at 0x71afc81a1f90>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -29,7 +29,7 @@ Usage: build-explorer-map [OPTIONS]
 
 
 * `explorer_path`:
-    * Type: <click.types.Path object at 0x7e193a495b40>
+    * Type: <click.types.Path object at 0x71afc81a2050>
     * Default: `../explorer`
     * Usage: `--explorer-path`
 
@@ -60,11 +60,12 @@ Usage: build-explorer-map [OPTIONS]
 ```
 Usage: build-explorer-map [OPTIONS]
 
-  Builds configuration files for the frontend OEPS Explorer application, and
-  uploads them to S3 bucket for direct access from the frontend.
+  Builds web map configuration files for the frontend OEPS Explorer
+  application, and optionally upload them to S3 bucket for direct access from
+  the frontend.
 
-  Optionally skip the upload step if you just want to inspect the output files
-  locally. They will be in .cache/explorer/csvs.
+  If not uploaded, they will be in .cache/explorer/csvs and the frontend will
+  read them from there.
 
 Options:
   --registry-path PATH  Optional override for the registry directory.

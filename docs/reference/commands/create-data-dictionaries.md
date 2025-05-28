@@ -15,7 +15,7 @@ Usage: create-data-dictionaries [OPTIONS]
 ## Options
 
 * `destination`:
-    * Type: <click.types.Path object at 0x7fd84aad9c30>
+    * Type: <click.types.Path object at 0x7a49b26d2740>
     * Default: `None`
     * Usage: `--destination
 -d`
@@ -25,7 +25,7 @@ Usage: create-data-dictionaries [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7fd84aaa5870>
+    * Type: <click.types.Path object at 0x7a49b269d9f0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 

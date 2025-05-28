@@ -19,6 +19,8 @@ Use `--help` to get detailed information for each command, or look at the auto-g
   - [explorer-map](./build-explorer-map.md)
 - [create](./create.md)
   - [data-dictionaries](./create-data-dictionaries.md)
+- [inspect](./inspect.md)
+  - [csv](./inspect-csv.md)
 - [merge](./merge.md)
   - [data-table](./merge-data-table.md)
 - [validate](./validate.md)
