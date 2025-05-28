@@ -25,8 +25,8 @@ def build_explorer_map(
     explorer_path: Path,
     upload: bool = False,
 ):
-    """Builds configuration files for the frontend OEPS Explorer application,
-    and ptionally upload them to S3 bucket for direct access from the frontend.
+    """Builds web map configuration files for the frontend OEPS Explorer application,
+    and optionally upload them to S3 bucket for direct access from the frontend.
 
     If not uploaded, they will be in .cache/explorer/csvs and the frontend will
     read them from there.

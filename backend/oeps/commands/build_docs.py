@@ -22,10 +22,12 @@ from ._common_opts import (
 def build_docs(operation, registry_path):
     """Generates verious documentation pages based on the data content.
 
-    OPERATION
+    OPERATION (choose one)
 
     bq-reference: build reference file for Big Query tables
+
     cli: create all documentation for the CLI interface
+
     registry-summary: build summary CSV files of all content in the registry
 
     """
@@ -50,6 +52,7 @@ def build_docs(operation, registry_path):
             ("oeps.commands.build_explorer_docs", "build_explorer_docs"),
             ("oeps.commands.build_explorer_map", "build_explorer_map"),
             ("oeps.commands.create_data_dictionaries", "create_data_dictionaries"),
+            ("oeps.commands.inspect_csv", "inspect_csv"),
             ("oeps.commands.merge_data_table", "merge_data_table"),
             ("oeps.commands.validate_registry", "validate_registry"),
         ]
