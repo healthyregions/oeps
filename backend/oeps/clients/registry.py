@@ -23,7 +23,7 @@ summary_lookup = {
         "geoid_length": 5,
     },
     "zcta": {
-        "code": "0860",
+        "code": "860",
         "geoid_length": 5,
     },
     "tract": {
@@ -445,8 +445,9 @@ class Registry:
 
         print(f"{len(new)} new column(s) will be added to the existing CSV")
         source_df_trim = source_df[["HEROP_ID"] + new]
+        print(source_df_trim)
         print(f"shape of incoming data: {source_df_trim.shape}")
-        merged_df = pd.merge(target_df, source_df_trim, on="HEROP_ID")
+        merged_df = pd.merge(target_df, source_df_trim, how="outer", on="HEROP_ID")
 
         temp_path = Path(temp_out, f"{target_ts_name}.csv")
         local_path = Path(DATA_DIR, "tables", f"{target_ts_name}.csv")
