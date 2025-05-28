@@ -62,8 +62,17 @@ Usage: merge-data-table [OPTIONS]
 
 
 
+* `validate`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--validate`
+
+    Only run validation operations on the input data table
+
+
+
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7ab6f66adab0>
+    * Type: <click.types.Path object at 0x78707d9c9a50>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -96,6 +105,8 @@ Options:
                              joined to.
   --force                    Continue without any prompts
   --dry-run                  Continue without any prompts
+  --validate                 Only run validation operations on the input data
+                             table
   --registry-path PATH       Optional override for the registry directory.
   --help                     Show this message and exit.
 ```

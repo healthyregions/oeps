@@ -10,7 +10,7 @@
 
 ID: `oeps-391119.tabular.county-2020`
 
-74 columns in this table.
+113 columns in this table.
 
 Name|Data Type|Description|Source
 -|-|-|-
@@ -88,6 +88,45 @@ MetTmWkP|NUMERIC|Percent of tracts with methadone provider within a 30-min walki
 NalTmDrP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 NalTmBkP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 NalTmWkP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BachelorsP|NUMERIC||ACS 
+DivrcdP|NUMERIC||ACS 
+EduHsP|NUMERIC||ACS 
+EduNoHsP|NUMERIC||ACS 
+FamSize|NUMERIC||ACS 
+FemP|NUMERIC||ACS 
+GradSclP|NUMERIC||ACS 
+HHSize|NUMERIC||ACS 
+HhldFA|NUMERIC||ACS 
+HhldFC|NUMERIC||ACS 
+HhldFS|NUMERIC||ACS 
+HhldMA|NUMERIC||ACS 
+HhldMC|NUMERIC||ACS 
+HhldMS|NUMERIC||ACS 
+HisP|NUMERIC||ACS 
+HsdTot|NUMERIC||ACS 
+HsdTypCo|NUMERIC||ACS 
+HsdTypM|NUMERIC||ACS 
+HsdTypMC|NUMERIC||ACS 
+MaleP|NUMERIC||ACS 
+MedAge|NUMERIC||ACS 
+MrrdP|NUMERIC||ACS 
+NvMrrdP|NUMERIC||ACS 
+Ovr16P|NUMERIC||ACS 
+Ovr18P|NUMERIC||ACS 
+Ovr21P|NUMERIC||ACS 
+Ovr62P|NUMERIC||ACS 
+SRatio|NUMERIC||ACS 
+SRatio18|NUMERIC||ACS 
+SRatio65|NUMERIC||ACS 
+SepartedP|NUMERIC||ACS 
+SomeCollegeP|NUMERIC||ACS 
+TwoRaceP|NUMERIC||ACS 
+Und18P|NUMERIC||ACS 
+Und5P|NUMERIC||ACS 
+WidwdP|NUMERIC||ACS 
+CrowdHsng|NUMERIC||ACS 
+EngProf|NUMERIC||ACS 
+OccupantP|NUMERIC||ACS 
 
 ### state-2017
 
@@ -207,11 +246,42 @@ OtpTmDrP|NUMERIC|Percent of tracts within a 30-minute drive time of an opioid tr
 
 ID: `oeps-391119.tabular.zcta-2020`
 
-41 columns in this table.
+111 columns in this table.
 
 Name|Data Type|Description|Source
 -|-|-|-
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
+GEOID|STRING|Unique identifer for the geography unit to which this value should be attached|Tiger/Line 2018; Tiger/Line 2010
+TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
+Ovr65P|NUMERIC|Percentage of population over 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+WhiteP|NUMERIC|Percentage of population with race identified as white alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
+UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
+VacantP|NUMERIC|Percentage of vacant housing units|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
+TotPopHh|INTEGER|Total number of people in households|ACS 2018, 5-Year
+TotVetPop|INTEGER|Total Veteran population|ACS 2018, 5-Year; ACS 2012, 5-Year
+TotWrkE|INTEGER|Estimated count of working population|ACS 2018, 5-Year
+DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability|ACS 2018, 5-Year; ACS 2012, 5-Year
+VetP|NUMERIC|Percent of population that are veterans|ACS 2017, 5-Year; ACS 2012, 5-Year
+NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family|ACS 2018, 5-Year
+NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are not related|ACS 2018, 5-Year
+MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
+PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
+GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)|ACS 2018, 5-Year; ACS 2012, 5-Year
+EduP|NUMERIC|Percentage of population employed in educational services industry|ACS 2018, 5-Year
+HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities|ACS 2018, 5-Year
+HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries|ACS 2018, 5-Year
+RetailP|NUMERIC|Percentage of population employed in retail trade industry|ACS 2018, 5-Year
+EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.|ACS 2018, 5-Year
+MobileP|NUMERIC|Percentage of total housing units categorized as mobile housing structures|ACS 2018, 5-Year
+LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago|ACS 2018, 5-Year
+RentalP|NUMERIC|Percentage of occupied housing units that are rented|ACS 2018, 5-Year
+UnitDens|NUMERIC|Number of housing units per square mile of land area|ACS 2018, 5-Year
 MoudMinDis|NUMERIC|Euclidean distance (miles) to nearest MOUD (all types)|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 BupMinDis|NUMERIC|Euclidean distance (miles) to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 BupTmDr|NUMERIC|Driving time (minutes) to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
@@ -252,6 +322,45 @@ MhCntDr|INTEGER|Count of MH providers within a 30-minute driving threshold|SAMHS
 SutMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest SUT service location, in miles|SAMHSA, 2020
 SutTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip SUT destination centroid, in minutes|SAMHSA, 2020
 SutCntDr|INTEGER|Count of SUT services within a 30-minute driving threshold|SAMHSA, 2020
+BachelorsP|NUMERIC||ACS 
+DivrcdP|NUMERIC||ACS 
+EduHsP|NUMERIC||ACS 
+EduNoHsP|NUMERIC||ACS 
+FamSize|NUMERIC||ACS 
+FemP|NUMERIC||ACS 
+GradSclP|NUMERIC||ACS 
+HHSize|NUMERIC||ACS 
+HhldFA|NUMERIC||ACS 
+HhldFC|NUMERIC||ACS 
+HhldFS|NUMERIC||ACS 
+HhldMA|NUMERIC||ACS 
+HhldMC|NUMERIC||ACS 
+HhldMS|NUMERIC||ACS 
+HisP|NUMERIC||ACS 
+HsdTot|NUMERIC||ACS 
+HsdTypCo|NUMERIC||ACS 
+HsdTypM|NUMERIC||ACS 
+HsdTypMC|NUMERIC||ACS 
+MaleP|NUMERIC||ACS 
+MedAge|NUMERIC||ACS 
+MrrdP|NUMERIC||ACS 
+NvMrrdP|NUMERIC||ACS 
+Ovr16P|NUMERIC||ACS 
+Ovr18P|NUMERIC||ACS 
+Ovr21P|NUMERIC||ACS 
+Ovr62P|NUMERIC||ACS 
+SRatio|NUMERIC||ACS 
+SRatio18|NUMERIC||ACS 
+SRatio65|NUMERIC||ACS 
+SepartedP|NUMERIC||ACS 
+SomeCollegeP|NUMERIC||ACS 
+TwoRaceP|NUMERIC||ACS 
+Und18P|NUMERIC||ACS 
+Und5P|NUMERIC||ACS 
+WidwdP|NUMERIC||ACS 
+CrowdHsng|NUMERIC||ACS 
+EngProf|NUMERIC||ACS 
+OccupantP|NUMERIC||ACS 
 
 ### tract-2010
 
@@ -434,11 +543,42 @@ Cover|NUMERIC|Percent of state covered by park or green space|OSM
 
 ID: `oeps-391119.tabular.tract-2020`
 
-51 columns in this table.
+121 columns in this table.
 
 Name|Data Type|Description|Source
 -|-|-|-
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
+GEOID|STRING|Unique identifer for the geography unit to which this value should be attached|Tiger/Line 2018; Tiger/Line 2010
+TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
+Ovr65P|NUMERIC|Percentage of population over 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+WhiteP|NUMERIC|Percentage of population with race identified as white alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
+UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
+VacantP|NUMERIC|Percentage of vacant housing units|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
+TotPopHh|INTEGER|Total number of people in households|ACS 2018, 5-Year
+TotVetPop|INTEGER|Total Veteran population|ACS 2018, 5-Year; ACS 2012, 5-Year
+TotWrkE|INTEGER|Estimated count of working population|ACS 2018, 5-Year
+DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability|ACS 2018, 5-Year; ACS 2012, 5-Year
+VetP|NUMERIC|Percent of population that are veterans|ACS 2017, 5-Year; ACS 2012, 5-Year
+NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family|ACS 2018, 5-Year
+NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are not related|ACS 2018, 5-Year
+MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
+PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
+GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)|ACS 2018, 5-Year; ACS 2012, 5-Year
+EduP|NUMERIC|Percentage of population employed in educational services industry|ACS 2018, 5-Year
+HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities|ACS 2018, 5-Year
+HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries|ACS 2018, 5-Year
+RetailP|NUMERIC|Percentage of population employed in retail trade industry|ACS 2018, 5-Year
+EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.|ACS 2018, 5-Year
+MobileP|NUMERIC|Percentage of total housing units categorized as mobile housing structures|ACS 2018, 5-Year
+LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago|ACS 2018, 5-Year
+RentalP|NUMERIC|Percentage of occupied housing units that are rented|ACS 2018, 5-Year
+UnitDens|NUMERIC|Number of housing units per square mile of land area|ACS 2018, 5-Year
 MoudMinDis|NUMERIC|Euclidean distance (miles) to nearest MOUD (all types)|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 BupMinDis|NUMERIC|Euclidean distance (miles) to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 BupTmDr|NUMERIC|Driving time (minutes) to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
@@ -489,6 +629,45 @@ NalRm90|NUMERIC|Naltrexone access 90 minutes (RAAM)|
 BupRm30|NUMERIC|Buprenorphine access 30 minutes (RAAM)|
 BupRm60|NUMERIC|Buprenorphine access 60 minutes (RAAM)|
 BupRm90|NUMERIC|Buprenorphine access 90 minutes (RAAM)|
+BachelorsP|NUMERIC||ACS 
+DivrcdP|NUMERIC||ACS 
+EduHsP|NUMERIC||ACS 
+EduNoHsP|NUMERIC||ACS 
+FamSize|NUMERIC||ACS 
+FemP|NUMERIC||ACS 
+GradSclP|NUMERIC||ACS 
+HHSize|NUMERIC||ACS 
+HhldFA|NUMERIC||ACS 
+HhldFC|NUMERIC||ACS 
+HhldFS|NUMERIC||ACS 
+HhldMA|NUMERIC||ACS 
+HhldMC|NUMERIC||ACS 
+HhldMS|NUMERIC||ACS 
+HisP|NUMERIC||ACS 
+HsdTot|NUMERIC||ACS 
+HsdTypCo|NUMERIC||ACS 
+HsdTypM|NUMERIC||ACS 
+HsdTypMC|NUMERIC||ACS 
+MaleP|NUMERIC||ACS 
+MedAge|NUMERIC||ACS 
+MrrdP|NUMERIC||ACS 
+NvMrrdP|NUMERIC||ACS 
+Ovr16P|NUMERIC||ACS 
+Ovr18P|NUMERIC||ACS 
+Ovr21P|NUMERIC||ACS 
+Ovr62P|NUMERIC||ACS 
+SRatio|NUMERIC||ACS 
+SRatio18|NUMERIC||ACS 
+SRatio65|NUMERIC||ACS 
+SepartedP|NUMERIC||ACS 
+SomeCollegeP|NUMERIC||ACS 
+TwoRaceP|NUMERIC||ACS 
+Und18P|NUMERIC||ACS 
+Und5P|NUMERIC||ACS 
+WidwdP|NUMERIC||ACS 
+CrowdHsng|NUMERIC||ACS 
+EngProf|NUMERIC||ACS 
+OccupantP|NUMERIC||ACS 
 
 ### state-1990
 
@@ -1428,7 +1607,7 @@ DmyBlckBlt|BOOLEAN|Dummy variable for whether county is in the Southern Black Be
 
 ## spatial
 
-7 tables in this dataset.
+11 tables in this dataset.
 
 ### counties2010
 
@@ -1452,6 +1631,36 @@ Name|Data Type|Description|Source
 HEROP_ID|STRING|None|None
 name|STRING|None|None
 
+### zctas2020
+
+ID: `oeps-391119.spatial.zctas2020`
+
+1 column in this table.
+
+Name|Data Type|Description|Source
+-|-|-|-
+HEROP_ID|STRING|None|None
+
+### tracts2020
+
+ID: `oeps-391119.spatial.tracts2020`
+
+1 column in this table.
+
+Name|Data Type|Description|Source
+-|-|-|-
+HEROP_ID|STRING|None|None
+
+### counties2020
+
+ID: `oeps-391119.spatial.counties2020`
+
+1 column in this table.
+
+Name|Data Type|Description|Source
+-|-|-|-
+HEROP_ID|STRING|None|None
+
 ### zctas2018
 
 ID: `oeps-391119.spatial.zctas2018`
@@ -1472,6 +1681,16 @@ Name|Data Type|Description|Source
 -|-|-|-
 HEROP_ID|STRING|None|None
 name|STRING|None|None
+
+### states2020
+
+ID: `oeps-391119.spatial.states2020`
+
+1 column in this table.
+
+Name|Data Type|Description|Source
+-|-|-|-
+HEROP_ID|STRING|None|None
 
 ### tracts2010
 
