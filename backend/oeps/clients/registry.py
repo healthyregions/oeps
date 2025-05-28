@@ -427,11 +427,18 @@ class Registry:
         ts_path = target_ts["path"]
         if not ts_path.startswith("http"):
             ts_path = Path(DATA_DIR, ts_path)
+        print(ts_path.absolute())
         target_df = pd.read_csv(ts_path)
 
         ## determine which columns to take from the incoming dataframe
         matched = [i for i in source_df.columns if i in self.variables]
-        new = [i for i in matched if i not in target_df.columns]
+        overlap = [i for i in matched if i in target_df.columns if not i == "HEROP_ID"]
+        print(
+            f"{len(overlap)} columns in the incoming dataset already exist in the target"
+        )
+        if overlap:
+            print("  -- overlapping columns from incoming data will be ignored.")
+        new = [i for i in matched if i not in target_df.columns and i not in overlap]
         if not new:
             print("No new columns to add from this input CSV.")
             return
