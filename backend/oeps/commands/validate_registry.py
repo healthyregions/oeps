@@ -10,7 +10,7 @@ from ._common_opts import (
 @click.command()
 @add_common_opts(registry_opt)
 def validate_registry(registry_path):
-    """Create the human readable, MS Excel data dictionaries based on registry content."""
+    """Runs a series of validation processes against the current registry content."""
 
     registry = Registry(registry_path)
     registry.validate()
