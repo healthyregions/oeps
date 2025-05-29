@@ -1,6 +1,6 @@
 import click
 
-from oeps.clients.registry import Registry
+from oeps.clients.registry import Registry, TableSource
 
 from ._common_opts import (
     add_common_opts,
@@ -15,64 +15,30 @@ from ._common_opts import (
     help="Path to CSV that will be merged into the data registry.",
 )
 @click.option(
-    "--geodata-source",
-    "-g",
-    help="Name of the geodata source this table will be joined to.",
-)
-@click.option(
-    "--year",
-    "-y",
-    help="Name of the geodata source this table will be joined to.",
-)
-@click.option(
-    "--force",
-    is_flag=True,
-    default=False,
-    help="Continue without any prompts",
+    "--table-source",
+    "-t",
+    help="Name of the table source this input will be joined to.",
 )
 @click.option(
     "--dry-run",
     is_flag=True,
     default=False,
-    help="Continue without any prompts",
-)
-@click.option(
-    "--validate",
-    is_flag=True,
-    default=False,
-    help="Only run validation operations on the input data table",
+    help="Stage and prepare the import but alter no registry or data files.",
 )
 @add_common_opts(registry_opt)
-def merge_data_table(
-    source, geodata_source, year, force, registry_path, dry_run, validate
-):
-    """Merge data from an external CSV into the canonical CSVs in OEPS."""
+def merge_data_table(source, table_source, registry_path, dry_run):
+    """Merge data from an external CSV into the canonical CSVs in OEPS.
+
+    ARGUMENTS:
+
+    TABLE_SOURCE: name of table_source to merge this CSV into. Table source
+    must already exist in the registry.
+    """
 
     registry = Registry(registry_path)
-    gs = registry.geodata_sources.get(geodata_source)
-    if not gs:
-        raise ValueError(
-            f"Invalid geodata_source name: {geodata_source}. Must be one of: {', '.join(registry.geodata_sources.keys())}"
-        )
 
-    if validate:
-        matched, missing = registry.validate_input_table(source, gs["summary_level"])
-        print(f"{len(matched)} columns match to variables already in the registry")
-        for i in matched:
-            print(i)
-        print(
-            f"{len(missing)} columns are not yet in the registry and will be ignored. List of unmatched columns:"
-        )
-        for i in missing:
-            print(i)
+    ts = TableSource(table_source, registry=registry, with_data=True)
 
-    else:
-        matched, missing = registry.validate_input_table(source, gs["summary_level"])
-        if len(missing) > 0 and not force:
-            c = input(
-                f"{len(missing)} fields will be ignored. continue? (run this command with --validate to learn more) Y/n "
-            )
-            if c and c.lower().startswith("n"):
-                exit()
-
-        registry.merge_table(source, geodata_source, year, dry_run=dry_run)
+    ts.stage_incoming_csv(source)
+    ts.validate_incoming_csv()
+    ts.merge_incoming_csv(dry_run=dry_run)
