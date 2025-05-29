@@ -40,6 +40,126 @@ class SummaryLevel(Enum):
     tract = "tract"
 
 
+class TableSource:
+    def __init__(
+        self,
+        name: str,
+        with_data: bool = False,
+        registry_dir: Path = REGISTRY_DIR,
+        registry: "Registry" = None,
+    ):
+        if not registry:
+            registry = Registry(registry_dir)
+        self.registry = registry
+        if name not in self.registry.table_sources:
+            raise Exception(f"invalid table source name: {name}")
+        self.name = name
+        self.schema = self.registry.table_sources[name]
+        self.summary_level = self.registry.geodata_sources[
+            self.schema["geodata_source"]
+        ]["summary_level"]
+
+        self.merge_columns = []
+
+        if with_data:
+            self.df = self.load_data()
+
+    def load_data(self) -> pd.DataFrame:
+        """Load this TableSource's CSV data into a pandas DataFrame"""
+
+        path = self.schema["path"]
+        if not path.startswith("http"):
+            path = Path(DATA_DIR, path)
+
+        return pd.read_csv(path)
+
+    def stage_incoming_csv(self, path: Path) -> pd.DataFrame:
+        """Load an incoming CSV to pandas dataframe, and create HEROP_ID
+        along the way if possible."""
+
+        df = pd.read_csv(path)
+
+        lvl = summary_lookup[self.summary_level]
+
+        ## all good if HEROP_ID already exists in the data frame
+        test_unique_id = "HEROP_ID"
+        if "HEROP_IP" not in df.columns:
+            for id in ["GEOID", "GEO ID", "GEO_ID", "FIPS"]:
+                if id in df.columns:
+                    df["HEROP_ID"] = f"{lvl['code']}US" + df[id].astype(str).str.zfill(
+                        lvl["geoid_length"]
+                    )
+                    test_unique_id = id
+
+        ## make sure whatever column that is used for the join ID is unique
+        if not pd.Series(df[test_unique_id]).is_unique:
+            raise Exception(
+                f"There are duplicate {test_unique_id} values in the input CSV. {test_unique_id} must be unique across all rows."
+            )
+
+        print("incoming data frame loaded")
+        print(df)
+
+        if "HEROP_ID" in df.columns:
+            self.staged_df = df
+        ## if it wasn't added above based on other incoming fields, abort process
+        else:
+            raise Exception(
+                "input data frame must have one of these fields: HEROP_ID, GEOID, GEO ID, GEO_ID, FIPS"
+            )
+
+    def validate_incoming_csv(self, verbose: bool = False):
+        """Compares the columns in the incoming CSV and against variables
+        in the registry and columns in the existing data for this TableSource."""
+
+        ## determine which columns to take from the incoming dataframe
+        matched = [i for i in self.staged_df.columns if i in self.registry.variables]
+        missed = [i for i in self.staged_df.columns if i not in self.registry.variables]
+        overlap = [i for i in matched if i in self.df.columns if not i == "HEROP_ID"]
+        new = [i for i in matched if i not in self.df.columns and i not in overlap]
+
+        print(f"{len(matched)} columns match to variables already in the registry")
+        print(
+            f"{len(missed)} columns are not yet in the registry and will be ignored. List of unmatched columns:"
+        )
+        for i in missed:
+            print(f"  {i}")
+        print(
+            f"{len(overlap)} columns in the incoming dataset already exist in the target"
+        )
+        if overlap:
+            print("  -- overlapping columns from incoming data will be ignored.")
+
+        print(f"{len(new)} new column(s) will be added to the existing CSV")
+
+        self.merge_columns = new
+
+    def merge_incoming_csv(self, dry_run: bool = False):
+        source_df = self.staged_df
+
+        source_df_trim = source_df[["HEROP_ID"] + self.merge_columns]
+        print(source_df_trim)
+        print(f"shape of incoming data: {source_df_trim.shape}")
+        merged_df = pd.merge(self.df, source_df_trim, how="outer", on="HEROP_ID")
+
+        temp_out = Path(TEMP_DIR, "tables")
+        temp_out.mkdir(parents=True, exist_ok=True)
+        temp_path = Path(temp_out, f"{self.name}.csv")
+        local_path = Path(DATA_DIR, "tables", f"{self.name}.csv")
+        merged_df.to_csv(temp_path, index=False)
+
+        if not dry_run:
+            shutil.copy(temp_path, local_path)
+
+        for col in source_df_trim.columns:
+            var = self.registry.variables[col]
+            if self.name not in var["table_sources"]:
+                var["table_sources"].append(self.name)
+
+        if not dry_run:
+            self.registry.write_variables()
+
+
 class Registry:
     def __init__(self, directory: Path = REGISTRY_DIR):
         self.directory = directory
@@ -139,6 +259,12 @@ class Registry:
             for construct, proxy in constructs.items():
                 self.theme_lookup[construct] = theme
                 self.proxy_lookup[construct] = proxy
+
+    def write_variables(self):
+        for v in self.variables.values():
+            del v["years"]
+
+        write_json(self.variables, Path(self.directory, "variables.json"))
 
     def get_all_sources(self):
         sources = list(self.table_sources.values())
@@ -271,7 +397,7 @@ class Registry:
 
                 df = df_lookup.get(ts)
                 if df is None:
-                    df = self.load_table_source(ts)
+                    df = TableSource(ts, with_data=True, registry=self).df
                     df_lookup[ts] = df
 
                 if k not in df.columns:
@@ -316,13 +442,14 @@ class Registry:
         if geodata_valid:
             print("all good")
 
-    def get_or_create_table_source(self, name: str, geodata_source: str, dry_run=True):
-        lvl, year = name.split("-")
-
+    def create_table_source(
+        self, summary_level: str, year: int, geodata_source: str, dry_run=True
+    ) -> TableSource:
         ## validate these components
-        lvl = SummaryLevel(lvl)
-        int(year)
+        SummaryLevel(summary_level)
         gs = self.geodata_sources[geodata_source]
+
+        name = f"{summary_level}-{year}"
 
         ts = self.table_sources.get(name)
 
@@ -346,7 +473,7 @@ class Registry:
 
             ## write the definition to a new JSON file
             if not dry_run:
-                outpath = Path(REGISTRY_DIR, "table_sources", f"{name}.json")
+                outpath = Path(self.directory, "table_sources", f"{name}.json")
                 write_json(ts, outpath)
             self.table_sources[name] = ts
 
@@ -360,110 +487,4 @@ class Registry:
                 shutil.copy(temp_path, local_path)
                 # upload_to_s3(temp_path, "data/tables", True)
 
-        return ts
-
-    def load_table_source(self, table_source_name: str) -> pd.DataFrame:
-        if table_source_name not in self.table_sources:
-            print(f"invalid table_source name: {table_source_name}")
-            return None
-
-        path = self.table_sources[table_source_name]["path"]
-        if not path.startswith("http"):
-            path = Path(DATA_DIR, path)
-
-        return pd.read_csv(path)
-
-    def load_incoming_csv_to_data_frame(self, path: Path, summary_level: str):
-        df = pd.read_csv(path)
-
-        lvl = summary_lookup[summary_level]
-
-        ## all good if HEROP_ID already exists in the data frame
-        if "HEROP_IP" not in df.columns:
-            for id in ["GEOID", "GEO ID", "GEO_ID", "FIPS"]:
-                if id in df.columns:
-                    df["HEROP_ID"] = f"{lvl['code']}US" + df[id].astype(str).str.zfill(
-                        lvl["geoid_length"]
-                    )
-
-        print("incoming data frame loaded")
-        print(df)
-
-        if "HEROP_ID" in df.columns:
-            return df
-        ## if it wasn't added above based on other incoming fields, abort process
-        else:
-            print(
-                "input data frame must have one of these fields: HEROP_ID, GEOID, GEO ID, GEO_ID, FIPS"
-            )
-            return None
-
-    def validate_input_table(self, input_path: Path, summary_level: str):
-        df = self.load_incoming_csv_to_data_frame(input_path, summary_level)
-        all_fields = list(df.columns)
-        matched = [i for i in all_fields if i in self.variables]
-        missed = [i for i in all_fields if i not in self.variables]
-
-        return (matched, missed)
-
-    def merge_table(
-        self, input_path: str, geodata_source: str, year: int, dry_run=True
-    ):
-        temp_out = Path(TEMP_DIR, "tables")
-        temp_out.mkdir(parents=True, exist_ok=True)
-
-        summary_level = self.geodata_sources[geodata_source]["summary_level"]
-
-        # need to pass in summary level in order to generate HEROP_ID (if necessary)
-        source_df = self.load_incoming_csv_to_data_frame(input_path, summary_level)
-
-        target_ts_name = f"{summary_level}-{year}"
-        target_ts = self.table_sources.get(target_ts_name)
-        if not target_ts:
-            target_ts = self.create_table_source(
-                target_ts_name, geodata_source, dry_run=dry_run
-            )
-
-        ts_path = target_ts["path"]
-        if not ts_path.startswith("http"):
-            ts_path = Path(DATA_DIR, ts_path)
-        print(ts_path.absolute())
-        target_df = pd.read_csv(ts_path)
-
-        ## determine which columns to take from the incoming dataframe
-        matched = [i for i in source_df.columns if i in self.variables]
-        overlap = [i for i in matched if i in target_df.columns if not i == "HEROP_ID"]
-        print(
-            f"{len(overlap)} columns in the incoming dataset already exist in the target"
-        )
-        if overlap:
-            print("  -- overlapping columns from incoming data will be ignored.")
-        new = [i for i in matched if i not in target_df.columns and i not in overlap]
-        if not new:
-            print("No new columns to add from this input CSV.")
-            return
-
-        print(f"{len(new)} new column(s) will be added to the existing CSV")
-        source_df_trim = source_df[["HEROP_ID"] + new]
-        print(source_df_trim)
-        print(f"shape of incoming data: {source_df_trim.shape}")
-        merged_df = pd.merge(target_df, source_df_trim, how="outer", on="HEROP_ID")
-
-        temp_path = Path(temp_out, f"{target_ts_name}.csv")
-        local_path = Path(DATA_DIR, "tables", f"{target_ts_name}.csv")
-        merged_df.to_csv(temp_path, index=False)
-
-        if not dry_run:
-            shutil.copy(temp_path, local_path)
-            # upload_to_s3(temp_path, "data/tables", True)
-
-        for col in source_df_trim.columns:
-            var = self.variables[col]
-            if target_ts_name not in var["table_sources"]:
-                var["table_sources"].append(target_ts_name)
-
-        for k, v in self.variables.items():
-            del v["years"]
-
-        if not dry_run:
-            write_json(self.variables, Path(self.directory, "variables.json"))
+        return TableSource(name, with_data=True)
