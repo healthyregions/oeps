@@ -3,6 +3,12 @@
 
 Merge data from an external CSV into the canonical CSVs in OEPS.
 
+    ARGUMENTS:
+
+    TABLE_SOURCE: name of table_source to merge this CSV into. Table source
+    must already exist in the registry.
+    
+
 ## Usage
 
 ```
@@ -24,32 +30,13 @@ Usage: merge-data-table [OPTIONS]
 
 
 
-* `geodata_source`:
+* `table_source`:
     * Type: STRING
     * Default: `None`
-    * Usage: `--geodata-source
--g`
+    * Usage: `--table-source
+-t`
 
-    Name of the geodata source this table will be joined to.
-
-
-
-* `year`:
-    * Type: STRING
-    * Default: `None`
-    * Usage: `--year
--y`
-
-    Name of the geodata source this table will be joined to.
-
-
-
-* `force`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--force`
-
-    Continue without any prompts
+    Name of the table source this input will be joined to.
 
 
 
@@ -58,21 +45,12 @@ Usage: merge-data-table [OPTIONS]
     * Default: `False`
     * Usage: `--dry-run`
 
-    Continue without any prompts
-
-
-
-* `validate`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--validate`
-
-    Only run validation operations on the input data table
+    Stage and prepare the import but alter no registry or data files.
 
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x78707d9c9a50>
+    * Type: <click.types.Path object at 0x7958c11a9510>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -96,19 +74,20 @@ Usage: merge-data-table [OPTIONS]
 
   Merge data from an external CSV into the canonical CSVs in OEPS.
 
+  ARGUMENTS:
+
+  TABLE_SOURCE: name of table_source to merge this CSV into. Table source must
+  already exist in the registry.
+
 Options:
-  -s, --source TEXT          Path to CSV that will be merged into the data
-                             registry.
-  -g, --geodata-source TEXT  Name of the geodata source this table will be
-                             joined to.
-  -y, --year TEXT            Name of the geodata source this table will be
-                             joined to.
-  --force                    Continue without any prompts
-  --dry-run                  Continue without any prompts
-  --validate                 Only run validation operations on the input data
-                             table
-  --registry-path PATH       Optional override for the registry directory.
-  --help                     Show this message and exit.
+  -s, --source TEXT        Path to CSV that will be merged into the data
+                           registry.
+  -t, --table-source TEXT  Name of the table source this input will be joined
+                           to.
+  --dry-run                Stage and prepare the import but alter no registry
+                           or data files.
+  --registry-path PATH     Optional override for the registry directory.
+  --help                   Show this message and exit.
 ```
 
 
