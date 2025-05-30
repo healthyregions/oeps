@@ -202,10 +202,10 @@ export default function Download() {
             <h3 id="data-dictionaries">Data Dictionaries</h3>
               <p>Not sure where to start? These data dictionaries provide a comprehensive overview of what variables are available for each geography&mdash;State (S), County (C), Census Tract (T), and Zip Code Tabulation Area (Z).</p>
               <ul>
-                <li><a href="https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/dictionaries/S_Dict.xlsx">S_Dict.xlsx</a></li>
-                <li><a href="https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/dictionaries/C_Dict.xlsx">C_Dict.xlsx</a></li>
-                <li><a href="https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/dictionaries/T_Dict.xlsx">T_Dict.xlsx</a></li>
-                <li><a href="https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/dictionaries/Z_Dict.xlsx">Z_Dict.xlsx</a></li>
+                <li><a href="https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/dictionaries/S_Dict.xlsx">S_Dict.xlsx</a></li>
+                <li><a href="https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/dictionaries/C_Dict.xlsx">C_Dict.xlsx</a></li>
+                <li><a href="https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/dictionaries/T_Dict.xlsx">T_Dict.xlsx</a></li>
+                <li><a href="https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/dictionaries/Z_Dict.xlsx">Z_Dict.xlsx</a></li>
               </ul>
             <h3 id="individual-datasets">Individual Datasets</h3>
               <p>OEPS datasets are merged into single CSVs, one per geography (State, County, Tract, ZCTA) per year (1980, 1990, etc.). Each CSV can be joined to an appropriate <a href="#geometry-files">geometry file</a> using the HEROP_ID field (see below).</p>
@@ -218,32 +218,64 @@ export default function Download() {
                       <th>File</th>
                     </tr>
                     <tr>
-                      <td>1980</td>
-                      <td><a href="https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/S_1980.csv">S_1980.csv</a></td>
+                        <td>1980</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/state-1980.csv'>state-1980.csv</a></td>
                     </tr>
                     <tr>
-                      <td>1990</td>
-                      <td><a href="https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/S_1990.csv">S_1990.csv</a></td>
+                        <td>1990</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/state-1990.csv'>state-1990.csv</a></td>
                     </tr>
                     <tr>
-                      <td>2000</td>
-                      <td><a href="https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/S_2000.csv">S_2000.csv</a></td>
+                        <td>2000</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/state-2000.csv'>state-2000.csv</a></td>
                     </tr>
                     <tr>
-                      <td>2010</td>
-                      <td><a href="https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/S_2010.csv">S_2010.csv</a></td>
+                        <td>2010</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/state-2010.csv'>state-2010.csv</a></td>
                     </tr>
                     <tr>
-                      <td>2018 (latest)</td>
-                      <td><a href="https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/S_Latest.csv">S_Latest.csv</a></td>
+                        <td>2013</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/state-2013.csv'>state-2013.csv</a></td>
                     </tr>
                     <tr>
-                      <td>2020</td>
-                      <td><em>coming Spring 2025</em></td>
+                        <td>2014</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/state-2014.csv'>state-2014.csv</a></td>
                     </tr>
                     <tr>
-                      <td>2023</td>
-                      <td><em>coming Spring 2025</em></td>
+                        <td>2015</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/state-2015.csv'>state-2015.csv</a></td>
+                    </tr>
+                    <tr>
+                        <td>2016</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/state-2016.csv'>state-2016.csv</a></td>
+                    </tr>
+                    <tr>
+                        <td>2017</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/state-2017.csv'>state-2017.csv</a></td>
+                    </tr>
+                    <tr>
+                        <td>2018</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/state-2018.csv'>state-2018.csv</a></td>
+                    </tr>
+                    <tr>
+                        <td>2019</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/state-2019.csv'>state-2019.csv</a></td>
+                    </tr>
+                    <tr>
+                        <td>2020</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/state-2020.csv'>state-2020.csv</a></td>
+                    </tr>
+                    <tr>
+                        <td>2021</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/state-2021.csv'>state-2021.csv</a></td>
+                    </tr>
+                    <tr>
+                        <td>2022</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/state-2022.csv'>state-2022.csv</a></td>
+                    </tr>
+                    <tr>
+                        <td>2023</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/state-2023.csv'>state-2023.csv</a></td>
                     </tr>
                   </tbody>
                 </table>
@@ -257,32 +289,60 @@ export default function Download() {
                       <th>File</th>
                     </tr>
                     <tr>
-                      <td>1980</td>
-                      <td><a href="https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/C_1980.csv">C_1980.csv</a></td>
+                        <td>1980</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/county-1980.csv'>county-1980.csv</a></td>
                     </tr>
                     <tr>
-                      <td>1990</td>
-                      <td><a href="https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/C_1990.csv">C_1990.csv</a></td>
+                        <td>1990</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/county-1990.csv'>county-1990.csv</a></td>
                     </tr>
                     <tr>
-                      <td>2000</td>
-                      <td><a href="https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/C_2000.csv">C_2000.csv</a></td>
+                        <td>2000</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/county-2000.csv'>county-2000.csv</a></td>
                     </tr>
                     <tr>
-                      <td>2010</td>
-                      <td><a href="https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/C_2010.csv">C_2010.csv</a></td>
+                        <td>2010</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/county-2010.csv'>county-2010.csv</a></td>
                     </tr>
                     <tr>
-                      <td>2018 (latest)</td>
-                      <td><a href="https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/C_Latest.csv">C_Latest.csv</a></td>
+                        <td>2014</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/county-2014.csv'>county-2014.csv</a></td>
                     </tr>
                     <tr>
-                      <td>2020</td>
-                      <td><em>coming Spring 2025</em></td>
+                        <td>2015</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/county-2015.csv'>county-2015.csv</a></td>
                     </tr>
                     <tr>
-                      <td>2023</td>
-                      <td><em>coming Spring 2025</em></td>
+                        <td>2016</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/county-2016.csv'>county-2016.csv</a></td>
+                    </tr>
+                    <tr>
+                        <td>2017</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/county-2017.csv'>county-2017.csv</a></td>
+                    </tr>
+                    <tr>
+                        <td>2018</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/county-2018.csv'>county-2018.csv</a></td>
+                    </tr>
+                    <tr>
+                        <td>2019</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/county-2019.csv'>county-2019.csv</a></td>
+                    </tr>
+                    <tr>
+                        <td>2020</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/county-2020.csv'>county-2020.csv</a></td>
+                    </tr>
+                    <tr>
+                        <td>2021</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/county-2021.csv'>county-2021.csv</a></td>
+                    </tr>
+                    <tr>
+                        <td>2022</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/county-2022.csv'>county-2022.csv</a></td>
+                    </tr>
+                    <tr>
+                        <td>2023</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/county-2023.csv'>county-2023.csv</a></td>
                     </tr>
                   </tbody>
                 </table>
@@ -296,32 +356,48 @@ export default function Download() {
                       <th>File</th>
                     </tr>
                     <tr>
-                      <td>1980</td>
-                      <td><a href="https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/T_1980.csv">T_1980.csv</a></td>
+                        <td>1980</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/tract-1980.csv'>tract-1980.csv</a></td>
                     </tr>
                     <tr>
-                      <td>1990</td>
-                      <td><a href="https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/T_1990.csv">T_1990.csv</a></td>
+                        <td>1990</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/tract-1990.csv'>tract-1990.csv</a></td>
                     </tr>
                     <tr>
-                      <td>2000</td>
-                      <td><a href="https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/T_2000.csv">T_2000.csv</a></td>
+                        <td>2000</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/tract-2000.csv'>tract-2000.csv</a></td>
                     </tr>
                     <tr>
-                      <td>2010</td>
-                      <td><a href="https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/T_2010.csv">T_2010.csv</a></td>
+                        <td>2010</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/tract-2010.csv'>tract-2010.csv</a></td>
                     </tr>
                     <tr>
-                      <td>2018 (latest)</td>
-                      <td><a href="https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/T_Latest.csv">T_Latest.csv</a></td>
+                        <td>2014</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/tract-2014.csv'>tract-2014.csv</a></td>
                     </tr>
                     <tr>
-                      <td>2020</td>
-                      <td><em>coming Spring 2025</em></td>
+                        <td>2018</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/tract-2018.csv'>tract-2018.csv</a></td>
                     </tr>
                     <tr>
-                      <td>2023</td>
-                      <td><em>coming Spring 2025</em></td>
+                        <td>2019</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/tract-2019.csv'>tract-2019.csv</a></td>
+                    </tr>
+                    <tr>
+                        <td>2020</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/tract-2020.csv'>tract-2020.csv</a></td>
+                    </tr>
+                    <tr>
+                        <td>2021</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/tract-2021.csv'>tract-2021.csv</a></td>
+                    </tr>
+                    <tr>
+                        <td>2022</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/tract-2022.csv'>tract-2022.csv</a></td>
+                    </tr>
+                    <tr>
+                        <td>2023</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/tract-2023.csv'>tract-2023.csv</a></td>
                     </tr>
                   </tbody>
                 </table>
@@ -335,16 +411,28 @@ export default function Download() {
                       <th>File</th>
                     </tr>
                     <tr>
-                      <td>2018 (latest)</td>
-                      <td><a href="https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/T_Latest.csv">T_Latest.csv</a></td>
+                        <td>2018</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/zcta-2018.csv'>zcta-2018.csv</a></td>
                     </tr>
                     <tr>
-                      <td>2020</td>
-                      <td><em>coming Spring 2025</em></td>
+                        <td>2019</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/zcta-2019.csv'>zcta-2019.csv</a></td>
                     </tr>
                     <tr>
-                      <td>2023</td>
-                      <td><em>coming Spring 2025</em></td>
+                        <td>2020</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/zcta-2020.csv'>zcta-2020.csv</a></td>
+                    </tr>
+                    <tr>
+                        <td>2021</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/zcta-2021.csv'>zcta-2021.csv</a></td>
+                    </tr>
+                    <tr>
+                        <td>2022</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/zcta-2022.csv'>zcta-2022.csv</a></td>
+                    </tr>
+                    <tr>
+                        <td>2023</td>
+                        <td><a href='https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/zcta-2023.csv'>zcta-2023.csv</a></td>
                     </tr>
                   </tbody>
                 </table>
