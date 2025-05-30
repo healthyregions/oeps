@@ -58,7 +58,9 @@
       "tract-2023",
       "zcta-2023",
       "state-2023",
-      "county-2022"
+      "county-2022",
+      "tract-2022",
+      "zcta-2022"
     ]
   },
   "GEOID": {
@@ -103,7 +105,9 @@
       "state-2017",
       "state-2023",
       "county-2021",
-      "county-2022"
+      "county-2022",
+      "tract-2022",
+      "zcta-2022"
     ]
   },
   "TotPop": {
@@ -5552,7 +5556,12 @@
     "table_sources": [
       "tract-2018",
       "county-2018",
-      "zcta-2018"
+      "zcta-2018",
+      "tract-2020",
+      "county-2020",
+      "tract-2022",
+      "county-2022",
+      "zcta-2022"
     ]
   },
   "SviTh2": {
@@ -5573,7 +5582,12 @@
     "table_sources": [
       "tract-2018",
       "county-2018",
-      "zcta-2018"
+      "zcta-2018",
+      "tract-2020",
+      "county-2020",
+      "tract-2022",
+      "county-2022",
+      "zcta-2022"
     ]
   },
   "SviTh3": {
@@ -5594,7 +5608,12 @@
     "table_sources": [
       "tract-2018",
       "county-2018",
-      "zcta-2018"
+      "zcta-2018",
+      "tract-2020",
+      "county-2020",
+      "tract-2022",
+      "county-2022",
+      "zcta-2022"
     ]
   },
   "SviTh4": {
@@ -5615,7 +5634,12 @@
     "table_sources": [
       "tract-2018",
       "county-2018",
-      "zcta-2018"
+      "zcta-2018",
+      "tract-2020",
+      "county-2020",
+      "tract-2022",
+      "county-2022",
+      "zcta-2022"
     ]
   },
   "SviSmryRnk": {
@@ -5636,7 +5660,12 @@
     "table_sources": [
       "tract-2018",
       "county-2018",
-      "zcta-2018"
+      "zcta-2018",
+      "tract-2020",
+      "county-2020",
+      "tract-2022",
+      "county-2022",
+      "zcta-2022"
     ]
   },
   "A15_24P": {
