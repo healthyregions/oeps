@@ -7981,8 +7981,8 @@
   "CrrctExp": {
     "title": "Corrections expenditures",
     "name": "CrrctExp",
-    "type": "number",
-    "example": "$121.00",
+    "type": "integer",
+    "example": "1897193",
     "description": "Total expenditures on corrections system and operations",
     "constraints": "",
     "construct": "State & Local Government Expenditures",
@@ -7993,13 +7993,18 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PublicExpenditures.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "state-2022",
+      "state-2021",
+      "state-2020",
+      "state-2019"
+    ]
   },
   "HlthExp": {
     "title": "Public health expenditures",
     "name": "HlthExp",
-    "type": "number",
-    "example": "$121.00",
+    "type": "integer",
+    "example": "1897193",
     "description": "Total expenditures on public health and hospitals",
     "constraints": "",
     "construct": "State & Local Government Expenditures",
@@ -8010,13 +8015,18 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PublicExpenditures.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "state-2022",
+      "state-2021",
+      "state-2020",
+      "state-2019"
+    ]
   },
   "PlcFyrExp": {
     "title": "Police & fire expenditures",
     "name": "PlcFyrExp",
-    "type": "number",
-    "example": "$121.00",
+    "type": "integer",
+    "example": "1897193",
     "description": "Total expenditures on police and fire protection",
     "constraints": "",
     "construct": "State & Local Government Expenditures",
@@ -8027,13 +8037,18 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PublicExpenditures.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "state-2022",
+      "state-2021",
+      "state-2020",
+      "state-2019"
+    ]
   },
   "WlfrExp": {
     "title": "Public welfare expenditures",
     "name": "WlfrExp",
-    "type": "number",
-    "example": "$121.00",
+    "type": "integer",
+    "example": "1897193",
     "description": "Total expenditures on public welfare programs",
     "constraints": "",
     "construct": "State & Local Government Expenditures",
@@ -8044,6 +8059,11 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/PublicExpenditures.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "state-2022",
+      "state-2021",
+      "state-2020",
+      "state-2019"
+    ]
   }
 }
