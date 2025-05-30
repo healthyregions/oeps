@@ -3760,7 +3760,12 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017"
+      "state-2017",
+      "state-2018",
+      "state-2019",
+      "state-2020",
+      "state-2021",
+      "state-2022"
     ]
   },
   "NalPrStDt": {
@@ -3780,7 +3785,12 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017"
+      "state-2017",
+      "state-2018",
+      "state-2019",
+      "state-2020",
+      "state-2021",
+      "state-2022"
     ]
   },
   "NalPresDt": {
@@ -3800,7 +3810,12 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017"
+      "state-2017",
+      "state-2018",
+      "state-2019",
+      "state-2020",
+      "state-2021",
+      "state-2022"
     ]
   },
   "AnyNalFr": {
@@ -3819,7 +3834,12 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017"
+      "state-2017",
+      "state-2018",
+      "state-2019",
+      "state-2020",
+      "state-2021",
+      "state-2022"
     ]
   },
   "NalPrStFr": {
@@ -3838,7 +3858,12 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017"
+      "state-2017",
+      "state-2018",
+      "state-2019",
+      "state-2020",
+      "state-2021",
+      "state-2022"
     ]
   },
   "NalPresFr": {
@@ -3857,7 +3882,12 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017"
+      "state-2017",
+      "state-2018",
+      "state-2019",
+      "state-2020",
+      "state-2021",
+      "state-2022"
     ]
   },
   "MedcdExp": {
