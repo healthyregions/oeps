@@ -56,7 +56,8 @@
       "county-2000",
       "county-2023",
       "tract-2023",
-      "zcta-2023"
+      "zcta-2023",
+      "state-2023"
     ]
   },
   "GEOID": {
@@ -97,7 +98,9 @@
       "state-2020",
       "state-2021",
       "state-2018",
-      "state-2022"
+      "state-2022",
+      "state-2017",
+      "state-2023"
     ]
   },
   "TotPop": {
@@ -4083,7 +4086,13 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017"
+      "state-2017",
+      "state-2018",
+      "state-2019",
+      "state-2020",
+      "state-2021",
+      "state-2022",
+      "state-2023"
     ]
   },
   "CrrctExpS": {
