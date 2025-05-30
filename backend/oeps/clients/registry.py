@@ -8,7 +8,6 @@ from openpyxl.styles import Font
 import pandas as pd
 import geopandas as gpd
 
-from oeps.clients.s3 import get_base_url
 from oeps.config import REGISTRY_DIR, TEMP_DIR, DATA_DIR
 from oeps.utils import load_json, write_json
 
@@ -443,48 +442,46 @@ class Registry:
             print("all good")
 
     def create_table_source(
-        self, summary_level: str, year: int, geodata_source: str, dry_run=True
+        self, name: str, geodata_source: str, dry_run: bool = False
     ) -> TableSource:
+        summary_level, year = name.split("-")
+
         ## validate these components
         SummaryLevel(summary_level)
+        int(year)
+
         gs = self.geodata_sources[geodata_source]
-
-        name = f"{summary_level}-{year}"
-
-        ts = self.table_sources.get(name)
 
         file_name = f"{name}.csv"
         temp_path = Path(TEMP_DIR, "tables", file_name)
-        local_path = Path(DATA_DIR, "tables", file_name)
-        s3_path = f"{get_base_url()}data/tables/{file_name}"
-        if not ts:
-            ts = {
-                "bq_dataset_name": "tabular",
-                "bq_table_name": name,
-                "name": name,
-                "path": temp_path.absolute() if dry_run else s3_path,
-                "format": "csv",
-                "mediatype": "text/csv",
-                "title": name,
-                "description": f"This CSV aggregates all OEPS data values from {year} at the {gs['summary_level']} level.",
-                "year": str(year),
-                "geodata_source": geodata_source,
-            }
 
-            ## write the definition to a new JSON file
-            if not dry_run:
-                outpath = Path(self.directory, "table_sources", f"{name}.json")
-                write_json(ts, outpath)
-            self.table_sources[name] = ts
+        schema = {
+            "bq_dataset_name": "tabular",
+            "bq_table_name": name,
+            "name": name,
+            "path": f"tables/{file_name}",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "title": name,
+            "description": f"This CSV aggregates all OEPS data values from {year} at the {gs['summary_level']} level.",
+            "year": str(year),
+            "geodata_source": geodata_source,
+        }
 
-            ## now create and upload a dummy CSV with all HEROP_IDs, based on the geodata_source
-            temp_path = Path(TEMP_DIR, "tables", file_name)
-            gdf = gpd.read_file(gs["path"])
-            gdf_sm = gdf["HEROP_ID"]
-            gdf_sm.to_csv(temp_path, index=False)
+        ## write the definition to a new JSON file
+        if not dry_run:
+            outpath = Path(self.directory, "table_sources", f"{name}.json")
+            write_json(schema, outpath)
 
-            if not dry_run:
-                shutil.copy(temp_path, local_path)
-                # upload_to_s3(temp_path, "data/tables", True)
+        ## now create a dummy CSV with all HEROP_IDs, based on the geodata_source
+        temp_path = Path(TEMP_DIR, "tables", file_name)
+        gdf = gpd.read_file(gs["path"])
+        gdf_sm = gdf["HEROP_ID"]
+        print("new data table:")
+        print(gdf_sm)
 
-        return TableSource(name, with_data=True)
+        gdf_sm.to_csv(temp_path, index=False)
+
+        if not dry_run:
+            local_path = Path(DATA_DIR, schema["path"])
+            shutil.copy(temp_path, local_path)

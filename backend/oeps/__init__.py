@@ -15,6 +15,7 @@ from oeps.commands.build_explorer_docs import build_explorer_docs
 from oeps.commands.build_explorer_map import build_explorer_map
 from oeps.commands.create_data_package import create_data_package
 from oeps.commands.create_data_dictionaries import create_data_dictionaries
+from oeps.commands.create_table_source import create_table_source
 from oeps.commands.merge_data_table import merge_data_table
 from oeps.commands.validate_registry import validate_registry
 from oeps.commands.inspect_csv import inspect_csv
@@ -35,6 +36,7 @@ def create_app():
     app.cli.add_command(build_explorer_docs)
     app.cli.add_command(build_explorer_map)
     app.cli.add_command(create_data_dictionaries)
+    app.cli.add_command(create_table_source)
     app.cli.add_command(create_data_package)
     app.cli.add_command(merge_data_table)
     app.cli.add_command(validate_registry)
