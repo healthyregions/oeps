@@ -3980,7 +3980,8 @@
     "analysis": false,
     "table_sources": [
       "state-2019",
-      "state-2018"
+      "state-2018",
+      "state-2023"
     ]
   },
   "TradFedExp": {
@@ -3999,7 +4000,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2018"
+      "state-2018",
+      "state-2023"
     ]
   },
   "TradSttExp": {
@@ -4018,7 +4020,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2018"
+      "state-2018",
+      "state-2023"
     ]
   },
   "ExpnFedExp": {
@@ -4037,7 +4040,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2018"
+      "state-2018",
+      "state-2023"
     ]
   },
   "ExpnSttExp": {
@@ -4056,7 +4060,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2018"
+      "state-2018",
+      "state-2023"
     ]
   },
   "ExpSsp": {
