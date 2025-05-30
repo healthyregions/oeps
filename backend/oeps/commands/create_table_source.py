@@ -34,10 +34,10 @@ def create_table_source(name, geodata_source, dry_run, registry_path):
     registry = Registry(registry_path)
 
     if geodata_source not in registry.geodata_sources:
-        print(f"Invalid geodata source: {geodata_source}")
+        print(f"ERROR: Invalid geodata source: {geodata_source}")
         exit()
     if name in registry.table_sources:
-        print(f"This table source already exists: {name}")
+        print(f"ERROR: This table source already exists: {name}")
         exit()
 
     registry.create_table_source(name, geodata_source, dry_run=dry_run)
