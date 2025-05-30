@@ -92,7 +92,12 @@
       "tract-2023",
       "tract-2020",
       "zcta-2020",
-      "zcta-2023"
+      "zcta-2023",
+      "state-2019",
+      "state-2020",
+      "state-2021",
+      "state-2018",
+      "state-2022"
     ]
   },
   "TotPop": {
@@ -2865,7 +2870,12 @@
       "state-2016",
       "state-2015",
       "state-2013",
-      "state-2014"
+      "state-2014",
+      "state-2018",
+      "state-2019",
+      "state-2020",
+      "state-2021",
+      "state-2022"
     ]
   },
   "MlHcvD": {
@@ -2888,7 +2898,12 @@
       "state-2016",
       "state-2015",
       "state-2013",
-      "state-2014"
+      "state-2014",
+      "state-2018",
+      "state-2019",
+      "state-2020",
+      "state-2021",
+      "state-2022"
     ]
   },
   "FlHcvD": {
@@ -2911,7 +2926,12 @@
       "state-2016",
       "state-2015",
       "state-2013",
-      "state-2014"
+      "state-2014",
+      "state-2018",
+      "state-2019",
+      "state-2020",
+      "state-2021",
+      "state-2022"
     ]
   },
   "AmInHcvD": {
@@ -2934,7 +2954,12 @@
       "state-2016",
       "state-2015",
       "state-2013",
-      "state-2014"
+      "state-2014",
+      "state-2018",
+      "state-2019",
+      "state-2020",
+      "state-2021",
+      "state-2022"
     ]
   },
   "AsPiHcvD": {
@@ -2980,7 +3005,12 @@
       "state-2016",
       "state-2015",
       "state-2013",
-      "state-2014"
+      "state-2014",
+      "state-2018",
+      "state-2019",
+      "state-2020",
+      "state-2021",
+      "state-2022"
     ]
   },
   "HspHcvD": {
@@ -3003,7 +3033,12 @@
       "state-2016",
       "state-2015",
       "state-2013",
-      "state-2014"
+      "state-2014",
+      "state-2018",
+      "state-2019",
+      "state-2020",
+      "state-2021",
+      "state-2022"
     ]
   },
   "U50HcvD": {
@@ -3026,7 +3061,12 @@
       "state-2016",
       "state-2015",
       "state-2013",
-      "state-2014"
+      "state-2014",
+      "state-2018",
+      "state-2019",
+      "state-2020",
+      "state-2021",
+      "state-2022"
     ]
   },
   "A50_74HcvD": {
@@ -3049,7 +3089,12 @@
       "state-2016",
       "state-2015",
       "state-2013",
-      "state-2014"
+      "state-2014",
+      "state-2018",
+      "state-2019",
+      "state-2020",
+      "state-2021",
+      "state-2022"
     ]
   },
   "O75HcvD": {
@@ -3072,26 +3117,31 @@
       "state-2016",
       "state-2015",
       "state-2013",
-      "state-2014"
+      "state-2014",
+      "state-2018",
+      "state-2019",
+      "state-2020",
+      "state-2021",
+      "state-2022"
     ]
   },
   "AvHcvD": {
-    "title": "Hepatitis C Deaths (2013 - 2017)",
+    "title": "Average Hepitatis C virus Deaths",
     "name": "AvHcvD",
     "type": "number",
-    "example": "586.4",
-    "description": "Mean total yearly Hepatitis C deaths from 2013-2017",
+    "example": "121.0",
+    "description": "Mean total yearly Hepatitis C deaths from 2013-2017, 2018-2022",
     "constraints": "",
     "construct": "Hepatitis C Rates",
-    "source": "HepVu, 2017",
-    "source_long": "HepVu, 2017",
+    "source": "HepVu",
+    "source_long": "HepVu",
     "oeps_v1_table": null,
     "comments": "",
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017"
+      "state-2022"
     ]
   },
   "AvMlHcvD": {
@@ -3110,7 +3160,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017"
+      "state-2017",
+      "state-2022"
     ]
   },
   "AvFlHcvD": {
@@ -3129,7 +3180,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017"
+      "state-2017",
+      "state-2022"
     ]
   },
   "AvAmInHcvD": {
@@ -3148,7 +3200,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017"
+      "state-2017",
+      "state-2022"
     ]
   },
   "AvAsPiHcvD": {
@@ -3186,7 +3239,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017"
+      "state-2017",
+      "state-2022"
     ]
   },
   "AvHspHcvD": {
@@ -3205,7 +3259,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017"
+      "state-2017",
+      "state-2022"
     ]
   },
   "AvU50HcvD": {
@@ -3224,7 +3279,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017"
+      "state-2017",
+      "state-2022"
     ]
   },
   "Av50_74HcvD": {
@@ -3262,7 +3318,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017"
+      "state-2017",
+      "state-2022"
     ]
   },
   "TotPcp": {
@@ -3610,7 +3667,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017"
+      "state-2017",
+      "state-2019",
+      "state-2020",
+      "state-2021"
     ]
   },
   "GslArrDt": {
@@ -3630,7 +3690,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017"
+      "state-2017",
+      "state-2019",
+      "state-2020",
+      "state-2021"
     ]
   },
   "AnyGslFr": {
@@ -3649,7 +3712,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017"
+      "state-2017",
+      "state-2019",
+      "state-2020",
+      "state-2021"
     ]
   },
   "GslArrFr": {
@@ -3668,7 +3734,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017"
+      "state-2017",
+      "state-2019",
+      "state-2020",
+      "state-2021"
     ]
   },
   "AnyNalDt": {
@@ -5166,24 +5235,21 @@
     ]
   },
   "OtpMinDis": {
-    "title": "Distance (mi) to nearest Opioid Treatment Program (OTP)",
+    "title": "Distance to nearest OTP",
     "name": "OtpMinDis",
     "type": "number",
-    "example": "13.12",
+    "example": "121.0",
     "description": "Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles",
-    "constraints": "*Euclidean distance or straight-line distance is a simple approximation of distance or travel time from an origin centroid to the nearest health center. It is not a precise calculation of real travel times or distances.",
+    "constraints": "",
     "construct": "Access to Opioid Treatment Programs",
-    "source": "SAMSHA, 2021",
-    "source_long": "U.S. Substance Abuse and Mental Health Services Administration Treatment Locator, 2021",
+    "source": "SAMHSA",
+    "source_long": "The Substance Abuse and Mental Health Services Administration",
     "oeps_v1_table": null,
-    "comments": "This dataset includes all US states, Washington D.C., and Puerto Rico. It does not include the territories Guam, Northern Mariana Islands, American Samoa, Palau. Zip code and tract centroids are not population-weighted.",
+    "comments": "",
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_OpioidUseTreatment.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": [
-      "zcta-2021",
-      "tract-2021"
-    ]
+    "table_sources": []
   },
   "OtpTmDr": {
     "title": "Driving Time (min) to nearest Opioid Treatment Program (OTP)",
@@ -7564,7 +7630,13 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "state-2018",
+      "state-2019",
+      "state-2020",
+      "state-2021",
+      "state-2022"
+    ]
   },
   "NhPiHcvD": {
     "title": "Hepatitis C deaths among Native Hawaiian and Pacific Islander populations ",
@@ -7581,7 +7653,13 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "state-2018",
+      "state-2019",
+      "state-2020",
+      "state-2021",
+      "state-2022"
+    ]
   },
   "WhtHcvD": {
     "title": "Hepatitis C deaths among White populations",
@@ -7598,7 +7676,13 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "state-2018",
+      "state-2019",
+      "state-2020",
+      "state-2021",
+      "state-2022"
+    ]
   },
   "MulHcvD": {
     "title": "Hepatitis C deaths among Multiple Race populations ",
@@ -7615,7 +7699,13 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "state-2018",
+      "state-2019",
+      "state-2020",
+      "state-2021",
+      "state-2022"
+    ]
   },
   "AvAsHcvD": {
     "title": "Mean yearly Hepatitis C deaths among Asian population from 2018-2022",
@@ -7632,7 +7722,9 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "state-2022"
+    ]
   },
   "AvNhPiHcvD": {
     "title": "Mean yearly Hepatitis C deaths among Native Hawaiian and Pacific Islanders population from 2018-2022",
@@ -7649,7 +7741,9 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "state-2022"
+    ]
   },
   "AvWhtHcvD": {
     "title": "Mean yearly Hepatitis C deaths among White populations from 2018-2022",
@@ -7683,7 +7777,9 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "state-2022"
+    ]
   },
   "AvA50_74HcvD": {
     "title": "Average Ages between 50 to 74 Hepitatis C virus Deaths",
@@ -7700,24 +7796,9 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
-  },
-  "AvHcvD": {
-    "title": "Average Hepitatis C virus Deaths",
-    "name": "AvHcvD",
-    "type": "number",
-    "example": "121.0",
-    "description": "Mean total yearly Hepatitis C deaths from 2013-2017, 2018-2022",
-    "constraints": "",
-    "construct": "Hepatitis C Rates",
-    "source": "HepVu",
-    "source_long": "HepVu",
-    "oeps_v1_table": null,
-    "comments": "",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "state-2022"
+    ]
   },
   "AvWhHcvD": {
     "title": "Average White Hepitatis C virus Deaths",
@@ -7734,7 +7815,9 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "state-2022"
+    ]
   },
   "BupCntDr60": {
     "title": "Count of buprenorphine providers (drive)",
@@ -7783,23 +7866,6 @@
     "oeps_v1_table": null,
     "comments": "",
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": []
-  },
-  "OtpMinDis": {
-    "title": "Distance to nearest OTP",
-    "name": "OtpMinDis",
-    "type": "number",
-    "example": "121.0",
-    "description": "Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles",
-    "constraints": "",
-    "construct": "Access to Opioid Treatment Programs",
-    "source": "SAMHSA",
-    "source_long": "The Substance Abuse and Mental Health Services Administration",
-    "oeps_v1_table": null,
-    "comments": "",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_OpioidUseTreatment.md",
     "longitudinal": false,
     "analysis": false,
     "table_sources": []
