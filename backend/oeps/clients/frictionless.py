@@ -6,7 +6,10 @@ from pathlib import Path
 from frictionless import validate
 
 from oeps.clients.registry import Registry
-from oeps.utils import fetch_files, upload_to_s3, load_json, write_json
+from oeps.clients.s3 import upload_to_s3
+from oeps.utils import fetch_files, load_json, write_json
+
+from oeps.config import DATA_DIR
 
 
 class DataPackage:
@@ -78,7 +81,10 @@ class DataPackage:
             write_json(schema, Path(s_path, schema_filename))
 
             # copy the data files and generate the list of local paths
-            local_paths = fetch_files(res.pop("path"), d_path, no_cache=no_cache)
+            data_path = res.pop("path")
+            if not data_path.startswith("http"):
+                data_path = str(Path(DATA_DIR, data_path).resolve())
+            local_paths = fetch_files(data_path, d_path, no_cache=no_cache)
 
             res["path"] = [f"data/{i.name}" for i in local_paths]
             res["schema"] = f"schemas/{schema_filename}"
@@ -121,7 +127,7 @@ class DataPackage:
 
             if upload:
                 print("uploading zip to S3...")
-                upload_to_s3([zip_path], prefix="oeps", progress_bar=True)
+                upload_to_s3(zip_path, prefix="oeps", progress_bar=True)
 
             if not zip_output:
                 print("deleting local copy of zipped output...")

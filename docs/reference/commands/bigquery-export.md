@@ -1,5 +1,5 @@
 
-# bigquery export
+# bigquery-export
 
 Runs a SQL statement, which must be provided in a .sql file, and the results are printed to the console
     or saved to a CSV or SHP output file, based on the destination argument.
@@ -7,7 +7,7 @@ Runs a SQL statement, which must be provided in a .sql file, and the results are
 ## Usage
 
 ```
-Usage: bigquery export [OPTIONS]
+Usage: bigquery-export [OPTIONS]
 ```
 
 ## Arguments
@@ -46,7 +46,7 @@ Usage: bigquery export [OPTIONS]
 ## CLI Help
 
 ```
-Usage: bigquery export [OPTIONS]
+Usage: bigquery-export [OPTIONS]
 
   Runs a SQL statement, which must be provided in a .sql file, and the results
   are printed to the console or saved to a CSV or SHP output file, based on

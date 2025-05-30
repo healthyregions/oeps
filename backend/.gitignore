@@ -1,3 +1,4 @@
+.temp
 tests/test_output
 .ruff_cache
 

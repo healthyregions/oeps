@@ -1,33 +1,48 @@
 # OEPS Backend
 
-This project builds from the Opioid Environment Policy Scan (OEPS) data warehouse stored in [github.com/GeoDaCenter/opioid-policy-scan](https://github.com/GeoDaCenter/opioid-policy-scan), and published on Zenodo at [doi.org/10.5281/zenodo.5842465](https://doi.org/10.5281/zenodo.5842465). This repo allows us to pull the final data from the latest OEPS release and push it into Google BigQuery, which will enable new ways of accessing and analyzing that data.
+This project builds from the Opioid Environment Policy Scan (OEPS) data warehouse stored in [github.com/GeoDaCenter/opioid-policy-scan](https://github.com/GeoDaCenter/opioid-policy-scan), and published on Zenodo at [doi.org/10.5281/zenodo.5842465](https://doi.org/10.5281/zenodo.5842465).
 
-The backend includes commands for managing data transformation to and from to different destinations. These commands are organized thematically into the following groups:
-
-- [JCOIN](#jcoin)
-- [Google BigQuery](#google-bigquery)
-- [US Census Data](#us-census-data)
+The backend includes [commands](./reference/commands/README.md) for managing data transformation to and from to different destinations, as well as a [registry](./registry.md) to define all aspects of the data within OEPS.
 
 ## Getting Started
 
-### Install the Python Package
-
-0. Create and activate a [Python virtual environment](https://realpython.com/python-virtual-environments-a-primer/) with [venv](https://docs.python.org/3/library/venv.html), [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html), or your other tool of choice.
+### Install the backend Python Package
 
 1. Clone this repo
 
         git clone https://github.com/healthyregions/oeps
         cd oeps/backend
 
-2. Install this package and its dependencies
+2. Create and activate a [Python virtual environment](https://realpython.com/python-virtual-environments-a-primer/) with [venv](https://docs.python.org/3/library/venv.html), [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html), or your other tool of choice.
+
+    For example, using the `venv` module that is included in Python 3, the commands will be:
+
+        python3 -m venv env
+        source ./env/bin/activate
+
+    This will create a new directory `env/`, and when properly activated your command prompt will have a `(env)` prefix.
+
+3. Install this package and its dependencies
 
         pip install -e .
 
-3. You can now run any scripts with
+4. Create a `.env` file from the provided template (no need to update any values right now)
 
-        python ./scripts/script_name.py
+        cp .env.example .env
 
-4. (for development only)
+5. You can now run any commands with
+
+        flask [command]
+
+    To see what commands are available, run
+
+        flask --help
+
+    You should see a printout that lists about 10 commands.
+
+    > If you only see three commands (`routes`, `run`, and `shell`): These are default flask commands and you either need to activate your virtual environment or make sure you have a `.env` file with `FLASK_APP=oeps` in it.
+
+6. (for development only)
 
         pip install -e .[dev]
         pip install md-click@git+https://github.com/kid-116/md-click@support-arguments

@@ -1,0 +1,12 @@
+{
+  "bq_dataset_name": "tabular",
+  "bq_table_name": "county-2019",
+  "name": "county-2019",
+  "path": "tables/county-2019.csv",
+  "format": "csv",
+  "mediatype": "text/csv",
+  "title": "county-2019",
+  "description": "This CSV aggregates all OEPS data values from 2019 at the county level.",
+  "year": "2019",
+  "geodata_source": "counties-2018"
+}

@@ -1,0 +1,12 @@
+{
+  "bq_dataset_name": "tabular",
+  "bq_table_name": "zcta-2018",
+  "name": "zcta-2018",
+  "path": "tables/zcta-2018.csv",
+  "format": "csv",
+  "mediatype": "text/csv",
+  "title": "zcta-2018",
+  "description": "This CSV aggregates all OEPS data values from 2018 at the zcta level.",
+  "year": "2018",
+  "geodata_source": "zctas-2018"
+}
