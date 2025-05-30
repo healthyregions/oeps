@@ -57,7 +57,8 @@
       "county-2023",
       "tract-2023",
       "zcta-2023",
-      "state-2023"
+      "state-2023",
+      "county-2022"
     ]
   },
   "GEOID": {
@@ -100,7 +101,9 @@
       "state-2018",
       "state-2022",
       "state-2017",
-      "state-2023"
+      "state-2023",
+      "county-2021",
+      "county-2022"
     ]
   },
   "TotPop": {
@@ -3384,7 +3387,9 @@
     "analysis": false,
     "table_sources": [
       "county-2020",
-      "state-2020"
+      "state-2020",
+      "county-2022",
+      "state-2022"
     ]
   },
   "PrMsuseP": {
@@ -3403,7 +3408,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2020"
+      "state-2020",
+      "state-2022"
     ]
   },
   "OdMortRt": {
@@ -3435,7 +3441,10 @@
       "state-2020",
       "county-2017",
       "state-2018",
-      "state-2014"
+      "state-2014",
+      "county-2021",
+      "state-2021",
+      "state-2022"
     ]
   },
   "OdMortRtAv": {
@@ -3474,7 +3483,13 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017"
+      "state-2017",
+      "state-2018",
+      "state-2019",
+      "state-2020",
+      "state-2021",
+      "state-2022",
+      "state-2023"
     ]
   },
   "AnyPdmphFr": {
@@ -3493,7 +3508,13 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017"
+      "state-2017",
+      "state-2018",
+      "state-2019",
+      "state-2020",
+      "state-2021",
+      "state-2022",
+      "state-2023"
     ]
   },
   "OpPdmpFr": {
@@ -3512,7 +3533,13 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017"
+      "state-2017",
+      "state-2018",
+      "state-2019",
+      "state-2020",
+      "state-2021",
+      "state-2022",
+      "state-2023"
     ]
   },
   "MsAcPdmpFr": {
@@ -3531,7 +3558,13 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017"
+      "state-2017",
+      "state-2018",
+      "state-2019",
+      "state-2020",
+      "state-2021",
+      "state-2022",
+      "state-2023"
     ]
   },
   "ElcPdmpFr": {
@@ -3550,7 +3583,13 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017"
+      "state-2017",
+      "state-2018",
+      "state-2019",
+      "state-2020",
+      "state-2021",
+      "state-2022",
+      "state-2023"
     ]
   },
   "AnyPdmpDt": {
@@ -3570,7 +3609,13 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017"
+      "state-2017",
+      "state-2018",
+      "state-2019",
+      "state-2020",
+      "state-2021",
+      "state-2022",
+      "state-2023"
     ]
   },
   "AnyPdmphDt": {
@@ -3590,7 +3635,13 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017"
+      "state-2017",
+      "state-2018",
+      "state-2019",
+      "state-2020",
+      "state-2021",
+      "state-2022",
+      "state-2023"
     ]
   },
   "OpPdmpDt": {
@@ -3610,7 +3661,13 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017"
+      "state-2017",
+      "state-2018",
+      "state-2019",
+      "state-2020",
+      "state-2021",
+      "state-2022",
+      "state-2023"
     ]
   },
   "MsAcPdmpDt": {
@@ -3630,7 +3687,13 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017"
+      "state-2017",
+      "state-2018",
+      "state-2019",
+      "state-2020",
+      "state-2021",
+      "state-2022",
+      "state-2023"
     ]
   },
   "ElcPdmpDt": {
@@ -3650,7 +3713,13 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017"
+      "state-2017",
+      "state-2018",
+      "state-2019",
+      "state-2020",
+      "state-2021",
+      "state-2022",
+      "state-2023"
     ]
   },
   "AnyGslDt": {
