@@ -141,6 +141,11 @@ class TableSource:
         print(f"shape of incoming data: {source_df_trim.shape}")
         merged_df = pd.merge(self.df, source_df_trim, how="outer", on="HEROP_ID")
 
+        # set integer columns properly based on registry def of variables.
+        for col in merged_df.columns:
+            if self.registry.variables[col]["type"] == "integer":
+                merged_df[col] = merged_df[col].astype("Int64")
+
         temp_out = Path(TEMP_DIR, "tables")
         temp_out.mkdir(parents=True, exist_ok=True)
         temp_path = Path(temp_out, f"{self.name}.csv")
