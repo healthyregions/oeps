@@ -7426,7 +7426,7 @@
     "example": "60.0",
     "description": "",
     "constraints": "",
-    "construct": "Marital Status",
+    "construct": "Demographics",
     "source": "ACS ",
     "source_long": "American Community Survey (5-Year Estimate)",
     "oeps_v1_table": null,
