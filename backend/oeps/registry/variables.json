@@ -53,7 +53,10 @@
       "state-2014",
       "zcta-2019",
       "tract-2014",
-      "county-2000"
+      "county-2000",
+      "county-2023",
+      "tract-2023",
+      "zcta-2023"
     ]
   },
   "GEOID": {
@@ -84,7 +87,12 @@
       "tract-2000",
       "state-2000",
       "county-2010",
-      "county-2000"
+      "county-2000",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
     ]
   },
   "TotPop": {
@@ -119,7 +127,12 @@
       "zcta-2018",
       "county-2010",
       "state-2018",
-      "county-2000"
+      "county-2000",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
     ]
   },
   "TotUnits": {
@@ -154,7 +167,12 @@
       "zcta-2018",
       "county-2010",
       "state-2018",
-      "county-2000"
+      "county-2000",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
     ]
   },
   "Age18_64": {
@@ -582,7 +600,12 @@
       "zcta-2018",
       "county-2010",
       "state-2018",
-      "county-2000"
+      "county-2000",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
     ]
   },
   "WhiteP": {
@@ -617,7 +640,12 @@
       "zcta-2018",
       "county-2010",
       "state-2018",
-      "county-2000"
+      "county-2000",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
     ]
   },
   "BlackP": {
@@ -652,7 +680,12 @@
       "zcta-2018",
       "county-2010",
       "state-2018",
-      "county-2000"
+      "county-2000",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
     ]
   },
   "HispP": {
@@ -721,7 +754,12 @@
       "zcta-2018",
       "county-2010",
       "state-2018",
-      "county-2000"
+      "county-2000",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
     ]
   },
   "AsianP": {
@@ -790,7 +828,12 @@
       "zcta-2018",
       "county-2010",
       "state-2018",
-      "county-2000"
+      "county-2000",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
     ]
   },
   "OtherP": {
@@ -825,7 +868,12 @@
       "zcta-2018",
       "county-2010",
       "state-2018",
-      "county-2000"
+      "county-2000",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
     ]
   },
   "NoHsP": {
@@ -926,7 +974,12 @@
       "zcta-2018",
       "county-2010",
       "state-2018",
-      "county-2000"
+      "county-2000",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
     ]
   },
   "UnempP": {
@@ -961,7 +1014,12 @@
       "zcta-2018",
       "county-2010",
       "state-2018",
-      "county-2000"
+      "county-2000",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
     ]
   },
   "VacantP": {
@@ -996,7 +1054,12 @@
       "zcta-2018",
       "county-2010",
       "state-2018",
-      "county-2000"
+      "county-2000",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
     ]
   },
   "TotPopHh": {
@@ -1019,7 +1082,12 @@
       "tract-2018",
       "county-2018",
       "zcta-2018",
-      "state-2018"
+      "state-2018",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
     ]
   },
   "TotVetPop": {
@@ -1045,7 +1113,12 @@
       "county-2018",
       "zcta-2018",
       "county-2010",
-      "state-2018"
+      "state-2018",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
     ]
   },
   "TotWrkE": {
@@ -1068,7 +1141,12 @@
       "tract-2018",
       "county-2018",
       "zcta-2018",
-      "state-2018"
+      "state-2018",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
     ]
   },
   "Age45_49": {
@@ -1182,7 +1260,12 @@
       "zcta-2018",
       "county-2010",
       "state-2018",
-      "county-2000"
+      "county-2000",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
     ]
   },
   "VetP": {
@@ -1208,7 +1291,12 @@
       "county-2018",
       "zcta-2018",
       "county-2010",
-      "state-2018"
+      "state-2018",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
     ]
   },
   "NonRelFhhP": {
@@ -1231,7 +1319,12 @@
       "tract-2018",
       "county-2018",
       "zcta-2018",
-      "state-2018"
+      "state-2018",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
     ]
   },
   "NonRelNfhhP": {
@@ -1254,7 +1347,12 @@
       "tract-2018",
       "county-2018",
       "zcta-2018",
-      "state-2018"
+      "state-2018",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
     ]
   },
   "MedInc": {
@@ -1280,7 +1378,12 @@
       "county-2018",
       "zcta-2018",
       "county-2010",
-      "state-2018"
+      "state-2018",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
     ]
   },
   "PciE": {
@@ -1306,7 +1409,12 @@
       "county-2018",
       "zcta-2018",
       "county-2010",
-      "state-2018"
+      "state-2018",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
     ]
   },
   "ForDqP": {
@@ -1374,7 +1482,12 @@
       "county-2018",
       "zcta-2018",
       "county-2010",
-      "state-2018"
+      "state-2018",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
     ]
   },
   "EduP": {
@@ -1397,7 +1510,12 @@
       "tract-2018",
       "county-2018",
       "zcta-2018",
-      "state-2018"
+      "state-2018",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
     ]
   },
   "HghRskP": {
@@ -1420,7 +1538,12 @@
       "tract-2018",
       "county-2018",
       "zcta-2018",
-      "state-2018"
+      "state-2018",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
     ]
   },
   "HltCrP": {
@@ -1443,7 +1566,12 @@
       "tract-2018",
       "county-2018",
       "zcta-2018",
-      "state-2018"
+      "state-2018",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
     ]
   },
   "RetailP": {
@@ -1466,7 +1594,12 @@
       "tract-2018",
       "county-2018",
       "zcta-2018",
-      "state-2018"
+      "state-2018",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
     ]
   },
   "EssnWrkE": {
@@ -1511,7 +1644,12 @@
       "tract-2018",
       "county-2018",
       "zcta-2018",
-      "state-2018"
+      "state-2018",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
     ]
   },
   "NoIntP": {
@@ -1556,7 +1694,12 @@
       "tract-2018",
       "county-2018",
       "zcta-2018",
-      "state-2018"
+      "state-2018",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
     ]
   },
   "LngTermP": {
@@ -1579,7 +1722,12 @@
       "tract-2018",
       "county-2018",
       "zcta-2018",
-      "state-2018"
+      "state-2018",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
     ]
   },
   "RentalP": {
@@ -1602,7 +1750,12 @@
       "tract-2018",
       "county-2018",
       "zcta-2018",
-      "state-2018"
+      "state-2018",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
     ]
   },
   "UnitDens": {
@@ -1625,7 +1778,12 @@
       "tract-2018",
       "county-2018",
       "zcta-2018",
-      "state-2018"
+      "state-2018",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
     ]
   },
   "AreaSqMi": {
@@ -6421,7 +6579,7 @@
       "tract-2020"
     ]
   },
-   "BachelorsP": {
+  "BachelorsP": {
     "title": "% Persons aged 25 years and over with a bachelor\u2019s degree as their highest level of education",
     "name": "BachelorsP",
     "type": "number",
@@ -6436,7 +6594,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Educational_Characteristics.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "DivrcdP": {
     "title": "% Males 15 years and over who are divorced",
@@ -6453,7 +6618,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Marital%20Status.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "EduHsP": {
     "title": "% Population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)",
@@ -6470,7 +6642,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Educational_Characteristics.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "EduNoHsP": {
     "title": "% Population aged 25 years and over with less than a high school diploma",
@@ -6487,7 +6666,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Educational_Characteristics.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "FamSize": {
     "title": "Average family size",
@@ -6504,7 +6690,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "FemP": {
     "title": "% Population that is Female",
@@ -6521,7 +6714,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Demographics.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "GradSclP": {
     "title": "% Population aged 25 years and over with a graduate or professional degree",
@@ -6538,7 +6738,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Educational_Characteristics.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "HHSize": {
     "title": "Average household size",
@@ -6555,7 +6762,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "HhldFA": {
     "title": "% Female householder with no spouse/partner living alone",
@@ -6572,7 +6786,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "HhldFC": {
     "title": "% Female householder with no spouse/partner living with children under 18 years",
@@ -6589,7 +6810,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "HhldFS": {
     "title": "% Female householder 65 years and over living alone",
@@ -6606,7 +6834,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "HhldMA": {
     "title": "% Male householder with no spouse/partner living alone",
@@ -6623,7 +6858,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "HhldMC": {
     "title": "% Male householder with no spouse/partner living with children under 18 years",
@@ -6640,7 +6882,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "HhldMS": {
     "title": "% Male householder 65 years and over living alone",
@@ -6657,7 +6906,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "HisP": {
     "title": "% Population with ethnicity identified as of Hispanic or Latinx origin",
@@ -6674,7 +6930,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Race_Ethnicity.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "HsdTot": {
     "title": "Total households",
@@ -6691,7 +6954,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "HsdTypCo": {
     "title": "% Cohabiting couple household",
@@ -6708,7 +6978,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "HsdTypM": {
     "title": "% Married-couple household ",
@@ -6725,7 +7002,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "HsdTypMC": {
     "title": "% Married-couple household With children under 18 years",
@@ -6742,7 +7026,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "MaleP": {
     "title": "% Population that is Male",
@@ -6759,7 +7050,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Demographics.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "MedAge": {
     "title": "Median age",
@@ -6776,7 +7074,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Demographics.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "MrrdP": {
     "title": "% Males aged 15 or older who are married and living with their spouse",
@@ -6793,7 +7098,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Marital%20Status.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "NvMrrdP": {
     "title": "% Males aged 15 or older who never got married",
@@ -6810,7 +7122,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Marital%20Status.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "Ovr16P": {
     "title": "% Population over 16 years",
@@ -6827,7 +7146,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Demographics.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "Ovr18P": {
     "title": "% Population over 18 years",
@@ -6844,7 +7170,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Demographics.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "Ovr21P": {
     "title": "% Population over 21 years",
@@ -6861,7 +7194,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Demographics.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "Ovr62P": {
     "title": "% Population over 62 years",
@@ -6878,7 +7218,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Demographics.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "SRatio": {
     "title": "Sex ratio for the total population (males per 100 females)",
@@ -6895,7 +7242,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Demographics.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "SRatio18": {
     "title": "Sex ratio among adults aged 18 and older (males per 100 females)",
@@ -6912,7 +7266,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Demographics.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "SRatio65": {
     "title": "Sex ratio among seniors aged 65 and older (males per 100 females)",
@@ -6929,7 +7290,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Demographics.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "SepartedP": {
     "title": "% Males aged 15 years and over who are separated from their spouse",
@@ -6946,7 +7314,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Marital%20Status.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "SomeCollegeP": {
     "title": "% Population 25 years and over with some college, but no degree",
@@ -6963,7 +7338,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Educational_Characteristics.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "TwoRaceP": {
     "title": "% Population identifying as two or more races",
@@ -6980,7 +7362,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Race_Ethnicity.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "Und18P": {
     "title": "% Population under 18 years old",
@@ -6997,7 +7386,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Demographics.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "Und5P": {
     "title": "% Population under 5 years old ",
@@ -7014,7 +7410,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Demographics.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "WidwdP": {
     "title": "% Population aged 15 and over who are widowed",
@@ -7031,7 +7434,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Marital%20Status.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "CrowdHsng": {
     "title": "Proportion of occupied housing units that are considered crowded (more than 1 person per room)",
@@ -7048,7 +7458,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "EngProf": {
     "title": "Proportion of the population aged 5+ who speak a language other than English at home but are proficient in English",
@@ -7065,7 +7482,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Educational_Characteristics.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "OccupantP": {
     "title": "% Occupied housing units",
@@ -7082,7 +7506,14 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "county-2020",
+      "county-2023",
+      "tract-2023",
+      "tract-2020",
+      "zcta-2020",
+      "zcta-2023"
+    ]
   },
   "Eduless9P": {
     "title": "% Population with less than a 9th grade education",
