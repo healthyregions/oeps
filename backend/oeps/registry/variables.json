@@ -60,7 +60,11 @@
       "state-2023",
       "county-2022",
       "tract-2022",
-      "zcta-2022"
+      "zcta-2022",
+      "county-2025",
+      "state-2025",
+      "zcta-2025",
+      "tract-2025"
     ]
   },
   "GEOID": {
@@ -107,7 +111,11 @@
       "county-2021",
       "county-2022",
       "tract-2022",
-      "zcta-2022"
+      "zcta-2022",
+      "county-2025",
+      "state-2025",
+      "zcta-2025",
+      "tract-2025"
     ]
   },
   "TotPop": {
@@ -2174,7 +2182,9 @@
     "analysis": false,
     "table_sources": [
       "county-2018",
-      "state-2018"
+      "state-2018",
+      "county-2025",
+      "state-2025"
     ]
   },
   "CntBupT": {
@@ -2665,7 +2675,9 @@
     "analysis": false,
     "table_sources": [
       "county-2021",
-      "state-2021"
+      "state-2021",
+      "county-2025",
+      "state-2025"
     ]
   },
   "OtpAvTmDr": {
@@ -2685,7 +2697,9 @@
     "analysis": false,
     "table_sources": [
       "county-2021",
-      "state-2021"
+      "state-2021",
+      "county-2025",
+      "state-2025"
     ]
   },
   "OtpTmDrP": {
@@ -2705,7 +2719,9 @@
     "analysis": false,
     "table_sources": [
       "county-2021",
-      "state-2021"
+      "state-2021",
+      "county-2025",
+      "state-2025"
     ]
   },
   "TotHcv": {
@@ -4508,7 +4524,9 @@
     "analysis": false,
     "table_sources": [
       "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2025",
+      "tract-2025"
     ]
   },
   "BupMinDis": {
@@ -4528,7 +4546,9 @@
     "analysis": false,
     "table_sources": [
       "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2025",
+      "tract-2025"
     ]
   },
   "BupTmDr": {
@@ -4548,7 +4568,9 @@
     "analysis": true,
     "table_sources": [
       "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2025",
+      "tract-2025"
     ]
   },
   "BupCntDr30": {
@@ -4568,7 +4590,9 @@
     "analysis": false,
     "table_sources": [
       "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2025",
+      "tract-2025"
     ]
   },
   "MetMinDis": {
@@ -4588,7 +4612,9 @@
     "analysis": false,
     "table_sources": [
       "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2025",
+      "tract-2025"
     ]
   },
   "MetTmDr": {
@@ -4608,7 +4634,9 @@
     "analysis": true,
     "table_sources": [
       "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2025",
+      "tract-2025"
     ]
   },
   "MetCntDr30": {
@@ -4628,7 +4656,9 @@
     "analysis": false,
     "table_sources": [
       "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2025",
+      "tract-2025"
     ]
   },
   "NalMinDis": {
@@ -4648,7 +4678,9 @@
     "analysis": false,
     "table_sources": [
       "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2025",
+      "tract-2025"
     ]
   },
   "NalTmDr": {
@@ -4668,7 +4700,9 @@
     "analysis": true,
     "table_sources": [
       "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2025",
+      "tract-2025"
     ]
   },
   "NalCntDr30": {
@@ -4688,7 +4722,9 @@
     "analysis": false,
     "table_sources": [
       "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2025",
+      "tract-2025"
     ]
   },
   "BupTmWk": {
@@ -4708,7 +4744,9 @@
     "analysis": true,
     "table_sources": [
       "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2025",
+      "tract-2025"
     ]
   },
   "BupCntWk60": {
@@ -4728,7 +4766,9 @@
     "analysis": false,
     "table_sources": [
       "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2025",
+      "tract-2025"
     ]
   },
   "BupCntWk30": {
@@ -4748,7 +4788,9 @@
     "analysis": false,
     "table_sources": [
       "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2025",
+      "tract-2025"
     ]
   },
   "MetTmWk": {
@@ -4768,7 +4810,9 @@
     "analysis": true,
     "table_sources": [
       "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2025",
+      "tract-2025"
     ]
   },
   "MetCntWk30": {
@@ -4788,7 +4832,9 @@
     "analysis": false,
     "table_sources": [
       "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2025",
+      "tract-2025"
     ]
   },
   "MetCntWk60": {
@@ -4808,7 +4854,9 @@
     "analysis": false,
     "table_sources": [
       "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2025",
+      "tract-2025"
     ]
   },
   "NalTmWk": {
@@ -4828,7 +4876,9 @@
     "analysis": true,
     "table_sources": [
       "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2025",
+      "tract-2025"
     ]
   },
   "NalCntWk60": {
@@ -4848,7 +4898,9 @@
     "analysis": false,
     "table_sources": [
       "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2025",
+      "tract-2025"
     ]
   },
   "NalCntWk30": {
@@ -4868,7 +4920,9 @@
     "analysis": false,
     "table_sources": [
       "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2025",
+      "tract-2025"
     ]
   },
   "BupTmBk": {
@@ -4888,7 +4942,9 @@
     "analysis": true,
     "table_sources": [
       "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2025",
+      "tract-2025"
     ]
   },
   "BupCntBk60": {
@@ -4908,7 +4964,9 @@
     "analysis": false,
     "table_sources": [
       "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2025",
+      "tract-2025"
     ]
   },
   "BupCntBk30": {
@@ -4928,7 +4986,9 @@
     "analysis": false,
     "table_sources": [
       "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2025",
+      "tract-2025"
     ]
   },
   "MetTmBk": {
@@ -4948,7 +5008,9 @@
     "analysis": true,
     "table_sources": [
       "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2025",
+      "tract-2025"
     ]
   },
   "MetCntBk60": {
@@ -4968,7 +5030,9 @@
     "analysis": false,
     "table_sources": [
       "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2025",
+      "tract-2025"
     ]
   },
   "MetCntBk30": {
@@ -4988,7 +5052,9 @@
     "analysis": false,
     "table_sources": [
       "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2025",
+      "tract-2025"
     ]
   },
   "NalTmBk": {
@@ -5008,7 +5074,9 @@
     "analysis": true,
     "table_sources": [
       "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2025",
+      "tract-2025"
     ]
   },
   "NalCntBk60": {
@@ -5028,7 +5096,9 @@
     "analysis": false,
     "table_sources": [
       "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2025",
+      "tract-2025"
     ]
   },
   "NalCntBk30": {
@@ -5048,7 +5118,9 @@
     "analysis": false,
     "table_sources": [
       "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2025",
+      "tract-2025"
     ]
   },
   "FqhcMinDis": {
@@ -5366,7 +5438,10 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_OpioidUseTreatment.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "zcta-2025",
+      "tract-2025"
+    ]
   },
   "OtpTmDr": {
     "title": "Driving Time (min) to nearest Opioid Treatment Program (OTP)",
@@ -5385,7 +5460,9 @@
     "analysis": true,
     "table_sources": [
       "zcta-2021",
-      "tract-2021"
+      "tract-2021",
+      "zcta-2025",
+      "tract-2025"
     ]
   },
   "OtpCntDr": {
@@ -5405,7 +5482,9 @@
     "analysis": false,
     "table_sources": [
       "zcta-2021",
-      "tract-2021"
+      "tract-2021",
+      "zcta-2025",
+      "tract-2025"
     ]
   },
   "PcpPer100k": {
@@ -5708,7 +5787,9 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020"
+      "county-2020",
+      "county-2025",
+      "state-2025"
     ]
   },
   "BupCtTmBk": {
@@ -5727,7 +5808,9 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020"
+      "county-2020",
+      "county-2025",
+      "state-2025"
     ]
   },
   "BupCtTmWk": {
@@ -5746,7 +5829,9 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020"
+      "county-2020",
+      "county-2025",
+      "state-2025"
     ]
   },
   "MetCtTmDr": {
@@ -5765,7 +5850,9 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020"
+      "county-2020",
+      "county-2025",
+      "state-2025"
     ]
   },
   "MetCtTmBk": {
@@ -5784,7 +5871,9 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020"
+      "county-2020",
+      "county-2025",
+      "state-2025"
     ]
   },
   "MetCtTmWk": {
@@ -5803,7 +5892,9 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020"
+      "county-2020",
+      "county-2025",
+      "state-2025"
     ]
   },
   "NalCtTmDr": {
@@ -5822,7 +5913,9 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020"
+      "county-2020",
+      "county-2025",
+      "state-2025"
     ]
   },
   "NalCtTmBk": {
@@ -5841,7 +5934,9 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020"
+      "county-2020",
+      "county-2025",
+      "state-2025"
     ]
   },
   "NalCtTmWk": {
@@ -5860,7 +5955,9 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020"
+      "county-2020",
+      "county-2025",
+      "state-2025"
     ]
   },
   "BupAvTmDr": {
@@ -5879,7 +5976,9 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020"
+      "county-2020",
+      "county-2025",
+      "state-2025"
     ]
   },
   "BupAvTmBk": {
@@ -5898,7 +5997,9 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020"
+      "county-2020",
+      "county-2025",
+      "state-2025"
     ]
   },
   "BupAvTmWk": {
@@ -5917,7 +6018,9 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020"
+      "county-2020",
+      "county-2025",
+      "state-2025"
     ]
   },
   "MetAvTmDr": {
@@ -5936,7 +6039,9 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020"
+      "county-2020",
+      "county-2025",
+      "state-2025"
     ]
   },
   "MetAvTmBk": {
@@ -5955,7 +6060,9 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020"
+      "county-2020",
+      "county-2025",
+      "state-2025"
     ]
   },
   "MetAvTmWk": {
@@ -5974,7 +6081,9 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020"
+      "county-2020",
+      "county-2025",
+      "state-2025"
     ]
   },
   "NalAvTmDr": {
@@ -5993,7 +6102,9 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020"
+      "county-2020",
+      "county-2025",
+      "state-2025"
     ]
   },
   "NalAvTmBk": {
@@ -6012,7 +6123,9 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020"
+      "county-2020",
+      "county-2025",
+      "state-2025"
     ]
   },
   "NalAvTmWk": {
@@ -6031,7 +6144,9 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020"
+      "county-2020",
+      "county-2025",
+      "state-2025"
     ]
   },
   "BupTmDrP": {
@@ -6050,7 +6165,9 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020"
+      "county-2020",
+      "county-2025",
+      "state-2025"
     ]
   },
   "BupTmBkP": {
@@ -6069,7 +6186,9 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020"
+      "county-2020",
+      "county-2025",
+      "state-2025"
     ]
   },
   "BupTmWkP": {
@@ -6088,7 +6207,9 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020"
+      "county-2020",
+      "county-2025",
+      "state-2025"
     ]
   },
   "MetTmDrP": {
@@ -6107,7 +6228,9 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020"
+      "county-2020",
+      "county-2025",
+      "state-2025"
     ]
   },
   "MetTmBkP": {
@@ -6126,7 +6249,9 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020"
+      "county-2020",
+      "county-2025",
+      "state-2025"
     ]
   },
   "MetTmWkP": {
@@ -6145,7 +6270,9 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020"
+      "county-2020",
+      "county-2025",
+      "state-2025"
     ]
   },
   "NalTmDrP": {
@@ -6164,7 +6291,9 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020"
+      "county-2020",
+      "county-2025",
+      "state-2025"
     ]
   },
   "NalTmBkP": {
@@ -6183,7 +6312,9 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020"
+      "county-2020",
+      "county-2025",
+      "state-2025"
     ]
   },
   "NalTmWkP": {
@@ -6202,7 +6333,9 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020"
+      "county-2020",
+      "county-2025",
+      "state-2025"
     ]
   },
   "RcaUrbanP": {
@@ -7976,7 +8109,10 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "zcta-2025",
+      "tract-2025"
+    ]
   },
   "NalCntDr60": {
     "title": "Count of naltrexone providers (drive)",
@@ -7993,7 +8129,10 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "zcta-2025",
+      "tract-2025"
+    ]
   },
   "MetCntDr60": {
     "title": "Count of methadone providers (drive)",
@@ -8010,7 +8149,10 @@
     "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md",
     "longitudinal": false,
     "analysis": false,
-    "table_sources": []
+    "table_sources": [
+      "zcta-2025",
+      "tract-2025"
+    ]
   },
   "CrrctExp": {
     "title": "Corrections expenditures",
