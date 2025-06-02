@@ -275,6 +275,34 @@ class Registry:
         sources += list(self.geodata_sources.values())
         return sources
 
+    def find_table_source(self, variable_name, summary_level, year_up_to: int = None):
+        """Given the input variable name and summary level, return the latest
+        matching table_source.
+
+        year_up_to: Optionally provide a year cutoff after which table_sources
+        will be ignored."""
+
+        variable = self.variables[variable_name]
+        matching_sources = []
+        for ts in variable["table_sources"]:
+            ts_full = self.table_sources.get(ts)
+            if ts_full and ts_full["summary_level"] == summary_level:
+                matching_sources.append(ts_full)
+
+        if len(matching_sources) == 0:
+            return None
+
+        matching_sources.sort(key=lambda d: d["year"])
+        if year_up_to is None:
+            return matching_sources[-1]
+        else:
+            use_source = matching_sources[0]
+            for source in matching_sources:
+                if int(source["year"]) > year_up_to:
+                    break
+                use_source = source
+            return use_source
+
     def create_data_dictionaries(self, destination: Path = None):
         """Generate MS Excel formatted data dictionaries for all content."""
 

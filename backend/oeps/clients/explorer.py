@@ -33,14 +33,7 @@ class Explorer:
             entry = data.get("explorer_config")
             if entry:
                 entry["summary_level"] = data["summary_level"]
-                geodata_lookup[id] = entry
-
-        # create lookup of all table data sources that are linked to a valid geodata_source
-        table_lookup = {
-            k: v
-            for k, v in self.registry.table_sources.items()
-            if v.get("geodata_source") in geodata_lookup
-        }
+                geodata_lookup[entry["summary_level"]] = entry
 
         # iterate all variables and create a lookup for all combinations of data sources
         # in which each variable has a value
@@ -51,30 +44,19 @@ class Explorer:
         }
         ds_combo_lookup = {}
         for k, v in variables.items():
-            if v["table_sources"]:
-                summ_latest = {
-                    "state": None,
-                    "county": None,
-                    "zcta": None,
-                    "tract": None,
-                }
-                for ds in v["table_sources"]:
-                    entry = table_lookup.get(ds)
+            use_sources = [
+                self.registry.find_table_source(k, "state"),
+                self.registry.find_table_source(k, "county", year_up_to=2021),
+                self.registry.find_table_source(k, "zcta"),
+                self.registry.find_table_source(k, "tract", year_up_to=2021),
+            ]
 
-                    if entry:
-                        if (
-                            not summ_latest[entry["summary_level"]]
-                            or summ_latest[entry["summary_level"]]["year"]
-                            < entry["year"]
-                        ):
-                            summ_latest[entry["summary_level"]] = entry
-
-                latest_sources = [i for i in summ_latest.values() if i]
-                if latest_sources:
-                    ds_group_code = "__".join([i["name"] for i in latest_sources])
-                    ds_combo_lookup[ds_group_code] = ds_combo_lookup.get(
-                        ds_group_code, []
-                    ) + [k]
+            latest_sources = [i for i in use_sources if i]
+            if latest_sources:
+                ds_group_code = "__".join([i["name"] for i in latest_sources])
+                ds_combo_lookup[ds_group_code] = ds_combo_lookup.get(
+                    ds_group_code, []
+                ) + [k]
 
         ## create a lookup of all variables and the combined data sources that they exist for
         variables_to_ds_combos = {}
@@ -87,7 +69,7 @@ class Explorer:
         for k, field_list in ds_combo_lookup.items():
             field_list.insert(0, "HEROP_ID")
             for ds in k.split("__"):
-                ds_schema = table_lookup[ds]
+                ds_schema = self.registry.table_sources[ds]
 
                 filename = f"_{make_id()}"
                 out_path = Path(csv_dir, f"{filename}.csv")
@@ -107,7 +89,7 @@ class Explorer:
                     "type": "characteristic",
                     "join": "HEROP_ID",
                 }
-                geodata_lookup[ds_schema["geodata_source"]]["tables"][k] = table_entry
+                geodata_lookup[ds_schema["summary_level"]]["tables"][k] = table_entry
 
         out_variables = {
             k: {
@@ -123,19 +105,20 @@ class Explorer:
 
         # hacky method for creating the output geodata source list in descending order of
         # spatial resolution
-        out_sources = {"sources": []}
-        for v in geodata_lookup.values():
-            if v["summary_level"] == "state":
-                out_sources["sources"].append(v)
-        for v in geodata_lookup.values():
-            if v["summary_level"] == "county":
-                out_sources["sources"].append(v)
-        for v in geodata_lookup.values():
-            if v["summary_level"] == "zcta":
-                out_sources["sources"].append(v)
-        for v in geodata_lookup.values():
-            if v["summary_level"] == "tract":
-                out_sources["sources"].append(v)
+        out_sources = {
+            "sources": [
+                [i for i in geodata_lookup.values() if i["summary_level"] == "state"][
+                    0
+                ],
+                [i for i in geodata_lookup.values() if i["summary_level"] == "county"][
+                    0
+                ],
+                [i for i in geodata_lookup.values() if i["summary_level"] == "zcta"][0],
+                [i for i in geodata_lookup.values() if i["summary_level"] == "tract"][
+                    0
+                ],
+            ]
+        }
 
         if upload:
             prefix = "explorer/csvs"
