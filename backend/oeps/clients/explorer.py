@@ -46,9 +46,9 @@ class Explorer:
         for k, v in variables.items():
             use_sources = [
                 self.registry.find_table_source(k, "state"),
-                self.registry.find_table_source(k, "county", year_up_to=2021),
+                self.registry.find_table_source(k, "county"),
                 self.registry.find_table_source(k, "zcta"),
-                self.registry.find_table_source(k, "tract", year_up_to=2021),
+                self.registry.find_table_source(k, "tract"),
             ]
 
             latest_sources = [i for i in use_sources if i]
