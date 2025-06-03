@@ -186,7 +186,7 @@ class Explorer:
             csv_downloads[ts["summary_level"]].append(
                 {
                     "name": filename,
-                    "url": f"https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/{filename}",
+                    "url": f"https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/{filename}",
                     "year": ts["year"],
                 }
             )
