@@ -1,28 +1,28 @@
 [
   {
     "variable": "HEROP_ID",
-    "numerator": "state-2023__county-2021__zcta-2023__tract-2021",
+    "numerator": "state-2025__county-2025__zcta-2025__tract-2025",
     "nProperty": "HEROP_ID",
     "theme": "Geography",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Geographic_Boundaries.md"
   },
   {
     "variable": "GEOID",
-    "numerator": "state-2023__county-2021__zcta-2023__tract-2020",
+    "numerator": "state-2025__county-2025__zcta-2025__tract-2025",
     "nProperty": "GEOID",
     "theme": "Geography",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Geographic_Boundaries.md"
   },
   {
     "variable": "Total Population",
-    "numerator": "state-2018__county-2020__zcta-2023__tract-2020",
+    "numerator": "state-2018__county-2023__zcta-2023__tract-2023",
     "nProperty": "TotPop",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Demographics.md"
   },
   {
     "variable": "Total Occupied Housing Units",
-    "numerator": "state-2018__county-2020__zcta-2023__tract-2020",
+    "numerator": "state-2018__county-2023__zcta-2023__tract-2023",
     "nProperty": "TotUnits",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Housing_Variables.md"
@@ -113,21 +113,21 @@
   },
   {
     "variable": "% Population: Age 65+",
-    "numerator": "state-2018__county-2020__zcta-2023__tract-2020",
+    "numerator": "state-2018__county-2023__zcta-2023__tract-2023",
     "nProperty": "Ovr65P",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Demographics.md"
   },
   {
     "variable": "% White Population",
-    "numerator": "state-2018__county-2020__zcta-2023__tract-2020",
+    "numerator": "state-2018__county-2023__zcta-2023__tract-2023",
     "nProperty": "WhiteP",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Race_Ethnicity.md"
   },
   {
     "variable": "% Black/African American Population",
-    "numerator": "state-2018__county-2020__zcta-2023__tract-2020",
+    "numerator": "state-2018__county-2023__zcta-2023__tract-2023",
     "nProperty": "BlackP",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Race_Ethnicity.md"
@@ -141,7 +141,7 @@
   },
   {
     "variable": "% Native American/Alaska Native Population",
-    "numerator": "state-2018__county-2020__zcta-2023__tract-2020",
+    "numerator": "state-2018__county-2023__zcta-2023__tract-2023",
     "nProperty": "AmIndP",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Race_Ethnicity.md"
@@ -155,14 +155,14 @@
   },
   {
     "variable": "% Native Hawaiian & Other PI Population",
-    "numerator": "state-2018__county-2020__zcta-2023__tract-2020",
+    "numerator": "state-2018__county-2023__zcta-2023__tract-2023",
     "nProperty": "PacIsP",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Race_Ethnicity.md"
   },
   {
     "variable": "% Other (race) Population",
-    "numerator": "state-2018__county-2020__zcta-2023__tract-2020",
+    "numerator": "state-2018__county-2023__zcta-2023__tract-2023",
     "nProperty": "OtherP",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Race_Ethnicity.md"
@@ -183,42 +183,42 @@
   },
   {
     "variable": "Poverty %",
-    "numerator": "state-2018__county-2020__zcta-2023__tract-2020",
+    "numerator": "state-2018__county-2023__zcta-2023__tract-2023",
     "nProperty": "PovP",
     "theme": "Economic",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Economic.md"
   },
   {
     "variable": "Unemployment %",
-    "numerator": "state-2018__county-2020__zcta-2023__tract-2020",
+    "numerator": "state-2018__county-2023__zcta-2023__tract-2023",
     "nProperty": "UnempP",
     "theme": "Economic",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Economic.md"
   },
   {
     "variable": "Vacant Housing Units %",
-    "numerator": "state-2018__county-2020__zcta-2023__tract-2020",
+    "numerator": "state-2018__county-2023__zcta-2023__tract-2023",
     "nProperty": "VacantP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Housing_Variables.md"
   },
   {
     "variable": "Total Population in Households",
-    "numerator": "state-2018__county-2020__zcta-2023__tract-2020",
+    "numerator": "state-2018__county-2023__zcta-2023__tract-2023",
     "nProperty": "TotPopHh",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md"
   },
   {
     "variable": "Total Veteran Population",
-    "numerator": "state-2018__county-2020__zcta-2023__tract-2020",
+    "numerator": "state-2018__county-2023__zcta-2023__tract-2023",
     "nProperty": "TotVetPop",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/VetPop.md"
   },
   {
     "variable": "Count of Working Population",
-    "numerator": "state-2018__county-2020__zcta-2023__tract-2020",
+    "numerator": "state-2018__county-2023__zcta-2023__tract-2023",
     "nProperty": "TotWrkE",
     "theme": "Economic",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Job_Categories_byIndustry_2018.md"
@@ -246,42 +246,42 @@
   },
   {
     "variable": "% Population with Disability",
-    "numerator": "state-2018__county-2020__zcta-2023__tract-2020",
+    "numerator": "state-2018__county-2023__zcta-2023__tract-2023",
     "nProperty": "DisbP",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Other_Demographic_2018.md"
   },
   {
     "variable": "% Veteran Population",
-    "numerator": "state-2018__county-2020__zcta-2023__tract-2020",
+    "numerator": "state-2018__county-2023__zcta-2023__tract-2023",
     "nProperty": "VetP",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/VetPop.md"
   },
   {
     "variable": "% Nonrelatives in Family Households",
-    "numerator": "state-2018__county-2020__zcta-2023__tract-2020",
+    "numerator": "state-2018__county-2023__zcta-2023__tract-2023",
     "nProperty": "NonRelFhhP",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md"
   },
   {
     "variable": "% Nonrelatives in Non-family Households",
-    "numerator": "state-2018__county-2020__zcta-2023__tract-2020",
+    "numerator": "state-2018__county-2023__zcta-2023__tract-2023",
     "nProperty": "NonRelNfhhP",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md"
   },
   {
     "variable": "Median Income",
-    "numerator": "state-2018__county-2020__zcta-2023__tract-2020",
+    "numerator": "state-2018__county-2023__zcta-2023__tract-2023",
     "nProperty": "MedInc",
     "theme": "Economic",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Economic.md"
   },
   {
     "variable": "Per Capita Income",
-    "numerator": "state-2018__county-2020__zcta-2023__tract-2020",
+    "numerator": "state-2018__county-2023__zcta-2023__tract-2023",
     "nProperty": "PciE",
     "theme": "Economic",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Economic.md"
@@ -302,35 +302,35 @@
   },
   {
     "variable": "Income Inequality (Gini Coefficient)",
-    "numerator": "state-2018__county-2020__zcta-2023__tract-2020",
+    "numerator": "state-2018__county-2023__zcta-2023__tract-2023",
     "nProperty": "GiniCoeff",
     "theme": "Economic",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/ForeclosureRate.md"
   },
   {
     "variable": "Employed % - Education",
-    "numerator": "state-2018__county-2020__zcta-2023__tract-2020",
+    "numerator": "state-2018__county-2023__zcta-2023__tract-2023",
     "nProperty": "EduP",
     "theme": "Economic",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Job_Categories_byIndustry_2018.md"
   },
   {
     "variable": "Employed % - High Risk of Injury",
-    "numerator": "state-2018__county-2020__zcta-2023__tract-2020",
+    "numerator": "state-2018__county-2023__zcta-2023__tract-2023",
     "nProperty": "HghRskP",
     "theme": "Economic",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Job_Categories_byIndustry_2018.md"
   },
   {
     "variable": "Employed % - Health Care",
-    "numerator": "state-2018__county-2020__zcta-2023__tract-2020",
+    "numerator": "state-2018__county-2023__zcta-2023__tract-2023",
     "nProperty": "HltCrP",
     "theme": "Economic",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Job_Categories_byIndustry_2018.md"
   },
   {
     "variable": "Employed % - Retail",
-    "numerator": "state-2018__county-2020__zcta-2023__tract-2020",
+    "numerator": "state-2018__county-2023__zcta-2023__tract-2023",
     "nProperty": "RetailP",
     "theme": "Economic",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Job_Categories_byIndustry_2018.md"
@@ -344,7 +344,7 @@
   },
   {
     "variable": "Essential Workers %",
-    "numerator": "state-2018__county-2020__zcta-2023__tract-2020",
+    "numerator": "state-2018__county-2023__zcta-2023__tract-2023",
     "nProperty": "EssnWrkP",
     "theme": "Economic",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Job_Categories_byOccupation_2018.md"
@@ -358,28 +358,28 @@
   },
   {
     "variable": "Mobile Homes %",
-    "numerator": "state-2018__county-2020__zcta-2023__tract-2020",
+    "numerator": "state-2018__county-2023__zcta-2023__tract-2023",
     "nProperty": "MobileP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Housing_Variables.md"
   },
   {
     "variable": "Long-Term Occupancy %",
-    "numerator": "state-2018__county-2020__zcta-2023__tract-2020",
+    "numerator": "state-2018__county-2023__zcta-2023__tract-2023",
     "nProperty": "LngTermP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Housing_Variables.md"
   },
   {
     "variable": "Rentals %",
-    "numerator": "state-2018__county-2020__zcta-2023__tract-2020",
+    "numerator": "state-2018__county-2023__zcta-2023__tract-2023",
     "nProperty": "RentalP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Housing_Variables.md"
   },
   {
     "variable": "Housing Unit Density",
-    "numerator": "state-2018__county-2020__zcta-2023__tract-2020",
+    "numerator": "state-2018__county-2023__zcta-2023__tract-2023",
     "nProperty": "UnitDens",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Housing_Variables.md"
@@ -505,7 +505,7 @@
   },
   {
     "variable": "Total Census Tract Count",
-    "numerator": "state-2018__county-2018",
+    "numerator": "state-2025__county-2025",
     "nProperty": "TotTracts",
     "theme": "Geography",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_FQHCs_MinDistance.md"
@@ -680,21 +680,21 @@
   },
   {
     "variable": "Tracts with Opioid Treatment Program (OTP) (30-min drive)",
-    "numerator": "state-2021__county-2021",
+    "numerator": "state-2025__county-2025",
     "nProperty": "OtpCtTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_OpioidUseTreatment.md"
   },
   {
     "variable": "Driving Time (min) to nearest Opioid Treatment Program (OTP)",
-    "numerator": "state-2021__county-2021",
+    "numerator": "state-2025__county-2025",
     "nProperty": "OtpAvTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_OpioidUseTreatment.md"
   },
   {
     "variable": "% Tracts with Opioid Treatment Program (OTP) (30-min drive)",
-    "numerator": "state-2021__county-2021",
+    "numerator": "state-2025__county-2025",
     "nProperty": "OtpTmDrP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_OpioidUseTreatment.md"
@@ -911,7 +911,7 @@
   },
   {
     "variable": "Opioid Prescription Rate",
-    "numerator": "state-2022__county-2020",
+    "numerator": "state-2022__county-2022",
     "nProperty": "OpRxRt",
     "theme": "Outcome",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/OpioidIndicators.md"
@@ -1268,196 +1268,196 @@
   },
   {
     "variable": "Distance (mi) to nearest MOUD (any)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "MoudMinDis",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Distance (mi) to nearest Buprenorphine Provider",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "BupMinDis",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Driving Time (min) to nearest Buprenorphine Provider",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "BupTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Count of Buprenorphine Providers (30-min drive)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "BupCntDr30",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Distance (mi) to nearest Methadone Provider",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "MetMinDis",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Driving Time (min) to nearest Methadone Provider",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "MetTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Count of Methadone Providers (30-min drive)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "MetCntDr30",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Distance (mi) to nearest Naltrexone Provider",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "NalMinDis",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Driving Time (min) to nearest Naltrexone Provider",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "NalTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Count of Naltrexone Providers (30-min drive)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "NalCntDr30",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Walking Time (min) to nearest Buprenorphine Provider",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "BupTmWk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Count of Buprenorphine Providers (60-min walk)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "BupCntWk60",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Count of Buprenorphine Providers (30-min walk)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "BupCntWk30",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Walking Time (min) to nearest Methadone Provider",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "MetTmWk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Count of Methadone Providers (60-min walk)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "MetCntWk30",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Count of Methadone Providers (30-min walk)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "MetCntWk60",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Walking Time (min) to nearest Naltrexone Provider",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "NalTmWk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Count of Naltrexone Providers (60-min walk)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "NalCntWk60",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Count of Naltrexone Providers (30-min walk)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "NalCntWk30",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Biking Time (min) to nearest Buprenorphine Provider",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "BupTmBk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Count of Buprenorphine Providers (60-min bike)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "BupCntBk60",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Count of Buprenorphine Providers (30-min bike)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "BupCntBk30",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Biking Time (min) to nearest Methadone Provider",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "MetTmBk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Count of Methadone Providers (60-min bike)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "MetCntBk60",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Count of methadone providers (30-min bike)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "MetCntBk30",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Biking Time (min) to nearest Naltrexone Provider",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "NalTmBk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Count of Naltrexone Providers (60-min bike)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "NalCntBk60",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Count of Naltrexone Providers (30-min bike)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "NalCntBk30",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
@@ -1568,15 +1568,22 @@
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_SubstanceUseTreatment.md"
   },
   {
+    "variable": "Distance to nearest OTP",
+    "numerator": "zcta-2025__tract-2025",
+    "nProperty": "OtpMinDis",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_OpioidUseTreatment.md"
+  },
+  {
     "variable": "Driving Time (min) to nearest Opioid Treatment Program (OTP)",
-    "numerator": "zcta-2021__tract-2021",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "OtpTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_OpioidUseTreatment.md"
   },
   {
     "variable": "Count of Opioid Treatment Programs (OTP) (30-min drive)",
-    "numerator": "zcta-2021__tract-2021",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "OtpCntDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_OpioidUseTreatment.md"
@@ -1632,35 +1639,35 @@
   },
   {
     "variable": "Social Vulnerability Index (SVI) 1",
-    "numerator": "county-2020__zcta-2022__tract-2020",
+    "numerator": "county-2022__zcta-2022__tract-2022",
     "nProperty": "SviTh1",
     "theme": "Composite",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/SVI.md"
   },
   {
     "variable": "Social Vulnerability Index (SVI) 2",
-    "numerator": "county-2020__zcta-2022__tract-2020",
+    "numerator": "county-2022__zcta-2022__tract-2022",
     "nProperty": "SviTh2",
     "theme": "Composite",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/SVI.md"
   },
   {
     "variable": "Social Vulnerability Index (SVI) 3",
-    "numerator": "county-2020__zcta-2022__tract-2020",
+    "numerator": "county-2022__zcta-2022__tract-2022",
     "nProperty": "SviTh3",
     "theme": "Composite",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/SVI.md"
   },
   {
     "variable": "Social Vulnerability Index (SVI) 4",
-    "numerator": "county-2020__zcta-2022__tract-2020",
+    "numerator": "county-2022__zcta-2022__tract-2022",
     "nProperty": "SviTh4",
     "theme": "Composite",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/SVI.md"
   },
   {
     "variable": "Social Vulnerability Index (SVI) Summary Ranking",
-    "numerator": "county-2020__zcta-2022__tract-2020",
+    "numerator": "county-2022__zcta-2022__tract-2022",
     "nProperty": "SviSmryRnk",
     "theme": "Composite",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/SVI.md"
@@ -1674,189 +1681,189 @@
   },
   {
     "variable": "Tracts with Buprenorphine Provider within 30-min (driving)",
-    "numerator": "county-2020",
+    "numerator": "state-2025__county-2025",
     "nProperty": "BupCtTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Tracts with Buprenorphine Provider within 30-min (biking)",
-    "numerator": "county-2020",
+    "numerator": "state-2025__county-2025",
     "nProperty": "BupCtTmBk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Tracts with Buprenorphine Provider within 30-min (walking)",
-    "numerator": "county-2020",
+    "numerator": "state-2025__county-2025",
     "nProperty": "BupCtTmWk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Tracts with Methadone Provider within 30-min (driving)",
-    "numerator": "county-2020",
+    "numerator": "state-2025__county-2025",
     "nProperty": "MetCtTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Tracts with Methadone Provider within 30-min (biking)",
-    "numerator": "county-2020",
+    "numerator": "state-2025__county-2025",
     "nProperty": "MetCtTmBk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Tracts with Methadone Provider within 30-min (walking)",
-    "numerator": "county-2020",
+    "numerator": "state-2025__county-2025",
     "nProperty": "MetCtTmWk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Tracts with Naltrexone Provider within 30-min (driving)",
-    "numerator": "county-2020",
+    "numerator": "state-2025__county-2025",
     "nProperty": "NalCtTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Tracts with Naltrexone Provider within 30-min (biking)",
-    "numerator": "county-2020",
+    "numerator": "state-2025__county-2025",
     "nProperty": "NalCtTmBk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Tracts with Naltrexone Provider within 30-min (walking)",
-    "numerator": "county-2020",
+    "numerator": "state-2025__county-2025",
     "nProperty": "NalCtTmWk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Driving Time (min) to Nearest Buprenorphine Provider",
-    "numerator": "county-2020",
+    "numerator": "state-2025__county-2025",
     "nProperty": "BupAvTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Biking Time (min) to Nearest Buprenorphine Provider",
-    "numerator": "county-2020",
+    "numerator": "state-2025__county-2025",
     "nProperty": "BupAvTmBk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Walking Time (min) to Nearest Buprenorphine Provider",
-    "numerator": "county-2020",
+    "numerator": "state-2025__county-2025",
     "nProperty": "BupAvTmWk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Driving Time (min) to Nearest Methadone Provider",
-    "numerator": "county-2020",
+    "numerator": "state-2025__county-2025",
     "nProperty": "MetAvTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Biking Time (min) to Nearest Methadone Provider",
-    "numerator": "county-2020",
+    "numerator": "state-2025__county-2025",
     "nProperty": "MetAvTmBk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Walking Time (min) to Nearest Methadone Provide",
-    "numerator": "county-2020",
+    "numerator": "state-2025__county-2025",
     "nProperty": "MetAvTmWk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Driving Time (min) to Nearest Naltrexone Provider",
-    "numerator": "county-2020",
+    "numerator": "state-2025__county-2025",
     "nProperty": "NalAvTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Biking Time (min) to Nearest Naltrexone Provider",
-    "numerator": "county-2020",
+    "numerator": "state-2025__county-2025",
     "nProperty": "NalAvTmBk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Walking Time (min) to Nearest Naltrexone Provider",
-    "numerator": "county-2020",
+    "numerator": "state-2025__county-2025",
     "nProperty": "NalAvTmWk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "% Tracts With Buprenorphine Provider (30-min drive)",
-    "numerator": "county-2020",
+    "numerator": "state-2025__county-2025",
     "nProperty": "BupTmDrP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "% Tracts With Buprenorphine Provider (30-min bike)",
-    "numerator": "county-2020",
+    "numerator": "state-2025__county-2025",
     "nProperty": "BupTmBkP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "% Tracts With Buprenorphine Provider (30-min walk)",
-    "numerator": "county-2020",
+    "numerator": "state-2025__county-2025",
     "nProperty": "BupTmWkP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "% Tracts With Methadone Provider (30-min drive)",
-    "numerator": "county-2020",
+    "numerator": "state-2025__county-2025",
     "nProperty": "MetTmDrP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "% Tracts With Methadone Provider (30-min bike)",
-    "numerator": "county-2020",
+    "numerator": "state-2025__county-2025",
     "nProperty": "MetTmBkP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "% Tracts With Methadone Provider (30-min walk)",
-    "numerator": "county-2020",
+    "numerator": "state-2025__county-2025",
     "nProperty": "MetTmWkP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "% Tracts With Naltrexone Provider (30-min drive)",
-    "numerator": "county-2020",
+    "numerator": "state-2025__county-2025",
     "nProperty": "NalTmDrP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "% Tracts With Naltrexone Provider (30-min bike)",
-    "numerator": "county-2020",
+    "numerator": "state-2025__county-2025",
     "nProperty": "NalTmBkP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "% Tracts With Naltrexone Provider (30-min walk)",
-    "numerator": "county-2020",
+    "numerator": "state-2025__county-2025",
     "nProperty": "NalTmWkP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
@@ -2073,273 +2080,273 @@
   },
   {
     "variable": "% Persons aged 25 years and over with a bachelor\u2019s degree as their highest level of education",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "BachelorsP",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Educational_Characteristics.md"
   },
   {
     "variable": "% Males 15 years and over who are divorced",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "DivrcdP",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Marital_Status.md"
   },
   {
     "variable": "% Population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "EduHsP",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Educational_Characteristics.md"
   },
   {
     "variable": "% Population aged 25 years and over with less than a high school diploma",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "EduNoHsP",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Educational_Characteristics.md"
   },
   {
     "variable": "Average family size",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "FamSize",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md"
   },
   {
     "variable": "% Population that is Female",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "FemP",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Demographics.md"
   },
   {
     "variable": "% Population aged 25 years and over with a graduate or professional degree",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "GradSclP",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Educational_Characteristics.md"
   },
   {
     "variable": "Average household size",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "HHSize",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md"
   },
   {
     "variable": "% Female householder with no spouse/partner living alone",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "HhldFA",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md"
   },
   {
     "variable": "% Female householder with no spouse/partner living with children under 18 years",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "HhldFC",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md"
   },
   {
     "variable": "% Female householder 65 years and over living alone",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "HhldFS",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md"
   },
   {
     "variable": "% Male householder with no spouse/partner living alone",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "HhldMA",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md"
   },
   {
     "variable": "% Male householder with no spouse/partner living with children under 18 years",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "HhldMC",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md"
   },
   {
     "variable": "% Male householder 65 years and over living alone",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "HhldMS",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md"
   },
   {
     "variable": "% Population with ethnicity identified as of Hispanic or Latinx origin",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "HisP",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Race_Ethnicity.md"
   },
   {
     "variable": "Total households",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "HsdTot",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md"
   },
   {
     "variable": "% Cohabiting couple household",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "HsdTypCo",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md"
   },
   {
     "variable": "% Married-couple household ",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "HsdTypM",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md"
   },
   {
     "variable": "% Married-couple household With children under 18 years",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "HsdTypMC",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md"
   },
   {
     "variable": "% Population that is Male",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "MaleP",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Demographics.md"
   },
   {
     "variable": "Median age",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "MedAge",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Demographics.md"
   },
   {
     "variable": "% Males aged 15 or older who are married and living with their spouse",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "MrrdP",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Marital_Status.md"
   },
   {
     "variable": "% Males aged 15 or older who never got married",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "NvMrrdP",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Marital_Status.md"
   },
   {
     "variable": "% Population over 16 years",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "Ovr16P",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Demographics.md"
   },
   {
     "variable": "% Population over 18 years",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "Ovr18P",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Demographics.md"
   },
   {
     "variable": "% Population over 21 years",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "Ovr21P",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Demographics.md"
   },
   {
     "variable": "% Population over 62 years",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "Ovr62P",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Demographics.md"
   },
   {
     "variable": "Sex ratio for the total population (males per 100 females)",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "SRatio",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Demographics.md"
   },
   {
     "variable": "Sex ratio among adults aged 18 and older (males per 100 females)",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "SRatio18",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Demographics.md"
   },
   {
     "variable": "Sex ratio among seniors aged 65 and older (males per 100 females)",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "SRatio65",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Demographics.md"
   },
   {
     "variable": "% Males aged 15 years and over who are separated from their spouse",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "SepartedP",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Marital_Status.md"
   },
   {
     "variable": "% Population 25 years and over with some college, but no degree",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "SomeCollegeP",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Educational_Characteristics.md"
   },
   {
     "variable": "% Population identifying as two or more races",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "TwoRaceP",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Race_Ethnicity.md"
   },
   {
     "variable": "% Population under 18 years old",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "Und18P",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Demographics.md"
   },
   {
     "variable": "% Population under 5 years old ",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "Und5P",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Demographics.md"
   },
   {
     "variable": "% Population aged 15 and over who are widowed",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "WidwdP",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Marital_Status.md"
   },
   {
     "variable": "Proportion of occupied housing units that are considered crowded (more than 1 person per room)",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "CrowdHsng",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md"
   },
   {
     "variable": "Proportion of the population aged 5+ who speak a language other than English at home but are proficient in English",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "EngProf",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Educational_Characteristics.md"
   },
   {
     "variable": "% Occupied housing units",
-    "numerator": "county-2020__zcta-2023__tract-2020",
+    "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "OccupantP",
     "theme": "Social",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HouseholdType.md"
@@ -2406,6 +2413,27 @@
     "nProperty": "AvWhHcvD",
     "theme": "Outcome",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/HepC.md"
+  },
+  {
+    "variable": "Count of buprenorphine providers (drive)",
+    "numerator": "zcta-2025__tract-2025",
+    "nProperty": "BupCntDr60",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Count of naltrexone providers (drive)",
+    "numerator": "zcta-2025__tract-2025",
+    "nProperty": "NalCntDr60",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Count of methadone providers (drive)",
+    "numerator": "zcta-2025__tract-2025",
+    "nProperty": "MetCntDr60",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Corrections expenditures",
