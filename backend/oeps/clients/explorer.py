@@ -180,6 +180,21 @@ class Explorer:
                     }
                 )
 
+        csv_downloads = {"state": [], "county": [], "zcta": [], "tract": []}
+        for ts in self.registry.table_sources.values():
+            filename = Path(ts["path"]).name
+            csv_downloads[ts["summary_level"]].append(
+                {
+                    "name": filename,
+                    "url": f"https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/{filename}",
+                    "year": ts["year"],
+                }
+            )
+        for csv_list in csv_downloads.values():
+            csv_list.sort(key=lambda k: k["year"])
+
         meta_dir = Path(self.root_dir, "meta")
         meta_dir.mkdir(exist_ok=True)
+
         write_json(output, Path(meta_dir, "variables.json"))
+        write_json(csv_downloads, Path(meta_dir, "csvDownloads.json"))
