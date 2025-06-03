@@ -8,10 +8,10 @@
         "GEOID",
         "HEROP_ID"
       ],
-      "Source": "Tiger/Line 2018; Tiger/Line 2010; USDA-ERS 2010 & ACS 2018 5-Year; Healthy Regions & Policies Lab, UIUC",
+      "Source": "USDA-ERS 2010 & ACS 2018 5-Year; Tiger/Line 2018; Tiger/Line 2010; Healthy Regions & Policies Lab, UIUC",
       "Metadata": [
-        "Rural_Urban_Classification_County",
-        "Geographic_Boundaries"
+        "Geographic_Boundaries",
+        "Rural_Urban_Classification_County"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
       "Years": "1980, 1990, 2000, 2010, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2025"
@@ -25,7 +25,7 @@
         "State Area",
         "Total Census Tract Count"
       ],
-      "Source": "InfoGroup, 2018; OSM; Tiger/Line 2018",
+      "Source": "InfoGroup, 2018; Tiger/Line 2018; OSM",
       "Metadata": [
         "Access_FQHCs_MinDistance",
         "Park_Cover",
@@ -44,10 +44,10 @@
         "Total Population (2010)",
         "Urban Population Total"
       ],
-      "Source": "ACS 2018, 5-Year; Census 2010; IPUMS NHGIS; USDA-ERS 2010 & ACS 2018 5-Year",
+      "Source": "USDA-ERS 2010 & ACS 2018 5-Year; ACS 2018, 5-Year; Census 2010; IPUMS NHGIS",
       "Metadata": [
-        "Demographics",
-        "Rural_Urban_Classification_County"
+        "Rural_Urban_Classification_County",
+        "Demographics"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
       "Years": "1980, 1990, 2000, 2010, 2018, 2020, 2023"
@@ -97,7 +97,7 @@
         "Population: Age 60-64",
         "Population: Age 65+"
       ],
-      "Source": "ACS 2018, 5-Year; Census 2010; IPUMS NHGIS; ACS ; IPUMS NHGIS; ACS 2018, 5-Year; 2010 Decennial Census; ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS",
+      "Source": "ACS 2018, 5-Year; Census 2010; IPUMS NHGIS; ACS ; IPUMS NHGIS; ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS; ACS 2018, 5-Year; 2010 Decennial Census",
       "Metadata": [
         "Demographics"
       ],
@@ -152,7 +152,7 @@
         "% Population without High School Degree",
         "Proportion of the population aged 5+ who speak a language other than English at home but are proficient in English"
       ],
-      "Source": "ACS ; ACS 2018, 5-Year; ACS 2012, 5-Year; IPUMS NHGIS",
+      "Source": "ACS 2018, 5-Year; ACS 2012, 5-Year; IPUMS NHGIS; ACS ",
       "Metadata": [
         "Educational_Characteristics",
         "Other_Demographic_2018"
@@ -167,7 +167,7 @@
         "% Veteran Population",
         "Total Veteran Population"
       ],
-      "Source": "ACS 2018, 5-Year; ACS 2012, 5-Year; ACS 2017, 5-Year; ACS 2012, 5-Year",
+      "Source": "ACS 2017, 5-Year; ACS 2012, 5-Year; ACS 2018, 5-Year; ACS 2012, 5-Year",
       "Metadata": [
         "VetPop"
       ],
@@ -201,7 +201,7 @@
         "Total Population in Households",
         "Total households"
       ],
-      "Source": "ACS ; ACS 2018, 5-Year",
+      "Source": "ACS 2018, 5-Year; ACS ",
       "Metadata": [
         "Marital_Status",
         "HouseholdType"
@@ -330,7 +330,7 @@
         "Housing Unit Density",
         "Total Occupied Housing Units"
       ],
-      "Source": "ACS 2018, 5-Year; ACS 2018, 5-Year; Census 2010; Social Explorer",
+      "Source": "ACS 2018, 5-Year; Census 2010; Social Explorer; ACS 2018, 5-Year",
       "Metadata": [
         "Housing_Variables"
       ],
@@ -635,10 +635,10 @@
         "Employed % - Retail",
         "The number of unemployed individuals as a percentage of the civilian labor force (Alternative measurement)"
       ],
-      "Source": "ACS ; ACS 2018, 5-Year",
+      "Source": "ACS 2018, 5-Year; ACS ",
       "Metadata": [
-        "Economic",
-        "Job_Categories_byIndustry_2018"
+        "Job_Categories_byIndustry_2018",
+        "Economic"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
       "Years": "2018, 2020, 2023"
@@ -937,7 +937,7 @@
         "Yearly Hepatitis C cases - Women (2013-2016)",
         "Yearly Hepatitis C cases - non-Black (2013-2016)"
       ],
-      "Source": "HepVu; HepVu, 2017",
+      "Source": "HepVu, 2017; HepVu",
       "Metadata": [
         "HepC"
       ],
