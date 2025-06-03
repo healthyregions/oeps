@@ -1,0 +1,29 @@
+{
+    "bq_dataset_name": "spatial",
+    "bq_table_name": "zctas2020",
+    "name": "zctas-2020",
+    "title": "ZCTA Boundaries, 2020",
+    "description": "Shapefile of census Zip Code Tabulation Area boundaries from the US Census Bureau, 2020.",
+    "path": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/zcta-2020-500k-shp.zip",
+    "explorer_config": {
+        "name": "US Zip Codes",
+        "geodata": "Zip Codes [tiles]",
+        "tiles": "herop-lab.6cz490cc",
+        "id": "HEROP_ID",
+        "bounds": [-125.109215, -66.925621, 25.043926, 49.295128],
+        "tables": {}
+    },
+    "format": "shp",
+    "mediatype": "application/vnd.shp",
+    "summary_level": "zcta",
+    "schema": {
+        "primaryKey": "HEROP_ID",
+        "fields": [
+            {
+                "name": "HEROP_ID",
+                "title": "HEROP_ID",
+                "type": "string"
+            }
+        ]
+    }
+}

@@ -29,8 +29,9 @@ def test_init(runner):
     )
     assert len(registry.table_sources) == len(table_sources)
     for ts_path in table_sources:
-        ## delete "schema" which is created during load and not in source JSON
+        ## delete "schema" and "summary_level" which are added during load and not in source JSON
         del registry.table_sources[ts_path.stem]["schema"]
+        del registry.table_sources[ts_path.stem]["summary_level"]
         assert registry.table_sources[ts_path.stem] == load_json(ts_path)
 
     geodata_sources = list(
@@ -38,8 +39,6 @@ def test_init(runner):
     )
     assert len(registry.geodata_sources) == len(geodata_sources)
     for gs_path in geodata_sources:
-        ## "csv_abbrev "is a deriv"  key/value that is added on load, and isn't present in the source JSON
-        del registry.geodata_sources[gs_path.stem]["csv_abbrev"]
         assert registry.geodata_sources[gs_path.stem] == load_json(gs_path)
 
 

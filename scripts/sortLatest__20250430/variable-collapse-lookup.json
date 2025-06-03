@@ -1,0 +1,97 @@
+{
+    "OpRxRt": [
+        "OpRxRt20"
+    ],
+    "PrMsuseP": [
+        "PrMsuse20P"
+    ],
+    "OdMortRt": [
+        "OdMortRt14",
+        "OdMortRt15",
+        "OdMortRt16",
+        "OdMortRt17",
+        "OdMortRt18",
+        "OdMortRt19",
+        "OdMortRt20"
+    ],
+    "HcvD": [
+        "HcvD13",
+        "HcvD14",
+        "HcvD15",
+        "HcvD16",
+        "HcvD17"
+    ],
+    "MlHcvD": [
+        "MlHcvD13",
+        "MlHcvD14",
+        "MlHcvD15",
+        "MlHcvD16",
+        "MlHcvD17"
+    ],
+    "FlHcvD": [
+        "FlHcvD13",
+        "FlHcvD14",
+        "FlHcvD15",
+        "FlHcvD16",
+        "FlHcvD17"
+    ],
+    "AmInHcvD": [
+        "AmInHcvD13",
+        "AmInHcvD14",
+        "AmInHcvD15",
+        "AmInHcvD16",
+        "AmInHcvD17"
+    ],
+    "AsPiHcvD": [
+        "AsPiHcvD13",
+        "AsPiHcvD14",
+        "AsPiHcvD15",
+        "AsPiHcvD16",
+        "AsPiHcvD17"
+    ],
+    "BlkHcvD": [
+        "BlkHcvD13",
+        "BlkHcvD14",
+        "BlkHcvD15",
+        "BlkHcvD16",
+        "BlkHcvD17"
+    ],
+    "HspHcvD": [
+        "HspHcvD13",
+        "HspHcvD14",
+        "HspHcvD15",
+        "HspHcvD16",
+        "HspHcvD17"
+    ],
+    "U50HcvD": [
+        "U50HcvD13",
+        "U50HcvD14",
+        "U50HcvD15",
+        "U50HcvD16",
+        "U50HcvD17"
+    ],
+    "A50_74HcvD": [
+        "A50_74HcvD13",
+        "A50_74HcvD14",
+        "D50_74Hcv15",
+        "A50_74HcvD16",
+        "A50_74HcvD17"
+    ],
+    "O75HcvD": [
+        "O75HcvD13",
+        "O75HcvD14",
+        "O75HcvD15",
+        "O75HcvD16",
+        "O75HcvD17"
+    ],
+    "UrbPop": [
+        "UrbPop10"
+    ],
+    "RuralPop": [
+        "RuralPop10"
+    ],
+    "MedcdExp": [
+        "MedcdExp18",
+        "MedcdExp19"
+    ]
+}

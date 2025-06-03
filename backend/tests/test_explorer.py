@@ -20,7 +20,6 @@ def test_build_map(runner):
         explorer_grp,
         [
             "build-map",
-            "--make-csvs",
             "--explorer-path",
             runner.app.config["TEST_OUTPUT_DIR"],
             "--registry-path",

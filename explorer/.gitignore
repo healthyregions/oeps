@@ -1,3 +1,7 @@
+# ignore CSV files that are built for map, these should actually
+# be referenced to S3 files
+public/csv/_*.csv
+
 # Logs
 logs
 *.log
