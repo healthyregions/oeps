@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from 'next/link';
 import { 
   // useState, 
   useMemo } from 'react';
@@ -71,31 +72,6 @@ import csvDownloads from '../meta/csvDownloads.json';
 //   baseFileName: 'tracts2010'
 //  }
 // ]
-
-const downloads = {
-    "state": [
-        {
-            "name": "csv.csv",
-            "url": "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/",
-            "year": 1020
-        },
-        {
-            "name": "csvw.csv",
-            "url": "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/",
-            "year": 1020
-        },
-        {
-            "name": "csv.wwcsv",
-            "url": "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/",
-            "year": 1022
-        },
-        {
-            "name": "csv.22csv",
-            "url": "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/",
-            "year": 10204
-        }
-    ]
-}
 
 // const BASE_CSV_URL = 'https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/'
 
@@ -200,19 +176,19 @@ export default function Download() {
       <main className={styles.main}>
         <h1 className={styles.title}>Data Access</h1>
         <Gutter em={1} />
-        <p>There are many different ways to download or access OEPS data, find the one that works best for you. You may also be interested in our <a href="/codeResources">code resources</a> page with notebooks and tutorials.</p>
+        <p>There are many different ways to download or access OEPS data, find the one that works best for you. You may also be interested in our <Link href="/codeResources">code resources</Link> page with notebooks and tutorials.</p>
         <div className={styles.downloadsContainer}>
           <div>
-            <a className={styles.fullDownload} href="#data-dictionaries"><span>CSVs & Data<br/>Dictionaries</span></a>
+            <Link className={styles.fullDownload} href="#data-dictionaries"><span>CSVs & Data<br/>Dictionaries</span></Link>
           </div>
           <div>
-            <a className={styles.fullDownload} href="#frictionless-data-package"><span>Frictionless Data Package</span></a>
+            <Link className={styles.fullDownload} href="#frictionless-data-package"><span>Frictionless Data Package</span></Link>
           </div>
           <div>
-            <a className={styles.fullDownload} href="#oeps-data-package"><span>oepsData<br/>(R data package)</span></a>
+            <Link className={styles.fullDownload} href="#oeps-data-package"><span>oepsData<br/>(R data package)</span></Link>
           </div>
           <div>
-            <a className={styles.fullDownload} href="#big-query"><span>Google BigQuery</span></a>
+            <Link className={styles.fullDownload} href="#big-query"><span>Google BigQuery</span></Link>
           </div>
         </div>
         <div className="row" style={{paddingTop:"2em"}}>
@@ -224,13 +200,13 @@ export default function Download() {
             <h3 id="data-dictionaries">CSVs & Data Dictionaries</h3>
               <p>Not sure where to start? These data dictionaries provide a comprehensive overview of what variables are available for each geography&mdash;State (S), County (C), Census Tract (T), and Zip Code Tabulation Area (Z).</p>
               <ul>
-                <li><a href="https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/dictionaries/S_Dict.xlsx">S_Dict.xlsx</a></li>
-                <li><a href="https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/dictionaries/C_Dict.xlsx">C_Dict.xlsx</a></li>
-                <li><a href="https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/dictionaries/T_Dict.xlsx">T_Dict.xlsx</a></li>
-                <li><a href="https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/dictionaries/Z_Dict.xlsx">Z_Dict.xlsx</a></li>
+                <li><Link href="https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/dictionaries/S_Dict.xlsx">S_Dict.xlsx</Link></li>
+                <li><Link href="https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/dictionaries/C_Dict.xlsx">C_Dict.xlsx</Link></li>
+                <li><Link href="https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/dictionaries/T_Dict.xlsx">T_Dict.xlsx</Link></li>
+                <li><Link href="https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/dictionaries/Z_Dict.xlsx">Z_Dict.xlsx</Link></li>
               </ul>
               <p>OEPS datasets are merged into single CSVs, one per geography (State, County, Tract, ZCTA) per year (1980, 1990, etc.).
-                Each CSV can be joined to an appropriate <a href="#geometry-files">geometry file</a> using the HEROP_ID field.</p>
+                Each CSV can be joined to an appropriate <Link href="#geometry-files">geometry file</Link> using the HEROP_ID field.</p>
                 <h4>State</h4>
               <div className={styles.tableContainer}>
                 <table className={styles.variableTable}>
@@ -240,9 +216,9 @@ export default function Download() {
                       <th>File</th>
                     </tr>
                     {csvDownloads.state.map(row => 
-                    <tr>
+                    <tr key={row.name}>
                         <td>{row.year}</td>
-                        <td><a href={row.url}>{row.name}</a></td>
+                        <td><Link href={row.url}>{row.name}</Link></td>
                     </tr>)}
                   </tbody>
                 </table>
@@ -256,9 +232,9 @@ export default function Download() {
                       <th>File</th>
                     </tr>
                     {csvDownloads.county.map(row => 
-                    <tr>
+                    <tr key={row.name}>
                         <td>{row.year}</td>
-                        <td><a href={row.url}>{row.name}</a></td>
+                        <td><Link href={row.url}>{row.name}</Link></td>
                     </tr>)}
                   </tbody>
                 </table>
@@ -272,9 +248,9 @@ export default function Download() {
                       <th>File</th>
                     </tr>
                     {csvDownloads.tract.map(row => 
-                    <tr>
+                    <tr key={row.name}>
                         <td>{row.year}</td>
-                        <td><a href={row.url}>{row.name}</a></td>
+                        <td><Link href={row.url}>{row.name}</Link></td>
                     </tr>)}
                   </tbody>
                 </table>
@@ -288,9 +264,9 @@ export default function Download() {
                       <th>File</th>
                     </tr>
                     {csvDownloads.zcta.map(row => 
-                    <tr>
+                    <tr key={row.name}>
                         <td>{row.year}</td>
-                        <td><a href={row.url}>{row.name}</a></td>
+                        <td><Link href={row.url}>{row.name}</Link></td>
                     </tr>)}
                   </tbody>
                 </table>
@@ -298,19 +274,19 @@ export default function Download() {
             <h3 id="geometry-files">Geometry Files</h3>
             <p>For spatial analysis we provide our geographic datasets generated from the US Census Bureau&apos;s Cartographic Boundary files (500k scale). We provide the following formats: Shapefile, GeoJSON, or PMTiles.</p>
             <ul>
-                <li><a href="/docs/GeographicBoundaries">Go to download links and metadata</a></li>
+                <li><Link href="/docs/GeographicBoundaries">Go to download links and metadata</Link></li>
             </ul>
             <h4>Joining to geometry files:</h4>
             <ul>
                 <li>Use 2010 geometry files when joining to any OEPS data from 1980, 1990, 2000, or 2010. Use the 2018 geometry files for any later datasets up to 2020.</li>
                 <li>Use 2020 geometry files for all geographies and years 2020 and beyond.</li>
-                <li><strong>In Connecticut:</strong> For county and tract data from 2022 or later you must use 2022 geographies because county (and therefore tract) FIPS ids changed between 2021 and 2022. To translate 2022 tracts back to 2020 geometries, you can use <a href="https://www.ctdata.org/geographic-resources">these crosswalks</a> from CT Data Collaborative.</li>
+                <li><strong>In Connecticut:</strong> For county and tract data from 2022 or later you must use 2022 geographies because county (and therefore tract) FIPS ids changed between 2021 and 2022. To translate 2022 tracts back to 2020 geometries, you can use <Link href="https://www.ctdata.org/geographic-resources">these crosswalks</Link> from CT Data Collaborative.</li>
             </ul>
             <h3 id="frictionless-data-package">Frictionless Data Package</h3>
-            <p>We provide a single data package with all CSV and Shapefile assets which is structured to match the Data Package specification published by <a href="https://frictionlessdata.io/">Frictionless Data</a>.</p>
+            <p>We provide a single data package with all CSV and Shapefile assets which is structured to match the Data Package specification published by <Link href="https://frictionlessdata.io/">Frictionless Data</Link>.</p>
             <ul>
-              <li><a href="https://github.com/GeoDaCenter/opioid-policy-scan/releases/download/untagged-e509eea25fb66a9a1f90/oeps-data-package-v2_2024-12-05.zip">Download package (208mb)</a></li>
-              <li><a href="https://specs.frictionlessdata.io/">Frictionless Data Package v1 spec</a></li>
+              <li><Link href="https://github.com/GeoDaCenter/opioid-policy-scan/releases/download/untagged-e509eea25fb66a9a1f90/oeps-data-package-v2_2024-12-05.zip">Download package (208mb)</Link></li>
+              <li><Link href="https://specs.frictionlessdata.io/">Frictionless Data Package v1 spec</Link></li>
             </ul>
           </div>
         </div>
@@ -321,20 +297,20 @@ export default function Download() {
             <h2 style={{marginTop:0}}>Programmatic Access</h2>
           </div>
           <div className="col-xs-12 col-md-8 col-lg-9">
-            <h3 id="oeps-data-package"><a href="https://oepsdata.healthyregions.org">oepsData &mdash; R Package</a></h3>
-              <p>We maintain a small R package called <a href="https://oepsdata.healthyregions.org">oepsData</a>. This package is the best way for researchers who use R to load and analyze OEPS data directly, without the need to download CSVs or Shapefiles and worry about joins.</p>
+            <h3 id="oeps-data-package"><Link href="https://oepsdata.healthyregions.org">oepsData &mdash; R Package</Link></h3>
+              <p>We maintain a small R package called <Link href="https://oepsdata.healthyregions.org">oepsData</Link>. This package is the best way for researchers who use R to load and analyze OEPS data directly, without the need to download CSVs or Shapefiles and worry about joins.</p>
               <ul>
-                <li><a href="https://oepsdata.healthyregions.org">Documentation</a>: Learn how to install and use the package.</li>
-                <li><a href="https://oepsdata.healthyregions.org/examples.html">Usage examples</a>: Within the package docs we have a few examples of what it looks like to load and use OEPS data.</li>
-                <li><a href="https://github.com/healthyregions/oepsdata">GitHub</a>: Use the GitHub repo to report issues you have with the package, or suggest new features or datasets.</li>
+                <li><Link href="https://oepsdata.healthyregions.org">Documentation</Link>: Learn how to install and use the package.</li>
+                <li><Link href="https://oepsdata.healthyregions.org/examples.html">Usage examples</Link>: Within the package docs we have a few examples of what it looks like to load and use OEPS data.</li>
+                <li><Link href="https://github.com/healthyregions/oepsdata">GitHub</Link>: Use the GitHub repo to report issues you have with the package, or suggest new features or datasets.</li>
               </ul>
               <p><em>Current release: v0.1</em></p>
             <h3 id="big-query">Google BigQuery</h3>
-              <p>We have loaded the OEPS data warehouse into Google BigQuery, a data storage platgorm that provides the ability for researchers to run SQL queries (including spatial queries) to retrieve or perform analysis on specific data subsets. Google publishes many <a href="https://cloud.google.com/bigquery/docs/reference/libraries">different clients</a> through which you can access a BigQuery database, and for R users there is <a href="https://bigrquery.r-dbi.org/">bigrquery</a>. Here&apos;s how to get started:</p>
+              <p>We have loaded the OEPS data warehouse into Google BigQuery, a data storage platgorm that provides the ability for researchers to run SQL queries (including spatial queries) to retrieve or perform analysis on specific data subsets. Google publishes many <Link href="https://cloud.google.com/bigquery/docs/reference/libraries">different clients</Link> through which you can access a BigQuery database, and for R users there is <Link href="https://bigrquery.r-dbi.org/">bigrquery</Link>. Here&apos;s how to get started:</p>
               <ul>
-                <li><a href="https://oepsdata.healthyregions.org/getting-oeps-data-from-bigquery.html">Introduction to OEPS in Google BigQuery</a>: The oepsData documentation includes a detailed overview that is relevant no matter what client you use.</li>
-                <li><a href="https://oepsdata.healthyregions.org/getting-oeps-data-from-bigquery.html#setting-up-bigquery">Setting up BigQuery in R</a>: The oepsData documentation also has a walkthrough guide illustrating how R users can connect directly to our data in BigQuery.</li>
-                <li><a href="https://github.com/healthyregions/oeps/blob/main/docs/reference/big-query-tables.md">Database Table Reference</a>: Full reference document, provides the project id and the names of all tables and columns.</li>
+                <li><Link href="https://oepsdata.healthyregions.org/getting-oeps-data-from-bigquery.html">Introduction to OEPS in Google BigQuery</Link>: The oepsData documentation includes a detailed overview that is relevant no matter what client you use.</li>
+                <li><Link href="https://oepsdata.healthyregions.org/getting-oeps-data-from-bigquery.html#setting-up-bigquery">Setting up BigQuery in R</Link>: The oepsData documentation also has a walkthrough guide illustrating how R users can connect directly to our data in BigQuery.</li>
+                <li><Link href="https://github.com/healthyregions/oeps/blob/main/docs/reference/big-query-tables.md">Database Table Reference</Link>: Full reference document, provides the project id and the names of all tables and columns.</li>
               </ul>
           </div>
         </div>
