@@ -1,9 +1,12 @@
+import os
 from pathlib import Path
 
 from natsort import natsorted
 import pandas as pd
 
-from oeps.utils import write_json
+from oeps.clients.s3 import sync_to_s3, get_base_url
+from oeps.config import DATA_DIR
+from oeps.utils import write_json, make_id
 from .registry import Registry
 
 
@@ -15,9 +18,10 @@ class Explorer:
         self.root_dir = root_dir
         self.dataframe_lookup = {}
 
-    def build_map_config(self, write_csvs: bool = True):
+    def build_map_config(self, upload: bool = False):
         csv_dir = Path(self.root_dir, "public", "csv")
-        csv_dir.mkdir(parents=True, exist_ok=True)
+        for f in csv_dir.glob("_*.csv"):
+            os.remove(f)
 
         config_dir = Path(self.root_dir, "config")
         config_dir.mkdir(parents=True, exist_ok=True)
@@ -28,15 +32,8 @@ class Explorer:
         for id, data in self.registry.geodata_sources.items():
             entry = data.get("explorer_config")
             if entry:
-                entry["csv_abbrev"] = id[0]
-                geodata_lookup[id] = entry
-
-        # create lookup of all table data sources that are linked to a valid geodata_source
-        table_lookup = {
-            k: v
-            for k, v in self.registry.table_sources.items()
-            if v.get("geodata_source") in geodata_lookup
-        }
+                entry["summary_level"] = data["summary_level"]
+                geodata_lookup[entry["summary_level"]] = entry
 
         # iterate all variables and create a lookup for all combinations of data sources
         # in which each variable has a value
@@ -47,13 +44,16 @@ class Explorer:
         }
         ds_combo_lookup = {}
         for k, v in variables.items():
-            usable_sources = []
-            for ds in v["table_sources"]:
-                if ds in table_lookup:
-                    usable_sources.append(ds)
+            use_sources = [
+                self.registry.find_table_source(k, "state"),
+                self.registry.find_table_source(k, "county"),
+                self.registry.find_table_source(k, "zcta"),
+                self.registry.find_table_source(k, "tract"),
+            ]
 
-            if len(usable_sources) > 0:
-                ds_group_code = "__".join(usable_sources)
+            latest_sources = [i for i in use_sources if i]
+            if latest_sources:
+                ds_group_code = "__".join([i["name"] for i in latest_sources])
                 ds_combo_lookup[ds_group_code] = ds_combo_lookup.get(
                     ds_group_code, []
                 ) + [k]
@@ -69,22 +69,27 @@ class Explorer:
         for k, field_list in ds_combo_lookup.items():
             field_list.insert(0, "HEROP_ID")
             for ds in k.split("__"):
-                ds_schema = table_lookup[ds]
-                abbrev = ds_schema["geodata_source"][0]
-                out_path = Path(csv_dir, f"{k}_{abbrev}.csv")
+                ds_schema = self.registry.table_sources[ds]
 
-                if write_csvs:
-                    print(f"writing {out_path}")
-                    df = self.dataframe_lookup.get(ds, pd.read_csv(ds_schema["path"]))
-                    df_filtered = df.filter(field_list)
-                    df_filtered.to_csv(out_path, index=False)
+                filename = f"_{make_id()}"
+                out_path = Path(csv_dir, f"{filename}.csv")
+
+                print(f"writing {out_path}")
+                read_path = ds_schema["path"]
+                if read_path.startswith("tables"):
+                    read_path = Path(DATA_DIR, read_path)
+                df = self.dataframe_lookup.get(ds, pd.read_csv(read_path))
+                df_filtered = df.filter(field_list)
+
+                ## write CSV to local
+                df_filtered.to_csv(out_path, index=False)
 
                 table_entry = {
                     "file": out_path.name,
                     "type": "characteristic",
                     "join": "HEROP_ID",
                 }
-                geodata_lookup[ds_schema["geodata_source"]]["tables"][k] = table_entry
+                geodata_lookup[ds_schema["summary_level"]]["tables"][k] = table_entry
 
         out_variables = {
             k: {
@@ -100,19 +105,29 @@ class Explorer:
 
         # hacky method for creating the output geodata source list in descending order of
         # spatial resolution
-        out_sources = {"sources": []}
-        for v in geodata_lookup.values():
-            if v["csv_abbrev"] == "s":
-                out_sources["sources"].append(v)
-        for v in geodata_lookup.values():
-            if v["csv_abbrev"] == "c":
-                out_sources["sources"].append(v)
-        for v in geodata_lookup.values():
-            if v["csv_abbrev"] == "z":
-                out_sources["sources"].append(v)
-        for v in geodata_lookup.values():
-            if v["csv_abbrev"] == "t":
-                out_sources["sources"].append(v)
+        out_sources = {
+            "sources": [
+                [i for i in geodata_lookup.values() if i["summary_level"] == "state"][
+                    0
+                ],
+                [i for i in geodata_lookup.values() if i["summary_level"] == "county"][
+                    0
+                ],
+                [i for i in geodata_lookup.values() if i["summary_level"] == "zcta"][0],
+                [i for i in geodata_lookup.values() if i["summary_level"] == "tract"][
+                    0
+                ],
+            ]
+        }
+
+        if upload:
+            prefix = "explorer/csvs"
+            sync_to_s3(csv_dir, prefix, True)
+
+            base_url = get_base_url()
+            for source in out_sources["sources"]:
+                for t in source["tables"].values():
+                    t["file"] = f"{base_url}{prefix}/{t['file']}"
 
         write_json(out_sources, Path(config_dir, "sources.json"))
 
@@ -165,6 +180,21 @@ class Explorer:
                     }
                 )
 
+        csv_downloads = {"state": [], "county": [], "zcta": [], "tract": []}
+        for ts in self.registry.table_sources.values():
+            filename = Path(ts["path"]).name
+            csv_downloads[ts["summary_level"]].append(
+                {
+                    "name": filename,
+                    "url": f"https://github.com/GeoDaCenter/opioid-policy-scan/raw/refs/heads/main/data_final/full_tables/{filename}",
+                    "year": ts["year"],
+                }
+            )
+        for csv_list in csv_downloads.values():
+            csv_list.sort(key=lambda k: k["year"])
+
         meta_dir = Path(self.root_dir, "meta")
         meta_dir.mkdir(exist_ok=True)
+
         write_json(output, Path(meta_dir, "variables.json"))
+        write_json(csv_downloads, Path(meta_dir, "csvDownloads.json"))

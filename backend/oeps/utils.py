@@ -1,15 +1,12 @@
 import os
-import sys
 import json
 import click
 import shutil
-import threading
-import boto3
 import requests
-from typing import List
 from tqdm import tqdm
 from glob import glob
 from pathlib import Path
+import random
 
 BQ_TYPE_LOOKUP = {
     "string": "STRING",
@@ -18,6 +15,10 @@ BQ_TYPE_LOOKUP = {
     "date": "DATE",
     "number": "NUMERIC",
 }
+
+
+def make_id(length: int = 6):
+    return "".join(random.choices("0123456789ABCDEF", k=length))
 
 
 def load_json(path) -> dict:
@@ -31,45 +32,8 @@ def write_json(data, path):
     return path
 
 
-class S3ProgressPercentage(object):
-    def __init__(self, filename):
-        self._filename = filename
-        self._size = float(os.path.getsize(filename))
-        self._seen_so_far = 0
-        self._lock = threading.Lock()
-
-    def __call__(self, bytes_amount):
-        # To simplify, assume this is hooked up to a single filename
-
-        def b_to_mb(bytes):
-            return round(bytes / (1024 * 1024), 2)
-
-        with self._lock:
-            self._seen_so_far += bytes_amount
-            percentage = (self._seen_so_far / self._size) * 100
-            sys.stdout.write(
-                "\r - %s  %s / %s  (%.2f%%)"
-                % (
-                    Path(self._filename).name,
-                    b_to_mb(self._seen_so_far),
-                    b_to_mb(self._size),
-                    percentage,
-                )
-            )
-            sys.stdout.flush()
-
-
-def upload_to_s3(paths: List[Path], prefix: str = None, progress_bar: bool = False):
-    s3 = boto3.resource("s3")
-    bucket = os.getenv("AWS_BUCKET_NAME")
-    region = "us-east-2"
-
-    for path in paths:
-        key = f"{prefix}/{path.name}" if prefix else path.name
-        cb = S3ProgressPercentage(str(path)) if progress_bar else None
-        s3.Bucket(bucket).upload_file(str(path), key, Callback=cb)
-        if progress_bar:
-            print(f"\n  https://{bucket}.s3.{region}.amazonaws.com/{key}")
+def print_json(data):
+    print(json.dumps(data, indent=2))
 
 
 def download_file(url, filepath, desc=None, progress_bar=False, no_cache: bool = False):
