@@ -13,6 +13,7 @@ from oeps.commands.bigquery_upload import bigquery_upload
 from oeps.commands.build_docs import build_docs
 from oeps.commands.build_explorer_docs import build_explorer_docs
 from oeps.commands.build_explorer_map import build_explorer_map
+from oeps.commands.clean_explorer_bucket import clean_explorer_bucket
 from oeps.commands.create_data_package import create_data_package
 from oeps.commands.create_data_dictionaries import create_data_dictionaries
 from oeps.commands.create_table_source import create_table_source
@@ -35,6 +36,7 @@ def create_app():
     app.cli.add_command(build_docs)
     app.cli.add_command(build_explorer_docs)
     app.cli.add_command(build_explorer_map)
+    app.cli.add_command(clean_explorer_bucket)
     app.cli.add_command(create_data_dictionaries)
     app.cli.add_command(create_table_source)
     app.cli.add_command(create_data_package)

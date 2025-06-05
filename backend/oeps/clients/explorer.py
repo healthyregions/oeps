@@ -4,9 +4,9 @@ from pathlib import Path
 from natsort import natsorted
 import pandas as pd
 
-from oeps.clients.s3 import sync_to_s3, get_base_url
+from oeps.clients.s3 import sync_to_s3, get_base_url, clear_s3_bucket
 from oeps.config import DATA_DIR
-from oeps.utils import write_json, make_id
+from oeps.utils import write_json, load_json, make_id
 from .registry import Registry
 
 
@@ -132,6 +132,32 @@ class Explorer:
         write_json(out_sources, Path(config_dir, "sources.json"))
 
         write_json(list(out_variables.values()), Path(config_dir, "variables.json"))
+
+    def clean_explorer_bucket(self):
+        config_dir = Path(self.root_dir, "config")
+        objs_in_use = []
+
+        # command is highly destructive if sources.json is missing
+        # so prompt user in that case
+        try:
+            sources = load_json(Path(config_dir, 'sources.json'))['sources']
+            tables = [source['tables'] for source in sources]
+
+            # grab all filenames nested in the sources.json
+            objs_in_use = [
+                value['file'].split('/')[-1] 
+                for table in tables
+                for value in table.values()
+            ]
+
+        except FileNotFoundError:            
+            print(f"{Path(config_dir, 'sources.json')} not found, so continuing will delete all files in the bucket which start with `explorer/csv`.")
+            resp = input("Would you like to continue with deletion? (y/N)")
+            if resp.lower() != 'y':
+                print("Exiting without deleting files.")
+                return
+        
+        clear_s3_bucket(prefix='explorer/csv', objs_to_keep=objs_in_use)
 
     def build_docs_config(self):
         output = {}
