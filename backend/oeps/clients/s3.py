@@ -53,13 +53,16 @@ def batch_upload_to_s3(
     for path in paths:
         upload_to_s3(path, prefix, progress_bar)
 
+def clear_s3_bucket(bucket: boto3.s3.Bucket, prefix: str = None):
+    ''' Empty all contents in an s3 bucket beginning with a given prefix '''
+    for i in bucket.objects.filter(Prefix=prefix):
+        print(f'Deleting {i}..')
+        i.delete()
 
-def sync_to_s3(local_dir: Path, prefix: str = None, progress_bar: bool = False):
+def sync_to_s3(local_dir: Path, prefix: str = None, progress_bar: bool = False, clear_bucket: bool = False):
     s3 = boto3.resource("s3")
 
-    for i in s3.Bucket(BUCKET_NAME).objects.filter(Prefix=prefix):
-        print(i)
-        i.delete()
+    if clear_bucket: clear_s3_bucket(s3.Bucket(BUCKET_NAME), prefix)
 
     paths = local_dir.glob("*")
     batch_upload_to_s3(paths, prefix, progress_bar)
