@@ -157,6 +157,8 @@ class Explorer:
                 print("Exiting without deleting files.")
                 return
         
+        objs_in_use = objs_in_use + ['counties.csv', 'states.csv']
+
         clear_s3_bucket(prefix='explorer/csv', objs_to_keep=objs_in_use)
 
     def build_docs_config(self):
