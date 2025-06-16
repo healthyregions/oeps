@@ -527,7 +527,7 @@
   {
     "variable": "Tracts with Naltrexone Provider (30-min driving)",
     "numerator": "state-2020",
-    "nProperty": "CntNalT",
+    "nProperty": "CntNaltT",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
@@ -548,7 +548,7 @@
   {
     "variable": "Driving Time to Naltrexone Provider (driving time across all tracts)",
     "numerator": "state-2020",
-    "nProperty": "AvNalTime",
+    "nProperty": "AvNaltTime",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
@@ -569,7 +569,7 @@
   {
     "variable": "% Tracts within 30-min Drive of Naltrexone Provider",
     "numerator": "state-2020",
-    "nProperty": "PctNalT",
+    "nProperty": "PctNaltT",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
@@ -1038,42 +1038,42 @@
   {
     "variable": "Any Naloxone Law (date)",
     "numerator": "state-2022",
-    "nProperty": "AnyNalDt",
+    "nProperty": "AnyNalxDt",
     "theme": "Policy",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/NAL_2017.md"
   },
   {
     "variable": "Naloxone Law allowing distribution through a standing or order (date)",
     "numerator": "state-2022",
-    "nProperty": "NalPrStDt",
+    "nProperty": "NalxPrStDt",
     "theme": "Policy",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/NAL_2017.md"
   },
   {
     "variable": "Naloxone Law allowing pharmacists prescriptive authority (date)",
     "numerator": "state-2022",
-    "nProperty": "NalPresDt",
+    "nProperty": "NalxPresDt",
     "theme": "Policy",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/NAL_2017.md"
   },
   {
     "variable": "Naloxone Law allowing distribution through a standing or order (fraction of year in 2017)",
     "numerator": "state-2022",
-    "nProperty": "AnyNalFr",
+    "nProperty": "AnyNalxFr",
     "theme": "Policy",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/NAL_2017.md"
   },
   {
     "variable": "Naloxone Law in Effect (fraction of year in 2017)",
     "numerator": "state-2022",
-    "nProperty": "NalPrStFr",
+    "nProperty": "NalxPrStFr",
     "theme": "Policy",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/NAL_2017.md"
   },
   {
     "variable": "Naloxone Law allowing pharmacists prescriptive authority (fraction of year in 2017)",
     "numerator": "state-2022",
-    "nProperty": "NalPresFr",
+    "nProperty": "NalxPresFr",
     "theme": "Policy",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/NAL_2017.md"
   },
@@ -1318,21 +1318,21 @@
   {
     "variable": "Distance (mi) to nearest Naltrexone Provider",
     "numerator": "zcta-2025__tract-2025",
-    "nProperty": "NalMinDis",
+    "nProperty": "NaltMinDis",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Driving Time (min) to nearest Naltrexone Provider",
     "numerator": "zcta-2025__tract-2025",
-    "nProperty": "NalTmDr",
+    "nProperty": "NaltTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Count of Naltrexone Providers (30-min drive)",
     "numerator": "zcta-2025__tract-2025",
-    "nProperty": "NalCntDr30",
+    "nProperty": "NaltCntDr30",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
@@ -1381,21 +1381,21 @@
   {
     "variable": "Walking Time (min) to nearest Naltrexone Provider",
     "numerator": "zcta-2025__tract-2025",
-    "nProperty": "NalTmWk",
+    "nProperty": "NaltTmWk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Count of Naltrexone Providers (60-min walk)",
     "numerator": "zcta-2025__tract-2025",
-    "nProperty": "NalCntWk60",
+    "nProperty": "NaltCntWk60",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Count of Naltrexone Providers (30-min walk)",
     "numerator": "zcta-2025__tract-2025",
-    "nProperty": "NalCntWk30",
+    "nProperty": "NaltCntWk30",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
@@ -1444,21 +1444,21 @@
   {
     "variable": "Biking Time (min) to nearest Naltrexone Provider",
     "numerator": "zcta-2025__tract-2025",
-    "nProperty": "NalTmBk",
+    "nProperty": "NaltTmBk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Count of Naltrexone Providers (60-min bike)",
     "numerator": "zcta-2025__tract-2025",
-    "nProperty": "NalCntBk60",
+    "nProperty": "NaltCntBk60",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Count of Naltrexone Providers (30-min bike)",
     "numerator": "zcta-2025__tract-2025",
-    "nProperty": "NalCntBk30",
+    "nProperty": "NaltCntBk30",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
@@ -1724,21 +1724,21 @@
   {
     "variable": "Tracts with Naltrexone Provider within 30-min (driving)",
     "numerator": "state-2025__county-2025",
-    "nProperty": "NalCtTmDr",
+    "nProperty": "NaltCtTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Tracts with Naltrexone Provider within 30-min (biking)",
     "numerator": "state-2025__county-2025",
-    "nProperty": "NalCtTmBk",
+    "nProperty": "NaltCtTmBk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Tracts with Naltrexone Provider within 30-min (walking)",
     "numerator": "state-2025__county-2025",
-    "nProperty": "NalCtTmWk",
+    "nProperty": "NaltCtTmWk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
@@ -1787,21 +1787,21 @@
   {
     "variable": "Driving Time (min) to Nearest Naltrexone Provider",
     "numerator": "state-2025__county-2025",
-    "nProperty": "NalAvTmDr",
+    "nProperty": "NaltAvTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Biking Time (min) to Nearest Naltrexone Provider",
     "numerator": "state-2025__county-2025",
-    "nProperty": "NalAvTmBk",
+    "nProperty": "NaltAvTmBk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Walking Time (min) to Nearest Naltrexone Provider",
     "numerator": "state-2025__county-2025",
-    "nProperty": "NalAvTmWk",
+    "nProperty": "NaltAvTmWk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
@@ -1850,21 +1850,21 @@
   {
     "variable": "% Tracts With Naltrexone Provider (30-min drive)",
     "numerator": "state-2025__county-2025",
-    "nProperty": "NalTmDrP",
+    "nProperty": "NaltTmDrP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "% Tracts With Naltrexone Provider (30-min bike)",
     "numerator": "state-2025__county-2025",
-    "nProperty": "NalTmBkP",
+    "nProperty": "NaltTmBkP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
   {
     "variable": "% Tracts With Naltrexone Provider (30-min walk)",
     "numerator": "state-2025__county-2025",
-    "nProperty": "NalTmWkP",
+    "nProperty": "NaltTmWkP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
@@ -2039,21 +2039,21 @@
   {
     "variable": "Naltrexone access 30 minutes (RAAM)",
     "numerator": "tract-2020",
-    "nProperty": "NalRm30",
+    "nProperty": "NaltRm30",
     "theme": "Environment",
     "metadataUrl": ""
   },
   {
     "variable": "Naltrexone access 60 minutes (RAAM)",
     "numerator": "tract-2020",
-    "nProperty": "NalRm60",
+    "nProperty": "NaltRm60",
     "theme": "Environment",
     "metadataUrl": ""
   },
   {
     "variable": "Naltrexone access 90 minutes (RAAM)",
     "numerator": "tract-2020",
-    "nProperty": "NalRm90",
+    "nProperty": "NaltRm90",
     "theme": "Environment",
     "metadataUrl": ""
   },
@@ -2424,7 +2424,7 @@
   {
     "variable": "Count of naltrexone providers (drive)",
     "numerator": "zcta-2025__tract-2025",
-    "nProperty": "NalCntDr60",
+    "nProperty": "NaltCntDr60",
     "theme": "Environment",
     "metadataUrl": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Access_MOUDs.md"
   },
