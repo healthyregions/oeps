@@ -2225,9 +2225,9 @@
       "state-2020"
     ]
   },
-  "CntNalT": {
+  "CntNaltT": {
     "title": "Tracts with Naltrexone Provider (30-min driving)",
-    "name": "CntNalT",
+    "name": "CntNaltT",
     "type": "integer",
     "example": "1323",
     "description": "Number of tracts within 30 -min of naltrexone driving range",
@@ -2282,9 +2282,9 @@
       "state-2020"
     ]
   },
-  "AvNalTime": {
+  "AvNaltTime": {
     "title": "Driving Time to Naltrexone Provider (driving time across all tracts)",
-    "name": "AvNalTime",
+    "name": "AvNaltTime",
     "type": "number",
     "example": "11.68",
     "description": "Average driving time (minutes) across tracts in state to nearest naltrexone provider.",
@@ -2339,9 +2339,9 @@
       "state-2020"
     ]
   },
-  "PctNalT": {
+  "PctNaltT": {
     "title": "% Tracts within 30-min Drive of Naltrexone Provider",
-    "name": "PctNalT",
+    "name": "PctNaltT",
     "type": "number",
     "example": "0.91",
     "description": "Percent of tracts with naltrexone provider within a 30-min driving range",
@@ -3832,9 +3832,9 @@
       "state-2021"
     ]
   },
-  "AnyNalDt": {
+  "AnyNalxDt": {
     "title": "Any Naloxone Law (date)",
-    "name": "AnyNalDt",
+    "name": "AnyNalxDt",
     "type": "date",
     "example": "7/1/2010",
     "format": "%m/%d/%Y",
@@ -3857,9 +3857,9 @@
       "state-2022"
     ]
   },
-  "NalPrStDt": {
+  "NalxPrStDt": {
     "title": "Naloxone Law allowing distribution through a standing or order (date)",
-    "name": "NalPrStDt",
+    "name": "NalxPrStDt",
     "type": "date",
     "example": "8/1/2015",
     "format": "%m/%d/%Y",
@@ -3882,9 +3882,9 @@
       "state-2022"
     ]
   },
-  "NalPresDt": {
+  "NalxPresDt": {
     "title": "Naloxone Law allowing pharmacists prescriptive authority (date)",
-    "name": "NalPresDt",
+    "name": "NalxPresDt",
     "type": "date",
     "example": "5/1/2014",
     "format": "%m/%d/%Y",
@@ -3907,9 +3907,9 @@
       "state-2022"
     ]
   },
-  "AnyNalFr": {
+  "AnyNalxFr": {
     "title": "Naloxone Law allowing distribution through a standing or order (fraction of year in 2017)",
-    "name": "AnyNalFr",
+    "name": "AnyNalxFr",
     "type": "number",
     "example": "1",
     "description": "Fraction of year any type of Naloxone law is effective",
@@ -3931,9 +3931,9 @@
       "state-2022"
     ]
   },
-  "NalPrStFr": {
+  "NalxPrStFr": {
     "title": "Naloxone Law in Effect (fraction of year in 2017)",
-    "name": "NalPrStFr",
+    "name": "NalxPrStFr",
     "type": "number",
     "example": "1",
     "description": "Fraction of year state has an effective Naloxone law allowing distribution through a standing or protocol order",
@@ -3955,9 +3955,9 @@
       "state-2022"
     ]
   },
-  "NalPresFr": {
+  "NalxPresFr": {
     "title": "Naloxone Law allowing pharmacists prescriptive authority (fraction of year in 2017)",
-    "name": "NalPresFr",
+    "name": "NalxPresFr",
     "type": "number",
     "example": "0",
     "description": "Fraction of year state has an effective Naloxone law allowing pharmacists prescriptive authority",
@@ -4661,9 +4661,9 @@
       "tract-2025"
     ]
   },
-  "NalMinDis": {
+  "NaltMinDis": {
     "title": "Distance (mi) to nearest Naltrexone Provider",
-    "name": "NalMinDis",
+    "name": "NaltMinDis",
     "type": "number",
     "example": "18.04",
     "description": "Euclidean distance (miles) to nearest naltrexone/Vivitrol provider",
@@ -4683,9 +4683,9 @@
       "tract-2025"
     ]
   },
-  "NalTmDr": {
+  "NaltTmDr": {
     "title": "Driving Time (min) to nearest Naltrexone Provider",
-    "name": "NalTmDr",
+    "name": "NaltTmDr",
     "type": "number",
     "example": "35.34",
     "description": "Driving time (minutes) to nearest naltrexone provider",
@@ -4705,9 +4705,9 @@
       "tract-2025"
     ]
   },
-  "NalCntDr30": {
+  "NaltCntDr30": {
     "title": "Count of Naltrexone Providers (30-min drive)",
-    "name": "NalCntDr30",
+    "name": "NaltCntDr30",
     "type": "integer",
     "example": "0",
     "description": "Count of naltrexone providers in 30 minute drive time threshold",
@@ -4859,9 +4859,9 @@
       "tract-2025"
     ]
   },
-  "NalTmWk": {
+  "NaltTmWk": {
     "title": "Walking Time (min) to nearest Naltrexone Provider",
-    "name": "NalTmWk",
+    "name": "NaltTmWk",
     "type": "number",
     "example": "",
     "description": "Walking time (minutes) to nearest naltrexone provider",
@@ -4881,9 +4881,9 @@
       "tract-2025"
     ]
   },
-  "NalCntWk60": {
+  "NaltCntWk60": {
     "title": "Count of Naltrexone Providers (60-min walk)",
-    "name": "NalCntWk60",
+    "name": "NaltCntWk60",
     "type": "integer",
     "example": "0",
     "description": "Count of naltrexone providers in 60 minute walking time threshold",
@@ -4903,9 +4903,9 @@
       "tract-2025"
     ]
   },
-  "NalCntWk30": {
+  "NaltCntWk30": {
     "title": "Count of Naltrexone Providers (30-min walk)",
-    "name": "NalCntWk30",
+    "name": "NaltCntWk30",
     "type": "integer",
     "example": "0",
     "description": "Count of naltrexone providers in 30 minute walking time threshold",
@@ -5057,9 +5057,9 @@
       "tract-2025"
     ]
   },
-  "NalTmBk": {
+  "NaltTmBk": {
     "title": "Biking Time (min) to nearest Naltrexone Provider",
-    "name": "NalTmBk",
+    "name": "NaltTmBk",
     "type": "number",
     "example": "165.18",
     "description": "Biking time (minutes) to nearest naltrexone provider",
@@ -5079,9 +5079,9 @@
       "tract-2025"
     ]
   },
-  "NalCntBk60": {
+  "NaltCntBk60": {
     "title": "Count of Naltrexone Providers (60-min bike)",
-    "name": "NalCntBk60",
+    "name": "NaltCntBk60",
     "type": "integer",
     "example": "0",
     "description": "Count of naltrexone providers in 60 minute biking time threshold",
@@ -5101,9 +5101,9 @@
       "tract-2025"
     ]
   },
-  "NalCntBk30": {
+  "NaltCntBk30": {
     "title": "Count of Naltrexone Providers (30-min bike)",
-    "name": "NalCntBk30",
+    "name": "NaltCntBk30",
     "type": "integer",
     "example": "0",
     "description": "Count of naltrexone providers in 30 minute biking time threshold",
@@ -5897,9 +5897,9 @@
       "state-2025"
     ]
   },
-  "NalCtTmDr": {
+  "NaltCtTmDr": {
     "title": "Tracts with Naltrexone Provider within 30-min (driving)",
-    "name": "NalCtTmDr",
+    "name": "NaltCtTmDr",
     "type": "integer",
     "example": "288",
     "description": "Number of tracts with naltrexone provider within a 30-min driving range",
@@ -5918,9 +5918,9 @@
       "state-2025"
     ]
   },
-  "NalCtTmBk": {
+  "NaltCtTmBk": {
     "title": "Tracts with Naltrexone Provider within 30-min (biking)",
-    "name": "NalCtTmBk",
+    "name": "NaltCtTmBk",
     "type": "integer",
     "example": "287",
     "description": "Number of tracts with naltrexone provider within a 30-min biking range",
@@ -5939,9 +5939,9 @@
       "state-2025"
     ]
   },
-  "NalCtTmWk": {
+  "NaltCtTmWk": {
     "title": "Tracts with Naltrexone Provider within 30-min (walking)",
-    "name": "NalCtTmWk",
+    "name": "NaltCtTmWk",
     "type": "integer",
     "example": "287",
     "description": "Number of tracts with naltrexone provider within a 30-min walking range",
@@ -6086,9 +6086,9 @@
       "state-2025"
     ]
   },
-  "NalAvTmDr": {
+  "NaltAvTmDr": {
     "title": "Driving Time (min) to Nearest Naltrexone Provider",
-    "name": "NalAvTmDr",
+    "name": "NaltAvTmDr",
     "type": "number",
     "example": "1.61",
     "description": "Average driving time (minutes) across tracts in county to nearest naltrexone provider",
@@ -6107,9 +6107,9 @@
       "state-2025"
     ]
   },
-  "NalAvTmBk": {
+  "NaltAvTmBk": {
     "title": "Biking Time (min) to Nearest Naltrexone Provider",
-    "name": "NalAvTmBk",
+    "name": "NaltAvTmBk",
     "type": "number",
     "example": "3.80180555555556",
     "description": "Average biking time (minutes) across tracts in county to nearest naltrexone provider",
@@ -6128,9 +6128,9 @@
       "state-2025"
     ]
   },
-  "NalAvTmWk": {
+  "NaltAvTmWk": {
     "title": "Walking Time (min) to Nearest Naltrexone Provider",
-    "name": "NalAvTmWk",
+    "name": "NaltAvTmWk",
     "type": "number",
     "example": "7.40684027777778",
     "description": "Average walking time (minutes) across tracts in county to nearest naltrexone provider",
@@ -6275,9 +6275,9 @@
       "state-2025"
     ]
   },
-  "NalTmDrP": {
+  "NaltTmDrP": {
     "title": "% Tracts With Naltrexone Provider (30-min drive)",
-    "name": "NalTmDrP",
+    "name": "NaltTmDrP",
     "type": "number",
     "example": "1",
     "description": "Percent of tracts with naltrexone provider within a 30-min driving range",
@@ -6296,9 +6296,9 @@
       "state-2025"
     ]
   },
-  "NalTmBkP": {
+  "NaltTmBkP": {
     "title": "% Tracts With Naltrexone Provider (30-min bike)",
-    "name": "NalTmBkP",
+    "name": "NaltTmBkP",
     "type": "number",
     "example": "1",
     "description": "Percent of tracts with naltrexone provider within a 30-min biking range",
@@ -6317,9 +6317,9 @@
       "state-2025"
     ]
   },
-  "NalTmWkP": {
+  "NaltTmWkP": {
     "title": "% Tracts With Naltrexone Provider (30-min walk)",
-    "name": "NalTmWkP",
+    "name": "NaltTmWkP",
     "type": "number",
     "example": "1",
     "description": "Percent of tracts with naltrexone provider within a 30-min walking range",
@@ -6806,9 +6806,9 @@
       "tract-2000"
     ]
   },
-  "NalRm30": {
+  "NaltRm30": {
     "title": "Naltrexone access 30 minutes (RAAM)",
-    "name": "NalRm30",
+    "name": "NaltRm30",
     "type": "number",
     "example": "1.232",
     "description": "Naltrexone access 30 minutes (RAAM)",
@@ -6825,9 +6825,9 @@
       "tract-2020"
     ]
   },
-  "NalRm60": {
+  "NaltRm60": {
     "title": "Naltrexone access 60 minutes (RAAM)",
-    "name": "NalRm60",
+    "name": "NaltRm60",
     "type": "number",
     "example": "1.232",
     "description": "Naltrexone access 60 minutes (RAAM)",
@@ -6844,9 +6844,9 @@
       "tract-2020"
     ]
   },
-  "NalRm90": {
+  "NaltRm90": {
     "title": "Naltrexone access 90 minutes (RAAM)",
-    "name": "NalRm90",
+    "name": "NaltRm90",
     "type": "number",
     "example": "1.232",
     "description": "Naltrexone access 90 minutes (RAAM)",
@@ -8114,9 +8114,9 @@
       "tract-2025"
     ]
   },
-  "NalCntDr60": {
+  "NaltCntDr60": {
     "title": "Count of naltrexone providers (drive)",
-    "name": "NalCntDr60",
+    "name": "NaltCntDr60",
     "type": "number",
     "example": "121.0",
     "description": "Count of naltrexone providers in 60 minute drive time threshold",
