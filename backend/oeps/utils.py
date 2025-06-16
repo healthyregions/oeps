@@ -87,14 +87,14 @@ def fetch_files(paths, out_dir, no_cache: bool = False):
 
     local_paths = []
     for path in paths:
-        name = path.split("/")[-1]
-        out_path = Path(out_dir, name)
+        path = Path(path)
+        out_path = Path(out_dir, path.name)
         if not out_path.exists() or no_cache:
             print(f"  get: {path} --> {out_path}")
             if path.startswith("http"):
                 response = requests.get(path, stream=True)
                 if response.status_code == 200:
-                    with open(Path(out_dir, name), mode="wb") as file:
+                    with open(Path(out_dir, path.name), mode="wb") as file:
                         for chunk in response.iter_content(chunk_size=10 * 1024):
                             file.write(chunk)
                 else:
