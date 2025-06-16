@@ -8,7 +8,7 @@
         "GEOID",
         "HEROP_ID"
       ],
-      "Source": "USDA-ERS 2010 & ACS 2018 5-Year; Tiger/Line 2018; Tiger/Line 2010; Healthy Regions & Policies Lab, UIUC",
+      "Source": "Tiger/Line 2018; Tiger/Line 2010; Healthy Regions & Policies Lab, UIUC; USDA-ERS 2010 & ACS 2018 5-Year",
       "Metadata": [
         "Geographic_Boundaries",
         "Rural_Urban_Classification_County"
@@ -25,10 +25,10 @@
         "State Area",
         "Total Census Tract Count"
       ],
-      "Source": "InfoGroup, 2018; Tiger/Line 2018; OSM",
+      "Source": "InfoGroup, 2018; OSM; Tiger/Line 2018",
       "Metadata": [
-        "Access_FQHCs_MinDistance",
         "Park_Cover",
+        "Access_FQHCs_MinDistance",
         "AlcoholOutlets_2018"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
@@ -46,8 +46,8 @@
       ],
       "Source": "USDA-ERS 2010 & ACS 2018 5-Year; ACS 2018, 5-Year; Census 2010; IPUMS NHGIS",
       "Metadata": [
-        "Rural_Urban_Classification_County",
-        "Demographics"
+        "Demographics",
+        "Rural_Urban_Classification_County"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
       "Years": "1980, 1990, 2000, 2010, 2018, 2020, 2023"
@@ -66,7 +66,7 @@
         "% Population with ethnicity identified as of Hispanic or Latinx origin",
         "% White Population"
       ],
-      "Source": "ACS 2018, 5-Year; Census 2010; IPUMS NHGIS; ACS ",
+      "Source": "ACS ; ACS 2018, 5-Year; Census 2010; IPUMS NHGIS",
       "Metadata": [
         "Race_Ethnicity"
       ],
@@ -97,7 +97,7 @@
         "Population: Age 60-64",
         "Population: Age 65+"
       ],
-      "Source": "ACS 2018, 5-Year; Census 2010; IPUMS NHGIS; ACS ; IPUMS NHGIS; ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS; ACS 2018, 5-Year; 2010 Decennial Census",
+      "Source": "ACS ; IPUMS NHGIS; ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS; ACS 2018, 5-Year; 2010 Decennial Census; ACS 2018, 5-Year; Census 2010; IPUMS NHGIS",
       "Metadata": [
         "Demographics"
       ],
@@ -152,7 +152,7 @@
         "% Population without High School Degree",
         "Proportion of the population aged 5+ who speak a language other than English at home but are proficient in English"
       ],
-      "Source": "ACS 2018, 5-Year; ACS 2012, 5-Year; IPUMS NHGIS; ACS ",
+      "Source": "ACS ; ACS 2018, 5-Year; ACS 2012, 5-Year; IPUMS NHGIS",
       "Metadata": [
         "Educational_Characteristics",
         "Other_Demographic_2018"
@@ -167,7 +167,7 @@
         "% Veteran Population",
         "Total Veteran Population"
       ],
-      "Source": "ACS 2017, 5-Year; ACS 2012, 5-Year; ACS 2018, 5-Year; ACS 2012, 5-Year",
+      "Source": "ACS 2018, 5-Year; ACS 2012, 5-Year; ACS 2017, 5-Year; ACS 2012, 5-Year",
       "Metadata": [
         "VetPop"
       ],
@@ -330,7 +330,7 @@
         "Housing Unit Density",
         "Total Occupied Housing Units"
       ],
-      "Source": "ACS 2018, 5-Year; Census 2010; Social Explorer; ACS 2018, 5-Year",
+      "Source": "ACS 2018, 5-Year; ACS 2018, 5-Year; Census 2010; Social Explorer",
       "Metadata": [
         "Housing_Variables"
       ],
@@ -479,7 +479,7 @@
         "Walking Time (min) to nearest Methadone Provider",
         "Walking Time (min) to nearest Naltrexone Provider"
       ],
-      "Source": "; SAMHSA; SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020; SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020",
+      "Source": "; SAMHSA; SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020; SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020",
       "Metadata": [
         "",
         "Access_MOUDs"
@@ -586,7 +586,7 @@
         "Driving Time (min) to nearest Opioid Treatment Program (OTP)",
         "Tracts with Opioid Treatment Program (OTP) (30-min drive)"
       ],
-      "Source": "SAMHSA; SAMSHA, 2021",
+      "Source": "SAMSHA, 2021; SAMHSA",
       "Metadata": [
         "Access_OpioidUseTreatment"
       ],
@@ -637,8 +637,8 @@
       ],
       "Source": "ACS 2018, 5-Year; ACS ",
       "Metadata": [
-        "Job_Categories_byIndustry_2018",
-        "Economic"
+        "Economic",
+        "Job_Categories_byIndustry_2018"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
       "Years": "2018, 2020, 2023"
@@ -826,7 +826,7 @@
         "Traditional Medicaid Federal Spending",
         "Traditional Medicaid State Spending"
       ],
-      "Source": "KFF, 2018; KFF, 2019",
+      "Source": "KFF, 2019; KFF, 2018",
       "Metadata": [
         "MedExp"
       ],
