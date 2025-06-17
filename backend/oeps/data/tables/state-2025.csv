@@ -1,4 +1,4 @@
-HEROP_ID,GEOID,BupCtTmDr,BupCtTmBk,BupCtTmWk,MetCtTmDr,MetCtTmBk,MetCtTmWk,NalCtTmDr,NalCtTmBk,NalCtTmWk,BupAvTmDr,BupAvTmBk,BupAvTmWk,MetAvTmDr,MetAvTmBk,MetAvTmWk,NalAvTmDr,NalAvTmBk,NalAvTmWk,TotTracts,BupTmDrP,BupTmBkP,BupTmWkP,MetTmDrP,MetTmBkP,MetTmWkP,NalTmDrP,NalTmBkP,NalTmWkP,OtpCtTmDr,OtpAvTmDr,OtpTmDrP
+HEROP_ID,GEOID,BupCtTmDr,BupCtTmBk,BupCtTmWk,MetCtTmDr,MetCtTmBk,MetCtTmWk,NaltCtTmDr,NaltCtTmBk,NaltCtTmWk,BupAvTmDr,BupAvTmBk,BupAvTmWk,MetAvTmDr,MetAvTmBk,MetAvTmWk,NaltAvTmDr,NaltAvTmBk,NaltAvTmWk,TotTracts,BupTmDrP,BupTmBkP,BupTmWkP,MetTmDrP,MetTmBkP,MetTmWkP,NaltTmDrP,NaltTmBkP,NaltTmWkP,OtpCtTmDr,OtpAvTmDr,OtpTmDrP
 040US01,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 040US02,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 040US04,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
