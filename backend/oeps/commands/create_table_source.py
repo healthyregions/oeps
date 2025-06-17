@@ -28,7 +28,7 @@ from ._common_opts import (
 @add_common_opts(registry_opt)
 def create_table_source(name, geodata_source, dry_run, registry_path):
     """Creates a new blank table source and generates an accompanying
-    CSV with only HEROP_IDs.
+    CSV with only relevant keys.
     """
 
     registry = Registry(registry_path)
