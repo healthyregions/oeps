@@ -506,10 +506,14 @@ class Registry:
             outpath = Path(self.directory, "table_sources", f"{name}.json")
             write_json(schema, outpath)
 
-        ## now create a dummy CSV with all HEROP_IDs, based on the geodata_source
+        ## now create a dummy CSV with all key variables, based on the geodata_source
         temp_path = Path(TEMP_DIR, "tables", file_name)
         gdf = gpd.read_file(gs["path"])
-        gdf_sm = gdf["HEROP_ID"]
+        gdf_sm = gdf[["HEROP_ID"]]
+        
+        foreign_key = 'ZCTA5' if summary_level == 'zcta' else 'FIPS'
+        gdf_sm[foreign_key] = gdf_sm.HEROP_ID.apply(lambda x: x[5:])
+
         print("new data table:")
         print(gdf_sm)
 
