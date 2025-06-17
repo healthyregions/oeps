@@ -83,7 +83,7 @@ class TableSource:
         ## all good if HEROP_ID already exists in the data frame
         test_unique_id = "HEROP_ID"
         if "HEROP_IP" not in df.columns:
-            for id in ["GEOID", "GEO ID", "GEO_ID", "FIPS"]:
+            for id in ["GEOID", "GEO ID", "GEO_ID", "FIPS", "ZCTA5"]:
                 if id in df.columns:
                     df["HEROP_ID"] = f"{lvl['code']}US" + df[id].astype(str).str.zfill(
                         lvl["geoid_length"]
@@ -104,7 +104,7 @@ class TableSource:
         ## if it wasn't added above based on other incoming fields, abort process
         else:
             raise Exception(
-                "input data frame must have one of these fields: HEROP_ID, GEOID, GEO ID, GEO_ID, FIPS"
+                "input data frame must have one of these fields: HEROP_ID, GEOID, GEO ID, GEO_ID, FIPS, ZCTA5"
             )
 
     def validate_incoming_csv(self, verbose: bool = False):
