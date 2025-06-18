@@ -478,6 +478,7 @@ class Registry:
         self, name: str, geodata_source: str, dry_run: bool = False
     ) -> TableSource:
         summary_level, year = name.split("-")
+        geog_summary_level = geodata_source.split('-')[0]
 
         ## validate these components
         SummaryLevel(summary_level)
@@ -509,9 +510,9 @@ class Registry:
         ## now create a dummy CSV with all key variables, based on the geodata_source
         temp_path = Path(TEMP_DIR, "tables", file_name)
         gdf = gpd.read_file(gs["path"])
-        gdf_sm = gdf[["HEROP_ID"]]
+        gdf_sm = gdf.copy()[["HEROP_ID"]]
         
-        foreign_key = 'ZCTA5' if summary_level == 'zcta' else 'FIPS'
+        foreign_key = 'ZCTA5' if geog_summary_level == 'zctas' else 'FIPS'
         gdf_sm[foreign_key] = gdf_sm.HEROP_ID.apply(lambda x: x[5:])
 
         print("new data table:")
