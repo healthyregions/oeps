@@ -1,0 +1,260 @@
+{
+  "state": [
+    {
+      "name": "state-1980.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/state-1980.csv",
+      "year": "1980"
+    },
+    {
+      "name": "state-1990.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/state-1990.csv",
+      "year": "1990"
+    },
+    {
+      "name": "state-2000.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/state-2000.csv",
+      "year": "2000"
+    },
+    {
+      "name": "state-2010.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/state-2010.csv",
+      "year": "2010"
+    },
+    {
+      "name": "state-2013.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/state-2013.csv",
+      "year": "2013"
+    },
+    {
+      "name": "state-2014.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/state-2014.csv",
+      "year": "2014"
+    },
+    {
+      "name": "state-2015.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/state-2015.csv",
+      "year": "2015"
+    },
+    {
+      "name": "state-2016.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/state-2016.csv",
+      "year": "2016"
+    },
+    {
+      "name": "state-2017.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/state-2017.csv",
+      "year": "2017"
+    },
+    {
+      "name": "state-2018.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/state-2018.csv",
+      "year": "2018"
+    },
+    {
+      "name": "state-2019.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/state-2019.csv",
+      "year": "2019"
+    },
+    {
+      "name": "state-2020.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/state-2020.csv",
+      "year": "2020"
+    },
+    {
+      "name": "state-2021.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/state-2021.csv",
+      "year": "2021"
+    },
+    {
+      "name": "state-2022.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/state-2022.csv",
+      "year": "2022"
+    },
+    {
+      "name": "state-2023.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/state-2023.csv",
+      "year": "2023"
+    },
+    {
+      "name": "state-2025.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/state-2025.csv",
+      "year": "2025"
+    }
+  ],
+  "county": [
+    {
+      "name": "county-1980.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/county-1980.csv",
+      "year": "1980"
+    },
+    {
+      "name": "county-1990.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/county-1990.csv",
+      "year": "1990"
+    },
+    {
+      "name": "county-2000.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/county-2000.csv",
+      "year": "2000"
+    },
+    {
+      "name": "county-2010.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/county-2010.csv",
+      "year": "2010"
+    },
+    {
+      "name": "county-2014.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/county-2014.csv",
+      "year": "2014"
+    },
+    {
+      "name": "county-2015.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/county-2015.csv",
+      "year": "2015"
+    },
+    {
+      "name": "county-2016.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/county-2016.csv",
+      "year": "2016"
+    },
+    {
+      "name": "county-2017.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/county-2017.csv",
+      "year": "2017"
+    },
+    {
+      "name": "county-2018.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/county-2018.csv",
+      "year": "2018"
+    },
+    {
+      "name": "county-2019.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/county-2019.csv",
+      "year": "2019"
+    },
+    {
+      "name": "county-2020.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/county-2020.csv",
+      "year": "2020"
+    },
+    {
+      "name": "county-2021.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/county-2021.csv",
+      "year": "2021"
+    },
+    {
+      "name": "county-2022.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/county-2022.csv",
+      "year": "2022"
+    },
+    {
+      "name": "county-2023.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/county-2023.csv",
+      "year": "2023"
+    },
+    {
+      "name": "county-2025.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/county-2025.csv",
+      "year": "2025"
+    }
+  ],
+  "zcta": [
+    {
+      "name": "zcta-2018.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/zcta-2018.csv",
+      "year": "2018"
+    },
+    {
+      "name": "zcta-2019.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/zcta-2019.csv",
+      "year": "2019"
+    },
+    {
+      "name": "zcta-2020.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/zcta-2020.csv",
+      "year": "2020"
+    },
+    {
+      "name": "zcta-2021.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/zcta-2021.csv",
+      "year": "2021"
+    },
+    {
+      "name": "zcta-2022.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/zcta-2022.csv",
+      "year": "2022"
+    },
+    {
+      "name": "zcta-2023.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/zcta-2023.csv",
+      "year": "2023"
+    },
+    {
+      "name": "zcta-2025.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/zcta-2025.csv",
+      "year": "2025"
+    }
+  ],
+  "tract": [
+    {
+      "name": "tract-1980.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/tract-1980.csv",
+      "year": "1980"
+    },
+    {
+      "name": "tract-1990.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/tract-1990.csv",
+      "year": "1990"
+    },
+    {
+      "name": "tract-2000.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/tract-2000.csv",
+      "year": "2000"
+    },
+    {
+      "name": "tract-2010.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/tract-2010.csv",
+      "year": "2010"
+    },
+    {
+      "name": "tract-2014.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/tract-2014.csv",
+      "year": "2014"
+    },
+    {
+      "name": "tract-2018.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/tract-2018.csv",
+      "year": "2018"
+    },
+    {
+      "name": "tract-2019.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/tract-2019.csv",
+      "year": "2019"
+    },
+    {
+      "name": "tract-2020.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/tract-2020.csv",
+      "year": "2020"
+    },
+    {
+      "name": "tract-2021.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/tract-2021.csv",
+      "year": "2021"
+    },
+    {
+      "name": "tract-2022.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/tract-2022.csv",
+      "year": "2022"
+    },
+    {
+      "name": "tract-2023.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/tract-2023.csv",
+      "year": "2023"
+    },
+    {
+      "name": "tract-2025.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/tract-2025.csv",
+      "year": "2025"
+    }
+  ]
+}

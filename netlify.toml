@@ -1,0 +1,14 @@
+[build]
+  base = "explorer"
+  publish = ".next/"
+  command = "npm run build:netlify"
+
+[[redirects]]
+  from = "https://oeps.ssd.uchicago.edu/"
+  to = "https://oeps.healthyregions.org/"
+  force = true
+
+[[redirects]]
+  from = "https://oeps.ssd.uchicago.edu/*"
+  to = "https://oeps.healthyregions.org/:splat"
+  force = true

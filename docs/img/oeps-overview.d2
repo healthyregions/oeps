@@ -1,0 +1,120 @@
+title: |md
+# OEPS Architecture Overview
+
+- Data releases v1 and v2 are tagged in the original repo, and these are both directly linked to Zenodo.
+- v1 was transferred directly to JCOIN, where v2 will be augmented through the new backend and then exported to JCOIN.
+- The OEPS Explorer pulls CSV data directly from the original repo.
+- The oepsData R Package curates the process of loading raw data into an R environment for analysis
+- asdf
+|
+classes {
+    gh-repo: {
+        style: {
+            stroke: black
+            fill: white
+        }
+    }
+    data-repo: {
+        style: {
+            font-color: green
+            stroke: green
+            fill: lightgreen
+        }
+    }
+    freeze: {
+        shape: stored_data
+    }
+    branch: {
+        shape: parallelogram
+    }
+    todo: {
+        style: {
+            stroke: lightcoral
+            font-color: lightcoral
+        }
+    }
+}
+title.near: top-center
+
+geoda: GeoDaCenter/opioid-policy-scan
+geoda.class: gh-repo
+geoda.main: main branch
+geoda.main.class: branch
+geoda.main.r1: Release 1.0
+geoda.main.r1.class: freeze
+geoda.main.r2: Release 2.0
+geoda.main.r2.class: [freeze; todo]
+
+jcoin: JCOIN
+jcoin.class: data-repo
+jcoin.v1: OEPS v1
+jcoin.v1.class: freeze
+jcoin.v2: OEPS v2
+jcoin.v2.class: [freeze]
+
+zenodo: Zenodo
+zenodo.class: data-repo
+zenodo.v1: OEPS v1
+zenodo.v1.class: freeze
+zenodo.v2: OEPS v2
+zenodo.v2.class: [freeze; todo]
+
+oeps: healthyregions/oeps
+oeps.class: gh-repo
+oeps.main: main branch
+oeps.main.class: branch
+oeps.main.backend: /backend
+oeps.main.explorer: /explorer
+
+oepsData.text: |md
+# oepsData R Package
+oepsdata.healthyregions.org
+- Curated access to OEPS data
+- OS codebase: healthyregions/oepsData
+|
+oepsData.shape: page
+oepsData.label: ""
+
+bq: Google BigQuery
+bq.shape: cylinder
+
+geoda.main.r2 -> oepsData: ingest via scripts {
+    style: {
+        stroke-dash: 2
+    }
+}
+bq -> oepsData
+
+netlify: Netlify
+netlify.shape: cloud
+explorer.website: |md
+# OEPS Explorer
+oeps.healthyregions.org
+- Public data exploration
+- Public data download
+|
+explorer.shape: page
+explorer.label: ""
+
+geoda.main.r1 -> jcoin.v1
+geoda.main.r1 -> zenodo.v1: tag linkage
+geoda.main.r2 -> zenodo.v2: TODO: via tag linkage {
+    style: {
+        stroke: lightcoral
+    }
+}
+
+geoda.main.r2 -> oeps.main.backend: ingest via scripts {
+    style: {
+        stroke-dash: 2
+    }
+}
+geoda.main.r2 -> explorer: ingest via scripts {
+    style: {
+        stroke-dash: 2
+    }
+}
+oeps.main.backend -> jcoin.v2
+oeps.main.backend <-> bq
+oeps.main.explorer -> netlify
+netlify -> explorer
