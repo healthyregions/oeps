@@ -509,8 +509,7 @@ class Registry:
 
         ## now create a dummy CSV with all key variables, based on the geodata_source
         temp_path = Path(TEMP_DIR, "tables", file_name)
-        gdf = gpd.read_file(gs["path"])
-        gdf = gdf[["HEROP_ID"]]
+        gdf = gpd.read_file(gs["path"])[["HEROP_ID"]]
         
         foreign_key = 'ZCTA5' if geog_summary_level == 'zctas' else 'FIPS'
         gdf[foreign_key] = gdf.HEROP_ID.apply(lambda x: x[5:])
