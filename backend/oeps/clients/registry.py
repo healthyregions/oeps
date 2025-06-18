@@ -510,15 +510,15 @@ class Registry:
         ## now create a dummy CSV with all key variables, based on the geodata_source
         temp_path = Path(TEMP_DIR, "tables", file_name)
         gdf = gpd.read_file(gs["path"])
-        gdf_sm = gdf.copy()[["HEROP_ID"]]
+        gdf = gdf[["HEROP_ID"]]
         
         foreign_key = 'ZCTA5' if geog_summary_level == 'zctas' else 'FIPS'
-        gdf_sm[foreign_key] = gdf_sm.HEROP_ID.apply(lambda x: x[5:])
+        gdf[foreign_key] = gdf.HEROP_ID.apply(lambda x: x[5:])
 
         print("new data table:")
-        print(gdf_sm)
+        print(gdf)
 
-        gdf_sm.to_csv(temp_path, index=False)
+        gdf.to_csv(temp_path, index=False)
 
         if not dry_run:
             local_path = Path(DATA_DIR, schema["path"])
