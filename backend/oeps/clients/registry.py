@@ -83,7 +83,7 @@ class TableSource:
         ## all good if HEROP_ID already exists in the data frame
         test_unique_id = "HEROP_ID"
         if "HEROP_IP" not in df.columns:
-            for id in ["GEOID", "GEO ID", "GEO_ID", "FIPS"]:
+            for id in ["GEOID", "GEO ID", "GEO_ID", "FIPS", "ZCTA5"]:
                 if id in df.columns:
                     df["HEROP_ID"] = f"{lvl['code']}US" + df[id].astype(str).str.zfill(
                         lvl["geoid_length"]
@@ -104,7 +104,7 @@ class TableSource:
         ## if it wasn't added above based on other incoming fields, abort process
         else:
             raise Exception(
-                "input data frame must have one of these fields: HEROP_ID, GEOID, GEO ID, GEO_ID, FIPS"
+                "input data frame must have one of these fields: HEROP_ID, GEOID, GEO ID, GEO_ID, FIPS, ZCTA5"
             )
 
     def validate_incoming_csv(self, verbose: bool = False):
@@ -478,6 +478,7 @@ class Registry:
         self, name: str, geodata_source: str, dry_run: bool = False
     ) -> TableSource:
         summary_level, year = name.split("-")
+        geog_summary_level = geodata_source.split('-')[0]
 
         ## validate these components
         SummaryLevel(summary_level)
@@ -506,14 +507,17 @@ class Registry:
             outpath = Path(self.directory, "table_sources", f"{name}.json")
             write_json(schema, outpath)
 
-        ## now create a dummy CSV with all HEROP_IDs, based on the geodata_source
+        ## now create a dummy CSV with all key variables, based on the geodata_source
         temp_path = Path(TEMP_DIR, "tables", file_name)
-        gdf = gpd.read_file(gs["path"])
-        gdf_sm = gdf["HEROP_ID"]
-        print("new data table:")
-        print(gdf_sm)
+        gdf = gpd.read_file(gs["path"])[["HEROP_ID"]]
+        
+        foreign_key = 'ZCTA5' if geog_summary_level == 'zctas' else 'FIPS'
+        gdf[foreign_key] = gdf.HEROP_ID.apply(lambda x: x[5:])
 
-        gdf_sm.to_csv(temp_path, index=False)
+        print("new data table:")
+        print(gdf)
+
+        gdf.to_csv(temp_path, index=False)
 
         if not dry_run:
             local_path = Path(DATA_DIR, schema["path"])
