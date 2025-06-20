@@ -1,4 +1,6 @@
-# How to add data to OEPS
+# Adding Data to OEPS
+
+Because the OEPS backend must export the same data to many different formats, we have a [registry](./registry.md) that configures and manages all of the data within the system.
 
 ## Overview
 
