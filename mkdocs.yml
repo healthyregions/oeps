@@ -1,6 +1,8 @@
 site_name: OEPS Documentation
-
+plugins:
+  - search
+  - table-reader
 theme:
-  name: gitbook
+  name: readthedocs
 docs_dir: docs/src
 site_dir: docs/output
