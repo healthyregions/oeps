@@ -67,12 +67,12 @@
       "tract-2025"
     ]
   },
-  "GEOID": {
-    "title": "GEOID",
-    "name": "GEOID",
+    "FIPS": {
+    "title": "Federal Information Processing Standard code",
+    "name": "FIPS",
     "type": "string",
     "example": "36061",
-    "description": "Unique identifer for the geography unit to which this value should be attached",
+    "description": "Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.",
     "constraints": "",
     "construct": "Geographic Boundaries",
     "source": "Tiger/Line 2018; Tiger/Line 2010",
@@ -99,8 +99,6 @@
       "county-2023",
       "tract-2023",
       "tract-2020",
-      "zcta-2020",
-      "zcta-2023",
       "state-2019",
       "state-2020",
       "state-2021",
@@ -111,11 +109,31 @@
       "county-2021",
       "county-2022",
       "tract-2022",
-      "zcta-2022",
       "county-2025",
       "state-2025",
-      "zcta-2025",
       "tract-2025"
+    ]
+  },
+  "ZCTA5": {
+    "title": "Zip Code Tabulation Area",
+    "name": "ZCTA5",
+    "type": "string",
+    "example": "60637",
+    "description": "Census Bureau designated zip code tabulation area, or the rough area that contains five digit zip codes.",
+    "constraints": "",
+    "construct": "Geographic Boundaries",
+    "source": "Tiger/Line 2018; Tiger/Line 2010",
+    "source_long": "",
+    "oeps_v1_table": null,
+    "comments": "",
+    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Geographic_Boundaries.md",
+    "longitudinal": true,
+    "analysis": false,
+    "table_sources": [
+      "zcta-2020",
+      "zcta-2023",
+      "zcta-2022",
+      "zcta-2025"
     ]
   },
   "TotPop": {
