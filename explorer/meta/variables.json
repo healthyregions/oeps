@@ -5,8 +5,9 @@
       "Variable Proxy": "HEROP_ID, GEOID, Census Flags",
       "Variables": [
         "Census Flags",
-        "GEOID",
-        "HEROP_ID"
+        "Federal Information Processing Standard code",
+        "HEROP_ID",
+        "Zip Code Tabulation Area"
       ],
       "Source": "Tiger/Line 2018; Tiger/Line 2010; Healthy Regions & Policies Lab, UIUC; USDA-ERS 2010 & ACS 2018 5-Year",
       "Metadata": [
@@ -27,9 +28,9 @@
       ],
       "Source": "InfoGroup, 2018; OSM; Tiger/Line 2018",
       "Metadata": [
+        "AlcoholOutlets_2018",
         "Park_Cover",
-        "Access_FQHCs_MinDistance",
-        "AlcoholOutlets_2018"
+        "Access_FQHCs_MinDistance"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
       "Years": "2018, 2022, 2025"
@@ -66,7 +67,7 @@
         "% Population with ethnicity identified as of Hispanic or Latinx origin",
         "% White Population"
       ],
-      "Source": "ACS ; ACS 2018, 5-Year; Census 2010; IPUMS NHGIS",
+      "Source": "ACS 2018, 5-Year; Census 2010; IPUMS NHGIS; ACS ",
       "Metadata": [
         "Race_Ethnicity"
       ],
@@ -97,7 +98,7 @@
         "Population: Age 60-64",
         "Population: Age 65+"
       ],
-      "Source": "ACS ; IPUMS NHGIS; ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS; ACS 2018, 5-Year; 2010 Decennial Census; ACS 2018, 5-Year; Census 2010; IPUMS NHGIS",
+      "Source": "ACS 2018, 5-Year; 2010 Decennial Census; ACS ; IPUMS NHGIS; ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS; ACS 2018, 5-Year; Census 2010; IPUMS NHGIS",
       "Metadata": [
         "Demographics"
       ],
@@ -152,7 +153,7 @@
         "% Population without High School Degree",
         "Proportion of the population aged 5+ who speak a language other than English at home but are proficient in English"
       ],
-      "Source": "ACS ; ACS 2018, 5-Year; ACS 2012, 5-Year; IPUMS NHGIS",
+      "Source": "ACS 2018, 5-Year; ACS 2012, 5-Year; IPUMS NHGIS; ACS ",
       "Metadata": [
         "Educational_Characteristics",
         "Other_Demographic_2018"
@@ -167,7 +168,7 @@
         "% Veteran Population",
         "Total Veteran Population"
       ],
-      "Source": "ACS 2018, 5-Year; ACS 2012, 5-Year; ACS 2017, 5-Year; ACS 2012, 5-Year",
+      "Source": "ACS 2017, 5-Year; ACS 2012, 5-Year; ACS 2018, 5-Year; ACS 2012, 5-Year",
       "Metadata": [
         "VetPop"
       ],
@@ -330,7 +331,7 @@
         "Housing Unit Density",
         "Total Occupied Housing Units"
       ],
-      "Source": "ACS 2018, 5-Year; ACS 2018, 5-Year; Census 2010; Social Explorer",
+      "Source": "ACS 2018, 5-Year; Census 2010; Social Explorer; ACS 2018, 5-Year",
       "Metadata": [
         "Housing_Variables"
       ],
@@ -479,7 +480,7 @@
         "Walking Time (min) to nearest Methadone Provider",
         "Walking Time (min) to nearest Naltrexone Provider"
       ],
-      "Source": "; SAMHSA; SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020; SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020",
+      "Source": "; SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020; SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020; SAMHSA",
       "Metadata": [
         "",
         "Access_MOUDs"
@@ -937,7 +938,7 @@
         "Yearly Hepatitis C cases - Women (2013-2016)",
         "Yearly Hepatitis C cases - non-Black (2013-2016)"
       ],
-      "Source": "HepVu, 2017; HepVu",
+      "Source": "HepVu; HepVu, 2017",
       "Metadata": [
         "HepC"
       ],
