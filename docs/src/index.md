@@ -1,17 +1,15 @@
-# Welcome to MkDocs
+# OEPS Documentation
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+This documentation aims to be a comprehensive overview of how the OEPS Explorer and Flask backend are put together. Topics:
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+- Overviews:
+    - [OEPS Explorer](./explorer.md)
+    - [Flask Backend](./backend.md)
+    - [Data registry design](./registry.md)
+    - [Legacy migration](./legacy-migration.md)
+- Guides
+    - [Adding new variables and data sources](./adding-data.md)
+- Reference
+    - [Data registry content](./reference/registry-content.md)
+    - [CLI command reference](./reference/commands/README.md)
+    - [Google BigQuery data structure](./reference/big-query-tables.md)

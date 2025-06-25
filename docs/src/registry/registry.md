@@ -1,4 +1,4 @@
-# Registry
+# Registry Overview
 
 The backend app includes a **registry** directory that holds a structured representation of *all* data within the OEPS warehouse. The registry serves as a central content hub from which all data export and transformation operations can be carried out, via CLI commands. The registry seeks to achieve the following:
 
@@ -19,7 +19,7 @@ The registry is broken into four parts:
 - [table sources](#table-sources)
 - [geodata sources](#geodata-sources)
 
-![basic registry diagram](./img/registry-simple.png)
+![basic registry diagram](../img/registry-simple.png)
 
 ## Rationale
 
@@ -33,7 +33,7 @@ The `variables.json` file holds a comprehensive lookup of *all* individual varia
 
 Each table source (CSV) is in turn described by a JSON file in the `table_sources` directory, and linked via a `geodata_source` property to a similar entry in the `geodata_sources` directory. *All joins must be performed on the HEROP_ID field.*
 
-![illustration of connections between registry content](./img/registry-complex.png)
+![illustration of connections between registry content](../img/registry-complex.png)
 
 The diagram above illustrates how three different example variables would be defined and connected to data sources. Only the necessary properties are shown for each item, but a detailed explanation of all properties can be found in the following sections.
 
