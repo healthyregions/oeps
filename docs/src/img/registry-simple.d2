@@ -1,0 +1,27 @@
+# d2 ./registry-simple.d2 registry-simple.png --pad 25
+
+direction: right
+grid-columns: 4
+classes: {
+    container: {
+        style: {
+            fill: transparent
+            stroke-dash: 3
+        }
+    }
+}
+
+t: Themes &\nConstructs {
+    class: container
+}
+v: Variables {
+    class: container
+}
+s: Table\nSources {
+    class: container
+}
+g: Geodata\nSources {
+    class: container
+}
+
+t <- v -> s -> g
