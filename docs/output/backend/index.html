@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>OEPS Backend - OEPS Documentation</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="generator" content="mkdocs-1.6.1, mkdocs-gitbook-1.0.7">
+
+<link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta rel="next" href="" />
+<link href="../css/style.min.css" rel="stylesheet"> 
+</head>
+
+<body>
+<div class="book">
+<div class="book-summary">
+<div id="book-search-input" role="search">
+<input type="text" placeholder="Type to search" />
+</div> <!-- end of book-search-input -->
+
+<nav role="navigation">
+<ul class="summary">
+<li>
+<a href=".." target="_blank" class="custom-link">OEPS Documentation</a>
+</li>
+<li class="divider"></li>
+<li class="chapter" data-path="">
+<a href="..">Welcome to MkDocs</a>
+<li class="chapter" data-path="adding-data-to-oeps/">
+<a href="../adding-data-to-oeps/">Adding Data to OEPS</a>
+<li class="chapter active" data-path="backend/">
+<a href="./">OEPS Backend</a>
+<li class="chapter" data-path="explorer/">
+<a href="../explorer/">OEPS Explorer</a>
+<li class="chapter" data-path="exporting-data-from-oeps/">
+<a href="../exporting-data-from-oeps/">Exporting Data from OEPS</a>
+<li class="chapter" data-path="legacy-migration/">
+<a href="../legacy-migration/">Migration/Restructure 2023</a>
+<li class="chapter" data-path="registry/">
+<a href="../registry/">Registry</a>
+<li class="header">Reference</li>
+
+<li>
+<a href="../reference/big-query-tables/" class="">Project Id: oeps-391119</a>
+</li>
+
+<li>
+<a href="#">Commands</a>
+<ul>
+
+<li>
+<a href="../reference/commands/" class="">OEPS Backend -- CLI Commands</a>
+</li>
+
+<li>
+<a href="../reference/commands/bigquery-export/" class="">bigquery-export</a>
+</li>
+
+<li>
+<a href="../reference/commands/bigquery-upload/" class="">bigquery-upload</a>
+</li>
+
+<li>
+<a href="../reference/commands/build-docs/" class="">build-docs</a>
+</li>
+
+<li>
+<a href="../reference/commands/build-explorer-docs/" class="">build-explorer-docs</a>
+</li>
+
+<li>
+<a href="../reference/commands/build-explorer-map/" class="">build-explorer-map</a>
+</li>
+
+<li>
+<a href="../reference/commands/create-data-dictionaries/" class="">create-data-dictionaries</a>
+</li>
+
+<li>
+<a href="../reference/commands/inspect-csv/" class="">inspect-csv</a>
+</li>
+
+<li>
+<a href="../reference/commands/merge-data-table/" class="">merge-data-table</a>
+</li>
+
+<li>
+<a href="../reference/commands/validate-registry/" class="">validate-registry</a>
+</li>
+</ul>
+</li>
+
+<li>
+<a href="#">Registry</a>
+<ul>
+
+<li>
+<a href="../reference/registry/all-content/" class="">Registry Content</a>
+</li>
+</ul>
+</li>
+
+<li class="divider"></li>
+
+
+
+<li><a href="http://www.mkdocs.org">
+Published with MkDocs
+</a></li>
+
+<li><a href="https://github.com/GitbookIO/theme-default">
+Theme by GitBook
+</a></li>
+</ul>
+
+</nav>
+
+</div> <!-- end of book-summary -->
+
+<div class="book-body">
+<div class="body-inner">
+<div class="book-header" role="navigation">
+
+<!-- Title -->
+<h1>
+<i class="fa fa-circle-o-notch fa-spin"></i>
+<a href="." ></a>
+</h1>
+
+</div> <!-- end of book-header -->
+
+<div class="page-wrapper" tabindex="-1" role="main">
+<div class="page-inner">
+<div id="book-search-results">
+<div class="search-noresults">
+
+<section class="normal markdown-section">
+
+
+
+<h1 id="oeps-backend">OEPS Backend</h1>
+<p>This project builds from the Opioid Environment Policy Scan (OEPS) data warehouse stored in <a href="https://github.com/GeoDaCenter/opioid-policy-scan">github.com/GeoDaCenter/opioid-policy-scan</a>, and published on Zenodo at <a href="https://doi.org/10.5281/zenodo.5842465">doi.org/10.5281/zenodo.5842465</a>.</p>
+<p>The backend includes <a href="../reference/commands/">commands</a> for managing data transformation to and from to different destinations, as well as a <a href="../registry/">registry</a> to define all aspects of the data within OEPS.</p>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="install-the-backend-python-package">Install the backend Python Package</h3>
+<ol>
+<li>
+<p>Clone this repo</p>
+<pre><code>git clone https://github.com/healthyregions/oeps
+cd oeps/backend
+</code></pre>
+</li>
+<li>
+<p>Create and activate a <a href="https://realpython.com/python-virtual-environments-a-primer/">Python virtual environment</a> with <a href="https://docs.python.org/3/library/venv.html">venv</a>, <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html">Conda</a>, or your other tool of choice.</p>
+<p>For example, using the <code>venv</code> module that is included in Python 3, the commands will be:</p>
+<pre><code>python3 -m venv env
+source ./env/bin/activate
+</code></pre>
+<p>This will create a new directory <code>env/</code>, and when properly activated your command prompt will have a <code>(env)</code> prefix.</p>
+</li>
+<li>
+<p>Install this package and its dependencies</p>
+<pre><code>pip install -e .
+</code></pre>
+</li>
+<li>
+<p>Create a <code>.env</code> file from the provided template (no need to update any values right now)</p>
+<pre><code>cp .env.example .env
+</code></pre>
+</li>
+<li>
+<p>You can now run any commands with</p>
+<pre><code>flask [command]
+</code></pre>
+<p>To see what commands are available, run</p>
+<pre><code>flask --help
+</code></pre>
+<p>You should see a printout that lists about 10 commands.</p>
+<blockquote>
+<p>If you only see three commands (<code>routes</code>, <code>run</code>, and <code>shell</code>): These are default flask commands and you either need to activate your virtual environment or make sure you have a <code>.env</code> file with <code>FLASK_APP=oeps</code> in it.</p>
+</blockquote>
+</li>
+<li>
+<p>(for development only)</p>
+<pre><code>pip install -e .[dev]
+pip install md-click@git+https://github.com/kid-116/md-click@support-arguments
+</code></pre>
+<p>The <code>md-click</code> library is used to generate documentation of the CLI commands, and the
+particular branch is needed to handle Arguments on the commands that are being documented.
+Hopefull, this PR will be merged at some point and this install process could be updated:
+https://github.com/RiveryIO/md-click/pull/12.</p>
+<p>There is a dependency resolution bug (or something) when putting that github reference 
+directly in the <code>pyproject.toml</code> file, so it needs to be run separately after everything
+else is installed.</p>
+</li>
+</ol>
+<h2 id="jcoin">JCOIN</h2>
+<p><em>section in progress</em></p>
+<h2 id="google-bigquery">Google BigQuery</h2>
+<h3 id="setup-bigquery-credentials">Setup BigQuery Credentials</h3>
+<p>To use the BigQuery script (<code>scripts/bq.py</code>) you will need to add access credentials as environment variables using the <code>.env</code> file. This file must always stay out of version control.</p>
+<ul>
+<li>
+<p>Make a copy of <code>.env.example</code> and name it <code>.env</code>. Any variables defined in this file will now be available via <code>os.getenv('VARIABLE_NAME')</code></p>
+</li>
+<li>
+<p>Obtain a set of JSON credentials for the project, and store the file anywhere on your computer (but outside of this repository).</p>
+</li>
+<li>
+<p>In your <code>.env</code> file, update the <code>BQ_CREDENTIALS_FILE_PATH</code> variable with the full path to this file. For example:</p>
+<p><code>BQ_CREDENTIALS_FILE_PATH="/home/my_username/bq_credentials/oeps-391119-5783b2b59b83.json"</code></p>
+</li>
+<li>
+<p>It is also possible to set BigQuery credentials without storing a local JSON file. More info on this is in the <code>.env.example</code> file.</p>
+</li>
+</ul>
+<p>Once you have setup these credentials, you can test them with</p>
+<pre><code>python ./scripts/bq.py check-credentials
+</code></pre>
+<p>If all is well, the command will print <code>ok</code>.</p>
+<h2 id="bigquery-importexport">BigQuery Import/Export</h2>
+<p>The <code>bq.py</code> script can perform import and export operations on our BigQuery database.</p>
+<h3 id="importing-data">Importing Data</h3>
+<p>Use the following command to load a new table into BigQuery:</p>
+<pre><code>python ./scripts/bq.py load --source ./resources
+</code></pre>
+<p>Where <code>--source</code> is the path to a Data Resource schema (stored as JSON file), or a directory containing multiple Data Resource schemas. Optional flags on this command are:</p>
+<ul>
+<li><code>--table-only</code> will create the BigQuery dataset and table based on the schema, but will not attempt to load data into it.</li>
+<li><code>--dry-run</code> will validate the input dataset against the schema, but not attempt to load it.</li>
+<li><code>--overwrite</code> will drop and recreate the BigQuery table if it already exists in the dataset.</li>
+</ul>
+<h3 id="exporting-data">Exporting Data</h3>
+<p>Use the following command to query the OEPS BigQuery tables:</p>
+<pre><code>python scripts/bq.py export --sql sql/states.sql --output states.shp
+</code></pre>
+<p>Where <code>states.sql</code> is an example of a file that holds the SQL query to perform against one or more tables. In the SQL, <code>PROJECT_ID</code> is a placeholder (it will be replaced with the actual project identifier before the query is performed), such that table references look like <code>PROJECT_ID.dataset_name.table_name</code>, or <code>PROJECT_ID.spatial.states2018</code> for the table that holds state boundaries.</p>
+<ul>
+<li><code>--sql-file</code> path to a file whose contents is a complete SQL query. </li>
+<li><code>--output</code> is the name of a file to which the query results will be written. Either .csv or .shp files can be specified, and if a spatial result is written to CSV the geometries will be in WKT format. If this argument is omitted, the query results will be printed to the console (helpful for testing queries).</li>
+</ul>
+<p>You can write your own SQL into a file and use the same command to perform your query and export the results.</p>
+<p>Use the <a href="../reference/big-query-tables/">big-query-tables</a> page for quick access to all table and column names.</p>
+<h3 id="table-definitions">Table Definitions</h3>
+<p>A <strong>table definition</strong> is a JSON file that specifies</p>
+<ol>
+<li>The location of a source dataset to load</li>
+<li>The Google BigQuery project and table name to load into</li>
+<li>A thorough schema defining all fields from the source dataset and how they will be stored in BigQuery</li>
+</ol>
+<p>This information is used in various contexts to</p>
+<ol>
+<li>Create (or re-create) table schemas in BigQuery</li>
+<li>Load data into these tables</li>
+<li>Export data from BigQuery into various formats and file types</li>
+</ol>
+<p>The structure of a table definition is inspired by the <a href="https://specs.frictionlessdata.io/table-schema">Table Schema</a> specification published by <a href="https://specs.frictionlessdata.io">Frictionless Standards</a>, with a few additions for our own use case.</p>
+<h4 id="structure">Structure</h4>
+<p>The top-level properties of a table definition are:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Format</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>path</code></td>
+<td>String</td>
+<td>Path or URL for CSV or SHP dataset to load</td>
+</tr>
+<tr>
+<td><code>bq_table_name</code></td>
+<td>String</td>
+<td>Target table in BigQuery</td>
+</tr>
+<tr>
+<td><code>bq_dataset_name</code></td>
+<td>String</td>
+<td>Target dataset in BigQuery</td>
+</tr>
+<tr>
+<td><code>fields</code></td>
+<td>List</td>
+<td>List of definitions for all table fields</td>
+</tr>
+</tbody>
+</table>
+<p>Note that in BigQuery, a <code>dataset</code> is akin to a database in other RDBS implementations, such that a dataset holds one or more tables. Often, tables are identified by their fully-qualified identifier: <code>project_id.dataset_name.table_name</code>.</p>
+<p>The <code>fields</code> property is a list of one or more field objects, as described below. The only requirement of the <code>fields</code> list is that <strong>must</strong> contain an entry for a <a href="#herop_id-field"><code>HEROP_ID</code></a> field. This is our unique GIS join field.</p>
+<h4 id="field-descriptors">Field Descriptors</h4>
+<p>Fields are defined by a JSON object that adheres to the <a href="https://specs.frictionlessdata.io/table-schema/#field-descriptors">field descriptors</a> portion of the table schema standard, though not all possible attributes are required or implemented.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Format</th>
+<th>Description</th>
+<th>OEPS Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>String</td>
+<td>Canonical name for this column (used in BigQuery)</td>
+<td>Required</td>
+</tr>
+<tr>
+<td><code>title</code></td>
+<td>String</td>
+<td>A nicer human readable label or title for the field</td>
+<td>Required</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>String</td>
+<td>A string specifying the type. See <a href="https://specs.frictionlessdata.io/table-schema/#types-and-formats">types</a>.</td>
+<td>Required</td>
+</tr>
+<tr>
+<td><code>format</code></td>
+<td>String</td>
+<td>A string specifying a format</td>
+<td>Not Implemented</td>
+</tr>
+<tr>
+<td><code>example</code></td>
+<td>String</td>
+<td>An example value for the field</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>String</td>
+<td>A description for the field</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>constraints</code></td>
+<td>JSON</td>
+<td>A <a href="https://specs.frictionlessdata.io/table-schema/#constraints">constraints descriptor</a></td>
+<td>Not Implemented</td>
+</tr>
+</tbody>
+</table>
+<p>The following additional attributes are also supported and in some cases required:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Format</th>
+<th>Description</th>
+<th>OEPS Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>theme</code></td>
+<td>String</td>
+<td>One of <code>Social</code>, <code>Environment</code>, <code>Economic</code>, <code>Policy</code>, <code>Outcome</code>, or <code>Geography</code>. See <a href="https://oeps.healthyregions.org/docs">OEPS docs</a>.</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>comment</code></td>
+<td>String</td>
+<td>Additional information about the data in this field</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>source</code></td>
+<td>String</td>
+<td>Source of the data in this field</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>max_length</code></td>
+<td>Integer</td>
+<td>Max length of field (used in BigQuery schema)</td>
+<td>Optional</td>
+</tr>
+</tbody>
+</table>
+<h4 id="herop_id-field">HEROP_ID Field</h4>
+<p>For now, please see <a href="https://github.com/GeoDaCenter/opioid-policy-scan/issues/68#issuecomment-1701863572">this comment</a> for a detailed description of how <code>HEROP_ID</code> values are constructed.</p>
+<p>A field descriptor for this field will look something like this:</p>
+<pre><code>{
+    &quot;name&quot;: &quot;HEROP_ID&quot;,
+    &quot;type&quot;: &quot;string&quot;,
+    &quot;example&quot;: &quot;040US01-2018&quot;,
+    &quot;description&quot;: &quot;A derived unique id corresponding to the relevant geographic unit.&quot;,
+    &quot;theme&quot;: &quot;Geography&quot;,
+}
+</code></pre>
+<h4 id="geometry-fields">Geometry Fields</h4>
+<p>To load a shapefile you must include the following field descriptor in your <code>fields</code> list:</p>
+<pre><code>{
+    &quot;name&quot;: &quot;geom&quot;,
+    &quot;title&quot;: &quot;Geom&quot;,
+    &quot;type&quot;: &quot;string&quot;
+}
+</code></pre>
+<p>Note that for spatial data Table Schema only allows <code>geojson</code> or <code>geopoint</code> as valid geographic types, while Google BigQuery uses <code>GEOGRAPHY</code>. For now, we'll just use the above configuration, and more nuances can be pursued down the road. </p>
+<h4 id="example">Example</h4>
+<p>The following is a truncated version of a table definition for the 2010 State-level data published in OEPS v2.0. This defines a table <code>project_id.tabular.S_2010</code> with two fields, <code>HEROP_ID</code> and <code>TotPop</code>. Note also the direct URL to the raw <code>path</code> on GitHub.</p>
+<pre><code>{
+    &quot;bq_dataset_name&quot;: &quot;tabular&quot;,
+    &quot;bq_table_name&quot;: &quot;S_2010&quot;,
+    &quot;path&quot;: &quot;https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables/S_2010.csv&quot;,
+    &quot;fields&quot;: [
+        {
+            &quot;name&quot;: &quot;HEROP_ID&quot;
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;A derived unique id corresponding to the relevant geographic unit.&quot;,
+            &quot;constraints&quot;: null,
+            &quot;theme&quot;: &quot;Geography&quot;
+        },
+        {
+            &quot;name&quot;: &quot;TotPop&quot;
+            &quot;type&quot;: &quot;integer&quot;,
+            &quot;example&quot;: &quot;7294336&quot;,
+            &quot;description&quot;: &quot;Estimated total population&quot;,
+            &quot;constraints&quot;: null,
+            &quot;theme&quot;: &quot;Social&quot;,
+            &quot;source&quot;: &quot;American Community Survey 2014-2018 5 Year Estimates; 2010 Decennial Census; Integrated Public Use Microdata Service National Historic Geographic Information Systems&quot;,
+            &quot;comments&quot;: &quot;1980, 1990, and 2000 data from respective decennial censuses downloaded from IPUMS NHGIS and aggregated upwards.&quot;
+        }
+    ]
+}
+</code></pre>
+
+
+</section>
+</div> <!-- end of search-noresults -->
+<div class="search-results">
+<div class="has-results">
+
+<h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+<ul class="search-results-list"></ul>
+
+</div> <!-- end of has-results -->
+<div class="no-results">
+
+<h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+
+</div> <!-- end of no-results -->
+</div> <!-- end of search-results -->
+</div> <!-- end of book-search-results -->
+
+</div> <!-- end of page-inner -->
+</div> <!-- end of page-wrapper -->
+
+</div> <!-- end of body-inner -->
+
+</div> <!-- end of book-body -->
+<script src="../js/main.js"></script>
+<script src="../search/main.js"></script>
+<script src="../js/gitbook.min.js"></script>
+<script src="../js/theme.min.js"></script>
+</body>
+</html>
