@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Variables - OEPS Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Variables";
+        var mkdocs_page_input_path = "registry/variables.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+ <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> OEPS Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../legacy-migration/">Migration/Restructure 2023</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guides</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../guides/install/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../guides/getting-started-with-cli/">Getting Started with the CLI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../guides/provisioning-oeps-explorer/">Provisioning OEPS Explorer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../guides/adding-data-to-oeps/">Adding Data to OEPS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../guides/exporting-data-from-oeps/">Exporting Data from OEPS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../guides/uploading-oeps-data-to-bigquery/">Uploading OEPS Data to BigQuery</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../guides/analyzing-oeps-data-in-bigquery/">Analyzing OEPS Data in BigQuery</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Registry</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../themes-constructs/">Themes &amp; Constructs</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Variables</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../table-sources/">Table Sources</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../geodata-sources/">Geodata Sources</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">CLI Reference</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/bigquery-export/">bigquery-export</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/bigquery-upload/">bigquery-upload</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/build-docs/">build-docs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/build-explorer-docs/">build-explorer-docs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/build-explorer-map/">build-explorer-map</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/create-data-dictionaries/">create-data-dictionaries</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/inspect-csv/">inspect-csv</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/merge-data-table/">merge-data-table</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/validate-registry/">validate-registry</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">OEPS Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Registry</li>
+      <li class="breadcrumb-item active">Variables</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="variables">Variables</h1>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For a list of all variables currently in the registry, see <a href="https://github.com/healthyregions/oeps/blob/main/docs/src/reference/registry/variables.csv">variables.csv</a> on Github.</p>
+</div>
+<p>A single file, <code>variable.json</code>, serves as a central lookup for all variables, each one being defined as a Frictionless <a href="https://specs.frictionlessdata.io/table-schema/#field-descriptors">Field Descriptor</a>, with some extra properties that we have added for our own needs. The key for each item in the lookup must be the same as its <code>name</code> property.</p>
+<p>Fields are defined by a JSON object that adheres to the <a href="https://specs.frictionlessdata.io/table-schema/#field-descriptors">field descriptors</a> portion of the table schema standard, though not all possible attributes are required or implemented.</p>
+<p>The following additional attributes are also supported and in some cases required:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Format</th>
+<th>Description</th>
+<th>OEPS Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>String</td>
+<td>Canonical name for this column (used in BigQuery)</td>
+<td>Required</td>
+</tr>
+<tr>
+<td><code>title</code></td>
+<td>String</td>
+<td>A nicer human readable label or title for the field</td>
+<td>Required</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>String</td>
+<td>A string specifying the type. See <a href="https://specs.frictionlessdata.io/table-schema/#types-and-formats">types</a>.</td>
+<td>Required</td>
+</tr>
+<tr>
+<td><code>format</code></td>
+<td>String</td>
+<td>A string specifying a format</td>
+<td>Not Implemented</td>
+</tr>
+<tr>
+<td><code>example</code></td>
+<td>String</td>
+<td>An example value for the field</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>String</td>
+<td>A description for the field</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>constraints</code></td>
+<td>JSON</td>
+<td>A <a href="https://specs.frictionlessdata.io/table-schema/#constraints">constraints descriptor</a></td>
+<td>Not Implemented</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>name</code> - Canonical name of the variable, same as key for this item, must be CamelCase and &lt;= 10 characters long.</li>
+<li><code>title</code> - Human-readable title.</li>
+<li><code>type</code> - The type of data in this column, must be one of Frictionless <a href="https://specs.frictionlessdata.io/table-schema/#types-and-formats">field types</a>.</li>
+<li><code>example</code> - An example value in this field.</li>
+<li><code>description</code> - A one or two sentence description.</li>
+<li><code>constraints</code> - Any data usage constraints that are relevant for this variable.</li>
+<li><code>comments</code> - Any extra comments about this variable's creation that don't fit into other properties.</li>
+<li><code>construct</code> - A "construct" string that is present within the <code>themes.json</code> file (see above)</li>
+<li><code>source</code> - Creator of this variable, abbreviations ok.</li>
+<li><code>source_long</code> - Long-form version of source</li>
+<li><code>oeps_v1_table</code> - If applicable, the name of the data table that this variable was stored in in OEPS v1.</li>
+<li><code>metadata_doc_url</code> - URL to raw content for a Markdown-formatted metadata document (this content is read and loaded directly into the explorer webpages).</li>
+<li><code>longitudinal</code> - <code>true</code>/<code>false</code>, appropriate for longitudinal comparison.</li>
+<li><code>analysis</code> - <code>true</code>/<code>false</code></li>
+<li><code>table_sources</code> - A list of data_source identifiers, must match identiers in the <code>sources.json</code> file.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Format</th>
+<th>Description</th>
+<th>OEPS Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>theme</code></td>
+<td>String</td>
+<td>One of <code>Social</code>, <code>Environment</code>, <code>Economic</code>, <code>Policy</code>, <code>Outcome</code>, or <code>Geography</code>. See <a href="https://oeps.healthyregions.org/docs">OEPS docs</a>.</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>comment</code></td>
+<td>String</td>
+<td>Additional information about the data in this field</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>source</code></td>
+<td>String</td>
+<td>Source of the data in this field</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td><code>max_length</code></td>
+<td>Integer</td>
+<td>Max length of field (used in BigQuery schema)</td>
+<td>Optional</td>
+</tr>
+</tbody>
+</table>
+<pre><code>&quot;TotPop&quot;: {
+    &quot;name&quot;: &quot;TotPop&quot;,
+    &quot;title&quot;: &quot;Total Population&quot;,
+    &quot;type&quot;: &quot;number&quot;,
+    &quot;example&quot;: &quot;1632480&quot;,
+    &quot;description&quot;: &quot;Total population&quot;,
+    &quot;constraints&quot;: &quot;1980-2000 historic data was acquired from NHGIS and then interpolated to modern county boundaries through a population weighted interpolation using the tidycensus `interpolate_pw` function. For 1980, the underlying population weighting was county subdivisions, while for 1990 and 200 the underlying population weighting was tracts.&quot;,
+    &quot;construct&quot;: &quot;Population&quot;,
+    &quot;source&quot;: &quot;ACS 2018, 5-Year; Census 2010; IPUMS NHGIS&quot;,
+    &quot;source_long&quot;: &quot;American Community Survey 2014-2018 5 Year Estimate; 2010 Decennial Census; Integrated Public Use Microdata Series National Historic Geographic Information System&quot;,
+    &quot;oeps_v1_table&quot;: null,
+    &quot;comments&quot;: &quot;For more information about how these data have been used in homelessness and housing stability research, please refer to https://www.census.gov/newsroom/press-releases/2020/special-operations-homelessness.html or https://www.americanprogress.org/issues/poverty/reports/2020/10/05/491122/count-people-where-they-are/.&quot;,
+    &quot;metadata_doc_url&quot;: &quot;https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md&quot;,
+    &quot;longitudinal&quot;: true,
+    &quot;analysis&quot;: false,
+    &quot;table_sources&quot;: [
+        &quot;c-1980&quot;,
+        &quot;s-latest&quot;,
+        &quot;t-2010&quot;,
+        &quot;t-latest&quot;,
+        &quot;s-2000&quot;,
+        &quot;t-2000&quot;,
+        &quot;c-1990&quot;,
+        &quot;z-latest&quot;,
+        &quot;t-1990&quot;,
+        &quot;s-1980&quot;,
+        &quot;c-latest&quot;,
+        &quot;s-1990&quot;,
+        &quot;s-2010&quot;,
+        &quot;t-1980&quot;,
+        &quot;c-2010&quot;,
+        &quot;c-2000&quot;
+    ]
+}
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../themes-constructs/" class="btn btn-neutral float-left" title="Themes &amp; Constructs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../table-sources/" class="btn btn-neutral float-right" title="Table Sources">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../themes-constructs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../table-sources/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body>
+</html>

@@ -1,150 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="writer-html5" lang="en" >
 <head>
-<meta charset="utf-8">
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-<title>Migration/Restructure 2023 - OEPS Documentation</title>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Migration/Restructure 2023 - OEPS Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Migration/Restructure 2023";
+        var mkdocs_page_input_path = "legacy-migration.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+ <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
 
-<meta name="generator" content="mkdocs-1.6.1, mkdocs-gitbook-1.0.7">
+<body class="wy-body-for-nav" role="document">
 
-<link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
-<meta name="HandheldFriendly" content="true"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta rel="next" href="" />
-<link href="../css/style.min.css" rel="stylesheet"> 
-</head>
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> OEPS Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
 
-<body>
-<div class="book">
-<div class="book-summary">
-<div id="book-search-input" role="search">
-<input type="text" placeholder="Type to search" />
-</div> <!-- end of book-search-input -->
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="..">Overview</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Migration/Restructure 2023</a>
+    <ul class="current">
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guides</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/install/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/getting-started-with-cli/">Getting Started with the CLI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/provisioning-oeps-explorer/">Provisioning OEPS Explorer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/adding-data-to-oeps/">Adding Data to OEPS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/exporting-data-from-oeps/">Exporting Data from OEPS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/uploading-oeps-data-to-bigquery/">Uploading OEPS Data to BigQuery</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/analyzing-oeps-data-in-bigquery/">Analyzing OEPS Data in BigQuery</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Registry</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../registry/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../registry/themes-constructs/">Themes &amp; Constructs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../registry/variables/">Variables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../registry/table-sources/">Table Sources</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../registry/geodata-sources/">Geodata Sources</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">CLI Reference</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/cli/bigquery-export/">bigquery-export</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/cli/bigquery-upload/">bigquery-upload</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/cli/build-docs/">build-docs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/cli/build-explorer-docs/">build-explorer-docs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/cli/build-explorer-map/">build-explorer-map</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/cli/create-data-dictionaries/">create-data-dictionaries</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/cli/inspect-csv/">inspect-csv</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/cli/merge-data-table/">merge-data-table</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/cli/validate-registry/">validate-registry</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
 
-<nav role="navigation">
-<ul class="summary">
-<li>
-<a href=".." target="_blank" class="custom-link">OEPS Documentation</a>
-</li>
-<li class="divider"></li>
-<li class="chapter" data-path="">
-<a href="..">Welcome to MkDocs</a>
-<li class="chapter" data-path="adding-data-to-oeps/">
-<a href="../adding-data-to-oeps/">Adding Data to OEPS</a>
-<li class="chapter" data-path="backend/">
-<a href="../backend/">OEPS Backend</a>
-<li class="chapter" data-path="explorer/">
-<a href="../explorer/">OEPS Explorer</a>
-<li class="chapter" data-path="exporting-data-from-oeps/">
-<a href="../exporting-data-from-oeps/">Exporting Data from OEPS</a>
-<li class="chapter active" data-path="legacy-migration/">
-<a href="./">Migration/Restructure 2023</a>
-<li class="chapter" data-path="registry/">
-<a href="../registry/">Registry</a>
-<li class="header">Reference</li>
-
-<li>
-<a href="../reference/big-query-tables/" class="">Project Id: oeps-391119</a>
-</li>
-
-<li>
-<a href="#">Commands</a>
-<ul>
-
-<li>
-<a href="../reference/commands/" class="">OEPS Backend -- CLI Commands</a>
-</li>
-
-<li>
-<a href="../reference/commands/bigquery-export/" class="">bigquery-export</a>
-</li>
-
-<li>
-<a href="../reference/commands/bigquery-upload/" class="">bigquery-upload</a>
-</li>
-
-<li>
-<a href="../reference/commands/build-docs/" class="">build-docs</a>
-</li>
-
-<li>
-<a href="../reference/commands/build-explorer-docs/" class="">build-explorer-docs</a>
-</li>
-
-<li>
-<a href="../reference/commands/build-explorer-map/" class="">build-explorer-map</a>
-</li>
-
-<li>
-<a href="../reference/commands/create-data-dictionaries/" class="">create-data-dictionaries</a>
-</li>
-
-<li>
-<a href="../reference/commands/inspect-csv/" class="">inspect-csv</a>
-</li>
-
-<li>
-<a href="../reference/commands/merge-data-table/" class="">merge-data-table</a>
-</li>
-
-<li>
-<a href="../reference/commands/validate-registry/" class="">validate-registry</a>
-</li>
-</ul>
-</li>
-
-<li>
-<a href="#">Registry</a>
-<ul>
-
-<li>
-<a href="../reference/registry/all-content/" class="">Registry Content</a>
-</li>
-</ul>
-</li>
-
-<li class="divider"></li>
-
-
-
-<li><a href="http://www.mkdocs.org">
-Published with MkDocs
-</a></li>
-
-<li><a href="https://github.com/GitbookIO/theme-default">
-Theme by GitBook
-</a></li>
-</ul>
-
-</nav>
-
-</div> <!-- end of book-summary -->
-
-<div class="book-body">
-<div class="body-inner">
-<div class="book-header" role="navigation">
-
-<!-- Title -->
-<h1>
-<i class="fa fa-circle-o-notch fa-spin"></i>
-<a href="." ></a>
-</h1>
-
-</div> <!-- end of book-header -->
-
-<div class="page-wrapper" tabindex="-1" role="main">
-<div class="page-inner">
-<div id="book-search-results">
-<div class="search-noresults">
-
-<section class="normal markdown-section">
-
-
-
-<h1 id="migrationrestructure-2023">Migration/Restructure 2023</h1>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">OEPS Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Introduction</li>
+      <li class="breadcrumb-item active">Migration/Restructure 2023</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="migrationrestructure-2023">Migration/Restructure 2023</h1>
 <p>Through the summer of 2023 we had two broad objectives:</p>
 <ol>
 <li>undertake a significant data update for a v2 release</li>
@@ -156,35 +139,53 @@ Theme by GitBook
 <li>retained past git history and record of individual contributions to OEPS</li>
 </ul>
 <p>The end result is this single repo which holds the website (explorer) and new BQ backend, but still pulls from the original repo for static datasets which are pinned to that repo's GitHub release tags. Getting here was a bit circuitous, as you can see in the full diagram below.</p>
-<p><img alt="oeps repo migration" src="../img/oeps-repo-migration.png" /></p>
+<p><a class="glightbox" href="../img/oeps-repo-migration.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="oeps repo migration" src="../img/oeps-repo-migration.png" /></a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../guides/install/" class="btn btn-neutral float-right" title="Installation">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
 
+  <hr/>
 
-</section>
-</div> <!-- end of search-noresults -->
-<div class="search-results">
-<div class="has-results">
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
 
-<h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
-<ul class="search-results-list"></ul>
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
 
-</div> <!-- end of has-results -->
-<div class="no-results">
+    </section>
 
-<h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+  </div>
 
-</div> <!-- end of no-results -->
-</div> <!-- end of search-results -->
-</div> <!-- end of book-search-results -->
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../guides/install/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
 
-</div> <!-- end of page-inner -->
-</div> <!-- end of page-wrapper -->
-
-</div> <!-- end of body-inner -->
-
-</div> <!-- end of book-body -->
-<script src="../js/main.js"></script>
-<script src="../search/main.js"></script>
-<script src="../js/gitbook.min.js"></script>
-<script src="../js/theme.min.js"></script>
-</body>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body>
 </html>

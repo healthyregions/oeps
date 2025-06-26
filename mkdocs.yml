@@ -1,6 +1,0 @@
-site_name: OEPS Documentation
-
-theme:
-  name: gitbook
-docs_dir: docs/src
-site_dir: docs/output
