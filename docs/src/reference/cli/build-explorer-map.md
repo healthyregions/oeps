@@ -20,7 +20,7 @@ Usage: build-explorer-map [OPTIONS]
 ## Options
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7b36b444ec80>
+    * Type: <click.types.Path object at 0x7f86e1b72ce0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -29,7 +29,7 @@ Usage: build-explorer-map [OPTIONS]
 
 
 * `explorer_path`:
-    * Type: <click.types.Path object at 0x7b36b444ed40>
+    * Type: <click.types.Path object at 0x7f86e1b72da0>
     * Default: `../explorer`
     * Usage: `--explorer-path`
 

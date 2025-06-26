@@ -39,13 +39,6 @@ def build_docs(operation, registry_path):
             content += "|".join(row) + "\n"
         return content
 
-    def write_csv_file(name, header, rows):
-        path = Path(f"../docs/reference/{name}.csv")
-        with open(path, "w") as o:
-            writer = csv.writer(o)
-            writer.writerow(header)
-            writer.writerows(rows)
-
     def clean_value(value, md=False):
         if isinstance(value, str):
             return value.replace("\n", "<br>")
@@ -59,11 +52,11 @@ def build_docs(operation, registry_path):
         client = BigQuery()
         registry = Registry(registry_path)
 
-        outfile = Path("../docs/reference/bigquery-tables.md").absolute().resolve()
+        outfile = Path("../docs/src/reference/bigquery/tables.md").absolute().resolve()
         client.generate_reference_doc(registry.get_all_sources(), outfile)
 
     elif operation == "cli":
-        docs_path = Path("../docs/src/cli-reference")
+        docs_path = Path("../docs/src/reference/cli")
         for path in docs_path.glob("*.md"):
             os.remove(path)
 
@@ -100,6 +93,14 @@ def build_docs(operation, registry_path):
                 )
 
     elif operation == "registry-summary":
+
+        def write_csv_file(name, header, rows):
+            path = Path(f"../docs/src/reference/registry/{name}.csv")
+            with open(path, "w") as o:
+                writer = csv.writer(o)
+                writer.writerow(header)
+                writer.writerows(rows)
+
         registry = Registry()
 
         ## Create VARIABLES content

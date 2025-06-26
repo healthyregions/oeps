@@ -4,18 +4,34 @@
 
 ## tabular
 
-39 tables in this dataset.
+50 tables in this dataset.
+
+### tract-2022
+
+ID: `oeps-391119.tabular.tract-2022`
+
+7 columns in this table.
+
+Name|Data Type|Description|Source
+-|-|-|-
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
+SviTh1|NUMERIC|SVI Ranking, Theme 1: Socioeconomic|CDC, 2018
+SviTh2|NUMERIC|SVI Ranking, Theme 2: Household Composition & Disability|CDC, 2018
+SviTh3|NUMERIC|SVI Ranking, Theme 3: Minority Status & Language|CDC, 2018
+SviTh4|NUMERIC|SVI Ranking, Theme 4: Housing Type & Transportation|CDC, 2018
+SviSmryRnk|NUMERIC|Overall summary ranking|CDC, 2018
 
 ### county-2020
 
 ID: `oeps-391119.tabular.county-2020`
 
-113 columns in this table.
+118 columns in this table.
 
 Name|Data Type|Description|Source
 -|-|-|-
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-GEOID|STRING|Unique identifer for the geography unit to which this value should be attached|Tiger/Line 2018; Tiger/Line 2010
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
 TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
 TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
 Ovr65P|NUMERIC|Percentage of population over 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
@@ -61,33 +77,38 @@ SutpTmDrP|NUMERIC|Percent of tracts with Substance Use Treatment program within 
 OpRxRt|NUMERIC|Opioid prescription rate|HepVu, 2020
 OdMortRt|NUMERIC|Overdose mortality rate|HepVu, 2020
 OdMortRtAv|NUMERIC|Average overdose mortality rate from 2016-2020|HepVu, 2020
+SviTh1|NUMERIC|SVI Ranking, Theme 1: Socioeconomic|CDC, 2018
+SviTh2|NUMERIC|SVI Ranking, Theme 2: Household Composition & Disability|CDC, 2018
+SviTh3|NUMERIC|SVI Ranking, Theme 3: Minority Status & Language|CDC, 2018
+SviTh4|NUMERIC|SVI Ranking, Theme 4: Housing Type & Transportation|CDC, 2018
+SviSmryRnk|NUMERIC|Overall summary ranking|CDC, 2018
 BupCtTmDr|INTEGER|Number of tracts with buprenorphine provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 BupCtTmBk|INTEGER|Number of tracts with buprenorphine provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 BupCtTmWk|INTEGER|Number of tracts with buprenorphine provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 MetCtTmDr|INTEGER|Number of tracts with methadone provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 MetCtTmBk|INTEGER|Number of tracts with methadone provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 MetCtTmWk|INTEGER|Number of tracts with methadone provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NalCtTmDr|INTEGER|Number of tracts with naltrexone provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NalCtTmBk|INTEGER|Number of tracts with naltrexone provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NalCtTmWk|INTEGER|Number of tracts with naltrexone provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltCtTmDr|INTEGER|Number of tracts with naltrexone provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltCtTmBk|INTEGER|Number of tracts with naltrexone provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltCtTmWk|INTEGER|Number of tracts with naltrexone provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 BupAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 BupAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 BupAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 MetAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 MetAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 MetAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NalAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NalAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NalAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 BupTmDrP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 BupTmBkP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 BupTmWkP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 MetTmDrP|NUMERIC|Percent of tracts with methadone provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 MetTmBkP|NUMERIC|Percent of tracts with methadone provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 MetTmWkP|NUMERIC|Percent of tracts with methadone provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NalTmDrP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NalTmBkP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NalTmWkP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltTmDrP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltTmBkP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltTmWkP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 BachelorsP|NUMERIC||ACS 
 DivrcdP|NUMERIC||ACS 
 EduHsP|NUMERIC||ACS 
@@ -137,6 +158,7 @@ ID: `oeps-391119.tabular.state-2017`
 Name|Data Type|Description|Source
 -|-|-|-
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
 TotHcv|NUMERIC|Mean total yearly Hepitatis C cases from 2013-2016|HepVu, 2017
 MlHcv|NUMERIC|Mean yearly Hepatitis C cases in men from 2013-2016|HepVu, 2017
 FmHcv|NUMERIC|Mean yearly Hepatitis C cases in women from 2013-2016|HepVu, 2017
@@ -155,7 +177,6 @@ HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations|HepVu, 2017
 U50HcvD|INTEGER|Hepatitis C deaths in populations under 50 years of age|HepVu, 2017
 A50_74HcvD|INTEGER|Hepatitis C deaths among populations between 50 and 74 years of age|HepVu, 2017
 O75HcvD|INTEGER|Hepatitis C deaths among populations over 75 years of age|HepVu, 2017
-AvHcvD|NUMERIC|Mean total yearly Hepatitis C deaths from 2013-2017|HepVu, 2017
 AvMlHcvD|NUMERIC|Mean yearly Hepatitis C deaths among men from 2013-2017|HepVu, 2017
 AvFlHcvD|NUMERIC|Mean yearly Hepatitis C deaths among women from 2013-2017|HepVu, 2017
 AvAmInHcvD|NUMERIC|Mean yearly Hepatitis C deaths among American Indian population from 2013-2017|HepVu, 2017
@@ -180,13 +201,74 @@ AnyGslDt|DATE|Date (DMY) any type of GoodDate (DMY) any type of Good Samaritan L
 GslArrDt|DATE|Date (DMY) that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective|OPTIC, 2017
 AnyGslFr|NUMERIC|Fraction of year any type of Good Samaritan Law is effective|OPTIC, 2017
 GslArrFr|NUMERIC|Fraction of year that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective|OPTIC, 2017
-AnyNalDt|DATE|Date (MY) any type of Naloxone law effective|OPTIC, 2017
-NalPrStDt|DATE|Date (MY) Naloxone law allowing distribution through a standing or protocol order effective|OPTIC, 2017
-NalPresDt|DATE|Date (MY) Naloxone law allowing pharmacists prescriptive authority effective|OPTIC, 2017
-AnyNalFr|NUMERIC|Fraction of year any type of Naloxone law is effective|OPTIC, 2017
-NalPrStFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing distribution through a standing or protocol order|OPTIC, 2017
-NalPresFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing pharmacists prescriptive authority|OPTIC, 2017
+AnyNalxDt|DATE|Date (MY) any type of Naloxone law effective|OPTIC, 2017
+NalxPrStDt|DATE|Date (MY) Naloxone law allowing distribution through a standing or protocol order effective|OPTIC, 2017
+NalxPresDt|DATE|Date (MY) Naloxone law allowing pharmacists prescriptive authority effective|OPTIC, 2017
+AnyNalxFr|NUMERIC|Fraction of year any type of Naloxone law is effective|OPTIC, 2017
+NalxPrStFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing distribution through a standing or protocol order|OPTIC, 2017
+NalxPresFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing pharmacists prescriptive authority|OPTIC, 2017
 MdMarijLaw|BOOLEAN|Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (0=no, 1=yes)|PDAPS, 2017
+
+### zcta-2022
+
+ID: `oeps-391119.tabular.zcta-2022`
+
+7 columns in this table.
+
+Name|Data Type|Description|Source
+-|-|-|-
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
+ZCTA5|STRING|Census Bureau designated zip code tabulation area, or the rough area that contains five digit zip codes.|Tiger/Line 2018; Tiger/Line 2010
+SviTh1|NUMERIC|SVI Ranking, Theme 1: Socioeconomic|CDC, 2018
+SviTh2|NUMERIC|SVI Ranking, Theme 2: Household Composition & Disability|CDC, 2018
+SviTh3|NUMERIC|SVI Ranking, Theme 3: Minority Status & Language|CDC, 2018
+SviTh4|NUMERIC|SVI Ranking, Theme 4: Housing Type & Transportation|CDC, 2018
+SviSmryRnk|NUMERIC|Overall summary ranking|CDC, 2018
+
+### tract-2025
+
+ID: `oeps-391119.tabular.tract-2025`
+
+36 columns in this table.
+
+Name|Data Type|Description|Source
+-|-|-|-
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
+MoudMinDis|NUMERIC|Euclidean distance (miles) to nearest MOUD (all types)|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupMinDis|NUMERIC|Euclidean distance (miles) to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupTmDr|NUMERIC|Driving time (minutes) to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetMinDis|NUMERIC|Euclidean distance (miles) to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetTmDr|NUMERIC|Driving time (minutes) to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltMinDis|NUMERIC|Euclidean distance (miles) to nearest naltrexone/Vivitrol provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltTmDr|NUMERIC|Driving time (minutes) to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltCntDr30|INTEGER|Count of naltrexone providers in 30 minute drive time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupTmWk|NUMERIC|Walking time (minutes) to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupCntWk60|INTEGER|Count of buprenorphine providers in 60 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupCntWk30|INTEGER|Count of buprenorphine providers in 30 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetTmWk|NUMERIC|Walking time (minutes) to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetCntWk30|INTEGER|Count of methadone providers in 60 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetCntWk60|INTEGER|Count of methadone providers in 30 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltTmWk|NUMERIC|Walking time (minutes) to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltCntWk60|INTEGER|Count of naltrexone providers in 60 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltCntWk30|INTEGER|Count of naltrexone providers in 30 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupTmBk|NUMERIC|Biking time (minutes) to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupCntBk60|INTEGER|Count of buprenorphine providers in 60 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupCntBk30|INTEGER|Count of buprenorphine providers in 30 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetTmBk|NUMERIC|Biking time (minutes) to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetCntBk60|INTEGER|Count of methadone providers in 60 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetCntBk30|INTEGER|Count of methadone providers in 30 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltTmBk|NUMERIC|Biking time (minutes) to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltCntBk60|INTEGER|Count of naltrexone providers in 60 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltCntBk30|INTEGER|Count of naltrexone providers in 30 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+OtpMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles|SAMHSA
+OtpTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes|SAMSHA, 2021
+OtpCntDr|INTEGER|Count of OTPs within a 30-minute driving threshold|SAMSHA, 2021
+BupCntDr60|NUMERIC|Count of buprenorphine providers in 60 minute drive time threshold|SAMHSA
+NaltCntDr60|NUMERIC|Count of naltrexone providers in 60 minute drive time threshold|SAMHSA
+MetCntDr60|NUMERIC|Count of methadone providers in 60 minute drive time threshold|SAMHSA
 
 ### tract-1980
 
@@ -197,7 +279,7 @@ ID: `oeps-391119.tabular.tract-1980`
 Name|Data Type|Description|Source
 -|-|-|-
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-GEOID|STRING|Unique identifer for the geography unit to which this value should be attached|Tiger/Line 2018; Tiger/Line 2010
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
 TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
 TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
 Age18_64|INTEGER|Total adult population under age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
@@ -233,14 +315,96 @@ MetRm90|NUMERIC|Methadone access 90 minutes (RAAM)|
 
 ID: `oeps-391119.tabular.county-2021`
 
-4 columns in this table.
+6 columns in this table.
 
 Name|Data Type|Description|Source
 -|-|-|-
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
 OtpCtTmDr|INTEGER|Number of tracts within 30-min of opioid treatment program driving range|SAMSHA, 2021
 OtpAvTmDr|NUMERIC|Average driving time (minutes) across tracts to nearest opioid treatment program.|SAMSHA, 2021
 OtpTmDrP|NUMERIC|Percent of tracts within a 30-minute drive time of an opioid treatment program.|SAMSHA, 2021
+OdMortRt|NUMERIC|Overdose mortality rate|HepVu, 2020
+
+### tract-2023
+
+ID: `oeps-391119.tabular.tract-2023`
+
+71 columns in this table.
+
+Name|Data Type|Description|Source
+-|-|-|-
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
+TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
+Ovr65P|NUMERIC|Percentage of population over 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+WhiteP|NUMERIC|Percentage of population with race identified as white alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
+UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
+VacantP|NUMERIC|Percentage of vacant housing units|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
+TotPopHh|INTEGER|Total number of people in households|ACS 2018, 5-Year
+TotVetPop|INTEGER|Total Veteran population|ACS 2018, 5-Year; ACS 2012, 5-Year
+TotWrkE|INTEGER|Estimated count of working population|ACS 2018, 5-Year
+DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability|ACS 2018, 5-Year; ACS 2012, 5-Year
+VetP|NUMERIC|Percent of population that are veterans|ACS 2017, 5-Year; ACS 2012, 5-Year
+NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family|ACS 2018, 5-Year
+NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are not related|ACS 2018, 5-Year
+MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
+PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
+GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)|ACS 2018, 5-Year; ACS 2012, 5-Year
+EduP|NUMERIC|Percentage of population employed in educational services industry|ACS 2018, 5-Year
+HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities|ACS 2018, 5-Year
+HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries|ACS 2018, 5-Year
+RetailP|NUMERIC|Percentage of population employed in retail trade industry|ACS 2018, 5-Year
+EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.|ACS 2018, 5-Year
+MobileP|NUMERIC|Percentage of total housing units categorized as mobile housing structures|ACS 2018, 5-Year
+LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago|ACS 2018, 5-Year
+RentalP|NUMERIC|Percentage of occupied housing units that are rented|ACS 2018, 5-Year
+UnitDens|NUMERIC|Number of housing units per square mile of land area|ACS 2018, 5-Year
+BachelorsP|NUMERIC||ACS 
+DivrcdP|NUMERIC||ACS 
+EduHsP|NUMERIC||ACS 
+EduNoHsP|NUMERIC||ACS 
+FamSize|NUMERIC||ACS 
+FemP|NUMERIC||ACS 
+GradSclP|NUMERIC||ACS 
+HHSize|NUMERIC||ACS 
+HhldFA|NUMERIC||ACS 
+HhldFC|NUMERIC||ACS 
+HhldFS|NUMERIC||ACS 
+HhldMA|NUMERIC||ACS 
+HhldMC|NUMERIC||ACS 
+HhldMS|NUMERIC||ACS 
+HisP|NUMERIC||ACS 
+HsdTot|NUMERIC||ACS 
+HsdTypCo|NUMERIC||ACS 
+HsdTypM|NUMERIC||ACS 
+HsdTypMC|NUMERIC||ACS 
+MaleP|NUMERIC||ACS 
+MedAge|NUMERIC||ACS 
+MrrdP|NUMERIC||ACS 
+NvMrrdP|NUMERIC||ACS 
+Ovr16P|NUMERIC||ACS 
+Ovr18P|NUMERIC||ACS 
+Ovr21P|NUMERIC||ACS 
+Ovr62P|NUMERIC||ACS 
+SRatio|NUMERIC||ACS 
+SRatio18|NUMERIC||ACS 
+SRatio65|NUMERIC||ACS 
+SepartedP|NUMERIC||ACS 
+SomeCollegeP|NUMERIC||ACS 
+TwoRaceP|NUMERIC||ACS 
+Und18P|NUMERIC||ACS 
+Und5P|NUMERIC||ACS 
+WidwdP|NUMERIC||ACS 
+CrowdHsng|NUMERIC||ACS 
+EngProf|NUMERIC||ACS 
+OccupantP|NUMERIC||ACS 
 
 ### zcta-2020
 
@@ -251,7 +415,7 @@ ID: `oeps-391119.tabular.zcta-2020`
 Name|Data Type|Description|Source
 -|-|-|-
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-GEOID|STRING|Unique identifer for the geography unit to which this value should be attached|Tiger/Line 2018; Tiger/Line 2010
+ZCTA5|STRING|Census Bureau designated zip code tabulation area, or the rough area that contains five digit zip codes.|Tiger/Line 2018; Tiger/Line 2010
 TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
 TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
 Ovr65P|NUMERIC|Percentage of population over 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
@@ -289,27 +453,27 @@ BupCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshol
 MetMinDis|NUMERIC|Euclidean distance (miles) to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 MetTmDr|NUMERIC|Driving time (minutes) to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 MetCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NalMinDis|NUMERIC|Euclidean distance (miles) to nearest naltrexone/Vivitrol provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NalTmDr|NUMERIC|Driving time (minutes) to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NalCntDr30|INTEGER|Count of naltrexone providers in 30 minute drive time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltMinDis|NUMERIC|Euclidean distance (miles) to nearest naltrexone/Vivitrol provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltTmDr|NUMERIC|Driving time (minutes) to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltCntDr30|INTEGER|Count of naltrexone providers in 30 minute drive time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 BupTmWk|NUMERIC|Walking time (minutes) to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 BupCntWk60|INTEGER|Count of buprenorphine providers in 60 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 BupCntWk30|INTEGER|Count of buprenorphine providers in 30 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 MetTmWk|NUMERIC|Walking time (minutes) to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 MetCntWk30|INTEGER|Count of methadone providers in 60 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 MetCntWk60|INTEGER|Count of methadone providers in 30 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NalTmWk|NUMERIC|Walking time (minutes) to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NalCntWk60|INTEGER|Count of naltrexone providers in 60 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NalCntWk30|INTEGER|Count of naltrexone providers in 30 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltTmWk|NUMERIC|Walking time (minutes) to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltCntWk60|INTEGER|Count of naltrexone providers in 60 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltCntWk30|INTEGER|Count of naltrexone providers in 30 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 BupTmBk|NUMERIC|Biking time (minutes) to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 BupCntBk60|INTEGER|Count of buprenorphine providers in 60 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 BupCntBk30|INTEGER|Count of buprenorphine providers in 30 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 MetTmBk|NUMERIC|Biking time (minutes) to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 MetCntBk60|INTEGER|Count of methadone providers in 60 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 MetCntBk30|INTEGER|Count of methadone providers in 30 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NalTmBk|NUMERIC|Biking time (minutes) to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NalCntBk60|INTEGER|Count of naltrexone providers in 60 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NalCntBk30|INTEGER|Count of naltrexone providers in 30 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltTmBk|NUMERIC|Biking time (minutes) to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltCntBk60|INTEGER|Count of naltrexone providers in 60 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltCntBk30|INTEGER|Count of naltrexone providers in 30 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 FqhcMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest FQHC, in miles|US Covid Atlas via HRSA, 2020
 FqhcTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes|US Covid Atlas via HRSA, 2020
 FqhcCntDr|INTEGER|Count of FQHCs within a 30-minute driving threshold|US Covid Atlas via HRSA, 2020
@@ -371,7 +535,7 @@ ID: `oeps-391119.tabular.tract-2010`
 Name|Data Type|Description|Source
 -|-|-|-
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-GEOID|STRING|Unique identifer for the geography unit to which this value should be attached|Tiger/Line 2018; Tiger/Line 2010
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
 TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
 TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
 Age18_64|INTEGER|Total adult population under age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
@@ -417,12 +581,11 @@ MetRm90|NUMERIC|Methadone access 90 minutes (RAAM)|
 
 ID: `oeps-391119.tabular.zcta-2021`
 
-4 columns in this table.
+3 columns in this table.
 
 Name|Data Type|Description|Source
 -|-|-|-
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-OtpMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles|SAMSHA, 2021
 OtpTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes|SAMSHA, 2021
 OtpCntDr|INTEGER|Count of OTPs within a 30-minute driving threshold|SAMSHA, 2021
 
@@ -435,7 +598,7 @@ ID: `oeps-391119.tabular.tract-1990`
 Name|Data Type|Description|Source
 -|-|-|-
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-GEOID|STRING|Unique identifer for the geography unit to which this value should be attached|Tiger/Line 2018; Tiger/Line 2010
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
 TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
 TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
 Age18_64|INTEGER|Total adult population under age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
@@ -477,7 +640,7 @@ ID: `oeps-391119.tabular.state-1980`
 Name|Data Type|Description|Source
 -|-|-|-
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-GEOID|STRING|Unique identifer for the geography unit to which this value should be attached|Tiger/Line 2018; Tiger/Line 2010
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
 TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
 TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
 Age18_64|INTEGER|Total adult population under age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
@@ -531,24 +694,75 @@ OdMortRt|NUMERIC|Overdose mortality rate|HepVu, 2020
 
 ID: `oeps-391119.tabular.state-2022`
 
-3 columns in this table.
+54 columns in this table.
 
 Name|Data Type|Description|Source
 -|-|-|-
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
 ParkArea|NUMERIC|Area (in square meters) of park or green space in a state).|OSM
 Cover|NUMERIC|Percent of state covered by park or green space|OSM
+HcvD|INTEGER|Total Hepatitis C deaths|HepVu, 2017
+MlHcvD|INTEGER|Hepatitis C deaths among men|HepVu, 2017
+FlHcvD|INTEGER|Hepatitis C deaths among women|HepVu, 2017
+AmInHcvD|INTEGER|Hepatitis C deaths among American Indian populations|HepVu, 2017
+BlkHcvD|INTEGER|Hepatitis C deaths among Black population|HepVu, 2017
+HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations|HepVu, 2017
+U50HcvD|INTEGER|Hepatitis C deaths in populations under 50 years of age|HepVu, 2017
+A50_74HcvD|INTEGER|Hepatitis C deaths among populations between 50 and 74 years of age|HepVu, 2017
+O75HcvD|INTEGER|Hepatitis C deaths among populations over 75 years of age|HepVu, 2017
+AvHcvD|NUMERIC|Mean total yearly Hepatitis C deaths from 2013-2017, 2018-2022|HepVu
+AvMlHcvD|NUMERIC|Mean yearly Hepatitis C deaths among men from 2013-2017|HepVu, 2017
+AvFlHcvD|NUMERIC|Mean yearly Hepatitis C deaths among women from 2013-2017|HepVu, 2017
+AvAmInHcvD|NUMERIC|Mean yearly Hepatitis C deaths among American Indian population from 2013-2017|HepVu, 2017
+AvBlkHcvD|NUMERIC|Mean yearly Hepatitis C deaths among Black populations from 2013-2017|HepVu, 2017
+AvHspHcvD|NUMERIC|Mean yearly Hepatitis C deaths among Hispanic populations from 2013-2017|HepVu, 2017
+AvU50HcvD|NUMERIC|Mean yearly Hepatitis C deaths among people under 50 years of age from 2013-2017|HepVu, 2017
+AvO75HcvD|NUMERIC|Mean yearly Hepatitis C deaths among people over 75 years of age|HepVu, 2017
+OpRxRt|NUMERIC|Opioid prescription rate|HepVu, 2020
+PrMsuseP|NUMERIC|Percent of persons who self-report misusing prescription pain relief medication in 2020.|HepVu, 2020
+OdMortRt|NUMERIC|Overdose mortality rate|HepVu, 2020
+AnyPdmpFr|NUMERIC|Fraction of year that state has any prescription drug monitoring program operating.|OPTIC, 2017
+AnyPdmphFr|NUMERIC|Fraction of year that state has prescription drug monitoring program enabling legislation for any type of prescription drug monitoring program in effect ,including paper-based systems (as determined by Horowitz et al., 2018) enacted|OPTIC, 2017
+OpPdmpFr|NUMERIC|Fraction of year that state has a “modern system” operational and users could access (as determined by Horowitz et al., 2018).|OPTIC, 2017
+MsAcPdmpFr|NUMERIC|Fraction of year that state has any legislation requiring Prescribers to access PDMP before prescribing (as interpreted by PDAPS) enacted.|OPTIC, 2017
+ElcPdmpFr|NUMERIC|Fraction of year that state has an electronic PDMP system operating.|OPTIC, 2017
+AnyPdmpDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: PDAPS for first PDMP laws passed after January 1, 1998; Info on laws prior to 1998 came from Brandeis TTAC.|OPTIC, 2017
+AnyPdmphDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: Horowitz et al., 2018, Table 2, column 1.|OPTIC, 2017
+OpPdmpDt|DATE|Date when a “modern system” became operational and users could access. Source: Horowitz et al., 2018, Table 2, column 4. This definition includes specific caveats adopted by Horowitz et al., 2018, described further below in Notes.|OPTIC, 2017
+MsAcPdmpDt|DATE|Date of legislation requiring Prescribers to access PDMP before prescribing as interpreted by PDAPS.|OPTIC, 2017
+ElcPdmpDt|DATE|Date state began operating an electronic PDMP system.|OPTIC, 2017
+AnyNalxDt|DATE|Date (MY) any type of Naloxone law effective|OPTIC, 2017
+NalxPrStDt|DATE|Date (MY) Naloxone law allowing distribution through a standing or protocol order effective|OPTIC, 2017
+NalxPresDt|DATE|Date (MY) Naloxone law allowing pharmacists prescriptive authority effective|OPTIC, 2017
+AnyNalxFr|NUMERIC|Fraction of year any type of Naloxone law is effective|OPTIC, 2017
+NalxPrStFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing distribution through a standing or protocol order|OPTIC, 2017
+NalxPresFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing pharmacists prescriptive authority|OPTIC, 2017
+MdMarijLaw|BOOLEAN|Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (0=no, 1=yes)|PDAPS, 2017
+AsHcvD|NUMERIC||HepVu
+NhPiHcvD|NUMERIC||HepVu
+WhtHcvD|NUMERIC||HepVu
+MulHcvD|NUMERIC||HepVu
+AvAsHcvD|NUMERIC||HepVu
+AvNhPiHcvD|NUMERIC||HepVu
+AvMulHcvD|NUMERIC||HepVu
+AvA50_74HcvD|NUMERIC|Mean yearly Hepatitis C deaths among people between 50 and 74 years of age from 2013-2017, 2018-2022|HepVu
+AvWhHcvD|NUMERIC|Mean yearly Hepatitis C deaths among White populations from 2018-2022|HepVu
+CrrctExp|INTEGER|Total expenditures on corrections system and operations|State and Local Finance Data Finder
+HlthExp|INTEGER|Total expenditures on public health and hospitals|State and Local Finance Data Finder
+PlcFyrExp|INTEGER|Total expenditures on police and fire protection|State and Local Finance Data Finder
+WlfrExp|INTEGER|Total expenditures on public welfare programs|State and Local Finance Data Finder
 
 ### tract-2020
 
 ID: `oeps-391119.tabular.tract-2020`
 
-121 columns in this table.
+126 columns in this table.
 
 Name|Data Type|Description|Source
 -|-|-|-
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-GEOID|STRING|Unique identifer for the geography unit to which this value should be attached|Tiger/Line 2018; Tiger/Line 2010
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
 TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
 TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
 Ovr65P|NUMERIC|Percentage of population over 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
@@ -586,27 +800,27 @@ BupCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshol
 MetMinDis|NUMERIC|Euclidean distance (miles) to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 MetTmDr|NUMERIC|Driving time (minutes) to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 MetCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NalMinDis|NUMERIC|Euclidean distance (miles) to nearest naltrexone/Vivitrol provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NalTmDr|NUMERIC|Driving time (minutes) to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NalCntDr30|INTEGER|Count of naltrexone providers in 30 minute drive time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltMinDis|NUMERIC|Euclidean distance (miles) to nearest naltrexone/Vivitrol provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltTmDr|NUMERIC|Driving time (minutes) to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltCntDr30|INTEGER|Count of naltrexone providers in 30 minute drive time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 BupTmWk|NUMERIC|Walking time (minutes) to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 BupCntWk60|INTEGER|Count of buprenorphine providers in 60 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 BupCntWk30|INTEGER|Count of buprenorphine providers in 30 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 MetTmWk|NUMERIC|Walking time (minutes) to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 MetCntWk30|INTEGER|Count of methadone providers in 60 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 MetCntWk60|INTEGER|Count of methadone providers in 30 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NalTmWk|NUMERIC|Walking time (minutes) to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NalCntWk60|INTEGER|Count of naltrexone providers in 60 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NalCntWk30|INTEGER|Count of naltrexone providers in 30 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltTmWk|NUMERIC|Walking time (minutes) to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltCntWk60|INTEGER|Count of naltrexone providers in 60 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltCntWk30|INTEGER|Count of naltrexone providers in 30 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 BupTmBk|NUMERIC|Biking time (minutes) to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 BupCntBk60|INTEGER|Count of buprenorphine providers in 60 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 BupCntBk30|INTEGER|Count of buprenorphine providers in 30 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 MetTmBk|NUMERIC|Biking time (minutes) to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 MetCntBk60|INTEGER|Count of methadone providers in 60 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 MetCntBk30|INTEGER|Count of methadone providers in 30 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NalTmBk|NUMERIC|Biking time (minutes) to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NalCntBk60|INTEGER|Count of naltrexone providers in 60 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NalCntBk30|INTEGER|Count of naltrexone providers in 30 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltTmBk|NUMERIC|Biking time (minutes) to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltCntBk60|INTEGER|Count of naltrexone providers in 60 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltCntBk30|INTEGER|Count of naltrexone providers in 30 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 FqhcMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest FQHC, in miles|US Covid Atlas via HRSA, 2020
 FqhcTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes|US Covid Atlas via HRSA, 2020
 FqhcCntDr|INTEGER|Count of FQHCs within a 30-minute driving threshold|US Covid Atlas via HRSA, 2020
@@ -620,12 +834,17 @@ SutMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest SUT ser
 SutTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip SUT destination centroid, in minutes|SAMHSA, 2020
 SutCntDr|INTEGER|Count of SUT services within a 30-minute driving threshold|SAMHSA, 2020
 NeighbTyp|STRING|Categorical, one of seven neighborhood (tract-level) typologies: 1 = Rural Affordable; 2 = Suburban Affluent; 3 = Suburban Affordable; 4 = Extreme Poverty; 5 = Multilingual Working; 6 = Urban Core Opportunity; 7 = Sparse Areas|Kolak et al., 2020
+SviTh1|NUMERIC|SVI Ranking, Theme 1: Socioeconomic|CDC, 2018
+SviTh2|NUMERIC|SVI Ranking, Theme 2: Household Composition & Disability|CDC, 2018
+SviTh3|NUMERIC|SVI Ranking, Theme 3: Minority Status & Language|CDC, 2018
+SviTh4|NUMERIC|SVI Ranking, Theme 4: Housing Type & Transportation|CDC, 2018
+SviSmryRnk|NUMERIC|Overall summary ranking|CDC, 2018
 MetRm30|NUMERIC|Methadone access 30 minutes (RAAM)|
 MetRm60|NUMERIC|Methadone access 60 minutes (RAAM)|
 MetRm90|NUMERIC|Methadone access 90 minutes (RAAM)|
-NalRm30|NUMERIC|Naltrexone access 30 minutes (RAAM)|
-NalRm60|NUMERIC|Naltrexone access 60 minutes (RAAM)|
-NalRm90|NUMERIC|Naltrexone access 90 minutes (RAAM)|
+NaltRm30|NUMERIC|Naltrexone access 30 minutes (RAAM)|
+NaltRm60|NUMERIC|Naltrexone access 60 minutes (RAAM)|
+NaltRm90|NUMERIC|Naltrexone access 90 minutes (RAAM)|
 BupRm30|NUMERIC|Buprenorphine access 30 minutes (RAAM)|
 BupRm60|NUMERIC|Buprenorphine access 60 minutes (RAAM)|
 BupRm90|NUMERIC|Buprenorphine access 90 minutes (RAAM)|
@@ -678,7 +897,7 @@ ID: `oeps-391119.tabular.state-1990`
 Name|Data Type|Description|Source
 -|-|-|-
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-GEOID|STRING|Unique identifer for the geography unit to which this value should be attached|Tiger/Line 2018; Tiger/Line 2010
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
 TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
 TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
 Age18_64|INTEGER|Total adult population under age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
@@ -712,16 +931,46 @@ Age50_54|NUMERIC|Total population between age 50-54|ACS 2018, 5-Year; 2010 Decen
 
 ID: `oeps-391119.tabular.state-2019`
 
-13 columns in this table.
+52 columns in this table.
 
 Name|Data Type|Description|Source
 -|-|-|-
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
 NoIntP|NUMERIC|Percentage of Households without Internet access|ACS, 2019
 RxCtTmDr|INTEGER|Number of tracts with pharmacy within a 30-min driving range|InfoGroup, 2019
 RxAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest pharmacy.|InfoGroup, 2019
 RxTmDrP|NUMERIC|Percent of tracts with pharmacy within a 30-min driving range|InfoGroup, 2019
+HcvD|INTEGER|Total Hepatitis C deaths|HepVu, 2017
+MlHcvD|INTEGER|Hepatitis C deaths among men|HepVu, 2017
+FlHcvD|INTEGER|Hepatitis C deaths among women|HepVu, 2017
+AmInHcvD|INTEGER|Hepatitis C deaths among American Indian populations|HepVu, 2017
+BlkHcvD|INTEGER|Hepatitis C deaths among Black population|HepVu, 2017
+HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations|HepVu, 2017
+U50HcvD|INTEGER|Hepatitis C deaths in populations under 50 years of age|HepVu, 2017
+A50_74HcvD|INTEGER|Hepatitis C deaths among populations between 50 and 74 years of age|HepVu, 2017
+O75HcvD|INTEGER|Hepatitis C deaths among populations over 75 years of age|HepVu, 2017
 OdMortRt|NUMERIC|Overdose mortality rate|HepVu, 2020
+AnyPdmpFr|NUMERIC|Fraction of year that state has any prescription drug monitoring program operating.|OPTIC, 2017
+AnyPdmphFr|NUMERIC|Fraction of year that state has prescription drug monitoring program enabling legislation for any type of prescription drug monitoring program in effect ,including paper-based systems (as determined by Horowitz et al., 2018) enacted|OPTIC, 2017
+OpPdmpFr|NUMERIC|Fraction of year that state has a “modern system” operational and users could access (as determined by Horowitz et al., 2018).|OPTIC, 2017
+MsAcPdmpFr|NUMERIC|Fraction of year that state has any legislation requiring Prescribers to access PDMP before prescribing (as interpreted by PDAPS) enacted.|OPTIC, 2017
+ElcPdmpFr|NUMERIC|Fraction of year that state has an electronic PDMP system operating.|OPTIC, 2017
+AnyPdmpDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: PDAPS for first PDMP laws passed after January 1, 1998; Info on laws prior to 1998 came from Brandeis TTAC.|OPTIC, 2017
+AnyPdmphDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: Horowitz et al., 2018, Table 2, column 1.|OPTIC, 2017
+OpPdmpDt|DATE|Date when a “modern system” became operational and users could access. Source: Horowitz et al., 2018, Table 2, column 4. This definition includes specific caveats adopted by Horowitz et al., 2018, described further below in Notes.|OPTIC, 2017
+MsAcPdmpDt|DATE|Date of legislation requiring Prescribers to access PDMP before prescribing as interpreted by PDAPS.|OPTIC, 2017
+ElcPdmpDt|DATE|Date state began operating an electronic PDMP system.|OPTIC, 2017
+AnyGslDt|DATE|Date (DMY) any type of GoodDate (DMY) any type of Good Samaritan Law is effective|OPTIC, 2017
+GslArrDt|DATE|Date (DMY) that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective|OPTIC, 2017
+AnyGslFr|NUMERIC|Fraction of year any type of Good Samaritan Law is effective|OPTIC, 2017
+GslArrFr|NUMERIC|Fraction of year that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective|OPTIC, 2017
+AnyNalxDt|DATE|Date (MY) any type of Naloxone law effective|OPTIC, 2017
+NalxPrStDt|DATE|Date (MY) Naloxone law allowing distribution through a standing or protocol order effective|OPTIC, 2017
+NalxPresDt|DATE|Date (MY) Naloxone law allowing pharmacists prescriptive authority effective|OPTIC, 2017
+AnyNalxFr|NUMERIC|Fraction of year any type of Naloxone law is effective|OPTIC, 2017
+NalxPrStFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing distribution through a standing or protocol order|OPTIC, 2017
+NalxPresFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing pharmacists prescriptive authority|OPTIC, 2017
 MedcdExp|INTEGER|Total medicaid spending|KFF, 2019
 ExpSsp|BOOLEAN|Dummy variable indicating whether the state has law that explicitly authorizes Syringe Service Programs (0=no, 1=yes)|LawAtlas, 2019
 NoPrphLw|BOOLEAN|Dummy variable indicating whether the state has no state drug paraphernalia law (0=no, 1=yes)|LawAtlas, 2019
@@ -729,19 +978,107 @@ NtPrFrDsSy|BOOLEAN|Dummy variable indicating whether the state law does not proh
 PrExcInj|BOOLEAN|Dummy variable indicating whether the paraphernalia definition in the state law explicitly exludes objects used for injecting drugs (0=no, 1=yes)|LawAtlas, 2019
 PrNtRefInj|BOOLEAN|Dummy variable indicating whether the paraphernalia definition in the state law does not refer to objects used for injecting drugs (0=no, 1=yes)|LawAtlas, 2019
 NoLwRmUnc|BOOLEAN|Dummy variable indicating whether the state has no law removing barriers or uncertainty as to SSP legality (0=no, 1=yes)|LawAtlas, 2019
+MdMarijLaw|BOOLEAN|Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (0=no, 1=yes)|PDAPS, 2017
+AsHcvD|NUMERIC||HepVu
+NhPiHcvD|NUMERIC||HepVu
+WhtHcvD|NUMERIC||HepVu
+MulHcvD|NUMERIC||HepVu
+CrrctExp|INTEGER|Total expenditures on corrections system and operations|State and Local Finance Data Finder
+HlthExp|INTEGER|Total expenditures on public health and hospitals|State and Local Finance Data Finder
+PlcFyrExp|INTEGER|Total expenditures on police and fire protection|State and Local Finance Data Finder
+WlfrExp|INTEGER|Total expenditures on public welfare programs|State and Local Finance Data Finder
 
 ### tract-2021
 
 ID: `oeps-391119.tabular.tract-2021`
 
-4 columns in this table.
+3 columns in this table.
 
 Name|Data Type|Description|Source
 -|-|-|-
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-OtpMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles|SAMSHA, 2021
 OtpTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes|SAMSHA, 2021
 OtpCntDr|INTEGER|Count of OTPs within a 30-minute driving threshold|SAMSHA, 2021
+
+### zcta-2023
+
+ID: `oeps-391119.tabular.zcta-2023`
+
+71 columns in this table.
+
+Name|Data Type|Description|Source
+-|-|-|-
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
+ZCTA5|STRING|Census Bureau designated zip code tabulation area, or the rough area that contains five digit zip codes.|Tiger/Line 2018; Tiger/Line 2010
+TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
+Ovr65P|NUMERIC|Percentage of population over 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+WhiteP|NUMERIC|Percentage of population with race identified as white alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
+UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
+VacantP|NUMERIC|Percentage of vacant housing units|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
+TotPopHh|INTEGER|Total number of people in households|ACS 2018, 5-Year
+TotVetPop|INTEGER|Total Veteran population|ACS 2018, 5-Year; ACS 2012, 5-Year
+TotWrkE|INTEGER|Estimated count of working population|ACS 2018, 5-Year
+DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability|ACS 2018, 5-Year; ACS 2012, 5-Year
+VetP|NUMERIC|Percent of population that are veterans|ACS 2017, 5-Year; ACS 2012, 5-Year
+NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family|ACS 2018, 5-Year
+NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are not related|ACS 2018, 5-Year
+MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
+PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
+GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)|ACS 2018, 5-Year; ACS 2012, 5-Year
+EduP|NUMERIC|Percentage of population employed in educational services industry|ACS 2018, 5-Year
+HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities|ACS 2018, 5-Year
+HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries|ACS 2018, 5-Year
+RetailP|NUMERIC|Percentage of population employed in retail trade industry|ACS 2018, 5-Year
+EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.|ACS 2018, 5-Year
+MobileP|NUMERIC|Percentage of total housing units categorized as mobile housing structures|ACS 2018, 5-Year
+LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago|ACS 2018, 5-Year
+RentalP|NUMERIC|Percentage of occupied housing units that are rented|ACS 2018, 5-Year
+UnitDens|NUMERIC|Number of housing units per square mile of land area|ACS 2018, 5-Year
+BachelorsP|NUMERIC||ACS 
+DivrcdP|NUMERIC||ACS 
+EduHsP|NUMERIC||ACS 
+EduNoHsP|NUMERIC||ACS 
+FamSize|NUMERIC||ACS 
+FemP|NUMERIC||ACS 
+GradSclP|NUMERIC||ACS 
+HHSize|NUMERIC||ACS 
+HhldFA|NUMERIC||ACS 
+HhldFC|NUMERIC||ACS 
+HhldFS|NUMERIC||ACS 
+HhldMA|NUMERIC||ACS 
+HhldMC|NUMERIC||ACS 
+HhldMS|NUMERIC||ACS 
+HisP|NUMERIC||ACS 
+HsdTot|NUMERIC||ACS 
+HsdTypCo|NUMERIC||ACS 
+HsdTypM|NUMERIC||ACS 
+HsdTypMC|NUMERIC||ACS 
+MaleP|NUMERIC||ACS 
+MedAge|NUMERIC||ACS 
+MrrdP|NUMERIC||ACS 
+NvMrrdP|NUMERIC||ACS 
+Ovr16P|NUMERIC||ACS 
+Ovr18P|NUMERIC||ACS 
+Ovr21P|NUMERIC||ACS 
+Ovr62P|NUMERIC||ACS 
+SRatio|NUMERIC||ACS 
+SRatio18|NUMERIC||ACS 
+SRatio65|NUMERIC||ACS 
+SepartedP|NUMERIC||ACS 
+SomeCollegeP|NUMERIC||ACS 
+TwoRaceP|NUMERIC||ACS 
+Und18P|NUMERIC||ACS 
+Und5P|NUMERIC||ACS 
+WidwdP|NUMERIC||ACS 
+CrowdHsng|NUMERIC||ACS 
+EngProf|NUMERIC||ACS 
+OccupantP|NUMERIC||ACS 
 
 ### county-1980
 
@@ -752,7 +1089,7 @@ ID: `oeps-391119.tabular.county-1980`
 Name|Data Type|Description|Source
 -|-|-|-
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-GEOID|STRING|Unique identifer for the geography unit to which this value should be attached|Tiger/Line 2018; Tiger/Line 2010
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
 TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
 TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
 Age18_64|INTEGER|Total adult population under age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
@@ -878,7 +1215,7 @@ ID: `oeps-391119.tabular.county-1990`
 Name|Data Type|Description|Source
 -|-|-|-
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-GEOID|STRING|Unique identifer for the geography unit to which this value should be attached|Tiger/Line 2018; Tiger/Line 2010
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
 TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
 TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
 Age18_64|INTEGER|Total adult population under age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
@@ -908,6 +1245,86 @@ VacantP|NUMERIC|Percentage of vacant housing units|ACS 2018, 5-Year; ACS 2012, 5
 Age45_49|INTEGER|Total population between age 45-49|ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS
 Age50_54|NUMERIC|Total population between age 50-54|ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS
 
+### county-2023
+
+ID: `oeps-391119.tabular.county-2023`
+
+71 columns in this table.
+
+Name|Data Type|Description|Source
+-|-|-|-
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
+TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
+Ovr65P|NUMERIC|Percentage of population over 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+WhiteP|NUMERIC|Percentage of population with race identified as white alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
+UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
+VacantP|NUMERIC|Percentage of vacant housing units|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
+TotPopHh|INTEGER|Total number of people in households|ACS 2018, 5-Year
+TotVetPop|INTEGER|Total Veteran population|ACS 2018, 5-Year; ACS 2012, 5-Year
+TotWrkE|INTEGER|Estimated count of working population|ACS 2018, 5-Year
+DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability|ACS 2018, 5-Year; ACS 2012, 5-Year
+VetP|NUMERIC|Percent of population that are veterans|ACS 2017, 5-Year; ACS 2012, 5-Year
+NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family|ACS 2018, 5-Year
+NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are not related|ACS 2018, 5-Year
+MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
+PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
+GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)|ACS 2018, 5-Year; ACS 2012, 5-Year
+EduP|NUMERIC|Percentage of population employed in educational services industry|ACS 2018, 5-Year
+HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities|ACS 2018, 5-Year
+HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries|ACS 2018, 5-Year
+RetailP|NUMERIC|Percentage of population employed in retail trade industry|ACS 2018, 5-Year
+EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.|ACS 2018, 5-Year
+MobileP|NUMERIC|Percentage of total housing units categorized as mobile housing structures|ACS 2018, 5-Year
+LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago|ACS 2018, 5-Year
+RentalP|NUMERIC|Percentage of occupied housing units that are rented|ACS 2018, 5-Year
+UnitDens|NUMERIC|Number of housing units per square mile of land area|ACS 2018, 5-Year
+BachelorsP|NUMERIC||ACS 
+DivrcdP|NUMERIC||ACS 
+EduHsP|NUMERIC||ACS 
+EduNoHsP|NUMERIC||ACS 
+FamSize|NUMERIC||ACS 
+FemP|NUMERIC||ACS 
+GradSclP|NUMERIC||ACS 
+HHSize|NUMERIC||ACS 
+HhldFA|NUMERIC||ACS 
+HhldFC|NUMERIC||ACS 
+HhldFS|NUMERIC||ACS 
+HhldMA|NUMERIC||ACS 
+HhldMC|NUMERIC||ACS 
+HhldMS|NUMERIC||ACS 
+HisP|NUMERIC||ACS 
+HsdTot|NUMERIC||ACS 
+HsdTypCo|NUMERIC||ACS 
+HsdTypM|NUMERIC||ACS 
+HsdTypMC|NUMERIC||ACS 
+MaleP|NUMERIC||ACS 
+MedAge|NUMERIC||ACS 
+MrrdP|NUMERIC||ACS 
+NvMrrdP|NUMERIC||ACS 
+Ovr16P|NUMERIC||ACS 
+Ovr18P|NUMERIC||ACS 
+Ovr21P|NUMERIC||ACS 
+Ovr62P|NUMERIC||ACS 
+SRatio|NUMERIC||ACS 
+SRatio18|NUMERIC||ACS 
+SRatio65|NUMERIC||ACS 
+SepartedP|NUMERIC||ACS 
+SomeCollegeP|NUMERIC||ACS 
+TwoRaceP|NUMERIC||ACS 
+Und18P|NUMERIC||ACS 
+Und5P|NUMERIC||ACS 
+WidwdP|NUMERIC||ACS 
+CrowdHsng|NUMERIC||ACS 
+EngProf|NUMERIC||ACS 
+OccupantP|NUMERIC||ACS 
+
 ### state-2010
 
 ID: `oeps-391119.tabular.state-2010`
@@ -917,7 +1334,7 @@ ID: `oeps-391119.tabular.state-2010`
 Name|Data Type|Description|Source
 -|-|-|-
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-GEOID|STRING|Unique identifer for the geography unit to which this value should be attached|Tiger/Line 2018; Tiger/Line 2010
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
 TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
 TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
 Age0_4|INTEGER|Total population between age 0-4|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
@@ -953,6 +1370,33 @@ PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 in
 GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)|ACS 2018, 5-Year; ACS 2012, 5-Year
 TotPcp|INTEGER|Number of primary care providers in area|Dartmouth Atlas, 2010
 TotSp|INTEGER|Number of specialty physicians in area|Dartmouth Atlas, 2010
+
+### state-2023
+
+ID: `oeps-391119.tabular.state-2023`
+
+18 columns in this table.
+
+Name|Data Type|Description|Source
+-|-|-|-
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
+AnyPdmpFr|NUMERIC|Fraction of year that state has any prescription drug monitoring program operating.|OPTIC, 2017
+AnyPdmphFr|NUMERIC|Fraction of year that state has prescription drug monitoring program enabling legislation for any type of prescription drug monitoring program in effect ,including paper-based systems (as determined by Horowitz et al., 2018) enacted|OPTIC, 2017
+OpPdmpFr|NUMERIC|Fraction of year that state has a “modern system” operational and users could access (as determined by Horowitz et al., 2018).|OPTIC, 2017
+MsAcPdmpFr|NUMERIC|Fraction of year that state has any legislation requiring Prescribers to access PDMP before prescribing (as interpreted by PDAPS) enacted.|OPTIC, 2017
+ElcPdmpFr|NUMERIC|Fraction of year that state has an electronic PDMP system operating.|OPTIC, 2017
+AnyPdmpDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: PDAPS for first PDMP laws passed after January 1, 1998; Info on laws prior to 1998 came from Brandeis TTAC.|OPTIC, 2017
+AnyPdmphDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: Horowitz et al., 2018, Table 2, column 1.|OPTIC, 2017
+OpPdmpDt|DATE|Date when a “modern system” became operational and users could access. Source: Horowitz et al., 2018, Table 2, column 4. This definition includes specific caveats adopted by Horowitz et al., 2018, described further below in Notes.|OPTIC, 2017
+MsAcPdmpDt|DATE|Date of legislation requiring Prescribers to access PDMP before prescribing as interpreted by PDAPS.|OPTIC, 2017
+ElcPdmpDt|DATE|Date state began operating an electronic PDMP system.|OPTIC, 2017
+MedcdExp|INTEGER|Total medicaid spending|KFF, 2019
+TradFedExp|INTEGER|Traditional medicaid - federal spending|KFF, 2018
+TradSttExp|INTEGER|Traditional medicaid - state spending|KFF, 2018
+ExpnFedExp|INTEGER|Expansion Group - Federal Spending|KFF, 2018
+ExpnSttExp|INTEGER|Expansion Group - State Spending|KFF, 2018
+MdMarijLaw|BOOLEAN|Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (0=no, 1=yes)|PDAPS, 2017
 
 ### county-2015
 
@@ -1022,7 +1466,7 @@ ID: `oeps-391119.tabular.tract-2000`
 Name|Data Type|Description|Source
 -|-|-|-
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-GEOID|STRING|Unique identifer for the geography unit to which this value should be attached|Tiger/Line 2018; Tiger/Line 2010
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
 TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
 TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
 Age18_64|INTEGER|Total adult population under age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
@@ -1146,6 +1590,48 @@ CenFlags|STRING|Three different values indicating three things:
 3 - Bedford City, Virginia, was consolidated with Bedford County, Virginia (FIPS 51019) since 2010.|USDA-ERS 2010 & ACS 2018 5-Year
 CenRuralP|NUMERIC|% of 2010 Population living in non urban areas, as defined by Census Bureau|USDA-ERS 2010 & ACS 2018 5-Year
 
+### county-2025
+
+ID: `oeps-391119.tabular.county-2025`
+
+33 columns in this table.
+
+Name|Data Type|Description|Source
+-|-|-|-
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
+TotTracts|INTEGER|Total number of census tracts within the state.|Tiger/Line 2018
+OtpCtTmDr|INTEGER|Number of tracts within 30-min of opioid treatment program driving range|SAMSHA, 2021
+OtpAvTmDr|NUMERIC|Average driving time (minutes) across tracts to nearest opioid treatment program.|SAMSHA, 2021
+OtpTmDrP|NUMERIC|Percent of tracts within a 30-minute drive time of an opioid treatment program.|SAMSHA, 2021
+BupCtTmDr|INTEGER|Number of tracts with buprenorphine provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupCtTmBk|INTEGER|Number of tracts with buprenorphine provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupCtTmWk|INTEGER|Number of tracts with buprenorphine provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetCtTmDr|INTEGER|Number of tracts with methadone provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetCtTmBk|INTEGER|Number of tracts with methadone provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetCtTmWk|INTEGER|Number of tracts with methadone provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltCtTmDr|INTEGER|Number of tracts with naltrexone provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltCtTmBk|INTEGER|Number of tracts with naltrexone provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltCtTmWk|INTEGER|Number of tracts with naltrexone provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupTmDrP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupTmBkP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupTmWkP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetTmDrP|NUMERIC|Percent of tracts with methadone provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetTmBkP|NUMERIC|Percent of tracts with methadone provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetTmWkP|NUMERIC|Percent of tracts with methadone provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltTmDrP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltTmBkP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltTmWkP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+
 ### county-2016
 
 ID: `oeps-391119.tabular.county-2016`
@@ -1165,20 +1651,21 @@ TtlPrAPp|INTEGER|Prison Prison Admissions Count|Vera Institute of Justice, 2016
 
 ID: `oeps-391119.tabular.state-2020`
 
-26 columns in this table.
+65 columns in this table.
 
 Name|Data Type|Description|Source
 -|-|-|-
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
 CntBupT|INTEGER|Number of tracts with buprenorphine provider within a 30-min driving range|SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020
 CntMetT|INTEGER|Number of tracts with methadone provider within a 30-min driving range|SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020
-CntNalT|INTEGER|Number of tracts within 30 -min of naltrexone driving range|SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020
+CntNaltT|INTEGER|Number of tracts within 30 -min of naltrexone driving range|SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020
 AvBupTime|NUMERIC|Average driving time (minutes) across tracts in state to nearest buprenorphine provider.|SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020
 AvMetTime|NUMERIC|Average driving time (minutes) across tracts in state to nearest methadone provider.|SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020
-AvNalTime|NUMERIC|Average driving time (minutes) across tracts in state to nearest naltrexone provider.|SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020
+AvNaltTime|NUMERIC|Average driving time (minutes) across tracts in state to nearest naltrexone provider.|SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020
 PctBupT|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min driving range|SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020
 PctMetT|NUMERIC|Percent of tracts with methadone provider within a 30-min driving range|SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020
-PctNalT|NUMERIC|Percent of tracts with naltrexone provider within a 30-min driving range|SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020
+PctNaltT|NUMERIC|Percent of tracts with naltrexone provider within a 30-min driving range|SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020
 FqhcCtTmDr|INTEGER|Number of tracts with Federally Qualified Health Center within a 30-min driving range|US Covid Atlas via HRSA, 2020
 FqhcAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest Federally Qualified Health Center|US Covid Atlas via HRSA, 2020
 FqhcTmDrP|NUMERIC|Percent of tracts with Federally Qualified Health Center within a 30-min driving range.|US Covid Atlas via HRSA, 2020
@@ -1191,10 +1678,48 @@ MhTmDrP|NUMERIC|Percent of tracts with a mental health provider within a 30-min 
 SutpCtTmDr|INTEGER|Number of tracts with Substance Use Treatment within a 30-min driving range.|SAMHSA, 2020
 SutpAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest Substance Use Treatment program.|SAMHSA, 2020
 SutpTmDrP|NUMERIC|Percent of tracts with Substance Use Treatment program within a 30-minute driving range.|SAMHSA, 2020
+HcvD|INTEGER|Total Hepatitis C deaths|HepVu, 2017
+MlHcvD|INTEGER|Hepatitis C deaths among men|HepVu, 2017
+FlHcvD|INTEGER|Hepatitis C deaths among women|HepVu, 2017
+AmInHcvD|INTEGER|Hepatitis C deaths among American Indian populations|HepVu, 2017
+BlkHcvD|INTEGER|Hepatitis C deaths among Black population|HepVu, 2017
+HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations|HepVu, 2017
+U50HcvD|INTEGER|Hepatitis C deaths in populations under 50 years of age|HepVu, 2017
+A50_74HcvD|INTEGER|Hepatitis C deaths among populations between 50 and 74 years of age|HepVu, 2017
+O75HcvD|INTEGER|Hepatitis C deaths among populations over 75 years of age|HepVu, 2017
 OpRxRt|NUMERIC|Opioid prescription rate|HepVu, 2020
 PrMsuseP|NUMERIC|Percent of persons who self-report misusing prescription pain relief medication in 2020.|HepVu, 2020
 OdMortRt|NUMERIC|Overdose mortality rate|HepVu, 2020
 OdMortRtAv|NUMERIC|Average overdose mortality rate from 2016-2020|HepVu, 2020
+AnyPdmpFr|NUMERIC|Fraction of year that state has any prescription drug monitoring program operating.|OPTIC, 2017
+AnyPdmphFr|NUMERIC|Fraction of year that state has prescription drug monitoring program enabling legislation for any type of prescription drug monitoring program in effect ,including paper-based systems (as determined by Horowitz et al., 2018) enacted|OPTIC, 2017
+OpPdmpFr|NUMERIC|Fraction of year that state has a “modern system” operational and users could access (as determined by Horowitz et al., 2018).|OPTIC, 2017
+MsAcPdmpFr|NUMERIC|Fraction of year that state has any legislation requiring Prescribers to access PDMP before prescribing (as interpreted by PDAPS) enacted.|OPTIC, 2017
+ElcPdmpFr|NUMERIC|Fraction of year that state has an electronic PDMP system operating.|OPTIC, 2017
+AnyPdmpDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: PDAPS for first PDMP laws passed after January 1, 1998; Info on laws prior to 1998 came from Brandeis TTAC.|OPTIC, 2017
+AnyPdmphDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: Horowitz et al., 2018, Table 2, column 1.|OPTIC, 2017
+OpPdmpDt|DATE|Date when a “modern system” became operational and users could access. Source: Horowitz et al., 2018, Table 2, column 4. This definition includes specific caveats adopted by Horowitz et al., 2018, described further below in Notes.|OPTIC, 2017
+MsAcPdmpDt|DATE|Date of legislation requiring Prescribers to access PDMP before prescribing as interpreted by PDAPS.|OPTIC, 2017
+ElcPdmpDt|DATE|Date state began operating an electronic PDMP system.|OPTIC, 2017
+AnyGslDt|DATE|Date (DMY) any type of GoodDate (DMY) any type of Good Samaritan Law is effective|OPTIC, 2017
+GslArrDt|DATE|Date (DMY) that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective|OPTIC, 2017
+AnyGslFr|NUMERIC|Fraction of year any type of Good Samaritan Law is effective|OPTIC, 2017
+GslArrFr|NUMERIC|Fraction of year that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective|OPTIC, 2017
+AnyNalxDt|DATE|Date (MY) any type of Naloxone law effective|OPTIC, 2017
+NalxPrStDt|DATE|Date (MY) Naloxone law allowing distribution through a standing or protocol order effective|OPTIC, 2017
+NalxPresDt|DATE|Date (MY) Naloxone law allowing pharmacists prescriptive authority effective|OPTIC, 2017
+AnyNalxFr|NUMERIC|Fraction of year any type of Naloxone law is effective|OPTIC, 2017
+NalxPrStFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing distribution through a standing or protocol order|OPTIC, 2017
+NalxPresFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing pharmacists prescriptive authority|OPTIC, 2017
+MdMarijLaw|BOOLEAN|Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (0=no, 1=yes)|PDAPS, 2017
+AsHcvD|NUMERIC||HepVu
+NhPiHcvD|NUMERIC||HepVu
+WhtHcvD|NUMERIC||HepVu
+MulHcvD|NUMERIC||HepVu
+CrrctExp|INTEGER|Total expenditures on corrections system and operations|State and Local Finance Data Finder
+HlthExp|INTEGER|Total expenditures on public health and hospitals|State and Local Finance Data Finder
+PlcFyrExp|INTEGER|Total expenditures on police and fire protection|State and Local Finance Data Finder
+WlfrExp|INTEGER|Total expenditures on public welfare programs|State and Local Finance Data Finder
 
 ### county-2017
 
@@ -1223,7 +1748,7 @@ ID: `oeps-391119.tabular.state-2000`
 Name|Data Type|Description|Source
 -|-|-|-
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-GEOID|STRING|Unique identifer for the geography unit to which this value should be attached|Tiger/Line 2018; Tiger/Line 2010
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
 TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
 TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
 Age18_64|INTEGER|Total adult population under age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
@@ -1254,18 +1779,75 @@ Age45_49|INTEGER|Total population between age 45-49|ACS 2018, 5-Year; 2010 Decen
 Age50_54|NUMERIC|Total population between age 50-54|ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS
 DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability|ACS 2018, 5-Year; ACS 2012, 5-Year
 
-### state-2021
+### county-2022
 
-ID: `oeps-391119.tabular.state-2021`
+ID: `oeps-391119.tabular.county-2022`
 
-4 columns in this table.
+8 columns in this table.
 
 Name|Data Type|Description|Source
 -|-|-|-
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
+OpRxRt|NUMERIC|Opioid prescription rate|HepVu, 2020
+SviTh1|NUMERIC|SVI Ranking, Theme 1: Socioeconomic|CDC, 2018
+SviTh2|NUMERIC|SVI Ranking, Theme 2: Household Composition & Disability|CDC, 2018
+SviTh3|NUMERIC|SVI Ranking, Theme 3: Minority Status & Language|CDC, 2018
+SviTh4|NUMERIC|SVI Ranking, Theme 4: Housing Type & Transportation|CDC, 2018
+SviSmryRnk|NUMERIC|Overall summary ranking|CDC, 2018
+
+### state-2021
+
+ID: `oeps-391119.tabular.state-2021`
+
+44 columns in this table.
+
+Name|Data Type|Description|Source
+-|-|-|-
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
 OtpCtTmDr|INTEGER|Number of tracts within 30-min of opioid treatment program driving range|SAMSHA, 2021
 OtpAvTmDr|NUMERIC|Average driving time (minutes) across tracts to nearest opioid treatment program.|SAMSHA, 2021
 OtpTmDrP|NUMERIC|Percent of tracts within a 30-minute drive time of an opioid treatment program.|SAMSHA, 2021
+HcvD|INTEGER|Total Hepatitis C deaths|HepVu, 2017
+MlHcvD|INTEGER|Hepatitis C deaths among men|HepVu, 2017
+FlHcvD|INTEGER|Hepatitis C deaths among women|HepVu, 2017
+AmInHcvD|INTEGER|Hepatitis C deaths among American Indian populations|HepVu, 2017
+BlkHcvD|INTEGER|Hepatitis C deaths among Black population|HepVu, 2017
+HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations|HepVu, 2017
+U50HcvD|INTEGER|Hepatitis C deaths in populations under 50 years of age|HepVu, 2017
+A50_74HcvD|INTEGER|Hepatitis C deaths among populations between 50 and 74 years of age|HepVu, 2017
+O75HcvD|INTEGER|Hepatitis C deaths among populations over 75 years of age|HepVu, 2017
+OdMortRt|NUMERIC|Overdose mortality rate|HepVu, 2020
+AnyPdmpFr|NUMERIC|Fraction of year that state has any prescription drug monitoring program operating.|OPTIC, 2017
+AnyPdmphFr|NUMERIC|Fraction of year that state has prescription drug monitoring program enabling legislation for any type of prescription drug monitoring program in effect ,including paper-based systems (as determined by Horowitz et al., 2018) enacted|OPTIC, 2017
+OpPdmpFr|NUMERIC|Fraction of year that state has a “modern system” operational and users could access (as determined by Horowitz et al., 2018).|OPTIC, 2017
+MsAcPdmpFr|NUMERIC|Fraction of year that state has any legislation requiring Prescribers to access PDMP before prescribing (as interpreted by PDAPS) enacted.|OPTIC, 2017
+ElcPdmpFr|NUMERIC|Fraction of year that state has an electronic PDMP system operating.|OPTIC, 2017
+AnyPdmpDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: PDAPS for first PDMP laws passed after January 1, 1998; Info on laws prior to 1998 came from Brandeis TTAC.|OPTIC, 2017
+AnyPdmphDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: Horowitz et al., 2018, Table 2, column 1.|OPTIC, 2017
+OpPdmpDt|DATE|Date when a “modern system” became operational and users could access. Source: Horowitz et al., 2018, Table 2, column 4. This definition includes specific caveats adopted by Horowitz et al., 2018, described further below in Notes.|OPTIC, 2017
+MsAcPdmpDt|DATE|Date of legislation requiring Prescribers to access PDMP before prescribing as interpreted by PDAPS.|OPTIC, 2017
+ElcPdmpDt|DATE|Date state began operating an electronic PDMP system.|OPTIC, 2017
+AnyGslDt|DATE|Date (DMY) any type of GoodDate (DMY) any type of Good Samaritan Law is effective|OPTIC, 2017
+GslArrDt|DATE|Date (DMY) that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective|OPTIC, 2017
+AnyGslFr|NUMERIC|Fraction of year any type of Good Samaritan Law is effective|OPTIC, 2017
+GslArrFr|NUMERIC|Fraction of year that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective|OPTIC, 2017
+AnyNalxDt|DATE|Date (MY) any type of Naloxone law effective|OPTIC, 2017
+NalxPrStDt|DATE|Date (MY) Naloxone law allowing distribution through a standing or protocol order effective|OPTIC, 2017
+NalxPresDt|DATE|Date (MY) Naloxone law allowing pharmacists prescriptive authority effective|OPTIC, 2017
+AnyNalxFr|NUMERIC|Fraction of year any type of Naloxone law is effective|OPTIC, 2017
+NalxPrStFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing distribution through a standing or protocol order|OPTIC, 2017
+NalxPresFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing pharmacists prescriptive authority|OPTIC, 2017
+MdMarijLaw|BOOLEAN|Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (0=no, 1=yes)|PDAPS, 2017
+AsHcvD|NUMERIC||HepVu
+NhPiHcvD|NUMERIC||HepVu
+WhtHcvD|NUMERIC||HepVu
+MulHcvD|NUMERIC||HepVu
+CrrctExp|INTEGER|Total expenditures on corrections system and operations|State and Local Finance Data Finder
+HlthExp|INTEGER|Total expenditures on public health and hospitals|State and Local Finance Data Finder
+PlcFyrExp|INTEGER|Total expenditures on police and fire protection|State and Local Finance Data Finder
+WlfrExp|INTEGER|Total expenditures on public welfare programs|State and Local Finance Data Finder
 
 ### zcta-2018
 
@@ -1357,7 +1939,7 @@ ID: `oeps-391119.tabular.county-2010`
 Name|Data Type|Description|Source
 -|-|-|-
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-GEOID|STRING|Unique identifer for the geography unit to which this value should be attached|Tiger/Line 2018; Tiger/Line 2010
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
 TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
 TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
 Age18_64|INTEGER|Total adult population under age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
@@ -1404,11 +1986,12 @@ RuralPop|INTEGER|2010 Population living in non urban areas, as defined by Census
 
 ID: `oeps-391119.tabular.state-2018`
 
-86 columns in this table.
+117 columns in this table.
 
 Name|Data Type|Description|Source
 -|-|-|-
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
 TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
 TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
 Age18_64|INTEGER|Total adult population under age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
@@ -1476,12 +2059,38 @@ IsoAs|NUMERIC|Isolation index for Asian and non-Hispanic White residents|ACS 201
 Ndvi|NUMERIC|Average normalized difference vegetation index, a measure of greenness used to determine the amount of vegetation in an area, value from all pixel values in each Census tract|Sentinel-2 MSI, 2018
 StateArea|NUMERIC|Area (in square meters) of state|Tiger/Line 2018
 TotTracts|INTEGER|Total number of census tracts within the state.|Tiger/Line 2018
+HcvD|INTEGER|Total Hepatitis C deaths|HepVu, 2017
+MlHcvD|INTEGER|Hepatitis C deaths among men|HepVu, 2017
+FlHcvD|INTEGER|Hepatitis C deaths among women|HepVu, 2017
+AmInHcvD|INTEGER|Hepatitis C deaths among American Indian populations|HepVu, 2017
+BlkHcvD|INTEGER|Hepatitis C deaths among Black population|HepVu, 2017
+HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations|HepVu, 2017
+U50HcvD|INTEGER|Hepatitis C deaths in populations under 50 years of age|HepVu, 2017
+A50_74HcvD|INTEGER|Hepatitis C deaths among populations between 50 and 74 years of age|HepVu, 2017
+O75HcvD|INTEGER|Hepatitis C deaths among populations over 75 years of age|HepVu, 2017
 OdMortRt|NUMERIC|Overdose mortality rate|HepVu, 2020
+AnyPdmpFr|NUMERIC|Fraction of year that state has any prescription drug monitoring program operating.|OPTIC, 2017
+AnyPdmphFr|NUMERIC|Fraction of year that state has prescription drug monitoring program enabling legislation for any type of prescription drug monitoring program in effect ,including paper-based systems (as determined by Horowitz et al., 2018) enacted|OPTIC, 2017
+OpPdmpFr|NUMERIC|Fraction of year that state has a “modern system” operational and users could access (as determined by Horowitz et al., 2018).|OPTIC, 2017
+MsAcPdmpFr|NUMERIC|Fraction of year that state has any legislation requiring Prescribers to access PDMP before prescribing (as interpreted by PDAPS) enacted.|OPTIC, 2017
+ElcPdmpFr|NUMERIC|Fraction of year that state has an electronic PDMP system operating.|OPTIC, 2017
+AnyPdmpDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: PDAPS for first PDMP laws passed after January 1, 1998; Info on laws prior to 1998 came from Brandeis TTAC.|OPTIC, 2017
+AnyPdmphDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: Horowitz et al., 2018, Table 2, column 1.|OPTIC, 2017
+OpPdmpDt|DATE|Date when a “modern system” became operational and users could access. Source: Horowitz et al., 2018, Table 2, column 4. This definition includes specific caveats adopted by Horowitz et al., 2018, described further below in Notes.|OPTIC, 2017
+MsAcPdmpDt|DATE|Date of legislation requiring Prescribers to access PDMP before prescribing as interpreted by PDAPS.|OPTIC, 2017
+ElcPdmpDt|DATE|Date state began operating an electronic PDMP system.|OPTIC, 2017
+AnyNalxDt|DATE|Date (MY) any type of Naloxone law effective|OPTIC, 2017
+NalxPrStDt|DATE|Date (MY) Naloxone law allowing distribution through a standing or protocol order effective|OPTIC, 2017
+NalxPresDt|DATE|Date (MY) Naloxone law allowing pharmacists prescriptive authority effective|OPTIC, 2017
+AnyNalxFr|NUMERIC|Fraction of year any type of Naloxone law is effective|OPTIC, 2017
+NalxPrStFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing distribution through a standing or protocol order|OPTIC, 2017
+NalxPresFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing pharmacists prescriptive authority|OPTIC, 2017
 MedcdExp|INTEGER|Total medicaid spending|KFF, 2019
 TradFedExp|INTEGER|Traditional medicaid - federal spending|KFF, 2018
 TradSttExp|INTEGER|Traditional medicaid - state spending|KFF, 2018
 ExpnFedExp|INTEGER|Expansion Group - Federal Spending|KFF, 2018
 ExpnSttExp|INTEGER|Expansion Group - State Spending|KFF, 2018
+MdMarijLaw|BOOLEAN|Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (0=no, 1=yes)|PDAPS, 2017
 CrrctExpS|INTEGER|Expenditures on corrections system and operation by the State alone|US Census, 2018
 PlcFyrExpS|INTEGER|Expenditures on police and fire protection by the State alone|US Census, 2018
 HlthExpS|INTEGER|Expenditures on public health and hospitals by the State alone|US Census, 2018
@@ -1494,6 +2103,55 @@ CrrctExpT|INTEGER|Total expenditures on corrections system and operations|US Cen
 PlcFyrExpT|INTEGER|Total expenditures on police and fire protection|US Census, 2018
 HlthExpT|INTEGER|Total expenditures on public health and welfare|US Census, 2018
 WlfrExpT|INTEGER|Total expenditures on public welfare programs|US Census, 2018
+AsHcvD|NUMERIC||HepVu
+NhPiHcvD|NUMERIC||HepVu
+WhtHcvD|NUMERIC||HepVu
+MulHcvD|NUMERIC||HepVu
+
+### zcta-2025
+
+ID: `oeps-391119.tabular.zcta-2025`
+
+36 columns in this table.
+
+Name|Data Type|Description|Source
+-|-|-|-
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
+ZCTA5|STRING|Census Bureau designated zip code tabulation area, or the rough area that contains five digit zip codes.|Tiger/Line 2018; Tiger/Line 2010
+MoudMinDis|NUMERIC|Euclidean distance (miles) to nearest MOUD (all types)|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupMinDis|NUMERIC|Euclidean distance (miles) to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupTmDr|NUMERIC|Driving time (minutes) to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetMinDis|NUMERIC|Euclidean distance (miles) to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetTmDr|NUMERIC|Driving time (minutes) to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltMinDis|NUMERIC|Euclidean distance (miles) to nearest naltrexone/Vivitrol provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltTmDr|NUMERIC|Driving time (minutes) to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltCntDr30|INTEGER|Count of naltrexone providers in 30 minute drive time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupTmWk|NUMERIC|Walking time (minutes) to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupCntWk60|INTEGER|Count of buprenorphine providers in 60 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupCntWk30|INTEGER|Count of buprenorphine providers in 30 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetTmWk|NUMERIC|Walking time (minutes) to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetCntWk30|INTEGER|Count of methadone providers in 60 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetCntWk60|INTEGER|Count of methadone providers in 30 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltTmWk|NUMERIC|Walking time (minutes) to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltCntWk60|INTEGER|Count of naltrexone providers in 60 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltCntWk30|INTEGER|Count of naltrexone providers in 30 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupTmBk|NUMERIC|Biking time (minutes) to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupCntBk60|INTEGER|Count of buprenorphine providers in 60 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupCntBk30|INTEGER|Count of buprenorphine providers in 30 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetTmBk|NUMERIC|Biking time (minutes) to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetCntBk60|INTEGER|Count of methadone providers in 60 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetCntBk30|INTEGER|Count of methadone providers in 30 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltTmBk|NUMERIC|Biking time (minutes) to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltCntBk60|INTEGER|Count of naltrexone providers in 60 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltCntBk30|INTEGER|Count of naltrexone providers in 30 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+OtpMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles|SAMHSA
+OtpTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes|SAMSHA, 2021
+OtpCntDr|INTEGER|Count of OTPs within a 30-minute driving threshold|SAMSHA, 2021
+BupCntDr60|NUMERIC|Count of buprenorphine providers in 60 minute drive time threshold|SAMHSA
+NaltCntDr60|NUMERIC|Count of naltrexone providers in 60 minute drive time threshold|SAMHSA
+MetCntDr60|NUMERIC|Count of methadone providers in 60 minute drive time threshold|SAMHSA
 
 ### state-2013
 
@@ -1514,6 +2172,48 @@ HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations|HepVu, 2017
 U50HcvD|INTEGER|Hepatitis C deaths in populations under 50 years of age|HepVu, 2017
 A50_74HcvD|INTEGER|Hepatitis C deaths among populations between 50 and 74 years of age|HepVu, 2017
 O75HcvD|INTEGER|Hepatitis C deaths among populations over 75 years of age|HepVu, 2017
+
+### state-2025
+
+ID: `oeps-391119.tabular.state-2025`
+
+33 columns in this table.
+
+Name|Data Type|Description|Source
+-|-|-|-
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
+TotTracts|INTEGER|Total number of census tracts within the state.|Tiger/Line 2018
+OtpCtTmDr|INTEGER|Number of tracts within 30-min of opioid treatment program driving range|SAMSHA, 2021
+OtpAvTmDr|NUMERIC|Average driving time (minutes) across tracts to nearest opioid treatment program.|SAMSHA, 2021
+OtpTmDrP|NUMERIC|Percent of tracts within a 30-minute drive time of an opioid treatment program.|SAMSHA, 2021
+BupCtTmDr|INTEGER|Number of tracts with buprenorphine provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupCtTmBk|INTEGER|Number of tracts with buprenorphine provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupCtTmWk|INTEGER|Number of tracts with buprenorphine provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetCtTmDr|INTEGER|Number of tracts with methadone provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetCtTmBk|INTEGER|Number of tracts with methadone provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetCtTmWk|INTEGER|Number of tracts with methadone provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltCtTmDr|INTEGER|Number of tracts with naltrexone provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltCtTmBk|INTEGER|Number of tracts with naltrexone provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltCtTmWk|INTEGER|Number of tracts with naltrexone provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupTmDrP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupTmBkP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupTmWkP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetTmDrP|NUMERIC|Percent of tracts with methadone provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetTmBkP|NUMERIC|Percent of tracts with methadone provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+MetTmWkP|NUMERIC|Percent of tracts with methadone provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltTmDrP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltTmBkP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+NaltTmWkP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
 
 ### state-2014
 
@@ -1573,7 +2273,7 @@ ID: `oeps-391119.tabular.county-2000`
 Name|Data Type|Description|Source
 -|-|-|-
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-GEOID|STRING|Unique identifer for the geography unit to which this value should be attached|Tiger/Line 2018; Tiger/Line 2010
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
 TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
 TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
 Age18_64|INTEGER|Total adult population under age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS

@@ -9,26 +9,24 @@ nav:
     - guides/provisioning-oeps-explorer.md
     - guides/adding-data-to-oeps.md
     - guides/exporting-data-from-oeps.md
+    - guides/uploading-oeps-data-to-bigquery.md
+    - guides/analyzing-oeps-data-in-bigquery.md
   - Registry:
     - registry/overview.md
     - registry/themes-constructs.md
     - registry/variables.md
     - registry/table-sources.md
     - registry/geodata-sources.md
-  - BigQuery Reference:
-    - bigquery-reference/getting-started.md
-    - bigquery-reference/import-export.md
-    - bigquery-reference/bigquery-tables.md
   - CLI Reference:
-    - cli-reference/bigquery-export.md
-    - cli-reference/bigquery-upload.md
-    - cli-reference/build-docs.md
-    - cli-reference/build-explorer-docs.md
-    - cli-reference/build-explorer-map.md
-    - cli-reference/create-data-dictionaries.md
-    - cli-reference/inspect-csv.md
-    - cli-reference/merge-data-table.md
-    - cli-reference/validate-registry.md
+    - reference/cli/bigquery-export.md
+    - reference/cli/bigquery-upload.md
+    - reference/cli/build-docs.md
+    - reference/cli/build-explorer-docs.md
+    - reference/cli/build-explorer-map.md
+    - reference/cli/create-data-dictionaries.md
+    - reference/cli/inspect-csv.md
+    - reference/cli/merge-data-table.md
+    - reference/cli/validate-registry.md
 plugins:
   - search
   - glightbox

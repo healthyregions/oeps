@@ -1,7 +1,7 @@
 # Themes & Constructs
 
 !!! tip
-    For a list of all themese & constructs currently in the registry, see [themes.csv](https://github.com/healthyregions/oeps/blob/main/docs/reference/themes.csv) on Github.
+    For a list of all themese & constructs currently in the registry, see [themes.csv](https://github.com/healthyregions/oeps/blob/main/docs/src/reference/registry/themes.csv) on Github.
 
 Themes are a very lightweight grouping of "constructs" that represent a variable (or a group of variables) at a conceptual level. Alongside each construct is a "proxy"; this is just a short description of all variables that fit within this construct. The structure of the `themes.json` file is very simple:
 
