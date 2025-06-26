@@ -24,7 +24,6 @@ dependencies = [
     'db-dtypes',
     'openpyxl',
     'boto3',
-    'duckdb',
     'frictionless',
     'python-dotenv',
     'natsort',
@@ -36,6 +35,10 @@ dev = [
     "ruff",
     "pre-commit",
     "pytest",
+]
+docs = [
+    'mkdocs',
+    'mkdocs-glightbox',
 ]
 
 [tool.setuptools]
