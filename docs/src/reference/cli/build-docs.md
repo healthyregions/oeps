@@ -30,7 +30,7 @@ Usage: build-docs [OPTIONS] OPERATION
 ## Options
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7aa1a83e1f90>
+    * Type: <click.types.Path object at 0x72ce280e6590>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 

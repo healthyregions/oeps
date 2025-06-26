@@ -1,7 +1,7 @@
 # Table Sources
 
 !!! tip
-    For a list of all table sources currently in the registry, see [table_sources.csv](https://github.com/healthyregions/oeps/blob/main/docs/reference/table_sources.csv) on Github.
+    For a list of all table sources currently in the registry, see [table_sources.csv](https://github.com/healthyregions/oeps/blob/main/docs/src/reference/registry/table_sources.csv) on Github.
 
 Each table source file is essentially a [Tabular Data Resource](https://specs.frictionlessdata.io/tabular-data-resource/) that links to a single data table (CSV), but without a `schema` property. Where the `schema` typically defines a primary key, foreign key (for joins), and a list of all fields, all of this information is inferred or standardized elsewhere and need not be stored in these files.
 

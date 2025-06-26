@@ -1,16 +1,7 @@
-### Importing Data
+# Analyzing OEPS Data in BigQuery
 
-Use the following command to load a new table into BigQuery:
-
-    python ./scripts/bq.py load --source ./resources
-
-Where `--source` is the path to a Data Resource schema (stored as JSON file), or a directory containing multiple Data Resource schemas. Optional flags on this command are:
-
-- `--table-only` will create the BigQuery dataset and table based on the schema, but will not attempt to load data into it.
-- `--dry-run` will validate the input dataset against the schema, but not attempt to load it.
-- `--overwrite` will drop and recreate the BigQuery table if it already exists in the dataset.
-
-### Exporting Data
+!!! warning
+    This section is outdated.
 
 Use the following command to query the OEPS BigQuery tables:
 

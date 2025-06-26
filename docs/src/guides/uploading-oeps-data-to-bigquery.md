@@ -1,6 +1,6 @@
-# Getting Started
+# Uploading OEPS Data to BigQuery
 
-## Setup Credentials
+## Setting up Credentials
 
 To load OEPS data to BigQuery you will need to add access credentials as environment variables using the `.env` file. This file must always stay out of version control.
 
@@ -21,3 +21,19 @@ Once you have setup these credentials, you can test them with
     flask bigquery-upload --check-credentials
 
 If all is well, the command will print `ok`.
+
+## Uploading Tables
+
+Use the following command to load a new table into BigQuery:
+
+```shell
+flask bigquery-upload
+```
+
+TODO: Need to finish this section.
+
+Where `--source` is the path to a Data Resource schema (stored as JSON file), or a directory containing multiple Data Resource schemas. Optional flags on this command are:
+
+- `--table-only` will create the BigQuery dataset and table based on the schema, but will not attempt to load data into it.
+- `--dry-run` will validate the input dataset against the schema, but not attempt to load it.
+- `--overwrite` will drop and recreate the BigQuery table if it already exists in the dataset.

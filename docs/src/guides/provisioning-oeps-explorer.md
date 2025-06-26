@@ -11,7 +11,7 @@ flask build-explorer-map
 ```
 
 !!! tip ""
-    [view in cli reference &rarr;](../cli-reference/build-explorer-map.md)
+    [view in cli reference &rarr;](../reference/cli/build-explorer-map.md)
 
 CSV content will be restructured and written to a directory that the frontend OEPS Explorer can read. The `variables.json` file within the OEPS Explorer will be updated as well, pointing to the newly uploaded files.
 
@@ -32,4 +32,4 @@ flask build-explorer-docs
 ```
 
 !!! tip ""
-    [view in cli reference &rarr;](../cli-reference/build-explorer-docs.md)
+    [view in cli reference &rarr;](../reference/cli/build-explorer-docs.md)

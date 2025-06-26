@@ -1,7 +1,7 @@
 # Variables
 
 !!! tip
-    For a list of all variables currently in the registry, see [variables.csv](https://github.com/healthyregions/oeps/blob/main/docs/reference/variables.csv) on Github.
+    For a list of all variables currently in the registry, see [variables.csv](https://github.com/healthyregions/oeps/blob/main/docs/src/reference/registry/variables.csv) on Github.
 
 A single file, `variable.json`, serves as a central lookup for all variables, each one being defined as a Frictionless [Field Descriptor](https://specs.frictionlessdata.io/table-schema/#field-descriptors), with some extra properties that we have added for our own needs. The key for each item in the lookup must be the same as its `name` property.
 
