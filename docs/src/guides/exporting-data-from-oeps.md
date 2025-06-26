@@ -4,35 +4,7 @@ The data stored within OEPS is distributed through a number of different channel
 
 The rest of this page describes the various commands available and the export content they will create.
 
-## OEPS Explorer
-
-### Interactive Map
-
-To regenerate the data that is displayed on the OEPS interactive web map, use the following:
-
-```
-flask build-explorer-map
-```
-
-
-CSV content will be restructured and written to a directory that the frontend OEPS Explorer can read. The `variables.json` file within the OEPS Explorer will be updated as well, pointing to the newly uploaded files.
-
-Run with `--upload` to put the output in S3. You must do this to publish changes to the production site.
-[[see full docs]](./reference/commands/build-explorer-map.md)
-
-### Docs
-
-The [docs](https://oeps.healthyregions.org/docs) page is driven by a generated set of JSON files that link themes, constructs, and variable-specific information. Generate this content with:
-
-```
-flask build-explorer-docs
-```
-
-[[see full docs]](./reference/commands/build-explorer-docs.md)
-
-## Data & Data Dictionaries
-
-### Data Package (Frictionless Data spec v1)
+## Data Package (Frictionless Data spec v1)
 
 To generate a data package, run the following:
 
@@ -44,25 +16,7 @@ Run on its own, this command will end in a `row_stream` error. This is because a
 
 [[see full docs]](./reference/commands/create-data-package.md)
 
-### Google Big Query
-
-The following command will upload a single table source, or geodata source to Google BigQuery
-
-```
-flask bigquery-upload
-```
-
-[[see full docs]](./reference/commands/bigquery-upload.md)
-
-You can, in turn, extract data from Big Query through a command here as well:
-
-```
-flask bigquery-export
-```
-
-## Data Dictionaries & Documentation
-
-### Data Dictionaries
+## Data Dictionaries
 
 A suite of data dictionaries, one per geography level, can be generated with the following command:
 
@@ -72,7 +26,7 @@ flask create-data-dictionaries
 
 These files compile all information available for each variable into a human readable, easy-to-distribute MS Excel spreadsheet.
 
-### Internal Documentation
+## Documentation
 
 A number of files within this set of docs are also generated from the registry content and placed within the docs/references directory, by using this command:
 

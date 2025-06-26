@@ -10,7 +10,7 @@ This code base holds the following components of the OEPS project:
     - The backend is a Flask app that manages the many variables and datasets that makeup the OEPS data warehouse.
     - The backend uses [Frictionless Standards](https://specs.frictionlessdata.io) internally and features multiple export pipelines to different systems.
 
-The [full documentation](./docs) describes how these applications interact, how to use them, and how to add new data variables and tables to the warehouse.
+The [full documentation](https://healthyregions.github.io/oeps) describes how these applications interact, how to use them, and how to add new data variables and tables to the warehouse.
 
 See also:
 

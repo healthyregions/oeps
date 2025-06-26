@@ -57,12 +57,13 @@ You can check this with the following command:
 flask inspect-csv -s path/to/MyNewCountyData2021.csv
 ```
 
-> **Note:** You can run this command on a directory as well, and every CSV within it will be inspected.
+!!! note
+    You can run this command on a directory as well, and every CSV within it will be inspected.
 
 - If yes, great! You are ready to [merge data into OEPS](#merge-data-into-oeps).
 - If no, you need to [create a new variable entry](#create-a-new-variable-entry) for every new incoming variable.
 
-## Registry operations
+## Workflow
 
 Presented in logical order, though often only the later steps will be needed.
 
@@ -102,9 +103,11 @@ To create a new geodata-source, add a new JSON file named `<summary level>-<year
 }
 ```
 
-> **Note:** Currently, we use plurals in geodata-source names, "counties", instead of "county" which we use elsewhere. In the future, geodata source definitions will not use plural.
+!!! note
+    Currently, we use plurals in geodata-source names, "counties", instead of "county" which we use elsewhere. In the future, geodata source definitions will not use plural.
 
-> **Note:** The bq* attributes are used for Google BigQuery, and are likely to be removed in the future.
+!!! note
+    The bq* attributes are used for Google BigQuery, and are likely to be removed in the future.
 
 ### Create a new table source
 
@@ -125,7 +128,8 @@ This command will do two things:
 1. Using the specified geodata-source, create a "dummy" CSV in `data/tables` named `county-2021.csv` that only contains join columns--essentially a placeholder file into which new data can be merged
 2. Create a new JSON file for this table-source, `registry/table-sources/county-2021.json` that adds the new CSV to the registry.
 
-> **Note:** Currently, we use plurals in geodata-source names, "counties", instead of "county" which we use elsewhere. In the future, geodata source definitions will not use plural.
+!!! warning
+    Currently, we use plurals in geodata-source names, "counties", instead of "county" which we use elsewhere. In the future, geodata source definitions will not use plural.
 
 ### Create a new variable entry
 
