@@ -48,7 +48,7 @@ class TableSource:
         registry: "Registry" = None,
     ):
         if not registry:
-            registry = Registry(registry_dir)
+            registry = Registry(registry_dir, quiet=True)
         self.registry = registry
         if name not in self.registry.table_sources:
             raise Exception(f"invalid table source name: {name}")
@@ -57,6 +57,12 @@ class TableSource:
         self.summary_level = self.registry.geodata_sources[
             self.schema["geodata_source"]
         ]["summary_level"]
+
+        self.path = Path(DATA_DIR, "tables", f"{self.name}.csv")
+
+        temp_out = Path(TEMP_DIR, "tables")
+        temp_out.mkdir(parents=True, exist_ok=True)
+        self.temp_path = Path(temp_out, f"{self.name}.csv")
 
         self.merge_columns = []
 
@@ -71,6 +77,13 @@ class TableSource:
             path = Path(DATA_DIR, path)
 
         return pd.read_csv(path)
+
+    def set_data_types(self):
+        """set integer columns properly based on registry def of variables."""
+
+        for col in self.df.columns:
+            if self.registry.variables[col]["type"] == "integer":
+                self.df[col] = self.df[col].astype("Int64")
 
     def stage_incoming_csv(self, path: Path) -> pd.DataFrame:
         """Load an incoming CSV to pandas dataframe, and create HEROP_ID
@@ -139,33 +152,46 @@ class TableSource:
         source_df_trim = source_df[["HEROP_ID"] + self.merge_columns]
         print(source_df_trim)
         print(f"shape of incoming data: {source_df_trim.shape}")
-        merged_df = pd.merge(self.df, source_df_trim, how="outer", on="HEROP_ID")
+        self.df = pd.merge(self.df, source_df_trim, how="inner", on="HEROP_ID")
 
-        # set integer columns properly based on registry def of variables.
-        for col in merged_df.columns:
-            if self.registry.variables[col]["type"] == "integer":
-                merged_df[col] = merged_df[col].astype("Int64")
+        self.set_data_types()
 
-        temp_out = Path(TEMP_DIR, "tables")
-        temp_out.mkdir(parents=True, exist_ok=True)
-        temp_path = Path(temp_out, f"{self.name}.csv")
-        local_path = Path(DATA_DIR, "tables", f"{self.name}.csv")
-        merged_df.to_csv(temp_path, index=False)
+        self.df.to_csv(self.temp_path, index=False)
 
         if not dry_run:
-            shutil.copy(temp_path, local_path)
+            self.df.to_csv(self.path, index=False)
+            self.registry.sync_variable_table_sources(table_source=self)
 
-        for col in source_df_trim.columns:
-            var = self.registry.variables[col]
-            if self.name not in var["table_sources"]:
-                var["table_sources"].append(self.name)
+    def get_variable_data(self, name, delete: bool = False):
+        var_data = pd.DataFrame(self.df, columns=["HEROP_ID", name])
+        if delete:
+            self.delete_variable_data(name)
+        return var_data
 
-        if not dry_run:
-            self.registry.write_variables()
+    def delete_variable_data(self, name):
+        self.df = self.df.drop(name, axis=1)
+        self.df.to_csv(self.path, index=False)
+
+    def merge_df(self, incoming_df: pd.DataFrame, overwrite: bool = False):
+        new_vars = [i for i in incoming_df.columns if not i == "HEROP_ID"]
+        dupe_vars = [i for i in new_vars if i in self.df.columns]
+        if len(dupe_vars) > 0:
+            if not overwrite:
+                raise Exception(
+                    "Incoming variables exist in the dataframe, cancelling merge. Use overwrite=True to continue."
+                )
+            for var in dupe_vars:
+                self.delete_variable_data(var)
+
+        self.df = pd.merge(self.df, incoming_df, how="inner", on="HEROP_ID")
+
+        self.set_data_types()
+
+        self.df.to_csv(self.path, index=False)
 
 
 class Registry:
-    def __init__(self, directory: Path = REGISTRY_DIR):
+    def __init__(self, directory: Path = REGISTRY_DIR, quiet: bool = False):
         self.directory = directory
 
         ## load in this order so that some attributes can be cascaded
@@ -179,9 +205,10 @@ class Registry:
         self.proxy_lookup = {}
         self._load_themes()  # updates self.themes, self.theme_lookup, and self.proxy_lookup
 
-        print(
-            f"registry initialized | variables: {len(self.variables)}, tables: {len(self.table_sources)}, geodata: {len(self.geodata_sources)}"
-        )
+        if not quiet:
+            print(
+                f"registry initialized | variables: {len(self.variables)}, tables: {len(self.table_sources)}, geodata: {len(self.geodata_sources)}"
+            )
 
     def _load_geodata_sources(self) -> dict:
         """Creates a lookup of all geodata sources in the registry."""
@@ -264,10 +291,23 @@ class Registry:
                 self.theme_lookup[construct] = theme
                 self.proxy_lookup[construct] = proxy
 
+    def sync_variable_table_sources(self, table_source: TableSource):
+        for var in self.variables.values():
+            ## first remove this table source from all variables in the registry
+            var["table_sources"] = [
+                i for i in var["table_sources"] if not i == table_source.name
+            ]
+            ## now add this table source if the variable is in df.columns
+            if var["name"] in table_source.df.columns:
+                var["table_sources"].append(table_source.name)
+            ## sort all table_sources
+            var["table_sources"].sort()
+        self.write_variables()
+
     def write_variables(self):
         for v in self.variables.values():
-            del v["years"]
-
+            if "years" in v:
+                del v["years"]
         write_json(self.variables, Path(self.directory, "variables.json"))
 
     def get_all_sources(self):
@@ -478,7 +518,7 @@ class Registry:
         self, name: str, geodata_source: str, dry_run: bool = False
     ) -> TableSource:
         summary_level, year = name.split("-")
-        geog_summary_level = geodata_source.split('-')[0]
+        geog_summary_level = geodata_source.split("-")[0]
 
         ## validate these components
         SummaryLevel(summary_level)
@@ -510,8 +550,8 @@ class Registry:
         ## now create a dummy CSV with all key variables, based on the geodata_source
         temp_path = Path(TEMP_DIR, "tables", file_name)
         gdf = gpd.read_file(gs["path"])[["HEROP_ID"]]
-        
-        foreign_key = 'ZCTA5' if geog_summary_level == 'zctas' else 'FIPS'
+
+        foreign_key = "ZCTA5" if geog_summary_level == "zctas" else "FIPS"
         gdf[foreign_key] = gdf.HEROP_ID.apply(lambda x: x[5:])
 
         print("new data table:")
