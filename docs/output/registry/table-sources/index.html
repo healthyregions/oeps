@@ -45,14 +45,14 @@
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption"><span class="caption-text">Introduction</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../..">Overview</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../overview/">OEPS Overview</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../legacy-migration/">Migration/Restructure 2023</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Guides</span></p>
+              <p class="caption"><span class="caption-text">Developer Guides</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../guides/install/">Installation</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../guides/install/">Installing the Components</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../guides/getting-started-with-cli/">Getting Started with the CLI</a>
                   </li>
@@ -60,16 +60,16 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../guides/adding-data-to-oeps/">Adding Data to OEPS</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../guides/exporting-data-from-oeps/">Exporting Data from OEPS</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../guides/creating-data-packages/">Creating Data Packages</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../guides/uploading-oeps-data-to-bigquery/">Uploading OEPS Data to BigQuery</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../guides/interacting-with-bigquery/">Interacting with OEPS Data in BigQuery</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../guides/analyzing-oeps-data-in-bigquery/">Analyzing OEPS Data in BigQuery</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../guides/generating-derived-documentation/">Generating Derived Documentation</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Registry</span></p>
               <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../overview/">Overview</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../">Overview</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../themes-constructs/">Themes &amp; Constructs</a>
                   </li>
@@ -77,6 +77,8 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">Table Sources</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#example-table_source">Example table_source</a>
+    </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../geodata-sources/">Geodata Sources</a>
@@ -95,6 +97,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/build-explorer-map/">build-explorer-map</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/create-data-dictionaries/">create-data-dictionaries</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/create-data-package/">create-data-package</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/inspect-csv/">inspect-csv</a>
                   </li>
@@ -132,30 +136,95 @@
 <p class="admonition-title">Tip</p>
 <p>For a list of all table sources currently in the registry, see <a href="https://github.com/healthyregions/oeps/blob/main/docs/src/reference/registry/table_sources.csv">table_sources.csv</a> on Github.</p>
 </div>
-<p>Each table source file is essentially a <a href="https://specs.frictionlessdata.io/tabular-data-resource/">Tabular Data Resource</a> that links to a single data table (CSV), but without a <code>schema</code> property. Where the <code>schema</code> typically defines a primary key, foreign key (for joins), and a list of all fields, all of this information is inferred or standardized elsewhere and need not be stored in these files.</p>
-<p>There are a few rules for how a CSV can be constructed:</p>
-<ol>
-<li>It must have a <code>HEROP_ID</code> column that joins each row to a geography unit.</li>
-<li>It must only have data for a single geography category within it.</li>
-<li><em>Ideally</em> it will only have values for a single publication year (though we don't yet have this enforced).</li>
-</ol>
-<pre><code class="language-json">{
-    &quot;name&quot;: &quot;c-1980&quot;,
-    &quot;path&quot;: &quot;https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables/C_1980.csv&quot;,
-    &quot;title&quot;: &quot;OEPS Data Aggregated by Census Tract (1980)&quot;,
-    &quot;description&quot;: &quot;This CSV aggregates all 1980 data variables from the OEPS v2 release at the Census Tract level.&quot;,
-    &quot;bq_dataset_name&quot;: &quot;tabular&quot;,
-    &quot;bq_table_name&quot;: &quot;C_1980&quot;,
+<p><strong>Table sources</strong> are a JSON representations of each CSV dataset within OEPS--one JSON file per CSV. The structure is based on the <a href="https://specs.frictionlessdata.io/tabular-data-resource/">Tabular Data Resource</a> from Frictionless Data. However, where a <code>schema</code> property would typically define a primary key, foreign key (for joins), and a list of all fields, all of this information is inferred or standardized elsewhere and need not be stored in these files.</p>
+<p>Characteristics of table source CSVs:</p>
+<ul>
+<li>Only have data for <strong>one</strong> geography level (state, county, tract, or zcta)</li>
+<li>Only have data for <strong>one</strong> year</li>
+<li>Named with the format <code>{geography}-{year}</code>, for example, <code>county-2020</code></li>
+<li>Has a <code>HEROP_ID</code> column as primary key that joins each row to a geography unit.</li>
+<li>Has column names that match (exactly) with <a href="../variables/">variable</a> names already defined in the registry.</li>
+</ul>
+<p>Each table source is defined by the following attributes:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>ID of table source</td>
+<td>Will always be in <code>{geography}-{year}</code> format</td>
+</tr>
+<tr>
+<td><code>title</code></td>
+<td>Human-readable title</td>
+<td>Currently not used anywhere, and set to match <code>name</code></td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>Short description</td>
+<td>Will always be "This CSV aggregates all OEPS data values from {year} at the {geography} level.</td>
+</tr>
+<tr>
+<td><code>path</code></td>
+<td>Path to CSV</td>
+<td>Relative to data directory, this path will always be <code>tables/{name}.csv</code>, i.e. <code>tables/{geography}-{year}.csv</code></td>
+</tr>
+<tr>
+<td><code>format</code></td>
+<td>Will always be <code>csv</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>mediatype</code></td>
+<td>Will always be <code>text/csv</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>year</code></td>
+<td>Year of the data in this CSV</td>
+<td></td>
+</tr>
+<tr>
+<td><code>bq_dataset_name</code></td>
+<td>Target dataset during BigQuery upload</td>
+<td>To be deprecated.</td>
+</tr>
+<tr>
+<td><code>bq_table_name</code></td>
+<td>Target table during BigQuery upload</td>
+<td>To be deprecated.</td>
+</tr>
+<tr>
+<td><code>geodata_source</code></td>
+<td>Name of geodata source this CSV will join to</td>
+<td>Geodata source must already exist in the registry. Importantly, the year of the CSV data may not match the geodata source, as 2015 data should be joined to 2010 geographies (for example).</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Future simplification</p>
+<p>Much of the content stored in the attributes described above can be inferred from other information, or is always the same across all table sources, so it's possible that some of these will be removed in the future.</p>
+</div>
+<h2 id="example-table_source">Example <code>table_source</code></h2>
+<pre><code>{
+  &quot;bq_dataset_name&quot;: &quot;tabular&quot;,
+  &quot;bq_table_name&quot;: &quot;county-2020&quot;,
+  &quot;name&quot;: &quot;county-2020&quot;,
+  &quot;path&quot;: &quot;tables/county-2020.csv&quot;,
+  &quot;format&quot;: &quot;csv&quot;,
+  &quot;mediatype&quot;: &quot;text/csv&quot;,
+  &quot;title&quot;: &quot;county-2020&quot;,
+  &quot;description&quot;: &quot;This CSV aggregates all OEPS data values from 2020 at the county level.&quot;,
+  &quot;year&quot;: &quot;2020&quot;,
+  &quot;geodata_source&quot;: &quot;counties-2018&quot;
 }
 </code></pre>
-<ul>
-<li><code>name</code> - Identifier for this table source. This ID is referenced by entries in the variables file.</li>
-<li><code>path</code> - URL to publicly hosted CSV file.</li>
-<li><code>title</code> - Human reaadable title of this source.</li>
-<li><code>description</code> - A short, informative description of the data source.</li>
-<li><code>bq_dataset_name</code> - The "dataset" (i.e. database) name in BigQuery that this source will be loaded into.</li>
-<li><code>bq_table_name</code> - The table name that this dataset will be loaded into.</li>
-</ul>
               
             </div>
           </div><footer>
