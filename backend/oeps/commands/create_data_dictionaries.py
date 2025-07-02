@@ -13,7 +13,7 @@ from ._common_opts import (
 @click.option(
     "--destination",
     "-d",
-    default=None,
+    default="../docs/src/reference/data-dictionaries/",
     help="Output directory for new dictionaries, if not supplied will be placed within data dir.",
     type=click.Path(
         resolve_path=True,
@@ -25,4 +25,6 @@ def create_data_dictionaries(destination, registry_path):
     """Create the human readable, MS Excel data dictionaries based on registry content."""
 
     registry = Registry(registry_path)
-    registry.create_data_dictionaries(destination)
+    outdir = Path(destination).absolute().resolve()
+    outdir.mkdir(exist_ok=True)
+    registry.create_data_dictionaries(outdir)
