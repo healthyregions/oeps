@@ -29,6 +29,10 @@ export default function About() {
             <h2> Notebooks and Sample Code </h2>
           </div>
           <div className="col-xs-12 col-md-8 col-lg-9">
+            <h3><a href="https://healthyregions.github.io/oeps">OEPS Documentation</a></h3>
+            <p>The full documentation site includes details about how OEPS is put together, and how the backend application can be used to manage data. This
+                documentation site is especially useful for developers who will be working on OEPS, or adding more data into the system.
+            </p>
             <h3><a href="https://geodacenter.github.io/opioid-environment-toolkit/index.html">Opioid Environment Toolkit</a></h3>
               <p>
               The Opioid Environment Toolkit provides an <b>introduction to GIS and spatial analysis</b> for opioid environment applications.

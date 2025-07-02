@@ -17,15 +17,11 @@ CSV content will be restructured and written to a directory that the frontend OE
 
 Run with `--upload` to put the output in S3. You must do this to publish changes to the production site.
 
-The entire map interface is driven by a collection of files in the `config` directory. This content is (almost) all generated automatically from the backend, and should not be edited directly. This is because the number of variables we now have in the system has become very large (over 350). The one exception to this is the `config/symbology.json` file. In this file, we store map display configurations for each variable.
-
-All of the actual data is stored in CSVs files located in `public/csv`.
-
 ![breakdown of config content](../img/explorer-build-process.png)
 
-## Docs
+## Docs/Download Pages
 
-The [/docs](https://oeps.healthyregions.org/docs) page is driven by a generated set of JSON files that link themes, constructs, and variable-specific information. Generate this content with:
+The [oeps.healthyregions.org/docs](https://oeps.healthyregions.org/docs) and [oeps.healthyregions.org/download](https://oeps.healthyregions.org/download) pages are driven by a generated set of JSON files that link themes, constructs, and variable-specific information. Generate this content with:
 
 ```shell
 flask build-explorer-docs

@@ -45,14 +45,14 @@
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption"><span class="caption-text">Introduction</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../..">Overview</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../overview/">OEPS Overview</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../legacy-migration/">Migration/Restructure 2023</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Guides</span></p>
+              <p class="caption"><span class="caption-text">Developer Guides</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../guides/install/">Installation</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../guides/install/">Installing the Components</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../guides/getting-started-with-cli/">Getting Started with the CLI</a>
                   </li>
@@ -60,21 +60,23 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../guides/adding-data-to-oeps/">Adding Data to OEPS</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../guides/exporting-data-from-oeps/">Exporting Data from OEPS</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../guides/creating-data-packages/">Creating Data Packages</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../guides/uploading-oeps-data-to-bigquery/">Uploading OEPS Data to BigQuery</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../guides/interacting-with-bigquery/">Interacting with OEPS Data in BigQuery</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../guides/analyzing-oeps-data-in-bigquery/">Analyzing OEPS Data in BigQuery</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../guides/generating-derived-documentation/">Generating Derived Documentation</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Registry</span></p>
               <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../overview/">Overview</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../">Overview</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../themes-constructs/">Themes &amp; Constructs</a>
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">Variables</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#example-variable-entry">Example variable entry</a>
+    </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../table-sources/">Table Sources</a>
@@ -95,6 +97,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/build-explorer-map/">build-explorer-map</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/create-data-dictionaries/">create-data-dictionaries</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/create-data-package/">create-data-package</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/inspect-csv/">inspect-csv</a>
                   </li>
@@ -141,111 +145,107 @@
 <th>Property</th>
 <th>Format</th>
 <th>Description</th>
-<th>OEPS Use</th>
+<th>Comment</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>name</code></td>
-<td>String</td>
-<td>Canonical name for this column (used in BigQuery)</td>
-<td>Required</td>
+<td>Primary identifier</td>
+<td>Same as key for this item, must be CamelCase and &lt;= 10 characters long.</td>
+<td></td>
 </tr>
 <tr>
 <td><code>title</code></td>
-<td>String</td>
-<td>A nicer human readable label or title for the field</td>
-<td>Required</td>
+<td>Human-readable title</td>
+<td>Appears in data dictionaries and OEPS Explorer interfaces</td>
+<td></td>
 </tr>
 <tr>
 <td><code>type</code></td>
-<td>String</td>
-<td>A string specifying the type. See <a href="https://specs.frictionlessdata.io/table-schema/#types-and-formats">types</a>.</td>
-<td>Required</td>
-</tr>
-<tr>
-<td><code>format</code></td>
-<td>String</td>
-<td>A string specifying a format</td>
-<td>Not Implemented</td>
+<td>Datatype of this variable</td>
+<td>See <a href="https://specs.frictionlessdata.io/table-schema/#types-and-formats">Frictionless Data field descriptor types</a></td>
+<td></td>
 </tr>
 <tr>
 <td><code>example</code></td>
-<td>String</td>
+<td>Varies</td>
 <td>An example value for the field</td>
-<td>Optional</td>
+<td></td>
 </tr>
 <tr>
 <td><code>description</code></td>
-<td>String</td>
 <td>A description for the field</td>
-<td>Optional</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>constraints</code></td>
-<td>JSON</td>
 <td>A <a href="https://specs.frictionlessdata.io/table-schema/#constraints">constraints descriptor</a></td>
-<td>Not Implemented</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><code>name</code> - Canonical name of the variable, same as key for this item, must be CamelCase and &lt;= 10 characters long.</li>
-<li><code>title</code> - Human-readable title.</li>
-<li><code>type</code> - The type of data in this column, must be one of Frictionless <a href="https://specs.frictionlessdata.io/table-schema/#types-and-formats">field types</a>.</li>
-<li><code>example</code> - An example value in this field.</li>
-<li><code>description</code> - A one or two sentence description.</li>
-<li><code>constraints</code> - Any data usage constraints that are relevant for this variable.</li>
-<li><code>comments</code> - Any extra comments about this variable's creation that don't fit into other properties.</li>
-<li><code>construct</code> - A "construct" string that is present within the <code>themes.json</code> file (see above)</li>
-<li><code>source</code> - Creator of this variable, abbreviations ok.</li>
-<li><code>source_long</code> - Long-form version of source</li>
-<li><code>oeps_v1_table</code> - If applicable, the name of the data table that this variable was stored in in OEPS v1.</li>
-<li><code>metadata_doc_url</code> - URL to raw content for a Markdown-formatted metadata document (this content is read and loaded directly into the explorer webpages).</li>
-<li><code>longitudinal</code> - <code>true</code>/<code>false</code>, appropriate for longitudinal comparison.</li>
-<li><code>analysis</code> - <code>true</code>/<code>false</code></li>
-<li><code>table_sources</code> - A list of data_source identifiers, must match identiers in the <code>sources.json</code> file.</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Format</th>
-<th>Description</th>
-<th>OEPS Use</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>theme</code></td>
-<td>String</td>
-<td>One of <code>Social</code>, <code>Environment</code>, <code>Economic</code>, <code>Policy</code>, <code>Outcome</code>, or <code>Geography</code>. See <a href="https://oeps.healthyregions.org/docs">OEPS docs</a>.</td>
-<td>Optional</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td><code>comment</code></td>
-<td>String</td>
-<td>Additional information about the data in this field</td>
-<td>Optional</td>
+<td><code>construct</code></td>
+<td><a href="../themes-constructs/">Construct</a> this variable fits within</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>source</code></td>
-<td>String</td>
-<td>Source of the data in this field</td>
-<td>Optional</td>
+<td>Abbreviated data source</td>
+<td>This information appears in OEPS Explorer interfaces</td>
+<td></td>
 </tr>
 <tr>
-<td><code>max_length</code></td>
-<td>Integer</td>
-<td>Max length of field (used in BigQuery schema)</td>
-<td>Optional</td>
+<td><code>source_long</code></td>
+<td>Long-form data source info</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>oeps_v1_table</code></td>
+<td>Table that held this variable in <a href="https://github.com/GeoDaCenter/opioid-policy-scan/releases/tag/v1.0">OEPS v1</a></td>
+<td>Not always applicable</td>
+<td></td>
+</tr>
+<tr>
+<td><code>comments</code></td>
+<td>Extra notes if needed</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>metadata_doc_url</code></td>
+<td>Markdown metadata URL</td>
+<td>Metadata documents store further information about the provenance of each variable</td>
+<td></td>
+</tr>
+<tr>
+<td><code>longitudinal</code></td>
+<td>N/A</td>
+<td>N/A</td>
+<td></td>
+</tr>
+<tr>
+<td><code>analysis</code></td>
+<td>N/A</td>
+<td>N/A</td>
+<td></td>
+</tr>
+<tr>
+<td><code>table_sources</code></td>
+<td>List of all <a href="../table-sources/">table sources</a> this variable appears in</td>
+<td>Table source names are in this list</td>
+<td></td>
 </tr>
 </tbody>
 </table>
+<h2 id="example-variable-entry">Example <code>variable</code> entry</h2>
 <pre><code>&quot;TotPop&quot;: {
-    &quot;name&quot;: &quot;TotPop&quot;,
     &quot;title&quot;: &quot;Total Population&quot;,
-    &quot;type&quot;: &quot;number&quot;,
+    &quot;name&quot;: &quot;TotPop&quot;,
+    &quot;type&quot;: &quot;integer&quot;,
     &quot;example&quot;: &quot;1632480&quot;,
     &quot;description&quot;: &quot;Total population&quot;,
     &quot;constraints&quot;: &quot;1980-2000 historic data was acquired from NHGIS and then interpolated to modern county boundaries through a population weighted interpolation using the tidycensus `interpolate_pw` function. For 1980, the underlying population weighting was county subdivisions, while for 1990 and 200 the underlying population weighting was tracts.&quot;,
@@ -254,27 +254,34 @@
     &quot;source_long&quot;: &quot;American Community Survey 2014-2018 5 Year Estimate; 2010 Decennial Census; Integrated Public Use Microdata Series National Historic Geographic Information System&quot;,
     &quot;oeps_v1_table&quot;: null,
     &quot;comments&quot;: &quot;For more information about how these data have been used in homelessness and housing stability research, please refer to https://www.census.gov/newsroom/press-releases/2020/special-operations-homelessness.html or https://www.americanprogress.org/issues/poverty/reports/2020/10/05/491122/count-people-where-they-are/.&quot;,
-    &quot;metadata_doc_url&quot;: &quot;https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md&quot;,
+    &quot;metadata_doc_url&quot;: &quot;https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Demographics.md&quot;,
     &quot;longitudinal&quot;: true,
     &quot;analysis&quot;: false,
     &quot;table_sources&quot;: [
-        &quot;c-1980&quot;,
-        &quot;s-latest&quot;,
-        &quot;t-2010&quot;,
-        &quot;t-latest&quot;,
-        &quot;s-2000&quot;,
-        &quot;t-2000&quot;,
-        &quot;c-1990&quot;,
-        &quot;z-latest&quot;,
-        &quot;t-1990&quot;,
-        &quot;s-1980&quot;,
-        &quot;c-latest&quot;,
-        &quot;s-1990&quot;,
-        &quot;s-2010&quot;,
-        &quot;t-1980&quot;,
-        &quot;c-2010&quot;,
-        &quot;c-2000&quot;
+      &quot;county-1980&quot;,
+      &quot;county-1990&quot;,
+      &quot;county-2000&quot;,
+      &quot;county-2010&quot;,
+      &quot;county-2018&quot;,
+      &quot;county-2020&quot;,
+      &quot;county-2023&quot;,
+      &quot;state-1980&quot;,
+      &quot;state-1990&quot;,
+      &quot;state-2010&quot;,
+      &quot;state-2000&quot;,
+      &quot;state-2018&quot;,
+      &quot;tract-1980&quot;,
+      &quot;tract-1990&quot;,
+      &quot;tract-2010&quot;,
+      &quot;tract-2000&quot;,
+      &quot;tract-2020&quot;,
+      &quot;tract-2018&quot;,
+      &quot;tract-2023&quot;,
+      &quot;zcta-2018&quot;,
+      &quot;zcta-2020&quot;,
+      &quot;zcta-2023&quot;
     ]
+  },
 }
 </code></pre>
               

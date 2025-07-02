@@ -45,14 +45,14 @@
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption"><span class="caption-text">Introduction</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../..">Overview</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../overview/">OEPS Overview</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../legacy-migration/">Migration/Restructure 2023</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Guides</span></p>
+              <p class="caption"><span class="caption-text">Developer Guides</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../guides/install/">Installation</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../guides/install/">Installing the Components</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../guides/getting-started-with-cli/">Getting Started with the CLI</a>
                   </li>
@@ -60,16 +60,16 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../guides/adding-data-to-oeps/">Adding Data to OEPS</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../guides/exporting-data-from-oeps/">Exporting Data from OEPS</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../guides/creating-data-packages/">Creating Data Packages</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../guides/uploading-oeps-data-to-bigquery/">Uploading OEPS Data to BigQuery</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../guides/interacting-with-bigquery/">Interacting with OEPS Data in BigQuery</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../guides/analyzing-oeps-data-in-bigquery/">Analyzing OEPS Data in BigQuery</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../guides/generating-derived-documentation/">Generating Derived Documentation</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Registry</span></p>
               <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../overview/">Overview</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../">Overview</a>
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">Themes &amp; Constructs</a>
     <ul class="current">
@@ -95,6 +95,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/build-explorer-map/">build-explorer-map</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/create-data-dictionaries/">create-data-dictionaries</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/create-data-package/">create-data-package</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/inspect-csv/">inspect-csv</a>
                   </li>
@@ -130,7 +132,7 @@
                 <h1 id="themes-constructs">Themes &amp; Constructs</h1>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>For a list of all themese &amp; constructs currently in the registry, see <a href="https://github.com/healthyregions/oeps/blob/main/docs/src/reference/registry/themes.csv">themes.csv</a> on Github.</p>
+<p>For a list of all themes &amp; constructs currently in the registry, see <a href="https://github.com/healthyregions/oeps/blob/main/docs/src/reference/registry/themes.csv">themes.csv</a> on Github.</p>
 </div>
 <p>Themes are a very lightweight grouping of "constructs" that represent a variable (or a group of variables) at a conceptual level. Alongside each construct is a "proxy"; this is just a short description of all variables that fit within this construct. The structure of the <code>themes.json</code> file is very simple:</p>
 <pre><code class="language-json">{
@@ -148,13 +150,16 @@
   }
 }
 </code></pre>
-<p>Each variable is matched to one construct via its <code>construct</code> propert (see below).</p>
+<p>Each variable is matched to one construct via its <code>construct</code> property.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>Themes, construct, and proxies are only used in certain export formats, and are not a structurally central aspect of the registry.</p>
+</div>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../overview/" class="btn btn-neutral float-left" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../" class="btn btn-neutral float-left" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../variables/" class="btn btn-neutral float-right" title="Variables">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
@@ -178,7 +183,7 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../overview/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
       <span><a href="../variables/" style="color: #fcfcfc">Next &raquo;</a></span>

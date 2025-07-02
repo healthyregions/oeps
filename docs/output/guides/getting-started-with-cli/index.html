@@ -45,20 +45,20 @@
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption"><span class="caption-text">Introduction</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../..">Overview</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../overview/">OEPS Overview</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../legacy-migration/">Migration/Restructure 2023</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Guides</span></p>
+              <p class="caption"><span class="caption-text">Developer Guides</span></p>
               <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../install/">Installation</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../install/">Installing the Components</a>
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">Getting Started with the CLI</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a>
+    <li class="toctree-l2"><a class="reference internal" href="#running-commands">Running commands</a>
     </li>
     </ul>
                   </li>
@@ -66,16 +66,16 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../adding-data-to-oeps/">Adding Data to OEPS</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../exporting-data-from-oeps/">Exporting Data from OEPS</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../creating-data-packages/">Creating Data Packages</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../uploading-oeps-data-to-bigquery/">Uploading OEPS Data to BigQuery</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../interacting-with-bigquery/">Interacting with OEPS Data in BigQuery</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../analyzing-oeps-data-in-bigquery/">Analyzing OEPS Data in BigQuery</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../generating-derived-documentation/">Generating Derived Documentation</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Registry</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../registry/overview/">Overview</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../registry/">Overview</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../registry/themes-constructs/">Themes &amp; Constructs</a>
                   </li>
@@ -100,6 +100,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/create-data-dictionaries/">create-data-dictionaries</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/create-data-package/">create-data-package</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/inspect-csv/">inspect-csv</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/merge-data-table/">merge-data-table</a>
@@ -121,7 +123,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Guides</li>
+          <li class="breadcrumb-item">Developer Guides</li>
       <li class="breadcrumb-item active">Getting Started with the CLI</li>
     <li class="wy-breadcrumbs-aside">
     </li>
@@ -144,13 +146,17 @@ source ./env/bin/activate
 ## on windows
 .\env\Scripts\activate
 </code></pre>
-<h2 id="usage">Usage</h2>
+<h2 id="running-commands">Running commands</h2>
 <p>All commands must be invoked with the prefix <code>flask</code>. To get a list of all available commands, run</p>
 <pre><code class="language-shell">flask --help
 </code></pre>
 <p>You should see a list of about 10 commands. To run one of these commands, use</p>
 <pre><code class="language-shell">flask [command]
 </code></pre>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you only see three commands (<code>routes</code>, <code>run</code>, and <code>shell</code>), then you either need to activate your virtual environment or make sure you have a <code>.env</code> file with <code>FLASK_APP=oeps</code> in it. (These three are default Flask commands.)</p>
+</div>
 <p>For example, to validate the registry, just run</p>
 <pre><code class="language-shell">flask validate-registry
 </code></pre>
@@ -162,7 +168,7 @@ source ./env/bin/activate
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../install/" class="btn btn-neutral float-left" title="Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../install/" class="btn btn-neutral float-left" title="Installing the Components"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../provisioning-oeps-explorer/" class="btn btn-neutral float-right" title="Provisioning OEPS Explorer">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 

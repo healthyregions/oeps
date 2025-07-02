@@ -68,6 +68,7 @@ def build_docs(operation, registry_path):
             ("oeps.commands.build_explorer_docs", "build_explorer_docs"),
             ("oeps.commands.build_explorer_map", "build_explorer_map"),
             ("oeps.commands.create_data_dictionaries", "create_data_dictionaries"),
+            ("oeps.commands.create_data_package", "create_data_package"),
             ("oeps.commands.inspect_csv", "inspect_csv"),
             ("oeps.commands.merge_data_table", "merge_data_table"),
             ("oeps.commands.validate_registry", "validate_registry"),

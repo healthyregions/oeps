@@ -45,14 +45,14 @@
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption"><span class="caption-text">Introduction</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../..">Overview</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../overview/">OEPS Overview</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../legacy-migration/">Migration/Restructure 2023</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Guides</span></p>
+              <p class="caption"><span class="caption-text">Developer Guides</span></p>
               <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../install/">Installation</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../install/">Installing the Components</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../getting-started-with-cli/">Getting Started with the CLI</a>
                   </li>
@@ -60,22 +60,22 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#interactive-map">Interactive Map</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#docs">Docs</a>
+    <li class="toctree-l2"><a class="reference internal" href="#docsdownload-pages">Docs/Download Pages</a>
     </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../adding-data-to-oeps/">Adding Data to OEPS</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../exporting-data-from-oeps/">Exporting Data from OEPS</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../creating-data-packages/">Creating Data Packages</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../uploading-oeps-data-to-bigquery/">Uploading OEPS Data to BigQuery</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../interacting-with-bigquery/">Interacting with OEPS Data in BigQuery</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../analyzing-oeps-data-in-bigquery/">Analyzing OEPS Data in BigQuery</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../generating-derived-documentation/">Generating Derived Documentation</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Registry</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../registry/overview/">Overview</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../registry/">Overview</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../registry/themes-constructs/">Themes &amp; Constructs</a>
                   </li>
@@ -100,6 +100,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/create-data-dictionaries/">create-data-dictionaries</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/create-data-package/">create-data-package</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/inspect-csv/">inspect-csv</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/merge-data-table/">merge-data-table</a>
@@ -121,7 +123,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Guides</li>
+          <li class="breadcrumb-item">Developer Guides</li>
       <li class="breadcrumb-item active">Provisioning OEPS Explorer</li>
     <li class="wy-breadcrumbs-aside">
     </li>
@@ -142,11 +144,9 @@
 </div>
 <p>CSV content will be restructured and written to a directory that the frontend OEPS Explorer can read. The <code>variables.json</code> file within the OEPS Explorer will be updated as well, pointing to the newly uploaded files.</p>
 <p>Run with <code>--upload</code> to put the output in S3. You must do this to publish changes to the production site.</p>
-<p>The entire map interface is driven by a collection of files in the <code>config</code> directory. This content is (almost) all generated automatically from the backend, and should not be edited directly. This is because the number of variables we now have in the system has become very large (over 350). The one exception to this is the <code>config/symbology.json</code> file. In this file, we store map display configurations for each variable.</p>
-<p>All of the actual data is stored in CSVs files located in <code>public/csv</code>.</p>
 <p><a class="glightbox" href="../../img/explorer-build-process.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="breakdown of config content" src="../../img/explorer-build-process.png" /></a></p>
-<h2 id="docs">Docs</h2>
-<p>The <a href="https://oeps.healthyregions.org/docs">/docs</a> page is driven by a generated set of JSON files that link themes, constructs, and variable-specific information. Generate this content with:</p>
+<h2 id="docsdownload-pages">Docs/Download Pages</h2>
+<p>The <a href="https://oeps.healthyregions.org/docs">oeps.healthyregions.org/docs</a> and <a href="https://oeps.healthyregions.org/download">oeps.healthyregions.org/download</a> pages are driven by a generated set of JSON files that link themes, constructs, and variable-specific information. Generate this content with:</p>
 <pre><code class="language-shell">flask build-explorer-docs
 </code></pre>
 <div class="admonition tip">

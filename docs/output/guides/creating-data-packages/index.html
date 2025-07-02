@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Exporting Data from OEPS - OEPS Documentation</title>
+    <title>Creating Data Packages - OEPS Documentation</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Exporting Data from OEPS";
-        var mkdocs_page_input_path = "guides/exporting-data-from-oeps.md";
+        var mkdocs_page_name = "Creating Data Packages";
+        var mkdocs_page_input_path = "guides/creating-data-packages.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -45,14 +45,14 @@
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption"><span class="caption-text">Introduction</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../..">Overview</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../overview/">OEPS Overview</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../legacy-migration/">Migration/Restructure 2023</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Guides</span></p>
+              <p class="caption"><span class="caption-text">Developer Guides</span></p>
               <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../install/">Installation</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../install/">Installing the Components</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../getting-started-with-cli/">Getting Started with the CLI</a>
                   </li>
@@ -60,24 +60,18 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../adding-data-to-oeps/">Adding Data to OEPS</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Exporting Data from OEPS</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Creating Data Packages</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#data-package-frictionless-data-spec-v1">Data Package (Frictionless Data spec v1)</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#data-dictionaries">Data Dictionaries</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#documentation">Documentation</a>
-    </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../uploading-oeps-data-to-bigquery/">Uploading OEPS Data to BigQuery</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../interacting-with-bigquery/">Interacting with OEPS Data in BigQuery</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../analyzing-oeps-data-in-bigquery/">Analyzing OEPS Data in BigQuery</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../generating-derived-documentation/">Generating Derived Documentation</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Registry</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../registry/overview/">Overview</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../registry/">Overview</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../registry/themes-constructs/">Themes &amp; Constructs</a>
                   </li>
@@ -102,6 +96,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/create-data-dictionaries/">create-data-dictionaries</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/create-data-package/">create-data-package</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/inspect-csv/">inspect-csv</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/merge-data-table/">merge-data-table</a>
@@ -123,8 +119,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Guides</li>
-      <li class="breadcrumb-item active">Exporting Data from OEPS</li>
+          <li class="breadcrumb-item">Developer Guides</li>
+      <li class="breadcrumb-item active">Creating Data Packages</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -133,36 +129,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="exporting-data-from-oeps">Exporting Data from OEPS</h1>
-<p>The data stored within OEPS is distributed through a number of different channels, and extraction methods have been built to transform the content as needed. For example, OEPS data is restructured in a specific way to populate the <a href="https://oeps.healthyregions.org/map">interactive web map</a>, but the same data must also be configured into a <a href="https://https://specs.frictionlessdata.io">Frictionless Data Package</a> for integration into the JCOIN Data Commons, a data sharing and analysis portal based on the Gen3 platform.</p>
-<p>The rest of this page describes the various commands available and the export content they will create.</p>
-<h2 id="data-package-frictionless-data-spec-v1">Data Package (Frictionless Data spec v1)</h2>
+                <h1 id="creating-data-packages">Creating Data Packages</h1>
+<p>Data packages can be generated from data in OEPS based on the <a href="https://https://specs.frictionlessdata.io">Frictionless Data spec</a> (these specs are actually already implemented within the registry, as described <a href="../../registry/">here</a>).</p>
 <p>To generate a data package, run the following:</p>
 <pre><code>flask create-data-package
 </code></pre>
-<p>Run on its own, this command will end in a <code>row_stream</code> error. This is because a validation check is attempted that doesn't support foreign keys to shapefiles, which is how we have the package configured. You can avoid this by using either the <code>--skip-foreign-keys</code> or <code>--skip-validation</code> flags as described in the full docs.</p>
-<p><a href="./reference/commands/create-data-package.md">[see full docs]</a></p>
-<h2 id="data-dictionaries">Data Dictionaries</h2>
-<p>A suite of data dictionaries, one per geography level, can be generated with the following command:</p>
-<pre><code>flask create-data-dictionaries
-</code></pre>
-<p>These files compile all information available for each variable into a human readable, easy-to-distribute MS Excel spreadsheet.</p>
-<h2 id="documentation">Documentation</h2>
-<p>A number of files within this set of docs are also generated from the registry content and placed within the docs/references directory, by using this command:</p>
-<pre><code>flask build-docs [category]
-</code></pre>
-<p>Categories are:</p>
-<ul>
-<li><code>bq-reference</code>: Generates a markdown reference file for all content in BigQuery</li>
-<li><code>cli</code>: Generates the detailed command documentation (for every command described here!)</li>
-<li><code>registry-summary</code>: Generates the summary CSV files that list all registry content, and are easy to search through in Github.</li>
-</ul>
+<div class="admonition tip">
+<p><a href="../../reference/cli/create-data-package/">view in cli reference &rarr;</a></p>
+</div>
+<p>Run on its own, this command will end in a <code>row_stream</code> error. This is because a validation check is attempted that doesn't support foreign keys to shapefiles, which is how we have the package configured. You can avoid this by using either the <code>--skip-foreign-keys</code> or <code>--skip-validation</code> flags as described in the CLI reference for this command.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../adding-data-to-oeps/" class="btn btn-neutral float-left" title="Adding Data to OEPS"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../uploading-oeps-data-to-bigquery/" class="btn btn-neutral float-right" title="Uploading OEPS Data to BigQuery">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../interacting-with-bigquery/" class="btn btn-neutral float-right" title="Interacting with OEPS Data in BigQuery">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -188,7 +169,7 @@
       <span><a href="../adding-data-to-oeps/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../uploading-oeps-data-to-bigquery/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../interacting-with-bigquery/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

@@ -1,16 +1,18 @@
 # Opioid Environment Policy Scan (OEPS)
 
-The Opioid Environment Policy Scan (OEPS) is an open-source data warehouse that helps characterize helps characterize the multi-dimensional risk environment impacting opioid use and health outcomes across the United States.
+The Opioid Environment Policy Scan (OEPS) is an open source data ecosystem that helps characterize the multi-dimensional risk environment impacting opioid use and health outcomes across the United States.
 
-This code base holds the following components of the OEPS project:
+This code base holds the all components of the OEPS project, including the CSV files that contain the raw data itself.
 
-- OEPS Explorer (frontend): [oeps.healthyregions.org](https://oeps.healthyregions.org)
+- OEPS Documentation:  [healthyregions.github.io/oeps](https://healthyregions.github.io/oeps)
+    - The full, technical documentation deployed via Github pages.
+    - **Start here** if you are looking to learn about how OEPS is put together, or are a developer that will be working on this code base.
+- OEPS Explorer: [oeps.healthyregions.org](https://oeps.healthyregions.org)
     - The OEPS Explorer is a NextJS app built from [WebGeoda](https://docs.webgeoda.org/) (which uses [jsGeoDa](https://jsgeoda.libgeoda.org/)) for geospatial interactivity.
-- Data management backend
+- OEPS Backend
     - The backend is a Flask app that manages the many variables and datasets that makeup the OEPS data warehouse.
     - The backend uses [Frictionless Standards](https://specs.frictionlessdata.io) internally and features multiple export pipelines to different systems.
-
-The [full documentation](https://healthyregions.github.io/oeps) describes how these applications interact, how to use them, and how to add new data variables and tables to the warehouse.
+    - The backend holds a registry as well as the raw CSV data itself.
 
 See also:
 
@@ -36,7 +38,3 @@ Susan Paykin, Dylan Halpern, Qinyun Lin, Moksha Menghaney, Angela Li, Rachel Vig
 ### v2 Citation
 
 Adam Cox, Ashlynn Wimer, Sara Lambert, Susan Paykin, Dylan Halpern, Qinyun Lin, Moksha Menghaney, Angela Li, Rachel Vigil, Margot Bolanos Gamez, Alexa Jin, Ally Muszynski, and Marynia Kolak. (2024). healthyregions/oeps: Opioid Environment Policy Scan (OEPS) Data Warehouse (v2.0). Zenodo. https://doi.org/10.5281/zenodo.5842465
-
-## Data Access and Release Architecture
-
-![OEPS data release architecture](./docs/img/oeps-overview.png)
