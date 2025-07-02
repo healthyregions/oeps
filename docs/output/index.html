@@ -3,16 +3,16 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" />
       <link rel="shortcut icon" href="img/favicon.ico" />
-    <title>Overview - OEPS Documentation</title>
+    <title>OEPS Documentation</title>
     <link rel="stylesheet" href="css/theme.css" />
     <link rel="stylesheet" href="css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Overview";
+        var mkdocs_page_name = "OEPS Documentation";
         var mkdocs_page_input_path = "index.md";
         var mkdocs_page_url = null;
       </script>
@@ -44,31 +44,15 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption"><span class="caption-text">Introduction</span></p>
-              <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Overview</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#oeps-explorer">OEPS Explorer</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#oeps-backend">OEPS Backend</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#registry">Registry</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#management-commands">Management Commands</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#documentation-site">Documentation Site</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#oepsdata-r-package">oepsData - R package</a>
-    </li>
-    </ul>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="overview/">OEPS Overview</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="legacy-migration/">Migration/Restructure 2023</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Guides</span></p>
+              <p class="caption"><span class="caption-text">Developer Guides</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="guides/install/">Installation</a>
+                  <li class="toctree-l1"><a class="reference internal" href="guides/install/">Installing the Components</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="guides/getting-started-with-cli/">Getting Started with the CLI</a>
                   </li>
@@ -76,16 +60,16 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="guides/adding-data-to-oeps/">Adding Data to OEPS</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="guides/exporting-data-from-oeps/">Exporting Data from OEPS</a>
+                  <li class="toctree-l1"><a class="reference internal" href="guides/creating-data-packages/">Creating Data Packages</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="guides/uploading-oeps-data-to-bigquery/">Uploading OEPS Data to BigQuery</a>
+                  <li class="toctree-l1"><a class="reference internal" href="guides/interacting-with-bigquery/">Interacting with OEPS Data in BigQuery</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="guides/analyzing-oeps-data-in-bigquery/">Analyzing OEPS Data in BigQuery</a>
+                  <li class="toctree-l1"><a class="reference internal" href="guides/generating-derived-documentation/">Generating Derived Documentation</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Registry</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="registry/overview/">Overview</a>
+                  <li class="toctree-l1"><a class="reference internal" href="registry/">Overview</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="registry/themes-constructs/">Themes &amp; Constructs</a>
                   </li>
@@ -110,6 +94,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="reference/cli/create-data-dictionaries/">create-data-dictionaries</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="reference/cli/create-data-package/">create-data-package</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="reference/cli/inspect-csv/">inspect-csv</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="reference/cli/merge-data-table/">merge-data-table</a>
@@ -131,8 +117,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Introduction</li>
-      <li class="breadcrumb-item active">Overview</li>
+      <li class="breadcrumb-item active">OEPS Documentation</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -141,45 +126,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="overview">Overview</h1>
-<p>This documentation aims to be a comprehensive overview of how the Opioid Policy Environment Scan (OEPS, or "oh-eeps") data ecosystem is put together. Primarily, it is a technical resource for developers working on the code base, but also contains information for analysts preparing and adding new data, and information for researchers looking to download or otherwise access OEPS data.</p>
+                <h1 id="oeps-documentation">OEPS Documentation</h1>
+<p>This documentation aims to be a comprehensive explantation of how the Opioid Policy Environment Scan (OEPS, or "oh-eeps") data ecosystem is put together, and a technical resource for developers working on the code base. It also contains information for analysts preparing and adding new data, and guides for researchers looking to download or otherwise access OEPS data.</p>
 <p>This project builds from the original data warehouse stored in <a href="https://github.com/GeoDaCenter/opioid-policy-scan">github.com/GeoDaCenter/opioid-policy-scan</a>, and published on Zenodo at <a href="https://doi.org/10.5281/zenodo.5842465">doi.org/10.5281/zenodo.5842465</a>.</p>
-<p>A number of components work together to create a data ecosystem from which data can be accessed and analyzed in many different ways. The following is a brief description of each component, with links to topics of interest for each one.</p>
-<h2 id="oeps-explorer">OEPS Explorer</h2>
-<p>The <a href="https://oeps.healthyregions.org">OEPS Explorer</a> is a NextJS app that is built from <a href="https://docs.webgeoda.org/">WebGeoDa Scaffolding</a>, a configurable web map application that implements <a href="https://jsgeoda.libgeoda.org/">jsGeoDa</a> for geospatial interactivity. It is deployed through Netlify.</p>
-<ul>
-<li><a href="guides/install/#oeps-explorer">How to install the OEPS Explorer for local development</a></li>
-<li><a href="guides/provisioning-oeps-explorer/">How to provision static assets for the OEPS Explorer from the backend app</a></li>
-</ul>
-<h2 id="oeps-backend">OEPS Backend</h2>
-<p>The OEPS Backend is a <a href="https://flask.palletsprojects.com/en/stable/">Flask</a> application that 1) holds all source data and data definitions in a "registry", and 2) provides a suite of management commands that interact with the registry to perform various data-related actions. These commands are built with <a href="https://click.palletsprojects.com/en/stable/">Click</a>, the CLI framework that Flask uses.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>In the future, Flask's URL routing could be used to expose registry-related operations to HTTP endpoints, but for now everything is handling via the CLI.</p>
-</div>
-<ul>
-<li><a href="guides/install/#oeps-backend">How to install the OEPS Backend</a></li>
-</ul>
-<h3 id="registry">Registry</h3>
-<p>The registry holds all data for OEPS (as CSV files), as well as linkage information for how those CSVs can be joined to the appropriate geometry Shapefiles for each year and geography (state, county, tract, or zcta). More importantly, it holds a suite of JSON files that define structured metadata about all of the data content.</p>
-<h3 id="management-commands">Management Commands</h3>
-<p>The backend provides management commands that can be used to perform many different data-related operations.</p>
-<ul>
-<li><a href="guides/getting-started-with-commands.md">How to get started with backend management commands</a></li>
-</ul>
-<h2 id="documentation-site">Documentation Site</h2>
-<p>todo</p>
-<h2 id="oepsdata-r-package">oepsData - R package</h2>
-<p>We also manage an R data package, which makes it especially easy to download and analyze OEPS data in an R environment.</p>
-<ul>
-<li><a href="https://oepsdata.healthyregions.org">Go to full <code>oepsData</code> Documentation</a></li>
-</ul>
               
             </div>
           </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="legacy-migration/" class="btn btn-neutral float-right" title="Migration/Restructure 2023">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
 
   <hr/>
 
@@ -202,8 +154,6 @@
     
     
     
-      <span><a href="legacy-migration/" style="color: #fcfcfc">Next &raquo;</a></span>
-    
   </span>
 </div>
     <script src="js/jquery-3.6.0.min.js"></script>
@@ -220,3 +170,8 @@
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 </script></body>
 </html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2025-07-02 18:05:28.682369+00:00
+-->

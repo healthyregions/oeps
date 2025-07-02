@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Migration/Restructure 2023 - OEPS Documentation</title>
+    <title>OEPS Overview - OEPS Documentation</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Migration/Restructure 2023";
-        var mkdocs_page_input_path = "legacy-migration.md";
+        var mkdocs_page_name = "OEPS Overview";
+        var mkdocs_page_input_path = "overview.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -45,11 +45,19 @@
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption"><span class="caption-text">Introduction</span></p>
               <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../overview/">OEPS Overview</a>
-                  </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Migration/Restructure 2023</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">OEPS Overview</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#oeps-explorer">OEPS Explorer</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#oeps-backend">OEPS Backend</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#oeps-documentation">OEPS Documentation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#oepsdata">oepsData</a>
+    </li>
     </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../legacy-migration/">Migration/Restructure 2023</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Developer Guides</span></p>
@@ -120,7 +128,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Introduction</li>
-      <li class="breadcrumb-item active">Migration/Restructure 2023</li>
+      <li class="breadcrumb-item active">OEPS Overview</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -129,25 +137,46 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="migrationrestructure-2023">Migration/Restructure 2023</h1>
-<p>Through the summer of 2023 we had two broad objectives:</p>
-<ol>
-<li>undertake a significant data update for a v2 release</li>
-<li>create a new backend integration with Google BigQuery</li>
-</ol>
-<p>Furthermore, we needed to do some significant restructuring of the existing OEPS repositories in order to move management to our new <a href="https://github.com/healthyregions">HealthyRegions</a> GitHub org. We tried our best to do this in a way that </p>
+                <h1 id="oeps-overview">OEPS Overview</h1>
+<p>A number of components work together to create a data ecosystem from which data can be accessed and analyzed in many different ways. The following is a brief description of each component, with links to topics of interest for each one.</p>
 <ul>
-<li>retained existing release patterns and data stores, and</li>
-<li>retained past git history and record of individual contributions to OEPS</li>
+<li><a href="#oeps-explorer">OEPS Explorer</a></li>
+<li><a href="#oeps-backend">OEPS Backend</a></li>
+<li><a href="#oeps-documentation">OEPS Documentation</a></li>
+<li><a href="#oepsdata">oepsData (R package)</a></li>
 </ul>
-<p>The end result is this single repo which holds the website (explorer) and new BQ backend, but still pulls from the original repo for static datasets which are pinned to that repo's GitHub release tags. Getting here was a bit circuitous, as you can see in the full diagram below.</p>
-<p><a class="glightbox" href="../img/oeps-repo-migration.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="oeps repo migration" src="../img/oeps-repo-migration.png" /></a></p>
+<h2 id="oeps-explorer">OEPS Explorer</h2>
+<p>The <a href="https://oeps.healthyregions.org">OEPS Explorer</a> is a NextJS app built from <a href="https://docs.webgeoda.org/">WebGeoDa Scaffolding</a>, a configurable web map application that implements <a href="https://jsgeoda.libgeoda.org/">jsGeoDa</a> for geospatial interactivity. It is deployed through Netlify.</p>
+<ul>
+<li><a href="../guides/install/#oeps-explorer">Install the OEPS Explorer for local development</a></li>
+<li><a href="../guides/provisioning-oeps-explorer/">Provision static assets for the OEPS Explorer (using the backend app)</a></li>
+</ul>
+<h2 id="oeps-backend">OEPS Backend</h2>
+<p>The OEPS Backend is a <a href="https://flask.palletsprojects.com/en/stable/">Flask</a> application that holds a relational database-style JSON file registry based on <a href="https://specs.frictionlessdata.io">Frictionless Data</a> standards and all OEPS data in CSV format, as well as a suite of management commands that perform various data-related actions.</p>
+<ul>
+<li><a href="../guides/install/#oeps-backend">Install the OEPS Backend</a></li>
+<li><a href="../guides/getting-started-with-cli/">Get started with CLI commands</a></li>
+<li><a href="../registry/">Learn about the registry and what's in it</a></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the future, Flask's URL routing could be used to expose registry-related operations to HTTP endpoints, but for now everything is handling via the CLI.</p>
+</div>
+<h2 id="oeps-documentation">OEPS Documentation</h2>
+<p>The OEPS Documentation is a static site build with <a href="https://www.mkdocs.org/">MkDocs</a> and hosted on Github pages at <a href="https://healthyregions.github.io/oeps">healthyregions.github.io/oeps</a>.</p>
+<ul>
+<li><a href="../guides/install/#oeps-documentation">Install the documentation for local development</a></li>
+</ul>
+<h2 id="oepsdata">oepsData</h2>
+<p>We also manage an R data package called <code>oepsData</code> that makes it especially easy to download and analyze datasets from OEPS in an R environment.</p>
+<ul>
+<li><a href="https://oepsdata.healthyregions.org" target="_blank">Go to full <code>oepsData</code> Documentation &nearr;</a></li>
+</ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../overview/" class="btn btn-neutral float-left" title="OEPS Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../guides/install/" class="btn btn-neutral float-right" title="Installing the Components">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../legacy-migration/" class="btn btn-neutral float-right" title="Migration/Restructure 2023">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -170,10 +199,8 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../overview/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-    
-      <span><a href="../guides/install/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../legacy-migration/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

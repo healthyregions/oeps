@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Uploading OEPS Data to BigQuery - OEPS Documentation</title>
+    <title>Generating Derived Documentation - OEPS Documentation</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Uploading OEPS Data to BigQuery";
-        var mkdocs_page_input_path = "guides/uploading-oeps-data-to-bigquery.md";
+        var mkdocs_page_name = "Generating Derived Documentation";
+        var mkdocs_page_input_path = "guides/generating-derived-documentation.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -45,14 +45,14 @@
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption"><span class="caption-text">Introduction</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../..">Overview</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../overview/">OEPS Overview</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../legacy-migration/">Migration/Restructure 2023</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Guides</span></p>
+              <p class="caption"><span class="caption-text">Developer Guides</span></p>
               <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../install/">Installation</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../install/">Installing the Components</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../getting-started-with-cli/">Getting Started with the CLI</a>
                   </li>
@@ -60,22 +60,26 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../adding-data-to-oeps/">Adding Data to OEPS</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../exporting-data-from-oeps/">Exporting Data from OEPS</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../creating-data-packages/">Creating Data Packages</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Uploading OEPS Data to BigQuery</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../interacting-with-bigquery/">Interacting with OEPS Data in BigQuery</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Generating Derived Documentation</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#setting-up-credentials">Setting up Credentials</a>
+    <li class="toctree-l2"><a class="reference internal" href="#data-dictionaries">Data Dictionaries</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#uploading-tables">Uploading Tables</a>
+    <li class="toctree-l2"><a class="reference internal" href="#cli-documentation">CLI Documentation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#registry-summary">Registry Summary</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bigquery-table-schemas">BigQuery Table Schemas</a>
     </li>
     </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../analyzing-oeps-data-in-bigquery/">Analyzing OEPS Data in BigQuery</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Registry</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../registry/overview/">Overview</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../registry/">Overview</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../registry/themes-constructs/">Themes &amp; Constructs</a>
                   </li>
@@ -100,6 +104,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/create-data-dictionaries/">create-data-dictionaries</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/create-data-package/">create-data-package</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/inspect-csv/">inspect-csv</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/merge-data-table/">merge-data-table</a>
@@ -121,8 +127,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Guides</li>
-      <li class="breadcrumb-item active">Uploading OEPS Data to BigQuery</li>
+          <li class="breadcrumb-item">Developer Guides</li>
+      <li class="breadcrumb-item active">Generating Derived Documentation</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -131,45 +137,79 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="uploading-oeps-data-to-bigquery">Uploading OEPS Data to BigQuery</h1>
-<h2 id="setting-up-credentials">Setting up Credentials</h2>
-<p>To load OEPS data to BigQuery you will need to add access credentials as environment variables using the <code>.env</code> file. This file must always stay out of version control.</p>
+                <h1 id="generating-derived-documentation">Generating Derived Documentation</h1>
+<p>A variety of informational content can be automatically derived from the registry and backend code through a few different CLI commands.</p>
+<div class="toc">
 <ul>
-<li>
-<p>Make a copy of <code>.env.example</code> and name it <code>.env</code>. Any variables defined in this file will now be available via <code>os.getenv('VARIABLE_NAME')</code></p>
-</li>
-<li>
-<p>Obtain a set of JSON credentials for the project, and store the file anywhere on your computer (but outside of this repository).</p>
-</li>
-<li>
-<p>In your <code>.env</code> file, update the <code>BQ_CREDENTIALS_FILE_PATH</code> variable with the full path to this file. For example:</p>
-<p><code>BQ_CREDENTIALS_FILE_PATH="/home/my_username/bq_credentials/oeps-391119-5783b2b59b83.json"</code></p>
-</li>
-<li>
-<p>It is also possible to set BigQuery credentials without storing a local JSON file. More info on this is in the <code>.env.example</code> file.</p>
+<li><a href="#generating-derived-documentation">Generating Derived Documentation</a><ul>
+<li><a href="#data-dictionaries">Data Dictionaries</a></li>
+<li><a href="#cli-documentation">CLI Documentation</a></li>
+<li><a href="#registry-summary">Registry Summary</a></li>
+<li><a href="#bigquery-table-schemas">BigQuery Table Schemas</a></li>
+</ul>
 </li>
 </ul>
-<p>Once you have setup these credentials, you can test them with</p>
-<pre><code>flask bigquery-upload --check-credentials
+</div>
+<h2 id="data-dictionaries">Data Dictionaries</h2>
+<p>Data dictionaries can be generated in MS Excel format for easy-to-access, human readable distribution. These data dictionaries are split by geography--state, county, tract, or zcta--and list all variables with data at that geography and the for which years we have data for that variable.</p>
+<p>Use the following command to generate updated data dictionaries:</p>
+<pre><code class="language-shell">flask create-data-dictionaries
 </code></pre>
-<p>If all is well, the command will print <code>ok</code>.</p>
-<h2 id="uploading-tables">Uploading Tables</h2>
-<p>Use the following command to load a new table into BigQuery:</p>
-<pre><code class="language-shell">flask bigquery-upload
+<div class="admonition tip">
+<p><a href="../../reference/cli/create-data-dictionaries/">view in cli reference &rarr;</a></p>
+</div>
+<p>These files are directly linked for download within the OEPS Explorer (/docs page) and are also referenced within the oepsData R package.</p>
+<div class="admonition message">
+<p>Output location: <code>/docs/src/reference/data-dictionaries</code></p>
+</div>
+<h2 id="cli-documentation">CLI Documentation</h2>
+<p>The CLI reference documentation for each command is automatically generated from code comments and docstrings directly within those commands.</p>
+<p>Use the following command to regenerate this content:</p>
+<pre><code class="language-shell">flask build-docs cli
 </code></pre>
-<p>TODO: Need to finish this section.</p>
-<p>Where <code>--source</code> is the path to a Data Resource schema (stored as JSON file), or a directory containing multiple Data Resource schemas. Optional flags on this command are:</p>
+<div class="admonition tip">
+<p><a href="../../reference/cli/build-docs/">view in cli reference &rarr;</a></p>
+</div>
+<p>To properly document a newly created CLI command, make sure that</p>
 <ul>
-<li><code>--table-only</code> will create the BigQuery dataset and table based on the schema, but will not attempt to load data into it.</li>
-<li><code>--dry-run</code> will validate the input dataset against the schema, but not attempt to load it.</li>
-<li><code>--overwrite</code> will drop and recreate the BigQuery table if it already exists in the dataset.</li>
+<li>it is listed in the code for the <code>build-docs</code> command</li>
+<li>the newly generated <code>.md</code> file is added to <code>mkdocs.yml</code></li>
+<li>rebuild and publish these docs as described in the <a href="../install/#oeps-documentation">OEPS Documentation installation notes</a></li>
 </ul>
+<div class="admonition message">
+<p>Output location: <code>/docs/src/reference/cli</code></p>
+</div>
+<h2 id="registry-summary">Registry Summary</h2>
+<p>While the registry content is stored in JSON files, it can be easier to quickly search and digest that information in CSV format. The following command will generate a full set of CSV files from the registry:</p>
+<pre><code class="language-shell">flask build-docs registry-summary
+</code></pre>
+<div class="admonition tip">
+<p><a href="../../reference/cli/build-docs/">view in cli reference &rarr;</a></p>
+</div>
+<p>These are the files linked from the <a href="../../registry/#whats-in-the-registry">What's in the Registry?</a> section.</p>
+<div class="admonition message">
+<p>Output location: <code>/docs/src/reference/registry</code></p>
+</div>
+<h2 id="bigquery-table-schemas">BigQuery Table Schemas</h2>
+<p>To help researchers use the BigQuery tables to which we upload OEPS data, a reference document can be generated that describes the full shape of the content in BigQuery:</p>
+<pre><code class="language-shell">flask build-docs bq-reference
+</code></pre>
+<div class="admonition tip">
+<p><a href="../../reference/cli/build-docs/">view in cli reference &rarr;</a></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The document describes the <strong>anticipated</strong> shape of these tables, even if they have not actually been updated recently, so extra care must be taken to keep these things in sync.</p>
+</div>
+<div class="admonition message">
+<p>Output location: <code>/docs/src/reference/bigquery</code></p>
+</div>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../exporting-data-from-oeps/" class="btn btn-neutral float-left" title="Exporting Data from OEPS"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../analyzing-oeps-data-in-bigquery/" class="btn btn-neutral float-right" title="Analyzing OEPS Data in BigQuery">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../interacting-with-bigquery/" class="btn btn-neutral float-left" title="Interacting with OEPS Data in BigQuery"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../registry/" class="btn btn-neutral float-right" title="Overview">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -192,10 +232,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../exporting-data-from-oeps/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../interacting-with-bigquery/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../analyzing-oeps-data-in-bigquery/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../../registry/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

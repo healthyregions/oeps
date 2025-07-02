@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Migration/Restructure 2023 - OEPS Documentation</title>
+    <title>Admonitions - OEPS Documentation</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Migration/Restructure 2023";
-        var mkdocs_page_input_path = "legacy-migration.md";
+        var mkdocs_page_name = "Admonitions";
+        var mkdocs_page_input_path = "admonitions.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -44,12 +44,10 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption"><span class="caption-text">Introduction</span></p>
-              <ul class="current">
+              <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../overview/">OEPS Overview</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Migration/Restructure 2023</a>
-    <ul class="current">
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../legacy-migration/">Migration/Restructure 2023</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Developer Guides</span></p>
@@ -119,8 +117,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Introduction</li>
-      <li class="breadcrumb-item active">Migration/Restructure 2023</li>
+      <li class="breadcrumb-item active">Admonitions</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -129,26 +126,39 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="migrationrestructure-2023">Migration/Restructure 2023</h1>
-<p>Through the summer of 2023 we had two broad objectives:</p>
-<ol>
-<li>undertake a significant data update for a v2 release</li>
-<li>create a new backend integration with Google BigQuery</li>
-</ol>
-<p>Furthermore, we needed to do some significant restructuring of the existing OEPS repositories in order to move management to our new <a href="https://github.com/healthyregions">HealthyRegions</a> GitHub org. We tried our best to do this in a way that </p>
-<ul>
-<li>retained existing release patterns and data stores, and</li>
-<li>retained past git history and record of individual contributions to OEPS</li>
-</ul>
-<p>The end result is this single repo which holds the website (explorer) and new BQ backend, but still pulls from the original repo for static datasets which are pinned to that repo's GitHub release tags. Getting here was a bit circuitous, as you can see in the full diagram below.</p>
-<p><a class="glightbox" href="../img/oeps-repo-migration.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="oeps repo migration" src="../img/oeps-repo-migration.png" /></a></p>
+                <div class="admonition attention">
+<p class="admonition-title">Attention</p>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+</div>
+<div class="admonition anyrandomtext">
+<p class="admonition-title">Anyrandomtext</p>
+</div>
               
             </div>
           </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../overview/" class="btn btn-neutral float-left" title="OEPS Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../guides/install/" class="btn btn-neutral float-right" title="Installing the Components">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
 
   <hr/>
 
@@ -170,10 +180,6 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../overview/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../guides/install/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
