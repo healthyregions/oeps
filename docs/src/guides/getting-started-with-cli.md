@@ -18,7 +18,7 @@ source ./env/bin/activate
 .\env\Scripts\activate
 ```
 
-## Usage
+## Running commands
 
 All commands must be invoked with the prefix `flask`. To get a list of all available commands, run
 
@@ -31,6 +31,9 @@ You should see a list of about 10 commands. To run one of these commands, use
 ```shell
 flask [command]
 ```
+
+!!! warning
+    If you only see three commands (`routes`, `run`, and `shell`), then you either need to activate your virtual environment or make sure you have a `.env` file with `FLASK_APP=oeps` in it. (These three are default Flask commands.)
 
 For example, to validate the registry, just run
 

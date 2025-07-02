@@ -1,16 +1,8 @@
 # Overview
 
-## Rationale
+The backend app includes a **registry** directory that holds a structured representation of *all* data within the OEPS warehouse. The registry serves as a central content hub from which all data export and transformation operations can be carried out, via CLI commands.
 
-The backend app includes a **registry** directory that holds a structured representation of *all* data within the OEPS warehouse. The registry serves as a central content hub from which all data export and transformation operations can be carried out, via CLI commands. The registry seeks to achieve the following:
-
-- Reduce duplicative variable and source metadata representations
-- Facilitate export to multiple configurations and formats, specifically
-- Provide a framework for future addition of variables
-
-The composition of the registry is largely inspired by [Frictionless](https://frictionlessdata.io/) data specs, which are used to generate [Data Packages](https://specs.frictionlessdata.io/data-package/), [Data Resources](https://specs.frictionlessdata.io/data-resource/), and other forms of data dictionaries and downloadable content.
-
-The registry is broken into four parts:
+The registry is made up of these four components:
 
 - [themes & constructs](./themes-constructs.md)
 - [variables](./variables.md)
@@ -19,10 +11,19 @@ The registry is broken into four parts:
 
 ![basic registry diagram](../img/registry-simple.png)
 
+## Rationale
+
 The core rationale for this setup is to treat individual variables as the lowest common denominator within the system, allowing the concept of a variable to be shared across as many tables and data sources as needed. For example, "Total Population" is a variable that has a value in 16 different tables--by state in 2010, by county in 2010, by state in 2000, etc. The registry allows us to define this variable one time, and then link it with multiple data sources, each of which in turn links to the proper geospatial dataset.
 
-Themes and constructs provide a mechanism through which variables can be organized within the risk environment framework, creating a thematic hierarchy without directly affecting the structure of the data or datasets themselves.
+Thus, the registry seeks to achieve the following:
 
+- Reduce duplicative variable and source metadata representations
+- Facilitate export to multiple configurations and formats, specifically
+- Provide a framework for future addition of variables
+
+The composition of the registry is largely inspired by [Frictionless](https://frictionlessdata.io/) data specs, which are used to generate [Data Packages](https://specs.frictionlessdata.io/data-package/), [Data Resources](https://specs.frictionlessdata.io/data-resource/), and other forms of data dictionaries and downloadable content.
+
+Themes and constructs provide a mechanism through which variables can be organized within the risk environment framework, creating a thematic hierarchy without directly affecting the structure of the data or datasets themselves.
 
 ## Structure
 
@@ -43,3 +44,14 @@ To explain the example:
 Though these three variables are present in four different data source tables, you will notice that these tables only link to three different geodata sources. This is because both of the state-level data sources, 2010 and 2000, can be joined to the same single `states` geodata source.
 
 While this is a very small example (currently we have over 300 variables), it should be enough to illustrate the theoretical flexibility of the setup.
+
+## What's in the Registry?
+
+The easiest way to browse all entries in the registry is to filter through the following CSV files that are stored in Github.
+
+- <a href="https://github.com/healthyregions/oeps/blob/main/docs/src/reference/registry/themes.csv" target="_blank">themes.csv &nearr;</a>
+- <a href="https://github.com/healthyregions/oeps/blob/main/docs/src/reference/registry/variables.csv" target="_blank">variables.csv &nearr;</a>
+- <a href="https://github.com/healthyregions/oeps/blob/main/docs/src/reference/registry/table_sources.csv" target="_blank">table_sources.csv &nearr;</a>
+- <a href="https://github.com/healthyregions/oeps/blob/main/docs/src/reference/registry/geodata_sources.csv" target="_blank">geodata_sources.csv &nearr;</a>
+
+These files are derived from the JSON files that make up the registry, and should generatelly be up-to-date.
