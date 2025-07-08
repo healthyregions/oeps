@@ -15,59 +15,59 @@
     "longitudinal": true,
     "analysis": false,
     "table_sources": [
-      "county-2020",
-      "state-2017",
-      "tract-1980",
-      "county-2021",
-      "zcta-2020",
-      "tract-2010",
-      "zcta-2021",
-      "tract-1990",
-      "state-1980",
-      "state-2016",
-      "state-2022",
-      "tract-2020",
-      "state-1990",
-      "state-2019",
-      "tract-2021",
       "county-1980",
-      "tract-2018",
-      "tract-2019",
       "county-1990",
-      "state-2010",
-      "county-2015",
-      "county-2019",
-      "county-2014",
-      "state-2015",
-      "tract-2000",
-      "county-2018",
-      "county-2016",
-      "state-2020",
-      "county-2017",
-      "state-2000",
-      "state-2021",
-      "zcta-2018",
+      "county-2000",
       "county-2010",
-      "state-2018",
+      "county-2014",
+      "county-2015",
+      "county-2016",
+      "county-2017",
+      "county-2018",
+      "county-2019",
+      "county-2020",
+      "county-2021",
+      "county-2022",
+      "county-2023",
+      "county-2025",
+      "state-1980",
+      "state-1990",
+      "state-2000",
+      "state-2010",
       "state-2013",
       "state-2014",
-      "zcta-2019",
-      "tract-2014",
-      "county-2000",
-      "county-2023",
-      "tract-2023",
-      "zcta-2023",
+      "state-2015",
+      "state-2016",
+      "state-2017",
+      "state-2018",
+      "state-2019",
+      "state-2020",
+      "state-2021",
+      "state-2022",
       "state-2023",
-      "county-2022",
-      "tract-2022",
-      "zcta-2022",
-      "county-2025",
       "state-2025",
-      "zcta-2025",
-      "tract-2025"
+      "tract-1980",
+      "tract-1990",
+      "tract-2000",
+      "tract-2010",
+      "tract-2014",
+      "tract-2018",
+      "tract-2019",
+      "tract-2020",
+      "tract-2021",
+      "tract-2022",
+      "tract-2023",
+      "tract-2025",
+      "zcta-2018",
+      "zcta-2019",
+      "zcta-2020",
+      "zcta-2021",
+      "zcta-2022",
+      "zcta-2023",
+      "zcta-2025"
     ]
   },
-    "FIPS": {
+  "FIPS": {
     "title": "Federal Information Processing Standard code",
     "name": "FIPS",
     "type": "string",
@@ -83,34 +83,36 @@
     "longitudinal": true,
     "analysis": false,
     "table_sources": [
-      "county-2020",
-      "tract-1980",
-      "tract-2010",
-      "tract-1990",
-      "state-1980",
-      "state-1990",
       "county-1980",
       "county-1990",
-      "state-2010",
-      "tract-2000",
-      "state-2000",
-      "county-2010",
       "county-2000",
+      "county-2010",
+      "county-2018",
+      "county-2020",
+      "county-2021",
+      "county-2022",
       "county-2023",
-      "tract-2023",
-      "tract-2020",
+      "county-2025",
+      "state-1980",
+      "state-1990",
+      "state-2000",
+      "state-2010",
+      "state-2017",
+      "state-2018",
       "state-2019",
       "state-2020",
       "state-2021",
-      "state-2018",
       "state-2022",
-      "state-2017",
       "state-2023",
-      "county-2021",
-      "county-2022",
-      "tract-2022",
-      "county-2025",
       "state-2025",
+      "tract-1980",
+      "tract-1990",
+      "tract-2000",
+      "tract-2010",
+      "tract-2018",
+      "tract-2020",
+      "tract-2022",
+      "tract-2023",
       "tract-2025"
     ]
   },
@@ -131,8 +133,8 @@
     "analysis": false,
     "table_sources": [
       "zcta-2020",
-      "zcta-2023",
       "zcta-2022",
+      "zcta-2023",
       "zcta-2025"
     ]
   },
@@ -152,26 +154,26 @@
     "longitudinal": true,
     "analysis": false,
     "table_sources": [
+      "county-1980",
+      "county-1990",
+      "county-2000",
+      "county-2010",
+      "county-2018",
       "county-2020",
-      "tract-1980",
-      "tract-2010",
-      "tract-1990",
+      "county-2023",
       "state-1980",
       "state-1990",
-      "county-1980",
-      "tract-2018",
-      "county-1990",
-      "state-2010",
-      "tract-2000",
-      "county-2018",
       "state-2000",
-      "zcta-2018",
-      "county-2010",
+      "state-2010",
       "state-2018",
-      "county-2000",
-      "county-2023",
-      "tract-2023",
+      "tract-1980",
+      "tract-1990",
+      "tract-2000",
+      "tract-2010",
+      "tract-2018",
       "tract-2020",
+      "tract-2023",
+      "zcta-2018",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -192,26 +194,26 @@
     "longitudinal": true,
     "analysis": false,
     "table_sources": [
+      "county-1980",
+      "county-1990",
+      "county-2000",
+      "county-2010",
+      "county-2018",
       "county-2020",
-      "tract-1980",
-      "tract-2010",
-      "tract-1990",
+      "county-2023",
       "state-1980",
       "state-1990",
-      "county-1980",
-      "tract-2018",
-      "county-1990",
-      "state-2010",
-      "tract-2000",
-      "county-2018",
       "state-2000",
-      "zcta-2018",
-      "county-2010",
+      "state-2010",
       "state-2018",
-      "county-2000",
-      "county-2023",
-      "tract-2023",
+      "tract-1980",
+      "tract-1990",
+      "tract-2000",
+      "tract-2010",
+      "tract-2018",
       "tract-2020",
+      "tract-2023",
+      "zcta-2018",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -232,21 +234,21 @@
     "longitudinal": true,
     "analysis": false,
     "table_sources": [
-      "tract-1980",
-      "tract-2010",
-      "tract-1990",
+      "county-1980",
+      "county-1990",
+      "county-2000",
+      "county-2010",
+      "county-2018",
       "state-1980",
       "state-1990",
-      "county-1980",
-      "tract-2018",
-      "county-1990",
-      "tract-2000",
-      "county-2018",
       "state-2000",
-      "zcta-2018",
-      "county-2010",
       "state-2018",
-      "county-2000"
+      "tract-1980",
+      "tract-1990",
+      "tract-2000",
+      "tract-2010",
+      "tract-2018",
+      "zcta-2018"
     ]
   },
   "Age0_4": {
@@ -265,22 +267,22 @@
     "longitudinal": true,
     "analysis": false,
     "table_sources": [
-      "tract-1980",
-      "tract-2010",
-      "tract-1990",
+      "county-1980",
+      "county-1990",
+      "county-2000",
+      "county-2010",
+      "county-2018",
       "state-1980",
       "state-1990",
-      "county-1980",
-      "tract-2018",
-      "county-1990",
-      "state-2010",
-      "tract-2000",
-      "county-2018",
       "state-2000",
-      "zcta-2018",
-      "county-2010",
+      "state-2010",
       "state-2018",
-      "county-2000"
+      "tract-1980",
+      "tract-1990",
+      "tract-2000",
+      "tract-2010",
+      "tract-2018",
+      "zcta-2018"
     ]
   },
   "Age5_14": {
@@ -299,22 +301,22 @@
     "longitudinal": true,
     "analysis": false,
     "table_sources": [
-      "tract-1980",
-      "tract-2010",
-      "tract-1990",
+      "county-1980",
+      "county-1990",
+      "county-2000",
+      "county-2010",
+      "county-2018",
       "state-1980",
       "state-1990",
-      "county-1980",
-      "tract-2018",
-      "county-1990",
-      "state-2010",
-      "tract-2000",
-      "county-2018",
       "state-2000",
-      "zcta-2018",
-      "county-2010",
+      "state-2010",
       "state-2018",
-      "county-2000"
+      "tract-1980",
+      "tract-1990",
+      "tract-2000",
+      "tract-2010",
+      "tract-2018",
+      "zcta-2018"
     ]
   },
   "Age15_19": {
@@ -333,22 +335,22 @@
     "longitudinal": true,
     "analysis": false,
     "table_sources": [
-      "tract-1980",
-      "tract-2010",
-      "tract-1990",
+      "county-1980",
+      "county-1990",
+      "county-2000",
+      "county-2010",
+      "county-2018",
       "state-1980",
       "state-1990",
-      "county-1980",
-      "tract-2018",
-      "county-1990",
-      "state-2010",
-      "tract-2000",
-      "county-2018",
       "state-2000",
-      "zcta-2018",
-      "county-2010",
+      "state-2010",
       "state-2018",
-      "county-2000"
+      "tract-1980",
+      "tract-1990",
+      "tract-2000",
+      "tract-2010",
+      "tract-2018",
+      "zcta-2018"
     ]
   },
   "Age20_24": {
@@ -367,22 +369,22 @@
     "longitudinal": true,
     "analysis": false,
     "table_sources": [
-      "tract-1980",
-      "tract-2010",
-      "tract-1990",
+      "county-1980",
+      "county-1990",
+      "county-2000",
+      "county-2010",
+      "county-2018",
       "state-1980",
       "state-1990",
-      "county-1980",
-      "tract-2018",
-      "county-1990",
-      "state-2010",
-      "tract-2000",
-      "county-2018",
       "state-2000",
-      "zcta-2018",
-      "county-2010",
+      "state-2010",
       "state-2018",
-      "county-2000"
+      "tract-1980",
+      "tract-1990",
+      "tract-2000",
+      "tract-2010",
+      "tract-2018",
+      "zcta-2018"
     ]
   },
   "Age15_44": {
@@ -401,22 +403,22 @@
     "longitudinal": true,
     "analysis": false,
     "table_sources": [
-      "tract-1980",
-      "tract-2010",
-      "tract-1990",
+      "county-1980",
+      "county-1990",
+      "county-2000",
+      "county-2010",
+      "county-2018",
       "state-1980",
       "state-1990",
-      "county-1980",
-      "tract-2018",
-      "county-1990",
-      "state-2010",
-      "tract-2000",
-      "county-2018",
       "state-2000",
-      "zcta-2018",
-      "county-2010",
+      "state-2010",
       "state-2018",
-      "county-2000"
+      "tract-1980",
+      "tract-1990",
+      "tract-2000",
+      "tract-2010",
+      "tract-2018",
+      "zcta-2018"
     ]
   },
   "Age45_54": {
@@ -435,9 +437,9 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "tract-1980",
+      "county-1980",
       "state-1980",
-      "county-1980"
+      "tract-1980"
     ]
   },
   "Age55_59": {
@@ -456,22 +458,22 @@
     "longitudinal": true,
     "analysis": false,
     "table_sources": [
-      "tract-1980",
-      "tract-2010",
-      "tract-1990",
+      "county-1980",
+      "county-1990",
+      "county-2000",
+      "county-2010",
+      "county-2018",
       "state-1980",
       "state-1990",
-      "county-1980",
-      "tract-2018",
-      "county-1990",
-      "state-2010",
-      "tract-2000",
-      "county-2018",
       "state-2000",
-      "zcta-2018",
-      "county-2010",
+      "state-2010",
       "state-2018",
-      "county-2000"
+      "tract-1980",
+      "tract-1990",
+      "tract-2000",
+      "tract-2010",
+      "tract-2018",
+      "zcta-2018"
     ]
   },
   "Age60_64": {
@@ -490,22 +492,22 @@
     "longitudinal": true,
     "analysis": false,
     "table_sources": [
-      "tract-1980",
-      "tract-2010",
-      "tract-1990",
+      "county-1980",
+      "county-1990",
+      "county-2000",
+      "county-2010",
+      "county-2018",
       "state-1980",
       "state-1990",
-      "county-1980",
-      "tract-2018",
-      "county-1990",
-      "state-2010",
-      "tract-2000",
-      "county-2018",
       "state-2000",
-      "zcta-2018",
-      "county-2010",
+      "state-2010",
       "state-2018",
-      "county-2000"
+      "tract-1980",
+      "tract-1990",
+      "tract-2000",
+      "tract-2010",
+      "tract-2018",
+      "zcta-2018"
     ]
   },
   "AgeOv65": {
@@ -524,22 +526,22 @@
     "longitudinal": true,
     "analysis": false,
     "table_sources": [
-      "tract-1980",
-      "tract-2010",
-      "tract-1990",
+      "county-1980",
+      "county-1990",
+      "county-2000",
+      "county-2010",
+      "county-2018",
       "state-1980",
       "state-1990",
-      "county-1980",
-      "tract-2018",
-      "county-1990",
-      "state-2010",
-      "tract-2000",
-      "county-2018",
       "state-2000",
-      "zcta-2018",
-      "county-2010",
+      "state-2010",
       "state-2018",
-      "county-2000"
+      "tract-1980",
+      "tract-1990",
+      "tract-2000",
+      "tract-2010",
+      "tract-2018",
+      "zcta-2018"
     ]
   },
   "Age15_24P": {
@@ -558,21 +560,21 @@
     "longitudinal": true,
     "analysis": false,
     "table_sources": [
-      "tract-1980",
-      "tract-2010",
-      "tract-1990",
+      "county-1980",
+      "county-1990",
+      "county-2000",
+      "county-2010",
+      "county-2018",
       "state-1980",
       "state-1990",
-      "county-1980",
-      "tract-2018",
-      "county-1990",
-      "state-2010",
-      "tract-2000",
-      "county-2018",
       "state-2000",
-      "county-2010",
+      "state-2010",
       "state-2018",
-      "county-2000"
+      "tract-1980",
+      "tract-1990",
+      "tract-2000",
+      "tract-2010",
+      "tract-2018"
     ]
   },
   "Und45P": {
@@ -591,22 +593,22 @@
     "longitudinal": true,
     "analysis": false,
     "table_sources": [
-      "tract-1980",
-      "tract-2010",
-      "tract-1990",
+      "county-1980",
+      "county-1990",
+      "county-2000",
+      "county-2010",
+      "county-2018",
       "state-1980",
       "state-1990",
-      "county-1980",
-      "tract-2018",
-      "county-1990",
-      "state-2010",
-      "tract-2000",
-      "county-2018",
       "state-2000",
-      "zcta-2018",
-      "county-2010",
+      "state-2010",
       "state-2018",
-      "county-2000"
+      "tract-1980",
+      "tract-1990",
+      "tract-2000",
+      "tract-2010",
+      "tract-2018",
+      "zcta-2018"
     ]
   },
   "Ovr65P": {
@@ -625,26 +627,26 @@
     "longitudinal": true,
     "analysis": false,
     "table_sources": [
+      "county-1980",
+      "county-1990",
+      "county-2000",
+      "county-2010",
+      "county-2018",
       "county-2020",
-      "tract-1980",
-      "tract-2010",
-      "tract-1990",
+      "county-2023",
       "state-1980",
       "state-1990",
-      "county-1980",
-      "tract-2018",
-      "county-1990",
-      "state-2010",
-      "tract-2000",
-      "county-2018",
       "state-2000",
-      "zcta-2018",
-      "county-2010",
+      "state-2010",
       "state-2018",
-      "county-2000",
-      "county-2023",
-      "tract-2023",
+      "tract-1980",
+      "tract-1990",
+      "tract-2000",
+      "tract-2010",
+      "tract-2018",
       "tract-2020",
+      "tract-2023",
+      "zcta-2018",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -665,26 +667,26 @@
     "longitudinal": true,
     "analysis": false,
     "table_sources": [
+      "county-1980",
+      "county-1990",
+      "county-2000",
+      "county-2010",
+      "county-2018",
       "county-2020",
-      "tract-1980",
-      "tract-2010",
-      "tract-1990",
+      "county-2023",
       "state-1980",
       "state-1990",
-      "county-1980",
-      "tract-2018",
-      "county-1990",
-      "state-2010",
-      "tract-2000",
-      "county-2018",
       "state-2000",
-      "zcta-2018",
-      "county-2010",
+      "state-2010",
       "state-2018",
-      "county-2000",
-      "county-2023",
-      "tract-2023",
+      "tract-1980",
+      "tract-1990",
+      "tract-2000",
+      "tract-2010",
+      "tract-2018",
       "tract-2020",
+      "tract-2023",
+      "zcta-2018",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -705,26 +707,26 @@
     "longitudinal": true,
     "analysis": false,
     "table_sources": [
+      "county-1980",
+      "county-1990",
+      "county-2000",
+      "county-2010",
+      "county-2018",
       "county-2020",
-      "tract-1980",
-      "tract-2010",
-      "tract-1990",
+      "county-2023",
       "state-1980",
       "state-1990",
-      "county-1980",
-      "tract-2018",
-      "county-1990",
-      "state-2010",
-      "tract-2000",
-      "county-2018",
       "state-2000",
-      "zcta-2018",
-      "county-2010",
+      "state-2010",
       "state-2018",
-      "county-2000",
-      "county-2023",
-      "tract-2023",
+      "tract-1980",
+      "tract-1990",
+      "tract-2000",
+      "tract-2010",
+      "tract-2018",
       "tract-2020",
+      "tract-2023",
+      "zcta-2018",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -745,22 +747,22 @@
     "longitudinal": true,
     "analysis": false,
     "table_sources": [
-      "tract-1980",
-      "tract-2010",
-      "tract-1990",
+      "county-1980",
+      "county-1990",
+      "county-2000",
+      "county-2010",
+      "county-2018",
       "state-1980",
       "state-1990",
-      "county-1980",
-      "tract-2018",
-      "county-1990",
-      "state-2010",
-      "tract-2000",
-      "county-2018",
       "state-2000",
-      "zcta-2018",
-      "county-2010",
+      "state-2010",
       "state-2018",
-      "county-2000"
+      "tract-1980",
+      "tract-1990",
+      "tract-2000",
+      "tract-2010",
+      "tract-2018",
+      "zcta-2018"
     ]
   },
   "AmIndP": {
@@ -779,26 +781,26 @@
     "longitudinal": true,
     "analysis": false,
     "table_sources": [
+      "county-1980",
+      "county-1990",
+      "county-2000",
+      "county-2010",
+      "county-2018",
       "county-2020",
-      "tract-1980",
-      "tract-2010",
-      "tract-1990",
+      "county-2023",
       "state-1980",
       "state-1990",
-      "county-1980",
-      "tract-2018",
-      "county-1990",
-      "state-2010",
-      "tract-2000",
-      "county-2018",
       "state-2000",
-      "zcta-2018",
-      "county-2010",
+      "state-2010",
       "state-2018",
-      "county-2000",
-      "county-2023",
-      "tract-2023",
+      "tract-1980",
+      "tract-1990",
+      "tract-2000",
+      "tract-2010",
+      "tract-2018",
       "tract-2020",
+      "tract-2023",
+      "zcta-2018",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -819,22 +821,22 @@
     "longitudinal": true,
     "analysis": false,
     "table_sources": [
-      "tract-1980",
-      "tract-2010",
-      "tract-1990",
+      "county-1980",
+      "county-1990",
+      "county-2000",
+      "county-2010",
+      "county-2018",
       "state-1980",
       "state-1990",
-      "county-1980",
-      "tract-2018",
-      "county-1990",
-      "state-2010",
-      "tract-2000",
-      "county-2018",
       "state-2000",
-      "zcta-2018",
-      "county-2010",
+      "state-2010",
       "state-2018",
-      "county-2000"
+      "tract-1980",
+      "tract-1990",
+      "tract-2000",
+      "tract-2010",
+      "tract-2018",
+      "zcta-2018"
     ]
   },
   "PacIsP": {
@@ -853,26 +855,26 @@
     "longitudinal": true,
     "analysis": false,
     "table_sources": [
+      "county-1980",
+      "county-1990",
+      "county-2000",
+      "county-2010",
+      "county-2018",
       "county-2020",
-      "tract-1980",
-      "tract-2010",
-      "tract-1990",
+      "county-2023",
       "state-1980",
       "state-1990",
-      "county-1980",
-      "tract-2018",
-      "county-1990",
-      "state-2010",
-      "tract-2000",
-      "county-2018",
       "state-2000",
-      "zcta-2018",
-      "county-2010",
+      "state-2010",
       "state-2018",
-      "county-2000",
-      "county-2023",
-      "tract-2023",
+      "tract-1980",
+      "tract-1990",
+      "tract-2000",
+      "tract-2010",
+      "tract-2018",
       "tract-2020",
+      "tract-2023",
+      "zcta-2018",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -893,26 +895,26 @@
     "longitudinal": true,
     "analysis": false,
     "table_sources": [
+      "county-1980",
+      "county-1990",
+      "county-2000",
+      "county-2010",
+      "county-2018",
       "county-2020",
-      "tract-1980",
-      "tract-2010",
-      "tract-1990",
+      "county-2023",
       "state-1980",
       "state-1990",
-      "county-1980",
-      "tract-2018",
-      "county-1990",
-      "state-2010",
-      "tract-2000",
-      "county-2018",
       "state-2000",
-      "zcta-2018",
-      "county-2010",
+      "state-2010",
       "state-2018",
-      "county-2000",
-      "county-2023",
-      "tract-2023",
+      "tract-1980",
+      "tract-1990",
+      "tract-2000",
+      "tract-2010",
+      "tract-2018",
       "tract-2020",
+      "tract-2023",
+      "zcta-2018",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -933,22 +935,22 @@
     "longitudinal": true,
     "analysis": false,
     "table_sources": [
-      "tract-1980",
-      "tract-2010",
-      "tract-1990",
+      "county-1980",
+      "county-1990",
+      "county-2000",
+      "county-2010",
+      "county-2018",
       "state-1980",
       "state-1990",
-      "county-1980",
-      "tract-2018",
-      "county-1990",
-      "state-2010",
-      "tract-2000",
-      "county-2018",
       "state-2000",
-      "zcta-2018",
-      "county-2010",
+      "state-2010",
       "state-2018",
-      "county-2000"
+      "tract-1980",
+      "tract-1990",
+      "tract-2000",
+      "tract-2010",
+      "tract-2018",
+      "zcta-2018"
     ]
   },
   "ChildrenP": {
@@ -967,20 +969,20 @@
     "longitudinal": true,
     "analysis": false,
     "table_sources": [
-      "tract-1980",
-      "tract-1990",
+      "county-1980",
+      "county-1990",
+      "county-2000",
+      "county-2010",
+      "county-2018",
       "state-1980",
       "state-1990",
-      "county-1980",
-      "tract-2018",
-      "county-1990",
-      "tract-2000",
-      "county-2018",
       "state-2000",
-      "zcta-2018",
-      "county-2010",
       "state-2018",
-      "county-2000"
+      "tract-1980",
+      "tract-1990",
+      "tract-2000",
+      "tract-2018",
+      "zcta-2018"
     ]
   },
   "PovP": {
@@ -999,26 +1001,26 @@
     "longitudinal": true,
     "analysis": false,
     "table_sources": [
+      "county-1980",
+      "county-1990",
+      "county-2000",
+      "county-2010",
+      "county-2018",
       "county-2020",
-      "tract-1980",
-      "tract-2010",
-      "tract-1990",
+      "county-2023",
       "state-1980",
       "state-1990",
-      "county-1980",
-      "tract-2018",
-      "county-1990",
-      "state-2010",
-      "tract-2000",
-      "county-2018",
       "state-2000",
-      "zcta-2018",
-      "county-2010",
+      "state-2010",
       "state-2018",
-      "county-2000",
-      "county-2023",
-      "tract-2023",
+      "tract-1980",
+      "tract-1990",
+      "tract-2000",
+      "tract-2010",
+      "tract-2018",
       "tract-2020",
+      "tract-2023",
+      "zcta-2018",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -1039,26 +1041,26 @@
     "longitudinal": true,
     "analysis": false,
     "table_sources": [
+      "county-1980",
+      "county-1990",
+      "county-2000",
+      "county-2010",
+      "county-2018",
       "county-2020",
-      "tract-1980",
-      "tract-2010",
-      "tract-1990",
+      "county-2023",
       "state-1980",
       "state-1990",
-      "county-1980",
-      "tract-2018",
-      "county-1990",
-      "state-2010",
-      "tract-2000",
-      "county-2018",
       "state-2000",
-      "zcta-2018",
-      "county-2010",
+      "state-2010",
       "state-2018",
-      "county-2000",
-      "county-2023",
-      "tract-2023",
+      "tract-1980",
+      "tract-1990",
+      "tract-2000",
+      "tract-2010",
+      "tract-2018",
       "tract-2020",
+      "tract-2023",
+      "zcta-2018",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -1079,26 +1081,26 @@
     "longitudinal": true,
     "analysis": false,
     "table_sources": [
+      "county-1980",
+      "county-1990",
+      "county-2000",
+      "county-2010",
+      "county-2018",
       "county-2020",
-      "tract-1980",
-      "tract-2010",
-      "tract-1990",
+      "county-2023",
       "state-1980",
       "state-1990",
-      "county-1980",
-      "tract-2018",
-      "county-1990",
-      "state-2010",
-      "tract-2000",
-      "county-2018",
       "state-2000",
-      "zcta-2018",
-      "county-2010",
+      "state-2010",
       "state-2018",
-      "county-2000",
-      "county-2023",
-      "tract-2023",
+      "tract-1980",
+      "tract-1990",
+      "tract-2000",
+      "tract-2010",
+      "tract-2018",
       "tract-2020",
+      "tract-2023",
+      "zcta-2018",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -1119,14 +1121,14 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020",
-      "tract-2018",
       "county-2018",
-      "zcta-2018",
-      "state-2018",
+      "county-2020",
       "county-2023",
-      "tract-2023",
+      "state-2018",
+      "tract-2018",
       "tract-2020",
+      "tract-2023",
+      "zcta-2018",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -1147,17 +1149,17 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
+      "county-2010",
+      "county-2018",
       "county-2020",
+      "county-2023",
+      "state-2010",
+      "state-2018",
       "tract-2010",
       "tract-2018",
-      "state-2010",
-      "county-2018",
-      "zcta-2018",
-      "county-2010",
-      "state-2018",
-      "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
+      "zcta-2018",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -1178,14 +1180,14 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020",
-      "tract-2018",
       "county-2018",
-      "zcta-2018",
-      "state-2018",
+      "county-2020",
       "county-2023",
-      "tract-2023",
+      "state-2018",
+      "tract-2018",
       "tract-2020",
+      "tract-2023",
+      "zcta-2018",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -1206,19 +1208,19 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "tract-2010",
-      "tract-1990",
-      "state-1990",
-      "tract-2018",
       "county-1990",
-      "state-2010",
-      "tract-2000",
-      "county-2018",
-      "state-2000",
-      "zcta-2018",
+      "county-2000",
       "county-2010",
+      "county-2018",
+      "state-1990",
+      "state-2000",
+      "state-2010",
       "state-2018",
-      "county-2000"
+      "tract-1990",
+      "tract-2000",
+      "tract-2010",
+      "tract-2018",
+      "zcta-2018"
     ]
   },
   "Age50_54": {
@@ -1237,19 +1239,19 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "tract-2010",
-      "tract-1990",
-      "state-1990",
-      "tract-2018",
       "county-1990",
-      "state-2010",
-      "tract-2000",
-      "county-2018",
-      "state-2000",
-      "zcta-2018",
+      "county-2000",
       "county-2010",
+      "county-2018",
+      "state-1990",
+      "state-2000",
+      "state-2010",
       "state-2018",
-      "county-2000"
+      "tract-1990",
+      "tract-2000",
+      "tract-2010",
+      "tract-2018",
+      "zcta-2018"
     ]
   },
   "AgeOv18": {
@@ -1268,11 +1270,11 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "tract-2018",
-      "state-2010",
       "county-2018",
-      "zcta-2018",
-      "state-2018"
+      "state-2010",
+      "state-2018",
+      "tract-2018",
+      "zcta-2018"
     ]
   },
   "DisbP": {
@@ -1291,20 +1293,20 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
+      "county-2000",
+      "county-2010",
+      "county-2018",
       "county-2020",
+      "county-2023",
+      "state-2000",
+      "state-2010",
+      "state-2018",
+      "tract-2000",
       "tract-2010",
       "tract-2018",
-      "state-2010",
-      "tract-2000",
-      "county-2018",
-      "state-2000",
-      "zcta-2018",
-      "county-2010",
-      "state-2018",
-      "county-2000",
-      "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
+      "zcta-2018",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -1325,17 +1327,17 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
+      "county-2010",
+      "county-2018",
       "county-2020",
+      "county-2023",
+      "state-2010",
+      "state-2018",
       "tract-2010",
       "tract-2018",
-      "state-2010",
-      "county-2018",
-      "zcta-2018",
-      "county-2010",
-      "state-2018",
-      "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
+      "zcta-2018",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -1356,14 +1358,14 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020",
-      "tract-2018",
       "county-2018",
-      "zcta-2018",
-      "state-2018",
+      "county-2020",
       "county-2023",
-      "tract-2023",
+      "state-2018",
+      "tract-2018",
       "tract-2020",
+      "tract-2023",
+      "zcta-2018",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -1384,14 +1386,14 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020",
-      "tract-2018",
       "county-2018",
-      "zcta-2018",
-      "state-2018",
+      "county-2020",
       "county-2023",
-      "tract-2023",
+      "state-2018",
+      "tract-2018",
       "tract-2020",
+      "tract-2023",
+      "zcta-2018",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -1412,17 +1414,17 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
+      "county-2010",
+      "county-2018",
       "county-2020",
+      "county-2023",
+      "state-2010",
+      "state-2018",
       "tract-2010",
       "tract-2018",
-      "state-2010",
-      "county-2018",
-      "zcta-2018",
-      "county-2010",
-      "state-2018",
-      "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
+      "zcta-2018",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -1443,17 +1445,17 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
+      "county-2010",
+      "county-2018",
       "county-2020",
+      "county-2023",
+      "state-2010",
+      "state-2018",
       "tract-2010",
       "tract-2018",
-      "state-2010",
-      "county-2018",
-      "zcta-2018",
-      "county-2010",
-      "state-2018",
-      "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
+      "zcta-2018",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -1474,9 +1476,9 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "tract-2018",
       "county-2018",
-      "state-2018"
+      "state-2018",
+      "tract-2018"
     ]
   },
   "ForDqTot": {
@@ -1495,9 +1497,9 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "tract-2018",
       "county-2018",
-      "state-2018"
+      "state-2018",
+      "tract-2018"
     ]
   },
   "GiniCoeff": {
@@ -1516,17 +1518,17 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
+      "county-2010",
+      "county-2018",
       "county-2020",
+      "county-2023",
+      "state-2010",
+      "state-2018",
       "tract-2010",
       "tract-2018",
-      "state-2010",
-      "county-2018",
-      "zcta-2018",
-      "county-2010",
-      "state-2018",
-      "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
+      "zcta-2018",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -1547,14 +1549,14 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020",
-      "tract-2018",
       "county-2018",
-      "zcta-2018",
-      "state-2018",
+      "county-2020",
       "county-2023",
-      "tract-2023",
+      "state-2018",
+      "tract-2018",
       "tract-2020",
+      "tract-2023",
+      "zcta-2018",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -1575,14 +1577,14 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020",
-      "tract-2018",
       "county-2018",
-      "zcta-2018",
-      "state-2018",
+      "county-2020",
       "county-2023",
-      "tract-2023",
+      "state-2018",
+      "tract-2018",
       "tract-2020",
+      "tract-2023",
+      "zcta-2018",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -1603,14 +1605,14 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020",
-      "tract-2018",
       "county-2018",
-      "zcta-2018",
-      "state-2018",
+      "county-2020",
       "county-2023",
-      "tract-2023",
+      "state-2018",
+      "tract-2018",
       "tract-2020",
+      "tract-2023",
+      "zcta-2018",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -1631,14 +1633,14 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020",
-      "tract-2018",
       "county-2018",
-      "zcta-2018",
-      "state-2018",
+      "county-2020",
       "county-2023",
-      "tract-2023",
+      "state-2018",
+      "tract-2018",
       "tract-2020",
+      "tract-2023",
+      "zcta-2018",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -1659,10 +1661,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "tract-2018",
       "county-2018",
-      "zcta-2018",
-      "state-2018"
+      "state-2018",
+      "tract-2018",
+      "zcta-2018"
     ]
   },
   "EssnWrkP": {
@@ -1681,14 +1683,14 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020",
-      "tract-2018",
       "county-2018",
-      "zcta-2018",
-      "state-2018",
+      "county-2020",
       "county-2023",
-      "tract-2023",
+      "state-2018",
+      "tract-2018",
       "tract-2020",
+      "tract-2023",
+      "zcta-2018",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -1709,9 +1711,9 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
+      "county-2019",
       "state-2019",
       "tract-2019",
-      "county-2019",
       "zcta-2019"
     ]
   },
@@ -1731,14 +1733,14 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020",
-      "tract-2018",
       "county-2018",
-      "zcta-2018",
-      "state-2018",
+      "county-2020",
       "county-2023",
-      "tract-2023",
+      "state-2018",
+      "tract-2018",
       "tract-2020",
+      "tract-2023",
+      "zcta-2018",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -1759,14 +1761,14 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020",
-      "tract-2018",
       "county-2018",
-      "zcta-2018",
-      "state-2018",
+      "county-2020",
       "county-2023",
-      "tract-2023",
+      "state-2018",
+      "tract-2018",
       "tract-2020",
+      "tract-2023",
+      "zcta-2018",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -1787,14 +1789,14 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020",
-      "tract-2018",
       "county-2018",
-      "zcta-2018",
-      "state-2018",
+      "county-2020",
       "county-2023",
-      "tract-2023",
+      "state-2018",
+      "tract-2018",
       "tract-2020",
+      "tract-2023",
+      "zcta-2018",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -1815,14 +1817,14 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020",
-      "tract-2018",
       "county-2018",
-      "zcta-2018",
-      "state-2018",
+      "county-2020",
       "county-2023",
-      "tract-2023",
+      "state-2018",
+      "tract-2018",
       "tract-2020",
+      "tract-2023",
+      "zcta-2018",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -1843,10 +1845,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "tract-2018",
       "county-2018",
-      "zcta-2018",
-      "state-2018"
+      "state-2018",
+      "tract-2018",
+      "zcta-2018"
     ]
   },
   "AlcTot": {
@@ -1865,10 +1867,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "tract-2018",
       "county-2018",
-      "zcta-2018",
-      "state-2018"
+      "state-2018",
+      "tract-2018",
+      "zcta-2018"
     ]
   },
   "AlcDens": {
@@ -1887,10 +1889,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "tract-2018",
       "county-2018",
-      "zcta-2018",
-      "state-2018"
+      "state-2018",
+      "tract-2018",
+      "zcta-2018"
     ]
   },
   "AlcPerCap": {
@@ -1909,10 +1911,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "tract-2018",
       "county-2018",
-      "zcta-2018",
-      "state-2018"
+      "state-2018",
+      "tract-2018",
+      "zcta-2018"
     ]
   },
   "DsmBlk": {
@@ -1932,8 +1934,8 @@
     "analysis": false,
     "table_sources": [
       "county-2018",
-      "zcta-2018",
-      "state-2018"
+      "state-2018",
+      "zcta-2018"
     ]
   },
   "IntrBlkWht": {
@@ -1953,8 +1955,8 @@
     "analysis": false,
     "table_sources": [
       "county-2018",
-      "zcta-2018",
-      "state-2018"
+      "state-2018",
+      "zcta-2018"
     ]
   },
   "IsoBlk": {
@@ -1974,8 +1976,8 @@
     "analysis": false,
     "table_sources": [
       "county-2018",
-      "zcta-2018",
-      "state-2018"
+      "state-2018",
+      "zcta-2018"
     ]
   },
   "DsmHsp": {
@@ -1995,8 +1997,8 @@
     "analysis": false,
     "table_sources": [
       "county-2018",
-      "zcta-2018",
-      "state-2018"
+      "state-2018",
+      "zcta-2018"
     ]
   },
   "IntrHspWht": {
@@ -2016,8 +2018,8 @@
     "analysis": false,
     "table_sources": [
       "county-2018",
-      "zcta-2018",
-      "state-2018"
+      "state-2018",
+      "zcta-2018"
     ]
   },
   "IsoHsp": {
@@ -2037,8 +2039,8 @@
     "analysis": false,
     "table_sources": [
       "county-2018",
-      "zcta-2018",
-      "state-2018"
+      "state-2018",
+      "zcta-2018"
     ]
   },
   "DsmAs": {
@@ -2058,8 +2060,8 @@
     "analysis": false,
     "table_sources": [
       "county-2018",
-      "zcta-2018",
-      "state-2018"
+      "state-2018",
+      "zcta-2018"
     ]
   },
   "IntrAsWht": {
@@ -2079,8 +2081,8 @@
     "analysis": false,
     "table_sources": [
       "county-2018",
-      "zcta-2018",
-      "state-2018"
+      "state-2018",
+      "zcta-2018"
     ]
   },
   "IsoAs": {
@@ -2100,8 +2102,8 @@
     "analysis": false,
     "table_sources": [
       "county-2018",
-      "zcta-2018",
-      "state-2018"
+      "state-2018",
+      "zcta-2018"
     ]
   },
   "Ndvi": {
@@ -2120,10 +2122,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "tract-2018",
       "county-2018",
-      "zcta-2018",
-      "state-2018"
+      "state-2018",
+      "tract-2018",
+      "zcta-2018"
     ]
   },
   "ParkArea": {
@@ -2200,8 +2202,8 @@
     "analysis": false,
     "table_sources": [
       "county-2018",
-      "state-2018",
       "county-2025",
+      "state-2018",
       "state-2025"
     ]
   },
@@ -2512,8 +2514,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2019",
-      "county-2019"
+      "county-2019",
+      "state-2019"
     ]
   },
   "RxAvTmDr": {
@@ -2532,8 +2534,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2019",
-      "county-2019"
+      "county-2019",
+      "state-2019"
     ]
   },
   "RxTmDrP": {
@@ -2552,8 +2554,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2019",
-      "county-2019"
+      "county-2019",
+      "state-2019"
     ]
   },
   "MhCtTmDr": {
@@ -2693,8 +2695,8 @@
     "analysis": false,
     "table_sources": [
       "county-2021",
-      "state-2021",
       "county-2025",
+      "state-2021",
       "state-2025"
     ]
   },
@@ -2715,8 +2717,8 @@
     "analysis": false,
     "table_sources": [
       "county-2021",
-      "state-2021",
       "county-2025",
+      "state-2021",
       "state-2025"
     ]
   },
@@ -2737,8 +2739,8 @@
     "analysis": false,
     "table_sources": [
       "county-2021",
-      "state-2021",
       "county-2025",
+      "state-2021",
       "state-2025"
     ]
   },
@@ -2910,11 +2912,11 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017",
-      "state-2016",
-      "state-2015",
       "state-2013",
       "state-2014",
+      "state-2015",
+      "state-2016",
+      "state-2017",
       "state-2018",
       "state-2019",
       "state-2020",
@@ -2938,11 +2940,11 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017",
-      "state-2016",
-      "state-2015",
       "state-2013",
       "state-2014",
+      "state-2015",
+      "state-2016",
+      "state-2017",
       "state-2018",
       "state-2019",
       "state-2020",
@@ -2966,11 +2968,11 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017",
-      "state-2016",
-      "state-2015",
       "state-2013",
       "state-2014",
+      "state-2015",
+      "state-2016",
+      "state-2017",
       "state-2018",
       "state-2019",
       "state-2020",
@@ -2994,11 +2996,11 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017",
-      "state-2016",
-      "state-2015",
       "state-2013",
       "state-2014",
+      "state-2015",
+      "state-2016",
+      "state-2017",
       "state-2018",
       "state-2019",
       "state-2020",
@@ -3022,11 +3024,11 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017",
-      "state-2016",
-      "state-2015",
       "state-2013",
-      "state-2014"
+      "state-2014",
+      "state-2015",
+      "state-2016",
+      "state-2017"
     ]
   },
   "BlkHcvD": {
@@ -3045,11 +3047,11 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017",
-      "state-2016",
-      "state-2015",
       "state-2013",
       "state-2014",
+      "state-2015",
+      "state-2016",
+      "state-2017",
       "state-2018",
       "state-2019",
       "state-2020",
@@ -3073,11 +3075,11 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017",
-      "state-2016",
-      "state-2015",
       "state-2013",
       "state-2014",
+      "state-2015",
+      "state-2016",
+      "state-2017",
       "state-2018",
       "state-2019",
       "state-2020",
@@ -3101,11 +3103,11 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017",
-      "state-2016",
-      "state-2015",
       "state-2013",
       "state-2014",
+      "state-2015",
+      "state-2016",
+      "state-2017",
       "state-2018",
       "state-2019",
       "state-2020",
@@ -3129,11 +3131,11 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017",
-      "state-2016",
-      "state-2015",
       "state-2013",
       "state-2014",
+      "state-2015",
+      "state-2016",
+      "state-2017",
       "state-2018",
       "state-2019",
       "state-2020",
@@ -3157,11 +3159,11 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2017",
-      "state-2016",
-      "state-2015",
       "state-2013",
       "state-2014",
+      "state-2015",
+      "state-2016",
+      "state-2017",
       "state-2018",
       "state-2019",
       "state-2020",
@@ -3382,9 +3384,9 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "tract-2010",
+      "county-2010",
       "state-2010",
-      "county-2010"
+      "tract-2010"
     ]
   },
   "TotSp": {
@@ -3403,9 +3405,9 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "tract-2010",
+      "county-2010",
       "state-2010",
-      "county-2010"
+      "tract-2010"
     ]
   },
   "OpRxRt": {
@@ -3425,8 +3427,8 @@
     "analysis": false,
     "table_sources": [
       "county-2020",
-      "state-2020",
       "county-2022",
+      "state-2020",
       "state-2022"
     ]
   },
@@ -3466,21 +3468,21 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2020",
-      "state-2017",
-      "state-2016",
-      "state-2019",
-      "county-2015",
-      "county-2019",
       "county-2014",
-      "state-2015",
-      "county-2018",
+      "county-2015",
       "county-2016",
-      "state-2020",
       "county-2017",
-      "state-2018",
-      "state-2014",
+      "county-2018",
+      "county-2019",
+      "county-2020",
       "county-2021",
+      "state-2014",
+      "state-2015",
+      "state-2016",
+      "state-2017",
+      "state-2018",
+      "state-2019",
+      "state-2020",
       "state-2021",
       "state-2022"
     ]
@@ -4013,8 +4015,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2019",
       "state-2018",
+      "state-2019",
       "state-2023"
     ]
   },
@@ -4481,7 +4483,7 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "tract-2018",
+      "tract-2010",
       "zcta-2018"
     ]
   },
@@ -4501,7 +4503,7 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "tract-2018",
+      "tract-2010",
       "zcta-2018"
     ]
   },
@@ -4541,10 +4543,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "zcta-2020",
       "tract-2020",
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2020",
+      "zcta-2025"
     ]
   },
   "BupMinDis": {
@@ -4563,10 +4565,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "zcta-2020",
       "tract-2020",
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2020",
+      "zcta-2025"
     ]
   },
   "BupTmDr": {
@@ -4585,10 +4587,10 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "zcta-2020",
       "tract-2020",
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2020",
+      "zcta-2025"
     ]
   },
   "BupCntDr30": {
@@ -4607,10 +4609,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "zcta-2020",
       "tract-2020",
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2020",
+      "zcta-2025"
     ]
   },
   "MetMinDis": {
@@ -4629,10 +4631,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "zcta-2020",
       "tract-2020",
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2020",
+      "zcta-2025"
     ]
   },
   "MetTmDr": {
@@ -4651,10 +4653,10 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "zcta-2020",
       "tract-2020",
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2020",
+      "zcta-2025"
     ]
   },
   "MetCntDr30": {
@@ -4673,10 +4675,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "zcta-2020",
       "tract-2020",
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2020",
+      "zcta-2025"
     ]
   },
   "NaltMinDis": {
@@ -4695,10 +4697,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "zcta-2020",
       "tract-2020",
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2020",
+      "zcta-2025"
     ]
   },
   "NaltTmDr": {
@@ -4717,10 +4719,10 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "zcta-2020",
       "tract-2020",
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2020",
+      "zcta-2025"
     ]
   },
   "NaltCntDr30": {
@@ -4739,10 +4741,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "zcta-2020",
       "tract-2020",
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2020",
+      "zcta-2025"
     ]
   },
   "BupTmWk": {
@@ -4761,10 +4763,10 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "zcta-2020",
       "tract-2020",
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2020",
+      "zcta-2025"
     ]
   },
   "BupCntWk60": {
@@ -4783,10 +4785,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "zcta-2020",
       "tract-2020",
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2020",
+      "zcta-2025"
     ]
   },
   "BupCntWk30": {
@@ -4805,10 +4807,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "zcta-2020",
       "tract-2020",
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2020",
+      "zcta-2025"
     ]
   },
   "MetTmWk": {
@@ -4827,10 +4829,10 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "zcta-2020",
       "tract-2020",
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2020",
+      "zcta-2025"
     ]
   },
   "MetCntWk30": {
@@ -4849,10 +4851,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "zcta-2020",
       "tract-2020",
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2020",
+      "zcta-2025"
     ]
   },
   "MetCntWk60": {
@@ -4871,10 +4873,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "zcta-2020",
       "tract-2020",
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2020",
+      "zcta-2025"
     ]
   },
   "NaltTmWk": {
@@ -4893,10 +4895,10 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "zcta-2020",
       "tract-2020",
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2020",
+      "zcta-2025"
     ]
   },
   "NaltCntWk60": {
@@ -4915,10 +4917,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "zcta-2020",
       "tract-2020",
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2020",
+      "zcta-2025"
     ]
   },
   "NaltCntWk30": {
@@ -4937,10 +4939,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "zcta-2020",
       "tract-2020",
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2020",
+      "zcta-2025"
     ]
   },
   "BupTmBk": {
@@ -4959,10 +4961,10 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "zcta-2020",
       "tract-2020",
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2020",
+      "zcta-2025"
     ]
   },
   "BupCntBk60": {
@@ -4981,10 +4983,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "zcta-2020",
       "tract-2020",
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2020",
+      "zcta-2025"
     ]
   },
   "BupCntBk30": {
@@ -5003,10 +5005,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "zcta-2020",
       "tract-2020",
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2020",
+      "zcta-2025"
     ]
   },
   "MetTmBk": {
@@ -5025,10 +5027,10 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "zcta-2020",
       "tract-2020",
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2020",
+      "zcta-2025"
     ]
   },
   "MetCntBk60": {
@@ -5047,10 +5049,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "zcta-2020",
       "tract-2020",
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2020",
+      "zcta-2025"
     ]
   },
   "MetCntBk30": {
@@ -5069,10 +5071,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "zcta-2020",
       "tract-2020",
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2020",
+      "zcta-2025"
     ]
   },
   "NaltTmBk": {
@@ -5091,10 +5093,10 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "zcta-2020",
       "tract-2020",
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2020",
+      "zcta-2025"
     ]
   },
   "NaltCntBk60": {
@@ -5113,10 +5115,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "zcta-2020",
       "tract-2020",
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2020",
+      "zcta-2025"
     ]
   },
   "NaltCntBk30": {
@@ -5135,10 +5137,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "zcta-2020",
       "tract-2020",
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2020",
+      "zcta-2025"
     ]
   },
   "FqhcMinDis": {
@@ -5157,8 +5159,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2020"
     ]
   },
   "FqhcTmDr": {
@@ -5177,8 +5179,8 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2020"
     ]
   },
   "FqhcCntDr": {
@@ -5197,8 +5199,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2020"
     ]
   },
   "HospMinDis": {
@@ -5217,8 +5219,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2020"
     ]
   },
   "HospTmDr": {
@@ -5237,8 +5239,8 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2020"
     ]
   },
   "HospCntDr": {
@@ -5257,8 +5259,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2020"
     ]
   },
   "RxMinDis": {
@@ -5337,8 +5339,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2020"
     ]
   },
   "MhTmDr": {
@@ -5357,8 +5359,8 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2020"
     ]
   },
   "MhCntDr": {
@@ -5377,8 +5379,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2020"
     ]
   },
   "SutMinDis": {
@@ -5397,8 +5399,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2020"
     ]
   },
   "SutTmDr": {
@@ -5417,8 +5419,8 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2020"
     ]
   },
   "SutCntDr": {
@@ -5437,8 +5439,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "zcta-2020",
-      "tract-2020"
+      "tract-2020",
+      "zcta-2020"
     ]
   },
   "OtpMinDis": {
@@ -5457,8 +5459,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2025"
     ]
   },
   "OtpTmDr": {
@@ -5477,10 +5479,10 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "zcta-2021",
       "tract-2021",
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2021",
+      "zcta-2025"
     ]
   },
   "OtpCntDr": {
@@ -5499,10 +5501,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "zcta-2021",
       "tract-2021",
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2021",
+      "zcta-2025"
     ]
   },
   "PcpPer100k": {
@@ -5521,8 +5523,8 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "tract-2010",
-      "county-2010"
+      "county-2010",
+      "tract-2010"
     ]
   },
   "SpPer100k": {
@@ -5541,8 +5543,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "tract-2010",
-      "county-2010"
+      "county-2010",
+      "tract-2010"
     ]
   },
   "SocEcAdvIn": {
@@ -5656,13 +5658,13 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "tract-2018",
       "county-2018",
-      "zcta-2018",
-      "tract-2020",
       "county-2020",
-      "tract-2022",
       "county-2022",
+      "tract-2018",
+      "tract-2020",
+      "tract-2022",
+      "zcta-2018",
       "zcta-2022"
     ]
   },
@@ -5682,13 +5684,13 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "tract-2018",
       "county-2018",
-      "zcta-2018",
-      "tract-2020",
       "county-2020",
-      "tract-2022",
       "county-2022",
+      "tract-2018",
+      "tract-2020",
+      "tract-2022",
+      "zcta-2018",
       "zcta-2022"
     ]
   },
@@ -5708,13 +5710,13 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "tract-2018",
       "county-2018",
-      "zcta-2018",
-      "tract-2020",
       "county-2020",
-      "tract-2022",
       "county-2022",
+      "tract-2018",
+      "tract-2020",
+      "tract-2022",
+      "zcta-2018",
       "zcta-2022"
     ]
   },
@@ -5734,13 +5736,13 @@
     "longitudinal": false,
     "analysis": true,
     "table_sources": [
-      "tract-2018",
       "county-2018",
-      "zcta-2018",
-      "tract-2020",
       "county-2020",
-      "tract-2022",
       "county-2022",
+      "tract-2018",
+      "tract-2020",
+      "tract-2022",
+      "zcta-2018",
       "zcta-2022"
     ]
   },
@@ -5760,13 +5762,13 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "tract-2018",
       "county-2018",
-      "zcta-2018",
-      "tract-2020",
       "county-2020",
-      "tract-2022",
       "county-2022",
+      "tract-2018",
+      "tract-2020",
+      "tract-2022",
+      "zcta-2018",
       "zcta-2022"
     ]
   },
@@ -6372,7 +6374,7 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2018"
+      "county-2010"
     ]
   },
   "RcaSubrbP": {
@@ -6391,7 +6393,7 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2018"
+      "county-2010"
     ]
   },
   "RcaRuralP": {
@@ -6410,7 +6412,7 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2018"
+      "county-2010"
     ]
   },
   "CenFlags": {
@@ -6505,7 +6507,7 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "county-2018"
+      "county-2010"
     ]
   },
   "DmySgrg": {
@@ -6772,10 +6774,10 @@
     "analysis": false,
     "table_sources": [
       "tract-1980",
-      "tract-2010",
       "tract-1990",
-      "tract-2020",
-      "tract-2000"
+      "tract-2000",
+      "tract-2010",
+      "tract-2020"
     ]
   },
   "MetRm60": {
@@ -6795,10 +6797,10 @@
     "analysis": false,
     "table_sources": [
       "tract-1980",
-      "tract-2010",
       "tract-1990",
-      "tract-2020",
-      "tract-2000"
+      "tract-2000",
+      "tract-2010",
+      "tract-2020"
     ]
   },
   "MetRm90": {
@@ -6818,10 +6820,10 @@
     "analysis": false,
     "table_sources": [
       "tract-1980",
-      "tract-2010",
       "tract-1990",
-      "tract-2020",
-      "tract-2000"
+      "tract-2000",
+      "tract-2010",
+      "tract-2020"
     ]
   },
   "NaltRm30": {
@@ -6956,8 +6958,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -6980,8 +6982,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7004,8 +7006,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7028,8 +7030,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7052,8 +7054,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7076,8 +7078,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7100,8 +7102,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7124,8 +7126,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7148,8 +7150,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7172,8 +7174,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7196,8 +7198,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7220,8 +7222,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7244,8 +7246,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7268,8 +7270,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7292,8 +7294,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7316,8 +7318,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7340,8 +7342,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7364,8 +7366,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7388,8 +7390,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7412,8 +7414,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7436,8 +7438,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7460,8 +7462,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7484,8 +7486,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7508,8 +7510,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7532,8 +7534,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7556,8 +7558,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7580,8 +7582,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7604,8 +7606,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7628,8 +7630,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7652,8 +7654,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7676,8 +7678,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7700,8 +7702,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7724,8 +7726,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7748,8 +7750,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7772,8 +7774,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7796,8 +7798,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7820,8 +7822,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7844,8 +7846,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -7868,8 +7870,8 @@
     "table_sources": [
       "county-2020",
       "county-2023",
-      "tract-2023",
       "tract-2020",
+      "tract-2023",
       "zcta-2020",
       "zcta-2023"
     ]
@@ -8128,8 +8130,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2025"
     ]
   },
   "NaltCntDr60": {
@@ -8148,8 +8150,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2025"
     ]
   },
   "MetCntDr60": {
@@ -8168,8 +8170,8 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "zcta-2025",
-      "tract-2025"
+      "tract-2025",
+      "zcta-2025"
     ]
   },
   "CrrctExp": {
@@ -8188,10 +8190,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2022",
-      "state-2021",
+      "state-2019",
       "state-2020",
-      "state-2019"
+      "state-2021",
+      "state-2022"
     ]
   },
   "HlthExp": {
@@ -8210,10 +8212,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2022",
-      "state-2021",
+      "state-2019",
       "state-2020",
-      "state-2019"
+      "state-2021",
+      "state-2022"
     ]
   },
   "PlcFyrExp": {
@@ -8232,10 +8234,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2022",
-      "state-2021",
+      "state-2019",
       "state-2020",
-      "state-2019"
+      "state-2021",
+      "state-2022"
     ]
   },
   "WlfrExp": {
@@ -8254,10 +8256,10 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
-      "state-2022",
-      "state-2021",
+      "state-2019",
       "state-2020",
-      "state-2019"
+      "state-2021",
+      "state-2022"
     ]
   }
 }
