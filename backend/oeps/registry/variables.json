@@ -7876,40 +7876,6 @@
       "zcta-2023"
     ]
   },
-  "Eduless9P": {
-    "title": "% Population with less than a 9th grade education",
-    "name": "Eduless9P",
-    "type": "number",
-    "example": "60.0",
-    "description": "",
-    "constraints": "",
-    "construct": "Educational Attainment",
-    "source": "ACS ",
-    "source_long": "American Community Survey (5-Year Estimate)",
-    "oeps_v1_table": null,
-    "comments": "",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Educational_Characteristics.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": []
-  },
-  "UnempP2": {
-    "title": "The number of unemployed individuals as a percentage of the civilian labor force (Alternative measurement)",
-    "name": "UnempP2",
-    "type": "number",
-    "example": "60.0",
-    "description": "",
-    "constraints": "",
-    "construct": "Employment Trends",
-    "source": "ACS ",
-    "source_long": "American Community Survey (5-Year Estimate)",
-    "oeps_v1_table": null,
-    "comments": "",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Economic.md",
-    "longitudinal": false,
-    "analysis": false,
-    "table_sources": []
-  },
   "AsHcvD": {
     "title": "Hepatitis C deaths among Asian populations ",
     "name": "AsHcvD",
