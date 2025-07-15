@@ -34,8 +34,7 @@ def get_dfs(table_sources, variables):
         df = df.set_index("HEROP_ID")
         df = df.sort_index()
         
-        to_include = list(set(variables) & set(df.columns))
-        df = df[to_include]
+        df = df
 
         dfs.append(df)
     
@@ -151,6 +150,10 @@ if __name__ == "__main__":
         old_df = df.copy()
         present_variables = find_present_variables(df, date_vars + fr_vars)
         df = clean_fr_and_date(dfs[i], year, date_var_dict, present_variables)
+
+        for col in present_variables:
+            dfs[i][col] = df[col]
+
         dfs[i][present_variables] = df[present_variables]
         print(f"Masked a total of {pd.isna(old_df).sum() - pd.isna(df).sum()} new values for the dataframe from year {year}")
 
