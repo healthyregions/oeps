@@ -3172,7 +3172,7 @@
     ]
   },
   "AvHcvD": {
-    "title": "Average Hepitatis C virus Deaths",
+    "title": "Average Hepitatis C virus Deaths (5-Year Averages)",
     "name": "AvHcvD",
     "type": "number",
     "example": "121.0",
@@ -3187,11 +3187,12 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
+      "state-2017",
       "state-2022"
     ]
   },
   "AvMlHcvD": {
-    "title": "Hepatitis C Deaths - Men (2013 - 2017)",
+    "title": "Hepatitis C Deaths - Men (5-Year Averages)",
     "name": "AvMlHcvD",
     "type": "number",
     "example": "409.2",
@@ -3211,7 +3212,7 @@
     ]
   },
   "AvFlHcvD": {
-    "title": "Hepatitis C Deaths - Women (2013 - 2017)",
+    "title": "Hepatitis C Deaths - Women (5-Year Averages)",
     "name": "AvFlHcvD",
     "type": "number",
     "example": "177.2",
@@ -3231,7 +3232,7 @@
     ]
   },
   "AvAmInHcvD": {
-    "title": "Hepatitis C Deaths - American Indian (2013 - 2017)",
+    "title": "Hepatitis C Deaths - American Indian (5-Year Averages)",
     "name": "AvAmInHcvD",
     "type": "number",
     "example": "23.6",
@@ -3270,7 +3271,7 @@
     ]
   },
   "AvBlkHcvD": {
-    "title": "Hepatitis C Deaths - Black (2013 - 2017)",
+    "title": "Hepatitis C Deaths - Black (5-Year Averages)",
     "name": "AvBlkHcvD",
     "type": "number",
     "example": "42.2",
@@ -3290,7 +3291,7 @@
     ]
   },
   "AvHspHcvD": {
-    "title": "Hepatitis C Deaths - Hispanic (2013 - 2017)",
+    "title": "Hepatitis C Deaths - Hispanic (5-Year Averages)",
     "name": "AvHspHcvD",
     "type": "number",
     "example": "34.4",
@@ -3310,7 +3311,7 @@
     ]
   },
   "AvU50HcvD": {
-    "title": "Hepatitis C Deaths - Age Under 50 (2013 - 2017)",
+    "title": "Hepatitis C Deaths - Age Under 50 (5-Year Averages)",
     "name": "AvU50HcvD",
     "type": "number",
     "example": "26.6",
@@ -3349,7 +3350,7 @@
     ]
   },
   "AvO75HcvD": {
-    "title": "Hepatitis C Deaths - Age Over 75  (2013 - 2017)",
+    "title": "Hepatitis C Deaths - Age Over 75  (5-Year Averages)",
     "name": "AvO75HcvD",
     "type": "number",
     "example": "27",
@@ -8041,6 +8042,7 @@
     "longitudinal": false,
     "analysis": false,
     "table_sources": [
+      "state-2017",
       "state-2022"
     ]
   },
