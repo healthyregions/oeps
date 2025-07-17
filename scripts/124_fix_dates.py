@@ -22,7 +22,7 @@ def get_table_sources(variable):
         file = tables_folder + table
         if any(pd.Series(variable).isin(pd.read_csv(file).columns)):
             rv.append(table)
-    
+
     return rv
 
 def get_dfs(table_sources, variables):
@@ -33,11 +33,11 @@ def get_dfs(table_sources, variables):
         df = pd.read_csv(tables_folder + table)
         df = df.set_index("HEROP_ID")
         df = df.sort_index()
-        
+
         df = df
 
         dfs.append(df)
-    
+
     return dfs
 
 def column_has_impossible_date(series, year):
@@ -50,24 +50,24 @@ def column_has_impossible_date(series, year):
 def mask_future_dates(date_series, year):
     '''Given a pandas series of datetimes and a year,
     remove any datetimes that postdate the year.
-    
+
     e.g. given the year 2016, 5/3/2017 will be removed
     but 12/29/2016 will not.'''
-    
-    end_date = datetime(int(year) + 1, 1, 1)    
+
+    end_date = datetime(int(year) + 1, 1, 1)
     remaining_seconds = (end_date) - pd.to_datetime(date_series)
-    
+
     mask = remaining_seconds.apply(lambda x: x.total_seconds()) < 0
-    
+
     rv = date_series.copy()
     rv[mask] = np.NaN
-    
+
     return rv
 
 def calculate_fr_from_date(date_series, year):
     '''Given a pandas series of datetimes and a year,
     return an array of fractions of the year'''
-    
+
     start_of_year = datetime(int(year), 1, 1)
     end_of_year = datetime(int(year) + 1, 1, 1)
 
@@ -77,8 +77,8 @@ def calculate_fr_from_date(date_series, year):
 
     rv = remaining_seconds / total_seconds
     rv[rv > 1] = 1
-    
-    rv =rv.fillna(0)
+
+    rv = rv.fillna(0)
 
     assert not any(rv < 0), "Negative return value in rv, masking failed."
 
@@ -92,7 +92,7 @@ def clean_fr_and_date(df, year, date_fr_dict, present_vars):
     correspondent fraction of a year variables.'''
 
     # detangle ourselves from the initial df
-    df = df.copy() 
+    df = df.copy()
 
     for column in present_vars:
 
@@ -103,12 +103,12 @@ def clean_fr_and_date(df, year, date_fr_dict, present_vars):
         print(f"Cleaning column {column} in year {year}")
         new_date_col = mask_future_dates(df[column], year)
         new_fr_col = calculate_fr_from_date(new_date_col, year)
-        
+
         print(pd.concat( [df[column], new_date_col], axis=1 ))
         print(pd.concat( [df[fr_column], new_fr_col    ], axis=1 ))
 
         df[column] = new_date_col
-        df[fr_column] = new_fr_col
+        df[fr_column] = new_fr_col.apply(lambda x: round(x, 2))
 
     return df
 
@@ -124,9 +124,9 @@ def sanity_check(df, year):
         to_plot = pd.to_datetime(df[col])
 
         ax.vlines(to_plot, 0, 1, color='black', alpha=0.1)
-    
+
     ax.vlines(datetime(int(year) + 1, 1, 1), 0, 1, color='blue')
-    
+
     return fig, ax
 
 if __name__ == "__main__":
@@ -139,7 +139,7 @@ if __name__ == "__main__":
     for df, table, year in zip(dfs, tables, years):
         present_variables = find_present_variables(df, date_vars + fr_vars)
         for variable in present_variables:
-    
+
             if column_has_impossible_date(df[variable], year):
                 print(f"Table {table} has impossible entry for variable {variable}")
 
@@ -167,5 +167,4 @@ if __name__ == "__main__":
     if save_yn.lower() not in ['yes', 'y', 'ye', 'yeah']: exit(1)
 
     for df, table in zip(dfs, tables):
-        df.to_csv(tables_folder + table, index=False)
-    
+        df.to_csv(tables_folder + table, index=True)
