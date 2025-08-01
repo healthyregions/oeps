@@ -136,7 +136,7 @@ County and state-level variables include the **count** of Census tracts and the 
 #### County and State
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Count of tracts | TotTracts | Total number of tracts in county/state | 2019, 2025 | County, State |
+| Count of tracts | TotTracts | Total number of tracts in county/state | 2020, 2025 | County, State |
 | Count of tracts within 30-min buprenorphine driving range | BupCtTmDr | Number of tracts with buprenorphine provider within a 30-min driving range | 2020, 2025 | County, State |
 | Count of tracts within 30-min buprenorphine biking range | BupCtTmBk | Number of tracts with buprenorphine provider within a 30-min biking range | 2020, 2025 | County, State |
 | Count of tracts within 30-min buprenorphine walking range | BupCtTmWk | Number of tracts with buprenorphine provider within a 30-min walking range | 2020, 2025 | County, State |
