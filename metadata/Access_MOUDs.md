@@ -1,7 +1,6 @@
 **Meta Data Name**: Access to MOUDs  
 **Date Added**: February 1, 2021  
 **Author**: Marynia Kolak, Mahjabin Kabir Adrita, Wataru Morioka, Susan Paykin
-
 **Date Last Modified**: August 1, 2025  
 **Last Modified By**: Marynia Kolak
 
@@ -13,7 +12,9 @@ You can find the variables described in this document in the CSV files [here](ht
 
 CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
 
-### Data Source(s) Description:  
+### Data Source(s) Description:
+
+#### Medications for Opioid Overuse Disorder (MOUDs)
 Data on providers prescribing Medications for Opioid Overuse Disorder (MOUDs) and their locations were sourced from the [U.S. Substance Abuse and Mental Health Services Administration (SAMHSA) Treatment Locator](https://findtreatment.samhsa.gov/locator) for all time periods. 
 
 For 2019, we extracted the following from SAMSHA’s Treatment Locator Service:
@@ -32,13 +33,16 @@ The following was extracted in May 2025 from SAMSHA’s Treatment Locator Servic
  - **OTP**: All providers tagged as “opioid treatment providers.”
  - **Naltrexone**: All providers tagged as providing “naltrexone.”
 
-Data on street and pedestrian networks to calculate travel time metrics were sourced from multiple open source data portals. 
+#### Street Network Topology & Travel Time Matrices
+Data on street and pedestrian networks to calculate travel time metrics were sourced from multiple open source data portals. Street network topologies (including street orientations and speed/travel time) all derive from [OpenStreetMap](https://www.openstreetmap.org), also known as OSM.
 
-- For 2019, the **travel time matrices** for driving, biking and walking were sourced from Project OSRM, calculated by Vidal Anguiano (University of Chicago), and are available at the Tract or ZCTA scales.
-- For 2025, the **transit matrices** for driving, biking and walking were sourced from OpenStreetMap using [OSMnx](https://osmnx.readthedocs.io/en/stable/) and [SPASTC](https://doi.org/10.1080/13658816.2024.2326445), calculated by [Alex Michels](https://alexandermichels.github.io/) (University of Texas at Dallas), and are available at the tract scales.
+- For 2019, the **travel time matrices** for driving, biking and walking were sourced from [Project OSRM](https://project-osrm.org/), calculated by Vidal Anguiano (University of Chicago), and are available at the Tract or ZCTA scales.
+- For 2025, the **travel time matrices** for driving, biking and walking were sourced from OpenStreetMap using [OSMnx](https://osmnx.readthedocs.io/en/stable/) and [SPASTC](https://doi.org/10.1080/13658816.2024.2326445), calculated by [Alex Michels](https://alexandermichels.github.io/) (University of Texas at Dallas), and are available at the tract scales.
+
+In our approach, a travel time is calculated from the center of each census tract, to the center of another census tract, up to 90 minutes away. These time tables are calculated for across the country, and can be referenced by tract FIPS (unique ID) code.
 
 ### Description of Data Processing: 
-Data was identified, wrangled, cleaned, and prepared for analysis. We geocoded locations through the [tidygeocoder](https://cran.r-project.org/web/packages/tidygeocoder/vignettes/tidygeocoder.html) package in R, as well as supplemental geocoding through University of Chicago Library GIS services. 
+Data was identified, wrangled, cleaned, and prepared for analysis. For 2019 locations that needed geocoding, we used the [tidygeocoder](https://cran.r-project.org/web/packages/tidygeocoder/vignettes/tidygeocoder.html) package in R, as well as supplemental geocoding through University of Chicago Library GIS services. Data extracted in 2025 was already complete with spatial coordinate information.
 
 #### Tract and ZIP Code
 
@@ -47,8 +51,11 @@ We conducted the nearest resource analysis from geography centroid to MOUD provi
 
 ##### Travel Time and Count Within Threshold
 
-We calculated travel-network access metrics for every census tract centroid to the census tract centroid of nearest provider type, up to 90 minutes away. For zip code tabulation areas, overlapping tract-level measures were averaged, weighted by proportion of the overlapping tract, using the corresponding HUD tract-to-zip code crosswalks. 
-Count of providers within a travel threshold (30 minutes and/or 60 minutes) were also calculated for three modes of transit: driving, walking, and biking at the tract level, with corresponding average of overlapping tracts at the ZCTA scale.. This analysis was conducted in Python. The scripts are available in code/AccessMetrics - MOUDs. Some of the scripts are available in [code/AccessMetrics - MOUDs.](https://github.com/GeoDaCenter/opioid-policy-scan/tree/fc3d94053dd1941a96a5945d73cc6f4845453484/code/Access%20Metrics%20-%20MOUD), with complete computational notebooks forthcoming in 2026.
+We calculated travel-network access metrics for every census tract centroid to the census tract centroid of nearest provider type, up to 90 minutes away. For *zip code tabulation areas*, overlapping tract-level measures were averaged, weighted by proportion of the overlapping tract, using the corresponding HUD tract-to-zip code crosswalks. 
+
+Count of providers within a travel threshold (30 minutes and/or 60 minutes) were also calculated for three modes of transit: driving, walking, and biking at the tract level, with corresponding average of overlapping tracts at the ZCTA scale. 
+
+This analysis was conducted in Python. The scripts are available in code/AccessMetrics - MOUDs. Some of the scripts are available in [code/AccessMetrics - MOUDs.](https://github.com/GeoDaCenter/opioid-policy-scan/tree/fc3d94053dd1941a96a5945d73cc6f4845453484/code/Access%20Metrics%20-%20MOUD), with complete computational notebooks forthcoming in 2026.
 
 #### County and State 
 County and state-level variables include the **count** of Census tracts and the **percent** of Census tracts located within a 30 minute driving threshold of an MOUD type, as well as the mean (average) driving time in minutes from Census tracts within the county or state. 
@@ -61,18 +68,18 @@ County and state-level variables include the **count** of Census tracts and the 
 - **Years Available** -- years for which data exists for this variable
 - **Spatial Scale** -- the variable exists for these levels of spatial scale
 
-#### Tract, ZIP Code
+#### Tract
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
 | Minimum distance to nearest MOUD (all types) | MoudMinDis | Euclidean distance (miles) to nearest MOUD (all types) | 2019, 2025 | Tract |
 | Minimum distance to buprenorphine | BupMinDis | Euclidean distance (miles) to nearest buprenorphine provider | 2019, 2025 | Tract |
 | Driving time to nearest buprenorphine | BupTmDr | Driving time (minutes) to nearest buprenorphine provider | 2019, 2025 | Tract |
 | Count of buprenorphine providers (drive) | BupCntDr30 | Count of methadone providers in 30 minute drive time threshold | 2019, 2025 | Tract |
-| Minimum distance to methadone | MetMinDis | Euclidean distance (miles) to nearest methadone provider | 2019, 2025 | Tract, Zip |
-| Driving time to nearest methadone | MetTmDr | Driving time (minutes) to nearest methadone provider | 2019, 2025 | Tract, Zip |
+| Minimum distance to methadone | MetMinDis | Euclidean distance (miles) to nearest methadone provider | 2019, 2025 | Tract |
+| Driving time to nearest methadone | MetTmDr | Driving time (minutes) to nearest methadone provider | 2019, 2025 | Tract |
 | Count of methadone providers (drive) | MetCntDr30 | Count of methadone providers in 30 minute drive time threshold | 2019, 2025 | Tract |
 | Minimum distance to naltrexone | NalMinDis | Euclidean distance (miles) to nearest naltrexone/Vivitrol provider | 2019, 2025 | Tract |
-| Driving time to nearest naltrexone |  NalTmDr | Driving time (minutes) to nearest naltrexone provider | 2019, 2025 | Tract, Zip |
+| Driving time to nearest naltrexone |  NalTmDr | Driving time (minutes) to nearest naltrexone provider | 2019, 2025 | Tract |
 | Count of naltrexone providers (drive) | NalCntDr30 | Count of naltrexone providers in 30 minute drive time threshold | 2019, 2025 | Tract|
 | Walking time to nearest buprenorphine | BupTmWk | Driving time (minutes) to nearest buprenorphine provider | 2019, 2025 | Tract |
 | Count of buprenorphine providers (walk) | BupCntWk60 | Count of buprenorphine providers in 60 minute walking time threshold | 2019, 2025 | Tract|
