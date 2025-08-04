@@ -9,10 +9,10 @@
         "HEROP_ID",
         "Zip Code Tabulation Area"
       ],
-      "Source": "Tiger/Line 2018; Tiger/Line 2010; Healthy Regions & Policies Lab, UIUC; USDA-ERS 2010 & ACS 2018 5-Year",
+      "Source": "USDA-ERS 2010 & ACS 2018 5-Year; Tiger/Line 2018; Tiger/Line 2010; Healthy Regions & Policies Lab, UIUC",
       "Metadata": [
-        "Geographic_Boundaries",
-        "Rural_Urban_Classification_County"
+        "Rural_Urban_Classification_County",
+        "Geographic_Boundaries"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
       "Years": "1980, 1990, 2000, 2010, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2025"
@@ -26,7 +26,7 @@
         "State Area",
         "Total Census Tract Count"
       ],
-      "Source": "InfoGroup, 2018; OSM; Tiger/Line 2018",
+      "Source": "OSM; Tiger/Line 2018; InfoGroup, 2018",
       "Metadata": [
         "AlcoholOutlets_2018",
         "Park_Cover",
@@ -45,7 +45,7 @@
         "Total Population (2010)",
         "Urban Population Total"
       ],
-      "Source": "USDA-ERS 2010 & ACS 2018 5-Year; ACS 2018, 5-Year; Census 2010; IPUMS NHGIS",
+      "Source": "ACS 2018, 5-Year; Census 2010; IPUMS NHGIS; USDA-ERS 2010 & ACS 2018 5-Year",
       "Metadata": [
         "Demographics",
         "Rural_Urban_Classification_County"
@@ -98,7 +98,7 @@
         "Population: Age 60-64",
         "Population: Age 65+"
       ],
-      "Source": "ACS 2018, 5-Year; 2010 Decennial Census; ACS ; IPUMS NHGIS; ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS; ACS 2018, 5-Year; Census 2010; IPUMS NHGIS",
+      "Source": "ACS 2018, 5-Year; Census 2010; IPUMS NHGIS; ACS ; ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS; ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS",
       "Metadata": [
         "Demographics"
       ],
@@ -149,11 +149,10 @@
         "% Population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)",
         "% Population aged 25 years and over with a graduate or professional degree",
         "% Population aged 25 years and over with less than a high school diploma",
-        "% Population with less than a 9th grade education",
         "% Population without High School Degree",
         "Proportion of the population aged 5+ who speak a language other than English at home but are proficient in English"
       ],
-      "Source": "ACS 2018, 5-Year; ACS 2012, 5-Year; IPUMS NHGIS; ACS ",
+      "Source": "ACS ; ACS 2018, 5-Year; ACS 2012, 5-Year; IPUMS NHGIS",
       "Metadata": [
         "Educational_Characteristics",
         "Other_Demographic_2018"
@@ -168,7 +167,7 @@
         "% Veteran Population",
         "Total Veteran Population"
       ],
-      "Source": "ACS 2017, 5-Year; ACS 2012, 5-Year; ACS 2018, 5-Year; ACS 2012, 5-Year",
+      "Source": "ACS 2018, 5-Year; ACS 2012, 5-Year; ACS 2017, 5-Year; ACS 2012, 5-Year",
       "Metadata": [
         "VetPop"
       ],
@@ -202,7 +201,7 @@
         "Total Population in Households",
         "Total households"
       ],
-      "Source": "ACS 2018, 5-Year; ACS ",
+      "Source": "ACS ; ACS 2018, 5-Year",
       "Metadata": [
         "Marital_Status",
         "HouseholdType"
@@ -480,7 +479,7 @@
         "Walking Time (min) to nearest Methadone Provider",
         "Walking Time (min) to nearest Naltrexone Provider"
       ],
-      "Source": "; SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020; SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020; SAMHSA",
+      "Source": "SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020; ; SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020; SAMHSA",
       "Metadata": [
         "",
         "Access_MOUDs"
@@ -587,7 +586,7 @@
         "Driving Time (min) to nearest Opioid Treatment Program (OTP)",
         "Tracts with Opioid Treatment Program (OTP) (30-min drive)"
       ],
-      "Source": "SAMSHA, 2021; SAMHSA",
+      "Source": "SAMHSA; SAMSHA, 2021",
       "Metadata": [
         "Access_OpioidUseTreatment"
       ],
@@ -633,12 +632,10 @@
         "Employed % - Education",
         "Employed % - Health Care",
         "Employed % - High Risk of Injury",
-        "Employed % - Retail",
-        "The number of unemployed individuals as a percentage of the civilian labor force (Alternative measurement)"
+        "Employed % - Retail"
       ],
-      "Source": "ACS 2018, 5-Year; ACS ",
+      "Source": "ACS 2018, 5-Year",
       "Metadata": [
-        "Economic",
         "Job_Categories_byIndustry_2018"
       ],
       "Spatial Scale": "Tract, Zip, County, State",
@@ -886,7 +883,7 @@
         "Total Public Health & Welfare Expenditures",
         "Total Public Welfare Expenditures"
       ],
-      "Source": "State and Local Finance Data Finder; US Census, 2018",
+      "Source": "US Census, 2018; State and Local Finance Data Finder",
       "Metadata": [
         "PublicExpenditures"
       ],
@@ -900,27 +897,27 @@
       "Variable Proxy": "Yearly Hepatitis C cases (2013-2016), Yearly Hepatitis C cases - Men (2013-2016), Yearly Hepatitis C cases - Women (2013-2016), Yearly Hepatitis C cases - Under 50 years old (2013-2016), Yearly Hepatitis C cases - 50 to 74 years old (2013-2016), Yearly Hepatitis C cases - Over 75 years old (2013-2016), Yearly Hepatitis C cases - Black (2013-2016), Yearly Hepatitis C cases - non-Black (2013-2016), Hepatitis C Deaths, Hepatitis C Deaths - Men, Hepatitis C Deaths - Women, Hepatitis C Deaths - American Indian, Hepatitis C Deaths - Asian & Pacific Islander, Hepatitis C Deaths - Black, Hepatitis C Deaths - Hispanic, Hepatitis C Deaths - Under 50 years old, Hepatitis C Deaths - 50 to 74 years old, Hepatitis C Deaths - Over 75 years old, Average Hepitatis C virus Deaths, Hepatitis C Deaths - Men (2013 - 2017), Hepatitis C Deaths - Women (2013 - 2017), Hepatitis C Deaths - American Indian (2013 - 2017), Hepatitis C Deaths - Asian & Pacific Islander (2013 - 2017), Hepatitis C Deaths - Black (2013 - 2017), Hepatitis C Deaths - Hispanic (2013 - 2017), Hepatitis C Deaths - Age Under 50 (2013 - 2017), Hepatitis C Deaths - Age 50 to 74 (2013 - 2017), Hepatitis C Deaths - Age Over 75  (2013 - 2017), Hepatitis C deaths among Asian populations , Hepatitis C deaths among Native Hawaiian and Pacific Islander populations , Hepatitis C deaths among White populations, Hepatitis C deaths among Multiple Race populations , Mean yearly Hepatitis C deaths among Asian population from 2018-2022, Mean yearly Hepatitis C deaths among Native Hawaiian and Pacific Islanders population from 2018-2022, Mean yearly Hepatitis C deaths among White populations from 2018-2022, Mean yearly Hepatitis C deaths among Multiple Race populations from 2018-2022, Average Ages between 50 to 74 Hepitatis C virus Deaths, Average White Hepitatis C virus Deaths",
       "Variables": [
         "Average Ages between 50 to 74 Hepitatis C virus Deaths",
-        "Average Hepitatis C virus Deaths",
+        "Average Hepitatis C virus Deaths (5-Year Averages)",
         "Average White Hepitatis C virus Deaths",
         "Hepatitis C Deaths",
         "Hepatitis C Deaths - 50 to 74 years old",
         "Hepatitis C Deaths - Age 50 to 74 (2013 - 2017)",
-        "Hepatitis C Deaths - Age Over 75  (2013 - 2017)",
-        "Hepatitis C Deaths - Age Under 50 (2013 - 2017)",
+        "Hepatitis C Deaths - Age Over 75  (5-Year Averages)",
+        "Hepatitis C Deaths - Age Under 50 (5-Year Averages)",
         "Hepatitis C Deaths - American Indian",
-        "Hepatitis C Deaths - American Indian (2013 - 2017)",
+        "Hepatitis C Deaths - American Indian (5-Year Averages)",
         "Hepatitis C Deaths - Asian & Pacific Islander",
         "Hepatitis C Deaths - Asian & Pacific Islander (2013 - 2017)",
         "Hepatitis C Deaths - Black",
-        "Hepatitis C Deaths - Black (2013 - 2017)",
+        "Hepatitis C Deaths - Black (5-Year Averages)",
         "Hepatitis C Deaths - Hispanic",
-        "Hepatitis C Deaths - Hispanic (2013 - 2017)",
+        "Hepatitis C Deaths - Hispanic (5-Year Averages)",
         "Hepatitis C Deaths - Men",
-        "Hepatitis C Deaths - Men (2013 - 2017)",
+        "Hepatitis C Deaths - Men (5-Year Averages)",
         "Hepatitis C Deaths - Over 75 years old",
         "Hepatitis C Deaths - Under 50 years old",
         "Hepatitis C Deaths - Women",
-        "Hepatitis C Deaths - Women (2013 - 2017)",
+        "Hepatitis C Deaths - Women (5-Year Averages)",
         "Hepatitis C deaths among Asian populations ",
         "Hepatitis C deaths among Multiple Race populations ",
         "Hepatitis C deaths among Native Hawaiian and Pacific Islander populations ",
@@ -928,7 +925,6 @@
         "Mean yearly Hepatitis C deaths among Asian population from 2018-2022",
         "Mean yearly Hepatitis C deaths among Multiple Race populations from 2018-2022",
         "Mean yearly Hepatitis C deaths among Native Hawaiian and Pacific Islanders population from 2018-2022",
-        "Mean yearly Hepatitis C deaths among White populations from 2018-2022",
         "Yearly Hepatitis C cases (2013-2016)",
         "Yearly Hepatitis C cases - 50 to 74 years old (2013-2016)",
         "Yearly Hepatitis C cases - Black (2013-2016)",
@@ -938,7 +934,7 @@
         "Yearly Hepatitis C cases - Women (2013-2016)",
         "Yearly Hepatitis C cases - non-Black (2013-2016)"
       ],
-      "Source": "HepVu; HepVu, 2017",
+      "Source": "HepVu, 2017; HepVu",
       "Metadata": [
         "HepC"
       ],
