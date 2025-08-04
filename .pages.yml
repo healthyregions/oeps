@@ -1,0 +1,75 @@
+media: media
+content:
+  - name: metadata
+    label: Metadata
+    type: collection
+    path: backend/oeps/registry2/metadata
+    filename: '{name}.json'
+    format: json
+    fields:
+      - name: name
+        label: Name
+        type: string
+      - name: theme
+        label: Theme
+        type: select
+        options:
+          values: ["Geography", "Social", "Environment", "Economic", "Policy", "Outcome", "Composite"]          
+      - name: construct
+        label: Construct
+        type: string
+      - name: proxy
+        label: Proxy
+        type: string
+      - name: url
+        label: URL
+        type: string
+  - name: variables
+    label: Variables
+    type: collection
+    path: backend/oeps/registry2/variables
+    filename: "{name}.json"
+    format: json
+    fields:
+      - name: name
+        label: Name
+        type: string
+      - name: title
+        label: Title
+        type: string
+      - name: type
+        label: Type
+        type: select
+        options:
+          values: ["string", "number", "integer", "boolean", "date"]
+      - name: example
+        label: Example
+        type: string
+      - name: description
+        label: Description
+        type: string
+      - name: source
+        label: Source
+        type: string
+      - name: source_long
+        label: "Source (long)"
+        type: string
+      - name: name
+        label: Name
+        type: string
+      - name: metadata
+        label: Metadata Document
+        type: reference
+        options:
+          collection: metadata
+          search: name
+          value: "{name}"
+          label: "{name}"
+      - name: longitudinal
+        type: boolean
+      - name: analysis
+        type: boolean
+      - name: table_sources
+        type: string
+        list: true
+        hidden: true
