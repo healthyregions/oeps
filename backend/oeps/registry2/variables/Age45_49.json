@@ -1,0 +1,31 @@
+{
+  "title": "Population: Age 45-49",
+  "name": "Age45_49",
+  "type": "integer",
+  "example": "467768",
+  "description": "Total population between age 45-49",
+  "construct": "Age",
+  "source": "ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS",
+  "source_long": "American Community Survey 2014-2018 5 Year Estimates; 2010 Decennial Census; Integrated Public Use Microdata Service National Historic Geographic Information Systems",
+  "oeps_v1_table": null,
+  "comments": "1990 and 2000 data from respective decennial censuses downloaded from IPUMS NHGIS and aggregated upwards.",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Demographics.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "county-1990",
+    "county-2000",
+    "county-2010",
+    "county-2018",
+    "state-1990",
+    "state-2000",
+    "state-2010",
+    "state-2018",
+    "tract-1990",
+    "tract-2000",
+    "tract-2010",
+    "tract-2018",
+    "zcta-2018"
+  ],
+  "metadata": "Demographics"
+}

@@ -1,0 +1,20 @@
+{
+  "title": "Distance to nearest OTP",
+  "name": "OtpMinDis",
+  "type": "number",
+  "example": "121.0",
+  "description": "Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles",
+  "construct": "Access to Opioid Treatment Programs",
+  "source": "SAMHSA",
+  "source_long": "The Substance Abuse and Mental Health Services Administration",
+  "oeps_v1_table": null,
+  "comments": "",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_OpioidUseTreatment.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "tract-2025",
+    "zcta-2025"
+  ],
+  "metadata": "Access_OpioidUseTreatment"
+}

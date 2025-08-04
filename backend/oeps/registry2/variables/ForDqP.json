@@ -1,0 +1,21 @@
+{
+  "title": "Foreclosure & Delinquency %",
+  "name": "ForDqP",
+  "type": "number",
+  "example": "5.53",
+  "description": "Estimated percent of mortgages to start foreclosure process or be seriously delinquent during the 2008 Recession",
+  "construct": "Foreclosure Rate",
+  "source": "HUD, 2018",
+  "source_long": "U.S. Department of Housing and Urban Development Neighborhood Stabilization Program",
+  "oeps_v1_table": null,
+  "comments": "For more recent county, state, and metro area data on mortgage delinquencies, see Mortgage Performance Trends data from the U.S. Consumer Financial Protection Bureau.",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/ForeclosureRate.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "county-2018",
+    "state-2018",
+    "tract-2018"
+  ],
+  "metadata": "ForeclosureRate"
+}

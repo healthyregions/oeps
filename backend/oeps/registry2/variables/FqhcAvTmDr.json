@@ -1,0 +1,20 @@
+{
+  "title": "Driving Time to nearest Federally Qualified Health Center",
+  "name": "FqhcAvTmDr",
+  "type": "number",
+  "example": "10.65",
+  "description": "Average driving time (minutes) across tracts in state to nearest Federally Qualified Health Center",
+  "construct": "Access to Health Centers",
+  "source": "US Covid Atlas via HRSA, 2020",
+  "source_long": "United States Covid Atlas via Health Resources and Services Adminsitration, 2020",
+  "oeps_v1_table": null,
+  "comments": "This dataset includes all US states, Washington D.C., and Puerto Rico. It does not include the territories Guam, Northern Mariana Islands, American Samoa, Palau. Zip code and tract centroids are not population-weighted.",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_FQHCs_MinDistance.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "county-2020",
+    "state-2020"
+  ],
+  "metadata": "Access_FQHCs_MinDistance"
+}

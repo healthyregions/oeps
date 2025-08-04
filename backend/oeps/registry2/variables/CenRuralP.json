@@ -1,0 +1,19 @@
+{
+  "title": "Rural Population % (2010)",
+  "name": "CenRuralP",
+  "type": "number",
+  "example": "0",
+  "description": "% of 2010 Population living in non urban areas, as defined by Census Bureau",
+  "construct": "Urban/Suburban/Rural Classification",
+  "source": "USDA-ERS 2010 & ACS 2018 5-Year",
+  "source_long": "United States Department of Agriculture Economic Research Service, 2010; American Community Survey 2014-2018 5-Year Estimate",
+  "oeps_v1_table": null,
+  "comments": "The datasets come from two different sources. As a result, there might have some gaps or mismatches in the rurality categorization. Furthermore, for Census rurality, there are additional notes included for certain counties, e.g. changes in FIPS codes. These can be found under the note column.",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Rural_Urban_Classification_County.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "county-2010"
+  ],
+  "metadata": "Rural_Urban_Classification_County"
+}

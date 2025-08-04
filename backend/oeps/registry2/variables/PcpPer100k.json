@@ -1,0 +1,20 @@
+{
+  "title": "Primary Care Physicians (PCP) per 100k",
+  "name": "PcpPer100k",
+  "type": "number",
+  "example": "133.42",
+  "description": "PCPs per total Population X 100,000",
+  "construct": "Physicians",
+  "source": "Dartmouth Atlas, 2010",
+  "source_long": "Dartmouth Atlas' Primary Care Service Area (PCSA) Project",
+  "oeps_v1_table": null,
+  "comments": "",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Health_PCPs.md",
+  "longitudinal": false,
+  "analysis": true,
+  "table_sources": [
+    "county-2010",
+    "tract-2010"
+  ],
+  "metadata": "Health_PCPs"
+}

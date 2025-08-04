@@ -1,0 +1,19 @@
+{
+  "title": "Yearly Hepatitis C cases - Women (2013-2016)",
+  "name": "FmHcv",
+  "type": "number",
+  "example": "16900",
+  "description": "Mean yearly Hepatitis C cases in women from 2013-2016",
+  "construct": "Hepatitis C Rates",
+  "source": "HepVu, 2017",
+  "source_long": "HepVu, 2017",
+  "oeps_v1_table": null,
+  "comments": "Data included for Hepatitis C State and County Mortality is for 2014-2017, while Hepatitis C State Prevalence data are available for 2013-2016",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/HepC.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "state-2017"
+  ],
+  "metadata": "HepC"
+}

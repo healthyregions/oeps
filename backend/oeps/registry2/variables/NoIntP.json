@@ -1,0 +1,22 @@
+{
+  "title": "Households without Internet Access %",
+  "name": "NoIntP",
+  "type": "number",
+  "example": "8.79",
+  "description": "Percentage of Households without Internet access",
+  "construct": "Internet Access",
+  "source": "ACS, 2019",
+  "source_long": "American Community Survey 2015-2019 5 Year Estimate",
+  "oeps_v1_table": null,
+  "comments": "",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Internet_2019.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "county-2019",
+    "state-2019",
+    "tract-2019",
+    "zcta-2019"
+  ],
+  "metadata": "Internet_2019"
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Naltrexone access 60 minutes (RAAM)",
+  "name": "NaltRm60",
+  "type": "number",
+  "example": "1.232",
+  "description": "Naltrexone access 60 minutes (RAAM)",
+  "construct": "Access to MOUDs",
+  "source": "",
+  "source_long": "",
+  "oeps_v1_table": null,
+  "comments": "",
+  "metadata_doc_url": "",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "tract-2020"
+  ],
+  "metadata": ""
+}

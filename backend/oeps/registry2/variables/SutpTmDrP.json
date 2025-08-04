@@ -1,0 +1,20 @@
+{
+  "title": "% tracts with Substance Use Treatment program (30-min drive)",
+  "name": "SutpTmDrP",
+  "type": "number",
+  "example": "0.94",
+  "description": "Percent of tracts with Substance Use Treatment program within a 30-minute driving range.",
+  "construct": "Access to Substance Use Treatment Programs",
+  "source": "SAMHSA, 2020",
+  "source_long": "U.S. Substance Abuse and Mental Health Services Administration Treatment Locator, 2020",
+  "oeps_v1_table": null,
+  "comments": "This dataset includes all US states, Washington D.C., and Puerto Rico. It does not include the territories Guam, Northern Mariana Islands, American Samoa, Palau. Zip code and tract centroids are not population-weighted.",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_SubstanceUseTreatment.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "county-2020",
+    "state-2020"
+  ],
+  "metadata": "Access_SubstanceUseTreatment"
+}

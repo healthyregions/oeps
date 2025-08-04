@@ -1,0 +1,19 @@
+{
+  "title": "Neighborhood Type",
+  "name": "NeighbTyp",
+  "type": "string",
+  "example": "3",
+  "description": "Categorical, one of seven neighborhood (tract-level) typologies: 1 = Rural Affordable; 2 = Suburban Affluent; 3 = Suburban Affordable; 4 = Extreme Poverty; 5 = Multilingual Working; 6 = Urban Core Opportunity; 7 = Sparse Areas",
+  "construct": "Social Determinants of Health (SDOH)",
+  "source": "Kolak et al., 2020",
+  "source_long": "Kolak et al., 2020",
+  "oeps_v1_table": null,
+  "comments": "",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/SDOH_2014.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "tract-2020"
+  ],
+  "metadata": "SDOH_2014"
+}

@@ -1,0 +1,20 @@
+{
+  "title": "Distance (mi) to nearest FQHC",
+  "name": "FqhcMinDis",
+  "type": "number",
+  "example": "10.23",
+  "description": "Euclidean distance* from tract/zip centroid to nearest FQHC, in miles",
+  "construct": "Access to Health Centers",
+  "source": "US Covid Atlas via HRSA, 2020",
+  "source_long": "United States Covid Atlas via Health Resources and Services Adminsitration, 2020",
+  "oeps_v1_table": null,
+  "comments": "This dataset includes all US states, Washington D.C., and Puerto Rico. It does not include the territories Guam, Northern Mariana Islands, American Samoa, Palau. Zip code and tract centroids are not population-weighted.",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_FQHCs_MinDistance.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "tract-2020",
+    "zcta-2020"
+  ],
+  "metadata": "Access_FQHCs_MinDistance"
+}

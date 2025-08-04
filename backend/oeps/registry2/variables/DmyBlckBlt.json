@@ -1,0 +1,19 @@
+{
+  "title": "African American South",
+  "name": "DmyBlckBlt",
+  "type": "boolean",
+  "example": "0",
+  "description": "Dummy variable for whether county is in the Southern Black Belt region",
+  "construct": "Southern Black Belt",
+  "source": "US Census, 2000",
+  "source_long": "2000 Decennial Census",
+  "oeps_v1_table": null,
+  "comments": "In defining counties in the Southern Black Belt, we included southern US counties where at least 30% of the population identified as Black or African American as of the 2000 Census. However, the Southern Black Belt areas have been variously defined in literature. See, for example, Webster, G. R., & Bowman, J. (2008). Quantitatively Delineating the Black Belt Geographic Region. Southeastern Geographer, 48(1), 3\u201318. https://doi.org/10.1353/sgo.0.0007.",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Overlay.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "county-2000"
+  ],
+  "metadata": "Overlay"
+}

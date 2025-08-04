@@ -1,0 +1,25 @@
+{
+  "title": "Naloxone Law allowing distribution through a standing or order (date)",
+  "name": "NalxPrStDt",
+  "type": "date",
+  "example": "8/1/2015",
+  "format": "%m/%d/%Y",
+  "description": "Date (MY) Naloxone law allowing distribution through a standing or protocol order effective",
+  "construct": "Naloxone Access Laws",
+  "source": "OPTIC, 2017",
+  "source_long": "RAND-USC Schaeffer Opioid Policy Tools and Information Center, 2021",
+  "oeps_v1_table": null,
+  "comments": "",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/NAL_2017.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "state-2017",
+    "state-2018",
+    "state-2019",
+    "state-2020",
+    "state-2021",
+    "state-2022"
+  ],
+  "metadata": "NAL_2017"
+}

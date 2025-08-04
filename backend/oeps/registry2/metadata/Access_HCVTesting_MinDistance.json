@@ -1,0 +1,7 @@
+{
+  "theme": "Environment",
+  "construct": "Access to HCV Testing",
+  "proxy": "Access metrics to HCV testing centers, derived from tract-level data",
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting_MinDistance.md",
+  "name": "Access_HCVTesting_MinDistance"
+}

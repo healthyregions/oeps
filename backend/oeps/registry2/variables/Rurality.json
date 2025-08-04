@@ -1,0 +1,20 @@
+{
+  "title": "Urban-Suburban-Rural",
+  "name": "Rurality",
+  "type": "string",
+  "example": "Urban",
+  "description": "Urban/Suburban/Rural",
+  "construct": "Urban/Suburban/Rural Classification",
+  "source": "USDA-ERS 2010 & ACS 2018 5-Year",
+  "source_long": "United States Department of Agriculture Economic Research Service, 2010; American Community Survey 2014-2018 5-Year Estimate",
+  "oeps_v1_table": null,
+  "comments": "",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Rural_Urban_Classification_County.md",
+  "longitudinal": false,
+  "analysis": true,
+  "table_sources": [
+    "tract-2018",
+    "zcta-2018"
+  ],
+  "metadata": "Rural_Urban_Classification_County"
+}

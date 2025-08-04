@@ -1,0 +1,7 @@
+{
+  "theme": "Environment",
+  "construct": "Access to Health Centers",
+  "proxy": "Access metrics to Federally Qualified Health Centers, derived from tract-level data",
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_FQHCs_MinDistance.md",
+  "name": "Access_FQHCs_MinDistance"
+}
