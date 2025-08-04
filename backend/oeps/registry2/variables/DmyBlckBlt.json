@@ -15,5 +15,5 @@
   "table_sources": [
     "county-2000"
   ],
-  "metadata": "Overlay"
+  "metadata": "Overlay.json"
 }
