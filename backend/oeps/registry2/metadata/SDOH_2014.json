@@ -1,7 +1,7 @@
 {
-  "name": "Social Determinants of Health Estimates",
+  "name": "SDOH Indices",
   "theme": "Composite",
-  "construct": "Social Determinants of Health Estimates",
-  "proxy": "Social Determinants of Health (SDOH) Multivariate Estimates (Indices, Neighborhood Typology)",
+  "construct": "SDOH Indices & Typology",
+  "proxy": "Social Determinants of Health (SDOH) Multivariate Measures (Indices, Neighborhood Typology)",
   "url": "https://github.com/healthyregions/oeps/blob/main/metadata/SDOHIndices.md"
 }
