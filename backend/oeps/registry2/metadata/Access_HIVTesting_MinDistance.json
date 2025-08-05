@@ -1,7 +1,6 @@
 {
-  "theme": "",
-  "construct": "",
-  "proxy": "",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HIVTesting_MinDistance.md",
-  "name": "Access_HIVTesting_MinDistance"
+  "name": "Access_HIVTesting_MinDistance",
+  "theme": "Environment",
+  "proxy": "Spatial access metrics to testing for human immunodeficiency virus (HIV)(Distance, Travel Time, Count Within Threshold)",
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HIVTesting_MinDistance.md"
 }
