@@ -2,5 +2,6 @@
   "name": "Access_MentalHealth",
   "theme": "Environment",
   "construct": "Spatial Access to Mental Health Providers",
+  "proxy": "Spatial access metrics to Mental Health Providers (Distance, Travel Time, Count Within Threshold)",
   "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MentalHealth_MinDistance.md"
 }
