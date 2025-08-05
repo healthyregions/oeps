@@ -1,7 +1,5 @@
 {
-  "theme": "",
-  "construct": "",
-  "proxy": "",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Historical_Methadone_point.md",
-  "name": "Historical_Methadone_point"
+  "name": "Historical_Methadone_point",
+  "theme": "Environment",
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Historical_Methadone_point.md"
 }
