@@ -1,7 +1,7 @@
 {
-  "theme": "",
-  "construct": "",
-  "proxy": "",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Acesss_Hospitals_MinDistance.md",
-  "name": "Acesss_Hospitals_MinDistance"
+  "name": "Acesss_Hospitals",
+  "theme": "Environment",
+  "construct": "Spatial Access to Hospitals",
+  "proxy": "Spatial access metrics to Hospitals (Distance, Travel Time, Count Within Threshold)",
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Acesss_Hospitals_MinDistance.md"
 }
