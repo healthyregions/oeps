@@ -33,6 +33,9 @@ The following was extracted in May 2025 from SAMSHA’s Treatment Locator Servic
  - **Methadone**: Methadone: All providers tagged as providing “methadone.” The term methadone maintenance was no longer visible as a feature in the locator service.
  - **OTP**: All providers tagged as “opioid treatment providers.”
  - **Naltrexone**: All providers tagged as providing “naltrexone.”
+ 
+ For Opioid Treatment Programs, measures for all years were extracted from the U.S. Substance Abuse and Mental Health Services Administration (SAMHSA) [Opioid Treatment Program (OTP) Directory](https://dpt2.samhsa.gov/treatment/directory.aspx). The OTPs represented in this set are those certified, either fully or provisionally by SAMHSA. Certification is required for MOUD, but these programs can offer other types of treatment, including counseling and other behavioral therapies. Raw data can be found [here](https://dpt2.samhsa.gov/treatment/directory.aspx) and more information can be found [here](https://www.samhsa.gov/medication-assisted-treatment/become-accredited-opioid-treatment-program).
+
 
 #### Street Network Topology & Travel Time Matrices
 Data on street and pedestrian networks to calculate travel time metrics were sourced from multiple open source data portals. Street network topologies (including street orientations and speed/travel time) all derive from [OpenStreetMap](https://www.openstreetmap.org), also known as OSM.
