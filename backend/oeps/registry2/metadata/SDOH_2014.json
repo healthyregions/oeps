@@ -3,5 +3,5 @@
   "theme": "Composite",
   "construct": "Social Determinants of Health Estimates",
   "proxy": "Social Determinants of Health (SDOH) Multivariate Estimates (Indices, Neighborhood Typology)",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/SDOH_2014.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/SDOHIndices.md"
 }
