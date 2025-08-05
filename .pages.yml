@@ -20,7 +20,7 @@ content:
       - name: construct
         label: Construct
         type: string
-        description: "Name of construct, must match exactly any other metadata documents that are included in this construct."
+        description: "Name of construct, may match construct value in other metadata documents."
       - name: proxy
         label: Proxy
         type: string
