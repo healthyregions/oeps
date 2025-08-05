@@ -1,7 +1,5 @@
 {
-  "theme": "",
-  "construct": "",
-  "proxy": "",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Overlay.md",
-  "name": "Overlay"
+  "name": "Overlay",
+  "theme": "Geography",
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Overlay.md"
 }
