@@ -1,23 +1,23 @@
 **Meta Data Name**: Residential Segregation Indices  
 **Date Added**: July 8, 2021  
-**Author**: Susan Paykin  
+**Author**: Marynia Kolak, Mandela Gadri, Susan Paykin  
 **Date Last Modified**: January 3, 2024  
-**Last Modified By**: Wataru Morioka  
+**Last Modified By**: Marynia Kolak
 
 ### Theme: 
 Social
 
 ### Data Location: 
-You can find the variables described in this document in the CSV files [here](../full_tables).  
+You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).  
 
 CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
 Note: Every variable can be found in the **Latest** files.
 
 ### Data Source(s) Description:  
-All data was sourced from the American Community Survey (ACS) 2018 5-year estimates. Population demographic data was sourced at the tract level for all U.S. states and then aggregated up to the county-level for calculations. 
+All data was sourced from the American Community Survey (ACS) 2018 and 2023 5-year estimates. Population demographic data was sourced at the tract level for all U.S. states and then aggregated up to the county-level for calculations. 
 
 ### Description of Data Processing: 
-All calculations were performed in R. We obtained U.S. Census data from the American Community Survey using the `tidycensus` package, pulling from [Table B03002](https://censusreporter.org/tables/B03002/) (Race and Hispanic Origin) at the Census tract level for all states. We then aggregated tract-level population totals to the county level and merged the county population with the tract data for the measures of residential segregation calculations. We used index formulas from the U.S. Census, Housing Patterns, [Appendix B: Measures of Residential Segregation](https://www.census.gov/topics/housing/housing-patterns/guidance/appendix-b.html), developed by Massey and Denton (1998) for these calculations. 
+All calculations were performed in R by Mandela Gadri (2025) and Susan Payking (2021). We obtained U.S. Census data from the American Community Survey using the `tidycensus` package, pulling from [Table B03002](https://censusreporter.org/tables/B03002/) (Race and Hispanic Origin) at the Census tract level for all states. We then aggregated tract-level population totals to the county level and merged the county population with the tract data for the measures of residential segregation calculations. We used index formulas from the U.S. Census, Housing Patterns, [Appendix B: Measures of Residential Segregation](https://www.census.gov/topics/housing/housing-patterns/guidance/appendix-b.html), developed by Massey and Denton (1998) for these calculations. 
 
 State-level measures are mean values aggregated from county-level index measures by FIPS codes. 
 
@@ -49,15 +49,15 @@ The isolation index reflects the probabilities that a person in a minority group
 
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Dissimilarity index - Black | DsmBlk | Dissimilarity index for Black and non-Hispanic White residents | Latest | Zip, County, State |
-| Interaction index - Black | IntrBlkWht | Interaction index for Black and non-Hispanic White residents | Latest | Zip, County, State |
-| Isolation index - Black | IsoBlk | Isolation index for Black and non-Hispanic White residents | Latest | Zip, County, State |
-| Dissimilarity index - Hispanic | DsmHsp | Dissimilarity index for Hispanic and non-Hispanic White residents | Latest | Zip, County, State |
-| Interaction index - Hispanic | IntrHspWht | Interaction index for Hispanic and non-Hispanic White residents | Latest | Zip, County, State |
-| Isolation index - Hispanic | IsoHsp | Isolation index for Hispanic and non-Hispanic White residents | Latest | Zip, County, State |
-| Dissimilarity index - Asian | DsmAs | Dissimilarity index for Asian and non-Hispanic White residents | Latest | Zip, County, State |
-| Interaction index - Asian | IntrAsWht | Interaction index for Asian and non-Hispanic White residents | Latest | Zip, County, State |
-| Isolation index - Asian | IsoAs | Isolation index for Asian and non-Hispanic White residents | Latest | Zip, County, State |
+| Dissimilarity index - Black | DsmBlk | Dissimilarity index for Black and non-Hispanic White residents | 2018, 2023 | Zip, County, State |
+| Interaction index - Black | IntrBlkWht | Interaction index for Black and non-Hispanic White residents | 2018, 2023 | Zip, County, State |
+| Isolation index - Black | IsoBlk | Isolation index for Black and non-Hispanic White residents | 2018, 2023 | Zip, County, State |
+| Dissimilarity index - Hispanic | DsmHsp | Dissimilarity index for Hispanic and non-Hispanic White residents | 2018, 2023 | Zip, County, State |
+| Interaction index - Hispanic | IntrHspWht | Interaction index for Hispanic and non-Hispanic White residents | 2018, 2023 | Zip, County, State |
+| Isolation index - Hispanic | IsoHsp | Isolation index for Hispanic and non-Hispanic White residents | 2018, 2023 | Zip, County, State |
+| Dissimilarity index - Asian | DsmAs | Dissimilarity index for Asian and non-Hispanic White residents | 2018, 2023 | Zip, County, State |
+| Interaction index - Asian | IntrAsWht | Interaction index for Asian and non-Hispanic White residents | 2018, 2023 | Zip, County, State |
+| Isolation index - Asian | IsoAs | Isolation index for Asian and non-Hispanic White residents | 2018, 2023 | Zip, County, State |
 
 ### Data Limitations:
 The three indices measuring  residential segregation included here represent two categories of measures of residential segregation: measures of evenness (dissimilarity) and measures of exposure (interaction and isolation). Three additional categories of residential segregation measurements described by Massey and Denton (1998) include measures of concentration, centralization, and clustering. Read more on the indices and their expressions from the [U.S. Census Bureau](https://www.census.gov/topics/housing/housing-patterns/guidance/appendix-b.html). 
