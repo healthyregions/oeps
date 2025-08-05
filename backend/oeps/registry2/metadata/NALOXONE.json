@@ -1,7 +1,5 @@
 {
-  "theme": "",
-  "construct": "",
-  "proxy": "",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/NALOXONE.md",
-  "name": "NALOXONE"
+  "name": "NALOXONE",
+  "theme": "Policy",
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/NALOXONE.md"
 }
