@@ -1,7 +1,4 @@
 {
-  "theme": "",
-  "construct": "",
-  "proxy": "",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Internet_2019.md",
-  "name": "Internet_2019"
+  "name": "Internet Access",
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Internet_2019.md"
 }
