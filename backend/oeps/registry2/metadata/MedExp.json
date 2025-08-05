@@ -1,7 +1,5 @@
 {
-  "theme": "",
-  "construct": "",
-  "proxy": "",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/MedExp.md",
-  "name": "MedExp"
+  "name": "MedExp",
+  "theme": "Policy",
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/MedExp.md"
 }
