@@ -1,7 +1,5 @@
 {
-  "theme": "",
-  "construct": "",
-  "proxy": "",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/OpioidIndicators.md",
-  "name": "OpioidIndicators"
+  "name": "OpioidIndicators",
+  "theme": "Outcome",
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/OpioidIndicators.md"
 }
