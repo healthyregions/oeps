@@ -1,7 +1,7 @@
 {
-  "theme": "",
-  "construct": "",
-  "proxy": "",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/SVI.md",
-  "name": "SVI"
+  "name": "Social Vulnerability Indices",
+  "theme": "Composite",
+  "construct": "Social Vulnerability Indices",
+  "proxy": "Social Vulnerability Indices",
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/SVI.md"
 }
