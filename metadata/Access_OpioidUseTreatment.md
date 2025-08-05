@@ -1,14 +1,14 @@
 **Meta Data Name**: Access to Opioid Treatment Programs (OTP)  
 **Date Added**: July 23, 2021  
-**Author**: Rachel Vigil, Wataru Morioka, Mahjabin Kabir Adrita   
-**Date Last Modified**: January 3, 2024  
-**Last Modified By**: Wataru Morioka, Mahjabin Kabir Adrita
+**Author**: Marynia Kolak, Rachel Vigil, Mahjabin Kabir Adrita, Wataru Morioka 
+**Date Last Modified**: August 5, 2025 
+**Last Modified By**: Marynia Kolak
 
 ### Theme: 
 Environment  
 
 ### Data Location: 
-You can find the variables described in this document in the CSV files [here](../full_tables).  
+You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).  
 
 CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
 Note: Every variable can be found in the **Latest** files. 
