@@ -1,7 +1,4 @@
 {
-  "theme": "",
-  "construct": "",
-  "proxy": "",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/HouseholdType.md",
-  "name": "HouseholdType"
+  "name": "Household Characteristics",
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/HouseholdType.md"
 }
