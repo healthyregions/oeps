@@ -1,23 +1,25 @@
 **Meta Data Name**: Normalized Difference Vegetation Index (NDVI)  
 **Date Added**: April 1, 2022  
-**Author**: Michelle Stuhlmacher & Susan Paykin  
+**Author**: Marynia Kolak, Michelle Stuhlmacher & Susan Paykin  
 **Date Last Modified**: January 3, 2024  
-**Last Modified By**: Wataru Morioka
+**Last Modified By**: Marynia Kolak
 
 ### Theme: 
 Environment
 
 ### Data Location: 
-You can find the variables described in this document in the CSV files [here](../full_tables).  
+You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).  
 
 CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
 Note: Every variable can be found in the **Latest** files.
 
 ### Data Source(s) Description:  
+At this time, we provide a satellite-derived product to generate a greenspace measure for Census tracts across the U.S.
+
 Tract-level data was sourced from Sentinel 2 MSI: MultiSpectral Instrument, Level-1 C. It was calculated using imagery from the summer of 2018. Summer is defined as 03/20/2018 to 09/22/2018 (spring to fall solstice). The tract-level dataset was provided by Dr. Michelle Stuhmacher, Assistant Professor, DePaul University Department of Geography. 
 
 ### Description of Data Processing: 
-The tract-level data processing was done by the Depaul University team. Sentinel-2 imagery is filtered to the desired date range and then pixels with high cloud and cirrus interference are removed. The remaining pixels are composited using the 50th percentile to produce a single image with minimal cloud interference. The NDVI is calculated using this image, and the mean NDVI values for each census tract is extracted.  
+The tract-level data processing was done by the DePaul University team. Sentinel-2 imagery is filtered to the desired date range and then pixels with high cloud and cirrus interference are removed. The remaining pixels are composited using the 50th percentile to produce a single image with minimal cloud interference. The NDVI is calculated using this image, and the mean NDVI values for each census tract is extracted.  
 
 Analysis was completed using [Google Earth Engine](https://earthengine.google.com/). The code is publicly accessible to those with an Earth Engine account here: https://code.earthengine.google.com/4c997cd30d088e97d24171d528e4749b   
 
@@ -38,7 +40,7 @@ Tract-level estimates were then aggregated to the county-level average and state
 
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-|Normalized Difference Vegetation Index (NDVI) | Ndvi | Average NDVI value from all pixel values in each Census tract | Latest | Tract, Zip, County, State |
+|Normalized Difference Vegetation Index (NDVI) | Ndvi | Average NDVI value from all pixel values in each Census tract | 2018 | Tract, Zip, County, State |
 
 ### Data Limitations:
 Despite removing identified influences of cloud interferences, there may still be clouds or other atmospheric conditions that alter pixel values used in calculations. See the original source for greater documentation of these effects. Furthermore, summarizing NDVI to the census tract simplifies inter-census tract variability.
