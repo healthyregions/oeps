@@ -1,7 +1,7 @@
 {
-  "theme": "",
-  "construct": "",
-  "proxy": "",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_SubstanceUseTreatment.md",
-  "name": "Access_SubstanceUseTreatment"
+  "name": "Access_SubstanceUseTreatment",
+  "theme": "Environment",
+  "construct": "Spatial Access to Substance Use Treatment Providers",
+  "proxy": "Spatial access metrics to Substance Use Treatment Providers (Distance, Travel Time, Count Within Threshold)",
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_SubstanceUseTreatment.md"
 }
