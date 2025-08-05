@@ -1,7 +1,7 @@
 {
-  "theme": "",
-  "construct": "",
-  "proxy": "",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Housing_Variables.md",
-  "name": "Housing_Variables"
+  "name": "Housing Characteristics",
+  "theme": "Environment",
+  "construct": "Housing Characteristics ",
+  "proxy": "Housing Characteristics (Occupancy Rate, Vacancy Rate, Rented Rate, Long term Occupancy, Mobile Home Rate, Housing Unit Density)",
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Housing_Variables.md"
 }
