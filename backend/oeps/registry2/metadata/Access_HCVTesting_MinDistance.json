@@ -1,7 +1,7 @@
 {
+  "name": "Access_HCVTesting_MinDistance",
   "theme": "Environment",
   "construct": "Access to HCV Testing",
-  "proxy": "Access metrics to HCV testing centers, derived from tract-level data",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting_MinDistance.md",
-  "name": "Access_HCVTesting_MinDistance"
+  "proxy": "Spatial access metrics to testing for hepatitis C virus (HCV) infections (Straight-line Distance, Driving Time, Count of Resources)",
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting_MinDistance.md"
 }
