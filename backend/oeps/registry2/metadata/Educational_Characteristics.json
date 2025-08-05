@@ -1,7 +1,4 @@
 {
-  "theme": "",
-  "construct": "",
-  "proxy": "",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Educational_Characteristics.md",
-  "name": "Educational_Characteristics"
+  "name": "Educational Characteristics",
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Educational_Characteristics.md"
 }
