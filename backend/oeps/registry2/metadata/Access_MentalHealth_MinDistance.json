@@ -1,7 +1,6 @@
 {
-  "theme": "",
-  "construct": "",
-  "proxy": "",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MentalHealth_MinDistance.md",
-  "name": "Access_MentalHealth_MinDistance"
+  "name": "Access_MentalHealth",
+  "theme": "Environment",
+  "construct": "Spatial Access to Mental Health Providers",
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MentalHealth_MinDistance.md"
 }
