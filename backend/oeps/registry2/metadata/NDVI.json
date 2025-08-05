@@ -3,5 +3,5 @@
   "theme": "Environment",
   "construct": "Greenspace Measures",
   "proxy": "Normalized Difference Vegetation Index (NDVI)\t",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/NDVI.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Greenspace_Measures.md"
 }
