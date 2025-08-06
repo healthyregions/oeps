@@ -3,5 +3,5 @@
   "theme": "Environment",
   "construct": "Spatial access to Health Centers",
   "proxy": "Spatial access metrics to Federally Qualified Health Centers (Distance, Travel Time, Count Within Threshold)",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_FQHCs_MinDistance.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_FQHCs.md"
 }

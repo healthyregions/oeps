@@ -1,7 +1,7 @@
 {
-  "name": "Good Samaritan Laws",
+  "name": "Good_Samaritan_Laws",
   "theme": "Policy",
   "construct": "Good Samaritan Laws",
   "proxy": "Good Samaritan Laws (Date, Fraction of Year Enacted)",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/GSL.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Good_Samaritan_Laws.md"
 }

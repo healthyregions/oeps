@@ -1,7 +1,7 @@
 {
-  "name": "Healthcare Provider Access",
+  "name": "Healthcare_Provider_Access",
   "theme": "Environment",
   "construct": "Healthcare Provider Access",
   "proxy": "Primary Care and Specialty Physician Density (Total, Per Capita Density)",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Health_PCPs.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Healthcare_Provider_Access.md"
 }

@@ -3,5 +3,5 @@
   "theme": "Environment",
   "construct": "Spatial Access to Pharmacies",
   "proxy": "Spatial access metrics to Pharmacies (Distance, Travel Time, Count Within Threshold)",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Pharmacies_MinDistance.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Pharmacies.md"
 }
