@@ -114,31 +114,28 @@ def build_docs(operation, registry_path):
             "example",
             "description",
             "table_sources",
-            "constraints",
-            "construct",
             "source",
             "source_long",
-            "oeps_v1_table",
-            "comments",
-            "metadata_doc_url",
+            "metadata",
             "longitudinal",
             "analysis",
         ]
         var_rows_csv = []
-        var_rows_md = []
-        for var in variables:
+        for var in sorted(variables, key=lambda x: x["name"]):
             var_rows_csv.append([clean_value(var[i]) for i in var_cols])
-            var_rows_md.append([clean_value(var[i], md=True) for i in var_cols])
 
         ## Create THEME content
 
-        themes = registry.themes
-        theme_cols = ["theme", "construct", "proxy"]
-        theme_rows = []
+        metadata_cols = ["theme", "construct", "proxy", "metadata", "url"]
+        metadata_rows = []
 
-        for theme, constructs in themes.items():
-            for construct, proxy in constructs.items():
-                theme_rows.append([theme, construct, proxy])
+        for theme, constructs in registry.theme_tree.items():
+            for construct, metadata_entries in constructs.items():
+                for metadata in metadata_entries:
+                    md = registry.metadata[metadata]
+                    metadata_rows.append(
+                        [theme, construct, md["proxy"], metadata, md["url"]]
+                    )
 
         ## Create TABLE SOURCES content
 
@@ -178,7 +175,7 @@ def build_docs(operation, registry_path):
             geo_rows.append([clean_value(var[i]) for i in geo_cols])
 
         write_csv_file("variables", var_cols, var_rows_csv)
-        write_csv_file("themes", theme_cols, theme_rows)
+        write_csv_file("metadata", metadata_cols, metadata_rows)
         write_csv_file("table_sources", tab_cols, tab_rows)
         write_csv_file("geodata_sources", geo_cols, geo_rows)
 
