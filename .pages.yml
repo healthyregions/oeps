@@ -3,7 +3,7 @@ content:
   - name: metadata
     label: Metadata
     type: collection
-    path: backend/oeps/registry2/metadata
+    path: backend/oeps/registry/metadata
     filename: '{name}.json'
     format: json
     fields:
@@ -32,7 +32,7 @@ content:
   - name: variables
     label: Variables
     type: collection
-    path: backend/oeps/registry2/variables
+    path: backend/oeps/registry/variables
     filename: "{name}.json"
     format: json
     fields:
