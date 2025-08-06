@@ -11,6 +11,15 @@ import geopandas as gpd
 from oeps.config import REGISTRY_DIR, TEMP_DIR, DATA_DIR
 from oeps.utils import load_json, write_json
 
+THEME_ORDER = [
+    "Geography",
+    "Social",
+    "Environment",
+    "Economic",
+    "Policy",
+    "Outcome",
+    "Composite",
+]
 
 summary_lookup = {
     "state": {
@@ -197,6 +206,8 @@ class Registry:
         ## load in this order so that some attributes can be cascaded
         self.geodata_sources = self._load_geodata_sources()
         self.table_sources = self._load_table_sources()
+        self.metadata = self._load_metadata()
+        self.theme_tree = self._load_theme_tree()
         self.variables = self._load_variables()
 
         ## declare public attributes for type hinting
@@ -280,6 +291,12 @@ class Registry:
             ]
             v["years"] = list(set([i["year"] for i in sources]))
 
+        for i in variables.values():
+            if i["metadata"].replace(".json", "") not in self.metadata:
+                print(
+                    f"WARNING: variable {i['name']} references unknown metadata {i['metadata']}"
+                )
+
         return variables
 
     def _load_themes(self):
@@ -292,6 +309,40 @@ class Registry:
             for construct, proxy in constructs.items():
                 self.theme_lookup[construct] = theme
                 self.proxy_lookup[construct] = proxy
+
+    def _load_metadata(self):
+        metadata = {}
+        for path in Path(self.directory, "metadata").glob("*.json"):
+            metadata[path.stem] = load_json(path)
+
+        return metadata
+
+    def _load_theme_tree(self):
+        ## construct theme_tree based on sort order and then content in metadata
+        tree = {k: {} for k in THEME_ORDER}
+        for k, md in self.metadata.items():
+            valid = True
+            for key in ["name", "theme", "construct", "proxy", "url"]:
+                if key not in md or not md[key]:
+                    print(f"WARNING: metadata entry {k} is missing value: '{key}'")
+                    valid = False
+            if not valid:
+                continue
+
+            n = md["name"]
+            t = md["theme"]
+            c = md["construct"]
+
+            ## theme must be one of the preset options
+            if md["theme"] not in tree:
+                print(f"WARNING: metadata entry {n} has invalid theme {t}")
+            else:
+                if c not in tree[t]:
+                    tree[t][c] = [n]
+                else:
+                    tree[t][c].append(n)
+
+        return tree
 
     def sync_variable_table_sources(self, table_source: TableSource):
         for var in self.variables.values():
