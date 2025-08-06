@@ -1,0 +1,19 @@
+{
+    "title": "Park Area",
+    "name": "ParkArea",
+    "type": "number",
+    "example": "39296898972.47",
+    "description": "Area (in square meters) of park or green space in a state).",
+    "constraints": "",
+    "construct": "Geographic Characteristics",
+    "source": "OSM",
+    "source_long": "OpenStreetMap",
+    "oeps_v1_table": null,
+    "comments": "",
+    "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Park_Cover.md",
+    "longitudinal": false,
+    "analysis": false,
+    "table_sources": [
+      "s-latest"
+    ]
+  }

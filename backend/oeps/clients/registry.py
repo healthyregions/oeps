@@ -260,7 +260,9 @@ class Registry:
     def _load_variables(self) -> dict:
         """Creates a lookup of all variables."""
 
-        variables = load_json(Path(self.directory, "variables.json"))
+        variables = {}
+        for path in Path(self.directory, "variables").glob("*.json"):
+            variables[path.stem] = load_json(path)
 
         ## iterate all table_sources and add field lists to their schema
         ## using these variables.
@@ -308,7 +310,7 @@ class Registry:
         for v in self.variables.values():
             if "years" in v:
                 del v["years"]
-        write_json(self.variables, Path(self.directory, "variables.json"))
+            write_json(v, Path(self.directory, "variables", f"{v['name']}.json"))
 
     def get_all_sources(self):
         sources = list(self.table_sources.values())

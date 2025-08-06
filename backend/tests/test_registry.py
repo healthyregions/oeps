@@ -19,12 +19,15 @@ def test_init(runner):
     """Test initialization of the Registry."""
 
     registry = Registry(runner.app.config["TEST_REGISTRY_DIR"])
-    src = load_json(Path(runner.app.config["TEST_REGISTRY_DIR"], "variables.json"))
-    for k, v in src.items():
-        reg_var = registry.variables[k]
+    for src in Path(runner.app.config["TEST_REGISTRY_DIR"], "variables").glob("*.json"):
+        control_var = load_json(src)
+        reg_var = registry.variables[src.stem]
         ## delete "years" which are added during registry init process and not in source JSON
         del reg_var["years"]
-        assert reg_var == v
+
+        print(control_var)
+        print(reg_var)
+        assert reg_var == control_var
 
     table_sources = list(
         Path(runner.app.config["TEST_REGISTRY_DIR"], "table_sources").glob("*.json")
