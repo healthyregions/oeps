@@ -1,14 +1,16 @@
 from pathlib import Path
 
 from oeps.clients.registry import Registry
-from oeps.commands import registry_grp
 from oeps.utils import load_json
 
 
 def test_validate(runner):
     result = runner.invoke(
-        registry_grp,
-        ["validate", "--registry-path", runner.app.config["TEST_REGISTRY_DIR"]],
+        args=[
+            "validate-registry",
+            "--registry-path",
+            runner.app.config["TEST_REGISTRY_DIR"],
+        ]
     )
     assert result.exit_code == 0
 
@@ -44,14 +46,13 @@ def test_init(runner):
 
 def test_create_oeps_dicts(runner):
     result = runner.invoke(
-        registry_grp,
-        [
+        args=[
             "create-data-dictionaries",
             "--destination",
             runner.app.config["TEST_OUTPUT_DIR"],
             "--registry-path",
             runner.app.config["TEST_REGISTRY_DIR"],
-        ],
+        ]
     )
     assert result.exit_code == 0
 
