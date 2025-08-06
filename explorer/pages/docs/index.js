@@ -18,14 +18,27 @@ const VariableTable = ({table, filters}) =>
       <th>Spatial Scale</th>
       <th>Years</th>
     </tr>
-    {table.map(row => (!filters.scale.length || filters.scale.some(scale => row['Spatial Scale'].includes(scale))) ? <tr key={row['Variable Construct']}>
-      <td width="15%">{row['Variable Construct']}</td>
-      <td width="25%">{row['Variable Proxy']}</td>
-      <td width="15%">{row['Source']}</td>
-      <td width="15%"><ul>{row['Metadata'].map((docTitle, index) => <li key={`${docTitle}-${index}`}><a href={`docs/${docTitle}`}>{docTitle}</a></li>)}</ul></td>
-      <td width="15%">{row['Spatial Scale']}</td>
-      <td width="15%">{row['Years']}</td>
-    </tr> : null)}
+    {Object.keys(table).map((construct, index) => {
+        console.log(construct)
+        console.log(table[construct])
+        const output = []
+        // table[construct].map(row => (!filters.scale.length || filters.scale.some(scale => row['Spatial Scale'].includes(scale))) ? <tr key={row['Variable Construct']}>
+        table[construct].map(row => {
+            if (!filters.scale.length || filters.scale.some(scale => row['Spatial Scale'].includes(scale))) {
+                output.push(
+                    <tr key={row['Variable Construct']}>
+                        <td width="15%">{row['Variable Construct']}</td>
+                        <td width="25%">{row['Variable Proxy']}</td>
+                        <td width="15%">{row['Source']}</td>
+                        <td width="15%"><a href={`docs/${row['Metadata']}`}>{row['Metadata']}</a></td>
+                        <td width="15%">{row['Spatial Scale']}</td>
+                        <td width="15%">{row['Years']}</td>
+                    </tr>
+                )
+            }
+        })
+        return output
+    })}
     </tbody>
   </table>
 </div>
@@ -146,7 +159,14 @@ export default function DataDocs() {
           (
             (!activeFilters.topic.length || activeFilters.topic.includes(header))
             &&
-            (!activeFilters.scale.length || variables[header].some(row => activeFilters.scale.some(scale => row['Spatial Scale'].includes(scale))))
+            (!activeFilters.scale.length || Object.keys(variables[header]).some(construct => {
+                let include = false
+                variables[header][construct].map(row => {
+                    if (activeFilters.scale.some(scale => row['Spatial Scale'].includes(scale))) {include = true}
+                })
+                return include
+                }
+            ))
           )
           &&
           <>
