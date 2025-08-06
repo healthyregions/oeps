@@ -105,20 +105,20 @@ class Explorer:
 
         # hacky method for creating the output geodata source list in descending order of
         # spatial resolution
-        out_sources = {
-            "sources": [
-                [i for i in geodata_lookup.values() if i["summary_level"] == "state"][
-                    0
-                ],
-                [i for i in geodata_lookup.values() if i["summary_level"] == "county"][
-                    0
-                ],
-                [i for i in geodata_lookup.values() if i["summary_level"] == "zcta"][0],
-                [i for i in geodata_lookup.values() if i["summary_level"] == "tract"][
-                    0
-                ],
-            ]
-        }
+        s_geodata = [
+            i for i in geodata_lookup.values() if i["summary_level"] == "state"
+        ]
+        c_geodata = [
+            i for i in geodata_lookup.values() if i["summary_level"] == "county"
+        ]
+        z_geodata = [i for i in geodata_lookup.values() if i["summary_level"] == "zcta"]
+        t_geodata = [
+            i for i in geodata_lookup.values() if i["summary_level"] == "tract"
+        ]
+        out_sources = {"sources": []}
+        for sorted_src_list in [s_geodata, c_geodata, z_geodata, t_geodata]:
+            if len(sorted_src_list) > 0:
+                out_sources["sources"].append(sorted_src_list[0])
 
         if upload:
             prefix = "explorer/csvs"
