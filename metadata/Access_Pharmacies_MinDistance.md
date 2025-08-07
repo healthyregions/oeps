@@ -1,17 +1,16 @@
 **Meta Data Name**: Access to Pharmacies  
 **Date Added**: January 6, 2021  
-**Author**: Susan Paykin  
+**Author**: Mahjabin Kabir Adrita, Wataru Morioka, Susan Paykin  
 **Date Last Modified**: January 3, 2024  
-**Last Modified By**: Wataru Morioka  
+**Last Modified By**: Mahjabin Kabir Adrita  
 
 ### Theme: 
 Environment  
 
 ### Data Location: 
-You can find the variables described in this document in the CSV files [here](../full_tables).  
+You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).  
 
 CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
-Note: Every variable can be found in the **Latest** files.  
 
 ### Data Source(s) Description:  
 Pharmacy locations were sourced from the InfoGroup (now [Data Axle](https://www.data-axle.com/)) 2019 Business and Consumer Historical Datafile, available through the University of Chicago Library.
@@ -47,17 +46,17 @@ County and state-level variables include the **count** of Census tracts and the 
 #### Tract and Zip Code
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Distance to nearest pharmacy | RxMinDis | Euclidean distance* from tract/zip centroid to the nearest pharmacy, in miles | Latest | Tract, Zip |
-| Driving time to nearest pharmacy | RxTmDr | Driving time from tract/zip origin centroid to the nearest tract/zip pharmacy destination centroid, in minutes | Latest | Tract, Zip |
-| Count of pharmacies | RxCntDr | Count of pharmacies within a 30-minute driving threshold | Latest | Tract, Zip |
+| Distance to nearest pharmacy | RxMinDis | Euclidean distance* from tract/zip centroid to the nearest pharmacy, in miles | 2019 | Tract, Zip |
+| Driving time to nearest pharmacy | RxTmDr | Driving time from tract/zip origin centroid to the nearest tract/zip pharmacy destination centroid, in minutes | 2019 | Tract, Zip |
+| Count of pharmacies | RxCntDr | Count of pharmacies within a 30-minute driving threshold | 2019 | Tract, Zip |
 
 #### County and State
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Count of tracts | TotTracts | Total number of tracts in county/state | Latest | County, State |
-| Count of tracts within 30-min driving range | RxCtTmDr | Number of tracts with pharmacy within a 30-min driving range | Latest | County, State |
-| Average time drive to nearest pharmacy | RxAvTmDr | Average driving time (minutes) across tracts in county/state to nearest pharmacy | Latest | County, State |
-| Percent of tracts within 30-min driving range | RxTmDrP | Percent of tracts with pharmacy within a 30-min driving range | Latest | County, State |
+| Count of tracts | TotTracts | Total number of tracts in county/state | 2019 | County, State |
+| Count of tracts within 30-min driving range | RxCtTmDr | Number of tracts with pharmacy within a 30-min driving range | 2019 | County, State |
+| Average time drive to nearest pharmacy | RxAvTmDr | Average driving time (minutes) across tracts in county/state to nearest pharmacy | 2019 | County, State |
+| Percent of tracts within 30-min driving range | RxTmDrP | Percent of tracts with pharmacy within a 30-min driving range | 2019 | County, State |
 
 ### Data Limitations:
 *Euclidean distance or straight-line is a simple approximation of access or travel from an origin centroid to the nearest hospital. It is not a precise calculation of real travel times or distances.
