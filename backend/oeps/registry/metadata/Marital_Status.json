@@ -1,5 +1,7 @@
 {
   "id": "Marital_Status",
   "theme": "Social",
+  "construct": "Marital Status",
+  "proxy": "Percent males aged 15 or older who are married, never married, separated, divorced, or widowed",
   "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Marital_Status.md"
 }
