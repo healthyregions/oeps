@@ -96,8 +96,12 @@ class Explorer:
                 "variable": v["title"],
                 "numerator": variables_to_ds_combos[k],
                 "nProperty": k,
-                "theme": self.registry.theme_lookup[v["construct"]],
-                "metadataUrl": v.get("metadata_doc_url"),
+                "theme": self.registry.metadata.get(
+                    v.get("metadata", "").replace(".json", "")
+                )["theme"],
+                "metadataUrl": self.registry.metadata[
+                    v["metadata"].replace(".json", "")
+                ]["url"],
             }
             for k, v in variables.items()
             if k in variables_to_ds_combos
@@ -144,7 +148,6 @@ class Explorer:
                     geodata = set()
                     titles = set()
                     sources = set()
-                    metadata_docs = set()
                     years = set()
                     for v in self.registry.variables.values():
                         if v["metadata"].replace(".json", "") == id:
@@ -165,9 +168,6 @@ class Explorer:
                                         geodata.add(p[1])
                             sources.add(v["source"])
                             titles.add(v["title"])
-                            md_url = v["metadata_doc_url"]
-                            md_name = md_url.split("/")[-1].rstrip(".md")
-                            metadata_docs.add(md_name)
 
                     sorted_geodata = [
                         i for i in ["Tract", "Zip", "County", "State"] if i in geodata
