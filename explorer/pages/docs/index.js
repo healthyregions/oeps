@@ -20,13 +20,13 @@ const VariableTable = ({table, filters}) =>
         </tr>
     </thead>
     <tbody>
-    {Object.keys(table).map((construct, index) => {
+    {Object.keys(table).map((construct) => {
         const output = []
-        table[construct].map(row => {
+        table[construct].map((row, index) => {
             if (!filters.scale.length || filters.scale.some(scale => row['Spatial Scale'].includes(scale))) {
                 output.push(
                     <tr key={row['Metadata']}>
-                        <td style={{ width:"15%"}}>{row['Variable Construct']}</td>
+                        <td style={{ width:"15%"}}>{index == 0 ? row['Variable Construct'] : ""}</td>
                         <td style={{ width:"25%"}}>{row['Variable Proxy']}</td>
                         <td style={{ width:"15%"}}>{row['Source']}</td>
                         <td style={{ width:"15%"}}><a href={`docs/${row['Metadata']}`}>{row['Metadata']}</a></td>
