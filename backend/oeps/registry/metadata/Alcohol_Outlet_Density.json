@@ -1,5 +1,5 @@
 {
-  "name": "Alcohol_Outlet_Density",
+  "id": "Alcohol_Outlet_Density",
   "theme": "Environment",
   "construct": "Alcohol Outlet Density Measures",
   "proxy": "Alcohol outlet density measures (geographic density, per capita density, total)",

@@ -1,5 +1,5 @@
 {
-  "name": "Access_Mental_Health",
+  "id": "Access_Mental_Health",
   "theme": "Environment",
   "construct": "Spatial Access to Mental Health Providers",
   "proxy": "Spatial access metrics to Mental Health Providers (Distance, Travel Time, Count Within Threshold)",

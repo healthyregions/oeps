@@ -1,5 +1,5 @@
 {
-  "name": "Foreclosure_Rate",
+  "id": "Foreclosure_Rate",
   "theme": "Economic",
   "construct": "Great Recession Foreclosure Rate",
   "proxy": "Great Recession Foreclosure or Delinquency Measures (Count, Rate)",

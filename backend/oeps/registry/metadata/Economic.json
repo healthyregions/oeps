@@ -1,5 +1,5 @@
 {
-  "name": "Economic",
+  "id": "Economic",
   "theme": "Economic",
   "construct": "Economic Characteristics",
   "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Economic.md"

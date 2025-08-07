@@ -1,5 +1,5 @@
 {
-  "name": "Residential_Segregation",
+  "id": "Residential_Segregation",
   "theme": "Social",
   "construct": "Residential Segregation Measures",
   "proxy": "Dissimilarity, Interaction, and Isolation Indices for Black, Asian, & Hispanic Groups",

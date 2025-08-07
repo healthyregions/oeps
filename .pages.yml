@@ -4,19 +4,19 @@ content:
     label: Metadata
     type: collection
     path: backend/oeps/registry/metadata
-    filename: '{name}.json'
+    filename: '{if}.json'
     format: json
     fields:
-      - name: name
-        label: Name
+      - name: id
+        label: Id
         type: string
-        description: "Name for this metadata document, will be used for filename (don't use spaces, this could be enforced validation)"
+        description: "Id for this metadata document. Used for filename (use underscores, no spaces). Ex: Access_MOUDs"
       - name: theme
         label: Theme
         type: select
         description: "Select theme. More themes can be added in Settings."
         options:
-          values: ["Geography", "Social", "Environment", "Economic", "Policy", "Outcome", "Composite"]          
+          values: ["Geography", "Social", "Environment", "Economic", "Policy", "Outcome", "Composite"]
       - name: construct
         label: Construct
         type: string
@@ -71,9 +71,9 @@ content:
         description: "Link to metadata document that describes this variable."
         options:
           collection: metadata
-          search: name
-          value: "{name}"
-          label: "{name}"
+          search: id
+          value: "{id}"
+          label: "{id}"
       - name: longitudinal
         type: boolean
         description: "(use undetermined)"

@@ -1,5 +1,5 @@
 {
-  "name": "Greenspace_Measures",
+  "id": "Greenspace_Measures",
   "theme": "Environment",
   "construct": "Greenspace Measures",
   "proxy": "Normalized Difference Vegetation Index (NDVI)",

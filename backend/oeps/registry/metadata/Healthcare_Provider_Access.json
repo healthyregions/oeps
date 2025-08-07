@@ -1,5 +1,5 @@
 {
-  "name": "Healthcare_Provider_Access",
+  "id": "Healthcare_Provider_Access",
   "theme": "Environment",
   "construct": "Healthcare Provider Access",
   "proxy": "Primary Care and Specialty Physician Density (Total, Per Capita Density)",

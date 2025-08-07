@@ -1,5 +1,5 @@
 {
-  "name": "Access_HIVTesting",
+  "id": "Access_HIVTesting",
   "theme": "Environment",
   "construct": "Spatial Access to HIV Testing",
   "proxy": "Spatial access metrics to testing for human immunodeficiency virus (HIV)(Distance, Travel Time, Count Within Threshold)",
