@@ -72,6 +72,8 @@ def build_docs(operation, registry_path):
             ("oeps.commands.inspect_csv", "inspect_csv"),
             ("oeps.commands.merge_data_table", "merge_data_table"),
             ("oeps.commands.validate_registry", "validate_registry"),
+            ("oeps.commands.move_variable", "move_variable"),
+            ("oeps.commands.remove_variable", "remove_variable"),
         ]
 
         for mod, com in command_list:
