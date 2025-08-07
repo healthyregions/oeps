@@ -62,9 +62,9 @@ County and state-level variables include:
 
 | Variable                          | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |----------------------------------|----------------------|-----------------------------------------------------------------------------|------------------|----------------|
-| Distance to nearest MH Provider  | HivMinDis | Euclidean distance* from tract/zip centroid to nearest MH provider (miles) | 2025 | Tract, Zip     |
-| Driving time to nearest MH Provider | HivTmDr | Driving time from origin to nearest MH provider (minutes)                  | 2025 | Tract, Zip     |
-| Count of MH Providers            | HivCntDr | Number of MH providers within a 30-minute drive                             | 2025 | Tract, Zip     |
+| Distance to nearest HIV Provider  | HivMinDis | Euclidean distance* from tract/zip centroid to nearest MH provider (miles) | 2025 | Tract, Zip     |
+| Driving time to nearest HIV Provider | HivTmDr | Driving time from origin to nearest MH provider (minutes)                  | 2025 | Tract, Zip     |
+| Count of HIV Providers            | HivCntDr | Number of MH providers within a 30-minute drive                             | 2025 | Tract, Zip     |
 
 #### County and State
 
