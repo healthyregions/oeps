@@ -1,7 +1,7 @@
 {
-  "theme": "",
-  "construct": "",
-  "proxy": "",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Rural_Urban_Classification_County.md",
-  "id": "Rural_Urban_Classification_County"
+  "id": "Rural_Urban_Classification_County",
+  "theme": "Environment",
+  "construct": "Urban/Suburban/Rural Classification",
+  "proxy": "Primary RUCA Code, Secondary RUCA Code, etc.",
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Rural_Urban_Classification_County.md"
 }
