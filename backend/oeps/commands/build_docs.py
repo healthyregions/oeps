@@ -121,7 +121,7 @@ def build_docs(operation, registry_path):
             "analysis",
         ]
         var_rows_csv = []
-        for var in sorted(variables, key=lambda x: x["id"]):
+        for var in sorted(variables, key=lambda x: x["name"]):
             var_rows_csv.append([clean_value(var[i]) for i in var_cols])
 
         ## Create THEME content
