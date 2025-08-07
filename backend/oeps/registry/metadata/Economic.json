@@ -2,5 +2,6 @@
   "id": "Economic",
   "theme": "Economic",
   "construct": "Economic Characteristics",
+  "proxy": "Employment, poverty, income, and income inequality (Gini Coefficient)",
   "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Economic.md"
 }
