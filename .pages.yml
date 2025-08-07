@@ -80,4 +80,3 @@ content:
       - name: table_sources
         type: string
         list: true
-        hidden: true
