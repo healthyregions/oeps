@@ -13,6 +13,7 @@
     "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md",
     "longitudinal": false,
     "analysis": true,
+    "metadata": "Access_MOUDs.json",
     "table_sources": [
       "t-latest"
     ]

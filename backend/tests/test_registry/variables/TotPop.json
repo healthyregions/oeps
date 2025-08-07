@@ -13,6 +13,7 @@
     "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Age_2018.md",
     "longitudinal": true,
     "analysis": false,
+    "metadata": "Demographics.json",
     "table_sources": [
       "t-latest",
       "s-2000",
