@@ -1,0 +1,22 @@
+{
+  "title": "Count of Methadone Providers (60-min bike)",
+  "name": "MetCntBk60",
+  "type": "integer",
+  "example": "0",
+  "description": "Count of methadone providers in 60 minute biking time threshold",
+  "construct": "Access to MOUDs",
+  "source": "SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020",
+  "source_long": "U.S. Substance Abuse and Mental Health Services Administration Treatment Locator, 2019; Vivitrol, 2020; Open Source Routing Machine, 200",
+  "oeps_v1_table": null,
+  "comments": "All nearest distance calculations are in miles. All nearest travel time calculations are in minutes.",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "tract-2020",
+    "tract-2025",
+    "zcta-2020",
+    "zcta-2025"
+  ],
+  "metadata": "Access_MOUDs"
+}

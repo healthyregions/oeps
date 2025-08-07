@@ -11,6 +11,15 @@ import geopandas as gpd
 from oeps.config import REGISTRY_DIR, TEMP_DIR, DATA_DIR
 from oeps.utils import load_json, write_json
 
+THEME_ORDER = [
+    "Geography",
+    "Social",
+    "Environment",
+    "Economic",
+    "Policy",
+    "Outcome",
+    "Composite",
+]
 
 summary_lookup = {
     "state": {
@@ -197,13 +206,9 @@ class Registry:
         ## load in this order so that some attributes can be cascaded
         self.geodata_sources = self._load_geodata_sources()
         self.table_sources = self._load_table_sources()
+        self.metadata = self._load_metadata()
+        self.theme_tree = self._load_theme_tree()
         self.variables = self._load_variables()
-
-        ## declare public attributes for type hinting
-        self.themes = {}
-        self.theme_lookup = {}
-        self.proxy_lookup = {}
-        self._load_themes()  # updates self.themes, self.theme_lookup, and self.proxy_lookup
 
         if not quiet:
             print(
@@ -260,7 +265,9 @@ class Registry:
     def _load_variables(self) -> dict:
         """Creates a lookup of all variables."""
 
-        variables = load_json(Path(self.directory, "variables.json"))
+        variables = {}
+        for path in Path(self.directory, "variables").glob("*.json"):
+            variables[path.stem] = load_json(path)
 
         ## iterate all table_sources and add field lists to their schema
         ## using these variables.
@@ -278,18 +285,47 @@ class Registry:
             ]
             v["years"] = list(set([i["year"] for i in sources]))
 
+        for i in variables.values():
+            if i["metadata"].replace(".json", "") not in self.metadata:
+                print(
+                    f"WARNING: variable {i['name']} references unknown metadata {i['metadata']}"
+                )
+
         return variables
 
-    def _load_themes(self):
-        """load in the theme and construct structure used in certain exports."""
+    def _load_metadata(self):
+        metadata = {}
+        for path in Path(self.directory, "metadata").glob("*.json"):
+            metadata[path.stem] = load_json(path)
 
-        self.themes = load_json(Path(self.directory, "themes.json"))
-        self.theme_lookup = {}
-        self.proxy_lookup = {}
-        for theme, constructs in self.themes.items():
-            for construct, proxy in constructs.items():
-                self.theme_lookup[construct] = theme
-                self.proxy_lookup[construct] = proxy
+        return metadata
+
+    def _load_theme_tree(self):
+        ## construct theme_tree based on sort order and then content in metadata
+        tree = {k: {} for k in THEME_ORDER}
+        for k, md in self.metadata.items():
+            valid = True
+            for key in ["id", "theme", "construct", "proxy", "url"]:
+                if key not in md or not md[key]:
+                    print(f"WARNING: metadata entry {k} is missing value: '{key}'")
+                    valid = False
+            if not valid:
+                continue
+
+            n = md["id"]
+            t = md["theme"]
+            c = md["construct"]
+
+            ## theme must be one of the preset options
+            if md["theme"] not in tree:
+                print(f"WARNING: metadata entry {n} has invalid theme {t}")
+            else:
+                if c not in tree[t]:
+                    tree[t][c] = [n]
+                else:
+                    tree[t][c].append(n)
+
+        return tree
 
     def sync_variable_table_sources(self, table_source: TableSource):
         for var in self.variables.values():
@@ -308,7 +344,7 @@ class Registry:
         for v in self.variables.values():
             if "years" in v:
                 del v["years"]
-        write_json(self.variables, Path(self.directory, "variables.json"))
+            write_json(v, Path(self.directory, "variables", f"{v['name']}.json"))
 
     def get_all_sources(self):
         sources = list(self.table_sources.values())
@@ -371,11 +407,15 @@ class Registry:
                         fields.append(i)
 
             ordered = []
-            for theme in self.themes.keys():
-                matched = [
-                    i for i in fields if self.theme_lookup[i["construct"]] == theme
-                ]
-                ordered += sorted(matched, key=lambda i: i["metadata_doc_url"])
+            for theme in self.theme_tree.keys():
+                matched = []
+                for field in fields:
+                    metadata_id = field.get("metadata", "")
+                    metadata_id = metadata_id.replace(".json", "")
+                    if metadata_id != "":
+                        if self.metadata[metadata_id]["theme"] == theme:
+                            matched.append(field)
+                ordered += sorted(matched, key=lambda i: i["metadata"])
 
             all_variables = {}
             for f in ordered:
@@ -425,7 +465,7 @@ class Registry:
                     if v["analysis"]:
                         return "x"
                 elif attribute == "Theme":
-                    return self.theme_lookup.get(v["construct"])
+                    return self.metadata[v["metadata"].replace(".json", "")]["theme"]
                 elif attribute in variable.get("years", []):
                     return "x"
                 elif attribute == "Title":
@@ -433,7 +473,7 @@ class Registry:
                 elif attribute == "Variable":
                     return v.get("name")
                 elif attribute == "Metadata Location":
-                    return v.get("metadata_doc_url")
+                    return self.metadata[v["metadata"].replace(".json", "")]["url"]
                 elif attribute == "Data Limitations":
                     return v.get("constraints")
                 elif attribute == "Source Long":
@@ -478,29 +518,6 @@ class Registry:
                     )
                     variables_valid = False
         if variables_valid:
-            print("all good")
-
-        print("\n## Checking constructs & themes")
-        valid_constructs = []
-        for c in self.themes.values():
-            valid_constructs += list(c.keys())
-
-        missing = 0
-        used = set()
-        for v in self.variables.values():
-            construct = v.get("construct")
-            if construct not in valid_constructs:
-                print(f"{v['name']}: invalid construct {construct}")
-                missing += 1
-            else:
-                used.add(construct)
-        unused = [i for i in valid_constructs if i not in used]
-        if missing:
-            print(f"{missing} variables with invalid 'construct'")
-        if unused:
-            print(f"{len(unused)} unused 'construct':")
-            print(unused)
-        if missing == 0 and len(unused) == 0:
             print("all good")
 
         print("\n## Checking geodata sources")

@@ -1,0 +1,19 @@
+{
+  "title": "State Area",
+  "name": "StateArea",
+  "type": "number",
+  "example": "4486028684.18",
+  "description": "Area (in square meters) of state",
+  "construct": "Geographic Characteristics",
+  "source": "Tiger/Line 2018",
+  "source_long": "Tiger/Line 2018 Shapefiles",
+  "oeps_v1_table": null,
+  "comments": "",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Park_Cover.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "state-2018"
+  ],
+  "metadata": "Park_Cover"
+}

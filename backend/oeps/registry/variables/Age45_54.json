@@ -1,0 +1,21 @@
+{
+  "title": "Population: Age 45-54",
+  "name": "Age45_54",
+  "type": "integer",
+  "example": "105",
+  "description": "Total population between age 45-54",
+  "construct": "Age",
+  "source": "IPUMS NHGIS",
+  "source_long": "Integrated Public Use Microdata Series National Historic Geographic Information System",
+  "oeps_v1_table": null,
+  "comments": "The 1980 Census data does not allow for disaggregation into Age45_49 and Age50_54 variables, so this variable is used instead. The data itself is from its respective decennial census as downloaded from IPUMS NHGIS and crosswalked to 2010 census tracts using Longitudinal Tract Database crosswalk files. For more on the crosswalk files, see https://s4.ad.brown.edu/Projects/Diversity/researcher/bridging.htm",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Demographics.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "county-1980",
+    "state-1980",
+    "tract-1980"
+  ],
+  "metadata": "Demographics"
+}

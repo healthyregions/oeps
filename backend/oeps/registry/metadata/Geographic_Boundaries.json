@@ -1,0 +1,7 @@
+{
+  "id": "Geographic_Boundaries",
+  "theme": "Geography",
+  "construct": "Geographic Boundaries",
+  "proxy": "HEROP_ID, GEOID, and Census Flags",
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/GeographicBoundaries.md"
+}

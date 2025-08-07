@@ -1,0 +1,7 @@
+{
+  "id": "Alcohol_Outlet_Density",
+  "theme": "Environment",
+  "construct": "Alcohol Outlet Density Measures",
+  "proxy": "Alcohol outlet density measures (geographic density, per capita density, total)",
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Alcohol_Outlet_Density.md"
+}

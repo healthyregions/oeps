@@ -1,0 +1,86 @@
+media: media
+content:
+  - name: metadata
+    label: Metadata
+    type: collection
+    path: backend/oeps/registry/metadata
+    filename: '{if}.json'
+    format: json
+    fields:
+      - name: id
+        label: Id
+        type: string
+        description: "Id for this metadata document. Used for filename (use underscores, no spaces). Ex: Access_MOUDs"
+      - name: theme
+        label: Theme
+        type: select
+        description: "Select theme. More themes can be added in Settings."
+        options:
+          values: ["Geography", "Social", "Environment", "Economic", "Policy", "Outcome", "Composite"]
+      - name: construct
+        label: Construct
+        type: string
+        description: "Name of construct, may match construct value in other metadata documents."
+      - name: proxy
+        label: Proxy
+        type: string
+        description: "The proxy is a description of the variables themselves that are included in this metadata document."
+      - name: url
+        label: URL
+        type: string
+        description: "Full URL to the metadata document in GitHub, for example: https://github.com/healthyregions/oeps/blob/pagescms_registry/metadata/Access_MOUDs.md"
+  - name: variables
+    label: Variables
+    type: collection
+    path: backend/oeps/registry/variables
+    filename: "{name}.json"
+    format: json
+    fields:
+      - name: name
+        label: Name
+        type: string
+        description: "Name for this variable. Must use PascalCase, and <= 10 characters. Must match exactly the column names for datasets of this variable."
+      - name: title
+        label: Title
+        type: string
+        description: "Human-readable title to be displayed for this variable."
+      - name: type
+        label: Type
+        type: select
+        options:
+          values: ["string", "number", "integer", "boolean", "date"]
+      - name: example
+        label: Example
+        type: string
+        description: "An example value for this variable."
+      - name: description
+        label: Description
+        type: string
+        description: "Description of variable."
+      - name: source
+        label: Source
+        type: string
+        description: "Abbreviated source for this variable, ex: ACS 2018. Separate multiple with ;."
+      - name: source_long
+        label: "Source (long)"
+        type: string
+        description: "Long-form source name, ex: American Community Survey 2018. Separate multiple with ;."
+      - name: metadata
+        label: Metadata Document
+        type: reference
+        description: "Link to metadata document that describes this variable."
+        options:
+          collection: metadata
+          search: id
+          value: "{id}"
+          label: "{id}"
+      - name: longitudinal
+        type: boolean
+        description: "(use undetermined)"
+      - name: analysis
+        type: boolean
+        description: "(use undetermined)"
+      - name: table_sources
+        description: "DO NOT EDIT this list in PagesCMS. These are the CSVs that this variable appears in. Edits must be made in the backend."
+        type: string
+        list: true

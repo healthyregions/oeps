@@ -1,0 +1,19 @@
+{
+  "title": "Hepatitis C Deaths - Asian & Pacific Islander (2013 - 2017)",
+  "name": "AvAsPiHcvD",
+  "type": "number",
+  "example": "24.4",
+  "description": "Mean yearly Hepatitis C deaths among Asian and Pacific Islanders population from 2013-2017",
+  "construct": "Hepatitis C Rates",
+  "source": "HepVu, 2017",
+  "source_long": "HepVu, 2017",
+  "oeps_v1_table": null,
+  "comments": "",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/HepC.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "state-2017"
+  ],
+  "metadata": "HepC"
+}

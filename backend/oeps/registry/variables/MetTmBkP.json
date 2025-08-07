@@ -1,0 +1,21 @@
+{
+  "title": "% Tracts With Methadone Provider (30-min bike)",
+  "name": "MetTmBkP",
+  "type": "number",
+  "example": "0.99",
+  "description": "Percent of tracts with methadone provider within a 30-min biking range",
+  "construct": "Access to MOUDs",
+  "source": "SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020",
+  "source_long": "U.S. Substance Abuse and Mental Health Services Administration Treatment Locator, 2019; Vivitrol, 2020; Open Source Routing Machine, 200",
+  "oeps_v1_table": null,
+  "comments": "All nearest distance calculations are in miles. All nearest travel time calculations are in minutes.",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "county-2020",
+    "county-2025",
+    "state-2025"
+  ],
+  "metadata": "Access_MOUDs"
+}

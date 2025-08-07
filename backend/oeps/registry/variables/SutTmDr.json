@@ -1,0 +1,20 @@
+{
+  "title": "Driving time (min) to Substance Use Treatment (SUT) facility",
+  "name": "SutTmDr",
+  "type": "number",
+  "example": "17.76",
+  "description": "Driving time from tract/zip origin centroid to the nearest tract/zip SUT destination centroid, in minutes",
+  "construct": "Access to Substance Use Treatment Programs",
+  "source": "SAMHSA, 2020",
+  "source_long": "U.S. Substance Abuse and Mental Health Services Administration Treatment Locator, 2020",
+  "oeps_v1_table": null,
+  "comments": "This dataset includes all US states, Washington D.C., and Puerto Rico. It does not include the territories Guam, Northern Mariana Islands, American Samoa, Palau. Zip code and tract centroids are not population-weighted.",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_SubstanceUseTreatment.md",
+  "longitudinal": false,
+  "analysis": true,
+  "table_sources": [
+    "tract-2020",
+    "zcta-2020"
+  ],
+  "metadata": "Access_SubstanceUseTreatment"
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Hepatitis C Deaths - Age 50 to 74 (2013 - 2017)",
+  "name": "Av50_74HcvD",
+  "type": "number",
+  "example": "510.8",
+  "description": "Mean yearly Hepatitis C deaths among people between 50 and 74 years of age from 2013-2017",
+  "construct": "Hepatitis C Rates",
+  "source": "HepVu, 2017",
+  "source_long": "HepVu, 2017",
+  "oeps_v1_table": null,
+  "comments": "",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/HepC.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "state-2017"
+  ],
+  "metadata": "HepC"
+}

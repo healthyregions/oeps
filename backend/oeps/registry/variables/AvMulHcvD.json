@@ -1,0 +1,19 @@
+{
+  "title": "Mean yearly Hepatitis C deaths among Multiple Race populations from 2018-2022",
+  "name": "AvMulHcvD",
+  "type": "number",
+  "example": "60.0",
+  "description": "",
+  "construct": "Hepatitis C Rates",
+  "source": "HepVu",
+  "source_long": "HepVu",
+  "oeps_v1_table": null,
+  "comments": "",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/HepC.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "state-2022"
+  ],
+  "metadata": "HepC"
+}

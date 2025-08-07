@@ -1,0 +1,19 @@
+{
+  "title": "% Population: Age 15-24",
+  "name": "A15_24P",
+  "type": "number",
+  "example": "7.33",
+  "description": "Percentage of population between ages of 15 & 24",
+  "construct": "Age",
+  "source": "ACS 2018, 5-Year; Census 2010; IPUMS NHGIS",
+  "source_long": "American Community Survey 2014-2018 5-Year Estimates; 2010 Decennial Census; Integrated Public Use Microdata Series National Historic Geographic Information System",
+  "oeps_v1_table": null,
+  "comments": "1980, 1990, and 2000 data from respective decennial censuses downloaded from IPUMS NHGIS and crosswalked to 2010 census tracts using the Longitudinal Tract Database crosswalk files. They were then crosswalked to 2010 ZIPs using the 2012 1st quarter TRACT-ZIP crosswalk from Housing and Urban Development. For more on the tract crosswalk files, see https://s4.ad.brown.edu/Projects/Diversity/researcher/bridging.htm. For more on the TRACT-ZIP crosswalk, see https://www.huduser.gov/portal/datasets/usps_crosswalk.html",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Demographics.md",
+  "longitudinal": true,
+  "analysis": false,
+  "table_sources": [
+    "zcta-2018"
+  ],
+  "metadata": "Demographics"
+}
