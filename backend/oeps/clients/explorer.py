@@ -172,18 +172,18 @@ class Explorer:
                     sorted_geodata = [
                         i for i in ["Tract", "Zip", "County", "State"] if i in geodata
                     ]
-
-                    output[theme][construct].append(
-                        {
-                            "Variable Construct": construct,
-                            "Variable Proxy": metadata["proxy"],
-                            "Variables": natsorted(list(titles)),
-                            "Source": "; ".join(sources),
-                            "Metadata": id,
-                            "Spatial Scale": ", ".join(sorted_geodata),
-                            "Years": ", ".join(natsorted(years)),
-                        }
-                    )
+                    if len(titles) > 0:
+                        output[theme][construct].append(
+                            {
+                                "Variable Construct": construct,
+                                "Variable Proxy": metadata["proxy"],
+                                "Variables": natsorted(list(titles)),
+                                "Source": "; ".join(sources),
+                                "Metadata": id,
+                                "Spatial Scale": ", ".join(sorted_geodata),
+                                "Years": ", ".join(natsorted(years)),
+                            }
+                        )
 
         csv_downloads = {"state": [], "county": [], "zcta": [], "tract": []}
         for ts in self.registry.table_sources.values():
