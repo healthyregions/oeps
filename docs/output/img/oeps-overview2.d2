@@ -1,0 +1,127 @@
+# d2 oeps-overview2.d2 oeps-overview2.png --sketch
+
+grid-rows: 3
+
+title: |md
+# OEPS Ecosytem: Overview
+|
+
+title.near: top-center
+title {
+    width: 450
+}
+
+classes {
+    main-row {
+        style {
+            fill: transparent
+            stroke-dash: 2
+            stroke: grey
+            border-radius: 10
+        }
+    }
+}
+
+s: Data sources  {
+    grid-columns: 5
+    height: 140
+    class: main-row
+}
+s.* {
+    width: 90
+}
+s.1: ACS
+s.2: US Census
+s.3: USDA
+s.4: SAMHSA
+s.5: etc.
+
+# i: Ingestion Pipeline
+
+b: OEPS Backend {
+    # grid-columns: 3
+    # height: 140
+    direction: right
+}
+# b.* {
+#     width: 200
+# }
+b.1: Command Line Interface
+b.2: Registry
+b.3: CSV/SHP Data
+
+b.1 -> b.2: import {
+    style: {
+        stroke-dash: 2
+        font-color: black
+    }
+}
+b.1 <- b.2: export {
+    style: {
+        stroke-dash: 2
+        font-color: black
+    }
+}
+b.2 -- b.3 {
+    style: {
+        stroke-dash: 2
+    }
+}
+
+# s -> i -> b
+s -> b.1
+
+o: Output locations {
+    grid-columns: 4
+    height: 140
+    class: main-row
+}
+o.* {
+    class: block4
+}
+o.1: |md
+**OEPS Explorer**
+
+_Static files for frontend_
+|
+o.2: |md
+**JCOIN Data Commons**
+
+_Frictionless Data Package_
+|
+o.3: |md
+**Google BigQuery**
+
+_Data tables_
+|
+o.4: |md
+**oepsData**
+
+_R data package_
+|
+
+b.1 -> o
+
+# u: Users {
+#     grid-columns: 4
+#     height: 85
+#     style: {
+#         font-size: 20
+#     }
+# }
+# u.* {
+#     class: block4
+#     height: 10
+#     style: {
+#         opacity: 0
+#     }
+# }
+# u.1: ""
+# u.2: ""
+# u.3: ""
+# u.4: ""
+
+# u.1 -> o.1
+# u.2 -> o.2
+# u.3 -> o.3
+# u.4 -> o.4
