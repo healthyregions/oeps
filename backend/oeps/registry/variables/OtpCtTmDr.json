@@ -1,0 +1,22 @@
+{
+  "title": "Tracts with Opioid Treatment Program (OTP) (30-min drive)",
+  "name": "OtpCtTmDr",
+  "type": "integer",
+  "example": "1092",
+  "description": "Number of tracts within 30-min of opioid treatment program driving range",
+  "construct": "Access to Opioid Treatment Programs",
+  "source": "SAMSHA, 2021",
+  "source_long": "U.S. Substance Abuse and Mental Health Services Administration Treatment Locator, 2021",
+  "oeps_v1_table": null,
+  "comments": "This dataset includes all US states, Washington D.C., and Puerto Rico. It does not include the territories Guam, Northern Mariana Islands, American Samoa, Palau. Zip code and tract centroids are not population-weighted.",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_OpioidUseTreatment.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "county-2021",
+    "county-2025",
+    "state-2021",
+    "state-2025"
+  ],
+  "metadata": "Access_MOUDs"
+}

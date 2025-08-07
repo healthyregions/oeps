@@ -1,0 +1,25 @@
+{
+  "title": "Any Naloxone Law (date)",
+  "name": "AnyNalxDt",
+  "type": "date",
+  "example": "7/1/2010",
+  "format": "%m/%d/%Y",
+  "description": "Date (MY) any type of Naloxone law effective",
+  "construct": "Naloxone Access Laws",
+  "source": "OPTIC, 2017",
+  "source_long": "RAND-USC Schaeffer Opioid Policy Tools and Information Center, 2021",
+  "oeps_v1_table": null,
+  "comments": "",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/NAL_2017.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "state-2017",
+    "state-2018",
+    "state-2019",
+    "state-2020",
+    "state-2021",
+    "state-2022"
+  ],
+  "metadata": "Naloxone"
+}

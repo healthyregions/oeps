@@ -1,0 +1,28 @@
+{
+  "title": "Total Population in Households",
+  "name": "TotPopHh",
+  "type": "integer",
+  "example": "7151776",
+  "description": "Total number of people in households",
+  "construct": "Household Type",
+  "source": "ACS 2018, 5-Year",
+  "source_long": "American Community Survey 2014-2018 5 Year Estimates",
+  "oeps_v1_table": null,
+  "comments": "",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/HouseholdType.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "county-2018",
+    "county-2020",
+    "county-2023",
+    "state-2018",
+    "tract-2018",
+    "tract-2020",
+    "tract-2023",
+    "zcta-2018",
+    "zcta-2020",
+    "zcta-2023"
+  ],
+  "metadata": "HouseholdType"
+}

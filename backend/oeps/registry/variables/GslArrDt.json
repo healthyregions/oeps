@@ -1,0 +1,23 @@
+{
+  "title": "Good Samaritan Law Protecting Arrest (date)",
+  "name": "GslArrDt",
+  "type": "date",
+  "example": "10/1/2015",
+  "format": "%m/%d/%Y",
+  "description": "Date (DMY) that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective",
+  "construct": "Good Samaritan Laws",
+  "source": "OPTIC, 2017",
+  "source_long": "RAND-USC Schaeffer Opioid Policy Tools and Information Center, 2021",
+  "oeps_v1_table": null,
+  "comments": "Specific dimensions of Good Samaritan policy data included in this public version of the data are based on a review of relevant protections granted through different variations of these laws as described in:\n- Davis, C. S., & Carr, D. (2015). Legal changes to increase access to naloxone for opioid overdose reversal in the United States. Drug and alcohol dependence, 157, 112-120.- \n- Davis, C., & Carr, D. (2017). State legal innovations to encourage naloxone dispensing. Journal of the American Pharmacists Association, 57(2), S180-S184.",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/GSL.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "state-2017",
+    "state-2019",
+    "state-2020",
+    "state-2021"
+  ],
+  "metadata": "Good_Samaritan_Laws"
+}

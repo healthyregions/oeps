@@ -1,0 +1,7 @@
+{
+  "id": "Park_Cover",
+  "theme": "Geography",
+  "construct": "Geographic Characteristics",
+  "proxy": "Park Area",
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Park_Cover.md"
+}

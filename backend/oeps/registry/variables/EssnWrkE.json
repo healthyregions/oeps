@@ -1,0 +1,22 @@
+{
+  "title": "Count of Essential Workers",
+  "name": "EssnWrkE",
+  "type": "integer",
+  "example": "1509709",
+  "description": "Estimated count of population employed in essential occupations.",
+  "construct": "Essential Workers",
+  "source": "ACS 2018, 5-Year",
+  "source_long": "American Community Survey 2014-2018 5 Year Estimates",
+  "oeps_v1_table": null,
+  "comments": "",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Job_Categories_byOccupation_2018.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "county-2018",
+    "state-2018",
+    "tract-2018",
+    "zcta-2018"
+  ],
+  "metadata": "Job_Categories_byOccupation_2018"
+}

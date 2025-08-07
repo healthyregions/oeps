@@ -1,0 +1,7 @@
+{
+  "id": "Access_HCVTesting",
+  "theme": "Environment",
+  "construct": "Spatial access to HCV Testing",
+  "proxy": "Spatial access metrics to testing for hepatitis C virus (HCV) infections (Straight-line Distance, Driving Time, Count of Resources)",
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
+}

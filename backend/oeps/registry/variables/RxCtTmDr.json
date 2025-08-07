@@ -1,0 +1,20 @@
+{
+  "title": "Tracts with Pharmacy (30-min drive)",
+  "name": "RxCtTmDr",
+  "type": "integer",
+  "example": "1406",
+  "description": "Number of tracts with pharmacy within a 30-min driving range",
+  "construct": "Access to Pharmacies",
+  "source": "InfoGroup, 2019",
+  "source_long": "InfoGroup, 2019",
+  "oeps_v1_table": null,
+  "comments": "This dataset includes all US states, Washington D.C., and Puerto Rico. It does not include the territories Guam, Northern Mariana Islands, American Samoa, Palau. Zip code and tract centroids are not population-weighted.",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Pharmacies_MinDistance.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "county-2019",
+    "state-2019"
+  ],
+  "metadata": "Access_Pharmacies"
+}

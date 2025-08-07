@@ -1,0 +1,7 @@
+{
+  "id": "Residential_Segregation",
+  "theme": "Social",
+  "construct": "Residential Segregation Measures",
+  "proxy": "Dissimilarity, Interaction, and Isolation Indices for Black, Asian, & Hispanic Groups",
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Residential_Segregation.md"
+}

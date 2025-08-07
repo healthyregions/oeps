@@ -1,0 +1,7 @@
+{
+  "id": "SDOH_Indices",
+  "theme": "Composite",
+  "construct": "SDOH Indices & Typology",
+  "proxy": "Social Determinants of Health (SDOH) Multivariate Measures (Indices, Neighborhood Typology)",
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/SDOHIndices.md"
+}

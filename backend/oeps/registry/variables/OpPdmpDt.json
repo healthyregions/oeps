@@ -1,0 +1,26 @@
+{
+  "title": "Operational PDMP start date",
+  "name": "OpPdmpDt",
+  "type": "date",
+  "example": "1/1/2012",
+  "format": "%m/%d/%Y",
+  "description": "Date when a \u201cmodern system\u201d became operational and users could access. Source: Horowitz et al., 2018, Table 2, column 4. This definition includes specific caveats adopted by Horowitz et al., 2018, described further below in Notes.",
+  "construct": "Prescription Drug Monitoring Programs (PDMP)",
+  "source": "OPTIC, 2017",
+  "source_long": "RAND-USC Schaeffer Opioid Policy Tools and Information Center, 2021",
+  "oeps_v1_table": null,
+  "comments": "",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/PDMP_2017.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "state-2017",
+    "state-2018",
+    "state-2019",
+    "state-2020",
+    "state-2021",
+    "state-2022",
+    "state-2023"
+  ],
+  "metadata": "PDMP"
+}

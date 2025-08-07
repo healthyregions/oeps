@@ -1,0 +1,19 @@
+{
+  "title": "Corrections Expenditures",
+  "name": "CrrctExpS",
+  "type": "integer",
+  "example": "915105",
+  "description": "Expenditures on corrections system and operation by the State alone",
+  "construct": "State & Local Government Expenditures",
+  "source": "US Census, 2018",
+  "source_long": "U.S. Census Bureau Annual Survey of State and Local Government Finances via Urban Institute & Tax Policy Center's State and Local Finance Data Finder",
+  "oeps_v1_table": null,
+  "comments": "",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/PublicExpenditures.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "state-2018"
+  ],
+  "metadata": "PublicExpenditures"
+}

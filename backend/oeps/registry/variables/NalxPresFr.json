@@ -1,0 +1,24 @@
+{
+  "title": "Naloxone Law allowing pharmacists prescriptive authority (fraction of year in 2017)",
+  "name": "NalxPresFr",
+  "type": "number",
+  "example": "0",
+  "description": "Fraction of year state has an effective Naloxone law allowing pharmacists prescriptive authority",
+  "construct": "Naloxone Access Laws",
+  "source": "OPTIC, 2017",
+  "source_long": "RAND-USC Schaeffer Opioid Policy Tools and Information Center, 2021",
+  "oeps_v1_table": null,
+  "comments": "",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/NAL_2017.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "state-2017",
+    "state-2018",
+    "state-2019",
+    "state-2020",
+    "state-2021",
+    "state-2022"
+  ],
+  "metadata": "Naloxone"
+}

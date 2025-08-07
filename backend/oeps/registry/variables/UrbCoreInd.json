@@ -1,0 +1,19 @@
+{
+  "title": "Urban Core Opportunity Index",
+  "name": "UrbCoreInd",
+  "type": "number",
+  "example": "-0.06",
+  "description": "Raw Urban Core Opportunity Index (https://sdohatlas.github.io/)",
+  "construct": "Social Determinants of Health (SDOH)",
+  "source": "GeoDa Data and Lab; SDOH Atlas",
+  "source_long": "GeoDa Data and Lab; Spatial Deterimants of Health Atlas",
+  "oeps_v1_table": null,
+  "comments": "",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/SDOH_2014.md",
+  "longitudinal": false,
+  "analysis": true,
+  "table_sources": [
+    "tract-2014"
+  ],
+  "metadata": "SDOH_Indices"
+}

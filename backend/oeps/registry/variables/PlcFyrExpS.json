@@ -1,0 +1,19 @@
+{
+  "title": "Police & Fire Expenditures",
+  "name": "PlcFyrExpS",
+  "type": "integer",
+  "example": "305035",
+  "description": "Expenditures on police and fire protection by the State alone",
+  "construct": "State & Local Government Expenditures",
+  "source": "US Census, 2018",
+  "source_long": "U.S. Census Bureau Annual Survey of State and Local Government Finances via Urban Institute & Tax Policy Center's State and Local Finance Data Finder",
+  "oeps_v1_table": null,
+  "comments": "",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/PublicExpenditures.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "state-2018"
+  ],
+  "metadata": "PublicExpenditures"
+}

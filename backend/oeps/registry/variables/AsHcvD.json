@@ -1,0 +1,23 @@
+{
+  "title": "Hepatitis C deaths among Asian populations ",
+  "name": "AsHcvD",
+  "type": "number",
+  "example": "60.0",
+  "description": "",
+  "construct": "Hepatitis C Rates",
+  "source": "HepVu",
+  "source_long": "HepVu",
+  "oeps_v1_table": null,
+  "comments": "",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/HepC.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "state-2018",
+    "state-2019",
+    "state-2020",
+    "state-2021",
+    "state-2022"
+  ],
+  "metadata": "HepC"
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Total Census Tract Count",
+  "name": "TotTracts",
+  "type": "integer",
+  "example": "1458",
+  "description": "Total number of census tracts within the state.",
+  "construct": "Geographic Characteristics",
+  "source": "Tiger/Line 2018",
+  "source_long": "Tiger/Line 2018 Shapefiles",
+  "oeps_v1_table": null,
+  "comments": "All nearest distance calculations are in miles. All nearest travel time calculations are in minutes.",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_FQHCs_MinDistance.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "county-2018",
+    "county-2025",
+    "state-2018",
+    "state-2025"
+  ],
+  "metadata": "Access_FQHCs"
+}
