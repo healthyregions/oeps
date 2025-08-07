@@ -1,7 +1,7 @@
 {
-  "theme": "",
-  "construct": "",
-  "proxy": "",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Prison_Variables.md",
-  "id": "Prison_Variables"
+  "id": "Prison_Variables",
+  "theme": "Policy",
+  "construct": "Prison Incarceration Rates",
+  "proxy": "Total Prison Population Rate, Total Prison Admission Rate, Total Prison Population Count, Prison Prison Admissions Count",
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Prison_Variables.md"
 }
