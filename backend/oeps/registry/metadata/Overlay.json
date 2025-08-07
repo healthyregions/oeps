@@ -1,5 +1,7 @@
 {
   "id": "Overlay",
   "theme": "Geography",
+  "construct": "Community Overlay Variables",
+  "proxy": "Hypersegregated Cities, Southern Blackbelt, Native American Reservations",
   "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Overlay.md"
 }
