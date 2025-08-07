@@ -1,3 +1,4 @@
+import os
 from enum import Enum
 from pathlib import Path
 import shutil
@@ -171,11 +172,8 @@ class TableSource:
             self.df.to_csv(self.path, index=False)
             self.registry.sync_variable_table_sources(table_source=self)
 
-    def get_variable_data(self, name, delete: bool = False):
-        var_data = pd.DataFrame(self.df, columns=["HEROP_ID", name])
-        if delete:
-            self.delete_variable_data(name)
-        return var_data
+    def get_variable_data(self, name):
+        return pd.DataFrame(self.df, columns=["HEROP_ID", name])
 
     def delete_variable_data(self, name):
         self.df = self.df.drop(name, axis=1)
@@ -339,6 +337,10 @@ class Registry:
             ## sort all table_sources
             var["table_sources"].sort()
         self.write_variables()
+
+    def remove_variable(self, variable_name: str):
+        os.remove(Path(REGISTRY_DIR, "variables", f"{variable_name}.json"))
+        self._load_variables()
 
     def write_variables(self):
         for v in self.variables.values():
