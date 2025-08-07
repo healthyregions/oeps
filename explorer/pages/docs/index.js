@@ -9,35 +9,34 @@ import variables from '../../meta/variables.json';
 const VariableTable = ({table, filters}) =>
 <div className={styles.tableContainer}>
   <table className={styles.variableTable}>
+    <thead>
+        <tr>
+            <th style={{ width:"15%"}}>Variable Construct</th>
+            <th style={{ width:"25%"}}>Variable Proxy</th>
+            <th style={{ width:"15%"}}>Source</th>
+            <th style={{ width:"15%"}}>Metadata</th>
+            <th style={{ width:"15%"}}>Spatial Scale</th>
+            <th style={{ width:"15%"}}>Years</th>
+        </tr>
+    </thead>
     <tbody>
-    <tr>
-      <th>Variable Construct</th>
-      <th>Variable Proxy</th>
-      <th>Source</th>
-      <th>Metadata</th>
-      <th>Spatial Scale</th>
-      <th>Years</th>
-    </tr>
     {Object.keys(table).map((construct, index) => {
-        console.log(construct)
-        console.log(table[construct])
         const output = []
-        // table[construct].map(row => (!filters.scale.length || filters.scale.some(scale => row['Spatial Scale'].includes(scale))) ? <tr key={row['Variable Construct']}>
         table[construct].map(row => {
             if (!filters.scale.length || filters.scale.some(scale => row['Spatial Scale'].includes(scale))) {
                 output.push(
-                    <tr key={row['Variable Construct']}>
-                        <td width="15%">{row['Variable Construct']}</td>
-                        <td width="25%">{row['Variable Proxy']}</td>
-                        <td width="15%">{row['Source']}</td>
-                        <td width="15%"><a href={`docs/${row['Metadata']}`}>{row['Metadata']}</a></td>
-                        <td width="15%">{row['Spatial Scale']}</td>
-                        <td width="15%">{row['Years']}</td>
+                    <tr key={row['Metadata']}>
+                        <td style={{ width:"15%"}}>{row['Variable Construct']}</td>
+                        <td style={{ width:"25%"}}>{row['Variable Proxy']}</td>
+                        <td style={{ width:"15%"}}>{row['Source']}</td>
+                        <td style={{ width:"15%"}}><a href={`docs/${row['Metadata']}`}>{row['Metadata']}</a></td>
+                        <td style={{ width:"15%"}}>{row['Spatial Scale']}</td>
+                        <td style={{ width:"15%"}}>{row['Years']}</td>
                     </tr>
                 )
             }
         })
-        return output
+        return output.length > 0 ? output : null
     })}
     </tbody>
   </table>
