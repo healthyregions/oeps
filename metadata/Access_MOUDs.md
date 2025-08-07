@@ -2,7 +2,7 @@
 **Date Added**: February 1, 2021  
 **Author**: Marynia Kolak, Mahjabin Kabir Adrita, Wataru Morioka, Susan Paykin
 
-**Date Last Modified**: August 1, 2025  
+**Date Last Modified**: August 5, 2025  
 **Last Modified By**: Marynia Kolak
 
 ### Theme: 
@@ -33,6 +33,9 @@ The following was extracted in May 2025 from SAMSHA’s Treatment Locator Servic
  - **Methadone**: Methadone: All providers tagged as providing “methadone.” The term methadone maintenance was no longer visible as a feature in the locator service.
  - **OTP**: All providers tagged as “opioid treatment providers.”
  - **Naltrexone**: All providers tagged as providing “naltrexone.”
+ 
+ For Opioid Treatment Programs, measures for all years were extracted from the U.S. Substance Abuse and Mental Health Services Administration (SAMHSA) [Opioid Treatment Program (OTP) Directory](https://dpt2.samhsa.gov/treatment/directory.aspx). The OTPs represented in this set are those certified, either fully or provisionally by SAMHSA. Certification is required for MOUD, but these programs can offer other types of treatment, including counseling and other behavioral therapies. Raw data can be found [here](https://dpt2.samhsa.gov/treatment/directory.aspx) and more information can be found [here](https://www.samhsa.gov/medication-assisted-treatment/become-accredited-opioid-treatment-program).
+
 
 #### Street Network Topology & Travel Time Matrices
 Data on street and pedestrian networks to calculate travel time metrics were sourced from multiple open source data portals. Street network topologies (including street orientations and speed/travel time) all derive from [OpenStreetMap](https://www.openstreetmap.org), also known as OSM.
@@ -73,6 +76,9 @@ County and state-level variables include the **count** of Census tracts and the 
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
 | Minimum distance to nearest MOUD (all types) | MoudMinDis | Euclidean distance (miles) to nearest MOUD (all types) | 2020, 2025 | Tract |
+| Distance to nearest OTP | OtpMinDis | Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles | 2019, 2025 | Tract |
+| Driving time to nearest OTP | OtpTmDr | Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes | 2019, 2025 | Tract |
+| Count of OTPs | OtpCntDr | Count of OTPs within a 30-minute driving threshold | 2019, 2025 | Tract |
 | Minimum distance to buprenorphine | BupMinDis | Euclidean distance (miles) to nearest buprenorphine provider | 2020, 2025 | Tract |
 | Driving time to nearest buprenorphine | BupTmDr | Driving time (minutes) to nearest buprenorphine provider | 2020, 2025 | Tract |
 | Count of buprenorphine providers (drive) | BupCntDr30 | Count of methadone providers in 30 minute drive time threshold | 2020, 2025 | Tract |
@@ -101,10 +107,15 @@ County and state-level variables include the **count** of Census tracts and the 
 | Count of naltrexone providers (bike) | NalCntBk60 | Count of naltrexone providers in 60 minute biking time threshold | 2020, 2025 | Tract |
 | Count of naltrexone providers (bike) | NalCntBk30 | Count of naltrexone providers in 30 minute biking time threshold | 2020, 2025 | Tract |
 
+
+
 #### ZIP Code Tabulation Area
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
 | Minimum distance to nearest MOUD (all types) | MoudMinDis | Average Euclidean distance (miles) to nearest MOUD (all types) | 2020, 2025 | Zip |
+| Distance to nearest OTP | OtpMinDis | Average Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles | 2019, 2025 | Zip |
+| Driving time to nearest OTP | OtpTmDr | Average Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes | 2019, 2025 | Zip |
+| Count of OTPs | OtpCntDr | Average Count of OTPs within a 30-minute driving threshold | 2019, 2025 | Zip |
 | Minimum distance to buprenorphine | BupMinDis | Average Euclidean distance (miles) to nearest buprenorphine provider | 2020, 2025 | Zip |
 | Driving time to nearest buprenorphine | BupTmDr | Average Driving time (minutes) to nearest buprenorphine provider | 2020, 2025 | Zip |
 | Count of buprenorphine providers (drive) | BupCntDr30 | Average Count of methadone providers in 30 minute drive time threshold | 2020, 2025 | Zip |
