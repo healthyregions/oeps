@@ -1,6 +1,6 @@
 {
   "name": "AsianP",
-  "title": "% Asian Population3",
+  "title": "% Asian Population",
   "type": "number",
   "example": "12.03",
   "description": "Percentage of population with race identified as Asian alone",
