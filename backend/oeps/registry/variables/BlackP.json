@@ -1,15 +1,12 @@
 {
-  "title": "% Black/African American Population",
   "name": "BlackP",
+  "title": "% Black/African American Populationw",
   "type": "number",
   "example": "14.81",
   "description": "Percentage of population with race identified as Black or African American alone",
-  "construct": "Race & Ethnicity",
   "source": "ACS 2018, 5-Year; Census 2010; IPUMS NHGIS",
   "source_long": "American Community Survey 2014-2018 5 Year Estimate; 2010 Decennial Census; Integrated Public Use Microdata Series National Historic Geographic Information System",
-  "oeps_v1_table": null,
-  "comments": "",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Race_Ethnicity.md",
+  "metadata": "Race_Ethnicity.json",
   "longitudinal": true,
   "analysis": false,
   "table_sources": [
@@ -35,6 +32,5 @@
     "zcta-2018",
     "zcta-2020",
     "zcta-2023"
-  ],
-  "metadata": "Race_Ethnicity.json"
+  ]
 }
