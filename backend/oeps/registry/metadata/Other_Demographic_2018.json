@@ -1,5 +1,7 @@
 {
   "id": "Other_Demographic_2018",
   "theme": "Social",
+  "construct": "Age & Demographic",
+  "proxy": "Population with a Disability, % Less than High School degree",
   "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Other_Demographic_2018.md"
 }
