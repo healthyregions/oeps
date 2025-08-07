@@ -81,5 +81,6 @@ content:
         type: boolean
         description: "(use undetermined)"
       - name: table_sources
+        description: "DO NOT EDIT this list in PagesCMS. These are the CSVs that this variable appears in. Edits must be made in the backend."
         type: string
         list: true
