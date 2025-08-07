@@ -8,7 +8,7 @@
 Environment  
 
 ### Data Location:  
-You can find the variables described in this document in the CSV files [here](../full_tables).  
+You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).  
 
 CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in `C_2000.csv`.  
 *Note: Every variable can be found in the **Latest** files.*
@@ -62,9 +62,9 @@ County and state-level variables include:
 
 | Variable                          | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |----------------------------------|----------------------|-----------------------------------------------------------------------------|------------------|----------------|
-| Distance to nearest MH Provider  | HcvMinDis | Euclidean distance* from tract/zip centroid to nearest MH provider (miles) | 2025 | Tract, Zip     |
-| Driving time to nearest MH Provider | HcvTmDr | Driving time from origin to nearest MH provider (minutes)                  | 2025 | Tract, Zip     |
-| Count of MH Providers            | HcvCntDr | Number of MH providers within a 30-minute drive                             | 2025 | Tract, Zip     |
+| Distance to nearest HCV Provider  | HcvMinDis | Euclidean distance* from tract/zip centroid to nearest MH provider (miles) | 2025 | Tract, Zip     |
+| Driving time to nearest HCV Provider | HcvTmDr | Driving time from origin to nearest MH provider (minutes)                  | 2025 | Tract, Zip     |
+| Count of HCV Providers            | HcvCntDr | Number of MH providers within a 30-minute drive                             | 2025 | Tract, Zip     |
 
 #### County and State
 
