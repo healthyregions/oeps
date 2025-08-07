@@ -1,5 +1,7 @@
 {
   "id": "OpioidIndicators",
   "theme": "Outcome",
+  "construct": "Opioid Indicators",
+  "proxy": "Opioid Prescription Rates, Opioid Mortality Rates, Prescription Pain Medication Misuse",
   "url": "https://github.com/healthyregions/oeps/blob/main/metadata/OpioidIndicators.md"
 }
