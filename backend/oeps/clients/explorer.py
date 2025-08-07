@@ -96,12 +96,8 @@ class Explorer:
                 "variable": v["title"],
                 "numerator": variables_to_ds_combos[k],
                 "nProperty": k,
-                "theme": self.registry.metadata.get(
-                    v.get("metadata", "").replace(".json", "")
-                )["theme"],
-                "metadataUrl": self.registry.metadata[
-                    v["metadata"].replace(".json", "")
-                ]["url"],
+                "theme": self.registry.metadata.get(v.get("metadata", ""))["theme"],
+                "metadataUrl": self.registry.metadata[v["metadata"]]["url"],
             }
             for k, v in variables.items()
             if k in variables_to_ds_combos
@@ -150,7 +146,7 @@ class Explorer:
                     sources = set()
                     years = set()
                     for v in self.registry.variables.values():
-                        if v["metadata"].replace(".json", "") == id:
+                        if v["metadata"] == id:
                             for ts in v["table_sources"]:
                                 years.add(ts.split("-")[1])
                                 for p in [
