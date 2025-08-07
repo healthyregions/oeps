@@ -1,5 +1,7 @@
 {
   "id": "Syringe",
   "theme": "Policy",
+  "construct": "Syringe & Paraphernalia Laws",
+  "proxy": "Syringe Service Program (SSP) Authorization Laws, Drug Paraphernalia Laws, Distribution of Syringes Laws, Paraphernalia exludes objects used for injecting drugs, Paraphernalia does not refer to objects used for injecting drugs, Laws removing barriers to SSPs",
   "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Syringe.md"
 }
