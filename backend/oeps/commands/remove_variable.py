@@ -21,9 +21,8 @@ from ._common_opts import (
 )
 @add_common_opts(registry_opt)
 def remove_variable(name, table_source, registry_path):
-    """Move a variable from one table to another. This command is primarily meant to
-    be a corrective tool to help move a set of values for a variable to a different year,
-    after being initially placed in the wrong year.
+    """Remove a variable from the registry and all of its columns from table source CSVs.
+    Optionally remove the variable only from one table source.
     """
 
     registry = Registry(registry_path)
