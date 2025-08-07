@@ -305,14 +305,14 @@ class Registry:
         tree = {k: {} for k in THEME_ORDER}
         for k, md in self.metadata.items():
             valid = True
-            for key in ["name", "theme", "construct", "proxy", "url"]:
+            for key in ["id", "theme", "construct", "proxy", "url"]:
                 if key not in md or not md[key]:
                     print(f"WARNING: metadata entry {k} is missing value: '{key}'")
                     valid = False
             if not valid:
                 continue
 
-            n = md["name"]
+            n = md["id"]
             t = md["theme"]
             c = md["construct"]
 
