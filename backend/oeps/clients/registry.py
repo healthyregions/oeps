@@ -286,7 +286,7 @@ class Registry:
             v["years"] = list(set([i["year"] for i in sources]))
 
         for i in variables.values():
-            if i["metadata"].replace(".json", "") not in self.metadata:
+            if i["metadata"] not in self.metadata:
                 print(
                     f"WARNING: variable {i['name']} references unknown metadata {i['metadata']}"
                 )
@@ -411,7 +411,7 @@ class Registry:
                 matched = []
                 for field in fields:
                     metadata_id = field.get("metadata", "")
-                    metadata_id = metadata_id.replace(".json", "")
+                    metadata_id = metadata_id
                     if metadata_id != "":
                         if self.metadata[metadata_id]["theme"] == theme:
                             matched.append(field)
@@ -465,7 +465,7 @@ class Registry:
                     if v["analysis"]:
                         return "x"
                 elif attribute == "Theme":
-                    return self.metadata[v["metadata"].replace(".json", "")]["theme"]
+                    return self.metadata[v["metadata"]]["theme"]
                 elif attribute in variable.get("years", []):
                     return "x"
                 elif attribute == "Title":
@@ -473,7 +473,7 @@ class Registry:
                 elif attribute == "Variable":
                     return v.get("name")
                 elif attribute == "Metadata Location":
-                    return self.metadata[v["metadata"].replace(".json", "")]["url"]
+                    return self.metadata[v["metadata"]]["url"]
                 elif attribute == "Data Limitations":
                     return v.get("constraints")
                 elif attribute == "Source Long":
