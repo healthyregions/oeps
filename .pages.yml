@@ -71,9 +71,6 @@ content:
         description: "Link to metadata document that describes this variable."
         options:
           collection: metadata
-          search: id
-          value: "{id}"
-          label: "{id}"
       - name: longitudinal
         type: boolean
         description: "(use undetermined)"
