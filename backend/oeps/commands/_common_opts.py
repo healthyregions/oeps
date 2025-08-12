@@ -13,13 +13,11 @@ from oeps.config import (
 # CLI arguments. Using absolute paths (e.g. those in the config) would result in absolute paths
 # in the generated docs... this would be incorrect on every system besides the one that had
 # generated the docs.
-EXPLORER_ROOT_DIR_rel = os.path.relpath(
-    EXPLORER_ROOT_DIR, start=Path(__file__).parent.parent
-)
-TEMP_DIR_rel = os.path.relpath(TEMP_DIR, start=Path(__file__).parent.parent.parent)
-REGISTRY_DIR_rel = os.path.relpath(
-    REGISTRY_DIR, start=Path(__file__).parent.parent.parent
-)
+backend_dir = Path(__file__).parent.parent.parent
+
+EXPLORER_ROOT_DIR_rel = Path(os.path.relpath(EXPLORER_ROOT_DIR, start=backend_dir))
+TEMP_DIR_rel = Path(os.path.relpath(TEMP_DIR, start=backend_dir))
+REGISTRY_DIR_rel = Path(os.path.relpath(REGISTRY_DIR, start=backend_dir))
 
 
 def add_common_opts(*options):
