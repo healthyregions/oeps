@@ -2,7 +2,7 @@
 **Date Added**: July 23, 2021  
 **Author**: Rachel Vigil,  Wataru Morioka, Mahjabin Kabir Adrita  
 **Date Last Modified:** August 13, 2025  
-**Last Modified By:** Wataru Morioka, Mahjabin Kabir Adrita
+**Last Modified By:** Mahjabin Kabir Adrita
 
 ### Theme: 
 Environment  
