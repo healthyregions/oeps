@@ -76,9 +76,9 @@ County and state-level variables include the **count** of Census tracts and the 
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
 | Minimum distance to nearest MOUD (all types) | MoudMinDis | Euclidean distance (miles) to nearest MOUD (all types) | 2020, 2025 | Tract |
-| Distance to nearest OTP | OtpMinDis | Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles | 2019, 2025 | Tract |
-| Driving time to nearest OTP | OtpTmDr | Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes | 2019, 2025 | Tract |
-| Count of OTPs | OtpCntDr | Count of OTPs within a 30-minute driving threshold | 2019, 2025 | Tract |
+| Distance to nearest OTP | OtpMinDis | Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles | 2020, 2025 | Tract |
+| Driving time to nearest OTP | OtpTmDr | Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes | 2020, 2025 | Tract |
+| Count of OTPs | OtpCntDr | Count of OTPs within a 30-minute driving threshold | 2020, 2025 | Tract |
 | Minimum distance to buprenorphine | BupMinDis | Euclidean distance (miles) to nearest buprenorphine provider | 2020, 2025 | Tract |
 | Driving time to nearest buprenorphine | BupTmDr | Driving time (minutes) to nearest buprenorphine provider | 2020, 2025 | Tract |
 | Count of buprenorphine providers (drive) | BupCntDr30 | Count of methadone providers in 30 minute drive time threshold | 2020, 2025 | Tract |
@@ -113,9 +113,9 @@ County and state-level variables include the **count** of Census tracts and the 
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
 | Minimum distance to nearest MOUD (all types) | MoudMinDis | Average Euclidean distance (miles) to nearest MOUD (all types) | 2020, 2025 | Zip |
-| Distance to nearest OTP | OtpMinDis | Average Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles | 2019, 2025 | Zip |
-| Driving time to nearest OTP | OtpTmDr | Average Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes | 2019, 2025 | Zip |
-| Count of OTPs | OtpCntDr | Average Count of OTPs within a 30-minute driving threshold | 2019, 2025 | Zip |
+| Distance to nearest OTP | OtpMinDis | Average Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles | 2020, 2025 | Zip |
+| Driving time to nearest OTP | OtpTmDr | Average Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes | 2020, 2025 | Zip |
+| Count of OTPs | OtpCntDr | Average Count of OTPs within a 30-minute driving threshold | 2020, 2025 | Zip |
 | Minimum distance to buprenorphine | BupMinDis | Average Euclidean distance (miles) to nearest buprenorphine provider | 2020, 2025 | Zip |
 | Driving time to nearest buprenorphine | BupTmDr | Average Driving time (minutes) to nearest buprenorphine provider | 2020, 2025 | Zip |
 | Count of buprenorphine providers (drive) | BupCntDr30 | Average Count of methadone providers in 30 minute drive time threshold | 2020, 2025 | Zip |

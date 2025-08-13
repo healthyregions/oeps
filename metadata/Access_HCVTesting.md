@@ -8,10 +8,9 @@
 Environment  
 
 ### Data Location:  
-You can find the variables described in this document in the CSV files [here](../full_tables).  
+You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).  
 
 CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in `C_2000.csv`.  
-*Note: Every variable can be found in the **Latest** files.*
 
 ### Data Source(s) Description:  
 HCV Testing provider data was sourced from the [Substance Abuse and Mental Health Services Administration (SAMHSA)](https://www.samhsa.gov/) via its [Treatment Services Locator Tool](https://findtreatment.samhsa.gov/locator).  
@@ -62,18 +61,18 @@ County and state-level variables include:
 
 | Variable                          | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |----------------------------------|----------------------|-----------------------------------------------------------------------------|------------------|----------------|
-| Distance to nearest MH Provider  | HcvMinDis | Euclidean distance* from tract/zip centroid to nearest MH provider (miles) | 2025 | Tract, Zip     |
-| Driving time to nearest MH Provider | HcvTmDr | Driving time from origin to nearest MH provider (minutes)                  | 2025 | Tract, Zip     |
-| Count of MH Providers            | HcvCntDr | Number of MH providers within a 30-minute drive                             | 2025 | Tract, Zip     |
+| Distance to nearest HCV Provider  | HcvMinDis | Euclidean distance* from tract/zip centroid to nearest HCV testing provider (miles) | 2025 | Tract, Zip     |
+| Driving time to nearest HCV Provider | HcvTmDr | Driving time from origin to nearest HCV testing provider (minutes)                  | 2025 | Tract, Zip     |
+| Count of HCV Providers            | HcvCntDr | Number of HCV testing providers within a 30-minute drive                             | 2025 | Tract, Zip     |
 
 #### County and State
 
 | Variable                                   | Variable ID in .csv | Description                                                                     | Years Available | Spatial Scale |
 |-------------------------------------------|----------------------|----------------------------------------------------------------------------------|------------------|----------------|
 | Count of tracts                           | TotTracts | Total number of Census tracts in county/state                                   | 2025 | County, State  |
-| Count of tracts within 30-min driving range | HcvCtTmDr | Number of tracts with an MH provider within a 30-minute driving range           | 2025 | County, State  |
-| Average time drive to nearest MH provider | HcvAvTmDr | Mean driving time (minutes) from tracts to nearest MH provider                  | 2025 | County, State  |
-| Percent of tracts within 30-min driving range | HcvTmDrP | Percent of tracts within 30-minute drive to an MH provider                      | 2025 | County, State  |
+| Count of tracts within 30-min driving range | HcvCtTmDr | Number of tracts with an HCV testing provider within a 30-minute driving range           | 2025 | County, State  |
+| Average time drive to nearest HCV testing provider | HcvAvTmDr | Mean driving time (minutes) from tracts to nearest HCV testing provider                  | 2025 | County, State  |
+| Percent of tracts within 30-min driving range | HcvTmDrP | Percent of tracts within 30-minute drive to an HCV testing provider                      | 2025 | County, State  |
 
 ### Data Limitations:  
 *Euclidean or straight-line distance is a basic proxy for access. It does not account for real-world travel constraints.*  
