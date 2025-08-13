@@ -12,10 +12,10 @@ classes: {
 }
 title: |md
 
-  # Connecting themes, variables, tables, and geodata
+  # Connecting metadata, variables, tables, and geodata
 | {near: top-center}
 
-tc: Themes {
+tc: Metadata {
     class: container
     grid-rows: 3
     grid-gap: 50
@@ -33,22 +33,27 @@ g: Geodata Sources {
     grid-rows: 3
 }
 
-tc.Geography: {
+
+tc.Park_Cover: {
     shape: class
-    construct: Geographic Boundaries
-    "": Geographic Characteristics
+    theme: Geography
+    construct: Geographic Characteristics
+    proxy: Park Area
+    url: <link to Park_Cover.md>
 }
-tc.Social: {
+tc.Demographics: {
     shape: class
-    construct: Population
-    "": Age
-    " ": Race & Demographics
+    theme: Age & Demographic
+    construct: Spatial Access to MOUDs
+    proxy: Population, percentages, etc.
+    url: <link to Access_MOUDs.md>
 }
-tc.Environment: {
+tc.Access_MOUDs: {
     shape: class
-    construct: Access to MOUDs
-    "": Access to Health Centers
-    " ": Access to Hospitals
+    theme: Environment
+    construct: Spatial Access to MOUDs
+    proxy: Spatial access metrics...
+    url: <link to Access_MOUDs.md>
 }
 
 v.ParkArea: {
@@ -56,7 +61,7 @@ v.ParkArea: {
     name: ParkArea
     title: Park Area
     table_sources: s-2010
-    construct: Geographic Characteristics
+    metadata: Park_Cover
 }
 
 v.TotPop: {
@@ -67,7 +72,7 @@ v.TotPop: {
     "": s-2000
     " ": c-2010
     "  ": t-2010
-    construct: Population
+    metadata: Demographics
 }
 
 v.MetTmDr: {
@@ -75,7 +80,7 @@ v.MetTmDr: {
     name: MetTmDr
     title: Drive Time to Methadone Provider
     table_sources: t-2010
-    construct: Access to MOUDs
+    metadata: Access_MOUDs
 }
 
 t.s-2010: {
@@ -132,6 +137,6 @@ v.TotPop -> t.c-2010
 v.TotPop -> t.t-2010
 v.MetTmDr -> t.t-2010
 
-v.ParkArea -> tc.Geography
-v.TotPop -> tc.Social
-v.MetTmDr -> tc.Environment
+v.ParkArea -> tc.Park_Cover
+v.TotPop -> tc.Demographics
+v.MetTmDr -> tc.Access_MOUDs
