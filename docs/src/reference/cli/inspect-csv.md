@@ -25,7 +25,7 @@ Usage: inspect-csv [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x748371956cb0>
+    * Type: <click.types.Path object at 0x78f6f6142890>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 

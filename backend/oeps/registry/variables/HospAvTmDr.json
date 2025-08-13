@@ -1,0 +1,17 @@
+{
+  "title": "Avg. Driving Time to nearest Hospital",
+  "name": "HospAvTmDr",
+  "type": "number",
+  "example": "13.13",
+  "description": "Average driving time (minutes) across tracts in state to nearest hospital.",
+  "source": "CovidCareMap, 2020",
+  "source_long": "CovidCareMap, 2020",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Acesss_Hospitals_MinDistance.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "county-2020",
+    "state-2020"
+  ],
+  "metadata": "Access_Hospitals"
+}

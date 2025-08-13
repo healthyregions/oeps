@@ -4,7 +4,6 @@ import click
 import shutil
 import requests
 from tqdm import tqdm
-from glob import glob
 from pathlib import Path
 import random
 
@@ -64,18 +63,6 @@ def download_file(url, filepath, desc=None, progress_bar=False, no_cache: bool =
     return filepath
 
 
-def get_path_or_paths(path_input, glob_pattern="*"):
-    if os.path.isdir(path_input):
-        paths = glob(os.path.join(path_input, glob_pattern))
-    elif os.path.isfile(path_input):
-        paths = [path_input]
-    else:
-        print("invalid path:", path_input)
-        exit()
-
-    return paths
-
-
 def fetch_files(paths, out_dir, no_cache: bool = False):
     """Takes an input list of urls or local paths to fetch into the specified dir.
     Returns a list of paths to the new files.
@@ -87,14 +74,14 @@ def fetch_files(paths, out_dir, no_cache: bool = False):
 
     local_paths = []
     for path in paths:
-        path = Path(path)
-        out_path = Path(out_dir, path.name)
+        filename = Path(path).name
+        out_path = Path(out_dir, filename)
         if not out_path.exists() or no_cache:
             print(f"  get: {path} --> {out_path}")
             if path.startswith("http"):
                 response = requests.get(path, stream=True)
                 if response.status_code == 200:
-                    with open(Path(out_dir, path.name), mode="wb") as file:
+                    with open(out_path, mode="wb") as file:
                         for chunk in response.iter_content(chunk_size=10 * 1024):
                             file.write(chunk)
                 else:

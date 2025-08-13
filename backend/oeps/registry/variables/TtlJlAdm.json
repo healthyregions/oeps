@@ -1,0 +1,16 @@
+{
+  "title": "Total Jail Admissions Count, ASJ/COJ Data",
+  "name": "TtlJlAdm",
+  "type": "number",
+  "example": "72266",
+  "description": "Total Jail Admissions Count, ASJ/COJ Data",
+  "source": "Vera Institute of Justice, 2017",
+  "source_long": "Vera Institute of Justice, 2017, https://github.com/vera-institute/incarceration_trends",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Jail%20variables_2017.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "county-2017"
+  ],
+  "metadata": "Jail_Variables"
+}

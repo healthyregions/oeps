@@ -1,0 +1,19 @@
+{
+  "title": "Land Area (Square Miles)",
+  "name": "AreaSqMi",
+  "type": "number",
+  "example": "66452.74",
+  "description": "Land area of geography in sq miles",
+  "source": "InfoGroup, 2018",
+  "source_long": "InfoGroup's 2018 Business and Consumer Historical Datafile",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Alcohol_Outlet_Density.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "county-2018",
+    "state-2018",
+    "tract-2018",
+    "zcta-2018"
+  ],
+  "metadata": "Alcohol_Outlet_Density"
+}

@@ -1,0 +1,7 @@
+{
+  "id": "HepC",
+  "theme": "Outcome",
+  "construct": "Hepatitis C Rates",
+  "proxy": "Rates of Hep C cases by age and demographics",
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/HepC.md"
+}

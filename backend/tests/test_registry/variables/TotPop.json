@@ -1,0 +1,20 @@
+{
+    "title": "Total Population",
+    "name": "TotPop",
+    "type": "integer",
+    "example": "1632480",
+    "description": "Total population",
+    "source": "ACS 2018, 5-Year; Census 2010; IPUMS NHGIS",
+    "source_long": "American Community Survey 2014-2018 5 Year Estimate; 2010 Decennial Census; Integrated Public Use Microdata Series National Historic Geographic Information System",
+    "oeps_v1_table": null,
+    "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Age_2018.md",
+    "longitudinal": true,
+    "analysis": false,
+    "metadata": "Demographics.json",
+    "table_sources": [
+      "t-latest",
+      "s-2000",
+      "s-latest",
+      "c-2010"
+    ]
+}

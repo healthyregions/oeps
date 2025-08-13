@@ -1,0 +1,16 @@
+{
+  "title": "Driving Time to Buprenorphine Provider (driving time across all tracts)",
+  "name": "AvBupTime",
+  "type": "number",
+  "example": "6.9",
+  "description": "Average driving time (minutes) across tracts in state to nearest buprenorphine provider.",
+  "source": "SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020",
+  "source_long": "U.S. Substance Abuse and Mental Health Services Administration Treatment Locator, 2019; Vivitrol, 2020; Open Source Routing Machine, 200",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "state-2020"
+  ],
+  "metadata": "Access_MOUDs"
+}

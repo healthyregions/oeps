@@ -1,0 +1,28 @@
+{
+  "title": "Income Inequality (Gini Coefficient)",
+  "name": "GiniCoeff",
+  "type": "number",
+  "example": "0.46",
+  "description": "Income Inequality (Gini Coefficient)",
+  "source": "ACS 2018, 5-Year; ACS 2012, 5-Year",
+  "source_long": "American Community Survey 2014-2018 5 Year Estimates; American Community Survey 2008-2012 5-Year Estimates",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/ForeclosureRate.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "county-2010",
+    "county-2018",
+    "county-2020",
+    "county-2023",
+    "state-2010",
+    "state-2018",
+    "tract-2010",
+    "tract-2018",
+    "tract-2020",
+    "tract-2023",
+    "zcta-2018",
+    "zcta-2020",
+    "zcta-2023"
+  ],
+  "metadata": "Foreclosure_Rate"
+}

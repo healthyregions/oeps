@@ -1,0 +1,22 @@
+{
+  "title": "Laws authorizing medical marijuana use ",
+  "name": "MdMarijLaw",
+  "type": "boolean",
+  "example": "1",
+  "description": "Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (0=no, 1=yes)",
+  "source": "PDAPS, 2017",
+  "source_long": "Prescription Drug Abuse Policy System, Medical Marijuana Caregiver Rules, 2017",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/MedMarijLaw.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "state-2017",
+    "state-2018",
+    "state-2019",
+    "state-2020",
+    "state-2021",
+    "state-2022",
+    "state-2023"
+  ],
+  "metadata": "MedMarijLaw"
+}

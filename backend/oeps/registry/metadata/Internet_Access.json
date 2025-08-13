@@ -1,0 +1,7 @@
+{
+  "id": "Internet_Access",
+  "theme": "Economic",
+  "construct": "Internet Access",
+  "proxy": "Households without Internet Access %",
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Internet_Access.md"
+}

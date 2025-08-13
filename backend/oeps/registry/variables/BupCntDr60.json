@@ -1,0 +1,17 @@
+{
+  "title": "Count of buprenorphine providers (drive)",
+  "name": "BupCntDr60",
+  "type": "number",
+  "example": "121.0",
+  "description": "Count of buprenorphine providers in 60 minute drive time threshold",
+  "source": "SAMHSA",
+  "source_long": "The Substance Abuse and Mental Health Services Administration",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "tract-2025",
+    "zcta-2025"
+  ],
+  "metadata": "Access_MOUDs"
+}

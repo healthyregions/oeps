@@ -1,0 +1,7 @@
+{
+  "id": "Educational_Characteristics",
+  "theme": "Social",
+  "construct": "Educational Characteristics",
+  "proxy": "Population percentage with or without varying levels of educational attainment, further grouped by age",
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Educational_Characteristics.md"
+}

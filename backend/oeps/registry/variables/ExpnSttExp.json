@@ -1,0 +1,17 @@
+{
+  "title": "Expansion Medicaid State Spending",
+  "name": "ExpnSttExp",
+  "type": "integer",
+  "example": "174679300",
+  "description": "Expansion Group - State Spending",
+  "source": "KFF, 2018",
+  "source_long": "Kaiser Family Foundation, 2018",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/MedExp.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "state-2018",
+    "state-2023"
+  ],
+  "metadata": "MedExp"
+}

@@ -1,0 +1,18 @@
+{
+  "title": "Tracts with Naltrexone Provider within 30-min (biking)",
+  "name": "NaltCtTmBk",
+  "type": "integer",
+  "example": "287",
+  "description": "Number of tracts with naltrexone provider within a 30-min biking range",
+  "source": "SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020",
+  "source_long": "U.S. Substance Abuse and Mental Health Services Administration Treatment Locator, 2019; Vivitrol, 2020; Open Source Routing Machine, 200",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "county-2020",
+    "county-2025",
+    "state-2025"
+  ],
+  "metadata": "Access_MOUDs"
+}

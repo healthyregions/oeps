@@ -1,0 +1,19 @@
+{
+  "title": "Opioid Prescription Rate",
+  "name": "OpRxRt",
+  "type": "number",
+  "example": "39.5",
+  "description": "Opioid prescription rate",
+  "source": "HepVu, 2020",
+  "source_long": "HepVu, 2020",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/OpioidIndicators.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "county-2020",
+    "county-2022",
+    "state-2020",
+    "state-2022"
+  ],
+  "metadata": "OpioidIndicators"
+}

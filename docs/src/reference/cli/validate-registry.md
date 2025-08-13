@@ -15,7 +15,7 @@ Usage: validate-registry [OPTIONS]
 ## Options
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x770ed8c52380>
+    * Type: <click.types.Path object at 0x7fd5da65a830>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 

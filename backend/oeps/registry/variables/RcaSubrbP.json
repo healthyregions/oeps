@@ -1,0 +1,16 @@
+{
+  "title": "% Tracts Suburban (RUCA)",
+  "name": "RcaSubrbP",
+  "type": "number",
+  "example": "0",
+  "description": "Percent census tracts in the county classified as Suburban using RUCA codes",
+  "source": "USDA-ERS 2010 & ACS 2018 5-Year",
+  "source_long": "United States Department of Agriculture Economic Research Service, 2010; American Community Survey 2014-2018 5-Year Estimate",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Rural_Urban_Classification_County.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "county-2010"
+  ],
+  "metadata": "Rural_Urban_Classification_County"
+}

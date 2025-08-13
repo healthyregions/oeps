@@ -1,0 +1,17 @@
+{
+  "title": "Traditional Medicaid State Spending",
+  "name": "TradSttExp",
+  "type": "integer",
+  "example": "4349828600",
+  "description": "Traditional medicaid - state spending",
+  "source": "KFF, 2018",
+  "source_long": "Kaiser Family Foundation, 2018",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/MedExp.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "state-2018",
+    "state-2023"
+  ],
+  "metadata": "MedExp"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Social Vulnerability Index (SVI) 3",
+  "name": "SviTh3",
+  "type": "number",
+  "example": "0.2",
+  "description": "SVI Ranking, Theme 3: Minority Status & Language",
+  "source": "CDC, 2018",
+  "source_long": "Centers for Disease Control, 2018",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/SVI.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "county-2018",
+    "county-2020",
+    "county-2022",
+    "tract-2018",
+    "tract-2020",
+    "tract-2022",
+    "zcta-2018",
+    "zcta-2022"
+  ],
+  "metadata": "Social_Vulnerability_Indices"
+}
