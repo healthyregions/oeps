@@ -13,7 +13,7 @@ nav:
     - guides/generating-derived-documentation.md
   - Registry:
     - registry/index.md
-    - registry/themes-constructs.md
+    - registry/metadata.md
     - registry/variables.md
     - registry/table-sources.md
     - registry/geodata-sources.md
