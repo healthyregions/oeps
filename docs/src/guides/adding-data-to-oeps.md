@@ -137,32 +137,32 @@ This command will do two things:
 !!! tip
     See [table sources](../registry/table-sources.md) for a full explanation of table sources.
 
+### Getting started with PagesCMS
+
+Some elements of the registry can be directly edited through an online interface called PagesCMS. Here's how you can get started with this.
+
+1. Go to [app.pagescms.org/healthyregions/oeps/main](https://app.pagescms.org/healthyregions/oeps/main)
+2. Sign in with GitHub if needed
+3. Once logged in, you'll see `oeps` and `main` in the left-hand menu
+    - Click this button and go to > "Manage branches"
+4. Create a new branch with a descriptive name, `add_my_new_variable`
+    - You'll now see `oeps` and `add_my_new_variable` in the left-hand menu
+5. Perform the edits you need to do
+    - All work will be committed directly to your new branch.
+6. When you are ready, go to the actual GitHub repo, https://github.com/healthyregions/oeps/pulls, and create a new pull request into main from your branch.
+
 ### Create a new variable entry
 
-In `registry/variables.json` there is a single entry for each variable that has values for any geography level or any year within OEPS. Currently, adding new variables is a manual process, just directly edit the content of that file. A full variable definition looks like this:
+In `registry/variables` there are individual files for each variable with data in OEPS. Instead of editing these files directly, we can edit them through PagesCMS.
 
-```
-"TotPop": {
-    "title": "Total Population",
-    "name": "TotPop",
-    "type": "integer",
-    "example": "1632480",
-    "description": "Total population",
-    "constraints": "1980-2000 historic data was acquired from NHGIS and then interpolated to modern county boundaries through a population weighted interpolation using the tidycensus `interpolate_pw` function. For 1980, the underlying population weighting was county subdivisions, while for 1990 and 200 the underlying population weighting was tracts.",
-    "construct": "Population",
-    "source": "ACS 2018, 5-Year; Census 2010; IPUMS NHGIS",
-    "source_long": "American Community Survey 2014-2018 5 Year Estimate; 2010 Decennial Census; Integrated Public Use Microdata Series National Historic Geographic Information System",
-    "comments": "",
-    "metadata_doc_url": "https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md",
-    "table_sources": []
-}
-```
+See [getting started with PagesCMS](#getting-started-with-pagescms) to continue.
 
-Some notes on a few of these properties:
+Some data entry notes:
 
-- The top-level key and `name` for this variable must be identical, and must follow these rules:
+- `name` must follow these rules:
     - Follow abbreviation patterns we already use
-    - Follow [PascalCase](https://www.techopedia.com/definition/pascal-case): Use `TotPop`, don't use `tot_pop` or `totPop` or `tot-pop`
+    - Follow [PascalCase](https://pascal-case.com/)
+        - For example, use `TotPop`, not `tot_pop` or `totPop` or `tot-pop`
 - `type` must be one of:
     - `number` for any decimal number values
     - `integer` for any integer values
@@ -170,25 +170,33 @@ Some notes on a few of these properties:
     - `boolean` for true/false or yes/no values
     - `date` for date values
     - see [Frictionless field data types](https://specs.frictionlessdata.io/table-schema/#types-and-formats) for more info
-- `construct` must match the name of a construct in the `themes.json` file. If you are adding a variable that part of a new construct, then you must also [create a new construct](#create-a-new-theme-or-construct).
-- `table_sources` must start as an empty list, and will fill up with the names of table sources that hold values for this variable, as more and more data is merged into the system.
-
+- `table_sources` leave this blank, it should not be edited in PagesCMS.
 
 !!! tip
     See [variables](../registry/variables.md) for a full explanation of variables.
 
-### Create a new theme or construct
+### Create a new metadata entry
 
-OEPS is built on a conceptual framework that places different measures (or, "variables") into different themes and constructs. This grouping is defined in the `registry/themes.json` file, which lists "themes" at the top-level and then nests one or more constructs within each theme.
+In `registry/metadata` there are individual files for each metadata entry. Instead of editing these files directly, we can edit them through PagesCMS.
 
-To add a new construct or theme, just edit that file directly. Once you are finished, you'll need to regenerate the docs content for the OEPS explorer.
+!!! note
+    The actual metadata markdown files themselves are stored at the top of the main repo, in `/metadata`. In the future, we could further integrate them with the registry so that these files are also edited directly in PagesCMS.
+
+
+To add a new metadata entry, you should begin the process in GitHub by creating a new branch and added a new markdown file to in this directory: https://github.com/healthyregions/oeps/tree/main/metadata. Create your file based on https://github.com/healthyregions/oeps/tree/main/metadata/metadata-template.md.
+
+With your markdown file complete, you need to create an entry for it in PagesCMS. See [getting started with PagesCMS](#getting-started-with-pagescms), and be sure to use the branch you have already created (no need to make a new one).
+
+Once the new metadata entry has been created, you can also attach new variables to it if needed.
+
+After a pull request has been merged into the main branch, this command will need to be run to update the docs page in the OEPS Explorer:
 
 ```
 flask build-explorer-docs
 ```
 
 !!! tip
-    See [themes & constructs](../registry/themes-constructs.md) for a full explanation of themes and constructs.
+    See [metadata](../registry/metadata.md) for a full explanation of metadata entries.
 
 ### Merge data into OEPS
 

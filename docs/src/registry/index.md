@@ -4,7 +4,7 @@ The backend app includes a **registry** directory that holds a structured repres
 
 The registry is made up of these four components:
 
-- [themes & constructs](./themes-constructs.md)
+- [metadata](./metadata.md)
 - [variables](./variables.md)
 - [table sources](./table-sources.md)
 - [geodata sources](./geodata-sources.md)
@@ -49,7 +49,7 @@ While this is a very small example (currently we have over 300 variables), it sh
 
 The easiest way to browse all entries in the registry is to filter through the following CSV files that are stored in Github.
 
-- <a href="https://github.com/healthyregions/oeps/blob/main/docs/src/reference/registry/themes.csv" target="_blank">themes.csv &nearr;</a>
+- <a href="https://github.com/healthyregions/oeps/blob/main/docs/src/reference/registry/metadata.csv" target="_blank">metadata.csv &nearr;</a>
 - <a href="https://github.com/healthyregions/oeps/blob/main/docs/src/reference/registry/variables.csv" target="_blank">variables.csv &nearr;</a>
 - <a href="https://github.com/healthyregions/oeps/blob/main/docs/src/reference/registry/table_sources.csv" target="_blank">table_sources.csv &nearr;</a>
 - <a href="https://github.com/healthyregions/oeps/blob/main/docs/src/reference/registry/geodata_sources.csv" target="_blank">geodata_sources.csv &nearr;</a>
