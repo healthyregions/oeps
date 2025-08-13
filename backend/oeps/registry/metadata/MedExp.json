@@ -1,0 +1,7 @@
+{
+  "id": "MedExp",
+  "theme": "Policy",
+  "construct": "Medicaid Expenditure",
+  "proxy": "Medicaid spending",
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/MedExp.md"
+}

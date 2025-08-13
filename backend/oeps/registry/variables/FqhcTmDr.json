@@ -1,0 +1,17 @@
+{
+  "title": "Driving time (min) to nearest FQHC",
+  "name": "FqhcTmDr",
+  "type": "number",
+  "example": "19.16",
+  "description": "Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes",
+  "source": "US Covid Atlas via HRSA, 2020",
+  "source_long": "United States Covid Atlas via Health Resources and Services Adminsitration, 2020",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_FQHCs_MinDistance.md",
+  "longitudinal": false,
+  "analysis": true,
+  "table_sources": [
+    "tract-2020",
+    "zcta-2020"
+  ],
+  "metadata": "Access_FQHCs"
+}

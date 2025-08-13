@@ -1,0 +1,17 @@
+{
+    "title": "Driving Time (min) to nearest Methadone Provider",
+    "name": "MetTmDr",
+    "type": "number",
+    "example": "27.39",
+    "description": "Driving time (minutes) to nearest methadone provider",
+    "source": "SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020",
+    "source_long": "U.S. Substance Abuse and Mental Health Services Administration Treatment Locator, 2019; Vivitrol, 2020; Open Source Routing Machine, 200",
+    "oeps_v1_table": null,
+    "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md",
+    "longitudinal": false,
+    "analysis": true,
+    "metadata": "Access_MOUDs.json",
+    "table_sources": [
+      "t-latest"
+    ]
+  }

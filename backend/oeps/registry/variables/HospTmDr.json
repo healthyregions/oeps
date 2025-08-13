@@ -1,0 +1,17 @@
+{
+  "title": "Driving time (min) to nearest Hospital",
+  "name": "HospTmDr",
+  "type": "number",
+  "example": "0",
+  "description": "Driving time from tract/zip origin centroid to the nearest tract/zip hospital destination centroid, in minutes",
+  "source": "CovidCareMap, 2020",
+  "source_long": "CovidCareMap, 2020",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Acesss_Hospitals_MinDistance.md",
+  "longitudinal": false,
+  "analysis": true,
+  "table_sources": [
+    "tract-2020",
+    "zcta-2020"
+  ],
+  "metadata": "Access_Hospitals"
+}

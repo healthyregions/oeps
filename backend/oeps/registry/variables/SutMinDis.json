@@ -1,0 +1,17 @@
+{
+  "title": "Distance (mi) to Substance Use Treatment (SUT) facility",
+  "name": "SutMinDis",
+  "type": "number",
+  "example": "4.99",
+  "description": "Euclidean distance* from tract/zip centroid to nearest SUT service location, in miles",
+  "source": "SAMHSA, 2020",
+  "source_long": "U.S. Substance Abuse and Mental Health Services Administration Treatment Locator, 2020",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_SubstanceUseTreatment.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "tract-2020",
+    "zcta-2020"
+  ],
+  "metadata": "Access_SubstanceUseTreatment"
+}

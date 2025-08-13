@@ -1,0 +1,17 @@
+{
+  "title": "% Self-Report Misuse of Prescription Pain Medication (2020)",
+  "name": "PrMsuseP",
+  "type": "number",
+  "example": "4.15",
+  "description": "Percent of persons who self-report misusing prescription pain relief medication in 2020.",
+  "source": "HepVu, 2020",
+  "source_long": "HepVu, 2020",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/OpioidIndicators.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "state-2020",
+    "state-2022"
+  ],
+  "metadata": "OpioidIndicators"
+}

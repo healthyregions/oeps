@@ -1,0 +1,19 @@
+{
+  "title": "Corrections expenditures",
+  "name": "CrrctExp",
+  "type": "integer",
+  "example": "1897193",
+  "description": "Total expenditures on corrections system and operations",
+  "source": "State and Local Finance Data Finder",
+  "source_long": "State and Local Finance Data Finder",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/PublicExpenditures.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "state-2019",
+    "state-2020",
+    "state-2021",
+    "state-2022"
+  ],
+  "metadata": "PublicExpenditures"
+}

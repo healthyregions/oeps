@@ -1,0 +1,17 @@
+{
+  "title": "Count of FQHCs (30-min drive)",
+  "name": "FqhcCntDr",
+  "type": "integer",
+  "example": "17",
+  "description": "Count of FQHCs within a 30-minute driving threshold",
+  "source": "US Covid Atlas via HRSA, 2020",
+  "source_long": "United States Covid Atlas via Health Resources and Services Adminsitration, 2020",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_FQHCs_MinDistance.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "tract-2020",
+    "zcta-2020"
+  ],
+  "metadata": "Access_FQHCs"
+}

@@ -40,7 +40,7 @@ class Explorer:
         variables = {
             k: v
             for k, v in self.registry.variables.items()
-            if not self.registry.themes["Geography"] == v["construct"]
+            if k not in ["HEROP_ID", "GEOID"]
         }
         ds_combo_lookup = {}
         for k, v in variables.items():
@@ -96,8 +96,8 @@ class Explorer:
                 "variable": v["title"],
                 "numerator": variables_to_ds_combos[k],
                 "nProperty": k,
-                "theme": self.registry.theme_lookup[v["construct"]],
-                "metadataUrl": v.get("metadata_doc_url"),
+                "theme": self.registry.metadata.get(v.get("metadata", ""))["theme"],
+                "metadataUrl": self.registry.metadata[v["metadata"]]["url"],
             }
             for k, v in variables.items()
             if k in variables_to_ds_combos
@@ -105,20 +105,20 @@ class Explorer:
 
         # hacky method for creating the output geodata source list in descending order of
         # spatial resolution
-        out_sources = {
-            "sources": [
-                [i for i in geodata_lookup.values() if i["summary_level"] == "state"][
-                    0
-                ],
-                [i for i in geodata_lookup.values() if i["summary_level"] == "county"][
-                    0
-                ],
-                [i for i in geodata_lookup.values() if i["summary_level"] == "zcta"][0],
-                [i for i in geodata_lookup.values() if i["summary_level"] == "tract"][
-                    0
-                ],
-            ]
-        }
+        s_geodata = [
+            i for i in geodata_lookup.values() if i["summary_level"] == "state"
+        ]
+        c_geodata = [
+            i for i in geodata_lookup.values() if i["summary_level"] == "county"
+        ]
+        z_geodata = [i for i in geodata_lookup.values() if i["summary_level"] == "zcta"]
+        t_geodata = [
+            i for i in geodata_lookup.values() if i["summary_level"] == "tract"
+        ]
+        out_sources = {"sources": []}
+        for sorted_src_list in [s_geodata, c_geodata, z_geodata, t_geodata]:
+            if len(sorted_src_list) > 0:
+                out_sources["sources"].append(sorted_src_list[0])
 
         if upload:
             prefix = "explorer/csvs"
@@ -135,50 +135,51 @@ class Explorer:
 
     def build_docs_config(self):
         output = {}
-        for theme, constructs in self.registry.themes.items():
-            output[theme] = []
-            for construct in constructs:
-                geodata = set()
-                titles = set()
-                sources = set()
-                metadata_docs = set()
-                years = set()
-                for v in self.registry.variables.values():
-                    if v["construct"] == construct:
-                        for ts in v["table_sources"]:
-                            years.add(ts.split("-")[1])
-                            for p in [
-                                ("state", "State"),
-                                ("count", "County"),
-                                ("tract", "Tract"),
-                                ("zcta", "Zip"),
-                            ]:
-                                if (
-                                    p[0]
-                                    in self.registry.table_sources[ts]["geodata_source"]
-                                ):
-                                    geodata.add(p[1])
-                        sources.add(v["source"])
-                        titles.add(v["title"])
-                        md_url = v["metadata_doc_url"]
-                        md_name = md_url.split("/")[-1].rstrip(".md")
-                        metadata_docs.add(md_name)
+        for theme, constructs in self.registry.theme_tree.items():
+            output[theme] = {}
+            for construct, metadata_entries in constructs.items():
+                output[theme][construct] = []
+                for id in metadata_entries:
+                    metadata = self.registry.metadata[id]
+                    geodata = set()
+                    titles = set()
+                    sources = set()
+                    years = set()
+                    for v in self.registry.variables.values():
+                        if v["metadata"] == id:
+                            for ts in v["table_sources"]:
+                                years.add(ts.split("-")[1])
+                                for p in [
+                                    ("state", "State"),
+                                    ("count", "County"),
+                                    ("tract", "Tract"),
+                                    ("zcta", "Zip"),
+                                ]:
+                                    if (
+                                        p[0]
+                                        in self.registry.table_sources[ts][
+                                            "geodata_source"
+                                        ]
+                                    ):
+                                        geodata.add(p[1])
+                            sources.add(v["source"])
+                            titles.add(v["title"])
 
-                sorted_geodata = [
-                    i for i in ["Tract", "Zip", "County", "State"] if i in geodata
-                ]
-
-                output[theme].append(
-                    {
-                        "Variable Construct": construct,
-                        "Variable Proxy": self.registry.proxy_lookup[construct],
-                        "Variables": natsorted(list(titles)),
-                        "Source": "; ".join(sources),
-                        "Metadata": list(metadata_docs),
-                        "Spatial Scale": ", ".join(sorted_geodata),
-                        "Years": ", ".join(natsorted(years)),
-                    }
-                )
+                    sorted_geodata = [
+                        i for i in ["Tract", "Zip", "County", "State"] if i in geodata
+                    ]
+                    if len(titles) > 0:
+                        output[theme][construct].append(
+                            {
+                                "Variable Construct": construct,
+                                "Variable Proxy": metadata["proxy"],
+                                "Variables": natsorted(list(titles)),
+                                "Source": "; ".join(sources),
+                                "Metadata": id,
+                                "Spatial Scale": ", ".join(sorted_geodata),
+                                "Years": ", ".join(natsorted(years)),
+                            }
+                        )
 
         csv_downloads = {"state": [], "county": [], "zcta": [], "tract": []}
         for ts in self.registry.table_sources.values():

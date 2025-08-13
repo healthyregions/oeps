@@ -1,0 +1,16 @@
+{
+  "title": "Greenspace Coverage",
+  "name": "Cover",
+  "type": "number",
+  "example": "8.76",
+  "description": "Percent of state covered by park or green space",
+  "source": "OSM",
+  "source_long": "OpenStreetMap",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Park_Cover.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "state-2022"
+  ],
+  "metadata": "Park_Cover"
+}

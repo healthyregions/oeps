@@ -1,0 +1,19 @@
+{
+  "title": "% Tracts with Opioid Treatment Program (OTP) (30-min drive)",
+  "name": "OtpTmDrP",
+  "type": "number",
+  "example": "0.75",
+  "description": "Percent of tracts within a 30-minute drive time of an opioid treatment program.",
+  "source": "SAMSHA, 2021",
+  "source_long": "U.S. Substance Abuse and Mental Health Services Administration Treatment Locator, 2021",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_OpioidUseTreatment.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "county-2021",
+    "county-2025",
+    "state-2021",
+    "state-2025"
+  ],
+  "metadata": "Access_MOUDs"
+}

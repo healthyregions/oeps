@@ -1,0 +1,17 @@
+{
+  "title": "% tracts with Pharmacy (30-min drive)",
+  "name": "RxTmDrP",
+  "type": "number",
+  "example": "0.96",
+  "description": "Percent of tracts with pharmacy within a 30-min driving range",
+  "source": "InfoGroup, 2019",
+  "source_long": "InfoGroup, 2019",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Pharmacies_MinDistance.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "county-2019",
+    "state-2019"
+  ],
+  "metadata": "Access_Pharmacies"
+}

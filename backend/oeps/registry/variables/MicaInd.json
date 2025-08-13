@@ -1,0 +1,16 @@
+{
+  "title": "Mixed Immigrant Cohesion and Accesibility (MICA) Index",
+  "name": "MicaInd",
+  "type": "number",
+  "example": "0.59",
+  "description": "Raw Mixed Immigrant Cohesion and Accessibility (MICA) Index (https://sdohatlas.github.io/)",
+  "source": "GeoDa Data and Lab; SDOH Atlas",
+  "source_long": "GeoDa Data and Lab; Spatial Deterimants of Health Atlas",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/SDOH_2014.md",
+  "longitudinal": false,
+  "analysis": true,
+  "table_sources": [
+    "tract-2014"
+  ],
+  "metadata": "SDOH_Indices"
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Distance (mi) to nearest Pharmacy",
+  "name": "RxMinDis",
+  "type": "number",
+  "example": "0.84",
+  "description": "Euclidean distance* from tract/zip centroid to nearest pharmacy, in miles",
+  "source": "InfoGroup, 2019",
+  "source_long": "InfoGroup, 2019",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Pharmacies_MinDistance.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "tract-2019",
+    "zcta-2019"
+  ],
+  "metadata": "Access_Pharmacies"
+}

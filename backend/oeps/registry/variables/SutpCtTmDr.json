@@ -1,0 +1,17 @@
+{
+  "title": "Tracts with Substance Use Treatment (SUT) program (30-min drive)",
+  "name": "SutpCtTmDr",
+  "type": "integer",
+  "example": "1364",
+  "description": "Number of tracts with Substance Use Treatment within a 30-min driving range.",
+  "source": "SAMHSA, 2020",
+  "source_long": "U.S. Substance Abuse and Mental Health Services Administration Treatment Locator, 2020",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_SubstanceUseTreatment.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "county-2020",
+    "state-2020"
+  ],
+  "metadata": "Access_SubstanceUseTreatment"
+}

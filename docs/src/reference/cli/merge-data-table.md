@@ -50,7 +50,7 @@ Usage: merge-data-table [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x73480955aad0>
+    * Type: <click.types.Path object at 0x7dd9a03de800>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 

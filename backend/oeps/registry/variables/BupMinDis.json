@@ -1,0 +1,19 @@
+{
+  "title": "Distance (mi) to nearest Buprenorphine Provider",
+  "name": "BupMinDis",
+  "type": "number",
+  "example": "0.81",
+  "description": "Euclidean distance (miles) to nearest buprenorphine provider",
+  "source": "SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020",
+  "source_long": "U.S. Substance Abuse and Mental Health Services Administration Treatment Locator, 2019; Vivitrol, 2020; Open Source Routing Machine, 200",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "tract-2020",
+    "tract-2025",
+    "zcta-2020",
+    "zcta-2025"
+  ],
+  "metadata": "Access_MOUDs"
+}

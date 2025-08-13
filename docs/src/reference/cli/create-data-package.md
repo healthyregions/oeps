@@ -24,7 +24,7 @@ Usage: create-data-package [OPTIONS]
 ## Options
 
 * `destination`:
-    * Type: <click.types.Path object at 0x7f6e3ff36290>
+    * Type: <click.types.Path object at 0x714f4c1e6e30>
     * Default: `.temp/data-packages`
     * Usage: `--destination
 -d`
@@ -88,7 +88,7 @@ Usage: create-data-package [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f6e40452b00>
+    * Type: <click.types.Path object at 0x714f4c5ee650>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 

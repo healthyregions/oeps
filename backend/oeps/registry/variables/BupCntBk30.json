@@ -1,0 +1,19 @@
+{
+  "title": "Count of Buprenorphine Providers (30-min bike)",
+  "name": "BupCntBk30",
+  "type": "integer",
+  "example": "3",
+  "description": "Count of buprenorphine providers in 30 minute biking time threshold",
+  "source": "SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020",
+  "source_long": "U.S. Substance Abuse and Mental Health Services Administration Treatment Locator, 2019; Vivitrol, 2020; Open Source Routing Machine, 200",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "tract-2020",
+    "tract-2025",
+    "zcta-2020",
+    "zcta-2025"
+  ],
+  "metadata": "Access_MOUDs"
+}

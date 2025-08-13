@@ -1,0 +1,18 @@
+{
+  "title": "Foreclosure & Delinquency Count",
+  "name": "ForDqTot",
+  "type": "number",
+  "example": "48.09",
+  "description": "Estimated number of mortgages to start foreclosure process or be seriously delinquent during the 2008 Recession",
+  "source": "HUD, 2018",
+  "source_long": "U.S. Department of Housing and Urban Development Neighborhood Stabilization Program",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/ForeclosureRate.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "county-2018",
+    "state-2018",
+    "tract-2018"
+  ],
+  "metadata": "Foreclosure_Rate"
+}

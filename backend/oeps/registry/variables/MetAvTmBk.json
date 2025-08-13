@@ -1,0 +1,18 @@
+{
+  "title": "Biking Time (min) to Nearest Methadone Provider",
+  "name": "MetAvTmBk",
+  "type": "number",
+  "example": "6.32958333333333",
+  "description": "Average biking time (minutes) across tracts in county to nearest methadone provider",
+  "source": "SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020",
+  "source_long": "U.S. Substance Abuse and Mental Health Services Administration Treatment Locator, 2019; Vivitrol, 2020; Open Source Routing Machine, 200",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "county-2020",
+    "county-2025",
+    "state-2025"
+  ],
+  "metadata": "Access_MOUDs"
+}

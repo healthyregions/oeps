@@ -1,0 +1,19 @@
+{
+  "title": "NDVI Average",
+  "name": "Ndvi",
+  "type": "number",
+  "example": "0.06",
+  "description": "Average normalized difference vegetation index, a measure of greenness used to determine the amount of vegetation in an area, value from all pixel values in each Census tract",
+  "source": "Sentinel-2 MSI, 2018",
+  "source_long": "Sentinel 2 MSI: MultiSpectral Instrument Level-1 C",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/NDVI.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "county-2018",
+    "state-2018",
+    "tract-2018",
+    "zcta-2018"
+  ],
+  "metadata": "Greenspace_Measures"
+}

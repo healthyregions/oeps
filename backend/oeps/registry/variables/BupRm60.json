@@ -1,0 +1,16 @@
+{
+  "title": "Buprenorphine access 60 minutes (RAAM)",
+  "name": "BupRm60",
+  "type": "number",
+  "example": "1.232",
+  "description": "Buprenorphine access 60 minutes (RAAM)",
+  "source": "",
+  "source_long": "",
+  "metadata_doc_url": "",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "tract-2020"
+  ],
+  "metadata": "Access_MOUDs"
+}

@@ -1,0 +1,18 @@
+{
+  "title": "Population: Age 45-54",
+  "name": "Age45_54",
+  "type": "integer",
+  "example": "105",
+  "description": "Total population between age 45-54",
+  "source": "IPUMS NHGIS",
+  "source_long": "Integrated Public Use Microdata Series National Historic Geographic Information System",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Demographics.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "county-1980",
+    "state-1980",
+    "tract-1980"
+  ],
+  "metadata": "Demographics"
+}

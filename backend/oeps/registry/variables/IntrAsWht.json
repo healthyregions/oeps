@@ -1,0 +1,18 @@
+{
+  "title": "Segregation: Interaction (Asian)",
+  "name": "IntrAsWht",
+  "type": "number",
+  "example": "0.75",
+  "description": "Area (in square meters) of park or green space in a state).",
+  "source": "ACS 2018, 5-Year",
+  "source_long": "American Community Survey 2014-2018 5 Year Estimates",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Residential_Seg_Indices.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "county-2018",
+    "state-2018",
+    "zcta-2018"
+  ],
+  "metadata": "Residential_Segregation"
+}

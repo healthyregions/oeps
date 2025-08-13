@@ -1,0 +1,25 @@
+{
+  "title": "% Nonrelatives in Family Households",
+  "name": "NonRelFhhP",
+  "type": "number",
+  "example": "3.35",
+  "description": "Percent of people living in family households that are not related to family",
+  "source": "ACS 2018, 5-Year",
+  "source_long": "American Community Survey 2014-2018 5 Year Estimates",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/HouseholdType.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "county-2018",
+    "county-2020",
+    "county-2023",
+    "state-2018",
+    "tract-2018",
+    "tract-2020",
+    "tract-2023",
+    "zcta-2018",
+    "zcta-2020",
+    "zcta-2023"
+  ],
+  "metadata": "HouseholdType"
+}

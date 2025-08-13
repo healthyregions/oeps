@@ -1,0 +1,17 @@
+{
+  "title": "Count of Hospitals (30-min drive)",
+  "name": "HospCntDr",
+  "type": "integer",
+  "example": "6",
+  "description": "Count of hospitals within a 30-minute driving threshold",
+  "source": "CovidCareMap, 2020",
+  "source_long": "CovidCareMap, 2020",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Acesss_Hospitals_MinDistance.md",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "tract-2020",
+    "zcta-2020"
+  ],
+  "metadata": "Access_Hospitals"
+}
