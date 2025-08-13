@@ -84,9 +84,11 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#create-a-new-table-source">Create a new table source</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getting-started-with-pagescms">Getting started with PagesCMS</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#create-a-new-variable-entry">Create a new variable entry</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#create-a-new-theme-or-construct">Create a new theme or construct</a>
+    <li class="toctree-l3"><a class="reference internal" href="#create-a-new-metadata-entry">Create a new metadata entry</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#merge-data-into-oeps">Merge data into OEPS</a>
     </li>
@@ -105,7 +107,7 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../registry/">Overview</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../registry/themes-constructs/">Themes &amp; Constructs</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../registry/metadata/">Metadata</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../registry/variables/">Variables</a>
                   </li>
@@ -181,8 +183,9 @@
 <li><a href="#workflow">Workflow</a><ul>
 <li><a href="#create-a-new-geodata-source">Create a new geodata source</a></li>
 <li><a href="#create-a-new-table-source">Create a new table source</a></li>
+<li><a href="#getting-started-with-pagescms">Getting started with PagesCMS</a></li>
 <li><a href="#create-a-new-variable-entry">Create a new variable entry</a></li>
-<li><a href="#create-a-new-theme-or-construct">Create a new theme or construct</a></li>
+<li><a href="#create-a-new-metadata-entry">Create a new metadata entry</a></li>
 <li><a href="#merge-data-into-oeps">Merge data into OEPS</a></li>
 </ul>
 </li>
@@ -323,28 +326,36 @@
 <p class="admonition-title">Tip</p>
 <p>See <a href="../../registry/table-sources/">table sources</a> for a full explanation of table sources.</p>
 </div>
+<h3 id="getting-started-with-pagescms">Getting started with PagesCMS</h3>
+<p>Some elements of the registry can be directly edited through an online interface called PagesCMS. Here's how you can get started with this.</p>
+<ol>
+<li>Go to <a href="https://app.pagescms.org/healthyregions/oeps/main">app.pagescms.org/healthyregions/oeps/main</a></li>
+<li>Sign in with GitHub if needed</li>
+<li>Once logged in, you'll see <code>oeps</code> and <code>main</code> in the left-hand menu<ul>
+<li>Click this button and go to &gt; "Manage branches"</li>
+</ul>
+</li>
+<li>Create a new branch with a descriptive name, <code>add_my_new_variable</code><ul>
+<li>You'll now see <code>oeps</code> and <code>add_my_new_variable</code> in the left-hand menu</li>
+</ul>
+</li>
+<li>Perform the edits you need to do<ul>
+<li>All work will be committed directly to your new branch.</li>
+</ul>
+</li>
+<li>When you are ready, go to the actual GitHub repo, https://github.com/healthyregions/oeps/pulls, and create a new pull request into main from your branch.</li>
+</ol>
 <h3 id="create-a-new-variable-entry">Create a new variable entry</h3>
-<p>In <code>registry/variables.json</code> there is a single entry for each variable that has values for any geography level or any year within OEPS. Currently, adding new variables is a manual process, just directly edit the content of that file. A full variable definition looks like this:</p>
-<pre><code>&quot;TotPop&quot;: {
-    &quot;title&quot;: &quot;Total Population&quot;,
-    &quot;name&quot;: &quot;TotPop&quot;,
-    &quot;type&quot;: &quot;integer&quot;,
-    &quot;example&quot;: &quot;1632480&quot;,
-    &quot;description&quot;: &quot;Total population&quot;,
-    &quot;constraints&quot;: &quot;1980-2000 historic data was acquired from NHGIS and then interpolated to modern county boundaries through a population weighted interpolation using the tidycensus `interpolate_pw` function. For 1980, the underlying population weighting was county subdivisions, while for 1990 and 200 the underlying population weighting was tracts.&quot;,
-    &quot;construct&quot;: &quot;Population&quot;,
-    &quot;source&quot;: &quot;ACS 2018, 5-Year; Census 2010; IPUMS NHGIS&quot;,
-    &quot;source_long&quot;: &quot;American Community Survey 2014-2018 5 Year Estimate; 2010 Decennial Census; Integrated Public Use Microdata Series National Historic Geographic Information System&quot;,
-    &quot;comments&quot;: &quot;&quot;,
-    &quot;metadata_doc_url&quot;: &quot;https://github.com/GeoDaCenter/opioid-policy-scan/blob/main/data_final/metadata/Age_2018.md&quot;,
-    &quot;table_sources&quot;: []
-}
-</code></pre>
-<p>Some notes on a few of these properties:</p>
+<p>In <code>registry/variables</code> there are individual files for each variable with data in OEPS. Instead of editing these files directly, we can edit them through PagesCMS.</p>
+<p>See <a href="#getting-started-with-pagescms">getting started with PagesCMS</a> to continue.</p>
+<p>Some data entry notes:</p>
 <ul>
-<li>The top-level key and <code>name</code> for this variable must be identical, and must follow these rules:<ul>
+<li><code>name</code> must follow these rules:<ul>
 <li>Follow abbreviation patterns we already use</li>
-<li>Follow <a href="https://www.techopedia.com/definition/pascal-case">PascalCase</a>: Use <code>TotPop</code>, don't use <code>tot_pop</code> or <code>totPop</code> or <code>tot-pop</code></li>
+<li>Follow <a href="https://pascal-case.com/">PascalCase</a><ul>
+<li>For example, use <code>TotPop</code>, not <code>tot_pop</code> or <code>totPop</code> or <code>tot-pop</code></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><code>type</code> must be one of:<ul>
@@ -356,21 +367,27 @@
 <li>see <a href="https://specs.frictionlessdata.io/table-schema/#types-and-formats">Frictionless field data types</a> for more info</li>
 </ul>
 </li>
-<li><code>construct</code> must match the name of a construct in the <code>themes.json</code> file. If you are adding a variable that part of a new construct, then you must also <a href="#create-a-new-theme-or-construct">create a new construct</a>.</li>
-<li><code>table_sources</code> must start as an empty list, and will fill up with the names of table sources that hold values for this variable, as more and more data is merged into the system.</li>
+<li><code>table_sources</code> leave this blank, it should not be edited in PagesCMS.</li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>See <a href="../../registry/variables/">variables</a> for a full explanation of variables.</p>
 </div>
-<h3 id="create-a-new-theme-or-construct">Create a new theme or construct</h3>
-<p>OEPS is built on a conceptual framework that places different measures (or, "variables") into different themes and constructs. This grouping is defined in the <code>registry/themes.json</code> file, which lists "themes" at the top-level and then nests one or more constructs within each theme.</p>
-<p>To add a new construct or theme, just edit that file directly. Once you are finished, you'll need to regenerate the docs content for the OEPS explorer.</p>
+<h3 id="create-a-new-metadata-entry">Create a new metadata entry</h3>
+<p>In <code>registry/metadata</code> there are individual files for each metadata entry. Instead of editing these files directly, we can edit them through PagesCMS.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The actual metadata markdown files themselves are stored at the top of the main repo, in <code>/metadata</code>. In the future, we could further integrate them with the registry so that these files are also edited directly in PagesCMS.</p>
+</div>
+<p>To add a new metadata entry, you should begin the process in GitHub by creating a new branch and added a new markdown file to in this directory: https://github.com/healthyregions/oeps/tree/main/metadata. Create your file based on https://github.com/healthyregions/oeps/tree/main/metadata/metadata-template.md.</p>
+<p>With your markdown file complete, you need to create an entry for it in PagesCMS. See <a href="#getting-started-with-pagescms">getting started with PagesCMS</a>, and be sure to use the branch you have already created (no need to make a new one).</p>
+<p>Once the new metadata entry has been created, you can also attach new variables to it if needed.</p>
+<p>After a pull request has been merged into the main branch, this command will need to be run to update the docs page in the OEPS Explorer:</p>
 <pre><code>flask build-explorer-docs
 </code></pre>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>See <a href="../../registry/themes-constructs/">themes &amp; constructs</a> for a full explanation of themes and constructs.</p>
+<p>See <a href="../../registry/metadata/">metadata</a> for a full explanation of metadata entries.</p>
 </div>
 <h3 id="merge-data-into-oeps">Merge data into OEPS</h3>
 <p>Once both the incoming data and the registry have been prepared, you can merge in an external CSV with this command, using a new set of county-level 2021 data as an example.</p>
