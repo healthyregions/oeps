@@ -1,7 +1,7 @@
 **Meta Data Name**: Access to Opioid Treatment Programs (OTP)  
 **Date Added**: July 23, 2021  
-**Author**: Marynia Kolak, Rachel Vigil, Mahjabin Kabir Adrita, Wataru Morioka 
-**Date Last Modified**: August 5, 2025 
+**Author**: Marynia Kolak, Rachel Vigil, Mahjabin Kabir Adrita, Wataru Morioka  
+**Date Last Modified**: August 5, 2025  
 **Last Modified By**: Marynia Kolak
 
 ### Theme: 
