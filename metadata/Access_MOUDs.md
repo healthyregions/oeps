@@ -2,8 +2,8 @@
 **Date Added**: February 1, 2021  
 **Author**: Marynia Kolak, Mahjabin Kabir Adrita, Wataru Morioka, Susan Paykin
 
-**Date Last Modified**: August 5, 2025  
-**Last Modified By**: Marynia Kolak
+**Date Last Modified**: August 13, 2025  
+**Last Modified By**: Mahjabin Kabir Adrita
 
 ### Theme: 
 Environment  
@@ -29,11 +29,12 @@ Naltrexone provider data from SAMHSA in 2019 was supplemented by provider data f
 
 The following was extracted in May 2025 from SAMSHA’s Treatment Locator Service:
 
- - **Buprenorphine**: All prescribers listed. 
+ - **Buprenorphine**: All prescribers listed.
+ - **Telehealth**: All providers offering buprenorphine treatment via "telemedicine/telehealth" services.
  - **Methadone**: Methadone: All providers tagged as providing “methadone.” The term methadone maintenance was no longer visible as a feature in the locator service.
  - **OTP**: All providers tagged as “opioid treatment providers.”
  - **Naltrexone**: All providers tagged as providing “naltrexone.”
- 
+
  For Opioid Treatment Programs, measures for all years were extracted from the U.S. Substance Abuse and Mental Health Services Administration (SAMHSA) [Opioid Treatment Program (OTP) Directory](https://dpt2.samhsa.gov/treatment/directory.aspx). The OTPs represented in this set are those certified, either fully or provisionally by SAMHSA. Certification is required for MOUD, but these programs can offer other types of treatment, including counseling and other behavioral therapies. Raw data can be found [here](https://dpt2.samhsa.gov/treatment/directory.aspx) and more information can be found [here](https://www.samhsa.gov/medication-assisted-treatment/become-accredited-opioid-treatment-program).
 
 
@@ -106,8 +107,14 @@ County and state-level variables include the **count** of Census tracts and the 
 | Biking time to nearest naltrexone | NalTmBk | Biking time (minutes) to nearest naltrexone provider | 2020, 2025  | Tract |
 | Count of naltrexone providers (bike) | NalCntBk60 | Count of naltrexone providers in 60 minute biking time threshold | 2020, 2025 | Tract |
 | Count of naltrexone providers (bike) | NalCntBk30 | Count of naltrexone providers in 30 minute biking time threshold | 2020, 2025 | Tract |
-
-
+| Minimum distance to telehealth buprenorphine provider | TlBupMinDis | Euclidean distance (in miles) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services | 2025 | Tract |
+| Driving time to nearest telehealth buprenorphine provider | TlBupTmDr | Estimated driving time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services | 2025 | Tract |
+| Count of telehealth buprenorphine providers within 60-minute drive | TlBupCntDr60 | Total number of providers offering buprenorphine treatment via telemedicine/telehealth located within a 60-minute driving time threshold | 2025 | Tract |
+| Count of telehealth buprenorphine providers within 30-minute drive | TlBupCntDr30 | Total number of providers offering buprenorphine treatment via telemedicine/telehealth located within a 30-minute drive-time threshold | 2025 | Tract |
+| Walking time to nearest telehealth buprenorphine provider | TlBupTmWk | Estimated walking time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services | 2025 | Tract |
+| Count of telehealth buprenorphine providers within 30-minute walk | TlBupCntWk30 | Total number of providers offering buprenorphine treatment via telemedicine/telehealth located within a 30-minute walking time threshold | 2025 | Tract |
+| Biking time to nearest telehealth buprenorphine provider | TlBupTmBk | Estimated biking time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services | 2025 | Tract |
+| Count of telehealth buprenorphine providers within 30-minute bike ride | TlBupCntBk30 | Total number of providers offering buprenorphine treatment via telemedicine/telehealth located within a 30-minute biking time threshold | 2025 | Tract |
 
 #### ZIP Code Tabulation Area
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
@@ -143,6 +150,14 @@ County and state-level variables include the **count** of Census tracts and the 
 | Biking time to nearest naltrexone | NalTmBk | Average Biking time (minutes) to nearest naltrexone provider | 2020, 2025 | Zip |
 | Count of naltrexone providers (bike) | NalCntBk60 | Average Count of naltrexone providers in 60 minute biking time threshold | 2020, 2025 | Zip |
 | Count of naltrexone providers (bike) | NalCntBk30 | Average Count of naltrexone providers in 30 minute biking time threshold | 2020, 2025 | Zip |
+| Minimum distance to telehealth buprenorphine provider | TlBupMinDis | Euclidean distance (in miles) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services | 2025 | Zip |
+| Driving time to nearest telehealth buprenorphine provider | TlBupTmDr | Estimated driving time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services | 2025 | Zip |
+| Count of telehealth buprenorphine providers within 60-minute drive | TlBupCntDr60 | Total number of providers offering buprenorphine treatment via telemedicine/telehealth located within a 60-minute driving time threshold | 2025 | Zip |
+| Count of telehealth buprenorphine providers within 30-minute drive | TlBupCntDr30 | Total number of providers offering buprenorphine treatment via telemedicine/telehealth located within a 30-minute drive-time threshold | 2025 | Zip |
+| Walking time to nearest telehealth buprenorphine provider | TlBupTmWk | Estimated walking time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services | 2025 | Zip |
+| Count of telehealth buprenorphine providers within 30-minute walk | TlBupCntWk30 | Total number of providers offering buprenorphine treatment via telemedicine/telehealth located within a 30-minute walking time threshold | 2025 | Zip |
+| Biking time to nearest telehealth buprenorphine provider | TlBupTmBk | Estimated biking time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services | 2025 | Zip |
+| Count of telehealth buprenorphine providers within 30-minute bike ride | TlBupCntBk30 | Total number of providers offering buprenorphine treatment via telemedicine/telehealth located within a 30-minute biking time threshold | 2025 | Zip |
 
 #### County and State
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
@@ -175,6 +190,17 @@ County and state-level variables include the **count** of Census tracts and the 
 | Percent of tracts within 30-min naltrexone driving range | NalTmDrP | Percent of tracts with naltrexone provider within a 30-min driving range | 2020, 2025 | County, State |
 | Percent of tracts within 30-min naltrexone biking range | NalTmBkP | Percent of tracts with naltrexone provider within a 30-min biking range | 2020, 2025 | County, State |
 | Percent of tracts within 30-min naltrexone walking range | NalTmWkP | Percent of tracts with naltrexone provider within a 30-min walking range | 2020, 2025 | County, State |
+| Count of tracts within 30-min telehealth buprenorphine driving range | TlBupCtTmDr30 | Number of tracts with telehealth buprenorphine provider within a 30-min driving range | 2025 | County, State |
+| Count of tracts within 60-min telehealth buprenorphine driving range | TlBupCtTmDr60 | Number of tracts with telehealth buprenorphine provider within a 60-min driving range | 2025 | County, State |
+| Count of tracts within 30-min telehealth buprenorphine biking range | TlBupCtTmBk30 | Number of tracts with telehealth buprenorphine provider within a 30-min biking range | 2025 | County, State |
+| Count of tracts within 30-min telehealth buprenorphine walking range | TlBupCtTmWk30 | Number of tracts with telehealth buprenorphine provider within a 30-min walking range | 2025 | County, State |
+| Average driving time to nearest telehealth buprenorphine provider | TlBupAvTmDr | Average driving time (minutes) across tracts in county/state to nearest telehealth buprenorphine provider | 2025 | County, State |
+| Average biking time to nearest telehealth buprenorphine provider | TlBupAvTmBk | Average biking time (minutes) across tracts in county/state to nearest telehealth buprenorphine provider | 2025 | County, State |
+| Average walking time to nearest telehealth buprenorphine provider | TlBupAvTmWk | Average walking time (minutes) across tracts in county/state to nearest telehealth buprenorphine provider | 2025 | County, State |
+| Percent of tracts within 30-min telehealth buprenorphine driving range | TlBupTmDr30P | Percent of tracts with telehealth buprenorphine provider within a 30-min driving range | 2025 | County, State |
+| Percent of tracts within 60-min telehealth buprenorphine driving range | TlBupTmDr60P | Percent of tracts with telehealth buprenorphine provider within a 60-min driving range | 2025 | County, State |
+| Percent of tracts within 30-min telehealth buprenorphine biking range | TlBupTmBk30P | Percent of tracts with telehealth buprenorphine provider within a 30-min biking range | 2025 | County, State |
+| Percent of tracts within 30-min telehealth buprenorphine walking range | TlBupTmWk30P | Percent of tracts with telehealth buprenorphine provider within a 30-min walking range | 2025 | County, State |
 
 ### Data Limitations:
 All access metrics should be considered approximations, as estimates are calculated from locations within administrative units. Furthermore, resource data only represents *potential* access or spatial availability, reflecting resources made available on a publicly available website. Much research has shown that data on SAMHSA does not represent actual availability, as not all providers may in fact prescribe MOUD medications, some providers may not be accepting new patients, and multiple  factors such as access to insurance, policy matters, and stigma may serve as additional barriers to MOUDs. 
@@ -185,3 +211,4 @@ All access metrics should be considered approximations, as estimates are calcula
 * Not all metrics are available for U.S. places beyond the continental States; we recommend exploring the data on the OEPS Explorer web map to examine in more depth.
 * While a different time travel calculation was performed in 2025, the street network topology original source (Open Street Map) remained the same.
 * The zip code calculation was updated in 2025 to an average of overlapping tract-level metrics, rather than distance from the center of a zip code area. Because zip code areas are large, when compared to census tracts, distance from the geometric center was deemed less meaningful. A detailed notebook comparing the differences will be shared in 2026.
+* During the crosswalk process, we used the total ratio from the HUD USPS Crosswalk Files. This ratio represents the proportion of total addresses in a given geographic unit (e.g., census tract) that fall within a corresponding target geographic unit (e.g., ZIP Code). The total ratio was used as a weighting factor to allocate counts and measures proportionally between geographies.
