@@ -29,12 +29,12 @@ Naltrexone provider data from SAMHSA in 2019 was supplemented by provider data f
 
 The following was extracted in May 2025 from SAMSHA’s Treatment Locator Service:
 
- - **Buprenorphine**: All prescribers listed. 
+ - **Buprenorphine**: All prescribers listed.
+ - **Telehealth**: All providers offering buprenorphine treatment via "telemedicine/telehealth" services.
  - **Methadone**: Methadone: All providers tagged as providing “methadone.” The term methadone maintenance was no longer visible as a feature in the locator service.
  - **OTP**: All providers tagged as “opioid treatment providers.”
  - **Naltrexone**: All providers tagged as providing “naltrexone.”
- - - **Telehealth**: All providers offering buprenorphine treatment via "telemedicine/telehealth" services.
- 
+
  For Opioid Treatment Programs, measures for all years were extracted from the U.S. Substance Abuse and Mental Health Services Administration (SAMHSA) [Opioid Treatment Program (OTP) Directory](https://dpt2.samhsa.gov/treatment/directory.aspx). The OTPs represented in this set are those certified, either fully or provisionally by SAMHSA. Certification is required for MOUD, but these programs can offer other types of treatment, including counseling and other behavioral therapies. Raw data can be found [here](https://dpt2.samhsa.gov/treatment/directory.aspx) and more information can be found [here](https://www.samhsa.gov/medication-assisted-treatment/become-accredited-opioid-treatment-program).
 
 
