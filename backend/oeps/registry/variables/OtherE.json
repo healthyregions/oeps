@@ -1,0 +1,18 @@
+{
+  "title": "Count Other (race) Population",
+  "name": "OtherE",
+  "type": "number",
+  "example": "16.48",
+  "description": "Count of Population with race not mentioned in any of the options above (includes two race or more races). Estimated count in non-decennial years.",
+  "source": "ACS 2023, 5-Year; Census 2020; ACS 2018, 5-Year; Census 2010; IPUMS NHGIS",
+  "source_long": "American Community Survey 2019-2023 5 Year Estimate; 2020 Decennial Census; American Community Survey 2014-2018 5 Year Estimate; 2010 Decennial Census; Integrated Public Use Microdata Series National Historic Geographic Information System",
+  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Race_Ethnicity.md",
+  "longitudinal": true,
+  "analysis": false,
+  "table_sources": [
+    "county-2010",
+    "state-2010",
+    "tract-2010"
+  ],
+  "metadata": "Race_Ethnicity"
+}
