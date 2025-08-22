@@ -10,17 +10,8 @@
   "longitudinal": false,
   "analysis": false,
   "table_sources": [
-    "county-1990",
-    "county-2000",
-    "county-2010",
     "county-2018",
-    "state-1990",
-    "state-2000",
-    "state-2010",
     "state-2018",
-    "tract-1990",
-    "tract-2000",
-    "tract-2010",
     "tract-2018",
     "zcta-2018"
   ],
