@@ -2,6 +2,7 @@ import os
 from enum import Enum
 from pathlib import Path
 import shutil
+from warnings import warn
 
 from openpyxl import Workbook
 from openpyxl.utils import get_column_letter
@@ -89,11 +90,16 @@ class TableSource:
         return pd.read_csv(path)
 
     def set_data_types(self):
-        """set integer columns properly based on registry def of variables."""
+        """set integer columns properly based on registry def of variables.
+        Raise a warning if this process fails on a given column."""
 
         for col in self.df.columns:
             if self.registry.variables[col]["type"] == "integer":
-                self.df[col] = self.df[col].astype("Int64")
+                try:
+                    self.df[col] = self.df[col].astype("Int64")
+                except pd.errors.IntCastingNaNError:
+                    warn(message=f"Failed to coerce column {col} to Integer due to presence of NA or inf values in the dataset. Continuing without coercing.")
+                    
 
     def stage_incoming_csv(self, path: Path) -> pd.DataFrame:
         """Load an incoming CSV to pandas dataframe, and create HEROP_ID
