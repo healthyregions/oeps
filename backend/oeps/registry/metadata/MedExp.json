@@ -1,5 +1,5 @@
 {
-  "id": "MedExp",
+  "id": "Regional Medical Expenditures",
   "theme": "Policy",
   "construct": "Medicaid Expenditure",
   "proxy": "Medicaid spending",
