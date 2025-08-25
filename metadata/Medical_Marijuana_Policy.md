@@ -1,14 +1,14 @@
 **Meta Data Name**: Medical Marijuana Policies  
 **Date Added**: March 23, 2021  
-**Author**: Qinyun Lin, Wataru Morioka, Mahjabin Kabir Adrita   
+**Author**: Mahjabin Kabir Adrita,  Wataru Morioka, Qinyun Lin  
 **Date Last Modified**: May 12, 2025  
-**Last Modified By**: Wataru Morioka, Mahjabin Kabir Adrita  
+**Last Modified By**: Mahjabin Kabir Adrita  
 
 ### Theme: 
 Policy
 
 ### Data Location: 
-You can find the variables described in this document in the CSV files [here](../full_tables).  
+You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).  
 
 CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
 Note: Every variable can be found in the **Latest** files.
@@ -35,7 +35,7 @@ The following variables were included from the source data:
 | Law authorizing adults to use medical marijuana | MdMarijLaw | Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (Fraction of the year in which a state has medical MJ law in effect- 0 = no, 1 = yes) | 2017- 2023 | State |
 
 ### Data Limitations:
-N/A
+See source documentations for details.
 
 ### Comments/Notes:
 The variables included here are very high-level and collected as of Feb 1, 2017. For more detailed and longitudinal data, we recommend the following datasets from Prescription Drug Abuse Policy System: 
