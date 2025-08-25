@@ -1,7 +1,7 @@
 {
   "id": "Naloxone_Policy",
   "theme": "Policy",
-  "construct": "Naloxone Policy",
+  "construct": "Harm Reduction Policies",
   "proxy": "Presence of laws around naloxone access by state",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Naloxone.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Naloxone_Policy.md"
 }
