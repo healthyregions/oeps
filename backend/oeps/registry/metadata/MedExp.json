@@ -1,5 +1,5 @@
 {
-  "id": "Medical Expenditures",
+  "id": "Medical_Expenditures",
   "theme": "Policy",
   "construct": "Medicaid Expenditure",
   "proxy": "Medicaid spending",
