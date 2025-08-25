@@ -1,20 +1,22 @@
 **Meta Data Name**: Naloxone Policy Variables  
 **Date Added**: January 8, 2021  
-**Author**: Qinyun Lin, Wataru Morioka, Mahjabin Kabir Adrita  
+**Author**: Mahjabin Kabir Adrita, Wataru Morioka, Qinyun Lin 
 **Date Last Modified**: May 12, 2025  
-**Last Modified By**: Wataru Morioka, Mahjabin Kabir Adrita  
+**Last Modified By**: Mahjabin Kabir Adrita  
 
 ### Theme: 
 Policy
 
 ### Data Location: 
-You can find the variables described in this document in the CSV files [here](../full_tables).  
+You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).  
 
 CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
 Note: Every variable can be found in the **Latest** files.
 
 ### Data Source(s) Description:  
-Variables were obtained from RAND-USC Schaeffer Opioid Policy Tools and Information Center, [OPTIC-Vetted Naloxone Policy Dat](https://www.rand.org/health-care/centers/optic/resources/datasets.html), accessed on Jan 7th, 2021. Raw data is downloaded in the folder of [data_raw](https://github.com/GeoDaCenter/opioid-policy-scan/tree/v1.0/data_raw), named as *WEB_NAL.xlsx*. 
+Variables were obtained from RAND-USC Schaeffer Opioid Policy Tools and Information Center, 
+[OPTIC-Vetted Naloxone Policy Dat](https://www.rand.org/health-care/centers/optic/resources/datasets.html),
+accessed originally on Jan 7th, 2021, and then again in May 2025. 
 
 ### Description of Data Processing: 
 The following variables were included from the source data:

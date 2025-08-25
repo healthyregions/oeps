@@ -1,14 +1,14 @@
 **Meta Data Name**: Syringe Services Laws  
 **Date Added**: Febrary 23, 2021  
-**Author**: Qinyun Lin, Wataru Morioka, Mahjabin Kabir Adrita  
+**Author**: Mahjabin Kabir Adrita, Wataru Morioka, Qinyun Lin
 **Date Last Modified**: May 14, 2025  
-**Last Modified By**: Wataru Morioka, Mahjabin Kabir Adrita  
+**Last Modified By**: Mahjabin Kabir Adrita  
 
 ### Theme: 
 Policy
 
 ### Data Location: 
-You can find the variables described in this document in the CSV files [here](../full_tables).  
+You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).  
 
 CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
 Note: Every variable can be found in the **Latest** files.
@@ -43,7 +43,7 @@ The following variables were included from the source data:
 | State law does not prohibit free distribution of syringes | NtPrFrDsSy | Dummy variable indicating whether the state law does not prohibit free distribution of syringes (0=no, 1=yes) | 2019, 2021 | State |
 | Paraphernalia definition explicitly exludes objects used for injecting drugs | PrExcInj | Dummy variable indicating whether the paraphernalia definition in the state law explicitly exludes objects used for injecting drugs (0=no, 1=yes) | 2019, 2021 | State |
 | Paraphernalia definition does not refer to objects used for injecting drugs | PrNtRefInj | Dummy variable indicating whether the paraphernalia definition in the state law does not refer to objects used for injecting drugs (0=no, 1=yes) | 2019, 2021 | State |
-|  No state law removing barriers or uncertainty as to SSP legality | NoLwRmUnc | Dummy variable indicating whether the state has no law removing barriers or uncertainty as to SSP legality (0=no, 1=yes) | 2019, 2021 | State |
+| No state law removing barriers or uncertainty as to SSP legality | NoLwRmUnc | Dummy variable indicating whether the state has no law removing barriers or uncertainty as to SSP legality (0=no, 1=yes) | 2019, 2021 | State |
 
 ### Data Limitations:
 N/A
