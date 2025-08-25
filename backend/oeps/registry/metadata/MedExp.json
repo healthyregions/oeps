@@ -3,5 +3,5 @@
   "theme": "Policy",
   "construct": "Medicaid Expenditure",
   "proxy": "Medicaid spending",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/MedExp.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Medical_Expenditures.md"
 }
