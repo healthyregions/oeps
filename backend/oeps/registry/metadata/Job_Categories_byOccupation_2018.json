@@ -3,5 +3,5 @@
   "theme": "Economic",
   "construct": "Employment Trends",
   "proxy": "Count of Essential Workers, Essential Workers %",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Job_Categories_byOccupation_2018.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Essential_Workers.md"
 }
