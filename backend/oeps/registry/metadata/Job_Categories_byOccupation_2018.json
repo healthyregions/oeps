@@ -1,5 +1,5 @@
 {
-  "id": "Job_Categories_byOccupation_2018",
+  "id": "Essential_Workers",
   "theme": "Economic",
   "construct": "Employment Trends",
   "proxy": "Count of Essential Workers, Essential Workers %",
