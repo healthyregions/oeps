@@ -2,6 +2,6 @@
   "id": "Employment_Trends",
   "theme": "Economic",
   "construct": "Employment Trends",
-  "proxy": "Unemployment Rate, Essential Workers Total, Essential Workers %, ",
+  "proxy": "Unemployment Rate, Essential Workers Total, Essential Workers %",
   "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Employment_Trends.md"
 }
