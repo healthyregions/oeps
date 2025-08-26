@@ -1,8 +1,8 @@
-**Meta Data Name**: Essential Jobs  
+**Meta Data Name**: Employment Trends
 **Date Added**: October 22, 2020  
-**Author**: Moksha Menghaney & Qinyun Lin  
-**Date Last Modified**: January 3, 2024  
-**Last Modified By**: Wataru Morioka  
+**Author**: Marynia Kolak, Wataru Morioka, Moksha Menghaney & Qinyun Lin  
+**Date Last Modified**: August 26, 2025
+**Last Modified By**: Marynia Kolak
 
 ### Theme: 
 Economic  
@@ -14,15 +14,25 @@ CSV files are organized by **year** and **spatial scale**. For example, county-l
 Note: Every variable can be found in the **Latest** files.
 
 ### Data Source(s) Description:  
-Variables were obtained from the [2014 - 2018 American Community Survey (ACS)](https://data.census.gov), table S2401, at State, County, Tract and ZIP Code Tabulation Area (ZCTA) levels.  
+Variables were obtained from the multiple periods of the [American Community Survey (ACS)](https://data.census.gov) at State, County, Tract and ZIP Code Tabulation Area (ZCTA) levels.  
 
-The definition of "essential jobs" included in this dataset comes from [Chicago Metropolitan Agency for Planning (CMAP)](https://github.com/CMAP-REPOS/essentialworkers). 
+Prior to 2014, data was extracted from the Decennial Census.
+
+The definition of **"essential jobs"** included in this dataset comes from [Chicago Metropolitan Agency for Planning (CMAP)](https://github.com/CMAP-REPOS/essentialworkers). 
 
 ### Description of Data Source Tables:
-S2401 : Occupation by sex for the civilian employed population 16 years and over
+**Table S2401**: Occupation by sex for the civilian employed population 16 years and over
+
+**Table DP03**: Selected Economic Characteristics <br>
 
 ### Description of Data Processing: 
-All variables were included from S2401. The following variables were identified as essential workers for 2018:  
+
+#### Unemployment Definition
+The following variables were included from **DP03**:
+  * **Percent estimate; Unemployment Rate**. The unemployment rate represents the number of unemployed individuals as a percentage of the civilian labor force. 
+
+#### Essential Workers Definition
+All essential worker variables were included from S2401. The following variables were identified as essential workers for 2018 as our baseline, then replicated in subsequent time periods:  
 
 S2401_C01_011, S2401_C01_016, S2401_C01_017, S2401_C01_019, S2401_C01_021, S2401_C01_022, S2401_C01_023, S2401_C01_024, S2401_C01_030, S2401_C01_031, S2401_C01_032, S2401_C01_034, S2401_C01_035, S2401_C01_036
 
@@ -45,7 +55,7 @@ See [CMAP](https://github.com/CMAP-REPOS/essentialworkers) for a more detailed d
                  - Production, <br>
                  - Transportation and material moving occupations) / (Total Civilian employed population 16 years and over)*
 
-        
+
 ### Key Variable and Definitions:
 
 - **Variable** -- title of variable
@@ -56,8 +66,9 @@ See [CMAP](https://github.com/CMAP-REPOS/essentialworkers) for a more detailed d
 
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Count of Essential Workers | EssnWrkE | Estimated count of Population Employed in Essential Occupations (outlined above) | Latest | Tract, Zip, County, State |
-| % Essential Workers  | EssnWrkP | Percentage of Population Employed in Essential Occupations (outlined above) | Latest | Tract, Zip, County, State |
+| Unemployment Rate | UnempP | The number of unemployed individuals as a percentage of the civilian labor force | 1980, 1990, 2000, 2010, 2018, 2023 | Tract, Zip* County, State |
+| Count of Essential Workers | EssnWrkE | Estimated count of Population Employed in Essential Occupations (outlined above) | 2018, 2023 | Tract, Zip, County, State |
+| % Essential Workers  | EssnWrkP | Percentage of Population Employed in Essential Occupations (outlined above) | 2018, 2023 | Tract, Zip, County, State |
 
 ### Data Limitations:
 Please note this dataset uses occupations as a classifier and doesn't include any information about the industry to which the job belongs. This can lead to an overestimation of essential workers category. 
