@@ -1,7 +1,7 @@
 {
-  "id": "HouseholdType",
+  "id": "Household_Characteristics",
   "theme": "Social",
   "construct": "Household Characteristics",
-  "proxy": "\tTotal Population in Households, % Nonrelatives in Family Households, % Nonrelatives in Non-family Households, % Males 15 years and over who are divorced, Average family size, etc.",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/HouseholdType.md"
+  "proxy": "Total Population in Households, % Nonrelatives in Family Households, % Nonrelatives in Non-family Households, % Males 15 years and over who are divorced, Average family size, etc.",
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Household_Characteristics.md"
 }
