@@ -1,7 +1,7 @@
 {
-  "id": "VetPop",
+  "id": "Veteran_Population",
   "theme": "Social",
   "construct": "Veteran Population",
   "proxy": "Total Veteran Population, % Veteran Population",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/VetPop.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Veteran_Population.md"
 }
