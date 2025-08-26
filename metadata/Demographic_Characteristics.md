@@ -14,7 +14,7 @@ CSV files are organized by **year** and **spatial scale**. For example, county-l
 Note: Every variable can be found in the **Latest** files.
 
 ### Data Source(s) Description:  
-Variables were obtained from the 2014 - 2018 American Community Survey (ACS), table S0101, at State, County, Tract and ZIP Code Tabulation Area level. Raw data and more details can be found at https://data.census.gov.
+Variables were obtained from the multiple ime periods of the American Community Survey (ACS), table S0101, at State, County, Tract and ZIP Code Tabulation Area levels. Raw data and more details can be found at https://data.census.gov.
 
 ### Description of Data Source Tables:
 S0101 : Age & Sex
