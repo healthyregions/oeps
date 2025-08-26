@@ -1,14 +1,14 @@
 **Meta Data Name**: Demegraphic and Age Variables  
 **Date Added**: October 16, 2020  
-**Author**: Moksha Menghaney, Susan Paykin, Wataru Morioka, Mahjabin Kabir Adrita   
-**Date Last Modified**: May 14, 2025      
-**Last Modified By**: Wataru Morioka, Mahjabin Kabir Adrita
+**Authors**: Ashlynn Wimer, Mahjabin Kabir Adrita,  Wataru Morioka, Susan Paykin, Moksha Menghaney
+**Date Last Modified**: Auigust 20, 2025      
+**Last Modified By**: Ashlynn Wimer
 
 ### Theme: 
 Social 
 
 ### Data Location: 
-You can find the variables described in this document in the CSV files [here](../full_tables).  
+You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).  
 
 CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
 Note: Every variable can be found in the **Latest** files.
@@ -68,11 +68,8 @@ All three variables were then converted to percentages using total population as
 
 
 
-
-
 ### Data Limitations:
-This data represents estimates as of the ACS 2018 5-year average.  
-*Note that the Zip code scale data is only available for the "latest" file.
+*Note that the Zip code scale data is only available for the "latest" file. (PENDING UPDATE)
 
 ### Comments/Notes:
-**Note on missing data:** Missing and/or unavailable data are coded as -999. 
+**Note on missing data:** Missing and/or unavailable data are coded as -999.  (PENDING UPDATE)
