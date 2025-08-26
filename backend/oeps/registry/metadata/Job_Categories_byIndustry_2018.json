@@ -2,6 +2,6 @@
   "id": "Job_byIndustry",
   "theme": "Economic",
   "construct": "Employment Trends",
-  "proxy": "Count of Working Population, Employed % - Education, Employed % - High Risk of Injury, Employed % - Health Care, Employed % - Retail, The number of unemployed individuals as a percentage of the civilian labor force",
+  "proxy": "Working Population Total, Employed % - Education, Employed % - High Risk of Injury, Employed % - Health Care, Employed % - Retail, The number of unemployed individuals as a percentage of the civilian labor force",
   "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Job_Categories_Job_byIndustry.md"
 }
