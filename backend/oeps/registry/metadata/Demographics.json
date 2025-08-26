@@ -1,7 +1,7 @@
 {
-  "id": "Demographics",
+  "id": "Demographic Characteristics ",
   "theme": "Social",
   "construct": "Age & Demographic",
   "proxy": "Population percentages split by age groups and male/female ratios",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Demographics.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Demographic_Characteristics.md"
 }
