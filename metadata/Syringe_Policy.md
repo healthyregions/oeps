@@ -1,6 +1,6 @@
 **Meta Data Name**: Syringe Services Laws  
 **Date Added**: Febrary 23, 2021  
-**Author**: Mahjabin Kabir Adrita, Wataru Morioka, Qinyun Lin
+**Author**: Mahjabin Kabir Adrita, Wataru Morioka, Qinyun Lin  
 **Date Last Modified**: May 14, 2025  
 **Last Modified By**: Mahjabin Kabir Adrita  
 
@@ -11,7 +11,6 @@ Policy
 You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).  
 
 CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
-Note: Every variable can be found in the **Latest** files.
 
 ### Data Source(s) Description:  
 Variables were obtained from Table 1 (August 1, 2019) in [Fernández-Viña MH, Prood NE, Herpolsheimer A, Waimberg J, Burris S. State Laws Governing Syringe Services Programs and Participant Syringe Possession](https://journals.sagepub.com/doi/full/10.1177/0033354920921817), 2014-2019. Public Health Reports. 2020;135:128S-137S. doi:10.1177/0033354920921817
