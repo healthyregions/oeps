@@ -46,9 +46,9 @@ Data was cleaned and variables were renamed to shorter, abbreviated labels. The 
 
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Opioid prescription rate | OpRxRt | Opioid prescription rate in a specific year | 2020, 2022 | County, State |
-| Overdose mortality rate | OdMortRt | Death of persons from narcotic overdose per 100,000 persons from individual years 2014-2022 | 2020-2022 | County, State |
-| Average overdose mortality rate | OdMortRtAv | Average narcotic overdose mortality rates from 2015-2019 | 2015-2019 | County, State |
+| Opioid prescription rate | OpRxRt | Opioid prescription rate in a specific year | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022| County, State |
+| Overdose mortality rate | OdMortRt | Death of persons from narcotic overdose per 100,000 persons from individual years | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022 | County, State |
+| Average overdose mortality rate | OdMortRtAv | Average narcotic overdose mortality rates | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022 | County, State |
 | Pain reliever misuse percent | PrMsuseP | Percent of persons who self-report misusing prescription pain relief medication in a specific year | 2020, 2022 | State |
 
 ### Data Limitations:
