@@ -1,7 +1,7 @@
 **Meta Data Name**: Naloxone Policy Variables  
 **Date Added**: January 8, 2021  
-**Author**: Mahjabin Kabir Adrita, Wataru Morioka, Qinyun Lin 
-**Date Last Modified**: May 12, 2025  
+**Author**: Mahjabin Kabir Adrita, Wataru Morioka, Qinyun Lin  
+**Date Last Modified**: August 26, 2025  
 **Last Modified By**: Mahjabin Kabir Adrita  
 
 ### Theme: 
@@ -11,7 +11,6 @@ Policy
 You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).  
 
 CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
-Note: Every variable can be found in the **Latest** files.
 
 ### Data Source(s) Description:  
 Variables were obtained from RAND-USC Schaeffer Opioid Policy Tools and Information Center, 
@@ -39,12 +38,12 @@ Fractions are calculated based on the number of months out of 12 that a law is e
 
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Any Naloxone law effective date | AnyNalxDt | Date (MY) any type of Naloxone law effective | 2017, 2018, 2019, 2020, 2021, 2022 | State |
-| Naloxone law allowing distribution through a standing or protocal order effective date | NalxPrStDt | Date (MY) Naloxone law allowing distribution through a standing or protocol order effective | 2017, 2018, 2019, 2020, 2021, 2022 | State |
-| Naloxone law allowing pharmacists prescriptive authority effective date | NalxPresDt | Date (MY) Naloxone law allowing pharmacists prescriptive authority effective | 2017, 2018, 2019, 2020, 2021, 2022 | State |
-| Fraction of year with any Naloxone law effective | AnyNalxFr | Fraction of year any type of Naloxone law is effective | 2017, 2018, 2019, 2020, 2021, 2022 | State |
-| Fraction of year with Naloxone law allowing distribution through a standing or protocal order effective | NalxPrStFr | Fraction of year state has an effective Naloxone law allowing distribution through a standing or protocol order | 2017, 2018, 2019, 2020, 2021, 2022 | State |
-| Fraction of year with Naloxone law allowing pharmacists prescriptive authority effective |  NalxPresFr | Fraction of year state has an effective Naloxone law allowing pharmacists prescriptive authority | 2017, 2018, 2019, 2020, 2021, 2022 | State |
+| Any Naloxone law effective date | AnyNalxDt | Date (MY) any type of Naloxone law effective | 2017-2022 | State |
+| Naloxone law allowing distribution through a standing or protocal order effective date | NalxPrStDt | Date (MY) Naloxone law allowing distribution through a standing or protocol order effective | 2017-2022 | State |
+| Naloxone law allowing pharmacists prescriptive authority effective date | NalxPresDt | Date (MY) Naloxone law allowing pharmacists prescriptive authority effective | 2017-2022 | State |
+| Fraction of year with any Naloxone law effective | AnyNalxFr | Fraction of year any type of Naloxone law is effective | 2017-2022 | State |
+| Fraction of year with Naloxone law allowing distribution through a standing or protocal order effective | NalxPrStFr | Fraction of year state has an effective Naloxone law allowing distribution through a standing or protocol order | 2017-2022 | State |
+| Fraction of year with Naloxone law allowing pharmacists prescriptive authority effective |  NalxPresFr | Fraction of year state has an effective Naloxone law allowing pharmacists prescriptive authority | 2017-2022 | State |
 
 ### Data Limitations:
 N/A.
