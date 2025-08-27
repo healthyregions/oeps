@@ -1,7 +1,7 @@
 **Meta Data Name**: Medical Marijuana Policies  
 **Date Added**: March 23, 2021  
 **Author**: Mahjabin Kabir Adrita,  Wataru Morioka, Qinyun Lin  
-**Date Last Modified**: May 12, 2025  
+**Date Last Modified**: August 26, 2025  
 **Last Modified By**: Mahjabin Kabir Adrita  
 
 ### Theme: 
