@@ -1,18 +1,17 @@
-Meta Data Name: Educational Attainment Variables  
-Date Added: May 5, 2025    
-Authors: Mandela Gadri, Mahjabin Kabir Adrita   
-Date Last Modified: May 5, 2025    
-Last Modified By: Mahjabin Kabir Adrita
+**Meta Data Name:** Educational Attainment Variables  
+**Date Added:** May 5, 2025    
+**Authors:** Mandela Gadri, Mahjabin Kabir Adrita   
+**Date Last Modified:** May 5, 2025    
+**Last Modified By:** Mahjabin Kabir Adrita
 
 
 ### Theme:  
 Education – Levels of Educational Attainment
 
 ### Data Location:  
-You can find the variables described in this document in the CSV files here.
+You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).
 
 CSV files are organized by year and spatial scale. For example, county-level variables from 2020 will be found in `C_2020.csv`.  
-**Note:** Every variable can be found in the **Latest** files.
 
 ### Data Source(s) Description:  
 Variables were obtained from the *American Community Survey (ACS)* 5-Year Estimates, using table B15003 and related education summary tables for the years 2020 and 2023.
