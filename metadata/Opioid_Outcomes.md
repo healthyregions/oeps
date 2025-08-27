@@ -1,17 +1,16 @@
 **Meta Data Name**: Opioid Indicators: Prescription and Mortality Rates  
 **Date Added**: February 1, 2021  
-**Author**: Susan Paykin, Wataru Morioka. Mahjabin Kabir Adrita   
-**Date Last Modified**: May 12, 2025  
-**Last Modified By**: Wataru Morioka. Mahjabin Kabir Adrita  
+**Author**: Susan Paykin, Wataru Morioka, Mahjabin Kabir Adrita   
+**Date Last Modified**: August 26, 2025  
+**Last Modified By**:  Mahjabin Kabir Adrita  
 
 ### Theme: 
 Outcome
 
 ### Data Location: 
-You can find the variables described in this document in the CSV files [here](../full_tables).  
+You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/).  
 
 CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
-Note: Every variable can be found in the **Latest** files.
 
 ### Data Source(s) Description:  
 
@@ -48,7 +47,7 @@ Data was cleaned and variables were renamed to shorter, abbreviated labels. The 
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
 | Opioid prescription rate | OpRxRt | Opioid prescription rate in a specific year | 2020, 2022 | County, State |
-| Overdose mortality rate | OdMortRt | Death of persons from narcotic overdose per 100,000 persons from individual years 2014-2022 | 2020, 2022 | County, State |
+| Overdose mortality rate | OdMortRt | Death of persons from narcotic overdose per 100,000 persons from individual years 2014-2022 | 2020-2022 | County, State |
 | Average overdose mortality rate | OdMortRtAv | Average narcotic overdose mortality rates from 2015-2019 | 2015-2019 | County, State |
 | Pain reliever misuse percent | PrMsuseP | Percent of persons who self-report misusing prescription pain relief medication in a specific year | 2020, 2022 | State |
 
