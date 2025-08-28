@@ -31,7 +31,7 @@ Property|Format|Description|Comment
     "type": "integer",
     "example": "1632480",
     "description": "Total population",
-    "metadata": "Demographics",
+    "metadata": "Demographic_Characteristics",
     "source": "ACS 2018, 5-Year; Census 2010; IPUMS NHGIS",
     "source_long": "American Community Survey 2014-2018 5 Year Estimate; 2010 Decennial Census; Integrated Public Use Microdata Series National Historic Geographic Information System",
     "longitudinal": true,
