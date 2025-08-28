@@ -1,14 +1,14 @@
-**Meta Data Name**: Jail Incarceration Variables  
-**Date Added**: September 11, 2020  
-**Author**: Qinyun Lin  
-**Date Last Modified**: August 24, 2025  
+**Meta Data Name**: Jail Incarceration Variables
+**Date Added**: September 11, 2020
+**Author**: Marynia Kolak, Qinyun Lin
+**Date Last Modified**: August 24, 2025
 **Last Modified By**: Marynia Kolak
 
-### Theme: 
-Policy  
+### Theme:
+Policy
 
 ### Data Location: 
-You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).  
+You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).
 
 CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
 Note: Every variable can be found in the **Latest** files.
