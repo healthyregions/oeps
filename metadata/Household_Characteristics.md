@@ -1,4 +1,4 @@
-**Meta Data Name**: Household Type  
+**Meta Data Name**: Household Characteristics
 **Date Added**  November 15, 2021  
 **Author**: Susan Paykin, Wataru Morioka, Mahjabin Kabir Adrita  
 **Date Last Modified**: August 26, 2025  
