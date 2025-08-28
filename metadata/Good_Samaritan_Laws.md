@@ -1,20 +1,20 @@
 **Meta Data Name**: Good Samaritan Laws  
 **Date Added**: January 7, 2021  
-**Author**: Qinyun Lin, Wataru Morioka, Mahjabin Kabir Adrita  
-**Date Last Modified**: May 12, 2025  
-**Last Modified By**: Wataru Morioka, Mahjabin Kabir Adrita  
+**Author**: Mahjabin Kabir Adrita, Marynia Kolak, Wataru Morioka, Qinyun Lin   
+**Date Last Modified**: August 26, 2025  
+**Last Modified By**:  Mahjabin Kabir Adrita
 
 ### Theme: 
 Policy 
 
 ### Data Location: 
-You can find the variables described in this document in the CSV files [here](../full_tables).  
+You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).  
 
 CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
-Note: Every variable can be found in the **Latest** files.
 
 ### Data Source(s) Description:  
-Variables were obtained from RAND-USC Schaeffer Opioid Policy Tools and Information Center, 2021, [OPTIC-Vetted Good Samaritan Policy Data](https://www.rand.org/health-care/centers/optic/resources/datasets.html).  Raw data is downloaded in the [data_raw](https://github.com/GeoDaCenter/opioid-policy-scan/tree/v1.0/data_raw) folder, named as *WEB_GSL.xlsx*. 
+Variables were obtained from RAND-USC Schaeffer Opioid Policy Tools and Information Center, 2021, [OPTIC-Vetted Good Samaritan Policy Data](https://www.rand.org/health-care/centers/optic/resources/datasets.html).
+Measures are included at the state level for 2017, 2019, 2020, and 2021.
 
 ### Description of Data Processing: 
 The following variables were included from the source data:
@@ -35,10 +35,10 @@ Fractions are calculated based on the number of months that a law is effective o
 
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Any Good Samaritan Law start date | AnyGslDt | Date (DMY) any type of Good Samaritan Law is effective | 2018, 2021 | State |
-| Good Samaritan Law Protecting Arrest starting date | GslArrDt | Date (DMY) that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective | 2018, 2021 | State |
-| Any Good Samaritan Law fraction | AnyGslFr | Fraction of year any type of Good Samaritan Law is effective | 2018, 2021 | State |
-| Good Samaritan Law Protecting Arrest fraction | GslArrFr | Fraction of year that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective | 2018, 2021 | State |
+| Any Good Samaritan Law start date | AnyGslDt | Date (DMY) any type of Good Samaritan Law is effective | 2017, 2019, 2020, 2021 | State |
+| Good Samaritan Law Protecting Arrest starting date | GslArrDt | Date (DMY) that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective | 2017, 2019, 2020, 2021 | State |
+| Any Good Samaritan Law fraction | AnyGslFr | Fraction of year any type of Good Samaritan Law is effective | 2017, 2019, 2020, 2021 | State |
+| Good Samaritan Law Protecting Arrest fraction | GslArrFr | Fraction of year that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective | 2017, 2019, 2020, 2021 | State |
 
 ### Data Limitations:
 N/A
