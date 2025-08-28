@@ -1,7 +1,7 @@
 {
-  "id": "PDMP",
+  "id": "PDMP_Presence",
   "theme": "Policy",
   "construct": "Prescription Drug Monitoring Programs (PDMP)",
   "proxy": "Presence of PDMP programs by state",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/PDMP.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/PDMP_Presence.md"
 }
