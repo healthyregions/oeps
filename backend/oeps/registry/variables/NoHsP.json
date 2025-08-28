@@ -9,11 +9,6 @@
   "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Other_Demographic_2018.md",
   "longitudinal": true,
   "analysis": false,
-  "table_sources": [
-    "county-2018",
-    "state-2018",
-    "tract-2018",
-    "zcta-2018"
-  ],
+  "table_sources": [],
   "metadata": "Other_Demographic_2018"
 }
