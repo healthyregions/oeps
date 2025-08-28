@@ -1,20 +1,5 @@
 {
   "Geography": {
-    "Geographic Characteristics": [
-      {
-        "Variable Construct": "Geographic Characteristics",
-        "Variable Proxy": "Park Area",
-        "Variables": [
-          "Greenspace Coverage",
-          "Park Area",
-          "State Area"
-        ],
-        "Source": "OSM; Tiger/Line 2018",
-        "Metadata": "Park_Cover",
-        "Spatial Scale": "State",
-        "Years": "2018, 2022"
-      }
-    ],
     "Geographic Boundaries": [
       {
         "Variable Construct": "Geographic Boundaries",
@@ -32,9 +17,9 @@
     ]
   },
   "Social": {
-    "Marital Status": [
+    "Household Characteristics": [
       {
-        "Variable Construct": "Marital Status",
+        "Variable Construct": "Household Characteristics",
         "Variable Proxy": "Percent males aged 15 or older who are married, never married, separated, divorced, or widowed",
         "Variables": [
           "% Males 15 years and over who are divorced",
@@ -47,6 +32,33 @@
         "Metadata": "Marital_Status",
         "Spatial Scale": "Tract, Zip, County",
         "Years": "2020, 2023"
+      },
+      {
+        "Variable Construct": "Household Characteristics",
+        "Variable Proxy": "Total Population in Households, % Nonrelatives in Family Households, % Nonrelatives in Non-family Households, % Males 15 years and over who are divorced, Average family size, etc.",
+        "Variables": [
+          "% Cohabiting couple household",
+          "% Female householder 65 years and over living alone",
+          "% Female householder with no spouse/partner living alone",
+          "% Female householder with no spouse/partner living with children under 18 years",
+          "% Male householder 65 years and over living alone",
+          "% Male householder with no spouse/partner living alone",
+          "% Male householder with no spouse/partner living with children under 18 years",
+          "% Married-couple household ",
+          "% Married-couple household With children under 18 years",
+          "% Nonrelatives in Family Households",
+          "% Nonrelatives in Non-family Households",
+          "% Occupied housing units",
+          "Average family size",
+          "Average household size",
+          "Proportion of occupied housing units that are considered crowded (more than 1 person per room)",
+          "Total Population in Households",
+          "Total households"
+        ],
+        "Source": "ACS 2018, 5-Year; ACS ",
+        "Metadata": "Household_Characteristics",
+        "Spatial Scale": "Tract, Zip, County, State",
+        "Years": "2018, 2020, 2023"
       }
     ],
     "Residential Segregation Measures": [
@@ -70,33 +82,19 @@
         "Years": "2018"
       }
     ],
-    "Household Characteristics": [
+    "Community Overlay Variables": [
       {
-        "Variable Construct": "Household Characteristics",
-        "Variable Proxy": "\tTotal Population in Households, % Nonrelatives in Family Households, % Nonrelatives in Non-family Households, % Males 15 years and over who are divorced, Average family size, etc.",
+        "Variable Construct": "Community Overlay Variables",
+        "Variable Proxy": "Hypersegregated Cities, Southern Blackbelt, Native American Reservations",
         "Variables": [
-          "% Cohabiting couple household",
-          "% Female householder 65 years and over living alone",
-          "% Female householder with no spouse/partner living alone",
-          "% Female householder with no spouse/partner living with children under 18 years",
-          "% Male householder 65 years and over living alone",
-          "% Male householder with no spouse/partner living alone",
-          "% Male householder with no spouse/partner living with children under 18 years",
-          "% Married-couple household ",
-          "% Married-couple household With children under 18 years",
-          "% Nonrelatives in Family Households",
-          "% Nonrelatives in Non-family Households",
-          "% Occupied housing units",
-          "Average family size",
-          "Average household size",
-          "Proportion of occupied housing units that are considered crowded (more than 1 person per room)",
-          "Total Population in Households",
-          "Total households"
+          "African American South",
+          "Hypersegregated Cities",
+          "Native American & Tribal Lands"
         ],
-        "Source": "ACS 2018, 5-Year; ACS ",
-        "Metadata": "HouseholdType",
-        "Spatial Scale": "Tract, Zip, County, State",
-        "Years": "2018, 2020, 2023"
+        "Source": "US Census, 2000; Massey et al, 2015; TIGER/Line 2017",
+        "Metadata": "Unique_Communities",
+        "Spatial Scale": "County",
+        "Years": "2000, 2015, 2017"
       }
     ],
     "Race & Ethnicity": [
@@ -120,21 +118,69 @@
         "Years": "1980, 1990, 2000, 2010, 2018, 2020, 2023"
       }
     ],
-    "Age & Demographic": [
+    "Population with Disability": [
       {
-        "Variable Construct": "Age & Demographic",
-        "Variable Proxy": "Population with a Disability, % Less than High School degree",
+        "Variable Construct": "Population with Disability",
+        "Variable Proxy": "Population with Disability (%)",
         "Variables": [
           "% Population with Disability",
           "% Population without High School Degree"
         ],
         "Source": "ACS 2018, 5-Year; ACS 2012, 5-Year; ACS 2018, 5-Year; ACS 2012, 5-Year; IPUMS NHGIS",
-        "Metadata": "Other_Demographic_2018",
+        "Metadata": "Population_withDisability",
         "Spatial Scale": "Tract, Zip, County, State",
         "Years": "1980, 1990, 2000, 2010, 2018, 2020, 2023"
+      }
+    ],
+    "Incarceration": [
+      {
+        "Variable Construct": "Incarceration",
+        "Variable Proxy": "Total Prison Population Rate, Total Prison Admission Rate, Total Prison Population Count, Prison Prison Admissions Count",
+        "Variables": [
+          "Prison Prison Admissions Count",
+          "Total Prison Admission Rate",
+          "Total Prison Population Count",
+          "Total Prison Population Rate"
+        ],
+        "Source": "Vera Institute of Justice, 2016",
+        "Metadata": "Prison_Incarceration_Rates",
+        "Spatial Scale": "County",
+        "Years": "2016"
       },
       {
-        "Variable Construct": "Age & Demographic",
+        "Variable Construct": "Incarceration",
+        "Variable Proxy": "Total Jail Population Rate, Total jail admission rate, Pretrial Jail Population Rate, Total Jail Population Count & more",
+        "Variables": [
+          "Pretrial Jail Population Count",
+          "Pretrial Jail Population Rate",
+          "Total Jail Admissions Count, ASJ/COJ Data",
+          "Total Jail Population Count, ASJ/COJ Data",
+          "Total Jail Population Rate",
+          "Total jail admission rate"
+        ],
+        "Source": "Vera Institute of Justice, 2017",
+        "Metadata": "Jail_Incarceration_Rates",
+        "Spatial Scale": "County",
+        "Years": "2017"
+      }
+    ],
+    "Veteran Population": [
+      {
+        "Variable Construct": "Veteran Population",
+        "Variable Proxy": "Total Veteran Population, % Veteran Population",
+        "Variables": [
+          "% Veteran Population",
+          "Total Veteran Population"
+        ],
+        "Source": "ACS 2017, 5-Year; ACS 2012, 5-Year; ACS 2018, 5-Year; ACS 2012, 5-Year",
+        "Metadata": "Veteran_Population",
+        "Spatial Scale": "Tract, Zip, County, State",
+        "Years": "2010, 2018, 2020, 2023"
+      }
+    ],
+    "Population, Age & Sex Ratios": [
+      {
+        "Variable Construct": "Population, Age & Sex Ratios",
         "Variable Proxy": "Population percentages split by age groups and male/female ratios",
         "Variables": [
           "% Population over 16 years",
@@ -168,25 +214,10 @@
           "Sex ratio for the total population (males per 100 females)",
           "Total Population"
         ],
-        "Source": "ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS; ACS 2018, 5-Year; Census 2010; IPUMS NHGIS; IPUMS NHGIS; ACS ; ACS 2018, 5-Year; 2010 Decennial Census",
-        "Metadata": "Demographics",
+        "Source": "ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS; IPUMS NHGIS; ACS 2018, 5-Year; Census 2010; IPUMS NHGIS; ACS ; ACS 2018, 5-Year; 2010 Decennial Census",
+        "Metadata": "Demographic_Characteristics",
         "Spatial Scale": "Tract, Zip, County, State",
         "Years": "1980, 1990, 2000, 2010, 2018, 2020, 2023"
-      }
-    ],
-    "Community Overlay Variables": [
-      {
-        "Variable Construct": "Community Overlay Variables",
-        "Variable Proxy": "Hypersegregated Cities, Southern Blackbelt, Native American Reservations",
-        "Variables": [
-          "African American South",
-          "Hypersegregated Cities",
-          "Native American & Tribal Lands"
-        ],
-        "Source": "TIGER/Line 2017; Massey et al, 2015; US Census, 2000",
-        "Metadata": "Overlay",
-        "Spatial Scale": "County",
-        "Years": "2000, 2015, 2017"
       }
     ],
     "Educational Characteristics": [
@@ -205,20 +236,6 @@
         "Metadata": "Educational_Characteristics",
         "Spatial Scale": "Tract, Zip, County",
         "Years": "2020, 2023"
-      }
-    ],
-    "Veteran Population": [
-      {
-        "Variable Construct": "Veteran Population",
-        "Variable Proxy": "Total Veteran Population, % Veteran Population",
-        "Variables": [
-          "% Veteran Population",
-          "Total Veteran Population"
-        ],
-        "Source": "ACS 2018, 5-Year; ACS 2012, 5-Year; ACS 2017, 5-Year; ACS 2012, 5-Year",
-        "Metadata": "VetPop",
-        "Spatial Scale": "Tract, Zip, County, State",
-        "Years": "2010, 2018, 2020, 2023"
       }
     ]
   },
@@ -310,7 +327,7 @@
           "Total Occupied Housing Units",
           "Vacant Housing Units %"
         ],
-        "Source": "ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer; ACS 2018, 5-Year; ACS 2018, 5-Year; Census 2010; Social Explorer",
+        "Source": "ACS 2018, 5-Year; Census 2010; Social Explorer; ACS 2018, 5-Year; ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer",
         "Metadata": "Housing_Variables",
         "Spatial Scale": "Tract, Zip, County, State",
         "Years": "1980, 1990, 2000, 2010, 2018, 2020, 2023"
@@ -321,12 +338,15 @@
         "Variable Construct": "Greenspace Measures",
         "Variable Proxy": "Normalized Difference Vegetation Index (NDVI)",
         "Variables": [
-          "NDVI Average"
+          "Greenspace Coverage",
+          "NDVI Average",
+          "Park Area",
+          "State Area"
         ],
-        "Source": "Sentinel-2 MSI, 2018",
+        "Source": "Sentinel-2 MSI, 2018; Tiger/Line 2018; OSM",
         "Metadata": "Greenspace_Measures",
         "Spatial Scale": "Tract, Zip, County, State",
-        "Years": "2018"
+        "Years": "2018, 2022"
       }
     ],
     "Spatial access to Health Centers": [
@@ -342,7 +362,7 @@
           "Total Census Tract Count",
           "Tracts with Federally Qualified Health Center (30-min driving)"
         ],
-        "Source": "US Covid Atlas via HRSA, 2020; Tiger/Line 2018",
+        "Source": "Tiger/Line 2018; US Covid Atlas via HRSA, 2020",
         "Metadata": "Access_FQHCs",
         "Spatial Scale": "Tract, Zip, County, State",
         "Years": "2018, 2020, 2025"
@@ -451,7 +471,7 @@
           "Walking Time (min) to nearest Methadone Provider",
           "Walking Time (min) to nearest Naltrexone Provider"
         ],
-        "Source": "; SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020; SAMSHA, 2021; SAMHSA; SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020",
+        "Source": "; SAMSHA, 2021; SAMHSA; SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020; SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020",
         "Metadata": "Access_MOUDs",
         "Spatial Scale": "Tract, Zip, County, State",
         "Years": "1980, 1990, 2000, 2010, 2020, 2021, 2025"
@@ -514,7 +534,7 @@
     "Employment Trends": [
       {
         "Variable Construct": "Employment Trends",
-        "Variable Proxy": "Count of Working Population, Employed % - Education, Employed % - High Risk of Injury, Employed % - Health Care, Employed % - Retail, The number of unemployed individuals as a percentage of the civilian labor force",
+        "Variable Proxy": "Working Population Total, Employed % - Education, Employed % - High Risk of Injury, Employed % - Health Care, Employed % - Retail, The number of unemployed individuals as a percentage of the civilian labor force",
         "Variables": [
           "Count of Working Population",
           "Employed % - Education",
@@ -523,21 +543,65 @@
           "Employed % - Retail"
         ],
         "Source": "ACS 2018, 5-Year",
-        "Metadata": "Job_Categories_byIndustry_2018",
+        "Metadata": "Jobs_byIndustry",
         "Spatial Scale": "Tract, Zip, County, State",
         "Years": "2018, 2020, 2023"
       },
       {
         "Variable Construct": "Employment Trends",
-        "Variable Proxy": "Count of Essential Workers, Essential Workers %",
+        "Variable Proxy": "Unemployment Rate, Essential Workers Total, Essential Workers %",
         "Variables": [
           "Count of Essential Workers",
           "Essential Workers %"
         ],
         "Source": "ACS 2018, 5-Year",
-        "Metadata": "Job_Categories_byOccupation_2018",
+        "Metadata": "Employment_Trends",
         "Spatial Scale": "Tract, Zip, County, State",
         "Years": "2018, 2020, 2023"
+      }
+    ],
+    "Internet Access": [
+      {
+        "Variable Construct": "Internet Access",
+        "Variable Proxy": "Households without Internet Access %",
+        "Variables": [
+          "Households without Internet Access %"
+        ],
+        "Source": "ACS, 2019",
+        "Metadata": "Internet_Access",
+        "Spatial Scale": "Tract, Zip, County, State",
+        "Years": "2019"
+      }
+    ],
+    "Poverty, Income, Gini Coefficient": [
+      {
+        "Variable Construct": "Poverty, Income, Gini Coefficient",
+        "Variable Proxy": "Employment, poverty, income, and income inequality (Gini Coefficient)",
+        "Variables": [
+          "Median Income",
+          "Per Capita Income",
+          "Poverty %",
+          "Unemployment %"
+        ],
+        "Source": "ACS 2018, 5-Year; ACS 2012, 5-Year; ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer",
+        "Metadata": "Economic_Characteristics",
+        "Spatial Scale": "Tract, Zip, County, State",
+        "Years": "1980, 1990, 2000, 2010, 2018, 2020, 2023"
+      }
+    ]
+  },
+  "Policy": {
+    "Marijuana Policies": [
+      {
+        "Variable Construct": "Marijuana Policies",
+        "Variable Proxy": "Laws authorizing medical marijuana use",
+        "Variables": [
+          "Laws authorizing medical marijuana use "
+        ],
+        "Source": "PDAPS, 2017",
+        "Metadata": "Medical_Marijuana_Laws",
+        "Spatial Scale": "State",
+        "Years": "2017, 2018, 2019, 2020, 2021, 2022, 2023"
       }
     ],
     "State & Local Government Expenditures": [
@@ -562,46 +626,30 @@
           "Total Public Health & Welfare Expenditures",
           "Total Public Welfare Expenditures"
         ],
-        "Source": "US Census, 2018; State and Local Finance Data Finder",
-        "Metadata": "PublicExpenditures",
+        "Source": "State and Local Finance Data Finder; US Census, 2018",
+        "Metadata": "Public_Expenditures",
         "Spatial Scale": "State",
         "Years": "2018, 2019, 2020, 2021, 2022"
+      },
+      {
+        "Variable Construct": "State & Local Government Expenditures",
+        "Variable Proxy": "Medicaid spending",
+        "Variables": [
+          "Expansion Medicaid Federal Spending",
+          "Expansion Medicaid State Spending",
+          "Total Medicaid Spending",
+          "Traditional Medicaid Federal Spending",
+          "Traditional Medicaid State Spending"
+        ],
+        "Source": "KFF, 2018; KFF, 2019",
+        "Metadata": "Medical_Expenditures",
+        "Spatial Scale": "State",
+        "Years": "2018, 2019, 2023"
       }
     ],
-    "Internet Access": [
+    "Harm Reduction Policies": [
       {
-        "Variable Construct": "Internet Access",
-        "Variable Proxy": "Households without Internet Access %",
-        "Variables": [
-          "Households without Internet Access %"
-        ],
-        "Source": "ACS, 2019",
-        "Metadata": "Internet_Access",
-        "Spatial Scale": "Tract, Zip, County, State",
-        "Years": "2019"
-      }
-    ],
-    "Economic Characteristics": [
-      {
-        "Variable Construct": "Economic Characteristics",
-        "Variable Proxy": "Employment, poverty, income, and income inequality (Gini Coefficient)",
-        "Variables": [
-          "Median Income",
-          "Per Capita Income",
-          "Poverty %",
-          "Unemployment %"
-        ],
-        "Source": "ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer; ACS 2018, 5-Year; ACS 2012, 5-Year",
-        "Metadata": "Economic",
-        "Spatial Scale": "Tract, Zip, County, State",
-        "Years": "1980, 1990, 2000, 2010, 2018, 2020, 2023"
-      }
-    ]
-  },
-  "Policy": {
-    "Naloxone Access Laws": [
-      {
-        "Variable Construct": "Naloxone Access Laws",
+        "Variable Construct": "Harm Reduction Policies",
         "Variable Proxy": "Presence of laws around naloxone access by state",
         "Variables": [
           "Any Naloxone Law (date)",
@@ -612,14 +660,12 @@
           "Naloxone Law in Effect (fraction of year in 2017)"
         ],
         "Source": "OPTIC, 2017",
-        "Metadata": "Naloxone",
+        "Metadata": "Naloxone_Policy",
         "Spatial Scale": "State",
         "Years": "2017, 2018, 2019, 2020, 2021, 2022"
-      }
-    ],
-    "Syringe & Paraphernalia Laws": [
+      },
       {
-        "Variable Construct": "Syringe & Paraphernalia Laws",
+        "Variable Construct": "Harm Reduction Policies",
         "Variable Proxy": "Syringe Service Program (SSP) Authorization Laws, Drug Paraphernalia Laws, Distribution of Syringes Laws, Paraphernalia exludes objects used for injecting drugs, Paraphernalia does not refer to objects used for injecting drugs, Laws removing barriers to SSPs",
         "Variables": [
           "Distribution of Syringes Laws",
@@ -630,22 +676,23 @@
           "Syringe Service Program (SSP) Authorization Laws"
         ],
         "Source": "LawAtlas, 2019",
-        "Metadata": "Syringe",
+        "Metadata": "Syringe_Policy",
         "Spatial Scale": "State",
         "Years": "2019"
-      }
-    ],
-    "Medical Marijuana Laws": [
+      },
       {
-        "Variable Construct": "Medical Marijuana Laws",
-        "Variable Proxy": "Laws authorizing medical marijuana use",
+        "Variable Construct": "Harm Reduction Policies",
+        "Variable Proxy": "Good Samaritan Laws (Date, Fraction of Year Enacted)",
         "Variables": [
-          "Laws authorizing medical marijuana use "
+          "Any Good Samaritan Law (date)",
+          "Any Good Samaritan Law (fraction of year in 2018)",
+          "Good Samaritan Law Protecting Arrest (date)",
+          "Good Samaritan Law Protecting Arrest (fraction of year in 2018)"
         ],
-        "Source": "PDAPS, 2017",
-        "Metadata": "MedMarijLaw",
+        "Source": "OPTIC, 2017",
+        "Metadata": "Good_Samaritan_Laws",
         "Spatial Scale": "State",
-        "Years": "2017, 2018, 2019, 2020, 2021, 2022, 2023"
+        "Years": "2017, 2019, 2020, 2021"
       }
     ],
     "Prescription Drug Monitoring Programs (PDMP)": [
@@ -665,76 +712,9 @@
           "Operational PDMP start date"
         ],
         "Source": "OPTIC, 2017",
-        "Metadata": "PDMP",
+        "Metadata": "PDMP_Presence",
         "Spatial Scale": "State",
         "Years": "2017, 2018, 2019, 2020, 2021, 2022, 2023"
-      }
-    ],
-    "Medicaid Expenditure": [
-      {
-        "Variable Construct": "Medicaid Expenditure",
-        "Variable Proxy": "Medicaid spending",
-        "Variables": [
-          "Expansion Medicaid Federal Spending",
-          "Expansion Medicaid State Spending",
-          "Total Medicaid Spending",
-          "Traditional Medicaid Federal Spending",
-          "Traditional Medicaid State Spending"
-        ],
-        "Source": "KFF, 2019; KFF, 2018",
-        "Metadata": "MedExp",
-        "Spatial Scale": "State",
-        "Years": "2018, 2019, 2023"
-      }
-    ],
-    "Prison Incarceration Rates": [
-      {
-        "Variable Construct": "Prison Incarceration Rates",
-        "Variable Proxy": "Total Prison Population Rate, Total Prison Admission Rate, Total Prison Population Count, Prison Prison Admissions Count",
-        "Variables": [
-          "Prison Prison Admissions Count",
-          "Total Prison Admission Rate",
-          "Total Prison Population Count",
-          "Total Prison Population Rate"
-        ],
-        "Source": "Vera Institute of Justice, 2016",
-        "Metadata": "Prison_Variables",
-        "Spatial Scale": "County",
-        "Years": "2016"
-      }
-    ],
-    "Jail Incarceration Rates": [
-      {
-        "Variable Construct": "Jail Incarceration Rates",
-        "Variable Proxy": "Total Jail Population Rate, Total jail admission rate, Pretrial Jail Population Rate, Total Jail Population Count & more",
-        "Variables": [
-          "Pretrial Jail Population Count",
-          "Pretrial Jail Population Rate",
-          "Total Jail Admissions Count, ASJ/COJ Data",
-          "Total Jail Population Count, ASJ/COJ Data",
-          "Total Jail Population Rate",
-          "Total jail admission rate"
-        ],
-        "Source": "Vera Institute of Justice, 2017",
-        "Metadata": "Jail_Variables",
-        "Spatial Scale": "County",
-        "Years": "2017"
-      }
-    ],
-    "Good Samaritan Laws": [
-      {
-        "Variable Construct": "Good Samaritan Laws",
-        "Variable Proxy": "Good Samaritan Laws (Date, Fraction of Year Enacted)",
-        "Variables": [
-          "Any Good Samaritan Law (date)",
-          "Any Good Samaritan Law (fraction of year in 2018)",
-          "Good Samaritan Law Protecting Arrest (date)",
-          "Good Samaritan Law Protecting Arrest (fraction of year in 2018)"
-        ],
-        "Source": "OPTIC, 2017",
-        "Metadata": "Good_Samaritan_Laws",
-        "Spatial Scale": "State",
-        "Years": "2017, 2019, 2020, 2021"
       }
     ]
   },
@@ -750,7 +730,7 @@
           "Overdose Mortality Rate Average (2016-2020)"
         ],
         "Source": "HepVu, 2020",
-        "Metadata": "OpioidIndicators",
+        "Metadata": "Opioid_Outcomes",
         "Spatial Scale": "County, State",
         "Years": "2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022"
       }
@@ -799,7 +779,7 @@
           "Yearly Hepatitis C cases - non-Black (2013-2016)"
         ],
         "Source": "HepVu; HepVu, 2017",
-        "Metadata": "HepC",
+        "Metadata": "HepatitisC_Rates",
         "Spatial Scale": "State",
         "Years": "2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022"
       }
@@ -817,7 +797,7 @@
           "Socioeconomic Advantage Index",
           "Urban Core Opportunity Index"
         ],
-        "Source": "GeoDa Data and Lab; SDOH Atlas; Kolak et al., 2020",
+        "Source": "Kolak et al., 2020; GeoDa Data and Lab; SDOH Atlas",
         "Metadata": "SDOH_Indices",
         "Spatial Scale": "Tract",
         "Years": "2014, 2020"
