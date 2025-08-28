@@ -1,7 +1,7 @@
 {
-  "id": "PublicExpenditures",
+  "id": "Public_Expenditures",
   "theme": "Economic",
   "construct": "State & Local Government Expenditures",
   "proxy": "Expenditure amounts for corrections, police, fire, and other services, by state",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/PublicExpenditures.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Public_Expenditures.md"
 }
