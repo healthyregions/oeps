@@ -1,7 +1,7 @@
-**Meta Data Name**: Jail Incarceration Variables  
-**Date Added**: September 11, 2020  
-**Author**: Qinyun Lin  
-**Date Last Modified**: August 24, 2025 
+**Meta Data Name**: Jail Incarceration Variables
+**Date Added**: September 11, 2020
+**Author**: Marynia Kolak, Qinyun Lin
+**Date Last Modified**: August 24, 2025
 **Last Modified By**: Marynia Kolak
 
 ### Theme: 
