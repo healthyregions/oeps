@@ -1,7 +1,7 @@
 {
-  "id": "MedMarijLaw",
+  "id": "Medical_Marijuana_Laws",
   "theme": "Policy",
-  "construct": "Medical Marijuana Laws",
+  "construct": "Marijuana Policies",
   "proxy": "Laws authorizing medical marijuana use",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/MedMarijLaw.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Medical_Marijuana_Laws.md"
 }

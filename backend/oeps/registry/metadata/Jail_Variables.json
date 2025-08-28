@@ -1,7 +1,7 @@
 {
-  "id": "Jail_Variables",
-  "theme": "Policy",
-  "construct": "Jail Incarceration Rates",
+  "id": "Jail_Incarceration_Rates",
+  "theme": "Social",
+  "construct": "Incarceration",
   "proxy": "Total Jail Population Rate, Total jail admission rate, Pretrial Jail Population Rate, Total Jail Population Count & more",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Jail_Variables.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Jail_Incarceration_Rates.md"
 }

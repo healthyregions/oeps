@@ -1,7 +1,7 @@
 {
-  "id": "Job_Categories_byOccupation_2018",
+  "id": "Employment_Trends",
   "theme": "Economic",
   "construct": "Employment Trends",
-  "proxy": "Count of Essential Workers, Essential Workers %",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Job_Categories_byOccupation_2018.md"
+  "proxy": "Unemployment Rate, Essential Workers Total, Essential Workers %",
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Employment_Trends.md"
 }
