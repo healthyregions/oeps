@@ -1,8 +1,8 @@
 **Meta Data Name**: Economic Variables  
 **Date Added**: October 22, 2020  
 **Authors**: Marynia Kolak, Mahjabin Kabir Adrita, Wataru Morika, Susan Paykin, Moksha Menghaney  
-**Date Last Modified**: May 12, 2025  
-**Last Modified By**: Marynia Kolak
+**Date Last Modified**: August 26, 2025  
+**Last Modified By**: Mahjabin Kabir Adrita
 
 ### Theme: 
 Economic
@@ -11,7 +11,6 @@ Economic
 You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).  
 
 CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
-Note: Every variable can be found in the **Latest** files.
 
 ### Data Source(s) Description:  
 
