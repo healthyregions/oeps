@@ -1,20 +1,20 @@
-**Meta Data Name**: Jobs by Industries  
+**Meta Data Name**: Jobs by Industry
 **Date Added**: October 22, 2020  
-**Author**: Moksha Menghaney  
-**Date Last Modified**: January 3, 2024  
-**Last Modified By** Wataru Morioka  
+**Author**: Marynia Kolak, Wataru Morioka, Moksha Menghaney  
+**Date Last Modified**: August 26, 2025
+**Last Modified By** Marynia Kolak
 
 ### Theme: 
 Economic  
 
 ### Data Location: 
-You can find the variables described in this document in the CSV files [here](../full_tables).  
+You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).  
 
 CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
 Note: Every variable can be found in the **Latest** files.
 
 ### Data Source(s) Description:  
-Variables were obtained from the 2014 - 2018 American Community Survey (ACS), table S2403, at State, County, Tract, and ZIP Code Tabulation Area levels. Raw data and more details can be found at https://data.census.gov.
+Variables were obtained from the multiple periods of the [American Community Survey (ACS)](https://data.census.gov) at State, County, Tract and ZIP Code Tabulation Area (ZCTA) levels.  
 
 ### Description of Data Source Tables:
 S2403: Industry by sex for the civilian employed population 16 years and over 
@@ -55,11 +55,11 @@ All variables were included from S2403 (2018):
 
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Total Count of Workers | TotWrkE | Estimated count of working population | Latest | Tract, Zip, County, State |
-| % Education Jobs  | EduP | Percentage of population employed in educational services industry | Latest | Tract, Zip, County, State |
-| % High Risk of Injury Jobs  | HghRskP | Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying,  oil and gas extraction, construction, manufacturing, utilities | Latest | Tract, Zip, County, State |
-| % Health Care Jobs | HltCrP | Percentage of population employed in health care and social assistance industries | Latest | Tract, Zip, County, State |
-| % Retail Jobs  | RetailP | Percentage of population employed in retail trade industry | Latest | Tract, Zip, County, State |
+| Total Count of Workers | TotWrkE | Estimated count of working population | 2018, 2023 | Tract, Zip, County, State |
+| % Education Jobs  | EduP | Percentage of population employed in educational services industry | 2018, 2023 | Tract, Zip, County, State |
+| % High Risk of Injury Jobs  | HghRskP | Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying,  oil and gas extraction, construction, manufacturing, utilities | 2018, 2023 | Tract, Zip, County, State |
+| % Health Care Jobs | HltCrP | Percentage of population employed in health care and social assistance industries | 2018, 2023 | Tract, Zip, County, State |
+| % Retail Jobs  | RetailP | Percentage of population employed in retail trade industry | 2018, 2023 | Tract, Zip, County, State |
 
 ### Data Limitations:
 Please note this dataset uses industry as a classifier and does not include any information about the specific occupation in that industry. This could lead to an overestimation of High Risk to Injury workers category.

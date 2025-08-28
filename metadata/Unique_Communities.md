@@ -1,4 +1,4 @@
-**Meta Data Name**: Community Overlay Variables  
+**Meta Data Name**: Unique Communities
 **Date Added**: Feburary 23, 2021  
 **Author**: Qinyun Lin  
 **Date Last Modified**: January 3, 2024  
@@ -6,12 +6,6 @@
 
 ### Theme: 
 Social
-
-### Data Location: 
-You can find the variables described in this document in the CSV files [here](../full_tables).  
-
-CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
-Note: Every variable can be found in the **Latest** files.  
 
 ### Data Source(s) Description:  
 Variables were obtained from [The US Covid Atlas Projec](https://theuscovidatlas.org/map)t. Hypersegregated cities refer to American metropolitan areas where black residents experience hypersegregation. See [here](https://www.princeton.edu/news/2015/05/18/hypersegregated-cities-face-tough-road-change) for more information. The Black Belt refers to Southern US counties where at least 30% of the population identified Black or African American in the 2000 Census (see [here](https://en.wikipedia.org/wiki/Black_Belt_in_the_American_South)). Native American or American Indian reservation boundaries come from the [TIGER/Line 2017](https://catalog.data.gov/dataset/tiger-line-shapefile-2017-nation-u-s-current-american-indian-alaska-native-native-hawaiian-area) dataset.

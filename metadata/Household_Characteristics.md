@@ -1,17 +1,16 @@
-**Meta Data Name**: Household Type  
+**Meta Data Name**: Household Characteristics
 **Date Added**  November 15, 2021  
 **Author**: Susan Paykin, Wataru Morioka, Mahjabin Kabir Adrita  
-**Date Last Modified**: May 12, 2025  
-**Last Modified By**: Wataru Morioka, Mahjabin Kabir Adrita
+**Date Last Modified**: August 26, 2025  
+**Last Modified By**: Mahjabin Kabir Adrita
 
 ### Theme: 
 Social
 
 ### Data Location: 
-You can find the variables described in this document in the CSV files [here](../full_tables).  
+You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).  
 
-CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
-Note: Every variable can be found in the **Latest** files. 
+CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.   
 
 ### Data Source(s) Description:  
 Data was sourced from the American Community Survey, 2018 5-year average, Table  B09019: *Household Type (Including Living Alone) by Relationship*, at the state, county, tract and ZIP Code Tabulation Area (ZCTA) scales, available from the [US Census Bureau](https://data.census.gov/cedsci/table?q=B09019&g=0100000US%240400000&tid=ACSDT5Y2018.B09019).  Complete data documentation for this table is available via [Social Explorer](https://www.socialexplorer.com/data/ACS2018_5yr/metadata/?ds=ACS18_5yr&var=B09019001). Data here was accessed through the [tidycensus](https://walker-data.com/tidycensus/index.html) R package, which uses the US Census Bureau's API. 
@@ -52,20 +51,20 @@ The following rates were calculated from the variables:
 | Total population in household | TotPopHh | Total number of people in households | 2018 | Tract, Zip, County, State |
 | Percent of nonrelatives in family households | NonRelFhhP | Percent of people living in family households that are not related to family | 2018 | Tract, Zip, County, State |
 | Percent of nonrelatives in non-family households | NonRelNfhhP | Percent of people living in non-family households that are not related | 2018 | Tract, Zip, County, State |
-| Average family size              | FamSize             | Average number of persons per family                       | 2018, 2023           | Tract, ZCTA, County    |
-| Average household size           | HHSize              | Average number of persons per household                    | 2018, 2023           | Tract, ZCTA, County    |
+| Average family size              | FamSize             | Average number of persons per family                       | 2018, 2020, 2023           | Tract, ZCTA, County    |
+| Average household size           | HHSize              | Average number of persons per household                    | 2018, 2020, 2023           | Tract, ZCTA, County    |
 | Total households            | HsdTot              | Total households                 | 2020, 2023       | Tract, County, ZCTA   |
-| Crowded Housing             | CrowdHsng         | Proportion of occupied housing units that are considered crowded (more than 1 person per room)           | 2018, 2023       | Tract, County, ZCTA   |
-| Condominium Housing               | HsdTypCo            | Percent cohabiting couple household                               | 2018, 2023       | Tract, County, ZCTA   |
-| Multifamily Housing               | HsdTypM             | Percent married-couple household                                | 2018, 2023       | Tract, County, ZCTA   |
-| Mixed-Use Housing                 | HsdTypMC            | Percent married-couple household With children under 18 years                                 | 2018, 2023       | Tract, County, ZCTA   |
+| Crowded Housing             | CrowdHsng         | Proportion of occupied housing units that are considered crowded (more than 1 person per room)           | 2018, 2020, 2023      | Tract, County, ZCTA   |
+| Condominium Housing               | HsdTypCo            | Percent cohabiting couple household                               | 2018, 2020, 2023       | Tract, County, ZCTA   |
+| Multifamily Housing               | HsdTypM             | Percent married-couple household                                | 2018, 2020, 2023       | Tract, County, ZCTA   |
+| Mixed-Use Housing                 | HsdTypMC            | Percent married-couple household With children under 18 years                                 | 2018, 2020, 2023       | Tract, County, ZCTA   |
 | Occupied Housing Units            | OccupantP           | Percent occupied housing units | 2023 | Tract, County, ZCTA | 
-| Female-headed family households  | HhldFA              | Percent female householder with no spouse/partner living alone             | 2018, 2023           | Tract, ZCTA, County    |
-| Female-headed family households with children  | HhldFC              | Percent female householder with no spouse/partner living with children under 18 years             | 2018, 2023           | Tract, ZCTA, County    |
-| Single female households  | HhldFS              | Percent female householder 65 years and over living alone                 | 2018, 2023           | Tract, ZCTA, County    |
-| Single male-headed adult households     | HhldMA              | Percent male householder with no spouse/partner living alone    | 2018, 2023           | Tract, ZCTA, County    |
-| Couple-headed male households    | HhldMC              | Percent married-couple household With children under 18 years              | 2018, 2023           | Tract, ZCTA, County    |
-| Single-male households           | HhldMS              | Percent male householder 65 years and over living alone                  | 2018, 2023           | Tract, ZCTA, County    |
+| Female-headed family households  | HhldFA              | Percent female householder with no spouse/partner living alone             | 2018, 2020, 2023           | Tract, ZCTA, County    |
+| Female-headed family households with children  | HhldFC              | Percent female householder with no spouse/partner living with children under 18 years             | 2018, 2020, 2023           | Tract, ZCTA, County    |
+| Single female households  | HhldFS              | Percent female householder 65 years and over living alone                 | 2018, 2020, 2023           | Tract, ZCTA, County    |
+| Single male-headed adult households     | HhldMA              | Percent male householder with no spouse/partner living alone    | 2018, 2020, 2023           | Tract, ZCTA, County    |
+| Couple-headed male households    | HhldMC              | Percent married-couple household With children under 18 years              | 2018, 2020, 2023           | Tract, ZCTA, County    |
+| Single-male households           | HhldMS              | Percent male householder 65 years and over living alone                  | 2018, 2020, 2023          | Tract, ZCTA, County    |
 
  
 ### Data Limitations:
