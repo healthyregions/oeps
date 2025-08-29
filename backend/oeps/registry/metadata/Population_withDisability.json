@@ -3,5 +3,7 @@
   "theme": "Social",
   "construct": "Population with Disability",
   "proxy": "Population with Disability (%)",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Population_withDisability.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Population_withDisability.md",
+  "source": "ACS 2012, 2018, 2023; IPUMS NHGIS 2000",
+  "source_long": "American Community Survey 2008-2012, 2014-2018, & 2019-2023 5-Year Estimates; Integrated Public Use Microdata Service National Historic Geographic Information Systems, 2020"
 }
