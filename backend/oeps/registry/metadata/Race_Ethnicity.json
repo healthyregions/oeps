@@ -4,6 +4,6 @@
   "construct": "Race & Ethnicity",
   "proxy": "Population percentages by race and ethnicity",
   "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Race_Ethnicity.md",
-  "source": "ACS 2018, 2023; Census 2010, 2020; IPUMS NHGIS 1980, 1990, 2000",
+  "source": "ACS 2018, 2023; Census 2010, 2020; IPUMS 1980, 1990, 2000",
   "source_long": "American Community Survey 2014-2018 & 2019-2023 5-Year Estimates; 2010 & 2020 Decennial Census; Integrated Public Use Microdata Series National Historic Geographic Information System"
 }
