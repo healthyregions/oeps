@@ -3,5 +3,7 @@
   "theme": "Economic",
   "construct": "Employment Trends",
   "proxy": "Working Population Total, Employed % - Education, Employed % - High Risk of Injury, Employed % - Health Care, Employed % - Retail, The number of unemployed individuals as a percentage of the civilian labor force",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Jobs_byIndustry.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Jobs_byIndustry.md",
+  "source": "ACS 2018, 2023",
+  "source_long": "American Community Survey 2014-2018 & 2019-2023 5-Year Estimates"
 }
