@@ -1,7 +1,0 @@
-{
-  "id": "Rural_Urban_Classification_T_Z",
-  "theme": "Environment",
-  "construct": "Urban/Suburban/Rural Classification",
-  "proxy": "Primary RUCA Code, Secondary RUCA Code by Tract & ZCTA",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Rural_Urban_Classification_T_Z.md"
-}
