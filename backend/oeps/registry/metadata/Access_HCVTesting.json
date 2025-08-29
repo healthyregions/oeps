@@ -3,5 +3,7 @@
   "theme": "Environment",
   "construct": "Spatial access to HCV Testing",
   "proxy": "Spatial access metrics to testing for hepatitis C virus (HCV) infections (Straight-line Distance, Driving Time, Count of Resources)",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md",
+  "source": "SAHMSA 2025",
+  "source_long": "U.S. Substance Abuse and Mental Health Services Administration 2025"
 }
