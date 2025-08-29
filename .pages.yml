@@ -29,6 +29,14 @@ content:
         label: URL
         type: string
         description: "Full URL to the metadata document in GitHub, for example: https://github.com/healthyregions/oeps/blob/pagescms_registry/metadata/Access_MOUDs.md"
+      - name: source
+        label: Source
+        type: string
+        description: "List of sources (using acronyms) for data described in this document. Example: \"ACS 2018; Census 2000, 2010; IPUMS 1980\""
+      - name: source_long
+        label: Source (long)
+        type: string
+        description: "List of sources as above, but using full names instead of abbreviations."
   - name: variables
     label: Variables
     type: collection
