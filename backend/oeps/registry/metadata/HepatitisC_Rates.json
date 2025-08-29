@@ -3,5 +3,7 @@
   "theme": "Outcome",
   "construct": "Hepatitis C Rates",
   "proxy": "Rates of Hep C cases by age and demographics",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/HepatitisC_Rates.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/HepatitisC_Rates.md",
+  "source": "HepVu 2013-2016, 2018-2022",
+  "source_long": "HepVu, Emory University Rollins School of Public Health, 2013-2016 & 2018-2022"
 }
