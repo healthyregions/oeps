@@ -3,5 +3,7 @@
   "theme": "Policy",
   "construct": "Harm Reduction Policies",
   "proxy": "Good Samaritan Laws (Date, Fraction of Year Enacted)",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Good_Samaritan_Laws.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Good_Samaritan_Laws.md",
+  "source": "OPTIC 2017, 2019, 2020, 2021",
+  "source_long": "RAND-USC Schaeffer Opioid Policy Tools and Information Center, 2017, 2019, 2020, 2021"
 }
