@@ -3,5 +3,7 @@
   "theme": "Social",
   "construct": "Household Characteristics",
   "proxy": "Percent males aged 15 or older who are married, never married, separated, divorced, or widowed",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Marital_Status.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Marital_Status.md",
+  "source": "ACS 2020, 2023",
+  "source_long": "American Community Survey 2020, 2023"
 }
