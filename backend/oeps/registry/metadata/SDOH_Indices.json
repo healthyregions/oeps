@@ -3,5 +3,7 @@
   "theme": "Composite",
   "construct": "SDOH Indices & Typology",
   "proxy": "Social Determinants of Health (SDOH) Multivariate Measures (Indices, Neighborhood Typology)",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/SDOHIndices.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/SDOHIndices.md",
+  "source": "GeoDa Data and Lab; SDOH Atlas; Kolak et al., 2020",
+  "source_long": "GeoDa Data and Lab; Spatial Deterimants of Health Atlas; Kolak et al., 2020"
 }
