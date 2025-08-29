@@ -3,5 +3,7 @@
   "theme": "Environment",
   "construct": "Spatial Access to Hospitals",
   "proxy": "Spatial access metrics to Hospitals (Distance, Travel Time, Count Within Threshold)",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Hospitals.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Hospitals.md",
+  "source": "CovidCareMap 2020",
+  "source_long": "CovidCareMap, 2020"
 }
