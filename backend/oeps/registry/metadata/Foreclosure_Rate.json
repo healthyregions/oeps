@@ -3,5 +3,7 @@
   "theme": "Economic",
   "construct": "Great Recession Foreclosure Rate",
   "proxy": "Great Recession Foreclosure or Delinquency Measures (Count, Rate)",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Foreclosure_Rate.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Foreclosure_Rate.md",
+  "source": "HUD 2018; ACS 2012, 2018",
+  "source_long": "U.S. Department of Housing and Urban Development Neighborhood Stabilization Program; American Community Survey 2008-2012 & 2014-2018 5-Year Estimates"
 }
