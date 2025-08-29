@@ -3,5 +3,7 @@
   "theme": "Social",
   "construct": "Community Overlay Variables",
   "proxy": "Hypersegregated Cities, Southern Blackbelt, Native American Reservations",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Unique_Communities.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Unique_Communities.md",
+  "source": "Census 2000; TIGER/Line 2017; Massey et al, 2015;",
+  "source_long": "2000 Decennial Census; TIGER/Line Shapefile, 2017, nation, U.S., Current American Indian/Alaska Native/Native Hawaiian Areas National (AIANNH) National; Massey DS, Tannen J. A Research Note on Trends in Black Hypersegregation. Demography. 2015 Jun;52(3):1025-34. doi: 10.1007/s13524-015-0381-6. PMID: 25791615; PMCID: PMC4886656."
 }
