@@ -3,5 +3,7 @@
   "theme": "Environment",
   "construct": "Spatial Access to Mental Health Providers",
   "proxy": "Spatial access metrics to Mental Health Providers (Distance, Travel Time, Count Within Threshold)",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Mental_Health.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Mental_Health.md",
+  "source": "SAMHSA 2020",
+  "source_long": "U.S. Substance Abuse and Mental Health Services Administration, Treatment Locator Tool, 2020"
 }
