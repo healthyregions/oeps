@@ -3,5 +3,7 @@
   "theme": "Environment",
   "construct": "Housing Characteristics ",
   "proxy": "Housing Characteristics (Occupancy Rate, Vacancy Rate, Rented Rate, Long term Occupancy, Mobile Home Rate, Housing Unit Density)",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Housing_Variables.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Housing_Variables.md",
+  "source": "ACS 2012, 2018; Social Explorer 2010",
+  "source_long": "American Community Survey 2008-2012 & 2014-2018 5-Year Estimates; Social Explorer Historic Census Data on 2010 Geographies"
 }
