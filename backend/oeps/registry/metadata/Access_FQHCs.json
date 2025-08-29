@@ -3,5 +3,7 @@
   "theme": "Environment",
   "construct": "Spatial access to Health Centers",
   "proxy": "Spatial access metrics to Federally Qualified Health Centers (Distance, Travel Time, Count Within Threshold)",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_FQHCs.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_FQHCs.md",
+  "source": "US Covid Atlas via HRSA 2020; Tiger/Line 2018",
+  "source_long": "United States Covid Atlas via Health Resources and Services Adminsitration, 2020; Tiger/Line 2018 Shapefiles"
 }
