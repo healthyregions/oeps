@@ -3,5 +3,7 @@
   "theme": "Environment",
   "construct": "Healthcare Provider Access",
   "proxy": "Primary Care and Specialty Physician Density (Total, Per Capita Density)",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Healthcare_Provider_Access.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Healthcare_Provider_Access.md",
+  "source": "Dartmouth Atlas 2010",
+  "source_long": "Dartmouth Atlas' Primary Care Service Area (PCSA) Project, 2010"
 }
