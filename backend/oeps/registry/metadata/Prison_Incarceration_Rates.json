@@ -3,5 +3,7 @@
   "theme": "Social",
   "construct": "Incarceration",
   "proxy": "Total Prison Population Rate, Total Prison Admission Rate, Total Prison Population Count, Prison Prison Admissions Count",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Prison_Incarceration_Rates.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Prison_Incarceration_Rates.md",
+  "source": "Vera Institute of Justice 2016",
+  "source_long": "Vera Institute of Justice, 2016"
 }
