@@ -3,5 +3,7 @@
   "theme": "Social",
   "construct": "Residential Segregation Measures",
   "proxy": "Dissimilarity, Interaction, and Isolation Indices for Black, Asian, & Hispanic Groups",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Residential_Segregation.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Residential_Segregation.md",
+  "source": "ACS 2018, 2023",
+  "source_long": "American Community Survey 2014-2018 & 2019-2023 5-Year Estimates"
 }
