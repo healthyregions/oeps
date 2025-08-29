@@ -3,5 +3,7 @@
   "theme": "Economic",
   "construct": "Poverty, Income, Gini Coefficient",
   "proxy": "Employment, poverty, income, and income inequality (Gini Coefficient)",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Economic_Characteristics.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Economic_Characteristics.md",
+  "source": "ACS 2012, 2018; Social Explorer 2010",
+  "source_long": "American Community Survey 2008-2012 & 2014-2018 5-Year Estimates; Social Explorer Historic Census Data on 2010 Geographies"
 }
