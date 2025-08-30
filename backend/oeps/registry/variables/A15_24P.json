@@ -10,11 +10,14 @@
   "longitudinal": true,
   "analysis": false,
 <<<<<<< HEAD
+<<<<<<< HEAD
   "table_sources": [
     "zcta-2018"
   ],
   "metadata": "Demographic_Characteristics"
 =======
+=======
+>>>>>>> be17f8c1e199def7d04cc2ed21d0e8c31eae9d77
   "table_sources": [],
   "metadata": "Demographics"
 >>>>>>> be17f8c (#136 draft updates to metadata, import new data)
