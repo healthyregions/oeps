@@ -10,6 +10,7 @@
   "longitudinal": true,
   "analysis": false,
   "table_sources": [
+    "zcta-2018",
     "zcta-2020",
     "zcta-2022",
     "zcta-2023",
