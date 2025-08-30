@@ -9,6 +9,7 @@
   "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Other_Demographic_2018.md",
   "longitudinal": true,
   "analysis": false,
+<<<<<<< HEAD
   "table_sources": [
     "county-2018",
     "state-2018",
@@ -16,4 +17,8 @@
     "zcta-2018"
   ],
   "metadata": "Population_withDisability"
+=======
+  "table_sources": [],
+  "metadata": "Other_Demographic_2018"
+>>>>>>> be17f8c (#136 draft updates to metadata, import new data)
 }

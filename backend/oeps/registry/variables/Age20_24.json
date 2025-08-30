@@ -9,6 +9,7 @@
   "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Demographics.md",
   "longitudinal": true,
   "analysis": false,
+<<<<<<< HEAD
   "table_sources": [
     "county-2018",
     "state-2018",
@@ -16,4 +17,8 @@
     "zcta-2018"
   ],
   "metadata": "Demographic_Characteristics"
+=======
+  "table_sources": [],
+  "metadata": "Demographics"
+>>>>>>> be17f8c (#136 draft updates to metadata, import new data)
 }
