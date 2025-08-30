@@ -9,7 +9,11 @@
 Education – Levels of Educational Attainment
 
 ### Data Location:  
+<<<<<<< HEAD
 You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).
+=======
+You can find the variables described in this document in the CSV files [here](../oeps/data/tables).
+>>>>>>> be17f8c1e199def7d04cc2ed21d0e8c31eae9d77
 
 CSV files are organized by year and spatial scale. For example, county-level variables from 2020 will be found in `county-2020.csv`.  
 
