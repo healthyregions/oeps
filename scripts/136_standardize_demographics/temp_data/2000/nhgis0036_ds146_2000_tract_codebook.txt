@@ -1,0 +1,181 @@
+--------------------------------------------------------------------------------
+Codebook for NHGIS data file 'nhgis0036_ds146_2000_tract'
+--------------------------------------------------------------------------------
+ 
+Contents
+    - Data Summary
+    - Data Dictionary
+    - Citation and Use
+ 
+Additional documentation on NHGIS data sources is available at: 
+    https://www.nhgis.org/documentation/tabular-data 
+ 
+--------------------------------------------------------------------------------
+Data Summary
+--------------------------------------------------------------------------------
+ 
+Year:             2000
+Geographic level: Census Tract (by State--County)
+Extent:           All areas
+Dataset:          2000 Census: SF 1a - 100% Data [Areas Larger Than Block Groups]
+   NHGIS code:    2000_SF1a
+   NHGIS ID:      ds146
+Breakdown(s):     Geographic Subarea:
+                     Total area (00)
+ 
+Tables:
+ 
+1. Population Under 20 Years by Sex by Age
+   Universe:    Persons Under 20 Years of Age
+   Source code: NP014C
+   NHGIS code:  FNG
+ 
+--------------------------------------------------------------------------------
+Data Dictionary
+--------------------------------------------------------------------------------
+ 
+Context Fields 
+        GISJOIN:     GIS Join Match Code
+        YEAR:        Data File Year
+        STUSAB:      File Identification
+        REGIONA:     Region Code
+        DIVISIONA:   Division Code
+        STATE:       State Name
+        STATEA:      State Code
+        COUNTY:      County Name
+        COUNTYA:     County Code
+        CTY_SUBA:    County Subdivision Code
+        COUSUBCC:    FIPS County Subdivion Class Code
+        PLACEA:      Place Code
+        PLACECC:     FIPS Place Class Code
+        PLACEDC:     Place Description Code
+        TRACTA:      Census Tract Code
+        TRBL_CTA:    Tribal Census Tract Code
+        BLCK_GRPA:   Block Group Code
+        TRBL_BGA:    Tribal Block Group Code
+        C_CITYA:     Consolidated City Code
+        AIANHHA:     American Indian Area/Alaska Native Area/Hawaiian Home Land Code
+        RES_ONLYA:   American Indian Area/Alaska Native Area (Reservation or Statistical Entity Only) Code
+        TRUSTA:      American Indian Area (Off-Reservation Trust Land Only)/Hawaiian Home Land Code
+        AIANHHCC:    FIPS American Indian Area/Alaska Native Area/Hawaiian Home Land Class Code
+        AITSCE:      American Indian Tribal Subdivision (Census)
+        TRBL_SUBA:   Tribal Subdivision Code
+        ANRCA:       Alaska Native Regional Corporation Code
+        MSA_CMSAA:   Metropolitan Statistical Area/Consolidated Metropolitan Statistical Area Code
+        CMSA:        Consolidated Metropolitan Statistical Area
+        MACCI:       Metropolitan Area Central City Indicator
+        PMSAA:       Primary Metropolitan Statistical Area Code
+        NECMAA:      New England County Metropolitan Area Code
+        NECMACCI:    New England County Metropolitan Area Central City Indicator
+        URB_AREAA:   Urban Area Code
+        UATYPE:      Urban Area Type
+        CD106A:      Congressional District (106th) Code
+        CD108A:      Congressional District (108th) Code
+        CD109A:      Congressional District (109th) Code
+        ZIP3A:       3-Digit ZIP Code Tabulation Area Code
+        ZCTAA:       5-Digit ZIP Code Tabulation Area Code
+        AREALAND:    Area (Land)
+        AREAWATR:    Area (Water)
+        NAME:        Area Name-Legal/Statistical Area Description (LSAD) Term-Part Indicator
+        FUNCSTAT:    Functional Status Code
+        INTPTLAT:    Internal Point (Latitude)
+        INTPLON:     Internal Point (Longitude)
+        LSADC:       Legal/Statistical Area Description Code
+        MACC:        Metropolitan Area Central City
+        UACP:        Urban Area Central Place
+ 
+Breakdown:
+    Geographic Subarea: Total area (00)
+ 
+    Table 1:     Population Under 20 Years by Sex by Age
+    Universe:    Persons Under 20 Years of Age
+    Source code: NP014C
+    NHGIS code:  FNG
+        FNG001:      Male >> Under 1 year
+        FNG002:      Male >> 1 year
+        FNG003:      Male >> 2 years
+        FNG004:      Male >> 3 years
+        FNG005:      Male >> 4 years
+        FNG006:      Male >> 5 years
+        FNG007:      Male >> 6 years
+        FNG008:      Male >> 7 years
+        FNG009:      Male >> 8 years
+        FNG010:      Male >> 9 years
+        FNG011:      Male >> 10 years
+        FNG012:      Male >> 11 years
+        FNG013:      Male >> 12 years
+        FNG014:      Male >> 13 years
+        FNG015:      Male >> 14 years
+        FNG016:      Male >> 15 years
+        FNG017:      Male >> 16 years
+        FNG018:      Male >> 17 years
+        FNG019:      Male >> 18 years
+        FNG020:      Male >> 19 years
+        FNG021:      Female >> Under 1 year
+        FNG022:      Female >> 1 year
+        FNG023:      Female >> 2 years
+        FNG024:      Female >> 3 years
+        FNG025:      Female >> 4 years
+        FNG026:      Female >> 5 years
+        FNG027:      Female >> 6 years
+        FNG028:      Female >> 7 years
+        FNG029:      Female >> 8 years
+        FNG030:      Female >> 9 years
+        FNG031:      Female >> 10 years
+        FNG032:      Female >> 11 years
+        FNG033:      Female >> 12 years
+        FNG034:      Female >> 13 years
+        FNG035:      Female >> 14 years
+        FNG036:      Female >> 15 years
+        FNG037:      Female >> 16 years
+        FNG038:      Female >> 17 years
+        FNG039:      Female >> 18 years
+        FNG040:      Female >> 19 years
+ 
+--------------------------------------------------------------------------------
+Citation and Use of NHGIS Data
+--------------------------------------------------------------------------------
+ 
+All persons are granted a limited license to use this documentation and the
+accompanying data, subject to the following conditions:
+
+* REDISTRIBUTION: You will not redistribute the data without permission.
+
+  You may publish a subset of the data to meet journal requirements for accessing 
+  data related to a particular publication. Contact us for permission for any other 
+  redistribution; we will consider requests for free and commercial redistribution.
+
+* CITATION: You will cite NHGIS appropriately.
+
+    * Publications and research reports employing NHGIS data (either tabular or GIS) 
+      should include the following citation:
+
+        Steven Manson, Jonathan Schroeder, David Van Riper, Katherine Knowles, Tracy Kugler, Finn Roberts, and Steven Ruggles.
+        IPUMS National Historical Geographic Information System: Version 19.0 
+        [dataset]. Minneapolis, MN: IPUMS. 2024. 
+        http://doi.org/10.18128/D050.V19.0
+
+    * For policy briefs, online resources, or articles in the popular press, we 
+      recommend that you cite the use of NHGIS data as follows:
+
+        IPUMS NHGIS, University of Minnesota, www.nhgis.org.
+
+These terms of use are a legally binding agreement. You can use the data only in 
+accordance with these terms, and any other use is a violation of the agreement. 
+Violations may result in revocation of the agreement and prohibition from using other 
+IPUMS data. If IPUMS or our partners are harmed from your violation, you are 
+responsible for all damages, including reasonable attorney's fees and expenses.
+        
+In addition, we request that users send us a copy of any publications, research
+reports, or educational material making use of the data or documentation.
+
+Send electronic material to: nhgis@umn.edu
+
+Printed matter should be sent to:
+
+    IPUMS NHGIS
+    Institute for Social Research and Data Innovation
+    University of Minnesota
+    50 Willey Hall
+    225 19th Ave S
+    Minneapolis, MN 55455

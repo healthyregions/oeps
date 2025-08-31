@@ -1,0 +1,147 @@
+--------------------------------------------------------------------------------
+Codebook for NHGIS data file 'nhgis0037_ds147_2000_blck_grp'
+--------------------------------------------------------------------------------
+ 
+Contents
+    - Data Summary
+    - Data Dictionary
+    - Citation and Use
+ 
+Additional documentation on NHGIS data sources is available at: 
+    https://www.nhgis.org/documentation/tabular-data 
+ 
+--------------------------------------------------------------------------------
+Data Summary
+--------------------------------------------------------------------------------
+ 
+Year:             2000
+Geographic level: Block Group (by State--County--Census Tract)
+Extent:           All areas
+Dataset:          2000 Census: SF 1b - 100% Data [Blocks & Block Groups]
+   NHGIS code:    2000_SF1b
+   NHGIS ID:      ds147
+ 
+Tables:
+ 
+1. Total Population
+   Universe:    Persons
+   Source code: NP001A
+   NHGIS code:  FXS
+ 
+2. Population by Hispanic or Latino and Not Hispanic or Latino
+   Universe:    Persons
+   Source code: NP004A
+   NHGIS code:  FXZ
+ 
+--------------------------------------------------------------------------------
+Data Dictionary
+--------------------------------------------------------------------------------
+ 
+Context Fields 
+    GISJOIN:     GIS Join Match Code
+    YEAR:        Data File Year
+    STUSAB:      File Identification
+    REGION:      Region
+    DIVISION:    Division
+    STATE:       State Name
+    STATEA:      State Code
+    COUNTY:      County Name
+    COUNTYA:     County Code
+    CTY_SUBA:    County Subdivision Code
+    COUSUBCC:    FIPS County Subdivion Class Code
+    PLACEA:      Place Code
+    PLACECC:     FIPS Place Class Code
+    PLACEDC:     Place Description Code
+    TRACTA:      Census Tract Code
+    BLCK_GRPA:   Block Group Code
+    BLOCKA:      Block Code
+    CONCIT:      Consolidated City (FIPS)
+    AIANHHA:     American Indian Area/Alaska Native Area/Hawaiian Home Land Code
+    AIANHHCC:    FIPS American Indian Area/Alaska Native Area/Hawaiian Home Land Class Code
+    AITSCE:      American Indian Tribal Subdivision (Census)
+    MSACMSA:     Metropolitan Statistical Area/Consolidated Metropolitan Statistical Area
+    CMSA:        Consolidated Metropolitan Statistical Area
+    MACCI:       Metropolitan Area Central City Indicator
+    PMSA:        Primary Metropolitan Statistical Area
+    NECMA:       New England County Metropolitan Area
+    NECMACCI:    New England County Metropolitan Area Central City Indicator
+    CD106:       Congressional District (106th)
+    SLDU:        State Legislative District (Upper Chamber)
+    SLDL:        State Legislative District (Lower Chamber)
+    VTD:         Voting District
+    VTDI:        Voting District Indicator
+    ZCTA3:       Zip Code Tabulation Area (3 digit)
+    ZCTA5:       Zip Code Tabulation Area (5 digit)
+    AREALAND:    Area (Land)
+    AREAWATR:    Area (Water)
+    NAME:        Area Name-Legal/Statistical Area Description (LSAD) Term-Part Indicator
+    FUNCSTAT:    Functional Status Code
+    INTPTLAT:    Internal Point (Latitude)
+    INTPLON:     Internal Point (Longitude)
+    LSADC:       Legal/Statistical Area Description Code
+    SDELM:       School District (Elementary)
+    SDSEC:       School District (Secondary)
+    SDUNI:       School District (Unified)
+    TAZ:         Traffic Analysis Zone
+    MACC:        Metropolitan Area Central City
+ 
+Table 1:     Total Population
+Universe:    Persons
+Source code: NP001A
+NHGIS code:  FXS
+    FXS001:      Total
+ 
+Table 2:     Population by Hispanic or Latino and Not Hispanic or Latino
+Universe:    Persons
+Source code: NP004A
+NHGIS code:  FXZ
+    FXZ001:      Hispanic or Latino
+    FXZ002:      Not Hispanic or Latino
+ 
+--------------------------------------------------------------------------------
+Citation and Use of NHGIS Data
+--------------------------------------------------------------------------------
+ 
+All persons are granted a limited license to use this documentation and the
+accompanying data, subject to the following conditions:
+
+* REDISTRIBUTION: You will not redistribute the data without permission.
+
+  You may publish a subset of the data to meet journal requirements for accessing 
+  data related to a particular publication. Contact us for permission for any other 
+  redistribution; we will consider requests for free and commercial redistribution.
+
+* CITATION: You will cite NHGIS appropriately.
+
+    * Publications and research reports employing NHGIS data (either tabular or GIS) 
+      should include the following citation:
+
+        Jonathan Schroeder, David Van Riper, Steven Manson, Katherine Knowles, Tracy Kugler, Finn Roberts, and Steven Ruggles. 
+        IPUMS National Historical Geographic Information System: Version 20.0 
+        [dataset]. Minneapolis, MN: IPUMS. 2025. 
+        http://doi.org/10.18128/D050.V20.0
+
+    * For policy briefs, online resources, or articles in the popular press, we 
+      recommend that you cite the use of NHGIS data as follows:
+
+        IPUMS NHGIS, University of Minnesota, www.nhgis.org.
+
+These terms of use are a legally binding agreement. You can use the data only in 
+accordance with these terms, and any other use is a violation of the agreement. 
+Violations may result in revocation of the agreement and prohibition from using other 
+IPUMS data. If IPUMS or our partners are harmed from your violation, you are 
+responsible for all damages, including reasonable attorney's fees and expenses.
+        
+In addition, we request that users send us a copy of any publications, research
+reports, or educational material making use of the data or documentation.
+
+Send electronic material to: nhgis@umn.edu
+
+Printed matter should be sent to:
+
+    IPUMS NHGIS
+    Institute for Social Research and Data Innovation
+    University of Minnesota
+    50 Willey Hall
+    225 19th Ave S
+    Minneapolis, MN 55455

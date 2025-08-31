@@ -1,0 +1,441 @@
+--------------------------------------------------------------------------------
+Codebook for NHGIS data file 'nhgis0035_ds120_1990_tract'
+--------------------------------------------------------------------------------
+ 
+Contents
+    - Data Summary
+    - Data Dictionary
+    - Citation and Use
+ 
+Additional documentation on NHGIS data sources is available at: 
+    https://www.nhgis.org/documentation/tabular-data 
+ 
+--------------------------------------------------------------------------------
+Data Summary
+--------------------------------------------------------------------------------
+ 
+Year:             1990
+Geographic level: Census Tract (by State--County)
+Extent:           All areas
+Dataset:          1990 Census: STF 1 - 100% Data
+   NHGIS code:    1990_STF1
+   NHGIS ID:      ds120
+Breakdown(s):     Geographic Subarea:
+                     Total area (00)
+ 
+Tables:
+ 
+1. Race by Sex by Age
+   Universe:    Persons
+   Source code: NP12
+   NHGIS code:  ET4
+ 
+--------------------------------------------------------------------------------
+Data Dictionary
+--------------------------------------------------------------------------------
+ 
+Context Fields 
+        GISJOIN:     GIS Join Match Code
+        YEAR:        Data File Year
+        STUSAB:      State/US Abbreviation
+        ANRCA:       Alaska Native Regional Corporation Code
+        AIANHHA:     American Indian Area/Alaska Native Area/Hawaiian Home Land Code
+        RES_ONLYA:   American Indian Reservation [excluding trust lands] Code
+        TRUSTA:      American Indian Reservation [trust lands only] Code
+        AIANCC:      American Indian/Alaska Native Area Class Code
+        RES_TRSTA:   Reservation/Trust Lands Code
+        BLOCKA:      Block Code
+        BLCK_GRPA:   Block Group Code
+        TRACTA:      Census Tract Code
+        CD101A:      Congressional District (101st) Code
+        C_CITYA:     Consolidated City Code
+        CMSA:        Consolidated Metropolitan Statistical Area
+        COUNTY:      County Name
+        COUNTYA:     County Code
+        CTY_SUBA:    County Subdivision Code
+        COUSUBCC:    County Subdivision Class Code
+        DIVISIONA:   Division Code
+        MSA_CMSAA:   Metropolitan Statistical Area/Consolidated Metropolitan Statistical Area Code
+        PLACEA:      Place Code
+        PLACECC:     Place Class Code
+        PLACEDC:     Place Description Code
+        PMSAA:       Primary Metropolitan Statistical Area Code
+        REGIONA:     Region Code
+        STATE:       State Name
+        STATEA:      State Code
+        URBRURALA:   Urban/Rural Code
+        URB_AREAA:   Urban Area Code
+        CD103A:      Congressional District (103rd) Code
+        AREALAND:    Area (land)
+        AREAWAT:     Area (Water)
+        ANPSADPI:    Area Name/PSAD Term/Part Indicator
+        FUNCSTAT:    Functional Status Code
+        INTPTLAT:    Internal Point (latitude)
+        INTPTLNG:    Internal Point (longitude)
+        PSADC:       Political/Statistical Area Description Code
+ 
+Breakdown:
+    Geographic Subarea: Total area (00)
+ 
+    Table 1:     Race by Sex by Age
+    Universe:    Persons
+    Source code: NP12
+    NHGIS code:  ET4
+        ET4001:      White >> Male >> Under 1 year
+        ET4002:      White >> Male >> 1 and 2 years
+        ET4003:      White >> Male >> 3 and 4 years
+        ET4004:      White >> Male >> 5 years
+        ET4005:      White >> Male >> 6 years
+        ET4006:      White >> Male >> 7 to 9 years
+        ET4007:      White >> Male >> 10 and 11 years
+        ET4008:      White >> Male >> 12 and 13 years
+        ET4009:      White >> Male >> 14 years
+        ET4010:      White >> Male >> 15 years
+        ET4011:      White >> Male >> 16 years
+        ET4012:      White >> Male >> 17 years
+        ET4013:      White >> Male >> 18 years
+        ET4014:      White >> Male >> 19 years
+        ET4015:      White >> Male >> 20 years
+        ET4016:      White >> Male >> 21 years
+        ET4017:      White >> Male >> 22 to 24 years
+        ET4018:      White >> Male >> 25 to 29 years
+        ET4019:      White >> Male >> 30 to 34 years
+        ET4020:      White >> Male >> 35 to 39 years
+        ET4021:      White >> Male >> 40 to 44 years
+        ET4022:      White >> Male >> 45 to 49 years
+        ET4023:      White >> Male >> 50 to 54 years
+        ET4024:      White >> Male >> 55 to 59 years
+        ET4025:      White >> Male >> 60 and 61 years
+        ET4026:      White >> Male >> 62 to 64 years
+        ET4027:      White >> Male >> 65 to 69 years
+        ET4028:      White >> Male >> 70 to 74 years
+        ET4029:      White >> Male >> 75 to 79 years
+        ET4030:      White >> Male >> 80 to 84 years
+        ET4031:      White >> Male >> 85 years and over
+        ET4032:      White >> Female >> Under 1 year
+        ET4033:      White >> Female >> 1 and 2 years
+        ET4034:      White >> Female >> 3 and 4 years
+        ET4035:      White >> Female >> 5 years
+        ET4036:      White >> Female >> 6 years
+        ET4037:      White >> Female >> 7 to 9 years
+        ET4038:      White >> Female >> 10 and 11 years
+        ET4039:      White >> Female >> 12 and 13 years
+        ET4040:      White >> Female >> 14 years
+        ET4041:      White >> Female >> 15 years
+        ET4042:      White >> Female >> 16 years
+        ET4043:      White >> Female >> 17 years
+        ET4044:      White >> Female >> 18 years
+        ET4045:      White >> Female >> 19 years
+        ET4046:      White >> Female >> 20 years
+        ET4047:      White >> Female >> 21 years
+        ET4048:      White >> Female >> 22 to 24 years
+        ET4049:      White >> Female >> 25 to 29 years
+        ET4050:      White >> Female >> 30 to 34 years
+        ET4051:      White >> Female >> 35 to 39 years
+        ET4052:      White >> Female >> 40 to 44 years
+        ET4053:      White >> Female >> 45 to 49 years
+        ET4054:      White >> Female >> 50 to 54 years
+        ET4055:      White >> Female >> 55 to 59 years
+        ET4056:      White >> Female >> 60 and 61 years
+        ET4057:      White >> Female >> 62 to 64 years
+        ET4058:      White >> Female >> 65 to 69 years
+        ET4059:      White >> Female >> 70 to 74 years
+        ET4060:      White >> Female >> 75 to 79 years
+        ET4061:      White >> Female >> 80 to 84 years
+        ET4062:      White >> Female >> 85 years and over
+        ET4063:      Black >> Male >> Under 1 year
+        ET4064:      Black >> Male >> 1 and 2 years
+        ET4065:      Black >> Male >> 3 and 4 years
+        ET4066:      Black >> Male >> 5 years
+        ET4067:      Black >> Male >> 6 years
+        ET4068:      Black >> Male >> 7 to 9 years
+        ET4069:      Black >> Male >> 10 and 11 years
+        ET4070:      Black >> Male >> 12 and 13 years
+        ET4071:      Black >> Male >> 14 years
+        ET4072:      Black >> Male >> 15 years
+        ET4073:      Black >> Male >> 16 years
+        ET4074:      Black >> Male >> 17 years
+        ET4075:      Black >> Male >> 18 years
+        ET4076:      Black >> Male >> 19 years
+        ET4077:      Black >> Male >> 20 years
+        ET4078:      Black >> Male >> 21 years
+        ET4079:      Black >> Male >> 22 to 24 years
+        ET4080:      Black >> Male >> 25 to 29 years
+        ET4081:      Black >> Male >> 30 to 34 years
+        ET4082:      Black >> Male >> 35 to 39 years
+        ET4083:      Black >> Male >> 40 to 44 years
+        ET4084:      Black >> Male >> 45 to 49 years
+        ET4085:      Black >> Male >> 50 to 54 years
+        ET4086:      Black >> Male >> 55 to 59 years
+        ET4087:      Black >> Male >> 60 and 61 years
+        ET4088:      Black >> Male >> 62 to 64 years
+        ET4089:      Black >> Male >> 65 to 69 years
+        ET4090:      Black >> Male >> 70 to 74 years
+        ET4091:      Black >> Male >> 75 to 79 years
+        ET4092:      Black >> Male >> 80 to 84 years
+        ET4093:      Black >> Male >> 85 years and over
+        ET4094:      Black >> Female >> Under 1 year
+        ET4095:      Black >> Female >> 1 and 2 years
+        ET4096:      Black >> Female >> 3 and 4 years
+        ET4097:      Black >> Female >> 5 years
+        ET4098:      Black >> Female >> 6 years
+        ET4099:      Black >> Female >> 7 to 9 years
+        ET4100:      Black >> Female >> 10 and 11 years
+        ET4101:      Black >> Female >> 12 and 13 years
+        ET4102:      Black >> Female >> 14 years
+        ET4103:      Black >> Female >> 15 years
+        ET4104:      Black >> Female >> 16 years
+        ET4105:      Black >> Female >> 17 years
+        ET4106:      Black >> Female >> 18 years
+        ET4107:      Black >> Female >> 19 years
+        ET4108:      Black >> Female >> 20 years
+        ET4109:      Black >> Female >> 21 years
+        ET4110:      Black >> Female >> 22 to 24 years
+        ET4111:      Black >> Female >> 25 to 29 years
+        ET4112:      Black >> Female >> 30 to 34 years
+        ET4113:      Black >> Female >> 35 to 39 years
+        ET4114:      Black >> Female >> 40 to 44 years
+        ET4115:      Black >> Female >> 45 to 49 years
+        ET4116:      Black >> Female >> 50 to 54 years
+        ET4117:      Black >> Female >> 55 to 59 years
+        ET4118:      Black >> Female >> 60 and 61 years
+        ET4119:      Black >> Female >> 62 to 64 years
+        ET4120:      Black >> Female >> 65 to 69 years
+        ET4121:      Black >> Female >> 70 to 74 years
+        ET4122:      Black >> Female >> 75 to 79 years
+        ET4123:      Black >> Female >> 80 to 84 years
+        ET4124:      Black >> Female >> 85 years and over
+        ET4125:      American Indian, Eskimo, or Aleut >> Male >> Under 1 year
+        ET4126:      American Indian, Eskimo, or Aleut >> Male >> 1 and 2 years
+        ET4127:      American Indian, Eskimo, or Aleut >> Male >> 3 and 4 years
+        ET4128:      American Indian, Eskimo, or Aleut >> Male >> 5 years
+        ET4129:      American Indian, Eskimo, or Aleut >> Male >> 6 years
+        ET4130:      American Indian, Eskimo, or Aleut >> Male >> 7 to 9 years
+        ET4131:      American Indian, Eskimo, or Aleut >> Male >> 10 and 11 years
+        ET4132:      American Indian, Eskimo, or Aleut >> Male >> 12 and 13 years
+        ET4133:      American Indian, Eskimo, or Aleut >> Male >> 14 years
+        ET4134:      American Indian, Eskimo, or Aleut >> Male >> 15 years
+        ET4135:      American Indian, Eskimo, or Aleut >> Male >> 16 years
+        ET4136:      American Indian, Eskimo, or Aleut >> Male >> 17 years
+        ET4137:      American Indian, Eskimo, or Aleut >> Male >> 18 years
+        ET4138:      American Indian, Eskimo, or Aleut >> Male >> 19 years
+        ET4139:      American Indian, Eskimo, or Aleut >> Male >> 20 years
+        ET4140:      American Indian, Eskimo, or Aleut >> Male >> 21 years
+        ET4141:      American Indian, Eskimo, or Aleut >> Male >> 22 to 24 years
+        ET4142:      American Indian, Eskimo, or Aleut >> Male >> 25 to 29 years
+        ET4143:      American Indian, Eskimo, or Aleut >> Male >> 30 to 34 years
+        ET4144:      American Indian, Eskimo, or Aleut >> Male >> 35 to 39 years
+        ET4145:      American Indian, Eskimo, or Aleut >> Male >> 40 to 44 years
+        ET4146:      American Indian, Eskimo, or Aleut >> Male >> 45 to 49 years
+        ET4147:      American Indian, Eskimo, or Aleut >> Male >> 50 to 54 years
+        ET4148:      American Indian, Eskimo, or Aleut >> Male >> 55 to 59 years
+        ET4149:      American Indian, Eskimo, or Aleut >> Male >> 60 and 61 years
+        ET4150:      American Indian, Eskimo, or Aleut >> Male >> 62 to 64 years
+        ET4151:      American Indian, Eskimo, or Aleut >> Male >> 65 to 69 years
+        ET4152:      American Indian, Eskimo, or Aleut >> Male >> 70 to 74 years
+        ET4153:      American Indian, Eskimo, or Aleut >> Male >> 75 to 79 years
+        ET4154:      American Indian, Eskimo, or Aleut >> Male >> 80 to 84 years
+        ET4155:      American Indian, Eskimo, or Aleut >> Male >> 85 years and over
+        ET4156:      American Indian, Eskimo, or Aleut >> Female >> Under 1 year
+        ET4157:      American Indian, Eskimo, or Aleut >> Female >> 1 and 2 years
+        ET4158:      American Indian, Eskimo, or Aleut >> Female >> 3 and 4 years
+        ET4159:      American Indian, Eskimo, or Aleut >> Female >> 5 years
+        ET4160:      American Indian, Eskimo, or Aleut >> Female >> 6 years
+        ET4161:      American Indian, Eskimo, or Aleut >> Female >> 7 to 9 years
+        ET4162:      American Indian, Eskimo, or Aleut >> Female >> 10 and 11 years
+        ET4163:      American Indian, Eskimo, or Aleut >> Female >> 12 and 13 years
+        ET4164:      American Indian, Eskimo, or Aleut >> Female >> 14 years
+        ET4165:      American Indian, Eskimo, or Aleut >> Female >> 15 years
+        ET4166:      American Indian, Eskimo, or Aleut >> Female >> 16 years
+        ET4167:      American Indian, Eskimo, or Aleut >> Female >> 17 years
+        ET4168:      American Indian, Eskimo, or Aleut >> Female >> 18 years
+        ET4169:      American Indian, Eskimo, or Aleut >> Female >> 19 years
+        ET4170:      American Indian, Eskimo, or Aleut >> Female >> 20 years
+        ET4171:      American Indian, Eskimo, or Aleut >> Female >> 21 years
+        ET4172:      American Indian, Eskimo, or Aleut >> Female >> 22 to 24 years
+        ET4173:      American Indian, Eskimo, or Aleut >> Female >> 25 to 29 years
+        ET4174:      American Indian, Eskimo, or Aleut >> Female >> 30 to 34 years
+        ET4175:      American Indian, Eskimo, or Aleut >> Female >> 35 to 39 years
+        ET4176:      American Indian, Eskimo, or Aleut >> Female >> 40 to 44 years
+        ET4177:      American Indian, Eskimo, or Aleut >> Female >> 45 to 49 years
+        ET4178:      American Indian, Eskimo, or Aleut >> Female >> 50 to 54 years
+        ET4179:      American Indian, Eskimo, or Aleut >> Female >> 55 to 59 years
+        ET4180:      American Indian, Eskimo, or Aleut >> Female >> 60 and 61 years
+        ET4181:      American Indian, Eskimo, or Aleut >> Female >> 62 to 64 years
+        ET4182:      American Indian, Eskimo, or Aleut >> Female >> 65 to 69 years
+        ET4183:      American Indian, Eskimo, or Aleut >> Female >> 70 to 74 years
+        ET4184:      American Indian, Eskimo, or Aleut >> Female >> 75 to 79 years
+        ET4185:      American Indian, Eskimo, or Aleut >> Female >> 80 to 84 years
+        ET4186:      American Indian, Eskimo, or Aleut >> Female >> 85 years and over
+        ET4187:      Asian or Pacific Islander >> Male >> Under 1 year
+        ET4188:      Asian or Pacific Islander >> Male >> 1 and 2 years
+        ET4189:      Asian or Pacific Islander >> Male >> 3 and 4 years
+        ET4190:      Asian or Pacific Islander >> Male >> 5 years
+        ET4191:      Asian or Pacific Islander >> Male >> 6 years
+        ET4192:      Asian or Pacific Islander >> Male >> 7 to 9 years
+        ET4193:      Asian or Pacific Islander >> Male >> 10 and 11 years
+        ET4194:      Asian or Pacific Islander >> Male >> 12 and 13 years
+        ET4195:      Asian or Pacific Islander >> Male >> 14 years
+        ET4196:      Asian or Pacific Islander >> Male >> 15 years
+        ET4197:      Asian or Pacific Islander >> Male >> 16 years
+        ET4198:      Asian or Pacific Islander >> Male >> 17 years
+        ET4199:      Asian or Pacific Islander >> Male >> 18 years
+        ET4200:      Asian or Pacific Islander >> Male >> 19 years
+        ET4201:      Asian or Pacific Islander >> Male >> 20 years
+        ET4202:      Asian or Pacific Islander >> Male >> 21 years
+        ET4203:      Asian or Pacific Islander >> Male >> 22 to 24 years
+        ET4204:      Asian or Pacific Islander >> Male >> 25 to 29 years
+        ET4205:      Asian or Pacific Islander >> Male >> 30 to 34 years
+        ET4206:      Asian or Pacific Islander >> Male >> 35 to 39 years
+        ET4207:      Asian or Pacific Islander >> Male >> 40 to 44 years
+        ET4208:      Asian or Pacific Islander >> Male >> 45 to 49 years
+        ET4209:      Asian or Pacific Islander >> Male >> 50 to 54 years
+        ET4210:      Asian or Pacific Islander >> Male >> 55 to 59 years
+        ET4211:      Asian or Pacific Islander >> Male >> 60 and 61 years
+        ET4212:      Asian or Pacific Islander >> Male >> 62 to 64 years
+        ET4213:      Asian or Pacific Islander >> Male >> 65 to 69 years
+        ET4214:      Asian or Pacific Islander >> Male >> 70 to 74 years
+        ET4215:      Asian or Pacific Islander >> Male >> 75 to 79 years
+        ET4216:      Asian or Pacific Islander >> Male >> 80 to 84 years
+        ET4217:      Asian or Pacific Islander >> Male >> 85 years and over
+        ET4218:      Asian or Pacific Islander >> Female >> Under 1 year
+        ET4219:      Asian or Pacific Islander >> Female >> 1 and 2 years
+        ET4220:      Asian or Pacific Islander >> Female >> 3 and 4 years
+        ET4221:      Asian or Pacific Islander >> Female >> 5 years
+        ET4222:      Asian or Pacific Islander >> Female >> 6 years
+        ET4223:      Asian or Pacific Islander >> Female >> 7 to 9 years
+        ET4224:      Asian or Pacific Islander >> Female >> 10 and 11 years
+        ET4225:      Asian or Pacific Islander >> Female >> 12 and 13 years
+        ET4226:      Asian or Pacific Islander >> Female >> 14 years
+        ET4227:      Asian or Pacific Islander >> Female >> 15 years
+        ET4228:      Asian or Pacific Islander >> Female >> 16 years
+        ET4229:      Asian or Pacific Islander >> Female >> 17 years
+        ET4230:      Asian or Pacific Islander >> Female >> 18 years
+        ET4231:      Asian or Pacific Islander >> Female >> 19 years
+        ET4232:      Asian or Pacific Islander >> Female >> 20 years
+        ET4233:      Asian or Pacific Islander >> Female >> 21 years
+        ET4234:      Asian or Pacific Islander >> Female >> 22 to 24 years
+        ET4235:      Asian or Pacific Islander >> Female >> 25 to 29 years
+        ET4236:      Asian or Pacific Islander >> Female >> 30 to 34 years
+        ET4237:      Asian or Pacific Islander >> Female >> 35 to 39 years
+        ET4238:      Asian or Pacific Islander >> Female >> 40 to 44 years
+        ET4239:      Asian or Pacific Islander >> Female >> 45 to 49 years
+        ET4240:      Asian or Pacific Islander >> Female >> 50 to 54 years
+        ET4241:      Asian or Pacific Islander >> Female >> 55 to 59 years
+        ET4242:      Asian or Pacific Islander >> Female >> 60 and 61 years
+        ET4243:      Asian or Pacific Islander >> Female >> 62 to 64 years
+        ET4244:      Asian or Pacific Islander >> Female >> 65 to 69 years
+        ET4245:      Asian or Pacific Islander >> Female >> 70 to 74 years
+        ET4246:      Asian or Pacific Islander >> Female >> 75 to 79 years
+        ET4247:      Asian or Pacific Islander >> Female >> 80 to 84 years
+        ET4248:      Asian or Pacific Islander >> Female >> 85 years and over
+        ET4249:      Other race >> Male >> Under 1 year
+        ET4250:      Other race >> Male >> 1 and 2 years
+        ET4251:      Other race >> Male >> 3 and 4 years
+        ET4252:      Other race >> Male >> 5 years
+        ET4253:      Other race >> Male >> 6 years
+        ET4254:      Other race >> Male >> 7 to 9 years
+        ET4255:      Other race >> Male >> 10 and 11 years
+        ET4256:      Other race >> Male >> 12 and 13 years
+        ET4257:      Other race >> Male >> 14 years
+        ET4258:      Other race >> Male >> 15 years
+        ET4259:      Other race >> Male >> 16 years
+        ET4260:      Other race >> Male >> 17 years
+        ET4261:      Other race >> Male >> 18 years
+        ET4262:      Other race >> Male >> 19 years
+        ET4263:      Other race >> Male >> 20 years
+        ET4264:      Other race >> Male >> 21 years
+        ET4265:      Other race >> Male >> 22 to 24 years
+        ET4266:      Other race >> Male >> 25 to 29 years
+        ET4267:      Other race >> Male >> 30 to 34 years
+        ET4268:      Other race >> Male >> 35 to 39 years
+        ET4269:      Other race >> Male >> 40 to 44 years
+        ET4270:      Other race >> Male >> 45 to 49 years
+        ET4271:      Other race >> Male >> 50 to 54 years
+        ET4272:      Other race >> Male >> 55 to 59 years
+        ET4273:      Other race >> Male >> 60 and 61 years
+        ET4274:      Other race >> Male >> 62 to 64 years
+        ET4275:      Other race >> Male >> 65 to 69 years
+        ET4276:      Other race >> Male >> 70 to 74 years
+        ET4277:      Other race >> Male >> 75 to 79 years
+        ET4278:      Other race >> Male >> 80 to 84 years
+        ET4279:      Other race >> Male >> 85 years and over
+        ET4280:      Other race >> Female >> Under 1 year
+        ET4281:      Other race >> Female >> 1 and 2 years
+        ET4282:      Other race >> Female >> 3 and 4 years
+        ET4283:      Other race >> Female >> 5 years
+        ET4284:      Other race >> Female >> 6 years
+        ET4285:      Other race >> Female >> 7 to 9 years
+        ET4286:      Other race >> Female >> 10 and 11 years
+        ET4287:      Other race >> Female >> 12 and 13 years
+        ET4288:      Other race >> Female >> 14 years
+        ET4289:      Other race >> Female >> 15 years
+        ET4290:      Other race >> Female >> 16 years
+        ET4291:      Other race >> Female >> 17 years
+        ET4292:      Other race >> Female >> 18 years
+        ET4293:      Other race >> Female >> 19 years
+        ET4294:      Other race >> Female >> 20 years
+        ET4295:      Other race >> Female >> 21 years
+        ET4296:      Other race >> Female >> 22 to 24 years
+        ET4297:      Other race >> Female >> 25 to 29 years
+        ET4298:      Other race >> Female >> 30 to 34 years
+        ET4299:      Other race >> Female >> 35 to 39 years
+        ET4300:      Other race >> Female >> 40 to 44 years
+        ET4301:      Other race >> Female >> 45 to 49 years
+        ET4302:      Other race >> Female >> 50 to 54 years
+        ET4303:      Other race >> Female >> 55 to 59 years
+        ET4304:      Other race >> Female >> 60 and 61 years
+        ET4305:      Other race >> Female >> 62 to 64 years
+        ET4306:      Other race >> Female >> 65 to 69 years
+        ET4307:      Other race >> Female >> 70 to 74 years
+        ET4308:      Other race >> Female >> 75 to 79 years
+        ET4309:      Other race >> Female >> 80 to 84 years
+        ET4310:      Other race >> Female >> 85 years and over
+ 
+--------------------------------------------------------------------------------
+Citation and Use of NHGIS Data
+--------------------------------------------------------------------------------
+ 
+All persons are granted a limited license to use this documentation and the
+accompanying data, subject to the following conditions:
+
+* REDISTRIBUTION: You will not redistribute the data without permission.
+
+  You may publish a subset of the data to meet journal requirements for accessing 
+  data related to a particular publication. Contact us for permission for any other 
+  redistribution; we will consider requests for free and commercial redistribution.
+
+* CITATION: You will cite NHGIS appropriately.
+
+    * Publications and research reports employing NHGIS data (either tabular or GIS) 
+      should include the following citation:
+
+        Steven Manson, Jonathan Schroeder, David Van Riper, Katherine Knowles, Tracy Kugler, Finn Roberts, and Steven Ruggles.
+        IPUMS National Historical Geographic Information System: Version 19.0 
+        [dataset]. Minneapolis, MN: IPUMS. 2024. 
+        http://doi.org/10.18128/D050.V19.0
+
+    * For policy briefs, online resources, or articles in the popular press, we 
+      recommend that you cite the use of NHGIS data as follows:
+
+        IPUMS NHGIS, University of Minnesota, www.nhgis.org.
+
+These terms of use are a legally binding agreement. You can use the data only in 
+accordance with these terms, and any other use is a violation of the agreement. 
+Violations may result in revocation of the agreement and prohibition from using other 
+IPUMS data. If IPUMS or our partners are harmed from your violation, you are 
+responsible for all damages, including reasonable attorney's fees and expenses.
+        
+In addition, we request that users send us a copy of any publications, research
+reports, or educational material making use of the data or documentation.
+
+Send electronic material to: nhgis@umn.edu
+
+Printed matter should be sent to:
+
+    IPUMS NHGIS
+    Institute for Social Research and Data Innovation
+    University of Minnesota
+    50 Willey Hall
+    225 19th Ave S
+    Minneapolis, MN 55455
