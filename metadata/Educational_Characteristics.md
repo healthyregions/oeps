@@ -9,11 +9,7 @@
 Education – Levels of Educational Attainment
 
 ### Data Location:  
-<<<<<<< HEAD
 You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).
-=======
-You can find the variables described in this document in the CSV files [here](../oeps/data/tables).
->>>>>>> be17f8c1e199def7d04cc2ed21d0e8c31eae9d77
 
 CSV files are organized by year and spatial scale. For example, county-level variables from 2020 will be found in `county-2020.csv`.  
 
@@ -36,20 +32,19 @@ This table includes the number and percent of people aged 25 years and older who
 
 ### Key Variable and Definitions:
 
-| Variable                           | Variable ID in .csv | Description                                                       | Years Available | Spatial Scale        |
-|------------------------------------|---------------------|-------------------------------------------------------------------|------------------|-----------------------|
-| Bachelor's degree or higher        | BachelorsP          | Percent persons aged 25 years and over with a bachelor’s degree as their highest level of education                    | 2020, 2023       | Tract, County, ZCTA   |
-| High school graduate               | EduHsP              | Percent population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)                    | 2020, 2023       | Tract, County, ZCTA   |
-| Less than 9th grade               | Eduless9P           | Percent with less than a 9th grade education                      | 2020, 2023       | County only           |
-| No high school diploma             | EduNoHsP            | Percent population aged 25 years and over with less than a high school diploma                            | 2020, 2023       | Tract, County, ZCTA   |
-| Graduate or professional degree    | GradSclP            | Percent population aged 25 years and over with a graduate or professional degree                      | 2020, 2023       | Tract, County, ZCTA   |
-| Some college, no degree            | SomeCollegeP        | Percent population 25 years and over with some college, but no degree                 | 2020, 2023       | Tract, County, ZCTA   |
-| English Proficiency (18+) | engProf18   | Proportion of the population aged 5+ who speak a language other than English at home but are proficient in English             | 2020, 2023       | Tract, County, ZCTA     |
+| Variable                       | Variable ID in .csv | Description                                                       | Years Available | Spatial Scale        |
+|--------------------------------|---------------|-------------------------------------------------------------------|------------------|-----------------------|
+| Bachelor's degree or higher    | BachelorsP    | Percent persons aged 25 years and over with a bachelor’s degree as their highest level of education | 1990, 2000, 2010, 2018, 2020, 2023 | Tract, County, ZCTA, State |
+| High school graduate           | EduHsP       | Percent population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)| 1980, 1990, 2000, 2010, 2018, 2020, 2023 | Tract, County, ZCTA, State |
+| No high school diploma         | EduNoHsP     | Percent population aged 25 years and over with less than a high school diploma | 1980, 1990, 2000, 2010, 2018, 2020, 2023 | Tract, County, ZCTA, State   |
+| Graduate or professional degree| GradSclP     | Percent population aged 25 years and over with a graduate or professional degree | 1990, 2000, 2010, 2018, 2020, 2023 | Tract, County, ZCTA, State   |
+| Some college, no degree        | SomeCollegeP | Percent population 25 years and over with some college, but no degree | 1980, 1990, 2000, 2010, 2018, 2020, 2023 | Tract, County, ZCTA, State |
+| English Proficiency (18+)      | engProf18    | Proportion of the population aged 5+ who speak a language other than English at home but are proficient in English | 2020, 2023 | Tract, County, ZCTA     |
 
 ### Data Limitations:  
 - Only individuals aged 25 years or older are included in these statistics.  
 - Percentages may not sum to 100% due to rounding or individuals falling into excluded categories (e.g., GED vs diploma).  
-- ZCTA data may be unavailable or unstable for very small populations.  
+- ZCTA data may be unavailable or unstable for very small populations, and is often unavailable pre-2018.  
 - County-level data for some variables (e.g., Eduless9P) may not exist at tract or ZCTA scales.
 - County shapes changed between 2000 and 2010, so county level data from 1980, 1990, and 2000 were interpolated onto 2018 geometries. This process was done using population weighted interpolation, a method which takes data on a given geometry and attempts to predict its distribution on a second geometry through the usage of higher-resolution population data. For 1980, this higher-resolution population data was at the county subdivision level, but for 1990 and 2000 it was at the tract level.
 - Tract data predating 2010 were crosswalked to 2010 geometries through files provided by the Longitudinal Tract Data Base (LTDB). For more information on the LTDB data, see their website [here](https://s4.ad.brown.edu/projects/diversity/Researcher/Bridging.htm).
