@@ -12,7 +12,7 @@ Sys.getenv("CENSUS_API_KEY")
 
 ### Variables for editing script output quickly
 save_dir <- "exported"
-year <- 2023
+year <- 2018
 
 state_fips <- tigris::fips_codes |>
   filter(! state_code %in% c("60", "72", "66", "69", "78", "74")) |>
@@ -86,7 +86,10 @@ variables_to_fetch <- c(
   m2534_g  = "B15001_018", m3544_g  = "B15001_026",
   m4564_g  = "B15001_034", m65p_g   = "B15001_042",
   f2534_g  = "B15001_059", f3544_g  = "B15001_067",
-  f4564_g  = "B15001_075", f65p_g   = "B15001_083"
+  f4564_g  = "B15001_075", f65p_g   = "B15001_083",
+  # english proficiency
+  only_eng = "B06007_002", span_eng_well = "B06007_004",
+  othr_lang_english_well = "B06007_007", lang_uni = "B06007_001"
 ) 
 
 #### County Logic -------
@@ -154,11 +157,14 @@ county <- county_i |>
       MaleP  = round(100 * male   / TotPop, 2),
       FemP   = round(100 * female / TotPop, 2)
     ) |>
+    mutate(
+      EngProf = round(100 * (only_eng + span_eng_well + othr_lang_english_well) / lang_uni, 2),
+    ) |> 
     select(
       GEOID, TotPop, MaleP, FemP, Ovr16, Ovr16P, Ovr18, Ovr18P, Ovr21, Ovr21P,
-      Ovr65, Ovr65P, SRatio, SRatio18, SRatio65, WhiteE, AsianE, PacIsE,
+      Ovr65, Ovr65P, SRatio, SRatio18, SRatio65, WhiteE, BlackE, AsianE, PacIsE,
       HisE, AmIndE, TwoPlsE, OtherE, SomeCollege, EduNoHsP, EduHsP,
-      BachelorsP, GradSclP
+      BachelorsP, GradSclP, EngProf
     )
 
 #### State Logic -------
@@ -218,11 +224,25 @@ state <- state |>
       MaleP  = round(100 * male   / TotPop, 2),
       FemP   = round(100 * female / TotPop, 2)
     ) |>
+    mutate(
+      BlackP  = round(100 * BlackE / TotPop, 2),
+      WhiteP  = round(100 * WhiteE / TotPop, 2),
+      AsianP  = round(100 * AsianE / TotPop, 2),
+      PacIsP  = round(100 * PacIsE / TotPop, 2),
+      AmIndP  = round(100 * AmIndE / TotPop, 2),
+      OtherP  = round(100 * OtherE / TotPop, 2),
+      TwoPlsP = round(100 * TwoPlsE / TotPop, 2),
+      HisP = round(100 * HisE / TotPop, 2),
+    ) |>
+    mutate(
+      EngProf = round(100 * (only_eng + span_eng_well + othr_lang_english_well) / lang_uni, 2),
+    ) |>
     select(
       GEOID, TotPop, MaleP, FemP, Ovr16, Ovr16P, Ovr18, Ovr18P, Ovr21, Ovr21P,
-      Ovr65, Ovr65P, SRatio, SRatio18, SRatio65, WhiteE, AsianE, PacIsE,
-      HisE, AmIndE, TwoPlsE, OtherE, SomeCollege, EduNoHsP, EduHsP,
-      BachelorsP, GradSclP
+      Ovr65, Ovr65P, SRatio, SRatio18, SRatio65, BlackE, WhiteE, AsianE, PacIsE,
+      HisE, AmIndE, TwoPlsE, OtherE,
+      WhiteP, BlackP, AsianP, PacIsP, HisP, AmIndP, TwoPlsP, OtherP,
+      SomeCollege, EduNoHsP, EduHsP, BachelorsP, GradSclP, EngProf
     )
 
 #### Tract Logic -------
@@ -285,11 +305,14 @@ tract <- tract |>
       MaleP  = round(100 * male   / TotPop, 2),
       FemP   = round(100 * female / TotPop, 2)
     ) |>
+    mutate(
+      EngProf = round(100 * (only_eng + span_eng_well + othr_lang_english_well) / lang_uni, 2),
+    ) |> 
     select(
       GEOID, TotPop, MaleP, FemP, Ovr16, Ovr16P, Ovr18, Ovr18P, Ovr21, Ovr21P,
-      Ovr65, Ovr65P, SRatio, SRatio18, SRatio65, WhiteE, AsianE, PacIsE,
+      Ovr65, Ovr65P, SRatio, SRatio18, SRatio65, BlackE, WhiteE, AsianE, PacIsE,
       HisE, AmIndE, TwoPlsE, OtherE, SomeCollege, EduNoHsP, EduHsP,
-      BachelorsP, GradSclP
+      BachelorsP, GradSclP, EngProf
     )
 
 #### ZCTA Logic -------
@@ -352,14 +375,18 @@ zcta <- zcta |>
       MaleP  = round(100 * male   / TotPop, 2),
       FemP   = round(100 * female / TotPop, 2)
     ) |>
+    mutate(
+      EngProf = round(100 * (only_eng + span_eng_well + othr_lang_english_well) / lang_uni, 2),
+    ) |>
     select(
       GEOID, TotPop, MaleP, FemP, Ovr16, Ovr16P, Ovr18, Ovr18P, Ovr21, Ovr21P,
-      Ovr65, Ovr65P, SRatio, SRatio18, SRatio65, WhiteE, AsianE, PacIsE,
+      Ovr65, Ovr65P, SRatio, SRatio18, SRatio65, WhiteE, BlackE, AsianE, PacIsE,
       HisE, AmIndE, TwoPlsE, OtherE, SomeCollege, EduNoHsP, EduHsP,
-      BachelorsP, GradSclP
+      BachelorsP, GradSclP, EngProf
     )
 
-# write.csv(tract, file=str_c(save_dir, "/tract-", year, ".csv"), row.names=FALSE)
-# write.csv(state, file=str_c(save_dir, "/state-", year, ".csv"), row.names=FALSE)
-# write.csv(county, file=str_c(save_dir, "/county-", year, ".csv"), row.names=FALSE)
-# write.csv(zcta, file=str_c(save_dir, "/zcta-", year, ".csv"), row.names=FALSE)
+setwd('scripts/136_standardize_demographics')
+write.csv(tract, file=str_c(save_dir, "/tract-", year, ".csv"), row.names=FALSE)
+write.csv(state, file=str_c(save_dir, "/state-", year, ".csv"), row.names=FALSE)
+write.csv(county, file=str_c(save_dir, "/county-", year, ".csv"), row.names=FALSE)
+write.csv(zcta, file=str_c(save_dir, "/zcta-", year, ".csv"), row.names=FALSE)
