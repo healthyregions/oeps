@@ -413,7 +413,6 @@ class Registry:
                 matched = []
                 for field in fields:
                     metadata_id = field.get("metadata", "")
-                    metadata_id = metadata_id
                     if metadata_id != "":
                         if self.metadata[metadata_id]["theme"] == theme:
                             matched.append(field)
@@ -478,8 +477,10 @@ class Registry:
                     return self.metadata[v["metadata"]]["url"]
                 elif attribute == "Data Limitations":
                     return v.get("constraints")
+                elif attribute == "Source":
+                    return self.metadata[v["metadata"]]["source"]
                 elif attribute == "Source Long":
-                    return v.get("source_long")
+                    return self.metadata[v["metadata"]]["source_long"]
                 elif attribute == "OEPS v1 Table":
                     return v.get("oeps_v1_table")
                 elif attribute.lower() in v:
