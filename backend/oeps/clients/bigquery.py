@@ -389,7 +389,6 @@ class BigQuery:
                         "name": f.get("name"),
                         "data_type": BQ_TYPE_LOOKUP[f.get("type")],
                         "description": f.get("description"),
-                        "source": f.get("source"),
                     }
                 )
         # fmt: off
