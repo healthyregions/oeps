@@ -9,15 +9,10 @@
   "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Demographics.md",
   "longitudinal": false,
   "analysis": false,
-<<<<<<< HEAD
   "table_sources": [
     "county-1980",
     "state-1980",
     "tract-1980"
   ],
   "metadata": "Demographic_Characteristics"
-=======
-  "table_sources": [],
-  "metadata": "Demographics"
->>>>>>> be17f8c1e199def7d04cc2ed21d0e8c31eae9d77
 }
