@@ -15,7 +15,9 @@ An example metadata entry looks like this:
   "theme": "Environment",
   "construct": "Spatial Access to MOUDs",
   "proxy": "Spatial access metrics... (this is a description of the variables themselves)",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md",
+  "source": "SAMSHA 2019, 2021; Vivitrol 2020; OSRM 2020;",
+  "source_long": "U.S. Substance Abuse and Mental Health Services Administration, Treatment Locator Tool, 2019; Vivitrol, 2020; Open Source Routing Machine, 2020"
 }
 ```
 
