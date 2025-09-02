@@ -116,8 +116,6 @@ def build_docs(operation, registry_path):
             "example",
             "description",
             "table_sources",
-            "source",
-            "source_long",
             "metadata",
             "longitudinal",
             "analysis",
