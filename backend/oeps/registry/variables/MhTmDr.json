@@ -4,9 +4,6 @@
   "type": "number",
   "example": "0",
   "description": "Driving time from tract/zip origin centroid to the nearest tract/zip mental health provider destination centroid, in minutes",
-  "source": "SAMHSA, 2020",
-  "source_long": "U.S. Substance Abuse and Mental Health Services Administration Treatment Locator, 2020",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MentalHealth_MinDistance.md",
   "longitudinal": false,
   "analysis": true,
   "table_sources": [

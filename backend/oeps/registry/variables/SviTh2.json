@@ -4,9 +4,6 @@
   "type": "number",
   "example": "0.3",
   "description": "SVI Ranking, Theme 2: Household Composition & Disability",
-  "source": "CDC, 2018",
-  "source_long": "Centers for Disease Control, 2018",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/SVI.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

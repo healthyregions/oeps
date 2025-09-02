@@ -4,9 +4,6 @@
   "type": "number",
   "example": "13.28",
   "description": "Percentage of vacant housing units",
-  "source": "ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer",
-  "source_long": "American Community Survey 2014-2018 5 Year Estimate; American Community Survey 2008-2012 5 Year Estimate; Social Explorer Historic Data on 2010 Geographies",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Housing_Variables.md",
   "longitudinal": true,
   "analysis": false,
   "table_sources": [

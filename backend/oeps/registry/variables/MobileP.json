@@ -4,9 +4,6 @@
   "type": "number",
   "example": "6.39",
   "description": "Percentage of total housing units categorized as mobile housing structures",
-  "source": "ACS 2018, 5-Year",
-  "source_long": "American Community Survey 2014-2018 5 Year Estimate",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Housing_Variables.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

@@ -4,9 +4,6 @@
   "type": "number",
   "example": "9.58",
   "description": "Percent of population that are veterans",
-  "source": "ACS 2017, 5-Year; ACS 2012, 5-Year",
-  "source_long": "American Community Survey 2013-2017 5 Year Estimate; American Community Survey 2008-2012 5-Year Estimates",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/VetPop.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

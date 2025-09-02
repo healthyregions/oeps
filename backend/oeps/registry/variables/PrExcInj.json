@@ -4,9 +4,6 @@
   "type": "boolean",
   "example": "0",
   "description": "Dummy variable indicating whether the paraphernalia definition in the state law explicitly exludes objects used for injecting drugs (0=no, 1=yes)",
-  "source": "LawAtlas, 2019",
-  "source_long": "Fern\u00e1ndez-Vi\u00f1a MH, Prood NE, Herpolsheimer A, Waimberg J, Burris S. State Laws Governing Syringe Services Programs and Participant Syringe Possession, 2014-2019. Public Health Reports. 2020;135:128S-137S. doi:10.1177/0033354920921817",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Syringe.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

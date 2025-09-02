@@ -4,9 +4,6 @@
   "type": "number",
   "example": "19.99",
   "description": "Percentage of population who moved into their current housing more than 20 years ago",
-  "source": "ACS 2018, 5-Year",
-  "source_long": "American Community Survey 2014-2018 5 Year Estimate",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Housing_Variables.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

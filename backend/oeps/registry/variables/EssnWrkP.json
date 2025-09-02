@@ -4,9 +4,6 @@
   "type": "number",
   "example": "42.96",
   "description": "Percentage of population employed in essential occupations.",
-  "source": "ACS 2018, 5-Year",
-  "source_long": "American Community Survey 2014-2018 5 Year Estimates",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Job_Categories_byOccupation_2018.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

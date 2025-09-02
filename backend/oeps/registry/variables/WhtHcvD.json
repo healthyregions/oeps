@@ -4,9 +4,6 @@
   "type": "number",
   "example": "60.0",
   "description": "",
-  "source": "HepVu",
-  "source_long": "HepVu",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/HepC.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

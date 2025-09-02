@@ -4,9 +4,6 @@
   "type": "number",
   "example": "1.232",
   "description": "Naltrexone access 90 minutes (RAAM)",
-  "source": "",
-  "source_long": "",
-  "metadata_doc_url": "",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

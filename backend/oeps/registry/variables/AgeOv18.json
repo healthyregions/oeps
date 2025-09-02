@@ -4,9 +4,6 @@
   "type": "number",
   "example": "5661461",
   "description": "Total population at or over age 18",
-  "source": "ACS 2018, 5-Year; 2010 Decennial Census",
-  "source_long": "American Community Survey 2014-2018 5 Year Estimates; 2010 Decennial Census",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Demographics.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

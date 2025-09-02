@@ -4,9 +4,6 @@
   "type": "boolean",
   "example": "1",
   "description": "Dummy variable for whether county is part of a hypersegregated city or its metropolitan area",
-  "source": "Massey et al, 2015",
-  "source_long": "Massey DS, Tannen J. A Research Note on Trends in Black Hypersegregation. Demography. 2015 Jun;52(3):1025-34. doi: 10.1007/s13524-015-0381-6. PMID: 25791615; PMCID: PMC4886656.",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Unique_Communities.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

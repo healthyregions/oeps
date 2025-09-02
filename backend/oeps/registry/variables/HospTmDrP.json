@@ -4,9 +4,6 @@
   "type": "number",
   "example": "0.92",
   "description": "Percent of tracts with hospital within a 30-mini driving range",
-  "source": "CovidCareMap, 2020",
-  "source_long": "CovidCareMap, 2020",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Acesss_Hospitals_MinDistance.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

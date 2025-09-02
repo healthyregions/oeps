@@ -4,9 +4,6 @@
   "type": "number",
   "example": "66452.74",
   "description": "Land area of geography in sq miles",
-  "source": "InfoGroup, 2018",
-  "source_long": "InfoGroup's 2018 Business and Consumer Historical Datafile",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Alcohol_Outlet_Density.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

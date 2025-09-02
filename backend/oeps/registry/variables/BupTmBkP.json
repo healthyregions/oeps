@@ -4,9 +4,6 @@
   "type": "number",
   "example": "1",
   "description": "Percent of tracts with buprenorphine provider within a 30-min biking range",
-  "source": "SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020",
-  "source_long": "U.S. Substance Abuse and Mental Health Services Administration Treatment Locator, 2019; Vivitrol, 2020; Open Source Routing Machine, 200",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

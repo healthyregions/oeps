@@ -4,9 +4,6 @@
   "type": "integer",
   "example": "467768",
   "description": "Total population between age 45-49",
-  "source": "ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS",
-  "source_long": "American Community Survey 2014-2018 5 Year Estimates; 2010 Decennial Census; Integrated Public Use Microdata Service National Historic Geographic Information Systems",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Demographics.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

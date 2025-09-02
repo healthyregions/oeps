@@ -4,9 +4,6 @@
   "type": "string",
   "example": "050US01001-2018",
   "description": "A derived unique id corresponding to the relevant geographic unit.",
-  "source": "Healthy Regions & Policies Lab, UIUC",
-  "source_long": "",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Geographic_Boundaries.md",
   "longitudinal": true,
   "analysis": false,
   "table_sources": [

@@ -4,9 +4,6 @@
   "type": "number",
   "example": "121.0",
   "description": "Count of methadone providers in 60 minute drive time threshold",
-  "source": "SAMHSA",
-  "source_long": "The Substance Abuse and Mental Health Services Administration",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

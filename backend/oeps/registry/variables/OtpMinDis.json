@@ -4,9 +4,6 @@
   "type": "number",
   "example": "121.0",
   "description": "Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles",
-  "source": "SAMHSA",
-  "source_long": "The Substance Abuse and Mental Health Services Administration",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_OpioidUseTreatment.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

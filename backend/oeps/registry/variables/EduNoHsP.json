@@ -4,9 +4,6 @@
   "type": "number",
   "example": "60.0",
   "description": "",
-  "source": "ACS ",
-  "source_long": "American Community Survey (5-Year Estimate)",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Educational_Characteristics.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

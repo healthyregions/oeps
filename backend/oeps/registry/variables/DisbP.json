@@ -4,9 +4,6 @@
   "type": "number",
   "example": "12.7",
   "description": "Percentage of civilian non institutionalized population with a disability",
-  "source": "ACS 2018, 5-Year; ACS 2012, 5-Year",
-  "source_long": "American Community Survey 2014-2018 5 Year Estimate; American Community Survey 2008-2012 5-Year Estimates; Integrated Public Use Microdata Service National Historic Geographic Information Systems",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Other_Demographic_2018.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

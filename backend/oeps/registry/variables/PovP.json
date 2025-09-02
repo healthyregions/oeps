@@ -4,9 +4,6 @@
   "type": "number",
   "example": "16.6",
   "description": "Number of individuals earning below the poverty income threshold as a percentage of the total population",
-  "source": "ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer",
-  "source_long": "American Community Survey 2014-2018 5 Year Estimates; American Community Survey 2008-2012 5-Year Estimates; Social Explorer Historic Census Data on 2010 Geographies",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Economic.md",
   "longitudinal": true,
   "analysis": false,
   "table_sources": [
