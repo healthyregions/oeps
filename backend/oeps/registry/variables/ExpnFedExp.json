@@ -4,9 +4,6 @@
   "type": "integer",
   "example": "2902387900",
   "description": "Expansion Group - Federal Spending",
-  "source": "KFF, 2018",
-  "source_long": "Kaiser Family Foundation, 2018",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/MedExp.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

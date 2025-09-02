@@ -4,9 +4,6 @@
   "type": "number",
   "example": "11.42",
   "description": "Average driving time (minutes) across tracts in state to nearest mental health provider.",
-  "source": "SAMHSA, 2020",
-  "source_long": "U.S. Substance Abuse and Mental Health Services Administration Treatment Locator, 2020",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MentalHealth_MinDistance.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

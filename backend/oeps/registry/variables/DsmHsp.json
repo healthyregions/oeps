@@ -4,9 +4,6 @@
   "type": "number",
   "example": "0.28",
   "description": "Dissimilarity index for Hispanic and non-Hispanic White residents",
-  "source": "ACS 2018, 5-Year",
-  "source_long": "American Community Survey 2014-2018 5 Year Estimates",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Residential_Seg_Indices.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

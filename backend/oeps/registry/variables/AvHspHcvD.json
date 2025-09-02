@@ -4,9 +4,6 @@
   "type": "number",
   "example": "34.4",
   "description": "Mean yearly Hepatitis C deaths among Hispanic populations from 2013-2017",
-  "source": "HepVu, 2017",
-  "source_long": "HepVu, 2017",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/HepC.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

@@ -4,9 +4,6 @@
   "type": "number",
   "example": "0.31",
   "description": "Euclidean distance* from tract/zip centroid to nearest hospital, in miles",
-  "source": "CovidCareMap, 2020",
-  "source_long": "CovidCareMap, 2020",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Acesss_Hospitals_MinDistance.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

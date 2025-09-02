@@ -5,9 +5,6 @@
   "example": "6/10/2010",
   "format": "%m/%d/%Y",
   "description": "Date (DMY) any type of GoodDate (DMY) any type of Good Samaritan Law is effective",
-  "source": "OPTIC, 2017",
-  "source_long": "RAND-USC Schaeffer Opioid Policy Tools and Information Center, 2021",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/GSL.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

@@ -4,9 +4,6 @@
   "type": "integer",
   "example": "34148",
   "description": "Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)",
-  "source": "ACS 2018, 5-Year; ACS 2012, 5-Year",
-  "source_long": "American Community Survey 2014-2018 5 Year Estimates; American Community Survey 2008-2012 5-Year Estimates",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Economic.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

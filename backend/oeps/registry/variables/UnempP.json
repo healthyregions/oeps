@@ -4,9 +4,6 @@
   "type": "number",
   "example": "5.7",
   "description": "The number of unemployed individuals as a percentage of the civilian labor force",
-  "source": "ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer",
-  "source_long": "American Community Survey 2014-2018 5 Year Estimates; American Community Survey 2008-2012 5-Year Estimates; Social Explorer Historic Census Data on 2010 Geographies",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Economic.md",
   "longitudinal": true,
   "analysis": false,
   "table_sources": [

@@ -4,9 +4,6 @@
   "type": "integer",
   "example": "1323",
   "description": "Number of tracts within 30 -min of naltrexone driving range",
-  "source": "SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020",
-  "source_long": "U.S. Substance Abuse and Mental Health Services Administration Treatment Locator, 2019; Vivitrol, 2020; Open Source Routing Machine, 200",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

@@ -4,9 +4,6 @@
   "type": "number",
   "example": "3.35",
   "description": "Percent of people living in family households that are not related to family",
-  "source": "ACS 2018, 5-Year",
-  "source_long": "American Community Survey 2014-2018 5 Year Estimates",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/HouseholdType.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

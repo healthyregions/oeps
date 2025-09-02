@@ -4,9 +4,6 @@
   "type": "integer",
   "example": "12037465400",
   "description": "Total medicaid spending",
-  "source": "KFF, 2019",
-  "source_long": "Kaiser Family Foundation, 2019",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/MedExp.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

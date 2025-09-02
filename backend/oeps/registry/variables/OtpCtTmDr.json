@@ -4,9 +4,6 @@
   "type": "integer",
   "example": "1092",
   "description": "Number of tracts within 30-min of opioid treatment program driving range",
-  "source": "SAMSHA, 2021",
-  "source_long": "U.S. Substance Abuse and Mental Health Services Administration Treatment Locator, 2021",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_OpioidUseTreatment.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

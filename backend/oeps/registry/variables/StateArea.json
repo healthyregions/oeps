@@ -4,9 +4,6 @@
   "type": "number",
   "example": "4486028684.18",
   "description": "Area (in square meters) of state",
-  "source": "Tiger/Line 2018",
-  "source_long": "Tiger/Line 2018 Shapefiles",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Park_Cover.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [
