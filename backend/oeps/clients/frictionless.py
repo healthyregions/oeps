@@ -161,5 +161,7 @@ class DataPackage:
         for k, v in fields.items():
             if v["type"] == "integer":
                 clean_df[k] = clean_df[k].apply(lambda x: int(x) if x != "NA" else "NA")
+            if v["type"] == "boolean":
+                clean_df[k] = clean_df[k].apply(lambda x: True if x else False)
 
         clean_df.to_csv(data_path, index=False)
