@@ -3,5 +3,7 @@
   "theme": "Policy",
   "construct": "Marijuana Policies",
   "proxy": "Laws authorizing medical marijuana use",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Medical_Marijuana_Laws.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Medical_Marijuana_Laws.md",
+  "source": "PDAPS 2017",
+  "source_long": "Prescription Drug Abuse Policy System, Medical Marijuana Caregiver Rules, 2017"
 }

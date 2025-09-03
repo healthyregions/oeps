@@ -4,9 +4,6 @@
   "type": "string",
   "example": "",
   "description": "Three different values indicating three things:\n1 - Revised count, so urban and rural components will not add to total. \n2 - Geography name and FIPS code were changed since 2010. Shannon County, Sotuh Dakota name changed to Oglala Lakota County, new FIPS 46102. Wade Hampton Census Area, Alaska, name changed to Kusilvak CEnsus Area, nwe FIPS 02158\n3 - Bedford City, Virginia, was consolidated with Bedford County, Virginia (FIPS 51019) since 2010.",
-  "source": "USDA-ERS 2010 & ACS 2018 5-Year",
-  "source_long": "United States Department of Agriculture Economic Research Service, 2010; American Community Survey 2014-2018 5-Year Estimate",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Rural_Urban_Classification_County.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

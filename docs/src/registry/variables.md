@@ -16,8 +16,6 @@ Property|Format|Description|Comment
 `type`|Datatype of this variable|See [Frictionless Data field descriptor types](https://specs.frictionlessdata.io/table-schema/#types-and-formats)
 `example`|Varies|An example value for the field|
 `description`|A description for the field|
-`source`|Abbreviated data source|This information appears in OEPS Explorer interfaces
-`source_long`|Long-form data source info|
 `longitudinal`|N/A|N/A
 `analysis`|N/A|N/A
 `table_sources`|List of all [table sources](./table-sources.md) this variable appears in|Table source names are in this list
@@ -32,8 +30,6 @@ Property|Format|Description|Comment
     "example": "1632480",
     "description": "Total population",
     "metadata": "Demographic_Characteristics",
-    "source": "ACS 2018, 5-Year; Census 2010; IPUMS NHGIS",
-    "source_long": "American Community Survey 2014-2018 5 Year Estimate; 2010 Decennial Census; Integrated Public Use Microdata Series National Historic Geographic Information System",
     "longitudinal": true,
     "analysis": false,
     "table_sources": [

@@ -143,7 +143,6 @@ class Explorer:
                     metadata = self.registry.metadata[id]
                     geodata = set()
                     titles = set()
-                    sources = set()
                     years = set()
                     for v in self.registry.variables.values():
                         if v["metadata"] == id:
@@ -162,7 +161,6 @@ class Explorer:
                                         ]
                                     ):
                                         geodata.add(p[1])
-                            sources.add(v["source"])
                             titles.add(v["title"])
 
                     sorted_geodata = [
@@ -174,7 +172,7 @@ class Explorer:
                                 "Variable Construct": construct,
                                 "Variable Proxy": metadata["proxy"],
                                 "Variables": natsorted(list(titles)),
-                                "Source": "; ".join(sources),
+                                "Source": metadata["source"],
                                 "Metadata": id,
                                 "Spatial Scale": ", ".join(sorted_geodata),
                                 "Years": ", ".join(natsorted(years)),

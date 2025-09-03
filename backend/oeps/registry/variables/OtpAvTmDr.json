@@ -4,9 +4,6 @@
   "type": "number",
   "example": "24.18",
   "description": "Average driving time (minutes) across tracts to nearest opioid treatment program.",
-  "source": "SAMSHA, 2021",
-  "source_long": "U.S. Substance Abuse and Mental Health Services Administration Treatment Locator, 2021",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_OpioidUseTreatment.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

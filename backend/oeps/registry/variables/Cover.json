@@ -4,9 +4,6 @@
   "type": "number",
   "example": "8.76",
   "description": "Percent of state covered by park or green space",
-  "source": "OSM",
-  "source_long": "OpenStreetMap",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Greenspace_Measures.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

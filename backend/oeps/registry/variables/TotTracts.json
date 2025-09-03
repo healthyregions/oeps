@@ -4,9 +4,6 @@
   "type": "integer",
   "example": "1458",
   "description": "Total number of census tracts within the state.",
-  "source": "Tiger/Line 2018",
-  "source_long": "Tiger/Line 2018 Shapefiles",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_FQHCs_MinDistance.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

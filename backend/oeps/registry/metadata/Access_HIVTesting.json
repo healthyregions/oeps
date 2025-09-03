@@ -3,5 +3,7 @@
   "theme": "Environment",
   "construct": "Spatial Access to HIV Testing",
   "proxy": "Spatial access metrics to testing for human immunodeficiency virus (HIV)(Distance, Travel Time, Count Within Threshold)",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HIVTesting.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HIVTesting.md",
+  "source": "SAMHSA 2025",
+  "source_long": "U.S. Substance Abuse and Mental Health Services Administration, Treatment Locator Tool, 2025"
 }

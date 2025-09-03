@@ -5,9 +5,6 @@
   "example": "10/1/2015",
   "format": "%m/%d/%Y",
   "description": "Date (DMY) that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective",
-  "source": "OPTIC, 2017",
-  "source_long": "RAND-USC Schaeffer Opioid Policy Tools and Information Center, 2021",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/GSL.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

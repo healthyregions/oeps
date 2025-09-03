@@ -3,5 +3,7 @@
   "theme": "Environment",
   "construct": "Spatial Access to Substance Use Treatment Providers",
   "proxy": "Spatial access metrics to Substance Use Treatment Providers (Distance, Travel Time, Count Within Threshold)",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_SubstanceUseTreatment.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_SubstanceUseTreatment.md",
+  "source": "SAMHSA 2020",
+  "source_long": "U.S. Substance Abuse and Mental Health Services Administration, Treatment Locator Tool, 2020"
 }

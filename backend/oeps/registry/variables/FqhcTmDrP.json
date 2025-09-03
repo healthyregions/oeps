@@ -4,9 +4,6 @@
   "type": "number",
   "example": "0.93",
   "description": "Percent of tracts with Federally Qualified Health Center within a 30-min driving range.",
-  "source": "US Covid Atlas via HRSA, 2020",
-  "source_long": "United States Covid Atlas via Health Resources and Services Adminsitration, 2020",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_FQHCs_MinDistance.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

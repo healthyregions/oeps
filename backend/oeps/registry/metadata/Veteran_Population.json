@@ -3,5 +3,7 @@
   "theme": "Social",
   "construct": "Veteran Population",
   "proxy": "Total Veteran Population, % Veteran Population",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Veteran_Population.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Veteran_Population.md",
+  "source": "ACS 2018, 2023; Census 2010, 2020",
+  "source_long": "American Community Survey 2014-2018 & 2019-2023 5-Year Estimates; 2010 & 2020 Decennial Census"
 }

@@ -3,5 +3,7 @@
   "theme": "Social",
   "construct": "Educational Characteristics",
   "proxy": "Population percentage with or without varying levels of educational attainment, further grouped by age",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Educational_Characteristics.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Educational_Characteristics.md",
+  "source": "ACS 2020, 2023",
+  "source_long": "American Community Survey 5-Year Estimates (2020??)"
 }

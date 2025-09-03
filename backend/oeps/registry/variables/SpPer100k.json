@@ -4,9 +4,6 @@
   "type": "number",
   "example": "41.05",
   "description": "Specialty Physicians per total Population X 100,000",
-  "source": "Dartmouth Atlas, 2010",
-  "source_long": "Dartmouth Atlas' Primary Care Service Area (PCSA) Project",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Health_PCPs.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

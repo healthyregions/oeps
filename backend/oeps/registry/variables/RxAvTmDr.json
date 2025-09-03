@@ -4,9 +4,6 @@
   "type": "number",
   "example": "5.97",
   "description": "Average driving time (minutes) across tracts in state to nearest pharmacy.",
-  "source": "InfoGroup, 2019",
-  "source_long": "InfoGroup, 2019",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Pharmacies_MinDistance.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

@@ -4,9 +4,6 @@
   "type": "number",
   "example": "0.46",
   "description": "Income Inequality (Gini Coefficient)",
-  "source": "ACS 2018, 5-Year; ACS 2012, 5-Year",
-  "source_long": "American Community Survey 2014-2018 5 Year Estimates; American Community Survey 2008-2012 5-Year Estimates",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/ForeclosureRate.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

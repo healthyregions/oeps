@@ -4,9 +4,6 @@
   "type": "boolean",
   "example": "0",
   "description": "Dummy variable for whether county is in the Southern Black Belt region",
-  "source": "US Census, 2000",
-  "source_long": "2000 Decennial Census",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Unique_Communities.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

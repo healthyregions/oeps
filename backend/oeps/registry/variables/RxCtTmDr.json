@@ -4,9 +4,6 @@
   "type": "integer",
   "example": "1406",
   "description": "Number of tracts with pharmacy within a 30-min driving range",
-  "source": "InfoGroup, 2019",
-  "source_long": "InfoGroup, 2019",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Pharmacies_MinDistance.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [

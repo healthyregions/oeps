@@ -3,5 +3,7 @@
   "theme": "Policy",
   "construct": "Prescription Drug Monitoring Programs (PDMP)",
   "proxy": "Presence of PDMP programs by state",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/PDMP_Presence.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/PDMP_Presence.md",
+  "source": "OPTIC 2017-2022",
+  "source_long": "RAND-USC Schaeffer Opioid Policy Tools and Information Center, 2017-2022"
 }

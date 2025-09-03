@@ -4,9 +4,6 @@
   "type": "number",
   "example": "20.58",
   "description": "Average overdose mortality rate from 2016-2020",
-  "source": "HepVu, 2020",
-  "source_long": "HepVu, 2020",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/OpioidIndicators.md",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [
