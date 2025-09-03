@@ -1,5 +1,5 @@
 {
-  "title": "Population: Age 15-44",
+  "title": "% Population: Age 15-44",
   "name": "Age15_44",
   "type": "integer",
   "example": "784568",
