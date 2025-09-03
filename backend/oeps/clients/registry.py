@@ -528,6 +528,10 @@ class Registry:
             for i in headers:
                 if headers.count(i) > 1:
                     print(f"duplicate column {i} in CSV for {id}")
+                if id not in self.variables[i]["table_sources"]:
+                    print(
+                        f"column {i} present in CSV for {id} but not listed as table-source"
+                    )
 
         print("\n## Checking variables against table source data")
 
