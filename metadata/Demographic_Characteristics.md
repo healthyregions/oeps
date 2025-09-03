@@ -28,7 +28,7 @@ Historical data from 1980, 1990, and 2000 were obtained from IPUMS NHGIS data ta
 
 ### Description of Data Processing: 
 
-Variables were retrieved from the above data tables and used to calculate all below gender and age categories. Variables were converted to percentages using Total Population as a base. When aggregating multiple categories, the largest pre-built categories from the Census were used to reduce measurement error. Historical tract data were crosswalked to modern tracts using Longitudinal Tract Data Base (LTDB) crosswalks, while historical county data were interpolated to modern tracts using population weighted interpolation. See Data Limitations for more information, or the relevant files [here](../scripts/136_standardize_demographics/)
+Variables were retrieved from the above data tables and used to calculate all below gender and age categories. Variables were converted to percentages using Total Population as a base. When aggregating multiple categories, the largest pre-built categories from the Census were used to reduce measurement error. Historical tract data were crosswalked to modern tracts using Longitudinal Tract Data Base (LTDB) crosswalks, while historical county data were interpolated to modern tracts using population weighted interpolation. See Data Limitations for more information, or the relevant files [here](https://github.com/healthyregions/oeps/tree/main/scripts/136_standardize_demographics/)
 
 ### Key Variable and Definitions:
 
@@ -41,20 +41,17 @@ Variables were retrieved from the above data tables and used to calculate all be
 | Variable                        | Variable ID in .csv | Description                                                       | Years Available                          | Spatial Scale                  |
 |:--------------------------------|:------------------- |:------------------------------------------------------------------|:-----------------------------------------|:-------------------------------|
 | Total population                | TotPop              | Total population                                                  | 1980, 1990, 2000, 2010, 2018, 2020, 2023 | Tract, ZCTA, County, State     |
-| Total population over age 18    | AgeOv18             | Total population over age 18                                      | 1980, 1990, 2000, 2010, 2018, 2020, 2023 | Tract, ZCTA, County, State     |
-| Total population over age 65    | AgeOv65             | Total population over age 65                                      | 1980, 1990, 2000, 2010, 2018, 2020, 2023 | Tract, ZCTA, County, State     |
-| Total population over age 16    | Ov16                | Total population over age 16                                      | 1980, 1990, 2000, 2010, 2018, 2020, 2023 | Tract, ZCTA, County            |
-| Percent over age 16             | Ov16P               | Percent of population over age 16                                 | 1980, 1990, 2000, 2010, 2018, 2020, 2023 | Tract, ZCTA, County            |
-| Total population over age 18    | Ov18                | Total population age 16                                           | 1980, 1990, 2000, 2010, 2018, 2020, 2023 | Tract, ZCTA, County            |
-| Percent over age 18             | Ov18P               | Percent of population over age 18                                 | 1980, 1990, 2000, 2010, 2018, 2020, 2023 | Tract, ZCTA, County            |
-| Total population over age 21    | Ov21                | Total population age 21                                           | 1980, 1990, 2000, 2010, 2018, 2020, 2023 | Tract, ZCTA, County            |
-| Percent over age 21             | Ov21P               | Percent of population over age 21                                 | 1980, 1990, 2000, 2010, 2018, 2020, 2023 | Tract, ZCTA, County            |
-| Percent over age 62             | Ov62P               | Percent of population over age 62                                 | 2020, 2023                               | Tract, ZCTA, County            |
+| Total population over age 16    | Ovr16               | Total population over age 16                                      | 1980, 1990, 2000, 2010, 2018, 2020, 2023 | Tract, ZCTA, County            |
+| Percent over age 16             | Ovr16P              | Percent of population over age 16                                 | 1980, 1990, 2000, 2010, 2018, 2020, 2023 | Tract, ZCTA, County            |
+| Total population over age 18    | Ovr18               | Total population age 16                                           | 1980, 1990, 2000, 2010, 2018, 2020, 2023 | Tract, ZCTA, County            |
+| Percent over age 18             | Ovr18P              | Percent of population over age 18                                 | 1980, 1990, 2000, 2010, 2018, 2020, 2023 | Tract, ZCTA, County            |
+| Total population over age 21    | Ovr21               | Total population age 21                                           | 1980, 1990, 2000, 2010, 2018, 2020, 2023 | Tract, ZCTA, County            |
+| Percent over age 21             | Ovr21P              | Percent of population over age 21                                 | 1980, 1990, 2000, 2010, 2018, 2020, 2023 | Tract, ZCTA, County            |
+| Percent over age 62             | Ovr62P              | Percent of population over age 62                                 | 2020, 2023                               | Tract, ZCTA, County           |
 | Percent under age 18            | Und18P              | Percent of population under age 18                                | 2020, 2023                               | Tract, ZCTA, County            |
-| Percent under age 5             | Und5P               | Percent of population under age 5                                 | 2020, 2023                               | Tract, ZCTA, County            |
-| Percent  under 45               | Und45P              | Percentage of population below 45 years of age                    | 1980, 1990, 2000, 2010, 2020, 2023       | Tract, ZCTA, County, State     |
-| Total population over age 65    | Ov65P               | Total population over age 65                                      | 1980, 1990, 2000, 2010, 2020, 2023       | Tract, ZCTA, County, State     |
-| Percent  over 65                | Ov65P               | Percentage of population over 65                                  | 1980, 1990, 2000, 2010, 2020, 2023       | Tract, ZCTA, County, State     |
+| Percent under 45                | Und45P              | Percentage of population below 45 years of age                    | 1980, 1990, 2000, 2010, 2020, 2023       | Tract, ZCTA, County, State     |
+| Total population over age 65    | Ovr65               | Total population over age 65                                      | 1980, 1990, 2000, 2010, 2020, 2023       | Tract, ZCTA, County, State     |
+| Percent over 65                 | Ovr65P              | Percentage of population over 65                                  | 1980, 1990, 2000, 2010, 2020, 2023       | Tract, ZCTA, County, State     |
 | Percent female                  | FemP                | Percent of population that is female                              | 1980, 1990, 2000, 2010, 2018, 2020, 2023 | Tract, ZCTA, County            |
 | Percent male                    | MaleP               | Percent of population identifying that is male                    | 1980, 1990, 2000, 2010, 2018, 2020, 2023 | Tract, ZCTA, County            |
 | Percent  Children               | ChildrenP           | Percentage of population under age 18                             | 1980, 1990, 2000, 2010, 2018             | Tract, ZCTA, County, State     |
