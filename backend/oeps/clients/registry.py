@@ -1,7 +1,9 @@
 import os
+import csv
 from enum import Enum
 from pathlib import Path
 import shutil
+from warnings import warn
 
 from openpyxl import Workbook
 from openpyxl.utils import get_column_letter
@@ -77,23 +79,31 @@ class TableSource:
         self.merge_columns = []
 
         if with_data:
-            self.df = self.load_data()
+            self.df = self.load_dataframe()
 
-    def load_data(self) -> pd.DataFrame:
+    def load_dataframe(self) -> pd.DataFrame:
         """Load this TableSource's CSV data into a pandas DataFrame"""
 
+        return pd.read_csv(self.get_path())
+
+    def get_path(self) -> str | Path:
         path = self.schema["path"]
         if not path.startswith("http"):
             path = Path(DATA_DIR, path)
-
-        return pd.read_csv(path)
+        return path
 
     def set_data_types(self):
-        """set integer columns properly based on registry def of variables."""
+        """set integer columns properly based on registry def of variables.
+        Raise a warning if this process fails on a given column."""
 
         for col in self.df.columns:
             if self.registry.variables[col]["type"] == "integer":
-                self.df[col] = self.df[col].astype("Int64")
+                try:
+                    self.df[col] = self.df[col].astype("Int64")
+                except pd.errors.IntCastingNaNError:
+                    warn(
+                        message=f"Failed to coerce column {col} to Integer due to presence of NA or inf values in the dataset. Continuing without coercing."
+                    )
 
     def stage_incoming_csv(self, path: Path) -> pd.DataFrame:
         """Load an incoming CSV to pandas dataframe, and create HEROP_ID
@@ -498,10 +508,8 @@ class Registry:
             wb.save(Path(destination, f"{id}_Dict.xlsx"))
 
     def validate(self):
-        print("\n## Checking variables against table source data")
-
-        df_lookup = {}
-        variables_valid = True
+        print("\n## Make dataframe lookup of all table sources")
+        ts_lookup = {}
         for k, v in self.variables.items():
             for ts in v["table_sources"]:
                 if ts not in self.table_sources:
@@ -509,12 +517,32 @@ class Registry:
                     variables_valid = False
                     continue
 
-                df = df_lookup.get(ts)
-                if df is None:
-                    df = TableSource(ts, with_data=True, registry=self).df
-                    df_lookup[ts] = df
+                if ts not in ts_lookup:
+                    ts_lookup[ts] = TableSource(ts, with_data=True, registry=self)
 
-                if k not in df.columns:
+        print("\n## Check integrity of all CSV files")
+        for id, ts in ts_lookup.items():
+            with open(ts.get_path(), "r") as o:
+                reader = csv.reader(o)
+                headers = next(reader)
+            for i in headers:
+                if headers.count(i) > 1:
+                    print(f"duplicate column {i} in CSV for {id}")
+                if id not in self.variables[i]["table_sources"]:
+                    print(
+                        f"column {i} present in CSV for {id} but not listed as table-source"
+                    )
+
+        print("\n## Checking variables against table source data")
+
+        variables_valid = True
+        for k, v in self.variables.items():
+            for id in v["table_sources"]:
+                ts = ts_lookup.get(id)
+                if ts is None:
+                    continue
+
+                if k not in ts.df.columns:
                     print(
                         f"{k} should be in table_source {ts} but that column is not present in the CSV"
                     )
