@@ -14,7 +14,6 @@
     "county-1990",
     "county-2000",
     "county-2018",
-    "county-2020",
     "county-2023",
     "state-1980",
     "state-1990",
@@ -25,10 +24,8 @@
     "tract-1990",
     "tract-2000",
     "tract-2018",
-    "tract-2020",
     "tract-2023",
     "zcta-2018",
-    "zcta-2020",
     "zcta-2023"
   ],
   "metadata": "Demographic_Characteristics"
