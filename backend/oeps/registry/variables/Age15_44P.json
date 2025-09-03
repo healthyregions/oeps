@@ -1,6 +1,6 @@
 {
   "title": "% Population: Age 15-44",
-  "name": "Age15_44",
+  "name": "Age15_44P",
   "type": "number",
   "example": "34.3",
   "description": "Percent population between age 15-44",
