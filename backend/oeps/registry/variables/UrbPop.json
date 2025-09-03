@@ -9,8 +9,6 @@
   "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Rural_Urban_Classification_County.md",
   "longitudinal": false,
   "analysis": false,
-  "table_sources": [
-    "county-2010"
-  ],
+  "table_sources": [],
   "metadata": "Rural_Urban_Classification_County"
 }

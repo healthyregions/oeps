@@ -1,9 +1,9 @@
 {
-  "title": "Population: Age 15-44",
+  "title": "% Population: Age 15-44",
   "name": "Age15_44",
-  "type": "integer",
-  "example": "784568",
-  "description": "Total population between age 15-44",
+  "type": "number",
+  "example": "34.3",
+  "description": "Percent population between age 15-44",
   "source": "ACS 2018, 5-Year; Census 2010; IPUMS NHGIS",
   "source_long": "American Community Survey 2014-2018 5 Year Estimate; 2010 Decennial Census; Integrated Public Use Microdata Series National Historic Geographic Information System",
   "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Demographics.md",
