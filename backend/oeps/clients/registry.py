@@ -4,6 +4,7 @@ from enum import Enum
 from pathlib import Path
 import shutil
 from warnings import warn
+from typing import Union
 
 from openpyxl import Workbook
 from openpyxl.utils import get_column_letter
@@ -86,7 +87,7 @@ class TableSource:
 
         return pd.read_csv(self.get_path())
 
-    def get_path(self) -> str | Path:
+    def get_path(self) -> Union[str, Path]:
         path = self.schema["path"]
         if not path.startswith("http"):
             path = Path(DATA_DIR, path)
