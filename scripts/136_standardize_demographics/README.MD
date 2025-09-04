@@ -2,7 +2,15 @@
 ### date: 8/31/2025
 ### contact me at: awimer(at)g.harvard.edu (or, on Slack!)
 
-This is the replication materials for the code used to resolve issues #136, #137, #138 on the healthyregions/oeps repository. In more words, these materials aimed to standardize race, age, ethnicity, and education variables at the county, state, and tract scale for the years 1980, 1990, 2000, 2010, 2018, 2020, and 2023. 
+This is the replication materials for the code used to resolve issues #136, #137, #138 on the healthyregions/oeps repository. In more words, these materials aimed to standardize race, age, ethnicity, and education variables at the county, state, and tract scale for the years 1980, 1990, 2000, 2010, 2018, 2020, and 2023.
+
+## Start by getting data archive from S3
+
+Data files used in these scripts have been zipped and uploaded to S3. Begin by downloading this zip file:
+
+https://herop-oeps.s3.us-east-2.amazonaws.com/archive/136_standardize_demographics_data.zip
+
+and then extract it into this directory. It has two folders: `temp_data` and `exported`, which are described below.
 
 ## Rundown of the files present:
 - `temp_data` contains source data downloaded from IPUMS NHGIS, seperated by year, a file called `shapes`, and a set of tract crosswalk files. Due to GitHub file size limits.
