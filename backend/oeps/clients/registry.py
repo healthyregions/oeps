@@ -245,7 +245,6 @@ class Registry:
 
             schema = {
                 "primaryKey": "HEROP_ID",
-                "missingValues": ["NA"],
                 "foreignKeys": [],
                 "fields": [],
             }

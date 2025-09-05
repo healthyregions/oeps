@@ -149,18 +149,18 @@ class DataPackage:
         # (this takes care of ordering the fields properly as well)
         clean_df = df[fields.keys()]
 
-        # set all dtypes to generic "object" so they can hold "NA"
+        # set all dtypes to generic "object" so they can hold "" for NaN
         clean_df = clean_df.astype(object)
 
-        # convert all NaN to NA, use this context and infer_objects to avoid a warning
+        # convert all NaN to "", use this context and infer_objects to avoid a warning
         # see: https://stackoverflow.com/a/78066237/3873885
         with pd.option_context("future.no_silent_downcasting", True):
-            clean_df = clean_df.fillna("NA").infer_objects(copy=False)
+            clean_df = clean_df.fillna("").infer_objects(copy=False)
 
         # iterate all fields and if integer, cast to int to remove .0
         for k, v in fields.items():
             if v["type"] == "integer":
-                clean_df[k] = clean_df[k].apply(lambda x: int(x) if x != "NA" else "NA")
+                clean_df[k] = clean_df[k].apply(lambda x: int(x) if x else "")
             if v["type"] == "boolean":
                 clean_df[k] = clean_df[k].apply(lambda x: True if x else False)
 
