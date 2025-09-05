@@ -8,7 +8,7 @@
 Environment
 
 ### Data Location: 
-You can find the variables described in this document in the CSV files [here](../full_tables).  
+You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions/download).
 
 CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
 Note: Every variable can be found in the **Latest** files.
@@ -39,14 +39,10 @@ For each county, the percentage of tracts classified as urban/suburban/rural, us
 
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| % Urban | RcaUrbanP | Percent census tracts in the county classified as Urban using RUCA codes | Latest | County |
-| % Suburban | RcaSubrbP | Percent census tracts in the county classified as Suburban using RUCA codes | Latest | County |
-| % Rural  | RcaRuralP | Percent census tracts in the county classified as Rural using RUCA codes | Latest | County |
-| CeususFlags | CenFlags | Three different values indicating three things: [1] - Revised count, so urban and rural components will not add to total. [2] - Geography name and FIPS code were changed since 2010. Shannon County, Sotuh Dakota name changed to Oglala Lakota County, new FIPS 46102. Wade Hampton Census Area, Alaska, name changed to Kusilvak CEnsus Area, nwe FIPS 02158. [3] - Bedford City, Virginia, was consolidated with Bedford County, Virginia (FIPS 51019) since 2010. | Latest | County |
-| Total Population| TotPop10 | 2010 Total Population | Latest | County |
-| Urban Population| UrbPop10 | 2010 Population living in urban areas, as defined by Census Bureau | Latest | County |
-| Rural Population| RuralPop10 | 2010 Population living in non urban areas, as defined by Census Bureau | Latest | County |
-| % Rurality | CenRuralP | % of 2010 Population living in non urban areas, as defined by Census Bureau | Latest | County |
+| % Urban | RcaUrbanP | Percent census tracts in the county classified as Urban using RUCA codes | 2010 | County |
+| % Suburban | RcaSubrbP | Percent census tracts in the county classified as Suburban using RUCA codes | 2010 | County |
+| % Rural  | RcaRuralP | Percent census tracts in the county classified as Rural using RUCA codes | 2010 | County |
+| CensusFlags | CenFlags | Three different values indicating three things: [1] - Revised count, so urban and rural components will not add to total. [2] - Geography name and FIPS code were changed since 2010. Shannon County, Sotuh Dakota name changed to Oglala Lakota County, new FIPS 46102. Wade Hampton Census Area, Alaska, name changed to Kusilvak CEnsus Area, nwe FIPS 02158. [3] - Bedford City, Virginia, was consolidated with Bedford County, Virginia (FIPS 51019) since 2010. | 2018 | County |
 
 ### Data Limitations:
 n/a
