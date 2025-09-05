@@ -1,0 +1,9 @@
+{
+  "id": "Greenspace_Measures",
+  "theme": "Environment",
+  "construct": "Greenspace Measures",
+  "proxy": "Normalized Difference Vegetation Index (NDVI)",
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Greenspace_Measures.md",
+  "source": "Tiger/Line 2018; Sentinel-2 MSI 2018; OSM",
+  "source_long": "Tiger/Line 2018 Shapefiles; Sentinel 2 MSI: MultiSpectral Instrument Level-1 C, 2018; OpenStreetMap Contributors"
+}
