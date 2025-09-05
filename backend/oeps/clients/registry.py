@@ -245,7 +245,6 @@ class Registry:
 
             schema = {
                 "primaryKey": "HEROP_ID",
-                "missingValues": ["NA"],
                 "foreignKeys": [],
                 "fields": [],
             }
@@ -524,6 +523,10 @@ class Registry:
 
         print("\n## Check integrity of all CSV files")
         for id, ts in ts_lookup.items():
+            path = ts.get_path()
+            if path.startswith("http"):
+                print("validation on remote CSVs not supported")
+                continue
             with open(ts.get_path(), "r") as o:
                 reader = csv.reader(o)
                 headers = next(reader)

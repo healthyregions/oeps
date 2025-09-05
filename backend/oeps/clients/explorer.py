@@ -20,6 +20,7 @@ class Explorer:
 
     def build_map_config(self, upload: bool = False):
         csv_dir = Path(self.root_dir, "public", "csv")
+        csv_dir.mkdir(parents=True, exist_ok=True)
         for f in csv_dir.glob("_*.csv"):
             os.remove(f)
 

@@ -1,7 +1,9 @@
 {
-  "name": "Access_MOUDs",
+  "id": "Access_MOUDs",
   "theme": "Environment",
   "construct": "Spatial Access to MOUDs",
   "proxy": "Spatial access metrics to Medications for Opioid Use Disorder(MOUD) including Methadone, Buprenorphine, Naltrexone, and Opioid Treatment Providers (Distance, Travel Time, Count Within Threshold, RAAM Access Score)",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
+  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md",
+  "source": "SAMSHA 2019, 2021; Vivitrol 2020; OSRM 2020;",
+  "source_long": "U.S. Substance Abuse and Mental Health Services Administration, Treatment Locator Tool, 2019; Vivitrol, 2020; Open Source Routing Machine, 2020"
 }
