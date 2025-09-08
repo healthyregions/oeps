@@ -193,7 +193,7 @@ class TableSource:
             for var in dupe_vars:
                 self.delete_variable_data(var)
 
-        self.df = pd.merge(self.df, incoming_df, how="inner", on="HEROP_ID")
+        self.df = pd.merge(self.df, incoming_df, how="left", on="HEROP_ID")
 
         self.df.to_csv(self.path, index=False)
 
