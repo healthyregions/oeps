@@ -7,7 +7,7 @@
   "longitudinal": false,
   "analysis": false,
   "table_sources": [
-    "tract-2020"
+    "tract-2014"
   ],
   "metadata": "SDOH_Indices"
 }
