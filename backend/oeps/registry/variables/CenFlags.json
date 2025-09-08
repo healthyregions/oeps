@@ -7,7 +7,7 @@
   "longitudinal": false,
   "analysis": false,
   "table_sources": [
-    "county-2018"
+    "county-2010"
   ],
   "metadata": "Urbanicity"
 }
