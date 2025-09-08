@@ -93,63 +93,68 @@ class TableSource:
             path = Path(DATA_DIR, path)
         return path
 
-    def set_data_types(self):
-        """set integer columns properly based on registry def of variables.
-        Raise a warning if this process fails on a given column."""
-
-        for col in self.df.columns:
-            if self.registry.variables[col]["type"] == "integer":
-                try:
-                    self.df[col] = self.df[col].astype("Int64")
-                except pd.errors.IntCastingNaNError:
-                    warn(
-                        message=f"Failed to coerce column {col} to Integer due to presence of NA or inf values in the dataset. Continuing without coercing."
-                    )
-
-    def stage_incoming_csv(self, path: Path) -> pd.DataFrame:
+    def stage_incoming_df(self, df: pd.DataFrame) -> pd.DataFrame:
         """Load an incoming CSV to pandas dataframe, and create HEROP_ID
         along the way if possible."""
 
-        df = pd.read_csv(path)
+        print("initial loaded dataframe:")
+        print(df)
+
+        id_column = None
+
+        allowed_id_columns = ["HEROP_ID","GEOID", "GEO ID", "GEO_ID", "FIPS", "ZCTA5", "ZIP", "COUNTYFP", "STATEFP"]
+
+        if "HEROP_ID" in df.columns:
+            id_column = "HEROP_ID"
+        else:
+            for i in allowed_id_columns:
+                if i in df.columns:
+                    id_column = i
+
+        if id_column is None:
+            raise Exception(
+                "No valid id column in this CSV."
+            )
+
+        ## determine which columns to take from the incoming dataframe
+        matched = [i for i in df.columns if i in self.registry.variables]
+        missed = [i for i in df.columns if i not in self.registry.variables]
+        overlap = [i for i in matched if i in self.df.columns if i not in allowed_id_columns]
+
+        use_columns = [i for i in matched if i not in self.df.columns and i not in overlap]
 
         lvl = summary_lookup[self.summary_level]
 
-        ## all good if HEROP_ID already exists in the data frame
-        test_unique_id = "HEROP_ID"
-        if "HEROP_IP" not in df.columns:
-            for id in ["GEOID", "GEO ID", "GEO_ID", "FIPS", "ZCTA5"]:
-                if id in df.columns:
-                    df["HEROP_ID"] = f"{lvl['code']}US" + df[id].astype(str).str.zfill(
-                        lvl["geoid_length"]
-                    )
-                    test_unique_id = id
-
-        ## make sure whatever column that is used for the join ID is unique
-        if not pd.Series(df[test_unique_id]).is_unique:
-            raise Exception(
-                f"There are duplicate {test_unique_id} values in the input CSV. {test_unique_id} must be unique across all rows."
+        ## may need to transform the 
+        if id_column != "HEROP_ID":
+            df["HEROP_ID"] = f"{lvl['code']}US" + df[id_column].astype("Int64").astype(str).str.zfill(
+                lvl["geoid_length"]
             )
 
-        print("incoming data frame loaded")
-        print(df)
+        ## make sure whatever column that is used for the join ID is unique
+        if not pd.Series(df[id_column]).is_unique:
+            raise Exception(
+                f"There are duplicate {id_column} values in the input CSV. {id_column} must be unique across all rows."
+            )
 
-        if "HEROP_ID" in df.columns:
-            self.staged_df = df
-        ## if it wasn't added above based on other incoming fields, abort process
-        else:
+        if "HEROP_ID" not in df.columns:
             raise Exception(
                 "input data frame must have one of these fields: HEROP_ID, GEOID, GEO ID, GEO_ID, FIPS, ZCTA5"
             )
 
-    def validate_incoming_csv(self, verbose: bool = False):
-        """Compares the columns in the incoming CSV and against variables
-        in the registry and columns in the existing data for this TableSource."""
+        ## drop any rows where the ID column is NaN after be
+        df = df.dropna(subset=[id_column])
 
-        ## determine which columns to take from the incoming dataframe
-        matched = [i for i in self.staged_df.columns if i in self.registry.variables]
-        missed = [i for i in self.staged_df.columns if i not in self.registry.variables]
-        overlap = [i for i in matched if i in self.df.columns if not i == "HEROP_ID"]
-        new = [i for i in matched if i not in self.df.columns and i not in overlap]
+        self.staged_df = self.registry.set_data_types(df)
+        self.staged_df = self.staged_df.round(2)
+
+        ## merge_columns is set in validate_csv but should probably be set in this method
+        self.staged_df = self.staged_df[["HEROP_ID"] + use_columns]
+
+        print("staged dataframe:")
+        print(self.staged_df)
+        print(f"dataframe shape: {self.staged_df.shape}")
+
 
         print(f"{len(matched)} columns match to variables already in the registry")
         print(
@@ -163,25 +168,7 @@ class TableSource:
         if overlap:
             print("  -- overlapping columns from incoming data will be ignored.")
 
-        print(f"{len(new)} new column(s) will be added to the existing CSV")
-
-        self.merge_columns = new
-
-    def merge_incoming_csv(self, dry_run: bool = False):
-        source_df = self.staged_df
-
-        source_df_trim = source_df[["HEROP_ID"] + self.merge_columns]
-        print(source_df_trim)
-        print(f"shape of incoming data: {source_df_trim.shape}")
-        self.df = pd.merge(self.df, source_df_trim, how="inner", on="HEROP_ID")
-
-        self.set_data_types()
-
-        self.df.to_csv(self.temp_path, index=False)
-
-        if not dry_run:
-            self.df.to_csv(self.path, index=False)
-            self.registry.sync_variable_table_sources(table_source=self)
+        print(f"{len(use_columns)} new column(s) will be added to the existing CSV")
 
     def get_variable_data(self, name):
         return pd.DataFrame(self.df, columns=["HEROP_ID", name])
@@ -203,9 +190,9 @@ class TableSource:
 
         self.df = pd.merge(self.df, incoming_df, how="inner", on="HEROP_ID")
 
-        self.set_data_types()
-
         self.df.to_csv(self.path, index=False)
+
+        self.registry.sync_variable_table_sources(table_source=self)
 
 
 class Registry:
@@ -614,3 +601,19 @@ class Registry:
         if not dry_run:
             local_path = Path(DATA_DIR, schema["path"])
             shutil.copy(temp_path, local_path)
+
+    def set_data_types(self, df: pd.DataFrame):
+        """set integer columns properly based on registry def of variables.
+        Raise a warning if this process fails on a given column."""
+
+        for col in df.columns:
+            if col in self.variables:
+                if self.variables[col]["type"] == "integer":
+                    try:
+                        df[col] = df[col].astype("Int64")
+                    except pd.errors.IntCastingNaNError:
+                        warn(
+                            message=f"Failed to coerce column {col} to Integer due to presence of NA or inf values in the dataset. Continuing without coercing."
+                        )
+
+        return df
