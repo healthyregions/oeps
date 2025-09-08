@@ -29,18 +29,22 @@ summary_lookup = {
     "state": {
         "code": "040",
         "geoid_length": 2,
+        "allowed_id_columns": ["HEROP_ID","GEOID", "GEO ID", "GEO_ID", "FIPS", "STATEFP"],
     },
     "county": {
         "code": "050",
         "geoid_length": 5,
+        "allowed_id_columns": ["HEROP_ID","GEOID", "GEO ID", "GEO_ID", "FIPS", "COUNTYFP"],
     },
     "zcta": {
         "code": "860",
         "geoid_length": 5,
+        "allowed_id_columns": ["HEROP_ID","GEOID", "GEO ID", "GEO_ID", "ZCTA5", "ZIP"],
     },
     "tract": {
         "code": "140",
         "geoid_length": 11,
+        "allowed_id_columns": ["HEROP_ID","GEOID", "GEO ID", "GEO_ID", "FIPS", "TRACTCE"],
     },
 }
 
@@ -93,68 +97,67 @@ class TableSource:
             path = Path(DATA_DIR, path)
         return path
 
-    def stage_incoming_df(self, df: pd.DataFrame) -> pd.DataFrame:
+    def stage_incoming_df(self, incoming_df: pd.DataFrame) -> pd.DataFrame:
         """Load an incoming CSV to pandas dataframe, and create HEROP_ID
         along the way if possible."""
 
-        print("initial loaded dataframe:")
-        print(df)
-
         id_column = None
+        lvl = summary_lookup[self.summary_level]
 
-        allowed_id_columns = ["HEROP_ID","GEOID", "GEO ID", "GEO_ID", "FIPS", "ZCTA5", "ZIP", "COUNTYFP", "STATEFP"]
-
-        if "HEROP_ID" in df.columns:
+        if "HEROP_ID" in incoming_df.columns:
             id_column = "HEROP_ID"
         else:
-            for i in allowed_id_columns:
-                if i in df.columns:
+            for i in lvl["allowed_id_columns"]:
+                if i in incoming_df.columns:
                     id_column = i
 
         if id_column is None:
             raise Exception(
-                "No valid id column in this CSV."
+                "No valid id column in this dataframe."
             )
 
         ## determine which columns to take from the incoming dataframe
-        matched = [i for i in df.columns if i in self.registry.variables]
-        missed = [i for i in df.columns if i not in self.registry.variables]
-        overlap = [i for i in matched if i in self.df.columns if i not in allowed_id_columns]
+        matched = [i for i in incoming_df.columns if i in self.registry.variables]
+        missed = [i for i in incoming_df.columns if i not in self.registry.variables]
+        overlap = [i for i in matched if i in self.df.columns if i not in lvl["allowed_id_columns"]]
 
         use_columns = [i for i in matched if i not in self.df.columns and i not in overlap]
 
-        lvl = summary_lookup[self.summary_level]
+        ## create and begin modifying the staged dataframe
+        staged_df = incoming_df.copy(deep=True)
 
         ## may need to transform the 
         if id_column != "HEROP_ID":
-            df["HEROP_ID"] = f"{lvl['code']}US" + df[id_column].astype("Int64").astype(str).str.zfill(
+            staged_df["HEROP_ID"] = f"{lvl['code']}US" + staged_df[id_column].astype("Int64").astype(str).str.zfill(
                 lvl["geoid_length"]
             )
 
         ## make sure whatever column that is used for the join ID is unique
-        if not pd.Series(df[id_column]).is_unique:
+        if not pd.Series(staged_df[id_column]).is_unique:
             raise Exception(
                 f"There are duplicate {id_column} values in the input CSV. {id_column} must be unique across all rows."
             )
 
-        if "HEROP_ID" not in df.columns:
+        if "HEROP_ID" not in staged_df.columns:
             raise Exception(
                 "input data frame must have one of these fields: HEROP_ID, GEOID, GEO ID, GEO_ID, FIPS, ZCTA5"
             )
 
         ## drop any rows where the ID column is NaN after be
-        df = df.dropna(subset=[id_column])
+        staged_df = staged_df.dropna(subset=[id_column])
 
-        self.staged_df = self.registry.set_data_types(df)
-        self.staged_df = self.staged_df.round(2)
+        staged_df = self.registry.set_data_types(staged_df)
+        staged_df = staged_df.round(2)
 
-        ## merge_columns is set in validate_csv but should probably be set in this method
-        self.staged_df = self.staged_df[["HEROP_ID"] + use_columns]
+        staged_df = staged_df[["HEROP_ID"] + use_columns]
+
+        print("initial loaded dataframe:")
+        print(incoming_df)
+        print(f"dataframe shape: {incoming_df.shape}")
 
         print("staged dataframe:")
-        print(self.staged_df)
-        print(f"dataframe shape: {self.staged_df.shape}")
-
+        print(staged_df)
+        print(f"dataframe shape: {staged_df.shape}")
 
         print(f"{len(matched)} columns match to variables already in the registry")
         print(
@@ -169,6 +172,8 @@ class TableSource:
             print("  -- overlapping columns from incoming data will be ignored.")
 
         print(f"{len(use_columns)} new column(s) will be added to the existing CSV")
+
+        return staged_df
 
     def get_variable_data(self, name):
         return pd.DataFrame(self.df, columns=["HEROP_ID", name])

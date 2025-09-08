@@ -33,8 +33,12 @@ def merge_csv(source, table_source, registry_path, dry_run):
 
     ARGUMENTS:
 
-    TABLE_SOURCE: name of table_source to merge this CSV into. Table source
+    -s / --source: Path to CSV to be merged in.
+
+    -t / --table-source: name of table_source to merge this CSV into. Table source
     must already exist in the registry.
+
+    --dry-run: load and stage the CSV but alter no files.
     """
 
     registry = Registry(registry_path)
@@ -42,6 +46,6 @@ def merge_csv(source, table_source, registry_path, dry_run):
     ts = TableSource(table_source, registry=registry, with_data=True)
 
     df = pd.read_csv(source)
-    ts.stage_incoming_df(df)
+    staged_df = ts.stage_incoming_df(df)
     if not dry_run:
-        ts.merge_df(ts.staged_df)
+        ts.merge_df(staged_df)
