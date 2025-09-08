@@ -1,5 +1,7 @@
 import click
 
+import pandas as pd
+
 from oeps.clients.registry import Registry, TableSource
 
 from ._common_opts import (
@@ -26,7 +28,7 @@ from ._common_opts import (
     help="Stage and prepare the import but alter no registry or data files.",
 )
 @add_common_opts(registry_opt)
-def merge_data_table(source, table_source, registry_path, dry_run):
+def merge_csv(source, table_source, registry_path, dry_run):
     """Merge data from an external CSV into the canonical CSVs in OEPS.
 
     ARGUMENTS:
@@ -39,6 +41,7 @@ def merge_data_table(source, table_source, registry_path, dry_run):
 
     ts = TableSource(table_source, registry=registry, with_data=True)
 
-    ts.stage_incoming_csv(source)
-    ts.validate_incoming_csv()
-    ts.merge_incoming_csv(dry_run=dry_run)
+    df = pd.read_csv(source)
+    ts.stage_incoming_df(df)
+    if not dry_run:
+        ts.merge_df(ts.staged_df)

@@ -8,8 +8,11 @@
   "analysis": false,
   "table_sources": [
     "county-2018",
+    "county-2023",
     "state-2018",
-    "zcta-2018"
+    "state-2023",
+    "zcta-2018",
+    "zcta-2023"
   ],
   "metadata": "Residential_Segregation"
 }
