@@ -6,7 +6,8 @@
   "description": "Percentage of population below 45 years of age",
   "longitudinal": true,
   "analysis": false,
-  "table_sources": ["county-1980",
+  "table_sources": [
+    "county-1980",
     "county-1990",
     "county-2000",
     "county-2010",
@@ -21,6 +22,7 @@
     "tract-2000",
     "tract-2010",
     "tract-2018",
-    "zcta-2018"],
+    "zcta-2018"
+  ],
   "metadata": "Demographic_Characteristics"
 }
