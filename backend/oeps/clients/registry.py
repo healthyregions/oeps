@@ -418,7 +418,7 @@ class Registry:
                     if metadata_id != "":
                         if self.metadata[metadata_id]["theme"] == theme:
                             matched.append(field)
-                ordered += sorted(matched, key=lambda i: self.metadata[i["metadata"]]["construct"])
+                ordered += sorted(matched, key=lambda i: (self.metadata[i["metadata"]]["construct"], i["name"]))
 
             all_variables = {}
             for f in ordered:
