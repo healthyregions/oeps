@@ -1,20 +1,20 @@
 **Meta Data Name**: State & Local Government Expenditures
 **Date Added**: March 11, 2021
-**Author**: Susan Paykin, Wataru Morioka, Mahjabin Kabir Adrita
-**Date Last Modified**: August 26, 2025
-**Last Modified By**: Mahjabin Kabir Adrita
+**Author**: Adam Cox, Susan Paykin, Wataru Morioka, Mahjabin Kabir Adrita
+**Date Last Modified**: September 9, 2025
+**Last Modified By**: Adam Cox
 
-### Theme: 
-Policy  
+### Theme:
+Policy
 
 ### Data Location: 
-You can find the variables described in this document in the CSV files [here](../full_tables).  
+You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions/download).
 
-CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
-Note: Every variable can be found in the **Latest** files.
+CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.
+
 ### Data Source(s) Description:  
 
-This data was sourced from the 2018 [U.S. Census Bureau Annual Survey of State and Local Government Finances](https://www.census.gov/programs-surveys/gov-finances.html) and accessed via Urban Institute & Tax Policy Center's [State and Local Finance Data Finder](https://state-local-finance-data.taxpolicycenter.org/pages.cfm). 
+This data was sourced from the [U.S. Census Bureau Annual Survey of State and Local Government Finances](https://www.census.gov/programs-surveys/gov-finances.html) and accessed via Urban Institute & Tax Policy Center's [State and Local Finance Data Finder](https://state-local-finance-data.taxpolicycenter.org/pages.cfm).
 
 This survey is the only source of nationwide, comprehensive local government finance information. It provides statistics on revenue, expenditure, debt, and assets for the 50 states and D.C. The 2018 data was released in September 2020. 
 
@@ -40,7 +40,7 @@ The data source table included the following variables for state and local gover
 
 ### Description of Data Processing: 
 
-Data was downloaded, cleaned, and prepared for analysis. The expenditure variables listed above were aggregated by category (police and fire, corrections, public health, and public welfare) to create variables represented category totals for state-level spending, local-level spending, and combined state and local spending for each state. These variables were then merged into the final dataset, which includes all finance variables for state and D.C. 
+Data was downloaded, cleaned, and prepared for analysis. The expenditure variables listed above were aggregated by category (police and fire, corrections, public health, and public welfare) to create variables represented category totals for combined state and local spending for each state. These variables were then merged into the final dataset, which includes all finance variables for state and D.C.
 
 ### Key Variable and Definitions:
 
@@ -52,18 +52,10 @@ Data was downloaded, cleaned, and prepared for analysis. The expenditure variabl
 
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Police & fire expenditures | PlcFyrExp | Total expenditures on police and fire protection| 2018-2022 | State |
-| Corrections expenditures | CrrctExp | Total expenditures on corrections system and operations | 2018-2022 | State |
-| Public health expenditures | HlthExp | Total expenditures on public health and hospitals | 2018-2022 | State |
-| Public welfare expenditures | WlfrExp | Total expenditures on public welfare programs | 2018-2022 | State |
-
-For the expenditure variables, the last characters indicate the following levels:  
-
-| Code | Level | Description |
-|:-----|:------|:------------|
-| _S | State | State finance information exclusive of local revenues or spending |
-| _L | Local | State totals of finance information for all local governments within each state. This includes data for all counties, municipalities, towns, special districts, and school districts |
-| _T | Total | Aggregated finance information state and local levels of government |
+| Police & fire expenditures | PlcFyrExp | Total expenditures on police and fire protection| 2019-2022 | State |
+| Corrections expenditures | CrrctExp | Total expenditures on corrections system and operations | 2019-2022 | State |
+| Public health expenditures | HlthExp | Total expenditures on public health and hospitals | 2019-2022 | State |
+| Public welfare expenditures | WlfrExp | Total expenditures on public welfare programs | 2019-2022 | State |
 
 ### Data Limitations: 
 
