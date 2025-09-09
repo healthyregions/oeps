@@ -2,8 +2,6 @@ from pathlib import Path
 
 import click
 
-from oeps.clients.explorer import Explorer
-from oeps.clients.registry import Registry
 from oeps.clients.s3 import clear_s3_bucket
 from oeps.utils import load_json
 
