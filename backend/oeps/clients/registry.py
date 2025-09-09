@@ -418,7 +418,7 @@ class Registry:
                     if metadata_id != "":
                         if self.metadata[metadata_id]["theme"] == theme:
                             matched.append(field)
-                ordered += sorted(matched, key=lambda i: i["metadata"])
+                ordered += sorted(matched, key=lambda i: self.metadata[i["metadata"]]["construct"])
 
             all_variables = {}
             for f in ordered:
@@ -429,7 +429,7 @@ class Registry:
                 for y in v["years"]:
                     years_list.add(y)
 
-            headers = {"Theme": 15}
+            headers = {"Theme": 15, "Construct": 20}
             for y in sorted(years_list):
                 headers[y] = 5
             headers.update(
@@ -469,6 +469,8 @@ class Registry:
                         return "x"
                 elif attribute == "Theme":
                     return self.metadata[v["metadata"]]["theme"]
+                elif attribute == "Construct":
+                    return self.metadata[v["metadata"]]["construct"]
                 elif attribute in variable.get("years", []):
                     return "x"
                 elif attribute == "Title":
