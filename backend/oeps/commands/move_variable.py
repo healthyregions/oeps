@@ -69,6 +69,9 @@ def move_variable(name, source, target, overwrite, registry_path):
     source_heropids = set(source.df["HEROP_ID"])
     target_heropids = set(target.df["HEROP_ID"])
 
+    var_df = registry.set_data_types(var_df)
+    var_df = var_df.round(2)
+
     print(
         f"Number of incoming data points (i.e. unique HEROP_IDs): {len(source_heropids)}"
     )

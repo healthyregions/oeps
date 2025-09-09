@@ -1,9 +1,0 @@
-{
-  "id": "Rural_Urban_Classification_County",
-  "theme": "Environment",
-  "construct": "Urban/Suburban/Rural Classification",
-  "proxy": "Primary RUCA Code, Secondary RUCA Code by County",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Rural_Urban_Classification_County.md",
-  "source": "USDA-ERS 2010; ACS 2018",
-  "source_long": "United States Department of Agriculture Economic Research Service, 2010; American Community Survey 2014-2018 5-Year Estimate"
-}

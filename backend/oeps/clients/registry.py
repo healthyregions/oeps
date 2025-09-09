@@ -193,7 +193,7 @@ class TableSource:
             for var in dupe_vars:
                 self.delete_variable_data(var)
 
-        self.df = pd.merge(self.df, incoming_df, how="inner", on="HEROP_ID")
+        self.df = pd.merge(self.df, incoming_df, how="left", on="HEROP_ID")
 
         self.df.to_csv(self.path, index=False)
 
@@ -516,7 +516,7 @@ class Registry:
         print("\n## Check integrity of all CSV files")
         for id, ts in ts_lookup.items():
             path = ts.get_path()
-            if path.startswith("http"):
+            if str(path).startswith("http"):
                 print("validation on remote CSVs not supported")
                 continue
             with open(ts.get_path(), "r") as o:
