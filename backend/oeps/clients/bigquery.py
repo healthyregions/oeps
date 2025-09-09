@@ -415,13 +415,13 @@ ID: `{project_id}.{ds}.{t}`
 
 {c_ct} column{'s' if c_ct != 1 else ''} in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
 """)
 
                     for c in datasets[ds][t]:
                         openf.write(
-f"{c['name']}|{c['data_type']}|{c['description']}|{c['source']}\n"
+f"{c['name']}|{c['data_type']}|{c['description']}\n"
                         )
 
                     openf.write("\n")
