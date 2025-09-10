@@ -34,9 +34,10 @@ class TableSource(TableSourceModel):
 
     def delete_variable_data(self, name):
         if self.df is None:
-            df = self.get_dataframe()
-        df = df.drop(name, axis=1)
-        df.to_csv(self.path, index=False)
+            self.load_dataframe()
+        print(self.df)
+        self.df.drop(name, axis=1, inplace=True)
+        self.df.to_csv(self.full_path, index=False)
 
     def merge_df(self, incoming_df: pd.DataFrame, overwrite: bool = False):
         new_vars = [i for i in incoming_df.columns if not i == "HEROP_ID"]
@@ -319,3 +320,7 @@ class Registry(BaseModel):
                     use_source = self.table_sources[ts]
 
         return use_source
+
+    def remove_variable(self, variable_name: str):
+        os.remove(Path(self.path, "variables", f"{variable_name}.json"))
+        self._load_variables(self.path)
