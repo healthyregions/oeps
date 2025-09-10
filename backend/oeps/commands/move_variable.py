@@ -1,6 +1,7 @@
 import click
 
 from oeps.clients.registry import Registry, TableSource
+from ..registry.handlers import Registry as Registry2
 
 from ._common_opts import (
     add_common_opts,
@@ -33,7 +34,8 @@ def move_variable(name, source, target, overwrite, registry_path):
     after being initially placed in the wrong year.
     """
 
-    registry = Registry(registry_path)
+    # registry = Registry(registry_path)
+    registry = Registry2.create_from_directory(registry_path)
 
     variable = registry.variables.get(name)
     if not variable:
@@ -42,19 +44,36 @@ def move_variable(name, source, target, overwrite, registry_path):
         )
         exit()
 
-    source = TableSource(source, with_data=True)
-    target = TableSource(target, with_data=True)
+    # source = TableSource(source, with_data=True)
+    # target = TableSource(target, with_data=True)
 
-    if source.schema["summary_level"] != target.schema["summary_level"]:
+    ts_source = registry.table_sources.get(source)
+    if ts_source is None:
+        print(
+            f"Invalid source name: {source} -- This table_source does not exist in the registry."
+        )
+        exit()
+    ts_target = registry.table_sources.get(target)
+    if ts_target is None:
+        print(
+            f"Invalid source name: {target} -- This table_source does not exist in the registry."
+        )
+        exit()
+
+    if registry.geodata_sources[ts_source.geodata_source].summary_level.name != \
+          registry.geodata_sources[ts_target.geodata_source].summary_level.name:
         print("Summary level is not the same between these table_sourcs.")
         print("cancelling operation")
         exit()
 
-    if name not in source.df.columns:
+    ts_source.load_dataframe()
+    ts_target.load_dataframe()
+
+    if name not in ts_source.df.columns:
         print(f"This variable does not exist in the source table: {name}.")
         exit()
 
-    if name in target.df.columns:
+    if name in ts_target.df.columns:
         print("This variable already has data in the target table source.")
         if overwrite:
             c = input("Overwrite that data? Y/n ")
@@ -65,9 +84,9 @@ def move_variable(name, source, target, overwrite, registry_path):
             print("Use --overwrite to overwrite existing data for this column.")
             exit()
 
-    var_df = source.get_variable_data(name)
-    source_heropids = set(source.df["HEROP_ID"])
-    target_heropids = set(target.df["HEROP_ID"])
+    var_df = ts_source.get_variable_data([name])
+    source_heropids = set(ts_source.df["HEROP_ID"])
+    target_heropids = set(ts_target.df["HEROP_ID"])
 
     var_df = registry.set_data_types(var_df)
     var_df = var_df.round(2)
@@ -93,8 +112,8 @@ def move_variable(name, source, target, overwrite, registry_path):
     if c.lower().startswith("n"):
         exit()
 
-    target.merge_df(var_df, overwrite=overwrite)
-    source.delete_variable_data(name)
+    ts_target.merge_df(var_df, overwrite=overwrite)
+    ts_source.delete_variable_data(name)
 
-    registry.sync_variable_table_sources(source)
-    registry.sync_variable_table_sources(target)
+    registry.update_variable_table_sources(ts_source)
+    registry.update_variable_table_sources(ts_target)

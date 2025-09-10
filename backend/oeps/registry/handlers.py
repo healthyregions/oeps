@@ -29,17 +29,21 @@ class TableSource(TableSourceModel):
         self.df = pd.read_csv(self.full_path)
         return self.df
 
-    def get_variable_data(self, name):
-        return pd.DataFrame(self.df, columns=["HEROP_ID", name])
-
-    def delete_variable_data(self, name):
+    def get_variable_data(self, names: list[str]):
         if self.df is None:
             self.load_dataframe()
-        print(self.df)
+        fields = ["HEROP_ID"] + names
+        return pd.DataFrame(self.df, columns=fields)
+
+    def delete_variable_data(self, name: str):
+        if self.df is None:
+            self.load_dataframe()
         self.df.drop(name, axis=1, inplace=True)
         self.df.to_csv(self.full_path, index=False)
 
     def merge_df(self, incoming_df: pd.DataFrame, overwrite: bool = False):
+        if self.df is None:
+            self.load_dataframe()
         new_vars = [i for i in incoming_df.columns if not i == "HEROP_ID"]
         dupe_vars = [i for i in new_vars if i in self.df.columns]
         if len(dupe_vars) > 0:
@@ -50,10 +54,9 @@ class TableSource(TableSourceModel):
             for var in dupe_vars:
                 self.delete_variable_data(var)
 
-        df = self.get_dataframe()
-        merged_df = pd.merge(df, incoming_df, how="left", on="HEROP_ID")
+        merged_df = pd.merge(self.df, incoming_df, how="left", on="HEROP_ID")
 
-        merged_df.to_csv(self.path, index=False)
+        merged_df.to_csv(self.full_path, index=False)
 
     def to_frictionless_resource(self):
 
@@ -181,18 +184,23 @@ class Registry(BaseModel):
     def reload_variables(self):
         self.variables = self._load_variables(self.path)
 
-    def update_variable_table_sources(self, table_source: str = None):
+    def update_variable_table_sources(self, table_source: Union[str, TableSource] = None):
         if table_source:
-            use_table_sources = [table_source]
+            if isinstance(table_source, str):
+                use_table_sources = [self.table_sources[table_source]]
+            else:
+                use_table_sources = [table_source]
         else:
-            use_table_sources = self.table_sources.keys()
+            use_table_sources = self.table_sources.values()
 
-        for ts_id in use_table_sources:
-            ts = self.table_sources[ts_id]
+        print(use_table_sources)
+        exit()
+
+        for ts in use_table_sources:
             ts.load_dataframe()
             for v in self.variables.values():
-                if ts_id in v.table_sources:
-                    v.table_sources = [i for i in v.table_sources if not i == ts_id]
+                if ts.name in v.table_sources:
+                    v.table_sources = [i for i in v.table_sources if not i == ts.name]
                     self.save_variable(v)
 
                 ## now add this table source if the variable is in df.columns
