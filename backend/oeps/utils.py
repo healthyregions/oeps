@@ -15,6 +15,33 @@ BQ_TYPE_LOOKUP = {
     "number": "NUMERIC",
 }
 
+GEOGRAPHY_LOOKUP = {
+    "state": {
+        "name": "state",
+        "code": "040",
+        "geoid_length": 2,
+        "allowed_id_columns": ["HEROP_ID","GEOID", "GEO ID", "GEO_ID", "FIPS", "STATEFP"],
+    },
+    "county": {
+        "name": "county",
+        "code": "050",
+        "geoid_length": 5,
+        "allowed_id_columns": ["HEROP_ID","GEOID", "GEO ID", "GEO_ID", "FIPS", "COUNTYFP"],
+    },
+    "zcta": {
+        "name": "zcta",
+        "code": "860",
+        "geoid_length": 5,
+        "allowed_id_columns": ["HEROP_ID","GEOID", "GEO ID", "GEO_ID", "ZCTA5", "ZIP"],
+    },
+    "tract": {
+        "name": "tract",
+        "code": "140",
+        "geoid_length": 11,
+        "allowed_id_columns": ["HEROP_ID","GEOID", "GEO ID", "GEO_ID", "FIPS", "TRACTCE"],
+    },
+}
+
 
 def make_id(length: int = 6):
     return "".join(random.choices("0123456789ABCDEF", k=length))

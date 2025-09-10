@@ -27,6 +27,7 @@ dependencies = [
     'frictionless',
     'python-dotenv',
     'natsort',
+    'pydantic',
 ]
 
 
