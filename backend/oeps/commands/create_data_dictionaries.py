@@ -1,7 +1,9 @@
 from pathlib import Path
 
 import click
-from oeps.clients.registry import Registry
+
+from ..clients.data_dictionary import create_data_dictionary
+from ..registry.handlers import Registry
 
 from ._common_opts import (
     add_common_opts,
@@ -24,7 +26,10 @@ from ._common_opts import (
 def create_data_dictionaries(destination, registry_path):
     """Create the human readable, MS Excel data dictionaries based on registry content."""
 
-    registry = Registry(registry_path)
+    registry = Registry.create_from_directory(registry_path)
     outdir = Path(destination).absolute().resolve()
-    outdir.mkdir(exist_ok=True)
-    registry.create_data_dictionaries(outdir)
+
+    create_data_dictionary(registry, "state", outdir)
+    create_data_dictionary(registry, "county", outdir)
+    create_data_dictionary(registry, "tract", outdir)
+    create_data_dictionary(registry, "zcta", outdir)
