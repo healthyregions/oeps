@@ -1,13 +1,14 @@
 import os
+import csv
 import shutil
 import pandas as pd
 from pathlib import Path
 
 from frictionless import validate
 
-from oeps.clients.registry import Registry
+from oeps.clients.registry import Registry, TableSource
 from oeps.clients.s3 import upload_to_s3
-from oeps.utils import fetch_files, load_json, write_json
+from oeps.utils import fetch_files, load_json, write_json, GEOGRAPHY_LOOKUP
 
 from oeps.config import DATA_DIR
 
@@ -15,6 +16,72 @@ from oeps.config import DATA_DIR
 class DataPackage:
     def __init__(self, path: Path = None):
         self.path = path
+
+    def create_from_rules(
+        self,
+        registry: Registry,
+        rules_dir: Path,
+        zip_output: bool = False,
+        upload: bool = False,
+        no_cache: bool = False,
+        skip_foreign_keys: bool = False,
+        run_validation: bool = True,
+        verbose: bool = False,
+    ):
+        """Single command to generate an output data package, based on a set
+        of CSVs that hold inclusion rules for each variable."""
+
+        self.path.mkdir(exist_ok=True, parents=True)
+        s_path = Path(self.path, "schemas")
+        s_path.mkdir(exist_ok=True)
+        d_path = Path(self.path, "data")
+        d_path.mkdir(exist_ok=True)
+
+        rules_name = rules_dir.name
+
+        data_package = {
+            "profile": "data-package",
+            "name": f"oeps-{rules_name}",
+            "title": f"Opioid Environment Policy Scan (OEPS) - {rules_name}",
+            "homepage": "https://oeps.healthyregions.org",
+            "licenses": [
+                {
+                    "name": "ODC-PDDL-1.0",
+                    "path": "http://opendatacommons.org/licenses/pddl/",
+                    "title": "Open Data Commons Public Domain Dedication and License v1.0",
+                }
+            ],
+            "resources": [],
+        }
+
+        for rules_file in rules_dir.glob("*.csv"):
+            if rules_file.stem not in GEOGRAPHY_LOOKUP:
+                continue
+            lvl = GEOGRAPHY_LOOKUP[rules_file.stem]
+            with open(rules_file, "r") as o:
+                reader = csv.DictReader(o)
+                ## filter out variables that don't have a "pick" value
+                rows = [i for i in reader if i["pick"]]
+
+            ## collect unique list of all years
+            years = set([i["pick"] for i in rows])
+
+            ## generate lookup of all geodata and table sources we'll need
+            lookup = {}
+            for year in years:
+                ts_name = f"{lvl['name']}-{year}"
+                ts = TableSource(ts_name, with_data=True)
+                gs = ts.schema["geodata_source"]
+                if gs not in lookup:
+                    lookup[gs] = [ts]
+                else:
+                    lookup[gs].append(ts)
+
+            for gs, tss in lookup.items():
+                print(gs, tss)
+
+        return self.path
+
 
     def create_from_registry(
         self,
