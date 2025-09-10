@@ -8,11 +8,12 @@ from oeps.clients.s3 import sync_to_s3, get_base_url
 from oeps.config import DATA_DIR
 from oeps.utils import write_json, make_id
 from .registry import Registry
+from ..registry.handlers import Registry as Registry2
 
 
 class Explorer:
     def __init__(
-        self, registry: Registry = Registry, root_dir: Path = Path(".explorer")
+        self, registry: Registry2, root_dir: Path = Path(".explorer")
     ):
         self.registry = registry
         self.root_dir = root_dir
@@ -31,10 +32,9 @@ class Explorer:
         # only source files with an "explorer_config" entry will be used
         geodata_lookup = {}
         for id, data in self.registry.geodata_sources.items():
-            entry = data.get("explorer_config")
-            if entry:
-                entry["summary_level"] = data["summary_level"]
-                geodata_lookup[entry["summary_level"]] = entry
+            if data.explorer_config:
+                data.explorer_config["summary_level"] = data.summary_level.name
+                geodata_lookup[data.explorer_config["summary_level"]] = data.explorer_config
 
         # iterate all variables and create a lookup for all combinations of data sources
         # in which each variable has a value
@@ -45,16 +45,19 @@ class Explorer:
         }
         ds_combo_lookup = {}
         for k, v in variables.items():
+
             use_sources = [
-                self.registry.find_table_source(k, "state"),
-                self.registry.find_table_source(k, "county"),
-                self.registry.find_table_source(k, "zcta"),
-                self.registry.find_table_source(k, "tract"),
+                self.registry.get_table_source_for_variable(k, "state"),
+                self.registry.get_table_source_for_variable(k, "county"),
+                self.registry.get_table_source_for_variable(k, "zcta"),
+                self.registry.get_table_source_for_variable(k, "tract"),
             ]
+
+            print(use_sources)
 
             latest_sources = [i for i in use_sources if i]
             if latest_sources:
-                ds_group_code = "__".join([i["name"] for i in latest_sources])
+                ds_group_code = "__".join([i.name for i in latest_sources])
                 ds_combo_lookup[ds_group_code] = ds_combo_lookup.get(
                     ds_group_code, []
                 ) + [k]
@@ -70,13 +73,13 @@ class Explorer:
         for k, field_list in ds_combo_lookup.items():
             field_list.insert(0, "HEROP_ID")
             for ds in k.split("__"):
-                ds_schema = self.registry.table_sources[ds]
+                ts = self.registry.table_sources[ds]
 
                 filename = f"_{make_id()}"
                 out_path = Path(csv_dir, f"{filename}.csv")
 
                 print(f"writing {out_path}")
-                read_path = ds_schema["path"]
+                read_path = ts.path
                 if read_path.startswith("tables"):
                     read_path = Path(DATA_DIR, read_path)
                 df = self.dataframe_lookup.get(ds, pd.read_csv(read_path))
@@ -90,15 +93,16 @@ class Explorer:
                     "type": "characteristic",
                     "join": "HEROP_ID",
                 }
-                geodata_lookup[ds_schema["summary_level"]]["tables"][k] = table_entry
+                geodata_source = self.registry.geodata_sources[ts.geodata_source]
+                geodata_lookup[geodata_source.summary_level.name]["tables"][k] = table_entry
 
         out_variables = {
             k: {
-                "variable": v["title"],
+                "variable": v.title,
                 "numerator": variables_to_ds_combos[k],
                 "nProperty": k,
-                "theme": self.registry.metadata.get(v.get("metadata", ""))["theme"],
-                "metadataUrl": self.registry.metadata[v["metadata"]]["url"],
+                "theme": self.registry.metadata.get(v.metadata).theme,
+                "metadataUrl": self.registry.metadata.get(v.metadata).url,
             }
             for k, v in variables.items()
             if k in variables_to_ds_combos
@@ -132,7 +136,8 @@ class Explorer:
 
         write_json(out_sources, Path(config_dir, "sources.json"))
 
-        write_json(list(out_variables.values()), Path(config_dir, "variables.json"))
+        out_variables_list = sorted(out_variables.values(), key=lambda x: x["variable"])
+        write_json(out_variables_list, Path(config_dir, "variables.json"))
 
     def build_docs_config(self):
         output = {}
@@ -146,8 +151,8 @@ class Explorer:
                     titles = set()
                     years = set()
                     for v in self.registry.variables.values():
-                        if v["metadata"] == id:
-                            for ts in v["table_sources"]:
+                        if v.metadata == id:
+                            for ts in v.table_sources:
                                 years.add(ts.split("-")[1])
                                 for p in [
                                     ("state", "State"),
@@ -157,12 +162,10 @@ class Explorer:
                                 ]:
                                     if (
                                         p[0]
-                                        in self.registry.table_sources[ts][
-                                            "geodata_source"
-                                        ]
+                                        in self.registry.table_sources[ts].geodata_source
                                     ):
                                         geodata.add(p[1])
-                            titles.add(v["title"])
+                            titles.add(v.title)
 
                     sorted_geodata = [
                         i for i in ["Tract", "Zip", "County", "State"] if i in geodata
@@ -171,9 +174,9 @@ class Explorer:
                         output[theme][construct].append(
                             {
                                 "Variable Construct": construct,
-                                "Variable Proxy": metadata["proxy"],
+                                "Variable Proxy": metadata.proxy,
                                 "Variables": natsorted(list(titles)),
-                                "Source": metadata["source"],
+                                "Source": metadata.source,
                                 "Metadata": id,
                                 "Spatial Scale": ", ".join(sorted_geodata),
                                 "Years": ", ".join(natsorted(years)),
@@ -182,12 +185,12 @@ class Explorer:
 
         csv_downloads = {"state": [], "county": [], "zcta": [], "tract": []}
         for ts in self.registry.table_sources.values():
-            filename = Path(ts["path"]).name
-            csv_downloads[ts["summary_level"]].append(
+            filename = Path(ts.path).name
+            csv_downloads[self.registry.geodata_sources[ts.geodata_source].summary_level.name].append(
                 {
                     "name": filename,
                     "url": f"https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/{filename}",
-                    "year": ts["year"],
+                    "year": ts.year,
                 }
             )
         for csv_list in csv_downloads.values():

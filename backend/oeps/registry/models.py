@@ -47,6 +47,7 @@ class GeodataSourceModel(BaseModel):
     title: str
     description: str
     path: str
+    explorer_config: dict = None
     summary_level: GeographyLevelModel
 
     @classmethod

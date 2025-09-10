@@ -303,3 +303,19 @@ class Registry(BaseModel):
                         )
 
         return df
+
+    def get_table_source_for_variable(self,
+            variable: Union[str, Variable],
+            summary_level: str,
+            year: str="2100") -> Union[TableSource, None]:
+
+        if isinstance(variable, str):
+            variable = self.variables.get(variable)
+
+        use_source = None
+        for ts in variable.table_sources:
+            if self.geodata_sources[self.table_sources[ts].geodata_source].summary_level.name == summary_level:
+                if self.table_sources[ts].year <= year:
+                    use_source = self.table_sources[ts]
+
+        return use_source
