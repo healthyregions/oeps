@@ -6,7 +6,7 @@ import subprocess
 import click
 
 from oeps.clients.bigquery import BigQuery
-from oeps.clients.registry import Registry
+from ..registry.handlers import Registry
 
 from ._common_opts import (
     add_common_opts,
@@ -57,10 +57,10 @@ def build_docs(bq_only:bool, cli_only: bool, registry_only: bool, registry_path:
 
     if ops["bq"]:
         client = BigQuery()
-        registry = Registry(registry_path)
+        registry = Registry.create_from_directory(registry_path)
 
         outfile = Path("../docs/src/reference/bigquery/tables.md").absolute().resolve()
-        client.generate_reference_doc(registry.get_all_sources(), outfile)
+        client.generate_reference_doc(registry.table_sources.values(), outfile)
 
     if ops["cli"]:
         docs_path = Path("../docs/src/reference/cli")
@@ -109,7 +109,7 @@ def build_docs(bq_only:bool, cli_only: bool, registry_only: bool, registry_path:
                 writer.writerow(header)
                 writer.writerows(rows)
 
-        registry = Registry()
+        registry = Registry.create_from_directory(registry_path)
 
         ## Create VARIABLES content
 
@@ -126,8 +126,8 @@ def build_docs(bq_only:bool, cli_only: bool, registry_only: bool, registry_path:
             "analysis",
         ]
         var_rows_csv = []
-        for var in sorted(variables, key=lambda x: x["name"]):
-            var_rows_csv.append([clean_value(var[i]) for i in var_cols])
+        for var in sorted(variables, key=lambda x: x.name):
+            var_rows_csv.append([clean_value(getattr(var, i)) for i in var_cols])
 
         ## Create THEME content
 
@@ -139,7 +139,7 @@ def build_docs(bq_only:bool, cli_only: bool, registry_only: bool, registry_path:
                 for metadata in metadata_entries:
                     md = registry.metadata[metadata]
                     metadata_rows.append(
-                        [theme, construct, md["proxy"], metadata, md["url"]]
+                        [theme, construct, md.proxy, metadata, md.url]
                     )
 
         ## Create TABLE SOURCES content
@@ -149,17 +149,13 @@ def build_docs(bq_only:bool, cli_only: bool, registry_only: bool, registry_path:
             "name",
             "title",
             "path",
-            "format",
-            "mediatype",
             "description",
             "year",
             "geodata_source",
-            "bq_dataset_name",
-            "bq_table_name",
         ]
         tab_rows = []
         for var in table_sources:
-            tab_rows.append([clean_value(var[i]) for i in tab_cols])
+            tab_rows.append([clean_value(getattr(var, i)) for i in tab_cols])
 
         ## Create GEODATA SOURCES content
 
@@ -168,16 +164,12 @@ def build_docs(bq_only:bool, cli_only: bool, registry_only: bool, registry_path:
             "name",
             "title",
             "path",
-            "format",
-            "mediatype",
             "description",
             "summary_level",
-            "bq_dataset_name",
-            "bq_table_name",
         ]
         geo_rows = []
         for var in geodata_sources:
-            geo_rows.append([clean_value(var[i]) for i in geo_cols])
+            geo_rows.append([clean_value(getattr(var, i)) for i in geo_cols])
 
         write_csv_file("variables", var_cols, var_rows_csv)
         write_csv_file("metadata", metadata_cols, metadata_rows)

@@ -76,7 +76,8 @@ class TableSourceModel(BaseModel):
 
     @property
     def full_path(self) -> str:
-        return self.path if self.path.startswith("http") else str(Path(DATA_DIR, self.path))
+        return self.path if self.path.startswith("http") else \
+            str(Path(DATA_DIR, self.path))
 
     @classmethod
     def from_json_file(cls, path: Path) -> "TableSourceModel":
@@ -123,6 +124,7 @@ class VariableModel(BaseModel):
         output["table_sources"] = self.table_sources
         json_path = Path(registry_path, "variables", f"{self.name}.json")
         write_json(output, json_path)
+
 
 class MetadataModel(BaseModel):
     id: str

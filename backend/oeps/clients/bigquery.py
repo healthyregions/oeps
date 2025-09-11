@@ -18,7 +18,7 @@ from google.cloud.bigquery import (
 )
 
 from oeps.utils import BQ_TYPE_LOOKUP
-
+from ..registry.handlers import TableSource
 
 def get_client():
     """Creates a BigQuery Client object and returns it, acquires credentials
@@ -368,14 +368,14 @@ class BigQuery:
                 clean_row.append(v)
             print(clean_row)
 
-    def generate_reference_doc(self, resources, outfile: Path):
+    def generate_reference_doc(self, table_sources: list[TableSource], outfile: Path):
         project_id = os.getenv("BQ_PROJECT_ID")
 
         datasets = {}
 
-        for d in resources:
-            ds_name = d["bq_dataset_name"]
-            t_name = d["bq_table_name"]
+        for d in table_sources:
+            ds_name = "tabular"
+            t_name = d.name
 
             if ds_name not in datasets:
                 datasets[ds_name] = {}
@@ -383,12 +383,12 @@ class BigQuery:
             if t_name not in datasets[ds_name]:
                 datasets[ds_name][t_name] = []
 
-            for f in d["schema"]["fields"]:
+            for f in d.variables:
                 datasets[ds_name][t_name].append(
                     {
-                        "name": f.get("name"),
-                        "data_type": BQ_TYPE_LOOKUP[f.get("type")],
-                        "description": f.get("description"),
+                        "name": f.name,
+                        "data_type": BQ_TYPE_LOOKUP[f.type],
+                        "description": f.description,
                     }
                 )
         # fmt: off

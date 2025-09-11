@@ -125,7 +125,7 @@ class Registry(BaseModel):
     theme_tree: dict[str, dict[str, list[str]]] = {}
 
     @staticmethod
-    def _load_variables(path: Path):
+    def _load_variables(path: Path) -> dict[str, Variable]:
         variables = {}
         for i in Path(path, "variables").glob("*.json"):
             v = Variable.from_json_file(i)
@@ -133,7 +133,7 @@ class Registry(BaseModel):
         return variables
 
     @staticmethod
-    def _load_table_sources(path: Path):
+    def _load_table_sources(path: Path) -> dict[str, TableSource]:
         table_sources = {}
         for i in Path(path, "table_sources").glob("*.json"):
             t = TableSource.from_json_file(i)
@@ -141,7 +141,7 @@ class Registry(BaseModel):
         return table_sources
 
     @staticmethod
-    def _load_geodata_sources(path: Path):
+    def _load_geodata_sources(path: Path) -> dict[str, GeodataSource]:
         geodata_sources = {}
         for i in Path(path, "geodata_sources").glob("*.json"):
             g = GeodataSource.from_json_file(i)
@@ -149,7 +149,7 @@ class Registry(BaseModel):
         return geodata_sources
 
     @staticmethod
-    def _load_metadata(path: Path):
+    def _load_metadata(path: Path) -> tuple[dict, dict]:
         metadata = {}
         theme_tree = {k: {} for k in THEME_ORDER}
         for i in Path(path, "metadata").glob("*.json"):
@@ -171,6 +171,14 @@ class Registry(BaseModel):
         table_sources = cls._load_table_sources(path)
         geodata_sources = cls._load_geodata_sources(path)
         metadata, theme_tree = cls._load_metadata(path)
+
+        ## set forward objects
+        for t in table_sources.values():
+            full_variable_objects = []
+            for v in variables.values():
+                if t.name in v.table_sources:
+                    full_variable_objects.append(v)
+            t.variables = full_variable_objects
 
         return cls(
             path=path,
