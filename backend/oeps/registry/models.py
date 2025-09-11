@@ -4,8 +4,8 @@ from typing import Literal
 import pandas as pd
 from pydantic import BaseModel
 
-from ..config import DATA_DIR
-from ..utils import load_json
+from ..config import DATA_DIR, REGISTRY_DIR
+from ..utils import load_json, write_json
 
 
 class GeographyLevelModel(BaseModel):
@@ -50,6 +50,10 @@ class GeodataSourceModel(BaseModel):
     explorer_config: dict = None
     summary_level: GeographyLevelModel
 
+    @property
+    def full_path(self) -> str:
+        return self.path if self.path.startswith("http") else str(Path(DATA_DIR, self.path))
+
     @classmethod
     def from_json_file(cls, path: Path) -> "GeodataSourceModel":
         data = load_json(path)
@@ -61,7 +65,6 @@ class TableSourceModel(BaseModel):
     name: str
     title: str
     path: str
-    full_path: str
     description: str
     year: str
     geodata_source: str
@@ -71,19 +74,31 @@ class TableSourceModel(BaseModel):
     class Config:
         arbitrary_types_allowed = True
 
+    @property
+    def full_path(self) -> str:
+        return self.path if self.path.startswith("http") else str(Path(DATA_DIR, self.path))
+
     @classmethod
     def from_json_file(cls, path: Path) -> "TableSourceModel":
         data = load_json(path)
-        if data["path"].startswith("http"):
-            data["full_path"] = data["path"]
-        else:
-            data["full_path"] = str(Path(DATA_DIR, data["path"]))
         return cls(**data)
+
+    def to_json_file(self, registry_path: Path):
+        output = self.model_dump(
+            exclude=[
+                "geodata_source",
+                "variables",
+                "df"
+            ]
+        )
+        output["geodata_source"] = self.geodata_source
+        json_path = Path(registry_path, "table_sources", f"{self.name}.json")
+        write_json(output, json_path)
 
 
 class VariableModel(BaseModel):
-    title: str
     name: str
+    title: str
     type: Literal['string', 'number', 'integer', 'boolean', 'date']
     example: str
     format: str = None
@@ -98,6 +113,16 @@ class VariableModel(BaseModel):
         data = load_json(path)
         return cls(**data)
 
+    def to_json_file(self, registry_path: Path):
+        output = self.model_dump(
+            exclude=[
+                "table_sources"
+            ],
+            exclude_none=True,
+        )
+        output["table_sources"] = self.table_sources
+        json_path = Path(registry_path, "variables", f"{self.name}.json")
+        write_json(output, json_path)
 
 class MetadataModel(BaseModel):
     id: str

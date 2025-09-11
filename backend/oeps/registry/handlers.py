@@ -193,9 +193,6 @@ class Registry(BaseModel):
         else:
             use_table_sources = self.table_sources.values()
 
-        print(use_table_sources)
-        exit()
-
         for ts in use_table_sources:
             ts.load_dataframe()
             for v in self.variables.values():
@@ -212,8 +209,12 @@ class Registry(BaseModel):
     def save_variable(self, variable: Union[str, Variable]):
         if isinstance(variable, str):
             variable = self.variables[variable]
-        path = Path(self.path, "variables", f"{variable.name}.json")
-        write_json(variable.model_dump(exclude_none=True), path)
+        variable.to_json_file(self.path)
+
+    def save_table_source(self, table_source: Union[str, TableSource]):
+        if isinstance(table_source, str):
+            ts = self.table_sources[table_source]
+        ts.to_json_file(self.path)
 
     def prepare_incoming_df(self, incoming_df: pd.DataFrame, target_ts: Union[str, TableSource]) -> pd.DataFrame:
         """Load an incoming CSV to pandas dataframe, and create HEROP_ID
@@ -332,3 +333,32 @@ class Registry(BaseModel):
     def remove_variable(self, variable_name: str):
         os.remove(Path(self.path, "variables", f"{variable_name}.json"))
         self._load_variables(self.path)
+
+    def create_table_source(
+        self, year: str, geodata_source: str, dry_run: bool = False
+    ) -> TableSource:
+
+        gs = self.geodata_sources.get(geodata_source)
+
+        name = f"{gs.summary_level.name}-{year}"
+
+        ts = TableSource(
+            name=name,
+            title=name,
+            description=f"This CSV aggregates all OEPS data values from {year} at the {gs.summary_level.name} level.",
+            year=year,
+            geodata_source=geodata_source,
+            path=f"tables/{name}.csv",
+        )
+
+        gdf = gpd.read_file(gs.full_path)[["HEROP_ID"]]
+
+        extra_foreign_key = "ZCTA5" if gs.summary_level.name == "zcta" else "FIPS"
+        gdf[extra_foreign_key] = gdf.HEROP_ID.apply(lambda x: x[5:])
+
+        print("new data table:")
+        print(gdf)
+
+        if not dry_run:
+            ts.to_json_file(self.path)
+            gdf.to_csv(ts.full_path, index=False)

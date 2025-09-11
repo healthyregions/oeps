@@ -1,7 +1,6 @@
 import click
 
-from oeps.clients.registry import Registry, TableSource
-from ..registry.handlers import Registry as Registry2
+from ..registry.handlers import Registry
 
 from ._common_opts import (
     add_common_opts,
@@ -35,7 +34,7 @@ def move_variable(name, source, target, overwrite, registry_path):
     """
 
     # registry = Registry(registry_path)
-    registry = Registry2.create_from_directory(registry_path)
+    registry = Registry.create_from_directory(registry_path)
 
     variable = registry.variables.get(name)
     if not variable:

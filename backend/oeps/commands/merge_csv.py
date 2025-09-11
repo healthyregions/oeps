@@ -2,7 +2,7 @@ import click
 
 import pandas as pd
 
-from oeps.clients.registry import Registry, TableSource
+from ..registry.handlers import Registry
 
 from ._common_opts import (
     add_common_opts,
@@ -41,11 +41,14 @@ def merge_csv(source, table_source, registry_path, dry_run):
     --dry-run: load and stage the CSV but alter no files.
     """
 
-    registry = Registry(registry_path)
+    registry = Registry.create_from_directory(registry_path)
 
-    ts = TableSource(table_source, registry=registry, with_data=True)
+    ts = registry.table_sources.get(table_source)
+    if not ts:
+        print(f"Invalid table source name: {table_source}")
+        exit()
 
     df = pd.read_csv(source)
-    staged_df = ts.stage_incoming_df(df)
+    staged_df = registry.prepare_incoming_df(df)
     if not dry_run:
         ts.merge_df(staged_df)
