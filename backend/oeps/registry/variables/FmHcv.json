@@ -1,13 +1,13 @@
 {
-  "title": "Yearly Hepatitis C cases - Women (2013-2016)",
   "name": "FmHcv",
+  "title": "Yearly Hepatitis C cases - Women (2013-2016)",
   "type": "number",
   "example": "16900",
   "description": "Mean yearly Hepatitis C cases in women from 2013-2016",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "HepatitisC_Rates",
   "table_sources": [
     "state-2017"
-  ],
-  "metadata": "HepatitisC_Rates"
+  ]
 }

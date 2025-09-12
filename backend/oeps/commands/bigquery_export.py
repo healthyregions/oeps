@@ -1,6 +1,6 @@
 import click
 
-from oeps.clients.bigquery import BigQuery
+from ..clients.bigquery import BigQuery
 
 
 @click.command()

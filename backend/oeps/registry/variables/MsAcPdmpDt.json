@@ -1,12 +1,13 @@
 {
-  "title": "Must-Access PDMP start date",
   "name": "MsAcPdmpDt",
+  "title": "Must-Access PDMP start date",
   "type": "date",
   "example": "7/1/2014",
   "format": "%m/%d/%Y",
   "description": "Date of legislation requiring Prescribers to access PDMP before prescribing as interpreted by PDAPS.",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "PDMP_Presence",
   "table_sources": [
     "state-2017",
     "state-2018",
@@ -15,6 +16,5 @@
     "state-2021",
     "state-2022",
     "state-2023"
-  ],
-  "metadata": "PDMP_Presence"
+  ]
 }

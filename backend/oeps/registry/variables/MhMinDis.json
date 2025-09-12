@@ -1,14 +1,14 @@
 {
-  "title": "Distance (mi) to nearest Mental Health Provider",
   "name": "MhMinDis",
+  "title": "Distance (mi) to nearest Mental Health Provider",
   "type": "number",
   "example": "0.2",
   "description": "Euclidean distance* from tract/zip centroid to nearest mental health provider, in miles",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_Mental_Health",
   "table_sources": [
     "tract-2020",
     "zcta-2020"
-  ],
-  "metadata": "Access_Mental_Health"
+  ]
 }

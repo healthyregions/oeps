@@ -1,11 +1,12 @@
 {
-  "title": "Poverty %",
   "name": "PovP",
+  "title": "Poverty %",
   "type": "number",
   "example": "16.6",
   "description": "Number of individuals earning below the poverty income threshold as a percentage of the total population",
   "longitudinal": true,
   "analysis": false,
+  "metadata": "Economic_Characteristics",
   "table_sources": [
     "county-1980",
     "county-1990",
@@ -29,6 +30,5 @@
     "zcta-2018",
     "zcta-2020",
     "zcta-2023"
-  ],
-  "metadata": "Economic_Characteristics"
+  ]
 }

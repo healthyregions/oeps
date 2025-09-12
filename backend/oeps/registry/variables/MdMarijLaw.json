@@ -1,11 +1,12 @@
 {
-  "title": "Laws authorizing medical marijuana use ",
   "name": "MdMarijLaw",
+  "title": "Laws authorizing medical marijuana use ",
   "type": "boolean",
   "example": "1",
   "description": "Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (0=no, 1=yes)",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Medical_Marijuana_Laws",
   "table_sources": [
     "state-2017",
     "state-2018",
@@ -14,6 +15,5 @@
     "state-2021",
     "state-2022",
     "state-2023"
-  ],
-  "metadata": "Medical_Marijuana_Laws"
+  ]
 }

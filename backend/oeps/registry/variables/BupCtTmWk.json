@@ -1,15 +1,15 @@
 {
-  "title": "Tracts with Buprenorphine Provider within 30-min (walking)",
   "name": "BupCtTmWk",
+  "title": "Tracts with Buprenorphine Provider within 30-min (walking)",
   "type": "integer",
   "example": "287",
   "description": "Number of tracts with buprenorphine provider within a 30-min walking range",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_MOUDs",
   "table_sources": [
     "county-2020",
     "county-2025",
     "state-2025"
-  ],
-  "metadata": "Access_MOUDs"
+  ]
 }

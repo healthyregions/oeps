@@ -1,11 +1,12 @@
 {
-  "title": "% Hispanic/Latinx Population",
   "name": "HispP",
+  "title": "% Hispanic/Latinx Population",
   "type": "number",
   "example": "25.95",
   "description": "Percentage of population with ethnicity identified as of Hispanic or Latinx origin",
   "longitudinal": true,
   "analysis": false,
+  "metadata": "Race_Ethnicity",
   "table_sources": [
     "county-1980",
     "county-1990",
@@ -23,6 +24,5 @@
     "tract-2010",
     "tract-2018",
     "zcta-2018"
-  ],
-  "metadata": "Race_Ethnicity"
+  ]
 }

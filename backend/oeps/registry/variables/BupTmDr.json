@@ -1,16 +1,16 @@
 {
-  "title": "Driving Time (min) to nearest Buprenorphine Provider",
   "name": "BupTmDr",
+  "title": "Driving Time (min) to nearest Buprenorphine Provider",
   "type": "number",
   "example": "0",
   "description": "Driving time (minutes) to nearest buprenorphine provider",
   "longitudinal": false,
   "analysis": true,
+  "metadata": "Access_MOUDs",
   "table_sources": [
     "tract-2020",
     "tract-2025",
     "zcta-2020",
     "zcta-2025"
-  ],
-  "metadata": "Access_MOUDs"
+  ]
 }

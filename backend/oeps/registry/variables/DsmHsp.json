@@ -1,11 +1,12 @@
 {
-  "title": "Segregation: Dissimilarity (Hispanic)",
   "name": "DsmHsp",
+  "title": "Segregation: Dissimilarity (Hispanic)",
   "type": "number",
   "example": "0.28",
   "description": "Dissimilarity index for Hispanic and non-Hispanic White residents",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Residential_Segregation",
   "table_sources": [
     "county-2018",
     "county-2023",
@@ -13,6 +14,5 @@
     "state-2023",
     "zcta-2018",
     "zcta-2023"
-  ],
-  "metadata": "Residential_Segregation"
+  ]
 }

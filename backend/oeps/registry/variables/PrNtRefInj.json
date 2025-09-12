@@ -1,13 +1,13 @@
 {
-  "title": "Paraphernalia does not refer to objects used for injecting drugs",
   "name": "PrNtRefInj",
+  "title": "Paraphernalia does not refer to objects used for injecting drugs",
   "type": "boolean",
   "example": "0",
   "description": "Dummy variable indicating whether the paraphernalia definition in the state law does not refer to objects used for injecting drugs (0=no, 1=yes)",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Syringe_Policy",
   "table_sources": [
     "state-2019"
-  ],
-  "metadata": "Syringe_Policy"
+  ]
 }

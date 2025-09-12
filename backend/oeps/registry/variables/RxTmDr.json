@@ -1,14 +1,14 @@
 {
-  "title": "Driving Time (min) to nearest Pharmacy",
   "name": "RxTmDr",
+  "title": "Driving Time (min) to nearest Pharmacy",
   "type": "number",
   "example": "0",
   "description": "Driving time from tract/zip origin centroid to the nearest tract/zip pharmacy destination centroid, in minutes",
   "longitudinal": false,
   "analysis": true,
+  "metadata": "Access_Pharmacies",
   "table_sources": [
     "tract-2019",
     "zcta-2019"
-  ],
-  "metadata": "Access_Pharmacies"
+  ]
 }

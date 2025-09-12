@@ -1,14 +1,14 @@
 {
-  "title": "Count of Hospitals (30-min drive)",
   "name": "HospCntDr",
+  "title": "Count of Hospitals (30-min drive)",
   "type": "integer",
   "example": "6",
   "description": "Count of hospitals within a 30-minute driving threshold",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_Hospitals",
   "table_sources": [
     "tract-2020",
     "zcta-2020"
-  ],
-  "metadata": "Access_Hospitals"
+  ]
 }

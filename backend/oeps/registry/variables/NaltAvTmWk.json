@@ -1,15 +1,15 @@
 {
-  "title": "Walking Time (min) to Nearest Naltrexone Provider",
   "name": "NaltAvTmWk",
+  "title": "Walking Time (min) to Nearest Naltrexone Provider",
   "type": "number",
   "example": "7.40684027777778",
   "description": "Average walking time (minutes) across tracts in county to nearest naltrexone provider",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_MOUDs",
   "table_sources": [
     "county-2020",
     "county-2025",
     "state-2025"
-  ],
-  "metadata": "Access_MOUDs"
+  ]
 }

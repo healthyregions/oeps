@@ -1,11 +1,12 @@
 {
-  "title": "Total Occupied Housing Units",
   "name": "TotUnits",
+  "title": "Total Occupied Housing Units",
   "type": "integer",
   "example": "874237",
   "description": "Count of total occupied housing units",
   "longitudinal": true,
   "analysis": false,
+  "metadata": "Housing_Variables",
   "table_sources": [
     "county-1980",
     "county-1990",
@@ -29,6 +30,5 @@
     "zcta-2018",
     "zcta-2020",
     "zcta-2023"
-  ],
-  "metadata": "Housing_Variables"
+  ]
 }

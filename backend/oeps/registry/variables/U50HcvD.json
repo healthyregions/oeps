@@ -1,11 +1,12 @@
 {
-  "title": "Hepatitis C Deaths - Under 50 years old",
   "name": "U50HcvD",
+  "title": "Hepatitis C Deaths - Under 50 years old",
   "type": "integer",
   "example": "40",
   "description": "Hepatitis C deaths in populations under 50 years of age",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "HepatitisC_Rates",
   "table_sources": [
     "state-2013",
     "state-2014",
@@ -17,6 +18,5 @@
     "state-2020",
     "state-2021",
     "state-2022"
-  ],
-  "metadata": "HepatitisC_Rates"
+  ]
 }

@@ -1,17 +1,17 @@
 {
-  "title": "Good Samaritan Law Protecting Arrest (date)",
   "name": "GslArrDt",
+  "title": "Good Samaritan Law Protecting Arrest (date)",
   "type": "date",
   "example": "10/1/2015",
   "format": "%m/%d/%Y",
   "description": "Date (DMY) that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Good_Samaritan_Laws",
   "table_sources": [
     "state-2017",
     "state-2019",
     "state-2020",
     "state-2021"
-  ],
-  "metadata": "Good_Samaritan_Laws"
+  ]
 }

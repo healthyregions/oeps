@@ -2,7 +2,7 @@ from pathlib import Path
 
 import click
 
-from oeps.clients.explorer import Explorer
+from ..clients.explorer import Explorer
 from ..registry.handlers import Registry
 
 from ._common_opts import (

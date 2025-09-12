@@ -1,16 +1,16 @@
 {
-  "title": "Distance (mi) to nearest Naltrexone Provider",
   "name": "NaltMinDis",
+  "title": "Distance (mi) to nearest Naltrexone Provider",
   "type": "number",
   "example": "18.04",
   "description": "Euclidean distance (miles) to nearest naltrexone/Vivitrol provider",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_MOUDs",
   "table_sources": [
     "tract-2020",
     "tract-2025",
     "zcta-2020",
     "zcta-2025"
-  ],
-  "metadata": "Access_MOUDs"
+  ]
 }

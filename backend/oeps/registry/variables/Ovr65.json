@@ -1,11 +1,12 @@
 {
-  "title": "% Population: Age 65+",
   "name": "Ovr65",
+  "title": "% Population: Age 65+",
   "type": "number",
   "example": "11.24",
   "description": "Percentage of population between ages of 15 & 24",
   "longitudinal": true,
   "analysis": false,
+  "metadata": "Demographic_Characteristics",
   "table_sources": [
     "county-1980",
     "county-1990",
@@ -24,6 +25,5 @@
     "tract-2023",
     "zcta-2018",
     "zcta-2023"
-  ],
-  "metadata": "Demographic_Characteristics"
+  ]
 }

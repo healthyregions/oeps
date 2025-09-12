@@ -1,14 +1,14 @@
 {
-  "title": "Traditional Medicaid Federal Spending",
   "name": "TradFedExp",
+  "title": "Traditional Medicaid Federal Spending",
   "type": "integer",
   "example": "4610569600",
   "description": "Traditional medicaid - federal spending",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Medical_Expenditures",
   "table_sources": [
     "state-2018",
     "state-2023"
-  ],
-  "metadata": "Medical_Expenditures"
+  ]
 }

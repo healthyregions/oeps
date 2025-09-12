@@ -1,17 +1,17 @@
 {
-  "title": "Any Good Samaritan Law (date)",
   "name": "AnyGslDt",
+  "title": "Any Good Samaritan Law (date)",
   "type": "date",
   "example": "6/10/2010",
   "format": "%m/%d/%Y",
   "description": "Date (DMY) any type of GoodDate (DMY) any type of Good Samaritan Law is effective",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Good_Samaritan_Laws",
   "table_sources": [
     "state-2017",
     "state-2019",
     "state-2020",
     "state-2021"
-  ],
-  "metadata": "Good_Samaritan_Laws"
+  ]
 }

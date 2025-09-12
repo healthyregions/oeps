@@ -1,16 +1,16 @@
 {
-  "title": "Driving Time (min) to nearest Opioid Treatment Program (OTP)",
   "name": "OtpTmDr",
+  "title": "Driving Time (min) to nearest Opioid Treatment Program (OTP)",
   "type": "number",
   "example": "27.39",
   "description": "Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes",
   "longitudinal": false,
   "analysis": true,
+  "metadata": "Access_MOUDs",
   "table_sources": [
     "tract-2021",
     "tract-2025",
     "zcta-2021",
     "zcta-2025"
-  ],
-  "metadata": "Access_MOUDs"
+  ]
 }

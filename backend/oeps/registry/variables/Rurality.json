@@ -1,14 +1,14 @@
 {
-  "title": "Urban-Suburban-Rural",
   "name": "Rurality",
+  "title": "Urban-Suburban-Rural",
   "type": "string",
   "example": "Urban",
   "description": "Urban/Suburban/Rural",
   "longitudinal": false,
   "analysis": true,
+  "metadata": "Urbanicity",
   "table_sources": [
     "tract-2010",
     "zcta-2010"
-  ],
-  "metadata": "Urbanicity"
+  ]
 }

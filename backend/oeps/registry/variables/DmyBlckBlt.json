@@ -1,13 +1,13 @@
 {
-  "title": "African American South",
   "name": "DmyBlckBlt",
+  "title": "African American South",
   "type": "boolean",
   "example": "0",
   "description": "Dummy variable for whether county is in the Southern Black Belt region",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Unique_Communities",
   "table_sources": [
     "county-2000"
-  ],
-  "metadata": "Unique_Communities"
+  ]
 }

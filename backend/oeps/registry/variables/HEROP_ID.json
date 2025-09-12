@@ -1,11 +1,12 @@
 {
-  "title": "HEROP_ID",
   "name": "HEROP_ID",
+  "title": "HEROP_ID",
   "type": "string",
   "example": "050US01001-2018",
   "description": "A derived unique id corresponding to the relevant geographic unit.",
   "longitudinal": true,
   "analysis": false,
+  "metadata": "Geographic_Boundaries",
   "table_sources": [
     "county-1980",
     "county-1990",
@@ -58,6 +59,5 @@
     "zcta-2022",
     "zcta-2023",
     "zcta-2025"
-  ],
-  "metadata": "Geographic_Boundaries"
+  ]
 }

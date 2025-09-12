@@ -2,7 +2,7 @@ from datetime import datetime
 from pathlib import Path
 
 import click
-from oeps.clients.frictionless import DataPackage
+from ..clients.frictionless import DataPackage
 from ..registry.handlers import Registry
 
 from oeps.utils import (

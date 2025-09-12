@@ -1,12 +1,13 @@
 {
-  "title": "Any Horowitz PDMP start date",
   "name": "AnyPdmphDt",
+  "title": "Any Horowitz PDMP start date",
   "type": "date",
   "example": "8/1/2011",
   "format": "%m/%d/%Y",
   "description": "Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: Horowitz et al., 2018, Table 2, column 1.",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "PDMP_Presence",
   "table_sources": [
     "state-2017",
     "state-2018",
@@ -15,6 +16,5 @@
     "state-2021",
     "state-2022",
     "state-2023"
-  ],
-  "metadata": "PDMP_Presence"
+  ]
 }

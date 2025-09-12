@@ -1,13 +1,13 @@
 {
-  "title": "% Tracts Urban (RUCA)",
   "name": "RcaUrbanP",
+  "title": "% Tracts Urban (RUCA)",
   "type": "number",
   "example": "0.99",
   "description": "Percent census tracts in the county classified as Urban using RUCA codes",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Urbanicity",
   "table_sources": [
     "county-2018"
-  ],
-  "metadata": "Urbanicity"
+  ]
 }

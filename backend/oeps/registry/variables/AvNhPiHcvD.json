@@ -1,13 +1,13 @@
 {
-  "title": "Mean yearly Hepatitis C deaths among Native Hawaiian and Pacific Islanders population from 2018-2022",
   "name": "AvNhPiHcvD",
+  "title": "Mean yearly Hepatitis C deaths among Native Hawaiian and Pacific Islanders population from 2018-2022",
   "type": "number",
   "example": "60.0",
   "description": "",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "HepatitisC_Rates",
   "table_sources": [
     "state-2022"
-  ],
-  "metadata": "HepatitisC_Rates"
+  ]
 }

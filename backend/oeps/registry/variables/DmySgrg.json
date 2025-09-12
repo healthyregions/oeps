@@ -1,13 +1,13 @@
 {
-  "title": "Hypersegregated Cities",
   "name": "DmySgrg",
+  "title": "Hypersegregated Cities",
   "type": "boolean",
   "example": "1",
   "description": "Dummy variable for whether county is part of a hypersegregated city or its metropolitan area",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Unique_Communities",
   "table_sources": [
     "county-2015"
-  ],
-  "metadata": "Unique_Communities"
+  ]
 }

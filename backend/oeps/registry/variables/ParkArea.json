@@ -1,13 +1,13 @@
 {
-  "title": "Park Area",
   "name": "ParkArea",
+  "title": "Park Area",
   "type": "number",
   "example": "39296898972.47",
   "description": "Area (in square meters) of park or green space in a state).",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Greenspace_Measures",
   "table_sources": [
     "state-2022"
-  ],
-  "metadata": "Greenspace_Measures"
+  ]
 }

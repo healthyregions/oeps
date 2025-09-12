@@ -1,14 +1,14 @@
 {
-  "title": "% Tracts within 30-min Drive of Hospital",
   "name": "HospTmDrP",
+  "title": "% Tracts within 30-min Drive of Hospital",
   "type": "number",
   "example": "0.92",
   "description": "Percent of tracts with hospital within a 30-mini driving range",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_Hospitals",
   "table_sources": [
     "county-2020",
     "state-2020"
-  ],
-  "metadata": "Access_Hospitals"
+  ]
 }

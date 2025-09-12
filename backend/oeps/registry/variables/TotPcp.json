@@ -1,15 +1,15 @@
 {
-  "title": "Count of Primary Care Physicians (PCPs)",
   "name": "TotPcp",
+  "title": "Count of Primary Care Physicians (PCPs)",
   "type": "integer",
   "example": "5904",
   "description": "Number of primary care providers in area",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Healthcare_Provider_Access",
   "table_sources": [
     "county-2010",
     "state-2010",
     "tract-2010"
-  ],
-  "metadata": "Healthcare_Provider_Access"
+  ]
 }

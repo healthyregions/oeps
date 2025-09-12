@@ -1,11 +1,12 @@
 {
-  "title": "% Native Hawaiian & Other PI Population",
   "name": "PacIsP",
+  "title": "% Native Hawaiian & Other PI Population",
   "type": "number",
   "example": "0.05",
   "description": "Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone",
   "longitudinal": true,
   "analysis": false,
+  "metadata": "Race_Ethnicity",
   "table_sources": [
     "county-1980",
     "county-1990",
@@ -30,6 +31,5 @@
     "zcta-2018",
     "zcta-2020",
     "zcta-2023"
-  ],
-  "metadata": "Race_Ethnicity"
+  ]
 }

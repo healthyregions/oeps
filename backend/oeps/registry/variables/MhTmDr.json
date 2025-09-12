@@ -1,14 +1,14 @@
 {
-  "title": "Driving Time (min) to nearest Mental Health Provider",
   "name": "MhTmDr",
+  "title": "Driving Time (min) to nearest Mental Health Provider",
   "type": "number",
   "example": "0",
   "description": "Driving time from tract/zip origin centroid to the nearest tract/zip mental health provider destination centroid, in minutes",
   "longitudinal": false,
   "analysis": true,
+  "metadata": "Access_Mental_Health",
   "table_sources": [
     "tract-2020",
     "zcta-2020"
-  ],
-  "metadata": "Access_Mental_Health"
+  ]
 }

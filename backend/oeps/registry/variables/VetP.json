@@ -1,11 +1,12 @@
 {
-  "title": "% Veteran Population",
   "name": "VetP",
+  "title": "% Veteran Population",
   "type": "number",
   "example": "9.58",
   "description": "Percent of population that are veterans",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Veteran_Population",
   "table_sources": [
     "county-2010",
     "county-2018",
@@ -20,6 +21,5 @@
     "zcta-2018",
     "zcta-2020",
     "zcta-2023"
-  ],
-  "metadata": "Veteran_Population"
+  ]
 }

@@ -1,15 +1,15 @@
 {
-  "title": "Tracts with Methadone Provider within 30-min (biking)",
   "name": "MetCtTmBk",
+  "title": "Tracts with Methadone Provider within 30-min (biking)",
   "type": "integer",
   "example": "285",
   "description": "Number of tracts with methadone provider within a 30-min biking range",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_MOUDs",
   "table_sources": [
     "county-2020",
     "county-2025",
     "state-2025"
-  ],
-  "metadata": "Access_MOUDs"
+  ]
 }

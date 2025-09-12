@@ -4,7 +4,7 @@ content:
     label: Metadata
     type: collection
     path: backend/oeps/registry/metadata
-    filename: '{if}.json'
+    filename: '{id}.json'
     format: json
     fields:
       - name: id
@@ -65,14 +65,6 @@ content:
         label: Description
         type: string
         description: "Description of variable."
-      - name: source
-        label: Source
-        type: string
-        description: "Abbreviated source for this variable, ex: ACS 2018. Separate multiple with ;."
-      - name: source_long
-        label: "Source (long)"
-        type: string
-        description: "Long-form source name, ex: American Community Survey 2018. Separate multiple with ;."
       - name: metadata
         label: Metadata Document
         type: reference

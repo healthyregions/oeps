@@ -1,13 +1,13 @@
 {
-  "title": "Mixed Immigrant Cohesion and Accesibility (MICA) Index",
   "name": "MicaInd",
+  "title": "Mixed Immigrant Cohesion and Accesibility (MICA) Index",
   "type": "number",
   "example": "0.59",
   "description": "Raw Mixed Immigrant Cohesion and Accessibility (MICA) Index (https://sdohatlas.github.io/)",
   "longitudinal": false,
   "analysis": true,
+  "metadata": "SDOH_Indices",
   "table_sources": [
     "tract-2014"
-  ],
-  "metadata": "SDOH_Indices"
+  ]
 }

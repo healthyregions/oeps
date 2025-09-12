@@ -1,11 +1,12 @@
 {
-  "title": "Housing Unit Density",
   "name": "UnitDens",
+  "title": "Housing Unit Density",
   "type": "number",
   "example": "46.11",
   "description": "Number of housing units per square mile of land area",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Housing_Variables",
   "table_sources": [
     "county-2018",
     "county-2020",
@@ -17,6 +18,5 @@
     "zcta-2018",
     "zcta-2020",
     "zcta-2023"
-  ],
-  "metadata": "Housing_Variables"
+  ]
 }

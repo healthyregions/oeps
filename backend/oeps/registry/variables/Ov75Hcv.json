@@ -1,13 +1,13 @@
 {
-  "title": "Yearly Hepatitis C cases - Over 75 years old (2013-2016)",
   "name": "Ov75Hcv",
+  "title": "Yearly Hepatitis C cases - Over 75 years old (2013-2016)",
   "type": "number",
   "example": "1600",
   "description": "Mean yearly Hepatitis C cases in people over 75 years of age from 2013-2016",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "HepatitisC_Rates",
   "table_sources": [
     "state-2017"
-  ],
-  "metadata": "HepatitisC_Rates"
+  ]
 }

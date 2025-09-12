@@ -1,7 +1,7 @@
 import click
 from pathlib import Path
 
-from oeps.registry.handlers import Registry
+from ..registry.handlers import Registry
 from ._common_opts import (
     add_common_opts,
     registry_opt,

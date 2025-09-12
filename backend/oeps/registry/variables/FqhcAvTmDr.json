@@ -1,14 +1,14 @@
 {
-  "title": "Driving Time to nearest Federally Qualified Health Center",
   "name": "FqhcAvTmDr",
+  "title": "Driving Time to nearest Federally Qualified Health Center",
   "type": "number",
   "example": "10.65",
   "description": "Average driving time (minutes) across tracts in state to nearest Federally Qualified Health Center",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_FQHCs",
   "table_sources": [
     "county-2020",
     "state-2020"
-  ],
-  "metadata": "Access_FQHCs"
+  ]
 }

@@ -1,17 +1,17 @@
 {
-  "title": "Hepatitis C deaths among Multiple Race populations ",
   "name": "MulHcvD",
+  "title": "Hepatitis C deaths among Multiple Race populations ",
   "type": "number",
   "example": "60.0",
   "description": "",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "HepatitisC_Rates",
   "table_sources": [
     "state-2018",
     "state-2019",
     "state-2020",
     "state-2021",
     "state-2022"
-  ],
-  "metadata": "HepatitisC_Rates"
+  ]
 }

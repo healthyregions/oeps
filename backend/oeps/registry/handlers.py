@@ -1,18 +1,13 @@
 import os
-import csv
 from pathlib import Path
 from warnings import warn
 from typing import Union
 
-from openpyxl import Workbook
-from openpyxl.utils import get_column_letter
-from openpyxl.styles import Font
 import pandas as pd
 import geopandas as gpd
 from pydantic import BaseModel
 
-from ..config import REGISTRY_DIR, DATA_DIR, THEME_ORDER
-from ..utils import load_json, write_json
+from ..config import THEME_ORDER
 from .models import (
     GEOGRAPHY_LOOKUP,
     TableSourceModel,

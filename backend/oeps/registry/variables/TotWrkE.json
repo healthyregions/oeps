@@ -1,11 +1,12 @@
 {
-  "title": "Count of Working Population",
   "name": "TotWrkE",
+  "title": "Count of Working Population",
   "type": "integer",
   "example": "3513856",
   "description": "Estimated count of working population",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Employment_Trends",
   "table_sources": [
     "county-2018",
     "county-2020",
@@ -17,6 +18,5 @@
     "zcta-2018",
     "zcta-2020",
     "zcta-2023"
-  ],
-  "metadata": "Employment_Trends"
+  ]
 }

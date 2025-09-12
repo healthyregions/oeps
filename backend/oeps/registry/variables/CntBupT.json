@@ -1,13 +1,13 @@
 {
-  "title": "Tracts with Buprenorphine Provider (30-min driving)",
   "name": "CntBupT",
+  "title": "Tracts with Buprenorphine Provider (30-min driving)",
   "type": "integer",
   "example": "1400",
   "description": "Number of tracts with buprenorphine provider within a 30-min driving range",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_MOUDs",
   "table_sources": [
     "state-2020"
-  ],
-  "metadata": "Access_MOUDs"
+  ]
 }

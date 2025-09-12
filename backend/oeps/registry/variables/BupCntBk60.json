@@ -1,16 +1,16 @@
 {
-  "title": "Count of Buprenorphine Providers (60-min bike)",
   "name": "BupCntBk60",
+  "title": "Count of Buprenorphine Providers (60-min bike)",
   "type": "integer",
   "example": "4",
   "description": "Count of buprenorphine providers in 60 minute biking time threshold",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_MOUDs",
   "table_sources": [
     "tract-2020",
     "tract-2025",
     "zcta-2020",
     "zcta-2025"
-  ],
-  "metadata": "Access_MOUDs"
+  ]
 }

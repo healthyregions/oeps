@@ -1,13 +1,13 @@
 {
-  "title": "Total Jail Population Rate",
   "name": "TtlJlPpr",
+  "title": "Total Jail Population Rate",
   "type": "number",
   "example": "230.32",
   "description": "Total Jail Population Rate, ASJ/COJ Data",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Jail_Incarceration_Rates",
   "table_sources": [
     "county-2017"
-  ],
-  "metadata": "Jail_Incarceration_Rates"
+  ]
 }

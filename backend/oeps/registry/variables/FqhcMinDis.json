@@ -1,14 +1,14 @@
 {
-  "title": "Distance (mi) to nearest FQHC",
   "name": "FqhcMinDis",
+  "title": "Distance (mi) to nearest FQHC",
   "type": "number",
   "example": "10.23",
   "description": "Euclidean distance* from tract/zip centroid to nearest FQHC, in miles",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_FQHCs",
   "table_sources": [
     "tract-2020",
     "zcta-2020"
-  ],
-  "metadata": "Access_FQHCs"
+  ]
 }

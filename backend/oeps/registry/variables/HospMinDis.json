@@ -1,14 +1,14 @@
 {
-  "title": "Distance (mi) to nearest Hospital",
   "name": "HospMinDis",
+  "title": "Distance (mi) to nearest Hospital",
   "type": "number",
   "example": "0.31",
   "description": "Euclidean distance* from tract/zip centroid to nearest hospital, in miles",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_Hospitals",
   "table_sources": [
     "tract-2020",
     "zcta-2020"
-  ],
-  "metadata": "Access_Hospitals"
+  ]
 }

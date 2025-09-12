@@ -1,14 +1,14 @@
 {
-  "title": "Expansion Medicaid Federal Spending",
   "name": "ExpnFedExp",
+  "title": "Expansion Medicaid Federal Spending",
   "type": "integer",
   "example": "2902387900",
   "description": "Expansion Group - Federal Spending",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Medical_Expenditures",
   "table_sources": [
     "state-2018",
     "state-2023"
-  ],
-  "metadata": "Medical_Expenditures"
+  ]
 }

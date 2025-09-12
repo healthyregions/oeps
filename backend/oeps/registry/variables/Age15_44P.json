@@ -1,11 +1,12 @@
 {
-  "title": "% Population: Age 15-44",
   "name": "Age15_44P",
+  "title": "% Population: Age 15-44",
   "type": "number",
   "example": "60.43",
   "description": "Percentage of population below 45 years of age",
   "longitudinal": true,
   "analysis": false,
+  "metadata": "Demographic_Characteristics",
   "table_sources": [
     "county-1980",
     "county-1990",
@@ -23,6 +24,5 @@
     "tract-2010",
     "tract-2018",
     "zcta-2018"
-  ],
-  "metadata": "Demographic_Characteristics"
+  ]
 }

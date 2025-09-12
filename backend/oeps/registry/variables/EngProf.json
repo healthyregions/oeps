@@ -1,11 +1,12 @@
 {
-  "title": "Proportion of the population aged 5+ who speak a language other than English at home but are proficient in English",
   "name": "EngProf",
+  "title": "Proportion of the population aged 5+ who speak a language other than English at home but are proficient in English",
   "type": "number",
   "example": "60.0",
   "description": "",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Educational_Characteristics",
   "table_sources": [
     "county-2018",
     "county-2020",
@@ -18,6 +19,5 @@
     "zcta-2018",
     "zcta-2020",
     "zcta-2023"
-  ],
-  "metadata": "Educational_Characteristics"
+  ]
 }

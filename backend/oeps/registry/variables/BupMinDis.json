@@ -1,16 +1,16 @@
 {
-  "title": "Distance (mi) to nearest Buprenorphine Provider",
   "name": "BupMinDis",
+  "title": "Distance (mi) to nearest Buprenorphine Provider",
   "type": "number",
   "example": "0.81",
   "description": "Euclidean distance (miles) to nearest buprenorphine provider",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_MOUDs",
   "table_sources": [
     "tract-2020",
     "tract-2025",
     "zcta-2020",
     "zcta-2025"
-  ],
-  "metadata": "Access_MOUDs"
+  ]
 }

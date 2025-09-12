@@ -1,13 +1,13 @@
 {
-  "title": "Driving Time to Buprenorphine Provider (driving time across all tracts)",
   "name": "AvBupTime",
+  "title": "Driving Time to Buprenorphine Provider (driving time across all tracts)",
   "type": "number",
   "example": "6.9",
   "description": "Average driving time (minutes) across tracts in state to nearest buprenorphine provider.",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_MOUDs",
   "table_sources": [
     "state-2020"
-  ],
-  "metadata": "Access_MOUDs"
+  ]
 }

@@ -1,11 +1,12 @@
 {
-  "title": "Children %",
   "name": "ChildrenP",
+  "title": "Children %",
   "type": "number",
   "example": "0.14",
   "description": "Percentage of population under age 18",
   "longitudinal": true,
   "analysis": false,
+  "metadata": "Demographic_Characteristics",
   "table_sources": [
     "county-1980",
     "county-1990",
@@ -21,6 +22,5 @@
     "tract-2000",
     "tract-2018",
     "zcta-2018"
-  ],
-  "metadata": "Demographic_Characteristics"
+  ]
 }

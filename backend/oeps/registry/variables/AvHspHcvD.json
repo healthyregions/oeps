@@ -1,14 +1,14 @@
 {
-  "title": "Hepatitis C Deaths - Hispanic (5-Year Averages)",
   "name": "AvHspHcvD",
+  "title": "Hepatitis C Deaths - Hispanic (5-Year Averages)",
   "type": "number",
   "example": "34.4",
   "description": "Mean yearly Hepatitis C deaths among Hispanic populations from 2013-2017",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "HepatitisC_Rates",
   "table_sources": [
     "state-2017",
     "state-2022"
-  ],
-  "metadata": "HepatitisC_Rates"
+  ]
 }

@@ -1,11 +1,12 @@
 {
-  "title": "Employed % - Education",
   "name": "EduP",
+  "title": "Employed % - Education",
   "type": "number",
   "example": "8.44",
   "description": "Percentage of population employed in educational services industry",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Employment_Trends",
   "table_sources": [
     "county-2018",
     "county-2020",
@@ -17,6 +18,5 @@
     "zcta-2018",
     "zcta-2020",
     "zcta-2023"
-  ],
-  "metadata": "Employment_Trends"
+  ]
 }

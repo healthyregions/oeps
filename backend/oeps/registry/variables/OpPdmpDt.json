@@ -1,12 +1,13 @@
 {
-  "title": "Operational PDMP start date",
   "name": "OpPdmpDt",
+  "title": "Operational PDMP start date",
   "type": "date",
   "example": "1/1/2012",
   "format": "%m/%d/%Y",
   "description": "Date when a \u201cmodern system\u201d became operational and users could access. Source: Horowitz et al., 2018, Table 2, column 4. This definition includes specific caveats adopted by Horowitz et al., 2018, described further below in Notes.",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "PDMP_Presence",
   "table_sources": [
     "state-2017",
     "state-2018",
@@ -15,6 +16,5 @@
     "state-2021",
     "state-2022",
     "state-2023"
-  ],
-  "metadata": "PDMP_Presence"
+  ]
 }

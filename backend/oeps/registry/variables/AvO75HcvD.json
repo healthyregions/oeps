@@ -1,14 +1,14 @@
 {
-  "title": "Hepatitis C Deaths - Age Over 75  (5-Year Averages)",
   "name": "AvO75HcvD",
+  "title": "Hepatitis C Deaths - Age Over 75  (5-Year Averages)",
   "type": "number",
   "example": "27",
   "description": "Mean yearly Hepatitis C deaths among people over 75 years of age",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "HepatitisC_Rates",
   "table_sources": [
     "state-2017",
     "state-2022"
-  ],
-  "metadata": "HepatitisC_Rates"
+  ]
 }

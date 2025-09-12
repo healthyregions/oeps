@@ -1,15 +1,15 @@
 {
-  "title": "Tracts with Naltrexone Provider within 30-min (driving)",
   "name": "NaltCtTmDr",
+  "title": "Tracts with Naltrexone Provider within 30-min (driving)",
   "type": "integer",
   "example": "288",
   "description": "Number of tracts with naltrexone provider within a 30-min driving range",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_MOUDs",
   "table_sources": [
     "county-2020",
     "county-2025",
     "state-2025"
-  ],
-  "metadata": "Access_MOUDs"
+  ]
 }

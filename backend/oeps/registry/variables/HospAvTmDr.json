@@ -1,14 +1,14 @@
 {
-  "title": "Avg. Driving Time to nearest Hospital",
   "name": "HospAvTmDr",
+  "title": "Avg. Driving Time to nearest Hospital",
   "type": "number",
   "example": "13.13",
   "description": "Average driving time (minutes) across tracts in state to nearest hospital.",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_Hospitals",
   "table_sources": [
     "county-2020",
     "state-2020"
-  ],
-  "metadata": "Access_Hospitals"
+  ]
 }

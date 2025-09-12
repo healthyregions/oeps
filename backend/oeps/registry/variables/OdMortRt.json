@@ -1,11 +1,12 @@
 {
-  "title": "Overdose Mortality Rate",
   "name": "OdMortRt",
+  "title": "Overdose Mortality Rate",
   "type": "number",
   "example": "13.3",
   "description": "Overdose mortality rate",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Opioid_Outcomes",
   "table_sources": [
     "county-2014",
     "county-2015",
@@ -24,6 +25,5 @@
     "state-2020",
     "state-2021",
     "state-2022"
-  ],
-  "metadata": "Opioid_Outcomes"
+  ]
 }

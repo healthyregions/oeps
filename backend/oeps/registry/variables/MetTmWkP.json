@@ -1,15 +1,15 @@
 {
-  "title": "% Tracts With Methadone Provider (30-min walk)",
   "name": "MetTmWkP",
+  "title": "% Tracts With Methadone Provider (30-min walk)",
   "type": "number",
   "example": "0.94",
   "description": "Percent of tracts with methadone provider within a 30-min walking range",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_MOUDs",
   "table_sources": [
     "county-2020",
     "county-2025",
     "state-2025"
-  ],
-  "metadata": "Access_MOUDs"
+  ]
 }

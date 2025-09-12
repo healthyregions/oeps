@@ -1,11 +1,12 @@
 {
-  "title": "Per Capita Income",
   "name": "PciE",
+  "title": "Per Capita Income",
   "type": "integer",
   "example": "36888",
   "description": "Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Economic_Characteristics",
   "table_sources": [
     "county-2010",
     "county-2018",
@@ -20,6 +21,5 @@
     "zcta-2018",
     "zcta-2020",
     "zcta-2023"
-  ],
-  "metadata": "Economic_Characteristics"
+  ]
 }

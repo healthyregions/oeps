@@ -1,16 +1,16 @@
 {
-  "title": "Opioid Prescription Rate",
   "name": "OpRxRt",
+  "title": "Opioid Prescription Rate",
   "type": "number",
   "example": "39.5",
   "description": "Opioid prescription rate",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Opioid_Outcomes",
   "table_sources": [
     "county-2020",
     "county-2022",
     "state-2020",
     "state-2022"
-  ],
-  "metadata": "Opioid_Outcomes"
+  ]
 }

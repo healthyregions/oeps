@@ -1,11 +1,12 @@
 {
-  "title": "% Native American/Alaska Native Population",
   "name": "AmIndP",
+  "title": "% Native American/Alaska Native Population",
   "type": "number",
   "example": "0.43",
   "description": "Percentage of population with race identified as Native American or Alaska Native alone",
   "longitudinal": true,
   "analysis": false,
+  "metadata": "Race_Ethnicity",
   "table_sources": [
     "county-1980",
     "county-1990",
@@ -30,6 +31,5 @@
     "zcta-2018",
     "zcta-2020",
     "zcta-2023"
-  ],
-  "metadata": "Race_Ethnicity"
+  ]
 }

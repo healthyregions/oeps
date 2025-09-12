@@ -1,11 +1,12 @@
 {
-  "title": "Federal Information Processing Standard code",
   "name": "FIPS",
+  "title": "Federal Information Processing Standard code",
   "type": "string",
   "example": "36061",
   "description": "Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.",
   "longitudinal": true,
   "analysis": false,
+  "metadata": "Geographic_Boundaries",
   "table_sources": [
     "county-1980",
     "county-1990",
@@ -50,6 +51,5 @@
     "tract-2022",
     "tract-2023",
     "tract-2025"
-  ],
-  "metadata": "Geographic_Boundaries"
+  ]
 }

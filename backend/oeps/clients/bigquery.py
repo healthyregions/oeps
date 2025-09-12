@@ -17,8 +17,8 @@ from google.cloud.bigquery import (
     LoadJobConfig,
 )
 
-from oeps.utils import BQ_TYPE_LOOKUP
 from ..registry.handlers import TableSource
+from ..utils import BQ_TYPE_LOOKUP
 
 def get_client():
     """Creates a BigQuery Client object and returns it, acquires credentials

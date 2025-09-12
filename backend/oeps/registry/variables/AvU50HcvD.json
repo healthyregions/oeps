@@ -1,14 +1,14 @@
 {
-  "title": "Hepatitis C Deaths - Age Under 50 (5-Year Averages)",
   "name": "AvU50HcvD",
+  "title": "Hepatitis C Deaths - Age Under 50 (5-Year Averages)",
   "type": "number",
   "example": "26.6",
   "description": "Mean yearly Hepatitis C deaths among people under 50 years of age from 2013-2017",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "HepatitisC_Rates",
   "table_sources": [
     "state-2017",
     "state-2022"
-  ],
-  "metadata": "HepatitisC_Rates"
+  ]
 }

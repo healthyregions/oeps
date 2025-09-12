@@ -1,11 +1,12 @@
 {
-  "title": "Total Population in Households",
   "name": "TotPopHh",
+  "title": "Total Population in Households",
   "type": "integer",
   "example": "7151776",
   "description": "Total number of people in households",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Household_Characteristics",
   "table_sources": [
     "county-2018",
     "county-2020",
@@ -17,6 +18,5 @@
     "zcta-2018",
     "zcta-2020",
     "zcta-2023"
-  ],
-  "metadata": "Household_Characteristics"
+  ]
 }

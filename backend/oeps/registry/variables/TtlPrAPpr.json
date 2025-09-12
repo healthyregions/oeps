@@ -1,13 +1,13 @@
 {
-  "title": "Total Prison Admission Rate",
   "name": "TtlPrAPpr",
+  "title": "Total Prison Admission Rate",
   "type": "number",
   "example": "140.33",
   "description": "Prison Prison Admissions Rate",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Prison_Incarceration_Rates",
   "table_sources": [
     "county-2016"
-  ],
-  "metadata": "Prison_Incarceration_Rates"
+  ]
 }

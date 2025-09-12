@@ -1,11 +1,12 @@
 {
-  "title": "Essential Workers %",
   "name": "EssnWrkP",
+  "title": "Essential Workers %",
   "type": "number",
   "example": "42.96",
   "description": "Percentage of population employed in essential occupations.",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Employment_Trends",
   "table_sources": [
     "county-2018",
     "county-2020",
@@ -17,6 +18,5 @@
     "zcta-2018",
     "zcta-2020",
     "zcta-2023"
-  ],
-  "metadata": "Employment_Trends"
+  ]
 }

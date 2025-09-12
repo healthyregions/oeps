@@ -1,13 +1,13 @@
 {
-  "title": "State Area",
   "name": "StateArea",
+  "title": "State Area",
   "type": "number",
   "example": "4486028684.18",
   "description": "Area (in square meters) of state",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Greenspace_Measures",
   "table_sources": [
     "state-2018"
-  ],
-  "metadata": "Greenspace_Measures"
+  ]
 }
