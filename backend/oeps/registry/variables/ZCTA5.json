@@ -1,11 +1,12 @@
 {
-  "title": "Zip Code Tabulation Area",
   "name": "ZCTA5",
+  "title": "Zip Code Tabulation Area",
   "type": "string",
   "example": "60637",
   "description": "Census Bureau designated zip code tabulation area, or the rough area that contains five digit zip codes.",
   "longitudinal": true,
   "analysis": false,
+  "metadata": "Geographic_Boundaries",
   "table_sources": [
     "zcta-2010",
     "zcta-2018",
@@ -15,6 +16,5 @@
     "zcta-2022",
     "zcta-2023",
     "zcta-2025"
-  ],
-  "metadata": "Geographic_Boundaries"
+  ]
 }

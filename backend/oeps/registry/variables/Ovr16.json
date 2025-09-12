@@ -1,11 +1,12 @@
 {
-  "title": "Count persons over 16 years",
   "name": "Ovr16",
+  "title": "Count persons over 16 years",
   "type": "number",
   "example": "60",
   "description": "",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Demographic_Characteristics",
   "table_sources": [
     "county-1980",
     "county-1990",
@@ -24,6 +25,5 @@
     "tract-2023",
     "zcta-2018",
     "zcta-2023"
-  ],
-  "metadata": "Demographic_Characteristics"
+  ]
 }

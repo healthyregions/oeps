@@ -1,13 +1,13 @@
 {
-  "title": "Average White Hepitatis C virus Deaths",
   "name": "AvWhHcvD",
+  "title": "Average White Hepitatis C virus Deaths",
   "type": "number",
   "example": "121.0",
   "description": "Mean yearly Hepatitis C deaths among White populations from 2018-2022",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "HepatitisC_Rates",
   "table_sources": [
     "state-2022"
-  ],
-  "metadata": "HepatitisC_Rates"
+  ]
 }

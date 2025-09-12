@@ -1,11 +1,12 @@
 {
-  "title": "% Nonrelatives in Non-family Households",
   "name": "NonRelNfhhP",
+  "title": "% Nonrelatives in Non-family Households",
   "type": "number",
   "example": "25.61",
   "description": "Percent of people living in non-family households that are not related",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Household_Characteristics",
   "table_sources": [
     "county-2018",
     "county-2020",
@@ -17,6 +18,5 @@
     "zcta-2018",
     "zcta-2020",
     "zcta-2023"
-  ],
-  "metadata": "Household_Characteristics"
+  ]
 }

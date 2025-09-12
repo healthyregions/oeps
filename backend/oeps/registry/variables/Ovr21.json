@@ -1,14 +1,12 @@
 {
-  "title": "Count persons over 21 years",
   "name": "Ovr21",
+  "title": "Count persons over 21 years",
   "type": "number",
   "example": "60",
   "description": "",
-  "source": "ACS ",
-  "source_long": "American Community Survey (5-Year Estimate)",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Demographics.md",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Demographic_Characteristics",
   "table_sources": [
     "county-1980",
     "county-1990",
@@ -27,6 +25,5 @@
     "tract-2023",
     "zcta-2018",
     "zcta-2023"
-  ],
-  "metadata": "Demographic_Characteristics"
+  ]
 }

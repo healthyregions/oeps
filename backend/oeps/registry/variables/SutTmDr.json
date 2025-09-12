@@ -1,14 +1,14 @@
 {
-  "title": "Driving time (min) to Substance Use Treatment (SUT) facility",
   "name": "SutTmDr",
+  "title": "Driving time (min) to Substance Use Treatment (SUT) facility",
   "type": "number",
   "example": "17.76",
   "description": "Driving time from tract/zip origin centroid to the nearest tract/zip SUT destination centroid, in minutes",
   "longitudinal": false,
   "analysis": true,
+  "metadata": "Access_SubstanceUseTreatment",
   "table_sources": [
     "tract-2020",
     "zcta-2020"
-  ],
-  "metadata": "Access_SubstanceUseTreatment"
+  ]
 }

@@ -1,11 +1,12 @@
 {
-  "title": "Must-Access PDMP (fraction of year in 2017)",
   "name": "MsAcPdmpFr",
+  "title": "Must-Access PDMP (fraction of year in 2017)",
   "type": "number",
   "example": "0",
   "description": "Fraction of year that state has any legislation requiring Prescribers to access PDMP before prescribing (as interpreted by PDAPS) enacted.",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "PDMP_Presence",
   "table_sources": [
     "state-2017",
     "state-2018",
@@ -14,6 +15,5 @@
     "state-2021",
     "state-2022",
     "state-2023"
-  ],
-  "metadata": "PDMP_Presence"
+  ]
 }

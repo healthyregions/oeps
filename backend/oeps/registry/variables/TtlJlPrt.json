@@ -1,13 +1,13 @@
 {
-  "title": "Pretrial Jail Population Count",
   "name": "TtlJlPrt",
+  "title": "Pretrial Jail Population Count",
   "type": "number",
   "example": "6150",
   "description": "Pretrial Jail Population Count",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Jail_Incarceration_Rates",
   "table_sources": [
     "county-2017"
-  ],
-  "metadata": "Jail_Incarceration_Rates"
+  ]
 }

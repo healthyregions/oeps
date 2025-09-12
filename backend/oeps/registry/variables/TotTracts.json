@@ -1,16 +1,16 @@
 {
-  "title": "Total Census Tract Count",
   "name": "TotTracts",
+  "title": "Total Census Tract Count",
   "type": "integer",
   "example": "1458",
   "description": "Total number of census tracts within the state.",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_FQHCs",
   "table_sources": [
     "county-2018",
     "county-2025",
     "state-2018",
     "state-2025"
-  ],
-  "metadata": "Access_FQHCs"
+  ]
 }

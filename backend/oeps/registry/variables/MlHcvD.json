@@ -1,11 +1,12 @@
 {
-  "title": "Hepatitis C Deaths - Men",
   "name": "MlHcvD",
+  "title": "Hepatitis C Deaths - Men",
   "type": "integer",
   "example": "417",
   "description": "Hepatitis C deaths among men",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "HepatitisC_Rates",
   "table_sources": [
     "state-2013",
     "state-2014",
@@ -17,6 +18,5 @@
     "state-2020",
     "state-2021",
     "state-2022"
-  ],
-  "metadata": "HepatitisC_Rates"
+  ]
 }

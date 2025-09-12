@@ -1,16 +1,16 @@
 {
-  "title": "Count of Naltrexone Providers (30-min drive)",
   "name": "NaltCntDr30",
+  "title": "Count of Naltrexone Providers (30-min drive)",
   "type": "integer",
   "example": "0",
   "description": "Count of naltrexone providers in 30 minute drive time threshold",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_MOUDs",
   "table_sources": [
     "tract-2020",
     "tract-2025",
     "zcta-2020",
     "zcta-2025"
-  ],
-  "metadata": "Access_MOUDs"
+  ]
 }

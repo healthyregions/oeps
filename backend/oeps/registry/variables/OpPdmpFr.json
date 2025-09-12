@@ -1,11 +1,12 @@
 {
-  "title": "Operational PDMP (fraction of year in 2017)",
   "name": "OpPdmpFr",
+  "title": "Operational PDMP (fraction of year in 2017)",
   "type": "number",
   "example": "1",
   "description": "Fraction of year that state has a \u201cmodern system\u201d operational and users could access (as determined by Horowitz et al., 2018).",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "PDMP_Presence",
   "table_sources": [
     "state-2017",
     "state-2018",
@@ -14,6 +15,5 @@
     "state-2021",
     "state-2022",
     "state-2023"
-  ],
-  "metadata": "PDMP_Presence"
+  ]
 }

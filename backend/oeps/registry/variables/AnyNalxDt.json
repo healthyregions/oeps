@@ -1,12 +1,13 @@
 {
-  "title": "Any Naloxone Law (date)",
   "name": "AnyNalxDt",
+  "title": "Any Naloxone Law (date)",
   "type": "date",
   "example": "7/1/2010",
   "format": "%m/%d/%Y",
   "description": "Date (MY) any type of Naloxone law effective",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Naloxone_Policy",
   "table_sources": [
     "state-2017",
     "state-2018",
@@ -14,6 +15,5 @@
     "state-2020",
     "state-2021",
     "state-2022"
-  ],
-  "metadata": "Naloxone_Policy"
+  ]
 }

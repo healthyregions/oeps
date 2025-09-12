@@ -1,14 +1,14 @@
 {
-  "title": "Count of buprenorphine providers (drive)",
   "name": "BupCntDr60",
+  "title": "Count of buprenorphine providers (drive)",
   "type": "number",
   "example": "121.0",
   "description": "Count of buprenorphine providers in 60 minute drive time threshold",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_MOUDs",
   "table_sources": [
     "tract-2025",
     "zcta-2025"
-  ],
-  "metadata": "Access_MOUDs"
+  ]
 }

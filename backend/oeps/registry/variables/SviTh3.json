@@ -1,11 +1,12 @@
 {
-  "title": "Social Vulnerability Index (SVI) 3",
   "name": "SviTh3",
+  "title": "Social Vulnerability Index (SVI) 3",
   "type": "number",
   "example": "0.2",
   "description": "SVI Ranking, Theme 3: Minority Status & Language",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Social_Vulnerability_Indices",
   "table_sources": [
     "county-2018",
     "county-2020",
@@ -15,6 +16,5 @@
     "tract-2022",
     "zcta-2018",
     "zcta-2022"
-  ],
-  "metadata": "Social_Vulnerability_Indices"
+  ]
 }

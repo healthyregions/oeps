@@ -1,16 +1,16 @@
 {
-  "title": "Count of Opioid Treatment Programs (OTP) (30-min drive)",
   "name": "OtpCntDr",
+  "title": "Count of Opioid Treatment Programs (OTP) (30-min drive)",
   "type": "integer",
   "example": "1",
   "description": "Count of OTPs within a 30-minute driving threshold",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_MOUDs",
   "table_sources": [
     "tract-2021",
     "tract-2025",
     "zcta-2021",
     "zcta-2025"
-  ],
-  "metadata": "Access_MOUDs"
+  ]
 }

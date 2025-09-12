@@ -1,14 +1,14 @@
 {
-  "title": "% tracts with Substance Use Treatment program (30-min drive)",
   "name": "SutpTmDrP",
+  "title": "% tracts with Substance Use Treatment program (30-min drive)",
   "type": "number",
   "example": "0.94",
   "description": "Percent of tracts with Substance Use Treatment program within a 30-minute driving range.",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_SubstanceUseTreatment",
   "table_sources": [
     "county-2020",
     "state-2020"
-  ],
-  "metadata": "Access_SubstanceUseTreatment"
+  ]
 }

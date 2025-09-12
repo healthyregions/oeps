@@ -1,14 +1,14 @@
 {
-  "title": "Average Hepitatis C virus Deaths (5-Year Averages)",
   "name": "AvHcvD",
+  "title": "Average Hepitatis C virus Deaths (5-Year Averages)",
   "type": "number",
   "example": "121.0",
   "description": "Mean total yearly Hepatitis C deaths from 2013-2017, 2018-2022",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "HepatitisC_Rates",
   "table_sources": [
     "state-2017",
     "state-2022"
-  ],
-  "metadata": "HepatitisC_Rates"
+  ]
 }

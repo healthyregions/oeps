@@ -1,11 +1,12 @@
 {
-  "title": "Income Inequality (Gini Coefficient)",
   "name": "GiniCoeff",
+  "title": "Income Inequality (Gini Coefficient)",
   "type": "number",
   "example": "0.46",
   "description": "Income Inequality (Gini Coefficient)",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Foreclosure_Rate",
   "table_sources": [
     "county-2010",
     "county-2018",
@@ -20,6 +21,5 @@
     "zcta-2018",
     "zcta-2020",
     "zcta-2023"
-  ],
-  "metadata": "Foreclosure_Rate"
+  ]
 }

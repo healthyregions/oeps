@@ -1,15 +1,15 @@
 {
-  "title": "Foreclosure & Delinquency Count",
   "name": "ForDqTot",
+  "title": "Foreclosure & Delinquency Count",
   "type": "number",
   "example": "48.09",
   "description": "Estimated number of mortgages to start foreclosure process or be seriously delinquent during the 2008 Recession",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Foreclosure_Rate",
   "table_sources": [
     "county-2018",
     "state-2018",
     "tract-2018"
-  ],
-  "metadata": "Foreclosure_Rate"
+  ]
 }

@@ -1,11 +1,12 @@
 {
-  "title": "Mobile Homes %",
   "name": "MobileP",
+  "title": "Mobile Homes %",
   "type": "number",
   "example": "6.39",
   "description": "Percentage of total housing units categorized as mobile housing structures",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Housing_Variables",
   "table_sources": [
     "county-2018",
     "county-2020",
@@ -17,6 +18,5 @@
     "zcta-2018",
     "zcta-2020",
     "zcta-2023"
-  ],
-  "metadata": "Housing_Variables"
+  ]
 }

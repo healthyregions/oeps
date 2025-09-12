@@ -1,11 +1,12 @@
 {
-  "title": "Employed % - Health Care",
   "name": "HltCrP",
+  "title": "Employed % - Health Care",
   "type": "number",
   "example": "13.13",
   "description": "Percentage of population employed in health care and social assistance industries",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Employment_Trends",
   "table_sources": [
     "county-2018",
     "county-2020",
@@ -17,6 +18,5 @@
     "zcta-2018",
     "zcta-2020",
     "zcta-2023"
-  ],
-  "metadata": "Employment_Trends"
+  ]
 }

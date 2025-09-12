@@ -1,15 +1,15 @@
 {
-  "title": "Biking Time (min) to Nearest Methadone Provider",
   "name": "MetAvTmBk",
+  "title": "Biking Time (min) to Nearest Methadone Provider",
   "type": "number",
   "example": "6.32958333333333",
   "description": "Average biking time (minutes) across tracts in county to nearest methadone provider",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_MOUDs",
   "table_sources": [
     "county-2020",
     "county-2025",
     "state-2025"
-  ],
-  "metadata": "Access_MOUDs"
+  ]
 }

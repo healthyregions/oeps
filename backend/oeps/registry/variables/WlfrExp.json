@@ -1,16 +1,16 @@
 {
-  "title": "Public welfare expenditures",
   "name": "WlfrExp",
+  "title": "Public welfare expenditures",
   "type": "integer",
   "example": "1897193",
   "description": "Total expenditures on public welfare programs",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Public_Expenditures",
   "table_sources": [
     "state-2019",
     "state-2020",
     "state-2021",
     "state-2022"
-  ],
-  "metadata": "Public_Expenditures"
+  ]
 }

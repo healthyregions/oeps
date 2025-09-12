@@ -1,14 +1,14 @@
 {
-  "title": "Count of FQHCs (30-min drive)",
   "name": "FqhcCntDr",
+  "title": "Count of FQHCs (30-min drive)",
   "type": "integer",
   "example": "17",
   "description": "Count of FQHCs within a 30-minute driving threshold",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_FQHCs",
   "table_sources": [
     "tract-2020",
     "zcta-2020"
-  ],
-  "metadata": "Access_FQHCs"
+  ]
 }

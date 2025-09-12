@@ -1,11 +1,12 @@
 {
-  "title": "Social Vulnerability Index (SVI) 1",
   "name": "SviTh1",
+  "title": "Social Vulnerability Index (SVI) 1",
   "type": "number",
   "example": "0.43",
   "description": "SVI Ranking, Theme 1: Socioeconomic",
   "longitudinal": false,
   "analysis": true,
+  "metadata": "Social_Vulnerability_Indices",
   "table_sources": [
     "county-2018",
     "county-2020",
@@ -15,6 +16,5 @@
     "tract-2022",
     "zcta-2018",
     "zcta-2022"
-  ],
-  "metadata": "Social_Vulnerability_Indices"
+  ]
 }

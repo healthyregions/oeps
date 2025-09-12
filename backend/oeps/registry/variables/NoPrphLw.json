@@ -1,13 +1,13 @@
 {
-  "title": "Drug Paraphernalia Laws",
   "name": "NoPrphLw",
+  "title": "Drug Paraphernalia Laws",
   "type": "boolean",
   "example": "0",
   "description": "Dummy variable indicating whether the state has no state drug paraphernalia law (0=no, 1=yes)",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Syringe_Policy",
   "table_sources": [
     "state-2019"
-  ],
-  "metadata": "Syringe_Policy"
+  ]
 }

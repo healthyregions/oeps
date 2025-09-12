@@ -1,14 +1,14 @@
 {
-  "title": "Avg. Driving Time (min) to nearest Pharmacy ",
   "name": "RxAvTmDr",
+  "title": "Avg. Driving Time (min) to nearest Pharmacy ",
   "type": "number",
   "example": "5.97",
   "description": "Average driving time (minutes) across tracts in state to nearest pharmacy.",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_Pharmacies",
   "table_sources": [
     "county-2019",
     "state-2019"
-  ],
-  "metadata": "Access_Pharmacies"
+  ]
 }

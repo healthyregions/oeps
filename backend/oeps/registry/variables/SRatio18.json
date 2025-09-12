@@ -1,11 +1,12 @@
 {
-  "title": "Sex ratio among adults aged 18 and older (males per 100 females)",
   "name": "SRatio18",
+  "title": "Sex ratio among adults aged 18 and older (males per 100 females)",
   "type": "number",
   "example": "60.0",
   "description": "",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Demographic_Characteristics",
   "table_sources": [
     "county-1980",
     "county-1990",
@@ -30,6 +31,5 @@
     "zcta-2018",
     "zcta-2020",
     "zcta-2023"
-  ],
-  "metadata": "Demographic_Characteristics"
+  ]
 }

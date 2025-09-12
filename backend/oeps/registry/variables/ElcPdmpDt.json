@@ -1,12 +1,13 @@
 {
-  "title": "Electronic PDMP start date",
   "name": "ElcPdmpDt",
+  "title": "Electronic PDMP start date",
   "type": "date",
   "example": "7/22/2007",
   "format": "%m/%d/%Y",
   "description": "Date state began operating an electronic PDMP system.",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "PDMP_Presence",
   "table_sources": [
     "state-2017",
     "state-2018",
@@ -15,6 +16,5 @@
     "state-2021",
     "state-2022",
     "state-2023"
-  ],
-  "metadata": "PDMP_Presence"
+  ]
 }

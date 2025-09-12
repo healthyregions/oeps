@@ -1,14 +1,14 @@
 {
-  "title": "% tracts with Pharmacy (30-min drive)",
   "name": "RxTmDrP",
+  "title": "% tracts with Pharmacy (30-min drive)",
   "type": "number",
   "example": "0.96",
   "description": "Percent of tracts with pharmacy within a 30-min driving range",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_Pharmacies",
   "table_sources": [
     "county-2019",
     "state-2019"
-  ],
-  "metadata": "Access_Pharmacies"
+  ]
 }

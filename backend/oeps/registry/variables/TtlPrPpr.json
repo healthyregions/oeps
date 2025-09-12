@@ -1,13 +1,13 @@
 {
-  "title": "Total Prison Population Rate",
   "name": "TtlPrPpr",
+  "title": "Total Prison Population Rate",
   "type": "number",
   "example": "373.6",
   "description": "Total Prison Population Rate",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Prison_Incarceration_Rates",
   "table_sources": [
     "county-2016"
-  ],
-  "metadata": "Prison_Incarceration_Rates"
+  ]
 }

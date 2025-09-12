@@ -1,11 +1,12 @@
 {
-  "title": "% Population aged 25 years and over with a graduate or professional degree",
   "name": "GradSclP",
+  "title": "% Population aged 25 years and over with a graduate or professional degree",
   "type": "number",
   "example": "60.0",
   "description": "",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Educational_Characteristics",
   "table_sources": [
     "county-1990",
     "county-2000",
@@ -27,6 +28,5 @@
     "zcta-2018",
     "zcta-2020",
     "zcta-2023"
-  ],
-  "metadata": "Educational_Characteristics"
+  ]
 }

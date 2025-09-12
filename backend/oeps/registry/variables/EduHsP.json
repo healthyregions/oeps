@@ -1,11 +1,12 @@
 {
-  "title": "% Population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)",
   "name": "EduHsP",
+  "title": "% Population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)",
   "type": "number",
   "example": "60.0",
   "description": "",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Educational_Characteristics",
   "table_sources": [
     "county-1980",
     "county-1990",
@@ -30,6 +31,5 @@
     "zcta-2018",
     "zcta-2020",
     "zcta-2023"
-  ],
-  "metadata": "Educational_Characteristics"
+  ]
 }

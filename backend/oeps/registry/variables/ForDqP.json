@@ -1,15 +1,15 @@
 {
-  "title": "Foreclosure & Delinquency %",
   "name": "ForDqP",
+  "title": "Foreclosure & Delinquency %",
   "type": "number",
   "example": "5.53",
   "description": "Estimated percent of mortgages to start foreclosure process or be seriously delinquent during the 2008 Recession",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Foreclosure_Rate",
   "table_sources": [
     "county-2018",
     "state-2018",
     "tract-2018"
-  ],
-  "metadata": "Foreclosure_Rate"
+  ]
 }

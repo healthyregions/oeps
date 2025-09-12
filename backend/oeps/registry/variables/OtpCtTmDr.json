@@ -1,16 +1,16 @@
 {
-  "title": "Tracts with Opioid Treatment Program (OTP) (30-min drive)",
   "name": "OtpCtTmDr",
+  "title": "Tracts with Opioid Treatment Program (OTP) (30-min drive)",
   "type": "integer",
   "example": "1092",
   "description": "Number of tracts within 30-min of opioid treatment program driving range",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_MOUDs",
   "table_sources": [
     "county-2021",
     "county-2025",
     "state-2021",
     "state-2025"
-  ],
-  "metadata": "Access_MOUDs"
+  ]
 }

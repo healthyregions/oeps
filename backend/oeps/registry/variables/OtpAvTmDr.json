@@ -1,16 +1,16 @@
 {
-  "title": "Driving Time (min) to nearest Opioid Treatment Program (OTP)",
   "name": "OtpAvTmDr",
+  "title": "Driving Time (min) to nearest Opioid Treatment Program (OTP)",
   "type": "number",
   "example": "24.18",
   "description": "Average driving time (minutes) across tracts to nearest opioid treatment program.",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_MOUDs",
   "table_sources": [
     "county-2021",
     "county-2025",
     "state-2021",
     "state-2025"
-  ],
-  "metadata": "Access_MOUDs"
+  ]
 }

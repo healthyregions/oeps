@@ -1,16 +1,16 @@
 {
-  "title": "Walking Time (min) to nearest Naltrexone Provider",
   "name": "NaltTmWk",
+  "title": "Walking Time (min) to nearest Naltrexone Provider",
   "type": "number",
   "example": "",
   "description": "Walking time (minutes) to nearest naltrexone provider",
   "longitudinal": false,
   "analysis": true,
+  "metadata": "Access_MOUDs",
   "table_sources": [
     "tract-2020",
     "tract-2025",
     "zcta-2020",
     "zcta-2025"
-  ],
-  "metadata": "Access_MOUDs"
+  ]
 }

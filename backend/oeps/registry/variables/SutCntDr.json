@@ -1,14 +1,14 @@
 {
-  "title": "Count of Substance Use Treatment (SUT) facility (30-min drive)",
   "name": "SutCntDr",
+  "title": "Count of Substance Use Treatment (SUT) facility (30-min drive)",
   "type": "integer",
   "example": "4",
   "description": "Count of SUT services within a 30-minute driving threshold",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_SubstanceUseTreatment",
   "table_sources": [
     "tract-2020",
     "zcta-2020"
-  ],
-  "metadata": "Access_SubstanceUseTreatment"
+  ]
 }

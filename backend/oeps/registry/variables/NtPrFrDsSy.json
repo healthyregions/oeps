@@ -1,13 +1,13 @@
 {
-  "title": "Distribution of Syringes Laws",
   "name": "NtPrFrDsSy",
+  "title": "Distribution of Syringes Laws",
   "type": "boolean",
   "example": "0",
   "description": "Dummy variable indicating whether the state law does not prohibit free distribution of syringes (0=no, 1=yes)",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Syringe_Policy",
   "table_sources": [
     "state-2019"
-  ],
-  "metadata": "Syringe_Policy"
+  ]
 }

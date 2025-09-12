@@ -1,11 +1,12 @@
 {
-  "title": "% Population with Disability",
   "name": "DisbP",
+  "title": "% Population with Disability",
   "type": "number",
   "example": "12.7",
   "description": "Percentage of civilian non institutionalized population with a disability",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Population_withDisability",
   "table_sources": [
     "county-2000",
     "county-2010",
@@ -23,6 +24,5 @@
     "zcta-2018",
     "zcta-2020",
     "zcta-2023"
-  ],
-  "metadata": "Population_withDisability"
+  ]
 }

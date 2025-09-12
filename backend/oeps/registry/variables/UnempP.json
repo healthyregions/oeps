@@ -1,11 +1,12 @@
 {
-  "title": "Unemployment %",
   "name": "UnempP",
+  "title": "Unemployment %",
   "type": "number",
   "example": "5.7",
   "description": "The number of unemployed individuals as a percentage of the civilian labor force",
   "longitudinal": true,
   "analysis": false,
+  "metadata": "Economic_Characteristics",
   "table_sources": [
     "county-1980",
     "county-1990",
@@ -29,6 +30,5 @@
     "zcta-2018",
     "zcta-2020",
     "zcta-2023"
-  ],
-  "metadata": "Economic_Characteristics"
+  ]
 }

@@ -1,15 +1,15 @@
 {
-  "title": "% Tracts With Buprenorphine Provider (30-min bike)",
   "name": "BupTmBkP",
+  "title": "% Tracts With Buprenorphine Provider (30-min bike)",
   "type": "number",
   "example": "1",
   "description": "Percent of tracts with buprenorphine provider within a 30-min biking range",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_MOUDs",
   "table_sources": [
     "county-2020",
     "county-2025",
     "state-2025"
-  ],
-  "metadata": "Access_MOUDs"
+  ]
 }

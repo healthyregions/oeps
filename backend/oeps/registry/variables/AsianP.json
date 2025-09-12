@@ -4,9 +4,9 @@
   "type": "number",
   "example": "12.03",
   "description": "Percentage of population with race identified as Asian alone",
-  "metadata": "Race_Ethnicity",
   "longitudinal": true,
   "analysis": false,
+  "metadata": "Race_Ethnicity",
   "table_sources": [
     "county-1980",
     "county-1990",

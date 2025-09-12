@@ -1,15 +1,15 @@
 {
-  "title": "Total Medicaid Spending",
   "name": "MedcdExp",
+  "title": "Total Medicaid Spending",
   "type": "integer",
   "example": "12037465400",
   "description": "Total medicaid spending",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Medical_Expenditures",
   "table_sources": [
     "state-2018",
     "state-2019",
     "state-2023"
-  ],
-  "metadata": "Medical_Expenditures"
+  ]
 }

@@ -1,16 +1,16 @@
 {
-  "title": "Count of Naltrexone Providers (30-min walk)",
   "name": "NaltCntWk30",
+  "title": "Count of Naltrexone Providers (30-min walk)",
   "type": "integer",
   "example": "0",
   "description": "Count of naltrexone providers in 30 minute walking time threshold",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_MOUDs",
   "table_sources": [
     "tract-2020",
     "tract-2025",
     "zcta-2020",
     "zcta-2025"
-  ],
-  "metadata": "Access_MOUDs"
+  ]
 }

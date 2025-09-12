@@ -1,16 +1,16 @@
 {
-  "title": "Total Alcohol Outlets",
   "name": "AlcTot",
+  "title": "Total Alcohol Outlets",
   "type": "integer",
   "example": "421",
   "description": "Total number of alcohol outlets",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Alcohol_Outlet_Density",
   "table_sources": [
     "county-2018",
     "state-2018",
     "tract-2018",
     "zcta-2018"
-  ],
-  "metadata": "Alcohol_Outlet_Density"
+  ]
 }

@@ -1,13 +1,13 @@
 {
-  "title": "Syringe Service Program (SSP) Authorization Laws",
   "name": "ExpSsp",
+  "title": "Syringe Service Program (SSP) Authorization Laws",
   "type": "boolean",
   "example": "1",
   "description": "Dummy variable indicating whether the state has law that explicitly authorizes Syringe Service Programs (0=no, 1=yes)",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Syringe_Policy",
   "table_sources": [
     "state-2019"
-  ],
-  "metadata": "Syringe_Policy"
+  ]
 }

@@ -1,16 +1,16 @@
 {
-  "title": "Public health expenditures",
   "name": "HlthExp",
+  "title": "Public health expenditures",
   "type": "integer",
   "example": "1897193",
   "description": "Total expenditures on public health and hospitals",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Public_Expenditures",
   "table_sources": [
     "state-2019",
     "state-2020",
     "state-2021",
     "state-2022"
-  ],
-  "metadata": "Public_Expenditures"
+  ]
 }

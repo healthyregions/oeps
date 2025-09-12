@@ -1,13 +1,13 @@
 {
-  "title": "Buprenorphine access 90 minutes (RAAM)",
   "name": "BupRm90",
+  "title": "Buprenorphine access 90 minutes (RAAM)",
   "type": "number",
   "example": "1.232",
   "description": "Buprenorphine access 90 minutes (RAAM)",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_MOUDs",
   "table_sources": [
     "tract-2020"
-  ],
-  "metadata": "Access_MOUDs"
+  ]
 }

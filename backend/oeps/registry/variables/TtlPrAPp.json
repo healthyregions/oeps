@@ -1,13 +1,13 @@
 {
-  "title": "Prison Prison Admissions Count",
   "name": "TtlPrAPp",
+  "title": "Prison Prison Admissions Count",
   "type": "integer",
   "example": "8115",
   "description": "Prison Prison Admissions Count",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Prison_Incarceration_Rates",
   "table_sources": [
     "county-2016"
-  ],
-  "metadata": "Prison_Incarceration_Rates"
+  ]
 }

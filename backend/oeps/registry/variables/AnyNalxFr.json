@@ -1,11 +1,12 @@
 {
-  "title": "Naloxone Law allowing distribution through a standing or order (fraction of year in 2017)",
   "name": "AnyNalxFr",
+  "title": "Naloxone Law allowing distribution through a standing or order (fraction of year in 2017)",
   "type": "number",
   "example": "1",
   "description": "Fraction of year any type of Naloxone law is effective",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Naloxone_Policy",
   "table_sources": [
     "state-2017",
     "state-2018",
@@ -13,6 +14,5 @@
     "state-2020",
     "state-2021",
     "state-2022"
-  ],
-  "metadata": "Naloxone_Policy"
+  ]
 }

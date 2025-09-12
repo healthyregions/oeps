@@ -1,13 +1,13 @@
 {
-  "title": "Laws removing barriers to SSPs",
   "name": "NoLwRmUnc",
+  "title": "Laws removing barriers to SSPs",
   "type": "boolean",
   "example": "0",
   "description": "Dummy variable indicating whether the state has no law removing barriers or uncertainty as to SSP legality (0=no, 1=yes)",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Syringe_Policy",
   "table_sources": [
     "state-2019"
-  ],
-  "metadata": "Syringe_Policy"
+  ]
 }

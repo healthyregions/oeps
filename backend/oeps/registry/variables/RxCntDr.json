@@ -1,14 +1,14 @@
 {
-  "title": "Count of Pharmacies (30-min drive)",
   "name": "RxCntDr",
+  "title": "Count of Pharmacies (30-min drive)",
   "type": "integer",
   "example": "58",
   "description": "Count of pharmacies within a 30-minute driving threshold",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_Pharmacies",
   "table_sources": [
     "tract-2019",
     "zcta-2019"
-  ],
-  "metadata": "Access_Pharmacies"
+  ]
 }

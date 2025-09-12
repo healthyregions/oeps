@@ -1,11 +1,12 @@
 {
-  "title": "Hepatitis C Deaths - 50 to 74 years old",
   "name": "A50_74HcvD",
+  "title": "Hepatitis C Deaths - 50 to 74 years old",
   "type": "integer",
   "example": "515",
   "description": "Hepatitis C deaths among populations between 50 and 74 years of age",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "HepatitisC_Rates",
   "table_sources": [
     "state-2013",
     "state-2014",
@@ -17,6 +18,5 @@
     "state-2020",
     "state-2021",
     "state-2022"
-  ],
-  "metadata": "HepatitisC_Rates"
+  ]
 }

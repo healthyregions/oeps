@@ -1,17 +1,17 @@
 {
-  "title": "Hepatitis C Deaths - Asian & Pacific Islander",
   "name": "AsPiHcvD",
+  "title": "Hepatitis C Deaths - Asian & Pacific Islander",
   "type": "integer",
   "example": "29",
   "description": "Hepatitis C deaths among Asian and Pacific Islander populations",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "HepatitisC_Rates",
   "table_sources": [
     "state-2013",
     "state-2014",
     "state-2015",
     "state-2016",
     "state-2017"
-  ],
-  "metadata": "HepatitisC_Rates"
+  ]
 }

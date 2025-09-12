@@ -1,14 +1,14 @@
 {
-  "title": "Expansion Medicaid State Spending",
   "name": "ExpnSttExp",
+  "title": "Expansion Medicaid State Spending",
   "type": "integer",
   "example": "174679300",
   "description": "Expansion Group - State Spending",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Medical_Expenditures",
   "table_sources": [
     "state-2018",
     "state-2023"
-  ],
-  "metadata": "Medical_Expenditures"
+  ]
 }

@@ -1,16 +1,16 @@
 {
-  "title": "Police & fire expenditures",
   "name": "PlcFyrExp",
+  "title": "Police & fire expenditures",
   "type": "integer",
   "example": "1897193",
   "description": "Total expenditures on police and fire protection",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Public_Expenditures",
   "table_sources": [
     "state-2019",
     "state-2020",
     "state-2021",
     "state-2022"
-  ],
-  "metadata": "Public_Expenditures"
+  ]
 }

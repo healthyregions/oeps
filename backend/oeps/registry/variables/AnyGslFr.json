@@ -1,16 +1,16 @@
 {
-  "title": "Any Good Samaritan Law (fraction of year in 2018)",
   "name": "AnyGslFr",
+  "title": "Any Good Samaritan Law (fraction of year in 2018)",
   "type": "number",
   "example": "1",
   "description": "Fraction of year any type of Good Samaritan Law is effective",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Good_Samaritan_Laws",
   "table_sources": [
     "state-2017",
     "state-2019",
     "state-2020",
     "state-2021"
-  ],
-  "metadata": "Good_Samaritan_Laws"
+  ]
 }

@@ -1,16 +1,16 @@
 {
-  "title": "Count of methadone providers (30-min bike)",
   "name": "MetCntBk30",
+  "title": "Count of methadone providers (30-min bike)",
   "type": "integer",
   "example": "0",
   "description": "Count of methadone providers in 30 minute biking time threshold",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_MOUDs",
   "table_sources": [
     "tract-2020",
     "tract-2025",
     "zcta-2020",
     "zcta-2025"
-  ],
-  "metadata": "Access_MOUDs"
+  ]
 }

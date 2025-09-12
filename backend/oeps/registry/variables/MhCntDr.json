@@ -1,14 +1,14 @@
 {
-  "title": "Count of Mental Health Providers (30-min drive)",
   "name": "MhCntDr",
+  "title": "Count of Mental Health Providers (30-min drive)",
   "type": "integer",
   "example": "3",
   "description": "Count of MH providers within a 30-minute driving threshold",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_Mental_Health",
   "table_sources": [
     "tract-2020",
     "zcta-2020"
-  ],
-  "metadata": "Access_Mental_Health"
+  ]
 }

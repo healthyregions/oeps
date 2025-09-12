@@ -1,12 +1,13 @@
 {
-  "title": "Naloxone Law allowing pharmacists prescriptive authority (date)",
   "name": "NalxPresDt",
+  "title": "Naloxone Law allowing pharmacists prescriptive authority (date)",
   "type": "date",
   "example": "5/1/2014",
   "format": "%m/%d/%Y",
   "description": "Date (MY) Naloxone law allowing pharmacists prescriptive authority effective",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Naloxone_Policy",
   "table_sources": [
     "state-2017",
     "state-2018",
@@ -14,6 +15,5 @@
     "state-2020",
     "state-2021",
     "state-2022"
-  ],
-  "metadata": "Naloxone_Policy"
+  ]
 }

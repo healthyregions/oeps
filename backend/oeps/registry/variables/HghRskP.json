@@ -1,11 +1,12 @@
 {
-  "title": "Employed % - High Risk of Injury",
   "name": "HghRskP",
+  "title": "Employed % - High Risk of Injury",
   "type": "number",
   "example": "20",
   "description": "Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Employment_Trends",
   "table_sources": [
     "county-2018",
     "county-2020",
@@ -17,6 +18,5 @@
     "zcta-2018",
     "zcta-2020",
     "zcta-2023"
-  ],
-  "metadata": "Employment_Trends"
+  ]
 }

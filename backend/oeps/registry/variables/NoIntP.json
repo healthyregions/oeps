@@ -1,16 +1,16 @@
 {
-  "title": "Households without Internet Access %",
   "name": "NoIntP",
+  "title": "Households without Internet Access %",
   "type": "number",
   "example": "8.79",
   "description": "Percentage of Households without Internet access",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Internet_Access",
   "table_sources": [
     "county-2019",
     "state-2019",
     "tract-2019",
     "zcta-2019"
-  ],
-  "metadata": "Internet_Access"
+  ]
 }

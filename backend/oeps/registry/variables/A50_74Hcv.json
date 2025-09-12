@@ -1,13 +1,13 @@
 {
-  "title": "Yearly Hepatitis C cases - 50 to 74 years old (2013-2016)",
   "name": "A50_74Hcv",
+  "title": "Yearly Hepatitis C cases - 50 to 74 years old (2013-2016)",
   "type": "number",
   "example": "43300",
   "description": "Mean yearly Hepatitis C cases in people between 50 to 74 years of age from 2013-2016",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "HepatitisC_Rates",
   "table_sources": [
     "state-2017"
-  ],
-  "metadata": "HepatitisC_Rates"
+  ]
 }

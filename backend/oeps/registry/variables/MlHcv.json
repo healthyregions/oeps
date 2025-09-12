@@ -1,13 +1,13 @@
 {
-  "title": "Yearly Hepatitis C cases - Men (2013-2016)",
   "name": "MlHcv",
+  "title": "Yearly Hepatitis C cases - Men (2013-2016)",
   "type": "number",
   "example": "37500",
   "description": "Mean yearly Hepatitis C cases in men from 2013-2016",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "HepatitisC_Rates",
   "table_sources": [
     "state-2017"
-  ],
-  "metadata": "HepatitisC_Rates"
+  ]
 }

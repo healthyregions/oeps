@@ -1,14 +1,14 @@
 {
-  "title": "Primary RUCA Code",
   "name": "Ruca1",
+  "title": "Primary RUCA Code",
   "type": "string",
   "example": "1",
   "description": "Primary RUCA Code",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Urbanicity",
   "table_sources": [
     "tract-2010",
     "zcta-2010"
-  ],
-  "metadata": "Urbanicity"
+  ]
 }

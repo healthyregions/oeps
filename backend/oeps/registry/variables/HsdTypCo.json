@@ -1,11 +1,12 @@
 {
-  "title": "% Cohabiting couple household",
   "name": "HsdTypCo",
+  "title": "% Cohabiting couple household",
   "type": "number",
   "example": "60.0",
   "description": "",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Household_Characteristics",
   "table_sources": [
     "county-2020",
     "county-2023",
@@ -13,6 +14,5 @@
     "tract-2023",
     "zcta-2020",
     "zcta-2023"
-  ],
-  "metadata": "Household_Characteristics"
+  ]
 }

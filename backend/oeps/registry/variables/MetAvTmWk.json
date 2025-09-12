@@ -1,15 +1,15 @@
 {
-  "title": "Walking Time (min) to Nearest Methadone Provide",
   "name": "MetAvTmWk",
+  "title": "Walking Time (min) to Nearest Methadone Provide",
   "type": "number",
   "example": "13.7240277777778",
   "description": "Average walking time (minutes) across tracts in county to nearest methadone provider",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_MOUDs",
   "table_sources": [
     "county-2020",
     "county-2025",
     "state-2025"
-  ],
-  "metadata": "Access_MOUDs"
+  ]
 }

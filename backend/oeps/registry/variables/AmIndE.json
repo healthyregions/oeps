@@ -1,14 +1,12 @@
 {
-  "title": "Count Native American/Alaska Native Population",
   "name": "AmIndE",
+  "title": "Count Native American/Alaska Native Population",
   "type": "number",
   "example": "0.43",
   "description": "Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.",
-  "source": "ACS 2023, 5-Year; Census 2020; ACS 2018, 5-Year; Census 2010; IPUMS NHGIS",
-  "source_long": "American Community Survey 2019-2023 5 Year Estimate; 2020 Decennial Census; American Community Survey 2014-2018 5 Year Estimate; 2010 Decennial Census; Integrated Public Use Microdata Series National Historic Geographic Information System",
-  "metadata_doc_url": "https://github.com/healthyregions/oeps/blob/main/metadata/Race_Ethnicity.md",
   "longitudinal": true,
   "analysis": false,
+  "metadata": "Race_Ethnicity",
   "table_sources": [
     "county-1980",
     "county-1990",
@@ -30,6 +28,5 @@
     "tract-2023",
     "zcta-2018",
     "zcta-2023"
-  ],
-  "metadata": "Race_Ethnicity"
+  ]
 }

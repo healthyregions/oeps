@@ -1,13 +1,13 @@
 {
-  "title": "Urban Core Opportunity Index",
   "name": "UrbCoreInd",
+  "title": "Urban Core Opportunity Index",
   "type": "number",
   "example": "-0.06",
   "description": "Raw Urban Core Opportunity Index (https://sdohatlas.github.io/)",
   "longitudinal": false,
   "analysis": true,
+  "metadata": "SDOH_Indices",
   "table_sources": [
     "tract-2014"
-  ],
-  "metadata": "SDOH_Indices"
+  ]
 }

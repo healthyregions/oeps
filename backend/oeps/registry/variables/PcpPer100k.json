@@ -1,14 +1,14 @@
 {
-  "title": "Primary Care Physicians (PCP) per 100k",
   "name": "PcpPer100k",
+  "title": "Primary Care Physicians (PCP) per 100k",
   "type": "number",
   "example": "133.42",
   "description": "PCPs per total Population X 100,000",
   "longitudinal": false,
   "analysis": true,
+  "metadata": "Healthcare_Provider_Access",
   "table_sources": [
     "county-2010",
     "tract-2010"
-  ],
-  "metadata": "Healthcare_Provider_Access"
+  ]
 }

@@ -1,13 +1,13 @@
 {
-  "title": "Total jail admission rate",
   "name": "TtlJlAdmr",
+  "title": "Total jail admission rate",
   "type": "number",
   "example": "1260.84",
   "description": "Total Jail Admissions Rate, ASJ/COJ Data",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Jail_Incarceration_Rates",
   "table_sources": [
     "county-2017"
-  ],
-  "metadata": "Jail_Incarceration_Rates"
+  ]
 }

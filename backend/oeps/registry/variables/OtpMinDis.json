@@ -1,16 +1,16 @@
 {
-  "title": "Distance to nearest OTP",
   "name": "OtpMinDis",
+  "title": "Distance to nearest OTP",
   "type": "number",
   "example": "121.0",
   "description": "Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_MOUDs",
   "table_sources": [
     "tract-2021",
     "tract-2025",
     "zcta-2021",
     "zcta-2025"
-  ],
-  "metadata": "Access_MOUDs"
+  ]
 }

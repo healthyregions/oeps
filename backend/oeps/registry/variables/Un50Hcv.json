@@ -1,13 +1,13 @@
 {
-  "title": "Yearly Hepatitis C cases - Under 50 years old (2013-2016)",
   "name": "Un50Hcv",
+  "title": "Yearly Hepatitis C cases - Under 50 years old (2013-2016)",
   "type": "number",
   "example": "9400",
   "description": "Mean yearly Hepatatis C cases in people under 50 years of age from 2013-2016",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "HepatitisC_Rates",
   "table_sources": [
     "state-2017"
-  ],
-  "metadata": "HepatitisC_Rates"
+  ]
 }

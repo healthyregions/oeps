@@ -1,11 +1,12 @@
 {
-  "title": "Vacant Housing Units %",
   "name": "VacantP",
+  "title": "Vacant Housing Units %",
   "type": "number",
   "example": "13.28",
   "description": "Percentage of vacant housing units",
   "longitudinal": true,
   "analysis": false,
+  "metadata": "Housing_Variables",
   "table_sources": [
     "county-1980",
     "county-1990",
@@ -29,6 +30,5 @@
     "zcta-2018",
     "zcta-2020",
     "zcta-2023"
-  ],
-  "metadata": "Housing_Variables"
+  ]
 }

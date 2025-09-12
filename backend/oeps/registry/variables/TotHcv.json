@@ -1,13 +1,13 @@
 {
-  "title": "Yearly Hepatitis C cases (2013-2016)",
   "name": "TotHcv",
+  "title": "Yearly Hepatitis C cases (2013-2016)",
   "type": "number",
   "example": "54200",
   "description": "Mean total yearly Hepitatis C cases from 2013-2016",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "HepatitisC_Rates",
   "table_sources": [
     "state-2017"
-  ],
-  "metadata": "HepatitisC_Rates"
+  ]
 }

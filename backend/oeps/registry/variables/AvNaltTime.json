@@ -1,13 +1,13 @@
 {
-  "title": "Driving Time to Naltrexone Provider (driving time across all tracts)",
   "name": "AvNaltTime",
+  "title": "Driving Time to Naltrexone Provider (driving time across all tracts)",
   "type": "number",
   "example": "11.68",
   "description": "Average driving time (minutes) across tracts in state to nearest naltrexone provider.",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_MOUDs",
   "table_sources": [
     "state-2020"
-  ],
-  "metadata": "Access_MOUDs"
+  ]
 }

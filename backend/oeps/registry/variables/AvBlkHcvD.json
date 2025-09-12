@@ -1,14 +1,14 @@
 {
-  "title": "Hepatitis C Deaths - Black (5-Year Averages)",
   "name": "AvBlkHcvD",
+  "title": "Hepatitis C Deaths - Black (5-Year Averages)",
   "type": "number",
   "example": "42.2",
   "description": "Mean yearly Hepatitis C deaths among Black populations from 2013-2017",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "HepatitisC_Rates",
   "table_sources": [
     "state-2017",
     "state-2022"
-  ],
-  "metadata": "HepatitisC_Rates"
+  ]
 }

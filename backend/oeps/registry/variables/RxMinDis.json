@@ -1,14 +1,14 @@
 {
-  "title": "Distance (mi) to nearest Pharmacy",
   "name": "RxMinDis",
+  "title": "Distance (mi) to nearest Pharmacy",
   "type": "number",
   "example": "0.84",
   "description": "Euclidean distance* from tract/zip centroid to nearest pharmacy, in miles",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_Pharmacies",
   "table_sources": [
     "tract-2019",
     "zcta-2019"
-  ],
-  "metadata": "Access_Pharmacies"
+  ]
 }

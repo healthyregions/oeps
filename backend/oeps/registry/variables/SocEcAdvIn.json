@@ -1,13 +1,13 @@
 {
-  "title": "Socioeconomic Advantage Index",
   "name": "SocEcAdvIn",
+  "title": "Socioeconomic Advantage Index",
   "type": "number",
   "example": "1.17",
   "description": "Raw Socioeconomic Advantage Index (https://sdohatlas.github.io/)",
   "longitudinal": false,
   "analysis": true,
+  "metadata": "SDOH_Indices",
   "table_sources": [
     "tract-2014"
-  ],
-  "metadata": "SDOH_Indices"
+  ]
 }

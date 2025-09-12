@@ -1,11 +1,12 @@
 {
-  "title": "% Population aged 15 and over who are widowed",
   "name": "WidwdP",
+  "title": "% Population aged 15 and over who are widowed",
   "type": "number",
   "example": "60.0",
   "description": "",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Marital_Status",
   "table_sources": [
     "county-2020",
     "county-2023",
@@ -13,6 +14,5 @@
     "tract-2023",
     "zcta-2020",
     "zcta-2023"
-  ],
-  "metadata": "Marital_Status"
+  ]
 }

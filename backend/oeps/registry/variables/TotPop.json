@@ -1,11 +1,12 @@
 {
-  "title": "Total Population",
   "name": "TotPop",
+  "title": "Total Population",
   "type": "integer",
   "example": "1632480",
   "description": "Total population",
   "longitudinal": true,
   "analysis": false,
+  "metadata": "Demographic_Characteristics",
   "table_sources": [
     "county-1980",
     "county-1990",
@@ -30,6 +31,5 @@
     "zcta-2018",
     "zcta-2020",
     "zcta-2023"
-  ],
-  "metadata": "Demographic_Characteristics"
+  ]
 }

@@ -1,13 +1,13 @@
 {
-  "title": "Yearly Hepatitis C cases - Black (2013-2016)",
   "name": "BlkHcv",
+  "title": "Yearly Hepatitis C cases - Black (2013-2016)",
   "type": "number",
   "example": "5600",
   "description": "Mean yearly Hepatitis C cases in populations identified as non-hispanic Black alone across 2013-2016",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "HepatitisC_Rates",
   "table_sources": [
     "state-2017"
-  ],
-  "metadata": "HepatitisC_Rates"
+  ]
 }

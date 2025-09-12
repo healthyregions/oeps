@@ -1,13 +1,13 @@
 {
-  "title": "% Tracts within 30-min Drive of Naltrexone Provider",
   "name": "PctNaltT",
+  "title": "% Tracts within 30-min Drive of Naltrexone Provider",
   "type": "number",
   "example": "0.91",
   "description": "Percent of tracts with naltrexone provider within a 30-min driving range",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_MOUDs",
   "table_sources": [
     "state-2020"
-  ],
-  "metadata": "Access_MOUDs"
+  ]
 }

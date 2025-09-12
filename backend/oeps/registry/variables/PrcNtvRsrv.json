@@ -1,13 +1,13 @@
 {
-  "title": "Native American & Tribal Lands",
   "name": "PrcNtvRsrv",
+  "title": "Native American & Tribal Lands",
   "type": "number",
   "example": "0.42",
   "description": "Percentage of county land area that belongs to Native American reservation(s)",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Unique_Communities",
   "table_sources": [
     "county-2017"
-  ],
-  "metadata": "Unique_Communities"
+  ]
 }

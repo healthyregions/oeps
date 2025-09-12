@@ -1,13 +1,13 @@
 {
-  "title": "Driving Time to Methadone Provider (driving time across all tracts)",
   "name": "AvMetTime",
+  "title": "Driving Time to Methadone Provider (driving time across all tracts)",
   "type": "number",
   "example": "29.15",
   "description": "Average driving time (minutes) across tracts in state to nearest methadone provider.",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_MOUDs",
   "table_sources": [
     "state-2020"
-  ],
-  "metadata": "Access_MOUDs"
+  ]
 }

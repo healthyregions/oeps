@@ -1,13 +1,13 @@
 {
-  "title": "Mean yearly Hepatitis C deaths among Asian population from 2018-2022",
   "name": "AvAsHcvD",
+  "title": "Mean yearly Hepatitis C deaths among Asian population from 2018-2022",
   "type": "number",
   "example": "60.0",
   "description": "",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "HepatitisC_Rates",
   "table_sources": [
     "state-2022"
-  ],
-  "metadata": "HepatitisC_Rates"
+  ]
 }
