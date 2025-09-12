@@ -4,7 +4,7 @@ from typing import Literal
 import pandas as pd
 from pydantic import BaseModel
 
-from ..config import DATA_DIR, REGISTRY_DIR
+from ..config import DATA_DIR
 from ..utils import load_json, write_json
 
 

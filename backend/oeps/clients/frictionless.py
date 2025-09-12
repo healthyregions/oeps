@@ -6,11 +6,10 @@ from pathlib import Path
 
 from frictionless import validate
 
+from ..clients.s3 import upload_to_s3
 from ..registry.handlers import Registry
 from ..registry.models import GeodataSourceModel, GEOGRAPHY_LOOKUP
-
-from oeps.clients.s3 import upload_to_s3
-from oeps.utils import load_json, write_json, download_file
+from ..utils import load_json, write_json, download_file
 
 
 class DataPackage:

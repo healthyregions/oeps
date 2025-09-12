@@ -5,7 +5,7 @@ import subprocess
 
 import click
 
-from oeps.clients.bigquery import BigQuery
+from ..clients.bigquery import BigQuery
 from ..registry.handlers import Registry
 
 from ._common_opts import (

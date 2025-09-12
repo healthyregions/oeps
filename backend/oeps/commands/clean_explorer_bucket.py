@@ -2,9 +2,8 @@ from pathlib import Path
 
 import click
 
-from oeps.clients.s3 import clear_s3_bucket
-from oeps.utils import load_json
-
+from ..clients.s3 import clear_s3_bucket
+from ..utils import load_json
 from ._common_opts import (
     add_common_opts,
     explorer_opt,

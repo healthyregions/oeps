@@ -3,7 +3,7 @@ from pathlib import Path
 
 import click
 
-from oeps.config import (
+from ..config import (
     TEMP_DIR,
     EXPLORER_ROOT_DIR,
     REGISTRY_DIR,

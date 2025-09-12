@@ -4,10 +4,10 @@ from pathlib import Path
 from natsort import natsorted
 import pandas as pd
 
-from oeps.clients.s3 import sync_to_s3, get_base_url
-from oeps.config import DATA_DIR
-from oeps.utils import write_json, make_id
+from ..clients.s3 import sync_to_s3, get_base_url
+from ..config import DATA_DIR
 from ..registry.handlers import Registry
+from ..utils import write_json, make_id
 
 
 class Explorer:

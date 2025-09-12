@@ -2,7 +2,7 @@ from datetime import datetime
 
 import click
 
-from oeps.clients.bigquery import BigQuery, get_client
+from ..clients.bigquery import BigQuery, get_client
 from ..registry.handlers import Registry
 
 from ._common_opts import (
