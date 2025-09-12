@@ -227,8 +227,8 @@ class Registry(BaseModel):
 
     def save_table_source(self, table_source: Union[str, TableSource]):
         if isinstance(table_source, str):
-            ts = self.table_sources[table_source]
-        ts.to_json_file(self.path)
+            table_source = self.table_sources[table_source]
+        table_source.to_json_file(self.path)
 
     def prepare_incoming_df(self, incoming_df: pd.DataFrame, target_ts: Union[str, TableSource]) -> pd.DataFrame:
         """Load an incoming CSV to pandas dataframe, and create HEROP_ID

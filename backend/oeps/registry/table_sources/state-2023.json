@@ -1,11 +1,7 @@
 {
-  "bq_dataset_name": "tabular",
-  "bq_table_name": "state-2023",
   "name": "state-2023",
-  "path": "tables/state-2023.csv",
-  "format": "csv",
-  "mediatype": "text/csv",
   "title": "state-2023",
+  "path": "tables/state-2023.csv",
   "description": "This CSV aggregates all OEPS data values from 2023 at the state level.",
   "year": "2023",
   "geodata_source": "states-2020"
