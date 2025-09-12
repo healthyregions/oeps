@@ -1,18 +1,22 @@
 
-# merge-data-table
+# merge-csv
 
 Merge data from an external CSV into the canonical CSVs in OEPS.
 
     ARGUMENTS:
 
-    TABLE_SOURCE: name of table_source to merge this CSV into. Table source
+    -s / --source: Path to CSV to be merged in.
+
+    -t / --table-source: name of table_source to merge this CSV into. Table source
     must already exist in the registry.
+
+    --dry-run: load and stage the CSV but alter no files.
     
 
 ## Usage
 
 ```
-Usage: merge-data-table [OPTIONS]
+Usage: merge-csv [OPTIONS]
 ```
 
 ## Arguments
@@ -50,7 +54,7 @@ Usage: merge-data-table [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7dd9a03de800>
+    * Type: <click.types.Path object at 0x780a3b7f0c10>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -70,14 +74,18 @@ Usage: merge-data-table [OPTIONS]
 ## CLI Help
 
 ```
-Usage: merge-data-table [OPTIONS]
+Usage: merge-csv [OPTIONS]
 
   Merge data from an external CSV into the canonical CSVs in OEPS.
 
   ARGUMENTS:
 
-  TABLE_SOURCE: name of table_source to merge this CSV into. Table source must
-  already exist in the registry.
+  -s / --source: Path to CSV to be merged in.
+
+  -t / --table-source: name of table_source to merge this CSV into. Table
+  source must already exist in the registry.
+
+  --dry-run: load and stage the CSV but alter no files.
 
 Options:
   -s, --source TEXT        Path to CSV that will be merged into the data

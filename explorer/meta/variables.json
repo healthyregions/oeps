@@ -79,7 +79,7 @@
         "Source": "ACS 2018, 2023",
         "Metadata": "Residential_Segregation",
         "Spatial Scale": "Zip, County, State",
-        "Years": "2018"
+        "Years": "2018, 2023"
       }
     ],
     "Community Overlay Variables": [
@@ -110,7 +110,15 @@
           "% Other (race) Population",
           "% Population identifying as two or more races",
           "% Population with ethnicity identified as of Hispanic or Latinx origin",
-          "% White Population"
+          "% White Population",
+          "Count Asian Population",
+          "Count Black/African American Populationw",
+          "Count Hispanic/Latinx Population",
+          "Count Native American/Alaska Native Population",
+          "Count Native Hawaiian & Other PI Population",
+          "Count Other (race) Population",
+          "Count Population identifying as two or more races",
+          "Count White Population"
         ],
         "Source": "ACS 2018, 2023; Census 2010, 2020; IPUMS 1980, 1990, 2000",
         "Metadata": "Race_Ethnicity",
@@ -123,13 +131,12 @@
         "Variable Construct": "Population with Disability",
         "Variable Proxy": "Population with Disability (%)",
         "Variables": [
-          "% Population with Disability",
-          "% Population without High School Degree"
+          "% Population with Disability"
         ],
         "Source": "ACS 2012, 2018, 2023; IPUMS NHGIS 2000",
         "Metadata": "Population_withDisability",
         "Spatial Scale": "Tract, Zip, County, State",
-        "Years": "1980, 1990, 2000, 2010, 2018, 2020, 2023"
+        "Years": "2000, 2010, 2018, 2020, 2023"
       }
     ],
     "Incarceration": [
@@ -189,26 +196,14 @@
           "% Population over 62 years",
           "% Population that is Female",
           "% Population that is Male",
-          "% Population under 5 years old ",
           "% Population under 18 years old",
-          "% Population: Age 15-24",
+          "% Population: Age 15-44",
           "% Population: Age 65+",
-          "% Population: Age under 45",
           "Children %",
+          "Count persons over 16 years",
+          "Count persons over 18 years",
+          "Count persons over 21 years",
           "Median age",
-          "Population: Age 0-4",
-          "Population: Age 5-14",
-          "Population: Age 15-19",
-          "Population: Age 15-44",
-          "Population: Age 18+",
-          "Population: Age 18-64",
-          "Population: Age 20-24",
-          "Population: Age 45-49",
-          "Population: Age 45-54",
-          "Population: Age 50-54",
-          "Population: Age 55-59",
-          "Population: Age 60-64",
-          "Population: Age 65+",
           "Sex ratio among adults aged 18 and older (males per 100 females)",
           "Sex ratio among seniors aged 65 and older (males per 100 females)",
           "Sex ratio for the total population (males per 100 females)",
@@ -234,35 +229,12 @@
         ],
         "Source": "ACS 2020, 2023",
         "Metadata": "Educational_Characteristics",
-        "Spatial Scale": "Tract, Zip, County",
-        "Years": "2020, 2023"
+        "Spatial Scale": "Tract, Zip, County, State",
+        "Years": "1980, 1990, 2000, 2010, 2018, 2020, 2023"
       }
     ]
   },
   "Environment": {
-    "Urban/Suburban/Rural Classification": [
-      {
-        "Variable Construct": "Urban/Suburban/Rural Classification",
-        "Variable Proxy": "Primary RUCA Code, Secondary RUCA Code by County",
-        "Variables": [
-          "% Tracts Rural (RUCA)",
-          "% Tracts Suburban (RUCA)",
-          "% Tracts Urban (RUCA)",
-          "Census Flags",
-          "Primary RUCA Code",
-          "Rural Population",
-          "Rural Population % (2010)",
-          "Secondary RUCA Code",
-          "Total Population (2010)",
-          "Urban Population Total",
-          "Urban-Suburban-Rural"
-        ],
-        "Source": "USDA-ERS 2010; ACS 2018",
-        "Metadata": "Rural_Urban_Classification_County",
-        "Spatial Scale": "Tract, Zip, County",
-        "Years": "2010, 2018"
-      }
-    ],
     "Healthcare Provider Access": [
       {
         "Variable Construct": "Healthcare Provider Access",
@@ -338,7 +310,6 @@
         "Variable Construct": "Greenspace Measures",
         "Variable Proxy": "Normalized Difference Vegetation Index (NDVI)",
         "Variables": [
-          "Greenspace Coverage",
           "NDVI Average",
           "Park Area",
           "State Area"
@@ -478,6 +449,25 @@
       }
     ],
     "Spatial access to HCV Testing": [],
+    "Urban/Suburban/Rural Classification": [
+      {
+        "Variable Construct": "Urban/Suburban/Rural Classification",
+        "Variable Proxy": "Primary RUCA Code, Secondary RUCA Code by County",
+        "Variables": [
+          "% Tracts Rural (RUCA)",
+          "% Tracts Suburban (RUCA)",
+          "% Tracts Urban (RUCA)",
+          "Census Flags",
+          "Primary RUCA Code",
+          "Secondary RUCA Code",
+          "Urban-Suburban-Rural"
+        ],
+        "Source": "USDA-ERS 2010; ACS 2018",
+        "Metadata": "Urbanicity",
+        "Spatial Scale": "Tract, Zip, County",
+        "Years": "2010, 2018"
+      }
+    ],
     "Spatial Access to HIV Testing": [],
     "Spatial Access to Mental Health Providers": [
       {
@@ -531,35 +521,6 @@
         "Years": "2010, 2018, 2020, 2023"
       }
     ],
-    "Employment Trends": [
-      {
-        "Variable Construct": "Employment Trends",
-        "Variable Proxy": "Working Population Total, Employed % - Education, Employed % - High Risk of Injury, Employed % - Health Care, Employed % - Retail, The number of unemployed individuals as a percentage of the civilian labor force",
-        "Variables": [
-          "Count of Working Population",
-          "Employed % - Education",
-          "Employed % - Health Care",
-          "Employed % - High Risk of Injury",
-          "Employed % - Retail"
-        ],
-        "Source": "ACS 2018, 2023",
-        "Metadata": "Jobs_byIndustry",
-        "Spatial Scale": "Tract, Zip, County, State",
-        "Years": "2018, 2020, 2023"
-      },
-      {
-        "Variable Construct": "Employment Trends",
-        "Variable Proxy": "Unemployment Rate, Essential Workers Total, Essential Workers %",
-        "Variables": [
-          "Count of Essential Workers",
-          "Essential Workers %"
-        ],
-        "Source": "ACS 2018, 2023",
-        "Metadata": "Employment_Trends",
-        "Spatial Scale": "Tract, Zip, County, State",
-        "Years": "2018, 2020, 2023"
-      }
-    ],
     "Internet Access": [
       {
         "Variable Construct": "Internet Access",
@@ -571,6 +532,25 @@
         "Metadata": "Internet_Access",
         "Spatial Scale": "Tract, Zip, County, State",
         "Years": "2019"
+      }
+    ],
+    "Employment Trends": [
+      {
+        "Variable Construct": "Employment Trends",
+        "Variable Proxy": "Unemployment Rate, Essential Workers Total, Essential Workers %, Working Population Total, Employed % - Education, Employed % - High Risk of Injury, Employed % - Health Care, Employed % - Retail, The number of unemployed individuals as a percentage of the civilian labor force",
+        "Variables": [
+          "Count of Essential Workers",
+          "Count of Working Population",
+          "Employed % - Education",
+          "Employed % - Health Care",
+          "Employed % - High Risk of Injury",
+          "Employed % - Retail",
+          "Essential Workers %"
+        ],
+        "Source": "ACS 2018, 2023",
+        "Metadata": "Employment_Trends",
+        "Spatial Scale": "Tract, Zip, County, State",
+        "Years": "2018, 2020, 2023"
       }
     ],
     "Poverty, Income, Gini Coefficient": [
@@ -609,27 +589,15 @@
         "Variable Construct": "State & Local Government Expenditures",
         "Variable Proxy": "Expenditure amounts for corrections, police, fire, and other services, by state",
         "Variables": [
-          "Corrections Expenditures",
-          "Corrections Expenditures (Local)",
           "Corrections expenditures",
-          "Police & Fire Expenditures",
-          "Police & Fire Expenditures (Local)",
           "Police & fire expenditures",
-          "Public Health Expenditures",
-          "Public Health Expenditures (Local)",
-          "Public Welfare Expenditures",
-          "Public Welfare Expenditures (Local)",
           "Public health expenditures",
-          "Public welfare expenditures",
-          "Total Corrections Expenditures",
-          "Total Police & Fire Expenditures",
-          "Total Public Health & Welfare Expenditures",
-          "Total Public Welfare Expenditures"
+          "Public welfare expenditures"
         ],
         "Source": "Survey of State and Local Government Finances 2018-2022",
         "Metadata": "Public_Expenditures",
         "Spatial Scale": "State",
-        "Years": "2018, 2019, 2020, 2021, 2022"
+        "Years": "2019, 2020, 2021, 2022"
       },
       {
         "Variable Construct": "State & Local Government Expenditures",
@@ -745,7 +713,6 @@
           "Average White Hepitatis C virus Deaths",
           "Hepatitis C Deaths",
           "Hepatitis C Deaths - 50 to 74 years old",
-          "Hepatitis C Deaths - Age 50 to 74 (2013 - 2017)",
           "Hepatitis C Deaths - Age Over 75  (5-Year Averages)",
           "Hepatitis C Deaths - Age Under 50 (5-Year Averages)",
           "Hepatitis C Deaths - American Indian",
@@ -797,10 +764,10 @@
           "Socioeconomic Advantage Index",
           "Urban Core Opportunity Index"
         ],
-        "Source": "GeoDa Data and Lab; SDOH Atlas; Kolak et al., 2020",
+        "Source": "Kolak et al., 2020",
         "Metadata": "SDOH_Indices",
         "Spatial Scale": "Tract",
-        "Years": "2014, 2020"
+        "Years": "2014"
       }
     ],
     "Social Vulnerability Indices": [

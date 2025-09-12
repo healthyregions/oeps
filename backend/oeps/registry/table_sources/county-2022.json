@@ -1,11 +1,7 @@
 {
-  "bq_dataset_name": "tabular",
-  "bq_table_name": "county-2022",
   "name": "county-2022",
-  "path": "tables/county-2022.csv",
-  "format": "csv",
-  "mediatype": "text/csv",
   "title": "county-2022",
+  "path": "tables/county-2022.csv",
   "description": "This CSV aggregates all OEPS data values from 2022 at the county level.",
   "year": "2022",
   "geodata_source": "counties-2020"

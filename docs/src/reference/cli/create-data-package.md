@@ -24,12 +24,22 @@ Usage: create-data-package [OPTIONS]
 ## Options
 
 * `destination`:
-    * Type: <click.types.Path object at 0x714f4c1e6e30>
+    * Type: <click.types.Path object at 0x7290e3ada460>
     * Default: `.temp/data-packages`
     * Usage: `--destination
 -d`
 
     Output location for export directory. The package will be placed within this directory and given a name generated from the current date and time.
+
+
+
+* `config`:
+    * Type: STRING
+    * Default: `None`
+    * Usage: `--config
+-c`
+
+    Name of folder in data/package_rules that holds configs for the export.
 
 
 
@@ -57,6 +67,15 @@ Usage: create-data-package [OPTIONS]
     * Usage: `--no-cache`
 
     Force re-download of any remote files.
+
+
+
+* `check_rules`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--check-rules`
+
+    Only check the rules file, don't create any dataframes or output files.
 
 
 
@@ -88,11 +107,20 @@ Usage: create-data-package [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x714f4c5ee650>
+    * Type: <click.types.Path object at 0x7290aa2a8fd0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
     Optional override for the registry directory.
+
+
+
+* `data_dir_path`:
+    * Type: <click.types.Path object at 0x7290aa2a87f0>
+    * Default: `oeps/data`
+    * Usage: `--data-dir-path`
+
+    Optional override for the data directory path.
 
 
 
@@ -136,11 +164,15 @@ Options:
   -d, --destination PATH  Output location for export directory. The package
                           will be placed within this directory and given a
                           name generated from the current date and time.
+  -c, --config TEXT       Name of folder in data/package_rules that holds
+                          configs for the export.
   --zip                   Zip the output data package.
   --upload                Upload the zipped data package to S3. Bucket is
                           determined by `AWS_BUCKET_NAME` environment
                           variable.
   --no-cache              Force re-download of any remote files.
+  --check-rules           Only check the rules file, don't create any
+                          dataframes or output files.
   --skip-foreign-keys     Don't define foreign keys in the output data
                           package. This is needed to avoid validation errors
                           that occur when Shapefiles are used in foreign keys.
@@ -148,6 +180,7 @@ Options:
                           output.
   --overwrite             Overwrite output content if it already exists.
   --registry-path PATH    Optional override for the registry directory.
+  --data-dir-path PATH    Optional override for the data directory path.
   --verbose               Enable verbose logging.
   --help                  Show this message and exit.
 ```

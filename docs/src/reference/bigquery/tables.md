@@ -1,10 +1,10 @@
 # Project Id: oeps-391119
 
-2 datasets in this project: tabular, spatial
+1 dataset in this project: tabular
 
 ## tabular
 
-50 tables in this dataset.
+51 tables in this dataset.
 
 ### tract-2022
 
@@ -12,202 +12,202 @@ ID: `oeps-391119.tabular.tract-2022`
 
 7 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
-SviTh1|NUMERIC|SVI Ranking, Theme 1: Socioeconomic|CDC, 2018
-SviTh2|NUMERIC|SVI Ranking, Theme 2: Household Composition & Disability|CDC, 2018
-SviTh3|NUMERIC|SVI Ranking, Theme 3: Minority Status & Language|CDC, 2018
-SviTh4|NUMERIC|SVI Ranking, Theme 4: Housing Type & Transportation|CDC, 2018
-SviSmryRnk|NUMERIC|Overall summary ranking|CDC, 2018
+SviTh4|NUMERIC|SVI Ranking, Theme 4: Housing Type & Transportation
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+SviSmryRnk|NUMERIC|Overall summary ranking
+SviTh3|NUMERIC|SVI Ranking, Theme 3: Minority Status & Language
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+SviTh1|NUMERIC|SVI Ranking, Theme 1: Socioeconomic
+SviTh2|NUMERIC|SVI Ranking, Theme 2: Household Composition & Disability
 
 ### county-2020
 
 ID: `oeps-391119.tabular.county-2020`
 
-118 columns in this table.
+117 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
-TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
-Ovr65P|NUMERIC|Percentage of population over 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-WhiteP|NUMERIC|Percentage of population with race identified as white alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-VacantP|NUMERIC|Percentage of vacant housing units|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-TotPopHh|INTEGER|Total number of people in households|ACS 2018, 5-Year
-TotVetPop|INTEGER|Total Veteran population|ACS 2018, 5-Year; ACS 2012, 5-Year
-TotWrkE|INTEGER|Estimated count of working population|ACS 2018, 5-Year
-DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability|ACS 2018, 5-Year; ACS 2012, 5-Year
-VetP|NUMERIC|Percent of population that are veterans|ACS 2017, 5-Year; ACS 2012, 5-Year
-NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family|ACS 2018, 5-Year
-NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are not related|ACS 2018, 5-Year
-MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
-PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
-GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)|ACS 2018, 5-Year; ACS 2012, 5-Year
-EduP|NUMERIC|Percentage of population employed in educational services industry|ACS 2018, 5-Year
-HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities|ACS 2018, 5-Year
-HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries|ACS 2018, 5-Year
-RetailP|NUMERIC|Percentage of population employed in retail trade industry|ACS 2018, 5-Year
-EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.|ACS 2018, 5-Year
-MobileP|NUMERIC|Percentage of total housing units categorized as mobile housing structures|ACS 2018, 5-Year
-LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago|ACS 2018, 5-Year
-RentalP|NUMERIC|Percentage of occupied housing units that are rented|ACS 2018, 5-Year
-UnitDens|NUMERIC|Number of housing units per square mile of land area|ACS 2018, 5-Year
-FqhcCtTmDr|INTEGER|Number of tracts with Federally Qualified Health Center within a 30-min driving range|US Covid Atlas via HRSA, 2020
-FqhcAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest Federally Qualified Health Center|US Covid Atlas via HRSA, 2020
-FqhcTmDrP|NUMERIC|Percent of tracts with Federally Qualified Health Center within a 30-min driving range.|US Covid Atlas via HRSA, 2020
-HospCtTmDr|INTEGER|Number of tracts with hospital within a 30-min driving range|CovidCareMap, 2020
-HospAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest hospital.|CovidCareMap, 2020
-HospTmDrP|NUMERIC|Percent of tracts with hospital within a 30-mini driving range|CovidCareMap, 2020
-MhCtTmDr|INTEGER|Number of tracts with a mental health provider within a 30-min driving range.|SAMHSA, 2020
-MhAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest mental health provider.|SAMHSA, 2020
-MhTmDrP|NUMERIC|Percent of tracts with a mental health provider within a 30-min driving range.|SAMHSA, 2020
-SutpCtTmDr|INTEGER|Number of tracts with Substance Use Treatment within a 30-min driving range.|SAMHSA, 2020
-SutpAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest Substance Use Treatment program.|SAMHSA, 2020
-SutpTmDrP|NUMERIC|Percent of tracts with Substance Use Treatment program within a 30-minute driving range.|SAMHSA, 2020
-OpRxRt|NUMERIC|Opioid prescription rate|HepVu, 2020
-OdMortRt|NUMERIC|Overdose mortality rate|HepVu, 2020
-OdMortRtAv|NUMERIC|Average overdose mortality rate from 2016-2020|HepVu, 2020
-SviTh1|NUMERIC|SVI Ranking, Theme 1: Socioeconomic|CDC, 2018
-SviTh2|NUMERIC|SVI Ranking, Theme 2: Household Composition & Disability|CDC, 2018
-SviTh3|NUMERIC|SVI Ranking, Theme 3: Minority Status & Language|CDC, 2018
-SviTh4|NUMERIC|SVI Ranking, Theme 4: Housing Type & Transportation|CDC, 2018
-SviSmryRnk|NUMERIC|Overall summary ranking|CDC, 2018
-BupCtTmDr|INTEGER|Number of tracts with buprenorphine provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupCtTmBk|INTEGER|Number of tracts with buprenorphine provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupCtTmWk|INTEGER|Number of tracts with buprenorphine provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetCtTmDr|INTEGER|Number of tracts with methadone provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetCtTmBk|INTEGER|Number of tracts with methadone provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetCtTmWk|INTEGER|Number of tracts with methadone provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltCtTmDr|INTEGER|Number of tracts with naltrexone provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltCtTmBk|INTEGER|Number of tracts with naltrexone provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltCtTmWk|INTEGER|Number of tracts with naltrexone provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupTmDrP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupTmBkP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupTmWkP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetTmDrP|NUMERIC|Percent of tracts with methadone provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetTmBkP|NUMERIC|Percent of tracts with methadone provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetTmWkP|NUMERIC|Percent of tracts with methadone provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltTmDrP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltTmBkP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltTmWkP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BachelorsP|NUMERIC||ACS 
-DivrcdP|NUMERIC||ACS 
-EduHsP|NUMERIC||ACS 
-EduNoHsP|NUMERIC||ACS 
-FamSize|NUMERIC||ACS 
-FemP|NUMERIC||ACS 
-GradSclP|NUMERIC||ACS 
-HHSize|NUMERIC||ACS 
-HhldFA|NUMERIC||ACS 
-HhldFC|NUMERIC||ACS 
-HhldFS|NUMERIC||ACS 
-HhldMA|NUMERIC||ACS 
-HhldMC|NUMERIC||ACS 
-HhldMS|NUMERIC||ACS 
-HisP|NUMERIC||ACS 
-HsdTot|NUMERIC||ACS 
-HsdTypCo|NUMERIC||ACS 
-HsdTypM|NUMERIC||ACS 
-HsdTypMC|NUMERIC||ACS 
-MaleP|NUMERIC||ACS 
-MedAge|NUMERIC||ACS 
-MrrdP|NUMERIC||ACS 
-NvMrrdP|NUMERIC||ACS 
-Ovr16P|NUMERIC||ACS 
-Ovr18P|NUMERIC||ACS 
-Ovr21P|NUMERIC||ACS 
-Ovr62P|NUMERIC||ACS 
-SRatio|NUMERIC||ACS 
-SRatio18|NUMERIC||ACS 
-SRatio65|NUMERIC||ACS 
-SepartedP|NUMERIC||ACS 
-SomeCollegeP|NUMERIC||ACS 
-TwoRaceP|NUMERIC||ACS 
-Und18P|NUMERIC||ACS 
-Und5P|NUMERIC||ACS 
-WidwdP|NUMERIC||ACS 
-CrowdHsng|NUMERIC||ACS 
-EngProf|NUMERIC||ACS 
-OccupantP|NUMERIC||ACS 
+Und18P|NUMERIC|
+BupAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest buprenorphine provider
+SviTh4|NUMERIC|SVI Ranking, Theme 4: Housing Type & Transportation
+BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone
+Ovr18P|NUMERIC|
+HsdTypCo|NUMERIC|
+SRatio65|NUMERIC|
+BupTmBkP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min biking range
+MetCtTmDr|INTEGER|Number of tracts with methadone provider within a 30-min driving range
+VacantP|NUMERIC|Percentage of vacant housing units
+NvMrrdP|NUMERIC|
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+TotWrkE|INTEGER|Estimated count of working population
+NaltAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest naltrexone provider
+MrrdP|NUMERIC|
+HospCtTmDr|INTEGER|Number of tracts with hospital within a 30-min driving range
+UnitDens|NUMERIC|Number of housing units per square mile of land area
+GradSclP|NUMERIC|
+TotUnits|INTEGER|Count of total occupied housing units
+EngProf|NUMERIC|
+MetTmBkP|NUMERIC|Percent of tracts with methadone provider within a 30-min biking range
+NaltAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest naltrexone provider
+FqhcCtTmDr|INTEGER|Number of tracts with Federally Qualified Health Center within a 30-min driving range
+WidwdP|NUMERIC|
+BupCtTmBk|INTEGER|Number of tracts with buprenorphine provider within a 30-min biking range
+Ovr16P|NUMERIC|
+RetailP|NUMERIC|Percentage of population employed in retail trade industry
+MetCtTmWk|INTEGER|Number of tracts with methadone provider within a 30-min walking range
+EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.
+MetTmDrP|NUMERIC|Percent of tracts with methadone provider within a 30-min driving range
+PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone
+FqhcTmDrP|NUMERIC|Percent of tracts with Federally Qualified Health Center within a 30-min driving range.
+HisP|NUMERIC|
+MetAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest methadone provider
+RentalP|NUMERIC|Percentage of occupied housing units that are rented
+NaltTmBkP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min biking range
+MobileP|NUMERIC|Percentage of total housing units categorized as mobile housing structures
+HhldFS|NUMERIC|
+HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities
+MetTmWkP|NUMERIC|Percent of tracts with methadone provider within a 30-min walking range
+BupTmDrP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min driving range
+HhldMS|NUMERIC|
+OdMortRt|NUMERIC|Overdose mortality rate
+Ovr62P|NUMERIC|
+NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family
+SviSmryRnk|NUMERIC|Overall summary ranking
+GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)
+FqhcAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest Federally Qualified Health Center
+HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries
+SRatio18|NUMERIC|
+SutpAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest Substance Use Treatment program.
+EduNoHsP|NUMERIC|
+OccupantP|NUMERIC|
+HsdTot|NUMERIC|
+DivrcdP|NUMERIC|
+FamSize|NUMERIC|
+PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
+HospTmDrP|NUMERIC|Percent of tracts with hospital within a 30-mini driving range
+PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
+HsdTypM|NUMERIC|
+MetAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest methadone provider
+MaleP|NUMERIC|
+Ovr21P|NUMERIC|
+NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are not related
+DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
+HHSize|NUMERIC|
+OpRxRt|NUMERIC|Opioid prescription rate
+TwoRaceP|NUMERIC|
+EduHsP|NUMERIC|
+SviTh3|NUMERIC|SVI Ranking, Theme 3: Minority Status & Language
+LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago
+BupCtTmWk|INTEGER|Number of tracts with buprenorphine provider within a 30-min walking range
+EduP|NUMERIC|Percentage of population employed in educational services industry
+SutpTmDrP|NUMERIC|Percent of tracts with Substance Use Treatment program within a 30-minute driving range.
+BachelorsP|NUMERIC|
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
+NaltCtTmBk|INTEGER|Number of tracts with naltrexone provider within a 30-min biking range
+MedAge|NUMERIC|
+SepartedP|NUMERIC|
+MetCtTmBk|INTEGER|Number of tracts with methadone provider within a 30-min biking range
+SomeCollegeP|NUMERIC|
+TotPopHh|INTEGER|Total number of people in households
+BupCtTmDr|INTEGER|Number of tracts with buprenorphine provider within a 30-min driving range
+OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
+Ovr65P|NUMERIC|Percentage of population over 65
+MhAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest mental health provider.
+HhldMC|NUMERIC|
+TotPop|INTEGER|Total population
+MhTmDrP|NUMERIC|Percent of tracts with a mental health provider within a 30-min driving range.
+NaltTmDrP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min driving range
+BupAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest buprenorphine provider
+BupAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest buprenorphine provider
+HhldMA|NUMERIC|
+SviTh1|NUMERIC|SVI Ranking, Theme 1: Socioeconomic
+TotVetPop|INTEGER|Total Veteran population
+OdMortRtAv|NUMERIC|Average overdose mortality rate from 2016-2020
+NaltCtTmWk|INTEGER|Number of tracts with naltrexone provider within a 30-min walking range
+BupTmWkP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min walking range
+VetP|NUMERIC|Percent of population that are veterans
+NaltCtTmDr|INTEGER|Number of tracts with naltrexone provider within a 30-min driving range
+NaltTmWkP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min walking range
+WhiteP|NUMERIC|Percentage of population with race identified as white alone
+MhCtTmDr|INTEGER|Number of tracts with a mental health provider within a 30-min driving range.
+SRatio|NUMERIC|
+HsdTypMC|NUMERIC|
+UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
+SutpCtTmDr|INTEGER|Number of tracts with Substance Use Treatment within a 30-min driving range.
+MetAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest methadone provider
+HhldFC|NUMERIC|
+AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
+HhldFA|NUMERIC|
+SviTh2|NUMERIC|SVI Ranking, Theme 2: Household Composition & Disability
+CrowdHsng|NUMERIC|
+HospAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest hospital.
+NaltAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest naltrexone provider
+FemP|NUMERIC|
 
 ### state-2017
 
 ID: `oeps-391119.tabular.state-2017`
 
-51 columns in this table.
+52 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
-TotHcv|NUMERIC|Mean total yearly Hepitatis C cases from 2013-2016|HepVu, 2017
-MlHcv|NUMERIC|Mean yearly Hepatitis C cases in men from 2013-2016|HepVu, 2017
-FmHcv|NUMERIC|Mean yearly Hepatitis C cases in women from 2013-2016|HepVu, 2017
-Un50Hcv|NUMERIC|Mean yearly Hepatatis C cases in people under 50 years of age from 2013-2016|HepVu, 2017
-A50_74Hcv|NUMERIC|Mean yearly Hepatitis C cases in people between 50 to 74 years of age from 2013-2016|HepVu, 2017
-Ov75Hcv|NUMERIC|Mean yearly Hepatitis C cases in people over 75 years of age from 2013-2016|HepVu, 2017
-BlkHcv|NUMERIC|Mean yearly Hepatitis C cases in populations identified as non-hispanic Black alone across 2013-2016|HepVu, 2017
-NonBlkHcv|NUMERIC|Mean yearly Hepatitis C cases in populations non-Black other race/ethnicity populations 2013-2016|HepVu, 2017
-HcvD|INTEGER|Total Hepatitis C deaths|HepVu, 2017
-MlHcvD|INTEGER|Hepatitis C deaths among men|HepVu, 2017
-FlHcvD|INTEGER|Hepatitis C deaths among women|HepVu, 2017
-AmInHcvD|INTEGER|Hepatitis C deaths among American Indian populations|HepVu, 2017
-AsPiHcvD|INTEGER|Hepatitis C deaths among Asian and Pacific Islander populations|HepVu, 2017
-BlkHcvD|INTEGER|Hepatitis C deaths among Black population|HepVu, 2017
-HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations|HepVu, 2017
-U50HcvD|INTEGER|Hepatitis C deaths in populations under 50 years of age|HepVu, 2017
-A50_74HcvD|INTEGER|Hepatitis C deaths among populations between 50 and 74 years of age|HepVu, 2017
-O75HcvD|INTEGER|Hepatitis C deaths among populations over 75 years of age|HepVu, 2017
-AvMlHcvD|NUMERIC|Mean yearly Hepatitis C deaths among men from 2013-2017|HepVu, 2017
-AvFlHcvD|NUMERIC|Mean yearly Hepatitis C deaths among women from 2013-2017|HepVu, 2017
-AvAmInHcvD|NUMERIC|Mean yearly Hepatitis C deaths among American Indian population from 2013-2017|HepVu, 2017
-AvAsPiHcvD|NUMERIC|Mean yearly Hepatitis C deaths among Asian and Pacific Islanders population from 2013-2017|HepVu, 2017
-AvBlkHcvD|NUMERIC|Mean yearly Hepatitis C deaths among Black populations from 2013-2017|HepVu, 2017
-AvHspHcvD|NUMERIC|Mean yearly Hepatitis C deaths among Hispanic populations from 2013-2017|HepVu, 2017
-AvU50HcvD|NUMERIC|Mean yearly Hepatitis C deaths among people under 50 years of age from 2013-2017|HepVu, 2017
-Av50_74HcvD|NUMERIC|Mean yearly Hepatitis C deaths among people between 50 and 74 years of age from 2013-2017|HepVu, 2017
-AvO75HcvD|NUMERIC|Mean yearly Hepatitis C deaths among people over 75 years of age|HepVu, 2017
-OdMortRt|NUMERIC|Overdose mortality rate|HepVu, 2020
-AnyPdmpFr|NUMERIC|Fraction of year that state has any prescription drug monitoring program operating.|OPTIC, 2017
-AnyPdmphFr|NUMERIC|Fraction of year that state has prescription drug monitoring program enabling legislation for any type of prescription drug monitoring program in effect ,including paper-based systems (as determined by Horowitz et al., 2018) enacted|OPTIC, 2017
-OpPdmpFr|NUMERIC|Fraction of year that state has a “modern system” operational and users could access (as determined by Horowitz et al., 2018).|OPTIC, 2017
-MsAcPdmpFr|NUMERIC|Fraction of year that state has any legislation requiring Prescribers to access PDMP before prescribing (as interpreted by PDAPS) enacted.|OPTIC, 2017
-ElcPdmpFr|NUMERIC|Fraction of year that state has an electronic PDMP system operating.|OPTIC, 2017
-AnyPdmpDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: PDAPS for first PDMP laws passed after January 1, 1998; Info on laws prior to 1998 came from Brandeis TTAC.|OPTIC, 2017
-AnyPdmphDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: Horowitz et al., 2018, Table 2, column 1.|OPTIC, 2017
-OpPdmpDt|DATE|Date when a “modern system” became operational and users could access. Source: Horowitz et al., 2018, Table 2, column 4. This definition includes specific caveats adopted by Horowitz et al., 2018, described further below in Notes.|OPTIC, 2017
-MsAcPdmpDt|DATE|Date of legislation requiring Prescribers to access PDMP before prescribing as interpreted by PDAPS.|OPTIC, 2017
-ElcPdmpDt|DATE|Date state began operating an electronic PDMP system.|OPTIC, 2017
-AnyGslDt|DATE|Date (DMY) any type of GoodDate (DMY) any type of Good Samaritan Law is effective|OPTIC, 2017
-GslArrDt|DATE|Date (DMY) that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective|OPTIC, 2017
-AnyGslFr|NUMERIC|Fraction of year any type of Good Samaritan Law is effective|OPTIC, 2017
-GslArrFr|NUMERIC|Fraction of year that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective|OPTIC, 2017
-AnyNalxDt|DATE|Date (MY) any type of Naloxone law effective|OPTIC, 2017
-NalxPrStDt|DATE|Date (MY) Naloxone law allowing distribution through a standing or protocol order effective|OPTIC, 2017
-NalxPresDt|DATE|Date (MY) Naloxone law allowing pharmacists prescriptive authority effective|OPTIC, 2017
-AnyNalxFr|NUMERIC|Fraction of year any type of Naloxone law is effective|OPTIC, 2017
-NalxPrStFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing distribution through a standing or protocol order|OPTIC, 2017
-NalxPresFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing pharmacists prescriptive authority|OPTIC, 2017
-MdMarijLaw|BOOLEAN|Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (0=no, 1=yes)|PDAPS, 2017
+U50HcvD|INTEGER|Hepatitis C deaths in populations under 50 years of age
+MsAcPdmpFr|NUMERIC|Fraction of year that state has any legislation requiring Prescribers to access PDMP before prescribing (as interpreted by PDAPS) enacted.
+ElcPdmpFr|NUMERIC|Fraction of year that state has an electronic PDMP system operating.
+NalxPrStDt|DATE|Date (MY) Naloxone law allowing distribution through a standing or protocol order effective
+O75HcvD|INTEGER|Hepatitis C deaths among populations over 75 years of age
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+NonBlkHcv|NUMERIC|Mean yearly Hepatitis C cases in populations non-Black other race/ethnicity populations 2013-2016
+AnyGslFr|NUMERIC|Fraction of year any type of Good Samaritan Law is effective
+NalxPresFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing pharmacists prescriptive authority
+FlHcvD|INTEGER|Hepatitis C deaths among women
+Un50Hcv|NUMERIC|Mean yearly Hepatatis C cases in people under 50 years of age from 2013-2016
+NalxPrStFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing distribution through a standing or protocol order
+AsPiHcvD|INTEGER|Hepatitis C deaths among Asian and Pacific Islander populations
+AvHcvD|NUMERIC|Mean total yearly Hepatitis C deaths from 2013-2017, 2018-2022
+MdMarijLaw|BOOLEAN|Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (0=no, 1=yes)
+A50_74Hcv|NUMERIC|Mean yearly Hepatitis C cases in people between 50 to 74 years of age from 2013-2016
+AvU50HcvD|NUMERIC|Mean yearly Hepatitis C deaths among people under 50 years of age from 2013-2017
+GslArrFr|NUMERIC|Fraction of year that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective
+OdMortRt|NUMERIC|Overdose mortality rate
+AnyPdmpDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: PDAPS for first PDMP laws passed after January 1, 1998; Info on laws prior to 1998 came from Brandeis TTAC.
+BlkHcvD|INTEGER|Hepatitis C deaths among Black population
+MlHcvD|INTEGER|Hepatitis C deaths among men
+ElcPdmpDt|DATE|Date state began operating an electronic PDMP system.
+OpPdmpDt|DATE|Date when a “modern system” became operational and users could access. Source: Horowitz et al., 2018, Table 2, column 4. This definition includes specific caveats adopted by Horowitz et al., 2018, described further below in Notes.
+AvAsPiHcvD|NUMERIC|Mean yearly Hepatitis C deaths among Asian and Pacific Islanders population from 2013-2017
+HcvD|INTEGER|Total Hepatitis C deaths
+AnyNalxDt|DATE|Date (MY) any type of Naloxone law effective
+OpPdmpFr|NUMERIC|Fraction of year that state has a “modern system” operational and users could access (as determined by Horowitz et al., 2018).
+AvFlHcvD|NUMERIC|Mean yearly Hepatitis C deaths among women from 2013-2017
+AmInHcvD|INTEGER|Hepatitis C deaths among American Indian populations
+BlkHcv|NUMERIC|Mean yearly Hepatitis C cases in populations identified as non-hispanic Black alone across 2013-2016
+GslArrDt|DATE|Date (DMY) that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective
+A50_74HcvD|INTEGER|Hepatitis C deaths among populations between 50 and 74 years of age
+AnyGslDt|DATE|Date (DMY) any type of GoodDate (DMY) any type of Good Samaritan Law is effective
+MlHcv|NUMERIC|Mean yearly Hepatitis C cases in men from 2013-2016
+MsAcPdmpDt|DATE|Date of legislation requiring Prescribers to access PDMP before prescribing as interpreted by PDAPS.
+FmHcv|NUMERIC|Mean yearly Hepatitis C cases in women from 2013-2016
+AvHspHcvD|NUMERIC|Mean yearly Hepatitis C deaths among Hispanic populations from 2013-2017
+AvA50_74HcvD|NUMERIC|Mean yearly Hepatitis C deaths among people between 50 and 74 years of age from 2013-2017, 2018-2022
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+AvBlkHcvD|NUMERIC|Mean yearly Hepatitis C deaths among Black populations from 2013-2017
+AnyPdmphDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: Horowitz et al., 2018, Table 2, column 1.
+TotHcv|NUMERIC|Mean total yearly Hepitatis C cases from 2013-2016
+Ov75Hcv|NUMERIC|Mean yearly Hepatitis C cases in people over 75 years of age from 2013-2016
+AnyPdmphFr|NUMERIC|Fraction of year that state has prescription drug monitoring program enabling legislation for any type of prescription drug monitoring program in effect ,including paper-based systems (as determined by Horowitz et al., 2018) enacted
+NalxPresDt|DATE|Date (MY) Naloxone law allowing pharmacists prescriptive authority effective
+AvMlHcvD|NUMERIC|Mean yearly Hepatitis C deaths among men from 2013-2017
+AvAmInHcvD|NUMERIC|Mean yearly Hepatitis C deaths among American Indian population from 2013-2017
+AnyNalxFr|NUMERIC|Fraction of year any type of Naloxone law is effective
+AvO75HcvD|NUMERIC|Mean yearly Hepatitis C deaths among people over 75 years of age
+AnyPdmpFr|NUMERIC|Fraction of year that state has any prescription drug monitoring program operating.
+HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations
 
 ### zcta-2022
 
@@ -215,15 +215,15 @@ ID: `oeps-391119.tabular.zcta-2022`
 
 7 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-ZCTA5|STRING|Census Bureau designated zip code tabulation area, or the rough area that contains five digit zip codes.|Tiger/Line 2018; Tiger/Line 2010
-SviTh1|NUMERIC|SVI Ranking, Theme 1: Socioeconomic|CDC, 2018
-SviTh2|NUMERIC|SVI Ranking, Theme 2: Household Composition & Disability|CDC, 2018
-SviTh3|NUMERIC|SVI Ranking, Theme 3: Minority Status & Language|CDC, 2018
-SviTh4|NUMERIC|SVI Ranking, Theme 4: Housing Type & Transportation|CDC, 2018
-SviSmryRnk|NUMERIC|Overall summary ranking|CDC, 2018
+SviTh4|NUMERIC|SVI Ranking, Theme 4: Housing Type & Transportation
+SviSmryRnk|NUMERIC|Overall summary ranking
+ZCTA5|STRING|Census Bureau designated zip code tabulation area, or the rough area that contains five digit zip codes.
+SviTh3|NUMERIC|SVI Ranking, Theme 3: Minority Status & Language
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+SviTh1|NUMERIC|SVI Ranking, Theme 1: Socioeconomic
+SviTh2|NUMERIC|SVI Ranking, Theme 2: Household Composition & Disability
 
 ### tract-2025
 
@@ -231,85 +231,95 @@ ID: `oeps-391119.tabular.tract-2025`
 
 36 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
-MoudMinDis|NUMERIC|Euclidean distance (miles) to nearest MOUD (all types)|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupMinDis|NUMERIC|Euclidean distance (miles) to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupTmDr|NUMERIC|Driving time (minutes) to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetMinDis|NUMERIC|Euclidean distance (miles) to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetTmDr|NUMERIC|Driving time (minutes) to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltMinDis|NUMERIC|Euclidean distance (miles) to nearest naltrexone/Vivitrol provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltTmDr|NUMERIC|Driving time (minutes) to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltCntDr30|INTEGER|Count of naltrexone providers in 30 minute drive time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupTmWk|NUMERIC|Walking time (minutes) to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupCntWk60|INTEGER|Count of buprenorphine providers in 60 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupCntWk30|INTEGER|Count of buprenorphine providers in 30 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetTmWk|NUMERIC|Walking time (minutes) to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetCntWk30|INTEGER|Count of methadone providers in 60 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetCntWk60|INTEGER|Count of methadone providers in 30 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltTmWk|NUMERIC|Walking time (minutes) to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltCntWk60|INTEGER|Count of naltrexone providers in 60 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltCntWk30|INTEGER|Count of naltrexone providers in 30 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupTmBk|NUMERIC|Biking time (minutes) to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupCntBk60|INTEGER|Count of buprenorphine providers in 60 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupCntBk30|INTEGER|Count of buprenorphine providers in 30 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetTmBk|NUMERIC|Biking time (minutes) to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetCntBk60|INTEGER|Count of methadone providers in 60 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetCntBk30|INTEGER|Count of methadone providers in 30 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltTmBk|NUMERIC|Biking time (minutes) to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltCntBk60|INTEGER|Count of naltrexone providers in 60 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltCntBk30|INTEGER|Count of naltrexone providers in 30 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-OtpMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles|SAMHSA
-OtpTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes|SAMSHA, 2021
-OtpCntDr|INTEGER|Count of OTPs within a 30-minute driving threshold|SAMSHA, 2021
-BupCntDr60|NUMERIC|Count of buprenorphine providers in 60 minute drive time threshold|SAMHSA
-NaltCntDr60|NUMERIC|Count of naltrexone providers in 60 minute drive time threshold|SAMHSA
-MetCntDr60|NUMERIC|Count of methadone providers in 60 minute drive time threshold|SAMHSA
+MetCntWk30|INTEGER|Count of methadone providers in 60 minute walking time threshold
+NaltCntWk30|INTEGER|Count of naltrexone providers in 30 minute walking time threshold
+NaltTmDr|NUMERIC|Driving time (minutes) to nearest naltrexone provider
+BupCntDr60|NUMERIC|Count of buprenorphine providers in 60 minute drive time threshold
+BupCntBk60|INTEGER|Count of buprenorphine providers in 60 minute biking time threshold
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+NaltMinDis|NUMERIC|Euclidean distance (miles) to nearest naltrexone/Vivitrol provider
+MetCntBk60|INTEGER|Count of methadone providers in 60 minute biking time threshold
+MetMinDis|NUMERIC|Euclidean distance (miles) to nearest methadone provider
+BupTmDr|NUMERIC|Driving time (minutes) to nearest buprenorphine provider
+MetTmBk|NUMERIC|Biking time (minutes) to nearest methadone provider
+NaltTmWk|NUMERIC|Walking time (minutes) to nearest naltrexone provider
+BupMinDis|NUMERIC|Euclidean distance (miles) to nearest buprenorphine provider
+NaltCntDr60|NUMERIC|Count of naltrexone providers in 60 minute drive time threshold
+OtpMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles
+MetCntBk30|INTEGER|Count of methadone providers in 30 minute biking time threshold
+MetCntDr60|NUMERIC|Count of methadone providers in 60 minute drive time threshold
+OtpTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes
+OtpCntDr|INTEGER|Count of OTPs within a 30-minute driving threshold
+NaltCntBk30|INTEGER|Count of naltrexone providers in 30 minute biking time threshold
+BupCntWk30|INTEGER|Count of buprenorphine providers in 30 minute walking time threshold
+MetCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+NaltCntWk60|INTEGER|Count of naltrexone providers in 60 minute walking time threshold
+MetCntWk60|INTEGER|Count of methadone providers in 30 minute walking time threshold
+NaltCntDr30|INTEGER|Count of naltrexone providers in 30 minute drive time threshold
+NaltTmBk|NUMERIC|Biking time (minutes) to nearest naltrexone provider
+BupTmBk|NUMERIC|Biking time (minutes) to nearest buprenorphine provider
+MoudMinDis|NUMERIC|Euclidean distance (miles) to nearest MOUD (all types)
+MetTmWk|NUMERIC|Walking time (minutes) to nearest methadone provider
+NaltCntBk60|INTEGER|Count of naltrexone providers in 60 minute biking time threshold
+MetTmDr|NUMERIC|Driving time (minutes) to nearest methadone provider
+BupCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold
+BupTmWk|NUMERIC|Walking time (minutes) to nearest buprenorphine provider
+BupCntWk60|INTEGER|Count of buprenorphine providers in 60 minute walking time threshold
+BupCntBk30|INTEGER|Count of buprenorphine providers in 30 minute biking time threshold
 
 ### tract-1980
 
 ID: `oeps-391119.tabular.tract-1980`
 
-32 columns in this table.
+42 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
-TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
-Age18_64|INTEGER|Total adult population under age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age0_4|INTEGER|Total population between age 0-4|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age5_14|INTEGER|Total population between age 5-14|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_19|INTEGER|Total population between age 15-19|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age20_24|INTEGER|Total population between age 20-24|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_44|INTEGER|Total population between age 15-44|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age45_54|INTEGER|Total population between age 45-54|IPUMS NHGIS
-Age55_59|INTEGER|Total population between age 55-59|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age60_64|INTEGER|Total population between age 60-64|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AgeOv65|INTEGER|Total population at or over age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_24P|NUMERIC|Percentage of population between ages of 15 & 24|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Und45P|NUMERIC|	Percentage of population below 45 years of age|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Ovr65P|NUMERIC|Percentage of population over 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-WhiteP|NUMERIC|Percentage of population with race identified as white alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AsianP|NUMERIC|Percentage of population with race identified as Asian alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-NoHsP|NUMERIC|Percentage of population 25 years and over, less than a high school degree|ACS 2018, 5-Year; ACS 2012, 5-Year; IPUMS NHGIS
-ChildrenP|NUMERIC|Percentage of population under age 18|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-VacantP|NUMERIC|Percentage of vacant housing units|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-MetRm30|NUMERIC|Methadone access 30 minutes (RAAM)|
-MetRm60|NUMERIC|Methadone access 60 minutes (RAAM)|
-MetRm90|NUMERIC|Methadone access 90 minutes (RAAM)|
+BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone
+Ovr18P|NUMERIC|
+MetRm60|NUMERIC|Methadone access 60 minutes (RAAM)
+SRatio65|NUMERIC|
+Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
+VacantP|NUMERIC|Percentage of vacant housing units
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+AsianP|NUMERIC|Percentage of population with race identified as Asian alone
+TotUnits|INTEGER|Count of total occupied housing units
+Ovr16P|NUMERIC|
+AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
+PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone
+WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
+SRatio18|NUMERIC|
+EduNoHsP|NUMERIC|
+Ovr21|NUMERIC|
+PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
+Ovr18|NUMERIC|
+MaleP|NUMERIC|
+BlackE|NUMERIC|Count population with race identified as Black or African American alone. Estimated count in non-decennial years.
+Ovr21P|NUMERIC|
+Ovr16|NUMERIC|
+HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
+EduHsP|NUMERIC|
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+SomeCollegeP|NUMERIC|
+OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
+Ovr65P|NUMERIC|Percentage of population over 65
+HisE|NUMERIC|Count persons with ethnicity identified as of Hispanic or Latinx origin. Estimated count in non-decennial years.
+TotPop|INTEGER|Total population
+MetRm90|NUMERIC|Methadone access 90 minutes (RAAM)
+PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
+ChildrenP|NUMERIC|Percentage of population under age 18
+AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
+MetRm30|NUMERIC|Methadone access 30 minutes (RAAM)
+Age15_44|INTEGER|Total population between age 15-44
+WhiteP|NUMERIC|Percentage of population with race identified as white alone
+SRatio|NUMERIC|
+UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
+AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
+FemP|NUMERIC|
+Age15_44P|NUMERIC|Percentage of population below 45 years of age
 
 ### county-2021
 
@@ -317,615 +327,673 @@ ID: `oeps-391119.tabular.county-2021`
 
 6 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
-OtpCtTmDr|INTEGER|Number of tracts within 30-min of opioid treatment program driving range|SAMSHA, 2021
-OtpAvTmDr|NUMERIC|Average driving time (minutes) across tracts to nearest opioid treatment program.|SAMSHA, 2021
-OtpTmDrP|NUMERIC|Percent of tracts within a 30-minute drive time of an opioid treatment program.|SAMSHA, 2021
-OdMortRt|NUMERIC|Overdose mortality rate|HepVu, 2020
+OtpTmDrP|NUMERIC|Percent of tracts within a 30-minute drive time of an opioid treatment program.
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+OdMortRt|NUMERIC|Overdose mortality rate
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+OtpAvTmDr|NUMERIC|Average driving time (minutes) across tracts to nearest opioid treatment program.
+OtpCtTmDr|INTEGER|Number of tracts within 30-min of opioid treatment program driving range
 
 ### tract-2023
 
 ID: `oeps-391119.tabular.tract-2023`
 
-71 columns in this table.
+82 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
-TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
-Ovr65P|NUMERIC|Percentage of population over 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-WhiteP|NUMERIC|Percentage of population with race identified as white alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-VacantP|NUMERIC|Percentage of vacant housing units|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-TotPopHh|INTEGER|Total number of people in households|ACS 2018, 5-Year
-TotVetPop|INTEGER|Total Veteran population|ACS 2018, 5-Year; ACS 2012, 5-Year
-TotWrkE|INTEGER|Estimated count of working population|ACS 2018, 5-Year
-DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability|ACS 2018, 5-Year; ACS 2012, 5-Year
-VetP|NUMERIC|Percent of population that are veterans|ACS 2017, 5-Year; ACS 2012, 5-Year
-NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family|ACS 2018, 5-Year
-NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are not related|ACS 2018, 5-Year
-MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
-PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
-GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)|ACS 2018, 5-Year; ACS 2012, 5-Year
-EduP|NUMERIC|Percentage of population employed in educational services industry|ACS 2018, 5-Year
-HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities|ACS 2018, 5-Year
-HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries|ACS 2018, 5-Year
-RetailP|NUMERIC|Percentage of population employed in retail trade industry|ACS 2018, 5-Year
-EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.|ACS 2018, 5-Year
-MobileP|NUMERIC|Percentage of total housing units categorized as mobile housing structures|ACS 2018, 5-Year
-LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago|ACS 2018, 5-Year
-RentalP|NUMERIC|Percentage of occupied housing units that are rented|ACS 2018, 5-Year
-UnitDens|NUMERIC|Number of housing units per square mile of land area|ACS 2018, 5-Year
-BachelorsP|NUMERIC||ACS 
-DivrcdP|NUMERIC||ACS 
-EduHsP|NUMERIC||ACS 
-EduNoHsP|NUMERIC||ACS 
-FamSize|NUMERIC||ACS 
-FemP|NUMERIC||ACS 
-GradSclP|NUMERIC||ACS 
-HHSize|NUMERIC||ACS 
-HhldFA|NUMERIC||ACS 
-HhldFC|NUMERIC||ACS 
-HhldFS|NUMERIC||ACS 
-HhldMA|NUMERIC||ACS 
-HhldMC|NUMERIC||ACS 
-HhldMS|NUMERIC||ACS 
-HisP|NUMERIC||ACS 
-HsdTot|NUMERIC||ACS 
-HsdTypCo|NUMERIC||ACS 
-HsdTypM|NUMERIC||ACS 
-HsdTypMC|NUMERIC||ACS 
-MaleP|NUMERIC||ACS 
-MedAge|NUMERIC||ACS 
-MrrdP|NUMERIC||ACS 
-NvMrrdP|NUMERIC||ACS 
-Ovr16P|NUMERIC||ACS 
-Ovr18P|NUMERIC||ACS 
-Ovr21P|NUMERIC||ACS 
-Ovr62P|NUMERIC||ACS 
-SRatio|NUMERIC||ACS 
-SRatio18|NUMERIC||ACS 
-SRatio65|NUMERIC||ACS 
-SepartedP|NUMERIC||ACS 
-SomeCollegeP|NUMERIC||ACS 
-TwoRaceP|NUMERIC||ACS 
-Und18P|NUMERIC||ACS 
-Und5P|NUMERIC||ACS 
-WidwdP|NUMERIC||ACS 
-CrowdHsng|NUMERIC||ACS 
-EngProf|NUMERIC||ACS 
-OccupantP|NUMERIC||ACS 
+Und18P|NUMERIC|
+BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone
+Ovr18P|NUMERIC|
+HsdTypCo|NUMERIC|
+SRatio65|NUMERIC|
+Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
+VacantP|NUMERIC|Percentage of vacant housing units
+NvMrrdP|NUMERIC|
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+TotWrkE|INTEGER|Estimated count of working population
+MrrdP|NUMERIC|
+UnitDens|NUMERIC|Number of housing units per square mile of land area
+GradSclP|NUMERIC|
+TotUnits|INTEGER|Count of total occupied housing units
+EngProf|NUMERIC|
+WidwdP|NUMERIC|
+Ovr16P|NUMERIC|
+RetailP|NUMERIC|Percentage of population employed in retail trade industry
+AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
+EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.
+PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone
+HisP|NUMERIC|
+RentalP|NUMERIC|Percentage of occupied housing units that are rented
+MobileP|NUMERIC|Percentage of total housing units categorized as mobile housing structures
+HhldFS|NUMERIC|
+WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
+HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities
+HhldMS|NUMERIC|
+Ovr62P|NUMERIC|
+NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family
+GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)
+HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries
+SRatio18|NUMERIC|
+EduNoHsP|NUMERIC|
+OccupantP|NUMERIC|
+HsdTot|NUMERIC|
+Ovr21|NUMERIC|
+DivrcdP|NUMERIC|
+FamSize|NUMERIC|
+PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
+PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
+HsdTypM|NUMERIC|
+Ovr18|NUMERIC|
+MaleP|NUMERIC|
+BlackE|NUMERIC|Count population with race identified as Black or African American alone. Estimated count in non-decennial years.
+Ovr21P|NUMERIC|
+NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are not related
+Ovr16|NUMERIC|
+DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
+HHSize|NUMERIC|
+TwoRaceP|NUMERIC|
+EduHsP|NUMERIC|
+LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago
+EduP|NUMERIC|Percentage of population employed in educational services industry
+BachelorsP|NUMERIC|
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
+MedAge|NUMERIC|
+SepartedP|NUMERIC|
+SomeCollegeP|NUMERIC|
+TotPopHh|INTEGER|Total number of people in households
+OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
+Ovr65P|NUMERIC|Percentage of population over 65
+OtherE|NUMERIC|Count of Population with race not mentioned in any of the options above (includes two race or more races). Estimated count in non-decennial years.
+HhldMC|NUMERIC|
+HisE|NUMERIC|Count persons with ethnicity identified as of Hispanic or Latinx origin. Estimated count in non-decennial years.
+TotPop|INTEGER|Total population
+PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
+AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
+HhldMA|NUMERIC|
+TotVetPop|INTEGER|Total Veteran population
+VetP|NUMERIC|Percent of population that are veterans
+WhiteP|NUMERIC|Percentage of population with race identified as white alone
+SRatio|NUMERIC|
+HsdTypMC|NUMERIC|
+UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
+HhldFC|NUMERIC|
+AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
+HhldFA|NUMERIC|
+CrowdHsng|NUMERIC|
+TwoRaceE|NUMERIC|Count persons identifying as two or more races. Estimated count in non-decennial years.
+FemP|NUMERIC|
 
 ### zcta-2020
 
 ID: `oeps-391119.tabular.zcta-2020`
 
-111 columns in this table.
+110 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-ZCTA5|STRING|Census Bureau designated zip code tabulation area, or the rough area that contains five digit zip codes.|Tiger/Line 2018; Tiger/Line 2010
-TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
-Ovr65P|NUMERIC|Percentage of population over 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-WhiteP|NUMERIC|Percentage of population with race identified as white alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-VacantP|NUMERIC|Percentage of vacant housing units|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-TotPopHh|INTEGER|Total number of people in households|ACS 2018, 5-Year
-TotVetPop|INTEGER|Total Veteran population|ACS 2018, 5-Year; ACS 2012, 5-Year
-TotWrkE|INTEGER|Estimated count of working population|ACS 2018, 5-Year
-DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability|ACS 2018, 5-Year; ACS 2012, 5-Year
-VetP|NUMERIC|Percent of population that are veterans|ACS 2017, 5-Year; ACS 2012, 5-Year
-NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family|ACS 2018, 5-Year
-NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are not related|ACS 2018, 5-Year
-MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
-PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
-GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)|ACS 2018, 5-Year; ACS 2012, 5-Year
-EduP|NUMERIC|Percentage of population employed in educational services industry|ACS 2018, 5-Year
-HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities|ACS 2018, 5-Year
-HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries|ACS 2018, 5-Year
-RetailP|NUMERIC|Percentage of population employed in retail trade industry|ACS 2018, 5-Year
-EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.|ACS 2018, 5-Year
-MobileP|NUMERIC|Percentage of total housing units categorized as mobile housing structures|ACS 2018, 5-Year
-LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago|ACS 2018, 5-Year
-RentalP|NUMERIC|Percentage of occupied housing units that are rented|ACS 2018, 5-Year
-UnitDens|NUMERIC|Number of housing units per square mile of land area|ACS 2018, 5-Year
-MoudMinDis|NUMERIC|Euclidean distance (miles) to nearest MOUD (all types)|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupMinDis|NUMERIC|Euclidean distance (miles) to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupTmDr|NUMERIC|Driving time (minutes) to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetMinDis|NUMERIC|Euclidean distance (miles) to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetTmDr|NUMERIC|Driving time (minutes) to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltMinDis|NUMERIC|Euclidean distance (miles) to nearest naltrexone/Vivitrol provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltTmDr|NUMERIC|Driving time (minutes) to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltCntDr30|INTEGER|Count of naltrexone providers in 30 minute drive time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupTmWk|NUMERIC|Walking time (minutes) to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupCntWk60|INTEGER|Count of buprenorphine providers in 60 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupCntWk30|INTEGER|Count of buprenorphine providers in 30 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetTmWk|NUMERIC|Walking time (minutes) to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetCntWk30|INTEGER|Count of methadone providers in 60 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetCntWk60|INTEGER|Count of methadone providers in 30 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltTmWk|NUMERIC|Walking time (minutes) to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltCntWk60|INTEGER|Count of naltrexone providers in 60 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltCntWk30|INTEGER|Count of naltrexone providers in 30 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupTmBk|NUMERIC|Biking time (minutes) to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupCntBk60|INTEGER|Count of buprenorphine providers in 60 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupCntBk30|INTEGER|Count of buprenorphine providers in 30 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetTmBk|NUMERIC|Biking time (minutes) to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetCntBk60|INTEGER|Count of methadone providers in 60 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetCntBk30|INTEGER|Count of methadone providers in 30 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltTmBk|NUMERIC|Biking time (minutes) to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltCntBk60|INTEGER|Count of naltrexone providers in 60 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltCntBk30|INTEGER|Count of naltrexone providers in 30 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-FqhcMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest FQHC, in miles|US Covid Atlas via HRSA, 2020
-FqhcTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes|US Covid Atlas via HRSA, 2020
-FqhcCntDr|INTEGER|Count of FQHCs within a 30-minute driving threshold|US Covid Atlas via HRSA, 2020
-HospMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest hospital, in miles|CovidCareMap, 2020
-HospTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip hospital destination centroid, in minutes|CovidCareMap, 2020
-HospCntDr|INTEGER|Count of hospitals within a 30-minute driving threshold|CovidCareMap, 2020
-MhMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest mental health provider, in miles|SAMHSA, 2020
-MhTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip mental health provider destination centroid, in minutes|SAMHSA, 2020
-MhCntDr|INTEGER|Count of MH providers within a 30-minute driving threshold|SAMHSA, 2020
-SutMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest SUT service location, in miles|SAMHSA, 2020
-SutTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip SUT destination centroid, in minutes|SAMHSA, 2020
-SutCntDr|INTEGER|Count of SUT services within a 30-minute driving threshold|SAMHSA, 2020
-BachelorsP|NUMERIC||ACS 
-DivrcdP|NUMERIC||ACS 
-EduHsP|NUMERIC||ACS 
-EduNoHsP|NUMERIC||ACS 
-FamSize|NUMERIC||ACS 
-FemP|NUMERIC||ACS 
-GradSclP|NUMERIC||ACS 
-HHSize|NUMERIC||ACS 
-HhldFA|NUMERIC||ACS 
-HhldFC|NUMERIC||ACS 
-HhldFS|NUMERIC||ACS 
-HhldMA|NUMERIC||ACS 
-HhldMC|NUMERIC||ACS 
-HhldMS|NUMERIC||ACS 
-HisP|NUMERIC||ACS 
-HsdTot|NUMERIC||ACS 
-HsdTypCo|NUMERIC||ACS 
-HsdTypM|NUMERIC||ACS 
-HsdTypMC|NUMERIC||ACS 
-MaleP|NUMERIC||ACS 
-MedAge|NUMERIC||ACS 
-MrrdP|NUMERIC||ACS 
-NvMrrdP|NUMERIC||ACS 
-Ovr16P|NUMERIC||ACS 
-Ovr18P|NUMERIC||ACS 
-Ovr21P|NUMERIC||ACS 
-Ovr62P|NUMERIC||ACS 
-SRatio|NUMERIC||ACS 
-SRatio18|NUMERIC||ACS 
-SRatio65|NUMERIC||ACS 
-SepartedP|NUMERIC||ACS 
-SomeCollegeP|NUMERIC||ACS 
-TwoRaceP|NUMERIC||ACS 
-Und18P|NUMERIC||ACS 
-Und5P|NUMERIC||ACS 
-WidwdP|NUMERIC||ACS 
-CrowdHsng|NUMERIC||ACS 
-EngProf|NUMERIC||ACS 
-OccupantP|NUMERIC||ACS 
+Und18P|NUMERIC|
+MetCntWk30|INTEGER|Count of methadone providers in 60 minute walking time threshold
+NaltCntWk30|INTEGER|Count of naltrexone providers in 30 minute walking time threshold
+BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone
+FqhcMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest FQHC, in miles
+Ovr18P|NUMERIC|
+HsdTypCo|NUMERIC|
+SRatio65|NUMERIC|
+NaltTmDr|NUMERIC|Driving time (minutes) to nearest naltrexone provider
+MhCntDr|INTEGER|Count of MH providers within a 30-minute driving threshold
+HospCntDr|INTEGER|Count of hospitals within a 30-minute driving threshold
+BupCntBk60|INTEGER|Count of buprenorphine providers in 60 minute biking time threshold
+VacantP|NUMERIC|Percentage of vacant housing units
+NvMrrdP|NUMERIC|
+TotWrkE|INTEGER|Estimated count of working population
+NaltMinDis|NUMERIC|Euclidean distance (miles) to nearest naltrexone/Vivitrol provider
+MrrdP|NUMERIC|
+HospTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip hospital destination centroid, in minutes
+UnitDens|NUMERIC|Number of housing units per square mile of land area
+GradSclP|NUMERIC|
+TotUnits|INTEGER|Count of total occupied housing units
+EngProf|NUMERIC|
+MetCntBk60|INTEGER|Count of methadone providers in 60 minute biking time threshold
+WidwdP|NUMERIC|
+MetMinDis|NUMERIC|Euclidean distance (miles) to nearest methadone provider
+FqhcCntDr|INTEGER|Count of FQHCs within a 30-minute driving threshold
+Ovr16P|NUMERIC|
+RetailP|NUMERIC|Percentage of population employed in retail trade industry
+BupTmDr|NUMERIC|Driving time (minutes) to nearest buprenorphine provider
+EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.
+PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone
+HisP|NUMERIC|
+MetTmBk|NUMERIC|Biking time (minutes) to nearest methadone provider
+RentalP|NUMERIC|Percentage of occupied housing units that are rented
+MobileP|NUMERIC|Percentage of total housing units categorized as mobile housing structures
+NaltTmWk|NUMERIC|Walking time (minutes) to nearest naltrexone provider
+HhldFS|NUMERIC|
+HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities
+HhldMS|NUMERIC|
+Ovr62P|NUMERIC|
+NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family
+FqhcTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes
+BupMinDis|NUMERIC|Euclidean distance (miles) to nearest buprenorphine provider
+GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)
+HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries
+SRatio18|NUMERIC|
+EduNoHsP|NUMERIC|
+OccupantP|NUMERIC|
+HsdTot|NUMERIC|
+ZCTA5|STRING|Census Bureau designated zip code tabulation area, or the rough area that contains five digit zip codes.
+DivrcdP|NUMERIC|
+FamSize|NUMERIC|
+MetCntBk30|INTEGER|Count of methadone providers in 30 minute biking time threshold
+PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
+PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
+HsdTypM|NUMERIC|
+MaleP|NUMERIC|
+Ovr21P|NUMERIC|
+NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are not related
+DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
+HHSize|NUMERIC|
+NaltCntBk30|INTEGER|Count of naltrexone providers in 30 minute biking time threshold
+BupCntWk30|INTEGER|Count of buprenorphine providers in 30 minute walking time threshold
+TwoRaceP|NUMERIC|
+EduHsP|NUMERIC|
+LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago
+MetCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold
+EduP|NUMERIC|Percentage of population employed in educational services industry
+BachelorsP|NUMERIC|
+HospMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest hospital, in miles
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+NaltCntWk60|INTEGER|Count of naltrexone providers in 60 minute walking time threshold
+MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
+MetCntWk60|INTEGER|Count of methadone providers in 30 minute walking time threshold
+SutCntDr|INTEGER|Count of SUT services within a 30-minute driving threshold
+MedAge|NUMERIC|
+SepartedP|NUMERIC|
+SomeCollegeP|NUMERIC|
+MhMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest mental health provider, in miles
+TotPopHh|INTEGER|Total number of people in households
+OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
+NaltCntDr30|INTEGER|Count of naltrexone providers in 30 minute drive time threshold
+Ovr65P|NUMERIC|Percentage of population over 65
+HhldMC|NUMERIC|
+TotPop|INTEGER|Total population
+NaltTmBk|NUMERIC|Biking time (minutes) to nearest naltrexone provider
+BupTmBk|NUMERIC|Biking time (minutes) to nearest buprenorphine provider
+MoudMinDis|NUMERIC|Euclidean distance (miles) to nearest MOUD (all types)
+SutMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest SUT service location, in miles
+HhldMA|NUMERIC|
+MetTmWk|NUMERIC|Walking time (minutes) to nearest methadone provider
+NaltCntBk60|INTEGER|Count of naltrexone providers in 60 minute biking time threshold
+TotVetPop|INTEGER|Total Veteran population
+VetP|NUMERIC|Percent of population that are veterans
+MetTmDr|NUMERIC|Driving time (minutes) to nearest methadone provider
+BupCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold
+BupTmWk|NUMERIC|Walking time (minutes) to nearest buprenorphine provider
+WhiteP|NUMERIC|Percentage of population with race identified as white alone
+MhTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip mental health provider destination centroid, in minutes
+SRatio|NUMERIC|
+HsdTypMC|NUMERIC|
+UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
+BupCntWk60|INTEGER|Count of buprenorphine providers in 60 minute walking time threshold
+HhldFC|NUMERIC|
+AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
+HhldFA|NUMERIC|
+CrowdHsng|NUMERIC|
+BupCntBk30|INTEGER|Count of buprenorphine providers in 30 minute biking time threshold
+SutTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip SUT destination centroid, in minutes
+FemP|NUMERIC|
 
 ### tract-2010
 
 ID: `oeps-391119.tabular.tract-2010`
 
-42 columns in this table.
+55 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
-TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
-Age18_64|INTEGER|Total adult population under age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age0_4|INTEGER|Total population between age 0-4|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age5_14|INTEGER|Total population between age 5-14|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_19|INTEGER|Total population between age 15-19|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age20_24|INTEGER|Total population between age 20-24|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_44|INTEGER|Total population between age 15-44|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age55_59|INTEGER|Total population between age 55-59|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age60_64|INTEGER|Total population between age 60-64|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AgeOv65|INTEGER|Total population at or over age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_24P|NUMERIC|Percentage of population between ages of 15 & 24|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Und45P|NUMERIC|	Percentage of population below 45 years of age|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Ovr65P|NUMERIC|Percentage of population over 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-WhiteP|NUMERIC|Percentage of population with race identified as white alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AsianP|NUMERIC|Percentage of population with race identified as Asian alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-NoHsP|NUMERIC|Percentage of population 25 years and over, less than a high school degree|ACS 2018, 5-Year; ACS 2012, 5-Year; IPUMS NHGIS
-PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-VacantP|NUMERIC|Percentage of vacant housing units|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-TotVetPop|INTEGER|Total Veteran population|ACS 2018, 5-Year; ACS 2012, 5-Year
-Age45_49|INTEGER|Total population between age 45-49|ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS
-Age50_54|NUMERIC|Total population between age 50-54|ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS
-DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability|ACS 2018, 5-Year; ACS 2012, 5-Year
-VetP|NUMERIC|Percent of population that are veterans|ACS 2017, 5-Year; ACS 2012, 5-Year
-MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
-PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
-GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)|ACS 2018, 5-Year; ACS 2012, 5-Year
-TotPcp|INTEGER|Number of primary care providers in area|Dartmouth Atlas, 2010
-TotSp|INTEGER|Number of specialty physicians in area|Dartmouth Atlas, 2010
-PcpPer100k|NUMERIC|PCPs per total Population X 100,000|Dartmouth Atlas, 2010
-SpPer100k|NUMERIC|Specialty Physicians per total Population X 100,000|Dartmouth Atlas, 2010
-MetRm30|NUMERIC|Methadone access 30 minutes (RAAM)|
-MetRm60|NUMERIC|Methadone access 60 minutes (RAAM)|
-MetRm90|NUMERIC|Methadone access 90 minutes (RAAM)|
+TotSp|INTEGER|Number of specialty physicians in area
+BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone
+Ovr18P|NUMERIC|
+MetRm60|NUMERIC|Methadone access 60 minutes (RAAM)
+SRatio65|NUMERIC|
+VacantP|NUMERIC|Percentage of vacant housing units
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+AsianP|NUMERIC|Percentage of population with race identified as Asian alone
+GradSclP|NUMERIC|
+TotUnits|INTEGER|Count of total occupied housing units
+Ovr16P|NUMERIC|
+AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
+PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone
+WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
+GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)
+TotPcp|INTEGER|Number of primary care providers in area
+SRatio18|NUMERIC|
+EduNoHsP|NUMERIC|
+Ruca1|STRING|Primary RUCA Code
+PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
+PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
+MaleP|NUMERIC|
+PcpPer100k|NUMERIC|PCPs per total Population X 100,000
+BlackE|NUMERIC|Count population with race identified as Black or African American alone. Estimated count in non-decennial years.
+Ovr21P|NUMERIC|
+HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
+DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
+TwoRaceP|NUMERIC|
+EduHsP|NUMERIC|
+BachelorsP|NUMERIC|
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+Rurality|STRING|Urban/Suburban/Rural
+MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
+SomeCollegeP|NUMERIC|
+OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
+Ovr65P|NUMERIC|Percentage of population over 65
+OtherE|NUMERIC|Count of Population with race not mentioned in any of the options above (includes two race or more races). Estimated count in non-decennial years.
+HisE|NUMERIC|Count persons with ethnicity identified as of Hispanic or Latinx origin. Estimated count in non-decennial years.
+TotPop|INTEGER|Total population
+MetRm90|NUMERIC|Methadone access 90 minutes (RAAM)
+PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
+Ruca2|STRING|Secondary RUCA Code
+AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
+MetRm30|NUMERIC|Methadone access 30 minutes (RAAM)
+Age15_44|INTEGER|Total population between age 15-44
+TotVetPop|INTEGER|Total Veteran population
+VetP|NUMERIC|Percent of population that are veterans
+SpPer100k|NUMERIC|Specialty Physicians per total Population X 100,000
+WhiteP|NUMERIC|Percentage of population with race identified as white alone
+SRatio|NUMERIC|
+UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
+AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
+TwoRaceE|NUMERIC|Count persons identifying as two or more races. Estimated count in non-decennial years.
+FemP|NUMERIC|
+Age15_44P|NUMERIC|Percentage of population below 45 years of age
 
 ### zcta-2021
 
 ID: `oeps-391119.tabular.zcta-2021`
 
-3 columns in this table.
+5 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-OtpTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes|SAMSHA, 2021
-OtpCntDr|INTEGER|Count of OTPs within a 30-minute driving threshold|SAMSHA, 2021
+ZCTA5|STRING|Census Bureau designated zip code tabulation area, or the rough area that contains five digit zip codes.
+OtpMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles
+OtpTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes
+OtpCntDr|INTEGER|Count of OTPs within a 30-minute driving threshold
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 
 ### tract-1990
 
 ID: `oeps-391119.tabular.tract-1990`
 
-33 columns in this table.
+45 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
-TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
-Age18_64|INTEGER|Total adult population under age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age0_4|INTEGER|Total population between age 0-4|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age5_14|INTEGER|Total population between age 5-14|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_19|INTEGER|Total population between age 15-19|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age20_24|INTEGER|Total population between age 20-24|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_44|INTEGER|Total population between age 15-44|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age55_59|INTEGER|Total population between age 55-59|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age60_64|INTEGER|Total population between age 60-64|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AgeOv65|INTEGER|Total population at or over age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_24P|NUMERIC|Percentage of population between ages of 15 & 24|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Und45P|NUMERIC|	Percentage of population below 45 years of age|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Ovr65P|NUMERIC|Percentage of population over 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-WhiteP|NUMERIC|Percentage of population with race identified as white alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AsianP|NUMERIC|Percentage of population with race identified as Asian alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-NoHsP|NUMERIC|Percentage of population 25 years and over, less than a high school degree|ACS 2018, 5-Year; ACS 2012, 5-Year; IPUMS NHGIS
-ChildrenP|NUMERIC|Percentage of population under age 18|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-VacantP|NUMERIC|Percentage of vacant housing units|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-Age45_49|INTEGER|Total population between age 45-49|ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS
-Age50_54|NUMERIC|Total population between age 50-54|ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS
-MetRm30|NUMERIC|Methadone access 30 minutes (RAAM)|
-MetRm60|NUMERIC|Methadone access 60 minutes (RAAM)|
-MetRm90|NUMERIC|Methadone access 90 minutes (RAAM)|
+BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone
+Ovr18P|NUMERIC|
+MetRm60|NUMERIC|Methadone access 60 minutes (RAAM)
+SRatio65|NUMERIC|
+Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
+VacantP|NUMERIC|Percentage of vacant housing units
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+AsianP|NUMERIC|Percentage of population with race identified as Asian alone
+GradSclP|NUMERIC|
+TotUnits|INTEGER|Count of total occupied housing units
+Ovr16P|NUMERIC|
+AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
+PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone
+HisP|NUMERIC|
+WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
+SRatio18|NUMERIC|
+EduNoHsP|NUMERIC|
+Ovr21|NUMERIC|
+PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
+Ovr18|NUMERIC|
+MaleP|NUMERIC|
+BlackE|NUMERIC|Count population with race identified as Black or African American alone. Estimated count in non-decennial years.
+Ovr21P|NUMERIC|
+Ovr16|NUMERIC|
+HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
+EduHsP|NUMERIC|
+BachelorsP|NUMERIC|
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+SomeCollegeP|NUMERIC|
+OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
+Ovr65P|NUMERIC|Percentage of population over 65
+HisE|NUMERIC|Count persons with ethnicity identified as of Hispanic or Latinx origin. Estimated count in non-decennial years.
+TotPop|INTEGER|Total population
+MetRm90|NUMERIC|Methadone access 90 minutes (RAAM)
+PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
+ChildrenP|NUMERIC|Percentage of population under age 18
+AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
+MetRm30|NUMERIC|Methadone access 30 minutes (RAAM)
+Age15_44|INTEGER|Total population between age 15-44
+WhiteP|NUMERIC|Percentage of population with race identified as white alone
+SRatio|NUMERIC|
+UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
+AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
+FemP|NUMERIC|
+Age15_44P|NUMERIC|Percentage of population below 45 years of age
 
 ### state-1980
 
 ID: `oeps-391119.tabular.state-1980`
 
-29 columns in this table.
+40 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
-TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
-Age18_64|INTEGER|Total adult population under age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age0_4|INTEGER|Total population between age 0-4|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age5_14|INTEGER|Total population between age 5-14|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_19|INTEGER|Total population between age 15-19|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age20_24|INTEGER|Total population between age 20-24|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_44|INTEGER|Total population between age 15-44|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age45_54|INTEGER|Total population between age 45-54|IPUMS NHGIS
-Age55_59|INTEGER|Total population between age 55-59|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age60_64|INTEGER|Total population between age 60-64|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AgeOv65|INTEGER|Total population at or over age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_24P|NUMERIC|Percentage of population between ages of 15 & 24|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Und45P|NUMERIC|	Percentage of population below 45 years of age|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Ovr65P|NUMERIC|Percentage of population over 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-WhiteP|NUMERIC|Percentage of population with race identified as white alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AsianP|NUMERIC|Percentage of population with race identified as Asian alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-NoHsP|NUMERIC|Percentage of population 25 years and over, less than a high school degree|ACS 2018, 5-Year; ACS 2012, 5-Year; IPUMS NHGIS
-ChildrenP|NUMERIC|Percentage of population under age 18|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-VacantP|NUMERIC|Percentage of vacant housing units|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
+BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone
+Ovr18P|NUMERIC|
+SRatio65|NUMERIC|
+Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
+VacantP|NUMERIC|Percentage of vacant housing units
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+AsianP|NUMERIC|Percentage of population with race identified as Asian alone
+TotUnits|INTEGER|Count of total occupied housing units
+Ovr16P|NUMERIC|
+AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
+PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone
+HisP|NUMERIC|
+WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
+SRatio18|NUMERIC|
+EduNoHsP|NUMERIC|
+Ovr21|NUMERIC|
+PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
+Ovr18|NUMERIC|
+MaleP|NUMERIC|
+BlackE|NUMERIC|Count population with race identified as Black or African American alone. Estimated count in non-decennial years.
+Ovr21P|NUMERIC|
+Ovr16|NUMERIC|
+HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
+EduHsP|NUMERIC|
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+SomeCollegeP|NUMERIC|
+OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
+Ovr65P|NUMERIC|Percentage of population over 65
+HisE|NUMERIC|Count persons with ethnicity identified as of Hispanic or Latinx origin. Estimated count in non-decennial years.
+TotPop|INTEGER|Total population
+PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
+ChildrenP|NUMERIC|Percentage of population under age 18
+AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
+Age15_44|INTEGER|Total population between age 15-44
+WhiteP|NUMERIC|Percentage of population with race identified as white alone
+SRatio|NUMERIC|
+UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
+AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
+FemP|NUMERIC|
+Age15_44P|NUMERIC|Percentage of population below 45 years of age
 
 ### state-2016
 
 ID: `oeps-391119.tabular.state-2016`
 
-12 columns in this table.
+13 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-HcvD|INTEGER|Total Hepatitis C deaths|HepVu, 2017
-MlHcvD|INTEGER|Hepatitis C deaths among men|HepVu, 2017
-FlHcvD|INTEGER|Hepatitis C deaths among women|HepVu, 2017
-AmInHcvD|INTEGER|Hepatitis C deaths among American Indian populations|HepVu, 2017
-AsPiHcvD|INTEGER|Hepatitis C deaths among Asian and Pacific Islander populations|HepVu, 2017
-BlkHcvD|INTEGER|Hepatitis C deaths among Black population|HepVu, 2017
-HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations|HepVu, 2017
-U50HcvD|INTEGER|Hepatitis C deaths in populations under 50 years of age|HepVu, 2017
-A50_74HcvD|INTEGER|Hepatitis C deaths among populations between 50 and 74 years of age|HepVu, 2017
-O75HcvD|INTEGER|Hepatitis C deaths among populations over 75 years of age|HepVu, 2017
-OdMortRt|NUMERIC|Overdose mortality rate|HepVu, 2020
+U50HcvD|INTEGER|Hepatitis C deaths in populations under 50 years of age
+O75HcvD|INTEGER|Hepatitis C deaths among populations over 75 years of age
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+FlHcvD|INTEGER|Hepatitis C deaths among women
+AsPiHcvD|INTEGER|Hepatitis C deaths among Asian and Pacific Islander populations
+OdMortRt|NUMERIC|Overdose mortality rate
+BlkHcvD|INTEGER|Hepatitis C deaths among Black population
+MlHcvD|INTEGER|Hepatitis C deaths among men
+HcvD|INTEGER|Total Hepatitis C deaths
+AmInHcvD|INTEGER|Hepatitis C deaths among American Indian populations
+A50_74HcvD|INTEGER|Hepatitis C deaths among populations between 50 and 74 years of age
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations
 
 ### state-2022
 
 ID: `oeps-391119.tabular.state-2022`
 
-54 columns in this table.
+53 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
-ParkArea|NUMERIC|Area (in square meters) of park or green space in a state).|OSM
-Cover|NUMERIC|Percent of state covered by park or green space|OSM
-HcvD|INTEGER|Total Hepatitis C deaths|HepVu, 2017
-MlHcvD|INTEGER|Hepatitis C deaths among men|HepVu, 2017
-FlHcvD|INTEGER|Hepatitis C deaths among women|HepVu, 2017
-AmInHcvD|INTEGER|Hepatitis C deaths among American Indian populations|HepVu, 2017
-BlkHcvD|INTEGER|Hepatitis C deaths among Black population|HepVu, 2017
-HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations|HepVu, 2017
-U50HcvD|INTEGER|Hepatitis C deaths in populations under 50 years of age|HepVu, 2017
-A50_74HcvD|INTEGER|Hepatitis C deaths among populations between 50 and 74 years of age|HepVu, 2017
-O75HcvD|INTEGER|Hepatitis C deaths among populations over 75 years of age|HepVu, 2017
-AvHcvD|NUMERIC|Mean total yearly Hepatitis C deaths from 2013-2017, 2018-2022|HepVu
-AvMlHcvD|NUMERIC|Mean yearly Hepatitis C deaths among men from 2013-2017|HepVu, 2017
-AvFlHcvD|NUMERIC|Mean yearly Hepatitis C deaths among women from 2013-2017|HepVu, 2017
-AvAmInHcvD|NUMERIC|Mean yearly Hepatitis C deaths among American Indian population from 2013-2017|HepVu, 2017
-AvBlkHcvD|NUMERIC|Mean yearly Hepatitis C deaths among Black populations from 2013-2017|HepVu, 2017
-AvHspHcvD|NUMERIC|Mean yearly Hepatitis C deaths among Hispanic populations from 2013-2017|HepVu, 2017
-AvU50HcvD|NUMERIC|Mean yearly Hepatitis C deaths among people under 50 years of age from 2013-2017|HepVu, 2017
-AvO75HcvD|NUMERIC|Mean yearly Hepatitis C deaths among people over 75 years of age|HepVu, 2017
-OpRxRt|NUMERIC|Opioid prescription rate|HepVu, 2020
-PrMsuseP|NUMERIC|Percent of persons who self-report misusing prescription pain relief medication in 2020.|HepVu, 2020
-OdMortRt|NUMERIC|Overdose mortality rate|HepVu, 2020
-AnyPdmpFr|NUMERIC|Fraction of year that state has any prescription drug monitoring program operating.|OPTIC, 2017
-AnyPdmphFr|NUMERIC|Fraction of year that state has prescription drug monitoring program enabling legislation for any type of prescription drug monitoring program in effect ,including paper-based systems (as determined by Horowitz et al., 2018) enacted|OPTIC, 2017
-OpPdmpFr|NUMERIC|Fraction of year that state has a “modern system” operational and users could access (as determined by Horowitz et al., 2018).|OPTIC, 2017
-MsAcPdmpFr|NUMERIC|Fraction of year that state has any legislation requiring Prescribers to access PDMP before prescribing (as interpreted by PDAPS) enacted.|OPTIC, 2017
-ElcPdmpFr|NUMERIC|Fraction of year that state has an electronic PDMP system operating.|OPTIC, 2017
-AnyPdmpDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: PDAPS for first PDMP laws passed after January 1, 1998; Info on laws prior to 1998 came from Brandeis TTAC.|OPTIC, 2017
-AnyPdmphDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: Horowitz et al., 2018, Table 2, column 1.|OPTIC, 2017
-OpPdmpDt|DATE|Date when a “modern system” became operational and users could access. Source: Horowitz et al., 2018, Table 2, column 4. This definition includes specific caveats adopted by Horowitz et al., 2018, described further below in Notes.|OPTIC, 2017
-MsAcPdmpDt|DATE|Date of legislation requiring Prescribers to access PDMP before prescribing as interpreted by PDAPS.|OPTIC, 2017
-ElcPdmpDt|DATE|Date state began operating an electronic PDMP system.|OPTIC, 2017
-AnyNalxDt|DATE|Date (MY) any type of Naloxone law effective|OPTIC, 2017
-NalxPrStDt|DATE|Date (MY) Naloxone law allowing distribution through a standing or protocol order effective|OPTIC, 2017
-NalxPresDt|DATE|Date (MY) Naloxone law allowing pharmacists prescriptive authority effective|OPTIC, 2017
-AnyNalxFr|NUMERIC|Fraction of year any type of Naloxone law is effective|OPTIC, 2017
-NalxPrStFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing distribution through a standing or protocol order|OPTIC, 2017
-NalxPresFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing pharmacists prescriptive authority|OPTIC, 2017
-MdMarijLaw|BOOLEAN|Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (0=no, 1=yes)|PDAPS, 2017
-AsHcvD|NUMERIC||HepVu
-NhPiHcvD|NUMERIC||HepVu
-WhtHcvD|NUMERIC||HepVu
-MulHcvD|NUMERIC||HepVu
-AvAsHcvD|NUMERIC||HepVu
-AvNhPiHcvD|NUMERIC||HepVu
-AvMulHcvD|NUMERIC||HepVu
-AvA50_74HcvD|NUMERIC|Mean yearly Hepatitis C deaths among people between 50 and 74 years of age from 2013-2017, 2018-2022|HepVu
-AvWhHcvD|NUMERIC|Mean yearly Hepatitis C deaths among White populations from 2018-2022|HepVu
-CrrctExp|INTEGER|Total expenditures on corrections system and operations|State and Local Finance Data Finder
-HlthExp|INTEGER|Total expenditures on public health and hospitals|State and Local Finance Data Finder
-PlcFyrExp|INTEGER|Total expenditures on police and fire protection|State and Local Finance Data Finder
-WlfrExp|INTEGER|Total expenditures on public welfare programs|State and Local Finance Data Finder
+U50HcvD|INTEGER|Hepatitis C deaths in populations under 50 years of age
+MsAcPdmpFr|NUMERIC|Fraction of year that state has any legislation requiring Prescribers to access PDMP before prescribing (as interpreted by PDAPS) enacted.
+ElcPdmpFr|NUMERIC|Fraction of year that state has an electronic PDMP system operating.
+NalxPrStDt|DATE|Date (MY) Naloxone law allowing distribution through a standing or protocol order effective
+O75HcvD|INTEGER|Hepatitis C deaths among populations over 75 years of age
+AvWhHcvD|NUMERIC|Mean yearly Hepatitis C deaths among White populations from 2018-2022
+NhPiHcvD|NUMERIC|
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+NalxPresFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing pharmacists prescriptive authority
+HlthExp|INTEGER|Total expenditures on public health and hospitals
+FlHcvD|INTEGER|Hepatitis C deaths among women
+NalxPrStFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing distribution through a standing or protocol order
+WlfrExp|INTEGER|Total expenditures on public welfare programs
+AvHcvD|NUMERIC|Mean total yearly Hepatitis C deaths from 2013-2017, 2018-2022
+MdMarijLaw|BOOLEAN|Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (0=no, 1=yes)
+AvU50HcvD|NUMERIC|Mean yearly Hepatitis C deaths among people under 50 years of age from 2013-2017
+OdMortRt|NUMERIC|Overdose mortality rate
+AnyPdmpDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: PDAPS for first PDMP laws passed after January 1, 1998; Info on laws prior to 1998 came from Brandeis TTAC.
+BlkHcvD|INTEGER|Hepatitis C deaths among Black population
+MlHcvD|INTEGER|Hepatitis C deaths among men
+ElcPdmpDt|DATE|Date state began operating an electronic PDMP system.
+OpPdmpDt|DATE|Date when a “modern system” became operational and users could access. Source: Horowitz et al., 2018, Table 2, column 4. This definition includes specific caveats adopted by Horowitz et al., 2018, described further below in Notes.
+ParkArea|NUMERIC|Area (in square meters) of park or green space in a state).
+WhtHcvD|NUMERIC|
+HcvD|INTEGER|Total Hepatitis C deaths
+AnyNalxDt|DATE|Date (MY) any type of Naloxone law effective
+OpPdmpFr|NUMERIC|Fraction of year that state has a “modern system” operational and users could access (as determined by Horowitz et al., 2018).
+AvFlHcvD|NUMERIC|Mean yearly Hepatitis C deaths among women from 2013-2017
+AmInHcvD|INTEGER|Hepatitis C deaths among American Indian populations
+A50_74HcvD|INTEGER|Hepatitis C deaths among populations between 50 and 74 years of age
+AvAsHcvD|NUMERIC|
+OpRxRt|NUMERIC|Opioid prescription rate
+MsAcPdmpDt|DATE|Date of legislation requiring Prescribers to access PDMP before prescribing as interpreted by PDAPS.
+AvHspHcvD|NUMERIC|Mean yearly Hepatitis C deaths among Hispanic populations from 2013-2017
+AvA50_74HcvD|NUMERIC|Mean yearly Hepatitis C deaths among people between 50 and 74 years of age from 2013-2017, 2018-2022
+MulHcvD|NUMERIC|
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+AvBlkHcvD|NUMERIC|Mean yearly Hepatitis C deaths among Black populations from 2013-2017
+PlcFyrExp|INTEGER|Total expenditures on police and fire protection
+AnyPdmphDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: Horowitz et al., 2018, Table 2, column 1.
+AvMulHcvD|NUMERIC|
+CrrctExp|INTEGER|Total expenditures on corrections system and operations
+AvNhPiHcvD|NUMERIC|
+AnyPdmphFr|NUMERIC|Fraction of year that state has prescription drug monitoring program enabling legislation for any type of prescription drug monitoring program in effect ,including paper-based systems (as determined by Horowitz et al., 2018) enacted
+NalxPresDt|DATE|Date (MY) Naloxone law allowing pharmacists prescriptive authority effective
+PrMsuseP|NUMERIC|Percent of persons who self-report misusing prescription pain relief medication in 2020.
+AvMlHcvD|NUMERIC|Mean yearly Hepatitis C deaths among men from 2013-2017
+AvAmInHcvD|NUMERIC|Mean yearly Hepatitis C deaths among American Indian population from 2013-2017
+AsHcvD|NUMERIC|
+AnyNalxFr|NUMERIC|Fraction of year any type of Naloxone law is effective
+AvO75HcvD|NUMERIC|Mean yearly Hepatitis C deaths among people over 75 years of age
+AnyPdmpFr|NUMERIC|Fraction of year that state has any prescription drug monitoring program operating.
+HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations
 
 ### tract-2020
 
 ID: `oeps-391119.tabular.tract-2020`
 
-126 columns in this table.
+124 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
-TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
-Ovr65P|NUMERIC|Percentage of population over 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-WhiteP|NUMERIC|Percentage of population with race identified as white alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-VacantP|NUMERIC|Percentage of vacant housing units|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-TotPopHh|INTEGER|Total number of people in households|ACS 2018, 5-Year
-TotVetPop|INTEGER|Total Veteran population|ACS 2018, 5-Year; ACS 2012, 5-Year
-TotWrkE|INTEGER|Estimated count of working population|ACS 2018, 5-Year
-DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability|ACS 2018, 5-Year; ACS 2012, 5-Year
-VetP|NUMERIC|Percent of population that are veterans|ACS 2017, 5-Year; ACS 2012, 5-Year
-NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family|ACS 2018, 5-Year
-NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are not related|ACS 2018, 5-Year
-MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
-PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
-GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)|ACS 2018, 5-Year; ACS 2012, 5-Year
-EduP|NUMERIC|Percentage of population employed in educational services industry|ACS 2018, 5-Year
-HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities|ACS 2018, 5-Year
-HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries|ACS 2018, 5-Year
-RetailP|NUMERIC|Percentage of population employed in retail trade industry|ACS 2018, 5-Year
-EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.|ACS 2018, 5-Year
-MobileP|NUMERIC|Percentage of total housing units categorized as mobile housing structures|ACS 2018, 5-Year
-LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago|ACS 2018, 5-Year
-RentalP|NUMERIC|Percentage of occupied housing units that are rented|ACS 2018, 5-Year
-UnitDens|NUMERIC|Number of housing units per square mile of land area|ACS 2018, 5-Year
-MoudMinDis|NUMERIC|Euclidean distance (miles) to nearest MOUD (all types)|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupMinDis|NUMERIC|Euclidean distance (miles) to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupTmDr|NUMERIC|Driving time (minutes) to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetMinDis|NUMERIC|Euclidean distance (miles) to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetTmDr|NUMERIC|Driving time (minutes) to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltMinDis|NUMERIC|Euclidean distance (miles) to nearest naltrexone/Vivitrol provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltTmDr|NUMERIC|Driving time (minutes) to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltCntDr30|INTEGER|Count of naltrexone providers in 30 minute drive time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupTmWk|NUMERIC|Walking time (minutes) to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupCntWk60|INTEGER|Count of buprenorphine providers in 60 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupCntWk30|INTEGER|Count of buprenorphine providers in 30 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetTmWk|NUMERIC|Walking time (minutes) to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetCntWk30|INTEGER|Count of methadone providers in 60 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetCntWk60|INTEGER|Count of methadone providers in 30 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltTmWk|NUMERIC|Walking time (minutes) to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltCntWk60|INTEGER|Count of naltrexone providers in 60 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltCntWk30|INTEGER|Count of naltrexone providers in 30 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupTmBk|NUMERIC|Biking time (minutes) to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupCntBk60|INTEGER|Count of buprenorphine providers in 60 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupCntBk30|INTEGER|Count of buprenorphine providers in 30 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetTmBk|NUMERIC|Biking time (minutes) to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetCntBk60|INTEGER|Count of methadone providers in 60 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetCntBk30|INTEGER|Count of methadone providers in 30 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltTmBk|NUMERIC|Biking time (minutes) to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltCntBk60|INTEGER|Count of naltrexone providers in 60 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltCntBk30|INTEGER|Count of naltrexone providers in 30 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-FqhcMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest FQHC, in miles|US Covid Atlas via HRSA, 2020
-FqhcTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes|US Covid Atlas via HRSA, 2020
-FqhcCntDr|INTEGER|Count of FQHCs within a 30-minute driving threshold|US Covid Atlas via HRSA, 2020
-HospMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest hospital, in miles|CovidCareMap, 2020
-HospTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip hospital destination centroid, in minutes|CovidCareMap, 2020
-HospCntDr|INTEGER|Count of hospitals within a 30-minute driving threshold|CovidCareMap, 2020
-MhMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest mental health provider, in miles|SAMHSA, 2020
-MhTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip mental health provider destination centroid, in minutes|SAMHSA, 2020
-MhCntDr|INTEGER|Count of MH providers within a 30-minute driving threshold|SAMHSA, 2020
-SutMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest SUT service location, in miles|SAMHSA, 2020
-SutTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip SUT destination centroid, in minutes|SAMHSA, 2020
-SutCntDr|INTEGER|Count of SUT services within a 30-minute driving threshold|SAMHSA, 2020
-NeighbTyp|STRING|Categorical, one of seven neighborhood (tract-level) typologies: 1 = Rural Affordable; 2 = Suburban Affluent; 3 = Suburban Affordable; 4 = Extreme Poverty; 5 = Multilingual Working; 6 = Urban Core Opportunity; 7 = Sparse Areas|Kolak et al., 2020
-SviTh1|NUMERIC|SVI Ranking, Theme 1: Socioeconomic|CDC, 2018
-SviTh2|NUMERIC|SVI Ranking, Theme 2: Household Composition & Disability|CDC, 2018
-SviTh3|NUMERIC|SVI Ranking, Theme 3: Minority Status & Language|CDC, 2018
-SviTh4|NUMERIC|SVI Ranking, Theme 4: Housing Type & Transportation|CDC, 2018
-SviSmryRnk|NUMERIC|Overall summary ranking|CDC, 2018
-MetRm30|NUMERIC|Methadone access 30 minutes (RAAM)|
-MetRm60|NUMERIC|Methadone access 60 minutes (RAAM)|
-MetRm90|NUMERIC|Methadone access 90 minutes (RAAM)|
-NaltRm30|NUMERIC|Naltrexone access 30 minutes (RAAM)|
-NaltRm60|NUMERIC|Naltrexone access 60 minutes (RAAM)|
-NaltRm90|NUMERIC|Naltrexone access 90 minutes (RAAM)|
-BupRm30|NUMERIC|Buprenorphine access 30 minutes (RAAM)|
-BupRm60|NUMERIC|Buprenorphine access 60 minutes (RAAM)|
-BupRm90|NUMERIC|Buprenorphine access 90 minutes (RAAM)|
-BachelorsP|NUMERIC||ACS 
-DivrcdP|NUMERIC||ACS 
-EduHsP|NUMERIC||ACS 
-EduNoHsP|NUMERIC||ACS 
-FamSize|NUMERIC||ACS 
-FemP|NUMERIC||ACS 
-GradSclP|NUMERIC||ACS 
-HHSize|NUMERIC||ACS 
-HhldFA|NUMERIC||ACS 
-HhldFC|NUMERIC||ACS 
-HhldFS|NUMERIC||ACS 
-HhldMA|NUMERIC||ACS 
-HhldMC|NUMERIC||ACS 
-HhldMS|NUMERIC||ACS 
-HisP|NUMERIC||ACS 
-HsdTot|NUMERIC||ACS 
-HsdTypCo|NUMERIC||ACS 
-HsdTypM|NUMERIC||ACS 
-HsdTypMC|NUMERIC||ACS 
-MaleP|NUMERIC||ACS 
-MedAge|NUMERIC||ACS 
-MrrdP|NUMERIC||ACS 
-NvMrrdP|NUMERIC||ACS 
-Ovr16P|NUMERIC||ACS 
-Ovr18P|NUMERIC||ACS 
-Ovr21P|NUMERIC||ACS 
-Ovr62P|NUMERIC||ACS 
-SRatio|NUMERIC||ACS 
-SRatio18|NUMERIC||ACS 
-SRatio65|NUMERIC||ACS 
-SepartedP|NUMERIC||ACS 
-SomeCollegeP|NUMERIC||ACS 
-TwoRaceP|NUMERIC||ACS 
-Und18P|NUMERIC||ACS 
-Und5P|NUMERIC||ACS 
-WidwdP|NUMERIC||ACS 
-CrowdHsng|NUMERIC||ACS 
-EngProf|NUMERIC||ACS 
-OccupantP|NUMERIC||ACS 
+Und18P|NUMERIC|
+MetCntWk30|INTEGER|Count of methadone providers in 60 minute walking time threshold
+NaltCntWk30|INTEGER|Count of naltrexone providers in 30 minute walking time threshold
+SviTh4|NUMERIC|SVI Ranking, Theme 4: Housing Type & Transportation
+BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone
+FqhcMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest FQHC, in miles
+Ovr18P|NUMERIC|
+HsdTypCo|NUMERIC|
+MetRm60|NUMERIC|Methadone access 60 minutes (RAAM)
+SRatio65|NUMERIC|
+NaltTmDr|NUMERIC|Driving time (minutes) to nearest naltrexone provider
+MhCntDr|INTEGER|Count of MH providers within a 30-minute driving threshold
+HospCntDr|INTEGER|Count of hospitals within a 30-minute driving threshold
+BupCntBk60|INTEGER|Count of buprenorphine providers in 60 minute biking time threshold
+NaltRm60|NUMERIC|Naltrexone access 60 minutes (RAAM)
+VacantP|NUMERIC|Percentage of vacant housing units
+NvMrrdP|NUMERIC|
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+TotWrkE|INTEGER|Estimated count of working population
+NaltMinDis|NUMERIC|Euclidean distance (miles) to nearest naltrexone/Vivitrol provider
+MrrdP|NUMERIC|
+HospTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip hospital destination centroid, in minutes
+BupRm60|NUMERIC|Buprenorphine access 60 minutes (RAAM)
+UnitDens|NUMERIC|Number of housing units per square mile of land area
+GradSclP|NUMERIC|
+TotUnits|INTEGER|Count of total occupied housing units
+EngProf|NUMERIC|
+MetCntBk60|INTEGER|Count of methadone providers in 60 minute biking time threshold
+WidwdP|NUMERIC|
+MetMinDis|NUMERIC|Euclidean distance (miles) to nearest methadone provider
+FqhcCntDr|INTEGER|Count of FQHCs within a 30-minute driving threshold
+Ovr16P|NUMERIC|
+RetailP|NUMERIC|Percentage of population employed in retail trade industry
+BupTmDr|NUMERIC|Driving time (minutes) to nearest buprenorphine provider
+EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.
+PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone
+HisP|NUMERIC|
+MetTmBk|NUMERIC|Biking time (minutes) to nearest methadone provider
+RentalP|NUMERIC|Percentage of occupied housing units that are rented
+MobileP|NUMERIC|Percentage of total housing units categorized as mobile housing structures
+NaltTmWk|NUMERIC|Walking time (minutes) to nearest naltrexone provider
+HhldFS|NUMERIC|
+NaltRm30|NUMERIC|Naltrexone access 30 minutes (RAAM)
+HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities
+HhldMS|NUMERIC|
+Ovr62P|NUMERIC|
+NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family
+NaltRm90|NUMERIC|Naltrexone access 90 minutes (RAAM)
+FqhcTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes
+BupMinDis|NUMERIC|Euclidean distance (miles) to nearest buprenorphine provider
+SviSmryRnk|NUMERIC|Overall summary ranking
+GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)
+HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries
+SRatio18|NUMERIC|
+EduNoHsP|NUMERIC|
+OccupantP|NUMERIC|
+HsdTot|NUMERIC|
+DivrcdP|NUMERIC|
+FamSize|NUMERIC|
+MetCntBk30|INTEGER|Count of methadone providers in 30 minute biking time threshold
+PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
+BupRm90|NUMERIC|Buprenorphine access 90 minutes (RAAM)
+PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
+HsdTypM|NUMERIC|
+MaleP|NUMERIC|
+Ovr21P|NUMERIC|
+NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are not related
+DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
+HHSize|NUMERIC|
+NaltCntBk30|INTEGER|Count of naltrexone providers in 30 minute biking time threshold
+BupCntWk30|INTEGER|Count of buprenorphine providers in 30 minute walking time threshold
+TwoRaceP|NUMERIC|
+EduHsP|NUMERIC|
+SviTh3|NUMERIC|SVI Ranking, Theme 3: Minority Status & Language
+LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago
+MetCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold
+EduP|NUMERIC|Percentage of population employed in educational services industry
+BachelorsP|NUMERIC|
+HospMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest hospital, in miles
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+NaltCntWk60|INTEGER|Count of naltrexone providers in 60 minute walking time threshold
+MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
+MetCntWk60|INTEGER|Count of methadone providers in 30 minute walking time threshold
+SutCntDr|INTEGER|Count of SUT services within a 30-minute driving threshold
+MedAge|NUMERIC|
+SepartedP|NUMERIC|
+SomeCollegeP|NUMERIC|
+MhMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest mental health provider, in miles
+TotPopHh|INTEGER|Total number of people in households
+OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
+NaltCntDr30|INTEGER|Count of naltrexone providers in 30 minute drive time threshold
+Ovr65P|NUMERIC|Percentage of population over 65
+HhldMC|NUMERIC|
+TotPop|INTEGER|Total population
+NaltTmBk|NUMERIC|Biking time (minutes) to nearest naltrexone provider
+MetRm90|NUMERIC|Methadone access 90 minutes (RAAM)
+BupTmBk|NUMERIC|Biking time (minutes) to nearest buprenorphine provider
+MoudMinDis|NUMERIC|Euclidean distance (miles) to nearest MOUD (all types)
+SutMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest SUT service location, in miles
+BupRm30|NUMERIC|Buprenorphine access 30 minutes (RAAM)
+HhldMA|NUMERIC|
+MetTmWk|NUMERIC|Walking time (minutes) to nearest methadone provider
+MetRm30|NUMERIC|Methadone access 30 minutes (RAAM)
+NaltCntBk60|INTEGER|Count of naltrexone providers in 60 minute biking time threshold
+SviTh1|NUMERIC|SVI Ranking, Theme 1: Socioeconomic
+TotVetPop|INTEGER|Total Veteran population
+VetP|NUMERIC|Percent of population that are veterans
+MetTmDr|NUMERIC|Driving time (minutes) to nearest methadone provider
+BupCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold
+BupTmWk|NUMERIC|Walking time (minutes) to nearest buprenorphine provider
+WhiteP|NUMERIC|Percentage of population with race identified as white alone
+MhTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip mental health provider destination centroid, in minutes
+SRatio|NUMERIC|
+HsdTypMC|NUMERIC|
+UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
+BupCntWk60|INTEGER|Count of buprenorphine providers in 60 minute walking time threshold
+HhldFC|NUMERIC|
+AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
+HhldFA|NUMERIC|
+SviTh2|NUMERIC|SVI Ranking, Theme 2: Household Composition & Disability
+CrowdHsng|NUMERIC|
+BupCntBk30|INTEGER|Count of buprenorphine providers in 30 minute biking time threshold
+SutTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip SUT destination centroid, in minutes
+FemP|NUMERIC|
 
 ### state-1990
 
 ID: `oeps-391119.tabular.state-1990`
 
-30 columns in this table.
+42 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
-TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
-Age18_64|INTEGER|Total adult population under age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age0_4|INTEGER|Total population between age 0-4|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age5_14|INTEGER|Total population between age 5-14|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_19|INTEGER|Total population between age 15-19|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age20_24|INTEGER|Total population between age 20-24|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_44|INTEGER|Total population between age 15-44|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age55_59|INTEGER|Total population between age 55-59|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age60_64|INTEGER|Total population between age 60-64|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AgeOv65|INTEGER|Total population at or over age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_24P|NUMERIC|Percentage of population between ages of 15 & 24|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Und45P|NUMERIC|	Percentage of population below 45 years of age|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Ovr65P|NUMERIC|Percentage of population over 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-WhiteP|NUMERIC|Percentage of population with race identified as white alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AsianP|NUMERIC|Percentage of population with race identified as Asian alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-NoHsP|NUMERIC|Percentage of population 25 years and over, less than a high school degree|ACS 2018, 5-Year; ACS 2012, 5-Year; IPUMS NHGIS
-ChildrenP|NUMERIC|Percentage of population under age 18|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-VacantP|NUMERIC|Percentage of vacant housing units|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-Age45_49|INTEGER|Total population between age 45-49|ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS
-Age50_54|NUMERIC|Total population between age 50-54|ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS
+BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone
+Ovr18P|NUMERIC|
+SRatio65|NUMERIC|
+Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
+VacantP|NUMERIC|Percentage of vacant housing units
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+AsianP|NUMERIC|Percentage of population with race identified as Asian alone
+GradSclP|NUMERIC|
+TotUnits|INTEGER|Count of total occupied housing units
+Ovr16P|NUMERIC|
+AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
+PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone
+HisP|NUMERIC|
+WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
+SRatio18|NUMERIC|
+EduNoHsP|NUMERIC|
+Ovr21|NUMERIC|
+PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
+Ovr18|NUMERIC|
+MaleP|NUMERIC|
+BlackE|NUMERIC|Count population with race identified as Black or African American alone. Estimated count in non-decennial years.
+Ovr21P|NUMERIC|
+Ovr16|NUMERIC|
+HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
+EduHsP|NUMERIC|
+BachelorsP|NUMERIC|
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+SomeCollegeP|NUMERIC|
+OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
+Ovr65P|NUMERIC|Percentage of population over 65
+HisE|NUMERIC|Count persons with ethnicity identified as of Hispanic or Latinx origin. Estimated count in non-decennial years.
+TotPop|INTEGER|Total population
+PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
+ChildrenP|NUMERIC|Percentage of population under age 18
+AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
+Age15_44|INTEGER|Total population between age 15-44
+WhiteP|NUMERIC|Percentage of population with race identified as white alone
+SRatio|NUMERIC|
+UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
+AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
+FemP|NUMERIC|
+Age15_44P|NUMERIC|Percentage of population below 45 years of age
 
 ### state-2019
 
@@ -933,662 +1001,832 @@ ID: `oeps-391119.tabular.state-2019`
 
 52 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
-NoIntP|NUMERIC|Percentage of Households without Internet access|ACS, 2019
-RxCtTmDr|INTEGER|Number of tracts with pharmacy within a 30-min driving range|InfoGroup, 2019
-RxAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest pharmacy.|InfoGroup, 2019
-RxTmDrP|NUMERIC|Percent of tracts with pharmacy within a 30-min driving range|InfoGroup, 2019
-HcvD|INTEGER|Total Hepatitis C deaths|HepVu, 2017
-MlHcvD|INTEGER|Hepatitis C deaths among men|HepVu, 2017
-FlHcvD|INTEGER|Hepatitis C deaths among women|HepVu, 2017
-AmInHcvD|INTEGER|Hepatitis C deaths among American Indian populations|HepVu, 2017
-BlkHcvD|INTEGER|Hepatitis C deaths among Black population|HepVu, 2017
-HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations|HepVu, 2017
-U50HcvD|INTEGER|Hepatitis C deaths in populations under 50 years of age|HepVu, 2017
-A50_74HcvD|INTEGER|Hepatitis C deaths among populations between 50 and 74 years of age|HepVu, 2017
-O75HcvD|INTEGER|Hepatitis C deaths among populations over 75 years of age|HepVu, 2017
-OdMortRt|NUMERIC|Overdose mortality rate|HepVu, 2020
-AnyPdmpFr|NUMERIC|Fraction of year that state has any prescription drug monitoring program operating.|OPTIC, 2017
-AnyPdmphFr|NUMERIC|Fraction of year that state has prescription drug monitoring program enabling legislation for any type of prescription drug monitoring program in effect ,including paper-based systems (as determined by Horowitz et al., 2018) enacted|OPTIC, 2017
-OpPdmpFr|NUMERIC|Fraction of year that state has a “modern system” operational and users could access (as determined by Horowitz et al., 2018).|OPTIC, 2017
-MsAcPdmpFr|NUMERIC|Fraction of year that state has any legislation requiring Prescribers to access PDMP before prescribing (as interpreted by PDAPS) enacted.|OPTIC, 2017
-ElcPdmpFr|NUMERIC|Fraction of year that state has an electronic PDMP system operating.|OPTIC, 2017
-AnyPdmpDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: PDAPS for first PDMP laws passed after January 1, 1998; Info on laws prior to 1998 came from Brandeis TTAC.|OPTIC, 2017
-AnyPdmphDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: Horowitz et al., 2018, Table 2, column 1.|OPTIC, 2017
-OpPdmpDt|DATE|Date when a “modern system” became operational and users could access. Source: Horowitz et al., 2018, Table 2, column 4. This definition includes specific caveats adopted by Horowitz et al., 2018, described further below in Notes.|OPTIC, 2017
-MsAcPdmpDt|DATE|Date of legislation requiring Prescribers to access PDMP before prescribing as interpreted by PDAPS.|OPTIC, 2017
-ElcPdmpDt|DATE|Date state began operating an electronic PDMP system.|OPTIC, 2017
-AnyGslDt|DATE|Date (DMY) any type of GoodDate (DMY) any type of Good Samaritan Law is effective|OPTIC, 2017
-GslArrDt|DATE|Date (DMY) that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective|OPTIC, 2017
-AnyGslFr|NUMERIC|Fraction of year any type of Good Samaritan Law is effective|OPTIC, 2017
-GslArrFr|NUMERIC|Fraction of year that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective|OPTIC, 2017
-AnyNalxDt|DATE|Date (MY) any type of Naloxone law effective|OPTIC, 2017
-NalxPrStDt|DATE|Date (MY) Naloxone law allowing distribution through a standing or protocol order effective|OPTIC, 2017
-NalxPresDt|DATE|Date (MY) Naloxone law allowing pharmacists prescriptive authority effective|OPTIC, 2017
-AnyNalxFr|NUMERIC|Fraction of year any type of Naloxone law is effective|OPTIC, 2017
-NalxPrStFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing distribution through a standing or protocol order|OPTIC, 2017
-NalxPresFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing pharmacists prescriptive authority|OPTIC, 2017
-MedcdExp|INTEGER|Total medicaid spending|KFF, 2019
-ExpSsp|BOOLEAN|Dummy variable indicating whether the state has law that explicitly authorizes Syringe Service Programs (0=no, 1=yes)|LawAtlas, 2019
-NoPrphLw|BOOLEAN|Dummy variable indicating whether the state has no state drug paraphernalia law (0=no, 1=yes)|LawAtlas, 2019
-NtPrFrDsSy|BOOLEAN|Dummy variable indicating whether the state law does not prohibit free distribution of syringes (0=no, 1=yes)|LawAtlas, 2019
-PrExcInj|BOOLEAN|Dummy variable indicating whether the paraphernalia definition in the state law explicitly exludes objects used for injecting drugs (0=no, 1=yes)|LawAtlas, 2019
-PrNtRefInj|BOOLEAN|Dummy variable indicating whether the paraphernalia definition in the state law does not refer to objects used for injecting drugs (0=no, 1=yes)|LawAtlas, 2019
-NoLwRmUnc|BOOLEAN|Dummy variable indicating whether the state has no law removing barriers or uncertainty as to SSP legality (0=no, 1=yes)|LawAtlas, 2019
-MdMarijLaw|BOOLEAN|Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (0=no, 1=yes)|PDAPS, 2017
-AsHcvD|NUMERIC||HepVu
-NhPiHcvD|NUMERIC||HepVu
-WhtHcvD|NUMERIC||HepVu
-MulHcvD|NUMERIC||HepVu
-CrrctExp|INTEGER|Total expenditures on corrections system and operations|State and Local Finance Data Finder
-HlthExp|INTEGER|Total expenditures on public health and hospitals|State and Local Finance Data Finder
-PlcFyrExp|INTEGER|Total expenditures on police and fire protection|State and Local Finance Data Finder
-WlfrExp|INTEGER|Total expenditures on public welfare programs|State and Local Finance Data Finder
+U50HcvD|INTEGER|Hepatitis C deaths in populations under 50 years of age
+MsAcPdmpFr|NUMERIC|Fraction of year that state has any legislation requiring Prescribers to access PDMP before prescribing (as interpreted by PDAPS) enacted.
+ElcPdmpFr|NUMERIC|Fraction of year that state has an electronic PDMP system operating.
+NalxPrStDt|DATE|Date (MY) Naloxone law allowing distribution through a standing or protocol order effective
+O75HcvD|INTEGER|Hepatitis C deaths among populations over 75 years of age
+NhPiHcvD|NUMERIC|
+NoLwRmUnc|BOOLEAN|Dummy variable indicating whether the state has no law removing barriers or uncertainty as to SSP legality (0=no, 1=yes)
+NoPrphLw|BOOLEAN|Dummy variable indicating whether the state has no state drug paraphernalia law (0=no, 1=yes)
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+RxAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest pharmacy.
+AnyGslFr|NUMERIC|Fraction of year any type of Good Samaritan Law is effective
+NalxPresFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing pharmacists prescriptive authority
+HlthExp|INTEGER|Total expenditures on public health and hospitals
+FlHcvD|INTEGER|Hepatitis C deaths among women
+NalxPrStFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing distribution through a standing or protocol order
+NtPrFrDsSy|BOOLEAN|Dummy variable indicating whether the state law does not prohibit free distribution of syringes (0=no, 1=yes)
+WlfrExp|INTEGER|Total expenditures on public welfare programs
+MdMarijLaw|BOOLEAN|Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (0=no, 1=yes)
+GslArrFr|NUMERIC|Fraction of year that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective
+OdMortRt|NUMERIC|Overdose mortality rate
+AnyPdmpDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: PDAPS for first PDMP laws passed after January 1, 1998; Info on laws prior to 1998 came from Brandeis TTAC.
+BlkHcvD|INTEGER|Hepatitis C deaths among Black population
+MlHcvD|INTEGER|Hepatitis C deaths among men
+ElcPdmpDt|DATE|Date state began operating an electronic PDMP system.
+OpPdmpDt|DATE|Date when a “modern system” became operational and users could access. Source: Horowitz et al., 2018, Table 2, column 4. This definition includes specific caveats adopted by Horowitz et al., 2018, described further below in Notes.
+WhtHcvD|NUMERIC|
+HcvD|INTEGER|Total Hepatitis C deaths
+AnyNalxDt|DATE|Date (MY) any type of Naloxone law effective
+OpPdmpFr|NUMERIC|Fraction of year that state has a “modern system” operational and users could access (as determined by Horowitz et al., 2018).
+AmInHcvD|INTEGER|Hepatitis C deaths among American Indian populations
+GslArrDt|DATE|Date (DMY) that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective
+A50_74HcvD|INTEGER|Hepatitis C deaths among populations between 50 and 74 years of age
+AnyGslDt|DATE|Date (DMY) any type of GoodDate (DMY) any type of Good Samaritan Law is effective
+MsAcPdmpDt|DATE|Date of legislation requiring Prescribers to access PDMP before prescribing as interpreted by PDAPS.
+MulHcvD|NUMERIC|
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+RxCtTmDr|INTEGER|Number of tracts with pharmacy within a 30-min driving range
+PlcFyrExp|INTEGER|Total expenditures on police and fire protection
+AnyPdmphDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: Horowitz et al., 2018, Table 2, column 1.
+CrrctExp|INTEGER|Total expenditures on corrections system and operations
+ExpSsp|BOOLEAN|Dummy variable indicating whether the state has law that explicitly authorizes Syringe Service Programs (0=no, 1=yes)
+AnyPdmphFr|NUMERIC|Fraction of year that state has prescription drug monitoring program enabling legislation for any type of prescription drug monitoring program in effect ,including paper-based systems (as determined by Horowitz et al., 2018) enacted
+NoIntP|NUMERIC|Percentage of Households without Internet access
+NalxPresDt|DATE|Date (MY) Naloxone law allowing pharmacists prescriptive authority effective
+MedcdExp|INTEGER|Total medicaid spending
+AsHcvD|NUMERIC|
+AnyNalxFr|NUMERIC|Fraction of year any type of Naloxone law is effective
+RxTmDrP|NUMERIC|Percent of tracts with pharmacy within a 30-min driving range
+AnyPdmpFr|NUMERIC|Fraction of year that state has any prescription drug monitoring program operating.
+HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations
+PrExcInj|BOOLEAN|Dummy variable indicating whether the paraphernalia definition in the state law explicitly exludes objects used for injecting drugs (0=no, 1=yes)
+PrNtRefInj|BOOLEAN|Dummy variable indicating whether the paraphernalia definition in the state law does not refer to objects used for injecting drugs (0=no, 1=yes)
 
 ### tract-2021
 
 ID: `oeps-391119.tabular.tract-2021`
 
-3 columns in this table.
+5 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-OtpTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes|SAMSHA, 2021
-OtpCntDr|INTEGER|Count of OTPs within a 30-minute driving threshold|SAMSHA, 2021
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+OtpMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles
+OtpTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes
+OtpCntDr|INTEGER|Count of OTPs within a 30-minute driving threshold
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 
 ### zcta-2023
 
 ID: `oeps-391119.tabular.zcta-2023`
 
-71 columns in this table.
+90 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-ZCTA5|STRING|Census Bureau designated zip code tabulation area, or the rough area that contains five digit zip codes.|Tiger/Line 2018; Tiger/Line 2010
-TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
-Ovr65P|NUMERIC|Percentage of population over 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-WhiteP|NUMERIC|Percentage of population with race identified as white alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-VacantP|NUMERIC|Percentage of vacant housing units|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-TotPopHh|INTEGER|Total number of people in households|ACS 2018, 5-Year
-TotVetPop|INTEGER|Total Veteran population|ACS 2018, 5-Year; ACS 2012, 5-Year
-TotWrkE|INTEGER|Estimated count of working population|ACS 2018, 5-Year
-DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability|ACS 2018, 5-Year; ACS 2012, 5-Year
-VetP|NUMERIC|Percent of population that are veterans|ACS 2017, 5-Year; ACS 2012, 5-Year
-NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family|ACS 2018, 5-Year
-NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are not related|ACS 2018, 5-Year
-MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
-PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
-GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)|ACS 2018, 5-Year; ACS 2012, 5-Year
-EduP|NUMERIC|Percentage of population employed in educational services industry|ACS 2018, 5-Year
-HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities|ACS 2018, 5-Year
-HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries|ACS 2018, 5-Year
-RetailP|NUMERIC|Percentage of population employed in retail trade industry|ACS 2018, 5-Year
-EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.|ACS 2018, 5-Year
-MobileP|NUMERIC|Percentage of total housing units categorized as mobile housing structures|ACS 2018, 5-Year
-LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago|ACS 2018, 5-Year
-RentalP|NUMERIC|Percentage of occupied housing units that are rented|ACS 2018, 5-Year
-UnitDens|NUMERIC|Number of housing units per square mile of land area|ACS 2018, 5-Year
-BachelorsP|NUMERIC||ACS 
-DivrcdP|NUMERIC||ACS 
-EduHsP|NUMERIC||ACS 
-EduNoHsP|NUMERIC||ACS 
-FamSize|NUMERIC||ACS 
-FemP|NUMERIC||ACS 
-GradSclP|NUMERIC||ACS 
-HHSize|NUMERIC||ACS 
-HhldFA|NUMERIC||ACS 
-HhldFC|NUMERIC||ACS 
-HhldFS|NUMERIC||ACS 
-HhldMA|NUMERIC||ACS 
-HhldMC|NUMERIC||ACS 
-HhldMS|NUMERIC||ACS 
-HisP|NUMERIC||ACS 
-HsdTot|NUMERIC||ACS 
-HsdTypCo|NUMERIC||ACS 
-HsdTypM|NUMERIC||ACS 
-HsdTypMC|NUMERIC||ACS 
-MaleP|NUMERIC||ACS 
-MedAge|NUMERIC||ACS 
-MrrdP|NUMERIC||ACS 
-NvMrrdP|NUMERIC||ACS 
-Ovr16P|NUMERIC||ACS 
-Ovr18P|NUMERIC||ACS 
-Ovr21P|NUMERIC||ACS 
-Ovr62P|NUMERIC||ACS 
-SRatio|NUMERIC||ACS 
-SRatio18|NUMERIC||ACS 
-SRatio65|NUMERIC||ACS 
-SepartedP|NUMERIC||ACS 
-SomeCollegeP|NUMERIC||ACS 
-TwoRaceP|NUMERIC||ACS 
-Und18P|NUMERIC||ACS 
-Und5P|NUMERIC||ACS 
-WidwdP|NUMERIC||ACS 
-CrowdHsng|NUMERIC||ACS 
-EngProf|NUMERIC||ACS 
-OccupantP|NUMERIC||ACS 
+Und18P|NUMERIC|
+BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone
+Ovr18P|NUMERIC|
+HsdTypCo|NUMERIC|
+SRatio65|NUMERIC|
+Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
+VacantP|NUMERIC|Percentage of vacant housing units
+NvMrrdP|NUMERIC|
+TotWrkE|INTEGER|Estimated count of working population
+MrrdP|NUMERIC|
+UnitDens|NUMERIC|Number of housing units per square mile of land area
+GradSclP|NUMERIC|
+TotUnits|INTEGER|Count of total occupied housing units
+EngProf|NUMERIC|
+WidwdP|NUMERIC|
+Ovr16P|NUMERIC|
+RetailP|NUMERIC|Percentage of population employed in retail trade industry
+AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
+EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.
+PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone
+HisP|NUMERIC|
+IntrHspWht|NUMERIC|Interaction index for Hispanic and non-Hispanic White residents
+DsmAs|NUMERIC|Dissimilarity index for Asian and non-Hispanic White residents
+RentalP|NUMERIC|Percentage of occupied housing units that are rented
+MobileP|NUMERIC|Percentage of total housing units categorized as mobile housing structures
+HhldFS|NUMERIC|
+WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
+HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities
+HhldMS|NUMERIC|
+Ovr62P|NUMERIC|
+NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family
+GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)
+HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries
+SRatio18|NUMERIC|
+EduNoHsP|NUMERIC|
+OccupantP|NUMERIC|
+IsoBlk|NUMERIC|Isolation index for Black and non-Hispanic White residents
+HsdTot|NUMERIC|
+Ovr21|NUMERIC|
+ZCTA5|STRING|Census Bureau designated zip code tabulation area, or the rough area that contains five digit zip codes.
+DivrcdP|NUMERIC|
+FamSize|NUMERIC|
+PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
+PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
+HsdTypM|NUMERIC|
+Ovr18|NUMERIC|
+MaleP|NUMERIC|
+Ovr21P|NUMERIC|
+NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are not related
+Ovr16|NUMERIC|
+DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
+HHSize|NUMERIC|
+TwoRaceP|NUMERIC|
+EduHsP|NUMERIC|
+LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago
+IsoAs|NUMERIC|Isolation index for Asian and non-Hispanic White residents
+EduP|NUMERIC|Percentage of population employed in educational services industry
+BachelorsP|NUMERIC|
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
+MedAge|NUMERIC|
+SepartedP|NUMERIC|
+IsoHsp|NUMERIC|Isolation index for Hispanic and non-Hispanic White residents
+SomeCollegeP|NUMERIC|
+TotPopHh|INTEGER|Total number of people in households
+OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
+Ovr65P|NUMERIC|Percentage of population over 65
+OtherE|NUMERIC|Count of Population with race not mentioned in any of the options above (includes two race or more races). Estimated count in non-decennial years.
+HhldMC|NUMERIC|
+HisE|NUMERIC|Count persons with ethnicity identified as of Hispanic or Latinx origin. Estimated count in non-decennial years.
+TotPop|INTEGER|Total population
+DsmHsp|NUMERIC|Dissimilarity index for Hispanic and non-Hispanic White residents
+PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
+AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
+HhldMA|NUMERIC|
+TotVetPop|INTEGER|Total Veteran population
+VetP|NUMERIC|Percent of population that are veterans
+WhiteP|NUMERIC|Percentage of population with race identified as white alone
+IntrAsWht|NUMERIC|Area (in square meters) of park or green space in a state).
+SRatio|NUMERIC|
+HsdTypMC|NUMERIC|
+UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
+HhldFC|NUMERIC|
+AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
+HhldFA|NUMERIC|
+CrowdHsng|NUMERIC|
+IntrBlkWht|NUMERIC|Interaction index for Black and non-Hispanic White residents
+TwoRaceE|NUMERIC|Count persons identifying as two or more races. Estimated count in non-decennial years.
+DsmBlk|NUMERIC|Dissimilarity index for Black and non-Hispanic White residents
+FemP|NUMERIC|
 
 ### county-1980
 
 ID: `oeps-391119.tabular.county-1980`
 
-29 columns in this table.
+40 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
-TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
-Age18_64|INTEGER|Total adult population under age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age0_4|INTEGER|Total population between age 0-4|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age5_14|INTEGER|Total population between age 5-14|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_19|INTEGER|Total population between age 15-19|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age20_24|INTEGER|Total population between age 20-24|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_44|INTEGER|Total population between age 15-44|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age45_54|INTEGER|Total population between age 45-54|IPUMS NHGIS
-Age55_59|INTEGER|Total population between age 55-59|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age60_64|INTEGER|Total population between age 60-64|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AgeOv65|INTEGER|Total population at or over age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_24P|NUMERIC|Percentage of population between ages of 15 & 24|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Und45P|NUMERIC|	Percentage of population below 45 years of age|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Ovr65P|NUMERIC|Percentage of population over 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-WhiteP|NUMERIC|Percentage of population with race identified as white alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AsianP|NUMERIC|Percentage of population with race identified as Asian alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-NoHsP|NUMERIC|Percentage of population 25 years and over, less than a high school degree|ACS 2018, 5-Year; ACS 2012, 5-Year; IPUMS NHGIS
-ChildrenP|NUMERIC|Percentage of population under age 18|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-VacantP|NUMERIC|Percentage of vacant housing units|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
+BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone
+Ovr18P|NUMERIC|
+SRatio65|NUMERIC|
+Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
+VacantP|NUMERIC|Percentage of vacant housing units
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+AsianP|NUMERIC|Percentage of population with race identified as Asian alone
+TotUnits|INTEGER|Count of total occupied housing units
+Ovr16P|NUMERIC|
+AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
+PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone
+HisP|NUMERIC|
+WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
+SRatio18|NUMERIC|
+EduNoHsP|NUMERIC|
+Ovr21|NUMERIC|
+PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
+Ovr18|NUMERIC|
+MaleP|NUMERIC|
+BlackE|NUMERIC|Count population with race identified as Black or African American alone. Estimated count in non-decennial years.
+Ovr21P|NUMERIC|
+Ovr16|NUMERIC|
+HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
+EduHsP|NUMERIC|
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+SomeCollegeP|NUMERIC|
+OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
+Ovr65P|NUMERIC|Percentage of population over 65
+HisE|NUMERIC|Count persons with ethnicity identified as of Hispanic or Latinx origin. Estimated count in non-decennial years.
+TotPop|INTEGER|Total population
+PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
+ChildrenP|NUMERIC|Percentage of population under age 18
+AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
+Age15_44|INTEGER|Total population between age 15-44
+WhiteP|NUMERIC|Percentage of population with race identified as white alone
+SRatio|NUMERIC|
+UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
+AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
+FemP|NUMERIC|
+Age15_44P|NUMERIC|Percentage of population below 45 years of age
 
 ### tract-2018
 
 ID: `oeps-391119.tabular.tract-2018`
 
-65 columns in this table.
+76 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
-Age18_64|INTEGER|Total adult population under age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age0_4|INTEGER|Total population between age 0-4|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age5_14|INTEGER|Total population between age 5-14|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_19|INTEGER|Total population between age 15-19|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age20_24|INTEGER|Total population between age 20-24|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_44|INTEGER|Total population between age 15-44|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age55_59|INTEGER|Total population between age 55-59|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age60_64|INTEGER|Total population between age 60-64|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AgeOv65|INTEGER|Total population at or over age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_24P|NUMERIC|Percentage of population between ages of 15 & 24|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Und45P|NUMERIC|	Percentage of population below 45 years of age|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Ovr65P|NUMERIC|Percentage of population over 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-WhiteP|NUMERIC|Percentage of population with race identified as white alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AsianP|NUMERIC|Percentage of population with race identified as Asian alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-NoHsP|NUMERIC|Percentage of population 25 years and over, less than a high school degree|ACS 2018, 5-Year; ACS 2012, 5-Year; IPUMS NHGIS
-ChildrenP|NUMERIC|Percentage of population under age 18|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-VacantP|NUMERIC|Percentage of vacant housing units|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-TotPopHh|INTEGER|Total number of people in households|ACS 2018, 5-Year
-TotVetPop|INTEGER|Total Veteran population|ACS 2018, 5-Year; ACS 2012, 5-Year
-TotWrkE|INTEGER|Estimated count of working population|ACS 2018, 5-Year
-Age45_49|INTEGER|Total population between age 45-49|ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS
-Age50_54|NUMERIC|Total population between age 50-54|ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS
-AgeOv18|NUMERIC|Total population at or over age 18|ACS 2018, 5-Year; 2010 Decennial Census
-DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability|ACS 2018, 5-Year; ACS 2012, 5-Year
-VetP|NUMERIC|Percent of population that are veterans|ACS 2017, 5-Year; ACS 2012, 5-Year
-NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family|ACS 2018, 5-Year
-NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are not related|ACS 2018, 5-Year
-MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
-PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
-ForDqP|NUMERIC|Estimated percent of mortgages to start foreclosure process or be seriously delinquent during the 2008 Recession|HUD, 2018
-ForDqTot|NUMERIC|Estimated number of mortgages to start foreclosure process or be seriously delinquent during the 2008 Recession|HUD, 2018
-GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)|ACS 2018, 5-Year; ACS 2012, 5-Year
-EduP|NUMERIC|Percentage of population employed in educational services industry|ACS 2018, 5-Year
-HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities|ACS 2018, 5-Year
-HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries|ACS 2018, 5-Year
-RetailP|NUMERIC|Percentage of population employed in retail trade industry|ACS 2018, 5-Year
-EssnWrkE|INTEGER|Estimated count of population employed in essential occupations.|ACS 2018, 5-Year
-EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.|ACS 2018, 5-Year
-MobileP|NUMERIC|Percentage of total housing units categorized as mobile housing structures|ACS 2018, 5-Year
-LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago|ACS 2018, 5-Year
-RentalP|NUMERIC|Percentage of occupied housing units that are rented|ACS 2018, 5-Year
-UnitDens|NUMERIC|Number of housing units per square mile of land area|ACS 2018, 5-Year
-AreaSqMi|NUMERIC|Land area of geography in sq miles|InfoGroup, 2018
-AlcTot|INTEGER|Total number of alcohol outlets|InfoGroup, 2018
-AlcDens|NUMERIC|Number of alcohol outlets per square mile|InfoGroup, 2018
-AlcPerCap|NUMERIC|Number of alcohol outlets per capita|InfoGroup, 2018
-Ndvi|NUMERIC|Average normalized difference vegetation index, a measure of greenness used to determine the amount of vegetation in an area, value from all pixel values in each Census tract|Sentinel-2 MSI, 2018
-Ruca1|STRING|Primary RUCA Code|USDA-ERS 2010 & ACS 2018 5-Year
-Ruca2|STRING|Secondary RUCA Code|USDA-ERS 2010 & ACS 2018 5-Year
-Rurality|STRING|Urban/Suburban/Rural|USDA-ERS 2010 & ACS 2018 5-Year
-SviTh1|NUMERIC|SVI Ranking, Theme 1: Socioeconomic|CDC, 2018
-SviTh2|NUMERIC|SVI Ranking, Theme 2: Household Composition & Disability|CDC, 2018
-SviTh3|NUMERIC|SVI Ranking, Theme 3: Minority Status & Language|CDC, 2018
-SviTh4|NUMERIC|SVI Ranking, Theme 4: Housing Type & Transportation|CDC, 2018
-SviSmryRnk|NUMERIC|Overall summary ranking|CDC, 2018
+AreaSqMi|NUMERIC|Land area of geography in sq miles
+SviTh4|NUMERIC|SVI Ranking, Theme 4: Housing Type & Transportation
+BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone
+Ovr18P|NUMERIC|
+SRatio65|NUMERIC|
+Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
+VacantP|NUMERIC|Percentage of vacant housing units
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+TotWrkE|INTEGER|Estimated count of working population
+EssnWrkE|INTEGER|Estimated count of population employed in essential occupations.
+AsianP|NUMERIC|Percentage of population with race identified as Asian alone
+UnitDens|NUMERIC|Number of housing units per square mile of land area
+GradSclP|NUMERIC|
+TotUnits|INTEGER|Count of total occupied housing units
+EngProf|NUMERIC|
+Ndvi|NUMERIC|Average normalized difference vegetation index, a measure of greenness used to determine the amount of vegetation in an area, value from all pixel values in each Census tract
+Ovr16P|NUMERIC|
+RetailP|NUMERIC|Percentage of population employed in retail trade industry
+AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
+EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.
+PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone
+RentalP|NUMERIC|Percentage of occupied housing units that are rented
+MobileP|NUMERIC|Percentage of total housing units categorized as mobile housing structures
+WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
+HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities
+NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family
+SviSmryRnk|NUMERIC|Overall summary ranking
+GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)
+HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries
+SRatio18|NUMERIC|
+EduNoHsP|NUMERIC|
+Ovr21|NUMERIC|
+ForDqTot|NUMERIC|Estimated number of mortgages to start foreclosure process or be seriously delinquent during the 2008 Recession
+PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
+PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
+Ovr18|NUMERIC|
+MaleP|NUMERIC|
+BlackE|NUMERIC|Count population with race identified as Black or African American alone. Estimated count in non-decennial years.
+Ovr21P|NUMERIC|
+NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are not related
+Ovr16|NUMERIC|
+AlcTot|INTEGER|Total number of alcohol outlets
+HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
+DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
+EduHsP|NUMERIC|
+SviTh3|NUMERIC|SVI Ranking, Theme 3: Minority Status & Language
+LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago
+EduP|NUMERIC|Percentage of population employed in educational services industry
+BachelorsP|NUMERIC|
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
+SomeCollegeP|NUMERIC|
+TotPopHh|INTEGER|Total number of people in households
+OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
+Ovr65P|NUMERIC|Percentage of population over 65
+OtherE|NUMERIC|Count of Population with race not mentioned in any of the options above (includes two race or more races). Estimated count in non-decennial years.
+HisE|NUMERIC|Count persons with ethnicity identified as of Hispanic or Latinx origin. Estimated count in non-decennial years.
+TotPop|INTEGER|Total population
+ForDqP|NUMERIC|Estimated percent of mortgages to start foreclosure process or be seriously delinquent during the 2008 Recession
+PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
+ChildrenP|NUMERIC|Percentage of population under age 18
+AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
+Age15_44|INTEGER|Total population between age 15-44
+SviTh1|NUMERIC|SVI Ranking, Theme 1: Socioeconomic
+TotVetPop|INTEGER|Total Veteran population
+AlcDens|NUMERIC|Number of alcohol outlets per square mile
+VetP|NUMERIC|Percent of population that are veterans
+WhiteP|NUMERIC|Percentage of population with race identified as white alone
+AlcPerCap|NUMERIC|Number of alcohol outlets per capita
+SRatio|NUMERIC|
+UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
+AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
+SviTh2|NUMERIC|SVI Ranking, Theme 2: Household Composition & Disability
+TwoRaceE|NUMERIC|Count persons identifying as two or more races. Estimated count in non-decennial years.
+FemP|NUMERIC|
+Age15_44P|NUMERIC|Percentage of population below 45 years of age
 
 ### tract-2019
 
 ID: `oeps-391119.tabular.tract-2019`
 
-5 columns in this table.
+6 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-NoIntP|NUMERIC|Percentage of Households without Internet access|ACS, 2019
-RxMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest pharmacy, in miles|InfoGroup, 2019
-RxTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip pharmacy destination centroid, in minutes|InfoGroup, 2019
-RxCntDr|INTEGER|Count of pharmacies within a 30-minute driving threshold|InfoGroup, 2019
+RxCntDr|INTEGER|Count of pharmacies within a 30-minute driving threshold
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+RxTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip pharmacy destination centroid, in minutes
+NoIntP|NUMERIC|Percentage of Households without Internet access
+RxMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest pharmacy, in miles
 
 ### county-1990
 
 ID: `oeps-391119.tabular.county-1990`
 
-30 columns in this table.
+42 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
-TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
-Age18_64|INTEGER|Total adult population under age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age0_4|INTEGER|Total population between age 0-4|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age5_14|INTEGER|Total population between age 5-14|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_19|INTEGER|Total population between age 15-19|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age20_24|INTEGER|Total population between age 20-24|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_44|INTEGER|Total population between age 15-44|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age55_59|INTEGER|Total population between age 55-59|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age60_64|INTEGER|Total population between age 60-64|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AgeOv65|INTEGER|Total population at or over age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_24P|NUMERIC|Percentage of population between ages of 15 & 24|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Und45P|NUMERIC|	Percentage of population below 45 years of age|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Ovr65P|NUMERIC|Percentage of population over 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-WhiteP|NUMERIC|Percentage of population with race identified as white alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AsianP|NUMERIC|Percentage of population with race identified as Asian alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-NoHsP|NUMERIC|Percentage of population 25 years and over, less than a high school degree|ACS 2018, 5-Year; ACS 2012, 5-Year; IPUMS NHGIS
-ChildrenP|NUMERIC|Percentage of population under age 18|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-VacantP|NUMERIC|Percentage of vacant housing units|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-Age45_49|INTEGER|Total population between age 45-49|ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS
-Age50_54|NUMERIC|Total population between age 50-54|ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS
+BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone
+Ovr18P|NUMERIC|
+SRatio65|NUMERIC|
+Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
+VacantP|NUMERIC|Percentage of vacant housing units
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+AsianP|NUMERIC|Percentage of population with race identified as Asian alone
+GradSclP|NUMERIC|
+TotUnits|INTEGER|Count of total occupied housing units
+Ovr16P|NUMERIC|
+AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
+PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone
+HisP|NUMERIC|
+WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
+SRatio18|NUMERIC|
+EduNoHsP|NUMERIC|
+Ovr21|NUMERIC|
+PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
+Ovr18|NUMERIC|
+MaleP|NUMERIC|
+BlackE|NUMERIC|Count population with race identified as Black or African American alone. Estimated count in non-decennial years.
+Ovr21P|NUMERIC|
+Ovr16|NUMERIC|
+HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
+EduHsP|NUMERIC|
+BachelorsP|NUMERIC|
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+SomeCollegeP|NUMERIC|
+OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
+Ovr65P|NUMERIC|Percentage of population over 65
+HisE|NUMERIC|Count persons with ethnicity identified as of Hispanic or Latinx origin. Estimated count in non-decennial years.
+TotPop|INTEGER|Total population
+PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
+ChildrenP|NUMERIC|Percentage of population under age 18
+AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
+Age15_44|INTEGER|Total population between age 15-44
+WhiteP|NUMERIC|Percentage of population with race identified as white alone
+SRatio|NUMERIC|
+UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
+AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
+FemP|NUMERIC|
+Age15_44P|NUMERIC|Percentage of population below 45 years of age
 
 ### county-2023
 
 ID: `oeps-391119.tabular.county-2023`
 
-71 columns in this table.
+91 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
-TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
-Ovr65P|NUMERIC|Percentage of population over 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-WhiteP|NUMERIC|Percentage of population with race identified as white alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-VacantP|NUMERIC|Percentage of vacant housing units|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-TotPopHh|INTEGER|Total number of people in households|ACS 2018, 5-Year
-TotVetPop|INTEGER|Total Veteran population|ACS 2018, 5-Year; ACS 2012, 5-Year
-TotWrkE|INTEGER|Estimated count of working population|ACS 2018, 5-Year
-DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability|ACS 2018, 5-Year; ACS 2012, 5-Year
-VetP|NUMERIC|Percent of population that are veterans|ACS 2017, 5-Year; ACS 2012, 5-Year
-NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family|ACS 2018, 5-Year
-NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are not related|ACS 2018, 5-Year
-MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
-PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
-GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)|ACS 2018, 5-Year; ACS 2012, 5-Year
-EduP|NUMERIC|Percentage of population employed in educational services industry|ACS 2018, 5-Year
-HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities|ACS 2018, 5-Year
-HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries|ACS 2018, 5-Year
-RetailP|NUMERIC|Percentage of population employed in retail trade industry|ACS 2018, 5-Year
-EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.|ACS 2018, 5-Year
-MobileP|NUMERIC|Percentage of total housing units categorized as mobile housing structures|ACS 2018, 5-Year
-LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago|ACS 2018, 5-Year
-RentalP|NUMERIC|Percentage of occupied housing units that are rented|ACS 2018, 5-Year
-UnitDens|NUMERIC|Number of housing units per square mile of land area|ACS 2018, 5-Year
-BachelorsP|NUMERIC||ACS 
-DivrcdP|NUMERIC||ACS 
-EduHsP|NUMERIC||ACS 
-EduNoHsP|NUMERIC||ACS 
-FamSize|NUMERIC||ACS 
-FemP|NUMERIC||ACS 
-GradSclP|NUMERIC||ACS 
-HHSize|NUMERIC||ACS 
-HhldFA|NUMERIC||ACS 
-HhldFC|NUMERIC||ACS 
-HhldFS|NUMERIC||ACS 
-HhldMA|NUMERIC||ACS 
-HhldMC|NUMERIC||ACS 
-HhldMS|NUMERIC||ACS 
-HisP|NUMERIC||ACS 
-HsdTot|NUMERIC||ACS 
-HsdTypCo|NUMERIC||ACS 
-HsdTypM|NUMERIC||ACS 
-HsdTypMC|NUMERIC||ACS 
-MaleP|NUMERIC||ACS 
-MedAge|NUMERIC||ACS 
-MrrdP|NUMERIC||ACS 
-NvMrrdP|NUMERIC||ACS 
-Ovr16P|NUMERIC||ACS 
-Ovr18P|NUMERIC||ACS 
-Ovr21P|NUMERIC||ACS 
-Ovr62P|NUMERIC||ACS 
-SRatio|NUMERIC||ACS 
-SRatio18|NUMERIC||ACS 
-SRatio65|NUMERIC||ACS 
-SepartedP|NUMERIC||ACS 
-SomeCollegeP|NUMERIC||ACS 
-TwoRaceP|NUMERIC||ACS 
-Und18P|NUMERIC||ACS 
-Und5P|NUMERIC||ACS 
-WidwdP|NUMERIC||ACS 
-CrowdHsng|NUMERIC||ACS 
-EngProf|NUMERIC||ACS 
-OccupantP|NUMERIC||ACS 
+Und18P|NUMERIC|
+BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone
+Ovr18P|NUMERIC|
+HsdTypCo|NUMERIC|
+SRatio65|NUMERIC|
+Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
+VacantP|NUMERIC|Percentage of vacant housing units
+NvMrrdP|NUMERIC|
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+TotWrkE|INTEGER|Estimated count of working population
+MrrdP|NUMERIC|
+UnitDens|NUMERIC|Number of housing units per square mile of land area
+GradSclP|NUMERIC|
+TotUnits|INTEGER|Count of total occupied housing units
+EngProf|NUMERIC|
+WidwdP|NUMERIC|
+Ovr16P|NUMERIC|
+RetailP|NUMERIC|Percentage of population employed in retail trade industry
+AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
+EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.
+PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone
+HisP|NUMERIC|
+IntrHspWht|NUMERIC|Interaction index for Hispanic and non-Hispanic White residents
+DsmAs|NUMERIC|Dissimilarity index for Asian and non-Hispanic White residents
+RentalP|NUMERIC|Percentage of occupied housing units that are rented
+MobileP|NUMERIC|Percentage of total housing units categorized as mobile housing structures
+HhldFS|NUMERIC|
+WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
+HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities
+HhldMS|NUMERIC|
+Ovr62P|NUMERIC|
+NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family
+GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)
+HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries
+SRatio18|NUMERIC|
+EduNoHsP|NUMERIC|
+OccupantP|NUMERIC|
+IsoBlk|NUMERIC|Isolation index for Black and non-Hispanic White residents
+HsdTot|NUMERIC|
+Ovr21|NUMERIC|
+DivrcdP|NUMERIC|
+FamSize|NUMERIC|
+PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
+PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
+HsdTypM|NUMERIC|
+Ovr18|NUMERIC|
+MaleP|NUMERIC|
+BlackE|NUMERIC|Count population with race identified as Black or African American alone. Estimated count in non-decennial years.
+Ovr21P|NUMERIC|
+NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are not related
+Ovr16|NUMERIC|
+DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
+HHSize|NUMERIC|
+TwoRaceP|NUMERIC|
+EduHsP|NUMERIC|
+LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago
+IsoAs|NUMERIC|Isolation index for Asian and non-Hispanic White residents
+EduP|NUMERIC|Percentage of population employed in educational services industry
+BachelorsP|NUMERIC|
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
+MedAge|NUMERIC|
+SepartedP|NUMERIC|
+IsoHsp|NUMERIC|Isolation index for Hispanic and non-Hispanic White residents
+SomeCollegeP|NUMERIC|
+TotPopHh|INTEGER|Total number of people in households
+OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
+Ovr65P|NUMERIC|Percentage of population over 65
+OtherE|NUMERIC|Count of Population with race not mentioned in any of the options above (includes two race or more races). Estimated count in non-decennial years.
+HhldMC|NUMERIC|
+HisE|NUMERIC|Count persons with ethnicity identified as of Hispanic or Latinx origin. Estimated count in non-decennial years.
+TotPop|INTEGER|Total population
+DsmHsp|NUMERIC|Dissimilarity index for Hispanic and non-Hispanic White residents
+PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
+AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
+HhldMA|NUMERIC|
+TotVetPop|INTEGER|Total Veteran population
+VetP|NUMERIC|Percent of population that are veterans
+WhiteP|NUMERIC|Percentage of population with race identified as white alone
+IntrAsWht|NUMERIC|Area (in square meters) of park or green space in a state).
+SRatio|NUMERIC|
+HsdTypMC|NUMERIC|
+UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
+HhldFC|NUMERIC|
+AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
+HhldFA|NUMERIC|
+CrowdHsng|NUMERIC|
+IntrBlkWht|NUMERIC|Interaction index for Black and non-Hispanic White residents
+TwoRaceE|NUMERIC|Count persons identifying as two or more races. Estimated count in non-decennial years.
+DsmBlk|NUMERIC|Dissimilarity index for Black and non-Hispanic White residents
+FemP|NUMERIC|
 
 ### state-2010
 
 ID: `oeps-391119.tabular.state-2010`
 
-37 columns in this table.
+47 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
-TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
-Age0_4|INTEGER|Total population between age 0-4|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age5_14|INTEGER|Total population between age 5-14|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_19|INTEGER|Total population between age 15-19|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age20_24|INTEGER|Total population between age 20-24|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_44|INTEGER|Total population between age 15-44|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age55_59|INTEGER|Total population between age 55-59|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age60_64|INTEGER|Total population between age 60-64|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AgeOv65|INTEGER|Total population at or over age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_24P|NUMERIC|Percentage of population between ages of 15 & 24|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Und45P|NUMERIC|	Percentage of population below 45 years of age|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Ovr65P|NUMERIC|Percentage of population over 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-WhiteP|NUMERIC|Percentage of population with race identified as white alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AsianP|NUMERIC|Percentage of population with race identified as Asian alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-NoHsP|NUMERIC|Percentage of population 25 years and over, less than a high school degree|ACS 2018, 5-Year; ACS 2012, 5-Year; IPUMS NHGIS
-PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-VacantP|NUMERIC|Percentage of vacant housing units|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-TotVetPop|INTEGER|Total Veteran population|ACS 2018, 5-Year; ACS 2012, 5-Year
-Age45_49|INTEGER|Total population between age 45-49|ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS
-Age50_54|NUMERIC|Total population between age 50-54|ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS
-AgeOv18|NUMERIC|Total population at or over age 18|ACS 2018, 5-Year; 2010 Decennial Census
-DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability|ACS 2018, 5-Year; ACS 2012, 5-Year
-VetP|NUMERIC|Percent of population that are veterans|ACS 2017, 5-Year; ACS 2012, 5-Year
-MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
-PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
-GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)|ACS 2018, 5-Year; ACS 2012, 5-Year
-TotPcp|INTEGER|Number of primary care providers in area|Dartmouth Atlas, 2010
-TotSp|INTEGER|Number of specialty physicians in area|Dartmouth Atlas, 2010
+TotSp|INTEGER|Number of specialty physicians in area
+BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone
+Ovr18P|NUMERIC|
+SRatio65|NUMERIC|
+VacantP|NUMERIC|Percentage of vacant housing units
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+AsianP|NUMERIC|Percentage of population with race identified as Asian alone
+GradSclP|NUMERIC|
+TotUnits|INTEGER|Count of total occupied housing units
+Ovr16P|NUMERIC|
+AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
+PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone
+WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
+GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)
+TotPcp|INTEGER|Number of primary care providers in area
+SRatio18|NUMERIC|
+EduNoHsP|NUMERIC|
+PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
+PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
+MaleP|NUMERIC|
+BlackE|NUMERIC|Count population with race identified as Black or African American alone. Estimated count in non-decennial years.
+Ovr21P|NUMERIC|
+HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
+DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
+TwoRaceP|NUMERIC|
+EduHsP|NUMERIC|
+BachelorsP|NUMERIC|
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
+SomeCollegeP|NUMERIC|
+OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
+Ovr65P|NUMERIC|Percentage of population over 65
+OtherE|NUMERIC|Count of Population with race not mentioned in any of the options above (includes two race or more races). Estimated count in non-decennial years.
+HisE|NUMERIC|Count persons with ethnicity identified as of Hispanic or Latinx origin. Estimated count in non-decennial years.
+TotPop|INTEGER|Total population
+PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
+AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
+Age15_44|INTEGER|Total population between age 15-44
+TotVetPop|INTEGER|Total Veteran population
+VetP|NUMERIC|Percent of population that are veterans
+WhiteP|NUMERIC|Percentage of population with race identified as white alone
+SRatio|NUMERIC|
+UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
+AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
+TwoRaceE|NUMERIC|Count persons identifying as two or more races. Estimated count in non-decennial years.
+FemP|NUMERIC|
+Age15_44P|NUMERIC|Percentage of population below 45 years of age
 
 ### state-2023
 
 ID: `oeps-391119.tabular.state-2023`
 
-18 columns in this table.
+63 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
-AnyPdmpFr|NUMERIC|Fraction of year that state has any prescription drug monitoring program operating.|OPTIC, 2017
-AnyPdmphFr|NUMERIC|Fraction of year that state has prescription drug monitoring program enabling legislation for any type of prescription drug monitoring program in effect ,including paper-based systems (as determined by Horowitz et al., 2018) enacted|OPTIC, 2017
-OpPdmpFr|NUMERIC|Fraction of year that state has a “modern system” operational and users could access (as determined by Horowitz et al., 2018).|OPTIC, 2017
-MsAcPdmpFr|NUMERIC|Fraction of year that state has any legislation requiring Prescribers to access PDMP before prescribing (as interpreted by PDAPS) enacted.|OPTIC, 2017
-ElcPdmpFr|NUMERIC|Fraction of year that state has an electronic PDMP system operating.|OPTIC, 2017
-AnyPdmpDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: PDAPS for first PDMP laws passed after January 1, 1998; Info on laws prior to 1998 came from Brandeis TTAC.|OPTIC, 2017
-AnyPdmphDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: Horowitz et al., 2018, Table 2, column 1.|OPTIC, 2017
-OpPdmpDt|DATE|Date when a “modern system” became operational and users could access. Source: Horowitz et al., 2018, Table 2, column 4. This definition includes specific caveats adopted by Horowitz et al., 2018, described further below in Notes.|OPTIC, 2017
-MsAcPdmpDt|DATE|Date of legislation requiring Prescribers to access PDMP before prescribing as interpreted by PDAPS.|OPTIC, 2017
-ElcPdmpDt|DATE|Date state began operating an electronic PDMP system.|OPTIC, 2017
-MedcdExp|INTEGER|Total medicaid spending|KFF, 2019
-TradFedExp|INTEGER|Traditional medicaid - federal spending|KFF, 2018
-TradSttExp|INTEGER|Traditional medicaid - state spending|KFF, 2018
-ExpnFedExp|INTEGER|Expansion Group - Federal Spending|KFF, 2018
-ExpnSttExp|INTEGER|Expansion Group - State Spending|KFF, 2018
-MdMarijLaw|BOOLEAN|Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (0=no, 1=yes)|PDAPS, 2017
+MsAcPdmpFr|NUMERIC|Fraction of year that state has any legislation requiring Prescribers to access PDMP before prescribing (as interpreted by PDAPS) enacted.
+ElcPdmpFr|NUMERIC|Fraction of year that state has an electronic PDMP system operating.
+BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone
+Ovr18P|NUMERIC|
+SRatio65|NUMERIC|
+ExpnFedExp|INTEGER|Expansion Group - Federal Spending
+Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+AsianP|NUMERIC|Percentage of population with race identified as Asian alone
+GradSclP|NUMERIC|
+EngProf|NUMERIC|
+Ovr16P|NUMERIC|
+AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
+TradSttExp|INTEGER|Traditional medicaid - state spending
+PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone
+HisP|NUMERIC|
+IntrHspWht|NUMERIC|Interaction index for Hispanic and non-Hispanic White residents
+MdMarijLaw|BOOLEAN|Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (0=no, 1=yes)
+DsmAs|NUMERIC|Dissimilarity index for Asian and non-Hispanic White residents
+WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
+ExpnSttExp|INTEGER|Expansion Group - State Spending
+AnyPdmpDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: PDAPS for first PDMP laws passed after January 1, 1998; Info on laws prior to 1998 came from Brandeis TTAC.
+ElcPdmpDt|DATE|Date state began operating an electronic PDMP system.
+OpPdmpDt|DATE|Date when a “modern system” became operational and users could access. Source: Horowitz et al., 2018, Table 2, column 4. This definition includes specific caveats adopted by Horowitz et al., 2018, described further below in Notes.
+SRatio18|NUMERIC|
+EduNoHsP|NUMERIC|
+IsoBlk|NUMERIC|Isolation index for Black and non-Hispanic White residents
+Ovr21|NUMERIC|
+OpPdmpFr|NUMERIC|Fraction of year that state has a “modern system” operational and users could access (as determined by Horowitz et al., 2018).
+TradFedExp|INTEGER|Traditional medicaid - federal spending
+Ovr18|NUMERIC|
+MaleP|NUMERIC|
+BlackE|NUMERIC|Count population with race identified as Black or African American alone. Estimated count in non-decennial years.
+Ovr21P|NUMERIC|
+Ovr16|NUMERIC|
+TwoRaceP|NUMERIC|
+MsAcPdmpDt|DATE|Date of legislation requiring Prescribers to access PDMP before prescribing as interpreted by PDAPS.
+EduHsP|NUMERIC|
+IsoAs|NUMERIC|Isolation index for Asian and non-Hispanic White residents
+BachelorsP|NUMERIC|
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+AnyPdmphDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: Horowitz et al., 2018, Table 2, column 1.
+IsoHsp|NUMERIC|Isolation index for Hispanic and non-Hispanic White residents
+SomeCollegeP|NUMERIC|
+OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
+Ovr65P|NUMERIC|Percentage of population over 65
+OtherE|NUMERIC|Count of Population with race not mentioned in any of the options above (includes two race or more races). Estimated count in non-decennial years.
+HisE|NUMERIC|Count persons with ethnicity identified as of Hispanic or Latinx origin. Estimated count in non-decennial years.
+TotPop|INTEGER|Total population
+DsmHsp|NUMERIC|Dissimilarity index for Hispanic and non-Hispanic White residents
+AnyPdmphFr|NUMERIC|Fraction of year that state has prescription drug monitoring program enabling legislation for any type of prescription drug monitoring program in effect ,including paper-based systems (as determined by Horowitz et al., 2018) enacted
+PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
+AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
+MedcdExp|INTEGER|Total medicaid spending
+WhiteP|NUMERIC|Percentage of population with race identified as white alone
+IntrAsWht|NUMERIC|Area (in square meters) of park or green space in a state).
+SRatio|NUMERIC|
+AnyPdmpFr|NUMERIC|Fraction of year that state has any prescription drug monitoring program operating.
+AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
+IntrBlkWht|NUMERIC|Interaction index for Black and non-Hispanic White residents
+TwoRaceE|NUMERIC|Count persons identifying as two or more races. Estimated count in non-decennial years.
+DsmBlk|NUMERIC|Dissimilarity index for Black and non-Hispanic White residents
+FemP|NUMERIC|
 
 ### county-2015
 
 ID: `oeps-391119.tabular.county-2015`
 
-3 columns in this table.
+4 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-OdMortRt|NUMERIC|Overdose mortality rate|HepVu, 2020
-DmySgrg|BOOLEAN|Dummy variable for whether county is part of a hypersegregated city or its metropolitan area|Massey et al, 2015
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+OdMortRt|NUMERIC|Overdose mortality rate
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+DmySgrg|BOOLEAN|Dummy variable for whether county is part of a hypersegregated city or its metropolitan area
 
 ### county-2019
 
 ID: `oeps-391119.tabular.county-2019`
 
-6 columns in this table.
+7 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-NoIntP|NUMERIC|Percentage of Households without Internet access|ACS, 2019
-RxCtTmDr|INTEGER|Number of tracts with pharmacy within a 30-min driving range|InfoGroup, 2019
-RxAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest pharmacy.|InfoGroup, 2019
-RxTmDrP|NUMERIC|Percent of tracts with pharmacy within a 30-min driving range|InfoGroup, 2019
-OdMortRt|NUMERIC|Overdose mortality rate|HepVu, 2020
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+RxAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest pharmacy.
+OdMortRt|NUMERIC|Overdose mortality rate
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+RxCtTmDr|INTEGER|Number of tracts with pharmacy within a 30-min driving range
+NoIntP|NUMERIC|Percentage of Households without Internet access
+RxTmDrP|NUMERIC|Percent of tracts with pharmacy within a 30-min driving range
+
+### zcta-2010
+
+ID: `oeps-391119.tabular.zcta-2010`
+
+5 columns in this table.
+
+Name|Data Type|Description
+-|-|-|-
+Ruca1|STRING|Primary RUCA Code
+ZCTA5|STRING|Census Bureau designated zip code tabulation area, or the rough area that contains five digit zip codes.
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+Rurality|STRING|Urban/Suburban/Rural
+Ruca2|STRING|Secondary RUCA Code
 
 ### county-2014
 
 ID: `oeps-391119.tabular.county-2014`
 
-2 columns in this table.
+3 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-OdMortRt|NUMERIC|Overdose mortality rate|HepVu, 2020
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+OdMortRt|NUMERIC|Overdose mortality rate
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 
 ### state-2015
 
 ID: `oeps-391119.tabular.state-2015`
 
-12 columns in this table.
+13 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-HcvD|INTEGER|Total Hepatitis C deaths|HepVu, 2017
-MlHcvD|INTEGER|Hepatitis C deaths among men|HepVu, 2017
-FlHcvD|INTEGER|Hepatitis C deaths among women|HepVu, 2017
-AmInHcvD|INTEGER|Hepatitis C deaths among American Indian populations|HepVu, 2017
-AsPiHcvD|INTEGER|Hepatitis C deaths among Asian and Pacific Islander populations|HepVu, 2017
-BlkHcvD|INTEGER|Hepatitis C deaths among Black population|HepVu, 2017
-HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations|HepVu, 2017
-U50HcvD|INTEGER|Hepatitis C deaths in populations under 50 years of age|HepVu, 2017
-A50_74HcvD|INTEGER|Hepatitis C deaths among populations between 50 and 74 years of age|HepVu, 2017
-O75HcvD|INTEGER|Hepatitis C deaths among populations over 75 years of age|HepVu, 2017
-OdMortRt|NUMERIC|Overdose mortality rate|HepVu, 2020
+U50HcvD|INTEGER|Hepatitis C deaths in populations under 50 years of age
+O75HcvD|INTEGER|Hepatitis C deaths among populations over 75 years of age
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+FlHcvD|INTEGER|Hepatitis C deaths among women
+AsPiHcvD|INTEGER|Hepatitis C deaths among Asian and Pacific Islander populations
+OdMortRt|NUMERIC|Overdose mortality rate
+BlkHcvD|INTEGER|Hepatitis C deaths among Black population
+MlHcvD|INTEGER|Hepatitis C deaths among men
+HcvD|INTEGER|Total Hepatitis C deaths
+AmInHcvD|INTEGER|Hepatitis C deaths among American Indian populations
+A50_74HcvD|INTEGER|Hepatitis C deaths among populations between 50 and 74 years of age
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations
 
 ### tract-2000
 
 ID: `oeps-391119.tabular.tract-2000`
 
-34 columns in this table.
+46 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
-TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
-Age18_64|INTEGER|Total adult population under age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age0_4|INTEGER|Total population between age 0-4|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age5_14|INTEGER|Total population between age 5-14|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_19|INTEGER|Total population between age 15-19|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age20_24|INTEGER|Total population between age 20-24|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_44|INTEGER|Total population between age 15-44|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age55_59|INTEGER|Total population between age 55-59|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age60_64|INTEGER|Total population between age 60-64|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AgeOv65|INTEGER|Total population at or over age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_24P|NUMERIC|Percentage of population between ages of 15 & 24|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Und45P|NUMERIC|	Percentage of population below 45 years of age|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Ovr65P|NUMERIC|Percentage of population over 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-WhiteP|NUMERIC|Percentage of population with race identified as white alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AsianP|NUMERIC|Percentage of population with race identified as Asian alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-NoHsP|NUMERIC|Percentage of population 25 years and over, less than a high school degree|ACS 2018, 5-Year; ACS 2012, 5-Year; IPUMS NHGIS
-ChildrenP|NUMERIC|Percentage of population under age 18|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-VacantP|NUMERIC|Percentage of vacant housing units|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-Age45_49|INTEGER|Total population between age 45-49|ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS
-Age50_54|NUMERIC|Total population between age 50-54|ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS
-DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability|ACS 2018, 5-Year; ACS 2012, 5-Year
-MetRm30|NUMERIC|Methadone access 30 minutes (RAAM)|
-MetRm60|NUMERIC|Methadone access 60 minutes (RAAM)|
-MetRm90|NUMERIC|Methadone access 90 minutes (RAAM)|
+BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone
+Ovr18P|NUMERIC|
+MetRm60|NUMERIC|Methadone access 60 minutes (RAAM)
+SRatio65|NUMERIC|
+Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
+VacantP|NUMERIC|Percentage of vacant housing units
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+AsianP|NUMERIC|Percentage of population with race identified as Asian alone
+GradSclP|NUMERIC|
+TotUnits|INTEGER|Count of total occupied housing units
+Ovr16P|NUMERIC|
+AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
+PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone
+HisP|NUMERIC|
+WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
+SRatio18|NUMERIC|
+EduNoHsP|NUMERIC|
+Ovr21|NUMERIC|
+PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
+Ovr18|NUMERIC|
+MaleP|NUMERIC|
+BlackE|NUMERIC|Count population with race identified as Black or African American alone. Estimated count in non-decennial years.
+Ovr21P|NUMERIC|
+Ovr16|NUMERIC|
+HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
+DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
+EduHsP|NUMERIC|
+BachelorsP|NUMERIC|
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+SomeCollegeP|NUMERIC|
+OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
+Ovr65P|NUMERIC|Percentage of population over 65
+HisE|NUMERIC|Count persons with ethnicity identified as of Hispanic or Latinx origin. Estimated count in non-decennial years.
+TotPop|INTEGER|Total population
+MetRm90|NUMERIC|Methadone access 90 minutes (RAAM)
+PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
+ChildrenP|NUMERIC|Percentage of population under age 18
+AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
+MetRm30|NUMERIC|Methadone access 30 minutes (RAAM)
+Age15_44|INTEGER|Total population between age 15-44
+WhiteP|NUMERIC|Percentage of population with race identified as white alone
+SRatio|NUMERIC|
+UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
+AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
+FemP|NUMERIC|
+Age15_44P|NUMERIC|Percentage of population below 45 years of age
 
 ### county-2018
 
 ID: `oeps-391119.tabular.county-2018`
 
-78 columns in this table.
+90 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
-Age18_64|INTEGER|Total adult population under age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age0_4|INTEGER|Total population between age 0-4|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age5_14|INTEGER|Total population between age 5-14|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_19|INTEGER|Total population between age 15-19|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age20_24|INTEGER|Total population between age 20-24|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_44|INTEGER|Total population between age 15-44|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age55_59|INTEGER|Total population between age 55-59|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age60_64|INTEGER|Total population between age 60-64|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AgeOv65|INTEGER|Total population at or over age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_24P|NUMERIC|Percentage of population between ages of 15 & 24|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Und45P|NUMERIC|	Percentage of population below 45 years of age|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Ovr65P|NUMERIC|Percentage of population over 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-WhiteP|NUMERIC|Percentage of population with race identified as white alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AsianP|NUMERIC|Percentage of population with race identified as Asian alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-NoHsP|NUMERIC|Percentage of population 25 years and over, less than a high school degree|ACS 2018, 5-Year; ACS 2012, 5-Year; IPUMS NHGIS
-ChildrenP|NUMERIC|Percentage of population under age 18|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-VacantP|NUMERIC|Percentage of vacant housing units|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-TotPopHh|INTEGER|Total number of people in households|ACS 2018, 5-Year
-TotVetPop|INTEGER|Total Veteran population|ACS 2018, 5-Year; ACS 2012, 5-Year
-TotWrkE|INTEGER|Estimated count of working population|ACS 2018, 5-Year
-Age45_49|INTEGER|Total population between age 45-49|ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS
-Age50_54|NUMERIC|Total population between age 50-54|ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS
-AgeOv18|NUMERIC|Total population at or over age 18|ACS 2018, 5-Year; 2010 Decennial Census
-DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability|ACS 2018, 5-Year; ACS 2012, 5-Year
-VetP|NUMERIC|Percent of population that are veterans|ACS 2017, 5-Year; ACS 2012, 5-Year
-NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family|ACS 2018, 5-Year
-NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are not related|ACS 2018, 5-Year
-MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
-PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
-ForDqP|NUMERIC|Estimated percent of mortgages to start foreclosure process or be seriously delinquent during the 2008 Recession|HUD, 2018
-ForDqTot|NUMERIC|Estimated number of mortgages to start foreclosure process or be seriously delinquent during the 2008 Recession|HUD, 2018
-GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)|ACS 2018, 5-Year; ACS 2012, 5-Year
-EduP|NUMERIC|Percentage of population employed in educational services industry|ACS 2018, 5-Year
-HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities|ACS 2018, 5-Year
-HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries|ACS 2018, 5-Year
-RetailP|NUMERIC|Percentage of population employed in retail trade industry|ACS 2018, 5-Year
-EssnWrkE|INTEGER|Estimated count of population employed in essential occupations.|ACS 2018, 5-Year
-EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.|ACS 2018, 5-Year
-MobileP|NUMERIC|Percentage of total housing units categorized as mobile housing structures|ACS 2018, 5-Year
-LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago|ACS 2018, 5-Year
-RentalP|NUMERIC|Percentage of occupied housing units that are rented|ACS 2018, 5-Year
-UnitDens|NUMERIC|Number of housing units per square mile of land area|ACS 2018, 5-Year
-AreaSqMi|NUMERIC|Land area of geography in sq miles|InfoGroup, 2018
-AlcTot|INTEGER|Total number of alcohol outlets|InfoGroup, 2018
-AlcDens|NUMERIC|Number of alcohol outlets per square mile|InfoGroup, 2018
-AlcPerCap|NUMERIC|Number of alcohol outlets per capita|InfoGroup, 2018
-DsmBlk|NUMERIC|Dissimilarity index for Black and non-Hispanic White residents|ACS 2018, 5-Year
-IntrBlkWht|NUMERIC|Interaction index for Black and non-Hispanic White residents|ACS 2018, 5-Year
-IsoBlk|NUMERIC|Isolation index for Black and non-Hispanic White residents|ACS 2018, 5-Year
-DsmHsp|NUMERIC|Dissimilarity index for Hispanic and non-Hispanic White residents|ACS 2018, 5-Year
-IntrHspWht|NUMERIC|Interaction index for Hispanic and non-Hispanic White residents|ACS 2018, 5-Year
-IsoHsp|NUMERIC|Isolation index for Hispanic and non-Hispanic White residents|ACS 2018, 5-Year
-DsmAs|NUMERIC|Dissimilarity index for Asian and non-Hispanic White residents|ACS 2018, 5-Year
-IntrAsWht|NUMERIC|Area (in square meters) of park or green space in a state).|ACS 2018, 5-Year
-IsoAs|NUMERIC|Isolation index for Asian and non-Hispanic White residents|ACS 2018, 5-Year
-Ndvi|NUMERIC|Average normalized difference vegetation index, a measure of greenness used to determine the amount of vegetation in an area, value from all pixel values in each Census tract|Sentinel-2 MSI, 2018
-TotTracts|INTEGER|Total number of census tracts within the state.|Tiger/Line 2018
-OdMortRt|NUMERIC|Overdose mortality rate|HepVu, 2020
-SviTh1|NUMERIC|SVI Ranking, Theme 1: Socioeconomic|CDC, 2018
-SviTh2|NUMERIC|SVI Ranking, Theme 2: Household Composition & Disability|CDC, 2018
-SviTh3|NUMERIC|SVI Ranking, Theme 3: Minority Status & Language|CDC, 2018
-SviTh4|NUMERIC|SVI Ranking, Theme 4: Housing Type & Transportation|CDC, 2018
-SviSmryRnk|NUMERIC|Overall summary ranking|CDC, 2018
-RcaUrbanP|NUMERIC|Percent census tracts in the county classified as Urban using RUCA codes|USDA-ERS 2010 & ACS 2018 5-Year
-RcaSubrbP|NUMERIC|Percent census tracts in the county classified as Suburban using RUCA codes|USDA-ERS 2010 & ACS 2018 5-Year
-RcaRuralP|NUMERIC|Percent census tracts in the county classified as Rural using RUCA codes|USDA-ERS 2010 & ACS 2018 5-Year
-CenFlags|STRING|Three different values indicating three things:
-1 - Revised count, so urban and rural components will not add to total. 
-2 - Geography name and FIPS code were changed since 2010. Shannon County, Sotuh Dakota name changed to Oglala Lakota County, new FIPS 46102. Wade Hampton Census Area, Alaska, name changed to Kusilvak CEnsus Area, nwe FIPS 02158
-3 - Bedford City, Virginia, was consolidated with Bedford County, Virginia (FIPS 51019) since 2010.|USDA-ERS 2010 & ACS 2018 5-Year
-CenRuralP|NUMERIC|% of 2010 Population living in non urban areas, as defined by Census Bureau|USDA-ERS 2010 & ACS 2018 5-Year
+AreaSqMi|NUMERIC|Land area of geography in sq miles
+SviTh4|NUMERIC|SVI Ranking, Theme 4: Housing Type & Transportation
+BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone
+Ovr18P|NUMERIC|
+SRatio65|NUMERIC|
+Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
+VacantP|NUMERIC|Percentage of vacant housing units
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+TotWrkE|INTEGER|Estimated count of working population
+EssnWrkE|INTEGER|Estimated count of population employed in essential occupations.
+RcaSubrbP|NUMERIC|Percent census tracts in the county classified as Suburban using RUCA codes
+AsianP|NUMERIC|Percentage of population with race identified as Asian alone
+UnitDens|NUMERIC|Number of housing units per square mile of land area
+GradSclP|NUMERIC|
+TotUnits|INTEGER|Count of total occupied housing units
+EngProf|NUMERIC|
+Ndvi|NUMERIC|Average normalized difference vegetation index, a measure of greenness used to determine the amount of vegetation in an area, value from all pixel values in each Census tract
+TotTracts|INTEGER|Total number of census tracts within the state.
+Ovr16P|NUMERIC|
+RetailP|NUMERIC|Percentage of population employed in retail trade industry
+AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
+EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.
+PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone
+IntrHspWht|NUMERIC|Interaction index for Hispanic and non-Hispanic White residents
+RcaUrbanP|NUMERIC|Percent census tracts in the county classified as Urban using RUCA codes
+DsmAs|NUMERIC|Dissimilarity index for Asian and non-Hispanic White residents
+RentalP|NUMERIC|Percentage of occupied housing units that are rented
+MobileP|NUMERIC|Percentage of total housing units categorized as mobile housing structures
+WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
+HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities
+OdMortRt|NUMERIC|Overdose mortality rate
+NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family
+SviSmryRnk|NUMERIC|Overall summary ranking
+GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)
+HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries
+SRatio18|NUMERIC|
+EduNoHsP|NUMERIC|
+IsoBlk|NUMERIC|Isolation index for Black and non-Hispanic White residents
+Ovr21|NUMERIC|
+ForDqTot|NUMERIC|Estimated number of mortgages to start foreclosure process or be seriously delinquent during the 2008 Recession
+PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
+RcaRuralP|NUMERIC|Percent census tracts in the county classified as Rural using RUCA codes
+PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
+Ovr18|NUMERIC|
+MaleP|NUMERIC|
+BlackE|NUMERIC|Count population with race identified as Black or African American alone. Estimated count in non-decennial years.
+Ovr21P|NUMERIC|
+NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are not related
+Ovr16|NUMERIC|
+AlcTot|INTEGER|Total number of alcohol outlets
+HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
+DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
+EduHsP|NUMERIC|
+SviTh3|NUMERIC|SVI Ranking, Theme 3: Minority Status & Language
+LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago
+IsoAs|NUMERIC|Isolation index for Asian and non-Hispanic White residents
+EduP|NUMERIC|Percentage of population employed in educational services industry
+BachelorsP|NUMERIC|
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
+IsoHsp|NUMERIC|Isolation index for Hispanic and non-Hispanic White residents
+SomeCollegeP|NUMERIC|
+TotPopHh|INTEGER|Total number of people in households
+OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
+Ovr65P|NUMERIC|Percentage of population over 65
+OtherE|NUMERIC|Count of Population with race not mentioned in any of the options above (includes two race or more races). Estimated count in non-decennial years.
+HisE|NUMERIC|Count persons with ethnicity identified as of Hispanic or Latinx origin. Estimated count in non-decennial years.
+TotPop|INTEGER|Total population
+DsmHsp|NUMERIC|Dissimilarity index for Hispanic and non-Hispanic White residents
+ForDqP|NUMERIC|Estimated percent of mortgages to start foreclosure process or be seriously delinquent during the 2008 Recession
+PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
+ChildrenP|NUMERIC|Percentage of population under age 18
+AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
+Age15_44|INTEGER|Total population between age 15-44
+SviTh1|NUMERIC|SVI Ranking, Theme 1: Socioeconomic
+TotVetPop|INTEGER|Total Veteran population
+AlcDens|NUMERIC|Number of alcohol outlets per square mile
+VetP|NUMERIC|Percent of population that are veterans
+WhiteP|NUMERIC|Percentage of population with race identified as white alone
+AlcPerCap|NUMERIC|Number of alcohol outlets per capita
+IntrAsWht|NUMERIC|Area (in square meters) of park or green space in a state).
+SRatio|NUMERIC|
+UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
+AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
+SviTh2|NUMERIC|SVI Ranking, Theme 2: Household Composition & Disability
+IntrBlkWht|NUMERIC|Interaction index for Black and non-Hispanic White residents
+TwoRaceE|NUMERIC|Count persons identifying as two or more races. Estimated count in non-decennial years.
+DsmBlk|NUMERIC|Dissimilarity index for Black and non-Hispanic White residents
+FemP|NUMERIC|
+Age15_44P|NUMERIC|Percentage of population below 45 years of age
 
 ### county-2025
 
@@ -1596,56 +1834,57 @@ ID: `oeps-391119.tabular.county-2025`
 
 33 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
-TotTracts|INTEGER|Total number of census tracts within the state.|Tiger/Line 2018
-OtpCtTmDr|INTEGER|Number of tracts within 30-min of opioid treatment program driving range|SAMSHA, 2021
-OtpAvTmDr|NUMERIC|Average driving time (minutes) across tracts to nearest opioid treatment program.|SAMSHA, 2021
-OtpTmDrP|NUMERIC|Percent of tracts within a 30-minute drive time of an opioid treatment program.|SAMSHA, 2021
-BupCtTmDr|INTEGER|Number of tracts with buprenorphine provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupCtTmBk|INTEGER|Number of tracts with buprenorphine provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupCtTmWk|INTEGER|Number of tracts with buprenorphine provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetCtTmDr|INTEGER|Number of tracts with methadone provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetCtTmBk|INTEGER|Number of tracts with methadone provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetCtTmWk|INTEGER|Number of tracts with methadone provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltCtTmDr|INTEGER|Number of tracts with naltrexone provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltCtTmBk|INTEGER|Number of tracts with naltrexone provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltCtTmWk|INTEGER|Number of tracts with naltrexone provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupTmDrP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupTmBkP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupTmWkP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetTmDrP|NUMERIC|Percent of tracts with methadone provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetTmBkP|NUMERIC|Percent of tracts with methadone provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetTmWkP|NUMERIC|Percent of tracts with methadone provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltTmDrP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltTmBkP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltTmWkP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest buprenorphine provider
+OtpTmDrP|NUMERIC|Percent of tracts within a 30-minute drive time of an opioid treatment program.
+BupTmBkP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min biking range
+MetCtTmDr|INTEGER|Number of tracts with methadone provider within a 30-min driving range
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+NaltAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest naltrexone provider
+MetTmBkP|NUMERIC|Percent of tracts with methadone provider within a 30-min biking range
+NaltAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest naltrexone provider
+BupCtTmBk|INTEGER|Number of tracts with buprenorphine provider within a 30-min biking range
+TotTracts|INTEGER|Total number of census tracts within the state.
+MetCtTmWk|INTEGER|Number of tracts with methadone provider within a 30-min walking range
+MetTmDrP|NUMERIC|Percent of tracts with methadone provider within a 30-min driving range
+MetAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest methadone provider
+NaltTmBkP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min biking range
+MetTmWkP|NUMERIC|Percent of tracts with methadone provider within a 30-min walking range
+BupTmDrP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min driving range
+MetAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest methadone provider
+BupCtTmWk|INTEGER|Number of tracts with buprenorphine provider within a 30-min walking range
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+OtpAvTmDr|NUMERIC|Average driving time (minutes) across tracts to nearest opioid treatment program.
+NaltCtTmBk|INTEGER|Number of tracts with naltrexone provider within a 30-min biking range
+MetCtTmBk|INTEGER|Number of tracts with methadone provider within a 30-min biking range
+BupCtTmDr|INTEGER|Number of tracts with buprenorphine provider within a 30-min driving range
+NaltTmDrP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min driving range
+BupAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest buprenorphine provider
+BupAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest buprenorphine provider
+OtpCtTmDr|INTEGER|Number of tracts within 30-min of opioid treatment program driving range
+NaltCtTmWk|INTEGER|Number of tracts with naltrexone provider within a 30-min walking range
+BupTmWkP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min walking range
+NaltCtTmDr|INTEGER|Number of tracts with naltrexone provider within a 30-min driving range
+NaltTmWkP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min walking range
+MetAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest methadone provider
+NaltAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest naltrexone provider
 
 ### county-2016
 
 ID: `oeps-391119.tabular.county-2016`
 
-6 columns in this table.
+7 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-OdMortRt|NUMERIC|Overdose mortality rate|HepVu, 2020
-TtlPrPpr|NUMERIC|Total Prison Population Rate|Vera Institute of Justice, 2016
-TtlPrAPpr|NUMERIC|Prison Prison Admissions Rate|Vera Institute of Justice, 2016
-TtlPrPp|INTEGER|Total Prison Population Count|Vera Institute of Justice, 2016
-TtlPrAPp|INTEGER|Prison Prison Admissions Count|Vera Institute of Justice, 2016
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+OdMortRt|NUMERIC|Overdose mortality rate
+TtlPrPpr|NUMERIC|Total Prison Population Rate
+TtlPrPp|INTEGER|Total Prison Population Count
+TtlPrAPp|INTEGER|Prison Prison Admissions Count
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+TtlPrAPpr|NUMERIC|Prison Prison Admissions Rate
 
 ### state-2020
 
@@ -1653,131 +1892,144 @@ ID: `oeps-391119.tabular.state-2020`
 
 65 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
-CntBupT|INTEGER|Number of tracts with buprenorphine provider within a 30-min driving range|SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020
-CntMetT|INTEGER|Number of tracts with methadone provider within a 30-min driving range|SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020
-CntNaltT|INTEGER|Number of tracts within 30 -min of naltrexone driving range|SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020
-AvBupTime|NUMERIC|Average driving time (minutes) across tracts in state to nearest buprenorphine provider.|SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020
-AvMetTime|NUMERIC|Average driving time (minutes) across tracts in state to nearest methadone provider.|SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020
-AvNaltTime|NUMERIC|Average driving time (minutes) across tracts in state to nearest naltrexone provider.|SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020
-PctBupT|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min driving range|SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020
-PctMetT|NUMERIC|Percent of tracts with methadone provider within a 30-min driving range|SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020
-PctNaltT|NUMERIC|Percent of tracts with naltrexone provider within a 30-min driving range|SAMSHA, 2019; Vivitrol, 2020; OSRM, 2020
-FqhcCtTmDr|INTEGER|Number of tracts with Federally Qualified Health Center within a 30-min driving range|US Covid Atlas via HRSA, 2020
-FqhcAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest Federally Qualified Health Center|US Covid Atlas via HRSA, 2020
-FqhcTmDrP|NUMERIC|Percent of tracts with Federally Qualified Health Center within a 30-min driving range.|US Covid Atlas via HRSA, 2020
-HospCtTmDr|INTEGER|Number of tracts with hospital within a 30-min driving range|CovidCareMap, 2020
-HospAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest hospital.|CovidCareMap, 2020
-HospTmDrP|NUMERIC|Percent of tracts with hospital within a 30-mini driving range|CovidCareMap, 2020
-MhCtTmDr|INTEGER|Number of tracts with a mental health provider within a 30-min driving range.|SAMHSA, 2020
-MhAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest mental health provider.|SAMHSA, 2020
-MhTmDrP|NUMERIC|Percent of tracts with a mental health provider within a 30-min driving range.|SAMHSA, 2020
-SutpCtTmDr|INTEGER|Number of tracts with Substance Use Treatment within a 30-min driving range.|SAMHSA, 2020
-SutpAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest Substance Use Treatment program.|SAMHSA, 2020
-SutpTmDrP|NUMERIC|Percent of tracts with Substance Use Treatment program within a 30-minute driving range.|SAMHSA, 2020
-HcvD|INTEGER|Total Hepatitis C deaths|HepVu, 2017
-MlHcvD|INTEGER|Hepatitis C deaths among men|HepVu, 2017
-FlHcvD|INTEGER|Hepatitis C deaths among women|HepVu, 2017
-AmInHcvD|INTEGER|Hepatitis C deaths among American Indian populations|HepVu, 2017
-BlkHcvD|INTEGER|Hepatitis C deaths among Black population|HepVu, 2017
-HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations|HepVu, 2017
-U50HcvD|INTEGER|Hepatitis C deaths in populations under 50 years of age|HepVu, 2017
-A50_74HcvD|INTEGER|Hepatitis C deaths among populations between 50 and 74 years of age|HepVu, 2017
-O75HcvD|INTEGER|Hepatitis C deaths among populations over 75 years of age|HepVu, 2017
-OpRxRt|NUMERIC|Opioid prescription rate|HepVu, 2020
-PrMsuseP|NUMERIC|Percent of persons who self-report misusing prescription pain relief medication in 2020.|HepVu, 2020
-OdMortRt|NUMERIC|Overdose mortality rate|HepVu, 2020
-OdMortRtAv|NUMERIC|Average overdose mortality rate from 2016-2020|HepVu, 2020
-AnyPdmpFr|NUMERIC|Fraction of year that state has any prescription drug monitoring program operating.|OPTIC, 2017
-AnyPdmphFr|NUMERIC|Fraction of year that state has prescription drug monitoring program enabling legislation for any type of prescription drug monitoring program in effect ,including paper-based systems (as determined by Horowitz et al., 2018) enacted|OPTIC, 2017
-OpPdmpFr|NUMERIC|Fraction of year that state has a “modern system” operational and users could access (as determined by Horowitz et al., 2018).|OPTIC, 2017
-MsAcPdmpFr|NUMERIC|Fraction of year that state has any legislation requiring Prescribers to access PDMP before prescribing (as interpreted by PDAPS) enacted.|OPTIC, 2017
-ElcPdmpFr|NUMERIC|Fraction of year that state has an electronic PDMP system operating.|OPTIC, 2017
-AnyPdmpDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: PDAPS for first PDMP laws passed after January 1, 1998; Info on laws prior to 1998 came from Brandeis TTAC.|OPTIC, 2017
-AnyPdmphDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: Horowitz et al., 2018, Table 2, column 1.|OPTIC, 2017
-OpPdmpDt|DATE|Date when a “modern system” became operational and users could access. Source: Horowitz et al., 2018, Table 2, column 4. This definition includes specific caveats adopted by Horowitz et al., 2018, described further below in Notes.|OPTIC, 2017
-MsAcPdmpDt|DATE|Date of legislation requiring Prescribers to access PDMP before prescribing as interpreted by PDAPS.|OPTIC, 2017
-ElcPdmpDt|DATE|Date state began operating an electronic PDMP system.|OPTIC, 2017
-AnyGslDt|DATE|Date (DMY) any type of GoodDate (DMY) any type of Good Samaritan Law is effective|OPTIC, 2017
-GslArrDt|DATE|Date (DMY) that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective|OPTIC, 2017
-AnyGslFr|NUMERIC|Fraction of year any type of Good Samaritan Law is effective|OPTIC, 2017
-GslArrFr|NUMERIC|Fraction of year that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective|OPTIC, 2017
-AnyNalxDt|DATE|Date (MY) any type of Naloxone law effective|OPTIC, 2017
-NalxPrStDt|DATE|Date (MY) Naloxone law allowing distribution through a standing or protocol order effective|OPTIC, 2017
-NalxPresDt|DATE|Date (MY) Naloxone law allowing pharmacists prescriptive authority effective|OPTIC, 2017
-AnyNalxFr|NUMERIC|Fraction of year any type of Naloxone law is effective|OPTIC, 2017
-NalxPrStFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing distribution through a standing or protocol order|OPTIC, 2017
-NalxPresFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing pharmacists prescriptive authority|OPTIC, 2017
-MdMarijLaw|BOOLEAN|Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (0=no, 1=yes)|PDAPS, 2017
-AsHcvD|NUMERIC||HepVu
-NhPiHcvD|NUMERIC||HepVu
-WhtHcvD|NUMERIC||HepVu
-MulHcvD|NUMERIC||HepVu
-CrrctExp|INTEGER|Total expenditures on corrections system and operations|State and Local Finance Data Finder
-HlthExp|INTEGER|Total expenditures on public health and hospitals|State and Local Finance Data Finder
-PlcFyrExp|INTEGER|Total expenditures on police and fire protection|State and Local Finance Data Finder
-WlfrExp|INTEGER|Total expenditures on public welfare programs|State and Local Finance Data Finder
+U50HcvD|INTEGER|Hepatitis C deaths in populations under 50 years of age
+AvNaltTime|NUMERIC|Average driving time (minutes) across tracts in state to nearest naltrexone provider.
+MsAcPdmpFr|NUMERIC|Fraction of year that state has any legislation requiring Prescribers to access PDMP before prescribing (as interpreted by PDAPS) enacted.
+ElcPdmpFr|NUMERIC|Fraction of year that state has an electronic PDMP system operating.
+NalxPrStDt|DATE|Date (MY) Naloxone law allowing distribution through a standing or protocol order effective
+O75HcvD|INTEGER|Hepatitis C deaths among populations over 75 years of age
+NhPiHcvD|NUMERIC|
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+AnyGslFr|NUMERIC|Fraction of year any type of Good Samaritan Law is effective
+NalxPresFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing pharmacists prescriptive authority
+HlthExp|INTEGER|Total expenditures on public health and hospitals
+HospCtTmDr|INTEGER|Number of tracts with hospital within a 30-min driving range
+FqhcCtTmDr|INTEGER|Number of tracts with Federally Qualified Health Center within a 30-min driving range
+CntNaltT|INTEGER|Number of tracts within 30 -min of naltrexone driving range
+FlHcvD|INTEGER|Hepatitis C deaths among women
+NalxPrStFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing distribution through a standing or protocol order
+CntBupT|INTEGER|Number of tracts with buprenorphine provider within a 30-min driving range
+FqhcTmDrP|NUMERIC|Percent of tracts with Federally Qualified Health Center within a 30-min driving range.
+WlfrExp|INTEGER|Total expenditures on public welfare programs
+MdMarijLaw|BOOLEAN|Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (0=no, 1=yes)
+GslArrFr|NUMERIC|Fraction of year that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective
+OdMortRt|NUMERIC|Overdose mortality rate
+AnyPdmpDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: PDAPS for first PDMP laws passed after January 1, 1998; Info on laws prior to 1998 came from Brandeis TTAC.
+AvBupTime|NUMERIC|Average driving time (minutes) across tracts in state to nearest buprenorphine provider.
+BlkHcvD|INTEGER|Hepatitis C deaths among Black population
+MlHcvD|INTEGER|Hepatitis C deaths among men
+ElcPdmpDt|DATE|Date state began operating an electronic PDMP system.
+OpPdmpDt|DATE|Date when a “modern system” became operational and users could access. Source: Horowitz et al., 2018, Table 2, column 4. This definition includes specific caveats adopted by Horowitz et al., 2018, described further below in Notes.
+FqhcAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest Federally Qualified Health Center
+SutpAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest Substance Use Treatment program.
+WhtHcvD|NUMERIC|
+HcvD|INTEGER|Total Hepatitis C deaths
+AnyNalxDt|DATE|Date (MY) any type of Naloxone law effective
+CntMetT|INTEGER|Number of tracts with methadone provider within a 30-min driving range
+OpPdmpFr|NUMERIC|Fraction of year that state has a “modern system” operational and users could access (as determined by Horowitz et al., 2018).
+HospTmDrP|NUMERIC|Percent of tracts with hospital within a 30-mini driving range
+AmInHcvD|INTEGER|Hepatitis C deaths among American Indian populations
+GslArrDt|DATE|Date (DMY) that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective
+A50_74HcvD|INTEGER|Hepatitis C deaths among populations between 50 and 74 years of age
+AnyGslDt|DATE|Date (DMY) any type of GoodDate (DMY) any type of Good Samaritan Law is effective
+OpRxRt|NUMERIC|Opioid prescription rate
+MsAcPdmpDt|DATE|Date of legislation requiring Prescribers to access PDMP before prescribing as interpreted by PDAPS.
+SutpTmDrP|NUMERIC|Percent of tracts with Substance Use Treatment program within a 30-minute driving range.
+MulHcvD|NUMERIC|
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+PlcFyrExp|INTEGER|Total expenditures on police and fire protection
+AnyPdmphDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: Horowitz et al., 2018, Table 2, column 1.
+MhAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest mental health provider.
+CrrctExp|INTEGER|Total expenditures on corrections system and operations
+PctNaltT|NUMERIC|Percent of tracts with naltrexone provider within a 30-min driving range
+MhTmDrP|NUMERIC|Percent of tracts with a mental health provider within a 30-min driving range.
+AnyPdmphFr|NUMERIC|Fraction of year that state has prescription drug monitoring program enabling legislation for any type of prescription drug monitoring program in effect ,including paper-based systems (as determined by Horowitz et al., 2018) enacted
+NalxPresDt|DATE|Date (MY) Naloxone law allowing pharmacists prescriptive authority effective
+PrMsuseP|NUMERIC|Percent of persons who self-report misusing prescription pain relief medication in 2020.
+PctMetT|NUMERIC|Percent of tracts with methadone provider within a 30-min driving range
+AsHcvD|NUMERIC|
+OdMortRtAv|NUMERIC|Average overdose mortality rate from 2016-2020
+AnyNalxFr|NUMERIC|Fraction of year any type of Naloxone law is effective
+AvMetTime|NUMERIC|Average driving time (minutes) across tracts in state to nearest methadone provider.
+MhCtTmDr|INTEGER|Number of tracts with a mental health provider within a 30-min driving range.
+SutpCtTmDr|INTEGER|Number of tracts with Substance Use Treatment within a 30-min driving range.
+PctBupT|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min driving range
+AnyPdmpFr|NUMERIC|Fraction of year that state has any prescription drug monitoring program operating.
+HospAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest hospital.
+HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations
 
 ### county-2017
 
 ID: `oeps-391119.tabular.county-2017`
 
-9 columns in this table.
+10 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-OdMortRt|NUMERIC|Overdose mortality rate|HepVu, 2020
-PrcNtvRsrv|NUMERIC|Percentage of county land area that belongs to Native American reservation(s)|TIGER/Line 2017
-TtlJlPpr|NUMERIC|Total Jail Population Rate, ASJ/COJ Data|Vera Institute of Justice, 2017
-TtlJlAdmr|NUMERIC|Total Jail Admissions Rate, ASJ/COJ Data|Vera Institute of Justice, 2017
-TtlJlPrtr|NUMERIC|Pretrial Jail Population Rate|Vera Institute of Justice, 2017
-TtlJlPp|NUMERIC|Total Jail Population Count, ASJ/COJ Data|Vera Institute of Justice, 2017
-TtlJlAdm|NUMERIC|Total Jail Admissions Count, ASJ/COJ Data|Vera Institute of Justice, 2017
-TtlJlPrt|NUMERIC|Pretrial Jail Population Count|Vera Institute of Justice, 2017
+TtlJlAdm|NUMERIC|Total Jail Admissions Count, ASJ/COJ Data
+TtlJlAdmr|NUMERIC|Total Jail Admissions Rate, ASJ/COJ Data
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+TtlJlPpr|NUMERIC|Total Jail Population Rate, ASJ/COJ Data
+PrcNtvRsrv|NUMERIC|Percentage of county land area that belongs to Native American reservation(s)
+TtlJlPp|NUMERIC|Total Jail Population Count, ASJ/COJ Data
+OdMortRt|NUMERIC|Overdose mortality rate
+TtlJlPrtr|NUMERIC|Pretrial Jail Population Rate
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+TtlJlPrt|NUMERIC|Pretrial Jail Population Count
 
 ### state-2000
 
 ID: `oeps-391119.tabular.state-2000`
 
-31 columns in this table.
+43 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
-TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
-Age18_64|INTEGER|Total adult population under age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age0_4|INTEGER|Total population between age 0-4|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age5_14|INTEGER|Total population between age 5-14|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_19|INTEGER|Total population between age 15-19|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age20_24|INTEGER|Total population between age 20-24|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_44|INTEGER|Total population between age 15-44|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age55_59|INTEGER|Total population between age 55-59|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age60_64|INTEGER|Total population between age 60-64|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AgeOv65|INTEGER|Total population at or over age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_24P|NUMERIC|Percentage of population between ages of 15 & 24|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Und45P|NUMERIC|	Percentage of population below 45 years of age|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Ovr65P|NUMERIC|Percentage of population over 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-WhiteP|NUMERIC|Percentage of population with race identified as white alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AsianP|NUMERIC|Percentage of population with race identified as Asian alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-NoHsP|NUMERIC|Percentage of population 25 years and over, less than a high school degree|ACS 2018, 5-Year; ACS 2012, 5-Year; IPUMS NHGIS
-ChildrenP|NUMERIC|Percentage of population under age 18|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-VacantP|NUMERIC|Percentage of vacant housing units|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-Age45_49|INTEGER|Total population between age 45-49|ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS
-Age50_54|NUMERIC|Total population between age 50-54|ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS
-DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability|ACS 2018, 5-Year; ACS 2012, 5-Year
+BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone
+Ovr18P|NUMERIC|
+SRatio65|NUMERIC|
+Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
+VacantP|NUMERIC|Percentage of vacant housing units
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+AsianP|NUMERIC|Percentage of population with race identified as Asian alone
+GradSclP|NUMERIC|
+TotUnits|INTEGER|Count of total occupied housing units
+Ovr16P|NUMERIC|
+AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
+PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone
+HisP|NUMERIC|
+WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
+SRatio18|NUMERIC|
+EduNoHsP|NUMERIC|
+Ovr21|NUMERIC|
+PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
+Ovr18|NUMERIC|
+MaleP|NUMERIC|
+BlackE|NUMERIC|Count population with race identified as Black or African American alone. Estimated count in non-decennial years.
+Ovr21P|NUMERIC|
+Ovr16|NUMERIC|
+HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
+DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
+EduHsP|NUMERIC|
+BachelorsP|NUMERIC|
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+SomeCollegeP|NUMERIC|
+OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
+Ovr65P|NUMERIC|Percentage of population over 65
+HisE|NUMERIC|Count persons with ethnicity identified as of Hispanic or Latinx origin. Estimated count in non-decennial years.
+TotPop|INTEGER|Total population
+PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
+ChildrenP|NUMERIC|Percentage of population under age 18
+AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
+Age15_44|INTEGER|Total population between age 15-44
+WhiteP|NUMERIC|Percentage of population with race identified as white alone
+SRatio|NUMERIC|
+UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
+AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
+FemP|NUMERIC|
+Age15_44P|NUMERIC|Percentage of population below 45 years of age
 
 ### county-2022
 
@@ -1785,16 +2037,16 @@ ID: `oeps-391119.tabular.county-2022`
 
 8 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
-OpRxRt|NUMERIC|Opioid prescription rate|HepVu, 2020
-SviTh1|NUMERIC|SVI Ranking, Theme 1: Socioeconomic|CDC, 2018
-SviTh2|NUMERIC|SVI Ranking, Theme 2: Household Composition & Disability|CDC, 2018
-SviTh3|NUMERIC|SVI Ranking, Theme 3: Minority Status & Language|CDC, 2018
-SviTh4|NUMERIC|SVI Ranking, Theme 4: Housing Type & Transportation|CDC, 2018
-SviSmryRnk|NUMERIC|Overall summary ranking|CDC, 2018
+SviTh4|NUMERIC|SVI Ranking, Theme 4: Housing Type & Transportation
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+SviSmryRnk|NUMERIC|Overall summary ranking
+OpRxRt|NUMERIC|Opioid prescription rate
+SviTh3|NUMERIC|SVI Ranking, Theme 3: Minority Status & Language
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+SviTh1|NUMERIC|SVI Ranking, Theme 1: Socioeconomic
+SviTh2|NUMERIC|SVI Ranking, Theme 2: Household Composition & Disability
 
 ### state-2021
 
@@ -1802,311 +2054,336 @@ ID: `oeps-391119.tabular.state-2021`
 
 44 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
-OtpCtTmDr|INTEGER|Number of tracts within 30-min of opioid treatment program driving range|SAMSHA, 2021
-OtpAvTmDr|NUMERIC|Average driving time (minutes) across tracts to nearest opioid treatment program.|SAMSHA, 2021
-OtpTmDrP|NUMERIC|Percent of tracts within a 30-minute drive time of an opioid treatment program.|SAMSHA, 2021
-HcvD|INTEGER|Total Hepatitis C deaths|HepVu, 2017
-MlHcvD|INTEGER|Hepatitis C deaths among men|HepVu, 2017
-FlHcvD|INTEGER|Hepatitis C deaths among women|HepVu, 2017
-AmInHcvD|INTEGER|Hepatitis C deaths among American Indian populations|HepVu, 2017
-BlkHcvD|INTEGER|Hepatitis C deaths among Black population|HepVu, 2017
-HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations|HepVu, 2017
-U50HcvD|INTEGER|Hepatitis C deaths in populations under 50 years of age|HepVu, 2017
-A50_74HcvD|INTEGER|Hepatitis C deaths among populations between 50 and 74 years of age|HepVu, 2017
-O75HcvD|INTEGER|Hepatitis C deaths among populations over 75 years of age|HepVu, 2017
-OdMortRt|NUMERIC|Overdose mortality rate|HepVu, 2020
-AnyPdmpFr|NUMERIC|Fraction of year that state has any prescription drug monitoring program operating.|OPTIC, 2017
-AnyPdmphFr|NUMERIC|Fraction of year that state has prescription drug monitoring program enabling legislation for any type of prescription drug monitoring program in effect ,including paper-based systems (as determined by Horowitz et al., 2018) enacted|OPTIC, 2017
-OpPdmpFr|NUMERIC|Fraction of year that state has a “modern system” operational and users could access (as determined by Horowitz et al., 2018).|OPTIC, 2017
-MsAcPdmpFr|NUMERIC|Fraction of year that state has any legislation requiring Prescribers to access PDMP before prescribing (as interpreted by PDAPS) enacted.|OPTIC, 2017
-ElcPdmpFr|NUMERIC|Fraction of year that state has an electronic PDMP system operating.|OPTIC, 2017
-AnyPdmpDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: PDAPS for first PDMP laws passed after January 1, 1998; Info on laws prior to 1998 came from Brandeis TTAC.|OPTIC, 2017
-AnyPdmphDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: Horowitz et al., 2018, Table 2, column 1.|OPTIC, 2017
-OpPdmpDt|DATE|Date when a “modern system” became operational and users could access. Source: Horowitz et al., 2018, Table 2, column 4. This definition includes specific caveats adopted by Horowitz et al., 2018, described further below in Notes.|OPTIC, 2017
-MsAcPdmpDt|DATE|Date of legislation requiring Prescribers to access PDMP before prescribing as interpreted by PDAPS.|OPTIC, 2017
-ElcPdmpDt|DATE|Date state began operating an electronic PDMP system.|OPTIC, 2017
-AnyGslDt|DATE|Date (DMY) any type of GoodDate (DMY) any type of Good Samaritan Law is effective|OPTIC, 2017
-GslArrDt|DATE|Date (DMY) that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective|OPTIC, 2017
-AnyGslFr|NUMERIC|Fraction of year any type of Good Samaritan Law is effective|OPTIC, 2017
-GslArrFr|NUMERIC|Fraction of year that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective|OPTIC, 2017
-AnyNalxDt|DATE|Date (MY) any type of Naloxone law effective|OPTIC, 2017
-NalxPrStDt|DATE|Date (MY) Naloxone law allowing distribution through a standing or protocol order effective|OPTIC, 2017
-NalxPresDt|DATE|Date (MY) Naloxone law allowing pharmacists prescriptive authority effective|OPTIC, 2017
-AnyNalxFr|NUMERIC|Fraction of year any type of Naloxone law is effective|OPTIC, 2017
-NalxPrStFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing distribution through a standing or protocol order|OPTIC, 2017
-NalxPresFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing pharmacists prescriptive authority|OPTIC, 2017
-MdMarijLaw|BOOLEAN|Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (0=no, 1=yes)|PDAPS, 2017
-AsHcvD|NUMERIC||HepVu
-NhPiHcvD|NUMERIC||HepVu
-WhtHcvD|NUMERIC||HepVu
-MulHcvD|NUMERIC||HepVu
-CrrctExp|INTEGER|Total expenditures on corrections system and operations|State and Local Finance Data Finder
-HlthExp|INTEGER|Total expenditures on public health and hospitals|State and Local Finance Data Finder
-PlcFyrExp|INTEGER|Total expenditures on police and fire protection|State and Local Finance Data Finder
-WlfrExp|INTEGER|Total expenditures on public welfare programs|State and Local Finance Data Finder
+U50HcvD|INTEGER|Hepatitis C deaths in populations under 50 years of age
+MsAcPdmpFr|NUMERIC|Fraction of year that state has any legislation requiring Prescribers to access PDMP before prescribing (as interpreted by PDAPS) enacted.
+ElcPdmpFr|NUMERIC|Fraction of year that state has an electronic PDMP system operating.
+NalxPrStDt|DATE|Date (MY) Naloxone law allowing distribution through a standing or protocol order effective
+O75HcvD|INTEGER|Hepatitis C deaths among populations over 75 years of age
+NhPiHcvD|NUMERIC|
+OtpTmDrP|NUMERIC|Percent of tracts within a 30-minute drive time of an opioid treatment program.
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+AnyGslFr|NUMERIC|Fraction of year any type of Good Samaritan Law is effective
+NalxPresFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing pharmacists prescriptive authority
+HlthExp|INTEGER|Total expenditures on public health and hospitals
+FlHcvD|INTEGER|Hepatitis C deaths among women
+NalxPrStFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing distribution through a standing or protocol order
+WlfrExp|INTEGER|Total expenditures on public welfare programs
+MdMarijLaw|BOOLEAN|Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (0=no, 1=yes)
+GslArrFr|NUMERIC|Fraction of year that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective
+OdMortRt|NUMERIC|Overdose mortality rate
+AnyPdmpDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: PDAPS for first PDMP laws passed after January 1, 1998; Info on laws prior to 1998 came from Brandeis TTAC.
+BlkHcvD|INTEGER|Hepatitis C deaths among Black population
+MlHcvD|INTEGER|Hepatitis C deaths among men
+ElcPdmpDt|DATE|Date state began operating an electronic PDMP system.
+OpPdmpDt|DATE|Date when a “modern system” became operational and users could access. Source: Horowitz et al., 2018, Table 2, column 4. This definition includes specific caveats adopted by Horowitz et al., 2018, described further below in Notes.
+WhtHcvD|NUMERIC|
+HcvD|INTEGER|Total Hepatitis C deaths
+AnyNalxDt|DATE|Date (MY) any type of Naloxone law effective
+OpPdmpFr|NUMERIC|Fraction of year that state has a “modern system” operational and users could access (as determined by Horowitz et al., 2018).
+AmInHcvD|INTEGER|Hepatitis C deaths among American Indian populations
+GslArrDt|DATE|Date (DMY) that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective
+A50_74HcvD|INTEGER|Hepatitis C deaths among populations between 50 and 74 years of age
+AnyGslDt|DATE|Date (DMY) any type of GoodDate (DMY) any type of Good Samaritan Law is effective
+MsAcPdmpDt|DATE|Date of legislation requiring Prescribers to access PDMP before prescribing as interpreted by PDAPS.
+MulHcvD|NUMERIC|
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+OtpAvTmDr|NUMERIC|Average driving time (minutes) across tracts to nearest opioid treatment program.
+PlcFyrExp|INTEGER|Total expenditures on police and fire protection
+AnyPdmphDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: Horowitz et al., 2018, Table 2, column 1.
+CrrctExp|INTEGER|Total expenditures on corrections system and operations
+AnyPdmphFr|NUMERIC|Fraction of year that state has prescription drug monitoring program enabling legislation for any type of prescription drug monitoring program in effect ,including paper-based systems (as determined by Horowitz et al., 2018) enacted
+NalxPresDt|DATE|Date (MY) Naloxone law allowing pharmacists prescriptive authority effective
+OtpCtTmDr|INTEGER|Number of tracts within 30-min of opioid treatment program driving range
+AsHcvD|NUMERIC|
+AnyNalxFr|NUMERIC|Fraction of year any type of Naloxone law is effective
+AnyPdmpFr|NUMERIC|Fraction of year that state has any prescription drug monitoring program operating.
+HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations
 
 ### zcta-2018
 
 ID: `oeps-391119.tabular.zcta-2018`
 
-72 columns in this table.
+83 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
-Age18_64|INTEGER|Total adult population under age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age0_4|INTEGER|Total population between age 0-4|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age5_14|INTEGER|Total population between age 5-14|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_19|INTEGER|Total population between age 15-19|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age20_24|INTEGER|Total population between age 20-24|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_44|INTEGER|Total population between age 15-44|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age55_59|INTEGER|Total population between age 55-59|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age60_64|INTEGER|Total population between age 60-64|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AgeOv65|INTEGER|Total population at or over age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Und45P|NUMERIC|	Percentage of population below 45 years of age|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Ovr65P|NUMERIC|Percentage of population over 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-WhiteP|NUMERIC|Percentage of population with race identified as white alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AsianP|NUMERIC|Percentage of population with race identified as Asian alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-NoHsP|NUMERIC|Percentage of population 25 years and over, less than a high school degree|ACS 2018, 5-Year; ACS 2012, 5-Year; IPUMS NHGIS
-ChildrenP|NUMERIC|Percentage of population under age 18|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-VacantP|NUMERIC|Percentage of vacant housing units|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-TotPopHh|INTEGER|Total number of people in households|ACS 2018, 5-Year
-TotVetPop|INTEGER|Total Veteran population|ACS 2018, 5-Year; ACS 2012, 5-Year
-TotWrkE|INTEGER|Estimated count of working population|ACS 2018, 5-Year
-Age45_49|INTEGER|Total population between age 45-49|ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS
-Age50_54|NUMERIC|Total population between age 50-54|ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS
-AgeOv18|NUMERIC|Total population at or over age 18|ACS 2018, 5-Year; 2010 Decennial Census
-DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability|ACS 2018, 5-Year; ACS 2012, 5-Year
-VetP|NUMERIC|Percent of population that are veterans|ACS 2017, 5-Year; ACS 2012, 5-Year
-NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family|ACS 2018, 5-Year
-NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are not related|ACS 2018, 5-Year
-MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
-PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
-GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)|ACS 2018, 5-Year; ACS 2012, 5-Year
-EduP|NUMERIC|Percentage of population employed in educational services industry|ACS 2018, 5-Year
-HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities|ACS 2018, 5-Year
-HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries|ACS 2018, 5-Year
-RetailP|NUMERIC|Percentage of population employed in retail trade industry|ACS 2018, 5-Year
-EssnWrkE|INTEGER|Estimated count of population employed in essential occupations.|ACS 2018, 5-Year
-EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.|ACS 2018, 5-Year
-MobileP|NUMERIC|Percentage of total housing units categorized as mobile housing structures|ACS 2018, 5-Year
-LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago|ACS 2018, 5-Year
-RentalP|NUMERIC|Percentage of occupied housing units that are rented|ACS 2018, 5-Year
-UnitDens|NUMERIC|Number of housing units per square mile of land area|ACS 2018, 5-Year
-AreaSqMi|NUMERIC|Land area of geography in sq miles|InfoGroup, 2018
-AlcTot|INTEGER|Total number of alcohol outlets|InfoGroup, 2018
-AlcDens|NUMERIC|Number of alcohol outlets per square mile|InfoGroup, 2018
-AlcPerCap|NUMERIC|Number of alcohol outlets per capita|InfoGroup, 2018
-DsmBlk|NUMERIC|Dissimilarity index for Black and non-Hispanic White residents|ACS 2018, 5-Year
-IntrBlkWht|NUMERIC|Interaction index for Black and non-Hispanic White residents|ACS 2018, 5-Year
-IsoBlk|NUMERIC|Isolation index for Black and non-Hispanic White residents|ACS 2018, 5-Year
-DsmHsp|NUMERIC|Dissimilarity index for Hispanic and non-Hispanic White residents|ACS 2018, 5-Year
-IntrHspWht|NUMERIC|Interaction index for Hispanic and non-Hispanic White residents|ACS 2018, 5-Year
-IsoHsp|NUMERIC|Isolation index for Hispanic and non-Hispanic White residents|ACS 2018, 5-Year
-DsmAs|NUMERIC|Dissimilarity index for Asian and non-Hispanic White residents|ACS 2018, 5-Year
-IntrAsWht|NUMERIC|Area (in square meters) of park or green space in a state).|ACS 2018, 5-Year
-IsoAs|NUMERIC|Isolation index for Asian and non-Hispanic White residents|ACS 2018, 5-Year
-Ndvi|NUMERIC|Average normalized difference vegetation index, a measure of greenness used to determine the amount of vegetation in an area, value from all pixel values in each Census tract|Sentinel-2 MSI, 2018
-Ruca1|STRING|Primary RUCA Code|USDA-ERS 2010 & ACS 2018 5-Year
-Ruca2|STRING|Secondary RUCA Code|USDA-ERS 2010 & ACS 2018 5-Year
-Rurality|STRING|Urban/Suburban/Rural|USDA-ERS 2010 & ACS 2018 5-Year
-SviTh1|NUMERIC|SVI Ranking, Theme 1: Socioeconomic|CDC, 2018
-SviTh2|NUMERIC|SVI Ranking, Theme 2: Household Composition & Disability|CDC, 2018
-SviTh3|NUMERIC|SVI Ranking, Theme 3: Minority Status & Language|CDC, 2018
-SviTh4|NUMERIC|SVI Ranking, Theme 4: Housing Type & Transportation|CDC, 2018
-SviSmryRnk|NUMERIC|Overall summary ranking|CDC, 2018
-A15_24P|NUMERIC|Percentage of population between ages of 15 & 24|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
+AreaSqMi|NUMERIC|Land area of geography in sq miles
+SviTh4|NUMERIC|SVI Ranking, Theme 4: Housing Type & Transportation
+BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone
+Ovr18P|NUMERIC|
+SRatio65|NUMERIC|
+Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
+VacantP|NUMERIC|Percentage of vacant housing units
+TotWrkE|INTEGER|Estimated count of working population
+EssnWrkE|INTEGER|Estimated count of population employed in essential occupations.
+AsianP|NUMERIC|Percentage of population with race identified as Asian alone
+UnitDens|NUMERIC|Number of housing units per square mile of land area
+GradSclP|NUMERIC|
+TotUnits|INTEGER|Count of total occupied housing units
+EngProf|NUMERIC|
+Ndvi|NUMERIC|Average normalized difference vegetation index, a measure of greenness used to determine the amount of vegetation in an area, value from all pixel values in each Census tract
+Ovr16P|NUMERIC|
+RetailP|NUMERIC|Percentage of population employed in retail trade industry
+AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
+EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.
+PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone
+IntrHspWht|NUMERIC|Interaction index for Hispanic and non-Hispanic White residents
+DsmAs|NUMERIC|Dissimilarity index for Asian and non-Hispanic White residents
+RentalP|NUMERIC|Percentage of occupied housing units that are rented
+MobileP|NUMERIC|Percentage of total housing units categorized as mobile housing structures
+WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
+HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities
+NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family
+SviSmryRnk|NUMERIC|Overall summary ranking
+GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)
+HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries
+SRatio18|NUMERIC|
+EduNoHsP|NUMERIC|
+IsoBlk|NUMERIC|Isolation index for Black and non-Hispanic White residents
+Ovr21|NUMERIC|
+ZCTA5|STRING|Census Bureau designated zip code tabulation area, or the rough area that contains five digit zip codes.
+PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
+PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
+Ovr18|NUMERIC|
+MaleP|NUMERIC|
+BlackE|NUMERIC|Count population with race identified as Black or African American alone. Estimated count in non-decennial years.
+Ovr21P|NUMERIC|
+NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are not related
+Ovr16|NUMERIC|
+AlcTot|INTEGER|Total number of alcohol outlets
+HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
+DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
+EduHsP|NUMERIC|
+SviTh3|NUMERIC|SVI Ranking, Theme 3: Minority Status & Language
+LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago
+IsoAs|NUMERIC|Isolation index for Asian and non-Hispanic White residents
+EduP|NUMERIC|Percentage of population employed in educational services industry
+BachelorsP|NUMERIC|
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
+IsoHsp|NUMERIC|Isolation index for Hispanic and non-Hispanic White residents
+SomeCollegeP|NUMERIC|
+TotPopHh|INTEGER|Total number of people in households
+OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
+Ovr65P|NUMERIC|Percentage of population over 65
+OtherE|NUMERIC|Count of Population with race not mentioned in any of the options above (includes two race or more races). Estimated count in non-decennial years.
+HisE|NUMERIC|Count persons with ethnicity identified as of Hispanic or Latinx origin. Estimated count in non-decennial years.
+TotPop|INTEGER|Total population
+DsmHsp|NUMERIC|Dissimilarity index for Hispanic and non-Hispanic White residents
+PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
+ChildrenP|NUMERIC|Percentage of population under age 18
+AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
+Age15_44|INTEGER|Total population between age 15-44
+SviTh1|NUMERIC|SVI Ranking, Theme 1: Socioeconomic
+TotVetPop|INTEGER|Total Veteran population
+AlcDens|NUMERIC|Number of alcohol outlets per square mile
+VetP|NUMERIC|Percent of population that are veterans
+WhiteP|NUMERIC|Percentage of population with race identified as white alone
+AlcPerCap|NUMERIC|Number of alcohol outlets per capita
+IntrAsWht|NUMERIC|Area (in square meters) of park or green space in a state).
+SRatio|NUMERIC|
+UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
+AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
+SviTh2|NUMERIC|SVI Ranking, Theme 2: Household Composition & Disability
+IntrBlkWht|NUMERIC|Interaction index for Black and non-Hispanic White residents
+TwoRaceE|NUMERIC|Count persons identifying as two or more races. Estimated count in non-decennial years.
+DsmBlk|NUMERIC|Dissimilarity index for Black and non-Hispanic White residents
+FemP|NUMERIC|
+Age15_44P|NUMERIC|Percentage of population below 45 years of age
 
 ### county-2010
 
 ID: `oeps-391119.tabular.county-2010`
 
-43 columns in this table.
+51 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
-TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
-Age18_64|INTEGER|Total adult population under age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age0_4|INTEGER|Total population between age 0-4|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age5_14|INTEGER|Total population between age 5-14|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_19|INTEGER|Total population between age 15-19|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age20_24|INTEGER|Total population between age 20-24|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_44|INTEGER|Total population between age 15-44|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age55_59|INTEGER|Total population between age 55-59|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age60_64|INTEGER|Total population between age 60-64|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AgeOv65|INTEGER|Total population at or over age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_24P|NUMERIC|Percentage of population between ages of 15 & 24|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Und45P|NUMERIC|	Percentage of population below 45 years of age|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Ovr65P|NUMERIC|Percentage of population over 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-WhiteP|NUMERIC|Percentage of population with race identified as white alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AsianP|NUMERIC|Percentage of population with race identified as Asian alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-NoHsP|NUMERIC|Percentage of population 25 years and over, less than a high school degree|ACS 2018, 5-Year; ACS 2012, 5-Year; IPUMS NHGIS
-ChildrenP|NUMERIC|Percentage of population under age 18|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-VacantP|NUMERIC|Percentage of vacant housing units|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-TotVetPop|INTEGER|Total Veteran population|ACS 2018, 5-Year; ACS 2012, 5-Year
-Age45_49|INTEGER|Total population between age 45-49|ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS
-Age50_54|NUMERIC|Total population between age 50-54|ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS
-DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability|ACS 2018, 5-Year; ACS 2012, 5-Year
-VetP|NUMERIC|Percent of population that are veterans|ACS 2017, 5-Year; ACS 2012, 5-Year
-MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
-PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
-GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)|ACS 2018, 5-Year; ACS 2012, 5-Year
-TotPcp|INTEGER|Number of primary care providers in area|Dartmouth Atlas, 2010
-TotSp|INTEGER|Number of specialty physicians in area|Dartmouth Atlas, 2010
-PcpPer100k|NUMERIC|PCPs per total Population X 100,000|Dartmouth Atlas, 2010
-SpPer100k|NUMERIC|Specialty Physicians per total Population X 100,000|Dartmouth Atlas, 2010
-TotPop10|INTEGER|2010 total population|USDA-ERS 2010 & ACS 2018 5-Year
-UrbPop|INTEGER|2010 Population living in urban areas, as defined by Census Bureau|USDA-ERS 2010 & ACS 2018 5-Year
-RuralPop|INTEGER|2010 Population living in non urban areas, as defined by Census Bureau|USDA-ERS 2010 & ACS 2018 5-Year
+TotSp|INTEGER|Number of specialty physicians in area
+BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone
+Ovr18P|NUMERIC|
+SRatio65|NUMERIC|
+VacantP|NUMERIC|Percentage of vacant housing units
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+AsianP|NUMERIC|Percentage of population with race identified as Asian alone
+GradSclP|NUMERIC|
+TotUnits|INTEGER|Count of total occupied housing units
+Ovr16P|NUMERIC|
+AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
+PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone
+WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
+GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)
+TotPcp|INTEGER|Number of primary care providers in area
+SRatio18|NUMERIC|
+EduNoHsP|NUMERIC|
+PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
+PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
+MaleP|NUMERIC|
+PcpPer100k|NUMERIC|PCPs per total Population X 100,000
+BlackE|NUMERIC|Count population with race identified as Black or African American alone. Estimated count in non-decennial years.
+Ovr21P|NUMERIC|
+HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
+DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
+TwoRaceP|NUMERIC|
+EduHsP|NUMERIC|
+BachelorsP|NUMERIC|
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
+SomeCollegeP|NUMERIC|
+OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
+Ovr65P|NUMERIC|Percentage of population over 65
+OtherE|NUMERIC|Count of Population with race not mentioned in any of the options above (includes two race or more races). Estimated count in non-decennial years.
+HisE|NUMERIC|Count persons with ethnicity identified as of Hispanic or Latinx origin. Estimated count in non-decennial years.
+TotPop|INTEGER|Total population
+PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
+ChildrenP|NUMERIC|Percentage of population under age 18
+AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
+Age15_44|INTEGER|Total population between age 15-44
+TotVetPop|INTEGER|Total Veteran population
+VetP|NUMERIC|Percent of population that are veterans
+SpPer100k|NUMERIC|Specialty Physicians per total Population X 100,000
+WhiteP|NUMERIC|Percentage of population with race identified as white alone
+SRatio|NUMERIC|
+UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
+CenFlags|STRING|Three different values indicating three things:
+1 - Revised count, so urban and rural components will not add to total. 
+2 - Geography name and FIPS code were changed since 2010. Shannon County, Sotuh Dakota name changed to Oglala Lakota County, new FIPS 46102. Wade Hampton Census Area, Alaska, name changed to Kusilvak CEnsus Area, nwe FIPS 02158
+3 - Bedford City, Virginia, was consolidated with Bedford County, Virginia (FIPS 51019) since 2010.
+AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
+TwoRaceE|NUMERIC|Count persons identifying as two or more races. Estimated count in non-decennial years.
+FemP|NUMERIC|
+Age15_44P|NUMERIC|Percentage of population below 45 years of age
 
 ### state-2018
 
 ID: `oeps-391119.tabular.state-2018`
 
-117 columns in this table.
+120 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
-TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
-Age18_64|INTEGER|Total adult population under age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age0_4|INTEGER|Total population between age 0-4|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age5_14|INTEGER|Total population between age 5-14|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_19|INTEGER|Total population between age 15-19|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age20_24|INTEGER|Total population between age 20-24|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_44|INTEGER|Total population between age 15-44|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age55_59|INTEGER|Total population between age 55-59|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age60_64|INTEGER|Total population between age 60-64|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AgeOv65|INTEGER|Total population at or over age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_24P|NUMERIC|Percentage of population between ages of 15 & 24|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Und45P|NUMERIC|	Percentage of population below 45 years of age|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Ovr65P|NUMERIC|Percentage of population over 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-WhiteP|NUMERIC|Percentage of population with race identified as white alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AsianP|NUMERIC|Percentage of population with race identified as Asian alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-NoHsP|NUMERIC|Percentage of population 25 years and over, less than a high school degree|ACS 2018, 5-Year; ACS 2012, 5-Year; IPUMS NHGIS
-ChildrenP|NUMERIC|Percentage of population under age 18|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-VacantP|NUMERIC|Percentage of vacant housing units|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-TotPopHh|INTEGER|Total number of people in households|ACS 2018, 5-Year
-TotVetPop|INTEGER|Total Veteran population|ACS 2018, 5-Year; ACS 2012, 5-Year
-TotWrkE|INTEGER|Estimated count of working population|ACS 2018, 5-Year
-Age45_49|INTEGER|Total population between age 45-49|ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS
-Age50_54|NUMERIC|Total population between age 50-54|ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS
-AgeOv18|NUMERIC|Total population at or over age 18|ACS 2018, 5-Year; 2010 Decennial Census
-DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability|ACS 2018, 5-Year; ACS 2012, 5-Year
-VetP|NUMERIC|Percent of population that are veterans|ACS 2017, 5-Year; ACS 2012, 5-Year
-NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family|ACS 2018, 5-Year
-NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are not related|ACS 2018, 5-Year
-MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
-PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)|ACS 2018, 5-Year; ACS 2012, 5-Year
-ForDqP|NUMERIC|Estimated percent of mortgages to start foreclosure process or be seriously delinquent during the 2008 Recession|HUD, 2018
-ForDqTot|NUMERIC|Estimated number of mortgages to start foreclosure process or be seriously delinquent during the 2008 Recession|HUD, 2018
-GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)|ACS 2018, 5-Year; ACS 2012, 5-Year
-EduP|NUMERIC|Percentage of population employed in educational services industry|ACS 2018, 5-Year
-HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities|ACS 2018, 5-Year
-HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries|ACS 2018, 5-Year
-RetailP|NUMERIC|Percentage of population employed in retail trade industry|ACS 2018, 5-Year
-EssnWrkE|INTEGER|Estimated count of population employed in essential occupations.|ACS 2018, 5-Year
-EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.|ACS 2018, 5-Year
-MobileP|NUMERIC|Percentage of total housing units categorized as mobile housing structures|ACS 2018, 5-Year
-LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago|ACS 2018, 5-Year
-RentalP|NUMERIC|Percentage of occupied housing units that are rented|ACS 2018, 5-Year
-UnitDens|NUMERIC|Number of housing units per square mile of land area|ACS 2018, 5-Year
-AreaSqMi|NUMERIC|Land area of geography in sq miles|InfoGroup, 2018
-AlcTot|INTEGER|Total number of alcohol outlets|InfoGroup, 2018
-AlcDens|NUMERIC|Number of alcohol outlets per square mile|InfoGroup, 2018
-AlcPerCap|NUMERIC|Number of alcohol outlets per capita|InfoGroup, 2018
-DsmBlk|NUMERIC|Dissimilarity index for Black and non-Hispanic White residents|ACS 2018, 5-Year
-IntrBlkWht|NUMERIC|Interaction index for Black and non-Hispanic White residents|ACS 2018, 5-Year
-IsoBlk|NUMERIC|Isolation index for Black and non-Hispanic White residents|ACS 2018, 5-Year
-DsmHsp|NUMERIC|Dissimilarity index for Hispanic and non-Hispanic White residents|ACS 2018, 5-Year
-IntrHspWht|NUMERIC|Interaction index for Hispanic and non-Hispanic White residents|ACS 2018, 5-Year
-IsoHsp|NUMERIC|Isolation index for Hispanic and non-Hispanic White residents|ACS 2018, 5-Year
-DsmAs|NUMERIC|Dissimilarity index for Asian and non-Hispanic White residents|ACS 2018, 5-Year
-IntrAsWht|NUMERIC|Area (in square meters) of park or green space in a state).|ACS 2018, 5-Year
-IsoAs|NUMERIC|Isolation index for Asian and non-Hispanic White residents|ACS 2018, 5-Year
-Ndvi|NUMERIC|Average normalized difference vegetation index, a measure of greenness used to determine the amount of vegetation in an area, value from all pixel values in each Census tract|Sentinel-2 MSI, 2018
-StateArea|NUMERIC|Area (in square meters) of state|Tiger/Line 2018
-TotTracts|INTEGER|Total number of census tracts within the state.|Tiger/Line 2018
-HcvD|INTEGER|Total Hepatitis C deaths|HepVu, 2017
-MlHcvD|INTEGER|Hepatitis C deaths among men|HepVu, 2017
-FlHcvD|INTEGER|Hepatitis C deaths among women|HepVu, 2017
-AmInHcvD|INTEGER|Hepatitis C deaths among American Indian populations|HepVu, 2017
-BlkHcvD|INTEGER|Hepatitis C deaths among Black population|HepVu, 2017
-HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations|HepVu, 2017
-U50HcvD|INTEGER|Hepatitis C deaths in populations under 50 years of age|HepVu, 2017
-A50_74HcvD|INTEGER|Hepatitis C deaths among populations between 50 and 74 years of age|HepVu, 2017
-O75HcvD|INTEGER|Hepatitis C deaths among populations over 75 years of age|HepVu, 2017
-OdMortRt|NUMERIC|Overdose mortality rate|HepVu, 2020
-AnyPdmpFr|NUMERIC|Fraction of year that state has any prescription drug monitoring program operating.|OPTIC, 2017
-AnyPdmphFr|NUMERIC|Fraction of year that state has prescription drug monitoring program enabling legislation for any type of prescription drug monitoring program in effect ,including paper-based systems (as determined by Horowitz et al., 2018) enacted|OPTIC, 2017
-OpPdmpFr|NUMERIC|Fraction of year that state has a “modern system” operational and users could access (as determined by Horowitz et al., 2018).|OPTIC, 2017
-MsAcPdmpFr|NUMERIC|Fraction of year that state has any legislation requiring Prescribers to access PDMP before prescribing (as interpreted by PDAPS) enacted.|OPTIC, 2017
-ElcPdmpFr|NUMERIC|Fraction of year that state has an electronic PDMP system operating.|OPTIC, 2017
-AnyPdmpDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: PDAPS for first PDMP laws passed after January 1, 1998; Info on laws prior to 1998 came from Brandeis TTAC.|OPTIC, 2017
-AnyPdmphDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: Horowitz et al., 2018, Table 2, column 1.|OPTIC, 2017
-OpPdmpDt|DATE|Date when a “modern system” became operational and users could access. Source: Horowitz et al., 2018, Table 2, column 4. This definition includes specific caveats adopted by Horowitz et al., 2018, described further below in Notes.|OPTIC, 2017
-MsAcPdmpDt|DATE|Date of legislation requiring Prescribers to access PDMP before prescribing as interpreted by PDAPS.|OPTIC, 2017
-ElcPdmpDt|DATE|Date state began operating an electronic PDMP system.|OPTIC, 2017
-AnyNalxDt|DATE|Date (MY) any type of Naloxone law effective|OPTIC, 2017
-NalxPrStDt|DATE|Date (MY) Naloxone law allowing distribution through a standing or protocol order effective|OPTIC, 2017
-NalxPresDt|DATE|Date (MY) Naloxone law allowing pharmacists prescriptive authority effective|OPTIC, 2017
-AnyNalxFr|NUMERIC|Fraction of year any type of Naloxone law is effective|OPTIC, 2017
-NalxPrStFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing distribution through a standing or protocol order|OPTIC, 2017
-NalxPresFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing pharmacists prescriptive authority|OPTIC, 2017
-MedcdExp|INTEGER|Total medicaid spending|KFF, 2019
-TradFedExp|INTEGER|Traditional medicaid - federal spending|KFF, 2018
-TradSttExp|INTEGER|Traditional medicaid - state spending|KFF, 2018
-ExpnFedExp|INTEGER|Expansion Group - Federal Spending|KFF, 2018
-ExpnSttExp|INTEGER|Expansion Group - State Spending|KFF, 2018
-MdMarijLaw|BOOLEAN|Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (0=no, 1=yes)|PDAPS, 2017
-CrrctExpS|INTEGER|Expenditures on corrections system and operation by the State alone|US Census, 2018
-PlcFyrExpS|INTEGER|Expenditures on police and fire protection by the State alone|US Census, 2018
-HlthExpS|INTEGER|Expenditures on public health and hospitals by the State alone|US Census, 2018
-WlfrExpS|INTEGER|Expenditures on public welfare progrmas by the State alone|US Census, 2018
-CrrctExpL|INTEGER|Expenditures on corrections system and operation by local governments alone|US Census, 2018
-PlcFyrExpL|INTEGER|Expenditures on police and fire protection by the local government alone|US Census, 2018
-HlthExpL|INTEGER|Expenditures on public health and hospitals by the local government alone|US Census, 2018
-WlfrExpL|INTEGER|Expenditures on public welfare progrmas by the local government alone|US Census, 2018
-CrrctExpT|INTEGER|Total expenditures on corrections system and operations|US Census, 2018
-PlcFyrExpT|INTEGER|Total expenditures on police and fire protection|US Census, 2018
-HlthExpT|INTEGER|Total expenditures on public health and welfare|US Census, 2018
-WlfrExpT|INTEGER|Total expenditures on public welfare programs|US Census, 2018
-AsHcvD|NUMERIC||HepVu
-NhPiHcvD|NUMERIC||HepVu
-WhtHcvD|NUMERIC||HepVu
-MulHcvD|NUMERIC||HepVu
+U50HcvD|INTEGER|Hepatitis C deaths in populations under 50 years of age
+MsAcPdmpFr|NUMERIC|Fraction of year that state has any legislation requiring Prescribers to access PDMP before prescribing (as interpreted by PDAPS) enacted.
+ElcPdmpFr|NUMERIC|Fraction of year that state has an electronic PDMP system operating.
+NalxPrStDt|DATE|Date (MY) Naloxone law allowing distribution through a standing or protocol order effective
+O75HcvD|INTEGER|Hepatitis C deaths among populations over 75 years of age
+AreaSqMi|NUMERIC|Land area of geography in sq miles
+BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone
+Ovr18P|NUMERIC|
+SRatio65|NUMERIC|
+ExpnFedExp|INTEGER|Expansion Group - Federal Spending
+NhPiHcvD|NUMERIC|
+Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
+VacantP|NUMERIC|Percentage of vacant housing units
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+TotWrkE|INTEGER|Estimated count of working population
+EssnWrkE|INTEGER|Estimated count of population employed in essential occupations.
+NalxPresFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing pharmacists prescriptive authority
+AsianP|NUMERIC|Percentage of population with race identified as Asian alone
+UnitDens|NUMERIC|Number of housing units per square mile of land area
+GradSclP|NUMERIC|
+TotUnits|INTEGER|Count of total occupied housing units
+EngProf|NUMERIC|
+Ndvi|NUMERIC|Average normalized difference vegetation index, a measure of greenness used to determine the amount of vegetation in an area, value from all pixel values in each Census tract
+FlHcvD|INTEGER|Hepatitis C deaths among women
+TotTracts|INTEGER|Total number of census tracts within the state.
+Ovr16P|NUMERIC|
+NalxPrStFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing distribution through a standing or protocol order
+RetailP|NUMERIC|Percentage of population employed in retail trade industry
+AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
+EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.
+TradSttExp|INTEGER|Traditional medicaid - state spending
+PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone
+HisP|NUMERIC|
+IntrHspWht|NUMERIC|Interaction index for Hispanic and non-Hispanic White residents
+MdMarijLaw|BOOLEAN|Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (0=no, 1=yes)
+DsmAs|NUMERIC|Dissimilarity index for Asian and non-Hispanic White residents
+RentalP|NUMERIC|Percentage of occupied housing units that are rented
+MobileP|NUMERIC|Percentage of total housing units categorized as mobile housing structures
+WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
+HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities
+OdMortRt|NUMERIC|Overdose mortality rate
+ExpnSttExp|INTEGER|Expansion Group - State Spending
+AnyPdmpDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: PDAPS for first PDMP laws passed after January 1, 1998; Info on laws prior to 1998 came from Brandeis TTAC.
+NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family
+BlkHcvD|INTEGER|Hepatitis C deaths among Black population
+MlHcvD|INTEGER|Hepatitis C deaths among men
+ElcPdmpDt|DATE|Date state began operating an electronic PDMP system.
+OpPdmpDt|DATE|Date when a “modern system” became operational and users could access. Source: Horowitz et al., 2018, Table 2, column 4. This definition includes specific caveats adopted by Horowitz et al., 2018, described further below in Notes.
+GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)
+HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries
+SRatio18|NUMERIC|
+EduNoHsP|NUMERIC|
+WhtHcvD|NUMERIC|
+IsoBlk|NUMERIC|Isolation index for Black and non-Hispanic White residents
+HcvD|INTEGER|Total Hepatitis C deaths
+AnyNalxDt|DATE|Date (MY) any type of Naloxone law effective
+Ovr21|NUMERIC|
+OpPdmpFr|NUMERIC|Fraction of year that state has a “modern system” operational and users could access (as determined by Horowitz et al., 2018).
+StateArea|NUMERIC|Area (in square meters) of state
+TradFedExp|INTEGER|Traditional medicaid - federal spending
+ForDqTot|NUMERIC|Estimated number of mortgages to start foreclosure process or be seriously delinquent during the 2008 Recession
+PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
+AmInHcvD|INTEGER|Hepatitis C deaths among American Indian populations
+PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
+Ovr18|NUMERIC|
+MaleP|NUMERIC|
+A50_74HcvD|INTEGER|Hepatitis C deaths among populations between 50 and 74 years of age
+BlackE|NUMERIC|Count population with race identified as Black or African American alone. Estimated count in non-decennial years.
+Ovr21P|NUMERIC|
+NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are not related
+Ovr16|NUMERIC|
+AlcTot|INTEGER|Total number of alcohol outlets
+HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
+DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
+TwoRaceP|NUMERIC|
+MsAcPdmpDt|DATE|Date of legislation requiring Prescribers to access PDMP before prescribing as interpreted by PDAPS.
+EduHsP|NUMERIC|
+LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago
+IsoAs|NUMERIC|Isolation index for Asian and non-Hispanic White residents
+EduP|NUMERIC|Percentage of population employed in educational services industry
+MulHcvD|NUMERIC|
+BachelorsP|NUMERIC|
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
+AnyPdmphDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: Horowitz et al., 2018, Table 2, column 1.
+IsoHsp|NUMERIC|Isolation index for Hispanic and non-Hispanic White residents
+SomeCollegeP|NUMERIC|
+TotPopHh|INTEGER|Total number of people in households
+OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
+Ovr65P|NUMERIC|Percentage of population over 65
+OtherE|NUMERIC|Count of Population with race not mentioned in any of the options above (includes two race or more races). Estimated count in non-decennial years.
+HisE|NUMERIC|Count persons with ethnicity identified as of Hispanic or Latinx origin. Estimated count in non-decennial years.
+TotPop|INTEGER|Total population
+DsmHsp|NUMERIC|Dissimilarity index for Hispanic and non-Hispanic White residents
+ForDqP|NUMERIC|Estimated percent of mortgages to start foreclosure process or be seriously delinquent during the 2008 Recession
+AnyPdmphFr|NUMERIC|Fraction of year that state has prescription drug monitoring program enabling legislation for any type of prescription drug monitoring program in effect ,including paper-based systems (as determined by Horowitz et al., 2018) enacted
+PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
+NalxPresDt|DATE|Date (MY) Naloxone law allowing pharmacists prescriptive authority effective
+ChildrenP|NUMERIC|Percentage of population under age 18
+AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
+Age15_44|INTEGER|Total population between age 15-44
+MedcdExp|INTEGER|Total medicaid spending
+TotVetPop|INTEGER|Total Veteran population
+AlcDens|NUMERIC|Number of alcohol outlets per square mile
+AsHcvD|NUMERIC|
+VetP|NUMERIC|Percent of population that are veterans
+AnyNalxFr|NUMERIC|Fraction of year any type of Naloxone law is effective
+WhiteP|NUMERIC|Percentage of population with race identified as white alone
+AlcPerCap|NUMERIC|Number of alcohol outlets per capita
+IntrAsWht|NUMERIC|Area (in square meters) of park or green space in a state).
+SRatio|NUMERIC|
+UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
+AnyPdmpFr|NUMERIC|Fraction of year that state has any prescription drug monitoring program operating.
+AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
+IntrBlkWht|NUMERIC|Interaction index for Black and non-Hispanic White residents
+HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations
+TwoRaceE|NUMERIC|Count persons identifying as two or more races. Estimated count in non-decennial years.
+DsmBlk|NUMERIC|Dissimilarity index for Black and non-Hispanic White residents
+FemP|NUMERIC|
+Age15_44P|NUMERIC|Percentage of population below 45 years of age
 
 ### zcta-2025
 
@@ -2114,64 +2391,65 @@ ID: `oeps-391119.tabular.zcta-2025`
 
 36 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-ZCTA5|STRING|Census Bureau designated zip code tabulation area, or the rough area that contains five digit zip codes.|Tiger/Line 2018; Tiger/Line 2010
-MoudMinDis|NUMERIC|Euclidean distance (miles) to nearest MOUD (all types)|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupMinDis|NUMERIC|Euclidean distance (miles) to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupTmDr|NUMERIC|Driving time (minutes) to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetMinDis|NUMERIC|Euclidean distance (miles) to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetTmDr|NUMERIC|Driving time (minutes) to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltMinDis|NUMERIC|Euclidean distance (miles) to nearest naltrexone/Vivitrol provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltTmDr|NUMERIC|Driving time (minutes) to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltCntDr30|INTEGER|Count of naltrexone providers in 30 minute drive time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupTmWk|NUMERIC|Walking time (minutes) to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupCntWk60|INTEGER|Count of buprenorphine providers in 60 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupCntWk30|INTEGER|Count of buprenorphine providers in 30 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetTmWk|NUMERIC|Walking time (minutes) to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetCntWk30|INTEGER|Count of methadone providers in 60 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetCntWk60|INTEGER|Count of methadone providers in 30 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltTmWk|NUMERIC|Walking time (minutes) to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltCntWk60|INTEGER|Count of naltrexone providers in 60 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltCntWk30|INTEGER|Count of naltrexone providers in 30 minute walking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupTmBk|NUMERIC|Biking time (minutes) to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupCntBk60|INTEGER|Count of buprenorphine providers in 60 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupCntBk30|INTEGER|Count of buprenorphine providers in 30 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetTmBk|NUMERIC|Biking time (minutes) to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetCntBk60|INTEGER|Count of methadone providers in 60 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetCntBk30|INTEGER|Count of methadone providers in 30 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltTmBk|NUMERIC|Biking time (minutes) to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltCntBk60|INTEGER|Count of naltrexone providers in 60 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltCntBk30|INTEGER|Count of naltrexone providers in 30 minute biking time threshold|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-OtpMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles|SAMHSA
-OtpTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes|SAMSHA, 2021
-OtpCntDr|INTEGER|Count of OTPs within a 30-minute driving threshold|SAMSHA, 2021
-BupCntDr60|NUMERIC|Count of buprenorphine providers in 60 minute drive time threshold|SAMHSA
-NaltCntDr60|NUMERIC|Count of naltrexone providers in 60 minute drive time threshold|SAMHSA
-MetCntDr60|NUMERIC|Count of methadone providers in 60 minute drive time threshold|SAMHSA
+MetCntWk30|INTEGER|Count of methadone providers in 60 minute walking time threshold
+NaltCntWk30|INTEGER|Count of naltrexone providers in 30 minute walking time threshold
+NaltTmDr|NUMERIC|Driving time (minutes) to nearest naltrexone provider
+BupCntDr60|NUMERIC|Count of buprenorphine providers in 60 minute drive time threshold
+BupCntBk60|INTEGER|Count of buprenorphine providers in 60 minute biking time threshold
+NaltMinDis|NUMERIC|Euclidean distance (miles) to nearest naltrexone/Vivitrol provider
+MetCntBk60|INTEGER|Count of methadone providers in 60 minute biking time threshold
+MetMinDis|NUMERIC|Euclidean distance (miles) to nearest methadone provider
+BupTmDr|NUMERIC|Driving time (minutes) to nearest buprenorphine provider
+MetTmBk|NUMERIC|Biking time (minutes) to nearest methadone provider
+NaltTmWk|NUMERIC|Walking time (minutes) to nearest naltrexone provider
+BupMinDis|NUMERIC|Euclidean distance (miles) to nearest buprenorphine provider
+NaltCntDr60|NUMERIC|Count of naltrexone providers in 60 minute drive time threshold
+ZCTA5|STRING|Census Bureau designated zip code tabulation area, or the rough area that contains five digit zip codes.
+OtpMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles
+MetCntBk30|INTEGER|Count of methadone providers in 30 minute biking time threshold
+MetCntDr60|NUMERIC|Count of methadone providers in 60 minute drive time threshold
+OtpTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes
+OtpCntDr|INTEGER|Count of OTPs within a 30-minute driving threshold
+NaltCntBk30|INTEGER|Count of naltrexone providers in 30 minute biking time threshold
+BupCntWk30|INTEGER|Count of buprenorphine providers in 30 minute walking time threshold
+MetCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+NaltCntWk60|INTEGER|Count of naltrexone providers in 60 minute walking time threshold
+MetCntWk60|INTEGER|Count of methadone providers in 30 minute walking time threshold
+NaltCntDr30|INTEGER|Count of naltrexone providers in 30 minute drive time threshold
+NaltTmBk|NUMERIC|Biking time (minutes) to nearest naltrexone provider
+BupTmBk|NUMERIC|Biking time (minutes) to nearest buprenorphine provider
+MoudMinDis|NUMERIC|Euclidean distance (miles) to nearest MOUD (all types)
+MetTmWk|NUMERIC|Walking time (minutes) to nearest methadone provider
+NaltCntBk60|INTEGER|Count of naltrexone providers in 60 minute biking time threshold
+MetTmDr|NUMERIC|Driving time (minutes) to nearest methadone provider
+BupCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold
+BupTmWk|NUMERIC|Walking time (minutes) to nearest buprenorphine provider
+BupCntWk60|INTEGER|Count of buprenorphine providers in 60 minute walking time threshold
+BupCntBk30|INTEGER|Count of buprenorphine providers in 30 minute biking time threshold
 
 ### state-2013
 
 ID: `oeps-391119.tabular.state-2013`
 
-11 columns in this table.
+12 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-HcvD|INTEGER|Total Hepatitis C deaths|HepVu, 2017
-MlHcvD|INTEGER|Hepatitis C deaths among men|HepVu, 2017
-FlHcvD|INTEGER|Hepatitis C deaths among women|HepVu, 2017
-AmInHcvD|INTEGER|Hepatitis C deaths among American Indian populations|HepVu, 2017
-AsPiHcvD|INTEGER|Hepatitis C deaths among Asian and Pacific Islander populations|HepVu, 2017
-BlkHcvD|INTEGER|Hepatitis C deaths among Black population|HepVu, 2017
-HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations|HepVu, 2017
-U50HcvD|INTEGER|Hepatitis C deaths in populations under 50 years of age|HepVu, 2017
-A50_74HcvD|INTEGER|Hepatitis C deaths among populations between 50 and 74 years of age|HepVu, 2017
-O75HcvD|INTEGER|Hepatitis C deaths among populations over 75 years of age|HepVu, 2017
+U50HcvD|INTEGER|Hepatitis C deaths in populations under 50 years of age
+O75HcvD|INTEGER|Hepatitis C deaths among populations over 75 years of age
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+FlHcvD|INTEGER|Hepatitis C deaths among women
+AsPiHcvD|INTEGER|Hepatitis C deaths among Asian and Pacific Islander populations
+BlkHcvD|INTEGER|Hepatitis C deaths among Black population
+MlHcvD|INTEGER|Hepatitis C deaths among men
+HcvD|INTEGER|Total Hepatitis C deaths
+AmInHcvD|INTEGER|Hepatitis C deaths among American Indian populations
+A50_74HcvD|INTEGER|Hepatitis C deaths among populations between 50 and 74 years of age
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations
 
 ### state-2025
 
@@ -2179,247 +2457,145 @@ ID: `oeps-391119.tabular.state-2025`
 
 33 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
-TotTracts|INTEGER|Total number of census tracts within the state.|Tiger/Line 2018
-OtpCtTmDr|INTEGER|Number of tracts within 30-min of opioid treatment program driving range|SAMSHA, 2021
-OtpAvTmDr|NUMERIC|Average driving time (minutes) across tracts to nearest opioid treatment program.|SAMSHA, 2021
-OtpTmDrP|NUMERIC|Percent of tracts within a 30-minute drive time of an opioid treatment program.|SAMSHA, 2021
-BupCtTmDr|INTEGER|Number of tracts with buprenorphine provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupCtTmBk|INTEGER|Number of tracts with buprenorphine provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupCtTmWk|INTEGER|Number of tracts with buprenorphine provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetCtTmDr|INTEGER|Number of tracts with methadone provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetCtTmBk|INTEGER|Number of tracts with methadone provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetCtTmWk|INTEGER|Number of tracts with methadone provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltCtTmDr|INTEGER|Number of tracts with naltrexone provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltCtTmBk|INTEGER|Number of tracts with naltrexone provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltCtTmWk|INTEGER|Number of tracts with naltrexone provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest buprenorphine provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest methadone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest naltrexone provider|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupTmDrP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupTmBkP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-BupTmWkP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetTmDrP|NUMERIC|Percent of tracts with methadone provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetTmBkP|NUMERIC|Percent of tracts with methadone provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-MetTmWkP|NUMERIC|Percent of tracts with methadone provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltTmDrP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min driving range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltTmBkP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min biking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
-NaltTmWkP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min walking range|SAMHSA, 2019; Vivitrol, 2020; OSRM, 2020
+BupAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest buprenorphine provider
+OtpTmDrP|NUMERIC|Percent of tracts within a 30-minute drive time of an opioid treatment program.
+BupTmBkP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min biking range
+MetCtTmDr|INTEGER|Number of tracts with methadone provider within a 30-min driving range
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+NaltAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest naltrexone provider
+MetTmBkP|NUMERIC|Percent of tracts with methadone provider within a 30-min biking range
+NaltAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest naltrexone provider
+BupCtTmBk|INTEGER|Number of tracts with buprenorphine provider within a 30-min biking range
+TotTracts|INTEGER|Total number of census tracts within the state.
+MetCtTmWk|INTEGER|Number of tracts with methadone provider within a 30-min walking range
+MetTmDrP|NUMERIC|Percent of tracts with methadone provider within a 30-min driving range
+MetAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest methadone provider
+NaltTmBkP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min biking range
+MetTmWkP|NUMERIC|Percent of tracts with methadone provider within a 30-min walking range
+BupTmDrP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min driving range
+MetAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest methadone provider
+BupCtTmWk|INTEGER|Number of tracts with buprenorphine provider within a 30-min walking range
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+OtpAvTmDr|NUMERIC|Average driving time (minutes) across tracts to nearest opioid treatment program.
+NaltCtTmBk|INTEGER|Number of tracts with naltrexone provider within a 30-min biking range
+MetCtTmBk|INTEGER|Number of tracts with methadone provider within a 30-min biking range
+BupCtTmDr|INTEGER|Number of tracts with buprenorphine provider within a 30-min driving range
+NaltTmDrP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min driving range
+BupAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest buprenorphine provider
+BupAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest buprenorphine provider
+OtpCtTmDr|INTEGER|Number of tracts within 30-min of opioid treatment program driving range
+NaltCtTmWk|INTEGER|Number of tracts with naltrexone provider within a 30-min walking range
+BupTmWkP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min walking range
+NaltCtTmDr|INTEGER|Number of tracts with naltrexone provider within a 30-min driving range
+NaltTmWkP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min walking range
+MetAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest methadone provider
+NaltAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest naltrexone provider
 
 ### state-2014
 
 ID: `oeps-391119.tabular.state-2014`
 
-12 columns in this table.
+13 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-HcvD|INTEGER|Total Hepatitis C deaths|HepVu, 2017
-MlHcvD|INTEGER|Hepatitis C deaths among men|HepVu, 2017
-FlHcvD|INTEGER|Hepatitis C deaths among women|HepVu, 2017
-AmInHcvD|INTEGER|Hepatitis C deaths among American Indian populations|HepVu, 2017
-AsPiHcvD|INTEGER|Hepatitis C deaths among Asian and Pacific Islander populations|HepVu, 2017
-BlkHcvD|INTEGER|Hepatitis C deaths among Black population|HepVu, 2017
-HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations|HepVu, 2017
-U50HcvD|INTEGER|Hepatitis C deaths in populations under 50 years of age|HepVu, 2017
-A50_74HcvD|INTEGER|Hepatitis C deaths among populations between 50 and 74 years of age|HepVu, 2017
-O75HcvD|INTEGER|Hepatitis C deaths among populations over 75 years of age|HepVu, 2017
-OdMortRt|NUMERIC|Overdose mortality rate|HepVu, 2020
+U50HcvD|INTEGER|Hepatitis C deaths in populations under 50 years of age
+O75HcvD|INTEGER|Hepatitis C deaths among populations over 75 years of age
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+FlHcvD|INTEGER|Hepatitis C deaths among women
+AsPiHcvD|INTEGER|Hepatitis C deaths among Asian and Pacific Islander populations
+OdMortRt|NUMERIC|Overdose mortality rate
+BlkHcvD|INTEGER|Hepatitis C deaths among Black population
+MlHcvD|INTEGER|Hepatitis C deaths among men
+HcvD|INTEGER|Total Hepatitis C deaths
+AmInHcvD|INTEGER|Hepatitis C deaths among American Indian populations
+A50_74HcvD|INTEGER|Hepatitis C deaths among populations between 50 and 74 years of age
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations
 
 ### zcta-2019
 
 ID: `oeps-391119.tabular.zcta-2019`
 
-5 columns in this table.
+6 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-NoIntP|NUMERIC|Percentage of Households without Internet access|ACS, 2019
-RxMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest pharmacy, in miles|InfoGroup, 2019
-RxTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip pharmacy destination centroid, in minutes|InfoGroup, 2019
-RxCntDr|INTEGER|Count of pharmacies within a 30-minute driving threshold|InfoGroup, 2019
+RxCntDr|INTEGER|Count of pharmacies within a 30-minute driving threshold
+ZCTA5|STRING|Census Bureau designated zip code tabulation area, or the rough area that contains five digit zip codes.
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+RxTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip pharmacy destination centroid, in minutes
+NoIntP|NUMERIC|Percentage of Households without Internet access
+RxMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest pharmacy, in miles
 
 ### tract-2014
 
 ID: `oeps-391119.tabular.tract-2014`
 
-5 columns in this table.
+7 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-SocEcAdvIn|NUMERIC|Raw Socioeconomic Advantage Index (https://sdohatlas.github.io/)|GeoDa Data and Lab; SDOH Atlas
-LimMobInd|NUMERIC|Raw Limited Mobility Index (https://sdohatlas.github.io/)|GeoDa Data and Lab; SDOH Atlas
-UrbCoreInd|NUMERIC|Raw Urban Core Opportunity Index (https://sdohatlas.github.io/)|GeoDa Data and Lab; SDOH Atlas
-MicaInd|NUMERIC|Raw Mixed Immigrant Cohesion and Accessibility (MICA) Index (https://sdohatlas.github.io/)|GeoDa Data and Lab; SDOH Atlas
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+UrbCoreInd|NUMERIC|Raw Urban Core Opportunity Index (https://sdohatlas.github.io/)
+MicaInd|NUMERIC|Raw Mixed Immigrant Cohesion and Accessibility (MICA) Index (https://sdohatlas.github.io/)
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+NeighbTyp|STRING|Categorical, one of seven neighborhood (tract-level) typologies: 1 = Rural Affordable; 2 = Suburban Affluent; 3 = Suburban Affordable; 4 = Extreme Poverty; 5 = Multilingual Working; 6 = Urban Core Opportunity; 7 = Sparse Areas
+SocEcAdvIn|NUMERIC|Raw Socioeconomic Advantage Index (https://sdohatlas.github.io/)
+LimMobInd|NUMERIC|Raw Limited Mobility Index (https://sdohatlas.github.io/)
 
 ### county-2000
 
 ID: `oeps-391119.tabular.county-2000`
 
-32 columns in this table.
+44 columns in this table.
 
-Name|Data Type|Description|Source
+Name|Data Type|Description
 -|-|-|-
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.|Healthy Regions & Policies Lab, UIUC
-FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.|Tiger/Line 2018; Tiger/Line 2010
-TotPop|INTEGER|Total population|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-TotUnits|INTEGER|Count of total occupied housing units|ACS 2018, 5-Year; Census 2010; Social Explorer
-Age18_64|INTEGER|Total adult population under age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age0_4|INTEGER|Total population between age 0-4|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age5_14|INTEGER|Total population between age 5-14|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_19|INTEGER|Total population between age 15-19|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age20_24|INTEGER|Total population between age 20-24|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_44|INTEGER|Total population between age 15-44|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age55_59|INTEGER|Total population between age 55-59|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age60_64|INTEGER|Total population between age 60-64|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AgeOv65|INTEGER|Total population at or over age 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Age15_24P|NUMERIC|Percentage of population between ages of 15 & 24|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Und45P|NUMERIC|	Percentage of population below 45 years of age|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-Ovr65P|NUMERIC|Percentage of population over 65|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-WhiteP|NUMERIC|Percentage of population with race identified as white alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-AsianP|NUMERIC|Percentage of population with race identified as Asian alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-NoHsP|NUMERIC|Percentage of population 25 years and over, less than a high school degree|ACS 2018, 5-Year; ACS 2012, 5-Year; IPUMS NHGIS
-ChildrenP|NUMERIC|Percentage of population under age 18|ACS 2018, 5-Year; Census 2010; IPUMS NHGIS
-PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-VacantP|NUMERIC|Percentage of vacant housing units|ACS 2018, 5-Year; ACS 2012, 5-Year; Social Explorer
-Age45_49|INTEGER|Total population between age 45-49|ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS
-Age50_54|NUMERIC|Total population between age 50-54|ACS 2018, 5-Year; 2010 Decennial Census; IPUMS NHGIS
-DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability|ACS 2018, 5-Year; ACS 2012, 5-Year
-DmyBlckBlt|BOOLEAN|Dummy variable for whether county is in the Southern Black Belt region|US Census, 2000
-
-## spatial
-
-11 tables in this dataset.
-
-### counties2010
-
-ID: `oeps-391119.spatial.counties2010`
-
-2 columns in this table.
-
-Name|Data Type|Description|Source
--|-|-|-
-HEROP_ID|STRING|None|None
-name|STRING|None|None
-
-### states2018
-
-ID: `oeps-391119.spatial.states2018`
-
-2 columns in this table.
-
-Name|Data Type|Description|Source
--|-|-|-
-HEROP_ID|STRING|None|None
-name|STRING|None|None
-
-### zctas2020
-
-ID: `oeps-391119.spatial.zctas2020`
-
-1 column in this table.
-
-Name|Data Type|Description|Source
--|-|-|-
-HEROP_ID|STRING|None|None
-
-### tracts2020
-
-ID: `oeps-391119.spatial.tracts2020`
-
-1 column in this table.
-
-Name|Data Type|Description|Source
--|-|-|-
-HEROP_ID|STRING|None|None
-
-### counties2020
-
-ID: `oeps-391119.spatial.counties2020`
-
-1 column in this table.
-
-Name|Data Type|Description|Source
--|-|-|-
-HEROP_ID|STRING|None|None
-
-### zctas2018
-
-ID: `oeps-391119.spatial.zctas2018`
-
-1 column in this table.
-
-Name|Data Type|Description|Source
--|-|-|-
-HEROP_ID|STRING|None|None
-
-### states2010
-
-ID: `oeps-391119.spatial.states2010`
-
-2 columns in this table.
-
-Name|Data Type|Description|Source
--|-|-|-
-HEROP_ID|STRING|None|None
-name|STRING|None|None
-
-### states2020
-
-ID: `oeps-391119.spatial.states2020`
-
-1 column in this table.
-
-Name|Data Type|Description|Source
--|-|-|-
-HEROP_ID|STRING|None|None
-
-### tracts2010
-
-ID: `oeps-391119.spatial.tracts2010`
-
-1 column in this table.
-
-Name|Data Type|Description|Source
--|-|-|-
-HEROP_ID|STRING|None|None
-
-### counties2018
-
-ID: `oeps-391119.spatial.counties2018`
-
-2 columns in this table.
-
-Name|Data Type|Description|Source
--|-|-|-
-HEROP_ID|STRING|None|None
-name|STRING|None|None
-
-### tracts2018
-
-ID: `oeps-391119.spatial.tracts2018`
-
-1 column in this table.
-
-Name|Data Type|Description|Source
--|-|-|-
-HEROP_ID|STRING|None|None
+BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone
+Ovr18P|NUMERIC|
+SRatio65|NUMERIC|
+Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
+VacantP|NUMERIC|Percentage of vacant housing units
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+AsianP|NUMERIC|Percentage of population with race identified as Asian alone
+GradSclP|NUMERIC|
+TotUnits|INTEGER|Count of total occupied housing units
+Ovr16P|NUMERIC|
+AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
+PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone
+HisP|NUMERIC|
+WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
+SRatio18|NUMERIC|
+EduNoHsP|NUMERIC|
+Ovr21|NUMERIC|
+PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
+Ovr18|NUMERIC|
+MaleP|NUMERIC|
+BlackE|NUMERIC|Count population with race identified as Black or African American alone. Estimated count in non-decennial years.
+Ovr21P|NUMERIC|
+Ovr16|NUMERIC|
+HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
+DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
+EduHsP|NUMERIC|
+BachelorsP|NUMERIC|
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+SomeCollegeP|NUMERIC|
+OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
+Ovr65P|NUMERIC|Percentage of population over 65
+DmyBlckBlt|BOOLEAN|Dummy variable for whether county is in the Southern Black Belt region
+HisE|NUMERIC|Count persons with ethnicity identified as of Hispanic or Latinx origin. Estimated count in non-decennial years.
+TotPop|INTEGER|Total population
+PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
+ChildrenP|NUMERIC|Percentage of population under age 18
+AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
+Age15_44|INTEGER|Total population between age 15-44
+WhiteP|NUMERIC|Percentage of population with race identified as white alone
+SRatio|NUMERIC|
+UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
+AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
+FemP|NUMERIC|
+Age15_44P|NUMERIC|Percentage of population below 45 years of age
 

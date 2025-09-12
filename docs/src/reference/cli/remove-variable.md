@@ -37,7 +37,7 @@ Usage: remove-variable [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7404c54560e0>
+    * Type: <click.types.Path object at 0x7187381e2f70>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 

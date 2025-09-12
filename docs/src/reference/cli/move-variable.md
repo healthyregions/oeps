@@ -57,7 +57,7 @@ Usage: move-variable [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7c16b0f4e440>
+    * Type: <click.types.Path object at 0x701b4df2f610>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
