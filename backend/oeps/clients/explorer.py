@@ -7,13 +7,12 @@ import pandas as pd
 from oeps.clients.s3 import sync_to_s3, get_base_url
 from oeps.config import DATA_DIR
 from oeps.utils import write_json, make_id
-from .registry import Registry
-from ..registry.handlers import Registry as Registry2
+from ..registry.handlers import Registry
 
 
 class Explorer:
     def __init__(
-        self, registry: Registry2, root_dir: Path = Path(".explorer")
+        self, registry: Registry, root_dir: Path = Path(".explorer")
     ):
         self.registry = registry
         self.root_dir = root_dir
