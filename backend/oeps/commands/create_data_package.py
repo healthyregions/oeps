@@ -3,7 +3,7 @@ from pathlib import Path
 
 import click
 from oeps.clients.frictionless import DataPackage
-from oeps.clients.registry import Registry
+from ..registry.handlers import Registry
 
 from oeps.utils import (
     handle_overwrite,
@@ -13,6 +13,7 @@ from ._common_opts import (
     add_common_opts,
     overwrite_opt,
     registry_opt,
+    data_dir_opt,
     verbose_opt,
     TEMP_DIR_rel,
 )
@@ -31,6 +32,11 @@ from ._common_opts import (
     ),
 )
 @click.option(
+    "--config",
+    "-c",
+    help="Name of folder in data/package_rules that holds configs for the export.",
+)
+@click.option(
     "--zip", "zip_", is_flag=True, default=False, help="Zip the output data package."
 )
 @click.option(
@@ -46,6 +52,12 @@ from ._common_opts import (
     help="Force re-download of any remote files.",
 )
 @click.option(
+    "--check-rules",
+    is_flag=True,
+    default=False,
+    help="Only check the rules file, don't create any dataframes or output files.",
+)
+@click.option(
     "--skip-foreign-keys",
     is_flag=True,
     default=False,
@@ -58,16 +70,19 @@ from ._common_opts import (
     default=False,
     help="Don't run data package validation on the final output.",
 )
-@add_common_opts(overwrite_opt, registry_opt, verbose_opt)
+@add_common_opts(overwrite_opt, registry_opt, data_dir_opt, verbose_opt)
 def create_data_package(
     destination,
+    config,
     zip_,
     upload,
     no_cache,
     skip_foreign_keys,
     skip_validation,
+    check_rules,
     overwrite,
     registry_path,
+    data_dir_path,
     verbose,
 ):
     """Generates a Frictionless data package from the Data Resource definitions in this backend. This export
@@ -81,19 +96,29 @@ def create_data_package(
     `--skip-validation` to skip the final step of running validation on the output package.
     """
 
-    out_name = f"oeps-data-package-v2_{datetime.now().date().isoformat()}"
+    rules_dir = Path(data_dir_path, "package_rules", config)
+
+    if not rules_dir.is_dir():
+        print(f"No directory for data rules: {config}")
+        print(f"Expected path: {rules_dir.resolve()}")
+        exit()
+
+    out_name = f"oeps-{config}_{datetime.now().date().isoformat()}"
     out_name = out_name + "_no_foreign_keys" if skip_foreign_keys else out_name
     out_path = Path(destination, out_name)
 
     if not overwrite:
         handle_overwrite(out_path)
 
-    registry = Registry(registry_path)
+    registry = Registry.create_from_directory(registry_path)
     dp = DataPackage(out_path)
-    dp.create_from_registry(
+    print(check_rules)
+    dp.create_from_rules(
         registry,
-        zip_,
-        upload,
+        rules_dir,
+        check_rules=check_rules,
+        zip_output=zip_,
+        upload=upload,
         no_cache=no_cache,
         skip_foreign_keys=skip_foreign_keys,
         run_validation=not skip_validation,

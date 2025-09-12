@@ -75,7 +75,7 @@ class TableSource(TableSourceModel):
 class Variable(VariableModel):
 
     def to_frictionless_field(self):
-        return {
+        field_def = {
             "name": self.name,
             "title": self.title,
             "type": self.type,
@@ -83,8 +83,19 @@ class Variable(VariableModel):
             "description": self.description,
             "metadata": self.metadata
         }
+        if self.format:
+            field_def["format"] = self.format
+        return field_def
 
 class GeodataSource(GeodataSourceModel):
+
+    def get_blank_dataframe(self) -> pd.DataFrame:
+        gdf = gpd.read_file(self.full_path)[["HEROP_ID"]]
+
+        extra_foreign_key = "ZCTA5" if self.summary_level.name == "zcta" else "FIPS"
+        gdf[extra_foreign_key] = gdf.HEROP_ID.apply(lambda x: x[5:])
+
+        return gdf
 
     def to_frictionless_resource(self):
 
@@ -118,7 +129,7 @@ class Metadata(MetadataModel):
 class Registry(BaseModel):
 
     path: Path
-    variables: dict[str, VariableModel] = {}
+    variables: dict[str, Variable] = {}
     table_sources: dict[str, TableSource] = {}
     geodata_sources: dict[str, GeodataSource] = {}
     metadata: dict[str, Metadata] = {}
@@ -359,10 +370,7 @@ class Registry(BaseModel):
             path=f"tables/{name}.csv",
         )
 
-        gdf = gpd.read_file(gs.full_path)[["HEROP_ID"]]
-
-        extra_foreign_key = "ZCTA5" if gs.summary_level.name == "zcta" else "FIPS"
-        gdf[extra_foreign_key] = gdf.HEROP_ID.apply(lambda x: x[5:])
+        gdf = gs.get_blank_dataframe()
 
         print("new data table:")
         print(gdf)
