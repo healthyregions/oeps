@@ -15,11 +15,20 @@ Usage: validate-registry [OPTIONS]
 ## Options
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7fd5da65a830>
+    * Type: <click.types.Path object at 0x7a87694e8ee0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
     Optional override for the registry directory.
+
+
+
+* `sync_table_sources`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--sync-table-sources`
+
+    Updates all variable table_sources values directly from CSV data.
 
 
 
@@ -41,6 +50,8 @@ Usage: validate-registry [OPTIONS]
 
 Options:
   --registry-path PATH  Optional override for the registry directory.
+  --sync-table-sources  Updates all variable table_sources values directly
+                        from CSV data.
   --help                Show this message and exit.
 ```
 

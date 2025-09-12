@@ -62,7 +62,7 @@ Usage: bigquery-upload [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7079103ea950>
+    * Type: <click.types.Path object at 0x7fe4baa5daf0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 

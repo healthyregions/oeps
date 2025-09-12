@@ -1,36 +1,51 @@
 
 # build-docs
 
-Generates verious documentation pages based on the data content.
+Generates various documentation pages based on the data content.
 
-    OPERATION (choose one)
-
-    bq-reference: build reference file for Big Query tables
-
-    cli: create all documentation for the CLI interface
-
-    registry-summary: build summary CSV files of all content in the registry
-
+    Optionally only generate one of the types of docs.
     
 
 ## Usage
 
 ```
-Usage: build-docs [OPTIONS] OPERATION
+Usage: build-docs [OPTIONS]
 ```
 
 ## Arguments
 
-* `operation` (REQUIRED):
-    * Type: STRING
-    * Default: `None`
-    * Usage: `operation`
-
 
 ## Options
 
+* `bq_only`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--bq-only`
+
+    Only build the BigQuery reference docs.
+
+
+
+* `cli_only`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--cli-only`
+
+    Only build the CLI docs.
+
+
+
+* `registry_only`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--registry-only`
+
+    Only build the registry summary docs.
+
+
+
 * `registry_path`:
-    * Type: <click.types.Path object at 0x74d626b4a530>
+    * Type: <click.types.Path object at 0x7e31e4f30d90>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -50,19 +65,16 @@ Usage: build-docs [OPTIONS] OPERATION
 ## CLI Help
 
 ```
-Usage: build-docs [OPTIONS] OPERATION
+Usage: build-docs [OPTIONS]
 
-  Generates verious documentation pages based on the data content.
+  Generates various documentation pages based on the data content.
 
-  OPERATION (choose one)
-
-  bq-reference: build reference file for Big Query tables
-
-  cli: create all documentation for the CLI interface
-
-  registry-summary: build summary CSV files of all content in the registry
+  Optionally only generate one of the types of docs.
 
 Options:
+  --bq-only             Only build the BigQuery reference docs.
+  --cli-only            Only build the CLI docs.
+  --registry-only       Only build the registry summary docs.
   --registry-path PATH  Optional override for the registry directory.
   --help                Show this message and exit.
 ```

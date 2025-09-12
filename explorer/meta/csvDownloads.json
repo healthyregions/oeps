@@ -160,6 +160,11 @@
   ],
   "zcta": [
     {
+      "name": "zcta-2010.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/zcta-2010.csv",
+      "year": "2010"
+    },
+    {
       "name": "zcta-2018.csv",
       "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/zcta-2018.csv",
       "year": "2018"
