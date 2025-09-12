@@ -9,7 +9,9 @@
   "table_sources": [
     "zcta-2010",
     "zcta-2018",
+    "zcta-2019",
     "zcta-2020",
+    "zcta-2021",
     "zcta-2022",
     "zcta-2023",
     "zcta-2025"

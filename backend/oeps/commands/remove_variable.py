@@ -1,6 +1,6 @@
 import click
 
-from oeps.clients.registry import Registry, TableSource
+from ..registry.handlers import Registry
 
 from ._common_opts import (
     add_common_opts,
@@ -25,7 +25,7 @@ def remove_variable(name, table_source, registry_path):
     Optionally remove the variable only from one table source.
     """
 
-    registry = Registry(registry_path)
+    registry = Registry.create_from_directory(registry_path)
 
     variable = registry.variables.get(name)
     if not variable:
@@ -35,21 +35,24 @@ def remove_variable(name, table_source, registry_path):
         exit()
 
     if table_source:
-        source = TableSource(table_source, with_data=True)
+        ts = registry.table_sources.get(table_source)
+        if not ts:
+            print(f"Invalid table source name: {table_source}")
+            exit()
         if (
             not input(
-                f"\n{name} column will be removed from the {source.name} CSV. Continue? Y/n "
+                f"\n{name} column will be removed from the {ts.name} CSV. Continue? Y/n "
             )
             .lower()
             .startswith("n")
         ):
-            source.delete_variable_data(name)
-            registry.sync_variable_table_sources(source)
+            ts.delete_variable_data(name)
+            registry.update_variable_table_sources(ts.name)
         else:
             print(" -- cancel operation")
 
     else:
-        sources = [TableSource(i, with_data=True) for i in variable["table_sources"]]
+        sources = [i for i in registry.table_sources.values() if i.name in variable.table_sources]
         source_names = "\n  ".join([i.name for i in sources])
         print(
             f"\nVariable will be removed from registry, and {name} column will be removed from the following CSVs:\n  {source_names}"

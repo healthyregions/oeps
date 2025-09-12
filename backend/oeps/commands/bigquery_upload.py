@@ -3,7 +3,7 @@ from datetime import datetime
 import click
 
 from oeps.clients.bigquery import BigQuery, get_client
-from oeps.clients.registry import Registry
+from ..registry.handlers import Registry
 
 from ._common_opts import (
     add_common_opts,
@@ -49,7 +49,11 @@ def bigquery_upload(
         exit()
 
     bq = BigQuery()
-    registry = Registry(registry_path)
+    registry = Registry.create_from_directory(registry_path)
+
+    print("WARNING: This command still needs to be updated to use the new Registry model.")
+    print("  --cancelling operation")
+    exit()
 
     messages = []
 

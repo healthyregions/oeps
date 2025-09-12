@@ -1,24 +1,38 @@
 import os
+import csv
 import shutil
 import pandas as pd
 from pathlib import Path
 
 from frictionless import validate
 
-from oeps.clients.registry import Registry
-from oeps.clients.s3 import upload_to_s3
-from oeps.utils import fetch_files, load_json, write_json
+from ..registry.handlers import Registry
+from ..registry.models import GeodataSourceModel, GEOGRAPHY_LOOKUP
 
-from oeps.config import DATA_DIR
+from oeps.clients.s3 import upload_to_s3
+from oeps.utils import load_json, write_json, download_file
 
 
 class DataPackage:
     def __init__(self, path: Path = None):
         self.path = path
+        self.registry = None
+        self.rules_rows = []
+        self.verbose = False
 
-    def create_from_registry(
+    def check_geodata_sources_in_rules_file(self, lvl: GeodataSourceModel):
+        gs = dict()
+        for row in self.rules_rows:
+            ts = self.registry.get_table_source_for_variable(row["name"], lvl.name, row["pick"])
+            gs[ts.geodata_source] = gs.get(ts.geodata_source, []) + [row["name"]]
+
+        return gs
+
+    def create_from_rules(
         self,
         registry: Registry,
+        rules_dir: Path,
+        check_rules: bool = False,
         zip_output: bool = False,
         upload: bool = False,
         no_cache: bool = False,
@@ -26,19 +40,23 @@ class DataPackage:
         run_validation: bool = True,
         verbose: bool = False,
     ):
-        """Single command to generate an output data package. Should probably be
-        refactored to more modular methods on this class."""
+        """Single command to generate an output data package, based on a set
+        of CSVs that hold inclusion rules for each variable."""
 
+        self.registry = registry
+        self.verbose = verbose
         self.path.mkdir(exist_ok=True, parents=True)
         s_path = Path(self.path, "schemas")
         s_path.mkdir(exist_ok=True)
         d_path = Path(self.path, "data")
         d_path.mkdir(exist_ok=True)
 
-        data_package = {
+        rules_name = rules_dir.name
+
+        package_schema = {
             "profile": "data-package",
-            "name": "oeps",
-            "title": "Opioid Environment Policy Scan (OEPS) v2",
+            "name": f"oeps-{rules_name.lower()}",
+            "title": f"Opioid Environment Policy Scan (OEPS) - {rules_name}",
             "homepage": "https://oeps.healthyregions.org",
             "licenses": [
                 {
@@ -50,70 +68,96 @@ class DataPackage:
             "resources": [],
         }
 
-        for res in registry.get_all_sources():
-            ## remove unneeded top-level attributes (outside of Data Package spec)
-            res.pop("bq_table_name", None)
-            res.pop("bq_dataset_name", None)
-            res.pop("geodata_source", None)
-            res.pop("explorer_config", None)
+        for rules_file in rules_dir.glob("*.csv"):
+            if rules_file.stem not in GEOGRAPHY_LOOKUP:
+                continue
+            lvl = GEOGRAPHY_LOOKUP[rules_file.stem]
+            print(f"processing {rules_file.name}")
+            with open(rules_file, "r") as o:
+                reader = csv.DictReader(o)
+                ## filter out variables that don't have a "pick" value
+                self.rules_rows = [i for i in reader if i["pick"]]
 
-            # remove foreignKeys from schema if needed
-            if skip_foreign_keys:
-                res["schema"].pop("foreignKeys", None)
+            gs_lookup = self.check_geodata_sources_in_rules_file(lvl)
+            if len(gs_lookup.keys()) > 1:
+                print("not all variable years in this file use the same geodata source.")
+                print("this must be corrected before the file can be processed.")
 
-            ## remove unneeded attributes from each field (outside of Data Package spec)
-            for field in res["schema"]["fields"]:
-                field.pop("table_sources", None)
-                field.pop("years", None)
-                field.pop("analysis", None)
-                field.pop("longitudinal", None)
+                fewer_vars = None
+                fewer_ct = 10000
+                for k, v in gs_lookup.items():
+                    if len(v) < fewer_ct:
+                        fewer_ct = len(v)
+                        fewer_vars = v
+                    print(k, len(v))
+                print(f"outliers: {', '.join(fewer_vars)}")
+                continue
 
-                ## convert our "constraints" field to generic "data_note"
-                ## because our "constraints" doesn't match Data Package specs
-                constraint = field.pop("constraints", "")
-                if not constraint == "":
-                    field["data_note"] = constraint
+            if check_rules:
+                continue
 
-            # write the schema out to its own file in the schemas dir
-            schema = res.pop("schema")
-            schema_filename = f"{res['name']}.json"
+            resource = {
+                "name": rules_file.stem,
+                "title": rules_file.stem,
+                "format": "csv",
+                "mediatype": "text/csv",
+                "path": f"data/{rules_file.name}",
+                "schema": f"schemas/{rules_file.stem}.json",
+            }
+            resource_schema = {
+                "primaryKey": "HEROP_ID",
+                "fields": [
+                    {
+                        "title": "HEROP_ID",
+                        "name": "HEROP_ID",
+                        "type": "string",
+                        "example": "050US01001",
+                        "description": "A derived unique id corresponding to the relevant geographic unit.",
+                        "metadata": "Geographic_Boundaries"
+                    },
+                    {
+                        "title": "FIPS",
+                        "name": "FIPS",
+                        "type": "string",
+                        "example": "22001",
+                        "description": "FIPS code for this geographic unit.",
+                        "metadata": "Geographic_Boundaries"
+                    },
+                ]
+            }
 
-            write_json(schema, Path(s_path, schema_filename))
+            gs = self.registry.geodata_sources.get(list(gs_lookup.keys())[0])
+            df = gs.get_blank_dataframe()
+            print(df)
+            for row in self.rules_rows:
+                ## skip HEROP_ID and FIPS, as they are already in the blank df
+                if row["name"] in ["HEROP_ID", "FIPS"]:
+                    continue
+                variable = self.registry.variables.get(row["name"])
+                ts = self.registry.get_table_source_for_variable(variable.name, lvl.name, row["pick"])
+                var_df = ts.get_variable_data([variable.name])
+                print(var_df)
+                df = pd.merge(df, var_df, how="left", on="HEROP_ID")
 
-            # copy the data files and generate the list of local paths
-            data_path = res.pop("path")
-            if not data_path.startswith("http"):
-                data_path = str(Path(DATA_DIR, data_path).resolve())
-            local_paths = fetch_files(data_path, d_path, no_cache=no_cache)
+                field_def = variable.to_frictionless_field()
+                field_def["year"] = row["pick"]
+                resource_schema["fields"].append(field_def)
 
-            res["path"] = [f"data/{i.name}" for i in local_paths]
-            res["schema"] = f"schemas/{schema_filename}"
+            print(df)
+            outpath = Path(d_path, rules_file.name)
+            df.to_csv(outpath, index=False)
 
-            data_package["resources"].append(res)
+            package_schema["resources"].append(resource)
+            write_json(resource_schema, Path(self.path, resource["schema"]))
 
-        package_json_path = Path(self.path, "data-package.json")
-        write_json(data_package, package_json_path)
+            self.clean_data_resource(resource)
 
-        non_shps = [i for i in data_package["resources"] if i["format"] != "shp"]
-        for res in non_shps:
-            self.clean_data_resource(res)
+        write_json(package_schema, Path(self.path, "data-package.json"))
+
+        self.collect_metadata()
 
         if run_validation:
-            print("\nvalidating output data package...")
-            report = validate(package_json_path, skip_errors=["type-error"])
-
-            print("VALIDATION REPORT SUMMARY:")
-            for t in report.tasks:
-                print(t.name, t.stats["errors"])
-                if verbose:
-                    if len(t.errors) > 0:
-                        for e in t.errors:
-                            print(e)
-
-            print(f"Totals: {report.stats}")
-
-            report.to_json(Path(self.path, "error-report.json"))
-
+            self.validate()
         else:
             print("skipping data package validation...")
 
@@ -133,12 +177,48 @@ class DataPackage:
                 print("deleting local copy of zipped output...")
                 os.remove(zip_path)
 
-        print("done.")
+        return self.path
+
+    def validate(self):
+
+        print("\nvalidating output data package...")
+        report = validate(Path(self.path, "data-package.json"), skip_errors=["type-error"])
+
+        print("VALIDATION REPORT SUMMARY:")
+        for t in report.tasks:
+            print(t.name, t.stats["errors"])
+            if self.verbose:
+                if len(t.errors) > 0:
+                    for e in t.errors:
+                        print(e)
+
+        print(f"Totals: {report.stats}")
+
+        report.to_json(Path(self.path, "error-report.json"))
+
+    def collect_metadata(self):
+
+        urls = set()
+        for schema_file in Path(self.path, "schemas").glob("*.json"):
+            schema = load_json(schema_file)
+            for field in schema["fields"]:
+                urls.add(self.registry.metadata[field["metadata"]].url)
+
+        if len(urls) > 0:
+            md_dir = Path(self.path, "metadata")
+            md_dir.mkdir(exist_ok=True)
+
+        download_url_base = "https://raw.githubusercontent.com/healthyregions/oeps/refs/heads/main/metadata/"
+        for url in urls:
+            file_name = Path(url).name
+            raw_url = f"{download_url_base}{file_name}"
+            local_path = Path(md_dir, file_name)
+            download_file(raw_url, local_path)
 
     def clean_data_resource(self, res):
         print(f"cleaning data for {res['name']}")
 
-        data_path = self.path / res["path"][0]
+        data_path = self.path / res["path"]
         schema_path = self.path / res["schema"]
 
         schema = load_json(schema_path)

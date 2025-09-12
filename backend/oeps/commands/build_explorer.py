@@ -3,7 +3,7 @@ from pathlib import Path
 import click
 
 from oeps.clients.explorer import Explorer
-from oeps.clients.registry import Registry
+from ..registry.handlers import Registry
 
 from ._common_opts import (
     add_common_opts,
@@ -42,7 +42,8 @@ def build_explorer(map_only: bool, docs_only: bool, upload_map_data: bool, regis
     will read them from there.
     """
 
-    registry = Registry(registry_path)
+    registry = Registry.create_from_directory(registry_path)
+
     ex = Explorer(registry=registry, root_dir=explorer_path)
 
     ops = {
