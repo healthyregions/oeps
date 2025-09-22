@@ -1,5 +1,5 @@
 {
-  "id": "PDMP_Presence",
+  "name": "PDMP_Presence",
   "theme": "Policy",
   "construct": "Prescription Drug Monitoring Programs (PDMP)",
   "proxy": "Presence of PDMP programs by state",

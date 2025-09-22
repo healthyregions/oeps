@@ -1,5 +1,5 @@
 {
-  "id": "Housing_Variables",
+  "name": "Housing_Variables",
   "theme": "Environment",
   "construct": "Housing Characteristics ",
   "proxy": "Housing Characteristics (Occupancy Rate, Vacancy Rate, Rented Rate, Long term Occupancy, Mobile Home Rate, Housing Unit Density)",

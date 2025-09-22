@@ -160,15 +160,15 @@ class Registry(BaseModel):
         theme_tree = {k: {} for k in THEME_ORDER}
         for i in Path(path, "metadata").glob("*.json"):
             md = Metadata.from_json_file(i)
-            metadata[md.id] = md
+            metadata[md.name] = md
             ## theme must be one of the preset options
             if md.theme not in theme_tree:
-                print(f"WARNING: metadata entry {md.id} has invalid theme {md.theme}")
+                print(f"WARNING: metadata entry {md.name} has invalid theme {md.theme}")
             else:
                 if md.construct2 not in theme_tree[md.theme]:
-                    theme_tree[md.theme][md.construct2] = [md.id]
+                    theme_tree[md.theme][md.construct2] = [md.name]
                 else:
-                    theme_tree[md.theme][md.construct2].append(md.id)
+                    theme_tree[md.theme][md.construct2].append(md.name)
         return (metadata, theme_tree)
 
     @classmethod

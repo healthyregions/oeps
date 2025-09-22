@@ -1,5 +1,5 @@
 {
-  "id": "Population_withDisability",
+  "name": "Population_withDisability",
   "theme": "Social",
   "construct": "Population with Disability",
   "proxy": "Population with Disability (%)",

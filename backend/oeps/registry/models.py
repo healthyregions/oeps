@@ -127,7 +127,7 @@ class VariableModel(BaseModel):
 
 
 class MetadataModel(BaseModel):
-    id: str
+    name: str
     theme: str
     ## need to avoid the upstream BaseModel.construct() method
     construct2: str

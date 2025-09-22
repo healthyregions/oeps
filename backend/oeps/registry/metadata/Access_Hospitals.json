@@ -1,5 +1,5 @@
 {
-  "id": "Access_Hospitals",
+  "name": "Access_Hospitals",
   "theme": "Environment",
   "construct": "Spatial Access to Hospitals",
   "proxy": "Spatial access metrics to Hospitals (Distance, Travel Time, Count Within Threshold)",

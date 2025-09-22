@@ -1,5 +1,5 @@
 {
-  "id": "Marital_Status",
+  "name": "Marital_Status",
   "theme": "Social",
   "construct": "Household Characteristics",
   "proxy": "Percent males aged 15 or older who are married, never married, separated, divorced, or widowed",

@@ -1,5 +1,5 @@
 {
-  "id": "Naloxone_Policy",
+  "name": "Naloxone_Policy",
   "theme": "Policy",
   "construct": "Harm Reduction Policies",
   "proxy": "Presence of laws around naloxone access by state",
