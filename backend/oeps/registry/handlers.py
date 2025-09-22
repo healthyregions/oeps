@@ -356,7 +356,7 @@ class Registry(BaseModel):
         use_source = None
         for ts in variable.table_sources:
             if self.geodata_sources[self.table_sources[ts].geodata_source].summary_level.name == summary_level:
-                if self.table_sources[ts].year <= year:
+                if self.table_sources[ts].data_year <= year:
                     use_source = self.table_sources[ts]
 
         return use_source

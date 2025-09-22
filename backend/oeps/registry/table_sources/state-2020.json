@@ -3,6 +3,6 @@
   "title": "state-2020",
   "path": "tables/state-2020.csv",
   "description": "This CSV aggregates all OEPS data values from 2020 at the state level.",
-  "year": "2020",
+  "data_year": "2020",
   "geodata_source": "geo-2018-state"
 }

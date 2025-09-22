@@ -3,6 +3,6 @@
   "title": "county-2020",
   "path": "tables/county-2020.csv",
   "description": "This CSV aggregates all OEPS data values from 2020 at the county level.",
-  "year": "2020",
+  "data_year": "2020",
   "geodata_source": "geo-2018-county"
 }

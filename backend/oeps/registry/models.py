@@ -75,7 +75,7 @@ class TableSourceModel(BaseModel):
     title: str
     path: str
     description: str
-    year: str
+    data_year: str
     geodata_source: str
     variables: list["VariableModel"] = []
     df: pd.DataFrame = None

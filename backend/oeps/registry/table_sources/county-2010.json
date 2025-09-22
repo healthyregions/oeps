@@ -3,6 +3,6 @@
   "title": "county-2010",
   "path": "tables/county-2010.csv",
   "description": "This CSV aggregates all OEPS data values from 2010 at the county level.",
-  "year": "2010",
+  "data_year": "2010",
   "geodata_source": "geo-2010-county"
 }

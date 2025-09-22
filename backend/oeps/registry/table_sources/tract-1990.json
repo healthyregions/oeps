@@ -3,6 +3,6 @@
   "title": "tract-1990",
   "path": "tables/tract-1990.csv",
   "description": "This CSV aggregates all OEPS data values from 1990 at the tract level.",
-  "year": "1990",
+  "data_year": "1990",
   "geodata_source": "geo-2010-tract"
 }

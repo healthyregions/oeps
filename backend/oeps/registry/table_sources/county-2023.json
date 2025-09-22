@@ -3,6 +3,6 @@
   "title": "county-2023",
   "path": "tables/county-2023.csv",
   "description": "This CSV aggregates all OEPS data values from 2023 at the county level.",
-  "year": "2023",
+  "data_year": "2023",
   "geodata_source": "geo-2020-county"
 }

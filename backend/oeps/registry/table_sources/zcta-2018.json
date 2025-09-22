@@ -3,6 +3,6 @@
   "title": "zcta-2018",
   "path": "tables/zcta-2018.csv",
   "description": "This CSV aggregates all OEPS data values from 2018 at the zcta level.",
-  "year": "2018",
+  "data_year": "2018",
   "geodata_source": "geo-2018-zcta"
 }

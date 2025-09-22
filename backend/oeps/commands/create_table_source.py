@@ -37,7 +37,7 @@ def create_table_source(year, geodata_source, dry_run, registry_path):
         exit()
 
     for ts in registry.table_sources.values():
-        if ts.year == year and ts.geodata_source == geodata_source:
+        if ts.data_year == year and ts.geodata_source == geodata_source:
             print(f"ERROR: This table source already exists: {ts.name}")
             exit()
 
