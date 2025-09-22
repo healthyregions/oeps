@@ -209,6 +209,11 @@ class Registry(BaseModel):
         for k, v in self.table_sources.items():
             if v.geodata_source not in self.geodata_sources:
                 print(f"{k} | Invalid geodata_source: {v.geodata_source} ")
+            pathpath = Path(v.full_path)
+            if pathpath.stem != v.name:
+                print(f"{k} | CSV file name must match table_source name: {pathpath.stem}")
+            if not pathpath.is_file():
+                print(f"{k} | CSV not found: {v.full_path}")
 
         print("\nall checks complete.")
 
@@ -366,18 +371,16 @@ class Registry(BaseModel):
         self._load_variables(self.path)
 
     def create_table_source(
-        self, year: str, geodata_source: str, dry_run: bool = False
+        self, name: str, data_year: str, geodata_source: str, dry_run: bool = False
     ) -> TableSource:
 
         gs = self.geodata_sources.get(geodata_source)
 
-        name = f"{gs.summary_level.name}-{year}"
-
         ts = TableSource(
             name=name,
             title=name,
-            description=f"This CSV aggregates all OEPS data values from {year} at the {gs.summary_level.name} level.",
-            year=year,
+            description=f"This CSV aggregates OEPS data values from {data_year} at the {gs.summary_level.name} level.",
+            data_year=data_year,
             geodata_source=geodata_source,
             path=f"tables/{name}.csv",
         )
