@@ -4,5 +4,5 @@
   "path": "tables/county-1980.csv",
   "description": "This CSV aggregates all OEPS data values from 1980 at the county level.",
   "year": "1980",
-  "geodata_source": "counties-2010"
+  "geodata_source": "geo-2010-county"
 }

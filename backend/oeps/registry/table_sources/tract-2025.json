@@ -4,5 +4,5 @@
   "path": "tables/tract-2025.csv",
   "description": "This CSV aggregates all OEPS data values from 2025 at the tract level.",
   "year": "2025",
-  "geodata_source": "tracts-2020"
+  "geodata_source": "geo-2020-tract"
 }

@@ -8,7 +8,6 @@
   "analysis": false,
   "metadata": "Geographic_Boundaries",
   "table_sources": [
-    "zcta-2010",
     "zcta-2018",
     "zcta-2019",
     "zcta-2020",

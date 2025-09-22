@@ -4,5 +4,5 @@
   "path": "tables/zcta-2021.csv",
   "description": "This CSV aggregates all OEPS data values from 2021 at the zcta level.",
   "year": "2021",
-  "geodata_source": "zctas-2018"
+  "geodata_source": "geo-2018-zcta"
 }

@@ -1,7 +1,5 @@
 {
-    "bq_dataset_name": "spatial",
-    "bq_table_name": "zctas2020",
-    "name": "zctas-2020",
+    "name": "geo-2020-zcta",
     "title": "ZCTA Boundaries, 2020",
     "description": "Shapefile of census Zip Code Tabulation Area boundaries from the US Census Bureau, 2020.",
     "path": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/zcta-2020-500k-shp.zip",

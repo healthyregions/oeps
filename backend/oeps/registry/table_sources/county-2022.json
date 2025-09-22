@@ -4,5 +4,5 @@
   "path": "tables/county-2022.csv",
   "description": "This CSV aggregates all OEPS data values from 2022 at the county level.",
   "year": "2022",
-  "geodata_source": "counties-2020"
+  "geodata_source": "geo-2020-county"
 }
