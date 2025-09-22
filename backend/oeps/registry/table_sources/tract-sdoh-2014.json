@@ -1,0 +1,8 @@
+{
+  "name": "tract-sdoh-2014",
+  "title": "tract-sdoh-2014",
+  "path": "tables/tract-sdoh-2014.csv",
+  "description": "This CSV aggregates OEPS data values from 2014 at the tract level.",
+  "data_year": "2014",
+  "geodata_source": "geo-2018-tract"
+}

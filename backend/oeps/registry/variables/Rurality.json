@@ -8,7 +8,7 @@
   "analysis": true,
   "metadata": "Urbanicity",
   "table_sources": [
-    "tract-2010",
-    "zcta-2018"
+    "tract-ruca-2010",
+    "zcta-ruca-2010"
   ]
 }

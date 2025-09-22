@@ -8,6 +8,6 @@
   "analysis": false,
   "metadata": "SDOH_Indices",
   "table_sources": [
-    "tract-2014"
+    "tract-sdoh-2014"
   ]
 }

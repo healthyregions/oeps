@@ -1,0 +1,8 @@
+{
+  "name": "state-providers-2010",
+  "title": "state-providers-2010",
+  "path": "tables/state-providers-2010.csv",
+  "description": "This CSV aggregates OEPS data values from 2010 at the state level.",
+  "data_year": "2010",
+  "geodata_source": "geo-2018-state"
+}

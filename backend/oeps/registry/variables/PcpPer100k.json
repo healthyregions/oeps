@@ -8,7 +8,7 @@
   "analysis": true,
   "metadata": "Healthcare_Provider_Access",
   "table_sources": [
-    "county-2010",
-    "tract-2010"
+    "county-providers-2010",
+    "tract-providers-2010"
   ]
 }

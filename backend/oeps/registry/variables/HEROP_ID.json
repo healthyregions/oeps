@@ -23,6 +23,7 @@
     "county-2022",
     "county-2023",
     "county-2025",
+    "county-providers-2010",
     "state-1980",
     "state-1990",
     "state-2000",
@@ -39,6 +40,7 @@
     "state-2022",
     "state-2023",
     "state-2025",
+    "state-providers-2010",
     "tract-1980",
     "tract-1990",
     "tract-2000",
@@ -51,12 +53,16 @@
     "tract-2022",
     "tract-2023",
     "tract-2025",
+    "tract-providers-2010",
+    "tract-ruca-2010",
+    "tract-sdoh-2014",
     "zcta-2018",
     "zcta-2019",
     "zcta-2020",
     "zcta-2021",
     "zcta-2022",
     "zcta-2023",
-    "zcta-2025"
+    "zcta-2025",
+    "zcta-ruca-2010"
   ]
 }
