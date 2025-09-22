@@ -195,6 +195,23 @@ class Registry(BaseModel):
             theme_tree=theme_tree,
         )
 
+    def validate(self):
+
+        print("\n-- checking variables...")
+        for k, v in self.variables.items():
+            if v.metadata not in self.metadata:
+                print(f"{k} | Invalid metadata name: {v.metadata} ")
+            for t in v.table_sources:
+                if t not in self.table_sources:
+                    print(f"{k} | Invalid table source name: {t} ")
+
+        print("\n-- checking table sources...")
+        for k, v in self.table_sources.items():
+            if v.geodata_source not in self.geodata_sources:
+                print(f"{k} | Invalid geodata_source: {v.geodata_source} ")
+
+        print("\nall checks complete.")
+
     def reload_variables(self):
         self.variables = self._load_variables(self.path)
 

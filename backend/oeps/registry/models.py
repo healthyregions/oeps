@@ -42,6 +42,15 @@ GEOGRAPHY_LOOKUP = {
 }
 
 
+def load_entry(path):
+    data = load_json(path)
+    if "name" not in data:
+        raise Exception(f"ERROR: {path.name} | name property is required")
+    if path.stem != data["name"]:
+        raise Exception(f"ERROR: {data['name']}, {path.name} | name and file name must match")
+    return data
+
+
 class GeodataSourceModel(BaseModel):
     name: str
     title: str
@@ -56,7 +65,7 @@ class GeodataSourceModel(BaseModel):
 
     @classmethod
     def from_json_file(cls, path: Path) -> "GeodataSourceModel":
-        data = load_json(path)
+        data = load_entry(path)
         data["summary_level"] = GEOGRAPHY_LOOKUP[data["summary_level"]]
         return cls(**data)
 
@@ -81,7 +90,7 @@ class TableSourceModel(BaseModel):
 
     @classmethod
     def from_json_file(cls, path: Path) -> "TableSourceModel":
-        data = load_json(path)
+        data = load_entry(path)
         return cls(**data)
 
     def to_json_file(self, registry_path: Path):
@@ -111,7 +120,7 @@ class VariableModel(BaseModel):
 
     @classmethod
     def from_json_file(cls, path: Path) -> "VariableModel":
-        data = load_json(path)
+        data = load_entry(path)
         return cls(**data)
 
     def to_json_file(self, registry_path: Path):
@@ -138,6 +147,6 @@ class MetadataModel(BaseModel):
 
     @classmethod
     def from_json_file(cls, path: Path) -> "MetadataModel":
-        data = load_json(path)
+        data = load_entry(path)
         data['construct2'] = data['construct']
         return cls(**data)
