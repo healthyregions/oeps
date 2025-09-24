@@ -1,5 +1,5 @@
 {
-  "id": "Jail_Incarceration_Rates",
+  "name": "Jail_Incarceration_Rates",
   "theme": "Social",
   "construct": "Incarceration",
   "proxy": "Total Jail Population Rate, Total jail admission rate, Pretrial Jail Population Rate, Total Jail Population Count & more",

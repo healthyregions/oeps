@@ -1,5 +1,5 @@
 {
-  "id": "Geographic_Boundaries",
+  "name": "Geographic_Boundaries",
   "theme": "Geography",
   "construct": "Geographic Boundaries",
   "proxy": "HEROP_ID, GEOID, and Census Flags",

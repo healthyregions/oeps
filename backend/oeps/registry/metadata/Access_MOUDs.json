@@ -1,5 +1,5 @@
 {
-  "id": "Access_MOUDs",
+  "name": "Access_MOUDs",
   "theme": "Environment",
   "construct": "Spatial Access to MOUDs",
   "proxy": "Spatial access metrics to Medications for Opioid Use Disorder(MOUD) including Methadone, Buprenorphine, Naltrexone, and Opioid Treatment Providers (Distance, Travel Time, Count Within Threshold, RAAM Access Score)",

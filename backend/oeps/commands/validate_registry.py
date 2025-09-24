@@ -25,5 +25,7 @@ def validate_registry(registry_path: Path, sync_table_sources: bool):
     print(f"geodata sources: {len(registry.geodata_sources)}")
     print(f"metadata entries: {len(registry.metadata)}")
 
+    registry.validate()
+
     if sync_table_sources:
         registry.update_variable_table_sources()

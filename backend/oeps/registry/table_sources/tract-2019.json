@@ -3,6 +3,6 @@
   "title": "tract-2019",
   "path": "tables/tract-2019.csv",
   "description": "This CSV aggregates all OEPS data values from 2019 at the tract level.",
-  "year": "2019",
-  "geodata_source": "tracts-2018"
+  "data_year": "2019",
+  "geodata_source": "geo-2018-tract"
 }

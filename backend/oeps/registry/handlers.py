@@ -160,15 +160,15 @@ class Registry(BaseModel):
         theme_tree = {k: {} for k in THEME_ORDER}
         for i in Path(path, "metadata").glob("*.json"):
             md = Metadata.from_json_file(i)
-            metadata[md.id] = md
+            metadata[md.name] = md
             ## theme must be one of the preset options
             if md.theme not in theme_tree:
-                print(f"WARNING: metadata entry {md.id} has invalid theme {md.theme}")
+                print(f"WARNING: metadata entry {md.name} has invalid theme {md.theme}")
             else:
                 if md.construct2 not in theme_tree[md.theme]:
-                    theme_tree[md.theme][md.construct2] = [md.id]
+                    theme_tree[md.theme][md.construct2] = [md.name]
                 else:
-                    theme_tree[md.theme][md.construct2].append(md.id)
+                    theme_tree[md.theme][md.construct2].append(md.name)
         return (metadata, theme_tree)
 
     @classmethod
@@ -194,6 +194,28 @@ class Registry(BaseModel):
             metadata=metadata,
             theme_tree=theme_tree,
         )
+
+    def validate(self):
+
+        print("\n-- checking variables...")
+        for k, v in self.variables.items():
+            if v.metadata not in self.metadata:
+                print(f"{k} | Invalid metadata name: {v.metadata} ")
+            for t in v.table_sources:
+                if t not in self.table_sources:
+                    print(f"{k} | Invalid table source name: {t} ")
+
+        print("\n-- checking table sources...")
+        for k, v in self.table_sources.items():
+            if v.geodata_source not in self.geodata_sources:
+                print(f"{k} | Invalid geodata_source: {v.geodata_source} ")
+            pathpath = Path(v.full_path)
+            if pathpath.stem != v.name:
+                print(f"{k} | CSV file name must match table_source name: {pathpath.stem}")
+            if not pathpath.is_file():
+                print(f"{k} | CSV not found: {v.full_path}")
+
+        print("\nall checks complete.")
 
     def reload_variables(self):
         self.variables = self._load_variables(self.path)
@@ -339,7 +361,7 @@ class Registry(BaseModel):
         use_source = None
         for ts in variable.table_sources:
             if self.geodata_sources[self.table_sources[ts].geodata_source].summary_level.name == summary_level:
-                if self.table_sources[ts].year <= year:
+                if self.table_sources[ts].data_year <= year:
                     use_source = self.table_sources[ts]
 
         return use_source
@@ -349,18 +371,16 @@ class Registry(BaseModel):
         self._load_variables(self.path)
 
     def create_table_source(
-        self, year: str, geodata_source: str, dry_run: bool = False
+        self, name: str, data_year: str, geodata_source: str, dry_run: bool = False
     ) -> TableSource:
 
         gs = self.geodata_sources.get(geodata_source)
 
-        name = f"{gs.summary_level.name}-{year}"
-
         ts = TableSource(
             name=name,
             title=name,
-            description=f"This CSV aggregates all OEPS data values from {year} at the {gs.summary_level.name} level.",
-            year=year,
+            description=f"This CSV aggregates OEPS data values from {data_year} at the {gs.summary_level.name} level.",
+            data_year=data_year,
             geodata_source=geodata_source,
             path=f"tables/{name}.csv",
         )

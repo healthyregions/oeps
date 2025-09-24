@@ -1,5 +1,5 @@
 {
-  "id": "Public_Expenditures",
+  "name": "Public_Expenditures",
   "theme": "Policy",
   "construct": "State & Local Government Expenditures",
   "proxy": "Expenditure amounts for corrections, police, fire, and other services, by state",

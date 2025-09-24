@@ -1,13 +1,11 @@
 {
-    "bq_dataset_name": "spatial",
-    "bq_table_name": "states2010",
-    "name": "states-2010",
-    "title": "State Boundaries, 2010",
-    "description": "Shapefile of state boundaries from the US Census Bureau, 2010.",
-    "path": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/state-2010-500k-shp.zip",
+    "name": "geo-2010-county",
+    "title": "County Boundaries, 2010",
+    "description": "Shapefile of county boundaries from the US Census Bureau, 2010.",
+    "path": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/county-2010-500k-shp.zip",
     "format": "shp",
     "mediatype": "application/vnd.shp",
-    "summary_level": "state",
+    "summary_level": "county",
     "schema": {
         "primaryKey": "HEROP_ID",
         "fields": [

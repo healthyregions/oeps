@@ -4,10 +4,10 @@ content:
     label: Metadata
     type: collection
     path: backend/oeps/registry/metadata
-    filename: '{id}.json'
+    filename: '{name}.json'
     format: json
     fields:
-      - name: id
+      - name: name
         label: Id
         type: string
         description: "Id for this metadata document. Used for filename (use underscores, no spaces). Ex: Access_MOUDs"
@@ -71,9 +71,9 @@ content:
         description: "Link to metadata document that describes this variable."
         options:
           collection: metadata
-          search: id
-          value: "{id}"
-          label: "{id}"
+          search: name
+          value: "{name}"
+          label: "{name}"
       - name: longitudinal
         type: boolean
         description: "(use undetermined)"

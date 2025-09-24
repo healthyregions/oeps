@@ -1,5 +1,5 @@
 {
-  "id": "HepatitisC_Rates",
+  "name": "HepatitisC_Rates",
   "theme": "Outcome",
   "construct": "Hepatitis C Rates",
   "proxy": "Rates of Hep C cases by age and demographics",

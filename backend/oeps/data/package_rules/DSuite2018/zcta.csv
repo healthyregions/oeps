@@ -1,161 +1,159 @@
-theme,construct,name,pick,all years
-Composite,Social Vulnerability Indices,SviSmryRnk,2018,"2018,2022"
-Composite,Social Vulnerability Indices,SviTh1,2018,"2018,2022"
-Composite,Social Vulnerability Indices,SviTh2,2018,"2018,2022"
-Composite,Social Vulnerability Indices,SviTh3,2018,"2018,2022"
-Composite,Social Vulnerability Indices,SviTh4,2018,"2018,2022"
-Economic,Employment Trends,EduP,2018,"2018,2020,2023"
-Economic,Employment Trends,EssnWrkE,2018,2018
-Economic,Employment Trends,EssnWrkP,2018,"2018,2020,2023"
-Economic,Employment Trends,HghRskP,2018,"2018,2020,2023"
-Economic,Employment Trends,HltCrP,2018,"2018,2020,2023"
-Economic,Employment Trends,RetailP,2018,"2018,2020,2023"
-Economic,Employment Trends,TotWrkE,2018,"2018,2020,2023"
-Economic,Great Recession Foreclosure Rate,GiniCoeff,2018,"2018,2020,2023"
-Economic,Internet Access,NoIntP,2019,2019
-Economic,"Poverty, Income, Gini Coefficient",MedInc,2018,"2018,2020,2023"
-Economic,"Poverty, Income, Gini Coefficient",PciE,2018,"2018,2020,2023"
-Economic,"Poverty, Income, Gini Coefficient",PovP,2018,"2018,2020,2023"
-Economic,"Poverty, Income, Gini Coefficient",UnempP,2018,"2018,2020,2023"
-Environment,Alcohol Outlet Density Measures,AlcDens,2018,2018
-Environment,Alcohol Outlet Density Measures,AlcPerCap,2018,2018
-Environment,Alcohol Outlet Density Measures,AlcTot,2018,2018
-Environment,Alcohol Outlet Density Measures,AreaSqMi,2018,2018
-Environment,Greenspace Measures,Ndvi,2018,2018
-Environment,Housing Characteristics ,LngTermP,2018,"2018,2020,2023"
-Environment,Housing Characteristics ,MobileP,2018,"2018,2020,2023"
-Environment,Housing Characteristics ,RentalP,2018,"2018,2020,2023"
-Environment,Housing Characteristics ,TotUnits,2018,"2018,2020,2023"
-Environment,Housing Characteristics ,UnitDens,2018,"2018,2020,2023"
-Environment,Housing Characteristics ,VacantP,2018,"2018,2020,2023"
-Environment,Spatial Access to Hospitals,HospCntDr,,2020
-Environment,Spatial Access to Hospitals,HospMinDis,,2020
-Environment,Spatial Access to Hospitals,HospTmDr,,2020
-Environment,Spatial Access to MOUDs,BupCntBk30,,"2020,2025"
-Environment,Spatial Access to MOUDs,BupCntBk60,,"2020,2025"
-Environment,Spatial Access to MOUDs,BupCntDr30,,"2020,2025"
+theme,construct,name,table_source,all years
+Composite,Social Vulnerability Indices,SviSmryRnk,zcta-2018,"2018,2022"
+Composite,Social Vulnerability Indices,SviTh1,zcta-2018,"2018,2022"
+Composite,Social Vulnerability Indices,SviTh2,zcta-2018,"2018,2022"
+Composite,Social Vulnerability Indices,SviTh3,zcta-2018,"2018,2022"
+Composite,Social Vulnerability Indices,SviTh4,zcta-2018,"2018,2022"
+Economic,Employment Trends,EduP,zcta-2018,"2018,2020,2023"
+Economic,Employment Trends,EssnWrkE,zcta-2018,2018
+Economic,Employment Trends,EssnWrkP,zcta-2018,"2018,2020,2023"
+Economic,Employment Trends,HghRskP,zcta-2018,"2018,2020,2023"
+Economic,Employment Trends,HltCrP,zcta-2018,"2018,2020,2023"
+Economic,Employment Trends,RetailP,zcta-2018,"2018,2020,2023"
+Economic,Employment Trends,TotWrkE,zcta-2018,"2018,2020,2023"
+Economic,Great Recession Foreclosure Rate,GiniCoeff,zcta-2018,"2018,2020,2023"
+Economic,Internet Access,NoIntP,zcta-2018,2019
+Economic,"Poverty, Income, Gini Coefficient",MedInc,zcta-2018,"2018,2020,2023"
+Economic,"Poverty, Income, Gini Coefficient",PciE,zcta-2018,"2018,2020,2023"
+Economic,"Poverty, Income, Gini Coefficient",PovP,zcta-2018,"2018,2020,2023"
+Economic,"Poverty, Income, Gini Coefficient",UnempP,zcta-2018,"2018,2020,2023"
+Environment,Alcohol Outlet Density Measures,AlcDens,zcta-2018,2018
+Environment,Alcohol Outlet Density Measures,AlcPerCap,zcta-2018,2018
+Environment,Alcohol Outlet Density Measures,AlcTot,zcta-2018,2018
+Environment,Alcohol Outlet Density Measures,AreaSqMi,zcta-2018,2018
+Environment,Greenspace Measures,Ndvi,zcta-2018,2018
+Environment,Housing Characteristics,LngTermP,zcta-2018,"2018,2020,2023"
+Environment,Housing Characteristics,MobileP,zcta-2018,"2018,2020,2023"
+Environment,Housing Characteristics,RentalP,zcta-2018,"2018,2020,2023"
+Environment,Housing Characteristics,TotUnits,zcta-2018,"2018,2020,2023"
+Environment,Housing Characteristics,UnitDens,zcta-2018,"2018,2020,2023"
+Environment,Housing Characteristics,VacantP,zcta-2018,"2018,2020,2023"
+Environment,Spatial Access to Hospitals,HospCntDr,zcta-2020,2020
+Environment,Spatial Access to Hospitals,HospMinDis,zcta-2020,2020
+Environment,Spatial Access to Hospitals,HospTmDr,zcta-2020,2020
+Environment,Spatial Access to MOUDs,BupCntBk30,zcta-2020,"2020,2025"
+Environment,Spatial Access to MOUDs,BupCntBk60,zcta-2020,"2020,2025"
+Environment,Spatial Access to MOUDs,BupCntDr30,zcta-2020,"2020,2025"
 Environment,Spatial Access to MOUDs,BupCntDr60,,2025
-Environment,Spatial Access to MOUDs,BupCntWk30,,"2020,2025"
-Environment,Spatial Access to MOUDs,BupCntWk60,,"2020,2025"
-Environment,Spatial Access to MOUDs,BupMinDis,,"2020,2025"
-Environment,Spatial Access to MOUDs,BupTmBk,,"2020,2025"
-Environment,Spatial Access to MOUDs,BupTmDr,,"2020,2025"
-Environment,Spatial Access to MOUDs,BupTmWk,,"2020,2025"
-Environment,Spatial Access to MOUDs,MetCntBk30,,"2020,2025"
-Environment,Spatial Access to MOUDs,MetCntBk60,,"2020,2025"
-Environment,Spatial Access to MOUDs,MetCntDr30,,"2020,2025"
+Environment,Spatial Access to MOUDs,BupCntWk30,zcta-2020,"2020,2025"
+Environment,Spatial Access to MOUDs,BupCntWk60,zcta-2020,"2020,2025"
+Environment,Spatial Access to MOUDs,BupMinDis,zcta-2020,"2020,2025"
+Environment,Spatial Access to MOUDs,BupTmBk,zcta-2020,"2020,2025"
+Environment,Spatial Access to MOUDs,BupTmDr,zcta-2020,"2020,2025"
+Environment,Spatial Access to MOUDs,BupTmWk,zcta-2020,"2020,2025"
+Environment,Spatial Access to MOUDs,MetCntBk30,zcta-2020,"2020,2025"
+Environment,Spatial Access to MOUDs,MetCntBk60,zcta-2020,"2020,2025"
+Environment,Spatial Access to MOUDs,MetCntDr30,zcta-2020,"2020,2025"
 Environment,Spatial Access to MOUDs,MetCntDr60,,2025
-Environment,Spatial Access to MOUDs,MetCntWk30,,"2020,2025"
-Environment,Spatial Access to MOUDs,MetCntWk60,,"2020,2025"
-Environment,Spatial Access to MOUDs,MetMinDis,,"2020,2025"
-Environment,Spatial Access to MOUDs,MetTmBk,,"2020,2025"
-Environment,Spatial Access to MOUDs,MetTmDr,,"2020,2025"
-Environment,Spatial Access to MOUDs,MetTmWk,,"2020,2025"
-Environment,Spatial Access to MOUDs,MoudMinDis,,"2020,2025"
-Environment,Spatial Access to MOUDs,NaltCntBk30,,"2020,2025"
-Environment,Spatial Access to MOUDs,NaltCntBk60,,"2020,2025"
-Environment,Spatial Access to MOUDs,NaltCntDr30,,"2020,2025"
+Environment,Spatial Access to MOUDs,MetCntWk30,zcta-2020,"2020,2025"
+Environment,Spatial Access to MOUDs,MetCntWk60,zcta-2020,"2020,2025"
+Environment,Spatial Access to MOUDs,MetMinDis,zcta-2020,"2020,2025"
+Environment,Spatial Access to MOUDs,MetTmBk,zcta-2020,"2020,2025"
+Environment,Spatial Access to MOUDs,MetTmDr,zcta-2020,"2020,2025"
+Environment,Spatial Access to MOUDs,MetTmWk,zcta-2020,"2020,2025"
+Environment,Spatial Access to MOUDs,MoudMinDis,zcta-2020,"2020,2025"
+Environment,Spatial Access to MOUDs,NaltCntBk30,zcta-2020,"2020,2025"
+Environment,Spatial Access to MOUDs,NaltCntBk60,zcta-2020,"2020,2025"
+Environment,Spatial Access to MOUDs,NaltCntDr30,zcta-2020,"2020,2025"
 Environment,Spatial Access to MOUDs,NaltCntDr60,,2025
-Environment,Spatial Access to MOUDs,NaltCntWk30,,"2020,2025"
-Environment,Spatial Access to MOUDs,NaltCntWk60,,"2020,2025"
-Environment,Spatial Access to MOUDs,NaltMinDis,,"2020,2025"
-Environment,Spatial Access to MOUDs,NaltTmBk,,"2020,2025"
-Environment,Spatial Access to MOUDs,NaltTmDr,,"2020,2025"
-Environment,Spatial Access to MOUDs,NaltTmWk,,"2020,2025"
-Environment,Spatial Access to MOUDs,OtpCntDr,,"2021,2025"
-Environment,Spatial Access to MOUDs,OtpMinDis,,"2021,2025"
-Environment,Spatial Access to MOUDs,OtpTmDr,,"2021,2025"
-Environment,Spatial Access to Mental Health Providers,MhCntDr,,2020
-Environment,Spatial Access to Mental Health Providers,MhMinDis,,2020
-Environment,Spatial Access to Mental Health Providers,MhTmDr,,2020
-Environment,Spatial Access to Pharmacies,RxCntDr,2019,2019
-Environment,Spatial Access to Pharmacies,RxMinDis,2019,2019
-Environment,Spatial Access to Pharmacies,RxTmDr,2019,2019
-Environment,Spatial Access to Substance Use Treatment Providers,SutCntDr,,2020
-Environment,Spatial Access to Substance Use Treatment Providers,SutMinDis,,2020
-Environment,Spatial Access to Substance Use Treatment Providers,SutTmDr,,2020
-Environment,Spatial access to Health Centers,FqhcCntDr,,2020
-Environment,Spatial access to Health Centers,FqhcMinDis,,2020
-Environment,Spatial access to Health Centers,FqhcTmDr,,2020
-Environment,Urban/Suburban/Rural Classification,Ruca1,2010,2010
-Environment,Urban/Suburban/Rural Classification,Ruca2,2010,2010
-Environment,Urban/Suburban/Rural Classification,Rurality,2010,2010
-Geography,Geographic Boundaries,HEROP_ID,2019,"2010,2018,2019,2020,2021,2022,2023,2025"
-Geography,Geographic Boundaries,ZCTA5,2019,"2010,2018,2019,2020,2021,2022,2023,2025"
-Social,Educational Characteristics,BachelorsP,2018,"2018,2020,2023"
-Social,Educational Characteristics,EduHsP,2018,"2018,2020,2023"
-Social,Educational Characteristics,EduNoHsP,2018,"2018,2020,2023"
-Social,Educational Characteristics,EngProf,2018,"2018,2020,2023"
-Social,Educational Characteristics,GradSclP,2018,"2018,2020,2023"
-Social,Educational Characteristics,SomeCollegeP,2018,"2018,2020,2023"
-Social,Household Characteristics,CrowdHsng,,"2020,2023"
-Social,Household Characteristics,DivrcdP,,"2020,2023"
-Social,Household Characteristics,FamSize,,"2020,2023"
-Social,Household Characteristics,HHSize,,"2020,2023"
-Social,Household Characteristics,HhldFA,,"2020,2023"
-Social,Household Characteristics,HhldFC,,"2020,2023"
-Social,Household Characteristics,HhldFS,,"2020,2023"
-Social,Household Characteristics,HhldMA,,"2020,2023"
-Social,Household Characteristics,HhldMC,,"2020,2023"
-Social,Household Characteristics,HhldMS,,"2020,2023"
-Social,Household Characteristics,HsdTot,,"2020,2023"
-Social,Household Characteristics,HsdTypCo,,"2020,2023"
-Social,Household Characteristics,HsdTypM,,"2020,2023"
-Social,Household Characteristics,HsdTypMC,,"2020,2023"
-Social,Household Characteristics,MrrdP,,"2020,2023"
-Social,Household Characteristics,NonRelFhhP,2018,"2018,2020,2023"
-Social,Household Characteristics,NonRelNfhhP,2018,"2018,2020,2023"
-Social,Household Characteristics,NvMrrdP,,"2020,2023"
-Social,Household Characteristics,OccupantP,,"2020,2023"
-Social,Household Characteristics,SepartedP,,"2020,2023"
-Social,Household Characteristics,TotPopHh,2018,"2018,2020,2023"
-Social,Household Characteristics,WidwdP,,"2020,2023"
-Social,Population with Disability,DisbP,2018,"2018,2020,2023"
-Social,"Population, Age & Sex Ratios",Age15_44,2018,2018
-Social,"Population, Age & Sex Ratios",Age15_44P,2018,2018
-Social,"Population, Age & Sex Ratios",ChildrenP,2018,2018
-Social,"Population, Age & Sex Ratios",FemP,2018,"2018,2020,2023"
-Social,"Population, Age & Sex Ratios",MaleP,2018,"2018,2020,2023"
-Social,"Population, Age & Sex Ratios",MedAge,,"2020,2023"
-Social,"Population, Age & Sex Ratios",Ovr16,2018,"2018,2023"
-Social,"Population, Age & Sex Ratios",Ovr16P,2018,"2018,2020,2023"
-Social,"Population, Age & Sex Ratios",Ovr18,2018,"2018,2023"
-Social,"Population, Age & Sex Ratios",Ovr18P,2018,"2018,2020,2023"
-Social,"Population, Age & Sex Ratios",Ovr21,2018,"2018,2023"
-Social,"Population, Age & Sex Ratios",Ovr21P,2018,"2018,2020,2023"
-Social,"Population, Age & Sex Ratios",Ovr62P,,"2020,2023"
-Social,"Population, Age & Sex Ratios",Ovr65,2018,"2018,2023"
-Social,"Population, Age & Sex Ratios",Ovr65P,2018,"2018,2020,2023"
-Social,"Population, Age & Sex Ratios",SRatio,2018,"2018,2020,2023"
-Social,"Population, Age & Sex Ratios",SRatio18,2018,"2018,2020,2023"
-Social,"Population, Age & Sex Ratios",SRatio65,2018,"2018,2020,2023"
-Social,"Population, Age & Sex Ratios",TotPop,2018,"2018,2020,2023"
-Social,"Population, Age & Sex Ratios",Und18P,,"2020,2023"
-Social,Race & Ethnicity,AmIndE,2018,"2018,2023"
-Social,Race & Ethnicity,AmIndP,2018,"2018,2020,2023"
-Social,Race & Ethnicity,AsianE,2018,"2018,2023"
-Social,Race & Ethnicity,AsianP,2018,2018
-Social,Race & Ethnicity,BlackE,2018,2018
-Social,Race & Ethnicity,BlackP,2018,"2018,2020,2023"
-Social,Race & Ethnicity,HisE,2018,"2018,2023"
-Social,Race & Ethnicity,HisP,,"2020,2023"
-Social,Race & Ethnicity,HispP,2018,2018
-Social,Race & Ethnicity,OtherE,2018,"2018,2023"
-Social,Race & Ethnicity,OtherP,2018,"2018,2020,2023"
-Social,Race & Ethnicity,PacIsE,2018,"2018,2023"
-Social,Race & Ethnicity,PacIsP,2018,"2018,2020,2023"
-Social,Race & Ethnicity,TwoRaceE,2018,"2018,2023"
-Social,Race & Ethnicity,TwoRaceP,,"2020,2023"
-Social,Race & Ethnicity,WhiteE,2018,"2018,2023"
-Social,Race & Ethnicity,WhiteP,2018,"2018,2020,2023"
-Social,Residential Segregation Measures,DsmAs,2018,"2018,2023"
-Social,Residential Segregation Measures,DsmBlk,2018,"2018,2023"
-Social,Residential Segregation Measures,DsmHsp,2018,"2018,2023"
-Social,Residential Segregation Measures,IntrAsWht,2018,"2018,2023"
-Social,Residential Segregation Measures,IntrBlkWht,2018,"2018,2023"
-Social,Residential Segregation Measures,IntrHspWht,2018,"2018,2023"
-Social,Residential Segregation Measures,IsoAs,2018,"2018,2023"
-Social,Residential Segregation Measures,IsoBlk,2018,"2018,2023"
-Social,Residential Segregation Measures,IsoHsp,2018,"2018,2023"
-Social,Veteran Population,TotVetPop,2018,"2018,2020,2023"
-Social,Veteran Population,VetP,2018,"2018,2020,2023"
+Environment,Spatial Access to MOUDs,NaltCntWk30,zcta-2020,"2020,2025"
+Environment,Spatial Access to MOUDs,NaltCntWk60,zcta-2020,"2020,2025"
+Environment,Spatial Access to MOUDs,NaltMinDis,zcta-2020,"2020,2025"
+Environment,Spatial Access to MOUDs,NaltTmBk,zcta-2020,"2020,2025"
+Environment,Spatial Access to MOUDs,NaltTmDr,zcta-2020,"2020,2025"
+Environment,Spatial Access to MOUDs,NaltTmWk,zcta-2020,"2020,2025"
+Environment,Spatial Access to MOUDs,OtpCntDr,zcta-2021,"2021,2025"
+Environment,Spatial Access to MOUDs,OtpMinDis,zcta-2021,"2021,2025"
+Environment,Spatial Access to MOUDs,OtpTmDr,zcta-2021,"2021,2025"
+Environment,Spatial Access to Mental Health Providers,MhCntDr,zcta-2020,2020
+Environment,Spatial Access to Mental Health Providers,MhMinDis,zcta-2020,2020
+Environment,Spatial Access to Mental Health Providers,MhTmDr,zcta-2020,2020
+Environment,Spatial Access to Pharmacies,RxCntDr,zcta-2019,2019
+Environment,Spatial Access to Pharmacies,RxMinDis,zcta-2019,2019
+Environment,Spatial Access to Pharmacies,RxTmDr,zcta-2019,2019
+Environment,Spatial Access to Substance Use Treatment Providers,SutCntDr,zcta-2020,2020
+Environment,Spatial Access to Substance Use Treatment Providers,SutMinDis,zcta-2020,2020
+Environment,Spatial Access to Substance Use Treatment Providers,SutTmDr,zcta-2020,2020
+Environment,Spatial access to Health Centers,FqhcCntDr,zcta-2020,2020
+Environment,Spatial access to Health Centers,FqhcMinDis,zcta-2020,2020
+Environment,Spatial access to Health Centers,FqhcTmDr,zcta-2020,2020
+Environment,Urban/Suburban/Rural Classification,Ruca1,zcta-ruca-2010,2010
+Environment,Urban/Suburban/Rural Classification,Ruca2,zcta-ruca-2010,2010
+Environment,Urban/Suburban/Rural Classification,Rurality,zcta-ruca-2010,2010
+Social,Educational Characteristics,BachelorsP,zcta-2018,"2018,2020,2023"
+Social,Educational Characteristics,EduHsP,zcta-2018,"2018,2020,2023"
+Social,Educational Characteristics,EduNoHsP,zcta-2018,"2018,2020,2023"
+Social,Educational Characteristics,EngProf,zcta-2018,"2018,2020,2023"
+Social,Educational Characteristics,GradSclP,zcta-2018,"2018,2020,2023"
+Social,Educational Characteristics,SomeCollegeP,zcta-2018,"2018,2020,2023"
+Social,Household Characteristics,CrowdHsng,zcta-2020,"2020,2023"
+Social,Household Characteristics,DivrcdP,zcta-2020,"2020,2023"
+Social,Household Characteristics,FamSize,zcta-2020,"2020,2023"
+Social,Household Characteristics,HHSize,zcta-2020,"2020,2023"
+Social,Household Characteristics,HhldFA,zcta-2020,"2020,2023"
+Social,Household Characteristics,HhldFC,zcta-2020,"2020,2023"
+Social,Household Characteristics,HhldFS,zcta-2020,"2020,2023"
+Social,Household Characteristics,HhldMA,zcta-2020,"2020,2023"
+Social,Household Characteristics,HhldMC,zcta-2020,"2020,2023"
+Social,Household Characteristics,HhldMS,zcta-2020,"2020,2023"
+Social,Household Characteristics,HsdTot,zcta-2020,"2020,2023"
+Social,Household Characteristics,HsdTypCo,zcta-2020,"2020,2023"
+Social,Household Characteristics,HsdTypM,zcta-2020,"2020,2023"
+Social,Household Characteristics,HsdTypMC,zcta-2020,"2020,2023"
+Social,Household Characteristics,MrrdP,zcta-2020,"2020,2023"
+Social,Household Characteristics,NonRelFhhP,zcta-2020,"2018,2020,2023"
+Social,Household Characteristics,NonRelNfhhP,zcta-2020,"2018,2020,2023"
+Social,Household Characteristics,NvMrrdP,zcta-2020,"2020,2023"
+Social,Household Characteristics,OccupantP,zcta-2020,"2020,2023"
+Social,Household Characteristics,SepartedP,zcta-2020,"2020,2023"
+Social,Household Characteristics,TotPopHh,zcta-2018,"2018,2020,2023"
+Social,Household Characteristics,WidwdP,zcta-2020,"2020,2023"
+Social,Population with Disability,DisbP,zcta-2018,"2018,2020,2023"
+Social,"Population, Age & Sex Ratios",Age15_44,zcta-2018,2018
+Social,"Population, Age & Sex Ratios",Age15_44P,zcta-2018,2018
+Social,"Population, Age & Sex Ratios",ChildrenP,zcta-2018,2018
+Social,"Population, Age & Sex Ratios",FemP,zcta-2018,"2018,2020,2023"
+Social,"Population, Age & Sex Ratios",MaleP,zcta-2018,"2018,2020,2023"
+Social,"Population, Age & Sex Ratios",MedAge,zcta-2020,"2020,2023"
+Social,"Population, Age & Sex Ratios",Ovr16,zcta-2018,"2018,2023"
+Social,"Population, Age & Sex Ratios",Ovr16P,zcta-2018,"2018,2020,2023"
+Social,"Population, Age & Sex Ratios",Ovr18,zcta-2018,"2018,2023"
+Social,"Population, Age & Sex Ratios",Ovr18P,zcta-2018,"2018,2020,2023"
+Social,"Population, Age & Sex Ratios",Ovr21,zcta-2018,"2018,2023"
+Social,"Population, Age & Sex Ratios",Ovr21P,zcta-2018,"2018,2020,2023"
+Social,"Population, Age & Sex Ratios",Ovr62P,zcta-2020,"2020,2023"
+Social,"Population, Age & Sex Ratios",Ovr65,zcta-2018,"2018,2023"
+Social,"Population, Age & Sex Ratios",Ovr65P,zcta-2018,"2018,2020,2023"
+Social,"Population, Age & Sex Ratios",SRatio,zcta-2018,"2018,2020,2023"
+Social,"Population, Age & Sex Ratios",SRatio18,zcta-2018,"2018,2020,2023"
+Social,"Population, Age & Sex Ratios",SRatio65,zcta-2018,"2018,2020,2023"
+Social,"Population, Age & Sex Ratios",TotPop,zcta-2018,"2018,2020,2023"
+Social,"Population, Age & Sex Ratios",Und18P,zcta-2020,"2020,2023"
+Social,Race & Ethnicity,AmIndE,zcta-2018,"2018,2023"
+Social,Race & Ethnicity,AmIndP,zcta-2018,"2018,2020,2023"
+Social,Race & Ethnicity,AsianE,zcta-2018,"2018,2023"
+Social,Race & Ethnicity,AsianP,zcta-2018,2018
+Social,Race & Ethnicity,BlackE,zcta-2018,2018
+Social,Race & Ethnicity,BlackP,zcta-2018,"2018,2020,2023"
+Social,Race & Ethnicity,HisE,zcta-2018,"2018,2023"
+Social,Race & Ethnicity,HisP,zcta-2020,"2020,2023"
+Social,Race & Ethnicity,HispP,zcta-2018,2018
+Social,Race & Ethnicity,OtherE,zcta-2018,"2018,2023"
+Social,Race & Ethnicity,OtherP,zcta-2018,"2018,2020,2023"
+Social,Race & Ethnicity,PacIsE,zcta-2018,"2018,2023"
+Social,Race & Ethnicity,PacIsP,zcta-2018,"2018,2020,2023"
+Social,Race & Ethnicity,TwoRaceE,zcta-2018,"2018,2023"
+Social,Race & Ethnicity,TwoRaceP,zcta-2020,"2020,2023"
+Social,Race & Ethnicity,WhiteE,zcta-2018,"2018,2023"
+Social,Race & Ethnicity,WhiteP,zcta-2018,"2018,2020,2023"
+Social,Residential Segregation Measures,DsmAs,zcta-2018,"2018,2023"
+Social,Residential Segregation Measures,DsmBlk,zcta-2018,"2018,2023"
+Social,Residential Segregation Measures,DsmHsp,zcta-2018,"2018,2023"
+Social,Residential Segregation Measures,IntrAsWht,zcta-2018,"2018,2023"
+Social,Residential Segregation Measures,IntrBlkWht,zcta-2018,"2018,2023"
+Social,Residential Segregation Measures,IntrHspWht,zcta-2018,"2018,2023"
+Social,Residential Segregation Measures,IsoAs,zcta-2018,"2018,2023"
+Social,Residential Segregation Measures,IsoBlk,zcta-2018,"2018,2023"
+Social,Residential Segregation Measures,IsoHsp,zcta-2018,"2018,2023"
+Social,Veteran Population,TotVetPop,zcta-2018,"2018,2020,2023"
+Social,Veteran Population,VetP,zcta-2018,"2018,2020,2023"

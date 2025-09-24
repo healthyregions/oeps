@@ -1,40 +1,40 @@
-theme,construct,name,pick,all years
-Economic,Employment Trends,EduP,2018,2018
-Economic,Employment Trends,EssnWrkE,2018,2018
-Economic,Employment Trends,EssnWrkP,2018,2018
-Economic,Employment Trends,HghRskP,2018,2018
-Economic,Employment Trends,HltCrP,2018,2018
-Economic,Employment Trends,RetailP,2018,2018
-Economic,Employment Trends,TotWrkE,2018,2018
-Economic,Great Recession Foreclosure Rate,ForDqP,2018,2018
-Economic,Great Recession Foreclosure Rate,ForDqTot,2018,2018
-Economic,Great Recession Foreclosure Rate,GiniCoeff,2018,"2010,2018"
-Economic,Internet Access,NoIntP,2019,2019
-Economic,"Poverty, Income, Gini Coefficient",MedInc,2018,"2010,2018"
-Economic,"Poverty, Income, Gini Coefficient",PciE,2018,"2010,2018"
-Economic,"Poverty, Income, Gini Coefficient",PovP,2018,"1980,1990,2000,2010,2018"
-Economic,"Poverty, Income, Gini Coefficient",UnempP,2018,"1980,1990,2000,2010,2018"
-Environment,Alcohol Outlet Density Measures,AlcDens,2018,2018
-Environment,Alcohol Outlet Density Measures,AlcPerCap,2018,2018
-Environment,Alcohol Outlet Density Measures,AlcTot,2018,2018
-Environment,Alcohol Outlet Density Measures,AreaSqMi,2018,2018
-Environment,Greenspace Measures,Ndvi,2018,2018
+theme,construct,name,table_source,all years
+Economic,Employment Trends,EduP,state-2018,2018
+Economic,Employment Trends,EssnWrkE,state-2018,2018
+Economic,Employment Trends,EssnWrkP,state-2018,2018
+Economic,Employment Trends,HghRskP,state-2018,2018
+Economic,Employment Trends,HltCrP,state-2018,2018
+Economic,Employment Trends,RetailP,state-2018,2018
+Economic,Employment Trends,TotWrkE,state-2018,2018
+Economic,Great Recession Foreclosure Rate,ForDqP,state-2018,2018
+Economic,Great Recession Foreclosure Rate,ForDqTot,state-2018,2018
+Economic,Great Recession Foreclosure Rate,GiniCoeff,state-2018,"2010,2018"
+Economic,Internet Access,NoIntP,state-2018,2019
+Economic,"Poverty, Income, Gini Coefficient",MedInc,state-2018,"2010,2018"
+Economic,"Poverty, Income, Gini Coefficient",PciE,state-2018,"2010,2018"
+Economic,"Poverty, Income, Gini Coefficient",PovP,state-2018,"1980,1990,2000,2010,2018"
+Economic,"Poverty, Income, Gini Coefficient",UnempP,state-2018,"1980,1990,2000,2010,2018"
+Environment,Alcohol Outlet Density Measures,AlcDens,state-2018,2018
+Environment,Alcohol Outlet Density Measures,AlcPerCap,state-2018,2018
+Environment,Alcohol Outlet Density Measures,AlcTot,state-2018,2018
+Environment,Alcohol Outlet Density Measures,AreaSqMi,state-2018,2018
+Environment,Greenspace Measures,Ndvi,state-2018,2018
 Environment,Greenspace Measures,ParkArea,,2022
-Environment,Greenspace Measures,StateArea,2018,2018
-Environment,Healthcare Provider Access,TotPcp,2010,2010
-Environment,Healthcare Provider Access,TotSp,2010,2010
-Environment,Housing Characteristics ,LngTermP,2018,2018
-Environment,Housing Characteristics ,MobileP,2018,2018
-Environment,Housing Characteristics ,RentalP,2018,2018
-Environment,Housing Characteristics ,TotUnits,2018,"1980,1990,2000,2010,2018"
-Environment,Housing Characteristics ,UnitDens,2018,2018
-Environment,Housing Characteristics ,VacantP,2018,"1980,1990,2000,2010,2018"
-Environment,Spatial Access to Hospitals,HospAvTmDr,,2020
-Environment,Spatial Access to Hospitals,HospCtTmDr,,2020
-Environment,Spatial Access to Hospitals,HospTmDrP,,2020
-Environment,Spatial Access to MOUDs,AvBupTime,,2020
-Environment,Spatial Access to MOUDs,AvMetTime,,2020
-Environment,Spatial Access to MOUDs,AvNaltTime,,2020
+Environment,Greenspace Measures,StateArea,state-2018,2018
+Environment,Healthcare Provider Access,TotPcp,state-providers-2010,2010
+Environment,Healthcare Provider Access,TotSp,state-providers-2010,2010
+Environment,Housing Characteristics,LngTermP,state-2018,2018
+Environment,Housing Characteristics,MobileP,state-2018,2018
+Environment,Housing Characteristics,RentalP,state-2018,2018
+Environment,Housing Characteristics,TotUnits,state-2018,"1980,1990,2000,2010,2018"
+Environment,Housing Characteristics,UnitDens,state-2018,2018
+Environment,Housing Characteristics,VacantP,state-2018,"1980,1990,2000,2010,2018"
+Environment,Spatial Access to Hospitals,HospAvTmDr,state-2020,2020
+Environment,Spatial Access to Hospitals,HospCtTmDr,state-2020,2020
+Environment,Spatial Access to Hospitals,HospTmDrP,state-2020,2020
+Environment,Spatial Access to MOUDs,AvBupTime,state-2020,2020
+Environment,Spatial Access to MOUDs,AvMetTime,state-2020,2020
+Environment,Spatial Access to MOUDs,AvNaltTime,state-2020,2020
 Environment,Spatial Access to MOUDs,BupAvTmBk,,2025
 Environment,Spatial Access to MOUDs,BupAvTmDr,,2025
 Environment,Spatial Access to MOUDs,BupAvTmWk,,2025
@@ -44,9 +44,9 @@ Environment,Spatial Access to MOUDs,BupCtTmWk,,2025
 Environment,Spatial Access to MOUDs,BupTmBkP,,2025
 Environment,Spatial Access to MOUDs,BupTmDrP,,2025
 Environment,Spatial Access to MOUDs,BupTmWkP,,2025
-Environment,Spatial Access to MOUDs,CntBupT,,2020
-Environment,Spatial Access to MOUDs,CntMetT,,2020
-Environment,Spatial Access to MOUDs,CntNaltT,,2020
+Environment,Spatial Access to MOUDs,CntBupT,state-2020,2020
+Environment,Spatial Access to MOUDs,CntMetT,state-2020,2020
+Environment,Spatial Access to MOUDs,CntNaltT,state-2020,2020
 Environment,Spatial Access to MOUDs,MetAvTmBk,,2025
 Environment,Spatial Access to MOUDs,MetAvTmDr,,2025
 Environment,Spatial Access to MOUDs,MetAvTmWk,,2025
@@ -65,155 +65,155 @@ Environment,Spatial Access to MOUDs,NaltCtTmWk,,2025
 Environment,Spatial Access to MOUDs,NaltTmBkP,,2025
 Environment,Spatial Access to MOUDs,NaltTmDrP,,2025
 Environment,Spatial Access to MOUDs,NaltTmWkP,,2025
-Environment,Spatial Access to MOUDs,OtpAvTmDr,,"2021,2025"
-Environment,Spatial Access to MOUDs,OtpCtTmDr,,"2021,2025"
-Environment,Spatial Access to MOUDs,OtpTmDrP,,"2021,2025"
-Environment,Spatial Access to MOUDs,PctBupT,,2020
-Environment,Spatial Access to MOUDs,PctMetT,,2020
-Environment,Spatial Access to MOUDs,PctNaltT,,2020
-Environment,Spatial Access to Mental Health Providers,MhAvTmDr,,2020
-Environment,Spatial Access to Mental Health Providers,MhCtTmDr,,2020
-Environment,Spatial Access to Mental Health Providers,MhTmDrP,,2020
-Environment,Spatial Access to Pharmacies,RxAvTmDr,2019,2019
-Environment,Spatial Access to Pharmacies,RxCtTmDr,2019,2019
-Environment,Spatial Access to Pharmacies,RxTmDrP,2019,2019
-Environment,Spatial Access to Substance Use Treatment Providers,SutpAvTmDr,,2020
-Environment,Spatial Access to Substance Use Treatment Providers,SutpCtTmDr,,2020
-Environment,Spatial Access to Substance Use Treatment Providers,SutpTmDrP,,2020
-Environment,Spatial access to Health Centers,FqhcAvTmDr,,2020
-Environment,Spatial access to Health Centers,FqhcCtTmDr,,2020
-Environment,Spatial access to Health Centers,FqhcTmDrP,,2020
-Environment,Spatial access to Health Centers,TotTracts,2018,"2018,2025"
-Geography,Geographic Boundaries,FIPS,2019,"1980,1990,2000,2010,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2025"
-Geography,Geographic Boundaries,HEROP_ID,2019,"1980,1990,2000,2010,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2025"
-Outcome,Hepatitis C Rates,A50_74Hcv,2017,2017
-Outcome,Hepatitis C Rates,A50_74HcvD,2019,"2013,2014,2015,2016,2017,2018,2019,2020,2021,2022"
-Outcome,Hepatitis C Rates,AmInHcvD,2019,"2013,2014,2015,2016,2017,2018,2019,2020,2021,2022"
-Outcome,Hepatitis C Rates,AsHcvD,2019,"2018,2019,2020,2021,2022"
-Outcome,Hepatitis C Rates,AsPiHcvD,2017,"2013,2014,2015,2016,2017"
-Outcome,Hepatitis C Rates,AvA50_74HcvD,2017,"2017,2022"
-Outcome,Hepatitis C Rates,AvAmInHcvD,2017,"2017,2022"
+Environment,Spatial Access to MOUDs,OtpAvTmDr,state-2021,"2021,2025"
+Environment,Spatial Access to MOUDs,OtpCtTmDr,state-2021,"2021,2025"
+Environment,Spatial Access to MOUDs,OtpTmDrP,state-2021,"2021,2025"
+Environment,Spatial Access to MOUDs,PctBupT,state-2020,2020
+Environment,Spatial Access to MOUDs,PctMetT,state-2020,2020
+Environment,Spatial Access to MOUDs,PctNaltT,state-2020,2020
+Environment,Spatial Access to Mental Health Providers,MhAvTmDr,state-2020,2020
+Environment,Spatial Access to Mental Health Providers,MhCtTmDr,state-2020,2020
+Environment,Spatial Access to Mental Health Providers,MhTmDrP,state-2020,2020
+Environment,Spatial Access to Pharmacies,RxAvTmDr,state-2019,2019
+Environment,Spatial Access to Pharmacies,RxCtTmDr,state-2019,2019
+Environment,Spatial Access to Pharmacies,RxTmDrP,state-2019,2019
+Environment,Spatial Access to Substance Use Treatment Providers,SutpAvTmDr,state-2020,2020
+Environment,Spatial Access to Substance Use Treatment Providers,SutpCtTmDr,state-2020,2020
+Environment,Spatial Access to Substance Use Treatment Providers,SutpTmDrP,state-2020,2020
+Environment,Spatial access to Health Centers,FqhcAvTmDr,state-2020,2020
+Environment,Spatial access to Health Centers,FqhcCtTmDr,state-2020,2020
+Environment,Spatial access to Health Centers,FqhcTmDrP,state-2020,2020
+Environment,Spatial access to Health Centers,TotTracts,state-2018,"2018,2025"
+Geography,Geographic Boundaries,FIPS,,"1980,1990,2000,2010,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2025"
+Geography,Geographic Boundaries,HEROP_ID,,"1980,1990,2000,2010,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2025"
+Outcome,Hepatitis C Rates,A50_74Hcv,state-2017,2017
+Outcome,Hepatitis C Rates,A50_74HcvD,,"2013,2014,2015,2016,2017,2018,2019,2020,2021,2022"
+Outcome,Hepatitis C Rates,AmInHcvD,,"2013,2014,2015,2016,2017,2018,2019,2020,2021,2022"
+Outcome,Hepatitis C Rates,AsHcvD,,"2018,2019,2020,2021,2022"
+Outcome,Hepatitis C Rates,AsPiHcvD,,"2013,2014,2015,2016,2017"
+Outcome,Hepatitis C Rates,AvA50_74HcvD,state-2017,"2017,2022"
+Outcome,Hepatitis C Rates,AvAmInHcvD,state-2017,"2017,2022"
 Outcome,Hepatitis C Rates,AvAsHcvD,,2022
-Outcome,Hepatitis C Rates,AvAsPiHcvD,2017,2017
-Outcome,Hepatitis C Rates,AvBlkHcvD,2017,"2017,2022"
-Outcome,Hepatitis C Rates,AvFlHcvD,2017,"2017,2022"
-Outcome,Hepatitis C Rates,AvHcvD,2017,"2017,2022"
-Outcome,Hepatitis C Rates,AvHspHcvD,2017,"2017,2022"
-Outcome,Hepatitis C Rates,AvMlHcvD,2017,"2017,2022"
+Outcome,Hepatitis C Rates,AvAsPiHcvD,state-2017,2017
+Outcome,Hepatitis C Rates,AvBlkHcvD,state-2017,"2017,2022"
+Outcome,Hepatitis C Rates,AvFlHcvD,state-2017,"2017,2022"
+Outcome,Hepatitis C Rates,AvHcvD,state-2017,"2017,2022"
+Outcome,Hepatitis C Rates,AvHspHcvD,state-2017,"2017,2022"
+Outcome,Hepatitis C Rates,AvMlHcvD,state-2017,"2017,2022"
 Outcome,Hepatitis C Rates,AvMulHcvD,,2022
 Outcome,Hepatitis C Rates,AvNhPiHcvD,,2022
-Outcome,Hepatitis C Rates,AvO75HcvD,2017,"2017,2022"
-Outcome,Hepatitis C Rates,AvU50HcvD,2017,"2017,2022"
+Outcome,Hepatitis C Rates,AvO75HcvD,state-2017,"2017,2022"
+Outcome,Hepatitis C Rates,AvU50HcvD,state-2017,"2017,2022"
 Outcome,Hepatitis C Rates,AvWhHcvD,,2022
-Outcome,Hepatitis C Rates,BlkHcv,2017,2017
-Outcome,Hepatitis C Rates,BlkHcvD,2019,"2013,2014,2015,2016,2017,2018,2019,2020,2021,2022"
-Outcome,Hepatitis C Rates,FlHcvD,2019,"2013,2014,2015,2016,2017,2018,2019,2020,2021,2022"
-Outcome,Hepatitis C Rates,FmHcv,2017,2017
-Outcome,Hepatitis C Rates,HcvD,2019,"2013,2014,2015,2016,2017,2018,2019,2020,2021,2022"
-Outcome,Hepatitis C Rates,HspHcvD,2019,"2013,2014,2015,2016,2017,2018,2019,2020,2021,2022"
-Outcome,Hepatitis C Rates,MlHcv,2017,2017
-Outcome,Hepatitis C Rates,MlHcvD,2019,"2013,2014,2015,2016,2017,2018,2019,2020,2021,2022"
-Outcome,Hepatitis C Rates,MulHcvD,2019,"2018,2019,2020,2021,2022"
-Outcome,Hepatitis C Rates,NhPiHcvD,2019,"2018,2019,2020,2021,2022"
-Outcome,Hepatitis C Rates,NonBlkHcv,2017,2017
-Outcome,Hepatitis C Rates,O75HcvD,2019,"2013,2014,2015,2016,2017,2018,2019,2020,2021,2022"
-Outcome,Hepatitis C Rates,Ov75Hcv,2017,2017
-Outcome,Hepatitis C Rates,TotHcv,2017,2017
-Outcome,Hepatitis C Rates,U50HcvD,2019,"2013,2014,2015,2016,2017,2018,2019,2020,2021,2022"
-Outcome,Hepatitis C Rates,Un50Hcv,2017,2017
-Outcome,Hepatitis C Rates,WhtHcvD,2019,"2018,2019,2020,2021,2022"
-Outcome,Opioid Indicators,OdMortRt,2019,"2014,2015,2016,2017,2018,2019,2020,2021,2022"
-Outcome,Opioid Indicators,OdMortRtAv,,2020
-Outcome,Opioid Indicators,OpRxRt,,"2020,2022"
-Outcome,Opioid Indicators,PrMsuseP,,"2020,2022"
-Policy,Harm Reduction Policies,AnyGslDt,2019,"2017,2019,2020,2021"
-Policy,Harm Reduction Policies,AnyGslFr,2019,"2017,2019,2020,2021"
-Policy,Harm Reduction Policies,AnyNalxDt,2019,"2017,2018,2019,2020,2021,2022"
-Policy,Harm Reduction Policies,AnyNalxFr,2019,"2017,2018,2019,2020,2021,2022"
-Policy,Harm Reduction Policies,ExpSsp,2019,2019
-Policy,Harm Reduction Policies,GslArrDt,2019,"2017,2019,2020,2021"
-Policy,Harm Reduction Policies,GslArrFr,2019,"2017,2019,2020,2021"
-Policy,Harm Reduction Policies,NalxPrStDt,2019,"2017,2018,2019,2020,2021,2022"
-Policy,Harm Reduction Policies,NalxPrStFr,2019,"2017,2018,2019,2020,2021,2022"
-Policy,Harm Reduction Policies,NalxPresDt,2019,"2017,2018,2019,2020,2021,2022"
-Policy,Harm Reduction Policies,NalxPresFr,2019,"2017,2018,2019,2020,2021,2022"
-Policy,Harm Reduction Policies,NoLwRmUnc,2019,2019
-Policy,Harm Reduction Policies,NoPrphLw,2019,2019
-Policy,Harm Reduction Policies,NtPrFrDsSy,2019,2019
-Policy,Harm Reduction Policies,PrExcInj,2019,2019
-Policy,Harm Reduction Policies,PrNtRefInj,2019,2019
-Policy,Marijuana Policies,MdMarijLaw,2019,"2017,2018,2019,2020,2021,2022,2023"
-Policy,Prescription Drug Monitoring Programs (PDMP),AnyPdmpDt,2019,"2017,2018,2019,2020,2021,2022,2023"
-Policy,Prescription Drug Monitoring Programs (PDMP),AnyPdmpFr,2019,"2017,2018,2019,2020,2021,2022,2023"
-Policy,Prescription Drug Monitoring Programs (PDMP),AnyPdmphDt,2019,"2017,2018,2019,2020,2021,2022,2023"
-Policy,Prescription Drug Monitoring Programs (PDMP),AnyPdmphFr,2019,"2017,2018,2019,2020,2021,2022,2023"
-Policy,Prescription Drug Monitoring Programs (PDMP),ElcPdmpDt,2019,"2017,2018,2019,2020,2021,2022,2023"
-Policy,Prescription Drug Monitoring Programs (PDMP),ElcPdmpFr,2019,"2017,2018,2019,2020,2021,2022,2023"
-Policy,Prescription Drug Monitoring Programs (PDMP),MsAcPdmpDt,2019,"2017,2018,2019,2020,2021,2022,2023"
-Policy,Prescription Drug Monitoring Programs (PDMP),MsAcPdmpFr,2019,"2017,2018,2019,2020,2021,2022,2023"
-Policy,Prescription Drug Monitoring Programs (PDMP),OpPdmpDt,2019,"2017,2018,2019,2020,2021,2022,2023"
-Policy,Prescription Drug Monitoring Programs (PDMP),OpPdmpFr,2019,"2017,2018,2019,2020,2021,2022,2023"
-Policy,State & Local Government Expenditures,CrrctExp,2019,"2019,2020,2021,2022"
-Policy,State & Local Government Expenditures,ExpnFedExp,2018,"2018,2023"
-Policy,State & Local Government Expenditures,ExpnSttExp,2018,"2018,2023"
-Policy,State & Local Government Expenditures,HlthExp,2019,"2019,2020,2021,2022"
-Policy,State & Local Government Expenditures,MedcdExp,2019,"2018,2019,2023"
-Policy,State & Local Government Expenditures,PlcFyrExp,2019,"2019,2020,2021,2022"
-Policy,State & Local Government Expenditures,TradFedExp,2018,"2018,2023"
-Policy,State & Local Government Expenditures,TradSttExp,2018,"2018,2023"
-Policy,State & Local Government Expenditures,WlfrExp,2019,"2019,2020,2021,2022"
-Social,Educational Characteristics,BachelorsP,2018,"1990,2000,2010,2018,2023"
-Social,Educational Characteristics,EduHsP,2018,"1980,1990,2000,2010,2018,2023"
-Social,Educational Characteristics,EduNoHsP,2018,"1980,1990,2000,2010,2018,2023"
-Social,Educational Characteristics,EngProf,2018,"2018,2023"
-Social,Educational Characteristics,GradSclP,2018,"1990,2000,2010,2018,2023"
-Social,Educational Characteristics,SomeCollegeP,2018,"1980,1990,2000,2010,2018,2023"
-Social,Household Characteristics,NonRelFhhP,2018,2018
-Social,Household Characteristics,NonRelNfhhP,2018,2018
-Social,Household Characteristics,TotPopHh,2018,2018
-Social,Population with Disability,DisbP,2018,"2000,2010,2018"
-Social,"Population, Age & Sex Ratios",Age15_44,2018,"1980,1990,2000,2010,2018"
-Social,"Population, Age & Sex Ratios",Age15_44P,2018,"1980,1990,2000,2010,2018"
-Social,"Population, Age & Sex Ratios",ChildrenP,2018,"1980,1990,2000,2018"
-Social,"Population, Age & Sex Ratios",FemP,2018,"1980,1990,2000,2010,2018,2023"
-Social,"Population, Age & Sex Ratios",MaleP,2018,"1980,1990,2000,2010,2018,2023"
-Social,"Population, Age & Sex Ratios",Ovr16,2018,"1980,1990,2000,2018,2023"
-Social,"Population, Age & Sex Ratios",Ovr16P,2018,"1980,1990,2000,2010,2018,2023"
-Social,"Population, Age & Sex Ratios",Ovr18,2018,"1980,1990,2000,2018,2023"
-Social,"Population, Age & Sex Ratios",Ovr18P,2018,"1980,1990,2000,2010,2018,2023"
-Social,"Population, Age & Sex Ratios",Ovr21,2018,"1980,1990,2000,2018,2023"
-Social,"Population, Age & Sex Ratios",Ovr21P,2018,"1980,1990,2000,2010,2018,2023"
-Social,"Population, Age & Sex Ratios",Ovr65,2018,"1980,1990,2000,2018,2023"
-Social,"Population, Age & Sex Ratios",Ovr65P,2018,"1980,1990,2000,2010,2018,2023"
-Social,"Population, Age & Sex Ratios",SRatio,2018,"1980,1990,2000,2010,2018,2023"
-Social,"Population, Age & Sex Ratios",SRatio18,2018,"1980,1990,2000,2010,2018,2023"
-Social,"Population, Age & Sex Ratios",SRatio65,2018,"1980,1990,2000,2010,2018,2023"
-Social,"Population, Age & Sex Ratios",TotPop,2018,"1980,1990,2000,2010,2018,2023"
-Social,Race & Ethnicity,AmIndE,2018,"1980,1990,2000,2010,2018,2023"
-Social,Race & Ethnicity,AmIndP,2018,"1980,1990,2000,2010,2018,2023"
-Social,Race & Ethnicity,AsianE,2018,"1980,1990,2000,2010,2018,2023"
-Social,Race & Ethnicity,AsianP,2018,"1980,1990,2000,2010,2018,2023"
-Social,Race & Ethnicity,BlackE,2018,"1980,1990,2000,2010,2018,2023"
-Social,Race & Ethnicity,BlackP,2018,"1980,1990,2000,2010,2018,2023"
-Social,Race & Ethnicity,HisE,2018,"1980,1990,2000,2010,2018,2023"
-Social,Race & Ethnicity,HisP,2018,"1980,1990,2000,2018,2023"
-Social,Race & Ethnicity,HispP,2018,"1980,1990,2000,2010,2018"
-Social,Race & Ethnicity,OtherE,2018,"2010,2018,2023"
-Social,Race & Ethnicity,OtherP,2018,"1980,1990,2000,2010,2018,2023"
-Social,Race & Ethnicity,PacIsE,2018,"1980,1990,2000,2010,2018,2023"
-Social,Race & Ethnicity,PacIsP,2018,"1980,1990,2000,2010,2018,2023"
-Social,Race & Ethnicity,TwoRaceE,2018,"2010,2018,2023"
-Social,Race & Ethnicity,TwoRaceP,2018,"2010,2018,2023"
-Social,Race & Ethnicity,WhiteE,2018,"1980,1990,2000,2010,2018,2023"
-Social,Race & Ethnicity,WhiteP,2018,"1980,1990,2000,2010,2018,2023"
-Social,Residential Segregation Measures,DsmAs,2018,"2018,2023"
-Social,Residential Segregation Measures,DsmBlk,2018,"2018,2023"
-Social,Residential Segregation Measures,DsmHsp,2018,"2018,2023"
-Social,Residential Segregation Measures,IntrAsWht,2018,"2018,2023"
-Social,Residential Segregation Measures,IntrBlkWht,2018,"2018,2023"
-Social,Residential Segregation Measures,IntrHspWht,2018,"2018,2023"
-Social,Residential Segregation Measures,IsoAs,2018,"2018,2023"
-Social,Residential Segregation Measures,IsoBlk,2018,"2018,2023"
-Social,Residential Segregation Measures,IsoHsp,2018,"2018,2023"
-Social,Veteran Population,TotVetPop,2018,"2010,2018"
-Social,Veteran Population,VetP,2018,"2010,2018"
+Outcome,Hepatitis C Rates,BlkHcv,,2017
+Outcome,Hepatitis C Rates,BlkHcvD,,"2013,2014,2015,2016,2017,2018,2019,2020,2021,2022"
+Outcome,Hepatitis C Rates,FlHcvD,,"2013,2014,2015,2016,2017,2018,2019,2020,2021,2022"
+Outcome,Hepatitis C Rates,FmHcv,,2017
+Outcome,Hepatitis C Rates,HcvD,,"2013,2014,2015,2016,2017,2018,2019,2020,2021,2022"
+Outcome,Hepatitis C Rates,HspHcvD,,"2013,2014,2015,2016,2017,2018,2019,2020,2021,2022"
+Outcome,Hepatitis C Rates,MlHcv,,2017
+Outcome,Hepatitis C Rates,MlHcvD,,"2013,2014,2015,2016,2017,2018,2019,2020,2021,2022"
+Outcome,Hepatitis C Rates,MulHcvD,,"2018,2019,2020,2021,2022"
+Outcome,Hepatitis C Rates,NhPiHcvD,,"2018,2019,2020,2021,2022"
+Outcome,Hepatitis C Rates,NonBlkHcv,,2017
+Outcome,Hepatitis C Rates,O75HcvD,,"2013,2014,2015,2016,2017,2018,2019,2020,2021,2022"
+Outcome,Hepatitis C Rates,Ov75Hcv,,2017
+Outcome,Hepatitis C Rates,TotHcv,,2017
+Outcome,Hepatitis C Rates,U50HcvD,,"2013,2014,2015,2016,2017,2018,2019,2020,2021,2022"
+Outcome,Hepatitis C Rates,Un50Hcv,,2017
+Outcome,Hepatitis C Rates,WhtHcvD,,"2018,2019,2020,2021,2022"
+Outcome,Opioid Indicators,OdMortRt,,"2014,2015,2016,2017,2018,2019,2020,2021,2022"
+Outcome,Opioid Indicators,OdMortRtAv,state-2020,2020
+Outcome,Opioid Indicators,OpRxRt,state-2020,"2020,2022"
+Outcome,Opioid Indicators,PrMsuseP,state-2020,"2020,2022"
+Policy,Harm Reduction Policies,AnyGslDt,state-2019,"2017,2019,2020,2021"
+Policy,Harm Reduction Policies,AnyGslFr,state-2019,"2017,2019,2020,2021"
+Policy,Harm Reduction Policies,AnyNalxDt,state-2019,"2017,2018,2019,2020,2021,2022"
+Policy,Harm Reduction Policies,AnyNalxFr,state-2019,"2017,2018,2019,2020,2021,2022"
+Policy,Harm Reduction Policies,ExpSsp,state-2019,2019
+Policy,Harm Reduction Policies,GslArrDt,state-2019,"2017,2019,2020,2021"
+Policy,Harm Reduction Policies,GslArrFr,state-2019,"2017,2019,2020,2021"
+Policy,Harm Reduction Policies,NalxPrStDt,state-2019,"2017,2018,2019,2020,2021,2022"
+Policy,Harm Reduction Policies,NalxPrStFr,state-2019,"2017,2018,2019,2020,2021,2022"
+Policy,Harm Reduction Policies,NalxPresDt,state-2019,"2017,2018,2019,2020,2021,2022"
+Policy,Harm Reduction Policies,NalxPresFr,state-2019,"2017,2018,2019,2020,2021,2022"
+Policy,Harm Reduction Policies,NoLwRmUnc,state-2019,2019
+Policy,Harm Reduction Policies,NoPrphLw,state-2019,2019
+Policy,Harm Reduction Policies,NtPrFrDsSy,state-2019,2019
+Policy,Harm Reduction Policies,PrExcInj,state-2019,2019
+Policy,Harm Reduction Policies,PrNtRefInj,state-2019,2019
+Policy,Marijuana Policies,MdMarijLaw,state-2019,"2017,2018,2019,2020,2021,2022,2023"
+Policy,Prescription Drug Monitoring Programs (PDMP),AnyPdmpDt,state-2019,"2017,2018,2019,2020,2021,2022,2023"
+Policy,Prescription Drug Monitoring Programs (PDMP),AnyPdmpFr,state-2019,"2017,2018,2019,2020,2021,2022,2023"
+Policy,Prescription Drug Monitoring Programs (PDMP),AnyPdmphDt,state-2019,"2017,2018,2019,2020,2021,2022,2023"
+Policy,Prescription Drug Monitoring Programs (PDMP),AnyPdmphFr,state-2019,"2017,2018,2019,2020,2021,2022,2023"
+Policy,Prescription Drug Monitoring Programs (PDMP),ElcPdmpDt,state-2019,"2017,2018,2019,2020,2021,2022,2023"
+Policy,Prescription Drug Monitoring Programs (PDMP),ElcPdmpFr,state-2019,"2017,2018,2019,2020,2021,2022,2023"
+Policy,Prescription Drug Monitoring Programs (PDMP),MsAcPdmpDt,state-2019,"2017,2018,2019,2020,2021,2022,2023"
+Policy,Prescription Drug Monitoring Programs (PDMP),MsAcPdmpFr,state-2019,"2017,2018,2019,2020,2021,2022,2023"
+Policy,Prescription Drug Monitoring Programs (PDMP),OpPdmpDt,state-2019,"2017,2018,2019,2020,2021,2022,2023"
+Policy,Prescription Drug Monitoring Programs (PDMP),OpPdmpFr,state-2019,"2017,2018,2019,2020,2021,2022,2023"
+Policy,State & Local Government Expenditures,CrrctExp,state-2019,"2019,2020,2021,2022"
+Policy,State & Local Government Expenditures,ExpnFedExp,state-2018,"2018,2023"
+Policy,State & Local Government Expenditures,ExpnSttExp,state-2018,"2018,2023"
+Policy,State & Local Government Expenditures,HlthExp,state-2019,"2019,2020,2021,2022"
+Policy,State & Local Government Expenditures,MedcdExp,state-2018,"2018,2019,2023"
+Policy,State & Local Government Expenditures,PlcFyrExp,state-2019,"2019,2020,2021,2022"
+Policy,State & Local Government Expenditures,TradFedExp,state-2018,"2018,2023"
+Policy,State & Local Government Expenditures,TradSttExp,state-2018,"2018,2023"
+Policy,State & Local Government Expenditures,WlfrExp,state-2019,"2019,2020,2021,2022"
+Social,Educational Characteristics,BachelorsP,state-2018,"1990,2000,2010,2018,2023"
+Social,Educational Characteristics,EduHsP,state-2018,"1980,1990,2000,2010,2018,2023"
+Social,Educational Characteristics,EduNoHsP,state-2018,"1980,1990,2000,2010,2018,2023"
+Social,Educational Characteristics,EngProf,state-2018,"2018,2023"
+Social,Educational Characteristics,GradSclP,state-2018,"1990,2000,2010,2018,2023"
+Social,Educational Characteristics,SomeCollegeP,state-2018,"1980,1990,2000,2010,2018,2023"
+Social,Household Characteristics,NonRelFhhP,state-2018,2018
+Social,Household Characteristics,NonRelNfhhP,state-2018,2018
+Social,Household Characteristics,TotPopHh,state-2018,2018
+Social,Population with Disability,DisbP,state-2018,"2000,2010,2018"
+Social,"Population, Age & Sex Ratios",Age15_44,state-2018,"1980,1990,2000,2010,2018"
+Social,"Population, Age & Sex Ratios",Age15_44P,state-2018,"1980,1990,2000,2010,2018"
+Social,"Population, Age & Sex Ratios",ChildrenP,state-2018,"1980,1990,2000,2018"
+Social,"Population, Age & Sex Ratios",FemP,state-2018,"1980,1990,2000,2010,2018,2023"
+Social,"Population, Age & Sex Ratios",MaleP,state-2018,"1980,1990,2000,2010,2018,2023"
+Social,"Population, Age & Sex Ratios",Ovr16,state-2018,"1980,1990,2000,2018,2023"
+Social,"Population, Age & Sex Ratios",Ovr16P,state-2018,"1980,1990,2000,2010,2018,2023"
+Social,"Population, Age & Sex Ratios",Ovr18,state-2018,"1980,1990,2000,2018,2023"
+Social,"Population, Age & Sex Ratios",Ovr18P,state-2018,"1980,1990,2000,2010,2018,2023"
+Social,"Population, Age & Sex Ratios",Ovr21,state-2018,"1980,1990,2000,2018,2023"
+Social,"Population, Age & Sex Ratios",Ovr21P,state-2018,"1980,1990,2000,2010,2018,2023"
+Social,"Population, Age & Sex Ratios",Ovr65,state-2018,"1980,1990,2000,2018,2023"
+Social,"Population, Age & Sex Ratios",Ovr65P,state-2018,"1980,1990,2000,2010,2018,2023"
+Social,"Population, Age & Sex Ratios",SRatio,state-2018,"1980,1990,2000,2010,2018,2023"
+Social,"Population, Age & Sex Ratios",SRatio18,state-2018,"1980,1990,2000,2010,2018,2023"
+Social,"Population, Age & Sex Ratios",SRatio65,state-2018,"1980,1990,2000,2010,2018,2023"
+Social,"Population, Age & Sex Ratios",TotPop,state-2018,"1980,1990,2000,2010,2018,2023"
+Social,Race & Ethnicity,AmIndE,state-2018,"1980,1990,2000,2010,2018,2023"
+Social,Race & Ethnicity,AmIndP,state-2018,"1980,1990,2000,2010,2018,2023"
+Social,Race & Ethnicity,AsianE,state-2018,"1980,1990,2000,2010,2018,2023"
+Social,Race & Ethnicity,AsianP,state-2018,"1980,1990,2000,2010,2018,2023"
+Social,Race & Ethnicity,BlackE,state-2018,"1980,1990,2000,2010,2018,2023"
+Social,Race & Ethnicity,BlackP,state-2018,"1980,1990,2000,2010,2018,2023"
+Social,Race & Ethnicity,HisE,state-2018,"1980,1990,2000,2010,2018,2023"
+Social,Race & Ethnicity,HisP,state-2018,"1980,1990,2000,2018,2023"
+Social,Race & Ethnicity,HispP,state-2018,"1980,1990,2000,2010,2018"
+Social,Race & Ethnicity,OtherE,state-2018,"2010,2018,2023"
+Social,Race & Ethnicity,OtherP,state-2018,"1980,1990,2000,2010,2018,2023"
+Social,Race & Ethnicity,PacIsE,state-2018,"1980,1990,2000,2010,2018,2023"
+Social,Race & Ethnicity,PacIsP,state-2018,"1980,1990,2000,2010,2018,2023"
+Social,Race & Ethnicity,TwoRaceE,state-2018,"2010,2018,2023"
+Social,Race & Ethnicity,TwoRaceP,state-2018,"2010,2018,2023"
+Social,Race & Ethnicity,WhiteE,state-2018,"1980,1990,2000,2010,2018,2023"
+Social,Race & Ethnicity,WhiteP,state-2018,"1980,1990,2000,2010,2018,2023"
+Social,Residential Segregation Measures,DsmAs,state-2018,"2018,2023"
+Social,Residential Segregation Measures,DsmBlk,state-2018,"2018,2023"
+Social,Residential Segregation Measures,DsmHsp,state-2018,"2018,2023"
+Social,Residential Segregation Measures,IntrAsWht,state-2018,"2018,2023"
+Social,Residential Segregation Measures,IntrBlkWht,state-2018,"2018,2023"
+Social,Residential Segregation Measures,IntrHspWht,state-2018,"2018,2023"
+Social,Residential Segregation Measures,IsoAs,state-2018,"2018,2023"
+Social,Residential Segregation Measures,IsoBlk,state-2018,"2018,2023"
+Social,Residential Segregation Measures,IsoHsp,state-2018,"2018,2023"
+Social,Veteran Population,TotVetPop,state-2018,"2010,2018"
+Social,Veteran Population,VetP,state-2018,"2010,2018"

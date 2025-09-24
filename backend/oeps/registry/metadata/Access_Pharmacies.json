@@ -1,5 +1,5 @@
 {
-  "id": "Access_Pharmacies",
+  "name": "Access_Pharmacies",
   "theme": "Environment",
   "construct": "Spatial Access to Pharmacies",
   "proxy": "Spatial access metrics to Pharmacies (Distance, Travel Time, Count Within Threshold)",

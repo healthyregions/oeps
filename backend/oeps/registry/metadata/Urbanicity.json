@@ -1,5 +1,5 @@
 {
-  "id": "Urbanicity",
+  "name": "Urbanicity",
   "theme": "Environment",
   "construct": "Urban/Suburban/Rural Classification",
   "proxy": "Primary RUCA Code, Secondary RUCA Code by County",

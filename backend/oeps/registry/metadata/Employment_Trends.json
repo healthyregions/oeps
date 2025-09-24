@@ -1,5 +1,5 @@
 {
-  "id": "Employment_Trends",
+  "name": "Employment_Trends",
   "theme": "Economic",
   "construct": "Employment Trends",
   "proxy": "Unemployment Rate, Essential Workers Total, Essential Workers %, Working Population Total, Employed % - Education, Employed % - High Risk of Injury, Employed % - Health Care, Employed % - Retail, The number of unemployed individuals as a percentage of the civilian labor force",

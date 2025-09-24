@@ -1,5 +1,5 @@
 {
-  "id": "Economic_Characteristics",
+  "name": "Economic_Characteristics",
   "theme": "Economic",
   "construct": "Poverty, Income, Gini Coefficient",
   "proxy": "Employment, poverty, income, and income inequality (Gini Coefficient)",

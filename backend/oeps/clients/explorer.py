@@ -189,7 +189,7 @@ class Explorer:
                 {
                     "name": filename,
                     "url": f"https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/{filename}",
-                    "year": ts.year,
+                    "year": ts.data_year,
                 }
             )
         for csv_list in csv_downloads.values():

@@ -69,7 +69,7 @@ def create_data_dictionary(registry: Registry, summary_level: str, destination: 
 
     all_variables = {}
     for f in ordered:
-        years = set([registry.table_sources[i].year for i in f.table_sources])
+        years = set([registry.table_sources[i].data_year for i in f.table_sources])
         all_variables[f.name] = {"years": years, "info": f}
 
     years_list = set()

@@ -1,5 +1,5 @@
 {
-  "id": "Internet_Access",
+  "name": "Internet_Access",
   "theme": "Economic",
   "construct": "Internet Access",
   "proxy": "Households without Internet Access %",

@@ -3,6 +3,6 @@
   "title": "state-1990",
   "path": "tables/state-1990.csv",
   "description": "This CSV aggregates all OEPS data values from 1990 at the state level.",
-  "year": "1990",
-  "geodata_source": "states-2010"
+  "data_year": "1990",
+  "geodata_source": "geo-2010-state"
 }
