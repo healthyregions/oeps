@@ -5,6 +5,9 @@ import pandas as pd
 from pathlib import Path
 
 from frictionless import validate
+from openpyxl import Workbook
+from openpyxl.utils import get_column_letter
+from openpyxl.styles import Font
 
 from ..clients.s3 import upload_to_s3
 from ..registry.handlers import Registry
@@ -18,14 +21,40 @@ class DataPackage:
         self.registry = None
         self.rules_rows = []
         self.verbose = False
+        self.schema = {
+            "profile": "data-package",
+            "name": None,
+            "title": None,
+            "homepage": "https://oeps.healthyregions.org",
+            "licenses": [
+                {
+                    "name": "ODC-PDDL-1.0",
+                    "path": "http://opendatacommons.org/licenses/pddl/",
+                    "title": "Open Data Commons Public Domain Dedication and License v1.0",
+                }
+            ],
+            "resources": [],
+        }
 
-    def check_geodata_sources_in_rules_file(self, lvl: GeodataSourceModel):
+    def check_geodata_sources_in_rules_file(self):
         gs = dict()
         for row in self.rules_rows:
-            ts = self.registry.get_table_source_for_variable(row["name"], lvl.name, row["pick"])
+            ts = self.registry.table_sources[row["table_source"]]
             gs[ts.geodata_source] = gs.get(ts.geodata_source, []) + [row["name"]]
 
         return gs
+
+    def add_geodata_source_to_package(self, gs: GeodataSourceModel):
+
+        gs_resource = gs.to_frictionless_resource()
+
+        gs_url = gs_resource.pop("path")
+        gs_resource["path"] = f"data/{Path(gs_url).name}"
+        download_file(gs_url, Path(self.path, gs_resource["path"]))
+        gs_schema = gs_resource.pop('schema')
+        gs_resource["schema"] = f"schemas/{gs.name}.json"
+        write_json(gs_schema, Path(self.path, gs_resource["schema"]))
+        self.schema["resources"].append(gs_resource)
 
     def create_from_rules(
         self,
@@ -52,32 +81,20 @@ class DataPackage:
 
         rules_name = rules_dir.name
 
-        package_schema = {
-            "profile": "data-package",
-            "name": f"oeps-{rules_name.lower()}",
-            "title": f"Opioid Environment Policy Scan (OEPS) - {rules_name}",
-            "homepage": "https://oeps.healthyregions.org",
-            "licenses": [
-                {
-                    "name": "ODC-PDDL-1.0",
-                    "path": "http://opendatacommons.org/licenses/pddl/",
-                    "title": "Open Data Commons Public Domain Dedication and License v1.0",
-                }
-            ],
-            "resources": [],
-        }
+        self.schema["name"] = f"oeps-{rules_name.lower()}"
+        self.schema["title"] = f"Opioid Environment Policy Scan (OEPS) - {rules_name}"
 
+        geodata_sources = []
         for rules_file in rules_dir.glob("*.csv"):
             if rules_file.stem not in GEOGRAPHY_LOOKUP:
                 continue
-            lvl = GEOGRAPHY_LOOKUP[rules_file.stem]
             print(f"processing {rules_file.name}")
             with open(rules_file, "r") as o:
                 reader = csv.DictReader(o)
-                ## filter out variables that don't have a "pick" value
-                self.rules_rows = [i for i in reader if i["pick"]]
+                ## filter out variables that don't have a "table_source" value
+                self.rules_rows = [i for i in reader if i["table_source"]]
 
-            gs_lookup = self.check_geodata_sources_in_rules_file(lvl)
+            gs_lookup = self.check_geodata_sources_in_rules_file()
             if len(gs_lookup.keys()) > 1:
                 print("not all variable years in this file use the same geodata source.")
                 print("this must be corrected before the file can be processed.")
@@ -89,13 +106,16 @@ class DataPackage:
                         fewer_ct = len(v)
                         fewer_vars = v
                     print(k, len(v))
-                print(f"outliers: {', '.join(fewer_vars)}")
+                print("outliers:\n" + '\n'.join(fewer_vars))
                 continue
 
             if check_rules:
                 continue
 
-            resource = {
+            gs = self.registry.geodata_sources.get(list(gs_lookup.keys())[0])
+            geodata_sources.append(gs)
+
+            ts_resource = {
                 "name": rules_file.stem,
                 "title": rules_file.stem,
                 "format": "csv",
@@ -104,7 +124,6 @@ class DataPackage:
                 "schema": f"schemas/{rules_file.stem}.json",
             }
             resource_schema = {
-                "primaryKey": "HEROP_ID",
                 "fields": [
                     {
                         "title": "HEROP_ID",
@@ -113,47 +132,70 @@ class DataPackage:
                         "example": "050US01001",
                         "description": "A derived unique id corresponding to the relevant geographic unit.",
                         "metadata": "Geographic_Boundaries"
-                    },
-                    {
-                        "title": "FIPS",
-                        "name": "FIPS",
-                        "type": "string",
-                        "example": "22001",
-                        "description": "FIPS code for this geographic unit.",
-                        "metadata": "Geographic_Boundaries"
-                    },
+                    }
                 ]
             }
+            if not skip_foreign_keys:
+                resource_schema["foreignKeys"] = [{
+                    "fields": "HEROP_ID",
+                    "reference": {
+                        "resource": gs.name,
+                        "fields": "HEROP_ID"
+                    }
+                }]
+            if rules_file.stem == "zcta":
+                resource_schema["fields"].append({
+                    "title": "ZCTA5",
+                    "name": "ZCTA5",
+                    "type": "string",
+                    "example": "22001",
+                    "description": "Zip Code for this geographic unit.",
+                    "metadata": "Geographic_Boundaries"
+                })
+            else:
+                resource_schema["fields"].append({
+                    "title": "FIPS",
+                    "name": "FIPS",
+                    "type": "string",
+                    "example": "22001",
+                    "description": "FIPS code for this geographic unit.",
+                    "metadata": "Geographic_Boundaries"
+                })
 
-            gs = self.registry.geodata_sources.get(list(gs_lookup.keys())[0])
             df = gs.get_blank_dataframe()
-            print(df)
             for row in self.rules_rows:
                 ## skip HEROP_ID and FIPS, as they are already in the blank df
                 if row["name"] in ["HEROP_ID", "FIPS"]:
                     continue
                 variable = self.registry.variables.get(row["name"])
-                ts = self.registry.get_table_source_for_variable(variable.name, lvl.name, row["pick"])
+                if not variable:
+                    raise Exception(f"skipping variable not in registry: {row['name']}")
+                ts = self.registry.table_sources[row["table_source"]]
+
                 var_df = ts.get_variable_data([variable.name])
-                print(var_df)
                 df = pd.merge(df, var_df, how="left", on="HEROP_ID")
 
                 field_def = variable.to_frictionless_field()
-                field_def["year"] = row["pick"]
+                field_def["data_year"] = ts.data_year
                 resource_schema["fields"].append(field_def)
 
             print(df)
             outpath = Path(d_path, rules_file.name)
             df.to_csv(outpath, index=False)
 
-            package_schema["resources"].append(resource)
-            write_json(resource_schema, Path(self.path, resource["schema"]))
+            self.schema["resources"].append(ts_resource)
+            write_json(resource_schema, Path(self.path, ts_resource["schema"]))
 
-            self.clean_data_resource(resource)
+            self.clean_data_resource(ts_resource)
 
-        write_json(package_schema, Path(self.path, "data-package.json"))
+        write_json(self.schema, Path(self.path, "data-package.json"))
 
         self.collect_metadata()
+
+        for geodata_source in geodata_sources:
+            self.add_geodata_source_to_package(geodata_source)
+
+        self.create_data_dictionaries()
 
         if run_validation:
             self.validate()
@@ -201,7 +243,9 @@ class DataPackage:
         for schema_file in Path(self.path, "schemas").glob("*.json"):
             schema = load_json(schema_file)
             for field in schema["fields"]:
-                urls.add(self.registry.metadata[field["metadata"]].url)
+                md_id = field.get("metadata")
+                if md_id:
+                    urls.add(self.registry.metadata[md_id].url)
 
         if len(urls) > 0:
             md_dir = Path(self.path, "metadata")
@@ -213,6 +257,49 @@ class DataPackage:
             raw_url = f"{download_url_base}{file_name}"
             local_path = Path(md_dir, file_name)
             download_file(raw_url, local_path)
+
+    def create_data_dictionaries(self):
+        dd_path = Path(self.path, "data_dictionaries")
+        dd_path.mkdir(exist_ok=True)
+
+        print("creating data dictionaries...")
+        for resource in self.schema['resources']:
+            if resource['format'] != "csv":
+                continue
+            out_path = Path(dd_path, resource["name"] +".xlsx")
+            headers = {
+                "Name": 15,
+                "Title": 20,
+                "Data Year": 10,
+                "Theme": 15,
+                "Construct": 20,
+            }
+            wb = Workbook()
+            ws = wb.active
+            ws.append(list(headers.keys()))
+
+            ft = Font(bold=True, name="Calibri")
+            for row in ws["A1:Z1"]:
+                for cell in row:
+                    cell.font = ft
+
+            schema_path = Path(self.path, resource["schema"])
+            s = load_json(schema_path)
+            for field in s["fields"]:
+                if field["name"] in ["HEROP_ID", "FIPS", "ZCTA5"]:
+                    continue
+                md_id = field.get("metadata")
+                theme, con = "", ""
+                if md_id:
+                    theme = self.registry.metadata[md_id].theme
+                    con = self.registry.metadata[md_id].construct2
+                ws.append([field["name"], field["title"], field["data_year"], theme, con])
+
+            for n, k in enumerate(headers.keys()):
+                ws.column_dimensions[get_column_letter(n + 1)].width = headers[k]
+
+            # Save the file
+            wb.save(out_path)
 
     def clean_data_resource(self, res):
         print(f"cleaning data for {res['name']}")

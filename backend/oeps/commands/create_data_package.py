@@ -1,5 +1,6 @@
 from datetime import datetime
 from pathlib import Path
+import shutil
 
 import click
 from ..clients.frictionless import DataPackage
@@ -110,9 +111,12 @@ def create_data_package(
     if not overwrite:
         handle_overwrite(out_path)
 
+    if out_path.is_dir():
+        shutil.rmtree(out_path)
+
     registry = Registry.create_from_directory(registry_path)
     dp = DataPackage(out_path)
-    print(check_rules)
+
     dp.create_from_rules(
         registry,
         rules_dir,
