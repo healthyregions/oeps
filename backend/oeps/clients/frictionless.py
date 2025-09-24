@@ -259,47 +259,70 @@ class DataPackage:
             download_file(raw_url, local_path)
 
     def create_data_dictionaries(self):
-        dd_path = Path(self.path, "data_dictionaries")
-        dd_path.mkdir(exist_ok=True)
+
+        res_names = []
+        var_rows = {}
 
         print("creating data dictionaries...")
         for resource in self.schema['resources']:
             if resource['format'] != "csv":
                 continue
-            out_path = Path(dd_path, resource["name"] +".xlsx")
-            headers = {
-                "Name": 15,
-                "Title": 20,
-                "Data Year": 10,
-                "Theme": 15,
-                "Construct": 20,
-            }
-            wb = Workbook()
-            ws = wb.active
-            ws.append(list(headers.keys()))
 
-            ft = Font(bold=True, name="Calibri")
-            for row in ws["A1:Z1"]:
-                for cell in row:
-                    cell.font = ft
-
+            res_names.append(resource["name"])
             schema_path = Path(self.path, resource["schema"])
             s = load_json(schema_path)
             for field in s["fields"]:
                 if field["name"] in ["HEROP_ID", "FIPS", "ZCTA5"]:
                     continue
+
                 md_id = field.get("metadata")
-                theme, con = "", ""
+                theme, con, url = "", "", ""
                 if md_id:
                     theme = self.registry.metadata[md_id].theme
                     con = self.registry.metadata[md_id].construct2
-                ws.append([field["name"], field["title"], field["data_year"], theme, con])
+                    url = self.registry.metadata[md_id].url
+                if field["name"] not in var_rows:
+                    var_rows[field["name"]] = {
+                        "Name": field["name"],
+                        "Title": field["title"],
+                        "Theme": theme,
+                        "Construct": con,
+                        "Metadata": url,
+                    }
+                var_rows[field["name"]][resource["name"]] = field["data_year"]
 
-            for n, k in enumerate(headers.keys()):
-                ws.column_dimensions[get_column_letter(n + 1)].width = headers[k]
+        headers = {
+            "Name": 15,
+            "Title": 30,
+        }
+        for i in res_names:
+            headers[i] = 15
+        headers.update({
+            "Theme": 15,
+            "Construct": 20,
+            "Metadata": 45,
+        })
 
-            # Save the file
-            wb.save(out_path)
+        wb = Workbook()
+        ws = wb.active
+
+        ws.append(list(headers.keys()))
+
+        for variable in sorted(var_rows.values(), key=lambda x: (x["Theme"], x["Construct"], x["Name"])):
+            row = []
+            for col in headers.keys():
+                row.append(variable.get(col))
+            ws.append(row)
+
+        ft = Font(bold=True, name="Calibri")
+        for row in ws["A1:Z1"]:
+            for cell in row:
+                cell.font = ft
+        for n, k in enumerate(headers.keys()):
+            ws.column_dimensions[get_column_letter(n + 1)].width = headers[k]
+
+        out_path = Path(self.path, "data-dictionary.xlsx")
+        wb.save(out_path)
 
     def clean_data_resource(self, res):
         print(f"cleaning data for {res['name']}")
