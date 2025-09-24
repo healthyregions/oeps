@@ -1,181 +1,181 @@
-theme,construct,name,pick,all years
-Composite,Social Vulnerability Indices,SviSmryRnk,2022,"2018,2020,2022"
-Composite,Social Vulnerability Indices,SviTh1,2022,"2018,2020,2022"
-Composite,Social Vulnerability Indices,SviTh2,2022,"2018,2020,2022"
-Composite,Social Vulnerability Indices,SviTh3,2022,"2018,2020,2022"
-Composite,Social Vulnerability Indices,SviTh4,2022,"2018,2020,2022"
-Economic,Employment Trends,EduP,2023,"2018,2020,2023"
-Economic,Employment Trends,EssnWrkE,2018,2018
-Economic,Employment Trends,EssnWrkP,2023,"2018,2020,2023"
-Economic,Employment Trends,HghRskP,2023,"2018,2020,2023"
-Economic,Employment Trends,HltCrP,2023,"2018,2020,2023"
-Economic,Employment Trends,RetailP,2023,"2018,2020,2023"
-Economic,Employment Trends,TotWrkE,2023,"2018,2020,2023"
-Economic,Great Recession Foreclosure Rate,ForDqP,2018,2018
-Economic,Great Recession Foreclosure Rate,ForDqTot,2018,2018
-Economic,Great Recession Foreclosure Rate,GiniCoeff,2023,"2010,2018,2020,2023"
-Economic,Internet Access,NoIntP,2019,2019
-Economic,"Poverty, Income, Gini Coefficient",MedInc,2023,"2010,2018,2020,2023"
-Economic,"Poverty, Income, Gini Coefficient",PciE,2023,"2010,2018,2020,2023"
-Economic,"Poverty, Income, Gini Coefficient",PovP,2023,"1980,1990,2000,2010,2018,2020,2023"
-Economic,"Poverty, Income, Gini Coefficient",UnempP,2023,"1980,1990,2000,2010,2018,2020,2023"
-Environment,Alcohol Outlet Density Measures,AlcDens,2018,2018
-Environment,Alcohol Outlet Density Measures,AlcPerCap,2018,2018
-Environment,Alcohol Outlet Density Measures,AlcTot,2018,2018
-Environment,Alcohol Outlet Density Measures,AreaSqMi,2018,2018
-Environment,Greenspace Measures,Ndvi,2018,2018
-Environment,Healthcare Provider Access,PcpPer100k,2010,2010
-Environment,Healthcare Provider Access,SpPer100k,2010,2010
-Environment,Healthcare Provider Access,TotPcp,2010,2010
-Environment,Healthcare Provider Access,TotSp,2010,2010
-Environment,Housing Characteristics ,LngTermP,2023,"2018,2020,2023"
-Environment,Housing Characteristics ,MobileP,2023,"2018,2020,2023"
-Environment,Housing Characteristics ,RentalP,2023,"2018,2020,2023"
-Environment,Housing Characteristics ,TotUnits,2023,"1980,1990,2000,2010,2018,2020,2023"
-Environment,Housing Characteristics ,UnitDens,2023,"2018,2020,2023"
-Environment,Housing Characteristics ,VacantP,2023,"1980,1990,2000,2010,2018,2020,2023"
-Environment,Spatial Access to Hospitals,HospAvTmDr,2020,2020
-Environment,Spatial Access to Hospitals,HospCtTmDr,2020,2020
-Environment,Spatial Access to Hospitals,HospTmDrP,2020,2020
-Environment,Spatial Access to MOUDs,BupAvTmBk,2025,"2020,2025"
-Environment,Spatial Access to MOUDs,BupAvTmDr,2025,"2020,2025"
-Environment,Spatial Access to MOUDs,BupAvTmWk,2025,"2020,2025"
-Environment,Spatial Access to MOUDs,BupCtTmBk,2025,"2020,2025"
-Environment,Spatial Access to MOUDs,BupCtTmDr,2025,"2020,2025"
-Environment,Spatial Access to MOUDs,BupCtTmWk,2025,"2020,2025"
-Environment,Spatial Access to MOUDs,BupTmBkP,2025,"2020,2025"
-Environment,Spatial Access to MOUDs,BupTmDrP,2025,"2020,2025"
-Environment,Spatial Access to MOUDs,BupTmWkP,2025,"2020,2025"
-Environment,Spatial Access to MOUDs,MetAvTmBk,2025,"2020,2025"
-Environment,Spatial Access to MOUDs,MetAvTmDr,2025,"2020,2025"
-Environment,Spatial Access to MOUDs,MetAvTmWk,2025,"2020,2025"
-Environment,Spatial Access to MOUDs,MetCtTmBk,2025,"2020,2025"
-Environment,Spatial Access to MOUDs,MetCtTmDr,2025,"2020,2025"
-Environment,Spatial Access to MOUDs,MetCtTmWk,2025,"2020,2025"
-Environment,Spatial Access to MOUDs,MetTmBkP,2025,"2020,2025"
-Environment,Spatial Access to MOUDs,MetTmDrP,2025,"2020,2025"
-Environment,Spatial Access to MOUDs,MetTmWkP,2025,"2020,2025"
-Environment,Spatial Access to MOUDs,NaltAvTmBk,2025,"2020,2025"
-Environment,Spatial Access to MOUDs,NaltAvTmDr,2025,"2020,2025"
-Environment,Spatial Access to MOUDs,NaltAvTmWk,2025,"2020,2025"
-Environment,Spatial Access to MOUDs,NaltCtTmBk,2025,"2020,2025"
-Environment,Spatial Access to MOUDs,NaltCtTmDr,2025,"2020,2025"
-Environment,Spatial Access to MOUDs,NaltCtTmWk,2025,"2020,2025"
-Environment,Spatial Access to MOUDs,NaltTmBkP,2025,"2020,2025"
-Environment,Spatial Access to MOUDs,NaltTmDrP,2025,"2020,2025"
-Environment,Spatial Access to MOUDs,NaltTmWkP,2025,"2020,2025"
-Environment,Spatial Access to MOUDs,OtpAvTmDr,2025,"2021,2025"
-Environment,Spatial Access to MOUDs,OtpCtTmDr,2025,"2021,2025"
-Environment,Spatial Access to MOUDs,OtpTmDrP,2025,"2021,2025"
-Environment,Spatial Access to Mental Health Providers,MhAvTmDr,2020,2020
-Environment,Spatial Access to Mental Health Providers,MhCtTmDr,2020,2020
-Environment,Spatial Access to Mental Health Providers,MhTmDrP,2020,2020
-Environment,Spatial Access to Pharmacies,RxAvTmDr,2019,2019
-Environment,Spatial Access to Pharmacies,RxCtTmDr,2019,2019
-Environment,Spatial Access to Pharmacies,RxTmDrP,2019,2019
-Environment,Spatial Access to Substance Use Treatment Providers,SutpAvTmDr,2020,2020
-Environment,Spatial Access to Substance Use Treatment Providers,SutpCtTmDr,2020,2020
-Environment,Spatial Access to Substance Use Treatment Providers,SutpTmDrP,2020,2020
-Environment,Spatial access to Health Centers,FqhcAvTmDr,2020,2020
-Environment,Spatial access to Health Centers,FqhcCtTmDr,2020,2020
-Environment,Spatial access to Health Centers,FqhcTmDrP,2020,2020
-Environment,Spatial access to Health Centers,TotTracts,2025,"2018,2025"
-Environment,Urban/Suburban/Rural Classification,CenFlags,2010,2010
-Environment,Urban/Suburban/Rural Classification,RcaRuralP,2018,2018
-Environment,Urban/Suburban/Rural Classification,RcaSubrbP,2018,2018
-Environment,Urban/Suburban/Rural Classification,RcaUrbanP,2018,2018
-Geography,Geographic Boundaries,FIPS,2025,"1980,1990,2000,2010,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2025"
-Geography,Geographic Boundaries,HEROP_ID,2025,"1980,1990,2000,2010,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2025"
-Outcome,Opioid Indicators,OdMortRt,2021,"2014,2015,2016,2017,2018,2019,2020,2021"
-Outcome,Opioid Indicators,OdMortRtAv,2020,2020
-Outcome,Opioid Indicators,OpRxRt,2022,"2020,2022"
-Social,Community Overlay Variables,DmyBlckBlt,2000,2000
-Social,Community Overlay Variables,DmySgrg,2015,2015
-Social,Community Overlay Variables,PrcNtvRsrv,2017,2017
-Social,Educational Characteristics,BachelorsP,2023,"1990,2000,2010,2018,2020,2023"
-Social,Educational Characteristics,EduHsP,2023,"1980,1990,2000,2010,2018,2020,2023"
-Social,Educational Characteristics,EduNoHsP,2023,"1980,1990,2000,2010,2018,2020,2023"
-Social,Educational Characteristics,EngProf,2023,"2018,2020,2023"
-Social,Educational Characteristics,GradSclP,2023,"1990,2000,2010,2018,2020,2023"
-Social,Educational Characteristics,SomeCollegeP,2023,"1980,1990,2000,2010,2018,2020,2023"
-Social,Household Characteristics,CrowdHsng,2023,"2020,2023"
-Social,Household Characteristics,DivrcdP,2023,"2020,2023"
-Social,Household Characteristics,FamSize,2023,"2020,2023"
-Social,Household Characteristics,HHSize,2023,"2020,2023"
-Social,Household Characteristics,HhldFA,2023,"2020,2023"
-Social,Household Characteristics,HhldFC,2023,"2020,2023"
-Social,Household Characteristics,HhldFS,2023,"2020,2023"
-Social,Household Characteristics,HhldMA,2023,"2020,2023"
-Social,Household Characteristics,HhldMC,2023,"2020,2023"
-Social,Household Characteristics,HhldMS,2023,"2020,2023"
-Social,Household Characteristics,HsdTot,2023,"2020,2023"
-Social,Household Characteristics,HsdTypCo,2023,"2020,2023"
-Social,Household Characteristics,HsdTypM,2023,"2020,2023"
-Social,Household Characteristics,HsdTypMC,2023,"2020,2023"
-Social,Household Characteristics,MrrdP,2023,"2020,2023"
-Social,Household Characteristics,NonRelFhhP,2023,"2018,2020,2023"
-Social,Household Characteristics,NonRelNfhhP,2023,"2018,2020,2023"
-Social,Household Characteristics,NvMrrdP,2023,"2020,2023"
-Social,Household Characteristics,OccupantP,2023,"2020,2023"
-Social,Household Characteristics,SepartedP,2023,"2020,2023"
-Social,Household Characteristics,TotPopHh,2023,"2018,2020,2023"
-Social,Household Characteristics,WidwdP,2023,"2020,2023"
-Social,Incarceration,TtlJlAdm,2017,2017
-Social,Incarceration,TtlJlAdmr,2017,2017
-Social,Incarceration,TtlJlPp,2017,2017
-Social,Incarceration,TtlJlPpr,2017,2017
-Social,Incarceration,TtlJlPrt,2017,2017
-Social,Incarceration,TtlJlPrtr,2017,2017
-Social,Incarceration,TtlPrAPp,2016,2016
-Social,Incarceration,TtlPrAPpr,2016,2016
-Social,Incarceration,TtlPrPp,2016,2016
-Social,Incarceration,TtlPrPpr,2016,2016
-Social,Population with Disability,DisbP,2023,"2000,2010,2018,2020,2023"
-Social,"Population, Age & Sex Ratios",Age15_44,2018,"1980,1990,2000,2010,2018"
-Social,"Population, Age & Sex Ratios",Age15_44P,2018,"1980,1990,2000,2010,2018"
-Social,"Population, Age & Sex Ratios",ChildrenP,2018,"1980,1990,2000,2010,2018"
-Social,"Population, Age & Sex Ratios",FemP,2023,"1980,1990,2000,2010,2018,2020,2023"
-Social,"Population, Age & Sex Ratios",MaleP,2023,"1980,1990,2000,2010,2018,2020,2023"
-Social,"Population, Age & Sex Ratios",MedAge,2023,"2020,2023"
-Social,"Population, Age & Sex Ratios",Ovr16,2023,"1980,1990,2000,2018,2023"
-Social,"Population, Age & Sex Ratios",Ovr16P,2023,"1980,1990,2000,2010,2018,2020,2023"
-Social,"Population, Age & Sex Ratios",Ovr18,2023,"1980,1990,2000,2018,2023"
-Social,"Population, Age & Sex Ratios",Ovr18P,2023,"1980,1990,2000,2010,2018,2020,2023"
-Social,"Population, Age & Sex Ratios",Ovr21,2023,"1980,1990,2000,2018,2023"
-Social,"Population, Age & Sex Ratios",Ovr21P,2023,"1980,1990,2000,2010,2018,2020,2023"
-Social,"Population, Age & Sex Ratios",Ovr62P,2023,"2020,2023"
-Social,"Population, Age & Sex Ratios",Ovr65,2023,"1980,1990,2000,2018,2023"
-Social,"Population, Age & Sex Ratios",Ovr65P,2023,"1980,1990,2000,2010,2018,2020,2023"
-Social,"Population, Age & Sex Ratios",SRatio,2023,"1980,1990,2000,2010,2018,2020,2023"
-Social,"Population, Age & Sex Ratios",SRatio18,2023,"1980,1990,2000,2010,2018,2020,2023"
-Social,"Population, Age & Sex Ratios",SRatio65,2023,"1980,1990,2000,2010,2018,2020,2023"
-Social,"Population, Age & Sex Ratios",TotPop,2023,"1980,1990,2000,2010,2018,2020,2023"
-Social,"Population, Age & Sex Ratios",Und18P,2023,"2020,2023"
-Social,Race & Ethnicity,AmIndE,2023,"1980,1990,2000,2010,2018,2023"
-Social,Race & Ethnicity,AmIndP,2023,"1980,1990,2000,2010,2018,2020,2023"
-Social,Race & Ethnicity,AsianE,2023,"1980,1990,2000,2010,2018,2023"
-Social,Race & Ethnicity,AsianP,2018,"1980,1990,2000,2010,2018"
-Social,Race & Ethnicity,BlackE,2023,"1980,1990,2000,2010,2018,2023"
-Social,Race & Ethnicity,BlackP,2023,"1980,1990,2000,2010,2018,2020,2023"
-Social,Race & Ethnicity,HisE,2023,"1980,1990,2000,2010,2018,2023"
-Social,Race & Ethnicity,HisP,2023,"1980,1990,2000,2020,2023"
-Social,Race & Ethnicity,HispP,2018,"1980,1990,2000,2010,2018"
-Social,Race & Ethnicity,OtherE,2023,"2010,2018,2023"
-Social,Race & Ethnicity,OtherP,2023,"1980,1990,2000,2010,2018,2020,2023"
-Social,Race & Ethnicity,PacIsE,2023,"1980,1990,2000,2010,2018,2023"
-Social,Race & Ethnicity,PacIsP,2023,"1980,1990,2000,2010,2018,2020,2023"
-Social,Race & Ethnicity,TwoRaceE,2023,"2010,2018,2023"
-Social,Race & Ethnicity,TwoRaceP,2023,"2010,2020,2023"
-Social,Race & Ethnicity,WhiteE,2023,"1980,1990,2000,2010,2018,2023"
-Social,Race & Ethnicity,WhiteP,2023,"1980,1990,2000,2010,2018,2020,2023"
-Social,Residential Segregation Measures,DsmAs,2023,"2018,2023"
-Social,Residential Segregation Measures,DsmBlk,2023,"2018,2023"
-Social,Residential Segregation Measures,DsmHsp,2023,"2018,2023"
-Social,Residential Segregation Measures,IntrAsWht,2023,"2018,2023"
-Social,Residential Segregation Measures,IntrBlkWht,2023,"2018,2023"
-Social,Residential Segregation Measures,IntrHspWht,2023,"2018,2023"
-Social,Residential Segregation Measures,IsoAs,2023,"2018,2023"
-Social,Residential Segregation Measures,IsoBlk,2023,"2018,2023"
-Social,Residential Segregation Measures,IsoHsp,2023,"2018,2023"
-Social,Veteran Population,TotVetPop,2023,"2010,2018,2020,2023"
-Social,Veteran Population,VetP,2023,"2010,2018,2020,2023"
+theme,construct,name,table_source,all years
+Composite,Social Vulnerability Indices,SviSmryRnk,county-2022,"2018,2020,2022"
+Composite,Social Vulnerability Indices,SviTh1,county-2022,"2018,2020,2022"
+Composite,Social Vulnerability Indices,SviTh2,county-2022,"2018,2020,2022"
+Composite,Social Vulnerability Indices,SviTh3,county-2022,"2018,2020,2022"
+Composite,Social Vulnerability Indices,SviTh4,county-2022,"2018,2020,2022"
+Economic,Employment Trends,EduP,county-2023,"2018,2020,2023"
+Economic,Employment Trends,EssnWrkE,,2018
+Economic,Employment Trends,EssnWrkP,county-2023,"2018,2020,2023"
+Economic,Employment Trends,HghRskP,county-2023,"2018,2020,2023"
+Economic,Employment Trends,HltCrP,county-2023,"2018,2020,2023"
+Economic,Employment Trends,RetailP,county-2023,"2018,2020,2023"
+Economic,Employment Trends,TotWrkE,county-2023,"2018,2020,2023"
+Economic,Great Recession Foreclosure Rate,ForDqP,,2018
+Economic,Great Recession Foreclosure Rate,ForDqTot,,2018
+Economic,Great Recession Foreclosure Rate,GiniCoeff,county-2023,"2010,2018,2020,2023"
+Economic,Internet Access,NoIntP,,2019
+Economic,"Poverty, Income, Gini Coefficient",MedInc,county-2023,"2010,2018,2020,2023"
+Economic,"Poverty, Income, Gini Coefficient",PciE,county-2023,"2010,2018,2020,2023"
+Economic,"Poverty, Income, Gini Coefficient",PovP,county-2023,"1980,1990,2000,2010,2018,2020,2023"
+Economic,"Poverty, Income, Gini Coefficient",UnempP,county-2023,"1980,1990,2000,2010,2018,2020,2023"
+Environment,Alcohol Outlet Density Measures,AlcDens,,2018
+Environment,Alcohol Outlet Density Measures,AlcPerCap,,2018
+Environment,Alcohol Outlet Density Measures,AlcTot,,2018
+Environment,Alcohol Outlet Density Measures,AreaSqMi,,2018
+Environment,Greenspace Measures,Ndvi,,2018
+Environment,Healthcare Provider Access,PcpPer100k,,2010
+Environment,Healthcare Provider Access,SpPer100k,,2010
+Environment,Healthcare Provider Access,TotPcp,,2010
+Environment,Healthcare Provider Access,TotSp,,2010
+Environment,Housing Characteristics,LngTermP,county-2023,"2018,2020,2023"
+Environment,Housing Characteristics,MobileP,county-2023,"2018,2020,2023"
+Environment,Housing Characteristics,RentalP,county-2023,"2018,2020,2023"
+Environment,Housing Characteristics,TotUnits,county-2023,"1980,1990,2000,2010,2018,2020,2023"
+Environment,Housing Characteristics,UnitDens,county-2023,"2018,2020,2023"
+Environment,Housing Characteristics,VacantP,county-2023,"1980,1990,2000,2010,2018,2020,2023"
+Environment,Spatial Access to Hospitals,HospAvTmDr,,2020
+Environment,Spatial Access to Hospitals,HospCtTmDr,,2020
+Environment,Spatial Access to Hospitals,HospTmDrP,,2020
+Environment,Spatial Access to MOUDs,BupAvTmBk,county-2025,"2020,2025"
+Environment,Spatial Access to MOUDs,BupAvTmDr,county-2025,"2020,2025"
+Environment,Spatial Access to MOUDs,BupAvTmWk,county-2025,"2020,2025"
+Environment,Spatial Access to MOUDs,BupCtTmBk,county-2025,"2020,2025"
+Environment,Spatial Access to MOUDs,BupCtTmDr,county-2025,"2020,2025"
+Environment,Spatial Access to MOUDs,BupCtTmWk,county-2025,"2020,2025"
+Environment,Spatial Access to MOUDs,BupTmBkP,county-2025,"2020,2025"
+Environment,Spatial Access to MOUDs,BupTmDrP,county-2025,"2020,2025"
+Environment,Spatial Access to MOUDs,BupTmWkP,county-2025,"2020,2025"
+Environment,Spatial Access to MOUDs,MetAvTmBk,county-2025,"2020,2025"
+Environment,Spatial Access to MOUDs,MetAvTmDr,county-2025,"2020,2025"
+Environment,Spatial Access to MOUDs,MetAvTmWk,county-2025,"2020,2025"
+Environment,Spatial Access to MOUDs,MetCtTmBk,county-2025,"2020,2025"
+Environment,Spatial Access to MOUDs,MetCtTmDr,county-2025,"2020,2025"
+Environment,Spatial Access to MOUDs,MetCtTmWk,county-2025,"2020,2025"
+Environment,Spatial Access to MOUDs,MetTmBkP,county-2025,"2020,2025"
+Environment,Spatial Access to MOUDs,MetTmDrP,county-2025,"2020,2025"
+Environment,Spatial Access to MOUDs,MetTmWkP,county-2025,"2020,2025"
+Environment,Spatial Access to MOUDs,NaltAvTmBk,county-2025,"2020,2025"
+Environment,Spatial Access to MOUDs,NaltAvTmDr,county-2025,"2020,2025"
+Environment,Spatial Access to MOUDs,NaltAvTmWk,county-2025,"2020,2025"
+Environment,Spatial Access to MOUDs,NaltCtTmBk,county-2025,"2020,2025"
+Environment,Spatial Access to MOUDs,NaltCtTmDr,county-2025,"2020,2025"
+Environment,Spatial Access to MOUDs,NaltCtTmWk,county-2025,"2020,2025"
+Environment,Spatial Access to MOUDs,NaltTmBkP,county-2025,"2020,2025"
+Environment,Spatial Access to MOUDs,NaltTmDrP,county-2025,"2020,2025"
+Environment,Spatial Access to MOUDs,NaltTmWkP,county-2025,"2020,2025"
+Environment,Spatial Access to MOUDs,OtpAvTmDr,county-2025,"2021,2025"
+Environment,Spatial Access to MOUDs,OtpCtTmDr,county-2025,"2021,2025"
+Environment,Spatial Access to MOUDs,OtpTmDrP,county-2025,"2021,2025"
+Environment,Spatial Access to Mental Health Providers,MhAvTmDr,,2020
+Environment,Spatial Access to Mental Health Providers,MhCtTmDr,,2020
+Environment,Spatial Access to Mental Health Providers,MhTmDrP,,2020
+Environment,Spatial Access to Pharmacies,RxAvTmDr,,2019
+Environment,Spatial Access to Pharmacies,RxCtTmDr,,2019
+Environment,Spatial Access to Pharmacies,RxTmDrP,,2019
+Environment,Spatial Access to Substance Use Treatment Providers,SutpAvTmDr,,2020
+Environment,Spatial Access to Substance Use Treatment Providers,SutpCtTmDr,,2020
+Environment,Spatial Access to Substance Use Treatment Providers,SutpTmDrP,,2020
+Environment,Spatial access to Health Centers,FqhcAvTmDr,,2020
+Environment,Spatial access to Health Centers,FqhcCtTmDr,,2020
+Environment,Spatial access to Health Centers,FqhcTmDrP,,2020
+Environment,Spatial access to Health Centers,TotTracts,county-2025,"2018,2025"
+Environment,Urban/Suburban/Rural Classification,CenFlags,,2010
+Environment,Urban/Suburban/Rural Classification,RcaRuralP,,2018
+Environment,Urban/Suburban/Rural Classification,RcaSubrbP,,2018
+Environment,Urban/Suburban/Rural Classification,RcaUrbanP,,2018
+Geography,Geographic Boundaries,FIPS,,"1980,1990,2000,2010,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2025"
+Geography,Geographic Boundaries,HEROP_ID,,"1980,1990,2000,2010,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2025"
+Outcome,Opioid Indicators,OdMortRt,,"2014,2015,2016,2017,2018,2019,2020,2021"
+Outcome,Opioid Indicators,OdMortRtAv,,2020
+Outcome,Opioid Indicators,OpRxRt,county-2022,"2020,2022"
+Social,Community Overlay Variables,DmyBlckBlt,,2000
+Social,Community Overlay Variables,DmySgrg,,2015
+Social,Community Overlay Variables,PrcNtvRsrv,,2017
+Social,Educational Characteristics,BachelorsP,county-2023,"1990,2000,2010,2018,2020,2023"
+Social,Educational Characteristics,EduHsP,county-2023,"1980,1990,2000,2010,2018,2020,2023"
+Social,Educational Characteristics,EduNoHsP,county-2023,"1980,1990,2000,2010,2018,2020,2023"
+Social,Educational Characteristics,EngProf,county-2023,"2018,2020,2023"
+Social,Educational Characteristics,GradSclP,county-2023,"1990,2000,2010,2018,2020,2023"
+Social,Educational Characteristics,SomeCollegeP,county-2023,"1980,1990,2000,2010,2018,2020,2023"
+Social,Household Characteristics,CrowdHsng,county-2023,"2020,2023"
+Social,Household Characteristics,DivrcdP,county-2023,"2020,2023"
+Social,Household Characteristics,FamSize,county-2023,"2020,2023"
+Social,Household Characteristics,HHSize,county-2023,"2020,2023"
+Social,Household Characteristics,HhldFA,county-2023,"2020,2023"
+Social,Household Characteristics,HhldFC,county-2023,"2020,2023"
+Social,Household Characteristics,HhldFS,county-2023,"2020,2023"
+Social,Household Characteristics,HhldMA,county-2023,"2020,2023"
+Social,Household Characteristics,HhldMC,county-2023,"2020,2023"
+Social,Household Characteristics,HhldMS,county-2023,"2020,2023"
+Social,Household Characteristics,HsdTot,county-2023,"2020,2023"
+Social,Household Characteristics,HsdTypCo,county-2023,"2020,2023"
+Social,Household Characteristics,HsdTypM,county-2023,"2020,2023"
+Social,Household Characteristics,HsdTypMC,county-2023,"2020,2023"
+Social,Household Characteristics,MrrdP,county-2023,"2020,2023"
+Social,Household Characteristics,NonRelFhhP,county-2023,"2018,2020,2023"
+Social,Household Characteristics,NonRelNfhhP,county-2023,"2018,2020,2023"
+Social,Household Characteristics,NvMrrdP,county-2023,"2020,2023"
+Social,Household Characteristics,OccupantP,county-2023,"2020,2023"
+Social,Household Characteristics,SepartedP,county-2023,"2020,2023"
+Social,Household Characteristics,TotPopHh,county-2023,"2018,2020,2023"
+Social,Household Characteristics,WidwdP,county-2023,"2020,2023"
+Social,Incarceration,TtlJlAdm,,2017
+Social,Incarceration,TtlJlAdmr,,2017
+Social,Incarceration,TtlJlPp,,2017
+Social,Incarceration,TtlJlPpr,,2017
+Social,Incarceration,TtlJlPrt,,2017
+Social,Incarceration,TtlJlPrtr,,2017
+Social,Incarceration,TtlPrAPp,,2016
+Social,Incarceration,TtlPrAPpr,,2016
+Social,Incarceration,TtlPrPp,,2016
+Social,Incarceration,TtlPrPpr,,2016
+Social,Population with Disability,DisbP,county-2023,"2000,2010,2018,2020,2023"
+Social,"Population, Age & Sex Ratios",Age15_44,,"1980,1990,2000,2010,2018"
+Social,"Population, Age & Sex Ratios",Age15_44P,,"1980,1990,2000,2010,2018"
+Social,"Population, Age & Sex Ratios",ChildrenP,,"1980,1990,2000,2010,2018"
+Social,"Population, Age & Sex Ratios",FemP,county-2023,"1980,1990,2000,2010,2018,2020,2023"
+Social,"Population, Age & Sex Ratios",MaleP,county-2023,"1980,1990,2000,2010,2018,2020,2023"
+Social,"Population, Age & Sex Ratios",MedAge,county-2023,"2020,2023"
+Social,"Population, Age & Sex Ratios",Ovr16,county-2023,"1980,1990,2000,2018,2023"
+Social,"Population, Age & Sex Ratios",Ovr16P,county-2023,"1980,1990,2000,2010,2018,2020,2023"
+Social,"Population, Age & Sex Ratios",Ovr18,county-2023,"1980,1990,2000,2018,2023"
+Social,"Population, Age & Sex Ratios",Ovr18P,county-2023,"1980,1990,2000,2010,2018,2020,2023"
+Social,"Population, Age & Sex Ratios",Ovr21,county-2023,"1980,1990,2000,2018,2023"
+Social,"Population, Age & Sex Ratios",Ovr21P,county-2023,"1980,1990,2000,2010,2018,2020,2023"
+Social,"Population, Age & Sex Ratios",Ovr62P,county-2023,"2020,2023"
+Social,"Population, Age & Sex Ratios",Ovr65,county-2023,"1980,1990,2000,2018,2023"
+Social,"Population, Age & Sex Ratios",Ovr65P,county-2023,"1980,1990,2000,2010,2018,2020,2023"
+Social,"Population, Age & Sex Ratios",SRatio,county-2023,"1980,1990,2000,2010,2018,2020,2023"
+Social,"Population, Age & Sex Ratios",SRatio18,county-2023,"1980,1990,2000,2010,2018,2020,2023"
+Social,"Population, Age & Sex Ratios",SRatio65,county-2023,"1980,1990,2000,2010,2018,2020,2023"
+Social,"Population, Age & Sex Ratios",TotPop,county-2023,"1980,1990,2000,2010,2018,2020,2023"
+Social,"Population, Age & Sex Ratios",Und18P,county-2023,"2020,2023"
+Social,Race & Ethnicity,AmIndE,county-2023,"1980,1990,2000,2010,2018,2023"
+Social,Race & Ethnicity,AmIndP,county-2023,"1980,1990,2000,2010,2018,2020,2023"
+Social,Race & Ethnicity,AsianE,county-2023,"1980,1990,2000,2010,2018,2023"
+Social,Race & Ethnicity,AsianP,,"1980,1990,2000,2010,2018"
+Social,Race & Ethnicity,BlackE,county-2023,"1980,1990,2000,2010,2018,2023"
+Social,Race & Ethnicity,BlackP,county-2023,"1980,1990,2000,2010,2018,2020,2023"
+Social,Race & Ethnicity,HisE,county-2023,"1980,1990,2000,2010,2018,2023"
+Social,Race & Ethnicity,HisP,county-2023,"1980,1990,2000,2020,2023"
+Social,Race & Ethnicity,HispP,,"1980,1990,2000,2010,2018"
+Social,Race & Ethnicity,OtherE,county-2023,"2010,2018,2023"
+Social,Race & Ethnicity,OtherP,county-2023,"1980,1990,2000,2010,2018,2020,2023"
+Social,Race & Ethnicity,PacIsE,county-2023,"1980,1990,2000,2010,2018,2023"
+Social,Race & Ethnicity,PacIsP,county-2023,"1980,1990,2000,2010,2018,2020,2023"
+Social,Race & Ethnicity,TwoRaceE,county-2023,"2010,2018,2023"
+Social,Race & Ethnicity,TwoRaceP,county-2023,"2010,2020,2023"
+Social,Race & Ethnicity,WhiteE,county-2023,"1980,1990,2000,2010,2018,2023"
+Social,Race & Ethnicity,WhiteP,county-2023,"1980,1990,2000,2010,2018,2020,2023"
+Social,Residential Segregation Measures,DsmAs,county-2023,"2018,2023"
+Social,Residential Segregation Measures,DsmBlk,county-2023,"2018,2023"
+Social,Residential Segregation Measures,DsmHsp,county-2023,"2018,2023"
+Social,Residential Segregation Measures,IntrAsWht,county-2023,"2018,2023"
+Social,Residential Segregation Measures,IntrBlkWht,county-2023,"2018,2023"
+Social,Residential Segregation Measures,IntrHspWht,county-2023,"2018,2023"
+Social,Residential Segregation Measures,IsoAs,county-2023,"2018,2023"
+Social,Residential Segregation Measures,IsoBlk,county-2023,"2018,2023"
+Social,Residential Segregation Measures,IsoHsp,county-2023,"2018,2023"
+Social,Veteran Population,TotVetPop,county-2023,"2010,2018,2020,2023"
+Social,Veteran Population,VetP,county-2023,"2010,2018,2020,2023"
