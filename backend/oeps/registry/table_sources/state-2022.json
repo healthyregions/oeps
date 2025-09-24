@@ -4,5 +4,5 @@
   "path": "tables/state-2022.csv",
   "description": "This CSV aggregates all OEPS data values from 2022 at the state level.",
   "data_year": "2022",
-  "geodata_source": "geo-2018-state"
+  "geodata_source": "geo-2020-state"
 }
