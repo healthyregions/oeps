@@ -1,0 +1,14 @@
+{
+  "name": "TlBupCtTmBk30",
+  "title": "Count of tracts within 30-min telehealth buprenorphine biking range",
+  "type": "integer",
+  "example": "44",
+  "description": "Number of tracts with telehealth buprenorphine provider within a 30-min biking range",
+  "longitudinal": false,
+  "analysis": false,
+  "metadata": "Access_MOUDs",
+  "table_sources": [
+    "county-2025",
+    "state-2025"
+  ]
+}

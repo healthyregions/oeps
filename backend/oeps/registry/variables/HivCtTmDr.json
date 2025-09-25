@@ -1,0 +1,14 @@
+{
+  "name": "HivCtTmDr",
+  "title": "Count of tracts within 30-min driving range",
+  "type": "integer",
+  "example": "42",
+  "description": "Number of tracts with an HIV testing provider within a 30-minute driving range",
+  "longitudinal": false,
+  "analysis": false,
+  "metadata": "Access_HCVTesting",
+  "table_sources": [
+    "county-2025",
+    "state-2025"
+  ]
+}

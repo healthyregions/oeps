@@ -8,6 +8,9 @@ import { Gutter } from "../components/layout/Gutter";
 import MainNav from "../components/layout/MainNav";
 import Footer from "../components/layout/Footer";
 import csvDownloads from '../meta/csvDownloads.json';
+import geodataDownloads from '../meta/geodataDownloads.json';
+
+console.log(geodataDownloads)
 // import * as JSZip from 'jszip';
 // import { saveAs } from 'file-saver';
 
@@ -179,10 +182,10 @@ export default function Download() {
         <p>There are many different ways to download or access OEPS data, find the one that works best for you. You may also be interested in our <Link href="/codeResources">code resources</Link> page with notebooks and tutorials.</p>
         <div className={styles.downloadsContainer}>
           <div>
-            <Link className={styles.fullDownload} href="#data-dictionaries"><span>CSVs & Data<br/>Dictionaries</span></Link>
+            <Link className={styles.fullDownload} href="#data-packages"><span>Aggregated<br/>Data<br/>Packages</span></Link>
           </div>
           <div>
-            <Link className={styles.fullDownload} href="#frictionless-data-package"><span>Frictionless Data Package</span></Link>
+            <Link className={styles.fullDownload} href="#data-dictionaries"><span>All Data<br/> (individual CSVs)</span></Link>
           </div>
           <div>
             <Link className={styles.fullDownload} href="#oeps-data-package"><span>oepsData<br/>(R data package)</span></Link>
@@ -197,96 +200,150 @@ export default function Download() {
             <h2 style={{marginTop:0}}>Direct Download</h2>
           </div>
           <div className="col-xs-12 col-md-8 col-lg-9">
-            <h3 id="data-dictionaries">CSVs & Data Dictionaries</h3>
-              <p>Not sure where to start? These data dictionaries provide a comprehensive overview of what variables are available for each geography&mdash;State (S), County (C), Census Tract (T), and Zip Code Tabulation Area (Z).</p>
+            <h3 id="data-packages">Aggregated Data Packages</h3>
+            <p>OEPS contains data for 300+ variables split across 50+ CSV files, at 4 different geography levels (state, county, tract, and zip-code tabulation area). The scope of this content can make data access complex, so we have created two consolidated data packages (<Link href="#dsuite-2018">DSuite2018</Link> and <Link href="#dsuite-2023">DSuite2023</Link>) to make it as easy as possible to get started. Each package contains:</p>
+            <ul>
+              <li>Four data CSVs, one each for geography level.</li>
+              <li>A data dictionary (MS Excel format) summarizing which data year is included for each variable.</li>
+              <li>A corresponding geometry file for each CSV (zipped shapefile).</li>
+              <li>Markdown-formatted metadata documents for each variable.</li>
+              <li>JSON schemas for all content, following <Link href="https://frictionlessdata.io/">Frictionless Data Package v1</Link> specifications.</li>
+            </ul>
+            <h4 id="dsuite-2018">DSuite2018</h4>
+            <p>The 2018 data package is centered around the 2018 ACS. In some cases variables are not available in that year, so we have included content from within a few years. The year for each data point is listed in the data dictionary.</p>
+            <ul>
+              <li>
+                <Link href="https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/dictionaries/DSuite2018-data-dictionary.xlsx">Download DSuite2018 data dictionary</Link>
+              </li>
+              <li>
+                <Link href="https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/oeps-DSuite2018_2025-09-25.zip">Download DSuite2018 data package [158mb]</Link>
+              </li>
+            </ul>
+            <h4 id="dsuite-2023">DSuite2023</h4>
+            <p>The 2023 data package is centered around the 2023 ACS. In some cases variables are not available in that year, so we have included content from within a few years. The year for each data point is listed in the data dictionary.</p>
+            <ul>
+              <li>
+                <Link href="https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/dictionaries/DSuite2023-data-dictionary.xlsx">Download DSuite2023 data dictionary</Link>
+              </li>
+              <li>
+                <Link href="https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/oeps-DSuite2023_2025-09-25.zip">Download DSuite2023 data package [166mb]</Link>
+              </li>
+            </ul>
+            <h3 id="data-dictionaries">All data by year</h3>
+              <p>Looking for historical data, or years outside of what is included in the data packages above? Use the individual CSVs listed below to find what you need. CSVs are grouped by geography (<Link href="#state-csvs">state</Link>, <Link href="#county-csvs">county</Link>, <Link href="#tract-csvs">tract</Link>, <Link href="#zcta-csvs">zcta</Link>), and tend to be consolidated one-per-year. However, you may see some exceptions to this where data from the same year must be joined to different geometry files.</p>
+              <p>We have generated a data dictionary for each geography level that summarizes what years are available for each variable.</p>
+              
+              <h4 id="state-csvs">State</h4>
               <ul>
-                <li><Link href="https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/dictionaries/S_Dict.xlsx">S_Dict.xlsx</Link></li>
-                <li><Link href="https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/dictionaries/C_Dict.xlsx">C_Dict.xlsx</Link></li>
-                <li><Link href="https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/dictionaries/T_Dict.xlsx">T_Dict.xlsx</Link></li>
-                <li><Link href="https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/dictionaries/Z_Dict.xlsx">Z_Dict.xlsx</Link></li>
+                <li> <Link href="https://github.com/healthyregions/oeps/raw/refs/heads/main/docs/src/reference/data-dictionaries/S_Dict.xlsx">Download data dictionary</Link></li>
               </ul>
-              <p>OEPS datasets are merged into single CSVs, one per geography (State, County, Tract, ZCTA) per year (1980, 1990, etc.).
-                Each CSV can be joined to an appropriate <Link href="#geometry-files">geometry file</Link> using the HEROP_ID field.</p>
-                <h4>State</h4>
               <div className={styles.tableContainer}>
                 <table className={styles.variableTable}>
                   <tbody>
                     <tr>
-                      <th>Year</th>
+                      <th>Data Year</th>
                       <th>File</th>
+                      <th>Join to</th>
                     </tr>
                     {csvDownloads.state.map(row => 
                     <tr key={row.name}>
                         <td>{row.year}</td>
                         <td><Link href={row.url}>{row.name}</Link></td>
+                        <td>{row.geodata_name}</td>
                     </tr>)}
                   </tbody>
                 </table>
               </div>
-              <h4>County</h4>
+              <h4 id="county-csvs">County</h4>
+              <ul>
+                <li><Link href="https://github.com/healthyregions/oeps/raw/refs/heads/main/docs/src/reference/data-dictionaries/C_Dict.xlsx">Download data dictionary</Link></li>
+              </ul>
               <div className={styles.tableContainer}>
                 <table className={styles.variableTable}>
                   <tbody>
                     <tr>
-                      <th>Year</th>
+                      <th>Data Year</th>
                       <th>File</th>
+                      <th>Join to</th>
                     </tr>
                     {csvDownloads.county.map(row => 
                     <tr key={row.name}>
                         <td>{row.year}</td>
                         <td><Link href={row.url}>{row.name}</Link></td>
+                        <td>{row.geodata_name}</td>
                     </tr>)}
                   </tbody>
                 </table>
               </div>
-              <h4>Tract</h4>
+              <h4 id="tract-csvs">Tract</h4>
+              <ul>
+                <li><Link href="https://github.com/healthyregions/oeps/raw/refs/heads/main/docs/src/reference/data-dictionaries/T_Dict.xlsx">Download data dictionary</Link></li>
+              </ul>
               <div className={styles.tableContainer}>
                 <table className={styles.variableTable}>
                   <tbody>
                     <tr>
-                      <th>Year</th>
+                      <th>Data Year</th>
                       <th>File</th>
+                      <th>Join to</th>
                     </tr>
                     {csvDownloads.tract.map(row => 
                     <tr key={row.name}>
                         <td>{row.year}</td>
                         <td><Link href={row.url}>{row.name}</Link></td>
+                        <td>{row.geodata_name}</td>
                     </tr>)}
                   </tbody>
                 </table>
               </div>
-              <h4>Zip Code Tabulation Area (ZCTA)</h4>
+              <h4 id="zcta-csvs">Zip Code Tabulation Area (ZCTA)</h4>
+              <ul>
+                <li><Link href="https://github.com/healthyregions/oeps/raw/refs/heads/main/docs/src/reference/data-dictionaries/Z_Dict.xlsx">Download data dictionary</Link></li>
+              </ul>
               <div className={styles.tableContainer}>
                 <table className={styles.variableTable}>
                   <tbody>
                     <tr>
-                      <th>Year</th>
+                      <th>Data Year</th>
                       <th>File</th>
+                      <th>Join to</th>
                     </tr>
                     {csvDownloads.zcta.map(row => 
                     <tr key={row.name}>
                         <td>{row.year}</td>
                         <td><Link href={row.url}>{row.name}</Link></td>
+                        <td>{row.geodata_name}</td>
                     </tr>)}
                   </tbody>
                 </table>
               </div>
             <h3 id="geometry-files">Geometry Files</h3>
-            <p>For spatial analysis we provide our geographic datasets generated from the US Census Bureau&apos;s Cartographic Boundary files (500k scale). We provide the following formats: Shapefile, GeoJSON, or PMTiles.</p>
+            <p>For spatial analysis we provide geographic datasets generated from the US Census Bureau&apos;s Cartographic Boundary files (500k scale). Direct download links are provided below for the following formats: Shapefile, GeoJSON, or PMTiles.</p>
+            <div className={styles.tableContainer}>
+              <table className={styles.variableTable}>
+                <tbody>
+                  <tr>
+                    <th>Id</th>
+                    <th>Download links</th>
+                  </tr>
+                  {geodataDownloads.map(row => 
+                  <tr key={row.name}>
+                      <td>{row.name}</td>
+                      <td>
+                        <Link href={row.shp_url}>shp</Link>,{" "}
+                        <Link href={row.geojson_url}>geojson</Link>,{" "}
+                        <Link href={row.pmtiles_url}>pmtiles</Link>
+                      </td>
+                  </tr>)}
+                </tbody>
+              </table>
+            </div>
+            <p>You can learn more about how we prepare and generate these geography files at <Link href="https://geodata.healthyregions.org" target="_blank">geodata.healthyregions.org ↗ </Link>.</p>
+            <h4>Tips for joining to geometry files:</h4>
             <ul>
-                <li><Link href="/docs/GeographicBoundaries">Go to download links and metadata</Link></li>
-            </ul>
-            <h4>Joining to geometry files:</h4>
-            <ul>
-                <li>Use 2010 geometry files when joining to any OEPS data from 1980, 1990, 2000, or 2010. Use the 2018 geometry files for any later datasets up to 2020.</li>
-                <li>Use 2020 geometry files for all geographies and years 2020 and beyond.</li>
-                <li><strong>In Connecticut:</strong> For county and tract data from 2022 or later you must use 2022 geographies because county (and therefore tract) FIPS ids changed between 2021 and 2022. To translate 2022 tracts back to 2020 geometries, you can use <Link href="https://www.ctdata.org/geographic-resources">these crosswalks</Link> from CT Data Collaborative.</li>
-            </ul>
-            <h3 id="frictionless-data-package">Frictionless Data Package</h3>
-            <p>We provide a single data package with all CSV and Shapefile assets which is structured to match the Data Package specification published by <Link href="https://frictionlessdata.io/">Frictionless Data</Link>.</p>
-            <ul>
-              <li><Link href="https://github.com/GeoDaCenter/opioid-policy-scan/releases/download/untagged-e509eea25fb66a9a1f90/oeps-data-package-v2_2024-12-05.zip">Download package (208mb)</Link></li>
-              <li><Link href="https://specs.frictionlessdata.io/">Frictionless Data Package v1 spec</Link></li>
+                <li>Make sure to link each CSV with the proper geometry file, using the tables above.</li>
+                <li>Use the HEROP_ID field to join, it is present in all CSV and geometry files (other common identifiers like ZIP5 or FIPS may be available too)</li>
+                <li><strong>In Connecticut:</strong> For county and tract data from 2022 or later you should use 2022 geographies (not yet provided here) because county (and therefore tract) FIPS ids changed between 2021 and 2022. To translate 2022 tracts back to 2020 geometries, you can use <Link href="https://www.ctdata.org/geographic-resources">these crosswalks</Link> from CT Data Collaborative.</li>
             </ul>
           </div>
         </div>

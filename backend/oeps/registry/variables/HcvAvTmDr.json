@@ -1,0 +1,14 @@
+{
+  "name": "HcvAvTmDr",
+  "title": "Average time drive to nearest HCV testing provider",
+  "type": "number",
+  "example": "42.45",
+  "description": "Mean driving time (minutes) from tracts to nearest HCV testing provider",
+  "longitudinal": false,
+  "analysis": false,
+  "metadata": "Access_HCVTesting",
+  "table_sources": [
+    "county-2025",
+    "state-2025"
+  ]
+}

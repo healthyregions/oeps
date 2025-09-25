@@ -4,7 +4,6 @@ Composite,Social Vulnerability Indices,SviTh1,zcta-2022,"2018,2022"
 Composite,Social Vulnerability Indices,SviTh2,zcta-2022,"2018,2022"
 Composite,Social Vulnerability Indices,SviTh3,zcta-2022,"2018,2022"
 Composite,Social Vulnerability Indices,SviTh4,zcta-2022,"2018,2022"
-Economic,Employment Trends,EduP,zcta-2023,"2018,2020,2023"
 Economic,Employment Trends,EssnWrkE,,2018
 Economic,Employment Trends,EssnWrkP,zcta-2023,"2018,2020,2023"
 Economic,Employment Trends,HghRskP,zcta-2023,"2018,2020,2023"
@@ -157,3 +156,17 @@ Social,Residential Segregation Measures,IsoBlk,zcta-2023,"2018,2023"
 Social,Residential Segregation Measures,IsoHsp,zcta-2023,"2018,2023"
 Social,Veteran Population,TotVetPop,zcta-2023,"2018,2020,2023"
 Social,Veteran Population,VetP,zcta-2023,"2018,2020,2023"
+,,HcvCntDr,zcta-2025,
+,,HcvMinDis,zcta-2025,
+,,HcvTmDr,zcta-2025,
+,,HivCntDr,zcta-2025,
+,,HivMinDis,zcta-2025,
+,,HivTmDr,zcta-2025,
+,,TlBupCntBk30,zcta-2025,
+,,TlBupCntDr30,zcta-2025,
+,,TlBupCntDr60,zcta-2025,
+,,TlBupCntWk30,zcta-2025,
+,,TlBupMinDis,zcta-2025,
+,,TlBupTmBk,zcta-2025,
+,,TlBupTmDr,zcta-2025,
+,,TlBupTmWk,zcta-2025,

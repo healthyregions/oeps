@@ -1,0 +1,14 @@
+{
+  "name": "HcvCntDr",
+  "title": "Count of HCV Providers",
+  "type": "integer",
+  "example": "42",
+  "description": "Number of HCV testing providers within a 30-minute drive",
+  "longitudinal": false,
+  "analysis": false,
+  "metadata": "Access_HCVTesting",
+  "table_sources": [
+    "tract-2025",
+    "zcta-2025"
+  ]
+}

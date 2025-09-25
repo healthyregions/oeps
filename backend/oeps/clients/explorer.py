@@ -152,7 +152,7 @@ class Explorer:
                     for v in self.registry.variables.values():
                         if v.metadata == id:
                             for ts in v.table_sources:
-                                years.add(ts.split("-")[1])
+                                years.add(self.registry.table_sources[ts].data_year)
                                 for p in [
                                     ("state", "State"),
                                     ("count", "County"),
@@ -183,20 +183,38 @@ class Explorer:
                         )
 
         csv_downloads = {"state": [], "county": [], "zcta": [], "tract": []}
+        gs_list = set()
         for ts in self.registry.table_sources.values():
             filename = Path(ts.path).name
+            gs_list.add(ts.geodata_source)
+            gs = self.registry.geodata_sources[ts.geodata_source]
             csv_downloads[self.registry.geodata_sources[ts.geodata_source].summary_level.name].append(
                 {
                     "name": filename,
                     "url": f"https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/{filename}",
                     "year": ts.data_year,
+                    "geodata_url": gs.path,
+                    "geodata_name": gs.name,
                 }
             )
         for csv_list in csv_downloads.values():
             csv_list.sort(key=lambda k: k["year"])
+
+        geodataDownloads = []
+        for gs_id in gs_list:
+            g = self.registry.geodata_sources[gs_id]
+            geodataDownloads.append({
+                "name": g.name,
+                "summary_level": g.summary_level.name,
+                "shp_url": g.path,
+                "pmtiles_url": g.path.replace("-shp.zip", ".pmtiles"),
+                "geojson_url": g.path.replace("-shp.zip", ".geojson"),
+            })
+        geodataDownloads.sort(key=lambda x: x["name"])
 
         meta_dir = Path(self.root_dir, "meta")
         meta_dir.mkdir(exist_ok=True)
 
         write_json(output, Path(meta_dir, "variables.json"))
         write_json(csv_downloads, Path(meta_dir, "csvDownloads.json"))
+        write_json(geodataDownloads, Path(meta_dir, "geodataDownloads.json"))

@@ -1,0 +1,14 @@
+{
+  "name": "TlBupCtTmDr60",
+  "title": "Count of tracts within 60-min telehealth buprenorphine driving range",
+  "type": "integer",
+  "example": "44",
+  "description": "Number of tracts with telehealth buprenorphine provider within a 60-min driving range",
+  "longitudinal": false,
+  "analysis": false,
+  "metadata": "Access_MOUDs",
+  "table_sources": [
+    "county-2025",
+    "state-2025"
+  ]
+}
