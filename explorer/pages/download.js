@@ -216,7 +216,7 @@ export default function Download() {
                 <Link href="https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/dictionaries/DSuite2018-data-dictionary.xlsx">Download DSuite2018 data dictionary</Link>
               </li>
               <li>
-                <Link href="https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/oeps-DSuite2018_2025-09-24.zip">Download DSuite2018 data package [158mb]</Link>
+                <Link href="https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/oeps-DSuite2018_2025-09-25.zip">Download DSuite2018 data package [158mb]</Link>
               </li>
             </ul>
             <h4 id="dsuite-2023">DSuite2023</h4>
@@ -226,7 +226,7 @@ export default function Download() {
                 <Link href="https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/dictionaries/DSuite2023-data-dictionary.xlsx">Download DSuite2023 data dictionary</Link>
               </li>
               <li>
-                <Link href="https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/oeps-DSuite2023_2025-09-24.zip">Download DSuite2023 data package [166mb]</Link>
+                <Link href="https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/oeps-DSuite2023_2025-09-25.zip">Download DSuite2023 data package [166mb]</Link>
               </li>
             </ul>
             <h3 id="data-dictionaries">All data by year</h3>
