@@ -1,0 +1,79 @@
+[
+  {
+    "name": "geo-2010-county",
+    "summary_level": "county",
+    "shp_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/county-2010-500k-shp.zip",
+    "pmtiles_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/county-2010-500k.pmtiles",
+    "geojson_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/county-2010-500k.geojson"
+  },
+  {
+    "name": "geo-2010-state",
+    "summary_level": "state",
+    "shp_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/state-2010-500k-shp.zip",
+    "pmtiles_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/state-2010-500k.pmtiles",
+    "geojson_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/state-2010-500k.geojson"
+  },
+  {
+    "name": "geo-2010-tract",
+    "summary_level": "tract",
+    "shp_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/tract-2010-500k-shp.zip",
+    "pmtiles_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/tract-2010-500k.pmtiles",
+    "geojson_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/tract-2010-500k.geojson"
+  },
+  {
+    "name": "geo-2018-county",
+    "summary_level": "county",
+    "shp_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/county-2018-500k-shp.zip",
+    "pmtiles_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/county-2018-500k.pmtiles",
+    "geojson_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/county-2018-500k.geojson"
+  },
+  {
+    "name": "geo-2018-state",
+    "summary_level": "state",
+    "shp_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/state-2018-500k-shp.zip",
+    "pmtiles_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/state-2018-500k.pmtiles",
+    "geojson_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/state-2018-500k.geojson"
+  },
+  {
+    "name": "geo-2018-tract",
+    "summary_level": "tract",
+    "shp_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/tract-2018-500k-shp.zip",
+    "pmtiles_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/tract-2018-500k.pmtiles",
+    "geojson_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/tract-2018-500k.geojson"
+  },
+  {
+    "name": "geo-2018-zcta",
+    "summary_level": "zcta",
+    "shp_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/zcta-2018-500k-shp.zip",
+    "pmtiles_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/zcta-2018-500k.pmtiles",
+    "geojson_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/zcta-2018-500k.geojson"
+  },
+  {
+    "name": "geo-2020-county",
+    "summary_level": "county",
+    "shp_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/county-2020-500k-shp.zip",
+    "pmtiles_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/county-2020-500k.pmtiles",
+    "geojson_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/county-2020-500k.geojson"
+  },
+  {
+    "name": "geo-2020-state",
+    "summary_level": "state",
+    "shp_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/state-2020-500k-shp.zip",
+    "pmtiles_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/state-2020-500k.pmtiles",
+    "geojson_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/state-2020-500k.geojson"
+  },
+  {
+    "name": "geo-2020-tract",
+    "summary_level": "tract",
+    "shp_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/tract-2020-500k-shp.zip",
+    "pmtiles_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/tract-2020-500k.pmtiles",
+    "geojson_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/tract-2020-500k.geojson"
+  },
+  {
+    "name": "geo-2020-zcta",
+    "summary_level": "zcta",
+    "shp_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/zcta-2020-500k-shp.zip",
+    "pmtiles_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/zcta-2020-500k.pmtiles",
+    "geojson_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/zcta-2020-500k.geojson"
+  }
+]
