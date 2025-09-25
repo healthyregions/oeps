@@ -1,0 +1,14 @@
+{
+  "name": "TlBupTmWk",
+  "title": "Walking time to nearest telehealth buprenorphine provider",
+  "type": "number",
+  "example": "4.5",
+  "description": "Estimated walking time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services",
+  "longitudinal": false,
+  "analysis": false,
+  "metadata": "Access_MOUDs",
+  "table_sources": [
+    "tract-2025",
+    "zcta-2025"
+  ]
+}
