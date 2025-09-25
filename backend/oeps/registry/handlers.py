@@ -261,7 +261,8 @@ class Registry(BaseModel):
         target_ts.load_dataframe()
 
         id_column = None
-        lvl = GEOGRAPHY_LOOKUP[target_ts.summary_level]
+        # lvl = GEOGRAPHY_LOOKUP[target_ts.summary_level]
+        lvl = self.geodata_sources[target_ts.geodata_source].summary_level
 
         if "HEROP_ID" in incoming_df.columns:
             id_column = "HEROP_ID"
