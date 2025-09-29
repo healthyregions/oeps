@@ -124,7 +124,7 @@ export default function Home() {
             <p>
             OEPS is led by the <a href="https://healthyregions.org/">Healthy Regions and Policies Lab</a>, based at the
             Department of Geography & GIScience at the University of Illinois at Urbana-Champaign. It was developed for the <a href="https://heal.nih.gov/research/research-to-practice/jcoin">Justice Community Overdose Innovation Network (JCOIN)</a>,
-            an NIH HEAL Initiative, as part of the Methodology and Advanced Analytics Resource Center at the University of Chicago.
+            a NIH HEAL Initiative, as part of the Methodology and Advanced Analytics Resource Center at the University of Chicago.
             </p>
           </div>
         </div>

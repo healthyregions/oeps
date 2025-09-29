@@ -1,14 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 html,
 body {
   padding: 0;
   margin: 0;
   background-color: whitesmoke;
-   font-family: "Lora", Georgia, "Times New Roman", Times, serif; 
+  /*font-family: "Lora", Georgia, "Times New Roman", Times, serif;  */
+  font-family:Montserrat;
+  font-size: small;
 }
 
 p {
-    /* font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;*/
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font: Montserrat;
   line-height: 1.35;
 }
 

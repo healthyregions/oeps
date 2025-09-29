@@ -21,26 +21,26 @@ export default function MainNav() {
             <MenuLink as="a" href="/">
               Home
             </MenuLink>
-            <MenuLink as="a" href="/map">
-              Map
-            </MenuLink>
-            <MenuLink as="a" href="/insights">
-              Insights
-            </MenuLink>
-            <MenuLink as="a" href="/methods">
-              Methodology
+            <MenuLink as="a" href="/about">
+              About
             </MenuLink>
             <MenuLink as="a" href="/docs">
               Data Docs
             </MenuLink>
+            <MenuLink as="a" href="/methods">
+              Data Methods
+            </MenuLink>
             <MenuLink as="a" href="/download">
-              Data Access
+              Data Download
+            </MenuLink>
+            <MenuLink as="a" href="/map">
+              Map Explorer
             </MenuLink>
             <MenuLink as="a" href="/codeResources">
               Code Resources
             </MenuLink>
-            <MenuLink as="a" href="/about">
-              About
+            <MenuLink as="a" href="/insights">
+              Insights
             </MenuLink>
           </MenuList>
         </Menu>
