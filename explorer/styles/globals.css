@@ -2,7 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-color: #e4dccf;
+  background-color: whitesmoke;
    font-family: "Lora", Georgia, "Times New Roman", Times, serif; 
 }
 
@@ -22,7 +22,7 @@ code {
 
 :root {
   --selected-color: #7f2686;
-  --selected-color-light: whitesmoke;
+  --selected-color-light: #e3cddc;
   --medium-gray: rgb(156, 156, 156);
   --light-gray: rgb(220, 220, 220);
   --orange: #e27213;
