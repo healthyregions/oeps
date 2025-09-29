@@ -6,14 +6,14 @@ body {
   margin: 0;
   background-color: whitesmoke;
   /*font-family: "Lora", Georgia, "Times New Roman", Times, serif;  */
-  font-family:Montserrat;
+  font-family: Montserrat, Times, serif;
   font-size: small;
 }
 
 p {
     /* font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
-    font: Montserrat;
+    font-family: Montserrat, Arial, sans-serif;;
   line-height: 1.35;
 }
 
