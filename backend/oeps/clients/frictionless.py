@@ -294,14 +294,14 @@ class DataPackage:
         headers = {
             "Name": 15,
             "Title": 30,
-        }
-        for i in res_names:
-            headers[i] = 15
-        headers.update({
+            "state": 10,
+            "county": 10,
+            "tract": 10,
+            "zcta": 10,
             "Theme": 15,
             "Construct": 20,
             "Metadata": 45,
-        })
+        }
 
         wb = Workbook()
         ws = wb.active

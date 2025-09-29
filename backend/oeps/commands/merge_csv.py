@@ -49,6 +49,7 @@ def merge_csv(source, table_source, registry_path, dry_run):
         exit()
 
     df = pd.read_csv(source)
-    staged_df = registry.prepare_incoming_df(df)
+    staged_df = registry.prepare_incoming_df(df, ts)
     if not dry_run:
         ts.merge_df(staged_df)
+        registry.update_variable_table_sources(ts)

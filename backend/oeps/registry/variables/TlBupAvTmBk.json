@@ -1,0 +1,14 @@
+{
+  "name": "TlBupAvTmBk",
+  "title": "Average biking time to nearest telehealth buprenorphine provider",
+  "type": "number",
+  "example": "4.5",
+  "description": "Average biking time (minutes) across tracts in county/state to nearest telehealth buprenorphine provider",
+  "longitudinal": false,
+  "analysis": false,
+  "metadata": "Access_MOUDs",
+  "table_sources": [
+    "county-2025",
+    "state-2025"
+  ]
+}

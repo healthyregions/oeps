@@ -1,0 +1,14 @@
+{
+  "name": "TlBupCntDr60",
+  "title": "Count of telehealth buprenorphine providers within 60-minute drive",
+  "type": "integer",
+  "example": "42",
+  "description": "Total number of providers offering buprenorphine treatment via telemedicine/telehealth located within a 60-minute driving time threshold",
+  "longitudinal": false,
+  "analysis": false,
+  "metadata": "Access_MOUDs",
+  "table_sources": [
+    "tract-2025",
+    "zcta-2025"
+  ]
+}

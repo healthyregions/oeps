@@ -1,0 +1,14 @@
+{
+  "name": "TlBupCntBk30",
+  "title": "Count of telehealth buprenorphine providers within 30-minute bike ride",
+  "type": "integer",
+  "example": "44",
+  "description": "Total number of providers offering buprenorphine treatment via telemedicine/telehealth located within a 30-minute biking time threshold",
+  "longitudinal": false,
+  "analysis": false,
+  "metadata": "Access_MOUDs",
+  "table_sources": [
+    "tract-2025",
+    "zcta-2025"
+  ]
+}

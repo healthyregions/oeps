@@ -1,5 +1,4 @@
 theme,construct,name,table_source,all years
-Economic,Employment Trends,EduP,,2018
 Economic,Employment Trends,EssnWrkE,,2018
 Economic,Employment Trends,EssnWrkP,,2018
 Economic,Employment Trends,HghRskP,,2018
@@ -29,12 +28,12 @@ Environment,Housing Characteristics,RentalP,,2018
 Environment,Housing Characteristics,TotUnits,,"1980,1990,2000,2010,2018"
 Environment,Housing Characteristics,UnitDens,,2018
 Environment,Housing Characteristics,VacantP,,"1980,1990,2000,2010,2018"
-Environment,Spatial Access to Hospitals,HospAvTmDr,,2020
-Environment,Spatial Access to Hospitals,HospCtTmDr,,2020
-Environment,Spatial Access to Hospitals,HospTmDrP,,2020
-Environment,Spatial Access to MOUDs,AvBupTime,,2020
-Environment,Spatial Access to MOUDs,AvMetTime,,2020
-Environment,Spatial Access to MOUDs,AvNaltTime,,2020
+Environment,Spatial Access to Hospitals,HospAvTmDr,state-2025,2020
+Environment,Spatial Access to Hospitals,HospCtTmDr,state-2025,2020
+Environment,Spatial Access to Hospitals,HospTmDrP,state-2025,2020
+Environment,Spatial Access to MOUDs,AvBupTime,state-2025,2020
+Environment,Spatial Access to MOUDs,AvMetTime,state-2025,2020
+Environment,Spatial Access to MOUDs,AvNaltTime,state-2025,2020
 Environment,Spatial Access to MOUDs,BupAvTmBk,state-2025,2025
 Environment,Spatial Access to MOUDs,BupAvTmDr,state-2025,2025
 Environment,Spatial Access to MOUDs,BupAvTmWk,state-2025,2025
@@ -44,9 +43,9 @@ Environment,Spatial Access to MOUDs,BupCtTmWk,state-2025,2025
 Environment,Spatial Access to MOUDs,BupTmBkP,state-2025,2025
 Environment,Spatial Access to MOUDs,BupTmDrP,state-2025,2025
 Environment,Spatial Access to MOUDs,BupTmWkP,state-2025,2025
-Environment,Spatial Access to MOUDs,CntBupT,,2020
-Environment,Spatial Access to MOUDs,CntMetT,,2020
-Environment,Spatial Access to MOUDs,CntNaltT,,2020
+Environment,Spatial Access to MOUDs,CntBupT,state-2025,2020
+Environment,Spatial Access to MOUDs,CntMetT,state-2025,2020
+Environment,Spatial Access to MOUDs,CntNaltT,state-2025,2020
 Environment,Spatial Access to MOUDs,MetAvTmBk,state-2025,2025
 Environment,Spatial Access to MOUDs,MetAvTmDr,state-2025,2025
 Environment,Spatial Access to MOUDs,MetAvTmWk,state-2025,2025
@@ -68,21 +67,39 @@ Environment,Spatial Access to MOUDs,NaltTmWkP,state-2025,2025
 Environment,Spatial Access to MOUDs,OtpAvTmDr,state-2025,"2021,2025"
 Environment,Spatial Access to MOUDs,OtpCtTmDr,state-2025,"2021,2025"
 Environment,Spatial Access to MOUDs,OtpTmDrP,state-2025,"2021,2025"
-Environment,Spatial Access to MOUDs,PctBupT,,2020
-Environment,Spatial Access to MOUDs,PctMetT,,2020
-Environment,Spatial Access to MOUDs,PctNaltT,,2020
-Environment,Spatial Access to Mental Health Providers,MhAvTmDr,,2020
-Environment,Spatial Access to Mental Health Providers,MhCtTmDr,,2020
-Environment,Spatial Access to Mental Health Providers,MhTmDrP,,2020
-Environment,Spatial Access to Pharmacies,RxAvTmDr,,2019
-Environment,Spatial Access to Pharmacies,RxCtTmDr,,2019
-Environment,Spatial Access to Pharmacies,RxTmDrP,,2019
-Environment,Spatial Access to Substance Use Treatment Providers,SutpAvTmDr,,2020
-Environment,Spatial Access to Substance Use Treatment Providers,SutpCtTmDr,,2020
-Environment,Spatial Access to Substance Use Treatment Providers,SutpTmDrP,,2020
-Environment,Spatial access to Health Centers,FqhcAvTmDr,,2020
-Environment,Spatial access to Health Centers,FqhcCtTmDr,,2020
-Environment,Spatial access to Health Centers,FqhcTmDrP,,2020
+Environment,Spatial Access to MOUDs,PctBupT,state-2025,2020
+Environment,Spatial Access to MOUDs,PctMetT,state-2025,2020
+Environment,Spatial Access to MOUDs,PctNaltT,state-2025,2020
+Environment,Spatial Access to MOUDs,HcvAvTmDr,state-2025,
+Environment,Spatial Access to MOUDs,HcvCntDr,state-2025,
+Environment,Spatial Access to MOUDs,HcvCtTmDr,state-2025,
+Environment,Spatial Access to MOUDs,HcvTmDrP,state-2025,
+Environment,Spatial Access to MOUDs,HivAvTmDr,state-2025,
+Environment,Spatial Access to MOUDs,HivCtTmDr,state-2025,
+Environment,Spatial Access to MOUDs,HivTmDrP,state-2025,
+Environment,Spatial Access to MOUDs,TlBupAvTmBk,state-2025,
+Environment,Spatial Access to MOUDs,TlBupAvTmDr,state-2025,
+Environment,Spatial Access to MOUDs,TlBupAvTmWk,state-2025,
+Environment,Spatial Access to MOUDs,TlBupCtTmBk30,state-2025,
+Environment,Spatial Access to MOUDs,TlBupCtTmDr30,state-2025,
+Environment,Spatial Access to MOUDs,TlBupCtTmDr60,state-2025,
+Environment,Spatial Access to MOUDs,TlBupCtTmWk30,state-2025,
+Environment,Spatial Access to MOUDs,TlBupTmBk30P,state-2025,
+Environment,Spatial Access to MOUDs,TlBupTmDr30P,state-2025,
+Environment,Spatial Access to MOUDs,TlBupTmDr60P,state-2025,
+Environment,Spatial Access to MOUDs,TlBupTmWk30P,state-2025,
+Environment,Spatial Access to Mental Health Providers,MhAvTmDr,state-2025,2020
+Environment,Spatial Access to Mental Health Providers,MhCtTmDr,state-2025,2020
+Environment,Spatial Access to Mental Health Providers,MhTmDrP,state-2025,2020
+Environment,Spatial Access to Pharmacies,RxAvTmDr,state-2025,2019
+Environment,Spatial Access to Pharmacies,RxCtTmDr,state-2025,2019
+Environment,Spatial Access to Pharmacies,RxTmDrP,state-2025,2019
+Environment,Spatial Access to Substance Use Treatment Providers,SutpAvTmDr,state-2025,2020
+Environment,Spatial Access to Substance Use Treatment Providers,SutpCtTmDr,state-2025,2020
+Environment,Spatial Access to Substance Use Treatment Providers,SutpTmDrP,state-2025,2020
+Environment,Spatial access to Health Centers,FqhcAvTmDr,state-2025,2020
+Environment,Spatial access to Health Centers,FqhcCtTmDr,state-2025,2020
+Environment,Spatial access to Health Centers,FqhcTmDrP,state-2025,2020
 Environment,Spatial access to Health Centers,TotTracts,state-2025,"2018,2025"
 Geography,Geographic Boundaries,FIPS,,"1980,1990,2000,2010,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2025"
 Geography,Geographic Boundaries,HEROP_ID,,"1980,1990,2000,2010,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2025"
