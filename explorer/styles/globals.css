@@ -2,11 +2,13 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Lora", Georgia, "Times New Roman", Times, serif;
+  background-color: #e4dccf;
+   font-family: "Lora", Georgia, "Times New Roman", Times, serif; 
 }
 
 p {
-  font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
+    /* font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;*/
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   line-height: 1.35;
 }
 
@@ -19,8 +21,8 @@ code {
 }
 
 :root {
-  --selected-color: #449D8F;
-  --selected-color-light: #99D6D0;
+  --selected-color: #7f2686;
+  --selected-color-light: #e4dccf;
   --medium-gray: rgb(156, 156, 156);
   --light-gray: rgb(220, 220, 220);
   --orange: #e27213;

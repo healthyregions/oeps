@@ -58,6 +58,7 @@ export default function About() {
                 ZIP Code or ZIP Code Tract Area (ZCTA), county, and state. You can filter and explore available datasets by spatial scale <Link href="/docs">here</Link>.
             </p>
 
+
           </div>
         </div>
 
@@ -73,22 +74,45 @@ export default function About() {
         Data is stratfied across six themes:
         </p>
         <ul>
-        <li> <b> Policy:</b> State, county, and local policies that may influence access to treatment and/or criminal justice </li>
-        <li> <b>Health:</b> Health outcomes, physicians, access to MOUDs and healthcare resources, and more </li>
-        <li> <b>Demographic:</b> Age, gender, race/ethnicity, social vulnerability, social determinants of health, and more</li>
-        <li> <b>Economic:</b> Employment trends, income, poverty, foreclosure rates, and more</li>
-        <li> <b>Physical Environment:</b> Housing, urban-suburban-rural classification, community overlays</li>
-        <li> <b>COVID-19:</b> Essential workers, daily infection rates and confirmed cases through March 2020.*</li>
+        <li> <b>Social:</b> Household Characteristics, Demographic measures, Race and Ethnicity, Disability measures, Incarceration rates, Veteran population, Educational Characteristics, Residential Segregation Measures, and Community Overlay Variables </li>
+        <li> <b>Economic:</b> Employment Trends, Poverty Measures, and Income Inequality</li>
+        <li> <b>Environment:</b> Access to Healthcare Providers, Housing Characteristics, Internet Access, Greenspace Measures, Urbanicity/Rurality, and Alchohol Outlet Density </li>
+        <li> <b>Policy:</b> State, county, and local policies that may influence access to treatment and/or criminal justice </li>
+        <li> <b>Outcomes:</b> Opioid Indicators and Hepatitis C Rate measures</li>
+
         </ul>
-        <p> <i>*For complete case rate, mortality, and additional COVID-19 data, please visit the <a href="https://www.USCovidAtlas.org">US COVID Atlas</a> --
+        <p> <i>Note: Historic Covid-19 data was moved to the <a href="https://www.USCovidAtlas.org">US COVID Atlas</a> --
         a free and open source pandemic data archive and visualization tool, also led by the Healthy Regions and Policies Lab.</i>  </p>
 
-        <p> The OEPS also includes <b>geography boundary</b> shapefiles from the US Census Bureau’s TIGER/Line (2018) for Census tracts, ZCTAs, counties, and states.</p>
+        <p> The OEPS also includes <b>geography boundary</b> shapefiles from the US Census Bureau’s TIGER/Line (Multiple Years) for Census tracts, ZCTAs, counties, and states.</p>
 
     </div>
   </div>
 
   <Gutter em={2} />
+
+        <div className="row">
+          <div className="col-xs-12 col-md-4 col-lg-3">
+            <h2>Census Vintage</h2>
+          </div>
+          <div className="col-xs-12 col-md-8 col-lg-9">
+            <p>
+                The Census Bureau updates administrative boundaries for census tracts, counties, and more, on different time scales. Much of the data for 2020 and prior
+                uses the 2018 Census Tract vintage, which actually uses the 2010 vintage with slight updates. Access measures were calculated in 2020 and at that time, only
+                those 2018 vintages were avialable. Unless otherwise specificed, we use the 2020 Census vintage for 2023 Census measures and later; access measures calculated in 2025 will use the 2020 boundaries, too. 
+            </p>
+            <p>
+                After the 2020 Census was complete, some new boundaries emerged and some existing boundaries changed. Merging newer data to an older boundary
+                may thus result in missing values, unless you use the same geographic vintage.
+               Be sure to check out the metadata for data you are using to understand which 
+                vintage of the data you are using.
+            </p>
+
+
+          </div>
+        </div>
+
+        <Gutter em={2} />
 
     <div className="row">
         <div className="col-xs-12 col-md-4 col-lg-3">
@@ -110,7 +134,8 @@ export default function About() {
         </div>
         <div className="col-xs-12 col-md-8 col-lg-9">
         <p>
-        Please refer to the <Link href= "/docs">Metadata Docs</Link> or the complete <a href= "https://docs.google.com/document/d/18NPWpuUfFTrKll9_ERHzVDmpNCETTzwjJt_FsIvmSrc/edit?usp=sharing">Data Documentation </a>
+        Please refer to the <Link href= "/docs">Metadata Docs</Link> 
+        {/* or the complete <a href= "https://docs.google.com/document/d/18NPWpuUfFTrKll9_ERHzVDmpNCETTzwjJt_FsIvmSrc/edit?usp=sharing">Data Documentation </a> */}
          for more information about individual datasets and variables.
         </p>
 

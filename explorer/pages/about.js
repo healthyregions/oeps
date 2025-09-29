@@ -12,11 +12,6 @@ const contributors = [
     link: 'https://github.com/mradamcox'
   },
   {
-    name:'Ashlynn Wimer',
-    photo: 'ashlynn.jpg',
-    link: 'https://www.linkedin.com/in/ashlynn-wimer-980798206'
-  },
-  {
     name:'Sara Lambert',
     photo: 'sara.jpg',
     link: 'https://github.com/bodom0015'
@@ -48,7 +43,7 @@ export default function About() {
           </div>
           <div className="col-xs-12 col-md-8 col-lg-9">
             <p>
-            The Opioid Environment Policy Scan (OEPS) is an open-source data warehouse to help characterize
+            The Opioid Environment Policy Scan (OEPS) is an open-source data warehouse and ecosystem to help characterize
             the multi-dimensional risk environment impacting opioid use and health outcomes across the United States.
             </p>
             <p>
@@ -73,8 +68,9 @@ export default function About() {
           </div>
           <div className="col-xs-12 col-md-8 col-lg-9">
             <ul>
-              <li><strong>v2.1</strong> (planned) Spring, 2025</li>
-              <li><strong>v2.0</strong> (current) December, 2024 [<Link href="https://github.com/GeoDaCenter/opioid-policy-scan/releases/tag/v2.0">release notes</Link>]</li>
+              <li><strong>v2.3</strong> (planned) January, 2026</li>
+              <li><strong>v2.2</strong> (current) September, 2025 [<Link href="https://github.com/GeoDaCenter/opioid-policy-scan/releases/tag/v2.2">release notes</Link>]</li>
+              <li><strong>v2.0</strong> December, 2024 [<Link href="https://github.com/GeoDaCenter/opioid-policy-scan/releases/tag/v2.0">release notes</Link>]</li>
               <li><strong>v1.0</strong> January, 2022 [<Link href="https://github.com/GeoDaCenter/opioid-policy-scan/releases/tag/v1.0">release notes</Link>]</li>
             </ul>
           </div>
@@ -120,7 +116,7 @@ export default function About() {
             before moving to UIUC in 2022.
             </p>
             <p>
-              Contributors include Susan Paykin, Dylan Halpern, Qinyun Lin, Moksha Menghaney, and Angela Lin, as well as Research Assistants (RAs)
+              Past contributors include Ashlynn Wimer, Susan Paykin, Dylan Halpern, Qinyun Lin, Moksha Menghaney, and Angela Lin, as well as Research Assistants (RAs)
               Margot Bolanos Gamez, Alexa Jin, Ally Muszynski, and Rachel Vigil.
             </p>
             <p>
@@ -136,7 +132,7 @@ export default function About() {
           <div className="col-xs-12 col-md-8 col-lg-9">
             <p>
             Submit an issue on <a href="https://github.com/healthyregions/oeps">GitHub</a>,
-            or email <a href="mailto:acfc@illinois.edu">Adam Cox</a> with any questions.
+            or email <a href="mailto:mkolak@illinois.edu">Marynia Kolak</a> with any questions.
             </p>
           </div>
         </div>
@@ -154,7 +150,7 @@ export default function About() {
             </p>
             <p>
             <i>This research was supported by the National Institute on Drug Abuse, National Institutes of Health,
-            through the NIH HEAL Initiative under award number UG3DA123456.
+            through the NIH HEAL Initiative under award numbers 5UM1DA050098-03 (MAARC 2.0) and UG3DA123456 (MAARC 1.0).
             The contents of this publication are solely the responsibility of the authors and do not necessarily represent
             the official views of the NIH, the Initiative, or the participating sites.</i>
             </p>
