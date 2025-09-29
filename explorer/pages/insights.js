@@ -21,20 +21,82 @@ export default function About() {
         Research, data tools, and extensions of OEPS data.
         </p>
 
-        <Gutter em={3} />
+        <Gutter em={2} />
 
         <div className="row">
         <div className="col-xs-12 col-md-8 col-lg-12">
         <p>
-        Understanding the drivers and impacts of opioid use disorder (OUD) necessitates a nuanced, place-based consideration of communities and
-        varying dimensions of risk. We work on <a href="https://voices.uchicago.edu/herop/research/opioid-spatial/">multiple projects</a> that bring a holistic perspective to OUD social and spatial epidemiology,
+        Understanding the drivers and impacts of opioid use disorder (OUD) necessitates a nuanced, place-based consideration 
+        of communities and varying dimensions of risk. We work on <a href="https://voices.uchicago.edu/herop/research/opioid-spatial/">
+        multiple projects</a> that bring a holistic perspective to OUD social and spatial epidemiology,
         building on a “risk environment” conceptual model with a social determinants of health sensibility.
         </p>
         </div>
 
+        <p className={styles.description}>
+        Research, data tools, and extensions of OEPS data.
+        </p>
+
         <div className="row">
           <div className="col-xs-12 col-md-4 col-lg-3">
-            <h2> Research Articles</h2>
+            <h2> 2025</h2>
+          </div>
+          <div className="col-xs-12 col-md-8 col-lg-9">
+           <p>
+            Balawajder, E.F., Ducharme, L., Taylor, B.G., Lamuda, P.A., Kolak, M., Friedmann, P.D., Pollack, H.A. and Schneider, J.A., 
+            2025. Barriers to Universal Availability of Medications for Opioid Use Disorder in US Jails. JAMA network open, 8(4),
+             pp.e255340-e255340.
+           </p>
+           </div>
+        </div>
+
+
+        <div className="row">
+          <div className="col-xs-12 col-md-4 col-lg-3">
+            <h2> 2024</h2>
+          </div>
+          <div className="col-xs-12 col-md-8 col-lg-9">
+          <p>
+            Aalsma, M.C., Bell, L.A., Schwartz, K., Ouyang, F., Kolak, M., Monahan, P.O., Mermelstein, S.P., Carson, I., Hulvershorn, 
+            L.A. and Adams, Z.W., 2024. Clinician willingness to prescribe medications for opioid use disorder to adolescents in Indiana. 
+            JAMA network open, 7(9), pp.e2435416-e2435416.
+           </p>
+           <p>
+            Balawajder, E.F., Ducharme, L., Taylor, B.G., Lamuda, P.A., Kolak, M., Friedmann, P.D., Pollack, H.A. and Schneider, J.A., 2024. 
+            Factors associated with the availability of medications for opioid use disorder in US jails. JAMA network open, 7(9), 
+            pp.e2434704-e2434704.
+           </p>
+           <p>
+            Tatara, E., Lin, Q., Ozik, J., Kolak, M., Collier, N., Halpern, D., Anselin, L., Dahari, H., Boodram, B. and Schneider, J., 2024. Spatial inequities in access to medications for treatment of opioid use disorder highlight scarcity of methadone providers under counterfactual scenarios. PLoS computational biology, 20(7), p.e1012307.
+           </p>
+          </div>
+        </div>
+
+      <div className="row">
+          <div className="col-xs-12 col-md-4 col-lg-3">
+            <h2> 2023</h2>
+          </div>
+          <div className="col-xs-12 col-md-8 col-lg-9">
+           <p>
+            Grella, C.E., Scott, C.K., Dennis, M.L. and LaVallee, R.A., 2023. Access to services for pregnant people with opioid use disorder in jails in the United States. Journal of Correctional Health Care, 29(4), pp.299-307.
+          </p>
+         </div>
+      </div>
+
+      <div className="row">
+          <div className="col-xs-12 col-md-4 col-lg-3">
+            <h2> 2021</h2>
+          </div>
+          <div className="col-xs-12 col-md-8 col-lg-9">
+           <p>
+            Schneider, J.A., Taylor, B.G., Hotton, A.L., Lamuda, P.A., Ozik, J., Lin, Q., Flanagan, E., Tuyet Pho, M., Kolak, M., Brewer, R. and Pagkas-Bather, J., 2021. National variability in Americans’ COVID-19 protective behaviors: Implications for vaccine roll-out. PloS one, 16(11), p.e0259257.
+           </p>
+         </div>
+      </div>
+
+      <div className="row">
+          <div className="col-xs-12 col-md-4 col-lg-3">
+            <h2> 2020</h2>
           </div>
           <div className="col-xs-12 col-md-8 col-lg-9">
             <p>
@@ -43,17 +105,12 @@ export default function About() {
             International Journal of Drug Policy.
             <a href= "https://www.sciencedirect.com/science/article/abs/pii/S0955395920300682?via%3Dihub"> https://doi.org/10.1016/j.drugpo.2020.102727</a>
             </p>
-            <p>
-            Halpern, D., Lin, Q., Wang, R., Yang, S., Goldstein, S., and Kolak, M.
-            Dimensions of uncertainty: A spatialtemporal review of five COVID-19 datasets. Cartography and Geographic Information Science.
-            <a href= "https://www.tandfonline.com/doi/full/10.1080/15230406.2021.1975311">https://doi.org/10.1080/15230406.2021.1975311</a>
-            </p>
-        </div>
-
           </div>
-        </div>
+      </div>
 
+      </div>
       <Gutter em={2} />
+
 
       <div className="row">
           <div className="col-xs-12 col-md-4 col-lg-3">
@@ -69,8 +126,10 @@ export default function About() {
             </p>
             <h3> US COVID Atlas </h3>
             <p>
-            The <a href="www.uscovidatlas.org">US COVID Atlas</a> is a near real-time, interactive data visualization platform and archive. The Atlas works to understand,
-            represent, and share stories of the often unequal impact of the COVID-19 pandemic in the United States, from January 2020 through today.
+            For historical Pandemic data, resources have been moved to the <a href="www.uscovidatlas.org">US COVID Atlas</a>,
+            a historic, interactive data visualization platform and archive. The Atlas worked to understand,
+            represent, and share stories of the often unequal impact of the COVID-19 pandemic in the United States, 
+            from January 2020 through the end of 2023.
             Data includes daily and weekly case counts, vaccination rates, and community health contexts.
             Read more and explore at <a href="www.uscovidatlas.org">USCovidAtlas.org</a>.
             </p>
@@ -80,7 +139,7 @@ export default function About() {
 
         <Gutter em={2} />
 
-<div className="row">
+{/* <div className="row">
     <div className="col-xs-12 col-md-4 col-lg-3">
       <h2> Ongoing Research</h2>
     </div>
@@ -115,57 +174,7 @@ export default function About() {
       </p>
 
     </div>
-  </div>
-
-  <Gutter em={2} />
-
-<div className="row">
-    <div className="col-xs-12 col-md-4 col-lg-3">
-      <h2> Partner Research</h2>
-    </div>
-    <div className="col-xs-12 col-md-8 col-lg-9">
-      <p>
-      We partner with numerous researchers and organizations working to address opioid risk environments. Below are a few active collaborations.
-      If you are interested in collaborating or using OEPS data in your research,
-      <a href="mailto:spaykin@uchicago,edu, mkolak@uchicago.edu"> let us know</a>.
-      </p>
-      <p>
-        <b> Yale University </b>
-        </p>
-        <p>
-        Research Article (in progress): Paul J. Jourdrey, Marynia Kolak, Qinyun Lin, Susan Paykin, Vidal Aguiano, Emily A. Wang.
-        Community social vulnerability and access to medications for opioid use disorder within the continental US: A cross-sectional study.
-        In progress, 2021.
-        </p>
-        <p>
-        <b> New York State Psychiatric Institute/Columbia University </b>
-          </p>
-          <p>
-            Study (in progress): Facilitating Opioid Care Connections through System Level Strategies to Improve Use of Medications and
-            Linkages to Care Drug Courts across New York
-            </p>
-            <p>
-            <b> Chestnut Health Systems </b>
-              </p>
-              <p>
-                Study (in progress): National Jail Survey: Interface between Criminal Justice and the Opioid Crisis
-      </p>
-      <p>
-        <b> University of Chicago </b>
-        </p>
-        <p>
-      Research Article (under review): Schneider, J., Taylor, B., Hotton, A., Lamuda, P., Ozik, J., Lin, Q., Flanagan, E., Pho, M., Kolak,
-      M., Brewer, R., Bather, J., and Pollak, H. (Under review). National variability in Americans’ COVID-19
-      protective behaviors: Implications for vaccine roll-out.
-      </p>
-
-    </div>
-  </div>
-
-
-
-
-
+  </div> */}
 
       </main>
       <Footer />
