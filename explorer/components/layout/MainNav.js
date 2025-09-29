@@ -6,8 +6,8 @@ import styles from "./MainNav.module.css";
 export default function MainNav() {
   return (
     <div className={styles.masthead}>
-      <h3 className={styles.mastheadTitle}>
-        <Link href="/">OEPS Explorer</Link>
+      <h3 className={styles.mastheadTitle} color='black'>
+        <Link href="/">OEPS Ecosystem</Link>
       </h3>
       <nav className={styles.mainNav}>
         <Menu>

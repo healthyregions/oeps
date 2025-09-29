@@ -22,7 +22,7 @@ code {
 
 :root {
   --selected-color: #7f2686;
-  --selected-color-light: #e4dccf;
+  --selected-color-light: whitesmoke;
   --medium-gray: rgb(156, 156, 156);
   --light-gray: rgb(220, 220, 220);
   --orange: #e27213;
