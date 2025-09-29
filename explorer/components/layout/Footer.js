@@ -4,14 +4,14 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <a
-        href="https://geodacenter.github.io/"
+        href="https://www.healthyregions.org"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <span className={styles.logo}>
-          <img src="/geoda-logo.png" alt="Geoda Logo" width={23} height={20} />
-        </span>
-        Powered by Geoda
+        {/* <span className={styles.logo}> */}
+          <img src="herop_light_logo.png" height={30}/>
+        {/* </span> */}
+
       </a>
     </footer>
   );

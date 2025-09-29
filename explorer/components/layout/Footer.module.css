@@ -1,20 +1,24 @@
 .footer {
   width: 100%;
   height: 100px;
+  background: black;
   border-top: 1px solid #eaeaea;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: right;
+  align-items: right;
 }
 
 .footer a {
+  color:white;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+  margin-top: 1rem;
+    margin-right: 3rem;
 }
 
 .logo {
-  height: 1em;
-  margin-right: 0.5rem;
+  height: 3em;
+  margin-right: 3rem;
 }
