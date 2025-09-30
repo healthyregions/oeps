@@ -10,7 +10,6 @@ import Footer from "../components/layout/Footer";
 import csvDownloads from '../meta/csvDownloads.json';
 import geodataDownloads from '../meta/geodataDownloads.json';
 
-console.log(geodataDownloads)
 // import * as JSZip from 'jszip';
 // import { saveAs } from 'file-saver';
 
@@ -178,10 +177,13 @@ export default function Download() {
             <Link className={styles.fullDownload} href="#data-packages"><span>Aggregated<br/>Data<br/>Packages</span></Link>
           </div>
           <div>
-            <Link className={styles.fullDownload} href="#data-dictionaries"><span>All Data<br/> (individual CSVs)</span></Link>
+            <Link className={styles.fullDownload} href="#csv-downloads"><span>Raw CSVs</span></Link>
           </div>
           <div>
-            <Link className={styles.fullDownload} href="#oeps-data-package"><span>oepsData<br/>(R data package)</span></Link>
+            <Link className={styles.fullDownload} href="#geography-files"><span>Geography<br/>Files</span></Link>
+          </div>
+          <div>
+            <Link className={styles.fullDownload} href="#oeps-data-package"><span>oepsData<br/>(R data<br/>package)</span></Link>
           </div>
           <div>
             <Link className={styles.fullDownload} href="#big-query"><span>Google BigQuery</span></Link>
@@ -222,9 +224,9 @@ export default function Download() {
                 <Link href="https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/oeps-DSuite2023_2025-09-25.zip">Download DSuite2023 data package [166mb]</Link>
               </li>
             </ul>
-            <h3 id="data-dictionaries">All data by year</h3>
-              <p>Looking for historical data, or years outside of what is included in the data packages above? Use the individual CSVs listed below to find what you need. CSVs are grouped by geography (<Link href="#state-csvs">state</Link>, <Link href="#county-csvs">county</Link>, <Link href="#tract-csvs">tract</Link>, <Link href="#zcta-csvs">zcta</Link>), and tend to be consolidated one-per-year. However, you may see some exceptions to this where data from the same year must be joined to different geometry files.</p>
-              <p>We have generated a data dictionary for each geography level that summarizes what years are available for each variable.</p>
+            <h3 id="csv-downloads">All data by year</h3>
+              <p>Looking for historical data, or years outside of what is included in the data packages above? Use the individual CSVs listed below to find what you need. CSVs are grouped by geography (<Link href="#state-csvs">state</Link>, <Link href="#county-csvs">county</Link>, <Link href="#tract-csvs">tract</Link>, <Link href="#zcta-csvs">zcta</Link>), and tend to be consolidated one-per-year. However, you may see some exceptions to this where data from the same year must be joined to different <Link href="#geography-files">geography files</Link>.</p>
+              <p>We have generated a data dictionary for each geography level that summarizes what variables and which years are available.</p>
               
               <h4 id="state-csvs">State</h4>
               <ul>
@@ -310,8 +312,10 @@ export default function Download() {
                   </tbody>
                 </table>
               </div>
-            <h3 id="geometry-files">Geometry Files</h3>
-            <p>For spatial analysis we provide geographic datasets generated from the US Census Bureau&apos;s Cartographic Boundary files (500k scale). Direct download links are provided below for the following formats: Shapefile, GeoJSON, or PMTiles.</p>
+            <h3 id="geography-files">Geography Files</h3>
+            <p>For spatial analysis, OEPS CSVs must be joined to geographic data from the US Census Bureau&apos;s Cartographic Boundary files (500k scale).
+              Direct download links are provided below for the following formats: Shapefile, GeoJSON, or PMTiles. Make sure to pick the correct join file for your
+              dataset, based on the tables above.</p>
             <div className={styles.tableContainer}>
               <table className={styles.variableTable}>
                 <tbody>
@@ -332,10 +336,10 @@ export default function Download() {
               </table>
             </div>
             <p>You can learn more about how we prepare and generate these geography files at <Link href="https://geodata.healthyregions.org" target="_blank">geodata.healthyregions.org ↗ </Link>.</p>
-            <h4>Tips for joining to geometry files:</h4>
+            <h4>Tips for joining to geography files:</h4>
             <ul>
                 <li>Make sure to link each CSV with the proper geometry file, using the tables above.</li>
-                <li>Use the HEROP_ID field to join, it is present in all CSV and geometry files (other common identifiers like ZIP5 or FIPS may be available too)</li>
+                <li>Use the HEROP_ID field to join, it is present in all CSV and geometry files (other common identifiers like ZIP5 or FIPS may also be available).</li>
                 <li><strong>In Connecticut:</strong> For county and tract data from 2022 or later you should use 2022 geographies (not yet provided here) because county (and therefore tract) FIPS ids changed between 2021 and 2022. To translate 2022 tracts back to 2020 geometries, you can use <Link href="https://www.ctdata.org/geographic-resources">these crosswalks</Link> from CT Data Collaborative.</li>
             </ul>
           </div>
