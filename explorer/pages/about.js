@@ -65,7 +65,8 @@ export default function About() {
           <div className="col-xs-12 col-md-8 col-lg-9">
             <ul>
               <li><strong>v2.3</strong> (planned) January, 2026</li>
-              <li><strong>v2.2</strong> (current) September, 2025 [<Link href="https://github.com/GeoDaCenter/opioid-policy-scan/releases/tag/v2.2">release notes</Link>]</li>
+              <li><strong>v2.2</strong> (current) September, 2025 [<Link href="https://github.com/healthyregions/oeps/releases/tag/v2.2">release notes</Link>]</li>
+              <li><strong>v2.1</strong> June, 2025 [<Link href="https://github.com/healthyregions/oeps/releases/tag/v2.1">release notes</Link>]</li>
               <li><strong>v2.0</strong> December, 2024 [<Link href="https://github.com/GeoDaCenter/opioid-policy-scan/releases/tag/v2.0">release notes</Link>]</li>
               <li><strong>v1.0</strong> January, 2022 [<Link href="https://github.com/GeoDaCenter/opioid-policy-scan/releases/tag/v1.0">release notes</Link>]</li>
             </ul>
