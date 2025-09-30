@@ -17,10 +17,6 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>OEPS Explorer</title>
-        <meta name="description" content="Web explorer for the Opioid Environment Policy Scan data warehouse." />
-        <script defer data-domain="oeps.healthyregions.org" src="https://plausible.io/js/script.js"></script>
-        <link rel="icon" href="/favicon.ico" />
-
       </Head>
       <MainNav />
       <main className={styles.main}>

@@ -10,10 +10,6 @@ export default function About() {
     <div className={styles.container}>
       <Head>
         <title>API Docs :: OEPS </title>
-        <meta name="description" content="Documentation for the OEPS API" />
-        <script defer data-domain="oeps.healthyregions.org" src="https://plausible.io/js/script.js"></script>
-        <link rel="icon" href="/favicon.ico" />
-
       </Head>
       <MainNav />
       <main className={styles.main}>
