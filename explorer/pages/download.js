@@ -205,7 +205,7 @@ export default function Download() {
             <p>The 2018 data package is centered around the 2018 ACS. In some cases variables are not available in that year, so we have included content from within a few years. The year for each data point is listed in the data dictionary.</p>
             <ul>
               <li>
-                <Link href="https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/dictionaries/DSuite2018-data-dictionary.xlsx">Download DSuite2018 data dictionary</Link>
+                <Link href="https://github.com/healthyregions/oeps/raw/refs/heads/main/docs/src/reference/data-dictionaries/DSuite2018-data-dictionary.xlsx">Download DSuite2018 data dictionary</Link>
               </li>
               <li>
                 <Link href="https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/oeps-DSuite2018_2025-09-25.zip">Download DSuite2018 data package [158mb]</Link>
@@ -215,7 +215,7 @@ export default function Download() {
             <p>The 2023 data package is centered around the 2023 ACS. In some cases variables are not available in that year, so we have included content from within a few years. The year for each data point is listed in the data dictionary.</p>
             <ul>
               <li>
-                <Link href="https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/dictionaries/DSuite2023-data-dictionary.xlsx">Download DSuite2023 data dictionary</Link>
+                <Link href="https://github.com/healthyregions/oeps/raw/refs/heads/main/docs/src/reference/data-dictionaries/DSuite2023-data-dictionary.xlsx">Download DSuite2023 data dictionary</Link>
               </li>
               <li>
                 <Link href="https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/oeps-DSuite2023_2025-09-25.zip">Download DSuite2023 data package [166mb]</Link>
