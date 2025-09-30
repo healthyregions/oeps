@@ -1,3 +1,5 @@
+
+
 .container {
     padding: 0;
     display: flex;
@@ -117,27 +119,28 @@
 
 .variableTable button, .filterButton, .downloadButton {
     border: medium none;
-    font-size:100%;
-    font-family: "Lora", Georgia, "Times New Roman", Times, serif;
-    background:var(--light-gray);
-    color:black;
+    font-size:90%;
+    /* font-family: "Lora", Georgia, "Times New Roman", Times, serif; */
+    font-weight: 500;
+    color: black;
     padding:0.125em 0.25em;
-    border-radius:0.25em;
+    border-radius:0.35em;
     cursor:pointer;
     transition:250ms all;
 }
 .variableTable button:hover {
-    background:var(--sky);
+    background:var(--orange);
 }
 
 .filterButton {
     margin:0.25em;
-    background:none;
     border:1px solid var(--medium-gray);
 }
 
 .active {
-    border:1px solid var(--orange);
+    background-color: var(--selected-color);
+    border:1px solid var(--medium-gray);
+    color:white;
 }
 .activeDownload {
     background: var(--orange);

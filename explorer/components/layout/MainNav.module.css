@@ -25,5 +25,7 @@
 }
 
 .mastheadTitle {
+  color: black;
+  font-weight: 500;
   user-select: none;
 }
