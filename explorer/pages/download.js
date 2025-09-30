@@ -1,8 +1,5 @@
 import Head from "next/head";
 import Link from 'next/link';
-import { 
-  // useState, 
-  useMemo } from 'react';
 import styles from "../styles/Docs.module.css";
 import { Gutter } from "../components/layout/Gutter";
 import MainNav from "../components/layout/MainNav";

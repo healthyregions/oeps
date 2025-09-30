@@ -107,7 +107,7 @@ export default function About() {
         <h2>Data Standards</h2>
         </div>
         <div className="col-xs-12 col-md-8 col-lg-9">
-        <p><strong>"No data" values</strong> our CSVs will simply have a blank entry. This means that for a given variable and geographic unit there is no value in the source dataset. Keep in mind that "0" is a valid value for many different measures and should not be treated as "no data".</p>
+        <p><strong>&quot;No data&quot; values</strong> our CSVs will simply have a blank entry. This means that for a given variable and geographic unit there is no value in the source dataset. Keep in mind that &quot;0&quot; is a valid value for many different measures and should not be treated as &quot;no data&quot;.</p>
         <p><b>Most variable names are no more than 10 characters (with some exceptions)</b> for ease of data wrangling with
         shapefiles and GIS software. Some variable names are therefore shortened or abbreviated from the source data.
         </p>
@@ -181,7 +181,7 @@ export default function About() {
 
   <h5>Converting HEROP_IDs to GEOIDs (integers)</h5>
     <p>
-HEROP_IDs can be converted back to standard GEOIDs by removing the first 5 characters, or by taking everything after the substring "US". Here are some examples of what this looks like in different environments:
+HEROP_IDs can be converted back to standard GEOIDs by removing the first 5 characters, or by taking everything after the substring &quot;US&quot;. Here are some examples of what this looks like in different environments:
   </p>
   <div className={styles.tableContainer}>
     <table className={styles.variableTable}>
@@ -194,19 +194,19 @@ HEROP_IDs can be converted back to standard GEOIDs by removing the first 5 chara
     <tbody>
         <tr>
             <td>Excel</td>
-            <td><code>REPLACE(A1, 1, 5, "")</code></td>
+            <td><code>REPLACE(A1, 1, 5, &quot;&quot;)</code></td>
         </tr>
         <tr>
             <td>R</td>
-            <td><code>geoid &lt;- str_split_i(HEROP_ID, "US", -1)</code></td>
+            <td><code>geoid &lt;- str_split_i(HEROP_ID, &quot;US&quot;, -1)</code></td>
         </tr>
         <tr>
             <td>Python</td>
-            <td><code>geoid = HEROP_ID.split("US")[1]</code></td>
+            <td><code>geoid = HEROP_ID.split(&quot;US&quot;)[1]</code></td>
         </tr>
         <tr>
             <td>JavaScript</td>
-            <td><code>const geoid = HEROP_ID.split("US")[1]</code></td>
+            <td><code>const geoid = HEROP_ID.split(&quot;US&quot;)[1]</code></td>
         </tr>
     </tbody>
 </table>
