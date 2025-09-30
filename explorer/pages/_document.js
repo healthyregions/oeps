@@ -20,13 +20,15 @@ export default function Document() {
                     media="print"
                     onLoad="this.media='all'"
                 />
-
                 <noscript>
                     <link
                         rel="stylesheet"
                         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,900;1,400;1,700&family=Lora:ital@0;1&display=swap"
                     />
                 </noscript>
+                <script defer data-domain="oeps.healthyregions.org" src="https://plausible.io/js/script.js"></script>
+                <link rel="icon" href="/favicon.ico" />
+                <meta name="description" content="Web explorer for the Opioid Environment Policy Scan data warehouse." />
             </Head>
             <body>
             <Main />
