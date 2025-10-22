@@ -1,8 +1,8 @@
-**Meta Data Name**: Jail Incarceration Variables
-**Date Added**: September 11, 2020
-**Author**: Marynia Kolak, Qinyun Lin
-**Date Last Modified**: August 24, 2025
-**Last Modified By**: Marynia Kolak
+**Meta Data Name**: Prison Incarceration Variables  
+**Date Added**: September 11, 2020  
+**Author**: Marynia Kolak, Qinyun Lin, Yilin Lyu  
+**Date Last Modified**: October 21, 2025  
+**Last Modified By**: Yilin Lyu  
 
 ### Theme:
 Policy
@@ -37,15 +37,24 @@ These rates were calculated using base rate of county population aged 15-64. The
 - **Years Available** -- years for which data exists for this variable
 - **Spatial Scale** -- the variable exists for these levels of spatial scale
 
+#### County
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Total prison population rate | TtlPrPpr | Total Prison Population Rate | Latest | County |
-| Total prison admission rate | TtlPrAPpr | Prison Prison Admissions Rate | Latest | County |
-| Total prison population count | TtlPrPp | Total Prison Population Count| Latest | County |
-| Total prison admission count | TtlPrAPp | Prison Prison Admissions Count | Latest | County |
+| Total prison population rate | TtlPrPpr | Total Prison Population Rate | 1983-2019 | County |
+| Total prison admission rate | TtlPrAPpr | Prison Prison Admissions Rate | 1983-2019 | County |
+| Total prison population count | TtlPrPp | Total Prison Population Count| 1983-2019 | County |
+| Total prison admission count | TtlPrAPp | Prison Prison Admissions Count | 1983-2019 | County |
+
+#### State
+| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
+|:---------|:--------------------|:------------|:----------------|:--------------|
+| Total prison population rate | TtlPrPpr | Total Prison Population Rate | 1969-2024 | State |
+| Total prison admission rate | TtlPrAPpr | Prison Prison Admissions Rate | 1978-2022 | State |
+| Total prison population count | TtlPrPp | Total Prison Population Count| 1950-2024 | State |
+| Total prison admission count | TtlPrAPp | Prison Prison Admissions Count | 1978-2022 | State |
 
 ### Data Limitations:
 There are missing data in many counties. 
 
 ### Comments/Notes:
-- No data for four counties in New York (Queen, King, Bronx, and Richmond). 
+- Most state-level data are available for consistent ranges as shown above, but some states differ. The federal system (FED) only includes 2005 data for total prison population rate and admission rate, covers 1978–2024 for total prison population count, and 1978–1989 and 1993–2022 for total prison admission count. Georgia (GA) has data from 1970–2022 for total prison admission rate and admission count. The District of Columbia (DC) is missing 2001–2011 and 2024 for total prison population rate and count, and 2001–2003 and 2019–2022 for total prison admission rate and count. Alaska (AK) is missing 1994 and 2006 data for total prison admission rate and count.
