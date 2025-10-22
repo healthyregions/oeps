@@ -57,4 +57,8 @@ These rates were calculated using base rate of county population aged 15-64. The
 There are missing data in many counties. 
 
 ### Comments/Notes:
-- Most state-level data are available for consistent ranges as shown above, but some states differ. The federal system (FED) only includes 2005 data for total prison population rate and admission rate, covers 1978–2024 for total prison population count, and 1978–1989 and 1993–2022 for total prison admission count. Georgia (GA) has data from 1970–2022 for total prison admission rate and admission count. The District of Columbia (DC) is missing 2001–2011 and 2024 for total prison population rate and count, and 2001–2003 and 2019–2022 for total prison admission rate and count. Alaska (AK) is missing 1994 and 2006 data for total prison admission rate and count.
+- Most state-level data are available for consistent ranges as shown above, but some states differ.
+- The federal system (FED) only includes 2005 data for total prison population rate and admission rate, covers 1978–2024 for total prison population count, and 1978–1989 and 1993–2022 for total prison admission count.
+- Georgia (GA) has data from 1970–2022 for total prison admission rate and admission count.
+- The District of Columbia (DC) is missing 2001–2011 and 2024 for total prison population rate and count, and 2001–2003 and 2019–2022 for total prison admission rate and count.
+- Alaska (AK) is missing 1994 and 2006 data for total prison admission rate and count.
