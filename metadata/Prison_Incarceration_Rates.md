@@ -1,7 +1,7 @@
 **Meta Data Name**: Prison Incarceration Variables  
 **Date Added**: September 11, 2020  
 **Author**: Marynia Kolak, Qinyun Lin, Yilin Lyu  
-**Date Last Modified**: October 21, 2025  
+**Date Last Modified**: October 23, 2025  
 **Last Modified By**: Yilin Lyu  
 
 ### Theme:
@@ -11,7 +11,6 @@ Social
 You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).
 
 CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
-Note: Every variable can be found in the **Latest** files.
 
 ### Data Source(s) Description:  
 Variables were obtained from the Vera Institute of Justice. Raw data and more details can be found at https://github.com/vera-institute/incarceration_trends. Raw data is downloaded in the folder of data_raw, named "incarceration_trends.xlsx". 
