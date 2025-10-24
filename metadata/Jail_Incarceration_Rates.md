@@ -46,7 +46,7 @@ These rates were calculated using base rate of county population aged 15-64 and 
 | Pretrial jail population rate | TtlJlPrtr | Pretrial Jail Population Rate | 1970-2024 | County |
 | Total jail population count | TtlJlPp | Total Jail Population Count, ASJ/COJ Data | 1970-2024 | County |
 | Total jail admission count | TtlJlAdm | Total Jail Admissions Count, ASJ/COJ Data | 1970-2024 | County |
-| Pretrial jail population count | TtlJlPrt | Pretrial Jail Population Count | Latest | 1970-2024 |
+| Pretrial jail population count | TtlJlPrt | Pretrial Jail Population Count | 1970-2024 | County |
 
 #### State
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
