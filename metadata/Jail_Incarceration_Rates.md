@@ -64,5 +64,5 @@ These rates were calculated using base rate of county population aged 15-64 and 
 - See the Vera Insitute's documentation for details on additional limitations.
 
 ### Comments/Notes:
-- The latest county-level data extend to 2024, but it only includes quarter. Also, pretrial jail population rate and count are largely unavailable; only some counties in Virginia and West Virginia report them.
+- The latest county-level data extend to 2024, but it only includes Quarter 1. Also, pretrial jail population rate and count are largely unavailable; only some counties in Virginia and West Virginia report them.
 - County-level data are reported quarterly, with estimates provided for four reference dates each year (March 31, June 30, September 30, and December 31).
