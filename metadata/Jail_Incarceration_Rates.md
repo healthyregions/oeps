@@ -41,12 +41,12 @@ These rates were calculated using base rate of county population aged 15-64 and 
 #### County
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Total jail population rate | TtlJlPpr | Total Jail Population Rate, ASJ/COJ Data | Latest | County |
-| Total jail admission rate | TtlJlAdmr | Total Jail Admissions Rate, ASJ/COJ Data | Latest | County |
-| Pretrial jail population rate | TtlJlPrtr | Pretrial Jail Population Rate | Latest | County |
-| Total jail population count | TtlJlPp | Total Jail Population Count, ASJ/COJ Data | Latest | County |
-| Total jail admission count | TtlJlAdm | Total Jail Admissions Count, ASJ/COJ Data | Latest | County |
-| Pretrial jail population count | TtlJlPrt | Pretrial Jail Population Count | Latest | County |
+| Total jail population rate | TtlJlPpr | Total Jail Population Rate, ASJ/COJ Data | 1970-2024 | County |
+| Total jail admission rate | TtlJlAdmr | Total Jail Admissions Rate, ASJ/COJ Data | 1970-2024 | County |
+| Pretrial jail population rate | TtlJlPrtr | Pretrial Jail Population Rate | Latest | 1970-2024 |
+| Total jail population count | TtlJlPp | Total Jail Population Count, ASJ/COJ Data | 1970-2024 | County |
+| Total jail admission count | TtlJlAdm | Total Jail Admissions Count, ASJ/COJ Data | 1970-2024 | County |
+| Pretrial jail population count | TtlJlPrt | Pretrial Jail Population Count | Latest | 1970-2024 |
 
 #### State
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
@@ -59,10 +59,10 @@ These rates were calculated using base rate of county population aged 15-64 and 
 | Pretrial jail population count | TtlJlPrt | Pretrial Jail Population Count | 1970-2023 | State |
 
 ### Data Limitations:
-There is missing data in many counties. See the Vera Insitute's documentation for details on additional limitations.
+- There is missing data in many counties.
+- Most state-level data are available for consistent ranges as shown above, but some states differ. Alaska (AK), Connecticut (CT), Delaware (DE), Rhode Island (RI) miss data from 1970-1977. Hawaii (HI) and Vermont (VT) miss data from 1971-1977.
+- See the Vera Insitute's documentation for details on additional limitations.
 
 ### Comments/Notes:
-- No data for four counties in New York (Queen, King, Bronx, and Richmond).
-- Most state-level data are available for consistent ranges as shown above, but some states differ.
-- Alaska (AK), Connecticut (CT), Delaware (DE), Rhode Island (RI) miss data from 1970-1977.
-- Hawaii (HI) and Vermont (VT) miss data from 1971-1977.
+- The latest county-level data extend to 2024, but pretrial jail population rate and count are largely unavailable; only some counties in Virginia and West Virginia report them.
+- County-level data are reported quarterly, with estimates provided for four reference dates each year (March 31, June 30, September 30, and December 31).
