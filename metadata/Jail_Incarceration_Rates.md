@@ -1,17 +1,16 @@
-**Meta Data Name**: Jail Incarceration Variables
-**Date Added**: September 11, 2020
-**Author**: Marynia Kolak, Qinyun Lin
-**Date Last Modified**: August 24, 2025
-**Last Modified By**: Marynia Kolak
+**Meta Data Name**: Jail Incarceration Variables  
+**Date Added**: September 11, 2020  
+**Author**: Marynia Kolak, Qinyun Lin, Yilin Lyu  
+**Date Last Modified**: October 23, 2025  
+**Last Modified By**: Yilin Lyu  
 
 ### Theme: 
-Policy  
+Social  
 
 ### Data Location: 
 You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).  
 
 CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
-Note: Every variable can be found in the **Latest** files.
 
 ### Data Source(s) Description:  
 Variables were obtained from the Vera Institute of Justice. Raw data and more details can be found at https://github.com/vera-institute/incarceration_trends. Raw data is downloaded in the folder of data_raw, named "incarceration_trends.xlsx". 
@@ -39,17 +38,31 @@ These rates were calculated using base rate of county population aged 15-64 and 
 - **Years Available** -- years for which data exists for this variable
 - **Spatial Scale** -- the variable exists for these levels of spatial scale
 
+#### County
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
-| Total jail population rate | TtlJlPpr | Total Jail Population Rate, ASJ/COJ Data | Latest | County |
-| Total jail admission rate | TtlJlAdmr | Total Jail Admissions Rate, ASJ/COJ Data | Latest | County |
-| Pretrial jail population rate | TtlJlPrtr | Pretrial Jail Population Rate | Latest | County |
-| Total jail population count | TtlJlPp | Total Jail Population Count, ASJ/COJ Data | Latest | County |
-| Total jail admission count | TtlJlAdm | Total Jail Admissions Count, ASJ/COJ Data | Latest | County |
-| Pretrial jail population count | TtlJlPrt | Pretrial Jail Population Count | Latest | County |
+| Total jail population rate | TtlJlPpr | Total Jail Population Rate, ASJ/COJ Data | 1970-2024 | County |
+| Total jail admission rate | TtlJlAdmr | Total Jail Admissions Rate, ASJ/COJ Data | 1970-2024 | County |
+| Pretrial jail population rate | TtlJlPrtr | Pretrial Jail Population Rate | 1970-2024 | County |
+| Total jail population count | TtlJlPp | Total Jail Population Count, ASJ/COJ Data | 1970-2024 | County |
+| Total jail admission count | TtlJlAdm | Total Jail Admissions Count, ASJ/COJ Data | 1970-2024 | County |
+| Pretrial jail population count | TtlJlPrt | Pretrial Jail Population Count | 1970-2024 | County |
+
+#### State
+| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
+|:---------|:--------------------|:------------|:----------------|:--------------|
+| Total jail population rate | TtlJlPpr | Total Jail Population Rate, ASJ/COJ Data | 1970-2023 | State |
+| Total jail admission rate | TtlJlAdmr | Total Jail Admissions Rate, ASJ/COJ Data | 1978-2022 | State |
+| Pretrial jail population rate | TtlJlPrtr | Pretrial Jail Population Rate | 1970-2023 | State |
+| Total jail population count | TtlJlPp | Total Jail Population Count, ASJ/COJ Data | 1970-2023 | State |
+| Total jail admission count | TtlJlAdm | Total Jail Admissions Count, ASJ/COJ Data | 1978-2022 | State |
+| Pretrial jail population count | TtlJlPrt | Pretrial Jail Population Count | 1970-2023 | State |
 
 ### Data Limitations:
-There is missing data in many counties. See the Vera Insitute's documentation for details on additional limitations.
+- There is missing data in many counties.
+- Most state-level data are available for consistent ranges as shown above, but some states differ. Alaska (AK), Connecticut (CT), Delaware (DE), Rhode Island (RI) miss data from 1970-1977. Hawaii (HI) and Vermont (VT) miss data from 1971-1977.
+- See the Vera Insitute's documentation for details on additional limitations.
 
 ### Comments/Notes:
-- No data for four counties in New York (Queen, King, Bronx, and Richmond). 
+- The latest county-level data extend to 2024, but it only includes Quarter 1. Also, pretrial jail population rate and count are largely unavailable; only some counties in Virginia and West Virginia report them.
+- County-level data are reported quarterly, with estimates provided for four reference dates each year (March 31, June 30, September 30, and December 31).
