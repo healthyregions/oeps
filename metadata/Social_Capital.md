@@ -53,10 +53,10 @@ Library and religious institution data were obtained from Overture Maps Foundati
 
 | Variable | Variable ID | Description | Years Available | Spatial Scale |
 |:--|:--|:--|:--|:--|
-| Housing Tenure | medianHT | Median time period householder moved into unit by tract | 2018, 2023 | Tract |
-| Libraries | libpercap | Libraries per capita | 2025 | Tract |
-| Religious Institutions| relgpercap | Religious institutions per capita | 2025 | Tract |
-| Response Rate| resprate | Ratio of units interviewed to units intended for interview | 2018, 2023 | County |
+| Housing Tenure | MedianHt | Median time period householder moved into unit by tract | 2018, 2023 | Tract |
+| Libraries | Libpercap | Libraries per capita | 2025 | Tract |
+| Religious Institutions| Relgpercap | Religious institutions per capita | 2025 | Tract |
+| Response Rate| Resprate | Ratio of units interviewed to units intended for interview | 2018, 2023 | County |
 
 
 ### Data Limitations
