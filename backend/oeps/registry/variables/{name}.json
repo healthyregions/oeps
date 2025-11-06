@@ -1,0 +1,9 @@
+{
+  "name": "SmokeP",
+  "title": "Percentage of Smoking Population",
+  "type": "number",
+  "example": "0.162",
+  "description": "Percentage of Smoking Population",
+  "longitudinal": false,
+  "analysis": false
+}
