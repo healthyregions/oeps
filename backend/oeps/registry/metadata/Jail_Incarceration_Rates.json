@@ -2,8 +2,8 @@
   "name": "Jail_Incarceration_Rates",
   "theme": "Social",
   "construct": "Incarceration",
-  "proxy": "Total Jail Population Rate, Total jail admission rate, Pretrial Jail Population Rate, Total Jail Population Count & more",
+  "proxy": "Total jail population rate, Total jail admission rate, Pretrial jail population rate, Total jail population count, Total jail admission count, Pretrial jail population count",
   "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Jail_Incarceration_Rates.md",
-  "source": "Vera Institute of Justice 2017",
-  "source_long": "Vera Institute of Justice, 2017"
+  "source": "Vera Institute of Justice 2025",
+  "source_long": "Vera Institute of Justice, 2025"
 }
