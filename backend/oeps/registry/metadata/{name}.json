@@ -3,7 +3,6 @@
   "theme": "Social",
   "construct": "Smoking",
   "proxy": "Percentage of Smoking Population",
-  "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Smoking_Population.md",
   "source": "County Health Rankings & Roadmaps (CHR&R), 2025",
   "source_long": "County Health Rankings & Roadmaps (CHR&R), 2025"
 }
