@@ -7,5 +7,8 @@
   "longitudinal": false,
   "analysis": false,
   "metadata": "Smoking_Population",
-  "table_sources": []
+  "table_sources": [
+    "county-2025",
+    "state-2025"
+  ]
 }
