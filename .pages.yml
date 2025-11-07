@@ -4,7 +4,7 @@ content:
     label: Metadata
     type: collection
     path: backend/oeps/registry/metadata
-    filename: '{name}.json'
+    filename: '{fields.name}.json'
     format: json
     fields:
       - name: name
@@ -41,7 +41,7 @@ content:
     label: Variables
     type: collection
     path: backend/oeps/registry/variables
-    filename: "{name}.json"
+    filename: "{fields.name}.json"
     format: json
     fields:
       - name: name
