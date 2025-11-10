@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="shortcut icon" href="../../img/favicon.ico" />
+<!DOCTYPE html><html class="writer-html5" lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="shortcut icon" href="../../img/favicon.ico">
     <title>Installing the Components - OEPS Documentation</title>
-    <link rel="stylesheet" href="../../css/theme.css" />
-    <link rel="stylesheet" href="../../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/theme_extra.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
     
       <script>
         // Current page data
@@ -22,11 +20,12 @@
     <![endif]-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
       <script>hljs.highlightAll();</script> 
- <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
 
 <body class="wy-body-for-nav" role="document">
 
@@ -36,8 +35,8 @@
       <div class="wy-side-nav-search">
           <a href="../.." class="icon icon-home"> OEPS Documentation
         </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here">
   </form>
 </div>
       </div>
@@ -63,6 +62,12 @@
     <li class="toctree-l2"><a class="reference internal" href="#oeps-backend">OEPS Backend</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#install-python-dependencies">Install Python dependencies</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#using-docker">Using Docker</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#local-install">Local install</a>
+    </li>
+        </ul>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#dev-dependencies">Dev dependencies</a>
     </li>
@@ -108,17 +113,17 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/build-docs/">build-docs</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/build-explorer-docs/">build-explorer-docs</a>
+                  <li class="toctree-l1"><a class="" href="../../reference/cli/build-explorer-docs.md">None</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/build-explorer-map/">build-explorer-map</a>
+                  <li class="toctree-l1"><a class="" href="../../reference/cli/build-explorer-map.md">None</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/create-data-dictionaries/">create-data-dictionaries</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/create-data-package/">create-data-package</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/inspect-csv/">inspect-csv</a>
+                  <li class="toctree-l1"><a class="" href="../../reference/cli/inspect-csv.md">None</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/merge-data-table/">merge-data-table</a>
+                  <li class="toctree-l1"><a class="" href="../../reference/cli/merge-data-table.md">None</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/validate-registry/">validate-registry</a>
                   </li>
@@ -142,7 +147,7 @@
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
-  <hr/>
+  <hr>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
@@ -173,10 +178,24 @@ cp .env.example .env
 <p>Two Mapbox Tilesets must be configured externally and linked within this app, one for Zip Code Tabulation Areas (ZCTAs) and one for Census Tracts. These geometries are joined with CSV tables to drive map visualizations.</p>
 <p>Additionally, a basemap style must be provided, as well as a Mapbox access token. All of these elements are (currently) provided through environment variables, so make sure your <code>.env</code> file has the following:</p>
 <pre><code>NEXT_PUBLIC_MAPBOX_TOKEN=&lt;your token&gt;
-NEXT_PUBLIC_MAPBOX_STYLE=&quot;mapbox://styles/&lt;account id&gt;/&lt;style id&gt;&quot;
+NEXT_PUBLIC_MAPBOX_STYLE="mapbox://styles/&lt;account id&gt;/&lt;style id&gt;"
 </code></pre>
 <h2 id="oeps-backend">OEPS Backend</h2>
+<p>The OEPS Backend is a suite of command line tools, built within the Flask framework. <em>Using the backend does not require a long running process or external database.</em> It simply automates certain operations that are performed on files within the repository. After an operation has been performed, it is typically necessary to commit the changes and then create a pull request. In the future, perhaps it will make sense to convert some of the operations to API routes, but for now Flask is merely a wrapper.</p>
 <h3 id="install-python-dependencies">Install Python dependencies</h3>
+<h4 id="using-docker">Using Docker</h4>
+<p>The easiest way to run backend commands is to use Docker--no need to create a Python virtual environment. Simply enter the backend directory and run:</p>
+<pre><code>docker compose run -it oeps [CLI COMMAND]
+</code></pre>
+<p>For example, to print help for all of the commands, run</p>
+<pre><code>docker compose run -it oeps flask --help
+</code></pre>
+<p>and you should get a printout of about 10 commands.</p>
+<p>If you are making changes to the backend code, then include the <code>--build</code> flag to rebuild the container during the command:</p>
+<pre><code>docker compose run -it oeps [CLI COMMAND]
+</code></pre>
+<p>Because the build process takes a little while, you may want to create a local install for more rapid development.</p>
+<h4 id="local-install">Local install</h4>
 <ol>
 <li>
 <p>Enter the backend directory</p>
@@ -217,7 +236,7 @@ pip install md-click@git+https://github.com/kid-116/md-click@support-arguments
 </code></pre>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>The <code>md-click</code> library is used to generate documentation of the CLI commands, and the particular branch is needed to handle Arguments on the commands that are being documented. Hopefully, this PR will be merged at some point and this install process could be updated: https://github.com/RiveryIO/md-click/pull/12.<br/><br/>There is a dependency resolution bug (or something) when putting that github reference directly in the <code>pyproject.toml</code> file, so it needs to be run separately after everything else is installed.</p>
+<p>The <code>md-click</code> library is used to generate documentation of the CLI commands, and the particular branch is needed to handle Arguments on the commands that are being documented. Hopefully, this PR will be merged at some point and this install process could be updated: https://github.com/RiveryIO/md-click/pull/12.<br><br>There is a dependency resolution bug (or something) when putting that github reference directly in the <code>pyproject.toml</code> file, so it needs to be run separately after everything else is installed.</p>
 </div>
 <h3 id="docs-dependencies">Docs dependencies</h3>
 <p>The <a href="#oeps-documentation">documentation site</a> (which you are reading right now!) is built with dependencies that are best installed directly into the backend virtual environment, so may as well install them now:</p>
@@ -246,7 +265,7 @@ mkdocs serve
         <a href="../getting-started-with-cli/" class="btn btn-neutral float-right" title="Getting Started with the CLI">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
-  <hr/>
+  <hr>
 
   <div role="contentinfo">
     <!-- Copyright etc -->
@@ -266,10 +285,10 @@ mkdocs serve
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../../legacy-migration/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../../legacy-migration/" style="color: #fcfcfc">« Previous</a></span>
     
     
-      <span><a href="../getting-started-with-cli/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../getting-started-with-cli/" style="color: #fcfcfc">Next »</a></span>
     
   </span>
 </div>
@@ -284,6 +303,7 @@ mkdocs serve
         });
     </script>
 
+
+
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-</script></body>
-</html>
+</script></body></html>
