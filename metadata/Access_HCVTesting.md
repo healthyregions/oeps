@@ -71,7 +71,7 @@ County and state-level variables include:
 | Count of tracts                           | TotTracts | Total number of Census tracts in county/state                                   | 2025 | County, State  |
 | Count of tracts within 30-min driving range | HcvCtTmDr | Number of tracts with an HCV testing provider within a 30-minute driving range           | 2025 | County, State  |
 | Average time drive to nearest HCV testing provider | HcvAvTmDr | Mean driving time (minutes) from tracts to nearest HCV testing provider                  | 2025 | County, State  |
-| Percent of tracts within 30-min driving range | HcvTmDrP | Percent of tracts within 30-minute drive to an HCV testing provider                      | 2025 | County, State  |
+| Percent of tracts within 30-min driving range | HcvTmDrP | Percent of tracts within 30-minute drive to an HCV testing provider                      | 2025 | County, State, tract  |
 
 ### Data Limitations:  
 *Euclidean or straight-line distance is a basic proxy for access. It does not account for real-world travel constraints.*  
