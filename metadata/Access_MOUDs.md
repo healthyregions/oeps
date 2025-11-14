@@ -1,9 +1,9 @@
 **Meta Data Name**: Access to MOUDs  
 **Date Added**: February 1, 2021  
-**Author**: Marynia Kolak, Mahjabin Kabir Adrita, Wataru Morioka, Susan Paykin
+**Author**: Marynia Kolak, Mahjabin Kabir Adrita, Wataru Morioka, Susan Paykin, Yilin Lyu
 
-**Date Last Modified**: August 13, 2025  
-**Last Modified By**: Mahjabin Kabir Adrita
+**Date Last Modified**: November 13, 2025  
+**Last Modified By**: Yilin Lyu
 
 ### Theme: 
 Environment  
@@ -80,12 +80,21 @@ County and state-level variables include the **count** of Census tracts and the 
 | Distance to nearest OTP | OtpMinDis | Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles | 2020, 2025 | Tract |
 | Driving time to nearest OTP | OtpTmDr | Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes | 2020, 2025 | Tract |
 | Count of OTPs | OtpCntDr | Count of OTPs within a 30-minute driving threshold | 2020, 2025 | Tract |
+| Buprenorphine access 30 minutes (RAAM) | BupRm30 | RAAM access score to buprenorphine providers within 30-minute drive time | 2020, 2025 | Tract |
+| Buprenorphine access 60 minutes (RAAM) | BupRm60 | RAAM access score to buprenorphine providers within 60-minute drive time | 2020, 2025 | Tract |
+| Buprenorphine access 90 minutes (RAAM) | BupRm90 | RAAM access score to buprenorphine providers within 90-minute drive time | 2020, 2025 | Tract |
 | Minimum distance to buprenorphine | BupMinDis | Euclidean distance (miles) to nearest buprenorphine provider | 2020, 2025 | Tract |
 | Driving time to nearest buprenorphine | BupTmDr | Driving time (minutes) to nearest buprenorphine provider | 2020, 2025 | Tract |
 | Count of buprenorphine providers (drive) | BupCntDr30 | Count of methadone providers in 30 minute drive time threshold | 2020, 2025 | Tract |
+| Methadone access 30 minutes (RAAM) | MetRm30 | RAAM access score to Methadone providers within 30-minute drive time | 2020, 2025 | Tract |
+| Methadone access 60 minutes (RAAM) | MetRm60 | RAAM access score to Methadone providers within 60-minute drive time | 2020, 2025 | Tract |
+| Methadone access 90 minutes (RAAM) | MetRm90 | RAAM access score to Methadone providers within 90-minute drive time | 2020, 2025 | Tract |
 | Minimum distance to methadone | MetMinDis | Euclidean distance (miles) to nearest methadone provider | 2020, 2025 | Tract |
 | Driving time to nearest methadone | MetTmDr | Driving time (minutes) to nearest methadone provider | 2020, 2025 | Tract |
 | Count of methadone providers (drive) | MetCntDr30 | Count of methadone providers in 30 minute drive time threshold | 2020, 2025 | Tract |
+| Naltrexone access 30 minutes (RAAM) | NaltRm30 | RAAM access score to Naltrexone providers within 30-minute drive time | 2020, 2025 | Tract |
+| Naltrexone access 60 minutes (RAAM) | NaltRm60 | RAAM access score to Naltrexone providers within 60-minute drive time | 2020, 2025 | Tract |
+| Naltrexone access 90 minutes (RAAM) | NaltRm90 | RAAM access score to Naltrexone providers within 90-minute drive time | 2020, 2025 | Tract |
 | Minimum distance to naltrexone | NalMinDis | Euclidean distance (miles) to nearest naltrexone/Vivitrol provider | 2020, 2025 | Tract |
 | Driving time to nearest naltrexone |  NalTmDr | Driving time (minutes) to nearest naltrexone provider | 2020, 2025 | Tract |
 | Count of naltrexone providers (drive) | NalCntDr30 | Count of naltrexone providers in 30 minute drive time threshold | 2020, 2025 | Tract|

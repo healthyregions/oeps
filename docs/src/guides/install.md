@@ -47,7 +47,35 @@ NEXT_PUBLIC_MAPBOX_STYLE="mapbox://styles/<account id>/<style id>"
 
 ## OEPS Backend
 
+The OEPS Backend is a suite of command line tools, built within the Flask framework. _Using the backend does not require a long running process or external database._ It simply automates certain operations that are performed on files within the repository. After an operation has been performed, it is typically necessary to commit the changes and then create a pull request. In the future, perhaps it will make sense to convert some of the operations to API routes, but for now Flask is merely a wrapper.
+
 ### Install Python dependencies
+
+#### Using Docker
+
+The easiest way to run backend commands is to use Docker--no need to create a Python virtual environment. Simply enter the backend directory and run:
+
+```
+docker compose run -it oeps [CLI COMMAND]
+```
+
+For example, to print help for all of the commands, run
+
+```
+docker compose run -it oeps flask --help
+```
+
+and you should get a printout of about 10 commands.
+
+If you are making changes to the backend code, then include the `--build` flag to rebuild the container during the command:
+
+```
+docker compose run -it oeps [CLI COMMAND]
+```
+
+Because the build process takes a little while, you may want to create a local install for more rapid development.
+
+#### Local install
 
 1. Enter the backend directory
 

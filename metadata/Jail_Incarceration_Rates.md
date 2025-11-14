@@ -66,3 +66,5 @@ These rates were calculated using base rate of county population aged 15-64 and 
 ### Comments/Notes:
 - The latest county-level data extend to 2024, but it only includes Quarter 1. Also, pretrial jail population rate and count are largely unavailable; only some counties in Virginia and West Virginia report them.
 - County-level data are reported quarterly, with estimates provided for four reference dates each year (March 31, June 30, September 30, and December 31).
+- Many states use regional or multi-county jail systems (e.g., WV statewide system, VA regional jails), so counties sharing the same jail receive identical jail population values. These repeated values reflect jail system structure, not actual similarities across counties.
+- Some jail counts may be fractional because linear interpolation has been used to replace missing data and apportions regional jail populations across counties based on population share. These estimation steps naturally create non-integer counts.

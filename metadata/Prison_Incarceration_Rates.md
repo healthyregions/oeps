@@ -59,3 +59,5 @@ These rates were calculated using base rate of county population aged 15-64. The
 
 ### Comments/Notes:
 - County-level data are reported annually.
+- Some states (e.g., Alaska) do not report prison data by county of commitment, so the same statewide prison population count and rate has been assigned to every county. These identical values reflect missing county-level detail, not real uniformity.
+- Some prison counts are estimates or filled using linear interpolation, which can produce fractional values instead of whole numbers. These decimals reflect estimation methods, not actual observed counts.

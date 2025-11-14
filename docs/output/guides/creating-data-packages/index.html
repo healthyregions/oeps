@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="shortcut icon" href="../../img/favicon.ico" />
+<!DOCTYPE html><html class="writer-html5" lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="shortcut icon" href="../../img/favicon.ico">
     <title>Creating Data Packages - OEPS Documentation</title>
-    <link rel="stylesheet" href="../../css/theme.css" />
-    <link rel="stylesheet" href="../../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/theme_extra.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
     
       <script>
         // Current page data
@@ -22,11 +20,12 @@
     <![endif]-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
       <script>hljs.highlightAll();</script> 
- <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
 
 <body class="wy-body-for-nav" role="document">
 
@@ -36,8 +35,8 @@
       <div class="wy-side-nav-search">
           <a href="../.." class="icon icon-home"> OEPS Documentation
         </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here">
   </form>
 </div>
       </div>
@@ -90,17 +89,17 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/build-docs/">build-docs</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/build-explorer-docs/">build-explorer-docs</a>
+                  <li class="toctree-l1"><a class="" href="../../reference/cli/build-explorer-docs.md">None</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/build-explorer-map/">build-explorer-map</a>
+                  <li class="toctree-l1"><a class="" href="../../reference/cli/build-explorer-map.md">None</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/create-data-dictionaries/">create-data-dictionaries</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/create-data-package/">create-data-package</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/inspect-csv/">inspect-csv</a>
+                  <li class="toctree-l1"><a class="" href="../../reference/cli/inspect-csv.md">None</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/merge-data-table/">merge-data-table</a>
+                  <li class="toctree-l1"><a class="" href="../../reference/cli/merge-data-table.md">None</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../reference/cli/validate-registry/">validate-registry</a>
                   </li>
@@ -124,7 +123,7 @@
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
-  <hr/>
+  <hr>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
@@ -135,7 +134,7 @@
 <pre><code>flask create-data-package
 </code></pre>
 <div class="admonition tip">
-<p><a href="../../reference/cli/create-data-package/">view in cli reference &rarr;</a></p>
+<p><a href="../../reference/cli/create-data-package/">view in cli reference →</a></p>
 </div>
 <p>Run on its own, this command will end in a <code>row_stream</code> error. This is because a validation check is attempted that doesn't support foreign keys to shapefiles, which is how we have the package configured. You can avoid this by using either the <code>--skip-foreign-keys</code> or <code>--skip-validation</code> flags as described in the CLI reference for this command.</p>
               
@@ -146,7 +145,7 @@
         <a href="../interacting-with-bigquery/" class="btn btn-neutral float-right" title="Interacting with OEPS Data in BigQuery">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
-  <hr/>
+  <hr>
 
   <div role="contentinfo">
     <!-- Copyright etc -->
@@ -166,10 +165,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../adding-data-to-oeps/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../adding-data-to-oeps/" style="color: #fcfcfc">« Previous</a></span>
     
     
-      <span><a href="../interacting-with-bigquery/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../interacting-with-bigquery/" style="color: #fcfcfc">Next »</a></span>
     
   </span>
 </div>
@@ -184,6 +183,7 @@
         });
     </script>
 
+
+
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-</script></body>
-</html>
+</script></body></html>

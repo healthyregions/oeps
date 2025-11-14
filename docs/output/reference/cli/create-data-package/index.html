@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+<!DOCTYPE html><html class="writer-html5" lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="shortcut icon" href="../../../img/favicon.ico">
     <title>create-data-package - OEPS Documentation</title>
-    <link rel="stylesheet" href="../../../css/theme.css" />
-    <link rel="stylesheet" href="../../../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    <link rel="stylesheet" href="../../../css/theme.css">
+    <link rel="stylesheet" href="../../../css/theme_extra.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
     
       <script>
         // Current page data
@@ -22,11 +20,12 @@
     <![endif]-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
       <script>hljs.highlightAll();</script> 
- <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
 
 <body class="wy-body-for-nav" role="document">
 
@@ -36,8 +35,8 @@
       <div class="wy-side-nav-search">
           <a href="../../.." class="icon icon-home"> OEPS Documentation
         </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here">
   </form>
 </div>
       </div>
@@ -88,9 +87,9 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../build-docs/">build-docs</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../build-explorer-docs/">build-explorer-docs</a>
+                  <li class="toctree-l1"><a class="" href="../build-explorer-docs.md">None</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../build-explorer-map/">build-explorer-map</a>
+                  <li class="toctree-l1"><a class="" href="../build-explorer-map.md">None</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../create-data-dictionaries/">create-data-dictionaries</a>
                   </li>
@@ -106,9 +105,9 @@
     </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../inspect-csv/">inspect-csv</a>
+                  <li class="toctree-l1"><a class="" href="../inspect-csv.md">None</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../merge-data-table/">merge-data-table</a>
+                  <li class="toctree-l1"><a class="" href="../merge-data-table.md">None</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../validate-registry/">validate-registry</a>
                   </li>
@@ -132,7 +131,7 @@
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
-  <hr/>
+  <hr>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
@@ -156,12 +155,22 @@ validation.
 <li>
 <p><code>destination</code>:</p>
 <ul>
-<li>Type: <click.types.Path object at 0x714f4c1e6e30></li>
+<li>Type: <click.types.path object at 0x7290e3ada460></click.types.path></li>
 <li>Default: <code>.temp/data-packages</code></li>
 <li>Usage: <code>--destination
 -d</code></li>
 </ul>
 <p>Output location for export directory. The package will be placed within this directory and given a name generated from the current date and time.</p>
+</li>
+<li>
+<p><code>config</code>:</p>
+<ul>
+<li>Type: STRING</li>
+<li>Default: <code>None</code></li>
+<li>Usage: <code>--config
+-c</code></li>
+</ul>
+<p>Name of folder in data/package_rules that holds configs for the export.</p>
 </li>
 <li>
 <p><code>zip_</code>:</p>
@@ -189,6 +198,15 @@ validation.
 <li>Usage: <code>--no-cache</code></li>
 </ul>
 <p>Force re-download of any remote files.</p>
+</li>
+<li>
+<p><code>check_rules</code>:</p>
+<ul>
+<li>Type: BOOL</li>
+<li>Default: <code>False</code></li>
+<li>Usage: <code>--check-rules</code></li>
+</ul>
+<p>Only check the rules file, don't create any dataframes or output files.</p>
 </li>
 <li>
 <p><code>skip_foreign_keys</code>:</p>
@@ -220,11 +238,20 @@ validation.
 <li>
 <p><code>registry_path</code>:</p>
 <ul>
-<li>Type: <click.types.Path object at 0x714f4c5ee650></li>
+<li>Type: <click.types.path object at 0x7290aa2a8fd0></click.types.path></li>
 <li>Default: <code>oeps/registry</code></li>
 <li>Usage: <code>--registry-path</code></li>
 </ul>
 <p>Optional override for the registry directory.</p>
+</li>
+<li>
+<p><code>data_dir_path</code>:</p>
+<ul>
+<li>Type: <click.types.path object at 0x7290aa2a87f0></click.types.path></li>
+<li>Default: <code>oeps/data</code></li>
+<li>Usage: <code>--data-dir-path</code></li>
+</ul>
+<p>Optional override for the data directory path.</p>
 </li>
 <li>
 <p><code>verbose</code>:</p>
@@ -265,11 +292,15 @@ Options:
   -d, --destination PATH  Output location for export directory. The package
                           will be placed within this directory and given a
                           name generated from the current date and time.
+  -c, --config TEXT       Name of folder in data/package_rules that holds
+                          configs for the export.
   --zip                   Zip the output data package.
   --upload                Upload the zipped data package to S3. Bucket is
                           determined by `AWS_BUCKET_NAME` environment
                           variable.
   --no-cache              Force re-download of any remote files.
+  --check-rules           Only check the rules file, don't create any
+                          dataframes or output files.
   --skip-foreign-keys     Don't define foreign keys in the output data
                           package. This is needed to avoid validation errors
                           that occur when Shapefiles are used in foreign keys.
@@ -277,6 +308,7 @@ Options:
                           output.
   --overwrite             Overwrite output content if it already exists.
   --registry-path PATH    Optional override for the registry directory.
+  --data-dir-path PATH    Optional override for the data directory path.
   --verbose               Enable verbose logging.
   --help                  Show this message and exit.
 </code></pre>
@@ -289,10 +321,10 @@ Options:
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../create-data-dictionaries/" class="btn btn-neutral float-left" title="create-data-dictionaries"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../inspect-csv/" class="btn btn-neutral float-right" title="inspect-csv">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../validate-registry/" class="btn btn-neutral float-right" title="validate-registry">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
-  <hr/>
+  <hr>
 
   <div role="contentinfo">
     <!-- Copyright etc -->
@@ -312,10 +344,10 @@ Options:
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../create-data-dictionaries/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../create-data-dictionaries/" style="color: #fcfcfc">« Previous</a></span>
     
     
-      <span><a href="../inspect-csv/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../validate-registry/" style="color: #fcfcfc">Next »</a></span>
     
   </span>
 </div>
@@ -330,6 +362,7 @@ Options:
         });
     </script>
 
+
+
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-</script></body>
-</html>
+</script></body></html>

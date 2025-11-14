@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="shortcut icon" href="../img/favicon.ico" />
+<!DOCTYPE html><html class="writer-html5" lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="shortcut icon" href="../img/favicon.ico">
     <title>Overview - OEPS Documentation</title>
-    <link rel="stylesheet" href="../css/theme.css" />
-    <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/theme_extra.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
     
       <script>
         // Current page data
@@ -22,11 +20,12 @@
     <![endif]-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
       <script>hljs.highlightAll();</script> 
- <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
 
 <body class="wy-body-for-nav" role="document">
 
@@ -36,8 +35,8 @@
       <div class="wy-side-nav-search">
           <a href=".." class="icon icon-home"> OEPS Documentation
         </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here">
   </form>
 </div>
       </div>
@@ -96,17 +95,17 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../reference/cli/build-docs/">build-docs</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../reference/cli/build-explorer-docs/">build-explorer-docs</a>
+                  <li class="toctree-l1"><a class="" href="../reference/cli/build-explorer-docs.md">None</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../reference/cli/build-explorer-map/">build-explorer-map</a>
+                  <li class="toctree-l1"><a class="" href="../reference/cli/build-explorer-map.md">None</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../reference/cli/create-data-dictionaries/">create-data-dictionaries</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../reference/cli/create-data-package/">create-data-package</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../reference/cli/inspect-csv/">inspect-csv</a>
+                  <li class="toctree-l1"><a class="" href="../reference/cli/inspect-csv.md">None</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../reference/cli/merge-data-table/">merge-data-table</a>
+                  <li class="toctree-l1"><a class="" href="../reference/cli/merge-data-table.md">None</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../reference/cli/validate-registry/">validate-registry</a>
                   </li>
@@ -130,7 +129,7 @@
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
-  <hr/>
+  <hr>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
@@ -144,7 +143,7 @@
 <li><a href="table-sources/">table sources</a></li>
 <li><a href="geodata-sources/">geodata sources</a></li>
 </ul>
-<p><a class="glightbox" href="../img/registry-simple.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="basic registry diagram" src="../img/registry-simple.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/registry-simple.png" data-desc-position="bottom"><img alt="basic registry diagram" src="../img/registry-simple.png"></a></p>
 <h2 id="rationale">Rationale</h2>
 <p>The core rationale for this setup is to treat individual variables as the lowest common denominator within the system, allowing the concept of a variable to be shared across as many tables and data sources as needed. For example, "Total Population" is a variable that has a value in 16 different tables--by state in 2010, by county in 2010, by state in 2000, etc. The registry allows us to define this variable one time, and then link it with multiple data sources, each of which in turn links to the proper geospatial dataset.</p>
 <p>Thus, the registry seeks to achieve the following:</p>
@@ -158,7 +157,7 @@
 <h2 id="structure">Structure</h2>
 <p>The <code>variables.json</code> file holds a comprehensive lookup of <em>all</em> individual variables that are present in any source file, each defined by a suite of metadata properties that describe. One of these properties, <code>table_sources</code> is a list of ids for all table sources in which a value for this variable can be found.</p>
 <p>Each table source (CSV) is in turn described by a JSON file in the <code>table_sources</code> directory, and linked via a <code>geodata_source</code> property to a similar entry in the <code>geodata_sources</code> directory. <em>All joins must be performed on the HEROP_ID field.</em></p>
-<p><a class="glightbox" href="../img/registry-complex.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="illustration of connections between registry content" src="../img/registry-complex.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/registry-complex.png" data-desc-position="bottom"><img alt="illustration of connections between registry content" src="../img/registry-complex.png"></a></p>
 <p>The diagram above illustrates how three different example variables would be defined and connected to data sources. Only the necessary properties are shown for each item, but a detailed explanation of all properties can be found in the following sections.</p>
 <p>To explain the example:</p>
 <ul>
@@ -171,10 +170,10 @@
 <h2 id="whats-in-the-registry">What's in the Registry?</h2>
 <p>The easiest way to browse all entries in the registry is to filter through the following CSV files that are stored in Github.</p>
 <ul>
-<li><a href="https://github.com/healthyregions/oeps/blob/main/docs/src/reference/registry/metadata.csv" target="_blank">metadata.csv &nearr;</a></li>
-<li><a href="https://github.com/healthyregions/oeps/blob/main/docs/src/reference/registry/variables.csv" target="_blank">variables.csv &nearr;</a></li>
-<li><a href="https://github.com/healthyregions/oeps/blob/main/docs/src/reference/registry/table_sources.csv" target="_blank">table_sources.csv &nearr;</a></li>
-<li><a href="https://github.com/healthyregions/oeps/blob/main/docs/src/reference/registry/geodata_sources.csv" target="_blank">geodata_sources.csv &nearr;</a></li>
+<li><a href="https://github.com/healthyregions/oeps/blob/main/docs/src/reference/registry/metadata.csv" target="_blank">metadata.csv ↗</a></li>
+<li><a href="https://github.com/healthyregions/oeps/blob/main/docs/src/reference/registry/variables.csv" target="_blank">variables.csv ↗</a></li>
+<li><a href="https://github.com/healthyregions/oeps/blob/main/docs/src/reference/registry/table_sources.csv" target="_blank">table_sources.csv ↗</a></li>
+<li><a href="https://github.com/healthyregions/oeps/blob/main/docs/src/reference/registry/geodata_sources.csv" target="_blank">geodata_sources.csv ↗</a></li>
 </ul>
 <p>These files are derived from the JSON files that make up the registry, and should generatelly be up-to-date.</p>
               
@@ -185,7 +184,7 @@
         <a href="metadata/" class="btn btn-neutral float-right" title="Metadata">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
-  <hr/>
+  <hr>
 
   <div role="contentinfo">
     <!-- Copyright etc -->
@@ -205,10 +204,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../guides/generating-derived-documentation/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../guides/generating-derived-documentation/" style="color: #fcfcfc">« Previous</a></span>
     
     
-      <span><a href="metadata/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="metadata/" style="color: #fcfcfc">Next »</a></span>
     
   </span>
 </div>
@@ -223,6 +222,7 @@
         });
     </script>
 
+
+
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-</script></body>
-</html>
+</script></body></html>

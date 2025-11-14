@@ -1,0 +1,11 @@
+services:
+  oeps:
+    image: ghcr.io/herop/oeps-backend
+    env_file:
+      - .env
+    build:
+      context: .
+    volumes:
+      - ../explorer:/home/explorer
+      - ./oeps/data:/home/herop/oeps/data
+      - ./oeps/registry:/home/herop/oeps/registry
