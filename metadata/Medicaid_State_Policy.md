@@ -1,8 +1,8 @@
-**Meta Data Name**: Medicaid State Policy
+**Meta Data Name**: Medicaid State Policy  
 **Date Added**: November 05, 2025  
-**Author**: Saket Pochiraju
-**Date Last Modified**: November 14, 2025    
-**Last Modified By**: Saket Pochiraju  
+**Author**: Saket Pochiraju  
+**Date Last Modified**: November 14, 2025      
+**Last Modified By**: Saket Pochiraju    
 
 ### Theme: 
 Policy
