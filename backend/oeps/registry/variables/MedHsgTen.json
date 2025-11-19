@@ -1,0 +1,10 @@
+{
+  "name": "MedHsgTen",
+  "title": "Median Housing Tenure",
+  "type": "string",
+  "example": "10to17",
+  "description": "Median time period occupant moved into housing unit by tract",
+  "longitudinal": 
+  "analysis": 
+  "metadata": "Social_Capital",
+  "table_sources": 
