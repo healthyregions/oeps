@@ -1,0 +1,11 @@
+{
+  "name": "LibPerCap",
+  "title": "Libraries per Capita",
+  "type": "number",
+  "example": "0.125",
+  "description": "Libraries per capita by census tract",
+  "longitudinal": 
+  "analysis": 
+  "metadata": "Social_Capital",
+  "table_sources": 
+}
