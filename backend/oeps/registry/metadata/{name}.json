@@ -1,0 +1,9 @@
+{
+  "name": "Social_Capital",
+  "theme": "Social",
+  "construct": "Social capital index",
+  "proxy": "Social capital index, Housing tenure, Libraries per capita, Religious institutions per capita, ACS response rate",
+  "url": "https://github.com/healthyregions/oeps/blob/socialcapital/metadata/Social_Capital.md",
+  "source": "ACS 2018, 2023; Overture",
+  "source_long": "American Community Survey 2018 5-year estimates, 2023 5-year estimates;"
+}
