@@ -97,8 +97,8 @@ Note: Unpopulated census tracts removed from dataset.
 |:--|:--|:--|:--|:--|
 | Housing Tenure | MedHsgTen | Median time period occupant moved into housing unit by tract | 2018, 2023 | Tract |
 | Long-Term Occupancy | LngTermP | Percentage of population who moved into their current housing approximately more than 20 years ago | 2018, 2023 | Tract|
-| Libraries | LibPerCap | Libraries per capita | 2025 | Tract |
-| Religious Institutions| RlgPerCap | Religious institutions per capita | 2025 | Tract |
+| Libraries per Capita | LibPerCap | Libraries per capita | 2025 | Tract |
+| Religious Institutions per Capita| RlgPerCap | Religious institutions per capita | 2025 | Tract |
 | Response Rate| RspRt | Ratio of units interviewed to units intended for interview | 2018, 2023 | County |
 
 
