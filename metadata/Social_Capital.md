@@ -99,7 +99,7 @@ Note: Unpopulated census tracts removed from dataset.
 | Long-Term Occupancy | LngTermP | Percentage of population who moved into their current housing approximately more than 20 years ago | 2018, 2023 | Tract|
 | Libraries per Capita | LibPerCap | Libraries per capita | 2025 | Tract |
 | Religious Institutions per Capita| RlgPerCap | Religious institutions per capita | 2025 | Tract |
-| Response Rate| RspRt | Ratio of units interviewed to units intended for interview | 2018, 2023 | County |
+| Response Rate| RspRt | Percent of units interviewed from total units intended for interview | 2018, 2023 | County |
 
 
 ### Data Limitations
