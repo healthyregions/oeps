@@ -95,7 +95,7 @@ Note: Unpopulated census tracts removed from dataset.
 
 | Variable | Variable ID | Description | Years Available | Spatial Scale |
 |:--|:--|:--|:--|:--|
-| Housing Tenure | MedHsgTen | Median time period householder moved into unit by tract | 2018, 2023 | Tract |
+| Housing Tenure | MedHsgTen | Median time period occupant moved into housing unit by tract | 2018, 2023 | Tract |
 | Long-Term Occupancy | LngTermP | Percentage of population who moved into their current housing approximately more than 20 years ago | 2018, 2023 | Tract|
 | Libraries | LibPerCap | Libraries per capita | 2025 | Tract |
 | Religious Institutions| RlgPerCap | Religious institutions per capita | 2025 | Tract |
