@@ -6,7 +6,6 @@ from oeps.commands.build_docs import build_docs
 from oeps.commands.build_explorer import build_explorer
 from oeps.commands.clean_explorer_bucket import clean_explorer_bucket
 from oeps.commands.create_data_package import create_data_package
-from oeps.commands.create_data_dictionaries import create_data_dictionaries
 from oeps.commands.create_table_source import create_table_source
 from oeps.commands.validate_registry import validate_registry
 from oeps.commands.merge_csv import merge_csv
@@ -28,7 +27,6 @@ def create_app():
     app.cli.add_command(build_docs)
     app.cli.add_command(build_explorer)
     app.cli.add_command(clean_explorer_bucket)
-    app.cli.add_command(create_data_dictionaries)
     app.cli.add_command(create_table_source)
     app.cli.add_command(create_data_package)
     app.cli.add_command(merge_csv)
