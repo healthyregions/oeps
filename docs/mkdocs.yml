@@ -1,10 +1,10 @@
-site_name: OEPS Documentation
+site_name: OEPS Data Ecosystem
 nav:
-  - Introduction:
-    - overview.md
+  - Background:
     - legacy-migration.md
-  - Developer Guides:
-    - guides/install.md
+  - Guides:
+    - guides/install-explorer.md
+    - guides/install-backend.md
     - guides/getting-started-with-cli.md
     - guides/provisioning-oeps-explorer.md
     - guides/adding-data-to-oeps.md
@@ -18,17 +18,8 @@ nav:
     - registry/variables.md
     - registry/table-sources.md
     - registry/geodata-sources.md
-  - CLI Reference:
-    - reference/cli/bigquery-export.md
-    - reference/cli/bigquery-upload.md
-    - reference/cli/build-docs.md
-    - reference/cli/build-explorer-docs.md
-    - reference/cli/build-explorer-map.md
-    - reference/cli/create-data-dictionaries.md
-    - reference/cli/create-data-package.md
-    - reference/cli/inspect-csv.md
-    - reference/cli/merge-data-table.md
-    - reference/cli/validate-registry.md
+  - CLI:
+    - reference/cli/command-line-reference.md
 plugins:
   - search
   - glightbox
