@@ -4,10 +4,14 @@ The backend app includes a **registry** directory that holds a structured repres
 
 The registry is made up of these four components:
 
-- [metadata](./metadata.md)
-- [variables](./variables.md)
-- [table sources](./table-sources.md)
-- [geodata sources](./geodata-sources.md)
+- [metadata](./data-model.md#metadata)
+    - One entry per metadata document
+- [variables](./data-model.md#variables)
+    - One entry per variable
+- [table sources](./data-model.md#table-sources)
+    - One entry per table source, i.e. per CSV file
+- [geodata sources](./data-model.md#geodata-sources)
+    - One entry per geospatial data source used for joins
 
 ![basic registry diagram](../img/registry-simple.png)
 
@@ -44,14 +48,3 @@ To explain the example:
 Though these three variables are present in four different data source tables, you will notice that these tables only link to three different geodata sources. This is because both of the state-level data sources, 2010 and 2000, can be joined to the same single `states` geodata source.
 
 While this is a very small example (currently we have over 300 variables), it should be enough to illustrate the theoretical flexibility of the setup.
-
-## What's in the Registry?
-
-The easiest way to browse all entries in the registry is to filter through the following CSV files that are stored in Github.
-
-- <a href="https://github.com/healthyregions/oeps/blob/main/docs/src/reference/registry/metadata.csv" target="_blank">metadata.csv &nearr;</a>
-- <a href="https://github.com/healthyregions/oeps/blob/main/docs/src/reference/registry/variables.csv" target="_blank">variables.csv &nearr;</a>
-- <a href="https://github.com/healthyregions/oeps/blob/main/docs/src/reference/registry/table_sources.csv" target="_blank">table_sources.csv &nearr;</a>
-- <a href="https://github.com/healthyregions/oeps/blob/main/docs/src/reference/registry/geodata_sources.csv" target="_blank">geodata_sources.csv &nearr;</a>
-
-These files are derived from the JSON files that make up the registry, and should generatelly be up-to-date.

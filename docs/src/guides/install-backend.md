@@ -1,59 +1,17 @@
-# Installing the Components
+# Installing the OEPS Backend
 
-The OEPS Explorer, OEPS Backend (which contains the registry), and this set of documentation each live in different directories of the same repository: [github.com/healthyregions/oeps](https://github.com/healthyregions/oeps). Each component operates independently, so there is no need to install them all at once.
+The OEPS Backend is a suite of command line tools, built with the Flask framework. However:
 
+- Using the backend does not require a connection to a proper database like SQLite or Postgres
+- The backend does not run as a service, and there are no actual API routes using the typical Flask patterns]
 
-To begin, clone the repo locally,
+Instead, the backend is better thought of as a suite of command line operations that modify static content. After an operation has been performed, there will typically be changes to registry or data files, and it is necessary to commit those changes and then create a pull request.
 
-```shell
-git clone https://github.com/healthyregions/oeps
-```
+In the future, perhaps it will make sense to convert some of the operations to API routes, but for now **Flask is merely a wrapper for command line arguments**.
 
-then you can install any of the following components:
+## Using Docker
 
-- [OEPS Explorer](#oeps-explorer)
-- [OEPS Backend](#oeps-backend)
-- [OEPS Documentation](#oeps-documentation)
-
-## OEPS Explorer
-
-To get started locally with the explorer:
-
-```
-
-cd oeps/explorer
-yarn install
-cp .env.example .env
-```
-
-Some environment variable values will already be set in `.env`, but you'll need to add a Mapbox token. Then run
-
-```
-yarn dev
-```
-
-and open `http://localhost:3000`
-
-### More about Mapbox dependencies
-
-Two Mapbox Tilesets must be configured externally and linked within this app, one for Zip Code Tabulation Areas (ZCTAs) and one for Census Tracts. These geometries are joined with CSV tables to drive map visualizations.
-
-Additionally, a basemap style must be provided, as well as a Mapbox access token. All of these elements are (currently) provided through environment variables, so make sure your `.env` file has the following:
-
-```
-NEXT_PUBLIC_MAPBOX_TOKEN=<your token>
-NEXT_PUBLIC_MAPBOX_STYLE="mapbox://styles/<account id>/<style id>"
-```
-
-## OEPS Backend
-
-The OEPS Backend is a suite of command line tools, built within the Flask framework. _Using the backend does not require a long running process or external database._ It simply automates certain operations that are performed on files within the repository. After an operation has been performed, it is typically necessary to commit the changes and then create a pull request. In the future, perhaps it will make sense to convert some of the operations to API routes, but for now Flask is merely a wrapper.
-
-### Install Python dependencies
-
-#### Using Docker
-
-The easiest way to run backend commands is to use Docker--no need to create a Python virtual environment. Simply enter the backend directory and run:
+The easiest way to run backend commands is to use Docker. Simply enter the backend directory and run:
 
 ```
 docker compose run -it oeps [CLI COMMAND]
@@ -75,7 +33,9 @@ docker compose run -it oeps [CLI COMMAND]
 
 Because the build process takes a little while, you may want to create a local install for more rapid development.
 
-#### Local install
+## Local install
+
+To make a local install without Docker, just install the Python requirements into a Python virtual environment.
 
 1. Enter the backend directory
 
