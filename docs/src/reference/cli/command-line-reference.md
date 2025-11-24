@@ -1,63 +1,4 @@
 # Command Line Reference
-## create-data-dictionaries
-
-Create the human readable, MS Excel data dictionaries based on registry content.
-
-###### Usage
-
-```
-Usage: create-data-dictionaries [OPTIONS]
-```
-
-###### Arguments
-
-
-###### Options
-
-* `destination`:
-    * Type: <click.types.Path object at 0x7007e65ee0d0>
-    * Default: `../docs/src/reference/data-dictionaries/`
-    * Usage: `--destination
--d`
-
-    Output directory for new dictionaries, if not supplied will be placed within data dir.
-
-
-
-* `registry_path`:
-    * Type: <click.types.Path object at 0x7007e65ee7c0>
-    * Default: `oeps/registry`
-    * Usage: `--registry-path`
-
-    Optional override for the registry directory.
-
-
-
-* `help`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--help`
-
-    Show this message and exit.
-
-
-
-###### CLI Help
-
-```
-Usage: create-data-dictionaries [OPTIONS]
-
-  Create the human readable, MS Excel data dictionaries based on registry
-  content.
-
-Options:
-  -d, --destination PATH  Output directory for new dictionaries, if not
-                          supplied will be placed within data dir.
-  --registry-path PATH    Optional override for the registry directory.
-  --help                  Show this message and exit.
-```
-
-
 ## clean-explorer-bucket
 
 Deletes all files from the S3 bucket which are not mentioned in the local
@@ -77,7 +18,7 @@ Usage: clean-explorer-bucket [OPTIONS]
 ###### Options
 
 * `explorer_path`:
-    * Type: <click.types.Path object at 0x777f5bf2ce50>
+    * Type: <click.types.Path object at 0x730360dacaf0>
     * Default: `../explorer`
     * Usage: `--explorer-path`
 
@@ -135,7 +76,7 @@ Usage: create-data-package [OPTIONS]
 ###### Options
 
 * `destination`:
-    * Type: <click.types.Path object at 0x7779fa17f4c0>
+    * Type: <click.types.Path object at 0x7f54857d78e0>
     * Default: `.temp/data-packages`
     * Usage: `--destination
 -d`
@@ -218,7 +159,7 @@ Usage: create-data-package [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7779c092d070>
+    * Type: <click.types.Path object at 0x7f54857ece20>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -227,7 +168,7 @@ Usage: create-data-package [OPTIONS]
 
 
 * `data_dir_path`:
-    * Type: <click.types.Path object at 0x7779c092d550>
+    * Type: <click.types.Path object at 0x7f54857eccd0>
     * Default: `oeps/data`
     * Usage: `--data-dir-path`
 
@@ -335,7 +276,7 @@ Usage: remove-variable [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x74067c46ee20>
+    * Type: <click.types.Path object at 0x76616f12d220>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -432,7 +373,7 @@ Usage: bigquery-upload [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7274682ed040>
+    * Type: <click.types.Path object at 0x7013e0a2eb80>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -493,7 +434,7 @@ Usage: build-explorer [OPTIONS]
 ###### Options
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x794c8022ee20>
+    * Type: <click.types.Path object at 0x7d88d41ace80>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -502,7 +443,7 @@ Usage: build-explorer [OPTIONS]
 
 
 * `explorer_path`:
-    * Type: <click.types.Path object at 0x794c8022e460>
+    * Type: <click.types.Path object at 0x7d88d41aca30>
     * Default: `../explorer`
     * Usage: `--explorer-path`
 
@@ -618,8 +559,17 @@ Usage: build-docs [OPTIONS]
 
 
 
+* `data_dictionaries_only`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--data-dictionaries-only`
+
+    Only build the data dictionaries.
+
+
+
 * `registry_path`:
-    * Type: <click.types.Path object at 0x771bdd8ecc10>
+    * Type: <click.types.Path object at 0x76f2d636c910>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -646,11 +596,12 @@ Usage: build-docs [OPTIONS]
   Optionally only generate one of the types of docs.
 
 Options:
-  --bq-only             Only build the BigQuery reference docs.
-  --cli-only            Only build the CLI docs.
-  --registry-only       Only build the registry summary docs.
-  --registry-path PATH  Optional override for the registry directory.
-  --help                Show this message and exit.
+  --bq-only                 Only build the BigQuery reference docs.
+  --cli-only                Only build the CLI docs.
+  --registry-only           Only build the registry summary docs.
+  --data-dictionaries-only  Only build the data dictionaries.
+  --registry-path PATH      Optional override for the registry directory.
+  --help                    Show this message and exit.
 ```
 
 
@@ -770,7 +721,7 @@ Usage: merge-csv [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7cda6ff6d820>
+    * Type: <click.types.Path object at 0x7c8fb206cd00>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -873,7 +824,7 @@ Usage: move-variable [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7947a21ecdf0>
+    * Type: <click.types.Path object at 0x7df3f602cc10>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -968,7 +919,7 @@ Usage: create-table-source [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x71cc1c4aeb20>
+    * Type: <click.types.Path object at 0x73f15852cdc0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -1022,7 +973,7 @@ Usage: validate-registry [OPTIONS]
 ###### Options
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x770a2f0ecc10>
+    * Type: <click.types.Path object at 0x752e0feecdf0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 

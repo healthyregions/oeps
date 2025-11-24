@@ -4,7 +4,23 @@
 
 ## tabular
 
-51 tables in this dataset.
+58 tables in this dataset.
+
+### tract-sdoh-2014
+
+ID: `oeps-391119.tabular.tract-sdoh-2014`
+
+7 columns in this table.
+
+Name|Data Type|Description
+-|-|-|-
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+UrbCoreInd|NUMERIC|Raw Urban Core Opportunity Index (https://sdohatlas.github.io/)
+MicaInd|NUMERIC|Raw Mixed Immigrant Cohesion and Accessibility (MICA) Index (https://sdohatlas.github.io/)
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+NeighbTyp|STRING|Categorical, one of seven neighborhood (tract-level) typologies: 1 = Rural Affordable; 2 = Suburban Affluent; 3 = Suburban Affordable; 4 = Extreme Poverty; 5 = Multilingual Working; 6 = Urban Core Opportunity; 7 = Sparse Areas
+SocEcAdvIn|NUMERIC|Raw Socioeconomic Advantage Index (https://sdohatlas.github.io/)
+LimMobInd|NUMERIC|Raw Limited Mobility Index (https://sdohatlas.github.io/)
 
 ### tract-2022
 
@@ -26,7 +42,7 @@ SviTh2|NUMERIC|SVI Ranking, Theme 2: Household Composition & Disability
 
 ID: `oeps-391119.tabular.county-2020`
 
-117 columns in this table.
+116 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
@@ -102,7 +118,6 @@ EduHsP|NUMERIC|
 SviTh3|NUMERIC|SVI Ranking, Theme 3: Minority Status & Language
 LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago
 BupCtTmWk|INTEGER|Number of tracts with buprenorphine provider within a 30-min walking range
-EduP|NUMERIC|Percentage of population employed in educational services industry
 SutpTmDrP|NUMERIC|Percent of tracts with Substance Use Treatment program within a 30-minute driving range.
 BachelorsP|NUMERIC|
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
@@ -229,46 +244,72 @@ SviTh2|NUMERIC|SVI Ranking, Theme 2: Household Composition & Disability
 
 ID: `oeps-391119.tabular.tract-2025`
 
-36 columns in this table.
+62 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
+HivCntDr|INTEGER|Number of HIV testing providers within a 30-minute drive
+HivTmDr|NUMERIC|Driving time from origin to nearest HIV testing provider (minutes)
+HivMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest HIV testing provider (miles)
 MetCntWk30|INTEGER|Count of methadone providers in 60 minute walking time threshold
 NaltCntWk30|INTEGER|Count of naltrexone providers in 30 minute walking time threshold
+FqhcMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest FQHC, in miles
 NaltTmDr|NUMERIC|Driving time (minutes) to nearest naltrexone provider
+MhCntDr|INTEGER|Count of MH providers within a 30-minute driving threshold
+HospCntDr|INTEGER|Count of hospitals within a 30-minute driving threshold
 BupCntDr60|NUMERIC|Count of buprenorphine providers in 60 minute drive time threshold
 BupCntBk60|INTEGER|Count of buprenorphine providers in 60 minute biking time threshold
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 NaltMinDis|NUMERIC|Euclidean distance (miles) to nearest naltrexone/Vivitrol provider
+TlBupTmWk|NUMERIC|Estimated walking time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services
+HospTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip hospital destination centroid, in minutes
 MetCntBk60|INTEGER|Count of methadone providers in 60 minute biking time threshold
 MetMinDis|NUMERIC|Euclidean distance (miles) to nearest methadone provider
+FqhcCntDr|INTEGER|Count of FQHCs within a 30-minute driving threshold
 BupTmDr|NUMERIC|Driving time (minutes) to nearest buprenorphine provider
+TlBupCntDr30|INTEGER|Total number of providers offering buprenorphine treatment via telemedicine/telehealth located within a 30-minute driving time threshold
 MetTmBk|NUMERIC|Biking time (minutes) to nearest methadone provider
 NaltTmWk|NUMERIC|Walking time (minutes) to nearest naltrexone provider
+TlBupTmDr|NUMERIC|Estimated driving time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services
+TlBupCntDr60|INTEGER|Total number of providers offering buprenorphine treatment via telemedicine/telehealth located within a 60-minute driving time threshold
+FqhcTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes
 BupMinDis|NUMERIC|Euclidean distance (miles) to nearest buprenorphine provider
 NaltCntDr60|NUMERIC|Count of naltrexone providers in 60 minute drive time threshold
 OtpMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles
 MetCntBk30|INTEGER|Count of methadone providers in 30 minute biking time threshold
 MetCntDr60|NUMERIC|Count of methadone providers in 60 minute drive time threshold
+HcvCntDr|INTEGER|Number of HCV testing providers within a 30-minute drive
+TlBupCntBk30|INTEGER|Total number of providers offering buprenorphine treatment via telemedicine/telehealth located within a 30-minute biking time threshold
 OtpTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes
+TlBupMinDis|NUMERIC|Euclidean distance (in miles) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services
 OtpCntDr|INTEGER|Count of OTPs within a 30-minute driving threshold
 NaltCntBk30|INTEGER|Count of naltrexone providers in 30 minute biking time threshold
 BupCntWk30|INTEGER|Count of buprenorphine providers in 30 minute walking time threshold
 MetCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold
+HospMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest hospital, in miles
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 NaltCntWk60|INTEGER|Count of naltrexone providers in 60 minute walking time threshold
 MetCntWk60|INTEGER|Count of methadone providers in 30 minute walking time threshold
+HcvTmDr|NUMERIC|Driving time from origin to nearest HCV testing provider (minutes)
+SutCntDr|INTEGER|Count of SUT services within a 30-minute driving threshold
+MhMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest mental health provider, in miles
 NaltCntDr30|INTEGER|Count of naltrexone providers in 30 minute drive time threshold
+HcvMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest HCV testing provider (miles)
 NaltTmBk|NUMERIC|Biking time (minutes) to nearest naltrexone provider
 BupTmBk|NUMERIC|Biking time (minutes) to nearest buprenorphine provider
 MoudMinDis|NUMERIC|Euclidean distance (miles) to nearest MOUD (all types)
+SutMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest SUT service location, in miles
+TlBupTmBk|NUMERIC|Estimated biking time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services
 MetTmWk|NUMERIC|Walking time (minutes) to nearest methadone provider
 NaltCntBk60|INTEGER|Count of naltrexone providers in 60 minute biking time threshold
 MetTmDr|NUMERIC|Driving time (minutes) to nearest methadone provider
 BupCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold
 BupTmWk|NUMERIC|Walking time (minutes) to nearest buprenorphine provider
+MhTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip mental health provider destination centroid, in minutes
 BupCntWk60|INTEGER|Count of buprenorphine providers in 60 minute walking time threshold
+TlBupCntWk30|INTEGER|Total number of providers offering buprenorphine treatment via telemedicine/telehealth located within a 30-minute walking time threshold
 BupCntBk30|INTEGER|Count of buprenorphine providers in 30 minute biking time threshold
+SutTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip SUT destination centroid, in minutes
 
 ### tract-1980
 
@@ -321,6 +362,20 @@ AmIndP|NUMERIC|Percentage of population with race identified as Native American 
 FemP|NUMERIC|
 Age15_44P|NUMERIC|Percentage of population below 45 years of age
 
+### tract-ruca-2010
+
+ID: `oeps-391119.tabular.tract-ruca-2010`
+
+5 columns in this table.
+
+Name|Data Type|Description
+-|-|-|-
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+Ruca1|STRING|Primary RUCA Code
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+Rurality|STRING|Urban/Suburban/Rural
+Ruca2|STRING|Secondary RUCA Code
+
 ### county-2021
 
 ID: `oeps-391119.tabular.county-2021`
@@ -340,7 +395,7 @@ OtpCtTmDr|INTEGER|Number of tracts within 30-min of opioid treatment program dri
 
 ID: `oeps-391119.tabular.tract-2023`
 
-82 columns in this table.
+81 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
@@ -397,7 +452,6 @@ HHSize|NUMERIC|
 TwoRaceP|NUMERIC|
 EduHsP|NUMERIC|
 LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago
-EduP|NUMERIC|Percentage of population employed in educational services industry
 BachelorsP|NUMERIC|
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
@@ -431,7 +485,7 @@ FemP|NUMERIC|
 
 ID: `oeps-391119.tabular.zcta-2020`
 
-110 columns in this table.
+109 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
@@ -502,7 +556,6 @@ TwoRaceP|NUMERIC|
 EduHsP|NUMERIC|
 LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago
 MetCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold
-EduP|NUMERIC|Percentage of population employed in educational services industry
 BachelorsP|NUMERIC|
 HospMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest hospital, in miles
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
@@ -550,11 +603,10 @@ FemP|NUMERIC|
 
 ID: `oeps-391119.tabular.tract-2010`
 
-55 columns in this table.
+48 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
-TotSp|INTEGER|Number of specialty physicians in area
 BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone
 Ovr18P|NUMERIC|
 MetRm60|NUMERIC|Methadone access 60 minutes (RAAM)
@@ -569,14 +621,11 @@ AmIndE|NUMERIC|Count population with race identified as Native American or Alask
 PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone
 WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
 GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)
-TotPcp|INTEGER|Number of primary care providers in area
 SRatio18|NUMERIC|
 EduNoHsP|NUMERIC|
-Ruca1|STRING|Primary RUCA Code
 PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
 PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
 MaleP|NUMERIC|
-PcpPer100k|NUMERIC|PCPs per total Population X 100,000
 BlackE|NUMERIC|Count population with race identified as Black or African American alone. Estimated count in non-decennial years.
 Ovr21P|NUMERIC|
 HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
@@ -585,7 +634,6 @@ TwoRaceP|NUMERIC|
 EduHsP|NUMERIC|
 BachelorsP|NUMERIC|
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
-Rurality|STRING|Urban/Suburban/Rural
 MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
 SomeCollegeP|NUMERIC|
 OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
@@ -595,13 +643,11 @@ HisE|NUMERIC|Count persons with ethnicity identified as of Hispanic or Latinx or
 TotPop|INTEGER|Total population
 MetRm90|NUMERIC|Methadone access 90 minutes (RAAM)
 PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
-Ruca2|STRING|Secondary RUCA Code
 AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
 MetRm30|NUMERIC|Methadone access 30 minutes (RAAM)
 Age15_44|INTEGER|Total population between age 15-44
 TotVetPop|INTEGER|Total Veteran population
 VetP|NUMERIC|Percent of population that are veterans
-SpPer100k|NUMERIC|Specialty Physicians per total Population X 100,000
 WhiteP|NUMERIC|Percentage of population with race identified as white alone
 SRatio|NUMERIC|
 UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
@@ -623,6 +669,20 @@ OtpMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest OTP ser
 OtpTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes
 OtpCntDr|INTEGER|Count of OTPs within a 30-minute driving threshold
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+
+### zcta-ruca-2010
+
+ID: `oeps-391119.tabular.zcta-ruca-2010`
+
+5 columns in this table.
+
+Name|Data Type|Description
+-|-|-|-
+Ruca1|STRING|Primary RUCA Code
+ZCTA5|STRING|Census Bureau designated zip code tabulation area, or the rough area that contains five digit zip codes.
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+Rurality|STRING|Urban/Suburban/Rural
+Ruca2|STRING|Secondary RUCA Code
 
 ### tract-1990
 
@@ -815,7 +875,7 @@ HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations
 
 ID: `oeps-391119.tabular.tract-2020`
 
-124 columns in this table.
+123 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
@@ -895,7 +955,6 @@ EduHsP|NUMERIC|
 SviTh3|NUMERIC|SVI Ranking, Theme 3: Minority Status & Language
 LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago
 MetCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold
-EduP|NUMERIC|Percentage of population employed in educational services industry
 BachelorsP|NUMERIC|
 HospMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest hospital, in miles
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
@@ -1074,7 +1133,7 @@ HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic uni
 
 ID: `oeps-391119.tabular.zcta-2023`
 
-90 columns in this table.
+89 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
@@ -1134,7 +1193,6 @@ TwoRaceP|NUMERIC|
 EduHsP|NUMERIC|
 LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago
 IsoAs|NUMERIC|Isolation index for Asian and non-Hispanic White residents
-EduP|NUMERIC|Percentage of population employed in educational services industry
 BachelorsP|NUMERIC|
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
@@ -1222,7 +1280,7 @@ Age15_44P|NUMERIC|Percentage of population below 45 years of age
 
 ID: `oeps-391119.tabular.tract-2018`
 
-76 columns in this table.
+75 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
@@ -1273,7 +1331,6 @@ DisbP|NUMERIC|Percentage of civilian non institutionalized population with a dis
 EduHsP|NUMERIC|
 SviTh3|NUMERIC|SVI Ranking, Theme 3: Minority Status & Language
 LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago
-EduP|NUMERIC|Percentage of population employed in educational services industry
 BachelorsP|NUMERIC|
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
@@ -1373,7 +1430,7 @@ Age15_44P|NUMERIC|Percentage of population below 45 years of age
 
 ID: `oeps-391119.tabular.county-2023`
 
-91 columns in this table.
+90 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
@@ -1434,7 +1491,6 @@ TwoRaceP|NUMERIC|
 EduHsP|NUMERIC|
 LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago
 IsoAs|NUMERIC|Isolation index for Asian and non-Hispanic White residents
-EduP|NUMERIC|Percentage of population employed in educational services industry
 BachelorsP|NUMERIC|
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
@@ -1473,11 +1529,10 @@ FemP|NUMERIC|
 
 ID: `oeps-391119.tabular.state-2010`
 
-47 columns in this table.
+45 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
-TotSp|INTEGER|Number of specialty physicians in area
 BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone
 Ovr18P|NUMERIC|
 SRatio65|NUMERIC|
@@ -1491,7 +1546,6 @@ AmIndE|NUMERIC|Count population with race identified as Native American or Alask
 PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone
 WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
 GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)
-TotPcp|INTEGER|Number of primary care providers in area
 SRatio18|NUMERIC|
 EduNoHsP|NUMERIC|
 PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
@@ -1597,6 +1651,19 @@ TwoRaceE|NUMERIC|Count persons identifying as two or more races. Estimated count
 DsmBlk|NUMERIC|Dissimilarity index for Black and non-Hispanic White residents
 FemP|NUMERIC|
 
+### state-providers-2010
+
+ID: `oeps-391119.tabular.state-providers-2010`
+
+4 columns in this table.
+
+Name|Data Type|Description
+-|-|-|-
+TotSp|INTEGER|Number of specialty physicians in area
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+TotPcp|INTEGER|Number of primary care providers in area
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+
 ### county-2015
 
 ID: `oeps-391119.tabular.county-2015`
@@ -1609,6 +1676,21 @@ FIPS|STRING|Federal Information Processing Standard code designated by the NIST;
 OdMortRt|NUMERIC|Overdose mortality rate
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 DmySgrg|BOOLEAN|Dummy variable for whether county is part of a hypersegregated city or its metropolitan area
+
+### tract-providers-2010
+
+ID: `oeps-391119.tabular.tract-providers-2010`
+
+6 columns in this table.
+
+Name|Data Type|Description
+-|-|-|-
+TotSp|INTEGER|Number of specialty physicians in area
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+TotPcp|INTEGER|Number of primary care providers in area
+PcpPer100k|NUMERIC|PCPs per total Population X 100,000
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+SpPer100k|NUMERIC|Specialty Physicians per total Population X 100,000
 
 ### county-2019
 
@@ -1625,20 +1707,6 @@ HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic uni
 RxCtTmDr|INTEGER|Number of tracts with pharmacy within a 30-min driving range
 NoIntP|NUMERIC|Percentage of Households without Internet access
 RxTmDrP|NUMERIC|Percent of tracts with pharmacy within a 30-min driving range
-
-### zcta-2010
-
-ID: `oeps-391119.tabular.zcta-2010`
-
-5 columns in this table.
-
-Name|Data Type|Description
--|-|-|-
-Ruca1|STRING|Primary RUCA Code
-ZCTA5|STRING|Census Bureau designated zip code tabulation area, or the rough area that contains five digit zip codes.
-HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
-Rurality|STRING|Urban/Suburban/Rural
-Ruca2|STRING|Secondary RUCA Code
 
 ### county-2014
 
@@ -1793,7 +1861,6 @@ EduHsP|NUMERIC|
 SviTh3|NUMERIC|SVI Ranking, Theme 3: Minority Status & Language
 LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago
 IsoAs|NUMERIC|Isolation index for Asian and non-Hispanic White residents
-EduP|NUMERIC|Percentage of population employed in educational services industry
 BachelorsP|NUMERIC|
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
@@ -1820,6 +1887,10 @@ AlcPerCap|NUMERIC|Number of alcohol outlets per capita
 IntrAsWht|NUMERIC|Area (in square meters) of park or green space in a state).
 SRatio|NUMERIC|
 UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
+CenFlags|STRING|Three different values indicating three things:
+1 - Revised count, so urban and rural components will not add to total. 
+2 - Geography name and FIPS code were changed since 2010. Shannon County, Sotuh Dakota name changed to Oglala Lakota County, new FIPS 46102. Wade Hampton Census Area, Alaska, name changed to Kusilvak CEnsus Area, nwe FIPS 02158
+3 - Bedford City, Virginia, was consolidated with Bedford County, Virginia (FIPS 51019) since 2010.
 AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
 SviTh2|NUMERIC|SVI Ranking, Theme 2: Household Composition & Disability
 IntrBlkWht|NUMERIC|Interaction index for Black and non-Hispanic White residents
@@ -1832,42 +1903,72 @@ Age15_44P|NUMERIC|Percentage of population below 45 years of age
 
 ID: `oeps-391119.tabular.county-2025`
 
-33 columns in this table.
+63 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
 BupAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest buprenorphine provider
+SmokeP|NUMERIC|Percentage of Smoking Population
 OtpTmDrP|NUMERIC|Percent of tracts within a 30-minute drive time of an opioid treatment program.
 BupTmBkP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min biking range
+HcvCtTmDr|INTEGER|Number of tracts with an HCV testing provider within a 30-minute driving range
 MetCtTmDr|INTEGER|Number of tracts with methadone provider within a 30-min driving range
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 NaltAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest naltrexone provider
+HospCtTmDr|INTEGER|Number of tracts with hospital within a 30-min driving range
 MetTmBkP|NUMERIC|Percent of tracts with methadone provider within a 30-min biking range
+TlBupTmWk30P|NUMERIC|Percent of tracts with telehealth buprenorphine provider within a 30-min walking range
 NaltAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest naltrexone provider
+FqhcCtTmDr|INTEGER|Number of tracts with Federally Qualified Health Center within a 30-min driving range
 BupCtTmBk|INTEGER|Number of tracts with buprenorphine provider within a 30-min biking range
+TlBupAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county/state to nearest telehealth buprenorphine provider
 TotTracts|INTEGER|Total number of census tracts within the state.
+TlBupCtTmWk30|INTEGER|Number of tracts with telehealth buprenorphine provider within a 30-min walking range
 MetCtTmWk|INTEGER|Number of tracts with methadone provider within a 30-min walking range
 MetTmDrP|NUMERIC|Percent of tracts with methadone provider within a 30-min driving range
+HivTmDrP|NUMERIC|Percent of tracts within 30-minute drive to an HIV testing provider
+FqhcTmDrP|NUMERIC|Percent of tracts with Federally Qualified Health Center within a 30-min driving range.
 MetAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest methadone provider
 NaltTmBkP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min biking range
 MetTmWkP|NUMERIC|Percent of tracts with methadone provider within a 30-min walking range
 BupTmDrP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min driving range
+HivCtTmDr|INTEGER|Number of tracts with an HIV testing provider within a 30-minute driving range
+TlBupAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county/state to nearest telehealth buprenorphine provider
+TlBupCtTmDr30|INTEGER|Number of tracts with telehealth buprenorphine provider within a 30-min driving range
+FqhcAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest Federally Qualified Health Center
+SutpAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest Substance Use Treatment program.
+TlBupCtTmDr60|INTEGER|Number of tracts with telehealth buprenorphine provider within a 60-min driving range
+HospTmDrP|NUMERIC|Percent of tracts with hospital within a 30-mini driving range
+TlBupCtTmBk30|INTEGER|Number of tracts with telehealth buprenorphine provider within a 30-min biking range
 MetAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest methadone provider
+TlBupTmBk30P|NUMERIC|Percent of tracts with telehealth buprenorphine provider within a 30-min biking range
+HcvTmDrP|NUMERIC|Percent of tracts within 30-minute drive to an HCV testing provider
 BupCtTmWk|INTEGER|Number of tracts with buprenorphine provider within a 30-min walking range
+SutpTmDrP|NUMERIC|Percent of tracts with Substance Use Treatment program within a 30-minute driving range.
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+TlBupTmDr30P|NUMERIC|Percent of tracts with telehealth buprenorphine provider within a 30-min driving range
 OtpAvTmDr|NUMERIC|Average driving time (minutes) across tracts to nearest opioid treatment program.
 NaltCtTmBk|INTEGER|Number of tracts with naltrexone provider within a 30-min biking range
 MetCtTmBk|INTEGER|Number of tracts with methadone provider within a 30-min biking range
+TlBupTmDr60P|NUMERIC|Percent of tracts with telehealth buprenorphine provider within a 60-min driving range
 BupCtTmDr|INTEGER|Number of tracts with buprenorphine provider within a 30-min driving range
+MhAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest mental health provider.
+MhTmDrP|NUMERIC|Percent of tracts with a mental health provider within a 30-min driving range.
 NaltTmDrP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min driving range
 BupAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest buprenorphine provider
 BupAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest buprenorphine provider
 OtpCtTmDr|INTEGER|Number of tracts within 30-min of opioid treatment program driving range
+TlBupAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county/state to nearest telehealth buprenorphine provider
 NaltCtTmWk|INTEGER|Number of tracts with naltrexone provider within a 30-min walking range
 BupTmWkP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min walking range
 NaltCtTmDr|INTEGER|Number of tracts with naltrexone provider within a 30-min driving range
+HcvAvTmDr|NUMERIC|Mean driving time (minutes) from tracts to nearest HCV testing provider
 NaltTmWkP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min walking range
+MhCtTmDr|INTEGER|Number of tracts with a mental health provider within a 30-min driving range.
+HivAvTmDr|NUMERIC|Mean driving time (minutes) from tracts to nearest HIV testing provider
+SutpCtTmDr|INTEGER|Number of tracts with Substance Use Treatment within a 30-min driving range.
 MetAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest methadone provider
+HospAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest hospital.
 NaltAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest naltrexone provider
 
 ### county-2016
@@ -2031,6 +2132,15 @@ AmIndP|NUMERIC|Percentage of population with race identified as Native American 
 FemP|NUMERIC|
 Age15_44P|NUMERIC|Percentage of population below 45 years of age
 
+### county-2024
+
+ID: `oeps-391119.tabular.county-2024`
+
+0 columns in this table.
+
+Name|Data Type|Description
+-|-|-|-
+
 ### county-2022
 
 ID: `oeps-391119.tabular.county-2022`
@@ -2105,7 +2215,7 @@ HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations
 
 ID: `oeps-391119.tabular.zcta-2018`
 
-83 columns in this table.
+82 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
@@ -2159,7 +2269,6 @@ EduHsP|NUMERIC|
 SviTh3|NUMERIC|SVI Ranking, Theme 3: Minority Status & Language
 LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago
 IsoAs|NUMERIC|Isolation index for Asian and non-Hispanic White residents
-EduP|NUMERIC|Percentage of population employed in educational services industry
 BachelorsP|NUMERIC|
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
@@ -2197,11 +2306,10 @@ Age15_44P|NUMERIC|Percentage of population below 45 years of age
 
 ID: `oeps-391119.tabular.county-2010`
 
-51 columns in this table.
+46 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
-TotSp|INTEGER|Number of specialty physicians in area
 BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone
 Ovr18P|NUMERIC|
 SRatio65|NUMERIC|
@@ -2215,13 +2323,11 @@ AmIndE|NUMERIC|Count population with race identified as Native American or Alask
 PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone
 WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
 GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)
-TotPcp|INTEGER|Number of primary care providers in area
 SRatio18|NUMERIC|
 EduNoHsP|NUMERIC|
 PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
 PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
 MaleP|NUMERIC|
-PcpPer100k|NUMERIC|PCPs per total Population X 100,000
 BlackE|NUMERIC|Count population with race identified as Black or African American alone. Estimated count in non-decennial years.
 Ovr21P|NUMERIC|
 HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
@@ -2243,14 +2349,9 @@ AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated c
 Age15_44|INTEGER|Total population between age 15-44
 TotVetPop|INTEGER|Total Veteran population
 VetP|NUMERIC|Percent of population that are veterans
-SpPer100k|NUMERIC|Specialty Physicians per total Population X 100,000
 WhiteP|NUMERIC|Percentage of population with race identified as white alone
 SRatio|NUMERIC|
 UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
-CenFlags|STRING|Three different values indicating three things:
-1 - Revised count, so urban and rural components will not add to total. 
-2 - Geography name and FIPS code were changed since 2010. Shannon County, Sotuh Dakota name changed to Oglala Lakota County, new FIPS 46102. Wade Hampton Census Area, Alaska, name changed to Kusilvak CEnsus Area, nwe FIPS 02158
-3 - Bedford City, Virginia, was consolidated with Bedford County, Virginia (FIPS 51019) since 2010.
 AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
 TwoRaceE|NUMERIC|Count persons identifying as two or more races. Estimated count in non-decennial years.
 FemP|NUMERIC|
@@ -2260,7 +2361,7 @@ Age15_44P|NUMERIC|Percentage of population below 45 years of age
 
 ID: `oeps-391119.tabular.state-2018`
 
-120 columns in this table.
+119 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
@@ -2343,7 +2444,6 @@ MsAcPdmpDt|DATE|Date of legislation requiring Prescribers to access PDMP before 
 EduHsP|NUMERIC|
 LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago
 IsoAs|NUMERIC|Isolation index for Asian and non-Hispanic White residents
-EduP|NUMERIC|Percentage of population employed in educational services industry
 MulHcvD|NUMERIC|
 BachelorsP|NUMERIC|
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
@@ -2389,46 +2489,72 @@ Age15_44P|NUMERIC|Percentage of population below 45 years of age
 
 ID: `oeps-391119.tabular.zcta-2025`
 
-36 columns in this table.
+62 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
+HivCntDr|INTEGER|Number of HIV testing providers within a 30-minute drive
+HivTmDr|NUMERIC|Driving time from origin to nearest HIV testing provider (minutes)
+HivMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest HIV testing provider (miles)
 MetCntWk30|INTEGER|Count of methadone providers in 60 minute walking time threshold
 NaltCntWk30|INTEGER|Count of naltrexone providers in 30 minute walking time threshold
+FqhcMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest FQHC, in miles
 NaltTmDr|NUMERIC|Driving time (minutes) to nearest naltrexone provider
+MhCntDr|INTEGER|Count of MH providers within a 30-minute driving threshold
+HospCntDr|INTEGER|Count of hospitals within a 30-minute driving threshold
 BupCntDr60|NUMERIC|Count of buprenorphine providers in 60 minute drive time threshold
 BupCntBk60|INTEGER|Count of buprenorphine providers in 60 minute biking time threshold
 NaltMinDis|NUMERIC|Euclidean distance (miles) to nearest naltrexone/Vivitrol provider
+TlBupTmWk|NUMERIC|Estimated walking time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services
+HospTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip hospital destination centroid, in minutes
 MetCntBk60|INTEGER|Count of methadone providers in 60 minute biking time threshold
 MetMinDis|NUMERIC|Euclidean distance (miles) to nearest methadone provider
+FqhcCntDr|INTEGER|Count of FQHCs within a 30-minute driving threshold
 BupTmDr|NUMERIC|Driving time (minutes) to nearest buprenorphine provider
+TlBupCntDr30|INTEGER|Total number of providers offering buprenorphine treatment via telemedicine/telehealth located within a 30-minute driving time threshold
 MetTmBk|NUMERIC|Biking time (minutes) to nearest methadone provider
 NaltTmWk|NUMERIC|Walking time (minutes) to nearest naltrexone provider
+TlBupTmDr|NUMERIC|Estimated driving time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services
+TlBupCntDr60|INTEGER|Total number of providers offering buprenorphine treatment via telemedicine/telehealth located within a 60-minute driving time threshold
+FqhcTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes
 BupMinDis|NUMERIC|Euclidean distance (miles) to nearest buprenorphine provider
 NaltCntDr60|NUMERIC|Count of naltrexone providers in 60 minute drive time threshold
 ZCTA5|STRING|Census Bureau designated zip code tabulation area, or the rough area that contains five digit zip codes.
 OtpMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles
 MetCntBk30|INTEGER|Count of methadone providers in 30 minute biking time threshold
 MetCntDr60|NUMERIC|Count of methadone providers in 60 minute drive time threshold
+HcvCntDr|INTEGER|Number of HCV testing providers within a 30-minute drive
+TlBupCntBk30|INTEGER|Total number of providers offering buprenorphine treatment via telemedicine/telehealth located within a 30-minute biking time threshold
 OtpTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes
+TlBupMinDis|NUMERIC|Euclidean distance (in miles) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services
 OtpCntDr|INTEGER|Count of OTPs within a 30-minute driving threshold
 NaltCntBk30|INTEGER|Count of naltrexone providers in 30 minute biking time threshold
 BupCntWk30|INTEGER|Count of buprenorphine providers in 30 minute walking time threshold
 MetCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold
+HospMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest hospital, in miles
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 NaltCntWk60|INTEGER|Count of naltrexone providers in 60 minute walking time threshold
 MetCntWk60|INTEGER|Count of methadone providers in 30 minute walking time threshold
+HcvTmDr|NUMERIC|Driving time from origin to nearest HCV testing provider (minutes)
+SutCntDr|INTEGER|Count of SUT services within a 30-minute driving threshold
+MhMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest mental health provider, in miles
 NaltCntDr30|INTEGER|Count of naltrexone providers in 30 minute drive time threshold
+HcvMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest HCV testing provider (miles)
 NaltTmBk|NUMERIC|Biking time (minutes) to nearest naltrexone provider
 BupTmBk|NUMERIC|Biking time (minutes) to nearest buprenorphine provider
 MoudMinDis|NUMERIC|Euclidean distance (miles) to nearest MOUD (all types)
+SutMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest SUT service location, in miles
+TlBupTmBk|NUMERIC|Estimated biking time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services
 MetTmWk|NUMERIC|Walking time (minutes) to nearest methadone provider
 NaltCntBk60|INTEGER|Count of naltrexone providers in 60 minute biking time threshold
 MetTmDr|NUMERIC|Driving time (minutes) to nearest methadone provider
 BupCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold
 BupTmWk|NUMERIC|Walking time (minutes) to nearest buprenorphine provider
+MhTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip mental health provider destination centroid, in minutes
 BupCntWk60|INTEGER|Count of buprenorphine providers in 60 minute walking time threshold
+TlBupCntWk30|INTEGER|Total number of providers offering buprenorphine treatment via telemedicine/telehealth located within a 30-minute walking time threshold
 BupCntBk30|INTEGER|Count of buprenorphine providers in 30 minute biking time threshold
+SutTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip SUT destination centroid, in minutes
 
 ### state-2013
 
@@ -2455,42 +2581,69 @@ HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations
 
 ID: `oeps-391119.tabular.state-2025`
 
-33 columns in this table.
+60 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
 BupAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest buprenorphine provider
+SmokeP|NUMERIC|Percentage of Smoking Population
 OtpTmDrP|NUMERIC|Percent of tracts within a 30-minute drive time of an opioid treatment program.
 BupTmBkP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min biking range
+HcvCtTmDr|INTEGER|Number of tracts with an HCV testing provider within a 30-minute driving range
 MetCtTmDr|INTEGER|Number of tracts with methadone provider within a 30-min driving range
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 NaltAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest naltrexone provider
+HospCtTmDr|INTEGER|Number of tracts with hospital within a 30-min driving range
 MetTmBkP|NUMERIC|Percent of tracts with methadone provider within a 30-min biking range
+TlBupTmWk30P|NUMERIC|Percent of tracts with telehealth buprenorphine provider within a 30-min walking range
 NaltAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest naltrexone provider
+FqhcCtTmDr|INTEGER|Number of tracts with Federally Qualified Health Center within a 30-min driving range
 BupCtTmBk|INTEGER|Number of tracts with buprenorphine provider within a 30-min biking range
+TlBupAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county/state to nearest telehealth buprenorphine provider
 TotTracts|INTEGER|Total number of census tracts within the state.
+TlBupCtTmWk30|INTEGER|Number of tracts with telehealth buprenorphine provider within a 30-min walking range
 MetCtTmWk|INTEGER|Number of tracts with methadone provider within a 30-min walking range
 MetTmDrP|NUMERIC|Percent of tracts with methadone provider within a 30-min driving range
+HivTmDrP|NUMERIC|Percent of tracts within 30-minute drive to an HIV testing provider
+FqhcTmDrP|NUMERIC|Percent of tracts with Federally Qualified Health Center within a 30-min driving range.
 MetAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest methadone provider
 NaltTmBkP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min biking range
 MetTmWkP|NUMERIC|Percent of tracts with methadone provider within a 30-min walking range
 BupTmDrP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min driving range
+HivCtTmDr|INTEGER|Number of tracts with an HIV testing provider within a 30-minute driving range
+TlBupAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county/state to nearest telehealth buprenorphine provider
+TlBupCtTmDr30|INTEGER|Number of tracts with telehealth buprenorphine provider within a 30-min driving range
+FqhcAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest Federally Qualified Health Center
+TlBupCtTmDr60|INTEGER|Number of tracts with telehealth buprenorphine provider within a 60-min driving range
+HospTmDrP|NUMERIC|Percent of tracts with hospital within a 30-mini driving range
+TlBupCtTmBk30|INTEGER|Number of tracts with telehealth buprenorphine provider within a 30-min biking range
 MetAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest methadone provider
+TlBupTmBk30P|NUMERIC|Percent of tracts with telehealth buprenorphine provider within a 30-min biking range
+HcvTmDrP|NUMERIC|Percent of tracts within 30-minute drive to an HCV testing provider
 BupCtTmWk|INTEGER|Number of tracts with buprenorphine provider within a 30-min walking range
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+TlBupTmDr30P|NUMERIC|Percent of tracts with telehealth buprenorphine provider within a 30-min driving range
 OtpAvTmDr|NUMERIC|Average driving time (minutes) across tracts to nearest opioid treatment program.
 NaltCtTmBk|INTEGER|Number of tracts with naltrexone provider within a 30-min biking range
 MetCtTmBk|INTEGER|Number of tracts with methadone provider within a 30-min biking range
+TlBupTmDr60P|NUMERIC|Percent of tracts with telehealth buprenorphine provider within a 60-min driving range
 BupCtTmDr|INTEGER|Number of tracts with buprenorphine provider within a 30-min driving range
+MhAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest mental health provider.
+MhTmDrP|NUMERIC|Percent of tracts with a mental health provider within a 30-min driving range.
 NaltTmDrP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min driving range
 BupAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest buprenorphine provider
 BupAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest buprenorphine provider
 OtpCtTmDr|INTEGER|Number of tracts within 30-min of opioid treatment program driving range
+TlBupAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county/state to nearest telehealth buprenorphine provider
 NaltCtTmWk|INTEGER|Number of tracts with naltrexone provider within a 30-min walking range
 BupTmWkP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min walking range
 NaltCtTmDr|INTEGER|Number of tracts with naltrexone provider within a 30-min driving range
+HcvAvTmDr|NUMERIC|Mean driving time (minutes) from tracts to nearest HCV testing provider
 NaltTmWkP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min walking range
+MhCtTmDr|INTEGER|Number of tracts with a mental health provider within a 30-min driving range.
+HivAvTmDr|NUMERIC|Mean driving time (minutes) from tracts to nearest HIV testing provider
 MetAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest methadone provider
+HospAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest hospital.
 NaltAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest naltrexone provider
 
 ### state-2014
@@ -2534,17 +2687,12 @@ RxMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest pharmacy
 
 ID: `oeps-391119.tabular.tract-2014`
 
-7 columns in this table.
+2 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
-UrbCoreInd|NUMERIC|Raw Urban Core Opportunity Index (https://sdohatlas.github.io/)
-MicaInd|NUMERIC|Raw Mixed Immigrant Cohesion and Accessibility (MICA) Index (https://sdohatlas.github.io/)
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
-NeighbTyp|STRING|Categorical, one of seven neighborhood (tract-level) typologies: 1 = Rural Affordable; 2 = Suburban Affluent; 3 = Suburban Affordable; 4 = Extreme Poverty; 5 = Multilingual Working; 6 = Urban Core Opportunity; 7 = Sparse Areas
-SocEcAdvIn|NUMERIC|Raw Socioeconomic Advantage Index (https://sdohatlas.github.io/)
-LimMobInd|NUMERIC|Raw Limited Mobility Index (https://sdohatlas.github.io/)
 
 ### county-2000
 
@@ -2598,4 +2746,28 @@ UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civil
 AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
 FemP|NUMERIC|
 Age15_44P|NUMERIC|Percentage of population below 45 years of age
+
+### county-providers-2010
+
+ID: `oeps-391119.tabular.county-providers-2010`
+
+6 columns in this table.
+
+Name|Data Type|Description
+-|-|-|-
+TotSp|INTEGER|Number of specialty physicians in area
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+TotPcp|INTEGER|Number of primary care providers in area
+PcpPer100k|NUMERIC|PCPs per total Population X 100,000
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+SpPer100k|NUMERIC|Specialty Physicians per total Population X 100,000
+
+### state-2024
+
+ID: `oeps-391119.tabular.state-2024`
+
+0 columns in this table.
+
+Name|Data Type|Description
+-|-|-|-
 
