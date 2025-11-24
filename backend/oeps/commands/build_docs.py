@@ -168,12 +168,13 @@ def build_docs(bq_only:bool, cli_only: bool, registry_only: bool, data_dictionar
             "title",
             "path",
             "description",
-            "year",
+            "data_year",
             "geodata_source",
         ]
         tab_rows = []
-        for var in table_sources:
-            tab_rows.append([clean_value(getattr(var, i)) for i in tab_cols])
+        for tab in table_sources:
+            print(tab)
+            tab_rows.append([clean_value(getattr(tab, i)) for i in tab_cols])
 
         ## Create GEODATA SOURCES content
 
