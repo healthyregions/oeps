@@ -4,7 +4,7 @@ The OEPS Backend provides a suite of management commands, or a "command line int
 
 ## Prerequisites
 
-You must [install the OEPS Backend](./install.md#oeps-backend) before you can begin using the CLI.
+You must [install the OEPS Backend](./install-backend.md) before you can begin using the CLI.
 
 To use CLI commands, make sure you have entered the backend directory and activated the Python virtual environment.
 

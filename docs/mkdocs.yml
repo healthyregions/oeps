@@ -1,25 +1,29 @@
 site_name: OEPS Data Ecosystem
 nav:
   - Background:
+    - index.md
     - legacy-migration.md
-  - Guides:
+  - Data Contributors:
+    - guides/adding-data-overview.md
+    - guides/preparing-csv-data.md
+    - guides/creating-metadata-and-variables.md
+  - OEPS Explorer:
     - guides/install-explorer.md
+    - guides/provisioning-oeps-explorer.md
+  - OEPS Backend:
     - guides/install-backend.md
     - guides/getting-started-with-cli.md
-    - guides/provisioning-oeps-explorer.md
-    - guides/adding-data-to-oeps.md
+    - guides/merging-data-into-oeps.md
     - guides/creating-data-packages.md
     - guides/interacting-with-bigquery.md
-    - guides/generating-derived-documentation.md
-    - guides/writing-documentation.md
+    - reference/cli/command-line-reference.md
   - Registry:
     - registry/index.md
-    - registry/metadata.md
-    - registry/variables.md
-    - registry/table-sources.md
-    - registry/geodata-sources.md
-  - CLI:
-    - reference/cli/command-line-reference.md
+    - registry/data-model.md
+    - registry/current-content.md
+  - Documentation:
+    - guides/writing-documentation.md
+    - guides/generating-derived-documentation.md
 plugins:
   - search
   - glightbox
