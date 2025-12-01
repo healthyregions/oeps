@@ -16,7 +16,7 @@ To understand how these pieces fit together, consider the following example oper
 flask build-explorer --map-only
 ```
 
-This command is will provision the interactive web in the OEPS Explorer with the latest data content that is currently in the ecosystem. It does so through the following general steps:
+This command will provision the interactive web map in the OEPS Explorer with the latest data content that is currently in the ecosystem. It does so through the following general steps:
 
 1. Initialize the registry, i.e. load all the JSON files into memory
 2. Reads registry to find the latest year of all data values
