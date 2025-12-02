@@ -1,0 +1,8 @@
+{
+  "name": "county-2024",
+  "title": "county-2024",
+  "path": "tables/county-2024.csv",
+  "description": "This CSV aggregates OEPS data values from 2024 at the county level.",
+  "data_year": "2024",
+  "geodata_source": "geo-2020-county"
+}

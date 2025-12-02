@@ -813,25 +813,29 @@ HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations
 
 ID: `oeps-391119.tabular.state-2022`
 
-53 columns in this table.
+63 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
 U50HcvD|INTEGER|Hepatitis C deaths in populations under 50 years of age
+TtlJlAdm|NUMERIC|Total Jail Admissions Count, ASJ/COJ Data
 MsAcPdmpFr|NUMERIC|Fraction of year that state has any legislation requiring Prescribers to access PDMP before prescribing (as interpreted by PDAPS) enacted.
 ElcPdmpFr|NUMERIC|Fraction of year that state has an electronic PDMP system operating.
 NalxPrStDt|DATE|Date (MY) Naloxone law allowing distribution through a standing or protocol order effective
 O75HcvD|INTEGER|Hepatitis C deaths among populations over 75 years of age
+TtlJlAdmr|NUMERIC|Total Jail Admissions Rate, ASJ/COJ Data
 AvWhHcvD|NUMERIC|Mean yearly Hepatitis C deaths among White populations from 2018-2022
 NhPiHcvD|NUMERIC|
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 NalxPresFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing pharmacists prescriptive authority
 HlthExp|INTEGER|Total expenditures on public health and hospitals
+TtlJlPpr|NUMERIC|Total Jail Population Rate, ASJ/COJ Data
 FlHcvD|INTEGER|Hepatitis C deaths among women
 NalxPrStFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing distribution through a standing or protocol order
 WlfrExp|INTEGER|Total expenditures on public welfare programs
 AvHcvD|NUMERIC|Mean total yearly Hepatitis C deaths from 2013-2017, 2018-2022
 MdMarijLaw|BOOLEAN|Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (0=no, 1=yes)
+TtlJlPp|NUMERIC|Total Jail Population Count, ASJ/COJ Data
 AvU50HcvD|NUMERIC|Mean yearly Hepatitis C deaths among people under 50 years of age from 2013-2017
 OdMortRt|NUMERIC|Overdose mortality rate
 AnyPdmpDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: PDAPS for first PDMP laws passed after January 1, 1998; Info on laws prior to 1998 came from Brandeis TTAC.
@@ -843,10 +847,14 @@ ParkArea|NUMERIC|Area (in square meters) of park or green space in a state).
 WhtHcvD|NUMERIC|
 HcvD|INTEGER|Total Hepatitis C deaths
 AnyNalxDt|DATE|Date (MY) any type of Naloxone law effective
+TtlPrPpr|NUMERIC|Total Prison Population Rate
 OpPdmpFr|NUMERIC|Fraction of year that state has a “modern system” operational and users could access (as determined by Horowitz et al., 2018).
 AvFlHcvD|NUMERIC|Mean yearly Hepatitis C deaths among women from 2013-2017
 AmInHcvD|INTEGER|Hepatitis C deaths among American Indian populations
 A50_74HcvD|INTEGER|Hepatitis C deaths among populations between 50 and 74 years of age
+TtlPrPp|INTEGER|Total Prison Population Count
+TtlPrAPp|INTEGER|Prison Prison Admissions Count
+TtlJlPrtr|NUMERIC|Pretrial Jail Population Rate
 AvAsHcvD|NUMERIC|
 OpRxRt|NUMERIC|Opioid prescription rate
 MsAcPdmpDt|DATE|Date of legislation requiring Prescribers to access PDMP before prescribing as interpreted by PDAPS.
@@ -854,9 +862,11 @@ AvHspHcvD|NUMERIC|Mean yearly Hepatitis C deaths among Hispanic populations from
 AvA50_74HcvD|NUMERIC|Mean yearly Hepatitis C deaths among people between 50 and 74 years of age from 2013-2017, 2018-2022
 MulHcvD|NUMERIC|
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+TtlJlPrt|NUMERIC|Pretrial Jail Population Count
 AvBlkHcvD|NUMERIC|Mean yearly Hepatitis C deaths among Black populations from 2013-2017
 PlcFyrExp|INTEGER|Total expenditures on police and fire protection
 AnyPdmphDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: Horowitz et al., 2018, Table 2, column 1.
+TtlPrAPpr|NUMERIC|Prison Prison Admissions Rate
 AvMulHcvD|NUMERIC|
 CrrctExp|INTEGER|Total expenditures on corrections system and operations
 AvNhPiHcvD|NUMERIC|
@@ -1430,21 +1440,26 @@ Age15_44P|NUMERIC|Percentage of population below 45 years of age
 
 ID: `oeps-391119.tabular.county-2023`
 
-90 columns in this table.
+114 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
+TtlJlPrtQ4|NUMERIC|Pretrial Jail Population Count (Q4)
 Und18P|NUMERIC|
+TtlJlPrtrQ1|NUMERIC|Pretrial Jail Population Rate (Q1)
 BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone
 Ovr18P|NUMERIC|
 HsdTypCo|NUMERIC|
 SRatio65|NUMERIC|
+TtlJlPrtrQ3|NUMERIC|Pretrial Jail Population Rate (Q3)
 Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
 VacantP|NUMERIC|Percentage of vacant housing units
+TtlJlPprQ3|NUMERIC|Total Jail Population Rate (Q3), ASJ/COJ Data
 NvMrrdP|NUMERIC|
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 TotWrkE|INTEGER|Estimated count of working population
 MrrdP|NUMERIC|
+TtlJlPpQ4|NUMERIC|Total Jail Population Count (Q4), ASJ/COJ Data
 UnitDens|NUMERIC|Number of housing units per square mile of land area
 GradSclP|NUMERIC|
 TotUnits|INTEGER|Count of total occupied housing units
@@ -1454,7 +1469,9 @@ Ovr16P|NUMERIC|
 RetailP|NUMERIC|Percentage of population employed in retail trade industry
 AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
 EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.
+TtlJlPprQ4|NUMERIC|Total Jail Population Rate (Q4), ASJ/COJ Data
 PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone
+TtlJlPrtrQ2|NUMERIC|Pretrial Jail Population Rate (Q2)
 HisP|NUMERIC|
 IntrHspWht|NUMERIC|Interaction index for Hispanic and non-Hispanic White residents
 DsmAs|NUMERIC|Dissimilarity index for Asian and non-Hispanic White residents
@@ -1462,11 +1479,16 @@ RentalP|NUMERIC|Percentage of occupied housing units that are rented
 MobileP|NUMERIC|Percentage of total housing units categorized as mobile housing structures
 HhldFS|NUMERIC|
 WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
+TtlJlAdmQ2|NUMERIC|Total Jail Admissions Count (Q2), ASJ/COJ Data
 HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities
+TtlJlPpQ1|NUMERIC|Total Jail Population Count (Q1), ASJ/COJ Data
 HhldMS|NUMERIC|
+TtlJlPrtQ2|NUMERIC|Pretrial Jail Population Count (Q2)
 Ovr62P|NUMERIC|
 NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family
+TtlJlPprQ2|NUMERIC|Total Jail Population Rate (Q2), ASJ/COJ Data
 GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)
+TtlJlAdmrQ2|NUMERIC|Total Jail Admissions Rate (Q2), ASJ/COJ Data
 HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries
 SRatio18|NUMERIC|
 EduNoHsP|NUMERIC|
@@ -1474,10 +1496,13 @@ OccupantP|NUMERIC|
 IsoBlk|NUMERIC|Isolation index for Black and non-Hispanic White residents
 HsdTot|NUMERIC|
 Ovr21|NUMERIC|
+TtlJlAdmrQ1|NUMERIC|Total Jail Admissions Rate (Q1), ASJ/COJ Data
 DivrcdP|NUMERIC|
 FamSize|NUMERIC|
+TtlJlPrtQ3|NUMERIC|Pretrial Jail Population Count (Q3)
 PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
 PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
+TtlJlAdmrQ3|NUMERIC|Total Jail Admissions Rate (Q3), ASJ/COJ Data
 HsdTypM|NUMERIC|
 Ovr18|NUMERIC|
 MaleP|NUMERIC|
@@ -1485,28 +1510,37 @@ BlackE|NUMERIC|Count population with race identified as Black or African America
 Ovr21P|NUMERIC|
 NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are not related
 Ovr16|NUMERIC|
+TtlJlAdmQ4|NUMERIC|Total Jail Admissions Count (Q4), ASJ/COJ Data
 DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
 HHSize|NUMERIC|
 TwoRaceP|NUMERIC|
 EduHsP|NUMERIC|
 LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago
+TtlJlPpQ3|NUMERIC|Total Jail Population Count (Q3), ASJ/COJ Data
 IsoAs|NUMERIC|Isolation index for Asian and non-Hispanic White residents
 BachelorsP|NUMERIC|
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+TtlJlPrtrQ4|NUMERIC|Pretrial Jail Population Rate (Q4)
 MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
+TtlJlAdmrQ4|NUMERIC|Total Jail Admissions Rate (Q4), ASJ/COJ Data
 MedAge|NUMERIC|
 SepartedP|NUMERIC|
 IsoHsp|NUMERIC|Isolation index for Hispanic and non-Hispanic White residents
+TtlJlAdmQ1|NUMERIC|Total Jail Admissions Count (Q1), ASJ/COJ Data
 SomeCollegeP|NUMERIC|
 TotPopHh|INTEGER|Total number of people in households
 OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
 Ovr65P|NUMERIC|Percentage of population over 65
 OtherE|NUMERIC|Count of Population with race not mentioned in any of the options above (includes two race or more races). Estimated count in non-decennial years.
 HhldMC|NUMERIC|
+TtlJlPprQ1|NUMERIC|Total Jail Population Rate (Q1), ASJ/COJ Data
 HisE|NUMERIC|Count persons with ethnicity identified as of Hispanic or Latinx origin. Estimated count in non-decennial years.
 TotPop|INTEGER|Total population
 DsmHsp|NUMERIC|Dissimilarity index for Hispanic and non-Hispanic White residents
+TtlJlPrtQ1|NUMERIC|Pretrial Jail Population Count (Q1)
+TtlJlAdmQ3|NUMERIC|Total Jail Admissions Count (Q3), ASJ/COJ Data
 PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
+TtlJlPpQ2|NUMERIC|Total Jail Population Count (Q2), ASJ/COJ Data
 AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
 HhldMA|NUMERIC|
 TotVetPop|INTEGER|Total Veteran population
@@ -1583,7 +1617,7 @@ Age15_44P|NUMERIC|Percentage of population below 45 years of age
 
 ID: `oeps-391119.tabular.state-2023`
 
-63 columns in this table.
+67 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
@@ -1596,6 +1630,7 @@ ExpnFedExp|INTEGER|Expansion Group - Federal Spending
 Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 AsianP|NUMERIC|Percentage of population with race identified as Asian alone
+TtlJlPpr|NUMERIC|Total Jail Population Rate, ASJ/COJ Data
 GradSclP|NUMERIC|
 EngProf|NUMERIC|
 Ovr16P|NUMERIC|
@@ -1606,6 +1641,7 @@ HisP|NUMERIC|
 IntrHspWht|NUMERIC|Interaction index for Hispanic and non-Hispanic White residents
 MdMarijLaw|BOOLEAN|Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (0=no, 1=yes)
 DsmAs|NUMERIC|Dissimilarity index for Asian and non-Hispanic White residents
+TtlJlPp|NUMERIC|Total Jail Population Count, ASJ/COJ Data
 WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
 ExpnSttExp|INTEGER|Expansion Group - State Spending
 AnyPdmpDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: PDAPS for first PDMP laws passed after January 1, 1998; Info on laws prior to 1998 came from Brandeis TTAC.
@@ -1622,12 +1658,14 @@ MaleP|NUMERIC|
 BlackE|NUMERIC|Count population with race identified as Black or African American alone. Estimated count in non-decennial years.
 Ovr21P|NUMERIC|
 Ovr16|NUMERIC|
+TtlJlPrtr|NUMERIC|Pretrial Jail Population Rate
 TwoRaceP|NUMERIC|
 MsAcPdmpDt|DATE|Date of legislation requiring Prescribers to access PDMP before prescribing as interpreted by PDAPS.
 EduHsP|NUMERIC|
 IsoAs|NUMERIC|Isolation index for Asian and non-Hispanic White residents
 BachelorsP|NUMERIC|
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+TtlJlPrt|NUMERIC|Pretrial Jail Population Count
 AnyPdmphDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: Horowitz et al., 2018, Table 2, column 1.
 IsoHsp|NUMERIC|Isolation index for Hispanic and non-Hispanic White residents
 SomeCollegeP|NUMERIC|
@@ -2136,10 +2174,18 @@ Age15_44P|NUMERIC|Percentage of population below 45 years of age
 
 ID: `oeps-391119.tabular.county-2024`
 
-0 columns in this table.
+8 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
+TtlJlAdm|NUMERIC|Total Jail Admissions Count, ASJ/COJ Data
+TtlJlAdmr|NUMERIC|Total Jail Admissions Rate, ASJ/COJ Data
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+TtlJlPpr|NUMERIC|Total Jail Population Rate, ASJ/COJ Data
+TtlJlPp|NUMERIC|Total Jail Population Count, ASJ/COJ Data
+TtlJlPrtr|NUMERIC|Pretrial Jail Population Rate
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+TtlJlPrt|NUMERIC|Pretrial Jail Population Count
 
 ### county-2022
 
@@ -2766,8 +2812,12 @@ SpPer100k|NUMERIC|Specialty Physicians per total Population X 100,000
 
 ID: `oeps-391119.tabular.state-2024`
 
-0 columns in this table.
+4 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+TtlPrPpr|NUMERIC|Total Prison Population Rate
+TtlPrPp|INTEGER|Total Prison Population Count
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 

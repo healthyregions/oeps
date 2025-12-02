@@ -52,8 +52,6 @@ class Explorer:
                 self.registry.get_table_source_for_variable(k, "tract"),
             ]
 
-            print(use_sources)
-
             latest_sources = [i for i in use_sources if i]
             if latest_sources:
                 ds_group_code = "__".join([i.name for i in latest_sources])

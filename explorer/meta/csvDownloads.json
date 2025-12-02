@@ -113,6 +113,13 @@
       "geodata_name": "geo-2020-state"
     },
     {
+      "name": "state-2024.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/state-2024.csv",
+      "year": "2024",
+      "geodata_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/state-2020-500k-shp.zip",
+      "geodata_name": "geo-2020-state"
+    },
+    {
       "name": "state-2025.csv",
       "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/state-2025.csv",
       "year": "2025",
@@ -223,6 +230,13 @@
       "name": "county-2023.csv",
       "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/county-2023.csv",
       "year": "2023",
+      "geodata_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/county-2020-500k-shp.zip",
+      "geodata_name": "geo-2020-county"
+    },
+    {
+      "name": "county-2024.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/county-2024.csv",
+      "year": "2024",
       "geodata_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/county-2020-500k-shp.zip",
       "geodata_name": "geo-2020-county"
     },

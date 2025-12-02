@@ -1,0 +1,13 @@
+{
+  "name": "TtlJlPrtQ4",
+  "title": "Pretrial Jail Population Count (Q4)",
+  "type": "number",
+  "example": "6150",
+  "description": "Pretrial Jail Population Count (Q4)",
+  "longitudinal": false,
+  "analysis": false,
+  "metadata": "Jail_Incarceration_Rates",
+  "table_sources": [
+    "county-2023"
+  ]
+}

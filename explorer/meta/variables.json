@@ -12,7 +12,7 @@
         "Source": "Tiger/Line 2010, 2018;",
         "Metadata": "Geographic_Boundaries",
         "Spatial Scale": "Tract, Zip, County, State",
-        "Years": "1980, 1990, 2000, 2010, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2025"
+        "Years": "1980, 1990, 2000, 2010, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025"
       }
     ]
   },
@@ -149,26 +149,50 @@
           "Total Prison Population Count",
           "Total Prison Population Rate"
         ],
-        "Source": "Vera Institute of Justice 2016",
+        "Source": "Vera Institute of Justice 2025",
         "Metadata": "Prison_Incarceration_Rates",
-        "Spatial Scale": "County",
-        "Years": "2016"
+        "Spatial Scale": "County, State",
+        "Years": "2016, 2022, 2024"
       },
       {
         "Variable Construct": "Incarceration",
-        "Variable Proxy": "Total Jail Population Rate, Total jail admission rate, Pretrial Jail Population Rate, Total Jail Population Count & more",
+        "Variable Proxy": "Total Jail Population Rate, Total Jail Admission Rate, Pretrial Jail Population Rate, Total Jail Population Count, Total Jail Admission Count, Pretrial Jail Population Count",
         "Variables": [
           "Pretrial Jail Population Count",
+          "Pretrial Jail Population Count (Q1)",
+          "Pretrial Jail Population Count (Q2)",
+          "Pretrial Jail Population Count (Q3)",
+          "Pretrial Jail Population Count (Q4)",
           "Pretrial Jail Population Rate",
+          "Pretrial Jail Population Rate (Q1)",
+          "Pretrial Jail Population Rate (Q2)",
+          "Pretrial Jail Population Rate (Q3)",
+          "Pretrial Jail Population Rate (Q4)",
+          "Total Jail Admissions Count (Q1), ASJ/COJ Data",
+          "Total Jail Admissions Count (Q2), ASJ/COJ Data",
+          "Total Jail Admissions Count (Q3), ASJ/COJ Data",
+          "Total Jail Admissions Count (Q4), ASJ/COJ Data",
           "Total Jail Admissions Count, ASJ/COJ Data",
+          "Total Jail Population Count (Q1), ASJ/COJ Data",
+          "Total Jail Population Count (Q2), ASJ/COJ Data",
+          "Total Jail Population Count (Q3), ASJ/COJ Data",
+          "Total Jail Population Count (Q4), ASJ/COJ Data",
           "Total Jail Population Count, ASJ/COJ Data",
           "Total Jail Population Rate",
-          "Total jail admission rate"
+          "Total Jail Population Rate (Q1)",
+          "Total Jail Population Rate (Q2)",
+          "Total Jail Population Rate (Q3)",
+          "Total Jail Population Rate (Q4)",
+          "Total jail admission rate",
+          "Total jail admission rate (Q1)",
+          "Total jail admission rate (Q2)",
+          "Total jail admission rate (Q3)",
+          "Total jail admission rate (Q4)"
         ],
-        "Source": "Vera Institute of Justice 2017",
+        "Source": "Vera Institute of Justice 2025",
         "Metadata": "Jail_Incarceration_Rates",
-        "Spatial Scale": "County",
-        "Years": "2017"
+        "Spatial Scale": "County, State",
+        "Years": "2017, 2022, 2023, 2024"
       }
     ],
     "Veteran Population": [
@@ -213,6 +237,19 @@
         "Metadata": "Demographic_Characteristics",
         "Spatial Scale": "Tract, Zip, County, State",
         "Years": "1980, 1990, 2000, 2010, 2018, 2020, 2023"
+      }
+    ],
+    "Smoking": [
+      {
+        "Variable Construct": "Smoking",
+        "Variable Proxy": "Percentage of Smoking Population",
+        "Variables": [
+          "Percentage of Smoking Population"
+        ],
+        "Source": "County Health Rankings & Roadmaps (CHR&R), 2025",
+        "Metadata": "Smoking_Population",
+        "Spatial Scale": "County, State",
+        "Years": "2025"
       }
     ],
     "Educational Characteristics": [
@@ -266,7 +303,7 @@
         "Source": "SAMHSA 2020",
         "Metadata": "Access_SubstanceUseTreatment",
         "Spatial Scale": "Tract, Zip, County, State",
-        "Years": "2020"
+        "Years": "2020, 2025"
       }
     ],
     "Spatial Access to Hospitals": [
@@ -284,7 +321,7 @@
         "Source": "CovidCareMap 2020",
         "Metadata": "Access_Hospitals",
         "Spatial Scale": "Tract, Zip, County, State",
-        "Years": "2020"
+        "Years": "2020, 2025"
       }
     ],
     "Housing Characteristics ": [
@@ -373,12 +410,16 @@
           "% Tracts within 30-min Drive of Buprenorphine Provider",
           "% Tracts within 30-min Drive of Methadone Provider",
           "% Tracts within 30-min Drive of Naltrexone Provider",
+          "Average biking time to nearest telehealth buprenorphine provider",
+          "Average driving time to nearest telehealth buprenorphine provider",
+          "Average walking time to nearest telehealth buprenorphine provider",
           "Biking Time (min) to Nearest Buprenorphine Provider",
           "Biking Time (min) to Nearest Methadone Provider",
           "Biking Time (min) to Nearest Naltrexone Provider",
           "Biking Time (min) to nearest Buprenorphine Provider",
           "Biking Time (min) to nearest Methadone Provider",
           "Biking Time (min) to nearest Naltrexone Provider",
+          "Biking time to nearest telehealth buprenorphine provider",
           "Buprenorphine access 30 minutes (RAAM)",
           "Buprenorphine access 60 minutes (RAAM)",
           "Buprenorphine access 90 minutes (RAAM)",
@@ -401,6 +442,14 @@
           "Count of methadone providers (30-min bike)",
           "Count of methadone providers (drive)",
           "Count of naltrexone providers (drive)",
+          "Count of telehealth buprenorphine providers within 30-minute bike ride",
+          "Count of telehealth buprenorphine providers within 30-minute drive",
+          "Count of telehealth buprenorphine providers within 30-minute walk",
+          "Count of telehealth buprenorphine providers within 60-minute drive",
+          "Count of tracts within 30-min telehealth buprenorphine biking range",
+          "Count of tracts within 30-min telehealth buprenorphine driving range",
+          "Count of tracts within 30-min telehealth buprenorphine walking range",
+          "Count of tracts within 60-min telehealth buprenorphine driving range",
           "Distance (mi) to nearest Buprenorphine Provider",
           "Distance (mi) to nearest MOUD (any)",
           "Distance (mi) to nearest Methadone Provider",
@@ -416,12 +465,18 @@
           "Driving Time to Buprenorphine Provider (driving time across all tracts)",
           "Driving Time to Methadone Provider (driving time across all tracts)",
           "Driving Time to Naltrexone Provider (driving time across all tracts)",
+          "Driving time to nearest telehealth buprenorphine provider",
           "Methadone access 30 minutes (RAAM)",
           "Methadone access 60 minutes (RAAM)",
           "Methadone access 90 minutes (RAAM)",
+          "Minimum distance to telehealth buprenorphine provider",
           "Naltrexone access 30 minutes (RAAM)",
           "Naltrexone access 60 minutes (RAAM)",
           "Naltrexone access 90 minutes (RAAM)",
+          "Percent of tracts within 30-min telehealth buprenorphine biking range",
+          "Percent of tracts within 30-min telehealth buprenorphine driving range",
+          "Percent of tracts within 30-min telehealth buprenorphine walking range",
+          "Percent of tracts within 60-min telehealth buprenorphine driving range",
           "Tracts with Buprenorphine Provider (30-min driving)",
           "Tracts with Buprenorphine Provider within 30-min (biking)",
           "Tracts with Buprenorphine Provider within 30-min (driving)",
@@ -440,7 +495,8 @@
           "Walking Time (min) to Nearest Naltrexone Provider",
           "Walking Time (min) to nearest Buprenorphine Provider",
           "Walking Time (min) to nearest Methadone Provider",
-          "Walking Time (min) to nearest Naltrexone Provider"
+          "Walking Time (min) to nearest Naltrexone Provider",
+          "Walking time to nearest telehealth buprenorphine provider"
         ],
         "Source": "SAMSHA 2019, 2021; Vivitrol 2020; OSRM 2020;",
         "Metadata": "Access_MOUDs",
@@ -448,7 +504,28 @@
         "Years": "1980, 1990, 2000, 2010, 2020, 2021, 2025"
       }
     ],
-    "Spatial access to HCV Testing": [],
+    "Spatial access to HCV Testing": [
+      {
+        "Variable Construct": "Spatial access to HCV Testing",
+        "Variable Proxy": "Spatial access metrics to testing for hepatitis C virus (HCV) infections (Straight-line Distance, Driving Time, Count of Resources)",
+        "Variables": [
+          "Average time drive to nearest HCV testing provider",
+          "Average time drive to nearest HIV provider",
+          "Count of HCV Providers",
+          "Count of HIV Providers",
+          "Count of tracts within 30-min driving range",
+          "Distance to nearest HCV Provider",
+          "Distance to nearest HIV Provider",
+          "Driving time to nearest HCV Provider",
+          "Driving time to nearest HIV Provider",
+          "Percent of tracts within 30-min driving range"
+        ],
+        "Source": "SAMHSA 2025",
+        "Metadata": "Access_HCVTesting",
+        "Spatial Scale": "Tract, Zip, County, State",
+        "Years": "2025"
+      }
+    ],
     "Urban/Suburban/Rural Classification": [
       {
         "Variable Construct": "Urban/Suburban/Rural Classification",
@@ -483,7 +560,7 @@
         "Source": "SAMHSA 2020",
         "Metadata": "Access_Mental_Health",
         "Spatial Scale": "Tract, Zip, County, State",
-        "Years": "2020"
+        "Years": "2020, 2025"
       }
     ],
     "Spatial Access to Pharmacies": [
@@ -541,7 +618,6 @@
         "Variables": [
           "Count of Essential Workers",
           "Count of Working Population",
-          "Employed % - Education",
           "Employed % - Health Care",
           "Employed % - High Risk of Injury",
           "Employed % - Retail",
