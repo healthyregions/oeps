@@ -1,0 +1,13 @@
+{
+  "name": "TtlJlAdmQ4",
+  "title": "Total Jail Admissions Count (Q4), ASJ/COJ Data",
+  "type": "number",
+  "example": "72266",
+  "description": "Total Jail Admissions Count (Q4), ASJ/COJ Data",
+  "longitudinal": false,
+  "analysis": false,
+  "metadata": "Jail_Incarceration_Rates",
+  "table_sources": [
+    "county-2023"
+  ]
+}

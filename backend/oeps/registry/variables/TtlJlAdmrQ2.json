@@ -1,0 +1,13 @@
+{
+  "name": "TtlJlAdmrQ2",
+  "title": "Total jail admission rate (Q2)",
+  "type": "number",
+  "example": "1260.84",
+  "description": "Total Jail Admissions Rate (Q2), ASJ/COJ Data",
+  "longitudinal": false,
+  "analysis": false,
+  "metadata": "Jail_Incarceration_Rates",
+  "table_sources": [
+    "county-2023"
+  ]
+}
