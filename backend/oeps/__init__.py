@@ -11,7 +11,6 @@ from oeps.commands.validate_registry import validate_registry
 from oeps.commands.merge_csv import merge_csv
 from oeps.commands.move_variable import move_variable
 from oeps.commands.remove_variable import remove_variable
-from oeps.routes import api
 
 
 def create_app():
@@ -33,8 +32,5 @@ def create_app():
     app.cli.add_command(validate_registry)
     app.cli.add_command(move_variable)
     app.cli.add_command(remove_variable)
-
-    # register routes via blueprints
-    app.register_blueprint(api)
 
     return app
