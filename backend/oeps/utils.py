@@ -1,5 +1,4 @@
 import json
-import shutil
 import requests
 from tqdm import tqdm
 from pathlib import Path
@@ -25,6 +24,9 @@ def write_json(data, path):
 
 
 def download_file(url, filepath, desc=None, progress_bar=False, no_cache: bool = False):
+    """Download a single file. Optionally print a progress bar. If a local file
+    already exists it will be used unless no_cache=True."""
+
     if Path(filepath).is_file() and not no_cache:
         if progress_bar:
             print(f"{desc}: use cached file")
@@ -50,36 +52,3 @@ def download_file(url, filepath, desc=None, progress_bar=False, no_cache: bool =
         t.close()
 
     return filepath
-
-
-def fetch_files(paths, out_dir, no_cache: bool = False):
-    """Takes an input list of urls or local paths to fetch into the specified dir.
-    Returns a list of paths to the new files.
-
-    Will skip existing files unless no_cache=True."""
-
-    if not isinstance(paths, list):
-        paths = [paths]
-
-    local_paths = []
-    for path in paths:
-        filename = Path(path).name
-        out_path = Path(out_dir, filename)
-        if not out_path.exists() or no_cache:
-            print(f"  get: {path} --> {out_path}")
-            if path.startswith("http"):
-                response = requests.get(path, stream=True)
-                if response.status_code == 200:
-                    with open(out_path, mode="wb") as file:
-                        for chunk in response.iter_content(chunk_size=10 * 1024):
-                            file.write(chunk)
-                else:
-                    print(response)
-            else:
-                shutil.copy(path, out_path)
-        else:
-            print(f"  cached: {path} --> {out_path}")
-
-        local_paths.append(out_path)
-
-    return local_paths
