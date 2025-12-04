@@ -1,6 +1,4 @@
 {
-    "bq_dataset_name": "spatial",
-    "bq_table_name": "tracts2018",
     "name": "tracts",
     "title": "Census Tract Boundaries, 2018",
     "description": "Shapefile of census tract boundaries from the US Census Bureau, 2018.",

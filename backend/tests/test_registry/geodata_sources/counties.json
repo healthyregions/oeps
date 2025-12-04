@@ -1,6 +1,4 @@
 {
-    "bq_dataset_name": "spatial",
-    "bq_table_name": "counties2010",
     "name": "counties",
     "title": "County Boundaries, 2010",
     "description": "Shapefile of county boundaries from the US Census Bureau, 2010.",
