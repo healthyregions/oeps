@@ -17,8 +17,15 @@ from google.cloud.bigquery import (
     LoadJobConfig,
 )
 
-from ..registry.handlers import TableSource
-from ..utils import BQ_TYPE_LOOKUP
+from ..handlers import TableSource
+
+BQ_TYPE_LOOKUP = {
+    "string": "STRING",
+    "boolean": "BOOLEAN",
+    "integer": "INTEGER",
+    "date": "DATE",
+    "number": "NUMERIC",
+}
 
 def get_client():
     """Creates a BigQuery Client object and returns it, acquires credentials

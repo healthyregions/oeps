@@ -55,3 +55,5 @@ Where `states.sql` is an example of a file that holds the SQL query to perform a
 You can write your own SQL into a file and use the same command to perform your query and export the results.
 
 Use the [big-query-tables](../reference/bigquery/tables.md) page for quick access to all table and column names.
+
+Here are some [example SQL queries](https://github.com/healthyregions/oeps/tree/main/docs/src/reference/bigquery/exmaple_sql) you can adapt to directly query the Big Query tables as desired.

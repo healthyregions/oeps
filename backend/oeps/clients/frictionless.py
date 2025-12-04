@@ -10,8 +10,8 @@ from openpyxl.utils import get_column_letter
 from openpyxl.styles import Font
 
 from ..clients.s3 import upload_to_s3
-from ..registry.handlers import Registry
-from ..registry.models import GeodataSourceModel, GEOGRAPHY_LOOKUP
+from ..handlers import Registry
+from ..models import GeodataSourceModel, GEOGRAPHY_LOOKUP
 from ..utils import load_json, write_json, download_file
 
 

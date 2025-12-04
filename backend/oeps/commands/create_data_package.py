@@ -4,9 +4,9 @@ import shutil
 
 import click
 from ..clients.frictionless import DataPackage
-from ..registry.handlers import Registry
+from ..handlers import Registry
 
-from oeps.utils import (
+from ._utils import (
     handle_overwrite,
 )
 

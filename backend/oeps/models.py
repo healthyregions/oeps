@@ -4,8 +4,8 @@ from typing import Literal
 import pandas as pd
 from pydantic import BaseModel
 
-from ..config import DATA_DIR
-from ..utils import load_json, write_json
+from .config import DATA_DIR
+from .utils import load_json, write_json
 
 
 class GeographyLevelModel(BaseModel):
@@ -80,8 +80,7 @@ class TableSourceModel(BaseModel):
     variables: list["VariableModel"] = []
     df: pd.DataFrame = None
 
-    class Config:
-        arbitrary_types_allowed = True
+    model_config = {"arbitrary_types_allowed": True}
 
     @property
     def full_path(self) -> str:

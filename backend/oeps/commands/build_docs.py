@@ -6,7 +6,7 @@ import click
 
 from ..clients.bigquery import BigQuery
 from ..clients.data_dictionary import create_data_dictionary
-from ..registry.handlers import Registry
+from ..handlers import Registry
 from ..config import TEMP_DIR
 from ._common_opts import (
     add_common_opts,
