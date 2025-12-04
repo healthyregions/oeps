@@ -80,8 +80,7 @@ class TableSourceModel(BaseModel):
     variables: list["VariableModel"] = []
     df: pd.DataFrame = None
 
-    class Config:
-        arbitrary_types_allowed = True
+    model_config = {"arbitrary_types_allowed": True}
 
     @property
     def full_path(self) -> str:
