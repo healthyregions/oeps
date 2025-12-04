@@ -4,7 +4,7 @@ import shutil
 
 import click
 from ..clients.frictionless import DataPackage
-from ..registry.handlers import Registry
+from ..handlers import Registry
 
 from ._utils import (
     handle_overwrite,

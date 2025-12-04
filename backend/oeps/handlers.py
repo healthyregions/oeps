@@ -7,9 +7,8 @@ import pandas as pd
 import geopandas as gpd
 from pydantic import BaseModel
 
-from ..config import THEME_ORDER
+from .config import THEME_ORDER
 from .models import (
-    GEOGRAPHY_LOOKUP,
     TableSourceModel,
     VariableModel,
     GeodataSourceModel,
@@ -261,7 +260,6 @@ class Registry(BaseModel):
         target_ts.load_dataframe()
 
         id_column = None
-        # lvl = GEOGRAPHY_LOOKUP[target_ts.summary_level]
         lvl = self.geodata_sources[target_ts.geodata_source].summary_level
 
         if "HEROP_ID" in incoming_df.columns:

@@ -3,7 +3,7 @@ from datetime import datetime
 import click
 
 from ..clients.bigquery import BigQuery, get_client
-from ..registry.handlers import Registry
+from ..handlers import Registry
 
 from ._common_opts import (
     add_common_opts,

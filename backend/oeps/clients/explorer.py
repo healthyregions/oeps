@@ -6,7 +6,7 @@ import pandas as pd
 
 from ..clients.s3 import sync_to_s3, get_base_url
 from ..config import DATA_DIR
-from ..registry.handlers import Registry
+from ..handlers import Registry
 from ..utils import write_json, make_id
 
 

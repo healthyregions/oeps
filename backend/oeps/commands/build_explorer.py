@@ -3,7 +3,7 @@ from pathlib import Path
 import click
 
 from ..clients.explorer import Explorer
-from ..registry.handlers import Registry
+from ..handlers import Registry
 
 from ._common_opts import (
     add_common_opts,
