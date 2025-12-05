@@ -6,7 +6,7 @@
 
 **Last Modified By**: Catherine Discenza
 
-**Date Last Modified**: November 19, 2025
+**Date Last Modified**: December 5, 2025
 
 ### Theme
 
@@ -73,7 +73,7 @@ The following variables were included from **2023 5-year ACS B25026**:
 
 ---------- 
 
-* **Long-term occupancy rate** was calculated as : *(Owner & renter populations moved in before 1989 + Owner & renter population moved in between 1990 & 1999) / (Total population in owner & renter occupied units)*
+* **Long-term occupancy rate** was calculated as : *(Owner & renter populations moved in before 1989 + Owner & renter population moved in between 1990 & 1999) / (Total population in owner & renter occupied units) * 100*
 
 * **2018 5-year ACS Median occupancy rate** was calculated as : *=IF((Owner  & renter populations moved in 2017 or later)>=(Total population in occupied housing units/2),THEN(Moved in 2017 or later),IF((Owner  & renter populations moved in 2017 or later + Owner  & renter populations moved in 2015 to 2016)>=(Total population in occupied housing units/2),THEN(Moved in 2015 to 2016),IF((Owner  & renter populations moved in 2017 or later + Owner  & renter populations moved in 2015 to 2016 + Owner & renter populations moved in 2010 to 2014)>=(Total population in occupied housing units/2),THEN(Moved in 2010 to 2014),IF((Owner  & renter populations moved in 2017 or later + Owner  & renter populations moved in 2015 to 2016 + Owner & renter populations moved in 2010 to 2014 + Owner & renter populations moved in 2000 to 2009)>=(Total population in occupied housing units/2),THEN(Moved in 2000 to 2009),IF((Owner  & renter populations moved in 2017 or later + Owner  & renter populations moved in 2015 to 2016 + Owner & renter populations moved in 2010 to 2014 + Owner & renter populations moved in 2000 to 2009 + Owner & renter populations moved in 1990 to 1999)>=(Total population in occupied housing units/2),THEN(Moved in 1990 to 1999),IF((Owner  & renter populations moved in 2017 or later + Owner  & renter populations moved in 2015 to 2016 + Owner & renter populations moved in 2010 to 2014 + Owner & renter populations moved in 2000 to 2009 + Owner & renter populations moved in 1990 to 1999 + Ownder & renter populaiton moved in before 1989)>=(Total population in occupied housing units/2),THEN(Moved in 1989 or earlier)))))))*
 
