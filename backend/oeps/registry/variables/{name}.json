@@ -1,9 +1,0 @@
-{
-  "name": "MedHsgTen",
-  "title": "Median Housing Tenure",
-  "type": "string",
-  "example": "Since2017",
-  "description": "Median time period occupant moved into housing unit by tract",
-  "longitudinal": false,
-  "analysis": false
-}
