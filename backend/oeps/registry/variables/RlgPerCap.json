@@ -4,8 +4,8 @@
   "type": "number",
   "example": "0.125",
   "description": "Religious institutions per capita by census tract",
-  "longitudinal": 
-  "analysis": 
+  "longitudinal": false,
+  "analysis": false,
   "metadata": "Social_Capital",
-  "table_sources": 
+  "table_sources": []
 }
