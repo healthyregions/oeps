@@ -1,0 +1,10 @@
+{
+  "name": "SocCapInd",
+  "title": "Social Capital Index",
+  "type": "number",
+  "example": "0.26",
+  "description": "Composite index of LngTermP, LibPerCap, RlgPerCap",
+  "metadata": "Social_Capital.json",
+  "longitudinal": false,
+  "analysis": false
+}
