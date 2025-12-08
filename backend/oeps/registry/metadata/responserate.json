@@ -1,0 +1,9 @@
+{
+  "name": "Response_Rate",
+  "theme": "Social",
+  "construct": "Response rate",
+  "proxy": "ACS response rate",
+  "url": "https://github.com/healthyregions/oeps/blob/232-add-social-capital-metadata-and-registry-files-prep-for-index/metadata/Response_Rate.md",
+  "source": "ACS 2018, 2023",
+  "source_long": "American Community Survey 2018 5-year estimates, 2023 5-year estimates"
+}
