@@ -7,6 +7,8 @@
   "longitudinal": false,
   "analysis": false,
   "metadata": "Social_Capital",
-  "table_sources": []
+  "table_sources": [
+    "tract-2018",
+    "tract-2023"
+  ]
 }
-

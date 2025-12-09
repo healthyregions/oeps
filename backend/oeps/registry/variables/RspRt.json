@@ -7,5 +7,8 @@
   "longitudinal": false,
   "analysis": false,
   "metadata": "Social_Capital",
-  "table_sources": []
+  "table_sources": [
+    "county-2018",
+    "county-2023"
+  ]
 }

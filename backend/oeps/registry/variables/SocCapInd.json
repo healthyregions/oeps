@@ -4,8 +4,11 @@
   "type": "number",
   "example": "0.26",
   "description": "Composite index of LngTermP, LibPerCap, RlgPerCap",
-  "metadata": "Social_Capital",
   "longitudinal": false,
   "analysis": false,
-  "table_sources": []
+  "metadata": "Social_Capital",
+  "table_sources": [
+    "tract-2018",
+    "tract-2023"
+  ]
 }
