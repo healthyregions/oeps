@@ -1,0 +1,14 @@
+{
+  "name": "RlgPerCap",
+  "title": "Religious institutions per capita",
+  "type": "number",
+  "example": "0.125",
+  "description": "Religious institutions per capita by census tract",
+  "longitudinal": false,
+  "analysis": false,
+  "metadata": "Social_Capital",
+  "table_sources": [
+    "tract-2018",
+    "tract-2023"
+  ]
+}
