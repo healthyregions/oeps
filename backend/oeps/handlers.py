@@ -255,37 +255,83 @@ class Registry(BaseModel):
         """Load an incoming CSV to pandas dataframe, and create HEROP_ID
         along the way if possible."""
 
+        print("\n## PREVIEW OF INCOMING DATAFRAME\n")
+        print(incoming_df)
+
+        ## get the table source instance and load its CSV data to dataframe
         if isinstance(target_ts, str):
             target_ts = self.table_sources[target_ts]
         target_ts.load_dataframe()
-
-        id_column = None
         lvl = self.geodata_sources[target_ts.geodata_source].summary_level
 
-        if "HEROP_ID" in incoming_df.columns:
-            id_column = "HEROP_ID"
-        else:
-            for i in lvl.allowed_id_columns:
-                if i in incoming_df.columns:
-                    id_column = i
+        ## analyze the columns in the incoming dataframe
+        print("\n## CHECK COLUMNS\n")
 
-        if id_column is None:
-            raise Exception(
-                "No valid id column in this dataframe."
-            )
+        geo_cols, matched_cols, unmatched_cols, overlap_cols = [], [], [], []
 
-        ## determine which columns to take from the incoming dataframe
-        matched = [i for i in incoming_df.columns if i in self.variables]
-        missed = [i for i in incoming_df.columns if i not in self.variables]
-        overlap = [i for i in matched if i in target_ts.df.columns if i not in lvl.allowed_id_columns]
+        for c in incoming_df.columns:
+            ## put all geoid columns into a bucket
+            if c in lvl.allowed_id_columns:
+                geo_cols.append(c)
+            ## now check against all variables in the registry
+            elif c in self.variables:
+                if c in target_ts.df.columns:
+                    overlap_cols.append(c)
+                else:
+                    matched_cols.append(c)
+            ## the rest of the colums will be ignored. Note that these could be
+            ## columns that actually should be merged, but either 1) don't have
+            ## exactly the right names, or 2) the variables they represent have
+            ## not yet been added to the registry
+            else:
+                unmatched_cols.append(c)
 
-        use_columns = [i for i in matched if i not in target_ts.df.columns and i not in overlap]
+        print(f"Geo columns: {geo_cols}")
+        print(f"Matched columns: {matched_cols}")
+        print(f"Matched columns already in target: {overlap_cols}")
+        print(f"Unmatched columns: {unmatched_cols}")
+
+        if overlap_cols:
+            print("\n**IMPORTANT**: Incoming columns that already exist in the target "\
+                "will be IGNORED during this merge. To overwrite columns in the "\
+                "target you must first remove them and then re-run this command."\
+                f"\n\n    flask remove-variable -n <column name> -t {target_ts.name}")
+
+        if unmatched_cols:
+            print("\n**IMPORTANT**: Unmatched columns will be IGNORED during this merge. "\
+                "If a column is listed as 'unmatched' but should be included:"\
+                "\n\n- Check that the variable has already been created in the registry"\
+                "\n- Check that the name of the column exactly matches the variable name (case-sensitive)")
 
         ## create and begin modifying the staged dataframe
         prep_df = incoming_df.copy(deep=True)
 
-        ## may need to transform the 
-        if id_column != "HEROP_ID":
+        ## run a series of checks to ensure there is a joinable HEROP_ID column.
+        print("\ndetermining join column...\n")
+
+        id_column = None
+        if "HEROP_ID" in incoming_df.columns:
+            print("HEROP_ID is present")
+            id_column = "HEROP_ID"
+        else:
+            print("HEROP_ID is missing, checking for other appropriate join columns...\n")
+            for id_col in [i for i in lvl.allowed_id_columns if not i == "HEROP_ID"]:
+                print(f"- {id_col} present?", end=" ")
+                if id_col in incoming_df.columns:
+                    print("Yes! This column will be converted to HEROP_ID for join.")
+                    id_column = id_col
+                    break
+                else:
+                    print("No.")
+
+            ## if no appropriate join column has been found, then operation
+            ## cannot continue
+            if id_column is None:
+                raise Exception(
+                    "No valid id column in this dataframe."
+                )
+
+            ## generate HEROP_ID based on the matched id colum.
             prep_df["HEROP_ID"] = f"{lvl.code}US" + prep_df[id_column].astype("Int64").astype(str).str.zfill(
                 lvl.geoid_length
             )
@@ -293,43 +339,40 @@ class Registry(BaseModel):
         ## make sure whatever column that is used for the join ID is unique
         if not pd.Series(prep_df[id_column]).is_unique:
             raise Exception(
-                f"There are duplicate {id_column} values in the input CSV. {id_column} must be unique across all rows."
+                f"There are duplicate {id_column} rows in the input CSV. {id_column} must be unique across all rows."
             )
 
-        if "HEROP_ID" not in prep_df.columns:
-            raise Exception(
-                "input data frame must have one of these fields: HEROP_ID, GEOID, GEO ID, GEO_ID, FIPS, ZCTA5"
-            )
+        ## Now begin checking the incoming data against what is already in the table source
+        print("\n## CHECK ROWS\n")
 
-        ## drop any rows where the ID column is NaN after be
+        ## drop any rows where the ID column is NaN
         prep_df = prep_df.dropna(subset=[id_column])
 
+        target_row_ct = target_ts.df.shape[0]
+
+        print(f"Joinable rows in target table source: {target_row_ct}")
+        print("\nNumber of rows with values for each matched/overlap column:\n")
+        for mc in matched_cols + overlap_cols:
+            print(f"- {mc}: {prep_df.dropna(subset=[mc]).shape[0]}")
+
+        print(f"\n**IMPORTANT**: If any incoming columns have less than {target_row_ct} rows with values"\
+              " you may need to check the data.")
+
+        if not matched_cols:
+            print("\n\nThere are no matched columns to merge. Cancelling operation.")
+            exit()
+
+        ## set all data types in the dataframe (according to attributes in the registry)
         prep_df = self.set_data_types(prep_df)
+
+        ## round all values to 2 decimals
         prep_df = prep_df.round(2)
 
-        prep_df = prep_df[["HEROP_ID"] + use_columns]
+        ## trim all unneeded columns, leave only join field and matched columns.
+        prep_df = prep_df[["HEROP_ID"] + matched_cols]
 
-        print("initial loaded dataframe:")
-        print(incoming_df)
-        print(f"dataframe shape: {incoming_df.shape}")
-
-        print("staged dataframe:")
+        print("\n## PREVIEW OF STAGED DATAFRAME")
         print(prep_df)
-        print(f"dataframe shape: {prep_df.shape}")
-
-        print(f"{len(matched)} columns match to variables already in the registry")
-        print(
-            f"{len(missed)} columns are not yet in the registry and will be ignored. List of unmatched columns:"
-        )
-        for i in missed:
-            print(f"  {i}")
-        print(
-            f"{len(overlap)} columns in the incoming dataset already exist in the target"
-        )
-        if overlap:
-            print("  -- overlapping columns from incoming data will be ignored.")
-
-        print(f"{len(use_columns)} new column(s) will be added to the existing CSV")
 
         return prep_df
 

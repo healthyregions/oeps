@@ -1,4 +1,3 @@
-import csv
 from pathlib import Path
 import subprocess
 
@@ -8,6 +7,7 @@ from ..clients.bigquery import BigQuery
 from ..clients.data_dictionary import create_data_dictionary
 from ..handlers import Registry
 from ..config import TEMP_DIR
+from ..utils import write_csv
 from ._common_opts import (
     add_common_opts,
     registry_opt,
@@ -120,13 +120,6 @@ def build_docs(bq_only:bool, cli_only: bool, registry_only: bool, data_dictionar
 
     if ops["registry"] or full:
 
-        def write_csv_file(name, header, rows):
-            path = Path(f"../docs/src/reference/registry/{name}.csv")
-            with open(path, "w") as o:
-                writer = csv.writer(o)
-                writer.writerow(header)
-                writer.writerows(rows)
-
         registry = Registry.create_from_directory(registry_path)
 
         ## Create VARIABLES content
@@ -173,7 +166,6 @@ def build_docs(bq_only:bool, cli_only: bool, registry_only: bool, data_dictionar
         ]
         tab_rows = []
         for tab in table_sources:
-            print(tab)
             tab_rows.append([clean_value(getattr(tab, i)) for i in tab_cols])
 
         ## Create GEODATA SOURCES content
@@ -181,19 +173,26 @@ def build_docs(bq_only:bool, cli_only: bool, registry_only: bool, data_dictionar
         geodata_sources = list(registry.geodata_sources.values())
         geo_cols = [
             "name",
+            "summary_level",
             "title",
             "path",
             "description",
-            "summary_level",
         ]
         geo_rows = []
-        for var in geodata_sources:
-            geo_rows.append([clean_value(getattr(var, i)) for i in geo_cols])
+        for gs in geodata_sources:
+            geo_rows.append([
+                gs.name,
+                gs.summary_level.name,
+                gs.title,
+                gs.path,
+                gs.description,
+            ])
 
-        write_csv_file("variables", var_cols, var_rows_csv)
-        write_csv_file("metadata", metadata_cols, metadata_rows)
-        write_csv_file("table_sources", tab_cols, tab_rows)
-        write_csv_file("geodata_sources", geo_cols, geo_rows)
+        dpath = Path("../docs/src/reference/registry/")
+        write_csv(dpath / "variables.csv", var_cols, var_rows_csv)
+        write_csv(dpath / "metadata.csv", metadata_cols, metadata_rows)
+        write_csv(dpath / "table_sources.csv", tab_cols, tab_rows)
+        write_csv(dpath / "geodata_sources.csv", geo_cols, geo_rows)
 
     if ops['dd'] or full:
         print('Creating data dictionaries...')

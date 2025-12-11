@@ -1,3 +1,4 @@
+import csv
 import json
 import requests
 from tqdm import tqdm
@@ -21,6 +22,14 @@ def write_json(data, path):
     with open(path, "w") as o:
         return json.dump(data, o, indent=2)
     return path
+
+
+def write_csv(path: Path, header: list, rows: list):
+    """Uses the basic CSV writer to create a file from input headers and rows"""
+    with open(path, "w") as o:
+        writer = csv.writer(o)
+        writer.writerow(header)
+        writer.writerows(rows)
 
 
 def download_file(url, filepath, desc=None, progress_bar=False, no_cache: bool = False):
