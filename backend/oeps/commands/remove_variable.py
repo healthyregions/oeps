@@ -147,12 +147,3 @@ def remove_variable(name, table_source, registry_path, yes=False):
             else:
                 print(" -- cancel operation")
                 return
-
-    print("""
-To complete the variable removal(s), the following operations must be run and all resulting files committed to version control:
-
-    flask create-data-dictionaries
-    flask build-docs registry-summary
-    flask build-explorer-docs
-    flask build-explorer-map --upload
-""")
