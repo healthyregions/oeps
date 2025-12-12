@@ -25,13 +25,13 @@ The data used for this analysis is a variable encoded as BRx_oud, a binary varia
 for opioid use disorder (OUD)?"
 - 0 represents No and 1 represents Yes
 
-This data was available to download and work with at [this link](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Flawatlas.org%2Fsites%2Fdefault%2Ffiles%2F2025-03%2FBuprenorphine_Prescribing_Data_3.4.25.xlsx&wdOrigin=BROWSELINK).
+This data is available to download and work with at [this link](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Flawatlas.org%2Fsites%2Fdefault%2Ffiles%2F2025-03%2FBuprenorphine_Prescribing_Data_3.4.25.xlsx&wdOrigin=BROWSELINK).
 
-For each state during the time period of data coverage, March 1st, 2023 to September 1st, 2024, any changes to the state policy landscape regarding buprenorphine were represented as a new policy and entered as a new row in the spreadsheet with the associated dates - 'Effective Date' and 'Valid Through Date' - for that policy. These dates reflect the date the policy coded was put into effect and the last date the policy was in effect, respectively. While this was the entire time period for certain policies in some jurisdictions (states), other states had multiple different policies implemented within the period of data coverage.
+For each state during the time period of data coverage, March 1st, 2023 to September 1st, 2024, any changes to the state policy landscape regarding buprenorphine were represented as a new policy and entered as a new row in the spreadsheet with the associated dates - 'Effective Date' and 'Valid Through Date' - for that policy. These dates reflect the date that the policy coded was put into effect and the last date the policy was in effect, respectively. While this was the entire time period for certain policies in some jurisdictions (states), other states had multiple different policies implemented within the period of data coverage.
 
 ### Description of Data Processing: 
 
-The policy variable here was created by calculating the proportion of the data coverage period for which policies explicity regulating buprenorphine prescription for opioid use disorder (OUD) - as captured by a value of 1 for the BRx_oud variable - were in effect. This calculation was done in Excel and followed the basic formula of ('Valid Through Date' - 'Effective Date') / (9/1/2024 - 3/1/2023) (period of data coverage). In states where multiple policies regulating buprenorphine went into effect, the larger period of regulation (across which all policies had a value of 1 for BRx_oud) was taken and used in the calculation.
+The policy variable here was created by calculating the proportion of the data coverage period for which policies explicity regulating buprenorphine prescription for opioid use disorder (OUD) - as captured by a value of 1 for the BRx_oud variable - were in effect. This calculation was done in Excel and followed the basic formula of ('Valid Through Date' - 'Effective Date') / (9/1/2024 - 3/1/2023) (period of data coverage). In states where multiple policies regulating buprenorphine went into effect, the overall period of regulation (across which all policies had a value of 1 for BRx_oud) was taken and used in the calculation.
 
 
 ### Key Variable and Definitions:
