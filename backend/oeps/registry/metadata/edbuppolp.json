@@ -1,0 +1,9 @@
+{
+  "name": "EdBupPolP",
+  "theme": "Policy",
+  "construct": "Buprenorphine Policy Proportion",
+  "proxy": "Proportion of Entire Data Period with State-Level Buprenorphine Policy in Effect",
+  "url": "https://github.com/healthyregions/oeps/blob/medicaid_variables_saket/metadata/Bup_Policy_Proportion.md",
+  "source": "CPHLR 2025",
+  "source_long": "Center for Public Health Law Research & Vital Strategies"
+}
