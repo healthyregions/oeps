@@ -16,7 +16,7 @@ CSV files are organized by **year** and **spatial scale**. For example, county-l
 
 **State Buprenorphine Policies**
 
-Data were acquired from [Law Atlas](https://lawatlas.org/datasets/buprenorphine-prescribing-requirements-and-limitations) on state-level policies with prescribing requirements and limitations for Buprenorphine. This is a longitudinal dataset created and maintained by the Center for Public Health Law Research and Vital Strategies that captures the laws in effect between March 1, 2023, and September 1, 2024, across all 50 states and the District of Columbia. 
+Data were acquired from [Law Atlas](https://lawatlas.org/datasets/buprenorphine-prescribing-requirements-and-limitations) on state-level policies with prescribing requirements and limitations for Buprenorphine. This is a longitudinal dataset created and maintained by the Center for Public Health Law Research and Vital Strategies that captures the laws in effect between March 1, 2023, and September 1, 2024, across all 50 states and the District of Columbia. Data was most recently accessed in December 2025.
 
 Important to note is that the dataset does not include laws or policies that regulate buprenorphine prescribing exclusively within state Medicaid programs. Additional information on the scope of state laws that this dataset captures is available in their [Research Protocol document](https://lawatlas.org/sites/default/files/2025-03/Buprenorphine%20Rx_Codebook%203.4.25.pdf), and the coding forms used for variables are available in [this Codebook](https://lawatlas.org/sites/default/files/2025-03/Buprenorphine%20Rx_Codebook%203.4.25.pdf).
 
@@ -32,6 +32,7 @@ For each state during the time period of data coverage, March 1st, 2023 to Septe
 ### Description of Data Processing: 
 
 The policy variable here was created by calculating the proportion of the data coverage period for which policies explicity regulating buprenorphine prescription for opioid use disorder (OUD) - as captured by a value of 1 for the BRx_oud variable - were in effect. This calculation was done in Excel and followed the basic formula of ('Valid Through Date' - 'Effective Date') / (9/1/2024 - 3/1/2023) (period of data coverage). In states where multiple policies regulating buprenorphine went into effect, the larger period of regulation (across which all policies had a value of 1 for BRx_oud) was taken and used in the calculation.
+
 
 ### Key Variable and Definitions:
 
