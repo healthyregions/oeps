@@ -93,7 +93,11 @@ def remove_variable(name, table_source, registry_path, yes=False):
         # Only delete variables that exist
         for var_name in existing_vars:
             ts.delete_variable_data(var_name)
-        registry.update_variable_table_sources(ts.name)
+            # Update table_sources for this specific variable only
+            variable = registry.variables.get(var_name)
+            if variable and ts.name in variable.table_sources:
+                variable.table_sources = [i for i in variable.table_sources if i != ts.name]
+                registry.save_variable(variable)
         print(f"Successfully removed {len(existing_vars)} variable(s) from {ts.name}")
 
     else:
