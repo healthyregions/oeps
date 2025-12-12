@@ -1,0 +1,9 @@
+{
+  "name": "MedPolProp",
+  "theme": "Policy",
+  "construct": "Medicaid Policy Proportion",
+  "proxy": "Proportion of given year for which Medicaid Expansion was implemented / in effect",
+  "url": "https://github.com/healthyregions/oeps/blob/medicaid_variables_saket/metadata/Medicaid_Policy_Proportion.md",
+  "source": "KFF 2025",
+  "source_long": "KFF (Status of State Action on Medicaid Expansion Decision) 2025"
+}
