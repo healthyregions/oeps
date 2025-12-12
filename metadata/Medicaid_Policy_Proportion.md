@@ -23,7 +23,7 @@ The following variables were included from the source data:
 
 1. Status of Medicaid Expansion Decision, a dummy variable indicating whether a state has adopted state-level policy action on the Medicaid Expansion decision ("Adopted") or not ("Not Adopted")
 2. Expansion Implementation Date, the date on which state-level Medicaid Expansion policies (if adopted) went into effect in a state
-   - However, values of this variables for states which have not implemented the Expansion Decision is left blank rather than represented with "N/A" as the source data does
+   - However, values of this variable for states which have not implemented the Expansion Decision are left blank rather than represented with "N/A" as the source data does
 
 Our first variable, Medicaid Policy Proportion, was calculated as a proportion of each year from 2014 to 2024 for which Medicaid Expansion was adopted / in effect in a state. For example, if Alaska adopted the Medicaid Expansion Decision on 9/1/2015, their proportion should be 0 for 2014, 0.333 (as Medicaid Expansion was adopted for four months -> 1/3rd of that calendar year) for 2015, and 1 for each year afterwards through 2024.  
 
