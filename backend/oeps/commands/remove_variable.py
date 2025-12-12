@@ -68,19 +68,33 @@ def remove_variable(name, table_source, registry_path, yes=False):
             print(f"Invalid table source name: {table_source}")
             exit(1)
         
-        if len(variable_names) == 1:
-            prompt = f"\n{variable_names[0]} column will be removed from the {ts.name} CSV. Continue? Y/n "
-        else:
-            prompt = f"\n{len(variable_names)} variables will be removed from the {ts.name} CSV:\n  {', '.join(variable_names)}\nContinue? Y/n "
+        if not yes:
+            if len(variable_names) == 1:
+                prompt = f"\n{variable_names[0]} column will be removed from the {ts.name} CSV. Continue? Y/n "
+            else:
+                prompt = f"\n{len(variable_names)} variables will be removed from the {ts.name} CSV:\n  {', '.join(variable_names)}\nContinue? Y/n "
+            
+            if input(prompt).lower().startswith("n"):
+                print(" -- cancel operation")
+                return
         
-        if yes or not input(prompt).lower().startswith("n"):
-            for var_name in variable_names:
-                ts.delete_variable_data(var_name)
-            registry.update_variable_table_sources(ts.name)
-            print(f"Successfully removed {len(variable_names)} variable(s) from {ts.name}")
-        else:
-            print(" -- cancel operation")
-            return
+        # Proceed with removal
+        # Load dataframe to check which variables actually exist
+        if ts.df is None:
+            ts.load_dataframe()
+        
+        # Filter to only variables that exist in this table source
+        existing_vars = [var_name for var_name in variable_names if var_name in ts.df.columns]
+        missing_vars = [var_name for var_name in variable_names if var_name not in ts.df.columns]
+        
+        if missing_vars:
+            print(f"Warning: The following variables are not in {ts.name} and will be skipped: {', '.join(missing_vars)}")
+        
+        # Only delete variables that exist
+        for var_name in existing_vars:
+            ts.delete_variable_data(var_name)
+        registry.update_variable_table_sources(ts.name)
+        print(f"Successfully removed {len(existing_vars)} variable(s) from {ts.name}")
 
     else:
         # Remove from all table sources where variables exist
@@ -94,7 +108,10 @@ def remove_variable(name, table_source, registry_path, yes=False):
             )
             if yes or not input("Continue? Y/n").lower().startswith("n"):
                 for source in sources:
-                    source.delete_variable_data(var_name)
+                    if source.df is None:
+                        source.load_dataframe()
+                    if var_name in source.df.columns:
+                        source.delete_variable_data(var_name)
                 registry.remove_variable(var_name)
             else:
                 print(" -- cancel operation")
@@ -117,7 +134,10 @@ def remove_variable(name, table_source, registry_path, yes=False):
                     variable = registry.variables.get(var_name)
                     sources = [i for i in registry.table_sources.values() if i.name in variable.table_sources]
                     for source in sources:
-                        source.delete_variable_data(var_name)
+                        if source.df is None:
+                            source.load_dataframe()
+                        if var_name in source.df.columns:
+                            source.delete_variable_data(var_name)
                     registry.remove_variable(var_name)
                 print(f"Successfully removed {len(variable_names)} variable(s)")
             else:
