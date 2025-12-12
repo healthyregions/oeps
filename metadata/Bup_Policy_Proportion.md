@@ -50,7 +50,7 @@ In states where multiple policies regulating buprenorphine went into effect, the
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
 | Buprenorphine Policy Proportion | BupPolP | Proportion of Year with State-Level Buprenorphine Policy in Effect | 2023, 2024 | State |
-| Entire Data Period Buprenorphine Policy Proportion | EdBupPolP | Proportion of Year with State-Level Buprenorphine Policy in Effect | 2023, 2024 | State |
+| Entire Data Period Buprenorphine Policy Proportion | EdBupPolP | Proportion of Entire Data Period with State-Level Buprenorphine Policy in Effect | 2023, 2024 | State |
 | Buprenorphine Policy Implementation Periods | PerImplBupP | Periods of Implementation of State-Level Buprenorphine Policy | 2023, 2024 | State |
 
 ### Data Limitations:
