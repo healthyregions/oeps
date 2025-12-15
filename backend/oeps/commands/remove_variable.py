@@ -102,48 +102,38 @@ def remove_variable(name, table_source, registry_path, yes=False):
 
     else:
         # Remove from all table sources where variables exist
-        if len(variable_names) == 1:
-            var_name = variable_names[0]
+        # Build summary of what will be removed
+        all_sources = set()
+        for var_name in variable_names:
             variable = registry.variables.get(var_name)
-            sources = [i for i in registry.table_sources.values() if i.name in variable.table_sources]
-            source_names = "\n  ".join([i.name for i in sources])
+            sources = [i.name for i in registry.table_sources.values() if i.name in variable.table_sources]
+            all_sources.update(sources)
+        
+        source_names = "\n  ".join(sorted(all_sources))
+        if len(variable_names) == 1:
             print(
-                f"\nVariable will be removed from registry, and {var_name} column will be removed from the following CSVs:\n  {source_names}"
+                f"\nVariable will be removed from registry, and {variable_names[0]} column will be removed from the following CSVs:\n  {source_names}"
             )
-            if yes or not input("Continue? Y/n").lower().startswith("n"):
-                for source in sources:
-                    if source.df is None:
-                        source.load_dataframe()
-                    if var_name in source.df.columns:
-                        source.delete_variable_data(var_name)
-                registry.remove_variable(var_name)
-            else:
-                print(" -- cancel operation")
-                return
         else:
-            # Multiple variables - show summary
-            all_sources = set()
-            for var_name in variable_names:
-                variable = registry.variables.get(var_name)
-                sources = [i.name for i in registry.table_sources.values() if i.name in variable.table_sources]
-                all_sources.update(sources)
-            
-            source_names = "\n  ".join(sorted(all_sources))
             print(
                 f"\n{len(variable_names)} variables will be removed from registry, and their columns will be removed from the following CSVs:\n  {source_names}"
             )
             print(f"\nVariables to remove: {', '.join(variable_names)}")
-            if yes or not input("Continue? Y/n").lower().startswith("n"):
-                for var_name in variable_names:
-                    variable = registry.variables.get(var_name)
-                    sources = [i for i in registry.table_sources.values() if i.name in variable.table_sources]
-                    for source in sources:
-                        if source.df is None:
-                            source.load_dataframe()
-                        if var_name in source.df.columns:
-                            source.delete_variable_data(var_name)
-                    registry.remove_variable(var_name)
-                print(f"Successfully removed {len(variable_names)} variable(s)")
-            else:
-                print(" -- cancel operation")
-                return
+        
+        # Confirm before proceeding
+        if not yes and input("Continue? Y/n").lower().startswith("n"):
+            print(" -- cancel operation")
+            return
+        
+        # Remove each variable from all its sources
+        for var_name in variable_names:
+            variable = registry.variables.get(var_name)
+            sources = [i for i in registry.table_sources.values() if i.name in variable.table_sources]
+            for source in sources:
+                if source.df is None:
+                    source.load_dataframe()
+                if var_name in source.df.columns:
+                    source.delete_variable_data(var_name)
+            registry.remove_variable(var_name)
+        
+        print(f"Successfully removed {len(variable_names)} variable(s)")
