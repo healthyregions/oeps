@@ -9,8 +9,6 @@
   "metadata": "Access_FQHCs",
   "table_sources": [
     "county-2020",
-    "county-2025",
-    "state-2020",
-    "state-2025"
+    "state-2020"
   ]
 }
