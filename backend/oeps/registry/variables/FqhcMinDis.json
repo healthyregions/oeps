@@ -1,9 +1,9 @@
 {
   "name": "FqhcMinDis",
-  "title": "Distance (mi) to nearest FQHC",
+  "title": "Distance (mi) to nearest Federally Qualified Health Centers (FQHC)",
   "type": "number",
   "example": "10.23",
-  "description": "Euclidean distance* from tract/zip centroid to nearest FQHC, in miles",
+  "description": "Euclidean distance* from tract/zip centroid to nearest Federally Qualified Health Centers (FQHC), in miles",
   "longitudinal": false,
   "analysis": false,
   "metadata": "Access_FQHCs",
