@@ -21,7 +21,7 @@ The dataset includes the Expansion Implementation Date as applicable for each st
 ### Description of Data Processing: 
 The following variables were included from the source data:
 
-1. Status of Medicaid Expansion Decision, a dummy variable indicating whether a state has adopted state-level policy action on the Medicaid Expansion decision ("Adopted") or not ("Not Adopted")
+1. Status of Medicaid Expansion Decision, a dummy variable indicating whether a state has adopted state-level policy action on the Medicaid Expansion decision ("Adopted") or not ("Not Adopted"), as of September 2025
 2. Expansion Implementation Date, the date on which state-level Medicaid Expansion policies (if adopted) went into effect in a state
    - However, values of this variable for states which have not implemented the Expansion Decision are left blank rather than represented with "N/A" as the source data does
 
