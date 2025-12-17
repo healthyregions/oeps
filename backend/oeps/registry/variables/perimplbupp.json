@@ -1,9 +1,9 @@
 {
-  "name": "PerImplBupP",
-  "title": "Buprenorphine Policy Implementation Periods",
+  "name": "PerImpBupP",
+  "title": "Periods of Buprenorphine Policy Implementation",
   "type": "string",
   "example": "2023-03-01 to 2023-06-25",
-  "description": "Periods of Implementation of State-Level Buprenorphine Policy",
+  "description": "Periods of Implementation of State-Level Buprenorphine Policy (Associated Date Ranges)",
   "metadata": "Bup_Policy_Proportion.json",
   "longitudinal": false,
   "analysis": false
