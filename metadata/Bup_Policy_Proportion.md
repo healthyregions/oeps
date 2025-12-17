@@ -57,7 +57,7 @@ In states where multiple policies regulating buprenorphine went into effect, the
 
 ### Data Limitations:
 
-- Data was only available through this source between March 2023 and September 2024. 
+- Data was only available through this source between March 2023 and September 2024. As such, the proportions are calculated to reflect this specifically and policies prescribing requirements/limitations may have been in effect during other parts of the given years that were not captured in the data used to provide the 'Periods of Buprenorphine Policy Implementation' variable.
 
 ### Comments/Notes:
 Calculated proportions were rounded to three decimal places.
