@@ -25,9 +25,9 @@ The following variables were included from the source data:
 2. Expansion Implementation Date, the date on which state-level Medicaid Expansion policies (if adopted) went into effect in a state
    - However, values of this variable for states which have not implemented the Expansion Decision are left blank rather than represented with "N/A" as the source data does
 
-Our first variable, Medicaid Policy Proportion, was calculated as a proportion of each year from 2014 to 2024 for which Medicaid Expansion was adopted / in effect in a state. For example, if Alaska adopted the Medicaid Expansion Decision on 9/1/2015, their proportion should be 0 for 2014, 0.333 (as Medicaid Expansion was adopted for four months -> 1/3rd of that calendar year) for 2015, and 1 for each year afterwards through 2024.  
+Additionally, our first variable, Medicaid Policy Proportion, was calculated as a proportion of each year from 2014 to 2024 for which Medicaid Expansion was adopted / in effect in a state. For example, if Alaska adopted the Medicaid Expansion Decision on 9/1/2015, their proportion should be 0 for 2014, 0.333 (as Medicaid Expansion was adopted for four months -> 1/3rd of that calendar year) for 2015, and 1 for each year afterwards through 2024.  
 
-Two broader five-year variables (2014 - 2019 Medicaid Expansion Proportion and 2020 - 2024 Medicaid Expansion Proportion) were also created to capture the proportion of the periods 2014 - 2019 and 2020 - 2024 for which Medicaid Expansion was implemented in a state.
+Two broader five-year variables (2014 - 2019 Medicaid Expansion Proportion and 2020 - 2024 Medicaid Expansion Proportion) were also created to capture the proportion of the periods 2014 - 2019 and 2020 - 2024 for which Medicaid Expansion was implemented in a state. They are organized into separate CSVs for their respective time periods and are not accessible as part of yearly CSVs like the first Medicaid Policy Proportion variable.
 
 ### Key Variable and Definitions:
 
@@ -40,8 +40,8 @@ Two broader five-year variables (2014 - 2019 Medicaid Expansion Proportion and 2
 | Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |:---------|:--------------------|:------------|:----------------|:--------------|
 | Medicaid Expansion Proportion | MedPolProp | Proportion of given year for which Medicaid Expansion was implemented / in effect | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 | State |
-| 2014 - 2019 Medicaid Expansion Proportion | 14to19MedPolProp | Proportion of the period from 2014 - 2019 for which Medicaid Expansion was implemented / in effect | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 | State | 
-| 2020 - 2024 Expansion Proportion | 20to24MedPolProp | Proportion of the period from 2020 - 2024 for which Medicaid Expansion was implemented / in effect | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 | State | 
+| 2014 - 2019 Medicaid Expansion Proportion | 14to19MedPolProp | Proportion of the period from 2014 - 2019 for which Medicaid Expansion was implemented / in effect | 2014 - 2019 | State | 
+| 2020 - 2024 Expansion Proportion | 20to24MedPolProp | Proportion of the period from 2020 - 2024 for which Medicaid Expansion was implemented / in effect | 2020 - 2024 | State | 
 
 ### Data Limitations / Additional Information:
 See source documentation for details. Additional information, such as a downloadable map and a detailed table of the state actions adopting Medicaid expansion, can be accessed [here](https://www.kff.org/medicaid/status-of-state-medicaid-expansion-decisions/).
