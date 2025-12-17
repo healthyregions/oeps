@@ -36,7 +36,11 @@ The policy variables here were created by calculating the proportion of a) the y
 As a third variable, associated date ranges for periods of policy implementation are stored and provided as well. If a state had no relevant policy implemented in the given year, the value of this variable is left blank.
 
  These calculations were done in Excel and followed the basic formulas of:
-a) ('Valid Through Date' - 'Effective Date') / (latest data available for year: 12/31/2023 or 9/1/2024 minus earliest date available for year: 3/1/2023 or 1/1/2024) (given year timespan) for the first variable and 
+ 
+a) ('Valid Through Date' - 'Effective Date') / (latest data available for year: 12/31/2023 or 9/1/2024 minus earliest date available for year: 3/1/2023 or 1/1/2024) (given year timespan) for the first variable 
+
+and 
+
 b) ('Valid Through Date' - 'Effective Date') / (9/1/2024 - 3/1/2023) (period of entire data coverage) for the second variable. 
  
 In states where multiple policies regulating buprenorphine went into effect, the overall sum period of regulation (across which all policies had a value of 1 for BRx_oud) was taken and used in the calculation.
