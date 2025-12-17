@@ -1,0 +1,10 @@
+{
+  "name": "BupPolP",
+  "title": "Buprenorphine Policy Proportion",
+  "type": "number",
+  "example": "0.211",
+  "description": "Proportion of Year with State-Level Buprenorphine Policy in Effect",
+  "metadata": "Bup_Policy_Proportion.json",
+  "longitudinal": false,
+  "analysis": false
+}
