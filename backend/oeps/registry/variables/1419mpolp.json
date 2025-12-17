@@ -1,0 +1,10 @@
+{
+  "name": "14_19MPolP",
+  "title": "2014 - 2019 Medicaid Expansion Proportion",
+  "type": "number",
+  "example": "0.7",
+  "description": "Proportion of the period from 2014 - 2019 for which Medicaid Expansion was implemented / in effect",
+  "metadata": "Medicaid_Policy_Proportion.json",
+  "longitudinal": false,
+  "analysis": false
+}
