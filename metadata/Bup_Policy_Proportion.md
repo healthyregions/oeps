@@ -31,7 +31,9 @@ For each state during the time period of data coverage, March 1st, 2023 to Septe
 
 ### Description of Data Processing: 
 
-The policy variables here were created by calculating the proportion of a) the year and b) the entire data coverage period for which policies explicity regulating buprenorphine prescription for opioid use disorder (OUD) - as captured by a value of 1 for the BRx_oud variable - were in effect. Associated date ranges for periods of policy implementation are stored and provided as well as a third variable.
+The policy variables here were created by calculating the proportion of a) the year and b) the entire data coverage period for which policies explicity regulating buprenorphine prescription for opioid use disorder (OUD) - as captured by a value of 1 for the BRx_oud variable - were in effect. 
+
+As a third variable, associated date ranges for periods of policy implementation are stored and provided as well. If a state had no relevant policy implemented in the given year, the value of this variable is left blank.
 
  These calculations were done in Excel and followed the basic formulas of:
 a) ('Valid Through Date' - 'Effective Date') / (latest data available for year: 12/31/2023 or 9/1/2024 minus earliest date available for year: 3/1/2023 or 1/1/2024) (given year timespan) for the first variable and 
