@@ -1,0 +1,9 @@
+{
+  "name": "Access_SSP",
+  "theme": "Environment",
+  "construct": "Spatial access to Syringe Services Programs",
+  "proxy": "Travel time to Syringe Services Programs",
+  "url": "https://github.com/healthyregions/oeps/blob/nasen_ssp/metadata/Access_SSP.md",
+  "source": "NASEN",
+  "source_long": "North American Syringe Exchange Network"
+}
