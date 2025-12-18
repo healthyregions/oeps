@@ -52,7 +52,7 @@ This analysis was conducted in Python. The scripts are available in code/AccessM
 
 | Variable                          | Variable ID in .csv | Description | Years Available | Spatial Scale |
 |----------------------------------|----------------------|-----------------------------------------------------------------------------|------------------|----------------|
-| Driving time to nearest SSP | SSPTmDr | Driving time from origin census tract centroid to census tract centroid of nearest SSP                  | 2025 | Tract |
+| Driving time to nearest SSP | SSPTmDr | Driving time in minutes from origin census tract centroid to census tract centroid of nearest SSP                  | 2025 | Tract |
 
 
 
