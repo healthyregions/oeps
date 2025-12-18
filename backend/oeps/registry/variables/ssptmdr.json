@@ -3,7 +3,7 @@
   "title": "Driving time to nearest SSP",
   "type": "number",
   "example": "83.75",
-  "description": "Driving time from origin census tract to nearest SSP (minutes)",
+  "description": "Driving time in minutes from origin census tract centroid to census tract centroid of nearest SSP",
   "metadata": "accessssp.json",
   "longitudinal": false,
   "analysis": false
