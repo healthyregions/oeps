@@ -1,6 +1,6 @@
-**Meta Data Name**: Access to Syringe Services Programs
+**Meta Data Name**: Access to Syringe Services Programs 
 **Date Added**: December 18, 2025  
-**Authors**: Catherine Discenza, Adam Cox
+**Authors**: Catherine Discenza, Adam Cox 
 **Date Last Modified**: December 18, 2025  
 **Last Modified By**: Catherine Discenza 
 
