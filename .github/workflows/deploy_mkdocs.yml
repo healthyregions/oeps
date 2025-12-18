@@ -5,6 +5,12 @@ on:
       - main
     paths:
       - 'docs/**'
+  workflow_run:
+    workflows: ["Generate Derived Data"]
+    types:
+      - completed
+    branches:
+      - main
   workflow_dispatch:
 permissions:
   contents: write
@@ -14,6 +20,11 @@ permissions:
 jobs:
   build_mkdocs:
     runs-on: ubuntu-latest
+    # Run if: direct push to docs/**, manual trigger, or successful completion of Generate Derived Data
+    if: >
+      github.event_name == 'push' ||
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success')
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -22,6 +33,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: 3.9
