@@ -1,0 +1,10 @@
+{
+  "name": "MedPolProp",
+  "title": "Medicaid Expansion Proportion",
+  "type": "number",
+  "example": "0.75",
+  "description": "Proportion of given year for which Medicaid Expansion was implemented / in effect",
+  "metadata": "Medicaid_Policy_Proportion.json",
+  "longitudinal": false,
+  "analysis": false
+}
