@@ -1,8 +1,8 @@
 **Meta Data Name**: Opioid Indicators: Prescription and Mortality Rates  
 **Date Added**: February 1, 2021  
-**Author**: Susan Paykin, Wataru Morioka, Mahjabin Kabir Adrita   
-**Date Last Modified**: August 26, 2025  
-**Last Modified By**:  Mahjabin Kabir Adrita  
+**Author**: Susan Paykin, Wataru Morioka, Mahjabin Kabir Adrita, Catherine Discenza   
+**Date Last Modified**: December 19, 2025  
+**Last Modified By**:  Catherine Discenza  
 
 ### Theme: 
 Outcome
@@ -22,6 +22,8 @@ For the **county** dataset, the two indicators are overdose mortality rate durin
 
 The opioid prescriptions rate data for 2020 for all U.S. counties were obtained from the “[CDC’s National Center for Injury Prevention and Control](https://www.cdc.gov/drugoverdose/rxrate-maps/index.html)”. CDC derived the data from the IQVIA Transactional Data Warehouse to obtain the number of opioid prescriptions dispensed in the U.S. via retail. Please see the full CDC report for more details.
 
+County-level MOUD access data was obtained from the U.S. Substance Abuse and Mental Health Services Administration (SAMHSA) [Opioid Treatment Program (OTP) Directory](https://dpt2.samhsa.gov/treatment/directory.aspx). Full details on this variable can be found in forthcoming updates to metadata/Access_MOUDS.md. 
+
 For the **state** dataset, the three indicators are overdose mortality rate during 2014-2020, opioid prescription rate in 2020, and pain reliever misuse prevalence during 2019-2020.
 
 *From HepVu:* State-specific data for overdose mortality rates were obtained from the CDC injury center and the NVSS. Deaths were classified using the International Classification of Diseases, Tenth Revision. Drug overdose deaths were identified using underlying cause-of-death codes X40–X44, X60–X64, X85, or Y10–Y14. Rates are age-adjusted using the 2000 U.S. standard population, except for age-specific crude rates. All rates are per 100,000 population.
@@ -34,7 +36,7 @@ For more information, see [HepVu's Data Methods](https://hepvu.org/data-methods/
 
 ### Description of Data Processing: 
 
-Data was cleaned and variables were renamed to shorter, abbreviated labels. The average drug overdose mortality rate variable (*OdMortRtAv*) was calculated by taking the 5-year average from 2015 to 2019).
+Data was cleaned and variables were renamed to shorter, abbreviated labels. The average drug overdose mortality rate variable (*OdMortRtAv*) was calculated by taking the 5-year average from 2015 to 2019). The ratio of MOUD access to drug overdose mortality rate (*OdMrtMoudR*) was calculated using the most recent (2021) drug overdose mortality as: *(MOUD access)/(OdMortRt)*
 
 ### Key Variable and Definitions:
 
@@ -50,9 +52,10 @@ Data was cleaned and variables were renamed to shorter, abbreviated labels. The 
 | Overdose mortality rate | OdMortRt | Death of persons from narcotic overdose per 100,000 persons from individual years | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022 | County, State |
 | Average overdose mortality rate | OdMortRtAv | Average narcotic overdose mortality rates | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022 | County, State |
 | Pain reliever misuse percent | PrMsuseP | Percent of persons who self-report misusing prescription pain relief medication in a specific year | 2020, 2022 | State |
+| MOUD access to overdose mortality rate | OdMrtMoudR | Ratio of county-level MOUD access to overdose mortality rate | 2021 | County |
 
 ### Data Limitations:
-Note that pain reliever misuse data is only available for State-level data. Overdose mortality data for county level is vailable for 2021.
+Note that pain reliever misuse data is only available for State-level data. Overdose mortality data for county level is available for 2021.
 
 ### Comments/Notes:
 No additional comments at this time. 
