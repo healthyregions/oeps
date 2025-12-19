@@ -2,7 +2,7 @@
   "name": "Opioid_Outcomes",
   "theme": "Outcome",
   "construct": "Opioid Indicators",
-  "proxy": "Opioid Prescription Rates, Opioid Mortality Rates, Prescription Pain Medication Misuse",
+  "proxy": "Opioid Prescription Rates, Opioid Mortality Rates, Prescription Pain Medication Misuse, MOUD Access to Overdose Mortality Ratio",
   "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Opioid_Outcomes.md",
   "source": "HepVu 2014-2022",
   "source_long": "HepVu, Emory University Rollins School of Public Health, 2014-2022"
