@@ -1,0 +1,10 @@
+{
+  "name": "OdMrtMoudR",
+  "title": "MOUD access to overdose mortality rate ratio",
+  "type": "number",
+  "example": "3.6",
+  "description": "Ratio of county-level MOUD access to overdose mortality rate",
+  "metadata": "Opioid_Outcomes.json",
+  "longitudinal": false,
+  "analysis": false
+}
