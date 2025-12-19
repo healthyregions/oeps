@@ -52,7 +52,7 @@ Data was cleaned and variables were renamed to shorter, abbreviated labels. The 
 | Overdose mortality rate | OdMortRt | Death of persons from narcotic overdose per 100,000 persons from individual years | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022 | County, State |
 | Average overdose mortality rate | OdMortRtAv | Average narcotic overdose mortality rates | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022 | County, State |
 | Pain reliever misuse percent | PrMsuseP | Percent of persons who self-report misusing prescription pain relief medication in a specific year | 2020, 2022 | State |
-| MOUD access to overdose mortality rate | OdMrtMoudR | Ratio of county-level MOUD access to overdose mortality rate | 2021 | County |
+| MOUD access to overdose mortality rate ratio | OdMrtMoudR | Ratio of county-level MOUD access to overdose mortality rate | 2021 | County |
 
 ### Data Limitations:
 Note that pain reliever misuse data is only available for State-level data. Overdose mortality data for county level is available for 2021.
