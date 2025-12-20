@@ -93,9 +93,8 @@ hist(fqhc$FqhcTmDrPL)
 fqhc.loud <- select(fqhc, GEOID,FqhcTmDr, FqhcTmDrPL)
 head(fqhc.loud)
 
-fqhc.loud$HEROP_ID <- paste0("140US",fqhc.loud$GEOID)
 
-loud.df <- merge(loud.df, fqhc.loud, by="HEROP_ID")
+loud.df <- merge(loud.df, fqhc.loud, by="GEOID")
 head(loud.df)
 
 save(loud.df,  file = "loud_staging.RData")
@@ -129,13 +128,11 @@ moud$NaltTmDrPL <- percent_rank(moud$NaltTmDr)
 head(moud)
 hist(moud$NaltTmDrPL)
 
-moud$HEROP_ID <- paste0("140US",moud$GEOID)
-
 moud.loud <- moud %>%
-  select(HEROP_ID,MetTmDr,MetTmDrPL,BupTmDr,BupTmDrPL,NaltTmDr,NaltTmDrPL)
+  select(GEOID,MetTmDr,MetTmDrPL,BupTmDr,BupTmDrPL,NaltTmDr,NaltTmDrPL)
 head(moud.loud)
 
-loud.df <- merge(loud.df, moud.loud, by="HEROP_ID")
+loud.df <- merge(loud.df, moud.loud, by="GEOID")
 head(loud.df)
 
 save(loud.df,  file = "loud_staging.RData")
