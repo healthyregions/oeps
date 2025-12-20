@@ -72,3 +72,5 @@ final_rounded$HEROP_ID <- paste0("140US",final_rounded$GEOID)
 head(final_rounded)
 
 write.csv(final_rounded, "../data_to_merge/commuting_tract18.csv",row.names = FALSE)
+
+

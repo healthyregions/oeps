@@ -46,3 +46,32 @@ tract$HEROP_ID <- paste0("140US",tract$GEOID)
 head(tract)
 
 write.csv(tract, "../data_to_merge/insurance_tract18.csv",row.names = FALSE)
+
+
+###### Zip
+
+# Retrieve ACS data for 2023 at the zcta level for the specified variable
+zcta <- get_acs(geography = 'zcta', variables = c(InsuredPop = "DP03_0096",
+                                                    InsuredPopP = "DP03_0096P", 
+                                                    PrivateInsP = "DP03_0097P",
+                                                    PublicInsP = "DP03_0098P"),
+                 year = 2018, geometry = FALSE, state = c(state.abb, "DC")) %>%
+  select(GEOID, NAME, variable, estimate) %>% 
+  spread(variable, estimate) %>% 
+  select(GEOID,InsuredPop,InsuredPopP,PrivateInsP,PublicInsP)
+
+head(zcta)
+
+hist(zcta$InsuredPop)
+hist(zcta$InsuredPopP)
+hist(zcta$PrivateInsP)
+hist(zcta$PublicInsP)
+summary(zcta) #32989
+
+
+zcta$HEROP_ID <- paste0("860US",zcta$GEOID)
+head(zcta)
+
+write.csv(zcta, "../data_to_merge/insurance_zcta18.csv",row.names = FALSE)
+
+#zcta not available after 2019
