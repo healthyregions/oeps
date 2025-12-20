@@ -102,7 +102,7 @@ final_rounded2 <- zcta %>%
 
 head(final_rounded2)
 zcta$HEROP_ID <- paste0("860US",zcta$GEOID)
-head(zcta)
+head(final_rounded2)
 
 write.csv(final_rounded2, "../data_to_merge/commuting_zcta18.csv",row.names = FALSE)
 
