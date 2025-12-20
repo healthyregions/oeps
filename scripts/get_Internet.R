@@ -68,6 +68,8 @@ summary(tract) #73056
 tract$HEROP_ID <- paste0("140US",tract$GEOID)
 head(tract)
 
+
+
 write.csv(tract, "../data_to_merge/internet_tract18.csv",row.names = FALSE)
 
 
