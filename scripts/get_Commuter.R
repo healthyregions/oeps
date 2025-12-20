@@ -74,3 +74,36 @@ head(final_rounded)
 write.csv(final_rounded, "../data_to_merge/commuting_tract18.csv",row.names = FALSE)
 
 
+###### Zip
+
+# Retrieve ACS data for 2018 at the zcta level for the specified variable
+zcta <- get_acs(geography = 'zcta', variables = c(TotalPop1 = "B08201_001", 
+                                                  NoVehTotal = "B08201_002",
+                                                  TotalPop2 = "B08101_001", 
+                                                  CommTransitTotal = "B08101_025",
+                                                  CommWalkingTotal = "B08101_033"),
+                year = 2018, geometry = FALSE, state = c(state.abb, "DC")) %>%
+  select(GEOID, NAME, variable, estimate) %>% 
+  spread(variable, estimate) %>% 
+  mutate( NoVehHHld = NoVehTotal/TotalPop1*100,
+          CommTransit = CommTransitTotal/TotalPop2*100,
+          CommWalking = CommWalkingTotal/TotalPop2*100) %>%
+  select(GEOID,NoVehHHld,CommTransit,CommWalking)
+
+head(zcta)
+
+hist(zcta$NoVehHHld)
+hist(zcta$CommTransit)
+hist(zcta$CommWalking)
+summary(zcta) #32989
+
+final_rounded2 <- zcta %>%
+  mutate(across(where(is.numeric), round, 2))
+
+head(final_rounded2)
+zcta$HEROP_ID <- paste0("860US",zcta$GEOID)
+head(zcta)
+
+write.csv(final_rounded2, "../data_to_merge/commuting_zcta18.csv",row.names = FALSE)
+
+#zcta not available after 2019
