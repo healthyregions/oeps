@@ -36,9 +36,9 @@ export default function Home() {
           <br></br>
                     <hr></hr>
           <p>
-          <em><strong>Updates:</strong></em> Version 2.2 was released in September 2025 and includes updated and 
-          standardized metadata, pre- and post-Pandemic data suites, and extensive data quality updates.</p>
-
+          <em><strong>Updates:</strong></em> We identified some errors in 2025 travel time metrics, and recommend
+          not using until an updated version is released in January 2026. Please contact us with any questions.</p>
+          
           </div>
         </div>
 
