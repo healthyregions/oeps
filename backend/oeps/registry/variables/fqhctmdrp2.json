@@ -5,6 +5,6 @@
   "example": "10.65",
   "description": "Average driving time (minutes) across tracts in state to nearest Federally Qualified Health Center, with Impedance factor",
   "metadata": "Access_FQHCs.json",
-  "longitudinal": true,
+  "longitudinal": false,
   "analysis": true
 }
