@@ -36,8 +36,11 @@ export default function Home() {
           <br></br>
                     <hr></hr>
           <p>
-          <em><strong>Updates:</strong></em> We identified some errors in 2025 travel time metrics, and recommend
-          not using until an updated version is released in January 2026. Please contact us with any questions.</p>
+          <em><strong>Updates:</strong></em> We recently identified some errors in 2025 travel time metrics. The corrected,
+          updated metrics will be released with Version 2.3, scheduled for the end January 2026. We apologize for any inconvenience caused. 
+          Please contact us with any questions; we are happy to share an updated file with individuals sooner, as needed. You are also invited 
+          to join the <b><a href="https://gccp.healthyregions.org/">GCCP</a></b>, where future updates to the OEPS platform will be shared 
+          via newsletter. <i>(Posted: 12/24/2025) </i> </p>
           
           </div>
         </div>
