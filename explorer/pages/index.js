@@ -40,7 +40,7 @@ export default function Home() {
           updated metrics will be released with Version 2.3, scheduled for the end January 2026. We apologize for any inconvenience caused. 
           Please contact us with any questions; we are happy to share an updated file with individuals sooner, as needed. You are also invited 
           to join the <b><a href="https://gccp.healthyregions.org/">GCCP</a></b>, where future updates to the OEPS platform will be shared 
-          via newsletter. <i>(Posted: 12/24/2025) </i> </p>
+          via newsletter. <i>Posted: 12/23/2025</i> </p>
           
           </div>
         </div>

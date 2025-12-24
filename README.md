@@ -52,7 +52,8 @@ server locally when posting web page updates, you'll need to do the following:
 - Make changes to the page you need (index, about, etc.) in your IDE
 - Navigate to the explorer folder using Terminal. Ensure <i>yarn</i> is working on your system.
 - To re-build the pages after your edit, run `yarn build`
-- To start the server, run `yarn start` and go http://localhost:3000/ to see the updates live
+- To start the server, run `yarn start` 
+- Go to http://localhost:3000/ to see the updates live
 - Remember, you can stop the server using control C
 - When all updates have completed, push to your branch. 
 
