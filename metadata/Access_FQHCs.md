@@ -14,6 +14,7 @@ CSV files are organized by **year** and **spatial scale**. For example, county-l
 
 #### Resources
 Locations of Federal Qualified Health Centers (FQHCs) were sourced from the [Health Resources and Services Administration](https://bphc.hrsa.gov/datareporting/index.html).
+
 - For the 2021 measure, the original FQHC data was extracted, cleaned and geocoded for the [US COVID Atlas](https://theuscovidatlas.org/), and subsequently used for OEPS.
 - For the 2025 measure, a copy of the original data used can be found at the [SDOH & Place Data Refuge](https://uofi.app.box.com/s/fqtslnfkpmgi32pb1cah1eyvmimvp740/folder/305426293733) for HRSA data downloaded on January 31, 2025. 
 
@@ -34,16 +35,19 @@ A copy of the geographic boundary files used can be found at the [HEROP GeoData 
 #### Tract and Zip Code
 
 ##### Minimum Distance
-Data was cleaned and prepared for analysis. Centroids were calculated for ZCTA and Census Tract geometries. For the nearest resource analysis, Euclidean distance was calculated from the centroid of each tract/ZCTA to the nearest FQHC location. The script is available in [code/access_FQHC.R](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/code/access_FQHC.R).
+Data was cleaned and prepared for analysis. Centroids were calculated for ZCTA and Census Tract geometries. 
+For the nearest resource analysis, Euclidean distance was calculated from the centroid of each tract/ZCTA to the 
+nearest FQHC location. The original 2021 script is available in [code/access_FQHC.R](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/code/access_FQHC.R).
 
 ##### Travel Time and Count Within Threshold
 We calculated travel-network access metrics for the driving travel time to the nearest FQHC location and count of FQHCs within a 30 minute driving threshold. We calculated travel-network access metrics for every census tract centroid to the census tract centroid of nearest provider type. For *zip code tabulation areas*, overlapping tract-level measures were averaged, weighted by proportion of the overlapping tract, using the corresponding HUD tract-to-zip code crosswalks. 
 
 This travel time analysis was conducted using a Python Computational notebook. 
+
 - For 2021 measures, some of the scripts are available in [code/AccessMetrics - MOUDs.](https://github.com/GeoDaCenter/opioid-policy-scan/tree/fc3d94053dd1941a96a5945d73cc6f4845453484/code/Access%20Metrics%20-%20MOUD).
 - The updated 2025 notebook will be released in late January 2026, due to some refinements and updates.
 
-In addition, an *impedance factor* was introduced in 2025 access metrics. Raw travel time measures assume pristine conditions in a best-case-scenario. 
+In addition, an **impedance factor** was introduced in 2025 access metrics. Raw travel time measures assume pristine conditions in a best-case-scenario. 
 An impedance approach instead multiples the estimated travel time by a factor, in this case a factor of 2, better approximating actual travel time due to traffic, congestion, etc.
 
 #### County and State 
@@ -85,12 +89,12 @@ For 2025 measures, the tract to county conversion were completed using R code, a
 [Average time drive to nearest FQHC, with Impedance (FqhcAvTmDr2)]("../images/FqhcAvTmDr2_2025.png")
 
 ### Data Limitations:
-- Euclidean distance or straight-line distance is a simple approximation of distance or travel time from an origin centroid to the nearest health center. It is not a precise calculation of real travel times or distances. The travel times are capped at a 90-minute threshold; any data exceeding this limit is left blank.  
+- Euclidean distance or straight-line distance is a simple approximation of distance or travel time from an origin centroid to the nearest health center. It is not a precise calculation of real travel times or distances. 
+- The travel times are capped at a 90-minute threshold (or 180 minutes, with impedance factor) were not calculated, as they were deemed too far = no access. 
 - Travel times are calculated from centroid to centroid of each census tract, meaning that the travel time will equal zero if there is a resource in the census tract. Thus, travel times must be considered approximations, and best suited for relative
 understanding of potential spatial access. 
-- Travel times over 90 minutes (or 180 minutes, with impedance factor) were not calculated, as they were deemed too far = poor access.
 - Note that Alaska travel times may reflect the data technically, but due to the geographic complexities of the state, we don't recommend using measures for that state at this time. Tracts are very large, and while there may
-be a FQHC location within the tract -- giving it a travel time of zero -- the physical size of the tract boundary makes that actual time inaccurate. Please proceed with caution in frontier locations.
+be a FQHC location within the tract -- giving it a travel time of zero -- the physical size of the tract boundary makes that actual time a bit unreasonable. Please proceed with caution in frontier locations.
 
 [Limitations of Alaska travel times due to tract boundary size and approach utilized]("../images/FqhcAvTmDr2_Alaska_2025.png")
 
