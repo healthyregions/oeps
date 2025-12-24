@@ -6,7 +6,7 @@
   "description": "Average driving time (minutes) across tracts in state to nearest Federally Qualified Health Center",
   "metadata": "Access_FQHCs",
   "longitudinal": true,
-  "analysis": true,
+  "analysis": false,
   "table_sources": [
     "county-2020",
     "state-2020"
