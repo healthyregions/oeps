@@ -1,9 +1,9 @@
 {
   "name": "Access_FQHCs",
   "theme": "Environment",
-  "construct": "Spatial access to Health Centers",
-  "proxy": "Spatial access metrics to Federally Qualified Health Centers (Distance, Travel Time, Count Within Threshold)",
+  "construct": "Spatial access to Federally Qualified Health Centers (FQHCs)",
+  "proxy": "Spatial access metrics to Federally Qualified Health Centers (Minimum Distance, Travel Time, Count Within Threshold, with & without Impedance)",
   "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_FQHCs.md",
-  "source": "US Covid Atlas via HRSA 2020; Tiger/Line 2018",
-  "source_long": "United States Covid Atlas via Health Resources and Services Adminsitration, 2020; Tiger/Line 2018 Shapefiles"
+  "source": "HRSA 2020 & 2025; OSM 2019 & 2025; Census TIGER 2018 & 2020",
+  "source_long": "United States Covid Atlas via Health Resources and Services Adminsitration, 2020 & 2025; Open Street Map 2019 & 2025; Census Tiger/Line 2018 & 2020 Shapefiles"
 }
