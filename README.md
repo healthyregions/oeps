@@ -38,3 +38,23 @@ Susan Paykin, Dylan Halpern, Qinyun Lin, Moksha Menghaney, Angela Li, Rachel Vig
 ### v2 Citation
 
 Adam Cox, Ashlynn Wimer, Sara Lambert, Susan Paykin, Dylan Halpern, Qinyun Lin, Moksha Menghaney, Angela Li, Rachel Vigil, Margot Bolanos Gamez, Alexa Jin, Ally Muszynski, and Marynia Kolak. (2024). healthyregions/oeps: Opioid Environment Policy Scan (OEPS) Data Warehouse (v2.0). Zenodo. https://doi.org/10.5281/zenodo.5842465
+
+## Development Notes
+
+Updates to the database, documentation, or web mapping infrastructure should only be completed
+by engineers who have completed training and understand the full OEPS documentation.
+
+For lighter updates to web pages, team members can use the following approach. To run the 
+server locally when posting web page updates, you'll need to do the following:
+
+- Make a new branch for your updates
+- Navigate to the appropriate page in "explorer/pages/.." 
+- Make changes to the page you need (index, about, etc.) in your IDE
+- Navigate to the explorer folder using Terminal. Ensure <i>yarn</i> is working on your system.
+- To re-build the pages after your edit, run `yarn build`
+- To start the server, run `yarn start` and go http://localhost:3000/ to see the updates live
+- Remember, you can stop the server using control C
+- When all updates have completed, push to your branch. 
+
+Submit a pull request when complete.
+
