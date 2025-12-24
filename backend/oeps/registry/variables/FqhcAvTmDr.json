@@ -4,9 +4,9 @@
   "type": "number",
   "example": "10.65",
   "description": "Average driving time (minutes) across tracts in state to nearest Federally Qualified Health Center",
-  "longitudinal": false,
-  "analysis": false,
   "metadata": "Access_FQHCs",
+  "longitudinal": true,
+  "analysis": true,
   "table_sources": [
     "county-2020",
     "state-2020"
