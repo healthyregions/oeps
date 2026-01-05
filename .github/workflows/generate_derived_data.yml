@@ -51,6 +51,10 @@ jobs:
         working-directory: backend
         run: flask build-docs --data-dictionaries-only
 
+      - name: Run build-docs (BigQuery)
+        working-directory: backend
+        run: flask build-docs --bq-only
+
       - name: Run build-explorer
         working-directory: backend
         run: flask build-explorer
