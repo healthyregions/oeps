@@ -3,7 +3,7 @@ import subprocess
 
 import click
 
-from ..clients.bigquery import generate_reference_doc
+from ..clients.bigquery import BigQuery
 from ..clients.data_dictionary import create_data_dictionary
 from ..handlers import Registry
 from ..config import TEMP_DIR
@@ -64,10 +64,11 @@ def build_docs(bq_only:bool, cli_only: bool, registry_only: bool, data_dictionar
     full = not any(ops.values())
 
     if ops["bq"] or full:
+        client = BigQuery()
         registry = Registry.create_from_directory(registry_path)
 
         outfile = Path("../docs/src/reference/bigquery/tables.md").absolute().resolve()
-        generate_reference_doc(registry.table_sources.values(), outfile)
+        client.generate_reference_doc(registry.table_sources.values(), outfile)
 
     if ops["cli"] or full:
         out_file = Path("../docs/src/reference/cli/command-line-reference.md")
