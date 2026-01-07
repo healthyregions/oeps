@@ -8,6 +8,9 @@
   "analysis": false,
   "metadata": "Jail_Incarceration_Rates",
   "table_sources": [
-    "county-2017"
+    "county-2017",
+    "county-2024",
+    "state-2022",
+    "state-2023"
   ]
 }

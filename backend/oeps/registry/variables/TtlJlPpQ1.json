@@ -1,0 +1,13 @@
+{
+  "name": "TtlJlPpQ1",
+  "title": "Total Jail Population Count (Q1), ASJ/COJ Data",
+  "type": "number",
+  "example": "13201",
+  "description": "Total Jail Population Count (Q1), ASJ/COJ Data",
+  "longitudinal": false,
+  "analysis": false,
+  "metadata": "Jail_Incarceration_Rates",
+  "table_sources": [
+    "county-2023"
+  ]
+}

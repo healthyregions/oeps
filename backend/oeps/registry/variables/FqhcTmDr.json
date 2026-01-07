@@ -1,6 +1,6 @@
 {
   "name": "FqhcTmDr",
-  "title": "Driving time (min) to nearest FQHC",
+  "title": "Driving time (min) to nearest Federally Qualified Health Centers (FQHC)",
   "type": "number",
   "example": "19.16",
   "description": "Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes",

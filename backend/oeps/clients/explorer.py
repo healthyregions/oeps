@@ -6,7 +6,7 @@ import pandas as pd
 
 from ..clients.s3 import sync_to_s3, get_base_url
 from ..config import DATA_DIR
-from ..registry.handlers import Registry
+from ..handlers import Registry
 from ..utils import write_json, make_id
 
 
@@ -51,8 +51,6 @@ class Explorer:
                 self.registry.get_table_source_for_variable(k, "zcta"),
                 self.registry.get_table_source_for_variable(k, "tract"),
             ]
-
-            print(use_sources)
 
             latest_sources = [i for i in use_sources if i]
             if latest_sources:

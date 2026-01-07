@@ -37,10 +37,6 @@ dev = [
     "pre-commit",
     "pytest",
 ]
-docs = [
-    'mkdocs',
-    'mkdocs-glightbox',
-]
 
 [tool.setuptools]
 packages = [

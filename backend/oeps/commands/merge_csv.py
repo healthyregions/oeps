@@ -2,7 +2,7 @@ import click
 
 import pandas as pd
 
-from ..registry.handlers import Registry
+from ..handlers import Registry
 
 from ._common_opts import (
     add_common_opts,

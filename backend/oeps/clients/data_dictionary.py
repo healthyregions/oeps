@@ -4,7 +4,7 @@ from openpyxl import Workbook
 from openpyxl.utils import get_column_letter
 from openpyxl.styles import Font
 
-from ..registry.handlers import Registry, Metadata
+from ..handlers import Registry, Metadata
 
 def parse_attribute_from_variable(
         attribute: str,

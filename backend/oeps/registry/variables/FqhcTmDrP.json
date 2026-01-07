@@ -1,6 +1,6 @@
 {
   "name": "FqhcTmDrP",
-  "title": "% tracts within 30-min drive of Federally Qualified Health Center",
+  "title": "% Tracts within 30-min drive of Federally Qualified Health Center (FQHC)",
   "type": "number",
   "example": "0.93",
   "description": "Percent of tracts with Federally Qualified Health Center within a 30-min driving range.",

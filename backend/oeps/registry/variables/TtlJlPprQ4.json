@@ -1,0 +1,13 @@
+{
+  "name": "TtlJlPprQ4",
+  "title": "Total Jail Population Rate (Q4)",
+  "type": "number",
+  "example": "230.32",
+  "description": "Total Jail Population Rate (Q4), ASJ/COJ Data",
+  "longitudinal": false,
+  "analysis": false,
+  "metadata": "Jail_Incarceration_Rates",
+  "table_sources": [
+    "county-2023"
+  ]
+}
