@@ -4,14 +4,6 @@
 **Date Last Modified**: August 26, 2025  
 **Last Modified By**:  Mahjabin Kabir Adrita  
 
-### Theme: 
-Policy  
-
-### Data Location: 
-You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).  
-
-CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.   
-
 ### Data Source(s) Description:  
 Variables were obtained from Kaiser Family Foundation's [State Health Facts](https://www.kff.org/medicaid/state-indicator/medicaid-expansion-spending/?currentTimeframe=0&sortModel=%7B%22colId%22:%22Total%20Medicaid%20Spending%22,%22sort%22:%22desc%22%7D), first accessed January 11, 2021. Raw data is downloaded in the folder of [data_raw](https://github.com/GeoDaCenter/opioid-policy-scan/tree/v1.0/data_raw), named as *raw_data_medi_expan.csv*. Kaiser Family Foundation uses data in its analysis from the Centers for Medicare and Medicaid Services (CMS) [Medicaid Budget and Expenditure System (MBES)](https://www.medicaid.gov/medicaid/financing-and-reimbursement/state-expenditure-reporting/expenditure-reports/index.html).
 The sources are from Urban Institute estimates based on data from CMS (Form 64) from August 2020.
@@ -23,22 +15,6 @@ The following variables were included from the source data:
 3. Traditional medicaid state spending;
 4. Expansion federal spending; 
 5. Expansion state spending. 
-
-### Key Variable and Definitions:
-
-- **Variable** -- title of variable
-- **Variable ID** -- exact name of variable in datasets
-- **Description** -- Short description of variable
-- **Years Available** -- years for which data exists for this variable
-- **Spatial Scale** -- the variable exists for these levels of spatial scale
-
-| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
-|:---------|:--------------------|:------------|:----------------|:--------------|
-| Total medicaid spending in FY | MedcdExp | Total medicaid spending in Fiscal Year | 2018, 2019, 2023 | State |
-| Traditional medicaid federal spending | TradFedExp | Traditional medicaid - federal spending in Fiscal Year | 2018, 2019, 2023 | State |
-| Traditional medicaid state spending | TradSttExp | Traditional medicaid - state spending in Fiscal Year | 2018, 2019, 2023 | State |
-| Expansion federal spending | ExpnFedExp | Expansion Group - Federal Spending in Fiscal Year | 2018, 2019, 2023 | State |
-| Expansion state spending | ExpnSttExp | Expansion Group - State Spending in Fiscal Year | 2018, 2019, 2023 | State |
 
 ### Data Limitations:
 N/A

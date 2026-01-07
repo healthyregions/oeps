@@ -4,14 +4,6 @@
 **Date Last Modified**: September 9, 2025
 **Last Modified By**: Adam Cox
 
-### Theme:
-Economic
-
-### Data Location: 
-You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).
-
-CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.
-
 ### Data Source(s) Description:  
 Variables were obtained from the multiple periods of the [American Community Survey (ACS)](https://data.census.gov) at State, County, Tract and ZIP Code Tabulation Area (ZCTA) levels.
 
@@ -79,25 +71,6 @@ All variables were included from S2403 (2018):
 
 * Percentage of population employed in Retail Jobs was calculated as : <br>
 *Sum of the workers employed in Retail trade / (Total Civilian employed population 16 years and over)* 
-
-### Key Variable and Definitions:
-
-- **Variable** -- title of variable
-- **Variable ID** -- exact name of variable in datasets
-- **Description** -- Short description of variable
-- **Years Available** -- years for which data exists for this variable
-- **Spatial Scale** -- the variable exists for these levels of spatial scale
-
-| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
-|:---------|:--------------------|:------------|:----------------|:--------------|
-| Unemployment Rate | UnempP | The number of unemployed individuals as a percentage of the civilian labor force | 1980, 1990, 2000, 2010, 2018, 2023 | Tract, Zip* County, State |
-| Count of Essential Workers | EssnWrkE | Estimated count of Population Employed in Essential Occupations (outlined above) | 2018, 2023 | Tract, Zip, County, State |
-| % Essential Workers  | EssnWrkP | Percentage of Population Employed in Essential Occupations (outlined above) | 2018, 2023 | Tract, Zip, County, State |
-| Total Count of Workers | TotWrkE | Estimated count of working population | 2018, 2023 | Tract, Zip, County, State |
-| % Education Jobs  | EduP | Percentage of population employed in educational services industry | 2018, 2023 | Tract, Zip, County, State |
-| % High Risk of Injury Jobs  | HghRskP | Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying,  oil and gas extraction, construction, manufacturing, utilities | 2018, 2023 | Tract, Zip, County, State |
-| % Health Care Jobs | HltCrP | Percentage of population employed in health care and social assistance industries | 2018, 2023 | Tract, Zip, County, State |
-| % Retail Jobs  | RetailP | Percentage of population employed in retail trade industry | 2018, 2023 | Tract, Zip, County, State |
 
 ### Data Limitations:
 Please note this dataset uses "occupation" and "industry" as classifiers and does not include any information about the occupation or industry to which a job belongs. This can lead to an overestimation of Essential Workers and High Risk to Injury categories.

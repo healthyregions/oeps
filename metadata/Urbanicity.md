@@ -4,15 +4,6 @@
 **Date Last Modified**: January 3, 2024
 **Last Modified By**: Wataru Morioka
 
-### Theme: 
-Environment
-
-### Data Location: 
-You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions/download).
-
-CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
-Note: Every variable can be found in the **Latest** files.
-
 ### Data Source(s) Description:
 
 #### Counties
@@ -62,25 +53,6 @@ Classified as:
 * Urban, if their RUCA2 codes were 1.0 and 1.1 
 * Suburban, if their RUCA2 codes were 2.0, 2.1, 4.0, and 4.1 
 * All other RUCA2 codes were classified as Rural.
-
-  
-### Key Variable and Definitions:
-
-- **Variable** -- title of variable
-- **Variable ID** -- exact name of variable in datasets
-- **Description** -- Short description of variable
-- **Years Available** -- years for which data exists for this variable
-- **Spatial Scale** -- the variable exists for these levels of spatial scale
-
-| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
-|:---------|:--------------------|:------------|:----------------|:--------------|
-| % Urban | RcaUrbanP | Percent census tracts in the county classified as Urban using RUCA codes | 2018 | County |
-| % Suburban | RcaSubrbP | Percent census tracts in the county classified as Suburban using RUCA codes | 2018 | County |
-| % Rural  | RcaRuralP | Percent census tracts in the county classified as Rural using RUCA codes | 2018 | County |
-| CensusFlags | CenFlags | Three different values indicating three things: [1] - Revised count, so urban and rural components will not add to total. [2] - Geography name and FIPS code were changed since 2010. Shannon County, Sotuh Dakota name changed to Oglala Lakota County, new FIPS 46102. Wade Hampton Census Area, Alaska, name changed to Kusilvak CEnsus Area, nwe FIPS 02158. [3] - Bedford City, Virginia, was consolidated with Bedford County, Virginia (FIPS 51019) since 2010. | 2010 | County |
-| RUCA Codes | Ruca1 | Primary RUCA Code | 2010 | Tract, Zip |
-| RUCA Codes | Ruca2 | Secondary RUCA Code | 2010 | Tract, Zip |
-| Classification | Rurality | Urban/Suburban/Rural | 2010 | Tract, Zip |
 
 ### Data Limitations:
 n/a

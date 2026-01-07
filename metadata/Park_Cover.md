@@ -4,15 +4,6 @@
 **Date Last Modified**: January 3, 2024
 **Last Modified By**: Wataru Morioka
 
-### Theme: 
-Environment
-
-### Data Location: 
-You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).
-
-CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.
-Note: Every variable can be found in the **Latest** files.
-
 ### Data Source(s) Description:
 Land use data were pulled from [OpenStreetMap (OSM)](openstreetmap.org). The following queries were made at the national level:
 * natural=wood
@@ -25,19 +16,6 @@ Land use data were pulled from [OpenStreetMap (OSM)](openstreetmap.org). The fol
 
 ### Description of Data Processing: 
 Data was collected from OpenStreetMap. The queries resulted in a series of polygons representing parks and green spaces. These polygons were dissolved and unioned. The resulting geometries were broken down by county or state to result in the total area of parks and green spaces as well as the percent cover.
-
-### Key Variable and Definitions:
-
-- **Variable** -- title of variable
-- **Variable ID** -- exact name of variable in datasets
-- **Description** -- Short description of variable
-- **Years Available** -- years for which data exists for this variable
-- **Spatial Scale** -- the variable exists for these levels of spatial scale
-
-| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
-|:---------|:--------------------|:------------|:----------------|:--------------|
-| Park Area | ParkArea | Area (in square meters) of park or green space in a state | 2022 | State |
-| State Area | StateArea | Area (in square meters) of state | 2022 | State |
 
 ### Data Limitations:
 
