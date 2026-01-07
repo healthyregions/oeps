@@ -17,6 +17,8 @@ export default function MarkdownDocs() {
   const router = useRouter()
   const { md } = router.query
   const [markdownText, setMarkdownText] = useState('## Loading...')
+  const [theme, setTheme] = useState("")
+  const [construct, setConstruct] = useState("")
   const [varList, setVarList] = useState([]);
   const [displayName, setDisplayName] = useState("");
 
@@ -24,8 +26,10 @@ export default function MarkdownDocs() {
     if (md !== undefined){
       try {
         fetchMarkdown(`${BASE_DOCS_URL}${md}.md`).then(result => setMarkdownText(result))
-        setVarList(metadataVariables[md])
         setDisplayName(md.replaceAll("_", " "))
+        setTheme(metadataVariables[md]["theme"])
+        setConstruct(metadataVariables[md]["construct"])
+        setVarList(metadataVariables[md]["variables"])
       } catch(e) {
         setMarkdownText('## Error - Could not locate information.')
       }
@@ -44,18 +48,25 @@ export default function MarkdownDocs() {
           {displayName}
         </h1>
         <div className={styles.markdownContainer}>
-          <Link href='/docs'>Return to docs</Link>
+          <div style={{display:'flex', justifyContent:'space-between'}}>
+            <Link href='/docs'>&larr; Return to docs</Link>
+            <Link href='#variables'>Jump to variables list &darr;</Link>
+          </div>
+          <p>
+            <strong>Theme:</strong> {theme}<br/>
+            <strong>Construct:</strong> {construct}
+          </p>
           <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdownText}</ReactMarkdown>
         </div>
         <Gutter em={5} />
-        <h2>
+        <h2 id="variables">
           Key Variables and Definitions
         </h2>
-        <p>
+        <p style={{width: "100%"}}>
           <strong>Variable</strong> -- Title of variable<br/>
-          <strong>Variable ID</strong> -- Exact name of variable in datasets<br/>
+          <strong>Variable ID</strong> -- Exact name of variable column in datasets<br/>
           <strong>Description</strong> -- Description of variable<br/>
-          <strong>Years Available</strong> -- Short description of variable<br/>
+          <strong>Years Available</strong> -- Data for this variable exists for these years<br/>
           <strong>Spatial Scale</strong> -- The variable exists for these levels of spatial scale<br/>
         </p>
         <Gutter em={1} />
