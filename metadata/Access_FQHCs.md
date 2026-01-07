@@ -82,10 +82,10 @@ For 2025 measures, the tract to county conversion were completed using R code, a
 | Average time drive to nearest FQHC, with Impedance | FqhcAvTmDr2 | Average driving time (minutes) across tracts in county/state to nearest FQHC, with impedance factor | 2025 | County |
 
 <img width="1708" height="1168" alt="Percent of tracts within 30-min driving range, with Impedance (FqhcTmDrP2)" src="https://github.com/user-attachments/assets/7a3cc935-b708-439f-950d-b70d0b84e0ec" />
+*Percent of tracts within 30-min driving range, with Impedance (FqhcTmDrP2)*
 
-
-
-[Average drive time to nearest FQHC, with Impedance (FqhcAvTmDr2)](/images/FqhcAvTmDr2_2025.png)
+<img width="1582" height="1168" alt="FqhcAvTmDr2_2025" src="https://github.com/user-attachments/assets/a1572118-06b9-4af6-9de9-9e00838e706d" />
+*Average drive time to nearest FQHC, with Impedance (FqhcAvTmDr2)*
 
 ### Data Limitations:
 - Euclidean distance or straight-line distance is a simple approximation of distance or travel time from an origin centroid to the nearest health center. It is not a precise calculation of real travel times or distances. 
@@ -95,7 +95,8 @@ understanding of potential spatial access.
 - Note that Alaska travel times may reflect the data technically, but due to the geographic complexities of the state, we don't recommend using measures for that state at this time. Tracts are very large, and while there may
 be a FQHC location within the tract -- giving it a travel time of zero -- the physical size of the tract boundary makes that actual time a bit unreasonable. Please proceed with caution in frontier locations.
 
-[Limitations of Alaska travel times due to tract boundary size and approach utilized](/images/FqhcAvTmDr2_Alaska_2025.png)
+<img width="1582" height="1168" alt="FqhcAvTmDr2_Alaska_2025" src="https://github.com/user-attachments/assets/b9ea8e36-6643-4851-9f9a-62ea9b9dd72b" />
+*Limitations of Alaska travel times due to tract boundary size and approach utilized*
 
 ### Comments/Notes:
 - All nearest distance calculations are in miles. 
