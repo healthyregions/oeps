@@ -7,9 +7,6 @@
 ### Theme: 
 Environment
 
-### Data Location: 
-CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
-
 ### Data Source(s) Description:  
 
 #### Resources
