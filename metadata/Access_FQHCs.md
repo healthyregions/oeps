@@ -81,9 +81,8 @@ For 2025 measures, the tract to county conversion were completed using R code, a
 | Average time drive to nearest FQHC | FqhcAvTmDr | Average driving time (minutes) across tracts in county/state to nearest FQHC | 2021, 2025 | County, State |
 | Average time drive to nearest FQHC, with Impedance | FqhcAvTmDr2 | Average driving time (minutes) across tracts in county/state to nearest FQHC, with impedance factor | 2025 | County |
 
-[Percent of tracts within 30-min driving range, with Impedance (FqhcTmDrP2)](/images/FqhcTmDrP2.png)
+<img width="1708" height="1168" alt="Percent of tracts within 30-min driving range, with Impedance (FqhcTmDrP2)" src="https://github.com/user-attachments/assets/7a3cc935-b708-439f-950d-b70d0b84e0ec" />
 
-<img width="1828" height="1038" alt="image" src="https://github.com/user-attachments/assets/e8933962-e7fb-4905-a8c0-89d409e7d327" />
 
 
 [Average drive time to nearest FQHC, with Impedance (FqhcAvTmDr2)](/images/FqhcAvTmDr2_2025.png)
