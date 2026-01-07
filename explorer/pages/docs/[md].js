@@ -56,6 +56,7 @@ export default function MarkdownDocs() {
           <ul>
             <li><strong>Variable</strong> -- Title of variable</li>
             <li><strong>Variable ID</strong> -- Exact name of variable in datasets</li>
+            <li><strong>Description</strong> -- Description of variable</li>
             <li><strong>Years Available</strong> -- Short description of variable</li>
             <li><strong>Spatial Scale</strong> -- The variable exists for these levels of spatial scale</li>
           </ul>
