@@ -4,7 +4,8 @@
   "type": "integer",
   "example": "17",
   "description": "Count of Federally Qualified Health Centers (FQHCs) within a 30-minute driving threshold, with Impedance factor",
-  "metadata": "Access_FQHCs.json",
+  "metadata": "Access_FQHCs",
   "longitudinal": false,
-  "analysis": true
+  "analysis": true,
+  "table_sources": []
 }
