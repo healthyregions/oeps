@@ -213,6 +213,30 @@ class Explorer:
         meta_dir = Path(self.root_dir, "meta")
         meta_dir.mkdir(exist_ok=True)
 
+        metadata_variables = {
+            i: list() for i in self.registry.metadata.keys()
+        }
+        for v in self.registry.variables.values():
+            years = set()
+            geographies = set()
+            for ts_id in v.table_sources:
+                ts = self.registry.table_sources[ts_id]
+                years.add(ts.data_year)
+
+                gs = self.registry.geodata_sources[ts.geodata_source]
+                geographies.add(gs.summary_level.title)
+
+            metadata_variables[v.metadata].append({
+                "title": v.title,
+                "name": v.name,
+                "description": v.description,
+                "years": sorted(list(years)),
+                "geographies": sorted(list(geographies)),
+            })
+        for mv in metadata_variables.values():
+            mv.sort(key=lambda x: x['title'])
+
         write_json(output, Path(meta_dir, "variables.json"))
         write_json(csv_downloads, Path(meta_dir, "csvDownloads.json"))
         write_json(geodataDownloads, Path(meta_dir, "geodataDownloads.json"))
+        write_json(metadata_variables, Path(meta_dir, "metadataVariables.json"))
