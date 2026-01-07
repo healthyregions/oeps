@@ -4,8 +4,10 @@
   "type": "number",
   "example": "10.65",
   "description": "Average driving time (minutes) across tracts in state to nearest Federally Qualified Health Center, with Impedance factor",
-  "metadata": "Access_FQHCs",
   "longitudinal": false,
   "analysis": true,
-  "table_sources": []
+  "metadata": "Access_FQHCs",
+  "table_sources": [
+    "county-2025"
+  ]
 }
