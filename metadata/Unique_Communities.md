@@ -4,9 +4,6 @@
 **Date Last Modified**: January 3, 2024  
 **Last Modified By**: Wataru Morioka   
 
-### Theme: 
-Social
-
 ### Data Source(s) Description:  
 Variables were obtained from [The US Covid Atlas Projec](https://theuscovidatlas.org/map)t. Hypersegregated cities refer to American metropolitan areas where black residents experience hypersegregation. See [here](https://www.princeton.edu/news/2015/05/18/hypersegregated-cities-face-tough-road-change) for more information. The Black Belt refers to Southern US counties where at least 30% of the population identified Black or African American in the 2000 Census (see [here](https://en.wikipedia.org/wiki/Black_Belt_in_the_American_South)). Native American or American Indian reservation boundaries come from the [TIGER/Line 2017](https://catalog.data.gov/dataset/tiger-line-shapefile-2017-nation-u-s-current-american-indian-alaska-native-native-hawaiian-area) dataset.
 
@@ -16,20 +13,6 @@ The following variables were included from the source data:
 * Hypersegregated City or Metropolitan Area - dummy variable
 * Black Belt County - dummy variable
 * Native American Reservations - numeric percent of county land area
- 
-### Key Variable and Definitions:
-
-- **Variable** -- title of variable
-- **Variable ID** -- exact name of variable in datasets
-- **Description** -- Short description of variable
-- **Years Available** -- years for which data exists for this variable
-- **Spatial Scale** -- the variable exists for these levels of spatial scale
-
-| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
-|:---------|:--------------------|:------------|:----------------|:--------------|
-| Hypersegregated City | DmySgrg | Dummy variable for whether county is part of a hypersegregated city or its metropolitan area | Latest | County |
-| Southern Black Belt | DmyBlckBlt | Dummy variable for whether county is in the Southern Black Belt region | Latest | County |
-| Native American Reservations | PrctNtvRsrv |  Percentage of county land area that belongs to Native American reservation(s) | Latest | County |
 
 ### Data Limitations:
 The variable representing Native American reservations was calculated as a percent of each county's total land area in US Albers Equal Area projection. Due to consistency issues of spatial projections, there may be some distortion of the percentage of land area calculation in Alaska.

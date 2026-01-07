@@ -17,10 +17,10 @@ def load_json(path) -> dict:
         return json.load(o)
 
 
-def write_json(data, path):
+def write_json(data, path, indent=2):
     """Writes a dict to JSON format in the specified path."""
     with open(path, "w") as o:
-        return json.dump(data, o, indent=2)
+        return json.dump(data, o, indent=indent)
     return path
 
 

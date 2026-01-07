@@ -4,15 +4,6 @@
 **Date Last Modified**: January 3, 2024  
 **Last Modified By**: Marynia Kolak
 
-### Theme: 
-Economic  
-
-### Data Location: 
-You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).  
-
-CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
-Note: Every variable can be found in the **Latest** files.
-
 ### Data Source(s) Description:  
 
 Foreclosure rate data was sourced from: [Neighborhood Stabilization Program (NSP2)](https://www.huduser.gov/portal/NSP2datadesc.html), U.S. Department of Housing and Urban Development (HUD), Office of Policy Development and Research, 2009. 
@@ -35,19 +26,6 @@ The NSP2 dataset includes variables used to estimate census tract-level foreclos
 ### Description of Data Processing: 
 
 Foreclosure and delinquency data was wrangled and cleaned. Tract level estimates were aggregated (mean) up to county-level and state-level, and appropriate geographic boundary labels were selected for inclusion in final datasets. 
-
-### Key Variable and Definitions:
-
-- **Variable** -- title of variable
-- **Variable ID** -- exact name of variable in datasets
-- **Description** -- Short description of variable
-- **Years Available** -- years for which data exists for this variable
-- **Spatial Scale** -- the variable exists for these levels of spatial scale
-
-| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
-|:---------|:--------------------|:------------|:----------------|:--------------|
-| Foreclosure or delinquency rate | ForDqP | Estimated percent of mortgages to start foreclosure process or be seriously delinquent during the 2008 Recession | 2008 | Tract, County, State |
-| Foreclosure or delinquency count | ForDqTot | Estimated number of mortgages to start foreclosure process or be seriously delinquent during the 2008 Recession | 2008 | Tract, County, State |
 
 ### Data Limitations:
 The data reflects 2007-2008 estimates. Note again, via [NSP2 Data and Methodology](https://www.huduser.gov/portal/NSP2datadesc.html): The estimated rate of foreclosure problems do not reflect "real" numbers of foreclosures but rather reflect neighborhood characteristics that are estimated to have a high level of risk for foreclosure. 
