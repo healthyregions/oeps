@@ -55,7 +55,7 @@ dim(county.fqhc) #3234
 head(county.fqhc)
 
 library(tmap)
-#tmap_mode("view")
+tmap_mode("view")
 tm_shape(county.fqhc) + tm_fill("FqhcAvTmDr2", style = "jenks") # plot for metadata
 
 tm_shape(county.fqhc) + tm_fill("FqhcAvTmDr", style = "jenks") # plot for metadata
