@@ -126,6 +126,23 @@
         "Years": "1980, 1990, 2000, 2010, 2018, 2020, 2023"
       }
     ],
+    "Social capital index": [
+      {
+        "Variable Construct": "Social capital index",
+        "Variable Proxy": "Social capital index, Housing tenure, Libraries per capita, Religious institutions per capita",
+        "Variables": [
+          "Libraries per Capita",
+          "Median Housing Tenure",
+          "Religious institutions per capita",
+          "Response Rate",
+          "Social Capital Index"
+        ],
+        "Source": "ACS 2018, 2023; Overture",
+        "Metadata": "Social_Capital",
+        "Spatial Scale": "Tract, County",
+        "Years": "2018, 2023"
+      }
+    ],
     "Population with Disability": [
       {
         "Variable Construct": "Population with Disability",
@@ -195,6 +212,7 @@
         "Years": "2017, 2022, 2023, 2024"
       }
     ],
+    "Response rate": [],
     "Veteran Population": [
       {
         "Variable Construct": "Veteran Population",
@@ -357,20 +375,25 @@
         "Years": "2018, 2022"
       }
     ],
-    "Spatial access to Health Centers": [
+    "Spatial access to Federally Qualified Health Centers (FQHCs)": [
       {
-        "Variable Construct": "Spatial access to Health Centers",
-        "Variable Proxy": "Spatial access metrics to Federally Qualified Health Centers (Distance, Travel Time, Count Within Threshold)",
+        "Variable Construct": "Spatial access to Federally Qualified Health Centers (FQHCs)",
+        "Variable Proxy": "Spatial access metrics to Federally Qualified Health Centers (Minimum Distance, Travel Time, Count Within Threshold, with & without Impedance)",
         "Variables": [
-          "% tracts within 30-min drive of Federally Qualified Health Center",
-          "Count of FQHCs (30-min drive)",
-          "Distance (mi) to nearest FQHC",
-          "Driving Time to nearest Federally Qualified Health Center",
-          "Driving time (min) to nearest FQHC",
-          "Total Census Tract Count",
-          "Tracts with Federally Qualified Health Center (30-min driving)"
+          "% Tracts within 30-min drive of Federally Qualified Health Center (FQHC)",
+          "% Tracts within 30-min drive of Federally Qualified Health Center (FQHC), with Impedance factor",
+          "Average driving time to nearest Federally Qualified Health Center (FQHC)",
+          "Average driving time to nearest Federally Qualified Health Center (FQHC), with Impedance factor",
+          "Count of Federally Qualified Health Centers (FQHCs) within 30-min drive",
+          "Count of Federally Qualified Health Centers (FQHCs) within 30-min drive, with Impedance factor",
+          "Count of Tracts within 30-min drive of Federally Qualified Health Center (FQHC)",
+          "Count of Tracts within 30-min drive of Federally Qualified Health Center (FQHC), with Impedance factor",
+          "Distance (mi) to nearest Federally Qualified Health Centers (FQHC)",
+          "Driving time (min) to nearest Federally Qualified Health Centers (FQHC)",
+          "Driving time (min) to nearest Federally Qualified Health Centers (FQHC), with Impedance factor",
+          "Total Census Tract Count"
         ],
-        "Source": "US Covid Atlas via HRSA 2020; Tiger/Line 2018",
+        "Source": "HRSA 2020 & 2025; OSM 2019 & 2025; Census TIGER 2018 & 2020",
         "Metadata": "Access_FQHCs",
         "Spatial Scale": "Tract, Zip, County, State",
         "Years": "2018, 2020, 2025"
@@ -522,7 +545,7 @@
         ],
         "Source": "SAMHSA 2025",
         "Metadata": "Access_HCVTesting",
-        "Spatial Scale": "Tract, Zip, County, State",
+        "Spatial Scale": "Tract, Zip",
         "Years": "2025"
       }
     ],
