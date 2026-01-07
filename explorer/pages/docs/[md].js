@@ -2,12 +2,14 @@ import Head from "next/head";
 import Link from 'next/link';
 import { useRouter } from 'next/router'
 import styles from "./MarkdownDocs.module.css";
+import docStyles from "../../styles/Docs.module.css";
 import { useState, useEffect } from "react";
 import { Gutter } from "../../components/layout/Gutter";
 import MainNav from "../../components/layout/MainNav";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm'
 import Footer from "../../components/layout/Footer";
+import metadataVariables from '../../meta/metadataVariables.json';
 
 const BASE_DOCS_URL = 'https://raw.githubusercontent.com/healthyregions/oeps/main/metadata/'
 const fetchMarkdown = async (url) => await fetch(url).then(r => r.text()).then(r => r.replace('[here](/data_final).', '[here](/download).'))
@@ -16,11 +18,13 @@ export default function MarkdownDocs() {
   const router = useRouter()
   const { md } = router.query
   const [markdownText, setMarkdownText] = useState('## Loading...')
+  const [varList, setVarList] = useState([]);
 
   useEffect(() => {
     if (md !== undefined){
       try {
         fetchMarkdown(`${BASE_DOCS_URL}${md}.md`).then(result => setMarkdownText(result))
+        setVarList(metadataVariables[md])
       } catch(e) {
         setMarkdownText('## Error - Could not locate information.')
       }
@@ -43,6 +47,32 @@ export default function MarkdownDocs() {
           <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdownText}</ReactMarkdown>
         </div>
         <Gutter em={5} />
+        <h2 className={styles.title}>
+          Key Variables and Definitions
+        </h2>
+        <Gutter em={5} />
+        <table className={docStyles.variableTable} style={{fontSize: '1.25em'}}>
+          <thead>
+              <tr>
+                  <th style={{ width:"15%"}}>Variable</th>
+                  <th style={{ width:"25%"}}>Variable ID</th>
+                  <th style={{ width:"15%"}}>Description</th>
+                  <th style={{ width:"15%"}}>Yeas Available</th>
+                  <th style={{ width:"15%"}}>Spatial Scale</th>
+              </tr>
+          </thead>
+          <tbody>
+          {varList.map((variable) => {
+              return <tr key={variable['name']}>
+                  <td style={{ width:"15%"}}>{variable['title']}</td>
+                  <td style={{ width:"25%"}}>{variable['name']}</td>
+                  <td style={{ width:"15%"}}>{variable['description']}</td>
+                  <td style={{ width:"15%"}}>{variable['years'].join(", ")}</td>
+                  <td style={{ width:"15%"}}>{variable['geographies'].join(", ")}</td>
+              </tr>
+          })}
+          </tbody>
+        </table>
       </main>
       <Footer />
     </div>
