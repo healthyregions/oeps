@@ -1,0 +1,9 @@
+{
+  "name": "HistRstMMT",
+  "title": "Historical restrictiveness of patient MMT experience",
+  "type": "integer",
+  "example": "1",
+  "description": "Historical restrictiveness of patient MMT experience",
+  "longitudinal": false,
+  "analysis": false
+}
