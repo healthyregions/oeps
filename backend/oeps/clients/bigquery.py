@@ -392,10 +392,24 @@ def generate_reference_doc(table_sources: list[TableSource], outfile: Path, proj
         table_sources: List of TableSource objects from the registry
         outfile: Path where the markdown documentation should be written
         project_id: Optional BigQuery project ID. If not provided, will attempt
-                   to get from BQ_PROJECT_ID env var, or use a placeholder.
+                   to get from existing file, BQ_PROJECT_ID env var, or use a placeholder.
     """
     if project_id is None:
-        project_id = os.getenv("BQ_PROJECT_ID", "PROJECT_ID")
+        # Try to read from existing file first
+        if outfile.exists():
+            try:
+                with open(outfile, "r") as f:
+                    first_line = f.readline()
+                    if first_line.startswith("# Project Id: "):
+                        existing_id = first_line.replace("# Project Id: ", "").strip()
+                        if existing_id and existing_id != "PROJECT_ID":
+                            project_id = existing_id
+            except Exception:
+                pass  # If we can't read it, continue to other methods
+        
+        # Fall back to environment variable or placeholder
+        if project_id is None:
+            project_id = os.getenv("BQ_PROJECT_ID", "PROJECT_ID")
 
     datasets = {}
 
