@@ -14,6 +14,8 @@ _Remove this text and add the following to this section:_
 
 **Task completion checklist**
 
+<!-- Do not alter this section during ticket creation: you can check the boxes off in the future. -->
+
 - [x] Create ticket for progress tracking (this ticket!)
 - [ ] Create a new branch that starts with the number of this ticket, and includes the name of the data to be added
   - Example: `244_fqhc_data_update`
@@ -24,6 +26,8 @@ _Remove this text and add the following to this section:_
 - [ ] Create a [new pull request](https://github.com/healthyregions/oeps/pulls) from your new branch into the `main` branch, and tag `@makosak` as a reviewer
 
 **Processing notes**
+
+<!-- Do not alter this section during ticket creation: use the Edit button above to change this section when you are ready. -->
 
 As you complete the work, update this section with details and screenshots of your work. You can click **Edit** above to make changes to this ticket, and use `ctrl + v` to post screenshots directly into the ticket, or dragging & dropping them into this interface.
 
