@@ -4,15 +4,6 @@
 **Date Last Modified**: August 5, 2025
 **Last Modified By**: Marynia Kolak
 
-### Theme: 
-Environment  
-
-### Data Location: 
-You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).  
-
-CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
-Note: Every variable can be found in the **Latest** files.
-
 ### Data Source(s) Description:  
 Alcohol outlet locations are from Infogroup's 2018 Business and Consumer Historical Datafile. State, county, census tract, and ZIP Code Tract Area (ZCTA) geometry files are from the U.S. Census TIGER/Line Shapefiles 2018. 
 
@@ -38,21 +29,6 @@ Land area in sq meters was sourced from geometry files and converted to sq miles
 Alcohol outlet density was then calculated as: 
   * Geographic density: Total outlets / Land area in sq mi
   * Per capita density: Total outlets / Total population
-
-### Key Variable and Definitions:
-
-- **Variable** -- title of variable
-- **Variable ID** -- exact name of variable in datasets
-- **Description** -- Short description of variable
-- **Years Available** -- years for which data exists for this variable
-- **Spatial Scale** -- the variable exists for these levels of spatial scale
-
-| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
-|:---------|:--------------------|:------------|:----------------|:--------------|
-| Total alcohol outlets | AlcTot | Total number of alcohol outlets | 2018 | Tract, Zip, County, State |
-| Alcohol outlet density per land area | AlcDens | Number of alcohol outlets per square mile | 2018 | Tract, Zip, County, State |
-| Alcohol outlet density per capita | AlcPerCap | Number of alcohol outlets per capita | 2018 | Tract, Zip, County, State |
-| Area Square Miles | AreaSqMi | Land area of geography in sq miles | 2018 | Tract, Zip, County, State |
 
 ### Data Limitations: 
 Alcohol outlet density is one approximation for accessibility or demand, though a limited one for describing or understanding the complex relationship between alcohol consumption and the surrounding area or community. 

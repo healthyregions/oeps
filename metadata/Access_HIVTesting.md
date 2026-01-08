@@ -4,14 +4,6 @@
 **Date Last Modified**: August 13, 2025  
 **Last Modified By**: Mahjabin Kabir Adrita  
 
-### Theme:  
-Environment  
-
-### Data Location:  
-You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).  
-
-CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in `C_2000.csv`.  
-
 ### Data Source(s) Description:  
 HIV Testing provider data was sourced from the [Substance Abuse and Mental Health Services Administration (SAMHSA)](https://www.samhsa.gov/) via its [Treatment Services Locator Tool](https://findtreatment.samhsa.gov/locator).  
 
@@ -47,31 +39,6 @@ County and state-level variables include:
 - **Count** of Census tracts  
 - **Percent** of Census tracts located within a 30-minute driving threshold  
 - **Mean driving time** from Census tracts within the county/state  
-
-### Key Variable and Definitions:
-
-- **Variable** – Title of the variable  
-- **Variable ID** – Exact name used in the dataset  
-- **Description** – Short explanation of what the variable measures  
-- **Years Available** – Data availability by year  
-- **Spatial Scale** – Level of geography for the variable  
-
-#### Tract and Zip Code
-
-| Variable                          | Variable ID in .csv | Description | Years Available | Spatial Scale |
-|----------------------------------|----------------------|-----------------------------------------------------------------------------|------------------|----------------|
-| Distance to nearest HIV Provider  | HivMinDis | Euclidean distance* from tract/zip centroid to nearest HIV testing provider (miles) | 2025 | Tract, Zip     |
-| Driving time to nearest HIV Provider | HivTmDr | Driving time from origin to nearest HIV testing provider (minutes)                  | 2025 | Tract, Zip     |
-| Count of HIV Providers            | HivCntDr | Number of HIV testing providers within a 30-minute drive                             | 2025 | Tract, Zip     |
-
-#### County and State
-
-| Variable                                   | Variable ID in .csv | Description                                                                     | Years Available | Spatial Scale |
-|-------------------------------------------|----------------------|----------------------------------------------------------------------------------|------------------|----------------|
-| Count of tracts                           | TotTracts | Total number of Census tracts in county/state                                   | 2025 | County, State  |
-| Count of tracts within 30-min driving range | HivCtTmDr | Number of tracts with an HIV testing provider within a 30-minute driving range           | 2025 | County, State  |
-| Average time drive to nearest HIV provider | HivAvTmDr | Mean driving time (minutes) from tracts to nearest HIV testing provider                  | 2025 | County, State  |
-| Percent of tracts within 30-min driving range | HivTmDrP | Percent of tracts within 30-minute drive to an HIV testing provider                      | 2025 | County, State  |
 
 ### Data Limitations:  
 *Euclidean or straight-line distance is a basic proxy for access. It does not account for real-world travel constraints.*  

@@ -35,7 +35,7 @@ fqhc_counties25 <- fqhc_tracts25 %>%
          FqhcAvTmDr,FqhcAvTmDr2)
 
 head(fqhc_counties25)  
-dim(fqhc_counties25) #3590. #3234
+dim(fqhc_counties25) #3590
 
 fqhc_counties25$HEROP_ID <- paste0("050US",fqhc_counties25$CountyFIPS)
 glimpse(fqhc_counties25)
@@ -55,7 +55,7 @@ dim(county.fqhc) #3234
 head(county.fqhc)
 
 library(tmap)
-tmap_mode("view") #this works best for county+
+#tmap_mode("view")
 tm_shape(county.fqhc) + tm_fill("FqhcAvTmDr2", style = "jenks") # plot for metadata
 
 tm_shape(county.fqhc) + tm_fill("FqhcAvTmDr", style = "jenks") # plot for metadata

@@ -36,9 +36,12 @@ export default function Home() {
           <br></br>
                     <hr></hr>
           <p>
-          <em><strong>Updates:</strong></em> Version 2.2 was released in September 2025 and includes updated and 
-          standardized metadata, pre- and post-Pandemic data suites, and extensive data quality updates.</p>
-
+          <em><strong>Updates:</strong></em> We recently identified some errors in 2025 travel time metrics. The corrected,
+          updated metrics will be released with Version 2.3, scheduled for the end January 2026. We apologize for any inconvenience caused. 
+          Please contact us with any questions; we are happy to share an updated file with individuals sooner, as needed. You are also invited 
+          to join the <b><a href="https://gccp.healthyregions.org/">GCCP</a></b>, where future updates to the OEPS platform will be shared 
+          via newsletter. <i>Posted: 12/23/2025</i> </p>
+          
           </div>
         </div>
 

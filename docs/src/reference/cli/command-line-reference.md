@@ -18,7 +18,7 @@ Usage: clean-explorer-bucket [OPTIONS]
 ###### Options
 
 * `explorer_path`:
-    * Type: <click.types.Path object at 0x730360dacaf0>
+    * Type: <click.types.Path object at 0x7f93e85aacd0>
     * Default: `../explorer`
     * Usage: `--explorer-path`
 
@@ -76,7 +76,7 @@ Usage: create-data-package [OPTIONS]
 ###### Options
 
 * `destination`:
-    * Type: <click.types.Path object at 0x7f54857d78e0>
+    * Type: <click.types.Path object at 0x766b7896ee80>
     * Default: `.temp/data-packages`
     * Usage: `--destination
 -d`
@@ -159,7 +159,7 @@ Usage: create-data-package [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f54857ece20>
+    * Type: <click.types.Path object at 0x766b3ffaae20>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -168,7 +168,7 @@ Usage: create-data-package [OPTIONS]
 
 
 * `data_dir_path`:
-    * Type: <click.types.Path object at 0x7f54857eccd0>
+    * Type: <click.types.Path object at 0x766b3ffaa820>
     * Default: `oeps/data`
     * Usage: `--data-dir-path`
 
@@ -240,8 +240,12 @@ Options:
 
 ## remove-variable
 
-Remove a variable from the registry and all of its columns from table source CSVs.
-    Optionally remove the variable only from one table source.
+Remove variable(s) from the registry and all of their columns from table source CSVs.
+    Optionally remove variables only from one table source.
+    
+    Can remove multiple variables at once by providing comma-separated names.
+    Example (single): flask remove-variable -n Var1 -t county-2025
+    Example (multiple): flask remove-variable -n "Var1,Var2,Var3" -t county-2025 --yes
     
 
 ###### Usage
@@ -261,7 +265,7 @@ Usage: remove-variable [OPTIONS]
     * Usage: `--name
 -n`
 
-    Name of variable to remove.
+    Name of variable(s) to remove. For multiple variables, use comma-separated values (e.g., -n 'Var1,Var2,Var3').
 
 
 
@@ -275,8 +279,18 @@ Usage: remove-variable [OPTIONS]
 
 
 
+* `yes`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--yes
+-y`
+
+    Skip confirmation prompts. Useful for batch operations.
+
+
+
 * `registry_path`:
-    * Type: <click.types.Path object at 0x76616f12d220>
+    * Type: <click.types.Path object at 0x71bb8c361d90>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -298,13 +312,21 @@ Usage: remove-variable [OPTIONS]
 ```
 Usage: remove-variable [OPTIONS]
 
-  Remove a variable from the registry and all of its columns from table source
-  CSVs. Optionally remove the variable only from one table source.
+  Remove variable(s) from the registry and all of their columns from table
+  source CSVs. Optionally remove variables only from one table source.
+
+  Can remove multiple variables at once by providing comma-separated names.
+  Example (single): flask remove-variable -n Var1 -t county-2025 Example
+  (multiple): flask remove-variable -n "Var1,Var2,Var3" -t county-2025 --yes
 
 Options:
-  -n, --name TEXT          Name of variable to remove.
+  -n, --name TEXT          Name of variable(s) to remove. For multiple
+                           variables, use comma-separated values (e.g., -n
+                           'Var1,Var2,Var3').
   -t, --table-source TEXT  Name of single table source from which the variable
                            will be removed.
+  -y, --yes                Skip confirmation prompts. Useful for batch
+                           operations.
   --registry-path PATH     Optional override for the registry directory.
   --help                   Show this message and exit.
 ```
@@ -373,7 +395,7 @@ Usage: bigquery-upload [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7013e0a2eb80>
+    * Type: <click.types.Path object at 0x70634c669d30>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -434,7 +456,7 @@ Usage: build-explorer [OPTIONS]
 ###### Options
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7d88d41ace80>
+    * Type: <click.types.Path object at 0x7290414abc40>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -443,7 +465,7 @@ Usage: build-explorer [OPTIONS]
 
 
 * `explorer_path`:
-    * Type: <click.types.Path object at 0x7d88d41aca30>
+    * Type: <click.types.Path object at 0x7290414ab280>
     * Default: `../explorer`
     * Usage: `--explorer-path`
 
@@ -569,7 +591,7 @@ Usage: build-docs [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x76f2d636c910>
+    * Type: <click.types.Path object at 0x746bba0ead90>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -721,7 +743,7 @@ Usage: merge-csv [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7c8fb206cd00>
+    * Type: <click.types.Path object at 0x7792be9eac40>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -824,7 +846,7 @@ Usage: move-variable [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7df3f602cc10>
+    * Type: <click.types.Path object at 0x7930882aae80>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -919,7 +941,7 @@ Usage: create-table-source [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x73f15852cdc0>
+    * Type: <click.types.Path object at 0x7cd3311aad90>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -973,7 +995,7 @@ Usage: validate-registry [OPTIONS]
 ###### Options
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x752e0feecdf0>
+    * Type: <click.types.Path object at 0x78e617eeaa00>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
