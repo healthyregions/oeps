@@ -1852,13 +1852,6 @@
         ]
       },
       {
-        "title": "Count of Federally Qualified Health Centers (FQHCs) within 30-min drive, with Impedance factor",
-        "name": "FqhcCntDr2",
-        "description": "Count of Federally Qualified Health Centers (FQHCs) within a 30-minute driving threshold, with Impedance factor",
-        "years": [],
-        "geographies": []
-      },
-      {
         "title": "Count of Tracts within 30-min drive of Federally Qualified Health Center (FQHC)",
         "name": "FqhcCtTmDr",
         "description": "Number of tracts with Federally Qualified Health Center within a 30-min driving range",
@@ -2713,27 +2706,6 @@
         "geographies": [
           "State"
         ]
-      },
-      {
-        "title": "Average biking time to nearest telehealth buprenorphine provider",
-        "name": "TlBupAvTmBk",
-        "description": "Average biking time (minutes) across tracts in county/state to nearest telehealth buprenorphine provider",
-        "years": [],
-        "geographies": []
-      },
-      {
-        "title": "Average driving time to nearest telehealth buprenorphine provider",
-        "name": "TlBupAvTmDr",
-        "description": "Average driving time (minutes) across tracts in county/state to nearest telehealth buprenorphine provider",
-        "years": [],
-        "geographies": []
-      },
-      {
-        "title": "Average walking time to nearest telehealth buprenorphine provider",
-        "name": "TlBupAvTmWk",
-        "description": "Average walking time (minutes) across tracts in county/state to nearest telehealth buprenorphine provider",
-        "years": [],
-        "geographies": []
       },
       {
         "title": "Biking Time (min) to Nearest Buprenorphine Provider",
@@ -4465,20 +4437,6 @@
     "construct": "Spatial access to HCV Testing",
     "variables": [
       {
-        "title": "Average time drive to nearest HCV testing provider",
-        "name": "HcvAvTmDr",
-        "description": "Mean driving time (minutes) from tracts to nearest HCV testing provider",
-        "years": [],
-        "geographies": []
-      },
-      {
-        "title": "Average time drive to nearest HIV provider",
-        "name": "HivAvTmDr",
-        "description": "Mean driving time (minutes) from tracts to nearest HIV testing provider",
-        "years": [],
-        "geographies": []
-      },
-      {
         "title": "Count of HCV Providers",
         "name": "HcvCntDr",
         "description": "Number of HCV testing providers within a 30-minute drive",
@@ -4501,20 +4459,6 @@
           "Tract",
           "ZCTA"
         ]
-      },
-      {
-        "title": "Count of tracts within 30-min driving range",
-        "name": "HcvCtTmDr",
-        "description": "Number of tracts with an HCV testing provider within a 30-minute driving range",
-        "years": [],
-        "geographies": []
-      },
-      {
-        "title": "Count of tracts within 30-min driving range",
-        "name": "HivCtTmDr",
-        "description": "Number of tracts with an HIV testing provider within a 30-minute driving range",
-        "years": [],
-        "geographies": []
       },
       {
         "title": "Distance to nearest HCV Provider",
@@ -4563,20 +4507,6 @@
           "Tract",
           "ZCTA"
         ]
-      },
-      {
-        "title": "Percent of tracts within 30-min driving range",
-        "name": "HivTmDrP",
-        "description": "Percent of tracts within 30-minute drive to an HIV testing provider",
-        "years": [],
-        "geographies": []
-      },
-      {
-        "title": "Percent of tracts within 30-min driving range",
-        "name": "HcvTmDrP",
-        "description": "Percent of tracts within 30-minute drive to an HCV testing provider",
-        "years": [],
-        "geographies": []
       }
     ]
   },
