@@ -3,6 +3,7 @@ import os
 import json
 from datetime import datetime
 from pathlib import Path
+from typing import Optional
 
 import pandas as pd
 import geopandas as gpd
@@ -376,47 +377,79 @@ class BigQuery:
             print(clean_row)
 
     def generate_reference_doc(self, table_sources: list[TableSource], outfile: Path):
-        project_id = os.getenv("BQ_PROJECT_ID")
+        """Generate BigQuery reference documentation (uses instance project_id)."""
+        generate_reference_doc(table_sources, outfile, project_id=self.project_id)
 
-        datasets = {}
 
-        for d in table_sources:
-            ds_name = "tabular"
-            t_name = d.name
+def generate_reference_doc(table_sources: list[TableSource], outfile: Path, project_id: Optional[str] = None):
+    """Generate BigQuery reference documentation from registry table sources.
+    
+    This function generates predictive table schemas based on what the data should
+    look like in BigQuery, without requiring any BigQuery credentials. The schemas
+    are derived entirely from the registry.
+    
+    Args:
+        table_sources: List of TableSource objects from the registry
+        outfile: Path where the markdown documentation should be written
+        project_id: Optional BigQuery project ID. If not provided, will attempt
+                   to get from existing file, BQ_PROJECT_ID env var, or use a placeholder.
+    """
+    if project_id is None:
+        # Try to read from existing file first
+        if outfile.exists():
+            try:
+                with open(outfile, "r") as f:
+                    first_line = f.readline()
+                    if first_line.startswith("# Project Id: "):
+                        existing_id = first_line.replace("# Project Id: ", "").strip()
+                        if existing_id and existing_id != "PROJECT_ID":
+                            project_id = existing_id
+            except Exception:
+                pass  # If we can't read it, continue to other methods
+        
+        # Fall back to environment variable or placeholder
+        if project_id is None:
+            project_id = os.getenv("BQ_PROJECT_ID", "PROJECT_ID")
 
-            if ds_name not in datasets:
-                datasets[ds_name] = {}
+    datasets = {}
 
-            if t_name not in datasets[ds_name]:
-                datasets[ds_name][t_name] = []
+    for d in table_sources:
+        ds_name = "tabular"
+        t_name = d.name
 
-            for f in d.variables:
-                datasets[ds_name][t_name].append(
-                    {
-                        "name": f.name,
-                        "data_type": BQ_TYPE_LOOKUP[f.type],
-                        "description": f.description,
-                    }
-                )
-        # fmt: off
-        with open(outfile, "w") as openf:
-            ds_ct = len(datasets)
-            openf.write(f"""# Project Id: {project_id}
+        if ds_name not in datasets:
+            datasets[ds_name] = {}
+
+        if t_name not in datasets[ds_name]:
+            datasets[ds_name][t_name] = []
+
+        for f in d.variables:
+            datasets[ds_name][t_name].append(
+                {
+                    "name": f.name,
+                    "data_type": BQ_TYPE_LOOKUP[f.type],
+                    "description": f.description,
+                }
+            )
+    # fmt: off
+    with open(outfile, "w") as openf:
+        ds_ct = len(datasets)
+        openf.write(f"""# Project Id: {project_id}
 
 {ds_ct} dataset{'s' if ds_ct != 1 else ''} in this project: {', '.join(datasets.keys())}
 
 """)
-            for ds in datasets:
-                t_ct = len(datasets[ds])
-                openf.write(f"""## {ds}
+        for ds in datasets:
+            t_ct = len(datasets[ds])
+            openf.write(f"""## {ds}
 
 {t_ct} table{'s' if t_ct != 1 else ''} in this dataset.
 
 """)
 
-                for t in datasets[ds]:
-                    c_ct = len(datasets[ds][t])
-                    openf.write(f"""### {t}
+            for t in datasets[ds]:
+                c_ct = len(datasets[ds][t])
+                openf.write(f"""### {t}
 
 ID: `{project_id}.{ds}.{t}`
 
@@ -426,12 +459,12 @@ Name|Data Type|Description
 -|-|-|-
 """)
 
-                    for c in datasets[ds][t]:
-                        openf.write(
+                for c in datasets[ds][t]:
+                    openf.write(
 f"{c['name']}|{c['data_type']}|{c['description']}\n"
-                        )
+                    )
 
-                    openf.write("\n")
+                openf.write("\n")
 
 
 # fmt: on
