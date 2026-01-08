@@ -10,6 +10,7 @@ from .utils import load_json, write_json
 
 class GeographyLevelModel(BaseModel):
     name: str
+    title: str
     code: str
     geoid_length: int
     allowed_id_columns: list[str]
@@ -17,24 +18,28 @@ class GeographyLevelModel(BaseModel):
 GEOGRAPHY_LOOKUP = {
     "state": GeographyLevelModel(
         name="state",
+        title="State",
         code="040",
         geoid_length=2,
         allowed_id_columns=["HEROP_ID","GEOID", "GEO ID", "GEO_ID", "FIPS", "STATEFP"]
     ),
     "county": GeographyLevelModel(
         name="county",
+        title="County",
         code="050",
         geoid_length=5,
         allowed_id_columns=["HEROP_ID","GEOID", "GEO ID", "GEO_ID", "FIPS", "COUNTYFP"]
     ),
     "tract": GeographyLevelModel(
         name="tract",
+        title="Tract",
         code="140",
         geoid_length=11,
         allowed_id_columns=["HEROP_ID","GEOID", "GEO ID", "GEO_ID", "FIPS", "TRACTCE"]
     ),
     "zcta": GeographyLevelModel(
         name="zcta",
+        title="ZCTA",
         code="860",
         geoid_length=5,
         allowed_id_columns=["HEROP_ID","GEOID", "GEO ID", "GEO_ID", "ZCTA5", "ZIP"]

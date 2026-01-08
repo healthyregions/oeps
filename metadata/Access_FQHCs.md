@@ -4,9 +4,6 @@
 **Date Last Modified**: December 23, 2025   
 **Last Modified By**: Marynia Kolak
 
-### Theme: 
-Environment
-
 ### Data Source(s) Description:  
 
 #### Resources
@@ -52,38 +49,6 @@ County and state-level variables include the **count** of Census tracts and the 
 
 For 2025 measures, the tract to county conversion were completed using R code, and can be found
 [scripts/fqhc-tract2county.R.](https://github.com/healthyregions/oeps/tree/main/scripts).
-
-### Key Variable and Definitions:
-
-- **Variable** -- title of variable
-- **Variable ID** -- exact name of variable in datasets
-- **Description** -- Short description of variable
-- **Years Available** -- years for which data exists for this variable
-- **Spatial Scale** -- the variable exists for these levels of spatial scale
-
-#### Tract and Zip Code
-| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
-|:---------|:--------------------|:------------|:----------------|:--------------| 
-| Distance to nearest FQHC | FqhcMinDis | Euclidean distance *from tract/zip centroid to nearest FQHC, in miles* | 2021, 2025 | Tract, Zip |
-| Driving time to nearest FQHC | FqhcTmDr | Driving time from tract/zip origin centroid to the nearest tract FQHC destination centroid, in minutes | 2021, 2025 | Tract|
-| Driving time to nearest FQHC, with Impedance | FqhcTmDr2 | Driving time from tract/zip origin centroid to the nearest tract FQHC destination centroid, with impedance factor, in minutes. | 2025 | Tract |
-| Count of FQHCs | FqhcCntDr | Count of FQHCs within a 30-minute driving threshold | 2021, 2025 | Tract |
-| Count of FQHCs, with Impedance | FqhcCntDr2 | Count of FQHCs within a 30-minute driving threshold, with impedance factor | 2025 | Tract |
-
-#### County and State
-| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
-|:---------|:--------------------|:------------|:----------------|:--------------|
-| Count of tracts | TotTracts | Total number of tracts in county/state | 2021, 2025 | County, State |
-| Count of tracts within 30-min driving range | FqhcCtTmDr | Number of tracts with FQHC within a 30-min driving range | 2021, 2025 | County, State |
-| Count of tracts within 30-min driving range, with Impedance | FqhcCtTmDr2 | Number of tracts with FQHC within a 30-min driving range, with impedance factor | 2025 | County |
-| Percent of tracts within 30-min driving range | FqhcTmDrP | Percent of tracts with FQHC within a 30-min driving range | 2021, 2025 | County, State |
-| Percent of tracts within 30-min driving range, with Impedance | FqhcTmDrP2 | Percent of tracts with FQHC within a 30-min driving range, with impedance factor | 2025 | County |
-| Average time drive to nearest FQHC | FqhcAvTmDr | Average driving time (minutes) across tracts in county/state to nearest FQHC | 2021, 2025 | County, State |
-| Average time drive to nearest FQHC, with Impedance | FqhcAvTmDr2 | Average driving time (minutes) across tracts in county/state to nearest FQHC, with impedance factor | 2025 | County |
-
-<img width="1708" height="1168" alt="Percent of tracts within 30-min driving range, with Impedance (FqhcTmDrP2)" src="https://github.com/user-attachments/assets/7a3cc935-b708-439f-950d-b70d0b84e0ec" />
-*Percent of tracts within 30-min driving range, with Impedance (FqhcTmDrP2)*
-
 
 <img width="1582" height="1168" alt="FqhcAvTmDr2_2025" src="https://github.com/user-attachments/assets/a1572118-06b9-4af6-9de9-9e00838e706d" />
 Average drive time to nearest FQHC, with Impedance (FqhcAvTmDr2)

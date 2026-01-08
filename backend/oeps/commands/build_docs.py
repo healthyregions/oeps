@@ -103,12 +103,7 @@ def build_docs(bq_only:bool, cli_only: bool, registry_only: bool, data_dictionar
                 for line in lines:
                     for n in reversed(range(1, 7)):
                         old_head, new_head = "#"*n, "#"*(n+1)
-                        if "data-dictionaries" in line:
-                            print(old_head, new_head)
-                            print(line)
                         line = line.replace(old_head, new_head)
-                        if "data-dictionaries" in line:
-                            print(line)
                     outlines.append(line)
 
         with open(out_file, "w") as o:

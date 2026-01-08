@@ -4,15 +4,6 @@
 **Date Last Modified:** August 30th, 2025    
 **Last Modified By:** Ashlynn Wimer
 
-
-### Theme:  
-Education – Levels of Educational Attainment
-
-### Data Location:  
-You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).
-
-CSV files are organized by year and spatial scale. For example, county-level variables from 2020 will be found in `county-2020.csv`.  
-
 ### Data Source(s) Description:  
 Variables were obtained from the *American Community Survey (ACS)* 5-Year Estimates, using table B15003 and related education summary tables for the years 2010, 2018, 2020 and 2023. Historical data from 1980, 1990, and 2000 were obtained from IPUMS NHGIS data tables NT7, NP37, NP037C which were themselves sourced from the 1980, 1990, and 2000 Decennial Censuses, respectively. 
 
@@ -30,17 +21,6 @@ This table includes the number and percent of people aged 25 years and older who
 - Some variables are reported as counts (e.g., total with high school or higher).  
 - Estimates are rounded to two decimal places where applicable.  
 - Calculations are based on total educational attainment population, excluding those under 25.
-
-### Key Variable and Definitions:
-
-| Variable                       | Variable ID in .csv | Description                                                       | Years Available | Spatial Scale        |
-|--------------------------------|---------------|-------------------------------------------------------------------|------------------|-----------------------|
-| Bachelor's degree or higher    | BachelorsP    | Percent persons aged 25 years and over with a bachelor’s degree as their highest level of education | 1990, 2000, 2010, 2018, 2020, 2023 | Tract, County, ZCTA, State |
-| High school graduate           | EduHsP       | Percent population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)| 1980, 1990, 2000, 2010, 2018, 2020, 2023 | Tract, County, ZCTA, State |
-| No high school diploma         | EduNoHsP     | Percent population aged 25 years and over with less than a high school diploma | 1980, 1990, 2000, 2010, 2018, 2020, 2023 | Tract, County, ZCTA, State   |
-| Graduate or professional degree| GradSclP     | Percent population aged 25 years and over with a graduate or professional degree | 1990, 2000, 2010, 2018, 2020, 2023 | Tract, County, ZCTA, State   |
-| Some college, no degree        | SomeCollegeP | Percent population 25 years and over with some college, but no degree | 1980, 1990, 2000, 2010, 2018, 2020, 2023 | Tract, County, ZCTA, State |
-| English Proficiency (18+)      | engProf18    | Proportion of the population aged 5+ who speak a language other than English at home but are proficient in English | 2018, 2020, 2023 | Tract, County, ZCTA     |
 
 ### Data Limitations:  
 - Only individuals aged 25 years or older are included in these statistics.  

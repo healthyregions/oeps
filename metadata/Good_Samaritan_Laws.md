@@ -4,14 +4,6 @@
 **Date Last Modified**: August 26, 2025  
 **Last Modified By**:  Mahjabin Kabir Adrita
 
-### Theme: 
-Policy 
-
-### Data Location: 
-You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).  
-
-CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
-
 ### Data Source(s) Description:  
 Variables were obtained from RAND-USC Schaeffer Opioid Policy Tools and Information Center, 2021, [OPTIC-Vetted Good Samaritan Policy Data](https://www.rand.org/health-care/centers/optic/resources/datasets.html).
 Measures are included at the state level for 2017, 2019, 2020, and 2021.
@@ -24,21 +16,6 @@ The following variables were included from the source data:
 4. Good Samaritan Law protecting arrest fraction.
 
 Fractions are calculated based on the number of months that a law is effective out of the 12 months in a year. A law is considered effective for a given month if a law becomes effective by the 7th for January, or if it becomes effective by the 3rd for February – December.
-
-### Key Variable and Definitions:
-
-- **Variable** -- title of variable
-- **Variable ID** -- exact name of variable in datasets
-- **Description** -- Short description of variable
-- **Years Available** -- years for which data exists for this variable
-- **Spatial Scale** -- the variable exists for these levels of spatial scale
-
-| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
-|:---------|:--------------------|:------------|:----------------|:--------------|
-| Any Good Samaritan Law start date | AnyGslDt | Date (DMY) any type of Good Samaritan Law is effective | 2017, 2019, 2020, 2021 | State |
-| Good Samaritan Law Protecting Arrest starting date | GslArrDt | Date (DMY) that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective | 2017, 2019, 2020, 2021 | State |
-| Any Good Samaritan Law fraction | AnyGslFr | Fraction of year any type of Good Samaritan Law is effective | 2017, 2019, 2020, 2021 | State |
-| Good Samaritan Law Protecting Arrest fraction | GslArrFr | Fraction of year that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective | 2017, 2019, 2020, 2021 | State |
 
 ### Data Limitations:
 N/A
