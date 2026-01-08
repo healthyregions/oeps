@@ -40,15 +40,16 @@ _Remove this text and add the following to this section throughout the course of
 - _The source URLs/database of the data that will be processed_
 - _The years and geography level of the data you will be creating_
 
+**Processing Notes**
+
+_Remove this text and add 1-3 images of to this section around these topics:_
+- _Key variables added_
+- _Recommended measures to use_
+- _Potential issues_
+
 **Data Limitations**
 
 _Remove this text and add the following to this section throughout the course of your work:_
 -  _Specific comments on missing data in the source content_
 -  _Any other notes on data issues_
-
-**Processing notes**
-
-_Remove this text and add 1-3 images of to this section around these topics:_
-- _Key variables added_
-- _Recommended measures to use_
-- _potential issues_
+- _Potential issues_
