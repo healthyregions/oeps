@@ -33,7 +33,7 @@ jobs:
         run: |
           pip install --upgrade pip
           pip install -e .
-          pip install mdclick
+          pip install git+https://github.com/kid-116/md-click@support-arguments
 
       - name: Create .env file
         working-directory: backend
