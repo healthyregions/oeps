@@ -10,7 +10,6 @@
   "table_sources": [
     "county-2025",
     "state-2025",
-    "tract-2025",
     "zcta-2025"
   ]
 }
