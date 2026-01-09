@@ -73,7 +73,7 @@ def build_docs(bq_only:bool, cli_only: bool, registry_only: bool, data_dictionar
         out_file = Path("../docs/src/reference/cli/command-line-reference.md")
 
         temp_docs_dir = TEMP_DIR / "cli-docs"
-        temp_docs_dir.mkdir(exist_ok=True)
+        temp_docs_dir.mkdir(parents=True, exist_ok=True)
         for p in temp_docs_dir.glob("*.md"):
             p.unlink()
 
