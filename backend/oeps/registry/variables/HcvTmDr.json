@@ -7,7 +7,5 @@
   "longitudinal": false,
   "analysis": false,
   "metadata": "Access_HCVTesting",
-  "table_sources": [
-    "zcta-2025"
-  ]
+  "table_sources": []
 }
