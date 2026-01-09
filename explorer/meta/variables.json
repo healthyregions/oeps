@@ -321,7 +321,7 @@
         "Source": "SAMHSA 2020",
         "Metadata": "Access_SubstanceUseTreatment",
         "Spatial Scale": "Tract, Zip, County, State",
-        "Years": "2020, 2025"
+        "Years": "2020"
       }
     ],
     "Spatial Access to Hospitals": [
@@ -339,7 +339,7 @@
         "Source": "CovidCareMap 2020",
         "Metadata": "Access_Hospitals",
         "Spatial Scale": "Tract, Zip, County, State",
-        "Years": "2020, 2025"
+        "Years": "2020"
       }
     ],
     "Housing Characteristics ": [
@@ -545,8 +545,8 @@
         ],
         "Source": "SAMHSA 2025",
         "Metadata": "Access_HCVTesting",
-        "Spatial Scale": "Tract, Zip",
-        "Years": "2025"
+        "Spatial Scale": "",
+        "Years": ""
       }
     ],
     "Urban/Suburban/Rural Classification": [
@@ -583,7 +583,7 @@
         "Source": "SAMHSA 2020",
         "Metadata": "Access_Mental_Health",
         "Spatial Scale": "Tract, Zip, County, State",
-        "Years": "2020, 2025"
+        "Years": "2020"
       }
     ],
     "Spatial Access to Pharmacies": [
