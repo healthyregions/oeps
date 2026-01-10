@@ -60,11 +60,11 @@ BupMinDis,Distance (mi) to nearest Buprenorphine Provider,number,0.81,Euclidean 
 BupRm30,Buprenorphine access 30 minutes (RAAM),number,1.232,Buprenorphine access 30 minutes (RAAM),tract-2020,Access_MOUDs,False,False
 BupRm60,Buprenorphine access 60 minutes (RAAM),number,1.232,Buprenorphine access 60 minutes (RAAM),tract-2020,Access_MOUDs,False,False
 BupRm90,Buprenorphine access 90 minutes (RAAM),number,1.232,Buprenorphine access 90 minutes (RAAM),tract-2020,Access_MOUDs,False,False
-BupTmBk,Biking Time (min) to nearest Buprenorphine Provider,number,0,Biking time (minutes) to nearest buprenorphine provider,"county-2025, state-2025, tract-2020, zcta-2020",Access_MOUDs,False,True
+BupTmBk,Biking Time (min) to nearest Buprenorphine Provider,number,0,Biking time (minutes) to nearest buprenorphine provider,"tract-2020, zcta-2020",Access_MOUDs,False,True
 BupTmBkP,% Tracts With Buprenorphine Provider (30-min bike),number,1,Percent of tracts with buprenorphine provider within a 30-min biking range,county-2020,Access_MOUDs,False,False
-BupTmDr,Driving Time (min) to nearest Buprenorphine Provider,number,0,Driving time (minutes) to nearest buprenorphine provider,"county-2025, state-2025, tract-2020, zcta-2020",Access_MOUDs,False,True
+BupTmDr,Driving Time (min) to nearest Buprenorphine Provider,number,0,Driving time (minutes) to nearest buprenorphine provider,"tract-2020, zcta-2020",Access_MOUDs,False,True
 BupTmDrP,% Tracts With Buprenorphine Provider (30-min drive),number,1,Percent of tracts with buprenorphine provider within a 30-min driving range,county-2020,Access_MOUDs,False,False
-BupTmWk,Walking Time (min) to nearest Buprenorphine Provider,number,0,Walking time (minutes) to nearest buprenorphine provider,"county-2025, state-2025, tract-2020, zcta-2020",Access_MOUDs,False,True
+BupTmWk,Walking Time (min) to nearest Buprenorphine Provider,number,0,Walking time (minutes) to nearest buprenorphine provider,"tract-2020, zcta-2020",Access_MOUDs,False,True
 BupTmWkP,% Tracts With Buprenorphine Provider (30-min walk),number,1,Percent of tracts with buprenorphine provider within a 30-min walking range,county-2020,Access_MOUDs,False,False
 CenFlags,Census Flags,string,,"Three different values indicating three things:<br>1 - Revised count, so urban and rural components will not add to total. <br>2 - Geography name and FIPS code were changed since 2010. Shannon County, Sotuh Dakota name changed to Oglala Lakota County, new FIPS 46102. Wade Hampton Census Area, Alaska, name changed to Kusilvak CEnsus Area, nwe FIPS 02158<br>3 - Bedford City, Virginia, was consolidated with Bedford County, Virginia (FIPS 51019) since 2010.",county-2018,Urbanicity,False,False
 ChildrenP,Children %,number,0.14,Percentage of population under age 18,"county-1980, county-1990, county-2000, county-2010, county-2018, state-1980, state-1990, state-2000, state-2018, tract-1980, tract-1990, tract-2000, tract-2018, zcta-2018",Demographic_Characteristics,True,False
@@ -181,11 +181,11 @@ MetMinDis,Distance (mi) to nearest Methadone Provider,number,13.22,Euclidean dis
 MetRm30,Methadone access 30 minutes (RAAM),number,1.232,Methadone access 30 minutes (RAAM),"tract-1980, tract-1990, tract-2000, tract-2010, tract-2020",Access_MOUDs,False,False
 MetRm60,Methadone access 60 minutes (RAAM),number,1.232,Methadone access 60 minutes (RAAM),"tract-1980, tract-1990, tract-2000, tract-2010, tract-2020",Access_MOUDs,False,False
 MetRm90,Methadone access 90 minutes (RAAM),number,1.232,Methadone access 90 minutes (RAAM),"tract-1980, tract-1990, tract-2000, tract-2010, tract-2020",Access_MOUDs,False,False
-MetTmBk,Biking Time (min) to nearest Methadone Provider,number,148.18,Biking time (minutes) to nearest methadone provider,"county-2025, state-2025, tract-2020, zcta-2020",Access_MOUDs,False,True
+MetTmBk,Biking Time (min) to nearest Methadone Provider,number,148.18,Biking time (minutes) to nearest methadone provider,"tract-2020, zcta-2020",Access_MOUDs,False,True
 MetTmBkP,% Tracts With Methadone Provider (30-min bike),number,0.99,Percent of tracts with methadone provider within a 30-min biking range,county-2020,Access_MOUDs,False,False
-MetTmDr,Driving Time (min) to nearest Methadone Provider,number,27.39,Driving time (minutes) to nearest methadone provider,"county-2025, state-2025, tract-2020, zcta-2020",Access_MOUDs,False,True
+MetTmDr,Driving Time (min) to nearest Methadone Provider,number,27.39,Driving time (minutes) to nearest methadone provider,"tract-2020, zcta-2020",Access_MOUDs,False,True
 MetTmDrP,% Tracts With Methadone Provider (30-min drive),number,1,Percent of tracts with methadone provider within a 30-min driving range,county-2020,Access_MOUDs,False,False
-MetTmWk,Walking Time (min) to nearest Methadone Provider,number,1744.66,Walking time (minutes) to nearest methadone provider,"county-2025, state-2025, tract-2020, zcta-2020",Access_MOUDs,False,True
+MetTmWk,Walking Time (min) to nearest Methadone Provider,number,1744.66,Walking time (minutes) to nearest methadone provider,"tract-2020, zcta-2020",Access_MOUDs,False,True
 MetTmWkP,% Tracts With Methadone Provider (30-min walk),number,0.94,Percent of tracts with methadone provider within a 30-min walking range,county-2020,Access_MOUDs,False,False
 MhAvTmDr,Driving Time (min) to nearest Mental Health Provider,number,11.42,Average driving time (minutes) across tracts in state to nearest mental health provider.,"county-2020, state-2020",Access_Mental_Health,False,False
 MhCntDr,Count of Mental Health Providers (30-min drive),integer,3,Count of MH providers within a 30-minute driving threshold,"tract-2020, zcta-2020",Access_Mental_Health,False,False
@@ -218,11 +218,11 @@ NaltMinDis,Distance (mi) to nearest Naltrexone Provider,number,18.04,Euclidean d
 NaltRm30,Naltrexone access 30 minutes (RAAM),number,1.232,Naltrexone access 30 minutes (RAAM),tract-2020,Access_MOUDs,False,False
 NaltRm60,Naltrexone access 60 minutes (RAAM),number,1.232,Naltrexone access 60 minutes (RAAM),tract-2020,Access_MOUDs,False,False
 NaltRm90,Naltrexone access 90 minutes (RAAM),number,1.232,Naltrexone access 90 minutes (RAAM),tract-2020,Access_MOUDs,False,False
-NaltTmBk,Biking Time (min) to nearest Naltrexone Provider,number,165.18,Biking time (minutes) to nearest naltrexone provider,"county-2025, state-2025, tract-2020, zcta-2020",Access_MOUDs,False,True
+NaltTmBk,Biking Time (min) to nearest Naltrexone Provider,number,165.18,Biking time (minutes) to nearest naltrexone provider,"tract-2020, zcta-2020",Access_MOUDs,False,True
 NaltTmBkP,% Tracts With Naltrexone Provider (30-min bike),number,1,Percent of tracts with naltrexone provider within a 30-min biking range,county-2020,Access_MOUDs,False,False
-NaltTmDr,Driving Time (min) to nearest Naltrexone Provider,number,35.34,Driving time (minutes) to nearest naltrexone provider,"county-2025, state-2025, tract-2020, zcta-2020",Access_MOUDs,False,True
+NaltTmDr,Driving Time (min) to nearest Naltrexone Provider,number,35.34,Driving time (minutes) to nearest naltrexone provider,"tract-2020, zcta-2020",Access_MOUDs,False,True
 NaltTmDrP,% Tracts With Naltrexone Provider (30-min drive),number,1,Percent of tracts with naltrexone provider within a 30-min driving range,county-2020,Access_MOUDs,False,False
-NaltTmWk,Walking Time (min) to nearest Naltrexone Provider,number,,Walking time (minutes) to nearest naltrexone provider,"county-2025, state-2025, tract-2020, zcta-2020",Access_MOUDs,False,True
+NaltTmWk,Walking Time (min) to nearest Naltrexone Provider,number,,Walking time (minutes) to nearest naltrexone provider,"tract-2020, zcta-2020",Access_MOUDs,False,True
 NaltTmWkP,% Tracts With Naltrexone Provider (30-min walk),number,1,Percent of tracts with naltrexone provider within a 30-min walking range,county-2020,Access_MOUDs,False,False
 NalxPrStDt,Naloxone Law allowing distribution through a standing or order (date),date,8/1/2015,Date (MY) Naloxone law allowing distribution through a standing or protocol order effective,"state-2017, state-2018, state-2019, state-2020, state-2021, state-2022",Naloxone_Policy,False,False
 NalxPrStFr,Naloxone Law in Effect (fraction of year in 2017),number,1,Fraction of year state has an effective Naloxone law allowing distribution through a standing or protocol order,"state-2017, state-2018, state-2019, state-2020, state-2021, state-2022",Naloxone_Policy,False,False
@@ -326,10 +326,10 @@ TlBupCtTmBk30,Count of tracts within 30-min telehealth buprenorphine biking rang
 TlBupCtTmDr30,Count of tracts within 30-min telehealth buprenorphine driving range,integer,44,Number of tracts with telehealth buprenorphine provider within a 30-min driving range,,Access_MOUDs,False,False
 TlBupCtTmDr60,Count of tracts within 60-min telehealth buprenorphine driving range,integer,44,Number of tracts with telehealth buprenorphine provider within a 60-min driving range,,Access_MOUDs,False,False
 TlBupCtTmWk30,Count of tracts within 30-min telehealth buprenorphine walking range,integer,44,Number of tracts with telehealth buprenorphine provider within a 30-min walking range,,Access_MOUDs,False,False
-TlBupMinDis,Minimum distance to telehealth buprenorphine provider,number,4.5,Euclidean distance (in miles) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services,"county-2025, state-2025",Access_MOUDs,False,False
+TlBupMinDis,Minimum distance to telehealth buprenorphine provider,number,4.5,Euclidean distance (in miles) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services,,Access_MOUDs,False,False
 TlBupTmBk,Biking time to nearest telehealth buprenorphine provider,number,4.5,Estimated biking time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services,"county-2025, state-2025",Access_MOUDs,False,False
 TlBupTmBk30P,Percent of tracts within 30-min telehealth buprenorphine biking range,number,4.5,Percent of tracts with telehealth buprenorphine provider within a 30-min biking range,,Access_MOUDs,False,False
-TlBupTmDr,Driving time to nearest telehealth buprenorphine provider,number,4.5,Estimated driving time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services,"county-2025, state-2025",Access_MOUDs,False,False
+TlBupTmDr,Driving time to nearest telehealth buprenorphine provider,number,4.5,Estimated driving time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services,,Access_MOUDs,False,False
 TlBupTmDr30P,Percent of tracts within 30-min telehealth buprenorphine driving range,number,4.5,Percent of tracts with telehealth buprenorphine provider within a 30-min driving range,,Access_MOUDs,False,False
 TlBupTmDr60P,Percent of tracts within 60-min telehealth buprenorphine driving range,number,4.5,Percent of tracts with telehealth buprenorphine provider within a 60-min driving range,,Access_MOUDs,False,False
 TlBupTmWk,Walking time to nearest telehealth buprenorphine provider,number,4.5,Estimated walking time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services,"county-2025, state-2025",Access_MOUDs,False,False

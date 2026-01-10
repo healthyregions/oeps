@@ -2716,12 +2716,9 @@
         "name": "BupTmBk",
         "description": "Biking time (minutes) to nearest buprenorphine provider",
         "years": [
-          "2020",
-          "2025"
+          "2020"
         ],
         "geographies": [
-          "County",
-          "State",
           "Tract",
           "ZCTA"
         ]
@@ -2731,12 +2728,9 @@
         "name": "MetTmBk",
         "description": "Biking time (minutes) to nearest methadone provider",
         "years": [
-          "2020",
-          "2025"
+          "2020"
         ],
         "geographies": [
-          "County",
-          "State",
           "Tract",
           "ZCTA"
         ]
@@ -2746,12 +2740,9 @@
         "name": "NaltTmBk",
         "description": "Biking time (minutes) to nearest naltrexone provider",
         "years": [
-          "2020",
-          "2025"
+          "2020"
         ],
         "geographies": [
-          "County",
-          "State",
           "Tract",
           "ZCTA"
         ]
@@ -3091,12 +3082,9 @@
         "name": "BupTmDr",
         "description": "Driving time (minutes) to nearest buprenorphine provider",
         "years": [
-          "2020",
-          "2025"
+          "2020"
         ],
         "geographies": [
-          "County",
-          "State",
           "Tract",
           "ZCTA"
         ]
@@ -3106,12 +3094,9 @@
         "name": "MetTmDr",
         "description": "Driving time (minutes) to nearest methadone provider",
         "years": [
-          "2020",
-          "2025"
+          "2020"
         ],
         "geographies": [
-          "County",
-          "State",
           "Tract",
           "ZCTA"
         ]
@@ -3121,12 +3106,9 @@
         "name": "NaltTmDr",
         "description": "Driving time (minutes) to nearest naltrexone provider",
         "years": [
-          "2020",
-          "2025"
+          "2020"
         ],
         "geographies": [
-          "County",
-          "State",
           "Tract",
           "ZCTA"
         ]
@@ -3189,18 +3171,6 @@
         ]
       },
       {
-        "title": "Driving time to nearest telehealth buprenorphine provider",
-        "name": "TlBupTmDr",
-        "description": "Estimated driving time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services",
-        "years": [
-          "2025"
-        ],
-        "geographies": [
-          "County",
-          "State"
-        ]
-      },
-      {
         "title": "Methadone access 30 minutes (RAAM)",
         "name": "MetRm30",
         "description": "Methadone access 30 minutes (RAAM)",
@@ -3243,18 +3213,6 @@
         ],
         "geographies": [
           "Tract"
-        ]
-      },
-      {
-        "title": "Minimum distance to telehealth buprenorphine provider",
-        "name": "TlBupMinDis",
-        "description": "Euclidean distance (in miles) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services",
-        "years": [
-          "2025"
-        ],
-        "geographies": [
-          "County",
-          "State"
         ]
       },
       {
@@ -3472,12 +3430,9 @@
         "name": "BupTmWk",
         "description": "Walking time (minutes) to nearest buprenorphine provider",
         "years": [
-          "2020",
-          "2025"
+          "2020"
         ],
         "geographies": [
-          "County",
-          "State",
           "Tract",
           "ZCTA"
         ]
@@ -3487,12 +3442,9 @@
         "name": "MetTmWk",
         "description": "Walking time (minutes) to nearest methadone provider",
         "years": [
-          "2020",
-          "2025"
+          "2020"
         ],
         "geographies": [
-          "County",
-          "State",
           "Tract",
           "ZCTA"
         ]
@@ -3502,12 +3454,9 @@
         "name": "NaltTmWk",
         "description": "Walking time (minutes) to nearest naltrexone provider",
         "years": [
-          "2020",
-          "2025"
+          "2020"
         ],
         "geographies": [
-          "County",
-          "State",
           "Tract",
           "ZCTA"
         ]

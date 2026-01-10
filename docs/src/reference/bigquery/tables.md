@@ -1894,33 +1894,22 @@ Age15_44P|NUMERIC|Percentage of population below 45 years of age
 
 ID: `oeps-391119.tabular.county-2025`
 
-23 columns in this table.
+12 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
-NaltTmDr|NUMERIC|Driving time (minutes) to nearest naltrexone provider
 SmokeP|NUMERIC|Percentage of Smoking Population
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 FqhcCtTmDr2|INTEGER|Number of tracts with Federally Qualified Health Center within a 30-min driving range, with Impedance factor
 TlBupTmWk|NUMERIC|Estimated walking time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services
 FqhcCtTmDr|INTEGER|Number of tracts with Federally Qualified Health Center within a 30-min driving range
 TotTracts|INTEGER|Total number of census tracts within the state.
-BupTmDr|NUMERIC|Driving time (minutes) to nearest buprenorphine provider
 FqhcTmDrP|NUMERIC|Percent of tracts with Federally Qualified Health Center within a 30-min driving range.
-MetTmBk|NUMERIC|Biking time (minutes) to nearest methadone provider
-NaltTmWk|NUMERIC|Walking time (minutes) to nearest naltrexone provider
-TlBupTmDr|NUMERIC|Estimated driving time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services
 FqhcAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest Federally Qualified Health Center
-TlBupMinDis|NUMERIC|Euclidean distance (in miles) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services
 FqhcAvTmDr2|NUMERIC|Average driving time (minutes) across tracts in state to nearest Federally Qualified Health Center, with Impedance factor
 FqhcTmDrP2|NUMERIC|Percent of tracts with Federally Qualified Health Center within a 30-min driving range, with Impedance factor
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
-NaltTmBk|NUMERIC|Biking time (minutes) to nearest naltrexone provider
-BupTmBk|NUMERIC|Biking time (minutes) to nearest buprenorphine provider
 TlBupTmBk|NUMERIC|Estimated biking time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services
-MetTmWk|NUMERIC|Walking time (minutes) to nearest methadone provider
-MetTmDr|NUMERIC|Driving time (minutes) to nearest methadone provider
-BupTmWk|NUMERIC|Walking time (minutes) to nearest buprenorphine provider
 
 ### county-2016
 
@@ -2481,27 +2470,16 @@ HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations
 
 ID: `oeps-391119.tabular.state-2025`
 
-17 columns in this table.
+6 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
-NaltTmDr|NUMERIC|Driving time (minutes) to nearest naltrexone provider
 SmokeP|NUMERIC|Percentage of Smoking Population
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 TlBupTmWk|NUMERIC|Estimated walking time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services
 TotTracts|INTEGER|Total number of census tracts within the state.
-BupTmDr|NUMERIC|Driving time (minutes) to nearest buprenorphine provider
-MetTmBk|NUMERIC|Biking time (minutes) to nearest methadone provider
-NaltTmWk|NUMERIC|Walking time (minutes) to nearest naltrexone provider
-TlBupTmDr|NUMERIC|Estimated driving time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services
-TlBupMinDis|NUMERIC|Euclidean distance (in miles) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
-NaltTmBk|NUMERIC|Biking time (minutes) to nearest naltrexone provider
-BupTmBk|NUMERIC|Biking time (minutes) to nearest buprenorphine provider
 TlBupTmBk|NUMERIC|Estimated biking time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services
-MetTmWk|NUMERIC|Walking time (minutes) to nearest methadone provider
-MetTmDr|NUMERIC|Driving time (minutes) to nearest methadone provider
-BupTmWk|NUMERIC|Walking time (minutes) to nearest buprenorphine provider
 
 ### state-2014
 
