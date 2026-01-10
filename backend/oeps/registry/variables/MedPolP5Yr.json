@@ -1,0 +1,10 @@
+{
+  "name": "MedPolP5Yr",
+  "title": "Five-Year Medicaid Expansion Proportion",
+  "type": "number",
+  "example": "0.583",
+  "description": "Proportion of the five-year period (ending in given year) for which Medicaid Expansion was implemented / in effect",
+  "metadata": "Medicaid_Policy_Proportion.json",
+  "longitudinal": false,
+  "analysis": false
+}
