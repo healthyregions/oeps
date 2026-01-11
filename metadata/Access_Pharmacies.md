@@ -5,7 +5,7 @@
 **Last Modified By**: Mahjabin Kabir Adrita  
 
 ### Data Source(s) Description:  
-Pharmacy locations were sourced from the InfoGroup (now [Data Axle](https://www.data-axle.com/)) 2019 Business and Consumer Historical Datafile, available through the University of Chicago Library.
+For 2019, Pharmacy locations were sourced from the InfoGroup (now [Data Axle](https://www.data-axle.com/)) 2019 Business and Consumer Historical Datafile, available through the University of Chicago Library. For the 2025 update, the dataset was derived from the Overture Maps Foundation’s public Points of Interest (POI) release (2025). Pharmacy locations were extracted using the HeRoP overture-poi-extract repository, which processes Overture’s publicly available POI data hosted on Amazon S3. Records were filtered by the POI category pharmacy, and relevant attributes—including geographic coordinates (latitude and longitude) and address fields—were retained.
 
 Zip code tract area (ZCTA) and Census Tract files were sourced from the [US Census Bureau, TIGER/Line Shapefiles 2018](https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html). 
 
