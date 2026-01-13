@@ -48,8 +48,8 @@ jobs:
         working-directory: backend
         id: aws_config
         run: |
-          AWS_BUCKET_NAME=$(grep "^AWS_BUCKET_NAME=" .env.example | cut -d '=' -f2 | tr -d '"')
-          AWS_REGION=$(grep "^AWS_REGION=" .env.example | cut -d '=' -f2 | tr -d '"')
+          AWS_BUCKET_NAME=$(grep "^AWS_BUCKET_NAME=" .env.example | cut -d '=' -f2- | sed 's/^"//; s/"$//' | sed "s/^'//; s/'$//" | xargs)
+          AWS_REGION=$(grep "^AWS_REGION=" .env.example | cut -d '=' -f2- | sed 's/^"//; s/"$//' | sed "s/^'//; s/'$//" | xargs)
           echo "bucket_name=$AWS_BUCKET_NAME" >> $GITHUB_OUTPUT
           echo "region=$AWS_REGION" >> $GITHUB_OUTPUT
 
