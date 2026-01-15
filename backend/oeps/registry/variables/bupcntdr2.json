@@ -1,0 +1,13 @@
+{
+  "name": "BupCntDr2",
+  "title": "Buprenorphine within 30-min drive (impedance-adjusted, indicator)",
+  "type": "boolean",
+  "example": "0",
+  "description": "Indicator (1 = yes, 0 = no) for whether there is at least one buprenorphine provider within a 30-minute driving threshold (using impedance-adjusted travel time).",
+  "metadata": "Access_MOUDs.json",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "tract-2020"
+  ]
+}
