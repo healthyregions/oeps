@@ -4,7 +4,20 @@
   "type": "number",
   "example": "0.75",
   "description": "Proportion of given year for which Medicaid Expansion was implemented / in effect",
-  "metadata": "Medicaid_Policy_Proportion.json",
   "longitudinal": false,
-  "analysis": false
+  "analysis": false,
+  "metadata": "Medicaid_Policy_Proportion",
+  "table_sources": [
+    "state-2014",
+    "state-2015",
+    "state-2016",
+    "state-2017",
+    "state-2018",
+    "state-2019",
+    "state-2020",
+    "state-2021",
+    "state-2022",
+    "state-2023",
+    "state-2024"
+  ]
 }

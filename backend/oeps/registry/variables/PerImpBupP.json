@@ -4,7 +4,11 @@
   "type": "string",
   "example": "2023-03-01 to 2023-06-25",
   "description": "Periods of Implementation of State-Level Buprenorphine Policy (Associated Date Ranges)",
-  "metadata": "Bup_Policy_Proportion.json",
   "longitudinal": false,
-  "analysis": false
+  "analysis": false,
+  "metadata": "Bup_Policy_Proportion",
+  "table_sources": [
+    "state-2023",
+    "state-2024"
+  ]
 }
