@@ -71,7 +71,7 @@ jobs:
         run: flask build-explorer --upload-map-data
 
       - name: Run build-explorer (without S3 upload on PRs)
-        if: github.event_name != 'push' || github.ref != 'refs/heads/main'
+        if: github.event_name == 'pull_request'
         working-directory: backend
         run: flask build-explorer
 
@@ -83,7 +83,7 @@ jobs:
           fi
 
       - name: Commit and push changes
-        if: steps.check_changes.outputs.changes == 'true' && github.event_name == 'push' && github.ref == 'refs/heads/main'
+        if: steps.check_changes.outputs.changes == 'true' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
