@@ -3167,6 +3167,48 @@
       }
     ]
   },
+  "Bup_Policy_Proportion": {
+    "theme": "Policy",
+    "construct": "Buprenorphine Policy Proportion",
+    "variables": [
+      {
+        "title": "Buprenorphine Policy Proportion",
+        "name": "BupPolP",
+        "description": "Proportion of Year with State-Level Buprenorphine Policy in Effect",
+        "years": [
+          "2023",
+          "2024"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Entire Data Period Buprenorphine Policy Proportion",
+        "name": "EdBupPolP",
+        "description": "Proportion of Entire Data Period with State-Level Buprenorphine Policy in Effect",
+        "years": [
+          "2023",
+          "2024"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Periods of Buprenorphine Policy Implementation",
+        "name": "PerImpBupP",
+        "description": "Periods of Implementation of State-Level Buprenorphine Policy (Associated Date Ranges)",
+        "years": [
+          "2023",
+          "2024"
+        ],
+        "geographies": [
+          "State"
+        ]
+      }
+    ]
+  },
   "Prison_Incarceration_Rates": {
     "theme": "Social",
     "construct": "Incarceration",
@@ -5257,6 +5299,45 @@
         ],
         "geographies": [
           "County",
+          "State"
+        ]
+      }
+    ]
+  },
+  "Medicaid_Policy_Proportion": {
+    "theme": "Policy",
+    "construct": "Medicaid Policy Proportion",
+    "variables": [
+      {
+        "title": "Five-Year Medicaid Expansion Proportion",
+        "name": "MedPolP5Yr",
+        "description": "Proportion of the five-year period (ending in given year) for which Medicaid Expansion was implemented / in effect",
+        "years": [
+          "2019",
+          "2024"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Medicaid Expansion Proportion",
+        "name": "MedPolProp",
+        "description": "Proportion of given year for which Medicaid Expansion was implemented / in effect",
+        "years": [
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023",
+          "2024"
+        ],
+        "geographies": [
           "State"
         ]
       }

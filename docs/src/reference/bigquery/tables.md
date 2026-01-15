@@ -24,7 +24,7 @@ HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic uni
 
 ID: `oeps-391119.tabular.state-2014`
 
-13 columns in this table.
+14 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
@@ -36,6 +36,7 @@ MlHcvD|INTEGER|Hepatitis C deaths among men
 BlkHcvD|INTEGER|Hepatitis C deaths among Black population
 HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations
 AsPiHcvD|INTEGER|Hepatitis C deaths among Asian and Pacific Islander populations
+MedPolProp|NUMERIC|Proportion of given year for which Medicaid Expansion was implemented / in effect
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 U50HcvD|INTEGER|Hepatitis C deaths in populations under 50 years of age
 OdMortRt|NUMERIC|Overdose mortality rate
@@ -109,7 +110,7 @@ PovP|NUMERIC|Number of individuals earning below the poverty income threshold as
 
 ID: `oeps-391119.tabular.state-2020`
 
-65 columns in this table.
+66 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
@@ -159,6 +160,7 @@ HospCtTmDr|INTEGER|Number of tracts with hospital within a 30-min driving range
 FqhcAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest Federally Qualified Health Center
 MhCtTmDr|INTEGER|Number of tracts with a mental health provider within a 30-min driving range.
 NalxPrStDt|DATE|Date (MY) Naloxone law allowing distribution through a standing or protocol order effective
+MedPolProp|NUMERIC|Proportion of given year for which Medicaid Expansion was implemented / in effect
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 AnyPdmphFr|NUMERIC|Fraction of year that state has prescription drug monitoring program enabling legislation for any type of prescription drug monitoring program in effect ,including paper-based systems (as determined by Horowitz et al., 2018) enacted
 GslArrDt|DATE|Date (DMY) that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective
@@ -258,7 +260,7 @@ HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic uni
 
 ID: `oeps-391119.tabular.state-2017`
 
-52 columns in this table.
+53 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
@@ -294,6 +296,7 @@ AvU50HcvD|NUMERIC|Mean yearly Hepatitis C deaths among people under 50 years of 
 AsPiHcvD|INTEGER|Hepatitis C deaths among Asian and Pacific Islander populations
 AnyNalxFr|NUMERIC|Fraction of year any type of Naloxone law is effective
 NalxPrStDt|DATE|Date (MY) Naloxone law allowing distribution through a standing or protocol order effective
+MedPolProp|NUMERIC|Proportion of given year for which Medicaid Expansion was implemented / in effect
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 AnyPdmphFr|NUMERIC|Fraction of year that state has prescription drug monitoring program enabling legislation for any type of prescription drug monitoring program in effect ,including paper-based systems (as determined by Horowitz et al., 2018) enacted
 AvA50_74HcvD|NUMERIC|Mean yearly Hepatitis C deaths among people between 50 and 74 years of age from 2013-2017, 2018-2022
@@ -452,7 +455,7 @@ EngProf|NUMERIC|
 
 ID: `oeps-391119.tabular.state-2021`
 
-44 columns in this table.
+45 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
@@ -487,6 +490,7 @@ ElcPdmpDt|DATE|Date state began operating an electronic PDMP system.
 AnyNalxFr|NUMERIC|Fraction of year any type of Naloxone law is effective
 MulHcvD|NUMERIC|
 NalxPrStDt|DATE|Date (MY) Naloxone law allowing distribution through a standing or protocol order effective
+MedPolProp|NUMERIC|Proportion of given year for which Medicaid Expansion was implemented / in effect
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 AnyPdmphFr|NUMERIC|Fraction of year that state has prescription drug monitoring program enabling legislation for any type of prescription drug monitoring program in effect ,including paper-based systems (as determined by Horowitz et al., 2018) enacted
 GslArrDt|DATE|Date (DMY) that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective
@@ -737,7 +741,7 @@ EngProf|NUMERIC|
 
 ID: `oeps-391119.tabular.state-2023`
 
-67 columns in this table.
+71 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
@@ -745,6 +749,7 @@ DsmAs|NUMERIC|Dissimilarity index for Asian and non-Hispanic White residents
 GradSclP|NUMERIC|
 TtlJlPrt|NUMERIC|Pretrial Jail Population Count
 Ovr16|NUMERIC|
+EdBupPolP|NUMERIC|Proportion of Entire Data Period with State-Level Buprenorphine Policy in Effect
 HisE|NUMERIC|Count persons with ethnicity identified as of Hispanic or Latinx origin. Estimated count in non-decennial years.
 AnyPdmpDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: PDAPS for first PDMP laws passed after January 1, 1998; Info on laws prior to 1998 came from Brandeis TTAC.
 AnyPdmpFr|NUMERIC|Fraction of year that state has any prescription drug monitoring program operating.
@@ -773,6 +778,7 @@ SRatio|NUMERIC|
 MedcdExp|INTEGER|Total medicaid spending
 AnyPdmphDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: Horowitz et al., 2018, Table 2, column 1.
 TtlJlPp|NUMERIC|Total Jail Population Count, ASJ/COJ Data
+PerImpBupP|STRING|Periods of Implementation of State-Level Buprenorphine Policy (Associated Date Ranges)
 Ovr21P|NUMERIC|
 MsAcPdmpFr|NUMERIC|Fraction of year that state has any legislation requiring Prescribers to access PDMP before prescribing (as interpreted by PDAPS) enacted.
 ElcPdmpFr|NUMERIC|Fraction of year that state has an electronic PDMP system operating.
@@ -786,9 +792,11 @@ EduNoHsP|NUMERIC|
 BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone
 Ovr65P|NUMERIC|Percentage of population over 65
 OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
+MedPolProp|NUMERIC|Proportion of given year for which Medicaid Expansion was implemented / in effect
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 SomeCollegeP|NUMERIC|
 Ovr21|NUMERIC|
+BupPolP|NUMERIC|Proportion of Year with State-Level Buprenorphine Policy in Effect
 AnyPdmphFr|NUMERIC|Fraction of year that state has prescription drug monitoring program enabling legislation for any type of prescription drug monitoring program in effect ,including paper-based systems (as determined by Horowitz et al., 2018) enacted
 DsmBlk|NUMERIC|Dissimilarity index for Black and non-Hispanic White residents
 OtherE|NUMERIC|Count of Population with race not mentioned in any of the options above (includes two race or more races). Estimated count in non-decennial years.
@@ -864,20 +872,25 @@ PovP|NUMERIC|Number of individuals earning below the poverty income threshold as
 
 ID: `oeps-391119.tabular.state-2024`
 
-4 columns in this table.
+9 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
+EdBupPolP|NUMERIC|Proportion of Entire Data Period with State-Level Buprenorphine Policy in Effect
 TtlPrPpr|NUMERIC|Total Prison Population Rate
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 TtlPrPp|INTEGER|Total Prison Population Count
+PerImpBupP|STRING|Periods of Implementation of State-Level Buprenorphine Policy (Associated Date Ranges)
+MedPolProp|NUMERIC|Proportion of given year for which Medicaid Expansion was implemented / in effect
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+BupPolP|NUMERIC|Proportion of Year with State-Level Buprenorphine Policy in Effect
+MedPolP5Yr|NUMERIC|Proportion of the five-year period (ending in given year) for which Medicaid Expansion was implemented / in effect
 
 ### state-2015
 
 ID: `oeps-391119.tabular.state-2015`
 
-13 columns in this table.
+14 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
@@ -889,6 +902,7 @@ MlHcvD|INTEGER|Hepatitis C deaths among men
 BlkHcvD|INTEGER|Hepatitis C deaths among Black population
 HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations
 AsPiHcvD|INTEGER|Hepatitis C deaths among Asian and Pacific Islander populations
+MedPolProp|NUMERIC|Proportion of given year for which Medicaid Expansion was implemented / in effect
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 U50HcvD|INTEGER|Hepatitis C deaths in populations under 50 years of age
 OdMortRt|NUMERIC|Overdose mortality rate
@@ -1130,7 +1144,7 @@ FqhcTmDrP2|NUMERIC|Percent of tracts with Federally Qualified Health Center with
 
 ID: `oeps-391119.tabular.state-2022`
 
-63 columns in this table.
+64 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
@@ -1176,6 +1190,7 @@ AvU50HcvD|NUMERIC|Mean yearly Hepatitis C deaths among people under 50 years of 
 AnyNalxFr|NUMERIC|Fraction of year any type of Naloxone law is effective
 MulHcvD|NUMERIC|
 NalxPrStDt|DATE|Date (MY) Naloxone law allowing distribution through a standing or protocol order effective
+MedPolProp|NUMERIC|Proportion of given year for which Medicaid Expansion was implemented / in effect
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 AvMulHcvD|NUMERIC|
 AnyPdmphFr|NUMERIC|Fraction of year that state has prescription drug monitoring program enabling legislation for any type of prescription drug monitoring program in effect ,including paper-based systems (as determined by Horowitz et al., 2018) enacted
@@ -1691,7 +1706,7 @@ RxCntDr|INTEGER|Count of pharmacies within a 30-minute driving threshold
 
 ID: `oeps-391119.tabular.state-2016`
 
-13 columns in this table.
+14 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
@@ -1703,6 +1718,7 @@ MlHcvD|INTEGER|Hepatitis C deaths among men
 BlkHcvD|INTEGER|Hepatitis C deaths among Black population
 HspHcvD|INTEGER|Hepatitis C deaths among hispanic populations
 AsPiHcvD|INTEGER|Hepatitis C deaths among Asian and Pacific Islander populations
+MedPolProp|NUMERIC|Proportion of given year for which Medicaid Expansion was implemented / in effect
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 U50HcvD|INTEGER|Hepatitis C deaths in populations under 50 years of age
 OdMortRt|NUMERIC|Overdose mortality rate
@@ -1726,7 +1742,7 @@ OdMortRt|NUMERIC|Overdose mortality rate
 
 ID: `oeps-391119.tabular.state-2019`
 
-52 columns in this table.
+54 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
@@ -1769,6 +1785,7 @@ AnyNalxFr|NUMERIC|Fraction of year any type of Naloxone law is effective
 MulHcvD|NUMERIC|
 NalxPrStDt|DATE|Date (MY) Naloxone law allowing distribution through a standing or protocol order effective
 RxTmDrP|NUMERIC|Percent of tracts with pharmacy within a 30-min driving range
+MedPolProp|NUMERIC|Proportion of given year for which Medicaid Expansion was implemented / in effect
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 AnyPdmphFr|NUMERIC|Fraction of year that state has prescription drug monitoring program enabling legislation for any type of prescription drug monitoring program in effect ,including paper-based systems (as determined by Horowitz et al., 2018) enacted
 GslArrDt|DATE|Date (DMY) that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective
@@ -1776,6 +1793,7 @@ NhPiHcvD|NUMERIC|
 NalxPresDt|DATE|Date (MY) Naloxone law allowing pharmacists prescriptive authority effective
 U50HcvD|INTEGER|Hepatitis C deaths in populations under 50 years of age
 OdMortRt|NUMERIC|Overdose mortality rate
+MedPolP5Yr|NUMERIC|Proportion of the five-year period (ending in given year) for which Medicaid Expansion was implemented / in effect
 FlHcvD|INTEGER|Hepatitis C deaths among women
 PrNtRefInj|BOOLEAN|Dummy variable indicating whether the paraphernalia definition in the state law does not refer to objects used for injecting drugs (0=no, 1=yes)
 OpPdmpDt|DATE|Date when a “modern system” became operational and users could access. Source: Horowitz et al., 2018, Table 2, column 4. This definition includes specific caveats adopted by Horowitz et al., 2018, described further below in Notes.
@@ -1787,7 +1805,7 @@ WhtHcvD|NUMERIC|
 
 ID: `oeps-391119.tabular.state-2018`
 
-119 columns in this table.
+120 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
@@ -1868,6 +1886,7 @@ PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 in
 Ovr65P|NUMERIC|Percentage of population over 65
 NalxPrStDt|DATE|Date (MY) Naloxone law allowing distribution through a standing or protocol order effective
 OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
+MedPolProp|NUMERIC|Proportion of given year for which Medicaid Expansion was implemented / in effect
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 SomeCollegeP|NUMERIC|
 Ovr21|NUMERIC|

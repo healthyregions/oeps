@@ -771,6 +771,21 @@
         "Years": "2019, 2020, 2021, 2022"
       }
     ],
+    "Buprenorphine Policy Proportion": [
+      {
+        "Variable Construct": "Buprenorphine Policy Proportion",
+        "Variable Proxy": "Proportions of individual years and Entire Data Period with State-Level Buprenorphine Policy in Effect, Periods of Implementation (Date Ranges Associated) of Policies also included",
+        "Variables": [
+          "Buprenorphine Policy Proportion",
+          "Entire Data Period Buprenorphine Policy Proportion",
+          "Periods of Buprenorphine Policy Implementation"
+        ],
+        "Source": "CPHLR 2025",
+        "Metadata": "Bup_Policy_Proportion",
+        "Spatial Scale": "State",
+        "Years": "2023, 2024"
+      }
+    ],
     "Marijuana Policies": [
       {
         "Variable Construct": "Marijuana Policies",
@@ -782,6 +797,20 @@
         "Metadata": "Medical_Marijuana_Laws",
         "Spatial Scale": "State",
         "Years": "2017, 2018, 2019, 2020, 2021, 2022, 2023"
+      }
+    ],
+    "Medicaid Policy Proportion": [
+      {
+        "Variable Construct": "Medicaid Policy Proportion",
+        "Variable Proxy": "Proportions of individual years and the five-year periods from 2014 - 2019 and 2020 - 2024 for which Medicaid Expansion was implemented / in effect",
+        "Variables": [
+          "Five-Year Medicaid Expansion Proportion",
+          "Medicaid Expansion Proportion"
+        ],
+        "Source": "KFF 2025",
+        "Metadata": "Medicaid_Policy_Proportion",
+        "Spatial Scale": "State",
+        "Years": "2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024"
       }
     ]
   },
