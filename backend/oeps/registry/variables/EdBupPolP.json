@@ -1,0 +1,14 @@
+{
+  "name": "EdBupPolP",
+  "title": "Entire Data Period Buprenorphine Policy Proportion",
+  "type": "number",
+  "example": "0.211",
+  "description": "Proportion of Entire Data Period with State-Level Buprenorphine Policy in Effect",
+  "longitudinal": false,
+  "analysis": false,
+  "metadata": "Bup_Policy_Proportion",
+  "table_sources": [
+    "state-2023",
+    "state-2024"
+  ]
+}
