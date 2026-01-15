@@ -5,9 +5,12 @@
 **Last Modified By**: Mahjabin Kabir Adrita  
 
 ### Data Source(s) Description: 
-For 2019, Pharmacy locations were sourced from the InfoGroup (now [Data Axle](https://www.data-axle.com/)) 2019 Business and Consumer Historical Datafile, available through the University of Chicago Library. For the 2025 update, the dataset was derived from the Overture Maps Foundation’s public Points of Interest (POI) release (2025). Pharmacy locations were extracted using the HeRoP overture-poi-extract repository, which processes Overture’s publicly available POI data hosted on Amazon S3. Records were filtered by the POI category pharmacy, and relevant attributes—including geographic coordinates (latitude and longitude) and address fields—were retained.
 
-Zip code tract area (ZCTA) and Census Tract files were sourced from the [US Census Bureau, TIGER/Line Shapefiles 2018](https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html). 
+#### Resources
+
+-For 2019, Pharmacy locations were sourced from the InfoGroup (now [Data Axle](https://www.data-axle.com/)) 2019 Business and Consumer Historical Datafile, available through the University of Chicago Library. 
+
+-For the 2025 update, the dataset was derived from the Overture Maps Foundation’s public Points of Interest (POI) release (2025). Pharmacy locations were extracted using the HeRoP overture-poi-extract repository, which processes Overture’s publicly available POI data hosted on Amazon S3. Records were filtered by the POI category pharmacy, and relevant attributes—including geographic coordinates (latitude and longitude) and address fields—were retained.
 
 #### Street Network Topology & Travel Time Matrices
 Data on street and pedestrian networks to calculate travel time metrics were sourced from multiple open source data portals. Street network topologies (including street orientations and speed/travel time) all derive from [OpenStreetMap](https://www.openstreetmap.org), also known as OSM.
