@@ -44,15 +44,6 @@ jobs:
         working-directory: backend
         run: echo "FLASK_APP=oeps" > .env
 
-      - name: Read AWS config from .env.example
-        working-directory: backend
-        id: aws_config
-        run: |
-          AWS_BUCKET_NAME=$(grep "^AWS_BUCKET_NAME=" .env.example | cut -d '=' -f2 | tr -d '"')
-          AWS_REGION=$(grep "^AWS_REGION=" .env.example | cut -d '=' -f2 | tr -d '"')
-          echo "bucket_name=$AWS_BUCKET_NAME" >> $GITHUB_OUTPUT
-          echo "region=$AWS_REGION" >> $GITHUB_OUTPUT
-
       - name: Run build-docs (CLI)
         working-directory: backend
         run: flask build-docs --cli-only
@@ -75,8 +66,8 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_BUCKET_NAME: ${{ steps.aws_config.outputs.bucket_name }}
-          AWS_REGION: ${{ steps.aws_config.outputs.region }}
+          AWS_BUCKET_NAME: ${{ secrets.AWS_BUCKET_NAME }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
         run: flask build-explorer --upload-map-data
 
       - name: Run build-explorer (without S3 upload on PRs)
