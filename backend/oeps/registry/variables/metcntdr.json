@@ -1,0 +1,13 @@
+{
+  "name": "MetCntDr",
+  "title": "Count of Methadone Providers (30-min drive)",
+  "type": "integer",
+  "example": "2",
+  "description": "Count of Methadone providers in 30 minute drive time threshold",
+  "metadata": "Access_MOUDs.json",
+  "longitudinal": false,
+  "analysis": true,
+  "table_sources": [
+    "tract-2020"
+  ]
+}
