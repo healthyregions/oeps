@@ -8,9 +8,9 @@
 
 #### Resources
 
--For 2019, Pharmacy locations were sourced from the InfoGroup (now [Data Axle](https://www.data-axle.com/)) 2019 Business and Consumer Historical Datafile, available through the University of Chicago Library. 
+- For 2019, Pharmacy locations were sourced from the InfoGroup (now [Data Axle](https://www.data-axle.com/)) 2019 Business and Consumer Historical Datafile, available through the University of Chicago Library. 
 
--For the 2025 update, the dataset was derived from the Overture Maps Foundation’s public Points of Interest (POI) release (2025). Pharmacy locations were extracted using the HeRoP overture-poi-extract repository, which processes Overture’s publicly available POI data hosted on Amazon S3. Records were filtered by the POI category pharmacy, and relevant attributes—including geographic coordinates (latitude and longitude) and address fields—were retained.
+- For the 2025 update, the dataset was derived from the Overture Maps Foundation’s public Points of Interest (POI) release (2025). Pharmacy locations were extracted using the HeRoP overture-poi-extract repository, which processes Overture’s publicly available POI data hosted on Amazon S3. Records were filtered by the POI category pharmacy, and relevant attributes—including geographic coordinates (latitude and longitude) and address fields—were retained.
 
 #### Street Network Topology & Travel Time Matrices
 Data on street and pedestrian networks to calculate travel time metrics were sourced from multiple open source data portals. Street network topologies (including street orientations and speed/travel time) all derive from [OpenStreetMap](https://www.openstreetmap.org), also known as OSM.
@@ -33,11 +33,19 @@ Data was downloaded and sourced from InfoGroup's historical dataset, filtered fo
 
 #### Tract and Zip Code
 
-##### Distance
+##### Minimum Distance
 Next, the nearest resource analysis was conducted using minimum Euclidean distance as a proxy variable for access. This analysis included calculating centroids for all U.S. census tracts and ZCTAs, identifying the nearest pharmact to each tract/ZCTA centroid, then measuring the distance in miles.
 
 ##### Travel Time and Count Within Threshold
-We calculated travel-network access metrics for the driving travel time to the nearest pharmacy location and count of pharmacies within a 30 minute driving threshold. The driving travel cost matrices were sourced from [Project OSRM](http://project-osrm.org/) and are available at the Tract or ZCTA scales for mulitple transit modes via [this Box folder](https://uchicago.app.box.com/s/ae2mtsw7f5tb4rhciczufdxd0owc23as). This analysis was conducted in Python. The script is available in [code/Access Metrics - Health Resources](https://github.com/GeoDaCenter/opioid-policy-scan/tree/fc3d94053dd1941a96a5945d73cc6f4845453484/code/Access%20Metrics%20-%20Health%20Resources).
+
+We calculated travel-network access metrics for the driving travel time to the nearest Pharmavy location and count of Pharmacies within a 30 minute driving threshold. We calculated travel-network access metrics for every census tract centroid to the census tract centroid of nearest provider type. For zip code tabulation areas, overlapping tract-level measures were averaged, weighted by proportion of the overlapping tract, using the corresponding HUD tract-to-zip code crosswalks.
+
+This travel time analysis was conducted using a Python Computational notebook.
+
+- For 2021 measures, some of the scripts are available in code/AccessMetrics - MOUDs..
+- The updated 2025 notebook will be released in late January 2026, due to some refinements and updates.
+
+In addition, an impedance factor was introduced in 2025 access metrics. Raw travel time measures assume pristine conditions in a best-case-scenario. An impedance approach instead multiples the estimated travel time by a factor, in this case a factor of 2, better approximating actual travel time due to traffic, congestion, etc.
 
 #### County and State 
 County and state-level variables include the **count** of Census tracts and the **percent** of Census tracts located within a 30 minute driving threshold of an FQHC, as well as the mean (average) driving time in minutes from Census tracts within the county or state. 
