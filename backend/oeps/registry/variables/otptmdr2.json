@@ -1,0 +1,13 @@
+{
+  "name": "OtpTmDr2",
+  "title": "Driving time to nearest OTP (impedance-adjusted)",
+  "type": "number",
+  "example": "22.45",
+  "description": "Driving time in minutes from the tract centroid to the nearest opioid treatment program, using impedance-adjusted travel time.",
+  "metadata": "Access_MOUDs.json",
+  "longitudinal": false,
+  "analysis": false,
+  "table_sources": [
+    "tract-2020"
+  ]
+}
