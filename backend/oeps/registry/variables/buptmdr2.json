@@ -1,0 +1,13 @@
+{
+  "name": "BupTmDr2",
+  "title": "Driving time to nearest buprenorphine provider (with impedance)",
+  "type": "number",
+  "example": "53.24",
+  "description": "Driving time (minutes) from the tract centroid to the nearest buprenorphine provider, with the impedance factor applied.",
+  "metadata": "Access_MOUDs.json",
+  "longitudinal": false,
+  "analysis": true,
+  "table_sources": [
+    "tract-2020"
+  ]
+}
