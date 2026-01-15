@@ -61,7 +61,7 @@ jobs:
         run: flask build-docs --bq-only
 
       - name: Run build-explorer (with S3 upload on main)
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
         working-directory: backend
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
