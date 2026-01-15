@@ -119,11 +119,11 @@ def create_data_package(
         rules_dir = Path(package_rules_dir, config_name)
 
         if not rules_dir.is_dir():
-            print(f"No directory for data rules: {config}")
+            print(f"No directory for data rules: {config_name}")
             print(f"Expected path: {rules_dir.resolve()}")
             exit()
 
-        out_name = f"oeps-{config}_{datetime.now().date().isoformat()}"
+        out_name = f"oeps-{config_name}_{datetime.now().date().isoformat()}"
         out_name = out_name + "_no_foreign_keys" if skip_foreign_keys else out_name
         out_path = Path(destination, out_name)
 
