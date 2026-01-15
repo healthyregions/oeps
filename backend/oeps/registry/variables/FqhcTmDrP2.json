@@ -4,7 +4,8 @@
   "type": "number",
   "example": "0.93",
   "description": "Percent of tracts with Federally Qualified Health Center within a 30-min driving range, with Impedance factor",
-  "metadata": "Access_FQHCs.json",
+  "metadata": "Access_FQHCs",
   "longitudinal": false,
-  "analysis": true
+  "analysis": true,
+  "table_sources": []
 }
