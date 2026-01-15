@@ -1,0 +1,5265 @@
+{
+  "Social_Capital": {
+    "theme": "Social",
+    "construct": "Social capital index",
+    "variables": [
+      {
+        "title": "Libraries per Capita",
+        "name": "LibPerCap",
+        "description": "Libraries per capita by census tract",
+        "years": [
+          "2018",
+          "2023"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Median Housing Tenure",
+        "name": "MedHsgTen",
+        "description": "Median time period occupant moved into housing unit by tract",
+        "years": [
+          "2018",
+          "2023"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Religious institutions per capita",
+        "name": "RlgPerCap",
+        "description": "Religious institutions per capita by census tract",
+        "years": [
+          "2018",
+          "2023"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Response Rate",
+        "name": "RspRt",
+        "description": "Percent of units interviewed from total units intended for interview",
+        "years": [
+          "2018",
+          "2023"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Social Capital Index",
+        "name": "SocCapInd",
+        "description": "Composite index of LngTermP, LibPerCap, RlgPerCap",
+        "years": [
+          "2018",
+          "2023"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      }
+    ]
+  },
+  "Alcohol_Outlet_Density": {
+    "theme": "Environment",
+    "construct": "Alcohol Outlet Density Measures",
+    "variables": [
+      {
+        "title": "Alcohol Outlets Density",
+        "name": "AlcDens",
+        "description": "Number of alcohol outlets per square mile",
+        "years": [
+          "2018"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Alcohol Outlets per Capita",
+        "name": "AlcPerCap",
+        "description": "Number of alcohol outlets per capita",
+        "years": [
+          "2018"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Land Area (Square Miles)",
+        "name": "AreaSqMi",
+        "description": "Land area of geography in sq miles",
+        "years": [
+          "2018"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Total Alcohol Outlets",
+        "name": "AlcTot",
+        "description": "Total number of alcohol outlets",
+        "years": [
+          "2018"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      }
+    ]
+  },
+  "Access_HIVTesting": {
+    "theme": "Environment",
+    "construct": "Spatial Access to HIV Testing",
+    "variables": []
+  },
+  "Economic_Characteristics": {
+    "theme": "Economic",
+    "construct": "Poverty, Income, Gini Coefficient",
+    "variables": [
+      {
+        "title": "Median Income",
+        "name": "MedInc",
+        "description": "Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)",
+        "years": [
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Per Capita Income",
+        "name": "PciE",
+        "description": "Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)",
+        "years": [
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Poverty %",
+        "name": "PovP",
+        "description": "Number of individuals earning below the poverty income threshold as a percentage of the total population",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Unemployment %",
+        "name": "UnempP",
+        "description": "The number of unemployed individuals as a percentage of the civilian labor force",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      }
+    ]
+  },
+  "SDOH_Indices": {
+    "theme": "Composite",
+    "construct": "SDOH Indices & Typology",
+    "variables": [
+      {
+        "title": "Limited Moblility Index",
+        "name": "LimMobInd",
+        "description": "Raw Limited Mobility Index (https://sdohatlas.github.io/)",
+        "years": [
+          "2014"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Mixed Immigrant Cohesion and Accesibility (MICA) Index",
+        "name": "MicaInd",
+        "description": "Raw Mixed Immigrant Cohesion and Accessibility (MICA) Index (https://sdohatlas.github.io/)",
+        "years": [
+          "2014"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Neighborhood Type",
+        "name": "NeighbTyp",
+        "description": "Categorical, one of seven neighborhood (tract-level) typologies: 1 = Rural Affordable; 2 = Suburban Affluent; 3 = Suburban Affordable; 4 = Extreme Poverty; 5 = Multilingual Working; 6 = Urban Core Opportunity; 7 = Sparse Areas",
+        "years": [
+          "2014"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Socioeconomic Advantage Index",
+        "name": "SocEcAdvIn",
+        "description": "Raw Socioeconomic Advantage Index (https://sdohatlas.github.io/)",
+        "years": [
+          "2014"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Urban Core Opportunity Index",
+        "name": "UrbCoreInd",
+        "description": "Raw Urban Core Opportunity Index (https://sdohatlas.github.io/)",
+        "years": [
+          "2014"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      }
+    ]
+  },
+  "Good_Samaritan_Laws": {
+    "theme": "Policy",
+    "construct": "Harm Reduction Policies",
+    "variables": [
+      {
+        "title": "Any Good Samaritan Law (date)",
+        "name": "AnyGslDt",
+        "description": "Date (DMY) any type of GoodDate (DMY) any type of Good Samaritan Law is effective",
+        "years": [
+          "2017",
+          "2019",
+          "2020",
+          "2021"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Any Good Samaritan Law (fraction of year in 2018)",
+        "name": "AnyGslFr",
+        "description": "Fraction of year any type of Good Samaritan Law is effective",
+        "years": [
+          "2017",
+          "2019",
+          "2020",
+          "2021"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Good Samaritan Law Protecting Arrest (date)",
+        "name": "GslArrDt",
+        "description": "Date (DMY) that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective",
+        "years": [
+          "2017",
+          "2019",
+          "2020",
+          "2021"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Good Samaritan Law Protecting Arrest (fraction of year in 2018)",
+        "name": "GslArrFr",
+        "description": "Fraction of year that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective",
+        "years": [
+          "2017",
+          "2019",
+          "2020",
+          "2021"
+        ],
+        "geographies": [
+          "State"
+        ]
+      }
+    ]
+  },
+  "Opioid_Outcomes": {
+    "theme": "Outcome",
+    "construct": "Opioid Indicators",
+    "variables": [
+      {
+        "title": "% Self-Report Misuse of Prescription Pain Medication (2020)",
+        "name": "PrMsuseP",
+        "description": "Percent of persons who self-report misusing prescription pain relief medication in 2020.",
+        "years": [
+          "2020",
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Opioid Prescription Rate",
+        "name": "OpRxRt",
+        "description": "Opioid prescription rate",
+        "years": [
+          "2020",
+          "2022"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      },
+      {
+        "title": "Overdose Mortality Rate",
+        "name": "OdMortRt",
+        "description": "Overdose mortality rate",
+        "years": [
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      },
+      {
+        "title": "Overdose Mortality Rate Average (2016-2020)",
+        "name": "OdMortRtAv",
+        "description": "Average overdose mortality rate from 2016-2020",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      }
+    ]
+  },
+  "HepatitisC_Rates": {
+    "theme": "Outcome",
+    "construct": "Hepatitis C Rates",
+    "variables": [
+      {
+        "title": "Average Ages between 50 to 74 Hepitatis C virus Deaths",
+        "name": "AvA50_74HcvD",
+        "description": "Mean yearly Hepatitis C deaths among people between 50 and 74 years of age from 2013-2017, 2018-2022",
+        "years": [
+          "2017",
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Average Hepitatis C virus Deaths (5-Year Averages)",
+        "name": "AvHcvD",
+        "description": "Mean total yearly Hepatitis C deaths from 2013-2017, 2018-2022",
+        "years": [
+          "2017",
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Average White Hepitatis C virus Deaths",
+        "name": "AvWhHcvD",
+        "description": "Mean yearly Hepatitis C deaths among White populations from 2018-2022",
+        "years": [
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Hepatitis C Deaths",
+        "name": "HcvD",
+        "description": "Total Hepatitis C deaths",
+        "years": [
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Hepatitis C Deaths - 50 to 74 years old",
+        "name": "A50_74HcvD",
+        "description": "Hepatitis C deaths among populations between 50 and 74 years of age",
+        "years": [
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Hepatitis C Deaths - Age Over 75  (5-Year Averages)",
+        "name": "AvO75HcvD",
+        "description": "Mean yearly Hepatitis C deaths among people over 75 years of age",
+        "years": [
+          "2017",
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Hepatitis C Deaths - Age Under 50 (5-Year Averages)",
+        "name": "AvU50HcvD",
+        "description": "Mean yearly Hepatitis C deaths among people under 50 years of age from 2013-2017",
+        "years": [
+          "2017",
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Hepatitis C Deaths - American Indian",
+        "name": "AmInHcvD",
+        "description": "Hepatitis C deaths among American Indian populations",
+        "years": [
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Hepatitis C Deaths - American Indian (5-Year Averages)",
+        "name": "AvAmInHcvD",
+        "description": "Mean yearly Hepatitis C deaths among American Indian population from 2013-2017",
+        "years": [
+          "2017",
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Hepatitis C Deaths - Asian & Pacific Islander",
+        "name": "AsPiHcvD",
+        "description": "Hepatitis C deaths among Asian and Pacific Islander populations",
+        "years": [
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Hepatitis C Deaths - Asian & Pacific Islander (2013 - 2017)",
+        "name": "AvAsPiHcvD",
+        "description": "Mean yearly Hepatitis C deaths among Asian and Pacific Islanders population from 2013-2017",
+        "years": [
+          "2017"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Hepatitis C Deaths - Black",
+        "name": "BlkHcvD",
+        "description": "Hepatitis C deaths among Black population",
+        "years": [
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Hepatitis C Deaths - Black (5-Year Averages)",
+        "name": "AvBlkHcvD",
+        "description": "Mean yearly Hepatitis C deaths among Black populations from 2013-2017",
+        "years": [
+          "2017",
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Hepatitis C Deaths - Hispanic",
+        "name": "HspHcvD",
+        "description": "Hepatitis C deaths among hispanic populations",
+        "years": [
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Hepatitis C Deaths - Hispanic (5-Year Averages)",
+        "name": "AvHspHcvD",
+        "description": "Mean yearly Hepatitis C deaths among Hispanic populations from 2013-2017",
+        "years": [
+          "2017",
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Hepatitis C Deaths - Men",
+        "name": "MlHcvD",
+        "description": "Hepatitis C deaths among men",
+        "years": [
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Hepatitis C Deaths - Men (5-Year Averages)",
+        "name": "AvMlHcvD",
+        "description": "Mean yearly Hepatitis C deaths among men from 2013-2017",
+        "years": [
+          "2017",
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Hepatitis C Deaths - Over 75 years old",
+        "name": "O75HcvD",
+        "description": "Hepatitis C deaths among populations over 75 years of age",
+        "years": [
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Hepatitis C Deaths - Under 50 years old",
+        "name": "U50HcvD",
+        "description": "Hepatitis C deaths in populations under 50 years of age",
+        "years": [
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Hepatitis C Deaths - Women",
+        "name": "FlHcvD",
+        "description": "Hepatitis C deaths among women",
+        "years": [
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Hepatitis C Deaths - Women (5-Year Averages)",
+        "name": "AvFlHcvD",
+        "description": "Mean yearly Hepatitis C deaths among women from 2013-2017",
+        "years": [
+          "2017",
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Hepatitis C deaths among Asian populations ",
+        "name": "AsHcvD",
+        "description": "",
+        "years": [
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Hepatitis C deaths among Multiple Race populations ",
+        "name": "MulHcvD",
+        "description": "",
+        "years": [
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Hepatitis C deaths among Native Hawaiian and Pacific Islander populations ",
+        "name": "NhPiHcvD",
+        "description": "",
+        "years": [
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Hepatitis C deaths among White populations",
+        "name": "WhtHcvD",
+        "description": "",
+        "years": [
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Mean yearly Hepatitis C deaths among Asian population from 2018-2022",
+        "name": "AvAsHcvD",
+        "description": "",
+        "years": [
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Mean yearly Hepatitis C deaths among Multiple Race populations from 2018-2022",
+        "name": "AvMulHcvD",
+        "description": "",
+        "years": [
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Mean yearly Hepatitis C deaths among Native Hawaiian and Pacific Islanders population from 2018-2022",
+        "name": "AvNhPiHcvD",
+        "description": "",
+        "years": [
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Yearly Hepatitis C cases (2013-2016)",
+        "name": "TotHcv",
+        "description": "Mean total yearly Hepitatis C cases from 2013-2016",
+        "years": [
+          "2017"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Yearly Hepatitis C cases - 50 to 74 years old (2013-2016)",
+        "name": "A50_74Hcv",
+        "description": "Mean yearly Hepatitis C cases in people between 50 to 74 years of age from 2013-2016",
+        "years": [
+          "2017"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Yearly Hepatitis C cases - Black (2013-2016)",
+        "name": "BlkHcv",
+        "description": "Mean yearly Hepatitis C cases in populations identified as non-hispanic Black alone across 2013-2016",
+        "years": [
+          "2017"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Yearly Hepatitis C cases - Men (2013-2016)",
+        "name": "MlHcv",
+        "description": "Mean yearly Hepatitis C cases in men from 2013-2016",
+        "years": [
+          "2017"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Yearly Hepatitis C cases - Over 75 years old (2013-2016)",
+        "name": "Ov75Hcv",
+        "description": "Mean yearly Hepatitis C cases in people over 75 years of age from 2013-2016",
+        "years": [
+          "2017"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Yearly Hepatitis C cases - Under 50 years old (2013-2016)",
+        "name": "Un50Hcv",
+        "description": "Mean yearly Hepatatis C cases in people under 50 years of age from 2013-2016",
+        "years": [
+          "2017"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Yearly Hepatitis C cases - Women (2013-2016)",
+        "name": "FmHcv",
+        "description": "Mean yearly Hepatitis C cases in women from 2013-2016",
+        "years": [
+          "2017"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Yearly Hepatitis C cases - non-Black (2013-2016)",
+        "name": "NonBlkHcv",
+        "description": "Mean yearly Hepatitis C cases in populations non-Black other race/ethnicity populations 2013-2016",
+        "years": [
+          "2017"
+        ],
+        "geographies": [
+          "State"
+        ]
+      }
+    ]
+  },
+  "Veteran_Population": {
+    "theme": "Social",
+    "construct": "Veteran Population",
+    "variables": [
+      {
+        "title": "% Veteran Population",
+        "name": "VetP",
+        "description": "Percent of population that are veterans",
+        "years": [
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Total Veteran Population",
+        "name": "TotVetPop",
+        "description": "Total Veteran population",
+        "years": [
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      }
+    ]
+  },
+  "Healthcare_Provider_Access": {
+    "theme": "Environment",
+    "construct": "Healthcare Provider Access",
+    "variables": [
+      {
+        "title": "Count of Primary Care Physicians (PCPs)",
+        "name": "TotPcp",
+        "description": "Number of primary care providers in area",
+        "years": [
+          "2010"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract"
+        ]
+      },
+      {
+        "title": "Count of Specialty Physicians",
+        "name": "TotSp",
+        "description": "Number of specialty physicians in area",
+        "years": [
+          "2010"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract"
+        ]
+      },
+      {
+        "title": "Primary Care Physicians (PCP) per 100k",
+        "name": "PcpPer100k",
+        "description": "PCPs per total Population X 100,000",
+        "years": [
+          "2010"
+        ],
+        "geographies": [
+          "County",
+          "Tract"
+        ]
+      },
+      {
+        "title": "Specialty Physicians per 100k",
+        "name": "SpPer100k",
+        "description": "Specialty Physicians per total Population X 100,000",
+        "years": [
+          "2010"
+        ],
+        "geographies": [
+          "County",
+          "Tract"
+        ]
+      }
+    ]
+  },
+  "Access_Hospitals": {
+    "theme": "Environment",
+    "construct": "Spatial Access to Hospitals",
+    "variables": [
+      {
+        "title": "% Tracts within 30-min Drive of Hospital",
+        "name": "HospTmDrP",
+        "description": "Percent of tracts with hospital within a 30-mini driving range",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      },
+      {
+        "title": "Avg. Driving Time to nearest Hospital",
+        "name": "HospAvTmDr",
+        "description": "Average driving time (minutes) across tracts in state to nearest hospital.",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      },
+      {
+        "title": "Count of Hospitals (30-min drive)",
+        "name": "HospCntDr",
+        "description": "Count of hospitals within a 30-minute driving threshold",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Distance (mi) to nearest Hospital",
+        "name": "HospMinDis",
+        "description": "Euclidean distance* from tract/zip centroid to nearest hospital, in miles",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Driving time (min) to nearest Hospital",
+        "name": "HospTmDr",
+        "description": "Driving time from tract/zip origin centroid to the nearest tract/zip hospital destination centroid, in minutes",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Tracts with Hospital (30-min drive)",
+        "name": "HospCtTmDr",
+        "description": "Number of tracts with hospital within a 30-min driving range",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      }
+    ]
+  },
+  "Response_Rate": {
+    "theme": "Social",
+    "construct": "Response rate",
+    "variables": []
+  },
+  "PDMP_Presence": {
+    "theme": "Policy",
+    "construct": "Prescription Drug Monitoring Programs (PDMP)",
+    "variables": [
+      {
+        "title": "Any Horowitz PDMP (fraction of year in 2017)",
+        "name": "AnyPdmphFr",
+        "description": "Fraction of year that state has prescription drug monitoring program enabling legislation for any type of prescription drug monitoring program in effect ,including paper-based systems (as determined by Horowitz et al., 2018) enacted",
+        "years": [
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Any Horowitz PDMP start date",
+        "name": "AnyPdmphDt",
+        "description": "Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: Horowitz et al., 2018, Table 2, column 1.",
+        "years": [
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Any PDMP (fraction of year in 2017)",
+        "name": "AnyPdmpFr",
+        "description": "Fraction of year that state has any prescription drug monitoring program operating.",
+        "years": [
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Any PDMP start date",
+        "name": "AnyPdmpDt",
+        "description": "Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: PDAPS for first PDMP laws passed after January 1, 1998; Info on laws prior to 1998 came from Brandeis TTAC.",
+        "years": [
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Electronic PDMP (fraction of year in 2017)",
+        "name": "ElcPdmpFr",
+        "description": "Fraction of year that state has an electronic PDMP system operating.",
+        "years": [
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Electronic PDMP start date",
+        "name": "ElcPdmpDt",
+        "description": "Date state began operating an electronic PDMP system.",
+        "years": [
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Must-Access PDMP (fraction of year in 2017)",
+        "name": "MsAcPdmpFr",
+        "description": "Fraction of year that state has any legislation requiring Prescribers to access PDMP before prescribing (as interpreted by PDAPS) enacted.",
+        "years": [
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Must-Access PDMP start date",
+        "name": "MsAcPdmpDt",
+        "description": "Date of legislation requiring Prescribers to access PDMP before prescribing as interpreted by PDAPS.",
+        "years": [
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Operational PDMP (fraction of year in 2017)",
+        "name": "OpPdmpFr",
+        "description": "Fraction of year that state has a \u201cmodern system\u201d operational and users could access (as determined by Horowitz et al., 2018).",
+        "years": [
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Operational PDMP start date",
+        "name": "OpPdmpDt",
+        "description": "Date when a \u201cmodern system\u201d became operational and users could access. Source: Horowitz et al., 2018, Table 2, column 4. This definition includes specific caveats adopted by Horowitz et al., 2018, described further below in Notes.",
+        "years": [
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023"
+        ],
+        "geographies": [
+          "State"
+        ]
+      }
+    ]
+  },
+  "Greenspace_Measures": {
+    "theme": "Environment",
+    "construct": "Greenspace Measures",
+    "variables": [
+      {
+        "title": "NDVI Average",
+        "name": "Ndvi",
+        "description": "Average normalized difference vegetation index, a measure of greenness used to determine the amount of vegetation in an area, value from all pixel values in each Census tract",
+        "years": [
+          "2018"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Park Area",
+        "name": "ParkArea",
+        "description": "Area (in square meters) of park or green space in a state).",
+        "years": [
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "State Area",
+        "name": "StateArea",
+        "description": "Area (in square meters) of state",
+        "years": [
+          "2018"
+        ],
+        "geographies": [
+          "State"
+        ]
+      }
+    ]
+  },
+  "Smoking_Population": {
+    "theme": "Social",
+    "construct": "Smoking",
+    "variables": [
+      {
+        "title": "Percentage of Smoking Population",
+        "name": "SmokeP",
+        "description": "Percentage of Smoking Population",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      }
+    ]
+  },
+  "Unique_Communities": {
+    "theme": "Social",
+    "construct": "Community Overlay Variables",
+    "variables": [
+      {
+        "title": "African American South",
+        "name": "DmyBlckBlt",
+        "description": "Dummy variable for whether county is in the Southern Black Belt region",
+        "years": [
+          "2000"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Hypersegregated Cities",
+        "name": "DmySgrg",
+        "description": "Dummy variable for whether county is part of a hypersegregated city or its metropolitan area",
+        "years": [
+          "2015"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Native American & Tribal Lands",
+        "name": "PrcNtvRsrv",
+        "description": "Percentage of county land area that belongs to Native American reservation(s)",
+        "years": [
+          "2017"
+        ],
+        "geographies": [
+          "County"
+        ]
+      }
+    ]
+  },
+  "Race_Ethnicity": {
+    "theme": "Social",
+    "construct": "Race & Ethnicity",
+    "variables": [
+      {
+        "title": "% Asian Population",
+        "name": "AsianP",
+        "description": "Percentage of population with race identified as Asian alone",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Black/African American Populationw",
+        "name": "BlackP",
+        "description": "Percentage of population with race identified as Black or African American alone",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Hispanic/Latinx Population",
+        "name": "HispP",
+        "description": "Percentage of population with ethnicity identified as of Hispanic or Latinx origin",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Native American/Alaska Native Population",
+        "name": "AmIndP",
+        "description": "Percentage of population with race identified as Native American or Alaska Native alone",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Native Hawaiian & Other PI Population",
+        "name": "PacIsP",
+        "description": "Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Other (race) Population",
+        "name": "OtherP",
+        "description": "Percentage of Population with race not mentioned in any of the options above (includes two race or more races)",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Population identifying as two or more races",
+        "name": "TwoRaceP",
+        "description": "",
+        "years": [
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Population with ethnicity identified as of Hispanic or Latinx origin",
+        "name": "HisP",
+        "description": "",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% White Population",
+        "name": "WhiteP",
+        "description": "Percentage of population with race identified as white alone",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Count Asian Population",
+        "name": "AsianE",
+        "description": "Count population with race identified as Asian alone. Estimated count in non-decennial years.",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Count Black/African American Populationw",
+        "name": "BlackE",
+        "description": "Count population with race identified as Black or African American alone. Estimated count in non-decennial years.",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Count Hispanic/Latinx Population",
+        "name": "HisE",
+        "description": "Count persons with ethnicity identified as of Hispanic or Latinx origin. Estimated count in non-decennial years.",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Count Native American/Alaska Native Population",
+        "name": "AmIndE",
+        "description": "Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Count Native Hawaiian & Other PI Population",
+        "name": "PacIsE",
+        "description": "Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Count Other (race) Population",
+        "name": "OtherE",
+        "description": "Count of Population with race not mentioned in any of the options above (includes two race or more races). Estimated count in non-decennial years.",
+        "years": [
+          "2010",
+          "2018",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Count Population identifying as two or more races",
+        "name": "TwoRaceE",
+        "description": "Count persons identifying as two or more races. Estimated count in non-decennial years.",
+        "years": [
+          "2010",
+          "2018",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Count White Population",
+        "name": "WhiteE",
+        "description": "Count persons with race identified as white alone. Estimated count in non-decennial years.",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      }
+    ]
+  },
+  "Medical_Expenditures": {
+    "theme": "Policy",
+    "construct": "State & Local Government Expenditures",
+    "variables": [
+      {
+        "title": "Expansion Medicaid Federal Spending",
+        "name": "ExpnFedExp",
+        "description": "Expansion Group - Federal Spending",
+        "years": [
+          "2018",
+          "2023"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Expansion Medicaid State Spending",
+        "name": "ExpnSttExp",
+        "description": "Expansion Group - State Spending",
+        "years": [
+          "2018",
+          "2023"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Total Medicaid Spending",
+        "name": "MedcdExp",
+        "description": "Total medicaid spending",
+        "years": [
+          "2018",
+          "2019",
+          "2023"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Traditional Medicaid Federal Spending",
+        "name": "TradFedExp",
+        "description": "Traditional medicaid - federal spending",
+        "years": [
+          "2018",
+          "2023"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Traditional Medicaid State Spending",
+        "name": "TradSttExp",
+        "description": "Traditional medicaid - state spending",
+        "years": [
+          "2018",
+          "2023"
+        ],
+        "geographies": [
+          "State"
+        ]
+      }
+    ]
+  },
+  "Public_Expenditures": {
+    "theme": "Policy",
+    "construct": "State & Local Government Expenditures",
+    "variables": [
+      {
+        "title": "Corrections expenditures",
+        "name": "CrrctExp",
+        "description": "Total expenditures on corrections system and operations",
+        "years": [
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Police & fire expenditures",
+        "name": "PlcFyrExp",
+        "description": "Total expenditures on police and fire protection",
+        "years": [
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Public health expenditures",
+        "name": "HlthExp",
+        "description": "Total expenditures on public health and hospitals",
+        "years": [
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Public welfare expenditures",
+        "name": "WlfrExp",
+        "description": "Total expenditures on public welfare programs",
+        "years": [
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      }
+    ]
+  },
+  "Urbanicity": {
+    "theme": "Environment",
+    "construct": "Urban/Suburban/Rural Classification",
+    "variables": [
+      {
+        "title": "% Tracts Rural (RUCA)",
+        "name": "RcaRuralP",
+        "description": "Percent census tracts in the county classified as Rural using RUCA codes",
+        "years": [
+          "2018"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "% Tracts Suburban (RUCA)",
+        "name": "RcaSubrbP",
+        "description": "Percent census tracts in the county classified as Suburban using RUCA codes",
+        "years": [
+          "2018"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "% Tracts Urban (RUCA)",
+        "name": "RcaUrbanP",
+        "description": "Percent census tracts in the county classified as Urban using RUCA codes",
+        "years": [
+          "2018"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Census Flags",
+        "name": "CenFlags",
+        "description": "Three different values indicating three things:\n1 - Revised count, so urban and rural components will not add to total. \n2 - Geography name and FIPS code were changed since 2010. Shannon County, Sotuh Dakota name changed to Oglala Lakota County, new FIPS 46102. Wade Hampton Census Area, Alaska, name changed to Kusilvak CEnsus Area, nwe FIPS 02158\n3 - Bedford City, Virginia, was consolidated with Bedford County, Virginia (FIPS 51019) since 2010.",
+        "years": [
+          "2018"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Primary RUCA Code",
+        "name": "Ruca1",
+        "description": "Primary RUCA Code",
+        "years": [
+          "2010"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Secondary RUCA Code",
+        "name": "Ruca2",
+        "description": "Secondary RUCA Code",
+        "years": [
+          "2010"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Urban-Suburban-Rural",
+        "name": "Rurality",
+        "description": "Urban/Suburban/Rural",
+        "years": [
+          "2010"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      }
+    ]
+  },
+  "Population_withDisability": {
+    "theme": "Social",
+    "construct": "Population with Disability",
+    "variables": [
+      {
+        "title": "% Population with Disability",
+        "name": "DisbP",
+        "description": "Percentage of civilian non institutionalized population with a disability",
+        "years": [
+          "2000",
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      }
+    ]
+  },
+  "Educational_Characteristics": {
+    "theme": "Social",
+    "construct": "Educational Characteristics",
+    "variables": [
+      {
+        "title": "% Persons aged 25 years and over with a bachelor\u2019s degree as their highest level of education",
+        "name": "BachelorsP",
+        "description": "",
+        "years": [
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Population 25 years and over with some college, but no degree",
+        "name": "SomeCollegeP",
+        "description": "",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)",
+        "name": "EduHsP",
+        "description": "",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Population aged 25 years and over with a graduate or professional degree",
+        "name": "GradSclP",
+        "description": "",
+        "years": [
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Population aged 25 years and over with less than a high school diploma",
+        "name": "EduNoHsP",
+        "description": "",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Proportion of the population aged 5+ who speak a language other than English at home but are proficient in English",
+        "name": "EngProf",
+        "description": "",
+        "years": [
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      }
+    ]
+  },
+  "Housing_Variables": {
+    "theme": "Environment",
+    "construct": "Housing Characteristics ",
+    "variables": [
+      {
+        "title": "Housing Unit Density",
+        "name": "UnitDens",
+        "description": "Number of housing units per square mile of land area",
+        "years": [
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Long-Term Occupancy %",
+        "name": "LngTermP",
+        "description": "Percentage of population who moved into their current housing more than 20 years ago",
+        "years": [
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Mobile Homes %",
+        "name": "MobileP",
+        "description": "Percentage of total housing units categorized as mobile housing structures",
+        "years": [
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Rentals %",
+        "name": "RentalP",
+        "description": "Percentage of occupied housing units that are rented",
+        "years": [
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Total Occupied Housing Units",
+        "name": "TotUnits",
+        "description": "Count of total occupied housing units",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Vacant Housing Units %",
+        "name": "VacantP",
+        "description": "Percentage of vacant housing units",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      }
+    ]
+  },
+  "Naloxone_Policy": {
+    "theme": "Policy",
+    "construct": "Harm Reduction Policies",
+    "variables": [
+      {
+        "title": "Any Naloxone Law (date)",
+        "name": "AnyNalxDt",
+        "description": "Date (MY) any type of Naloxone law effective",
+        "years": [
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Naloxone Law allowing distribution through a standing or order (date)",
+        "name": "NalxPrStDt",
+        "description": "Date (MY) Naloxone law allowing distribution through a standing or protocol order effective",
+        "years": [
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Naloxone Law allowing distribution through a standing or order (fraction of year in 2017)",
+        "name": "AnyNalxFr",
+        "description": "Fraction of year any type of Naloxone law is effective",
+        "years": [
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Naloxone Law allowing pharmacists prescriptive authority (date)",
+        "name": "NalxPresDt",
+        "description": "Date (MY) Naloxone law allowing pharmacists prescriptive authority effective",
+        "years": [
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Naloxone Law allowing pharmacists prescriptive authority (fraction of year in 2017)",
+        "name": "NalxPresFr",
+        "description": "Fraction of year state has an effective Naloxone law allowing pharmacists prescriptive authority",
+        "years": [
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Naloxone Law in Effect (fraction of year in 2017)",
+        "name": "NalxPrStFr",
+        "description": "Fraction of year state has an effective Naloxone law allowing distribution through a standing or protocol order",
+        "years": [
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ],
+        "geographies": [
+          "State"
+        ]
+      }
+    ]
+  },
+  "Household_Characteristics": {
+    "theme": "Social",
+    "construct": "Household Characteristics",
+    "variables": [
+      {
+        "title": "% Cohabiting couple household",
+        "name": "HsdTypCo",
+        "description": "",
+        "years": [
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Female householder 65 years and over living alone",
+        "name": "HhldFS",
+        "description": "",
+        "years": [
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Female householder with no spouse/partner living alone",
+        "name": "HhldFA",
+        "description": "",
+        "years": [
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Female householder with no spouse/partner living with children under 18 years",
+        "name": "HhldFC",
+        "description": "",
+        "years": [
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Male householder 65 years and over living alone",
+        "name": "HhldMS",
+        "description": "",
+        "years": [
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Male householder with no spouse/partner living alone",
+        "name": "HhldMA",
+        "description": "",
+        "years": [
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Male householder with no spouse/partner living with children under 18 years",
+        "name": "HhldMC",
+        "description": "",
+        "years": [
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Married-couple household ",
+        "name": "HsdTypM",
+        "description": "",
+        "years": [
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Married-couple household With children under 18 years",
+        "name": "HsdTypMC",
+        "description": "",
+        "years": [
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Nonrelatives in Family Households",
+        "name": "NonRelFhhP",
+        "description": "Percent of people living in family households that are not related to family",
+        "years": [
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Nonrelatives in Non-family Households",
+        "name": "NonRelNfhhP",
+        "description": "Percent of people living in non-family households that are not related",
+        "years": [
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Occupied housing units",
+        "name": "OccupantP",
+        "description": "",
+        "years": [
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Average family size",
+        "name": "FamSize",
+        "description": "",
+        "years": [
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Average household size",
+        "name": "HHSize",
+        "description": "",
+        "years": [
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Proportion of occupied housing units that are considered crowded (more than 1 person per room)",
+        "name": "CrowdHsng",
+        "description": "",
+        "years": [
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Total Population in Households",
+        "name": "TotPopHh",
+        "description": "Total number of people in households",
+        "years": [
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Total households",
+        "name": "HsdTot",
+        "description": "",
+        "years": [
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "Tract",
+          "ZCTA"
+        ]
+      }
+    ]
+  },
+  "Access_FQHCs": {
+    "theme": "Environment",
+    "construct": "Spatial access to Federally Qualified Health Centers (FQHCs)",
+    "variables": [
+      {
+        "title": "% Tracts within 30-min drive of Federally Qualified Health Center (FQHC)",
+        "name": "FqhcTmDrP",
+        "description": "Percent of tracts with Federally Qualified Health Center within a 30-min driving range.",
+        "years": [
+          "2020",
+          "2025"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      },
+      {
+        "title": "% Tracts within 30-min drive of Federally Qualified Health Center (FQHC), with Impedance factor",
+        "name": "FqhcTmDrP2",
+        "description": "Percent of tracts with Federally Qualified Health Center within a 30-min driving range, with Impedance factor",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Average driving time to nearest Federally Qualified Health Center (FQHC)",
+        "name": "FqhcAvTmDr",
+        "description": "Average driving time (minutes) across tracts in state to nearest Federally Qualified Health Center",
+        "years": [
+          "2020",
+          "2025"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      },
+      {
+        "title": "Average driving time to nearest Federally Qualified Health Center (FQHC), with Impedance factor",
+        "name": "FqhcAvTmDr2",
+        "description": "Average driving time (minutes) across tracts in state to nearest Federally Qualified Health Center, with Impedance factor",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Count of Federally Qualified Health Centers (FQHCs) within 30-min drive",
+        "name": "FqhcCntDr",
+        "description": "Count of Federally Qualified Health Centers (FQHCs) within a 30-minute driving threshold",
+        "years": [
+          "2020",
+          "2025"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Count of Tracts within 30-min drive of Federally Qualified Health Center (FQHC)",
+        "name": "FqhcCtTmDr",
+        "description": "Number of tracts with Federally Qualified Health Center within a 30-min driving range",
+        "years": [
+          "2020",
+          "2025"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      },
+      {
+        "title": "Count of Tracts within 30-min drive of Federally Qualified Health Center (FQHC), with Impedance factor",
+        "name": "FqhcCtTmDr2",
+        "description": "Number of tracts with Federally Qualified Health Center within a 30-min driving range, with Impedance factor",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Distance (mi) to nearest Federally Qualified Health Centers (FQHC)",
+        "name": "FqhcMinDis",
+        "description": "Euclidean distance* from tract/zip centroid to nearest Federally Qualified Health Centers (FQHC), in miles",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Driving time (min) to nearest Federally Qualified Health Centers (FQHC)",
+        "name": "FqhcTmDr",
+        "description": "Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes",
+        "years": [
+          "2020",
+          "2025"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Driving time (min) to nearest Federally Qualified Health Centers (FQHC), with Impedance factor",
+        "name": "FqhcTmDr2",
+        "description": "Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes, with Impedance factor",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Total Census Tract Count",
+        "name": "TotTracts",
+        "description": "Total number of census tracts within the state.",
+        "years": [
+          "2018",
+          "2025"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      }
+    ]
+  },
+  "Marital_Status": {
+    "theme": "Social",
+    "construct": "Household Characteristics",
+    "variables": [
+      {
+        "title": "% Males 15 years and over who are divorced",
+        "name": "DivrcdP",
+        "description": "",
+        "years": [
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Males aged 15 or older who are married and living with their spouse",
+        "name": "MrrdP",
+        "description": "",
+        "years": [
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Males aged 15 or older who never got married",
+        "name": "NvMrrdP",
+        "description": "",
+        "years": [
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Males aged 15 years and over who are separated from their spouse",
+        "name": "SepartedP",
+        "description": "",
+        "years": [
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Population aged 15 and over who are widowed",
+        "name": "WidwdP",
+        "description": "",
+        "years": [
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "Tract",
+          "ZCTA"
+        ]
+      }
+    ]
+  },
+  "Access_HCVTesting": {
+    "theme": "Environment",
+    "construct": "Spatial access to HCV Testing",
+    "variables": []
+  },
+  "Access_SubstanceUseTreatment": {
+    "theme": "Environment",
+    "construct": "Spatial Access to Substance Use Treatment Providers",
+    "variables": [
+      {
+        "title": "% tracts with Substance Use Treatment program (30-min drive)",
+        "name": "SutpTmDrP",
+        "description": "Percent of tracts with Substance Use Treatment program within a 30-minute driving range.",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      },
+      {
+        "title": "Count of Substance Use Treatment (SUT) facility (30-min drive)",
+        "name": "SutCntDr",
+        "description": "Count of SUT services within a 30-minute driving threshold",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Distance (mi) to Substance Use Treatment (SUT) facility",
+        "name": "SutMinDis",
+        "description": "Euclidean distance* from tract/zip centroid to nearest SUT service location, in miles",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Driving Time (min) to nearest Substance Use Treatment program",
+        "name": "SutpAvTmDr",
+        "description": "Average driving time (minutes) across tracts in state to nearest Substance Use Treatment program.",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      },
+      {
+        "title": "Driving time (min) to Substance Use Treatment (SUT) facility",
+        "name": "SutTmDr",
+        "description": "Driving time from tract/zip origin centroid to the nearest tract/zip SUT destination centroid, in minutes",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Tracts with Substance Use Treatment (SUT) program (30-min drive)",
+        "name": "SutpCtTmDr",
+        "description": "Number of tracts with Substance Use Treatment within a 30-min driving range.",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      }
+    ]
+  },
+  "Jail_Incarceration_Rates": {
+    "theme": "Social",
+    "construct": "Incarceration",
+    "variables": [
+      {
+        "title": "Pretrial Jail Population Count",
+        "name": "TtlJlPrt",
+        "description": "Pretrial Jail Population Count",
+        "years": [
+          "2017",
+          "2022",
+          "2023",
+          "2024"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      },
+      {
+        "title": "Pretrial Jail Population Count (Q1)",
+        "name": "TtlJlPrtQ1",
+        "description": "Pretrial Jail Population Count (Q1)",
+        "years": [
+          "2023"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Pretrial Jail Population Count (Q2)",
+        "name": "TtlJlPrtQ2",
+        "description": "Pretrial Jail Population Count (Q2)",
+        "years": [
+          "2023"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Pretrial Jail Population Count (Q3)",
+        "name": "TtlJlPrtQ3",
+        "description": "Pretrial Jail Population Count (Q3)",
+        "years": [
+          "2023"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Pretrial Jail Population Count (Q4)",
+        "name": "TtlJlPrtQ4",
+        "description": "Pretrial Jail Population Count (Q4)",
+        "years": [
+          "2023"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Pretrial Jail Population Rate",
+        "name": "TtlJlPrtr",
+        "description": "Pretrial Jail Population Rate",
+        "years": [
+          "2017",
+          "2022",
+          "2023",
+          "2024"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      },
+      {
+        "title": "Pretrial Jail Population Rate (Q1)",
+        "name": "TtlJlPrtrQ1",
+        "description": "Pretrial Jail Population Rate (Q1)",
+        "years": [
+          "2023"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Pretrial Jail Population Rate (Q2)",
+        "name": "TtlJlPrtrQ2",
+        "description": "Pretrial Jail Population Rate (Q2)",
+        "years": [
+          "2023"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Pretrial Jail Population Rate (Q3)",
+        "name": "TtlJlPrtrQ3",
+        "description": "Pretrial Jail Population Rate (Q3)",
+        "years": [
+          "2023"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Pretrial Jail Population Rate (Q4)",
+        "name": "TtlJlPrtrQ4",
+        "description": "Pretrial Jail Population Rate (Q4)",
+        "years": [
+          "2023"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Total Jail Admissions Count (Q1), ASJ/COJ Data",
+        "name": "TtlJlAdmQ1",
+        "description": "Total Jail Admissions Count (Q1), ASJ/COJ Data",
+        "years": [
+          "2023"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Total Jail Admissions Count (Q2), ASJ/COJ Data",
+        "name": "TtlJlAdmQ2",
+        "description": "Total Jail Admissions Count (Q2), ASJ/COJ Data",
+        "years": [
+          "2023"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Total Jail Admissions Count (Q3), ASJ/COJ Data",
+        "name": "TtlJlAdmQ3",
+        "description": "Total Jail Admissions Count (Q3), ASJ/COJ Data",
+        "years": [
+          "2023"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Total Jail Admissions Count (Q4), ASJ/COJ Data",
+        "name": "TtlJlAdmQ4",
+        "description": "Total Jail Admissions Count (Q4), ASJ/COJ Data",
+        "years": [
+          "2023"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Total Jail Admissions Count, ASJ/COJ Data",
+        "name": "TtlJlAdm",
+        "description": "Total Jail Admissions Count, ASJ/COJ Data",
+        "years": [
+          "2017",
+          "2022",
+          "2024"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      },
+      {
+        "title": "Total Jail Population Count (Q1), ASJ/COJ Data",
+        "name": "TtlJlPpQ1",
+        "description": "Total Jail Population Count (Q1), ASJ/COJ Data",
+        "years": [
+          "2023"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Total Jail Population Count (Q2), ASJ/COJ Data",
+        "name": "TtlJlPpQ2",
+        "description": "Total Jail Population Count (Q2), ASJ/COJ Data",
+        "years": [
+          "2023"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Total Jail Population Count (Q3), ASJ/COJ Data",
+        "name": "TtlJlPpQ3",
+        "description": "Total Jail Population Count (Q3), ASJ/COJ Data",
+        "years": [
+          "2023"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Total Jail Population Count (Q4), ASJ/COJ Data",
+        "name": "TtlJlPpQ4",
+        "description": "Total Jail Population Count (Q4), ASJ/COJ Data",
+        "years": [
+          "2023"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Total Jail Population Count, ASJ/COJ Data",
+        "name": "TtlJlPp",
+        "description": "Total Jail Population Count, ASJ/COJ Data",
+        "years": [
+          "2017",
+          "2022",
+          "2023",
+          "2024"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      },
+      {
+        "title": "Total Jail Population Rate",
+        "name": "TtlJlPpr",
+        "description": "Total Jail Population Rate, ASJ/COJ Data",
+        "years": [
+          "2017",
+          "2022",
+          "2023",
+          "2024"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      },
+      {
+        "title": "Total Jail Population Rate (Q1)",
+        "name": "TtlJlPprQ1",
+        "description": "Total Jail Population Rate (Q1), ASJ/COJ Data",
+        "years": [
+          "2023"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Total Jail Population Rate (Q2)",
+        "name": "TtlJlPprQ2",
+        "description": "Total Jail Population Rate (Q2), ASJ/COJ Data",
+        "years": [
+          "2023"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Total Jail Population Rate (Q3)",
+        "name": "TtlJlPprQ3",
+        "description": "Total Jail Population Rate (Q3), ASJ/COJ Data",
+        "years": [
+          "2023"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Total Jail Population Rate (Q4)",
+        "name": "TtlJlPprQ4",
+        "description": "Total Jail Population Rate (Q4), ASJ/COJ Data",
+        "years": [
+          "2023"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Total jail admission rate",
+        "name": "TtlJlAdmr",
+        "description": "Total Jail Admissions Rate, ASJ/COJ Data",
+        "years": [
+          "2017",
+          "2022",
+          "2024"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      },
+      {
+        "title": "Total jail admission rate (Q1)",
+        "name": "TtlJlAdmrQ1",
+        "description": "Total Jail Admissions Rate (Q1), ASJ/COJ Data",
+        "years": [
+          "2023"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Total jail admission rate (Q2)",
+        "name": "TtlJlAdmrQ2",
+        "description": "Total Jail Admissions Rate (Q2), ASJ/COJ Data",
+        "years": [
+          "2023"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Total jail admission rate (Q3)",
+        "name": "TtlJlAdmrQ3",
+        "description": "Total Jail Admissions Rate (Q3), ASJ/COJ Data",
+        "years": [
+          "2023"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Total jail admission rate (Q4)",
+        "name": "TtlJlAdmrQ4",
+        "description": "Total Jail Admissions Rate (Q4), ASJ/COJ Data",
+        "years": [
+          "2023"
+        ],
+        "geographies": [
+          "County"
+        ]
+      }
+    ]
+  },
+  "Prison_Incarceration_Rates": {
+    "theme": "Social",
+    "construct": "Incarceration",
+    "variables": [
+      {
+        "title": "Prison Prison Admissions Count",
+        "name": "TtlPrAPp",
+        "description": "Prison Prison Admissions Count",
+        "years": [
+          "2016",
+          "2022"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      },
+      {
+        "title": "Total Prison Admission Rate",
+        "name": "TtlPrAPpr",
+        "description": "Prison Prison Admissions Rate",
+        "years": [
+          "2016",
+          "2022"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      },
+      {
+        "title": "Total Prison Population Count",
+        "name": "TtlPrPp",
+        "description": "Total Prison Population Count",
+        "years": [
+          "2016",
+          "2022",
+          "2024"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      },
+      {
+        "title": "Total Prison Population Rate",
+        "name": "TtlPrPpr",
+        "description": "Total Prison Population Rate",
+        "years": [
+          "2016",
+          "2022",
+          "2024"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      }
+    ]
+  },
+  "Syringe_Policy": {
+    "theme": "Policy",
+    "construct": "Harm Reduction Policies",
+    "variables": [
+      {
+        "title": "Distribution of Syringes Laws",
+        "name": "NtPrFrDsSy",
+        "description": "Dummy variable indicating whether the state law does not prohibit free distribution of syringes (0=no, 1=yes)",
+        "years": [
+          "2019"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Drug Paraphernalia Laws",
+        "name": "NoPrphLw",
+        "description": "Dummy variable indicating whether the state has no state drug paraphernalia law (0=no, 1=yes)",
+        "years": [
+          "2019"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Laws removing barriers to SSPs",
+        "name": "NoLwRmUnc",
+        "description": "Dummy variable indicating whether the state has no law removing barriers or uncertainty as to SSP legality (0=no, 1=yes)",
+        "years": [
+          "2019"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Paraphernalia does not refer to objects used for injecting drugs",
+        "name": "PrNtRefInj",
+        "description": "Dummy variable indicating whether the paraphernalia definition in the state law does not refer to objects used for injecting drugs (0=no, 1=yes)",
+        "years": [
+          "2019"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Paraphernalia exludes objects used for injecting drugs",
+        "name": "PrExcInj",
+        "description": "Dummy variable indicating whether the paraphernalia definition in the state law explicitly exludes objects used for injecting drugs (0=no, 1=yes)",
+        "years": [
+          "2019"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Syringe Service Program (SSP) Authorization Laws",
+        "name": "ExpSsp",
+        "description": "Dummy variable indicating whether the state has law that explicitly authorizes Syringe Service Programs (0=no, 1=yes)",
+        "years": [
+          "2019"
+        ],
+        "geographies": [
+          "State"
+        ]
+      }
+    ]
+  },
+  "Residential_Segregation": {
+    "theme": "Social",
+    "construct": "Residential Segregation Measures",
+    "variables": [
+      {
+        "title": "Segregation: Dissimilarity (Asian)",
+        "name": "DsmAs",
+        "description": "Dissimilarity index for Asian and non-Hispanic White residents",
+        "years": [
+          "2018",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Segregation: Dissimilarity (Black)",
+        "name": "DsmBlk",
+        "description": "Dissimilarity index for Black and non-Hispanic White residents",
+        "years": [
+          "2018",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Segregation: Dissimilarity (Hispanic)",
+        "name": "DsmHsp",
+        "description": "Dissimilarity index for Hispanic and non-Hispanic White residents",
+        "years": [
+          "2018",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Segregation: Interaction (Asian)",
+        "name": "IntrAsWht",
+        "description": "Area (in square meters) of park or green space in a state).",
+        "years": [
+          "2018",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Segregation: Interaction (Black)",
+        "name": "IntrBlkWht",
+        "description": "Interaction index for Black and non-Hispanic White residents",
+        "years": [
+          "2018",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Segregation: Interaction (Hispanic)",
+        "name": "IntrHspWht",
+        "description": "Interaction index for Hispanic and non-Hispanic White residents",
+        "years": [
+          "2018",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Segregation: Isolation (Asian)",
+        "name": "IsoAs",
+        "description": "Isolation index for Asian and non-Hispanic White residents",
+        "years": [
+          "2018",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Segregation: Isolation (Black)",
+        "name": "IsoBlk",
+        "description": "Isolation index for Black and non-Hispanic White residents",
+        "years": [
+          "2018",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Segregation: Isolation (Hispanic)",
+        "name": "IsoHsp",
+        "description": "Isolation index for Hispanic and non-Hispanic White residents",
+        "years": [
+          "2018",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "ZCTA"
+        ]
+      }
+    ]
+  },
+  "Social_Vulnerability_Indices": {
+    "theme": "Composite",
+    "construct": "Social Vulnerability Indices",
+    "variables": [
+      {
+        "title": "Social Vulnerability Index (SVI) 1",
+        "name": "SviTh1",
+        "description": "SVI Ranking, Theme 1: Socioeconomic",
+        "years": [
+          "2018",
+          "2020",
+          "2022"
+        ],
+        "geographies": [
+          "County",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Social Vulnerability Index (SVI) 2",
+        "name": "SviTh2",
+        "description": "SVI Ranking, Theme 2: Household Composition & Disability",
+        "years": [
+          "2018",
+          "2020",
+          "2022"
+        ],
+        "geographies": [
+          "County",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Social Vulnerability Index (SVI) 3",
+        "name": "SviTh3",
+        "description": "SVI Ranking, Theme 3: Minority Status & Language",
+        "years": [
+          "2018",
+          "2020",
+          "2022"
+        ],
+        "geographies": [
+          "County",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Social Vulnerability Index (SVI) 4",
+        "name": "SviTh4",
+        "description": "SVI Ranking, Theme 4: Housing Type & Transportation",
+        "years": [
+          "2018",
+          "2020",
+          "2022"
+        ],
+        "geographies": [
+          "County",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Social Vulnerability Index (SVI) Summary Ranking",
+        "name": "SviSmryRnk",
+        "description": "Overall summary ranking",
+        "years": [
+          "2018",
+          "2020",
+          "2022"
+        ],
+        "geographies": [
+          "County",
+          "Tract",
+          "ZCTA"
+        ]
+      }
+    ]
+  },
+  "Access_Pharmacies": {
+    "theme": "Environment",
+    "construct": "Spatial Access to Pharmacies",
+    "variables": [
+      {
+        "title": "% tracts with Pharmacy (30-min drive)",
+        "name": "RxTmDrP",
+        "description": "Percent of tracts with pharmacy within a 30-min driving range",
+        "years": [
+          "2019"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      },
+      {
+        "title": "Avg. Driving Time (min) to nearest Pharmacy ",
+        "name": "RxAvTmDr",
+        "description": "Average driving time (minutes) across tracts in state to nearest pharmacy.",
+        "years": [
+          "2019"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      },
+      {
+        "title": "Count of Pharmacies (30-min drive)",
+        "name": "RxCntDr",
+        "description": "Count of pharmacies within a 30-minute driving threshold",
+        "years": [
+          "2019"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Distance (mi) to nearest Pharmacy",
+        "name": "RxMinDis",
+        "description": "Euclidean distance* from tract/zip centroid to nearest pharmacy, in miles",
+        "years": [
+          "2019"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Driving Time (min) to nearest Pharmacy",
+        "name": "RxTmDr",
+        "description": "Driving time from tract/zip origin centroid to the nearest tract/zip pharmacy destination centroid, in minutes",
+        "years": [
+          "2019"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Tracts with Pharmacy (30-min drive)",
+        "name": "RxCtTmDr",
+        "description": "Number of tracts with pharmacy within a 30-min driving range",
+        "years": [
+          "2019"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      }
+    ]
+  },
+  "Internet_Access": {
+    "theme": "Economic",
+    "construct": "Internet Access",
+    "variables": [
+      {
+        "title": "Households without Internet Access %",
+        "name": "NoIntP",
+        "description": "Percentage of Households without Internet access",
+        "years": [
+          "2019"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      }
+    ]
+  },
+  "Geographic_Boundaries": {
+    "theme": "Geography",
+    "construct": "Geographic Boundaries",
+    "variables": [
+      {
+        "title": "Federal Information Processing Standard code",
+        "name": "FIPS",
+        "description": "Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract"
+        ]
+      },
+      {
+        "title": "HEROP_ID",
+        "name": "HEROP_ID",
+        "description": "A derived unique id corresponding to the relevant geographic unit.",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Zip Code Tabulation Area",
+        "name": "ZCTA5",
+        "description": "Census Bureau designated zip code tabulation area, or the rough area that contains five digit zip codes.",
+        "years": [
+          "2010",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023",
+          "2025"
+        ],
+        "geographies": [
+          "ZCTA"
+        ]
+      }
+    ]
+  },
+  "Demographic_Characteristics": {
+    "theme": "Social",
+    "construct": "Population, Age & Sex Ratios",
+    "variables": [
+      {
+        "title": "% Population over 16 years",
+        "name": "Ovr16P",
+        "description": "",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Population over 18 years",
+        "name": "Ovr18P",
+        "description": "",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Population over 21 years",
+        "name": "Ovr21P",
+        "description": "",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Population over 62 years",
+        "name": "Ovr62P",
+        "description": "",
+        "years": [
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Population that is Female",
+        "name": "FemP",
+        "description": "",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Population that is Male",
+        "name": "MaleP",
+        "description": "",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Population under 18 years old",
+        "name": "Und18P",
+        "description": "",
+        "years": [
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Population: Age 15-44",
+        "name": "Age15_44",
+        "description": "Total population between age 15-44",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Population: Age 15-44",
+        "name": "Age15_44P",
+        "description": "Percentage of population below 45 years of age",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Population: Age 65+",
+        "name": "Ovr65",
+        "description": "Percentage of population between ages of 15 & 24",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2018",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Population: Age 65+",
+        "name": "Ovr65P",
+        "description": "Percentage of population over 65",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Children %",
+        "name": "ChildrenP",
+        "description": "Percentage of population under age 18",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Count persons over 16 years",
+        "name": "Ovr16",
+        "description": "",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2018",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Count persons over 18 years",
+        "name": "Ovr18",
+        "description": "",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2018",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Count persons over 21 years",
+        "name": "Ovr21",
+        "description": "",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2018",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Median age",
+        "name": "MedAge",
+        "description": "",
+        "years": [
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Sex ratio among adults aged 18 and older (males per 100 females)",
+        "name": "SRatio18",
+        "description": "",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Sex ratio among seniors aged 65 and older (males per 100 females)",
+        "name": "SRatio65",
+        "description": "",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Sex ratio for the total population (males per 100 females)",
+        "name": "SRatio",
+        "description": "",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Total Population",
+        "name": "TotPop",
+        "description": "Total population",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      }
+    ]
+  },
+  "Access_MOUDs": {
+    "theme": "Environment",
+    "construct": "Spatial Access to MOUDs",
+    "variables": [
+      {
+        "title": "% Tracts With Buprenorphine Provider (30-min bike)",
+        "name": "BupTmBkP",
+        "description": "Percent of tracts with buprenorphine provider within a 30-min biking range",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "% Tracts With Buprenorphine Provider (30-min drive)",
+        "name": "BupTmDrP",
+        "description": "Percent of tracts with buprenorphine provider within a 30-min driving range",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "% Tracts With Buprenorphine Provider (30-min walk)",
+        "name": "BupTmWkP",
+        "description": "Percent of tracts with buprenorphine provider within a 30-min walking range",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "% Tracts With Methadone Provider (30-min bike)",
+        "name": "MetTmBkP",
+        "description": "Percent of tracts with methadone provider within a 30-min biking range",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "% Tracts With Methadone Provider (30-min drive)",
+        "name": "MetTmDrP",
+        "description": "Percent of tracts with methadone provider within a 30-min driving range",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "% Tracts With Methadone Provider (30-min walk)",
+        "name": "MetTmWkP",
+        "description": "Percent of tracts with methadone provider within a 30-min walking range",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "% Tracts With Naltrexone Provider (30-min bike)",
+        "name": "NaltTmBkP",
+        "description": "Percent of tracts with naltrexone provider within a 30-min biking range",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "% Tracts With Naltrexone Provider (30-min drive)",
+        "name": "NaltTmDrP",
+        "description": "Percent of tracts with naltrexone provider within a 30-min driving range",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "% Tracts With Naltrexone Provider (30-min walk)",
+        "name": "NaltTmWkP",
+        "description": "Percent of tracts with naltrexone provider within a 30-min walking range",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "% Tracts with Opioid Treatment Program (OTP) (30-min drive)",
+        "name": "OtpTmDrP",
+        "description": "Percent of tracts within a 30-minute drive time of an opioid treatment program.",
+        "years": [
+          "2021"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      },
+      {
+        "title": "% Tracts within 30-min Drive of Buprenorphine Provider",
+        "name": "PctBupT",
+        "description": "Percent of tracts with buprenorphine provider within a 30-min driving range",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "% Tracts within 30-min Drive of Methadone Provider",
+        "name": "PctMetT",
+        "description": "Percent of tracts with methadone provider within a 30-min driving range",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "% Tracts within 30-min Drive of Naltrexone Provider",
+        "name": "PctNaltT",
+        "description": "Percent of tracts with naltrexone provider within a 30-min driving range",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Biking Time (min) to Nearest Buprenorphine Provider",
+        "name": "BupAvTmBk",
+        "description": "Average biking time (minutes) across tracts in county to nearest buprenorphine provider",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Biking Time (min) to Nearest Methadone Provider",
+        "name": "MetAvTmBk",
+        "description": "Average biking time (minutes) across tracts in county to nearest methadone provider",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Biking Time (min) to Nearest Naltrexone Provider",
+        "name": "NaltAvTmBk",
+        "description": "Average biking time (minutes) across tracts in county to nearest naltrexone provider",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Biking Time (min) to nearest Buprenorphine Provider",
+        "name": "BupTmBk",
+        "description": "Biking time (minutes) to nearest buprenorphine provider",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Biking Time (min) to nearest Methadone Provider",
+        "name": "MetTmBk",
+        "description": "Biking time (minutes) to nearest methadone provider",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Biking Time (min) to nearest Naltrexone Provider",
+        "name": "NaltTmBk",
+        "description": "Biking time (minutes) to nearest naltrexone provider",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Biking time to nearest telehealth buprenorphine provider",
+        "name": "TlBupTmBk",
+        "description": "Estimated biking time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      },
+      {
+        "title": "Buprenorphine access 30 minutes (RAAM)",
+        "name": "BupRm30",
+        "description": "Buprenorphine access 30 minutes (RAAM)",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Buprenorphine access 60 minutes (RAAM)",
+        "name": "BupRm60",
+        "description": "Buprenorphine access 60 minutes (RAAM)",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Buprenorphine access 90 minutes (RAAM)",
+        "name": "BupRm90",
+        "description": "Buprenorphine access 90 minutes (RAAM)",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Count of Buprenorphine Providers (30-min bike)",
+        "name": "BupCntBk30",
+        "description": "Count of buprenorphine providers in 30 minute biking time threshold",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Count of Buprenorphine Providers (30-min drive)",
+        "name": "BupCntDr30",
+        "description": "Count of methadone providers in 30 minute drive time threshold",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Count of Buprenorphine Providers (30-min walk)",
+        "name": "BupCntWk30",
+        "description": "Count of buprenorphine providers in 30 minute walking time threshold",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Count of Buprenorphine Providers (60-min bike)",
+        "name": "BupCntBk60",
+        "description": "Count of buprenorphine providers in 60 minute biking time threshold",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Count of Buprenorphine Providers (60-min walk)",
+        "name": "BupCntWk60",
+        "description": "Count of buprenorphine providers in 60 minute walking time threshold",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Count of Methadone Providers (30-min drive)",
+        "name": "MetCntDr30",
+        "description": "Count of methadone providers in 30 minute drive time threshold",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Count of Methadone Providers (30-min walk)",
+        "name": "MetCntWk60",
+        "description": "Count of methadone providers in 30 minute walking time threshold",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Count of Methadone Providers (60-min bike)",
+        "name": "MetCntBk60",
+        "description": "Count of methadone providers in 60 minute biking time threshold",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Count of Methadone Providers (60-min walk)",
+        "name": "MetCntWk30",
+        "description": "Count of methadone providers in 60 minute walking time threshold",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Count of Naltrexone Providers (30-min bike)",
+        "name": "NaltCntBk30",
+        "description": "Count of naltrexone providers in 30 minute biking time threshold",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Count of Naltrexone Providers (30-min drive)",
+        "name": "NaltCntDr30",
+        "description": "Count of naltrexone providers in 30 minute drive time threshold",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Count of Naltrexone Providers (30-min walk)",
+        "name": "NaltCntWk30",
+        "description": "Count of naltrexone providers in 30 minute walking time threshold",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Count of Naltrexone Providers (60-min bike)",
+        "name": "NaltCntBk60",
+        "description": "Count of naltrexone providers in 60 minute biking time threshold",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Count of Naltrexone Providers (60-min walk)",
+        "name": "NaltCntWk60",
+        "description": "Count of naltrexone providers in 60 minute walking time threshold",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Count of Opioid Treatment Programs (OTP) (30-min drive)",
+        "name": "OtpCntDr",
+        "description": "Count of OTPs within a 30-minute driving threshold",
+        "years": [
+          "2021"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Count of methadone providers (30-min bike)",
+        "name": "MetCntBk30",
+        "description": "Count of methadone providers in 30 minute biking time threshold",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Distance (mi) to nearest Buprenorphine Provider",
+        "name": "BupMinDis",
+        "description": "Euclidean distance (miles) to nearest buprenorphine provider",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Distance (mi) to nearest MOUD (any)",
+        "name": "MoudMinDis",
+        "description": "Euclidean distance (miles) to nearest MOUD (all types)",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Distance (mi) to nearest Methadone Provider",
+        "name": "MetMinDis",
+        "description": "Euclidean distance (miles) to nearest methadone provider",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Distance (mi) to nearest Naltrexone Provider",
+        "name": "NaltMinDis",
+        "description": "Euclidean distance (miles) to nearest naltrexone/Vivitrol provider",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Distance to nearest OTP",
+        "name": "OtpMinDis",
+        "description": "Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles",
+        "years": [
+          "2021"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Driving Time (min) to Nearest Buprenorphine Provider",
+        "name": "BupAvTmDr",
+        "description": "Average driving time (minutes) across tracts in county to nearest buprenorphine provider",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Driving Time (min) to Nearest Methadone Provider",
+        "name": "MetAvTmDr",
+        "description": "Average driving time (minutes) across tracts in county to nearest methadone provider",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Driving Time (min) to Nearest Naltrexone Provider",
+        "name": "NaltAvTmDr",
+        "description": "Average driving time (minutes) across tracts in county to nearest naltrexone provider",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Driving Time (min) to nearest Buprenorphine Provider",
+        "name": "BupTmDr",
+        "description": "Driving time (minutes) to nearest buprenorphine provider",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Driving Time (min) to nearest Methadone Provider",
+        "name": "MetTmDr",
+        "description": "Driving time (minutes) to nearest methadone provider",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Driving Time (min) to nearest Naltrexone Provider",
+        "name": "NaltTmDr",
+        "description": "Driving time (minutes) to nearest naltrexone provider",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Driving Time (min) to nearest Opioid Treatment Program (OTP)",
+        "name": "OtpTmDr",
+        "description": "Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes",
+        "years": [
+          "2021"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Driving Time (min) to nearest Opioid Treatment Program (OTP)",
+        "name": "OtpAvTmDr",
+        "description": "Average driving time (minutes) across tracts to nearest opioid treatment program.",
+        "years": [
+          "2021"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      },
+      {
+        "title": "Driving Time to Buprenorphine Provider (driving time across all tracts)",
+        "name": "AvBupTime",
+        "description": "Average driving time (minutes) across tracts in state to nearest buprenorphine provider.",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Driving Time to Methadone Provider (driving time across all tracts)",
+        "name": "AvMetTime",
+        "description": "Average driving time (minutes) across tracts in state to nearest methadone provider.",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Driving Time to Naltrexone Provider (driving time across all tracts)",
+        "name": "AvNaltTime",
+        "description": "Average driving time (minutes) across tracts in state to nearest naltrexone provider.",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Methadone access 30 minutes (RAAM)",
+        "name": "MetRm30",
+        "description": "Methadone access 30 minutes (RAAM)",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2020"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Methadone access 60 minutes (RAAM)",
+        "name": "MetRm60",
+        "description": "Methadone access 60 minutes (RAAM)",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2020"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Methadone access 90 minutes (RAAM)",
+        "name": "MetRm90",
+        "description": "Methadone access 90 minutes (RAAM)",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2020"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Naltrexone access 30 minutes (RAAM)",
+        "name": "NaltRm30",
+        "description": "Naltrexone access 30 minutes (RAAM)",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Naltrexone access 60 minutes (RAAM)",
+        "name": "NaltRm60",
+        "description": "Naltrexone access 60 minutes (RAAM)",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Naltrexone access 90 minutes (RAAM)",
+        "name": "NaltRm90",
+        "description": "Naltrexone access 90 minutes (RAAM)",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Tracts with Buprenorphine Provider (30-min driving)",
+        "name": "CntBupT",
+        "description": "Number of tracts with buprenorphine provider within a 30-min driving range",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Tracts with Buprenorphine Provider within 30-min (biking)",
+        "name": "BupCtTmBk",
+        "description": "Number of tracts with buprenorphine provider within a 30-min biking range",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Tracts with Buprenorphine Provider within 30-min (driving)",
+        "name": "BupCtTmDr",
+        "description": "Number of tracts with buprenorphine provider within a 30-min driving range",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Tracts with Buprenorphine Provider within 30-min (walking)",
+        "name": "BupCtTmWk",
+        "description": "Number of tracts with buprenorphine provider within a 30-min walking range",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Tracts with Methadone Provider (30-min driving)",
+        "name": "CntMetT",
+        "description": "Number of tracts with methadone provider within a 30-min driving range",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Tracts with Methadone Provider within 30-min (biking)",
+        "name": "MetCtTmBk",
+        "description": "Number of tracts with methadone provider within a 30-min biking range",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Tracts with Methadone Provider within 30-min (driving)",
+        "name": "MetCtTmDr",
+        "description": "Number of tracts with methadone provider within a 30-min driving range",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Tracts with Methadone Provider within 30-min (walking)",
+        "name": "MetCtTmWk",
+        "description": "Number of tracts with methadone provider within a 30-min walking range",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Tracts with Naltrexone Provider (30-min driving)",
+        "name": "CntNaltT",
+        "description": "Number of tracts within 30 -min of naltrexone driving range",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Tracts with Naltrexone Provider within 30-min (biking)",
+        "name": "NaltCtTmBk",
+        "description": "Number of tracts with naltrexone provider within a 30-min biking range",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Tracts with Naltrexone Provider within 30-min (driving)",
+        "name": "NaltCtTmDr",
+        "description": "Number of tracts with naltrexone provider within a 30-min driving range",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Tracts with Naltrexone Provider within 30-min (walking)",
+        "name": "NaltCtTmWk",
+        "description": "Number of tracts with naltrexone provider within a 30-min walking range",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Tracts with Opioid Treatment Program (OTP) (30-min drive)",
+        "name": "OtpCtTmDr",
+        "description": "Number of tracts within 30-min of opioid treatment program driving range",
+        "years": [
+          "2021"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      },
+      {
+        "title": "Walking Time (min) to Nearest Buprenorphine Provider",
+        "name": "BupAvTmWk",
+        "description": "Average walking time (minutes) across tracts in county to nearest buprenorphine provider",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Walking Time (min) to Nearest Methadone Provide",
+        "name": "MetAvTmWk",
+        "description": "Average walking time (minutes) across tracts in county to nearest methadone provider",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Walking Time (min) to Nearest Naltrexone Provider",
+        "name": "NaltAvTmWk",
+        "description": "Average walking time (minutes) across tracts in county to nearest naltrexone provider",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Walking Time (min) to nearest Buprenorphine Provider",
+        "name": "BupTmWk",
+        "description": "Walking time (minutes) to nearest buprenorphine provider",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Walking Time (min) to nearest Methadone Provider",
+        "name": "MetTmWk",
+        "description": "Walking time (minutes) to nearest methadone provider",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Walking Time (min) to nearest Naltrexone Provider",
+        "name": "NaltTmWk",
+        "description": "Walking time (minutes) to nearest naltrexone provider",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Walking time to nearest telehealth buprenorphine provider",
+        "name": "TlBupTmWk",
+        "description": "Estimated walking time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      }
+    ]
+  },
+  "Foreclosure_Rate": {
+    "theme": "Economic",
+    "construct": "Great Recession Foreclosure Rate",
+    "variables": [
+      {
+        "title": "Foreclosure & Delinquency %",
+        "name": "ForDqP",
+        "description": "Estimated percent of mortgages to start foreclosure process or be seriously delinquent during the 2008 Recession",
+        "years": [
+          "2018"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract"
+        ]
+      },
+      {
+        "title": "Foreclosure & Delinquency Count",
+        "name": "ForDqTot",
+        "description": "Estimated number of mortgages to start foreclosure process or be seriously delinquent during the 2008 Recession",
+        "years": [
+          "2018"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract"
+        ]
+      },
+      {
+        "title": "Income Inequality (Gini Coefficient)",
+        "name": "GiniCoeff",
+        "description": "Income Inequality (Gini Coefficient)",
+        "years": [
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      }
+    ]
+  },
+  "Medical_Marijuana_Laws": {
+    "theme": "Policy",
+    "construct": "Marijuana Policies",
+    "variables": [
+      {
+        "title": "Laws authorizing medical marijuana use ",
+        "name": "MdMarijLaw",
+        "description": "Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (0=no, 1=yes)",
+        "years": [
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023"
+        ],
+        "geographies": [
+          "State"
+        ]
+      }
+    ]
+  },
+  "Employment_Trends": {
+    "theme": "Economic",
+    "construct": "Employment Trends",
+    "variables": [
+      {
+        "title": "Count of Essential Workers",
+        "name": "EssnWrkE",
+        "description": "Estimated count of population employed in essential occupations.",
+        "years": [
+          "2018"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Count of Working Population",
+        "name": "TotWrkE",
+        "description": "Estimated count of working population",
+        "years": [
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Employed % - Health Care",
+        "name": "HltCrP",
+        "description": "Percentage of population employed in health care and social assistance industries",
+        "years": [
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Employed % - High Risk of Injury",
+        "name": "HghRskP",
+        "description": "Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities",
+        "years": [
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Employed % - Retail",
+        "name": "RetailP",
+        "description": "Percentage of population employed in retail trade industry",
+        "years": [
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Essential Workers %",
+        "name": "EssnWrkP",
+        "description": "Percentage of population employed in essential occupations.",
+        "years": [
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      }
+    ]
+  },
+  "Access_Mental_Health": {
+    "theme": "Environment",
+    "construct": "Spatial Access to Mental Health Providers",
+    "variables": [
+      {
+        "title": "% Tracts with Mental Health Provider (30-min drive)",
+        "name": "MhTmDrP",
+        "description": "Percent of tracts with a mental health provider within a 30-min driving range.",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      },
+      {
+        "title": "Count of Mental Health Providers (30-min drive)",
+        "name": "MhCntDr",
+        "description": "Count of MH providers within a 30-minute driving threshold",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Distance (mi) to nearest Mental Health Provider",
+        "name": "MhMinDis",
+        "description": "Euclidean distance* from tract/zip centroid to nearest mental health provider, in miles",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Driving Time (min) to nearest Mental Health Provider",
+        "name": "MhAvTmDr",
+        "description": "Average driving time (minutes) across tracts in state to nearest mental health provider.",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      },
+      {
+        "title": "Driving Time (min) to nearest Mental Health Provider",
+        "name": "MhTmDr",
+        "description": "Driving time from tract/zip origin centroid to the nearest tract/zip mental health provider destination centroid, in minutes",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Tracts with Mental Health Provider (30-min drive)",
+        "name": "MhCtTmDr",
+        "description": "Number of tracts with a mental health provider within a 30-min driving range.",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      }
+    ]
+  }
+}

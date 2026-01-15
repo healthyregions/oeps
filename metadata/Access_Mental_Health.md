@@ -4,15 +4,6 @@
 **Date Last Modified**: August 13, 2025    
 **Last Modified By**: Mahjabin Kabir Adrita  
 
-### Theme: 
-Environment  
-
-### Data Location: 
-You can find the variables described in this document in the CSV files [here](../full_tables).  
-
-CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
-Note: Every variable can be found in the **Latest** files.
-
 ### Data Source(s) Description:  
 Mental health provider data was sourced from [Substance Abuse and Mental Health Services Administration (SAMSHA)](https://www.samhsa.gov/) through its [Treatment Services Locator Tool](https://findtreatment.samhsa.gov/locator). 
 
@@ -38,29 +29,6 @@ This analysis was conducted in Python. The scripts are available in code/AccessM
 
 #### County and State 
 County and state-level variables include the **count** of Census tracts and the **percent** of Census tracts located within a 30 minute driving threshold of an FQHC, as well as the mean (average) driving time in minutes from Census tracts within the county or state. 
-
-### Key Variable and Definitions:
-
-- **Variable** -- title of variable
-- **Variable ID** -- exact name of variable in datasets
-- **Description** -- Short description of variable
-- **Years Available** -- years for which data exists for this variable
-- **Spatial Scale** -- the variable exists for these levels of spatial scale
-
-#### Tract and Zip Code
-| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
-|:---------|:--------------------|:------------|:----------------|:--------------|
-| Distance to nearest MH Provider | MhMinDis | Euclidean distance* from tract/zip centroid to nearest mental health provider, in miles | 2019, 2025 | Tract, Zip |
-| Driving time to nearest MH Provider | MhTmDr | Driving time from tract/zip origin centroid to the nearest tract/zip mental health provider destination centroid, in minutes | 2019, 2025 | Tract, Zip |
-| Count of MH Providers | MhCntDr | Count of MH providers within a 30-minute driving threshold | 2019, 2025 | Tract, Zip |
-
-#### County and State
-| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
-|:---------|:--------------------|:------------|:----------------|:--------------|
-| Count of tracts | TotTracts | Total number of tracts in county/state | 2019, 2025 | County, State  
-| Count of tracts within 30-min driving range | MhCtTmDr | Number of tracts with an MH provider within a 30-min driving range | 2019, 2025 | County, State |
-| Average time drive to nearest MH provider | MhAvTmDr | Average driving time (minutes) across tracts in county/state to nearest MH provider | 2019, 2025 | County, State |
-| Percent of tracts within 30-min driving range | MhTmDrP | Percent of tracts with an MH provider within a 30-min driving range | 2019, 2025 | County, State |
 
 ### Data Limitations:
 *Euclidean or straight-line distance is a simple approximation of access or travel from an origin centroid to the nearest hospital. It is not a precise calculation of real travel times or distances. The travel times are capped at a 90-minute threshold; any data exceeding this limit is left blank. 

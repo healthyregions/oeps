@@ -4,14 +4,6 @@
 **Date Last Modified**: May 12, 2025  
 **Last Modified By**: Wataru Morioka, Mahjabin Kabir Adrita
 
-### Theme: 
-Environment
-
-### Data Location: 
-You can find the variables described in this document in the CSV files [here](../full_tables).  
-CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
-Note: Every variable can be found in the **Latest** files. 
-
 ### Data Source(s) Description:  
 Variables were obtained from the 2014 - 2018 American Community Survey (ACS), tables B25002, B25024, B25003, and B25026, each at the State, County, Tract and ZIP Code Tabulation Area (ZCTA) levels. Raw data and more details can be found at https://data.census.gov.
 
@@ -56,26 +48,6 @@ The following variables were included from **B25026**:
 
 * **Housing Unit Density** was calculated as : *Total Housing Units / Land area in square miles*  
 Note: Total land area for each spatial scale was sourced from geometry files and converted to square miles.
-
-### Key Variable and Definitions:
-
-- **Variable** -- title of variable
-- **Variable ID** -- exact name of variable in datasets
-- **Description** -- Short description of variable
-- **Years Available** -- years for which data exists for this variable
-- **Spatial Scale** -- the variable exists for these levels of spatial scale
-
-| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
-|:---------|:--------------------|:------------|:----------------|:--------------|
-| Total Occupied Units | TotUnits | Count of total occupied housing units | 1980, 1990, 2000, 2010, 2018 | Tract, Zip, County, State |
-| Housing Vacancy Rate | VacantP | Percentage of vacant housing units | 1980, 1990, 2000, 2010, 2018 | Tract, Zip, County, State |
-| Mobile Homes Rate | MobileP | Percentage of total housing units categorized as mobile housing structures | 2018 | Tract, Zip, County, State |
-| Long-Term Occupancy | LngTermP | Percentage of population who moved into their current housing more than 20 years ago | 2018 | Tract, Zip, County, State |
-| Long-Term Occupancy | LngTermP | Percentage of population who moved into their current housing more than 20 years ago | 2018 | Tract, Zip, County, State |
-| Rental Rate | RentalP | Percentage of occupied housing units that are rented | 2018 | Tract, Zip, County, State |
-| Housing Unit Density | UnitDens | Number of housing units per square mile of land area | 2018 | Tract, Zip, County, State |
-  
-
 
 ### Data Limitations:
 None at this time.  

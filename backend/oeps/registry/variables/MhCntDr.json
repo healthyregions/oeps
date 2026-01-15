@@ -9,8 +9,6 @@
   "metadata": "Access_Mental_Health",
   "table_sources": [
     "tract-2020",
-    "tract-2025",
-    "zcta-2020",
-    "zcta-2025"
+    "zcta-2020"
   ]
 }
