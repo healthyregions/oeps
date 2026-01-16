@@ -6,8 +6,5 @@
   "description": "Count of Methadone providers in 30 minute drive time threshold",
   "metadata": "Access_MOUDs.json",
   "longitudinal": false,
-  "analysis": true,
-  "table_sources": [
-    "tract-2020"
-  ]
+  "analysis": true
 }
