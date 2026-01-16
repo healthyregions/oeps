@@ -6,8 +6,5 @@
   "description": "Driving time in minutes from the tract centroid to the nearest naltrexone provider, with the impedance factor applied.",
   "metadata": "Access_MOUDs.json",
   "longitudinal": false,
-  "analysis": false,
-  "table_sources": [
-    "tract-2020"
-  ]
+  "analysis": false
 }
