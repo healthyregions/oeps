@@ -1,0 +1,10 @@
+{
+  "name": "NaltTmDr2",
+  "title": "Driving time to nearest naltrexone provider (with impedance)",
+  "type": "number",
+  "example": "22.3",
+  "description": "Driving time in minutes from the tract centroid to the nearest naltrexone provider, with the impedance factor applied.",
+  "metadata": "Access_MOUDs.json",
+  "longitudinal": false,
+  "analysis": false
+}
