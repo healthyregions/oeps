@@ -6,8 +6,5 @@
   "description": "Indicates whether there is at least one methadone provider within a 30-minute impedance-adjusted driving time of the tract centroid (1 = yes, 0 = no).",
   "metadata": "Access_MOUDs.json",
   "longitudinal": false,
-  "analysis": false,
-  "table_sources": [
-    "tract-2020"
-  ]
+  "analysis": false
 }
