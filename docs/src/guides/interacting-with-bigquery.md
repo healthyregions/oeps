@@ -6,12 +6,7 @@ The OEPS BigQuery project is hosted at:
 - **Project ID**: `oeps-391119`
 - **Dashboard**: [https://console.cloud.google.com/welcome?project=oeps-391119](https://console.cloud.google.com/welcome?project=oeps-391119)
 
-Team members with Owner access can manage the project, view datasets, and access all resources. The following team members currently have Owner access:
-- Marynia Kolak (mkolak@illinois.edu)
-- Sara Lambert (lambert8@illinois.edu)
-- Yong Wook Kim (ywkim@illinois.edu)
-
-To request access, contact one of the project administrators listed above.
+Team members with Owner access can manage the project, view datasets, and access all resources. To request access, contact the project administrators.
 
 ## Project Structure
 
