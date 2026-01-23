@@ -10,7 +10,6 @@ nav:
   - OEPS Explorer:
     - guides/install-explorer.md
     - guides/provisioning-oeps-explorer.md
-    - guides/netlify-access-and-deployment.md
   - OEPS Backend:
     - guides/install-backend.md
     - guides/getting-started-with-cli.md
