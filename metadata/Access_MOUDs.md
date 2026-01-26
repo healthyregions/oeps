@@ -56,14 +56,8 @@ This analysis was conducted in Python. The scripts are available in code/AccessM
 <img width="1492" height="657" alt="Screenshot 2026-01-26 at 12 55 40 AM" src="https://github.com/user-attachments/assets/98ccd48e-e3a8-40a7-bd64-f6e9251cca45" />
 Travel Time to Opioid Treatment Programme (OtpTmDr)
 
-<img width="810" height="352" alt="Screenshot 2026-01-26 at 12 55 10 AM" src="https://github.com/user-attachments/assets/e29de409-f26e-4197-b76c-b3a25ab9e349" />
-Travel Time to Methadone Provider (MetTmDr)
-
 <img width="1511" height="671" alt="Screenshot 2026-01-26 at 12 53 49 AM" src="https://github.com/user-attachments/assets/6af05683-365c-4cc7-9ff4-938bcb22786d" />
 Travel Time to Buprenorphine Provider (BupTmDr)
-
-<img width="1494" height="659" alt="Screenshot 2026-01-26 at 12 50 42 AM" src="https://github.com/user-attachments/assets/69b63e26-74eb-4125-b2cc-b4749a45e8ba" />
-Travel Time to Naltrexone Provider (NaltTmDr)
 
 #### MOUD types within 30-min drive (impedance-adjusted)
 MoudTyp counts how many different MOUD types (buprenorphine, methadone, naltrexone) are available within a 30-minute car drive, after applying the impedance factor (Minutes2).This variable is built from the three binary indicators BupCntDr2, MetCntDr2, and NaltCntDr2 for each census tract, and is available only for 2025 tract-level measures.
