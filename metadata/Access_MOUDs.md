@@ -1,8 +1,8 @@
 **Meta Data Name**: Access to MOUDs  
 **Date Added**: February 1, 2021  
-**Author**: Marynia Kolak, Mahjabin Kabir Adrita, Wataru Morioka, Susan Paykin, Yilin Lyu
-**Date Last Modified**: November 13, 2025  
-**Last Modified By**: Yilin Lyu
+**Author**: Marynia Kolak, Mahjabin Kabir Adrita, Wataru Morioka, Susan Paykin, Yilin Lyu, Mallikarjun Bhusnoor   
+**Date Last Modified**: January 24, 2026 
+**Last Modified By**: Mallikarjun Bhusnoor
 
 ### Data Source(s) Description:
 
@@ -33,7 +33,7 @@ The following was extracted in May 2025 from SAMSHA’s Treatment Locator Servic
 Data on street and pedestrian networks to calculate travel time metrics were sourced from multiple open source data portals. Street network topologies (including street orientations and speed/travel time) all derive from [OpenStreetMap](https://www.openstreetmap.org), also known as OSM.
 
 - For 2019, the **travel time matrices** for driving, biking and walking were sourced from [Project OSRM](https://project-osrm.org/), calculated by Vidal Anguiano (University of Chicago), and are available at the Tract or ZCTA scales.
-- For 2025, the **travel time matrices** for driving, biking and walking were sourced from OpenStreetMap using [OSMnx](https://osmnx.readthedocs.io/en/stable/) and [SPASTC](https://doi.org/10.1080/13658816.2024.2326445), calculated by [Alex Michels](https://alexandermichels.github.io/) (University of Texas at Dallas), and are available at the tract scales.
+- For 2025, the **travel time matrices** for driving were sourced from OpenStreetMap using [OSMnx](https://osmnx.readthedocs.io/en/stable/) and [SPASTC](https://doi.org/10.1080/13658816.2024.2326445), calculated by [Alex Michels](https://alexandermichels.github.io/) (University of Texas at Dallas), and are available at the tract scales.
 
 In our approach, a travel time is calculated from the center of each census tract, to the center of another census tract, up to 90 minutes away. These time tables are calculated for across the country, and can be referenced by tract FIPS (unique ID) code.
 
@@ -51,7 +51,7 @@ We calculated travel-network access metrics for every census tract centroid to t
 
 Count of providers within a travel threshold (30 minutes and/or 60 minutes) were also calculated for three modes of transit: driving, walking, and biking at the tract level, with corresponding average of overlapping tracts at the ZCTA scale. 
 
-This analysis was conducted in Python. The scripts are available in code/AccessMetrics - MOUDs. Some of the scripts are available in [code/AccessMetrics - MOUDs.](https://github.com/GeoDaCenter/opioid-policy-scan/tree/fc3d94053dd1941a96a5945d73cc6f4845453484/code/Access%20Metrics%20-%20MOUD), with complete computational notebooks forthcoming in 2026.
+This analysis was conducted in Python. The scripts are available in code/AccessMetrics - MOUDs. Some of the scripts are available in [code/AccessMetrics - MOUDs.](https://github.com/GeoDaCenter/opioid-policy-scan/tree/fc3d94053dd1941a96a5945d73cc6f4845453484/code/Access%20Metrics%20-%20MOUD), with complete computational notebooks which can be found in [scripts/Calculate_Access_Metrics (2).ipynb] (https://github.com/healthyregions/oeps/blob/270-MOUD-2025-Update-(-BUP%2C-MET%2C-NAL-%2C-OTP-%2C-Near-by-MOUD)/scripts/Calculate_Access_Metrics%20(2).ipynb) 
 
 #### County and State 
 County and state-level variables include the **count** of Census tracts and the **percent** of Census tracts located within a 30 minute driving threshold of an MOUD type, as well as the mean (average) driving time in minutes from Census tracts within the county or state. 
