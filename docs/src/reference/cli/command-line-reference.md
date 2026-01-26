@@ -54,7 +54,7 @@ Usage: merge-csv [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7fd8f4028f10>
+    * Type: <click.types.Path object at 0x7f1061c51590>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -115,7 +115,7 @@ Usage: validate-registry [OPTIONS]
 ###### Options
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f527433d650>
+    * Type: <click.types.Path object at 0x7f6ce1a1d8d0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -274,7 +274,7 @@ Usage: create-table-source [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f448ac31250>
+    * Type: <click.types.Path object at 0x7f7553c30f50>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -364,7 +364,7 @@ Usage: remove-variable [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f08cdd2d2d0>
+    * Type: <click.types.Path object at 0x7fdedd92d550>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -464,7 +464,7 @@ Usage: move-variable [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f2d7d834d10>
+    * Type: <click.types.Path object at 0x7f8636c39010>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -527,7 +527,7 @@ Usage: create-data-package [OPTIONS]
 ###### Options
 
 * `destination`:
-    * Type: <click.types.Path object at 0x7f7df1900110>
+    * Type: <click.types.Path object at 0x7f411c8f20d0>
     * Default: `.temp/data-packages`
     * Usage: `--destination
 -d`
@@ -619,7 +619,7 @@ Usage: create-data-package [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f7df2231210>
+    * Type: <click.types.Path object at 0x7f411d031190>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -628,7 +628,7 @@ Usage: create-data-package [OPTIONS]
 
 
 * `data_dir_path`:
-    * Type: <click.types.Path object at 0x7f7df2231150>
+    * Type: <click.types.Path object at 0x7f411d030f50>
     * Default: `oeps/data`
     * Usage: `--data-dir-path`
 
@@ -755,7 +755,7 @@ Usage: build-docs [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f5df6a29310>
+    * Type: <click.types.Path object at 0x7f874683d310>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -854,7 +854,7 @@ Usage: bigquery-upload [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7fc3d8b290d0>
+    * Type: <click.types.Path object at 0x7f1f12838ed0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -911,7 +911,7 @@ Usage: clean-explorer-bucket [OPTIONS]
 ###### Options
 
 * `explorer_path`:
-    * Type: <click.types.Path object at 0x7f251ca48a50>
+    * Type: <click.types.Path object at 0x7fefe4f2d290>
     * Default: `../explorer`
     * Usage: `--explorer-path`
 
@@ -967,7 +967,7 @@ Usage: build-explorer [OPTIONS]
 ###### Options
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f07a34211d0>
+    * Type: <click.types.Path object at 0x7f23e1c25290>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -976,7 +976,7 @@ Usage: build-explorer [OPTIONS]
 
 
 * `explorer_path`:
-    * Type: <click.types.Path object at 0x7f07a3420e10>
+    * Type: <click.types.Path object at 0x7f23e38500d0>
     * Default: `../explorer`
     * Usage: `--explorer-path`
 
