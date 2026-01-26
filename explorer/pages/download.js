@@ -208,7 +208,7 @@ export default function Download() {
                 <Link href="https://github.com/healthyregions/oeps/raw/refs/heads/main/docs/src/reference/data-dictionaries/DSuite2018-data-dictionary.xlsx">Download DSuite2018 data dictionary</Link>
               </li>
               <li>
-                <Link href="https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/oeps-DSuite2018_2025-09-25.zip">Download DSuite2018 data package [158mb]</Link>
+                <Link href="https://herop-oeps.s3.us-east-2.amazonaws.com/oeps/oeps-DSuite2018_2026-01-15.zip">Download DSuite2018 data package [158mb]</Link>
               </li>
             </ul>
             <h4 id="dsuite-2023">DSuite2023</h4>

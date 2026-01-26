@@ -54,7 +54,7 @@ Usage: merge-csv [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7ffb41b822d0>
+    * Type: <click.types.Path object at 0x7fd8f4028f10>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -115,7 +115,7 @@ Usage: validate-registry [OPTIONS]
 ###### Options
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7fc34296e410>
+    * Type: <click.types.Path object at 0x7f527433d650>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -274,7 +274,7 @@ Usage: create-table-source [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7fdcc785e250>
+    * Type: <click.types.Path object at 0x7f448ac31250>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -364,7 +364,7 @@ Usage: remove-variable [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f02ba2522d0>
+    * Type: <click.types.Path object at 0x7f08cdd2d2d0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -464,7 +464,7 @@ Usage: move-variable [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f170d376090>
+    * Type: <click.types.Path object at 0x7f2d7d834d10>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -527,7 +527,7 @@ Usage: create-data-package [OPTIONS]
 ###### Options
 
 * `destination`:
-    * Type: <click.types.Path object at 0x7fbdce3f7250>
+    * Type: <click.types.Path object at 0x7f7df1900110>
     * Default: `.temp/data-packages`
     * Usage: `--destination
 -d`
@@ -543,6 +543,15 @@ Usage: create-data-package [OPTIONS]
 -c`
 
     Name of folder in data/package_rules that holds configs for the export.
+
+
+
+* `make_all`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--make-all`
+
+    Create data packages from all configs in the package_rules directory.
 
 
 
@@ -610,7 +619,7 @@ Usage: create-data-package [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7fbdcee72050>
+    * Type: <click.types.Path object at 0x7f7df2231210>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -619,7 +628,7 @@ Usage: create-data-package [OPTIONS]
 
 
 * `data_dir_path`:
-    * Type: <click.types.Path object at 0x7fbdcee71f90>
+    * Type: <click.types.Path object at 0x7f7df2231150>
     * Default: `oeps/data`
     * Usage: `--data-dir-path`
 
@@ -669,6 +678,8 @@ Options:
                           name generated from the current date and time.
   -c, --config TEXT       Name of folder in data/package_rules that holds
                           configs for the export.
+  --make-all              Create data packages from all configs in the
+                          package_rules directory.
   --zip                   Zip the output data package.
   --upload                Upload the zipped data package to S3. Bucket is
                           determined by `AWS_BUCKET_NAME` environment
@@ -744,7 +755,7 @@ Usage: build-docs [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7ff322961f90>
+    * Type: <click.types.Path object at 0x7f5df6a29310>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -843,7 +854,7 @@ Usage: bigquery-upload [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f2016071e90>
+    * Type: <click.types.Path object at 0x7fc3d8b290d0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -900,7 +911,7 @@ Usage: clean-explorer-bucket [OPTIONS]
 ###### Options
 
 * `explorer_path`:
-    * Type: <click.types.Path object at 0x7f5901979bd0>
+    * Type: <click.types.Path object at 0x7f251ca48a50>
     * Default: `../explorer`
     * Usage: `--explorer-path`
 
@@ -956,7 +967,7 @@ Usage: build-explorer [OPTIONS]
 ###### Options
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f33d235db90>
+    * Type: <click.types.Path object at 0x7f07a34211d0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -965,7 +976,7 @@ Usage: build-explorer [OPTIONS]
 
 
 * `explorer_path`:
-    * Type: <click.types.Path object at 0x7f33d235d7d0>
+    * Type: <click.types.Path object at 0x7f07a3420e10>
     * Default: `../explorer`
     * Usage: `--explorer-path`
 

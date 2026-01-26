@@ -188,12 +188,12 @@ class DataPackage:
 
             self.clean_data_resource(ts_resource)
 
-        write_json(self.schema, Path(self.path, "data-package.json"))
-
         self.collect_metadata()
 
         for geodata_source in geodata_sources:
             self.add_geodata_source_to_package(geodata_source)
+
+        write_json(self.schema, Path(self.path, "data-package.json"))
 
         self.create_data_dictionaries()
 
