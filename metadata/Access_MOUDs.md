@@ -53,6 +53,9 @@ Count of providers within a travel threshold (30 minutes and/or 60 minutes) were
 
 This analysis was conducted in Python. The scripts are available in code/AccessMetrics - MOUDs. Some of the scripts are available in [code/AccessMetrics - MOUDs.](https://github.com/GeoDaCenter/opioid-policy-scan/tree/fc3d94053dd1941a96a5945d73cc6f4845453484/code/Access%20Metrics%20-%20MOUD), with complete computational notebooks which can be found in [scripts/Calculate_Access_Metrics (2).ipynb] (https://github.com/healthyregions/oeps/blob/270-MOUD-2025-Update-(-BUP%2C-MET%2C-NAL-%2C-OTP-%2C-Near-by-MOUD)/scripts/Calculate_Access_Metrics%20(2).ipynb) 
 
+<img width="1494" height="659" alt="Screenshot 2026-01-26 at 12 50 42 AM" src="https://github.com/user-attachments/assets/69b63e26-74eb-4125-b2cc-b4749a45e8ba" />
+Travel Time to Naltrexone Provider (NaltTmDr)
+
 #### County and State 
 County and state-level variables include the **count** of Census tracts and the **percent** of Census tracts located within a 30 minute driving threshold of an MOUD type, as well as the mean (average) driving time in minutes from Census tracts within the county or state. 
 
