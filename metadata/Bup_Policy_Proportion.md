@@ -7,11 +7,6 @@
 ### Theme: 
 Policy
 
-### Data Location: 
-You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).  
-
-CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
-
 ### Data Source(s) Description:  
 
 **State Buprenorphine Policies**
