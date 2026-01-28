@@ -40,14 +40,6 @@ b) ('Valid Through Date' - 'Effective Date') / (9/1/2024 - 3/1/2023) (period of 
  
 In states where multiple policies regulating buprenorphine went into effect, the overall sum period of regulation (across which all policies had a value of 1 for BRx_oud) was taken and used in the calculation.
 
-### Key Variable and Definitions:
-
-- **Variable** -- title of variable
-- **Variable ID** -- exact name of variable in datasets
-- **Description** -- Short description of variable
-- **Years Available** -- years for which data exists for this variable
-- **Spatial Scale** -- the variable exists for these levels of spatial scale
-
 ### Data Limitations:
 
 - Data was only available through this source between March 2023 and September 2024. As such, the proportions are calculated to reflect this specifically and policies prescribing requirements/limitations may have been in effect during other parts of the given years that were not captured in the data used to provide the 'Periods of Buprenorphine Policy Implementation' variable.
