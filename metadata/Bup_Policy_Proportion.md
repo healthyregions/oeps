@@ -7,11 +7,6 @@
 ### Theme: 
 Policy
 
-### Data Location: 
-You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).  
-
-CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
-
 ### Data Source(s) Description:  
 
 **State Buprenorphine Policies**
@@ -44,20 +39,6 @@ and
 b) ('Valid Through Date' - 'Effective Date') / (9/1/2024 - 3/1/2023) (period of entire data coverage) for the second variable. 
  
 In states where multiple policies regulating buprenorphine went into effect, the overall sum period of regulation (across which all policies had a value of 1 for BRx_oud) was taken and used in the calculation.
-
-### Key Variable and Definitions:
-
-- **Variable** -- title of variable
-- **Variable ID** -- exact name of variable in datasets
-- **Description** -- Short description of variable
-- **Years Available** -- years for which data exists for this variable
-- **Spatial Scale** -- the variable exists for these levels of spatial scale
-
-| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
-|:---------|:--------------------|:------------|:----------------|:--------------|
-| Buprenorphine Policy Proportion | BupPolP | Proportion of Year with State-Level Buprenorphine Policy in Effect | 2023, 2024 | State |
-| Entire Data Period Buprenorphine Policy Proportion | EdBupPolP | Proportion of Entire Data Period with State-Level Buprenorphine Policy in Effect | 2024 | State |
-| Periods of Buprenorphine Policy Implementation | PerImpBupP | Periods of Implementation of State-Level Buprenorphine Policy (Associated Date Ranges) | 2023, 2024 | State |
 
 ### Data Limitations:
 
