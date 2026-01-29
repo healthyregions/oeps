@@ -51,48 +51,77 @@ def bigquery_upload(
     bq = BigQuery()
     registry = Registry.create_from_directory(registry_path)
 
-    print("WARNING: This command still needs to be updated to use the new Registry model.")
-    print("  --cancelling operation")
-    exit()
-
     messages = []
 
-    data_resources = registry.get_all_sources()
-
+    # Get table sources from registry
     if name:
-        to_load = [i for i in data_resources if i["name"] == name]
-        if len(to_load) == 0:
-            print("no resource by that name in registry. cancelling load.")
-            exit()
+        if name not in registry.table_sources:
+            print(f"ERROR: No table source found with name '{name}' in registry.")
+            exit(1)
+        to_load = [registry.table_sources[name]]
     else:
-        to_load = data_resources
+        to_load = list(registry.table_sources.values())
 
-    for resource in to_load:
-        if name and resource["name"] != name:
+    for table_source in to_load:
+        if name and table_source.name != name:
             continue
+
+        # Convert TableSource to format expected by BigQuery methods
+        # Use default dataset name "tabular" (as per old structure)
+        # HEROP_ID is the primary key and must be included in schema (first)
+        schema_fields = [
+            {
+                "name": "HEROP_ID",
+                "type": "string",
+                "max_length": None,
+            }
+        ]
+        # Add all variable fields (skip HEROP_ID if it's already in variables to avoid duplicate)
+        for var in table_source.variables:
+            if var.name == "HEROP_ID":
+                continue  # Already added above
+            schema_fields.append({
+                "name": var.name,
+                "type": var.type,
+                "max_length": getattr(var, "max_length", None),
+            })
+        
+        resource = {
+            "name": table_source.name,
+            "path": table_source.full_path,
+            "format": "csv",  # Table sources are always CSV
+            "bq_dataset_name": "tabular",  # Default dataset name
+            "bq_table_name": table_source.name,  # Use table source name as table name
+            "schema": {
+                "fields": schema_fields
+            }
+        }
 
         if table_only:
             table = bq.create_table(resource, overwrite=overwrite)
             print(table)
-            exit()
+            if name:
+                exit(0)
+            continue
 
+        start = datetime.now()
+        print(f"\nVALIDATE INPUT SOURCE: {resource['path']}")
+        rows, errors = bq.load_rows_from_resource(resource)
+        messages += errors
+        print(f"WARNINGS ENCOUNTERED: {len(errors)}")
+        for e in errors:
+            print("  " + e)
+
+        if not dry_run:
+            print(f"\nBEGIN LOAD: {resource['name']}")
+            table = bq.create_table(resource, overwrite=overwrite)
+            print(f"TABLE CREATED: {table}")
+            load_job = bq.load_table(
+                rows, resource["bq_dataset_name"], resource["bq_table_name"]
+            )
+            print(f"JOB COMPLETE: {load_job}")
+            print(f"TIME ELAPSED: {datetime.now()-start}")
         else:
-            start = datetime.now()
-            print(f"\nVALIDATE INPUT SOURCE: {resource['path']}")
-            rows, errors = bq.load_rows_from_resource(resource)
-            messages += errors
-            print(f"WARNINGS ENCOUNTERED: {len(errors)}")
-            for e in errors:
-                print("  " + e)
+            print(f"\nDRY RUN: Would load {len(rows)} rows to {resource['bq_dataset_name']}.{resource['bq_table_name']}")
 
-            if not dry_run:
-                print(f"\nBEGIN LOAD: {resource['name']}")
-                table = bq.create_table(resource, overwrite=overwrite)
-                print(f"TABLE CREATED: {table}")
-                load_job = bq.load_table(
-                    rows, resource["bq_dataset_name"], resource["bq_table_name"]
-                )
-                print(f"JOB COMPLETE: {load_job}")
-                print(f"TIME ELAPSED: {datetime.now()-start}")
-
-    print(f"ERRORS/WARNINGS ENCOUNTERED: {len(messages)}")
+    print(f"\nTOTAL ERRORS/WARNINGS ENCOUNTERED: {len(messages)}")
