@@ -1,0 +1,10 @@
+{
+  "name": " RxAvTmDr2",
+  "title": "Avg. Driving Time (min) to nearest Pharmacy with Impedance Factor",
+  "type": "number",
+  "example": "22.11",
+  "description": "Average driving time (minutes) across tracts in state to nearest pharmacy with Impedance Factor",
+  "metadata": "Access_Pharmacies.json",
+  "longitudinal": false,
+  "analysis": false
+}
