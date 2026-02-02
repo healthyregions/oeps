@@ -1,7 +1,7 @@
 **Meta Data Name**: Access to MOUDs  
 **Date Added**: February 1, 2021  
 **Author**: Marynia Kolak, Mahjabin Kabir Adrita, Wataru Morioka, Susan Paykin, Yilin Lyu, Mallikarjun Bhusnoor   
-**Date Last Modified**: January 24, 2026   
+**Date Last Modified**: February 2, 2026   
 **Last Modified By**: Mallikarjun Bhusnoor
 
 ### Data Source(s) Description:
@@ -37,6 +37,8 @@ Data on street and pedestrian networks to calculate travel time metrics were sou
 
 In our approach, a travel time is calculated from the center of each census tract, to the center of another census tract, up to 90 minutes away. These time tables are calculated for across the country, and can be referenced by tract FIPS (unique ID) code.
 
+For 2025 access metrics, the impedance-adjusted travel time (Minutes2) is calculated as 2 × the car travel time (Minutes). This doubles the base travel time to approximate delays from congestion, traffic, and other non-ideal travel conditions.
+
 ### Description of Data Processing: 
 Data was identified, wrangled, cleaned, and prepared for analysis. For 2019 locations that needed geocoding, we used the [tidygeocoder](https://cran.r-project.org/web/packages/tidygeocoder/vignettes/tidygeocoder.html) package in R, as well as supplemental geocoding through University of Chicago Library GIS services. Data extracted in 2025 was already complete with spatial coordinate information.
 
@@ -60,7 +62,7 @@ Travel Time to Opioid Treatment Programme (OtpTmDr)
 Travel Time to Buprenorphine Provider (BupTmDr)
 
 #### MOUD types within 30-min drive (impedance-adjusted)
-MoudTyp counts how many different MOUD types (buprenorphine, methadone, naltrexone) are available within a 30-minute car drive, after applying the impedance factor (Minutes2).This variable is built from the three binary indicators BupCntDr2, MetCntDr2, and NaltCntDr2 for each census tract, and is available only for 2025 tract-level measures.
+MoudTyp counts how many different MOUD types (buprenorphine, methadone, naltrexone) are available within a 30-minute car drive, after applying the impedance factor (Minutes2). Because Minutes2 (impedance) = 2 × Minutes, this 30-minute threshold with impedance is roughly equivalent to a 60-minute drive under ideal conditions. This variable is built from the three binary indicators BupCntDr2, MetCntDr2, and NaltCntDr2 for each census tract, and is available only for 2025 tract-level measures.
 
 #### County and State 
 County and state-level variables include the **count** of Census tracts and the **percent** of Census tracts located within a 30 minute driving threshold of an MOUD type, as well as the mean (average) driving time in minutes from Census tracts within the county or state. 
