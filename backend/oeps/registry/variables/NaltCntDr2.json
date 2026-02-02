@@ -1,6 +1,6 @@
 {
   "name": "NaltCntDr2",
-  "title": "Naltrexone within 30-min drive (impedance-adjusted, indicator)",
+  "title": "Buprenorphine within 30-min drive (with impedance)",
   "type": "boolean",
   "example": "1",
   "description": "Indicator (1 = yes, 0 = no) for whether there is at least one naltrexone provider within a 30-minute driving threshold (using impedance-adjusted travel time).",
