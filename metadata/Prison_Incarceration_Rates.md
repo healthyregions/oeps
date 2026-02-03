@@ -1,7 +1,7 @@
 **Meta Data Name**: Prison Incarceration Variables  
 **Date Added**: September 11, 2020  
 **Author**: Marynia Kolak, Qinyun Lin, Yilin Lyu  
-**Date Last Modified**: October 23, 2025  
+**Date Last Modified**: February 3, 2026  
 **Last Modified By**: Yilin Lyu  
 
 ### Data Source(s) Description:  
