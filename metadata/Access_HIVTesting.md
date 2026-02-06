@@ -38,9 +38,12 @@ nearest HIV Testing Facility location. The original 2021 script is available in 
 ##### Travel Time and Count Within Threshold
 We calculated travel-network access metrics for the driving travel time to the nearest HIV Testing Facility location and count of HiV Testing Facilities within a 30 minute driving threshold. We calculated travel-network access metrics for every census tract centroid to the census tract centroid of nearest provider type. For *zip code tabulation areas*, overlapping tract-level measures were averaged, weighted by proportion of the overlapping tract, using the corresponding HUD tract-to-zip code crosswalks. 
 
-This travel time analysis was conducted using a Python Computational notebook. 
+This travel time analysis was conducted using a Python Computational notebook.
 
 - The updated 2025 notebook will be released in late January 2026, due to some refinements and updates.
+
+<img width="1491" height="658" alt="image" src="https://github.com/user-attachments/assets/05ddd5c8-1503-4925-a46d-8e5d12c310a5" />
+
 
 In addition, an **impedance factor** was introduced in 2025 access metrics. Raw travel time measures assume pristine conditions in a best-case-scenario. 
 An impedance approach instead multiples the estimated travel time by a factor, in this case a factor of 2, better approximating actual travel time due to traffic, congestion, etc.
