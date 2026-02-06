@@ -46,10 +46,10 @@ In addition, an **impedance factor** was introduced in 2025 access metrics. Raw 
 An impedance approach instead multiples the estimated travel time by a factor, in this case a factor of 2, better approximating actual travel time due to traffic, congestion, etc.
 
 #### County and State 
-County and state-level variables include the **count** of Census tracts and the **percent** of Census tracts located within a 30 minute driving threshold of an FQHC, as well as the mean (average) driving time in minutes from Census tracts within the county or state. 
+County and state-level variables include the **count** of Census tracts and the **percent** of Census tracts located within a 30 minute driving threshold of an HIV Testing Facility, as well as the mean (average) driving time in minutes from Census tracts within the county or state. 
 
 For 2025 measures, the tract to county conversion were completed using R code, and can be found
-[scripts/HCV-tract2county.R.](https://github.com/healthyregions/oeps/tree/main/scripts). 
+[scripts/HIV-tract2county.R.](https://github.com/healthyregions/oeps/tree/main/scripts). 
 
 ### Data Limitations:  
 - Euclidean distance or straight-line distance is a simple approximation of distance or travel time from an origin centroid to the nearest health center. It is not a precise calculation of real travel times or distances. 
@@ -59,7 +59,7 @@ For 2025 measures, the tract to county conversion were completed using R code, a
 understanding of potential spatial access.
 - Unlike most U.S. states, Connecticut’s traditional eight counties do not function as active government units and have not been used for statistical reporting for decades. More recently, the U.S. Census Bureau replaced Connecticut’s eight historical counties with nine planning regions as official county-equivalent geographies, effective in Census Bureau products beginning in 2022, with full adoption in federal data products through 2023–2024. Because this redefinition means that county FIPS codes and county-level boundaries no longer align consistently with the definitions used elsewhere in our dataset (which assume stable county geographies), some Connecticut tracts may appear as empty or missing in the county summary table. This is especially true where tract identifiers include legacy county codes that no longer match current county-equivalent definitions.
 - Note that Alaska travel times may reflect the data technically, but due to the geographic complexities of the state, we don't recommend using measures for that state at this time. Tracts are very large, and while there may
-be a FQHC location within the tract -- giving it a travel time of zero -- the physical size of the tract boundary makes that actual time a bit unreasonable. Please proceed with caution in frontier locations.
+be a HIV Testing Facility location within the tract -- giving it a travel time of zero -- the physical size of the tract boundary makes that actual time a bit unreasonable. Please proceed with caution in frontier locations.
 
 ### Comments/Notes:  
 - All nearest distance calculations are in miles. 
