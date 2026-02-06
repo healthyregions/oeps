@@ -36,7 +36,7 @@ For the nearest resource analysis, Euclidean distance was calculated from the ce
 nearest HCV Testing Facility location. The original 2021 script is available in [ our codes folder](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/).
 
 ##### Travel Time and Count Within Threshold
-We calculated travel-network access metrics for the driving travel time to the nearest FQHC location and count of HCV Testing Facilities within a 30 minute driving threshold. We calculated travel-network access metrics for every census tract centroid to the census tract centroid of nearest provider type. For *zip code tabulation areas*, overlapping tract-level measures were averaged, weighted by proportion of the overlapping tract, using the corresponding HUD tract-to-zip code crosswalks. 
+We calculated travel-network access metrics for the driving travel time to the nearest HCV Testing Facility location and count of HCV Testing Facilities within a 30 minute driving threshold. We calculated travel-network access metrics for every census tract centroid to the census tract centroid of nearest provider type. For *zip code tabulation areas*, overlapping tract-level measures were averaged, weighted by proportion of the overlapping tract, using the corresponding HUD tract-to-zip code crosswalks. 
 
 This travel time analysis was conducted using a Python Computational notebook. 
 
