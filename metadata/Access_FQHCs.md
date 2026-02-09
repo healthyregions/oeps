@@ -51,7 +51,7 @@ For 2025 measures, the tract to county conversion were completed using R code, a
 [scripts/fqhc-tract2county.R.](https://github.com/healthyregions/oeps/tree/main/scripts).
 
 <img width="1582" height="1168" alt="FqhcAvTmDr2_2025" src="https://github.com/user-attachments/assets/a1572118-06b9-4af6-9de9-9e00838e706d" />
-Average drive time to nearest FQHC, with Impedance (FqhcAvTmDr2)
+*Average drive time to nearest FQHC, with Impedance (FqhcAvTmDr2)*
 
 ### Data Limitations:
 - Euclidean distance or straight-line distance is a simple approximation of distance or travel time from an origin centroid to the nearest health center. It is not a precise calculation of real travel times or distances. 
