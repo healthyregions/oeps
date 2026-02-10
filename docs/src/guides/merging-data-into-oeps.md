@@ -56,7 +56,7 @@ flask inspect-csv -s path/to/MyNewCountyData2021.csv
 Variables created via [PagesCMS](https://app.pagescms.org/healthyregions/oeps) may have gaps that would historically block the merge. The OEPS backend includes workarounds:
 
 - **table_sources**: CMS does not add `table_sources` when creating new variables. The backend treats it as optional (default `[]`), so the registry loads successfully. When you run the merge, `flask merge-csv` populates `table_sources` for any variable whose column is merged into the target table.
-- **metadata .json suffix**: The CMS metadata dropdown stores `Access_MOUDs.json` instead of `Access_MOUDs`. The backend strips the `.json` suffix when loading variable JSON files, so both forms work.
+- **metadata .json suffix**: The CMS metadata dropdown stores the full filename (e.g. with `.json` suffix) instead of the base name. The backend strips the `.json` suffix when loading variable JSON files, so both forms work.
 
 You can run the merge without manually editing variable files for these issues.
 

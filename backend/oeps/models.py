@@ -125,7 +125,7 @@ class VariableModel(BaseModel):
     @classmethod
     def from_json_file(cls, path: Path) -> "VariableModel":
         data = load_entry(path)
-        # PagesCMS stores metadata as "Access_MOUDs.json"; registry expects base name
+        # PagesCMS stores metadata with .json suffix; registry expects base name only
         if data.get("metadata", "").endswith(".json"):
             data["metadata"] = data["metadata"][: -len(".json")]
         return cls(**data)
