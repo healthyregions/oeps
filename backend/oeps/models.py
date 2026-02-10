@@ -119,12 +119,15 @@ class VariableModel(BaseModel):
     description: str
     longitudinal: bool = False
     analysis: bool = False
-    table_sources: list[str]
+    table_sources: list[str] = []
     metadata: str
 
     @classmethod
     def from_json_file(cls, path: Path) -> "VariableModel":
         data = load_entry(path)
+        # PagesCMS stores metadata as "Access_MOUDs.json"; registry expects base name
+        if data.get("metadata", "").endswith(".json"):
+            data["metadata"] = data["metadata"][: -len(".json")]
         return cls(**data)
 
     def to_json_file(self, registry_path: Path):

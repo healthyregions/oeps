@@ -51,6 +51,15 @@ flask inspect-csv -s path/to/MyNewCountyData2021.csv
 - If yes, great! You are ready to [merge data into OEPS](#merge-data-into-oeps).
 - If no, you need to [create a new variable entry](creating-metadata-and-variables.md#creating-a-new-variable-entry) for every new incoming variable.
 
+## PagesCMS workarounds
+
+Variables created via [PagesCMS](https://app.pagescms.org/healthyregions/oeps) may have gaps that would historically block the merge. The OEPS backend includes workarounds:
+
+- **table_sources**: CMS does not add `table_sources` when creating new variables. The backend treats it as optional (default `[]`), so the registry loads successfully. When you run the merge, `flask merge-csv` populates `table_sources` for any variable whose column is merged into the target table.
+- **metadata .json suffix**: The CMS metadata dropdown stores `Access_MOUDs.json` instead of `Access_MOUDs`. The backend strips the `.json` suffix when loading variable JSON files, so both forms work.
+
+You can run the merge without manually editing variable files for these issues.
+
 ## Workflow
 
 Listed here in logical order, though often only the later steps will be needed.
