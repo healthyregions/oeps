@@ -651,6 +651,13 @@
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
+    "variable": "Buprenorphine Policy Proportion",
+    "numerator": "state-2024",
+    "nProperty": "BupPolP",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/medicaid_variables_saket/metadata/Bup_Policy_Proportion.md"
+  },
+  {
     "variable": "Buprenorphine access 30 minutes (RAAM)",
     "numerator": "tract-2020",
     "nProperty": "BupRm30",
@@ -1211,6 +1218,13 @@
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Employment_Trends.md"
   },
   {
+    "variable": "Entire Data Period Buprenorphine Policy Proportion",
+    "numerator": "state-2024",
+    "nProperty": "EdBupPolP",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/medicaid_variables_saket/metadata/Bup_Policy_Proportion.md"
+  },
+  {
     "variable": "Essential Workers %",
     "numerator": "state-2018__county-2023__zcta-2023__tract-2023",
     "nProperty": "EssnWrkP",
@@ -1237,6 +1251,13 @@
     "nProperty": "FIPS",
     "theme": "Geography",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/GeographicBoundaries.md"
+  },
+  {
+    "variable": "Five-Year Medicaid Expansion Proportion",
+    "numerator": "state-2024",
+    "nProperty": "MedPolP5Yr",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/medicaid_variables_saket/metadata/Medicaid_Policy_Proportion.md"
   },
   {
     "variable": "Foreclosure & Delinquency %",
@@ -1533,6 +1554,13 @@
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Demographic_Characteristics.md"
   },
   {
+    "variable": "Medicaid Expansion Proportion",
+    "numerator": "state-2024",
+    "nProperty": "MedPolProp",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/medicaid_variables_saket/metadata/Medicaid_Policy_Proportion.md"
+  },
+  {
     "variable": "Methadone access 30 minutes (RAAM)",
     "numerator": "tract-2020",
     "nProperty": "MetRm30",
@@ -1727,6 +1755,13 @@
     "nProperty": "SmokeP",
     "theme": "Social",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Smoking_Population.md"
+  },
+  {
+    "variable": "Periods of Buprenorphine Policy Implementation",
+    "numerator": "state-2024",
+    "nProperty": "PerImpBupP",
+    "theme": "Policy",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/medicaid_variables_saket/metadata/Bup_Policy_Proportion.md"
   },
   {
     "variable": "Police & fire expenditures",

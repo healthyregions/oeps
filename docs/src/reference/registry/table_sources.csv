@@ -1,59 +1,59 @@
 name,title,path,description,data_year,geodata_source
-tract-sdoh-2014,tract-sdoh-2014,tables/tract-sdoh-2014.csv,This CSV aggregates OEPS data values from 2014 at the tract level.,2014,geo-2018-tract
-tract-2022,tract-2022,tables/tract-2022.csv,This CSV aggregates all OEPS data values from 2022 at the tract level.,2022,geo-2020-tract
-county-2020,county-2020,tables/county-2020.csv,This CSV aggregates all OEPS data values from 2020 at the county level.,2020,geo-2018-county
-state-2017,state-2017,tables/state-2017.csv,This CSV aggregates all OEPS data values from 2017 at the state level.,2017,geo-2018-state
-zcta-2022,zcta-2022,tables/zcta-2022.csv,This CSV aggregates all OEPS data values from 2022 at the zcta level.,2022,geo-2020-zcta
-tract-2025,tract-2025,tables/tract-2025.csv,This CSV aggregates all OEPS data values from 2025 at the tract level.,2025,geo-2020-tract
-tract-1980,tract-1980,tables/tract-1980.csv,This CSV aggregates all OEPS data values from 1980 at the tract level.,1980,geo-2010-tract
-tract-ruca-2010,tract-ruca-2010,tables/tract-ruca-2010.csv,This CSV aggregates OEPS data values from 2010 at the tract level.,2010,geo-2018-tract
-county-2021,county-2021,tables/county-2021.csv,This CSV aggregates all OEPS data values from 2021 at the county level.,2021,geo-2018-county
-tract-2023,tract-2023,tables/tract-2023.csv,This CSV aggregates all OEPS data values from 2023 at the tract level.,2023,geo-2020-tract
-zcta-2020,zcta-2020,tables/zcta-2020.csv,This CSV aggregates all OEPS data values from 2020 at the zcta level.,2020,geo-2018-zcta
-tract-2010,tract-2010,tables/tract-2010.csv,This CSV aggregates all OEPS data values from 2010 at the tract level.,2010,geo-2018-tract
 zcta-2021,zcta-2021,tables/zcta-2021.csv,This CSV aggregates all OEPS data values from 2021 at the zcta level.,2021,geo-2018-zcta
-zcta-ruca-2010,zcta-ruca-2010,tables/zcta-ruca-2010.csv,This CSV aggregates OEPS data values from 2010 at the zcta level.,2010,geo-2018-zcta
-tract-1990,tract-1990,tables/tract-1990.csv,This CSV aggregates all OEPS data values from 1990 at the tract level.,1990,geo-2010-tract
-state-1980,state-1980,tables/state-1980.csv,This CSV aggregates all OEPS data values from 1980 at the state level.,1980,geo-2010-state
-state-2016,state-2016,tables/state-2016.csv,This CSV aggregates all OEPS data values from 2016 at the state level.,2016,geo-2018-state
-state-2022,state-2022,tables/state-2022.csv,This CSV aggregates all OEPS data values from 2022 at the state level.,2022,geo-2020-state
-tract-2020,tract-2020,tables/tract-2020.csv,This CSV aggregates all OEPS data values from 2020 at the tract level.,2020,geo-2018-tract
-state-1990,state-1990,tables/state-1990.csv,This CSV aggregates all OEPS data values from 1990 at the state level.,1990,geo-2010-state
-state-2019,state-2019,tables/state-2019.csv,This CSV aggregates all OEPS data values from 2019 at the state level.,2019,geo-2018-state
-tract-2021,tract-2021,tables/tract-2021.csv,This CSV aggregates all OEPS data values from 2021 at the tract level.,2021,geo-2018-tract
-zcta-2023,zcta-2023,tables/zcta-2023.csv,This CSV aggregates all OEPS data values from 2023 at the zcta level.,2023,geo-2020-zcta
-county-1980,county-1980,tables/county-1980.csv,This CSV aggregates all OEPS data values from 1980 at the county level.,1980,geo-2010-county
-tract-2018,tract-2018,tables/tract-2018.csv,This CSV aggregates all OEPS data values from 2018 at the tract level.,2018,geo-2018-tract
-tract-2019,tract-2019,tables/tract-2019.csv,This CSV aggregates all OEPS data values from 2019 at the tract level.,2019,geo-2018-tract
+state-2014,state-2014,tables/state-2014.csv,This CSV aggregates all OEPS data values from 2014 at the state level.,2014,geo-2018-state
+zcta-2025,zcta-2025,tables/zcta-2025.csv,This CSV aggregates all OEPS data values from 2025 at the zcta level.,2025,geo-2020-zcta
 county-1990,county-1990,tables/county-1990.csv,This CSV aggregates all OEPS data values from 1990 at the county level.,1990,geo-2010-county
-county-2023,county-2023,tables/county-2023.csv,This CSV aggregates all OEPS data values from 2023 at the county level.,2023,geo-2020-county
-state-2010,state-2010,tables/state-2010.csv,This CSV aggregates all OEPS data values from 2010 at the state level.,2010,geo-2018-state
-state-2023,state-2023,tables/state-2023.csv,This CSV aggregates all OEPS data values from 2023 at the state level.,2023,geo-2020-state
-state-providers-2010,state-providers-2010,tables/state-providers-2010.csv,This CSV aggregates OEPS data values from 2010 at the state level.,2010,geo-2018-state
-county-2015,county-2015,tables/county-2015.csv,This CSV aggregates all OEPS data values from 2015 at the county level.,2015,geo-2018-county
+state-2020,state-2020,tables/state-2020.csv,This CSV aggregates all OEPS data values from 2020 at the state level.,2020,geo-2018-state
+tract-2014,tract-2014,tables/tract-2014.csv,This CSV aggregates all OEPS data values from 2014 at the tract level.,2014,geo-2018-tract
+county-1980,county-1980,tables/county-1980.csv,This CSV aggregates all OEPS data values from 1980 at the county level.,1980,geo-2010-county
+state-2025,state-2025,tables/state-2025.csv,This CSV aggregates all OEPS data values from 2025 at the state level.,2025,geo-2020-state
+state-2017,state-2017,tables/state-2017.csv,This CSV aggregates all OEPS data values from 2017 at the state level.,2017,geo-2018-state
+zcta-ruca-2010,zcta-ruca-2010,tables/zcta-ruca-2010.csv,This CSV aggregates OEPS data values from 2010 at the zcta level.,2010,geo-2018-zcta
+zcta-2019,zcta-2019,tables/zcta-2019.csv,This CSV aggregates all OEPS data values from 2019 at the zcta level.,2019,geo-2018-zcta
+tract-2022,tract-2022,tables/tract-2022.csv,This CSV aggregates all OEPS data values from 2022 at the tract level.,2022,geo-2020-tract
+tract-2018,tract-2018,tables/tract-2018.csv,This CSV aggregates all OEPS data values from 2018 at the tract level.,2018,geo-2018-tract
+state-2021,state-2021,tables/state-2021.csv,This CSV aggregates all OEPS data values from 2021 at the state level.,2021,geo-2018-state
+county-2010,county-2010,tables/county-2010.csv,This CSV aggregates all OEPS data values from 2010 at the county level.,2010,geo-2010-county
+county-2021,county-2021,tables/county-2021.csv,This CSV aggregates all OEPS data values from 2021 at the county level.,2021,geo-2018-county
 tract-providers-2010,tract-providers-2010,tables/tract-providers-2010.csv,This CSV aggregates OEPS data values from 2010 at the tract level.,2010,geo-2018-tract
+state-1980,state-1980,tables/state-1980.csv,This CSV aggregates all OEPS data values from 1980 at the state level.,1980,geo-2010-state
+zcta-2023,zcta-2023,tables/zcta-2023.csv,This CSV aggregates all OEPS data values from 2023 at the zcta level.,2023,geo-2020-zcta
+state-2023,state-2023,tables/state-2023.csv,This CSV aggregates all OEPS data values from 2023 at the state level.,2023,geo-2020-state
+state-1990,state-1990,tables/state-1990.csv,This CSV aggregates all OEPS data values from 1990 at the state level.,1990,geo-2010-state
+state-2024,state-2024,tables/state-2024.csv,This CSV aggregates OEPS data values from 2024 at the state level.,2024,geo-2020-state
+state-2015,state-2015,tables/state-2015.csv,This CSV aggregates all OEPS data values from 2015 at the state level.,2015,geo-2018-state
+zcta-2022,zcta-2022,tables/zcta-2022.csv,This CSV aggregates all OEPS data values from 2022 at the zcta level.,2022,geo-2020-zcta
+county-providers-2010,county-providers-2010,tables/county-providers-2010.csv,This CSV aggregates OEPS data values from 2010 at the county level.,2010,geo-2018-county
+tract-2021,tract-2021,tables/tract-2021.csv,This CSV aggregates all OEPS data values from 2021 at the tract level.,2021,geo-2018-tract
+county-2022,county-2022,tables/county-2022.csv,This CSV aggregates all OEPS data values from 2022 at the county level.,2022,geo-2020-county
+tract-sdoh-2014,tract-sdoh-2014,tables/tract-sdoh-2014.csv,This CSV aggregates OEPS data values from 2014 at the tract level.,2014,geo-2018-tract
+tract-2020,tract-2020,tables/tract-2020.csv,This CSV aggregates all OEPS data values from 2020 at the tract level.,2020,geo-2018-tract
+county-2025,county-2025,tables/county-2025.csv,This CSV aggregates all OEPS data values from 2025 at the county level.,2025,geo-2020-county
+state-2022,state-2022,tables/state-2022.csv,This CSV aggregates all OEPS data values from 2022 at the state level.,2022,geo-2020-state
+tract-1990,tract-1990,tables/tract-1990.csv,This CSV aggregates all OEPS data values from 1990 at the tract level.,1990,geo-2010-tract
+state-providers-2010,state-providers-2010,tables/state-providers-2010.csv,This CSV aggregates OEPS data values from 2010 at the state level.,2010,geo-2018-state
+county-2020,county-2020,tables/county-2020.csv,This CSV aggregates all OEPS data values from 2020 at the county level.,2020,geo-2018-county
+county-2017,county-2017,tables/county-2017.csv,This CSV aggregates all OEPS data values from 2017 at the county level.,2017,geo-2018-county
+county-2000,county-2000,tables/county-2000.csv,This CSV aggregates all OEPS data values from 2000 at the county level.,2000,geo-2010-county
+county-2018,county-2018,tables/county-2018.csv,This CSV aggregates all OEPS data values from 2018 at the county level.,2018,geo-2018-county
+tract-2025,tract-2025,tables/tract-2025.csv,This CSV aggregates all OEPS data values from 2025 at the tract level.,2025,geo-2020-tract
+tract-ruca-2010,tract-ruca-2010,tables/tract-ruca-2010.csv,This CSV aggregates OEPS data values from 2010 at the tract level.,2010,geo-2018-tract
 county-2019,county-2019,tables/county-2019.csv,This CSV aggregates all OEPS data values from 2019 at the county level.,2019,geo-2018-county
 county-2014,county-2014,tables/county-2014.csv,This CSV aggregates all OEPS data values from 2014 at the county level.,2014,geo-2018-county
-state-2015,state-2015,tables/state-2015.csv,This CSV aggregates all OEPS data values from 2015 at the state level.,2015,geo-2018-state
-tract-2000,tract-2000,tables/tract-2000.csv,This CSV aggregates all OEPS data values from 2000 at the tract level.,2000,geo-2010-tract
-county-2018,county-2018,tables/county-2018.csv,This CSV aggregates all OEPS data values from 2018 at the county level.,2018,geo-2018-county
-county-2025,county-2025,tables/county-2025.csv,This CSV aggregates all OEPS data values from 2025 at the county level.,2025,geo-2020-county
-county-2016,county-2016,tables/county-2016.csv,This CSV aggregates all OEPS data values from 2016 at the county level.,2016,geo-2018-county
-state-2020,state-2020,tables/state-2020.csv,This CSV aggregates all OEPS data values from 2020 at the state level.,2020,geo-2018-state
-county-2017,county-2017,tables/county-2017.csv,This CSV aggregates all OEPS data values from 2017 at the county level.,2017,geo-2018-county
-state-2000,state-2000,tables/state-2000.csv,This CSV aggregates all OEPS data values from 2000 at the state level.,2000,geo-2010-state
-county-2024,county-2024,tables/county-2024.csv,This CSV aggregates OEPS data values from 2024 at the county level.,2024,geo-2020-county
-county-2022,county-2022,tables/county-2022.csv,This CSV aggregates all OEPS data values from 2022 at the county level.,2022,geo-2020-county
-state-2021,state-2021,tables/state-2021.csv,This CSV aggregates all OEPS data values from 2021 at the state level.,2021,geo-2018-state
-zcta-2018,zcta-2018,tables/zcta-2018.csv,This CSV aggregates all OEPS data values from 2018 at the zcta level.,2018,geo-2018-zcta
-county-2010,county-2010,tables/county-2010.csv,This CSV aggregates all OEPS data values from 2010 at the county level.,2010,geo-2010-county
+tract-1980,tract-1980,tables/tract-1980.csv,This CSV aggregates all OEPS data values from 1980 at the tract level.,1980,geo-2010-tract
+tract-2019,tract-2019,tables/tract-2019.csv,This CSV aggregates all OEPS data values from 2019 at the tract level.,2019,geo-2018-tract
+state-2016,state-2016,tables/state-2016.csv,This CSV aggregates all OEPS data values from 2016 at the state level.,2016,geo-2018-state
+county-2015,county-2015,tables/county-2015.csv,This CSV aggregates all OEPS data values from 2015 at the county level.,2015,geo-2018-county
+state-2019,state-2019,tables/state-2019.csv,This CSV aggregates all OEPS data values from 2019 at the state level.,2019,geo-2018-state
 state-2018,state-2018,tables/state-2018.csv,This CSV aggregates all OEPS data values from 2018 at the state level.,2018,geo-2018-state
-zcta-2025,zcta-2025,tables/zcta-2025.csv,This CSV aggregates all OEPS data values from 2025 at the zcta level.,2025,geo-2020-zcta
+zcta-2018,zcta-2018,tables/zcta-2018.csv,This CSV aggregates all OEPS data values from 2018 at the zcta level.,2018,geo-2018-zcta
+tract-2023,tract-2023,tables/tract-2023.csv,This CSV aggregates all OEPS data values from 2023 at the tract level.,2023,geo-2020-tract
+county-2024,county-2024,tables/county-2024.csv,This CSV aggregates OEPS data values from 2024 at the county level.,2024,geo-2020-county
 state-2013,state-2013,tables/state-2013.csv,This CSV aggregates all OEPS data values from 2013 at the state level.,2013,geo-2018-state
-state-2025,state-2025,tables/state-2025.csv,This CSV aggregates all OEPS data values from 2025 at the state level.,2025,geo-2020-state
-state-2014,state-2014,tables/state-2014.csv,This CSV aggregates all OEPS data values from 2014 at the state level.,2014,geo-2018-state
-zcta-2019,zcta-2019,tables/zcta-2019.csv,This CSV aggregates all OEPS data values from 2019 at the zcta level.,2019,geo-2018-zcta
-tract-2014,tract-2014,tables/tract-2014.csv,This CSV aggregates all OEPS data values from 2014 at the tract level.,2014,geo-2018-tract
-county-2000,county-2000,tables/county-2000.csv,This CSV aggregates all OEPS data values from 2000 at the county level.,2000,geo-2010-county
-county-providers-2010,county-providers-2010,tables/county-providers-2010.csv,This CSV aggregates OEPS data values from 2010 at the county level.,2010,geo-2018-county
-state-2024,state-2024,tables/state-2024.csv,This CSV aggregates OEPS data values from 2024 at the state level.,2024,geo-2020-state
+state-2010,state-2010,tables/state-2010.csv,This CSV aggregates all OEPS data values from 2010 at the state level.,2010,geo-2018-state
+state-2000,state-2000,tables/state-2000.csv,This CSV aggregates all OEPS data values from 2000 at the state level.,2000,geo-2010-state
+zcta-2020,zcta-2020,tables/zcta-2020.csv,This CSV aggregates all OEPS data values from 2020 at the zcta level.,2020,geo-2018-zcta
+county-2016,county-2016,tables/county-2016.csv,This CSV aggregates all OEPS data values from 2016 at the county level.,2016,geo-2018-county
+county-2023,county-2023,tables/county-2023.csv,This CSV aggregates all OEPS data values from 2023 at the county level.,2023,geo-2020-county
+tract-2010,tract-2010,tables/tract-2010.csv,This CSV aggregates all OEPS data values from 2010 at the tract level.,2010,geo-2018-tract
+tract-2000,tract-2000,tables/tract-2000.csv,This CSV aggregates all OEPS data values from 2000 at the tract level.,2000,geo-2010-tract

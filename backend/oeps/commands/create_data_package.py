@@ -38,6 +38,12 @@ from ._common_opts import (
     help="Name of folder in data/package_rules that holds configs for the export.",
 )
 @click.option(
+    "--make-all",
+    is_flag=True,
+    default=False,
+    help="Create data packages from all configs in the package_rules directory.",
+)
+@click.option(
     "--zip", "zip_", is_flag=True, default=False, help="Zip the output data package."
 )
 @click.option(
@@ -75,6 +81,7 @@ from ._common_opts import (
 def create_data_package(
     destination,
     config,
+    make_all,
     zip_,
     upload,
     no_cache,
@@ -97,34 +104,46 @@ def create_data_package(
     `--skip-validation` to skip the final step of running validation on the output package.
     """
 
-    rules_dir = Path(data_dir_path, "package_rules", config)
+    package_rules_dir = Path(data_dir_path, "package_rules")
 
-    if not rules_dir.is_dir():
-        print(f"No directory for data rules: {config}")
-        print(f"Expected path: {rules_dir.resolve()}")
+    if config:
+        config_names = [config]
+    elif make_all:
+        config_names = [i.name for i in package_rules_dir.glob("*") if i.is_dir()]
+    else:
+        print("Must include one of -c <config name> or --make_all")
         exit()
 
-    out_name = f"oeps-{config}_{datetime.now().date().isoformat()}"
-    out_name = out_name + "_no_foreign_keys" if skip_foreign_keys else out_name
-    out_path = Path(destination, out_name)
+    for config_name in config_names:
+        print(f"CREATE DATA PACKAGE: {config_name}\n----\n")
+        rules_dir = Path(package_rules_dir, config_name)
 
-    if not overwrite:
-        handle_overwrite(out_path)
+        if not rules_dir.is_dir():
+            print(f"No directory for data rules: {config_name}")
+            print(f"Expected path: {rules_dir.resolve()}")
+            exit()
 
-    if out_path.is_dir():
-        shutil.rmtree(out_path)
+        out_name = f"oeps-{config_name}_{datetime.now().date().isoformat()}"
+        out_name = out_name + "_no_foreign_keys" if skip_foreign_keys else out_name
+        out_path = Path(destination, out_name)
 
-    registry = Registry.create_from_directory(registry_path)
-    dp = DataPackage(out_path)
+        if not overwrite:
+            handle_overwrite(out_path)
 
-    dp.create_from_rules(
-        registry,
-        rules_dir,
-        check_rules=check_rules,
-        zip_output=zip_,
-        upload=upload,
-        no_cache=no_cache,
-        skip_foreign_keys=skip_foreign_keys,
-        run_validation=not skip_validation,
-        verbose=verbose,
-    )
+        if out_path.is_dir():
+            shutil.rmtree(out_path)
+
+        registry = Registry.create_from_directory(registry_path)
+        dp = DataPackage(out_path)
+
+        dp.create_from_rules(
+            registry,
+            rules_dir,
+            check_rules=check_rules,
+            zip_output=zip_,
+            upload=upload,
+            no_cache=no_cache,
+            skip_foreign_keys=skip_foreign_keys,
+            run_validation=not skip_validation,
+            verbose=verbose,
+        )
