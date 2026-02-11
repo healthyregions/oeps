@@ -5,4 +5,5 @@
 
 .DS_Store
 
+# Credentials - never commit service account keys
 credentials/
