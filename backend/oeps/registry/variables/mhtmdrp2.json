@@ -1,0 +1,10 @@
+{
+  "name": "MhTmDrP2",
+  "title": "% Tracts within 30-min Drive of Mental Health Provider with impedence",
+  "type": "number",
+  "example": "45.78",
+  "description": "Percent of tracts with Mental Health Provider within a 30-mini driving range, with impedence",
+  "metadata": "Access_Mental_Health.json",
+  "longitudinal": false,
+  "analysis": false
+}
