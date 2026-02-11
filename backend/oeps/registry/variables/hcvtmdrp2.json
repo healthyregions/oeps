@@ -1,0 +1,10 @@
+{
+  "name": "HcvTmDrP2",
+  "title": "% Tracts within 30-min Drive of HCV Testing Facility with impedance",
+  "type": "number",
+  "example": "34.67",
+  "description": "Percent of tracts with HCV Testing Facility within a 30-mini driving range, with impedance",
+  "metadata": "Access_HCVTesting.json",
+  "longitudinal": false,
+  "analysis": false
+}
