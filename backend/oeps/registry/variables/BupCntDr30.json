@@ -3,10 +3,10 @@
   "title": "Count of Buprenorphine Providers (30-min drive)",
   "type": "integer",
   "example": "21",
-  "description": "Count of methadone providers in 30 minute drive time threshold",
+  "description": "Count of Buprenorphine providers in 30 minute drive time threshold",
+  "metadata": "Access_MOUDs",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Access_MOUDs",
   "table_sources": [
     "tract-2020",
     "zcta-2020"
