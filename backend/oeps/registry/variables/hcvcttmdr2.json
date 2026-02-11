@@ -2,7 +2,7 @@
   "name": "HcvCtTmDr2",
   "title": "Tracts with HCV Testing Facility (30-min drive) with impedance",
   "type": "number",
-  "example": "45.89",
+  "example": "45",
   "description": "Number of tracts with HCV Testing Facility within a 30-min driving range, with impedance",
   "metadata": "Access_HCVTesting.json",
   "longitudinal": false,
