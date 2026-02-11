@@ -1,6 +1,6 @@
 {
   "name": "HivTmDrP2",
-  "title": "% Tracts within 30-min Drive of HIV Testing Facility with impedence",
+  "title": "% Tracts within 30-min Drive of HIV Testing Facility with impedance",
   "type": "number",
   "example": "45.56",
   "description": "Percent of tracts with HIV Testing Facility within a 30-mini driving range, with impedance",
