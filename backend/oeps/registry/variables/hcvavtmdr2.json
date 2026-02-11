@@ -1,0 +1,10 @@
+{
+  "name": "HcvAvTmDr2",
+  "title": "Avg. Driving Time to nearest HCV Testing Facility with impedance",
+  "type": "number",
+  "example": "56.78",
+  "description": "Average driving time (minutes) across tracts in state to nearest HCV Testing Facility, with impedence",
+  "metadata": "Access_HCVTesting.json",
+  "longitudinal": false,
+  "analysis": false
+}
