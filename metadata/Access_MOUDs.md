@@ -53,12 +53,12 @@ We calculated travel-network access metrics for every census tract centroid to t
 
 Count of providers within a travel threshold (30 minutes and/or 60 minutes) were also calculated for three modes of transit: driving, walking, and biking at the tract level, with corresponding average of overlapping tracts at the ZCTA scale. 
 
-This analysis was conducted in Python. The scripts are available in code/AccessMetrics - MOUDs. Some of the scripts are available in [code/AccessMetrics - MOUDs.](https://github.com/GeoDaCenter/opioid-policy-scan/tree/fc3d94053dd1941a96a5945d73cc6f4845453484/code/Access%20Metrics%20-%20MOUD), with complete computational notebooks which can be found in [scripts/Calculate_Access_Metrics (2).ipynb] (https://github.com/healthyregions/oeps/blob/270-MOUD-2025-Update-(-BUP%2C-MET%2C-NAL-%2C-OTP-%2C-Near-by-MOUD)/scripts/Calculate_Access_Metrics%20(2).ipynb) 
+This analysis was conducted in Python. The scripts are available in code/AccessMetrics - MOUDs. Some of the scripts are available in [code/AccessMetrics - MOUDs.](https://github.com/GeoDaCenter/opioid-policy-scan/tree/fc3d94053dd1941a96a5945d73cc6f4845453484/code/Access%20Metrics%20-%20MOUD), with complete computational notebooks which can be found in [scripts/Calculate_Access_Metrics.ipynb](https://github.com/healthyregions/oeps/blob/main/scripts/Calculate_Access_Metrics.ipynb) 
 
-<img width="1492" height="657" alt="Screenshot 2026-01-26 at 12 55 40 AM" src="https://github.com/user-attachments/assets/98ccd48e-e3a8-40a7-bd64-f6e9251cca45" />
+![Travel Time to Opioid Treatment Programme](https://github.com/user-attachments/assets/98ccd48e-e3a8-40a7-bd64-f6e9251cca45)
 Travel Time to Opioid Treatment Programme (OtpTmDr)
 
-<img width="1511" height="671" alt="Screenshot 2026-01-26 at 12 53 49 AM" src="https://github.com/user-attachments/assets/6af05683-365c-4cc7-9ff4-938bcb22786d" />
+![Travel Time to Buprenorphine Provider (BupTmDr)](https://github.com/user-attachments/assets/6af05683-365c-4cc7-9ff4-938bcb22786d)
 Travel Time to Buprenorphine Provider (BupTmDr)
 
 #### MOUD types within 30-min drive (impedance-adjusted)
