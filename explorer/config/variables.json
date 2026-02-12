@@ -764,7 +764,7 @@
   },
   {
     "variable": "Count of Buprenorphine Providers (30-min drive)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "BupCntDr30",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
@@ -820,7 +820,7 @@
   },
   {
     "variable": "Count of Methadone Providers (30-min drive)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "MetCntDr30",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
@@ -855,7 +855,7 @@
   },
   {
     "variable": "Count of Naltrexone Providers (30-min drive)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "NaltCntDr30",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
@@ -883,7 +883,7 @@
   },
   {
     "variable": "Count of Opioid Treatment Programs (OTP) (30-min drive)",
-    "numerator": "zcta-2021__tract-2021",
+    "numerator": "zcta-2021__tract-2025",
     "nProperty": "OtpCntDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
@@ -1065,7 +1065,7 @@
   },
   {
     "variable": "Driving Time (min) to nearest Buprenorphine Provider",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "BupTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
@@ -1086,21 +1086,21 @@
   },
   {
     "variable": "Driving Time (min) to nearest Methadone Provider",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "MetTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Driving Time (min) to nearest Naltrexone Provider",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "NaltTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Driving Time (min) to nearest Opioid Treatment Program (OTP)",
-    "numerator": "zcta-2021__tract-2021",
+    "numerator": "zcta-2021__tract-2025",
     "nProperty": "OtpTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
@@ -1174,6 +1174,34 @@
     "nProperty": "HospTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Hospitals.md"
+  },
+  {
+    "variable": "Driving time to nearest OTP (impedance-adjusted)",
+    "numerator": "tract-2025",
+    "nProperty": "OtpTmDr2",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Driving time to nearest buprenorphine provider (with impedance)",
+    "numerator": "tract-2025",
+    "nProperty": "BupTmDr2",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Driving time to nearest methadone provider (with impedance)",
+    "numerator": "tract-2025",
+    "nProperty": "MetTmDr2",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Driving time to nearest naltrexone provider (with impedance)",
+    "numerator": "tract-2025",
+    "nProperty": "NaltTmDr2",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Drug Paraphernalia Laws",
@@ -1510,6 +1538,13 @@
     "nProperty": "LngTermP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Housing_Variables.md"
+  },
+  {
+    "variable": "MOUD Types Within 30-Min Drive  (impedance, adjusted) ",
+    "numerator": "tract-2025",
+    "nProperty": "MoudTyp",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Mean yearly Hepatitis C deaths among Asian population from 2018-2022",

@@ -548,7 +548,12 @@
           "Driving Time to Buprenorphine Provider (driving time across all tracts)",
           "Driving Time to Methadone Provider (driving time across all tracts)",
           "Driving Time to Naltrexone Provider (driving time across all tracts)",
+          "Driving time to nearest OTP (impedance-adjusted)",
+          "Driving time to nearest buprenorphine provider (with impedance)",
+          "Driving time to nearest methadone provider (with impedance)",
+          "Driving time to nearest naltrexone provider (with impedance)",
           "Driving time to nearest telehealth buprenorphine provider",
+          "MOUD Types Within 30-Min Drive  (impedance, adjusted) ",
           "Methadone access 30 minutes (RAAM)",
           "Methadone access 60 minutes (RAAM)",
           "Methadone access 90 minutes (RAAM)",
@@ -581,7 +586,7 @@
           "Walking Time (min) to nearest Naltrexone Provider",
           "Walking time to nearest telehealth buprenorphine provider"
         ],
-        "Source": "SAMSHA 2019, 2021; Vivitrol 2020; OSRM 2020;",
+        "Source": "SAMSHA 2019, 2021, 2025; Vivitrol 2020; OSRM 2020, 2025;",
         "Metadata": "Access_MOUDs",
         "Spatial Scale": "Tract, Zip, County, State",
         "Years": "1980, 1990, 2000, 2010, 2020, 2021, 2025"

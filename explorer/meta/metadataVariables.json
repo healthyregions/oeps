@@ -4386,9 +4386,10 @@
       {
         "title": "Count of Buprenorphine Providers (30-min drive)",
         "name": "BupCntDr30",
-        "description": "Count of methadone providers in 30 minute drive time threshold",
+        "description": "Count of Buprenorphine providers in 30 minute drive time threshold",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -4436,7 +4437,8 @@
         "name": "MetCntDr30",
         "description": "Count of methadone providers in 30 minute drive time threshold",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -4496,7 +4498,8 @@
         "name": "NaltCntDr30",
         "description": "Count of naltrexone providers in 30 minute drive time threshold",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -4544,7 +4547,8 @@
         "name": "OtpCntDr",
         "description": "Count of OTPs within a 30-minute driving threshold",
         "years": [
-          "2021"
+          "2021",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -4661,7 +4665,8 @@
         "name": "BupTmDr",
         "description": "Driving time (minutes) to nearest buprenorphine provider",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -4673,7 +4678,8 @@
         "name": "MetTmDr",
         "description": "Driving time (minutes) to nearest methadone provider",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -4685,7 +4691,8 @@
         "name": "NaltTmDr",
         "description": "Driving time (minutes) to nearest naltrexone provider",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -4697,7 +4704,8 @@
         "name": "OtpTmDr",
         "description": "Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes",
         "years": [
-          "2021"
+          "2021",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -4747,6 +4755,61 @@
         ],
         "geographies": [
           "State"
+        ]
+      },
+      {
+        "title": "Driving time to nearest OTP (impedance-adjusted)",
+        "name": "OtpTmDr2",
+        "description": "Driving time in minutes from the tract centroid to the nearest opioid treatment program, using impedance-adjusted travel time.",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Driving time to nearest buprenorphine provider (with impedance)",
+        "name": "BupTmDr2",
+        "description": "Driving time (minutes) from the tract centroid to the nearest buprenorphine provider, with the impedance factor applied.",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Driving time to nearest methadone provider (with impedance)",
+        "name": "MetTmDr2",
+        "description": "Driving time in minutes from the tract centroid to the nearest methadone provider, with the impedance factor applied.",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Driving time to nearest naltrexone provider (with impedance)",
+        "name": "NaltTmDr2",
+        "description": "Driving time in minutes from the tract centroid to the nearest naltrexone provider, with the impedance factor applied.",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "MOUD Types Within 30-Min Drive  (impedance, adjusted) ",
+        "name": "MoudTyp",
+        "description": "Count (0\u00e2\u20ac\u201c3) of distinct MOUD provider types (buprenorphine, methadone, naltrexone) within a 30-minute impedance-adjusted driving time.",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
         ]
       },
       {

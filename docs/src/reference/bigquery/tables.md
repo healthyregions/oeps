@@ -1037,7 +1037,7 @@ HospCntDr|INTEGER|Count of hospitals within a 30-minute driving threshold
 VacantP|NUMERIC|Percentage of vacant housing units
 SviTh2|NUMERIC|SVI Ranking, Theme 2: Household Composition & Disability
 Ovr18P|NUMERIC|
-BupCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold
+BupCntDr30|INTEGER|Count of Buprenorphine providers in 30 minute drive time threshold
 WidwdP|NUMERIC|
 HsdTypCo|NUMERIC|
 BachelorsP|NUMERIC|
@@ -1584,15 +1584,28 @@ EngProf|NUMERIC|
 
 ID: `oeps-391119.tabular.tract-2025`
 
-5 columns in this table.
+18 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
+OtpCntDr|INTEGER|Count of OTPs within a 30-minute driving threshold
+MetCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold
 FqhcTmDr2|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes, with Impedance factor
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 FqhcTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes
+NaltCntDr30|INTEGER|Count of naltrexone providers in 30 minute drive time threshold
+NaltTmDr2|NUMERIC|Driving time in minutes from the tract centroid to the nearest naltrexone provider, with the impedance factor applied.
+BupCntDr30|INTEGER|Count of Buprenorphine providers in 30 minute drive time threshold
 FqhcCntDr|INTEGER|Count of Federally Qualified Health Centers (FQHCs) within a 30-minute driving threshold
+OtpTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes
+MoudTyp|INTEGER|Count (0â€“3) of distinct MOUD provider types (buprenorphine, methadone, naltrexone) within a 30-minute impedance-adjusted driving time.
+OtpTmDr2|NUMERIC|Driving time in minutes from the tract centroid to the nearest opioid treatment program, using impedance-adjusted travel time.
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+MetTmDr2|NUMERIC|Driving time in minutes from the tract centroid to the nearest methadone provider, with the impedance factor applied.
+MetTmDr|NUMERIC|Driving time (minutes) to nearest methadone provider
+BupTmDr|NUMERIC|Driving time (minutes) to nearest buprenorphine provider
+NaltTmDr|NUMERIC|Driving time (minutes) to nearest naltrexone provider
+BupTmDr2|NUMERIC|Driving time (minutes) from the tract centroid to the nearest buprenorphine provider, with the impedance factor applied.
 
 ### tract-ruca-2010
 
@@ -2304,7 +2317,7 @@ NaltCntDr30|INTEGER|Count of naltrexone providers in 30 minute drive time thresh
 HospCntDr|INTEGER|Count of hospitals within a 30-minute driving threshold
 VacantP|NUMERIC|Percentage of vacant housing units
 Ovr18P|NUMERIC|
-BupCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold
+BupCntDr30|INTEGER|Count of Buprenorphine providers in 30 minute drive time threshold
 WidwdP|NUMERIC|
 HsdTypCo|NUMERIC|
 BachelorsP|NUMERIC|
