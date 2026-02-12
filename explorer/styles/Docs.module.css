@@ -29,6 +29,12 @@
     max-width: 75vw;
 }
 
+.markdownContainer img {
+    max-width: min(100%, 700px);
+    height: auto;
+    display: block;
+}
+
 
 .fixed {
     height:100vh;
