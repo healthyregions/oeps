@@ -17,10 +17,10 @@ A copy of the geographic boundary files used can be found at the [HEROP GeoData 
 
 ### Description of Data Processing: 
 The Vera Institute prison dataset includes annual state-level and county-level measures derived from administrative correctional records. The following prison-related variables are included in OEPS:
-* Total prison population rate
-* Total prison admission rate
-* Total prison population count
-* Total prison admission count
+1. Total prison population rate
+2. Total prison admission rate
+3. Total prison population count
+4. Total prison admission count
 
 Rates are calculated by the Vera Institute using the county population aged 15–64 as the denominator. This age range is used because populations under 15 and over 64 have a very low risk of incarceration, and their proportions vary substantially across counties.
 
