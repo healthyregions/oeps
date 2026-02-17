@@ -1,13 +1,13 @@
 **Meta Data Name**: Access to HIV Testing  
 **Date Added**: June 23, 2025  
 **Author**: Mahjabin Kabir Adrita  
-**Date Last Modified**: February 5, 2026  
+**Date Last Modified**: February 15, 2026  
 **Last Modified By**: Mahjabin Kabir Adrita  
 
 ### Data Source(s) Description:
 
 #### Resources
-HIV Testing provider data was sourced from the [Substance Abuse and Mental Health Services Administration (SAMHSA)](https://www.samhsa.gov/) via its [Treatment Services Locator Tool](https://findtreatment.samhsa.gov/locator).  
+For 2025, HIV Testing provider data was sourced from the [Substance Abuse and Mental Health Services Administration (SAMHSA)](https://www.samhsa.gov/) via its [Treatment Services Locator Tool](https://findtreatment.samhsa.gov/locator).  
 
 #### Street Network Topology & Travel Time Matrices
 Data on street and pedestrian networks to calculate travel time metrics were sourced from multiple open source data portals. Street network topologies (including street orientations and speed/travel time) all derive from [OpenStreetMap](https://www.openstreetmap.org), also known as OSM.
