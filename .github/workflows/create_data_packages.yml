@@ -1,0 +1,54 @@
+# Creates Frictionless data packages and uploads to S3 when package rules change.
+# See: https://github.com/healthyregions/oeps/issues/277
+name: Create Data Packages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'backend/oeps/data/package_rules/**'
+  workflow_dispatch:
+
+jobs:
+  create_data_packages:
+    runs-on: ubuntu-latest
+    # Only upload on main; allow manual trigger
+    if: github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install backend dependencies
+        working-directory: backend
+        run: |
+          pip install --upgrade pip
+          pip install -e .
+
+      - name: Create .env file
+        working-directory: backend
+        run: echo "FLASK_APP=oeps" > .env
+
+      - name: Create and upload data packages
+        working-directory: backend
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_BUCKET_NAME: ${{ secrets.AWS_BUCKET_NAME }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+        run: |
+          for dir in oeps/data/package_rules/*/; do
+            name=$(basename "$dir")
+            echo "Creating data package: $name"
+            extra=""
+            if [ "$name" = "DSuite2023" ]; then
+              extra="--skip-foreign-keys"
+            fi
+            flask create-data-package -c "$name" --zip --upload --skip-validation --stable-name $extra --overwrite
+          done
