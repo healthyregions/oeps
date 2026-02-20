@@ -1,0 +1,10 @@
+{
+  "name": "SutAvTmDr2",
+  "title": "Driving Time (min) to nearest Substance Use Treatment program (With Impedance)",
+  "type": "number",
+  "example": "9.32",
+  "description": "Average driving time (minutes) across tracts in state to nearest Substance Use Treatment program. (With Impedance)",
+  "metadata": "Access_SubstanceUseTreatment.json",
+  "longitudinal": false,
+  "analysis": false
+}
