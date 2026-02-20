@@ -38,7 +38,9 @@ Driving-network access metrics to the nearest SSP were computed
 We calculated travel-network access metrics for every census tract centroid to the census tract centroid of nearest provider type. 
 
 This analysis was conducted in Python. The scripts are available in code/AccessMetrics - MOUDs. Some of the scripts are available in [code/AccessMetrics - MOUDs.](https://github.com/GeoDaCenter/opioid-policy-scan/tree/fc3d94053dd1941a96a5945d73cc6f4845453484/code/Access%20Metrics%20-%20MOUD), with complete computational notebooks forthcoming in 2026.
- 
+
+ <img width="1491" height="658" alt="image" src="https://github.com/user-attachments/assets/a0d35bf4-3f56-4b1e-8253-c44969af8153" />
+
 
 ### Key Variable and Definitions:
 
