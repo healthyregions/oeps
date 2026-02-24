@@ -40,7 +40,7 @@ This travel time analysis was conducted using a Python Computational notebook.
 
 - The updated 2025 notebook will be released in late January 2026, due to some refinements and updates.
 
-<img width="1491" height="658" alt="image" src="https://github.com/user-attachments/assets/49d241c3-9fe3-4c0a-b43c-1ee5ed836245" />
+![Screenshot](https://github.com/user-attachments/assets/49d241c3-9fe3-4c0a-b43c-1ee5ed836245)
 
 In addition, an **impedance factor** was introduced in 2025 access metrics. Raw travel time measures assume pristine conditions in a best-case-scenario. 
 An impedance approach instead multiples the estimated travel time by a factor, in this case a factor of 2, better approximating actual travel time due to traffic, congestion, etc.
