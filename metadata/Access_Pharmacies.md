@@ -66,7 +66,7 @@ understanding of potential spatial access.
 - All nearest distance calculations are in miles. 
 - All nearest travel time calculations are in minutes.
 - Null values correspond to the worst access, where travel takes over 90 minutes in optimal conditions, or 180 minutes in normal conditions.
-<img width="1378" height="620" alt="image" src="https://github.com/user-attachments/assets/6ce05309-c07c-40bb-b1ae-73d5e19f970c" />
+![Screenshot](https://github.com/user-attachments/assets/6ce05309-c07c-40bb-b1ae-73d5e19f970c)
 
 - Not all metrics are available for U.S. places beyond the continental States; we recommend exploring the data on the OEPS Explorer web map to examine in more depth.
 - While a different time travel calculation was performed in 2025, the street network topology original source (Open Street Map) remained the same.
