@@ -36,7 +36,7 @@ Data was cleaned and prepared for analysis. Centroids were calculated for ZCTA a
 ##### Travel Time and Count Within Threshold
 We calculated travel-network access metrics for the driving travel time to the nearest hospital location and count of hospitals within a 30 minute driving threshold. We calculated travel-network access metrics for every census tract centroid to the census tract centroid of nearest provider type. For *zip code tabulation areas*, overlapping tract-level measures were averaged, weighted by proportion of the overlapping tract, using the corresponding HUD tract-to-zip code crosswalks. 
 
-<img width="1491" height="658" alt="image" src="https://github.com/user-attachments/assets/51dc2b58-67df-45c9-b01d-2c286d2163c9" />
+![Screenshot](https://github.com/user-attachments/assets/51dc2b58-67df-45c9-b01d-2c286d2163c9)
 
 This travel time analysis was conducted using a Python Computational notebook. 
 
@@ -52,7 +52,7 @@ County and state-level variables include the **count** of Census tracts and the 
 For 2025 measures, the tract to county conversion were completed using R code, and can be found
 [scripts/HospitalTract2County.R.](https://github.com/healthyregions/oeps/tree/main/scripts).
 
-<img width="714" height="521" alt="image" src="https://github.com/user-attachments/assets/83538524-1153-43ac-8b64-14fbecf0af10" />
+![Screenshot](https://github.com/user-attachments/assets/83538524-1153-43ac-8b64-14fbecf0af10)
 
 ### Data Limitations:
 - Euclidean distance or straight-line distance is a simple approximation of distance or travel time from an origin centroid to the nearest health center. It is not a precise calculation of real travel times or distances. 
