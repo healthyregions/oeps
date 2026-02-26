@@ -1,0 +1,10 @@
+{
+  "name": "SutTmDrP2",
+  "title": "% tracts with Substance Use Treatment program (60-min drive)",
+  "type": "number",
+  "example": "23",
+  "description": "Percent of tracts with Substance Use Treatment program within a 60-minute driving range.",
+  "metadata": "Access_SubstanceUseTreatment.json",
+  "longitudinal": false,
+  "analysis": false
+}

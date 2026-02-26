@@ -1,0 +1,10 @@
+{
+  "name": "SutTmDr2",
+  "title": "Driving time to nearest Substance Use Treatment Provider (with impedance)",
+  "type": "number",
+  "example": "1.21",
+  "description": "Driving time (minutes) from the tract centroid to the nearest Substance Use Treatment provider, with the impedance factor applied.",
+  "metadata": "Access_SubstanceUseTreatment.json",
+  "longitudinal": false,
+  "analysis": false
+}

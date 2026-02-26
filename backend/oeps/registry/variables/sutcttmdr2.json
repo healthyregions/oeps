@@ -1,0 +1,10 @@
+{
+  "name": "SutCtTmDr2",
+  "title": "Tracts with Substance Use Treatment (SUT) program (60-min drive)",
+  "type": "integer",
+  "example": "12",
+  "description": "Number of tracts with Substance Use Treatment within a 60-min driving range.",
+  "metadata": "Access_SubstanceUseTreatment.json",
+  "longitudinal": false,
+  "analysis": false
+}
