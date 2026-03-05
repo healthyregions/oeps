@@ -1,0 +1,10 @@
+{
+  "name": "SSPTmDr2",
+  "title": "Round trip driving time to nearest SSP",
+  "type": "number",
+  "example": "83.75",
+  "description": "Driving time in minutes from origin census tract centroid to census tract centroid of nearest SSP and back to origin census tract centroid",
+  "metadata": "accessssp.json",
+  "longitudinal": false,
+  "analysis": false
+}
