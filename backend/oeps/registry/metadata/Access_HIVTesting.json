@@ -4,6 +4,6 @@
   "construct": "Spatial Access to HIV Testing",
   "proxy": "Spatial access metrics to testing for human immunodeficiency virus (HIV)(Distance, Travel Time, Count Within Threshold)",
   "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HIVTesting.md",
-  "source": "SAMHSA 2025; OSM 2019 & 2025; Census TIGER 2018 & 2020",
-  "source_long": "U.S. Substance Abuse and Mental Health Services Administration, Treatment Locator Tool, 2025; Open Street Map 2019 & 2025; Census Tiger/Line 2018 & 2020 Shapefiles"
+  "source": "SAMHSA 2025; OSM 2025; Census TIGER 2020",
+  "source_long": "U.S. Substance Abuse and Mental Health Services Administration, Treatment Locator Tool, 2025; Open Street Map 2025; Census Tiger/Line 2020 Shapefiles"
 }
