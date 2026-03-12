@@ -1,0 +1,10 @@
+{
+  "name": "HivCtTmDr2",
+  "title": "Tracts with HIV Testing Facility (30-min drive) with impedance",
+  "type": "number",
+  "example": "56",
+  "description": "Number of tracts with HIV Testing Facility within a 30-min driving range, with impedance",
+  "metadata": "Access_HIVTesting.json",
+  "longitudinal": false,
+  "analysis": false
+}

@@ -1,0 +1,10 @@
+{
+  "name": "HivAvTmDr2",
+  "title": "Avg. Driving Time to nearest HIV Testing Facility with impedance",
+  "type": "number",
+  "example": "78.54",
+  "description": "Average driving time (minutes) across tracts in state to nearest HIV Testing Facility, with impedance",
+  "metadata": "Access_HIVTesting.json",
+  "longitudinal": false,
+  "analysis": false
+}
