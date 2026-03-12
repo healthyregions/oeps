@@ -77,6 +77,13 @@ from ._common_opts import (
     default=False,
     help="Don't run data package validation on the final output.",
 )
+@click.option(
+    "--stable-name",
+    is_flag=True,
+    default=False,
+    help="Use a stable output name without date (e.g. oeps-DSuite2018.zip). "
+    "Use with --upload so download page links never need updating.",
+)
 @add_common_opts(overwrite_opt, registry_opt, data_dir_opt, verbose_opt)
 def create_data_package(
     destination,
@@ -87,6 +94,7 @@ def create_data_package(
     no_cache,
     skip_foreign_keys,
     skip_validation,
+    stable_name,
     check_rules,
     overwrite,
     registry_path,
@@ -123,7 +131,10 @@ def create_data_package(
             print(f"Expected path: {rules_dir.resolve()}")
             exit()
 
-        out_name = f"oeps-{config_name}_{datetime.now().date().isoformat()}"
+        if stable_name:
+            out_name = f"oeps-{config_name}"
+        else:
+            out_name = f"oeps-{config_name}_{datetime.now().date().isoformat()}"
         out_name = out_name + "_no_foreign_keys" if skip_foreign_keys else out_name
         out_path = Path(destination, out_name)
 
