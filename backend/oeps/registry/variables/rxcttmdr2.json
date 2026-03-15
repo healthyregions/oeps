@@ -1,0 +1,10 @@
+{
+  "name": "\tRxCtTmDr2",
+  "title": "Tracts with Pharmacy (30-min drive)",
+  "type": "integer",
+  "example": "345",
+  "description": "Number of tracts with pharmacy within a 30-min driving range with impedance factor",
+  "metadata": "Access_Pharmacies.json",
+  "longitudinal": false,
+  "analysis": false
+}
