@@ -1,8 +1,8 @@
 **Meta Data Name**: Access to Federal Qualified Health Centers (FQHCs)  
 **Date Added**: January 5, 2021  
 **Author**: Susan Paykin, Wataru Morioka, Mahjabin Kabir Adrita, Marynia Kolak  
-**Date Last Modified**: December 23, 2025   
-**Last Modified By**: Marynia Kolak
+**Date Last Modified**: February 5, 2026   
+**Last Modified By**: Mahjabin Kabir Adrita
 
 ### Data Source(s) Description:  
 
@@ -50,19 +50,21 @@ County and state-level variables include the **count** of Census tracts and the 
 For 2025 measures, the tract to county conversion were completed using R code, and can be found
 [scripts/fqhc-tract2county.R.](https://github.com/healthyregions/oeps/tree/main/scripts).
 
-[Percent of tracts within 30-min driving range, with Impedance (FqhcTmDrP2)](/images/FqhcTmDrP2.png)
-
-[Average time drive to nearest FQHC, with Impedance (FqhcAvTmDr2)](/images/FqhcAvTmDr2_2025.png)
+![FqhcAvTmDr2_2025](https://github.com/user-attachments/assets/a1572118-06b9-4af6-9de9-9e00838e706d)
+*Average drive time to nearest FQHC, with Impedance (FqhcAvTmDr2)*
 
 ### Data Limitations:
 - Euclidean distance or straight-line distance is a simple approximation of distance or travel time from an origin centroid to the nearest health center. It is not a precise calculation of real travel times or distances. 
 - The travel times are capped at a 90-minute threshold (or 180 minutes, with impedance factor) were not calculated, as they were deemed too far = no access. 
+- Missing data and Travel Times that were capped both show up as blank on the data table.  
 - Travel times are calculated from centroid to centroid of each census tract, meaning that the travel time will equal zero if there is a resource in the census tract. Thus, travel times must be considered approximations, and best suited for relative
-understanding of potential spatial access. 
+understanding of potential spatial access.
+- Unlike most U.S. states, Connecticut’s traditional eight counties do not function as active government units and have not been used for statistical reporting for decades. More recently, the U.S. Census Bureau replaced Connecticut’s eight historical counties with nine planning regions as official county-equivalent geographies, effective in Census Bureau products beginning in 2022, with full adoption in federal data products through 2023–2024. Because this redefinition means that county FIPS codes and county-level boundaries no longer align consistently with the definitions used elsewhere in our dataset (which assume stable county geographies), some Connecticut tracts may appear as empty or missing in the county summary table. This is especially true where tract identifiers include legacy county codes that no longer match current county-equivalent definitions.
 - Note that Alaska travel times may reflect the data technically, but due to the geographic complexities of the state, we don't recommend using measures for that state at this time. Tracts are very large, and while there may
 be a FQHC location within the tract -- giving it a travel time of zero -- the physical size of the tract boundary makes that actual time a bit unreasonable. Please proceed with caution in frontier locations.
 
-[Limitations of Alaska travel times due to tract boundary size and approach utilized](/images/FqhcAvTmDr2_Alaska_2025.png)
+![Limitations of Alaska travel times due to tract boundary size and approach utilized](https://github.com/user-attachments/assets/b9ea8e36-6643-4851-9f9a-62ea9b9dd72b)
+*Limitations of Alaska travel times due to tract boundary size and approach utilized*
 
 ### Comments/Notes:
 - All nearest distance calculations are in miles. 
