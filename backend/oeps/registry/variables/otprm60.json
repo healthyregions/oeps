@@ -1,0 +1,10 @@
+{
+  "name": "OtpRm60",
+  "title": "Opioid Treatment Provider access 30 minutes (RAAM)",
+  "type": "number",
+  "example": "1.23",
+  "description": "Opioid Treatment Provider access 30 minutes (RAAM)",
+  "metadata": "Access_MOUDs.json",
+  "longitudinal": false,
+  "analysis": false
+}
