@@ -2492,7 +2492,7 @@
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Pharmacies.md"
   },
   {
-    "variable": "Tracts with Pharmacy (30-min drive)",
+    "variable": "Tracts with Pharmacy (30-min drive) with impedance factor",
     "numerator": "county-2025",
     "nProperty": "RxCtTmDr2",
     "theme": "Environment",

@@ -608,7 +608,8 @@
           "Distance (mi) to nearest Pharmacy",
           "Driving Time (min) to nearest Pharmacy",
           "Driving Time (min) to nearest Pharmacy with Impedance Factor",
-          "Tracts with Pharmacy (30-min drive)"
+          "Tracts with Pharmacy (30-min drive)",
+          "Tracts with Pharmacy (30-min drive) with impedance factor"
         ],
         "Source": "InfoGroup 2019; Amazon S3 2025; OSM 2019 & 2025; Census TIGER 2018 & 2020",
         "Metadata": "Access_Pharmacies",

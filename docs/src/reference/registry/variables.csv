@@ -307,7 +307,7 @@ RxAvTmDr,Avg. Driving Time (min) to nearest Pharmacy ,number,5.97,Average drivin
 RxAvTmDr2,Avg. Driving Time (min) to nearest Pharmacy with Impedance Factor,number,22.11,Average driving time (minutes) across tracts in state to nearest pharmacy with Impedance Factor,county-2025,Access_Pharmacies,False,False
 RxCntDr,Count of Pharmacies (30-min drive),integer,58,Count of pharmacies within a 30-minute driving threshold,"tract-2019, tract-2025, zcta-2019",Access_Pharmacies,False,False
 RxCtTmDr,Tracts with Pharmacy (30-min drive),integer,1406,Number of tracts with pharmacy within a 30-min driving range,"county-2019, county-2025, state-2019",Access_Pharmacies,False,False
-RxCtTmDr2,Tracts with Pharmacy (30-min drive),integer,345,Number of tracts with pharmacy within a 30-min driving range with impedance factor,county-2025,Access_Pharmacies,False,False
+RxCtTmDr2,Tracts with Pharmacy (30-min drive) with impedance factor,integer,345,Number of tracts with pharmacy within a 30-min driving range with impedance factor,county-2025,Access_Pharmacies,False,False
 RxMinDis,Distance (mi) to nearest Pharmacy,number,0.84,"Euclidean distance* from tract/zip centroid to nearest pharmacy, in miles","tract-2019, zcta-2019",Access_Pharmacies,False,False
 RxTmDr,Driving Time (min) to nearest Pharmacy,number,0,"Driving time from tract/zip origin centroid to the nearest tract/zip pharmacy destination centroid, in minutes","tract-2019, tract-2025, zcta-2019",Access_Pharmacies,False,True
 RxTmDr2,Driving Time (min) to nearest Pharmacy with Impedance Factor,number,34.54,"Driving time from tract/zip origin centroid to the nearest tract/zip pharmacy destination centroid with impedance factor, in minutes",tract-2025,Access_Pharmacies,False,False

@@ -4503,7 +4503,7 @@
         ]
       },
       {
-        "title": "Tracts with Pharmacy (30-min drive)",
+        "title": "Tracts with Pharmacy (30-min drive) with impedance factor",
         "name": "RxCtTmDr2",
         "description": "Number of tracts with pharmacy within a 30-min driving range with impedance factor",
         "years": [

@@ -60,7 +60,7 @@ Usage: remove-variable [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f7e18498fd0>
+    * Type: <click.types.Path object at 0x7f26cf7bcf10>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -123,7 +123,7 @@ Usage: clean-explorer-bucket [OPTIONS]
 ###### Options
 
 * `explorer_path`:
-    * Type: <click.types.Path object at 0x7f86b1aa06d0>
+    * Type: <click.types.Path object at 0x7feaf1db4850>
     * Default: `../explorer`
     * Usage: `--explorer-path`
 
@@ -214,7 +214,7 @@ Usage: move-variable [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f591bbbced0>
+    * Type: <click.types.Path object at 0x7f59ec2a49d0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -309,7 +309,7 @@ Usage: create-table-source [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7fcae8da13d0>
+    * Type: <click.types.Path object at 0x7f1a2b5bcd90>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -402,7 +402,7 @@ Usage: build-docs [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f4531abc8d0>
+    * Type: <click.types.Path object at 0x7f01cbea1110>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -454,7 +454,7 @@ Usage: validate-registry [OPTIONS]
 ###### Options
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f4181abc950>
+    * Type: <click.types.Path object at 0x7f17210b4ad0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -550,7 +550,7 @@ Usage: merge-csv [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f338cbbcb10>
+    * Type: <click.types.Path object at 0x7f0b1abd4d10>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -719,7 +719,7 @@ Usage: bigquery-upload [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f3bdf0a0a90>
+    * Type: <click.types.Path object at 0x7fdd5ffbd050>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -782,7 +782,7 @@ Usage: create-data-package [OPTIONS]
 ###### Options
 
 * `destination`:
-    * Type: <click.types.Path object at 0x7f4d7e58eb90>
+    * Type: <click.types.Path object at 0x7f08bd77e650>
     * Default: `.temp/data-packages`
     * Usage: `--destination
 -d`
@@ -864,6 +864,15 @@ Usage: create-data-package [OPTIONS]
 
 
 
+* `stable_name`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--stable-name`
+
+    Use a stable output name without date (e.g. oeps-DSuite2018.zip). Use with --upload so download page links never need updating.
+
+
+
 * `overwrite`:
     * Type: BOOL
     * Default: `False`
@@ -874,7 +883,7 @@ Usage: create-data-package [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f4d7eeb8e50>
+    * Type: <click.types.Path object at 0x7f08be0a8c10>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -883,7 +892,7 @@ Usage: create-data-package [OPTIONS]
 
 
 * `data_dir_path`:
-    * Type: <click.types.Path object at 0x7f4d7eeb8d90>
+    * Type: <click.types.Path object at 0x7f08be0a8b50>
     * Default: `oeps/data`
     * Usage: `--data-dir-path`
 
@@ -947,6 +956,9 @@ Options:
                           that occur when Shapefiles are used in foreign keys.
   --skip-validation       Don't run data package validation on the final
                           output.
+  --stable-name           Use a stable output name without date (e.g. oeps-
+                          DSuite2018.zip). Use with --upload so download page
+                          links never need updating.
   --overwrite             Overwrite output content if it already exists.
   --registry-path PATH    Optional override for the registry directory.
   --data-dir-path PATH    Optional override for the data directory path.
@@ -978,7 +990,7 @@ Usage: build-explorer [OPTIONS]
 ###### Options
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f8c276a0e90>
+    * Type: <click.types.Path object at 0x7fd7e22a5290>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -987,7 +999,7 @@ Usage: build-explorer [OPTIONS]
 
 
 * `explorer_path`:
-    * Type: <click.types.Path object at 0x7f8c276a0ad0>
+    * Type: <click.types.Path object at 0x7fd7e22a4ed0>
     * Default: `../explorer`
     * Usage: `--explorer-path`
 
