@@ -268,14 +268,14 @@
   {
     "variable": "% Population: Age 15-44",
     "numerator": "state-2018__county-2018__zcta-2018__tract-2018",
-    "nProperty": "Age15_44",
+    "nProperty": "Age15_44P",
     "theme": "Social",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Demographic_Characteristics.md"
   },
   {
     "variable": "% Population: Age 15-44",
     "numerator": "state-2018__county-2018__zcta-2018__tract-2018",
-    "nProperty": "Age15_44P",
+    "nProperty": "Age15_44",
     "theme": "Social",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Demographic_Characteristics.md"
   },
@@ -413,6 +413,13 @@
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Hospitals.md"
   },
   {
+    "variable": "% Tracts within 30-min Drive of Hospital with Impedance Factor",
+    "numerator": "county-2025",
+    "nProperty": "HospTmDrP2",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Hospitals.md"
+  },
+  {
     "variable": "% Tracts within 30-min Drive of Methadone Provider",
     "numerator": "state-2020",
     "nProperty": "PctMetT",
@@ -456,8 +463,15 @@
   },
   {
     "variable": "% tracts with Pharmacy (30-min drive)",
-    "numerator": "state-2019__county-2019",
+    "numerator": "state-2019__county-2025",
     "nProperty": "RxTmDrP",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Pharmacies.md"
+  },
+  {
+    "variable": "% tracts with Pharmacy (30-min drive) with Impedance Factor",
+    "numerator": "county-2025",
+    "nProperty": "RxTmDrP2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Pharmacies.md"
   },
@@ -589,8 +603,15 @@
   },
   {
     "variable": "Avg. Driving Time (min) to nearest Pharmacy ",
-    "numerator": "state-2019__county-2019",
+    "numerator": "state-2019__county-2025",
     "nProperty": "RxAvTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Pharmacies.md"
+  },
+  {
+    "variable": "Avg. Driving Time (min) to nearest Pharmacy with Impedance Factor",
+    "numerator": "county-2025",
+    "nProperty": "RxAvTmDr2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Pharmacies.md"
   },
@@ -598,6 +619,13 @@
     "variable": "Avg. Driving Time to nearest Hospital",
     "numerator": "state-2020__county-2020",
     "nProperty": "HospAvTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Hospitals.md"
+  },
+  {
+    "variable": "Avg. Driving Time to nearest Hospital with Impedance Factor",
+    "numerator": "county-2025",
+    "nProperty": "HospAvTmDr2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Hospitals.md"
   },
@@ -890,7 +918,7 @@
   },
   {
     "variable": "Count of Pharmacies (30-min drive)",
-    "numerator": "zcta-2019__tract-2019",
+    "numerator": "zcta-2019__tract-2025",
     "nProperty": "RxCntDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Pharmacies.md"
@@ -1100,22 +1128,29 @@
   },
   {
     "variable": "Driving Time (min) to nearest Opioid Treatment Program (OTP)",
-    "numerator": "zcta-2021__tract-2025",
-    "nProperty": "OtpTmDr",
-    "theme": "Environment",
-    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
-  },
-  {
-    "variable": "Driving Time (min) to nearest Opioid Treatment Program (OTP)",
     "numerator": "state-2021__county-2021",
     "nProperty": "OtpAvTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
+    "variable": "Driving Time (min) to nearest Opioid Treatment Program (OTP)",
+    "numerator": "zcta-2021__tract-2025",
+    "nProperty": "OtpTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
+  },
+  {
     "variable": "Driving Time (min) to nearest Pharmacy",
-    "numerator": "zcta-2019__tract-2019",
+    "numerator": "zcta-2019__tract-2025",
     "nProperty": "RxTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Pharmacies.md"
+  },
+  {
+    "variable": "Driving Time (min) to nearest Pharmacy with Impedance Factor",
+    "numerator": "tract-2025",
+    "nProperty": "RxTmDr2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Pharmacies.md"
   },
@@ -1172,6 +1207,13 @@
     "variable": "Driving time (min) to nearest Hospital",
     "numerator": "zcta-2020__tract-2020",
     "nProperty": "HospTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Hospitals.md"
+  },
+  {
+    "variable": "Driving time (min) to nearest Hospital with Impedance Factor",
+    "numerator": "tract-2025",
+    "nProperty": "HospTmDr2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Hospitals.md"
   },
@@ -2366,6 +2408,13 @@
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Hospitals.md"
   },
   {
+    "variable": "Tracts with Hospitals (30-min drive) with impedance",
+    "numerator": "county-2025",
+    "nProperty": "HospCtTmDr2",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Hospitals.md"
+  },
+  {
     "variable": "Tracts with Mental Health Provider (30-min drive)",
     "numerator": "state-2020__county-2020",
     "nProperty": "MhCtTmDr",
@@ -2437,8 +2486,15 @@
   },
   {
     "variable": "Tracts with Pharmacy (30-min drive)",
-    "numerator": "state-2019__county-2019",
+    "numerator": "state-2019__county-2025",
     "nProperty": "RxCtTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Pharmacies.md"
+  },
+  {
+    "variable": "Tracts with Pharmacy (30-min drive)",
+    "numerator": "county-2025",
+    "nProperty": "RxCtTmDr2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Pharmacies.md"
   },

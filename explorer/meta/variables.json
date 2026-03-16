@@ -17,127 +17,22 @@
     ]
   },
   "Social": {
-    "Social capital index": [
+    "Household Characteristics": [
       {
-        "Variable Construct": "Social capital index",
-        "Variable Proxy": "Social capital index, Housing tenure, Libraries per capita, Religious institutions per capita",
+        "Variable Construct": "Household Characteristics",
+        "Variable Proxy": "Percent males aged 15 or older who are married, never married, separated, divorced, or widowed",
         "Variables": [
-          "Libraries per Capita",
-          "Median Housing Tenure",
-          "Religious institutions per capita",
-          "Response Rate",
-          "Social Capital Index"
-        ],
-        "Source": "ACS 2018, 2023; Overture",
-        "Metadata": "Social_Capital",
-        "Spatial Scale": "Tract, County",
-        "Years": "2018, 2023"
-      }
-    ],
-    "Veteran Population": [
-      {
-        "Variable Construct": "Veteran Population",
-        "Variable Proxy": "Total Veteran Population, % Veteran Population",
-        "Variables": [
-          "% Veteran Population",
-          "Total Veteran Population"
-        ],
-        "Source": "ACS 2018, 2023; Census 2010, 2020",
-        "Metadata": "Veteran_Population",
-        "Spatial Scale": "Tract, Zip, County, State",
-        "Years": "2010, 2018, 2020, 2023"
-      }
-    ],
-    "Response rate": [],
-    "Smoking": [
-      {
-        "Variable Construct": "Smoking",
-        "Variable Proxy": "Percentage of Smoking Population",
-        "Variables": [
-          "Percentage of Smoking Population"
-        ],
-        "Source": "County Health Rankings & Roadmaps (CHR&R), 2025",
-        "Metadata": "Smoking_Population",
-        "Spatial Scale": "County, State",
-        "Years": "2025"
-      }
-    ],
-    "Community Overlay Variables": [
-      {
-        "Variable Construct": "Community Overlay Variables",
-        "Variable Proxy": "Hypersegregated Cities, Southern Blackbelt, Native American Reservations",
-        "Variables": [
-          "African American South",
-          "Hypersegregated Cities",
-          "Native American & Tribal Lands"
-        ],
-        "Source": "Census 2000; TIGER/Line 2017; Massey et al, 2015;",
-        "Metadata": "Unique_Communities",
-        "Spatial Scale": "County",
-        "Years": "2000, 2015, 2017"
-      }
-    ],
-    "Race & Ethnicity": [
-      {
-        "Variable Construct": "Race & Ethnicity",
-        "Variable Proxy": "Population percentages by race and ethnicity",
-        "Variables": [
-          "% Asian Population",
-          "% Black/African American Populationw",
-          "% Hispanic/Latinx Population",
-          "% Native American/Alaska Native Population",
-          "% Native Hawaiian & Other PI Population",
-          "% Other (race) Population",
-          "% Population identifying as two or more races",
-          "% Population with ethnicity identified as of Hispanic or Latinx origin",
-          "% White Population",
-          "Count Asian Population",
-          "Count Black/African American Populationw",
-          "Count Hispanic/Latinx Population",
-          "Count Native American/Alaska Native Population",
-          "Count Native Hawaiian & Other PI Population",
-          "Count Other (race) Population",
-          "Count Population identifying as two or more races",
-          "Count White Population"
-        ],
-        "Source": "ACS 2018, 2023; Census 2010, 2020; IPUMS 1980, 1990, 2000",
-        "Metadata": "Race_Ethnicity",
-        "Spatial Scale": "Tract, Zip, County, State",
-        "Years": "1980, 1990, 2000, 2010, 2018, 2020, 2023"
-      }
-    ],
-    "Population with Disability": [
-      {
-        "Variable Construct": "Population with Disability",
-        "Variable Proxy": "Population with Disability (%)",
-        "Variables": [
-          "% Population with Disability"
-        ],
-        "Source": "ACS 2012, 2018, 2023; IPUMS NHGIS 2000",
-        "Metadata": "Population_withDisability",
-        "Spatial Scale": "Tract, Zip, County, State",
-        "Years": "2000, 2010, 2018, 2020, 2023"
-      }
-    ],
-    "Educational Characteristics": [
-      {
-        "Variable Construct": "Educational Characteristics",
-        "Variable Proxy": "Population percentage with or without varying levels of educational attainment, further grouped by age",
-        "Variables": [
-          "% Persons aged 25 years and over with a bachelor\u2019s degree as their highest level of education",
-          "% Population 25 years and over with some college, but no degree",
-          "% Population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)",
-          "% Population aged 25 years and over with a graduate or professional degree",
-          "% Population aged 25 years and over with less than a high school diploma",
-          "Proportion of the population aged 5+ who speak a language other than English at home but are proficient in English"
+          "% Males 15 years and over who are divorced",
+          "% Males aged 15 or older who are married and living with their spouse",
+          "% Males aged 15 or older who never got married",
+          "% Males aged 15 years and over who are separated from their spouse",
+          "% Population aged 15 and over who are widowed"
         ],
         "Source": "ACS 2020, 2023",
-        "Metadata": "Educational_Characteristics",
-        "Spatial Scale": "Tract, Zip, County, State",
-        "Years": "1980, 1990, 2000, 2010, 2018, 2020, 2023"
-      }
-    ],
-    "Household Characteristics": [
+        "Metadata": "Marital_Status",
+        "Spatial Scale": "Tract, Zip, County",
+        "Years": "2020, 2023"
+      },
       {
         "Variable Construct": "Household Characteristics",
         "Variable Proxy": "Total Population in Households, % Nonrelatives in Family Households, % Nonrelatives in Non-family Households, % Males 15 years and over who are divorced, Average family size, etc.",
@@ -164,21 +59,62 @@
         "Metadata": "Household_Characteristics",
         "Spatial Scale": "Tract, Zip, County, State",
         "Years": "2018, 2020, 2023"
-      },
+      }
+    ],
+    "Social capital index": [
       {
-        "Variable Construct": "Household Characteristics",
-        "Variable Proxy": "Percent males aged 15 or older who are married, never married, separated, divorced, or widowed",
+        "Variable Construct": "Social capital index",
+        "Variable Proxy": "Social capital index, Housing tenure, Libraries per capita, Religious institutions per capita",
         "Variables": [
-          "% Males 15 years and over who are divorced",
-          "% Males aged 15 or older who are married and living with their spouse",
-          "% Males aged 15 or older who never got married",
-          "% Males aged 15 years and over who are separated from their spouse",
-          "% Population aged 15 and over who are widowed"
+          "Libraries per Capita",
+          "Median Housing Tenure",
+          "Religious institutions per capita",
+          "Response Rate",
+          "Social Capital Index"
+        ],
+        "Source": "ACS 2018, 2023; Overture",
+        "Metadata": "Social_Capital",
+        "Spatial Scale": "Tract, County",
+        "Years": "2018, 2023"
+      }
+    ],
+    "Educational Characteristics": [
+      {
+        "Variable Construct": "Educational Characteristics",
+        "Variable Proxy": "Population percentage with or without varying levels of educational attainment, further grouped by age",
+        "Variables": [
+          "% Persons aged 25 years and over with a bachelor\u2019s degree as their highest level of education",
+          "% Population 25 years and over with some college, but no degree",
+          "% Population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)",
+          "% Population aged 25 years and over with a graduate or professional degree",
+          "% Population aged 25 years and over with less than a high school diploma",
+          "Proportion of the population aged 5+ who speak a language other than English at home but are proficient in English"
         ],
         "Source": "ACS 2020, 2023",
-        "Metadata": "Marital_Status",
-        "Spatial Scale": "Tract, Zip, County",
-        "Years": "2020, 2023"
+        "Metadata": "Educational_Characteristics",
+        "Spatial Scale": "Tract, Zip, County, State",
+        "Years": "1980, 1990, 2000, 2010, 2018, 2020, 2023"
+      }
+    ],
+    "Residential Segregation Measures": [
+      {
+        "Variable Construct": "Residential Segregation Measures",
+        "Variable Proxy": "Dissimilarity, Interaction, and Isolation Indices for Black, Asian, & Hispanic Groups",
+        "Variables": [
+          "Segregation: Dissimilarity (Asian)",
+          "Segregation: Dissimilarity (Black)",
+          "Segregation: Dissimilarity (Hispanic)",
+          "Segregation: Interaction (Asian)",
+          "Segregation: Interaction (Black)",
+          "Segregation: Interaction (Hispanic)",
+          "Segregation: Isolation (Asian)",
+          "Segregation: Isolation (Black)",
+          "Segregation: Isolation (Hispanic)"
+        ],
+        "Source": "ACS 2018, 2023",
+        "Metadata": "Residential_Segregation",
+        "Spatial Scale": "Zip, County, State",
+        "Years": "2018, 2023"
       }
     ],
     "Incarceration": [
@@ -237,27 +173,22 @@
         "Years": "2016, 2022, 2024"
       }
     ],
-    "Residential Segregation Measures": [
+    "Community Overlay Variables": [
       {
-        "Variable Construct": "Residential Segregation Measures",
-        "Variable Proxy": "Dissimilarity, Interaction, and Isolation Indices for Black, Asian, & Hispanic Groups",
+        "Variable Construct": "Community Overlay Variables",
+        "Variable Proxy": "Hypersegregated Cities, Southern Blackbelt, Native American Reservations",
         "Variables": [
-          "Segregation: Dissimilarity (Asian)",
-          "Segregation: Dissimilarity (Black)",
-          "Segregation: Dissimilarity (Hispanic)",
-          "Segregation: Interaction (Asian)",
-          "Segregation: Interaction (Black)",
-          "Segregation: Interaction (Hispanic)",
-          "Segregation: Isolation (Asian)",
-          "Segregation: Isolation (Black)",
-          "Segregation: Isolation (Hispanic)"
+          "African American South",
+          "Hypersegregated Cities",
+          "Native American & Tribal Lands"
         ],
-        "Source": "ACS 2018, 2023",
-        "Metadata": "Residential_Segregation",
-        "Spatial Scale": "Zip, County, State",
-        "Years": "2018, 2023"
+        "Source": "Census 2000; TIGER/Line 2017; Massey et al, 2015;",
+        "Metadata": "Unique_Communities",
+        "Spatial Scale": "County",
+        "Years": "2000, 2015, 2017"
       }
     ],
+    "Response rate": [],
     "Population, Age & Sex Ratios": [
       {
         "Variable Construct": "Population, Age & Sex Ratios",
@@ -287,60 +218,78 @@
         "Spatial Scale": "Tract, Zip, County, State",
         "Years": "1980, 1990, 2000, 2010, 2018, 2020, 2023"
       }
+    ],
+    "Race & Ethnicity": [
+      {
+        "Variable Construct": "Race & Ethnicity",
+        "Variable Proxy": "Population percentages by race and ethnicity",
+        "Variables": [
+          "% Asian Population",
+          "% Black/African American Populationw",
+          "% Hispanic/Latinx Population",
+          "% Native American/Alaska Native Population",
+          "% Native Hawaiian & Other PI Population",
+          "% Other (race) Population",
+          "% Population identifying as two or more races",
+          "% Population with ethnicity identified as of Hispanic or Latinx origin",
+          "% White Population",
+          "Count Asian Population",
+          "Count Black/African American Populationw",
+          "Count Hispanic/Latinx Population",
+          "Count Native American/Alaska Native Population",
+          "Count Native Hawaiian & Other PI Population",
+          "Count Other (race) Population",
+          "Count Population identifying as two or more races",
+          "Count White Population"
+        ],
+        "Source": "ACS 2018, 2023; Census 2010, 2020; IPUMS 1980, 1990, 2000",
+        "Metadata": "Race_Ethnicity",
+        "Spatial Scale": "Tract, Zip, County, State",
+        "Years": "1980, 1990, 2000, 2010, 2018, 2020, 2023"
+      }
+    ],
+    "Population with Disability": [
+      {
+        "Variable Construct": "Population with Disability",
+        "Variable Proxy": "Population with Disability (%)",
+        "Variables": [
+          "% Population with Disability"
+        ],
+        "Source": "ACS 2012, 2018, 2023; IPUMS NHGIS 2000",
+        "Metadata": "Population_withDisability",
+        "Spatial Scale": "Tract, Zip, County, State",
+        "Years": "2000, 2010, 2018, 2020, 2023"
+      }
+    ],
+    "Veteran Population": [
+      {
+        "Variable Construct": "Veteran Population",
+        "Variable Proxy": "Total Veteran Population, % Veteran Population",
+        "Variables": [
+          "% Veteran Population",
+          "Total Veteran Population"
+        ],
+        "Source": "ACS 2018, 2023; Census 2010, 2020",
+        "Metadata": "Veteran_Population",
+        "Spatial Scale": "Tract, Zip, County, State",
+        "Years": "2010, 2018, 2020, 2023"
+      }
+    ],
+    "Smoking": [
+      {
+        "Variable Construct": "Smoking",
+        "Variable Proxy": "Percentage of Smoking Population",
+        "Variables": [
+          "Percentage of Smoking Population"
+        ],
+        "Source": "County Health Rankings & Roadmaps (CHR&R), 2025",
+        "Metadata": "Smoking_Population",
+        "Spatial Scale": "County, State",
+        "Years": "2025"
+      }
     ]
   },
   "Environment": {
-    "Alcohol Outlet Density Measures": [
-      {
-        "Variable Construct": "Alcohol Outlet Density Measures",
-        "Variable Proxy": "Alcohol outlet density measures (geographic density, per capita density, total)",
-        "Variables": [
-          "Alcohol Outlets Density",
-          "Alcohol Outlets per Capita",
-          "Land Area (Square Miles)",
-          "Total Alcohol Outlets"
-        ],
-        "Source": "InfoGroup 2018 ",
-        "Metadata": "Alcohol_Outlet_Density",
-        "Spatial Scale": "Tract, Zip, County, State",
-        "Years": "2018"
-      }
-    ],
-    "Spatial Access to HIV Testing": [],
-    "Healthcare Provider Access": [
-      {
-        "Variable Construct": "Healthcare Provider Access",
-        "Variable Proxy": "Primary Care and Specialty Physician Density (Total, Per Capita Density)",
-        "Variables": [
-          "Count of Primary Care Physicians (PCPs)",
-          "Count of Specialty Physicians",
-          "Primary Care Physicians (PCP) per 100k",
-          "Specialty Physicians per 100k"
-        ],
-        "Source": "Dartmouth Atlas 2010",
-        "Metadata": "Healthcare_Provider_Access",
-        "Spatial Scale": "Tract, County, State",
-        "Years": "2010"
-      }
-    ],
-    "Spatial Access to Hospitals": [
-      {
-        "Variable Construct": "Spatial Access to Hospitals",
-        "Variable Proxy": "Spatial access metrics to Hospitals (Distance, Travel Time, Count Within Threshold)",
-        "Variables": [
-          "% Tracts within 30-min Drive of Hospital",
-          "Avg. Driving Time to nearest Hospital",
-          "Count of Hospitals (30-min drive)",
-          "Distance (mi) to nearest Hospital",
-          "Driving time (min) to nearest Hospital",
-          "Tracts with Hospital (30-min drive)"
-        ],
-        "Source": "CovidCareMap 2020",
-        "Metadata": "Access_Hospitals",
-        "Spatial Scale": "Tract, Zip, County, State",
-        "Years": "2020"
-      }
-    ],
     "Greenspace Measures": [
       {
         "Variable Construct": "Greenspace Measures",
@@ -354,43 +303,6 @@
         "Metadata": "Greenspace_Measures",
         "Spatial Scale": "Tract, Zip, County, State",
         "Years": "2018, 2022"
-      }
-    ],
-    "Urban/Suburban/Rural Classification": [
-      {
-        "Variable Construct": "Urban/Suburban/Rural Classification",
-        "Variable Proxy": "Primary RUCA Code, Secondary RUCA Code by County",
-        "Variables": [
-          "% Tracts Rural (RUCA)",
-          "% Tracts Suburban (RUCA)",
-          "% Tracts Urban (RUCA)",
-          "Census Flags",
-          "Primary RUCA Code",
-          "Secondary RUCA Code",
-          "Urban-Suburban-Rural"
-        ],
-        "Source": "USDA-ERS 2010; ACS 2018",
-        "Metadata": "Urbanicity",
-        "Spatial Scale": "Tract, Zip, County",
-        "Years": "2010, 2018"
-      }
-    ],
-    "Housing Characteristics ": [
-      {
-        "Variable Construct": "Housing Characteristics ",
-        "Variable Proxy": "Housing Characteristics (Occupancy Rate, Vacancy Rate, Rented Rate, Long term Occupancy, Mobile Home Rate, Housing Unit Density)",
-        "Variables": [
-          "Housing Unit Density",
-          "Long-Term Occupancy %",
-          "Mobile Homes %",
-          "Rentals %",
-          "Total Occupied Housing Units",
-          "Vacant Housing Units %"
-        ],
-        "Source": "ACS 2012, 2018; Social Explorer 2010",
-        "Metadata": "Housing_Variables",
-        "Spatial Scale": "Tract, Zip, County, State",
-        "Years": "1980, 1990, 2000, 2010, 2018, 2020, 2023"
       }
     ],
     "Spatial access to Federally Qualified Health Centers (FQHCs)": [
@@ -417,62 +329,20 @@
         "Years": "2018, 2020, 2025"
       }
     ],
-    "Spatial access to HCV Testing": [
+    "Alcohol Outlet Density Measures": [
       {
-        "Variable Construct": "Spatial access to HCV Testing",
-        "Variable Proxy": "Spatial access metrics to testing for hepatitis C virus (HCV) infections (Straight-line Distance, Driving Time, Count of Resources)",
+        "Variable Construct": "Alcohol Outlet Density Measures",
+        "Variable Proxy": "Alcohol outlet density measures (geographic density, per capita density, total)",
         "Variables": [
-          "Average time drive to nearest HCV testing provider",
-          "Average time drive to nearest HIV provider",
-          "Count of HCV Providers",
-          "Count of HIV Providers",
-          "Count of tracts within 30-min driving range",
-          "Distance to nearest HCV Provider",
-          "Distance to nearest HIV Provider",
-          "Driving time to nearest HCV Provider",
-          "Driving time to nearest HIV Provider",
-          "Percent of tracts within 30-min driving range"
+          "Alcohol Outlets Density",
+          "Alcohol Outlets per Capita",
+          "Land Area (Square Miles)",
+          "Total Alcohol Outlets"
         ],
-        "Source": "SAMHSA 2025",
-        "Metadata": "Access_HCVTesting",
-        "Spatial Scale": "",
-        "Years": ""
-      }
-    ],
-    "Spatial Access to Substance Use Treatment Providers": [
-      {
-        "Variable Construct": "Spatial Access to Substance Use Treatment Providers",
-        "Variable Proxy": "Spatial access metrics to Substance Use Treatment Providers (Distance, Travel Time, Count Within Threshold)",
-        "Variables": [
-          "% tracts with Substance Use Treatment program (30-min drive)",
-          "Count of Substance Use Treatment (SUT) facility (30-min drive)",
-          "Distance (mi) to Substance Use Treatment (SUT) facility",
-          "Driving Time (min) to nearest Substance Use Treatment program",
-          "Driving time (min) to Substance Use Treatment (SUT) facility",
-          "Tracts with Substance Use Treatment (SUT) program (30-min drive)"
-        ],
-        "Source": "SAMHSA 2020",
-        "Metadata": "Access_SubstanceUseTreatment",
+        "Source": "InfoGroup 2018 ",
+        "Metadata": "Alcohol_Outlet_Density",
         "Spatial Scale": "Tract, Zip, County, State",
-        "Years": "2020"
-      }
-    ],
-    "Spatial Access to Pharmacies": [
-      {
-        "Variable Construct": "Spatial Access to Pharmacies",
-        "Variable Proxy": "Spatial access metrics to Pharmacies (Distance, Travel Time, Count Within Threshold)",
-        "Variables": [
-          "% tracts with Pharmacy (30-min drive)",
-          "Avg. Driving Time (min) to nearest Pharmacy ",
-          "Count of Pharmacies (30-min drive)",
-          "Distance (mi) to nearest Pharmacy",
-          "Driving Time (min) to nearest Pharmacy",
-          "Tracts with Pharmacy (30-min drive)"
-        ],
-        "Source": "InfoGroup 2019",
-        "Metadata": "Access_Pharmacies",
-        "Spatial Scale": "Tract, Zip, County, State",
-        "Years": "2019"
+        "Years": "2018"
       }
     ],
     "Spatial Access to MOUDs": [
@@ -592,6 +462,47 @@
         "Years": "1980, 1990, 2000, 2010, 2020, 2021, 2025"
       }
     ],
+    "Housing Characteristics ": [
+      {
+        "Variable Construct": "Housing Characteristics ",
+        "Variable Proxy": "Housing Characteristics (Occupancy Rate, Vacancy Rate, Rented Rate, Long term Occupancy, Mobile Home Rate, Housing Unit Density)",
+        "Variables": [
+          "Housing Unit Density",
+          "Long-Term Occupancy %",
+          "Mobile Homes %",
+          "Rentals %",
+          "Total Occupied Housing Units",
+          "Vacant Housing Units %"
+        ],
+        "Source": "ACS 2012, 2018; Social Explorer 2010",
+        "Metadata": "Housing_Variables",
+        "Spatial Scale": "Tract, Zip, County, State",
+        "Years": "1980, 1990, 2000, 2010, 2018, 2020, 2023"
+      }
+    ],
+    "Spatial Access to HIV Testing": [],
+    "Spatial Access to Hospitals": [
+      {
+        "Variable Construct": "Spatial Access to Hospitals",
+        "Variable Proxy": "Spatial access metrics to Hospitals (Distance, Travel Time, Count Within Threshold)",
+        "Variables": [
+          "% Tracts within 30-min Drive of Hospital",
+          "% Tracts within 30-min Drive of Hospital with Impedance Factor",
+          "Avg. Driving Time to nearest Hospital",
+          "Avg. Driving Time to nearest Hospital with Impedance Factor",
+          "Count of Hospitals (30-min drive)",
+          "Distance (mi) to nearest Hospital",
+          "Driving time (min) to nearest Hospital",
+          "Driving time (min) to nearest Hospital with Impedance Factor",
+          "Tracts with Hospital (30-min drive)",
+          "Tracts with Hospitals (30-min drive) with impedance"
+        ],
+        "Source": "CovidCareMap 2020; CMS 2025; OSM 2019 & 2025; Census TIGER 2018 & 2020",
+        "Metadata": "Access_Hospitals",
+        "Spatial Scale": "Tract, Zip, County, State",
+        "Years": "2020, 2025"
+      }
+    ],
     "Spatial Access to Mental Health Providers": [
       {
         "Variable Construct": "Spatial Access to Mental Health Providers",
@@ -608,9 +519,123 @@
         "Spatial Scale": "Tract, Zip, County, State",
         "Years": "2020"
       }
+    ],
+    "Urban/Suburban/Rural Classification": [
+      {
+        "Variable Construct": "Urban/Suburban/Rural Classification",
+        "Variable Proxy": "Primary RUCA Code, Secondary RUCA Code by County",
+        "Variables": [
+          "% Tracts Rural (RUCA)",
+          "% Tracts Suburban (RUCA)",
+          "% Tracts Urban (RUCA)",
+          "Census Flags",
+          "Primary RUCA Code",
+          "Secondary RUCA Code",
+          "Urban-Suburban-Rural"
+        ],
+        "Source": "USDA-ERS 2010; ACS 2018",
+        "Metadata": "Urbanicity",
+        "Spatial Scale": "Tract, Zip, County",
+        "Years": "2010, 2018"
+      }
+    ],
+    "Healthcare Provider Access": [
+      {
+        "Variable Construct": "Healthcare Provider Access",
+        "Variable Proxy": "Primary Care and Specialty Physician Density (Total, Per Capita Density)",
+        "Variables": [
+          "Count of Primary Care Physicians (PCPs)",
+          "Count of Specialty Physicians",
+          "Primary Care Physicians (PCP) per 100k",
+          "Specialty Physicians per 100k"
+        ],
+        "Source": "Dartmouth Atlas 2010",
+        "Metadata": "Healthcare_Provider_Access",
+        "Spatial Scale": "Tract, County, State",
+        "Years": "2010"
+      }
+    ],
+    "Spatial access to HCV Testing": [
+      {
+        "Variable Construct": "Spatial access to HCV Testing",
+        "Variable Proxy": "Spatial access metrics to testing for hepatitis C virus (HCV) infections (Straight-line Distance, Driving Time, Count of Resources)",
+        "Variables": [
+          "Average time drive to nearest HCV testing provider",
+          "Average time drive to nearest HIV provider",
+          "Count of HCV Providers",
+          "Count of HIV Providers",
+          "Count of tracts within 30-min driving range",
+          "Distance to nearest HCV Provider",
+          "Distance to nearest HIV Provider",
+          "Driving time to nearest HCV Provider",
+          "Driving time to nearest HIV Provider",
+          "Percent of tracts within 30-min driving range"
+        ],
+        "Source": "SAMHSA 2025",
+        "Metadata": "Access_HCVTesting",
+        "Spatial Scale": "",
+        "Years": ""
+      }
+    ],
+    "Spatial Access to Substance Use Treatment Providers": [
+      {
+        "Variable Construct": "Spatial Access to Substance Use Treatment Providers",
+        "Variable Proxy": "Spatial access metrics to Substance Use Treatment Providers (Distance, Travel Time, Count Within Threshold)",
+        "Variables": [
+          "% tracts with Substance Use Treatment program (30-min drive)",
+          "Count of Substance Use Treatment (SUT) facility (30-min drive)",
+          "Distance (mi) to Substance Use Treatment (SUT) facility",
+          "Driving Time (min) to nearest Substance Use Treatment program",
+          "Driving time (min) to Substance Use Treatment (SUT) facility",
+          "Tracts with Substance Use Treatment (SUT) program (30-min drive)"
+        ],
+        "Source": "SAMHSA 2020",
+        "Metadata": "Access_SubstanceUseTreatment",
+        "Spatial Scale": "Tract, Zip, County, State",
+        "Years": "2020"
+      }
+    ],
+    "Spatial Access to Pharmacies": [
+      {
+        "Variable Construct": "Spatial Access to Pharmacies",
+        "Variable Proxy": "Spatial access metrics to Pharmacies (Distance, Travel Time, Count Within Threshold)",
+        "Variables": [
+          "% tracts with Pharmacy (30-min drive)",
+          "% tracts with Pharmacy (30-min drive) with Impedance Factor",
+          "Avg. Driving Time (min) to nearest Pharmacy ",
+          "Avg. Driving Time (min) to nearest Pharmacy with Impedance Factor",
+          "Count of Pharmacies (30-min drive)",
+          "Distance (mi) to nearest Pharmacy",
+          "Driving Time (min) to nearest Pharmacy",
+          "Driving Time (min) to nearest Pharmacy with Impedance Factor",
+          "Tracts with Pharmacy (30-min drive)"
+        ],
+        "Source": "InfoGroup 2019; Amazon S3 2025; OSM 2019 & 2025; Census TIGER 2018 & 2020",
+        "Metadata": "Access_Pharmacies",
+        "Spatial Scale": "Tract, Zip, County, State",
+        "Years": "2019, 2025"
+      }
     ]
   },
   "Economic": {
+    "Employment Trends": [
+      {
+        "Variable Construct": "Employment Trends",
+        "Variable Proxy": "Unemployment Rate, Essential Workers Total, Essential Workers %, Working Population Total, Employed % - Education, Employed % - High Risk of Injury, Employed % - Health Care, Employed % - Retail, The number of unemployed individuals as a percentage of the civilian labor force",
+        "Variables": [
+          "Count of Essential Workers",
+          "Count of Working Population",
+          "Employed % - Health Care",
+          "Employed % - High Risk of Injury",
+          "Employed % - Retail",
+          "Essential Workers %"
+        ],
+        "Source": "ACS 2018, 2023",
+        "Metadata": "Employment_Trends",
+        "Spatial Scale": "Tract, Zip, County, State",
+        "Years": "2018, 2020, 2023"
+      }
+    ],
     "Poverty, Income, Gini Coefficient": [
       {
         "Variable Construct": "Poverty, Income, Gini Coefficient",
@@ -654,24 +679,6 @@
         "Spatial Scale": "Tract, Zip, County, State",
         "Years": "2010, 2018, 2020, 2023"
       }
-    ],
-    "Employment Trends": [
-      {
-        "Variable Construct": "Employment Trends",
-        "Variable Proxy": "Unemployment Rate, Essential Workers Total, Essential Workers %, Working Population Total, Employed % - Education, Employed % - High Risk of Injury, Employed % - Health Care, Employed % - Retail, The number of unemployed individuals as a percentage of the civilian labor force",
-        "Variables": [
-          "Count of Essential Workers",
-          "Count of Working Population",
-          "Employed % - Health Care",
-          "Employed % - High Risk of Injury",
-          "Employed % - Retail",
-          "Essential Workers %"
-        ],
-        "Source": "ACS 2018, 2023",
-        "Metadata": "Employment_Trends",
-        "Spatial Scale": "Tract, Zip, County, State",
-        "Years": "2018, 2020, 2023"
-      }
     ]
   },
   "Policy": {
@@ -692,22 +699,6 @@
       },
       {
         "Variable Construct": "Harm Reduction Policies",
-        "Variable Proxy": "Presence of laws around naloxone access by state",
-        "Variables": [
-          "Any Naloxone Law (date)",
-          "Naloxone Law allowing distribution through a standing or order (date)",
-          "Naloxone Law allowing distribution through a standing or order (fraction of year in 2017)",
-          "Naloxone Law allowing pharmacists prescriptive authority (date)",
-          "Naloxone Law allowing pharmacists prescriptive authority (fraction of year in 2017)",
-          "Naloxone Law in Effect (fraction of year in 2017)"
-        ],
-        "Source": "OPTIC 2017-2022",
-        "Metadata": "Naloxone_Policy",
-        "Spatial Scale": "State",
-        "Years": "2017, 2018, 2019, 2020, 2021, 2022"
-      },
-      {
-        "Variable Construct": "Harm Reduction Policies",
         "Variable Proxy": "Syringe Service Program (SSP) Authorization Laws, Drug Paraphernalia Laws, Distribution of Syringes Laws, Paraphernalia exludes objects used for injecting drugs, Paraphernalia does not refer to objects used for injecting drugs, Laws removing barriers to SSPs",
         "Variables": [
           "Distribution of Syringes Laws",
@@ -721,6 +712,22 @@
         "Metadata": "Syringe_Policy",
         "Spatial Scale": "State",
         "Years": "2019"
+      },
+      {
+        "Variable Construct": "Harm Reduction Policies",
+        "Variable Proxy": "Presence of laws around naloxone access by state",
+        "Variables": [
+          "Any Naloxone Law (date)",
+          "Naloxone Law allowing distribution through a standing or order (date)",
+          "Naloxone Law allowing distribution through a standing or order (fraction of year in 2017)",
+          "Naloxone Law allowing pharmacists prescriptive authority (date)",
+          "Naloxone Law allowing pharmacists prescriptive authority (fraction of year in 2017)",
+          "Naloxone Law in Effect (fraction of year in 2017)"
+        ],
+        "Source": "OPTIC 2017-2022",
+        "Metadata": "Naloxone_Policy",
+        "Spatial Scale": "State",
+        "Years": "2017, 2018, 2019, 2020, 2021, 2022"
       }
     ],
     "Prescription Drug Monitoring Programs (PDMP)": [
@@ -743,6 +750,20 @@
         "Metadata": "PDMP_Presence",
         "Spatial Scale": "State",
         "Years": "2017, 2018, 2019, 2020, 2021, 2022, 2023"
+      }
+    ],
+    "Medicaid Policy Proportion": [
+      {
+        "Variable Construct": "Medicaid Policy Proportion",
+        "Variable Proxy": "Proportions of individual years and the five-year periods from 2014 - 2019 and 2020 - 2024 for which Medicaid Expansion was implemented / in effect",
+        "Variables": [
+          "Five-Year Medicaid Expansion Proportion",
+          "Medicaid Expansion Proportion"
+        ],
+        "Source": "KFF 2025",
+        "Metadata": "Medicaid_Policy_Proportion",
+        "Spatial Scale": "State",
+        "Years": "2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024"
       }
     ],
     "State & Local Government Expenditures": [
@@ -776,21 +797,6 @@
         "Years": "2019, 2020, 2021, 2022"
       }
     ],
-    "Buprenorphine Policy Proportion": [
-      {
-        "Variable Construct": "Buprenorphine Policy Proportion",
-        "Variable Proxy": "Proportions of individual years and Entire Data Period with State-Level Buprenorphine Policy in Effect, Periods of Implementation (Date Ranges Associated) of Policies also included",
-        "Variables": [
-          "Buprenorphine Policy Proportion",
-          "Entire Data Period Buprenorphine Policy Proportion",
-          "Periods of Buprenorphine Policy Implementation"
-        ],
-        "Source": "CPHLR 2025",
-        "Metadata": "Bup_Policy_Proportion",
-        "Spatial Scale": "State",
-        "Years": "2023, 2024"
-      }
-    ],
     "Marijuana Policies": [
       {
         "Variable Construct": "Marijuana Policies",
@@ -804,18 +810,19 @@
         "Years": "2017, 2018, 2019, 2020, 2021, 2022, 2023"
       }
     ],
-    "Medicaid Policy Proportion": [
+    "Buprenorphine Policy Proportion": [
       {
-        "Variable Construct": "Medicaid Policy Proportion",
-        "Variable Proxy": "Proportions of individual years and the five-year periods from 2014 - 2019 and 2020 - 2024 for which Medicaid Expansion was implemented / in effect",
+        "Variable Construct": "Buprenorphine Policy Proportion",
+        "Variable Proxy": "Proportions of individual years and Entire Data Period with State-Level Buprenorphine Policy in Effect, Periods of Implementation (Date Ranges Associated) of Policies also included",
         "Variables": [
-          "Five-Year Medicaid Expansion Proportion",
-          "Medicaid Expansion Proportion"
+          "Buprenorphine Policy Proportion",
+          "Entire Data Period Buprenorphine Policy Proportion",
+          "Periods of Buprenorphine Policy Implementation"
         ],
-        "Source": "KFF 2025",
-        "Metadata": "Medicaid_Policy_Proportion",
+        "Source": "CPHLR 2025",
+        "Metadata": "Bup_Policy_Proportion",
         "Spatial Scale": "State",
-        "Years": "2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024"
+        "Years": "2023, 2024"
       }
     ]
   },
