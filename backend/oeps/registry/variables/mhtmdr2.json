@@ -1,0 +1,10 @@
+{
+  "name": "MhTmDr2",
+  "title": "Driving time (min) to nearest Mental Health Provider with impedance",
+  "type": "number",
+  "example": "56.89",
+  "description": "Driving time from tract/zip origin centroid to the nearest tract/zip Mental Health Provider with impedance destination centroid, in minutes",
+  "metadata": "Access_Mental_Health.json",
+  "longitudinal": false,
+  "analysis": false
+}
