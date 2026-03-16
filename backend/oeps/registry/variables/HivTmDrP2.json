@@ -4,7 +4,10 @@
   "type": "number",
   "example": "45.56",
   "description": "Percent of tracts with HIV Testing Facility within a 30-mini driving range, with impedance",
-  "metadata": "Access_HIVTesting.json",
   "longitudinal": false,
-  "analysis": false
+  "analysis": false,
+  "metadata": "Access_HIVTesting",
+  "table_sources": [
+    "county-2025"
+  ]
 }

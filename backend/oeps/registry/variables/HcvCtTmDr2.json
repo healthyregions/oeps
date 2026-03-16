@@ -4,7 +4,10 @@
   "type": "number",
   "example": "45",
   "description": "Number of tracts with HCV Testing Facility within a 30-min driving range, with impedance",
-  "metadata": "Access_HCVTesting.json",
   "longitudinal": false,
-  "analysis": false
+  "analysis": false,
+  "metadata": "Access_HCVTesting",
+  "table_sources": [
+    "county-2025"
+  ]
 }
