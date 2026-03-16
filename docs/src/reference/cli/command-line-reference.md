@@ -241,12 +241,13 @@ Options:
 ## remove-variable
 
 Remove variable(s) from the registry and all of their columns from table source CSVs.
-    Optionally remove variables only from one table source.
-    
-    Can remove multiple variables at once by providing comma-separated names.
-    Example (single): flask remove-variable -n Var1 -t county-2025
-    Example (multiple): flask remove-variable -n "Var1,Var2,Var3" -t county-2025 --yes
-    
+Optionally remove variables only from one table source.
+
+Can remove multiple variables at once by providing comma-separated names.
+
+* Example (single): `flask remove-variable -n Var1 -t county-2025`
+* Example (multiple): `flask remove-variable -n "Var1,Var2,Var3" -t county-2025 --yes`
+* Example (preview only): `flask remove-variable -n "Var1,Var2" -t tract-2025 --dry-run`
 
 ###### Usage
 
@@ -286,6 +287,15 @@ Usage: remove-variable [OPTIONS]
 -y`
 
     Skip confirmation prompts. Useful for batch operations.
+
+
+
+* `dry_run`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--dry-run`
+
+    Show what would be removed without changing any files. Use to preview before running remove for real.
 
 
 
