@@ -115,6 +115,22 @@
     border-width: 2px;
 }
 
+.variableTable .sortableTh {
+    background: none;
+    border: none;
+    font-weight: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+    color: inherit;
+}
+
+.variableTable .sortableTh:hover {
+    text-decoration: underline;
+}
+
 .variableTable td {
     vertical-align: top;
 }
