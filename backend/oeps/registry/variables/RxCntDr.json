@@ -9,6 +9,7 @@
   "metadata": "Access_Pharmacies",
   "table_sources": [
     "tract-2019",
+    "tract-2025",
     "zcta-2019"
   ]
 }

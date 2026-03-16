@@ -5,10 +5,25 @@ from tqdm import tqdm
 from pathlib import Path
 import random
 
+import pandas as pd
+
 
 def make_id(length: int = 6):
     """Creates a random hexadecimal identifier."""
     return "".join(random.choices("0123456789ABCDEF", k=length))
+
+
+def read_csv_robust(path, **kwargs):
+    """Read a CSV with encoding fallback for files saved as UTF-16 or with BOM (e.g. on Windows)."""
+    encodings = ["utf-8", "utf-8-sig", "utf-16", "utf-16-le", "cp1252"]
+    last_error = None
+    for encoding in encodings:
+        try:
+            return pd.read_csv(path, encoding=encoding, **kwargs)
+        except (UnicodeDecodeError, UnicodeError) as e:
+            last_error = e
+            continue
+    raise last_error
 
 
 def load_json(path) -> dict:
