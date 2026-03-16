@@ -4,7 +4,8 @@
   "type": "number",
   "example": "23",
   "description": "Number of tracts with Hospitals within a 30-min driving range, with impedance",
-  "metadata": "Access_Hospitals.json",
+  "metadata": "Access_Hospitals",
   "longitudinal": false,
-  "analysis": false
+  "analysis": false,
+  "table_sources": ["county-2025"]
 }

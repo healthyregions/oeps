@@ -1,8 +1,8 @@
 {
-  "name": "HospAvTmDrP2",
-  "title": "Avg. Driving Time to nearest Hospital",
+  "name": "HospAvTmDr2",
+  "title": "Avg. Driving Time to nearest Hospital with Impedance Factor",
   "type": "number",
-  "example": "33.33",
+  "example": "23.97",
   "description": "Average driving time (minutes) across tracts in state to nearest hospital with Impedance factor",
   "metadata": "Access_Hospitals",
   "longitudinal": false,
