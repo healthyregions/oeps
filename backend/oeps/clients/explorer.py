@@ -221,23 +221,24 @@ class Explorer:
                 "variables": [],
             }
             for v in self.registry.variables.values():
-                if v.metadata == m.name:
-                    years = set()
-                    geographies = set()
-                    for ts_id in v.table_sources:
-                        ts = self.registry.table_sources[ts_id]
-                        years.add(ts.data_year)
+                if v.table_sources:
+                    if v.metadata == m.name:
+                        years = set()
+                        geographies = set()
+                        for ts_id in v.table_sources:
+                            ts = self.registry.table_sources[ts_id]
+                            years.add(ts.data_year)
 
-                        gs = self.registry.geodata_sources[ts.geodata_source]
-                        geographies.add(gs.summary_level.title)
+                            gs = self.registry.geodata_sources[ts.geodata_source]
+                            geographies.add(gs.summary_level.title)
 
-                    entry["variables"].append({
-                        "title": v.title,
-                        "name": v.name,
-                        "description": v.description,
-                        "years": sorted(list(years)),
-                        "geographies": sorted(list(geographies)),
-                    })
+                        entry["variables"].append({
+                            "title": v.title,
+                            "name": v.name,
+                            "description": v.description,
+                            "years": sorted(list(years)),
+                            "geographies": sorted(list(geographies)),
+                        })
             entry["variables"].sort(key=lambda x: x['title'])
             metadata_entries[m.name] = entry
 
