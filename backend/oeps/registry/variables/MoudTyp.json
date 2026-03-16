@@ -1,0 +1,13 @@
+{
+  "name": "MoudTyp",
+  "title": "MOUD Types Within 30-Min Drive  (impedance, adjusted) ",
+  "type": "integer",
+  "example": "2",
+  "description": "Count (0\u00e2\u20ac\u201c3) of distinct MOUD provider types (buprenorphine, methadone, naltrexone) within a 30-minute impedance-adjusted driving time.",
+  "longitudinal": false,
+  "analysis": true,
+  "metadata": "Access_MOUDs",
+  "table_sources": [
+    "tract-2025"
+  ]
+}

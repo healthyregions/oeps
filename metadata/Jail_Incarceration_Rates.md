@@ -1,7 +1,7 @@
 **Meta Data Name**: Jail Incarceration Variables  
 **Date Added**: September 11, 2020  
 **Author**: Marynia Kolak, Qinyun Lin, Yilin Lyu  
-**Date Last Modified**: October 23, 2025  
+**Date Last Modified**: February 3, 2026  
 **Last Modified By**: Yilin Lyu  
 
 ### Data Source(s) Description:  
@@ -24,11 +24,10 @@ These rates were calculated using base rate of county population aged 15-64 and 
 
 ### Data Limitations:
 - There is missing data in many counties.
-- Most state-level data are available for consistent ranges as shown above, but some states differ. Alaska (AK), Connecticut (CT), Delaware (DE), Rhode Island (RI) miss data from 1970-1977. Hawaii (HI) and Vermont (VT) miss data from 1971-1977.
-- See the Vera Insitute's documentation for details on additional limitations.
-
-### Comments/Notes:
-- The latest county-level data extend to 2024, but it only includes Quarter 1. Also, pretrial jail population rate and count are largely unavailable; only some counties in Virginia and West Virginia report them.
-- County-level data are reported quarterly, with estimates provided for four reference dates each year (March 31, June 30, September 30, and December 31).
+- County-level data are reported quarterly, with estimates provided for four reference dates each year (March 31, June 30, September 30, and December 31). The latest county-level data extend to 2024, but it only includes Quarter 1.
+- Pretrial jail population rate and count are largely unavailable; only some counties in Virginia and West Virginia report them.
 - Many states use regional or multi-county jail systems (e.g., WV statewide system, VA regional jails), so counties sharing the same jail receive identical jail population values. These repeated values reflect jail system structure, not actual similarities across counties.
 - Some jail counts may be fractional because linear interpolation has been used to replace missing data and apportions regional jail populations across counties based on population share. These estimation steps naturally create non-integer counts.
+
+### Comments/Notes:
+- This dataset includes year from 2017 to 2024, please see the Vera Institute’s raw data and documentation for data before that.

@@ -49,7 +49,7 @@ BupAvTmDr,Driving Time (min) to Nearest Buprenorphine Provider,number,0.42,Avera
 BupAvTmWk,Walking Time (min) to Nearest Buprenorphine Provider,number,1.87725694444444,Average walking time (minutes) across tracts in county to nearest buprenorphine provider,county-2020,Access_MOUDs,False,False
 BupCntBk30,Count of Buprenorphine Providers (30-min bike),integer,3,Count of buprenorphine providers in 30 minute biking time threshold,"tract-2020, zcta-2020",Access_MOUDs,False,False
 BupCntBk60,Count of Buprenorphine Providers (60-min bike),integer,4,Count of buprenorphine providers in 60 minute biking time threshold,"tract-2020, zcta-2020",Access_MOUDs,False,False
-BupCntDr30,Count of Buprenorphine Providers (30-min drive),integer,21,Count of methadone providers in 30 minute drive time threshold,"tract-2020, zcta-2020",Access_MOUDs,False,False
+BupCntDr30,Count of Buprenorphine Providers (30-min drive),integer,21,Count of Buprenorphine providers in 30 minute drive time threshold,"tract-2020, tract-2025, zcta-2020",Access_MOUDs,False,False
 BupCntDr60,Count of buprenorphine providers (drive),number,121.0,Count of buprenorphine providers in 60 minute drive time threshold,,Access_MOUDs,False,False
 BupCntWk30,Count of Buprenorphine Providers (30-min walk),integer,2,Count of buprenorphine providers in 30 minute walking time threshold,"tract-2020, zcta-2020",Access_MOUDs,False,False
 BupCntWk60,Count of Buprenorphine Providers (60-min walk),integer,2,Count of buprenorphine providers in 60 minute walking time threshold,"tract-2020, zcta-2020",Access_MOUDs,False,False
@@ -63,7 +63,8 @@ BupRm60,Buprenorphine access 60 minutes (RAAM),number,1.232,Buprenorphine access
 BupRm90,Buprenorphine access 90 minutes (RAAM),number,1.232,Buprenorphine access 90 minutes (RAAM),tract-2020,Access_MOUDs,False,False
 BupTmBk,Biking Time (min) to nearest Buprenorphine Provider,number,0,Biking time (minutes) to nearest buprenorphine provider,"tract-2020, zcta-2020",Access_MOUDs,False,True
 BupTmBkP,% Tracts With Buprenorphine Provider (30-min bike),number,1,Percent of tracts with buprenorphine provider within a 30-min biking range,county-2020,Access_MOUDs,False,False
-BupTmDr,Driving Time (min) to nearest Buprenorphine Provider,number,0,Driving time (minutes) to nearest buprenorphine provider,"tract-2020, zcta-2020",Access_MOUDs,False,True
+BupTmDr,Driving Time (min) to nearest Buprenorphine Provider,number,10.12,Driving time (minutes) to nearest buprenorphine provider,"tract-2020, tract-2025, zcta-2020",Access_MOUDs,False,True
+BupTmDr2,Driving time to nearest buprenorphine provider (with impedance),number,53.24,"Driving time (minutes) from the tract centroid to the nearest buprenorphine provider, with the impedance factor applied.",tract-2025,Access_MOUDs,False,True
 BupTmDrP,% Tracts With Buprenorphine Provider (30-min drive),number,1,Percent of tracts with buprenorphine provider within a 30-min driving range,county-2020,Access_MOUDs,False,False
 BupTmWk,Walking Time (min) to nearest Buprenorphine Provider,number,0,Walking time (minutes) to nearest buprenorphine provider,"tract-2020, zcta-2020",Access_MOUDs,False,True
 BupTmWkP,% Tracts With Buprenorphine Provider (30-min walk),number,1,Percent of tracts with buprenorphine provider within a 30-min walking range,county-2020,Access_MOUDs,False,False
@@ -142,11 +143,16 @@ HivTmDrP,Percent of tracts within 30-min driving range,number,42.45,Percent of t
 HltCrP,Employed % - Health Care,number,13.13,Percentage of population employed in health care and social assistance industries,"county-2018, county-2020, county-2023, state-2018, tract-2018, tract-2020, tract-2023, zcta-2018, zcta-2020, zcta-2023",Employment_Trends,False,False
 HlthExp,Public health expenditures,integer,1897193,Total expenditures on public health and hospitals,"state-2019, state-2020, state-2021, state-2022",Public_Expenditures,False,False
 HospAvTmDr,Avg. Driving Time to nearest Hospital,number,13.13,Average driving time (minutes) across tracts in state to nearest hospital.,"county-2020, state-2020",Access_Hospitals,False,False
+HospAvTmDr2,Avg. Driving Time to nearest Hospital with Impedance Factor,number,23.97,Average driving time (minutes) across tracts in state to nearest hospital with Impedance factor,county-2025,Access_Hospitals,False,False
+HospAvTmDrP2,Avg. Driving Time to nearest Hospital,number,33.33,Average driving time (minutes) across tracts in state to nearest hospital with Impedance factor,,Access_Hospitals,False,False
 HospCntDr,Count of Hospitals (30-min drive),integer,6,Count of hospitals within a 30-minute driving threshold,"tract-2020, zcta-2020",Access_Hospitals,False,False
 HospCtTmDr,Tracts with Hospital (30-min drive),integer,1334,Number of tracts with hospital within a 30-min driving range,"county-2020, state-2020",Access_Hospitals,False,False
+HospCtTmDr2,Tracts with Hospitals (30-min drive) with impedance,number,23,"Number of tracts with Hospitals within a 30-min driving range, with impedance",county-2025,Access_Hospitals,False,False
 HospMinDis,Distance (mi) to nearest Hospital,number,0.31,"Euclidean distance* from tract/zip centroid to nearest hospital, in miles","tract-2020, zcta-2020",Access_Hospitals,False,False
 HospTmDr,Driving time (min) to nearest Hospital,number,0,"Driving time from tract/zip origin centroid to the nearest tract/zip hospital destination centroid, in minutes","tract-2020, zcta-2020",Access_Hospitals,False,True
+HospTmDr2,Driving time (min) to nearest Hospital with Impedance Factor,number,23.12,"Driving time from tract/zip origin centroid to the nearest tract/zip hospital destination centroid, in minutes with Impedance factor",tract-2025,Access_Hospitals,False,False
 HospTmDrP,% Tracts within 30-min Drive of Hospital,number,0.92,Percent of tracts with hospital within a 30-mini driving range,"county-2020, state-2020",Access_Hospitals,False,False
+HospTmDrP2,% Tracts within 30-min Drive of Hospital with Impedance Factor,number,11.11,Percent of tracts with hospital within a 30-mini driving range with Impedance Factor,county-2025,Access_Hospitals,False,False
 HsdTot,Total households,number,60.0,,"county-2020, county-2023, tract-2020, tract-2023, zcta-2020, zcta-2023",Household_Characteristics,False,False
 HsdTypCo,% Cohabiting couple household,number,60.0,,"county-2020, county-2023, tract-2020, tract-2023, zcta-2020, zcta-2023",Household_Characteristics,False,False
 HsdTypM,% Married-couple household ,number,60.0,,"county-2020, county-2023, tract-2020, tract-2023, zcta-2020, zcta-2023",Household_Characteristics,False,False
@@ -174,7 +180,7 @@ MetAvTmDr,Driving Time (min) to Nearest Methadone Provider,number,2.6,Average dr
 MetAvTmWk,Walking Time (min) to Nearest Methadone Provide,number,13.7240277777778,Average walking time (minutes) across tracts in county to nearest methadone provider,county-2020,Access_MOUDs,False,False
 MetCntBk30,Count of methadone providers (30-min bike),integer,0,Count of methadone providers in 30 minute biking time threshold,"tract-2020, zcta-2020",Access_MOUDs,False,False
 MetCntBk60,Count of Methadone Providers (60-min bike),integer,0,Count of methadone providers in 60 minute biking time threshold,"tract-2020, zcta-2020",Access_MOUDs,False,False
-MetCntDr30,Count of Methadone Providers (30-min drive),integer,1,Count of methadone providers in 30 minute drive time threshold,"tract-2020, zcta-2020",Access_MOUDs,False,False
+MetCntDr30,Count of Methadone Providers (30-min drive),integer,1,Count of methadone providers in 30 minute drive time threshold,"tract-2020, tract-2025, zcta-2020",Access_MOUDs,False,False
 MetCntDr60,Count of methadone providers (drive),number,121.0,Count of methadone providers in 60 minute drive time threshold,,Access_MOUDs,False,False
 MetCntWk30,Count of Methadone Providers (60-min walk),integer,0,Count of methadone providers in 60 minute walking time threshold,"tract-2020, zcta-2020",Access_MOUDs,False,False
 MetCntWk60,Count of Methadone Providers (30-min walk),integer,0,Count of methadone providers in 30 minute walking time threshold,"tract-2020, zcta-2020",Access_MOUDs,False,False
@@ -187,7 +193,8 @@ MetRm60,Methadone access 60 minutes (RAAM),number,1.232,Methadone access 60 minu
 MetRm90,Methadone access 90 minutes (RAAM),number,1.232,Methadone access 90 minutes (RAAM),"tract-1980, tract-1990, tract-2000, tract-2010, tract-2020",Access_MOUDs,False,False
 MetTmBk,Biking Time (min) to nearest Methadone Provider,number,148.18,Biking time (minutes) to nearest methadone provider,"tract-2020, zcta-2020",Access_MOUDs,False,True
 MetTmBkP,% Tracts With Methadone Provider (30-min bike),number,0.99,Percent of tracts with methadone provider within a 30-min biking range,county-2020,Access_MOUDs,False,False
-MetTmDr,Driving Time (min) to nearest Methadone Provider,number,27.39,Driving time (minutes) to nearest methadone provider,"tract-2020, zcta-2020",Access_MOUDs,False,True
+MetTmDr,Driving Time (min) to nearest Methadone Provider,number,27.39,Driving time (minutes) to nearest methadone provider,"tract-2020, tract-2025, zcta-2020",Access_MOUDs,False,True
+MetTmDr2,Driving time to nearest methadone provider (with impedance),number,33.4,"Driving time in minutes from the tract centroid to the nearest methadone provider, with the impedance factor applied.",tract-2025,Access_MOUDs,False,True
 MetTmDrP,% Tracts With Methadone Provider (30-min drive),number,1,Percent of tracts with methadone provider within a 30-min driving range,county-2020,Access_MOUDs,False,False
 MetTmWk,Walking Time (min) to nearest Methadone Provider,number,1744.66,Walking time (minutes) to nearest methadone provider,"tract-2020, zcta-2020",Access_MOUDs,False,True
 MetTmWkP,% Tracts With Methadone Provider (30-min walk),number,0.94,Percent of tracts with methadone provider within a 30-min walking range,county-2020,Access_MOUDs,False,False
@@ -202,6 +209,7 @@ MlHcv,Yearly Hepatitis C cases - Men (2013-2016),number,37500,Mean yearly Hepati
 MlHcvD,Hepatitis C Deaths - Men,integer,417,Hepatitis C deaths among men,"state-2013, state-2014, state-2015, state-2016, state-2017, state-2018, state-2019, state-2020, state-2021, state-2022",HepatitisC_Rates,False,False
 MobileP,Mobile Homes %,number,6.39,Percentage of total housing units categorized as mobile housing structures,"county-2018, county-2020, county-2023, state-2018, tract-2018, tract-2020, tract-2023, zcta-2018, zcta-2020, zcta-2023",Housing_Variables,False,False
 MoudMinDis,Distance (mi) to nearest MOUD (any),number,0.81,Euclidean distance (miles) to nearest MOUD (all types),"tract-2020, zcta-2020",Access_MOUDs,False,False
+MoudTyp,"MOUD Types Within 30-Min Drive  (impedance, adjusted) ",integer,2,"Count (0â€“3) of distinct MOUD provider types (buprenorphine, methadone, naltrexone) within a 30-minute impedance-adjusted driving time.",tract-2025,Access_MOUDs,False,True
 MrrdP,% Males aged 15 or older who are married and living with their spouse,number,60.0,,"county-2020, county-2023, tract-2020, tract-2023, zcta-2020, zcta-2023",Marital_Status,False,False
 MsAcPdmpDt,Must-Access PDMP start date,date,7/1/2014,Date of legislation requiring Prescribers to access PDMP before prescribing as interpreted by PDAPS.,"state-2017, state-2018, state-2019, state-2020, state-2021, state-2022, state-2023",PDMP_Presence,False,False
 MsAcPdmpFr,Must-Access PDMP (fraction of year in 2017),number,0,Fraction of year that state has any legislation requiring Prescribers to access PDMP before prescribing (as interpreted by PDAPS) enacted.,"state-2017, state-2018, state-2019, state-2020, state-2021, state-2022, state-2023",PDMP_Presence,False,False
@@ -211,7 +219,7 @@ NaltAvTmDr,Driving Time (min) to Nearest Naltrexone Provider,number,1.61,Average
 NaltAvTmWk,Walking Time (min) to Nearest Naltrexone Provider,number,7.40684027777778,Average walking time (minutes) across tracts in county to nearest naltrexone provider,county-2020,Access_MOUDs,False,False
 NaltCntBk30,Count of Naltrexone Providers (30-min bike),integer,0,Count of naltrexone providers in 30 minute biking time threshold,"tract-2020, zcta-2020",Access_MOUDs,False,False
 NaltCntBk60,Count of Naltrexone Providers (60-min bike),integer,0,Count of naltrexone providers in 60 minute biking time threshold,"tract-2020, zcta-2020",Access_MOUDs,False,False
-NaltCntDr30,Count of Naltrexone Providers (30-min drive),integer,0,Count of naltrexone providers in 30 minute drive time threshold,"tract-2020, zcta-2020",Access_MOUDs,False,False
+NaltCntDr30,Count of Naltrexone Providers (30-min drive),integer,0,Count of naltrexone providers in 30 minute drive time threshold,"tract-2020, tract-2025, zcta-2020",Access_MOUDs,False,False
 NaltCntDr60,Count of naltrexone providers (drive),number,121.0,Count of naltrexone providers in 60 minute drive time threshold,,Access_MOUDs,False,False
 NaltCntWk30,Count of Naltrexone Providers (30-min walk),integer,0,Count of naltrexone providers in 30 minute walking time threshold,"tract-2020, zcta-2020",Access_MOUDs,False,False
 NaltCntWk60,Count of Naltrexone Providers (60-min walk),integer,0,Count of naltrexone providers in 60 minute walking time threshold,"tract-2020, zcta-2020",Access_MOUDs,False,False
@@ -224,7 +232,8 @@ NaltRm60,Naltrexone access 60 minutes (RAAM),number,1.232,Naltrexone access 60 m
 NaltRm90,Naltrexone access 90 minutes (RAAM),number,1.232,Naltrexone access 90 minutes (RAAM),tract-2020,Access_MOUDs,False,False
 NaltTmBk,Biking Time (min) to nearest Naltrexone Provider,number,165.18,Biking time (minutes) to nearest naltrexone provider,"tract-2020, zcta-2020",Access_MOUDs,False,True
 NaltTmBkP,% Tracts With Naltrexone Provider (30-min bike),number,1,Percent of tracts with naltrexone provider within a 30-min biking range,county-2020,Access_MOUDs,False,False
-NaltTmDr,Driving Time (min) to nearest Naltrexone Provider,number,35.34,Driving time (minutes) to nearest naltrexone provider,"tract-2020, zcta-2020",Access_MOUDs,False,True
+NaltTmDr,Driving Time (min) to nearest Naltrexone Provider,number,35.34,Driving time (minutes) to nearest naltrexone provider,"tract-2020, tract-2025, zcta-2020",Access_MOUDs,False,True
+NaltTmDr2,Driving time to nearest naltrexone provider (with impedance),number,22.3,"Driving time in minutes from the tract centroid to the nearest naltrexone provider, with the impedance factor applied.",tract-2025,Access_MOUDs,False,False
 NaltTmDrP,% Tracts With Naltrexone Provider (30-min drive),number,1,Percent of tracts with naltrexone provider within a 30-min driving range,county-2020,Access_MOUDs,False,False
 NaltTmWk,Walking Time (min) to nearest Naltrexone Provider,number,,Walking time (minutes) to nearest naltrexone provider,"tract-2020, zcta-2020",Access_MOUDs,False,True
 NaltTmWkP,% Tracts With Naltrexone Provider (30-min walk),number,1,Percent of tracts with naltrexone provider within a 30-min walking range,county-2020,Access_MOUDs,False,False
@@ -253,10 +262,11 @@ OpRxRt,Opioid Prescription Rate,number,39.5,Opioid prescription rate,"county-202
 OtherE,Count Other (race) Population,number,16.48,Count of Population with race not mentioned in any of the options above (includes two race or more races). Estimated count in non-decennial years.,"county-2010, county-2018, county-2023, state-2010, state-2018, state-2023, tract-2010, tract-2018, tract-2023, zcta-2018, zcta-2023",Race_Ethnicity,True,False
 OtherP,% Other (race) Population,number,16.48,Percentage of Population with race not mentioned in any of the options above (includes two race or more races),"county-1980, county-1990, county-2000, county-2010, county-2018, county-2020, county-2023, state-1980, state-1990, state-2000, state-2010, state-2018, state-2023, tract-1980, tract-1990, tract-2000, tract-2010, tract-2018, tract-2020, tract-2023, zcta-2018, zcta-2020, zcta-2023",Race_Ethnicity,True,False
 OtpAvTmDr,Driving Time (min) to nearest Opioid Treatment Program (OTP),number,24.18,Average driving time (minutes) across tracts to nearest opioid treatment program.,"county-2021, state-2021",Access_MOUDs,False,False
-OtpCntDr,Count of Opioid Treatment Programs (OTP) (30-min drive),integer,1,Count of OTPs within a 30-minute driving threshold,"tract-2021, zcta-2021",Access_MOUDs,False,False
+OtpCntDr,Count of Opioid Treatment Programs (OTP) (30-min drive),integer,1,Count of OTPs within a 30-minute driving threshold,"tract-2021, tract-2025, zcta-2021",Access_MOUDs,False,False
 OtpCtTmDr,Tracts with Opioid Treatment Program (OTP) (30-min drive),integer,1092,Number of tracts within 30-min of opioid treatment program driving range,"county-2021, state-2021",Access_MOUDs,False,False
 OtpMinDis,Distance to nearest OTP,number,121.0,"Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles","tract-2021, zcta-2021",Access_MOUDs,False,False
-OtpTmDr,Driving Time (min) to nearest Opioid Treatment Program (OTP),number,27.39,"Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes","tract-2021, zcta-2021",Access_MOUDs,False,True
+OtpTmDr,Driving Time (min) to nearest Opioid Treatment Program (OTP),number,27.39,"Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes","tract-2021, tract-2025, zcta-2021",Access_MOUDs,False,True
+OtpTmDr2,Driving time to nearest OTP (impedance-adjusted),number,22.45,"Driving time in minutes from the tract centroid to the nearest opioid treatment program, using impedance-adjusted travel time.",tract-2025,Access_MOUDs,False,False
 OtpTmDrP,% Tracts with Opioid Treatment Program (OTP) (30-min drive),number,0.75,Percent of tracts within a 30-minute drive time of an opioid treatment program.,"county-2021, state-2021",Access_MOUDs,False,False
 Ov75Hcv,Yearly Hepatitis C cases - Over 75 years old (2013-2016),number,1600,Mean yearly Hepatitis C cases in people over 75 years of age from 2013-2016,state-2017,HepatitisC_Rates,False,False
 Ovr16,Count persons over 16 years,number,60,,"county-1980, county-1990, county-2000, county-2018, county-2023, state-1980, state-1990, state-2000, state-2018, state-2023, tract-1980, tract-1990, tract-2000, tract-2018, tract-2023, zcta-2018, zcta-2023",Demographic_Characteristics,False,False
@@ -293,12 +303,16 @@ RspRt,Response Rate,number,94.7,Percent of units interviewed from total units in
 Ruca1,Primary RUCA Code,string,1,Primary RUCA Code,"tract-ruca-2010, zcta-ruca-2010",Urbanicity,False,False
 Ruca2,Secondary RUCA Code,string,1.1,Secondary RUCA Code,"tract-ruca-2010, zcta-ruca-2010",Urbanicity,False,False
 Rurality,Urban-Suburban-Rural,string,Urban,Urban/Suburban/Rural,"tract-ruca-2010, zcta-ruca-2010",Urbanicity,False,True
-RxAvTmDr,Avg. Driving Time (min) to nearest Pharmacy ,number,5.97,Average driving time (minutes) across tracts in state to nearest pharmacy.,"county-2019, state-2019",Access_Pharmacies,False,False
-RxCntDr,Count of Pharmacies (30-min drive),integer,58,Count of pharmacies within a 30-minute driving threshold,"tract-2019, zcta-2019",Access_Pharmacies,False,False
-RxCtTmDr,Tracts with Pharmacy (30-min drive),integer,1406,Number of tracts with pharmacy within a 30-min driving range,"county-2019, state-2019",Access_Pharmacies,False,False
+RxAvTmDr,Avg. Driving Time (min) to nearest Pharmacy ,number,5.97,Average driving time (minutes) across tracts in state to nearest pharmacy.,"county-2019, county-2025, state-2019",Access_Pharmacies,False,False
+RxAvTmDr2,Avg. Driving Time (min) to nearest Pharmacy with Impedance Factor,number,22.11,Average driving time (minutes) across tracts in state to nearest pharmacy with Impedance Factor,county-2025,Access_Pharmacies,False,False
+RxCntDr,Count of Pharmacies (30-min drive),integer,58,Count of pharmacies within a 30-minute driving threshold,"tract-2019, tract-2025, zcta-2019",Access_Pharmacies,False,False
+RxCtTmDr,Tracts with Pharmacy (30-min drive),integer,1406,Number of tracts with pharmacy within a 30-min driving range,"county-2019, county-2025, state-2019",Access_Pharmacies,False,False
+RxCtTmDr2,Tracts with Pharmacy (30-min drive),integer,345,Number of tracts with pharmacy within a 30-min driving range with impedance factor,county-2025,Access_Pharmacies,False,False
 RxMinDis,Distance (mi) to nearest Pharmacy,number,0.84,"Euclidean distance* from tract/zip centroid to nearest pharmacy, in miles","tract-2019, zcta-2019",Access_Pharmacies,False,False
-RxTmDr,Driving Time (min) to nearest Pharmacy,number,0,"Driving time from tract/zip origin centroid to the nearest tract/zip pharmacy destination centroid, in minutes","tract-2019, zcta-2019",Access_Pharmacies,False,True
-RxTmDrP,% tracts with Pharmacy (30-min drive),number,0.96,Percent of tracts with pharmacy within a 30-min driving range,"county-2019, state-2019",Access_Pharmacies,False,False
+RxTmDr,Driving Time (min) to nearest Pharmacy,number,0,"Driving time from tract/zip origin centroid to the nearest tract/zip pharmacy destination centroid, in minutes","tract-2019, tract-2025, zcta-2019",Access_Pharmacies,False,True
+RxTmDr2,Driving Time (min) to nearest Pharmacy with Impedance Factor,number,34.54,"Driving time from tract/zip origin centroid to the nearest tract/zip pharmacy destination centroid with impedance factor, in minutes",tract-2025,Access_Pharmacies,False,False
+RxTmDrP,% tracts with Pharmacy (30-min drive),number,0.96,Percent of tracts with pharmacy within a 30-min driving range,"county-2019, county-2025, state-2019",Access_Pharmacies,False,False
+RxTmDrP2,% tracts with Pharmacy (30-min drive) with Impedance Factor,number,22.22,Percent of tracts with pharmacy within a 30-min driving range with impedance factor,county-2025,Access_Pharmacies,False,False
 SRatio,Sex ratio for the total population (males per 100 females),number,60.0,,"county-1980, county-1990, county-2000, county-2010, county-2018, county-2020, county-2023, state-1980, state-1990, state-2000, state-2010, state-2018, state-2023, tract-1980, tract-1990, tract-2000, tract-2010, tract-2018, tract-2020, tract-2023, zcta-2018, zcta-2020, zcta-2023",Demographic_Characteristics,False,False
 SRatio18,Sex ratio among adults aged 18 and older (males per 100 females),number,60.0,,"county-1980, county-1990, county-2000, county-2010, county-2018, county-2020, county-2023, state-1980, state-1990, state-2000, state-2010, state-2018, state-2023, tract-1980, tract-1990, tract-2000, tract-2010, tract-2018, tract-2020, tract-2023, zcta-2018, zcta-2020, zcta-2023",Demographic_Characteristics,False,False
 SRatio65,Sex ratio among seniors aged 65 and older (males per 100 females),number,60.0,,"county-1980, county-1990, county-2000, county-2010, county-2018, county-2020, county-2023, state-1980, state-1990, state-2000, state-2010, state-2018, state-2023, tract-1980, tract-1990, tract-2000, tract-2010, tract-2018, tract-2020, tract-2023, zcta-2018, zcta-2020, zcta-2023",Demographic_Characteristics,False,False

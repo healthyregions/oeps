@@ -63,14 +63,19 @@ def get_credentials():
 
     # prefer a local path to JSON credentials file.
     json_crendentials_path = os.getenv("BQ_CREDENTIALS_FILE_PATH")
-    if json_crendentials_path:
-        credentials = service_account.Credentials.from_service_account_file(
-            json_crendentials_path,
-            scopes=["https://www.googleapis.com/auth/cloud-platform"],
-        )
+    if json_crendentials_path and json_crendentials_path.strip():
+        try:
+            credentials = service_account.Credentials.from_service_account_file(
+                json_crendentials_path,
+                scopes=["https://www.googleapis.com/auth/cloud-platform"],
+            )
+        except Exception as e:
+            raise Exception(
+                f"Failed to load credentials from file '{json_crendentials_path}': {e}"
+            )
 
     # if no local file, attempt to get all credential info from environment
-    else:
+    if credentials is None:
         json_crendentials = {
             "type": "service_account",
             "project_id": os.getenv("BQ_PROJECT_ID"),
@@ -234,7 +239,7 @@ class BigQuery:
                             # special handle string values like '23493.3434'
                             row[k] = int(round(float(row[k])))
                     if field_types[k] == "number":
-                        row[k] = float(row[k])
+                        row[k] = round(float(row[k]), 9)  # BigQuery NUMERIC allows max 9 decimal places
                     if field_types[k] == "boolean":
                         if row[k] in [
                             1,
