@@ -4,8 +4,10 @@
   "type": "number",
   "example": "23.12",
   "description": "Driving time from tract/zip origin centroid to the nearest tract/zip hospital destination centroid, in minutes with Impedance factor",
-  "metadata": "Access_Hospitals",
   "longitudinal": false,
   "analysis": false,
-  "table_sources": ["tract-2025"]
+  "metadata": "Access_Hospitals",
+  "table_sources": [
+    "tract-2025"
+  ]
 }

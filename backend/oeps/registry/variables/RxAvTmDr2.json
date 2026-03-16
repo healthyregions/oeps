@@ -4,8 +4,10 @@
   "type": "number",
   "example": "22.11",
   "description": "Average driving time (minutes) across tracts in state to nearest pharmacy with Impedance Factor",
-  "metadata": "Access_Pharmacies",
   "longitudinal": false,
   "analysis": false,
-  "table_sources": ["county-2025"]
+  "metadata": "Access_Pharmacies",
+  "table_sources": [
+    "county-2025"
+  ]
 }
