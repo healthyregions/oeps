@@ -33,6 +33,8 @@ Data was cleaned and prepared for analysis. Centroids were calculated for ZCTA a
 For the nearest resource analysis, Euclidean distance was calculated from the centroid of each tract/ZCTA to the 
 nearest Mental Health Provider Facility location. The original 2021 script is available in [ our codes folder](https://github.com/GeoDaCenter/opioid-policy-scan/blob/master/).
 
+The zip code calculation was updated in 2025 to an average of overlapping tract-level metrics, rather than distance from the center of a zip code area. Because zip code areas are large, when compared to census tracts, distance from the geometric center was deemed less meaningful. A detailed notebook comparing the differences will be shared in 2026.
+
 ##### Travel Time and Count Within Threshold
 We calculated travel-network access metrics for the driving travel time to the nearest Mental Health Provider Facility location and count of Mental Health Provider Facilities within a 30 minute driving threshold. We calculated travel-network access metrics for every census tract centroid to the census tract centroid of nearest provider type. For *zip code tabulation areas*, overlapping tract-level measures were averaged, weighted by proportion of the overlapping tract, using the corresponding HUD tract-to-zip code crosswalks. 
 
@@ -66,4 +68,3 @@ be a Mental Health Provider Facility location within the tract -- giving it a tr
 - Null values correspond to the worst access, where travel takes over 90 minutes in optimal conditions, or 180 minutes in normal conditions.
 - Not all metrics are available for U.S. places beyond the continental States; we recommend exploring the data on the OEPS Explorer web map to examine in more depth.
 - While a different time travel calculation was performed in 2025, the street network topology original source (Open Street Map) remained the same.
-- The zip code calculation was updated in 2025 to an average of overlapping tract-level metrics, rather than distance from the center of a zip code area. Because zip code areas are large, when compared to census tracts, distance from the geometric center was deemed less meaningful. A detailed notebook comparing the differences will be shared in 2026.
