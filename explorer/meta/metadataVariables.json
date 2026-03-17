@@ -135,7 +135,8 @@
         "name": "FqhcMinDis",
         "description": "Euclidean distance* from tract/zip centroid to nearest Federally Qualified Health Centers (FQHC), in miles",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -1397,7 +1398,8 @@
         "name": "BupTmBkP",
         "description": "Percent of tracts with buprenorphine provider within a 30-min biking range",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "County"
@@ -1408,7 +1410,8 @@
         "name": "BupTmDrP",
         "description": "Percent of tracts with buprenorphine provider within a 30-min driving range",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "County"
@@ -1419,7 +1422,8 @@
         "name": "BupTmWkP",
         "description": "Percent of tracts with buprenorphine provider within a 30-min walking range",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "County"
@@ -1430,7 +1434,8 @@
         "name": "MetTmBkP",
         "description": "Percent of tracts with methadone provider within a 30-min biking range",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "County"
@@ -1441,7 +1446,8 @@
         "name": "MetTmDrP",
         "description": "Percent of tracts with methadone provider within a 30-min driving range",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "County"
@@ -1452,7 +1458,8 @@
         "name": "MetTmWkP",
         "description": "Percent of tracts with methadone provider within a 30-min walking range",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "County"
@@ -1463,7 +1470,8 @@
         "name": "NaltTmBkP",
         "description": "Percent of tracts with naltrexone provider within a 30-min biking range",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "County"
@@ -1474,7 +1482,8 @@
         "name": "NaltTmDrP",
         "description": "Percent of tracts with naltrexone provider within a 30-min driving range",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "County"
@@ -1485,7 +1494,8 @@
         "name": "NaltTmWkP",
         "description": "Percent of tracts with naltrexone provider within a 30-min walking range",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "County"
@@ -1496,7 +1506,8 @@
         "name": "OtpTmDrP",
         "description": "Percent of tracts within a 30-minute drive time of an opioid treatment program.",
         "years": [
-          "2021"
+          "2021",
+          "2025"
         ],
         "geographies": [
           "County",
@@ -1574,7 +1585,8 @@
         "name": "BupTmBk",
         "description": "Biking time (minutes) to nearest buprenorphine provider",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -1586,7 +1598,8 @@
         "name": "MetTmBk",
         "description": "Biking time (minutes) to nearest methadone provider",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -1598,7 +1611,8 @@
         "name": "NaltTmBk",
         "description": "Biking time (minutes) to nearest naltrexone provider",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -1614,7 +1628,8 @@
         ],
         "geographies": [
           "County",
-          "State"
+          "State",
+          "Tract"
         ]
       },
       {
@@ -1655,7 +1670,8 @@
         "name": "BupCntBk30",
         "description": "Count of buprenorphine providers in 30 minute biking time threshold",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -1680,7 +1696,8 @@
         "name": "BupCntWk30",
         "description": "Count of buprenorphine providers in 30 minute walking time threshold",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -1692,7 +1709,8 @@
         "name": "BupCntBk60",
         "description": "Count of buprenorphine providers in 60 minute biking time threshold",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -1704,7 +1722,8 @@
         "name": "BupCntWk60",
         "description": "Count of buprenorphine providers in 60 minute walking time threshold",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -1729,7 +1748,8 @@
         "name": "MetCntWk60",
         "description": "Count of methadone providers in 30 minute walking time threshold",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -1741,7 +1761,8 @@
         "name": "MetCntBk60",
         "description": "Count of methadone providers in 60 minute biking time threshold",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -1753,7 +1774,8 @@
         "name": "MetCntWk30",
         "description": "Count of methadone providers in 60 minute walking time threshold",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -1765,7 +1787,8 @@
         "name": "NaltCntBk30",
         "description": "Count of naltrexone providers in 30 minute biking time threshold",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -1790,7 +1813,8 @@
         "name": "NaltCntWk30",
         "description": "Count of naltrexone providers in 30 minute walking time threshold",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -1802,7 +1826,8 @@
         "name": "NaltCntBk60",
         "description": "Count of naltrexone providers in 60 minute biking time threshold",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -1814,7 +1839,8 @@
         "name": "NaltCntWk60",
         "description": "Count of naltrexone providers in 60 minute walking time threshold",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -1835,11 +1861,23 @@
         ]
       },
       {
+        "title": "Count of buprenorphine providers (drive)",
+        "name": "BupCntDr60",
+        "description": "Count of buprenorphine providers in 60 minute drive time threshold",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
         "title": "Count of methadone providers (30-min bike)",
         "name": "MetCntBk30",
         "description": "Count of methadone providers in 30 minute biking time threshold",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -1847,11 +1885,122 @@
         ]
       },
       {
+        "title": "Count of methadone providers (drive)",
+        "name": "MetCntDr60",
+        "description": "Count of methadone providers in 60 minute drive time threshold",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Count of naltrexone providers (drive)",
+        "name": "NaltCntDr60",
+        "description": "Count of naltrexone providers in 60 minute drive time threshold",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Count of telehealth buprenorphine providers within 30-minute bike ride",
+        "name": "TlBupCntBk30",
+        "description": "Total number of providers offering buprenorphine treatment via telemedicine/telehealth located within a 30-minute biking time threshold",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Count of telehealth buprenorphine providers within 30-minute drive",
+        "name": "TlBupCntDr30",
+        "description": "Total number of providers offering buprenorphine treatment via telemedicine/telehealth located within a 30-minute driving time threshold",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Count of telehealth buprenorphine providers within 30-minute walk",
+        "name": "TlBupCntWk30",
+        "description": "Total number of providers offering buprenorphine treatment via telemedicine/telehealth located within a 30-minute walking time threshold",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Count of telehealth buprenorphine providers within 60-minute drive",
+        "name": "TlBupCntDr60",
+        "description": "Total number of providers offering buprenorphine treatment via telemedicine/telehealth located within a 60-minute driving time threshold",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Count of tracts within 30-min telehealth buprenorphine biking range",
+        "name": "TlBupCtTmBk30",
+        "description": "Number of tracts with telehealth buprenorphine provider within a 30-min biking range",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Count of tracts within 30-min telehealth buprenorphine driving range",
+        "name": "TlBupCtTmDr30",
+        "description": "Number of tracts with telehealth buprenorphine provider within a 30-min driving range",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Count of tracts within 30-min telehealth buprenorphine walking range",
+        "name": "TlBupCtTmWk30",
+        "description": "Number of tracts with telehealth buprenorphine provider within a 30-min walking range",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Count of tracts within 60-min telehealth buprenorphine driving range",
+        "name": "TlBupCtTmDr60",
+        "description": "Number of tracts with telehealth buprenorphine provider within a 60-min driving range",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
         "title": "Distance (mi) to nearest Buprenorphine Provider",
         "name": "BupMinDis",
         "description": "Euclidean distance (miles) to nearest buprenorphine provider",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -1863,7 +2012,8 @@
         "name": "MoudMinDis",
         "description": "Euclidean distance (miles) to nearest MOUD (all types)",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -1875,7 +2025,8 @@
         "name": "MetMinDis",
         "description": "Euclidean distance (miles) to nearest methadone provider",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -1887,7 +2038,8 @@
         "name": "NaltMinDis",
         "description": "Euclidean distance (miles) to nearest naltrexone/Vivitrol provider",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -1899,7 +2051,8 @@
         "name": "OtpMinDis",
         "description": "Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles",
         "years": [
-          "2021"
+          "2021",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -1983,7 +2136,8 @@
         "name": "OtpAvTmDr",
         "description": "Average driving time (minutes) across tracts to nearest opioid treatment program.",
         "years": [
-          "2021"
+          "2021",
+          "2025"
         ],
         "geographies": [
           "County",
@@ -2037,53 +2191,9 @@
         ]
       },
       {
-        "title": "Driving time to nearest OTP (impedance-adjusted)",
-        "name": "OtpTmDr2",
-        "description": "Driving time in minutes from the tract centroid to the nearest opioid treatment program, using impedance-adjusted travel time.",
-        "years": [
-          "2025"
-        ],
-        "geographies": [
-          "Tract"
-        ]
-      },
-      {
-        "title": "Driving time to nearest buprenorphine provider (with impedance)",
-        "name": "BupTmDr2",
-        "description": "Driving time (minutes) from the tract centroid to the nearest buprenorphine provider, with the impedance factor applied.",
-        "years": [
-          "2025"
-        ],
-        "geographies": [
-          "Tract"
-        ]
-      },
-      {
-        "title": "Driving time to nearest methadone provider (with impedance)",
-        "name": "MetTmDr2",
-        "description": "Driving time in minutes from the tract centroid to the nearest methadone provider, with the impedance factor applied.",
-        "years": [
-          "2025"
-        ],
-        "geographies": [
-          "Tract"
-        ]
-      },
-      {
-        "title": "Driving time to nearest naltrexone provider (with impedance)",
-        "name": "NaltTmDr2",
-        "description": "Driving time in minutes from the tract centroid to the nearest naltrexone provider, with the impedance factor applied.",
-        "years": [
-          "2025"
-        ],
-        "geographies": [
-          "Tract"
-        ]
-      },
-      {
-        "title": "MOUD Types Within 30-Min Drive  (impedance, adjusted) ",
-        "name": "MoudTyp",
-        "description": "Count (0\u00e2\u20ac\u201c3) of distinct MOUD provider types (buprenorphine, methadone, naltrexone) within a 30-minute impedance-adjusted driving time.",
+        "title": "Driving time to nearest telehealth buprenorphine provider",
+        "name": "TlBupTmDr",
+        "description": "Estimated driving time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services",
         "years": [
           "2025"
         ],
@@ -2137,6 +2247,17 @@
         ]
       },
       {
+        "title": "Minimum distance to telehealth buprenorphine provider",
+        "name": "TlBupMinDis",
+        "description": "Euclidean distance (in miles) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
         "title": "Naltrexone access 30 minutes (RAAM)",
         "name": "NaltRm30",
         "description": "Naltrexone access 30 minutes (RAAM)",
@@ -2170,6 +2291,50 @@
         ]
       },
       {
+        "title": "Percent of tracts within 30-min telehealth buprenorphine biking range",
+        "name": "TlBupTmBk30P",
+        "description": "Percent of tracts with telehealth buprenorphine provider within a 30-min biking range",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Percent of tracts within 30-min telehealth buprenorphine driving range",
+        "name": "TlBupTmDr30P",
+        "description": "Percent of tracts with telehealth buprenorphine provider within a 30-min driving range",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Percent of tracts within 30-min telehealth buprenorphine walking range",
+        "name": "TlBupTmWk30P",
+        "description": "Percent of tracts with telehealth buprenorphine provider within a 30-min walking range",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Percent of tracts within 60-min telehealth buprenorphine driving range",
+        "name": "TlBupTmDr60P",
+        "description": "Percent of tracts with telehealth buprenorphine provider within a 60-min driving range",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
         "title": "Tracts with Buprenorphine Provider (30-min driving)",
         "name": "CntBupT",
         "description": "Number of tracts with buprenorphine provider within a 30-min driving range",
@@ -2185,7 +2350,8 @@
         "name": "BupCtTmBk",
         "description": "Number of tracts with buprenorphine provider within a 30-min biking range",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "County"
@@ -2196,7 +2362,8 @@
         "name": "BupCtTmDr",
         "description": "Number of tracts with buprenorphine provider within a 30-min driving range",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "County"
@@ -2207,7 +2374,8 @@
         "name": "BupCtTmWk",
         "description": "Number of tracts with buprenorphine provider within a 30-min walking range",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "County"
@@ -2229,7 +2397,8 @@
         "name": "MetCtTmBk",
         "description": "Number of tracts with methadone provider within a 30-min biking range",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "County"
@@ -2240,7 +2409,8 @@
         "name": "MetCtTmDr",
         "description": "Number of tracts with methadone provider within a 30-min driving range",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "County"
@@ -2251,7 +2421,8 @@
         "name": "MetCtTmWk",
         "description": "Number of tracts with methadone provider within a 30-min walking range",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "County"
@@ -2273,7 +2444,8 @@
         "name": "NaltCtTmBk",
         "description": "Number of tracts with naltrexone provider within a 30-min biking range",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "County"
@@ -2284,7 +2456,8 @@
         "name": "NaltCtTmDr",
         "description": "Number of tracts with naltrexone provider within a 30-min driving range",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "County"
@@ -2295,7 +2468,8 @@
         "name": "NaltCtTmWk",
         "description": "Number of tracts with naltrexone provider within a 30-min walking range",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "County"
@@ -2306,7 +2480,8 @@
         "name": "OtpCtTmDr",
         "description": "Number of tracts within 30-min of opioid treatment program driving range",
         "years": [
-          "2021"
+          "2021",
+          "2025"
         ],
         "geographies": [
           "County",
@@ -2351,7 +2526,8 @@
         "name": "BupTmWk",
         "description": "Walking time (minutes) to nearest buprenorphine provider",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -2363,7 +2539,8 @@
         "name": "MetTmWk",
         "description": "Walking time (minutes) to nearest methadone provider",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -2375,7 +2552,8 @@
         "name": "NaltTmWk",
         "description": "Walking time (minutes) to nearest naltrexone provider",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -2391,7 +2569,8 @@
         ],
         "geographies": [
           "County",
-          "State"
+          "State",
+          "Tract"
         ]
       }
     ]
@@ -2670,7 +2849,52 @@
   "Access_HIVTesting": {
     "theme": "Environment",
     "construct": "Spatial Access to HIV Testing",
-    "variables": []
+    "variables": [
+      {
+        "title": "% Tracts within 30-min Drive of HIV Testing Facility with impedance",
+        "name": "HivTmDrP2",
+        "description": "Percent of tracts with HIV Testing Facility within a 30-mini driving range, with impedance",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Avg. Driving Time to nearest HIV Testing Facility with impedance",
+        "name": "HivAvTmDr2",
+        "description": "Average driving time (minutes) across tracts in state to nearest HIV Testing Facility, with impedance",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Driving time (min) to nearest HIV Testing Facility, with impedance",
+        "name": "HivTmDr2",
+        "description": "Driving time from tract/zip origin centroid to the nearest tract/zip HIV Testing Facility with impedance destination centroid, in minutes",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Tracts with HIV Testing Facility (30-min drive) with impedance",
+        "name": "HivCtTmDr2",
+        "description": "Number of tracts with HIV Testing Facility within a 30-min driving range, with impedance",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "County"
+        ]
+      }
+    ]
   },
   "Access_Hospitals": {
     "theme": "Environment",
@@ -2681,7 +2905,8 @@
         "name": "HospTmDrP",
         "description": "Percent of tracts with hospital within a 30-mini driving range",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "County",
@@ -2704,7 +2929,8 @@
         "name": "HospAvTmDr",
         "description": "Average driving time (minutes) across tracts in state to nearest hospital.",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "County",
@@ -2727,7 +2953,8 @@
         "name": "HospCntDr",
         "description": "Count of hospitals within a 30-minute driving threshold",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -2739,7 +2966,8 @@
         "name": "HospMinDis",
         "description": "Euclidean distance* from tract/zip centroid to nearest hospital, in miles",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -2751,7 +2979,8 @@
         "name": "HospTmDr",
         "description": "Driving time from tract/zip origin centroid to the nearest tract/zip hospital destination centroid, in minutes",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -2774,7 +3003,8 @@
         "name": "HospCtTmDr",
         "description": "Number of tracts with hospital within a 30-min driving range",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "County",
@@ -2883,7 +3113,8 @@
         "name": "MhTmDrP",
         "description": "Percent of tracts with a mental health provider within a 30-min driving range.",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "County",
@@ -2895,7 +3126,8 @@
         "name": "MhCntDr",
         "description": "Count of MH providers within a 30-minute driving threshold",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -2907,7 +3139,8 @@
         "name": "MhMinDis",
         "description": "Euclidean distance* from tract/zip centroid to nearest mental health provider, in miles",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -2919,7 +3152,8 @@
         "name": "MhAvTmDr",
         "description": "Average driving time (minutes) across tracts in state to nearest mental health provider.",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "County",
@@ -2931,7 +3165,8 @@
         "name": "MhTmDr",
         "description": "Driving time from tract/zip origin centroid to the nearest tract/zip mental health provider destination centroid, in minutes",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -2943,7 +3178,8 @@
         "name": "MhCtTmDr",
         "description": "Number of tracts with a mental health provider within a 30-min driving range.",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "County",
@@ -4091,7 +4327,184 @@
   "Access_HCVTesting": {
     "theme": "Environment",
     "construct": "Spatial access to HCV Testing",
-    "variables": []
+    "variables": [
+      {
+        "title": "% Tracts within 30-min Drive of HCV Testing Facility with impedance",
+        "name": "HcvTmDrP2",
+        "description": "Percent of tracts with HCV Testing Facility within a 30-mini driving range, with impedance",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Average time drive to nearest HCV testing provider",
+        "name": "HcvAvTmDr",
+        "description": "Mean driving time (minutes) from tracts to nearest HCV testing provider",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Average time drive to nearest HIV provider",
+        "name": "HivAvTmDr",
+        "description": "Mean driving time (minutes) from tracts to nearest HIV testing provider",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Avg. Driving Time to nearest HCV Testing Facility with impedance",
+        "name": "HcvAvTmDr2",
+        "description": "Average driving time (minutes) across tracts in state to nearest HCV Testing Facility, with impedance",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Count of HCV Providers",
+        "name": "HcvCntDr",
+        "description": "Number of HCV testing providers within a 30-minute drive",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Count of HIV Providers",
+        "name": "HivCntDr",
+        "description": "Number of HIV testing providers within a 30-minute drive",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Count of tracts within 30-min driving range",
+        "name": "HcvCtTmDr",
+        "description": "Number of tracts with an HCV testing provider within a 30-minute driving range",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Count of tracts within 30-min driving range",
+        "name": "HivCtTmDr",
+        "description": "Number of tracts with an HIV testing provider within a 30-minute driving range",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Distance to nearest HCV Provider",
+        "name": "HcvMinDis",
+        "description": "Euclidean distance* from tract/zip centroid to nearest HCV testing provider (miles)",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Distance to nearest HIV Provider",
+        "name": "HivMinDis",
+        "description": "Euclidean distance* from tract/zip centroid to nearest HIV testing provider (miles)",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Driving time (min) to nearest HIV Testing Facility with impedance",
+        "name": "HcvTmDr2",
+        "description": "Driving time from tract/zip origin centroid to the nearest tract/zip HIV Testing Facility with impedance destination centroid, in minutes",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Driving time to nearest HCV Provider",
+        "name": "HcvTmDr",
+        "description": "Driving time from origin to nearest HCV testing provider (minutes)",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Driving time to nearest HIV Provider",
+        "name": "HivTmDr",
+        "description": "Driving time from origin to nearest HIV testing provider (minutes)",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Percent of tracts within 30-min driving range",
+        "name": "HcvTmDrP",
+        "description": "Percent of tracts within 30-minute drive to an HCV testing provider",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Percent of tracts within 30-min driving range",
+        "name": "HivTmDrP",
+        "description": "Percent of tracts within 30-minute drive to an HIV testing provider",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Tracts with HCV Testing Facility (30-min drive) with impedance",
+        "name": "HcvCtTmDr2",
+        "description": "Number of tracts with HCV Testing Facility within a 30-min driving range, with impedance",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "County"
+        ]
+      }
+    ]
   },
   "Social_Vulnerability_Indices": {
     "theme": "Composite",
@@ -4195,7 +4608,8 @@
         "name": "SutCntDr",
         "description": "Count of SUT services within a 30-minute driving threshold",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -4207,7 +4621,8 @@
         "name": "SutMinDis",
         "description": "Euclidean distance* from tract/zip centroid to nearest SUT service location, in miles",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -4231,7 +4646,8 @@
         "name": "SutTmDr",
         "description": "Driving time from tract/zip origin centroid to the nearest tract/zip SUT destination centroid, in minutes",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract",

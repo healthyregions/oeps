@@ -323,77 +323,77 @@
   },
   {
     "variable": "% Tracts With Buprenorphine Provider (30-min bike)",
-    "numerator": "county-2020",
+    "numerator": "county-2025",
     "nProperty": "BupTmBkP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "% Tracts With Buprenorphine Provider (30-min drive)",
-    "numerator": "county-2020",
+    "numerator": "county-2025",
     "nProperty": "BupTmDrP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "% Tracts With Buprenorphine Provider (30-min walk)",
-    "numerator": "county-2020",
+    "numerator": "county-2025",
     "nProperty": "BupTmWkP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "% Tracts With Methadone Provider (30-min bike)",
-    "numerator": "county-2020",
+    "numerator": "county-2025",
     "nProperty": "MetTmBkP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "% Tracts With Methadone Provider (30-min drive)",
-    "numerator": "county-2020",
+    "numerator": "county-2025",
     "nProperty": "MetTmDrP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "% Tracts With Methadone Provider (30-min walk)",
-    "numerator": "county-2020",
+    "numerator": "county-2025",
     "nProperty": "MetTmWkP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "% Tracts With Naltrexone Provider (30-min bike)",
-    "numerator": "county-2020",
+    "numerator": "county-2025",
     "nProperty": "NaltTmBkP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "% Tracts With Naltrexone Provider (30-min drive)",
-    "numerator": "county-2020",
+    "numerator": "county-2025",
     "nProperty": "NaltTmDrP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "% Tracts With Naltrexone Provider (30-min walk)",
-    "numerator": "county-2020",
+    "numerator": "county-2025",
     "nProperty": "NaltTmWkP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "% Tracts with Mental Health Provider (30-min drive)",
-    "numerator": "state-2020__county-2020",
+    "numerator": "state-2020__county-2025",
     "nProperty": "MhTmDrP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Mental_Health.md"
   },
   {
     "variable": "% Tracts with Opioid Treatment Program (OTP) (30-min drive)",
-    "numerator": "state-2021__county-2021",
+    "numerator": "state-2021__county-2025",
     "nProperty": "OtpTmDrP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
@@ -406,8 +406,22 @@
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
+    "variable": "% Tracts within 30-min Drive of HCV Testing Facility with impedance",
+    "numerator": "county-2025",
+    "nProperty": "HcvTmDrP2",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
+  },
+  {
+    "variable": "% Tracts within 30-min Drive of HIV Testing Facility with impedance",
+    "numerator": "county-2025",
+    "nProperty": "HivTmDrP2",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HIVTesting.md"
+  },
+  {
     "variable": "% Tracts within 30-min Drive of Hospital",
-    "numerator": "state-2020__county-2020",
+    "numerator": "state-2020__county-2025",
     "nProperty": "HospTmDrP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Hospitals.md"
@@ -602,6 +616,20 @@
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Household_Characteristics.md"
   },
   {
+    "variable": "Average time drive to nearest HCV testing provider",
+    "numerator": "county-2025",
+    "nProperty": "HcvAvTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
+  },
+  {
+    "variable": "Average time drive to nearest HIV provider",
+    "numerator": "county-2025",
+    "nProperty": "HivAvTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
+  },
+  {
     "variable": "Avg. Driving Time (min) to nearest Pharmacy ",
     "numerator": "state-2019__county-2025",
     "nProperty": "RxAvTmDr",
@@ -616,8 +644,22 @@
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Pharmacies.md"
   },
   {
+    "variable": "Avg. Driving Time to nearest HCV Testing Facility with impedance",
+    "numerator": "county-2025",
+    "nProperty": "HcvAvTmDr2",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
+  },
+  {
+    "variable": "Avg. Driving Time to nearest HIV Testing Facility with impedance",
+    "numerator": "county-2025",
+    "nProperty": "HivAvTmDr2",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HIVTesting.md"
+  },
+  {
     "variable": "Avg. Driving Time to nearest Hospital",
-    "numerator": "state-2020__county-2020",
+    "numerator": "state-2020__county-2025",
     "nProperty": "HospAvTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Hospitals.md"
@@ -652,28 +694,28 @@
   },
   {
     "variable": "Biking Time (min) to nearest Buprenorphine Provider",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "BupTmBk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Biking Time (min) to nearest Methadone Provider",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "MetTmBk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Biking Time (min) to nearest Naltrexone Provider",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "NaltTmBk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Biking time to nearest telehealth buprenorphine provider",
-    "numerator": "state-2025__county-2025",
+    "numerator": "state-2025__county-2025__tract-2025",
     "nProperty": "TlBupTmBk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
@@ -785,7 +827,7 @@
   },
   {
     "variable": "Count of Buprenorphine Providers (30-min bike)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "BupCntBk30",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
@@ -799,21 +841,21 @@
   },
   {
     "variable": "Count of Buprenorphine Providers (30-min walk)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "BupCntWk30",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Count of Buprenorphine Providers (60-min bike)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "BupCntBk60",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Count of Buprenorphine Providers (60-min walk)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "BupCntWk60",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
@@ -833,15 +875,29 @@
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_FQHCs.md"
   },
   {
+    "variable": "Count of HCV Providers",
+    "numerator": "tract-2025",
+    "nProperty": "HcvCntDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
+  },
+  {
+    "variable": "Count of HIV Providers",
+    "numerator": "tract-2025",
+    "nProperty": "HivCntDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
+  },
+  {
     "variable": "Count of Hospitals (30-min drive)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "HospCntDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Hospitals.md"
   },
   {
     "variable": "Count of Mental Health Providers (30-min drive)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "MhCntDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Mental_Health.md"
@@ -855,28 +911,28 @@
   },
   {
     "variable": "Count of Methadone Providers (30-min walk)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "MetCntWk60",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Count of Methadone Providers (60-min bike)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "MetCntBk60",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Count of Methadone Providers (60-min walk)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "MetCntWk30",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Count of Naltrexone Providers (30-min bike)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "NaltCntBk30",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
@@ -890,21 +946,21 @@
   },
   {
     "variable": "Count of Naltrexone Providers (30-min walk)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "NaltCntWk30",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Count of Naltrexone Providers (60-min bike)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "NaltCntBk60",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Count of Naltrexone Providers (60-min walk)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "NaltCntWk60",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
@@ -939,7 +995,7 @@
   },
   {
     "variable": "Count of Substance Use Treatment (SUT) facility (30-min drive)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "SutCntDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_SubstanceUseTreatment.md"
@@ -966,9 +1022,100 @@
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Employment_Trends.md"
   },
   {
+    "variable": "Count of buprenorphine providers (drive)",
+    "numerator": "tract-2025",
+    "nProperty": "BupCntDr60",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
+  },
+  {
     "variable": "Count of methadone providers (30-min bike)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "MetCntBk30",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Count of methadone providers (drive)",
+    "numerator": "tract-2025",
+    "nProperty": "MetCntDr60",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Count of naltrexone providers (drive)",
+    "numerator": "tract-2025",
+    "nProperty": "NaltCntDr60",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Count of telehealth buprenorphine providers within 30-minute bike ride",
+    "numerator": "tract-2025",
+    "nProperty": "TlBupCntBk30",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Count of telehealth buprenorphine providers within 30-minute drive",
+    "numerator": "tract-2025",
+    "nProperty": "TlBupCntDr30",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Count of telehealth buprenorphine providers within 30-minute walk",
+    "numerator": "tract-2025",
+    "nProperty": "TlBupCntWk30",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Count of telehealth buprenorphine providers within 60-minute drive",
+    "numerator": "tract-2025",
+    "nProperty": "TlBupCntDr60",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Count of tracts within 30-min driving range",
+    "numerator": "county-2025",
+    "nProperty": "HcvCtTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
+  },
+  {
+    "variable": "Count of tracts within 30-min driving range",
+    "numerator": "county-2025",
+    "nProperty": "HivCtTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
+  },
+  {
+    "variable": "Count of tracts within 30-min telehealth buprenorphine biking range",
+    "numerator": "county-2025",
+    "nProperty": "TlBupCtTmBk30",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Count of tracts within 30-min telehealth buprenorphine driving range",
+    "numerator": "county-2025",
+    "nProperty": "TlBupCtTmDr30",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Count of tracts within 30-min telehealth buprenorphine walking range",
+    "numerator": "county-2025",
+    "nProperty": "TlBupCtTmWk30",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Count of tracts within 60-min telehealth buprenorphine driving range",
+    "numerator": "county-2025",
+    "nProperty": "TlBupCtTmDr60",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
@@ -995,56 +1142,56 @@
   },
   {
     "variable": "Distance (mi) to Substance Use Treatment (SUT) facility",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "SutMinDis",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_SubstanceUseTreatment.md"
   },
   {
     "variable": "Distance (mi) to nearest Buprenorphine Provider",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "BupMinDis",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Distance (mi) to nearest Federally Qualified Health Centers (FQHC)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "FqhcMinDis",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_FQHCs.md"
   },
   {
     "variable": "Distance (mi) to nearest Hospital",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "HospMinDis",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Hospitals.md"
   },
   {
     "variable": "Distance (mi) to nearest MOUD (any)",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "MoudMinDis",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Distance (mi) to nearest Mental Health Provider",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "MhMinDis",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Mental_Health.md"
   },
   {
     "variable": "Distance (mi) to nearest Methadone Provider",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "MetMinDis",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Distance (mi) to nearest Naltrexone Provider",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "NaltMinDis",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
@@ -1057,8 +1204,22 @@
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Pharmacies.md"
   },
   {
+    "variable": "Distance to nearest HCV Provider",
+    "numerator": "tract-2025",
+    "nProperty": "HcvMinDis",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
+  },
+  {
+    "variable": "Distance to nearest HIV Provider",
+    "numerator": "tract-2025",
+    "nProperty": "HivMinDis",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
+  },
+  {
     "variable": "Distance to nearest OTP",
-    "numerator": "zcta-2021__tract-2021",
+    "numerator": "zcta-2021__tract-2025",
     "nProperty": "OtpMinDis",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
@@ -1100,14 +1261,14 @@
   },
   {
     "variable": "Driving Time (min) to nearest Mental Health Provider",
-    "numerator": "state-2020__county-2020",
+    "numerator": "state-2020__county-2025",
     "nProperty": "MhAvTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Mental_Health.md"
   },
   {
     "variable": "Driving Time (min) to nearest Mental Health Provider",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "MhTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Mental_Health.md"
@@ -1128,7 +1289,7 @@
   },
   {
     "variable": "Driving Time (min) to nearest Opioid Treatment Program (OTP)",
-    "numerator": "state-2021__county-2021",
+    "numerator": "state-2021__county-2025",
     "nProperty": "OtpAvTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
@@ -1184,7 +1345,7 @@
   },
   {
     "variable": "Driving time (min) to Substance Use Treatment (SUT) facility",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "SutTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_SubstanceUseTreatment.md"
@@ -1204,8 +1365,22 @@
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_FQHCs.md"
   },
   {
+    "variable": "Driving time (min) to nearest HIV Testing Facility with impedance",
+    "numerator": "tract-2025",
+    "nProperty": "HcvTmDr2",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
+  },
+  {
+    "variable": "Driving time (min) to nearest HIV Testing Facility, with impedance",
+    "numerator": "tract-2025",
+    "nProperty": "HivTmDr2",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HIVTesting.md"
+  },
+  {
     "variable": "Driving time (min) to nearest Hospital",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "HospTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Hospitals.md"
@@ -1218,30 +1393,23 @@
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Hospitals.md"
   },
   {
-    "variable": "Driving time to nearest OTP (impedance-adjusted)",
+    "variable": "Driving time to nearest HCV Provider",
     "numerator": "tract-2025",
-    "nProperty": "OtpTmDr2",
+    "nProperty": "HcvTmDr",
     "theme": "Environment",
-    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
   },
   {
-    "variable": "Driving time to nearest buprenorphine provider (with impedance)",
+    "variable": "Driving time to nearest HIV Provider",
     "numerator": "tract-2025",
-    "nProperty": "BupTmDr2",
+    "nProperty": "HivTmDr",
     "theme": "Environment",
-    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
   },
   {
-    "variable": "Driving time to nearest methadone provider (with impedance)",
+    "variable": "Driving time to nearest telehealth buprenorphine provider",
     "numerator": "tract-2025",
-    "nProperty": "MetTmDr2",
-    "theme": "Environment",
-    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
-  },
-  {
-    "variable": "Driving time to nearest naltrexone provider (with impedance)",
-    "numerator": "tract-2025",
-    "nProperty": "NaltTmDr2",
+    "nProperty": "TlBupTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
@@ -1582,13 +1750,6 @@
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Housing_Variables.md"
   },
   {
-    "variable": "MOUD Types Within 30-Min Drive  (impedance, adjusted) ",
-    "numerator": "tract-2025",
-    "nProperty": "MoudTyp",
-    "theme": "Environment",
-    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
-  },
-  {
     "variable": "Mean yearly Hepatitis C deaths among Asian population from 2018-2022",
     "numerator": "state-2022",
     "nProperty": "AvAsHcvD",
@@ -1655,6 +1816,13 @@
     "variable": "Methadone access 90 minutes (RAAM)",
     "numerator": "tract-2020",
     "nProperty": "MetRm90",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Minimum distance to telehealth buprenorphine provider",
+    "numerator": "tract-2025",
+    "nProperty": "TlBupMinDis",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
@@ -1825,6 +1993,48 @@
     "nProperty": "PciE",
     "theme": "Economic",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Economic_Characteristics.md"
+  },
+  {
+    "variable": "Percent of tracts within 30-min driving range",
+    "numerator": "county-2025",
+    "nProperty": "HcvTmDrP",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
+  },
+  {
+    "variable": "Percent of tracts within 30-min driving range",
+    "numerator": "county-2025",
+    "nProperty": "HivTmDrP",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
+  },
+  {
+    "variable": "Percent of tracts within 30-min telehealth buprenorphine biking range",
+    "numerator": "county-2025",
+    "nProperty": "TlBupTmBk30P",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Percent of tracts within 30-min telehealth buprenorphine driving range",
+    "numerator": "county-2025",
+    "nProperty": "TlBupTmDr30P",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Percent of tracts within 30-min telehealth buprenorphine walking range",
+    "numerator": "county-2025",
+    "nProperty": "TlBupTmWk30P",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Percent of tracts within 60-min telehealth buprenorphine driving range",
+    "numerator": "county-2025",
+    "nProperty": "TlBupTmDr60P",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Percentage of Smoking Population",
@@ -2381,28 +2591,42 @@
   },
   {
     "variable": "Tracts with Buprenorphine Provider within 30-min (biking)",
-    "numerator": "county-2020",
+    "numerator": "county-2025",
     "nProperty": "BupCtTmBk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Tracts with Buprenorphine Provider within 30-min (driving)",
-    "numerator": "county-2020",
+    "numerator": "county-2025",
     "nProperty": "BupCtTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Tracts with Buprenorphine Provider within 30-min (walking)",
-    "numerator": "county-2020",
+    "numerator": "county-2025",
     "nProperty": "BupCtTmWk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
+    "variable": "Tracts with HCV Testing Facility (30-min drive) with impedance",
+    "numerator": "county-2025",
+    "nProperty": "HcvCtTmDr2",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
+  },
+  {
+    "variable": "Tracts with HIV Testing Facility (30-min drive) with impedance",
+    "numerator": "county-2025",
+    "nProperty": "HivCtTmDr2",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HIVTesting.md"
+  },
+  {
     "variable": "Tracts with Hospital (30-min drive)",
-    "numerator": "state-2020__county-2020",
+    "numerator": "state-2020__county-2025",
     "nProperty": "HospCtTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Hospitals.md"
@@ -2416,7 +2640,7 @@
   },
   {
     "variable": "Tracts with Mental Health Provider (30-min drive)",
-    "numerator": "state-2020__county-2020",
+    "numerator": "state-2020__county-2025",
     "nProperty": "MhCtTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Mental_Health.md"
@@ -2430,21 +2654,21 @@
   },
   {
     "variable": "Tracts with Methadone Provider within 30-min (biking)",
-    "numerator": "county-2020",
+    "numerator": "county-2025",
     "nProperty": "MetCtTmBk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Tracts with Methadone Provider within 30-min (driving)",
-    "numerator": "county-2020",
+    "numerator": "county-2025",
     "nProperty": "MetCtTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Tracts with Methadone Provider within 30-min (walking)",
-    "numerator": "county-2020",
+    "numerator": "county-2025",
     "nProperty": "MetCtTmWk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
@@ -2458,28 +2682,28 @@
   },
   {
     "variable": "Tracts with Naltrexone Provider within 30-min (biking)",
-    "numerator": "county-2020",
+    "numerator": "county-2025",
     "nProperty": "NaltCtTmBk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Tracts with Naltrexone Provider within 30-min (driving)",
-    "numerator": "county-2020",
+    "numerator": "county-2025",
     "nProperty": "NaltCtTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Tracts with Naltrexone Provider within 30-min (walking)",
-    "numerator": "county-2020",
+    "numerator": "county-2025",
     "nProperty": "NaltCtTmWk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Tracts with Opioid Treatment Program (OTP) (30-min drive)",
-    "numerator": "state-2021__county-2021",
+    "numerator": "state-2021__county-2025",
     "nProperty": "OtpCtTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
@@ -2570,28 +2794,28 @@
   },
   {
     "variable": "Walking Time (min) to nearest Buprenorphine Provider",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "BupTmWk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Walking Time (min) to nearest Methadone Provider",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "MetTmWk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Walking Time (min) to nearest Naltrexone Provider",
-    "numerator": "zcta-2020__tract-2020",
+    "numerator": "zcta-2020__tract-2025",
     "nProperty": "NaltTmWk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Walking time to nearest telehealth buprenorphine provider",
-    "numerator": "state-2025__county-2025",
+    "numerator": "state-2025__county-2025__tract-2025",
     "nProperty": "TlBupTmWk",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"

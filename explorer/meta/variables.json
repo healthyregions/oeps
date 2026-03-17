@@ -480,7 +480,22 @@
         "Years": "1980, 1990, 2000, 2010, 2018, 2020, 2023"
       }
     ],
-    "Spatial Access to HIV Testing": [],
+    "Spatial Access to HIV Testing": [
+      {
+        "Variable Construct": "Spatial Access to HIV Testing",
+        "Variable Proxy": "Spatial access metrics to testing for human immunodeficiency virus (HIV)(Distance, Travel Time, Count Within Threshold)",
+        "Variables": [
+          "% Tracts within 30-min Drive of HIV Testing Facility with impedance",
+          "Avg. Driving Time to nearest HIV Testing Facility with impedance",
+          "Driving time (min) to nearest HIV Testing Facility, with impedance",
+          "Tracts with HIV Testing Facility (30-min drive) with impedance"
+        ],
+        "Source": "SAMHSA 2025; OSM 2025; Census TIGER 2020",
+        "Metadata": "Access_HIVTesting",
+        "Spatial Scale": "Tract, County",
+        "Years": "2025"
+      }
+    ],
     "Spatial Access to Hospitals": [
       {
         "Variable Construct": "Spatial Access to Hospitals",
@@ -517,7 +532,7 @@
         "Source": "SAMHSA 2020",
         "Metadata": "Access_Mental_Health",
         "Spatial Scale": "Tract, Zip, County, State",
-        "Years": "2020"
+        "Years": "2020, 2025"
       }
     ],
     "Urban/Suburban/Rural Classification": [
@@ -560,21 +575,25 @@
         "Variable Construct": "Spatial access to HCV Testing",
         "Variable Proxy": "Spatial access metrics to testing for hepatitis C virus (HCV) infections (Straight-line Distance, Driving Time, Count of Resources)",
         "Variables": [
+          "% Tracts within 30-min Drive of HCV Testing Facility with impedance",
           "Average time drive to nearest HCV testing provider",
           "Average time drive to nearest HIV provider",
+          "Avg. Driving Time to nearest HCV Testing Facility with impedance",
           "Count of HCV Providers",
           "Count of HIV Providers",
           "Count of tracts within 30-min driving range",
           "Distance to nearest HCV Provider",
           "Distance to nearest HIV Provider",
+          "Driving time (min) to nearest HIV Testing Facility with impedance",
           "Driving time to nearest HCV Provider",
           "Driving time to nearest HIV Provider",
-          "Percent of tracts within 30-min driving range"
+          "Percent of tracts within 30-min driving range",
+          "Tracts with HCV Testing Facility (30-min drive) with impedance"
         ],
-        "Source": "SAMHSA 2025",
+        "Source": "SAMHSA 2025; OSM 2025; Census TIGER 2020",
         "Metadata": "Access_HCVTesting",
-        "Spatial Scale": "",
-        "Years": ""
+        "Spatial Scale": "Tract, County",
+        "Years": "2025"
       }
     ],
     "Spatial Access to Substance Use Treatment Providers": [
@@ -592,7 +611,7 @@
         "Source": "SAMHSA 2020",
         "Metadata": "Access_SubstanceUseTreatment",
         "Spatial Scale": "Tract, Zip, County, State",
-        "Years": "2020"
+        "Years": "2020, 2025"
       }
     ],
     "Spatial Access to Pharmacies": [
