@@ -1078,14 +1078,14 @@
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "Count of tracts within 30-min driving range",
+    "variable": "Count of tracts with an HCV testing provider within 30-min driving range",
     "numerator": "county-2025",
     "nProperty": "HcvCtTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
   },
   {
-    "variable": "Count of tracts within 30-min driving range",
+    "variable": "Count of tracts with an HIV testing provider within 30-min driving range",
     "numerator": "county-2025",
     "nProperty": "HivCtTmDr",
     "theme": "Environment",
@@ -1365,7 +1365,7 @@
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_FQHCs.md"
   },
   {
-    "variable": "Driving time (min) to nearest HIV Testing Facility with impedance",
+    "variable": "Driving time (min) to nearest HCV Testing Facility with impedance",
     "numerator": "tract-2025",
     "nProperty": "HcvTmDr2",
     "theme": "Environment",
@@ -1995,14 +1995,14 @@
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Economic_Characteristics.md"
   },
   {
-    "variable": "Percent of tracts within 30-min driving range",
+    "variable": "Percent of tracts with an HCV testing provider within 30-min driving range",
     "numerator": "county-2025",
     "nProperty": "HcvTmDrP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
   },
   {
-    "variable": "Percent of tracts within 30-min driving range",
+    "variable": "Percent of tracts with an HIV testing provider within 30-min driving range",
     "numerator": "county-2025",
     "nProperty": "HivTmDrP",
     "theme": "Environment",
