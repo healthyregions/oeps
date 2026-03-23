@@ -1,6 +1,6 @@
 {
   "name": "HcvTmDrP",
-  "title": "Percent of tracts within 30-min driving range",
+  "title": "Percent of tracts with HCV testing provider within 30-min driving range",
   "type": "number",
   "example": "42.34",
   "description": "Percent of tracts within 30-minute drive to an HCV testing provider",
