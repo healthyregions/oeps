@@ -115,6 +115,54 @@ class DataPackage:
             gs = self.registry.geodata_sources.get(list(gs_lookup.keys())[0])
             geodata_sources.append(gs)
 
+            df = gs.get_blank_dataframe()
+
+            # Tabular geography key table for Frictionless FK checks. Validating FKs against the
+            # shapefile resource fails (FileResource has no row_stream); see issue #311.
+            if not skip_foreign_keys:
+                keys_resource_name = f"{rules_file.stem}-geography-keys"
+                keys_filename = f"{rules_file.stem}-geography-keys.csv"
+                keys_path_rel = f"data/{keys_filename}"
+                geo_key_col = "ZCTA5" if rules_file.stem == "zcta" else "FIPS"
+                keys_schema_obj = {
+                    "primaryKey": "HEROP_ID",
+                    "fields": [
+                        {
+                            "title": "HEROP_ID",
+                            "name": "HEROP_ID",
+                            "type": "string",
+                            "example": "050US01001",
+                            "description": "A derived unique id corresponding to the relevant geographic unit.",
+                            "metadata": "Geographic_Boundaries",
+                        },
+                        {
+                            "title": "ZCTA5" if geo_key_col == "ZCTA5" else "FIPS",
+                            "name": geo_key_col,
+                            "type": "string",
+                            "example": "22001",
+                            "description": (
+                                "Zip Code for this geographic unit."
+                                if geo_key_col == "ZCTA5"
+                                else "FIPS code for this geographic unit."
+                            ),
+                            "metadata": "Geographic_Boundaries",
+                        },
+                    ],
+                }
+                keys_resource = {
+                    "name": keys_resource_name,
+                    "title": f"Geography keys ({rules_file.stem})",
+                    "format": "csv",
+                    "mediatype": "text/csv",
+                    "path": keys_path_rel,
+                    "schema": f"schemas/{keys_resource_name}.json",
+                }
+                keys_outpath = Path(d_path, keys_filename)
+                df[["HEROP_ID", geo_key_col]].to_csv(keys_outpath, index=False)
+                write_json(keys_schema_obj, Path(self.path, keys_resource["schema"]))
+                self.schema["resources"].append(keys_resource)
+                self.clean_data_resource(keys_resource)
+
             ts_resource = {
                 "name": rules_file.stem,
                 "title": rules_file.stem,
@@ -139,7 +187,7 @@ class DataPackage:
                 resource_schema["foreignKeys"] = [{
                     "fields": "HEROP_ID",
                     "reference": {
-                        "resource": gs.name,
+                        "resource": f"{rules_file.stem}-geography-keys",
                         "fields": "HEROP_ID"
                     }
                 }]
@@ -162,7 +210,6 @@ class DataPackage:
                     "metadata": "Geographic_Boundaries"
                 })
 
-            df = gs.get_blank_dataframe()
             for row in self.rules_rows:
                 ## skip HEROP_ID and FIPS, as they are already in the blank df
                 if row["name"] in ["HEROP_ID", "FIPS"]:
