@@ -4,6 +4,7 @@ library(tidyverse)
 Mh_tracts25 <- read.csv("C:/Users/adrit/Downloads/MhFacility-Tract25.csv")
 head(Mh_tracts25)
 summary(Mh_tracts25)
+
 # Flag tracts with Mental Health Facility within 30-minute drive
 Mh_tracts25$MhInRangeDr30 = ifelse(Mh_tracts25$MhTmDr < 30, 1, 0)
 Mh_tracts25$MhInRangeDr302 = ifelse(Mh_tracts25$MhTmDr2 < 30, 1, 0)
