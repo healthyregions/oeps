@@ -1,3 +1,7 @@
+# Author: Mahjabin Kabir Adrita
+# Date: 2026-04-02
+# Data Source: Substance Abuse and Mental Health Services Administration (SAMHSA)
+
 library(tidyverse)
 
 # Open tract-level Mental Health Facility travel time data (2025)
