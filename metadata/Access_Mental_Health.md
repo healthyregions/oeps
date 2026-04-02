@@ -50,8 +50,10 @@ An impedance approach instead multiples the estimated travel time by a factor, i
 #### County and State 
 County and state-level variables include the **count** of Census tracts and the **percent** of Census tracts located within a 30-minute driving threshold of a Mental Health Provider Facility, as well as the mean (average) driving time in minutes from Census tracts within the county or state. 
 
-For 2025 measures, the tract to county conversion was completed using R code, and can be found
-[scripts/-tract2county.R.](https://github.com/healthyregions/oeps/tree/main/scripts). 
+![Screenshot](https://github.com/user-attachments/assets/a6cc665d-8244-4554-8410-04a6a418be9a)
+
+For 2025 measures, the tract to county conversion was completed using R code, and can be found in
+[scripts](https://github.com/healthyregions/oeps/tree/main/scripts). 
 
 ### Data Limitations:  
 - Euclidean distance or straight-line distance is a simple approximation of distance or travel time from an origin centroid to the nearest health center. It is not a precise calculation of real travel times or distances. 
