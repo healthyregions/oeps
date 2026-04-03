@@ -4,7 +4,7 @@
   "type": "number",
   "example": "56.89",
   "description": "Driving time from tract/zip origin centroid to the nearest tract/zip HIV Testing Facility with impedance destination centroid, in minutes",
-  "metadata": "Access_HCVTesting",
+  "metadata": "Access_HIVTesting.json",
   "longitudinal": false,
   "analysis": false,
   "table_sources": [
