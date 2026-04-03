@@ -1,7 +1,7 @@
 **Meta Data Name**: Access to MOUDs  
 **Date Added**: February 1, 2021  
 **Author**: Marynia Kolak, Mahjabin Kabir Adrita, Wataru Morioka, Susan Paykin, Yilin Lyu, Mallikarjun Bhusnoor   
-**Date Last Modified**: February 18, 2026   
+**Date Last Modified**: April 03, 2026   
 **Last Modified By**: Mallikarjun Bhusnoor
 
 ### Data Source(s) Description:
@@ -22,7 +22,7 @@ The following was extracted in May 2025 from SAMSHA’s Treatment Locator Servic
 
  - **Buprenorphine**: All prescribers listed.
  - **Telehealth**: All providers offering buprenorphine treatment via "telemedicine/telehealth" services.
- - **Methadone**: Methadone: All providers tagged as providing “methadone.” The term methadone maintenance was no longer visible as a feature in the locator service.
+ - **Methadone**: All providers tagged as providing “methadone.” The term methadone maintenance was no longer visible as a feature in the locator service.
  - **OTP**: All providers tagged as “opioid treatment providers.”
  - **Naltrexone**: All providers tagged as providing “naltrexone.”
 
@@ -65,7 +65,9 @@ Travel Time to Buprenorphine Provider (BupTmDr)
 MoudTyp counts how many different MOUD types (buprenorphine, methadone, naltrexone) are available within a 30-minute car drive, after applying the impedance factor (Minutes2). Because Minutes2 (impedance) = 2 × Minutes, this 30-minute threshold with impedance is roughly equivalent to a 60-minute drive under ideal conditions. This variable is built from the three binary indicators BupCntDr2, MetCntDr2, and NaltCntDr2 for each census tract, and is available only for 2025 tract-level measures.
 
 #### RAAM Access Measures
-We calculated RAAM access metrics for every census tract, using tract centroids as demand locations, methadone and opioid treatment providers as supply locations, and national car travel–time matrices up to 90 minutes. Tract‐level population defined demand, and provider counts per tract defined supply. RAAM iteratively allocates demand to nearby providers within a time budget (30 and 60 minutes), accounting for both travel time and crowding at each site, and returns an access “cost” for every tract (lower values indicate better access). This analysis was conducted in Python using the PySAL access package, with complete computational notebooks which can be found here - [scripts/RAAM_National_OTP.ipynb] (https://github.com/healthyregions/oeps/blob/main/scripts/RAAM_National_OTP.ipynb)
+We calculated RAAM access metrics for census tracts using tract centroids as demand locations, tract-level population as demand, provider counts per tract as supply, and national car travel-time matrices up to 90 minutes. RAAM iteratively allocates demand to nearby providers within a specified travel-time budget while accounting for both travel impedance and provider crowding, and returns an access cost for each tract. Lower RAAM values indicate better access, while higher values indicate worse access. In the current release, RAAM measures are available only for methadone and opioid treatment programs (OTP); RAAM measures for additional MOUD types, including buprenorphine and naltrexone, are planned for release by mid-2026. This analysis was conducted in Python using the PySAL access package, with complete computational notebooks which can be found here - [scripts/RAAM_National_OTP.ipynb] (https://github.com/healthyregions/oeps/blob/main/scripts/RAAM_National_OTP.ipynb)
+
+A null value indicates that a RAAM score was not available for that geography in the current release. This may reflect no reachable provider within the modeled travel-time threshold, missing required inputs, or a value not produced during processing or integration.
 
 ![Methadone RAAM Measure (30 Minutes)](https://github.com/healthyregions/oeps/blob/293_Methadone_OTP_2025_RAAM/metadata/images/MetRm30.png)
 Methadone RAAM Measure (30 Minutes)
@@ -77,6 +79,8 @@ Opioid Treatment Provider RAAM Measure (30 Minutes
 County and state-level variables include the **count** of Census tracts and the **percent** of Census tracts located within a 30 minute driving threshold of an MOUD type, as well as the mean (average) driving time in minutes from Census tracts within the county or state. 
 
 ### Data Limitations:
+Although this metadata describes access to multiple MOUD types, RAAM measures in the current release are limited to methadone/OTP only. RAAM measures for buprenorphine and naltrexone will be added in a future update planned for mid-2026.
+
 All access metrics should be considered approximations, as estimates are calculated from locations within administrative units. Furthermore, resource data only represents *potential* access or spatial availability, reflecting resources made available on a publicly available website. Much research has shown that data on SAMHSA does not represent actual availability, as not all providers may in fact prescribe MOUD medications, some providers may not be accepting new patients, and multiple  factors such as access to insurance, policy matters, and stigma may serve as additional barriers to MOUDs. 
 
 ### Comments/Notes:
