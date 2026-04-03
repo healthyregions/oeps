@@ -627,7 +627,7 @@
     "numerator": "county-2025",
     "nProperty": "HivAvTmDr",
     "theme": "Environment",
-    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HIVTesting.md"
   },
   {
     "variable": "Avg. Driving Time (min) to nearest Pharmacy ",
@@ -886,7 +886,7 @@
     "numerator": "tract-2025",
     "nProperty": "HivCntDr",
     "theme": "Environment",
-    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HIVTesting.md"
   },
   {
     "variable": "Count of Hospitals (30-min drive)",
@@ -1089,7 +1089,7 @@
     "numerator": "county-2025",
     "nProperty": "HivCtTmDr",
     "theme": "Environment",
-    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HIVTesting.md"
   },
   {
     "variable": "Count of tracts within 30-min telehealth buprenorphine biking range",
@@ -1215,7 +1215,7 @@
     "numerator": "tract-2025",
     "nProperty": "HivMinDis",
     "theme": "Environment",
-    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HIVTesting.md"
   },
   {
     "variable": "Distance to nearest OTP",
@@ -1289,15 +1289,15 @@
   },
   {
     "variable": "Driving Time (min) to nearest Opioid Treatment Program (OTP)",
-    "numerator": "state-2021__county-2025",
-    "nProperty": "OtpAvTmDr",
+    "numerator": "zcta-2021__tract-2025",
+    "nProperty": "OtpTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Driving Time (min) to nearest Opioid Treatment Program (OTP)",
-    "numerator": "zcta-2021__tract-2025",
-    "nProperty": "OtpTmDr",
+    "numerator": "state-2021__county-2025",
+    "nProperty": "OtpAvTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
@@ -1369,7 +1369,7 @@
     "numerator": "tract-2025",
     "nProperty": "HcvTmDr2",
     "theme": "Environment",
-    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HIVTesting.md"
   },
   {
     "variable": "Driving time (min) to nearest HIV Testing Facility, with impedance",
@@ -1404,7 +1404,7 @@
     "numerator": "tract-2025",
     "nProperty": "HivTmDr",
     "theme": "Environment",
-    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HIVTesting.md"
   },
   {
     "variable": "Driving time to nearest telehealth buprenorphine provider",
@@ -2006,7 +2006,7 @@
     "numerator": "county-2025",
     "nProperty": "HivTmDrP",
     "theme": "Environment",
-    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HIVTesting.md"
   },
   {
     "variable": "Percent of tracts within 30-min telehealth buprenorphine biking range",
