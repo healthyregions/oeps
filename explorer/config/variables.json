@@ -1369,7 +1369,7 @@
     "numerator": "tract-2025",
     "nProperty": "HcvTmDr2",
     "theme": "Environment",
-    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HIVTesting.md"
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
   },
   {
     "variable": "Driving time (min) to nearest HIV Testing Facility, with impedance",

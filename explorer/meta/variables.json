@@ -301,7 +301,6 @@
           "Count of HIV Providers",
           "Count of tracts with an HIV testing provider within 30-min driving range",
           "Distance to nearest HIV Provider",
-          "Driving time (min) to nearest HCV Testing Facility with impedance",
           "Driving time (min) to nearest HIV Testing Facility, with impedance",
           "Driving time to nearest HIV Provider",
           "Percent of tracts with an HIV testing provider within 30-min driving range",
@@ -594,6 +593,7 @@
           "Count of HCV Providers",
           "Count of tracts with an HCV testing provider within 30-min driving range",
           "Distance to nearest HCV Provider",
+          "Driving time (min) to nearest HCV Testing Facility with impedance",
           "Driving time to nearest HCV Provider",
           "Percent of tracts with an HCV testing provider within 30-min driving range",
           "Tracts with HCV Testing Facility (30-min drive) with impedance"

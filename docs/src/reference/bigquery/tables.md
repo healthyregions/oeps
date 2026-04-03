@@ -2586,7 +2586,7 @@ HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic uni
 BupCntDr60|NUMERIC|Count of buprenorphine providers in 60 minute drive time threshold
 TlBupTmWk|NUMERIC|Estimated walking time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services
 NaltCntDr60|NUMERIC|Count of naltrexone providers in 60 minute drive time threshold
-HcvTmDr2|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip HIV Testing Facility with impedance destination centroid, in minutes
+HcvTmDr2|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip HCV Testing Facility with impedance destination centroid, in minutes
 BupCntDr30|INTEGER|Count of Buprenorphine providers in 30 minute drive time threshold
 HcvTmDr|NUMERIC|Driving time from origin to nearest HCV testing provider (minutes)
 NaltCntDr30|INTEGER|Count of naltrexone providers in 30 minute drive time threshold
