@@ -1,4 +1,8 @@
-# Load required libraries
+# Author: Mahjabin Kabir Adrita
+# Date: 2026-08-02
+# Data Source: Substance Abuse and Mental Health Services Administration (SAMHSA)
+
+#Load required libraries
 
 library(sf)
 library(tmap)
