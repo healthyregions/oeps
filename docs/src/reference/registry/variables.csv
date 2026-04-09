@@ -282,7 +282,7 @@ OtpFca30,Two-step floating catchment area (2SFCA) measure of access to opioid tr
 OtpFca60,Two-step floating catchment area (2SFCA) measure of access to opioid treatment programs within a 60-minute drive,number,0.0004,Two-step floating catchment area (2SFCA) measure of access to opioid treatment programs within a 60-minute drive,tract-2025,Access_MOUDs,False,False
 OtpMinDis,Distance to nearest OTP,number,121.0,"Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles","tract-2021, tract-2025, zcta-2021",Access_MOUDs,False,False
 OtpRm30,Opioid Treatment Provider access 30 minutes (RAAM),number,1.22,Opioid Treatment Provider access 30 minutes (RAAM),tract-2025,Access_MOUDs,False,False
-OtpRm60,Opioid Treatment Provider access 30 minutes (RAAM),number,1.23,Opioid Treatment Provider access 30 minutes (RAAM),tract-2025,Access_MOUDs,False,False
+OtpRm60,Opioid Treatment Provider access 60 minutes (RAAM),number,1.23,Opioid Treatment Provider access 60 minutes (RAAM),tract-2025,Access_MOUDs,False,False
 OtpTmDr,Driving Time (min) to nearest Opioid Treatment Program (OTP),number,27.39,"Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes","tract-2021, tract-2025, zcta-2021",Access_MOUDs,False,True
 OtpTmDr2,Driving time to nearest OTP (impedance-adjusted),number,22.45,"Driving time in minutes from the tract centroid to the nearest opioid treatment program, using impedance-adjusted travel time.",,Access_MOUDs,False,False
 OtpTmDrP,% Tracts with Opioid Treatment Program (OTP) (30-min drive),number,0.75,Percent of tracts within a 30-minute drive time of an opioid treatment program.,"county-2021, county-2025, state-2021",Access_MOUDs,False,False

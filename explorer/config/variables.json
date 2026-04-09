@@ -268,21 +268,14 @@
   {
     "variable": "% Population: Age 15-44",
     "numerator": "state-2018__county-2018__zcta-2018__tract-2018",
-    "nProperty": "Age15_44P",
+    "nProperty": "Age15_44",
     "theme": "Social",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Demographic_Characteristics.md"
   },
   {
     "variable": "% Population: Age 15-44",
     "numerator": "state-2018__county-2018__zcta-2018__tract-2018",
-    "nProperty": "Age15_44",
-    "theme": "Social",
-    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Demographic_Characteristics.md"
-  },
-  {
-    "variable": "% Population: Age 65+",
-    "numerator": "state-2023__county-2023__zcta-2023__tract-2023",
-    "nProperty": "Ovr65",
+    "nProperty": "Age15_44P",
     "theme": "Social",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Demographic_Characteristics.md"
   },
@@ -290,6 +283,13 @@
     "variable": "% Population: Age 65+",
     "numerator": "state-2023__county-2023__zcta-2023__tract-2023",
     "nProperty": "Ovr65P",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Demographic_Characteristics.md"
+  },
+  {
+    "variable": "% Population: Age 65+",
+    "numerator": "state-2023__county-2023__zcta-2023__tract-2023",
+    "nProperty": "Ovr65",
     "theme": "Social",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Demographic_Characteristics.md"
   },
@@ -1981,7 +1981,7 @@
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
-    "variable": "Opioid Treatment Provider access 30 minutes (RAAM)",
+    "variable": "Opioid Treatment Provider access 60 minutes (RAAM)",
     "numerator": "tract-2025",
     "nProperty": "OtpRm60",
     "theme": "Environment",

@@ -150,18 +150,18 @@
       "geodata_name": "geo-2010-county"
     },
     {
-      "name": "county-providers-2010.csv",
-      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/county-providers-2010.csv",
-      "year": "2010",
-      "geodata_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/county-2018-500k-shp.zip",
-      "geodata_name": "geo-2018-county"
-    },
-    {
       "name": "county-2010.csv",
       "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/county-2010.csv",
       "year": "2010",
       "geodata_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/county-2010-500k-shp.zip",
       "geodata_name": "geo-2010-county"
+    },
+    {
+      "name": "county-providers-2010.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/county-providers-2010.csv",
+      "year": "2010",
+      "geodata_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/county-2018-500k-shp.zip",
+      "geodata_name": "geo-2018-county"
     },
     {
       "name": "county-2014.csv",
@@ -329,15 +329,15 @@
       "geodata_name": "geo-2010-tract"
     },
     {
-      "name": "tract-2010.csv",
-      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/tract-2010.csv",
+      "name": "tract-providers-2010.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/tract-providers-2010.csv",
       "year": "2010",
       "geodata_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/tract-2018-500k-shp.zip",
       "geodata_name": "geo-2018-tract"
     },
     {
-      "name": "tract-providers-2010.csv",
-      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/tract-providers-2010.csv",
+      "name": "tract-2010.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/tract-2010.csv",
       "year": "2010",
       "geodata_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/tract-2018-500k-shp.zip",
       "geodata_name": "geo-2018-tract"
