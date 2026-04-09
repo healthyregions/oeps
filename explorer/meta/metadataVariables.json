@@ -1457,6 +1457,7 @@
           "2025"
         ],
         "geographies": [
+          "County",
           "Tract",
           "ZCTA"
         ]
@@ -1470,6 +1471,7 @@
           "2025"
         ],
         "geographies": [
+          "County",
           "Tract",
           "ZCTA"
         ]
@@ -1483,6 +1485,7 @@
           "2025"
         ],
         "geographies": [
+          "County",
           "Tract",
           "ZCTA"
         ]
@@ -1969,6 +1972,7 @@
           "2025"
         ],
         "geographies": [
+          "County",
           "Tract",
           "ZCTA"
         ]
@@ -1982,6 +1986,7 @@
           "2025"
         ],
         "geographies": [
+          "County",
           "Tract",
           "ZCTA"
         ]
@@ -1995,6 +2000,7 @@
           "2025"
         ],
         "geographies": [
+          "County",
           "Tract",
           "ZCTA"
         ]
@@ -2066,6 +2072,7 @@
           "2025"
         ],
         "geographies": [
+          "County",
           "Tract"
         ]
       },
@@ -2124,6 +2131,7 @@
           "2025"
         ],
         "geographies": [
+          "County",
           "Tract"
         ]
       },
@@ -2466,6 +2474,7 @@
           "2025"
         ],
         "geographies": [
+          "County",
           "Tract",
           "ZCTA"
         ]
@@ -2479,6 +2488,7 @@
           "2025"
         ],
         "geographies": [
+          "County",
           "Tract",
           "ZCTA"
         ]
@@ -2492,6 +2502,7 @@
           "2025"
         ],
         "geographies": [
+          "County",
           "Tract",
           "ZCTA"
         ]
@@ -3350,6 +3361,28 @@
         ]
       },
       {
+        "title": "% Tracts within 30-min Drive of Mental Health Provider with impedence",
+        "name": "MhTmDrP2",
+        "description": "Percent of tracts with Mental Health Provider within a 30-mini driving range, with impedence",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Avg. Driving Time to nearest Mental Health Provider with impedance",
+        "name": "MhAvTmDr2",
+        "description": "Average driving time (minutes) across tracts in state to nearest Mental Health Provider, with impedance",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
         "title": "Count of Mental Health Providers (30-min drive)",
         "name": "MhCntDr",
         "description": "Count of MH providers within a 30-minute driving threshold",
@@ -3402,6 +3435,17 @@
         ]
       },
       {
+        "title": "Driving time (min) to nearest Mental Health Provider with impedance",
+        "name": "MhTmDr2",
+        "description": "Driving time from tract/zip origin centroid to the nearest tract/zip Mental Health Provider with impedance destination centroid, in minutes",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
         "title": "Tracts with Mental Health Provider (30-min drive)",
         "name": "MhCtTmDr",
         "description": "Number of tracts with a mental health provider within a 30-min driving range.",
@@ -3412,6 +3456,17 @@
         "geographies": [
           "County",
           "State"
+        ]
+      },
+      {
+        "title": "Tracts with Mental Health Provider (30-min drive) with impedance",
+        "name": "MhCtTmDr2",
+        "description": "Number of tracts with Mental Health Provider within a 30-min driving range, with impedance",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "County"
         ]
       }
     ]

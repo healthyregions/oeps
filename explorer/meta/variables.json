@@ -542,12 +542,16 @@
         "Variable Proxy": "Spatial access metrics to Mental Health Providers (Distance, Travel Time, Count Within Threshold)",
         "Variables": [
           "% Tracts with Mental Health Provider (30-min drive)",
+          "% Tracts within 30-min Drive of Mental Health Provider with impedence",
+          "Avg. Driving Time to nearest Mental Health Provider with impedance",
           "Count of Mental Health Providers (30-min drive)",
           "Distance (mi) to nearest Mental Health Provider",
           "Driving Time (min) to nearest Mental Health Provider",
-          "Tracts with Mental Health Provider (30-min drive)"
+          "Driving time (min) to nearest Mental Health Provider with impedance",
+          "Tracts with Mental Health Provider (30-min drive)",
+          "Tracts with Mental Health Provider (30-min drive) with impedance"
         ],
-        "Source": "SAMHSA 2020",
+        "Source": "SAMHSA 2020, 2025; OSM 2019 & 2025; Census TIGER 2018 & 2020",
         "Metadata": "Access_Mental_Health",
         "Spatial Scale": "Tract, Zip, County, State",
         "Years": "2020, 2025"
