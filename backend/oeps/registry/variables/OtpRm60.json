@@ -1,12 +1,12 @@
 {
   "name": "OtpRm60",
-  "title": "Opioid Treatment Provider access 30 minutes (RAAM)",
+  "title": "Opioid Treatment Provider access 60 minutes (RAAM)",
   "type": "number",
   "example": "1.23",
-  "description": "Opioid Treatment Provider access 30 minutes (RAAM)",
+  "description": "Opioid Treatment Provider access 60 minutes (RAAM)",
+  "metadata": "Access_MOUDs",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Access_MOUDs",
   "table_sources": [
     "tract-2025"
   ]
