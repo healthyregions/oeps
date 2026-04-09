@@ -4,8 +4,10 @@
   "type": "number",
   "example": "42.45",
   "description": "Euclidean distance* from tract/zip centroid to nearest HIV testing provider (miles)",
+  "metadata": "Access_HIVTesting.json",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Access_HCVTesting",
-  "table_sources": []
+  "table_sources": [
+    "tract-2025"
+  ]
 }

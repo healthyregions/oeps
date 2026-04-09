@@ -1,0 +1,13 @@
+{
+  "name": "HospTmDr2",
+  "title": "Driving time (min) to nearest Hospital with Impedance Factor",
+  "type": "number",
+  "example": "23.12",
+  "description": "Driving time from tract/zip origin centroid to the nearest tract/zip hospital destination centroid, in minutes with Impedance factor",
+  "longitudinal": false,
+  "analysis": false,
+  "metadata": "Access_Hospitals",
+  "table_sources": [
+    "tract-2025"
+  ]
+}

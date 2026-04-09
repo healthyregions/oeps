@@ -4,6 +4,6 @@
   "construct": "Spatial Access to Hospitals",
   "proxy": "Spatial access metrics to Hospitals (Distance, Travel Time, Count Within Threshold)",
   "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Hospitals.md",
-  "source": "CovidCareMap 2020",
-  "source_long": "CovidCareMap, 2020"
+  "source": "CovidCareMap 2020; CMS 2025; OSM 2019 & 2025; Census TIGER 2018 & 2020",
+  "source_long": " CovidCareMap Healthcare System Capacity data, 2020; Centers for Medicare & Medicaid Services, 2025; Open Street Map 2019 & 2025; Census Tiger/Line 2018 & 2020 Shapefiles"
 }

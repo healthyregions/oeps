@@ -1,0 +1,13 @@
+{
+  "name": "HospTmDrP2",
+  "title": "% Tracts within 30-min Drive of Hospital with Impedance Factor",
+  "type": "number",
+  "example": "11.11",
+  "description": "Percent of tracts with hospital within a 30-mini driving range with Impedance Factor",
+  "longitudinal": false,
+  "analysis": false,
+  "metadata": "Access_Hospitals",
+  "table_sources": [
+    "county-2025"
+  ]
+}

@@ -4,6 +4,6 @@
   "construct": "Spatial Access to Pharmacies",
   "proxy": "Spatial access metrics to Pharmacies (Distance, Travel Time, Count Within Threshold)",
   "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Pharmacies.md",
-  "source": "InfoGroup 2019",
-  "source_long": "InfoGroup, 2019"
+  "source": "InfoGroup 2019; Amazon S3 2025; OSM 2019 & 2025; Census TIGER 2018 & 2020",
+  "source_long": "InfoGroup, 2019; Amazon S3, 2025; Open Street Map 2019 & 2025; Census Tiger/Line 2018 & 2020 Shapefiles"
 }

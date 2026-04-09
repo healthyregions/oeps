@@ -4,8 +4,10 @@
   "type": "integer",
   "example": "42",
   "description": "Number of HIV testing providers within a 30-minute drive",
+  "metadata": "Access_HIVTesting.json",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Access_HCVTesting",
-  "table_sources": []
+  "table_sources": [
+    "tract-2025"
+  ]
 }

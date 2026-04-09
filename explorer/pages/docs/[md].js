@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from 'next/link';
 import { useRouter } from 'next/router'
 import styles from "../../styles/Docs.module.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Gutter } from "../../components/layout/Gutter";
 import MainNav from "../../components/layout/MainNav";
 import ReactMarkdown from 'react-markdown';
@@ -13,6 +13,19 @@ import metadataVariables from '../../meta/metadataVariables.json';
 const BASE_DOCS_URL = 'https://raw.githubusercontent.com/healthyregions/oeps/main/metadata/'
 const fetchMarkdown = async (url) => await fetch(url).then(r => r.text()).then(r => r.replace('[here](/data_final).', '[here](/download).'))
 
+function sortVariables(list, sortKey, sortAsc) {
+  if (!list?.length) return list
+  const dir = sortAsc ? 1 : -1
+  return [...list].sort((a, b) => {
+    let va = a[sortKey]
+    let vb = b[sortKey]
+    if (Array.isArray(va)) va = va.join(', ')
+    if (Array.isArray(vb)) vb = vb.join(', ')
+    const cmp = String(va).localeCompare(String(vb), undefined, { numeric: true })
+    return dir * cmp
+  })
+}
+
 export default function MarkdownDocs() {
   const router = useRouter()
   const { md } = router.query
@@ -21,6 +34,8 @@ export default function MarkdownDocs() {
   const [construct, setConstruct] = useState("")
   const [varList, setVarList] = useState([]);
   const [displayName, setDisplayName] = useState("");
+  const [sortKey, setSortKey] = useState('name')
+  const [sortAsc, setSortAsc] = useState(true)
 
   useEffect(() => {
     if (md !== undefined){
@@ -29,12 +44,19 @@ export default function MarkdownDocs() {
         setDisplayName(md.replaceAll("_", " "))
         setTheme(metadataVariables[md]["theme"])
         setConstruct(metadataVariables[md]["construct"])
-        setVarList(metadataVariables[md]["variables"])
+        setVarList(metadataVariables[md]["variables"] ?? [])
       } catch(e) {
         setMarkdownText('## Error - Could not locate information.')
       }
     }
   },[md])
+
+  const sortedVarList = useMemo(() => sortVariables(varList, sortKey, sortAsc), [varList, sortKey, sortAsc])
+
+  const handleSort = (key) => {
+    setSortKey(key)
+    setSortAsc(prev => (sortKey === key ? !prev : true))
+  }
 
   return (
     <div className={styles.container}>
@@ -73,15 +95,31 @@ export default function MarkdownDocs() {
         <table className={styles.variableTable} style={{fontSize: '1.25em'}}>
           <thead>
               <tr>
-                  <th style={{ width:"20%"}}>Variable</th>
-                  <th style={{ width:"10%"}}>Variable ID</th>
+                  <th style={{ width:"20%"}}>
+                    <button type="button" className={styles.sortableTh} onClick={() => handleSort('title')} title="Sort by Variable">
+                      Variable {sortKey === 'title' && (sortAsc ? '↑' : '↓')}
+                    </button>
+                  </th>
+                  <th style={{ width:"10%"}}>
+                    <button type="button" className={styles.sortableTh} onClick={() => handleSort('name')} title="Sort by Variable ID">
+                      Variable ID {sortKey === 'name' && (sortAsc ? '↑' : '↓')}
+                    </button>
+                  </th>
                   <th style={{ width:"45%"}}>Description</th>
-                  <th style={{ width:"10%"}}>Years Available</th>
-                  <th style={{ width:"15%"}}>Spatial Scale</th>
+                  <th style={{ width:"10%"}}>
+                    <button type="button" className={styles.sortableTh} onClick={() => handleSort('years')} title="Sort by Years Available">
+                      Years Available {sortKey === 'years' && (sortAsc ? '↑' : '↓')}
+                    </button>
+                  </th>
+                  <th style={{ width:"15%"}}>
+                    <button type="button" className={styles.sortableTh} onClick={() => handleSort('geographies')} title="Sort by Spatial Scale">
+                      Spatial Scale {sortKey === 'geographies' && (sortAsc ? '↑' : '↓')}
+                    </button>
+                  </th>
               </tr>
           </thead>
           <tbody>
-          {varList.map((variable) => {
+          {sortedVarList.map((variable) => {
               return <tr key={variable['name']}>
                   <td style={{ width:"20%"}}>{variable['title']}</td>
                   <td style={{ width:"10%"}}>{variable['name']}</td>

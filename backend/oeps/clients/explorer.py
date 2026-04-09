@@ -7,7 +7,7 @@ import pandas as pd
 from ..clients.s3 import sync_to_s3, get_base_url
 from ..config import DATA_DIR
 from ..handlers import Registry
-from ..utils import write_json, make_id
+from ..utils import write_json, make_id, read_csv_robust
 
 
 class Explorer:
@@ -79,7 +79,7 @@ class Explorer:
                 read_path = ts.path
                 if read_path.startswith("tables"):
                     read_path = Path(DATA_DIR, read_path)
-                df = self.dataframe_lookup.get(ds, pd.read_csv(read_path))
+                df = self.dataframe_lookup.get(ds, read_csv_robust(read_path))
                 df_filtered = df.filter(field_list)
 
                 ## write CSV to local
