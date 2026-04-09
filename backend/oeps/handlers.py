@@ -8,6 +8,7 @@ import geopandas as gpd
 from pydantic import BaseModel
 
 from .config import THEME_ORDER
+from .utils import read_csv_robust
 from .models import (
     TableSourceModel,
     VariableModel,
@@ -20,7 +21,7 @@ class TableSource(TableSourceModel):
 
     def load_dataframe(self) -> pd.DataFrame:
         """Load this TableSource's CSV data into a pandas DataFrame"""
-        self.df = pd.read_csv(self.full_path)
+        self.df = read_csv_robust(self.full_path)
         return self.df
 
     def get_variable_data(self, names: list[str]):

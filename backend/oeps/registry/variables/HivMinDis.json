@@ -6,6 +6,8 @@
   "description": "Euclidean distance* from tract/zip centroid to nearest HIV testing provider (miles)",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Access_HCVTesting",
-  "table_sources": []
+  "metadata": "Access_HIVTesting",
+  "table_sources": [
+    "tract-2025"
+  ]
 }
