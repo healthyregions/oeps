@@ -1,0 +1,10 @@
+{
+  "name": "MetCtTmDr2",
+  "title": "Count of Tracts within 30-min drive of Methadone Provider, with Impedance factor",
+  "type": "number",
+  "example": "3.4",
+  "description": "Number of tracts with Methadone Providerwithin a 30-min driving range, with Impedance factor",
+  "metadata": "Access_MOUDs.json",
+  "longitudinal": false,
+  "analysis": false
+}
