@@ -1,0 +1,10 @@
+{
+  "name": "MetAvTmDr2",
+  "title": "Average driving time to nearest Methadone Provider(MET), with Impedance factor",
+  "type": "number",
+  "example": "2.3",
+  "description": "Average driving time (minutes) across tracts in state to nearest Methadone Provider(MET), with Impedance factor",
+  "metadata": "Access_MOUDs.json",
+  "longitudinal": false,
+  "analysis": false
+}
