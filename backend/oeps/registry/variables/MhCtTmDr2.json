@@ -3,10 +3,10 @@
   "title": "Tracts with Mental Health Provider (30-min drive) with impedance",
   "type": "number",
   "example": "45",
-  "description": "Number of tracts with Mental Health Provider within a 30-min driving range, with impedance",
+  "description": "Number of tracts with mental health provider within a 30-min driving range, with impedance",
+  "metadata": "Access_Mental_Health",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Access_Mental_Health",
   "table_sources": [
     "county-2025"
   ]
