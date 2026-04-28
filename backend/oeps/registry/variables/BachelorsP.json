@@ -1,6 +1,6 @@
 {
   "name": "BachelorsP",
-  "title": "Bachelor's degree",
+  "title": "% Bachelor's degree",
   "type": "number",
   "example": "60.0",
   "description": "Percent persons aged 25 years and over with a bachelor’s degree as their highest level of education",
