@@ -1,6 +1,6 @@
 {
   "name": "EduHsP",
-  "title": "High School Graduate",
+  "title": "% High School Graduate",
   "type": "number",
   "example": "60.0",
   "description": "\tPercent population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)",
