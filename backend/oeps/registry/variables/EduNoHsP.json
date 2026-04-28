@@ -1,6 +1,6 @@
 {
   "name": "EduNoHsP",
-  "title": "No High School Diploma",
+  "title": "% No High School Diploma",
   "type": "number",
   "example": "60.0",
   "description": "Percent population aged 25 years and over with less than a high school diploma",
