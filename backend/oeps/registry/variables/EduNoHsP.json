@@ -1,12 +1,12 @@
 {
   "name": "EduNoHsP",
-  "title": "% Population aged 25 years and over with less than a high school diploma",
+  "title": "No High School Diploma",
   "type": "number",
   "example": "60.0",
-  "description": "",
+  "description": "Percent population aged 25 years and over with less than a high school diploma",
+  "metadata": "Educational_Characteristics",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Educational_Characteristics",
   "table_sources": [
     "county-1980",
     "county-1990",
