@@ -3,10 +3,10 @@
   "title": "Driving Time (min) to nearest Mental Health Provider",
   "type": "number",
   "example": "11.42",
-  "description": "Average driving time (minutes) across tracts in state to nearest mental health provider.",
+  "description": "Average driving time (minutes) across tracts in state to nearest mental health provider",
+  "metadata": "Access_Mental_Health",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Access_Mental_Health",
   "table_sources": [
     "county-2020",
     "county-2025",
