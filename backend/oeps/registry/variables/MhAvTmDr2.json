@@ -3,10 +3,10 @@
   "title": "Avg. Driving Time to nearest Mental Health Provider with impedance",
   "type": "number",
   "example": "67.89",
-  "description": "Average driving time (minutes) across tracts in state to nearest Mental Health Provider, with impedance",
+  "description": "Average driving time (minutes) across tracts in state to nearest mental health provider, with impedance",
+  "metadata": "Access_Mental_Health",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Access_Mental_Health",
   "table_sources": [
     "county-2025"
   ]
