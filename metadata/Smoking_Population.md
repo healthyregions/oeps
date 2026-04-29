@@ -14,7 +14,7 @@ The smoking measure used in this dataset is derived from the Behavioral Risk Fac
 Raw data were downloaded from the 2025 CHR CSV Analytic Data file [here](https://www.countyhealthrankings.org/health-data/methodology-and-sources/data-documentation). Additional documentation on data sources, methods, and historical measures is available through the County Health Rankings & Roadmaps documentation.
 
 #### Geographic Boundaries
-ZIP Code Tract Area (ZCTA) and Census Tract boundary files were sourced from the [US Census Bureau, TIGER/Line Shapefiles 2018, 2020](https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html). 
+State and County boundary files were sourced from the [US Census Bureau, TIGER/Line Shapefiles 2018, 2020](https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html). 
 A copy of the geographic boundary files used can be found at the [HEROP GeoData Web Archive](https://geodata.healthyregions.org/).
 
 ### Description of Data Processing: 
