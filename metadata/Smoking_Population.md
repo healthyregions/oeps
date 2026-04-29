@@ -1,7 +1,7 @@
 **Meta Data Name**: Smoking Population Variables  
 **Date Added**: October 30, 2025  
 **Author**: Yilin Lyu  
-**Date Last Modified**: February 12, 2025  
+**Date Last Modified**: April 28, 2026  
 **Last Modified By**: Yilin Lyu  
 
 ### Data Source(s) Description:  
