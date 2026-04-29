@@ -34,9 +34,9 @@ County Map:
 <img width="778" height="487" alt="County Map_Prison_2019_Natural Break" src="https://github.com/user-attachments/assets/dfc70206-e6f7-4a81-b034-bbe7428eabaa" />
 
 ### Data Limitations:
-- There are missing data in many counties. Prison admission data are not available after 2020.
+- There are missing data in many counties.
+- Prison admission data are not available after 2020. State data of 2023 was not avaliable due to missing admissions.
 - Some states (e.g., Alaska) do not report prison data by county of commitment, so the same statewide prison population count and rate has been assigned to every county. These identical values reflect missing county-level detail, not real uniformity.
-- Some prison counts are estimates or filled using linear interpolation, which can produce fractional values instead of whole numbers. These decimals reflect estimation methods, not actual observed counts.
 
 ### Comments/Notes:
 - County-level data are reported annually.
