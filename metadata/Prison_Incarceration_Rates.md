@@ -1,7 +1,7 @@
 **Meta Data Name**: Prison Incarceration Variables  
 **Date Added**: September 11, 2020  
 **Author**: Marynia Kolak, Qinyun Lin, Yilin Lyu  
-**Date Last Modified**: February 12, 2026  
+**Date Last Modified**: April 28, 2026  
 **Last Modified By**: Yilin Lyu  
 
 ### Data Source(s) Description:  
@@ -12,7 +12,7 @@ Prison incarceration variables were obtained from the Vera Institute of Justice,
 Raw data and documentation are publicly available through the Vera Institute’s GitHub repository. OEPS uses Version 1 of the Vera data for county-level prison measures beginning in 2017. As of May 2025, updated county- and state-level prison data through 2024 are available at [Vera Institute's Github Page](https://github.com/vera-institute/incarceration-trends). 
 
 #### Geographic Boundaries
-ZIP Code Tract Area (ZCTA) and Census Tract boundary files were sourced from the [US Census Bureau, TIGER/Line Shapefiles 2018, 2020](https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html). 
+State and County boundary files were sourced from the [US Census Bureau, TIGER/Line Shapefiles 2018, 2020](https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html). 
 A copy of the geographic boundary files used can be found at the [HEROP GeoData Web Archive](https://geodata.healthyregions.org/).
 
 ### Description of Data Processing: 
