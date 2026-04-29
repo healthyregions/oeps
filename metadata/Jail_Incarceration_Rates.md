@@ -39,6 +39,7 @@ County Map:
 
 ### Data Limitations:
 - There is missing data in many counties.
+- State 2023 was excluded because total jail admission count and rate weren't available for that year.
 - County-level data are reported quarterly, with estimates provided for four reference dates each year (March 31, June 30, September 30, and December 31). The latest county-level data extend to 2024, but it only includes Quarter 1.
 - Pretrial jail population rate and count are largely unavailable; only some counties in Virginia and West Virginia report them.
 - Many states use regional or multi-county jail systems (e.g., WV statewide system, VA regional jails), so counties sharing the same jail receive identical jail population values. These repeated values reflect jail system structure, not actual similarities across counties.
