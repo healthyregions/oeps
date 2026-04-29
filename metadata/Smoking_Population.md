@@ -38,4 +38,5 @@ County Map:
 - Additionally, new methods using biomarkers have shown that not all smokers are exposed to the same level of contaminants. The simple “current smoker” status question does not capture the thousands of chemical compounds in cigarettes and cigarette smoke nor take into account the effects of secondhand smoke.
 
 ### Comments/Notes:
+- This dataset includes the most recent year of 2025, please see the [Data & Documentation](https://www.countyhealthrankings.org/health-data/methodology-and-sources/data-documentation) provided by CHR&R for data before that.
 - Smoking data are based not only on survey response, but depend on statistical modeling techniques that improve the precision of the estimates. Detailed information about key measure methods can be found [here](https://www.countyhealthrankings.org/health-data/community-conditions/health-infrastructure/health-promotion-and-harm-reduction/adult-smoking?year=2025).
