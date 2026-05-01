@@ -32,6 +32,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 - File size labels for data packages updated to "(100mb+)" on the download page ([#277](https://github.com/healthyregions/oeps/issues/277)).
 
+- Smoking (`SmokeP`) and incarceration (prison/jail) variables and canonical table data refreshed for county-2019 and state/county 2022–2025 using `remove-variable` and `merge-csv` with updated source CSVs ([#261](https://github.com/healthyregions/oeps/issues/261)).
+
 ### Fixed
 
 - Frictionless data package validation no longer fails when CSV foreign keys pointed at shapefile resources (`FileResource` / `row_stream`) ([#311](https://github.com/healthyregions/oeps/issues/311)).

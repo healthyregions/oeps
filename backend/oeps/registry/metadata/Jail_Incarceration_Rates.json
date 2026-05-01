@@ -4,6 +4,6 @@
   "construct": "Incarceration",
   "proxy": "Total Jail Population Rate, Total Jail Admission Rate, Pretrial Jail Population Rate, Total Jail Population Count, Total Jail Admission Count, Pretrial Jail Population Count",
   "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Jail_Incarceration_Rates.md",
-  "source": "Vera Institute of Justice 2025",
-  "source_long": "Vera Institute of Justice, 2025"
+  "source": "Vera 2017, 2022, 2023, 2024",
+  "source_long": "Vera Institute of Justice 2017, 2022, 2023, 2024"
 }
