@@ -1,0 +1,13 @@
+{
+  "name": "RxTmDr2",
+  "title": "Driving Time (min) to nearest Pharmacy with Impedance Factor",
+  "type": "number",
+  "example": "34.54",
+  "description": "Driving time from tract/zip origin centroid to the nearest tract/zip pharmacy destination centroid with impedance factor, in minutes",
+  "longitudinal": false,
+  "analysis": false,
+  "metadata": "Access_Pharmacies",
+  "table_sources": [
+    "tract-2025"
+  ]
+}

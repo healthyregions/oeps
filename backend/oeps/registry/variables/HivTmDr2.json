@@ -1,0 +1,13 @@
+{
+  "name": "HivTmDr2",
+  "title": "Driving time (min) to nearest HIV Testing Facility, with impedance",
+  "type": "number",
+  "example": "56.87",
+  "description": "Driving time from tract/zip origin centroid to the nearest tract/zip HIV Testing Facility with impedance destination centroid, in minutes",
+  "longitudinal": false,
+  "analysis": false,
+  "metadata": "Access_HIVTesting",
+  "table_sources": [
+    "tract-2025"
+  ]
+}

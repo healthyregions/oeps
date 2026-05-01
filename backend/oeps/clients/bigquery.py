@@ -239,7 +239,7 @@ class BigQuery:
                             # special handle string values like '23493.3434'
                             row[k] = int(round(float(row[k])))
                     if field_types[k] == "number":
-                        row[k] = float(row[k])
+                        row[k] = round(float(row[k]), 9)  # BigQuery NUMERIC allows max 9 decimal places
                     if field_types[k] == "boolean":
                         if row[k] in [
                             1,
