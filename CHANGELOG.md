@@ -8,6 +8,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- GitHub Action **Validate registry** that runs `flask validate-registry` on pull requests when `backend/oeps/registry/**`, `backend/oeps/data/**`, or the workflow file changes, plus manual **`workflow_dispatch`** ([#262](https://github.com/healthyregions/oeps/issues/262)).
+
 - GitHub Action to create and upload Frictionless data packages when `backend/oeps/data/package_rules/**` changes ([#277](https://github.com/healthyregions/oeps/issues/277)).
 
 - `--stable-name` option for `flask create-data-package` so package filenames are fixed (e.g. `oeps-DSuite2018.zip`) and download links do not need updates ([#277](https://github.com/healthyregions/oeps/issues/277)).
