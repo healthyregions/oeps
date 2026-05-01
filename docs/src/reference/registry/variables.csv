@@ -412,10 +412,10 @@ TtlJlPrtrQ1,Pretrial Jail Population Rate (Q1),number,107.3,Pretrial Jail Popula
 TtlJlPrtrQ2,Pretrial Jail Population Rate (Q2),number,107.3,Pretrial Jail Population Rate (Q2),county-2023,Jail_Incarceration_Rates,False,False
 TtlJlPrtrQ3,Pretrial Jail Population Rate (Q3),number,107.3,Pretrial Jail Population Rate (Q3),county-2023,Jail_Incarceration_Rates,False,False
 TtlJlPrtrQ4,Pretrial Jail Population Rate (Q4),number,107.3,Pretrial Jail Population Rate (Q4),county-2023,Jail_Incarceration_Rates,False,False
-TtlPrAPp,Prison Prison Admissions Count,integer,8115,Prison Prison Admissions Count,"county-2016, state-2022",Prison_Incarceration_Rates,False,False
-TtlPrAPpr,Total Prison Admission Rate,number,140.33,Prison Prison Admissions Rate,"county-2016, state-2022",Prison_Incarceration_Rates,False,False
-TtlPrPp,Total Prison Population Count,integer,21605,Total Prison Population Count,"county-2016, state-2022, state-2024",Prison_Incarceration_Rates,False,False
-TtlPrPpr,Total Prison Population Rate,number,373.6,Total Prison Population Rate,"county-2016, state-2022, state-2024",Prison_Incarceration_Rates,False,False
+TtlPrAPp,Prison Prison Admissions Count,integer,8115,Prison Prison Admissions Count,"county-2016, county-2019, state-2022",Prison_Incarceration_Rates,False,False
+TtlPrAPpr,Total Prison Admission Rate,number,140.33,Prison Prison Admissions Rate,"county-2016, county-2019, state-2022",Prison_Incarceration_Rates,False,False
+TtlPrPp,Total Prison Population Count,integer,21605,Total Prison Population Count,"county-2016, county-2019, state-2022, state-2024",Prison_Incarceration_Rates,False,False
+TtlPrPpr,Total Prison Population Rate,number,373.6,Total Prison Population Rate,"county-2016, county-2019, state-2022, state-2024",Prison_Incarceration_Rates,False,False
 TwoRaceE,Count Population identifying as two or more races,number,60.0,Count persons identifying as two or more races. Estimated count in non-decennial years.,"county-2010, county-2018, county-2023, state-2010, state-2018, state-2023, tract-2010, tract-2018, tract-2023, zcta-2018, zcta-2023",Race_Ethnicity,False,False
 TwoRaceP,% Population identifying as two or more races,number,60.0,,"county-2010, county-2020, county-2023, state-2010, state-2018, state-2023, tract-2010, tract-2020, tract-2023, zcta-2020, zcta-2023",Race_Ethnicity,False,False
 U50HcvD,Hepatitis C Deaths - Under 50 years old,integer,40,Hepatitis C deaths in populations under 50 years of age,"state-2013, state-2014, state-2015, state-2016, state-2017, state-2018, state-2019, state-2020, state-2021, state-2022",HepatitisC_Rates,False,False

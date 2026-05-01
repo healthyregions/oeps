@@ -15,7 +15,7 @@ Usage: validate-registry [OPTIONS]
 ###### Options
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f00a939dc90>
+    * Type: <click.types.Path object at 0x7f2c072f37d0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -111,7 +111,7 @@ Usage: build-docs [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7ffb16dc20d0>
+    * Type: <click.types.Path object at 0x7f21b8ccf6d0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -204,7 +204,7 @@ Usage: create-table-source [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f884349d910>
+    * Type: <click.types.Path object at 0x7fcb55cf3750>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -303,7 +303,7 @@ Usage: remove-variable [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f234dfbdad0>
+    * Type: <click.types.Path object at 0x7f560a0c5bd0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -405,7 +405,7 @@ Usage: move-variable [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7feb4b7be150>
+    * Type: <click.types.Path object at 0x7f57809d75d0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -466,7 +466,7 @@ Usage: build-explorer [OPTIONS]
 ###### Options
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f21231ba310>
+    * Type: <click.types.Path object at 0x7fa13b2db8d0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -475,7 +475,7 @@ Usage: build-explorer [OPTIONS]
 
 
 * `explorer_path`:
-    * Type: <click.types.Path object at 0x7f21231b9f50>
+    * Type: <click.types.Path object at 0x7fa13b2db510>
     * Default: `../explorer`
     * Usage: `--explorer-path`
 
@@ -609,7 +609,7 @@ Usage: bigquery-upload [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f7973fbdf10>
+    * Type: <click.types.Path object at 0x7fc6d80c14d0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -711,8 +711,8 @@ Options:
 ## clean-explorer-bucket
 
 Deletes all files from the S3 bucket which are not mentioned in the local
-    explorer/configs/sources.json file. If no sources.json file exists, optionally
-    deletes all uploaded files.
+    explorer/config/sources.json file. If no sources.json file exists, optionally
+    deletes all uploaded files (interactive only).
     
 
 ###### Usage
@@ -726,8 +726,26 @@ Usage: clean-explorer-bucket [OPTIONS]
 
 ###### Options
 
+* `non_interactive`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--non-interactive`
+
+    Fail immediately if explorer/config/sources.json is missing (for CI). Without this flag, a missing file triggers an interactive confirmation.
+
+
+
+* `dry_run`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--dry-run`
+
+    Print S3 keys that would be deleted without deleting them.
+
+
+
 * `explorer_path`:
-    * Type: <click.types.Path object at 0x7f49760bd410>
+    * Type: <click.types.Path object at 0x7fc2b3cc6f90>
     * Default: `../explorer`
     * Usage: `--explorer-path`
 
@@ -750,10 +768,15 @@ Usage: clean-explorer-bucket [OPTIONS]
 Usage: clean-explorer-bucket [OPTIONS]
 
   Deletes all files from the S3 bucket which are not mentioned in the local
-  explorer/configs/sources.json file. If no sources.json file exists,
-  optionally deletes all uploaded files.
+  explorer/config/sources.json file. If no sources.json file exists,
+  optionally deletes all uploaded files (interactive only).
 
 Options:
+  --non-interactive     Fail immediately if explorer/config/sources.json is
+                        missing (for CI). Without this flag, a missing file
+                        triggers an interactive confirmation.
+  --dry-run             Print S3 keys that would be deleted without deleting
+                        them.
   --explorer-path PATH  Optional override for the root directory of the
                         explorer.
   --help                Show this message and exit.
@@ -785,7 +808,7 @@ Usage: create-data-package [OPTIONS]
 ###### Options
 
 * `destination`:
-    * Type: <click.types.Path object at 0x7fddd0f76390>
+    * Type: <click.types.Path object at 0x7f0e6816ee90>
     * Default: `.temp/data-packages`
     * Usage: `--destination
 -d`
@@ -886,7 +909,7 @@ Usage: create-data-package [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7fddd18a5c90>
+    * Type: <click.types.Path object at 0x7f0e68ddb8d0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -895,7 +918,7 @@ Usage: create-data-package [OPTIONS]
 
 
 * `data_dir_path`:
-    * Type: <click.types.Path object at 0x7fddd18a5bd0>
+    * Type: <click.types.Path object at 0x7f0e68ddb810>
     * Default: `oeps/data`
     * Usage: `--data-dir-path`
 
@@ -1025,7 +1048,7 @@ Usage: merge-csv [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f7e524a9ad0>
+    * Type: <click.types.Path object at 0x7f13054f3fd0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 

@@ -3272,6 +3272,7 @@
         "description": "Prison Prison Admissions Count",
         "years": [
           "2016",
+          "2019",
           "2022"
         ],
         "geographies": [
@@ -3285,6 +3286,7 @@
         "description": "Prison Prison Admissions Rate",
         "years": [
           "2016",
+          "2019",
           "2022"
         ],
         "geographies": [
@@ -3298,6 +3300,7 @@
         "description": "Total Prison Population Count",
         "years": [
           "2016",
+          "2019",
           "2022",
           "2024"
         ],
@@ -3312,6 +3315,7 @@
         "description": "Total Prison Population Rate",
         "years": [
           "2016",
+          "2019",
           "2022",
           "2024"
         ],

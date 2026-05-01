@@ -2185,7 +2185,7 @@
   },
   {
     "variable": "Prison Prison Admissions Count",
-    "numerator": "state-2022__county-2016",
+    "numerator": "state-2022__county-2019",
     "nProperty": "TtlPrAPp",
     "theme": "Social",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Prison_Incarceration_Rates.md"
@@ -2549,21 +2549,21 @@
   },
   {
     "variable": "Total Prison Admission Rate",
-    "numerator": "state-2022__county-2016",
+    "numerator": "state-2022__county-2019",
     "nProperty": "TtlPrAPpr",
     "theme": "Social",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Prison_Incarceration_Rates.md"
   },
   {
     "variable": "Total Prison Population Count",
-    "numerator": "state-2024__county-2016",
+    "numerator": "state-2024__county-2019",
     "nProperty": "TtlPrPp",
     "theme": "Social",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Prison_Incarceration_Rates.md"
   },
   {
     "variable": "Total Prison Population Rate",
-    "numerator": "state-2024__county-2016",
+    "numerator": "state-2024__county-2019",
     "nProperty": "TtlPrPpr",
     "theme": "Social",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Prison_Incarceration_Rates.md"

@@ -33,16 +33,20 @@ AmInHcvD|INTEGER|Hepatitis C deaths among American Indian populations
 
 ID: `oeps-391119.tabular.county-2019`
 
-7 columns in this table.
+11 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
+TtlPrPpr|NUMERIC|Total Prison Population Rate
+TtlPrPp|INTEGER|Total Prison Population Count
 RxCtTmDr|INTEGER|Number of tracts with pharmacy within a 30-min driving range
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 RxAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest pharmacy.
+TtlPrAPp|INTEGER|Prison Prison Admissions Count
 RxTmDrP|NUMERIC|Percent of tracts with pharmacy within a 30-min driving range
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 OdMortRt|NUMERIC|Overdose mortality rate
+TtlPrAPpr|NUMERIC|Prison Prison Admissions Rate
 NoIntP|NUMERIC|Percentage of Households without Internet access
 
 ### zcta-2020
