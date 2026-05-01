@@ -8,6 +8,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- `--dry-run` flag for `flask remove-variable`: prints which columns would be dropped from the target table and how registry `table_sources` would be updated, without changing CSVs or variable JSON ([#351](https://github.com/healthyregions/oeps/issues/351)).
+
 - GitHub Action **Validate registry** that runs `flask validate-registry` on pull requests when `backend/oeps/registry/**`, `backend/oeps/data/**`, or the workflow file changes, plus manual **`workflow_dispatch`** ([#262](https://github.com/healthyregions/oeps/issues/262)).
 
 - GitHub Action to create and upload Frictionless data packages when `backend/oeps/data/package_rules/**` changes ([#277](https://github.com/healthyregions/oeps/issues/277)).
