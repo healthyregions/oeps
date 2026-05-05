@@ -69,10 +69,10 @@ We calculated RAAM access metrics for census tracts using tract centroids as dem
 
 A null value indicates that a RAAM score was not available for that geography in the current release. This may reflect no reachable provider within the modeled travel-time threshold, missing required inputs, or a value not produced during processing or integration.
 
-![Methadone RAAM Measure (30 Minutes)](images/RAAM_Access_Cost_30_minutes_Methadone_US_Tracts.png)
+![Methadone RAAM Measure (30 Minutes)](images/MetRm30.png)
 Methadone RAAM Measure (30 Minutes)
 
-![Opioid Treatment Provider RAAM Measure (30 Minutes)](images/RAAM_Access_Cost_30_minutes_OTP_US_Tracts.png)
+![Opioid Treatment Provider RAAM Measure (30 Minutes)](images/OtpRm30.png)
 Opioid Treatment Provider RAAM Measure (30 Minutes
 
 #### County and State 

@@ -52,7 +52,7 @@ County and state-level variables include the **count** of Census tracts and the 
 For 2025 measures, the tract to county conversion were completed using R code, and can be found
 [scripts/fqhc-tract2county.R.](https://github.com/healthyregions/oeps/tree/main/scripts).
 
-![FqhcAvTmDr2_2025](images/FqhcAvTmDr2_Explorer_Contiguous_US.png)
+![FqhcAvTmDr2_2025](images/FqhcAvTmDr2_2025.png)
 *Average drive time to nearest FQHC, with Impedance (FqhcAvTmDr2)*
 
 ### Data Limitations:
@@ -65,7 +65,7 @@ understanding of potential spatial access.
 - Note that Alaska travel times may reflect the data technically, but due to the geographic complexities of the state, we don't recommend using measures for that state at this time. Tracts are very large, and while there may
 be a FQHC location within the tract -- giving it a travel time of zero -- the physical size of the tract boundary makes that actual time a bit unreasonable. Please proceed with caution in frontier locations.
 
-![Limitations of Alaska travel times due to tract boundary size and approach utilized](images/FqhcAvTmDr2_Explorer_Alaska.png)
+![Limitations of Alaska travel times due to tract boundary size and approach utilized](images/FqhcAvTmDr2_Alaska_2025.png)
 *Limitations of Alaska travel times due to tract boundary size and approach utilized*
 
 ### Comments/Notes:
