@@ -27,11 +27,11 @@ Rates are calculated by the Vera Institute using the county population aged 15â€
 
 State Map:
 
-<img width="778" height="487" alt="State Map_Prison_2024_Natural Break" src="https://github.com/user-attachments/assets/12fb953b-3906-404e-901e-41058d2d4310" />
+![Screenshot](https://github.com/user-attachments/assets/e40788bf-f5ec-4614-8446-840ecd7a3934)
 
 County Map:
 
-<img width="778" height="487" alt="County Map_Prison_2019_Natural Break" src="https://github.com/user-attachments/assets/dfc70206-e6f7-4a81-b034-bbe7428eabaa" />
+![Screenshot](https://github.com/user-attachments/assets/e40d41f5-ffeb-4af5-8855-e5b72fecee3f)
 
 ### Data Limitations:
 - There are missing data in many counties.
