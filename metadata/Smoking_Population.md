@@ -26,11 +26,11 @@ This measure was derived from the Behavioral Risk Factor Surveillance System (BR
 
 State Map:
 
-<img width="628" height="487" alt="State Map_Smoking_Natural Break" src="https://github.com/user-attachments/assets/33f5f353-83da-4679-8fe4-149e8473552d" />
+![Screenshot](https://github.com/user-attachments/assets/19022841-3823-45c0-9eac-c8020ff324fd)
 
 County Map:
 
-<img width="628" height="487" alt="County Map_Smoking_ Natural Break" src="https://github.com/user-attachments/assets/5d1c002a-270b-4736-b697-af341b7d4b97" />
+![Screenshot](https://github.com/user-attachments/assets/ec5b4460-d951-44db-8c91-ea27505050e8)
 
 ### Data Limitations:
 - The BRFSS only surveys adults (age 18 and older), lacking data on adolescent smoking. The Youth Behavioral Risk Factor Survey attempts to fill this gap, but it currently does not provide enough data to estimate county-level smoking prevalence among youth.
