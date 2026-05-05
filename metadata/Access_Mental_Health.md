@@ -42,7 +42,7 @@ This travel time analysis was conducted using a Python Computational notebook.
 
 - The updated 2025 notebook will be released in late January 2026, due to some refinements and updates.
 
-![Screenshot](https://github.com/user-attachments/assets/49d241c3-9fe3-4c0a-b43c-1ee5ed836245)
+![Screenshot](images/Travel_Time_to_Mental_Health_facility_by_Census_Tract.png)
 
 In addition, an **impedance factor** was introduced in 2025 access metrics. Raw travel time measures assume pristine conditions in a best-case-scenario. 
 An impedance approach instead multiples the estimated travel time by a factor, in this case a factor of 2, better approximating actual travel time due to traffic, congestion, etc.
@@ -50,7 +50,7 @@ An impedance approach instead multiples the estimated travel time by a factor, i
 #### County and State 
 County and state-level variables include the **count** of Census tracts and the **percent** of Census tracts located within a 30-minute driving threshold of a Mental Health Provider Facility, as well as the mean (average) driving time in minutes from Census tracts within the county or state. 
 
-![Screenshot](https://github.com/user-attachments/assets/a6cc665d-8244-4554-8410-04a6a418be9a)
+![Screenshot](images/MhAvTmDr_US_map.png)
 
 For 2025 measures, the tract to county conversion was completed using R code, and can be found in
 [scripts](https://github.com/healthyregions/oeps/tree/main/scripts). 

@@ -31,11 +31,11 @@ Note that these rates are jail population relative to the total county populatio
 
 State Map:
 
-<img width="778" height="487" alt="State Map_Jail_2023_Natural Break" src="https://github.com/user-attachments/assets/2cf23d18-5007-4786-8efc-7f663ad9b315" />
+![State Map_Jail_2023_Natural Break](images/State_level_Total_Jail_Population_Rate_2023.png)
 
 County Map:
 
-<img width="778" height="487" alt="County Map_Jail_2024Q1_Natural Break" src="https://github.com/user-attachments/assets/3d27ed20-044d-426e-8b53-ec5f26ae4a10" />
+![County Map_Jail_2024Q1_Natural Break](images/County_level_Total_Jail_Population_Rate_2024_Q1.png)
 
 ### Data Limitations:
 - There is missing data in many counties.

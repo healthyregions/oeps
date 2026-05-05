@@ -19,41 +19,38 @@
 
 The OEPS docs page renders metadata markdown with ReactMarkdown, which does **not** render raw HTML. Use **Markdown image syntax** so images show correctly on the OEPS docs page.
 
+### Recommended: store files in `metadata/images/` and link with a relative path
+
+1. Add your image file under **`metadata/images/`** in this repo (for example `metadata/images/My_Map_Title.png`).
+2. Use a **short, stable filename**: letters, numbers, and underscores only (no spaces); use underscores instead of spaces.
+3. In your metadata `.md` file in `metadata/`, reference it like this:
+
+   ```markdown
+   ![Short description of what the figure shows](images/My_Map_Title.png)
+   ```
+
+The path `images/...` is relative to the markdown file in `metadata/`, so it resolves to `metadata/images/` when the docs site builds.
+
 ### HTML vs Markdown (use Markdown)
 
-When you drop or paste an image into GitHub’s markdown editor, it may insert an HTML `<img>` tag. That works when viewing the file on GitHub, but **the OEPS docs page will not render it**—the image will not show. Use Markdown syntax instead.
+When you drop or paste an image into GitHub's markdown editor, it may insert an HTML `<img>` tag. That can look fine on GitHub, but **the OEPS docs page will not render it**—use Markdown instead.
 
-| Don’t use (HTML – won’t show on OEPS docs) | Do use (Markdown – works on OEPS docs) |
+| Don't use (HTML – won't show on OEPS docs) | Do use (Markdown – works on OEPS docs) |
 |-------------------------------------------|----------------------------------------|
-| `<img width="1492" height="657" alt="Screenshot" src="https://github.com/user-attachments/assets/abc123" />` | `![Screenshot](https://github.com/user-attachments/assets/abc123)` |
+| `<img width="1492" height="657" alt="Screenshot" src="images/My_Map_Title.png" />` | `![Screenshot](images/My_Map_Title.png)` |
 
-Same image URL; only the syntax changes. Replace any auto-generated `<img>` with the `![alt](url)` form.
+Replace any auto-generated `<img>` with the `![alt](path)` form.
 
-### Option 1: GitHub paste/drop (recommended)
+### Optional: absolute URL to `main`
 
-1. Paste or drop the image into a **PR or issue comment** so GitHub hosts it.
-2. Right‑click the pasted image → **Copy image address**.
-3. In your metadata `.md` file, add:
-
-   ```markdown
-   ![Short description of the image](paste-the-copied-url-here)
-   ```
-
-4. Do not use the auto-generated HTML when you drop an image into the .md file; use this Markdown line so the image renders on the OEPS docs page.
-
-**Example:**
+If you need a full URL (for example in external docs), you can point at the file on `main`:
 
 ```markdown
-![Travel time to nearest provider](https://github.com/user-attachments/assets/98ccd48e-e3a8-40a7-bd64-f6e9251cca45)
+![Short description](https://raw.githubusercontent.com/healthyregions/oeps/main/metadata/images/My_Map_Title.png)
 ```
 
-### Option 2: Use `metadata/images/`
+Prefer the **relative** `images/...` form in metadata markdown so links stay correct on branches and after merge.
 
-1. Add your image file to the `metadata/images/` folder in the repo (create the folder if needed).
-2. In your metadata `.md` file, reference it with the raw GitHub URL:
+### Avoid relying on GitHub-only image hosts
 
-   ```markdown
-   ![Short description of the image](https://raw.githubusercontent.com/healthyregions/oeps/main/metadata/images/your-filename.png)
-   ```
-
-3. The URL above points at `main`. If you add an image on a feature branch, use a branch-specific URL during development (replace `main` with your branch name), then switch to `main` after the PR is merged.
+Do **not** depend on pasted **issue/PR** image URLs (`github.com/user-attachments/...`) or temporary **private** image links as the only copy of an asset. Those are easy to lose track of and may not match what lives in the repo. Put the canonical image in **`metadata/images/`** and link it from the `.md` file as above.
