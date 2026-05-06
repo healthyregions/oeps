@@ -65,7 +65,7 @@ understanding of potential spatial access.
 - Note that Alaska travel times may reflect the data technically, but due to the geographic complexities of the state, we don't recommend using measures for that state at this time. Tracts are very large, and while there may
 be a FQHC location within the tract -- giving it a travel time of zero -- the physical size of the tract boundary makes that actual time a bit unreasonable. Please proceed with caution in frontier locations.
 
-![Limitations of Alaska travel times due to tract boundary size and approach utilized](https://github.com/user-attachments/assets/b9ea8e36-6643-4851-9f9a-62ea9b9dd72b)
+![Limitations of Alaska travel times due to tract boundary size and approach utilized](images/FqhcAvTmDr2_Alaska_2025.png)
 *Limitations of Alaska travel times due to tract boundary size and approach utilized*
 
 ### Comments/Notes:
