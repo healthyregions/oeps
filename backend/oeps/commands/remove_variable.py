@@ -26,8 +26,14 @@ from ._common_opts import (
     default=False,
     help="Skip confirmation prompts. Useful for batch operations.",
 )
+@click.option(
+    "--dry-run",
+    is_flag=True,
+    default=False,
+    help="Show what would be removed without changing any files.",
+)
 @add_common_opts(registry_opt)
-def remove_variable(name, table_source, registry_path, yes=False):
+def remove_variable(name, table_source, registry_path, yes=False, dry_run=False):
     """Remove variable(s) from the registry and all of their columns from table source CSVs.
     Optionally remove variables only from one table source.
     
@@ -68,6 +74,26 @@ def remove_variable(name, table_source, registry_path, yes=False):
             print(f"Invalid table source name: {table_source}")
             exit(1)
         
+        # Load dataframe to check which variables actually exist
+        if ts.df is None:
+            ts.load_dataframe()
+
+        # Filter to only variables that exist in this table source
+        existing_vars = [var_name for var_name in variable_names if var_name in ts.df.columns]
+        missing_vars = [var_name for var_name in variable_names if var_name not in ts.df.columns]
+
+        if dry_run:
+            print(f"\n[DRY RUN] Would remove from {ts.name}:")
+            if existing_vars:
+                print(f"  Columns: {', '.join(existing_vars)}")
+                print(f"  Variable table_sources would be updated to drop '{ts.name}' for these variables.")
+            if missing_vars:
+                print(f"  (Not in table, would skip: {', '.join(missing_vars)})")
+            if not existing_vars and not missing_vars:
+                print("  (No matching columns)")
+            print("  No files were modified.")
+            return
+
         if not yes:
             if len(variable_names) == 1:
                 prompt = f"\n{variable_names[0]} column will be removed from the {ts.name} CSV. Continue? Y/n "
@@ -77,15 +103,6 @@ def remove_variable(name, table_source, registry_path, yes=False):
             if input(prompt).lower().startswith("n"):
                 print(" -- cancel operation")
                 return
-        
-        # Proceed with removal
-        # Load dataframe to check which variables actually exist
-        if ts.df is None:
-            ts.load_dataframe()
-        
-        # Filter to only variables that exist in this table source
-        existing_vars = [var_name for var_name in variable_names if var_name in ts.df.columns]
-        missing_vars = [var_name for var_name in variable_names if var_name not in ts.df.columns]
         
         if missing_vars:
             print(f"Warning: The following variables are not in {ts.name} and will be skipped: {', '.join(missing_vars)}")
@@ -110,6 +127,13 @@ def remove_variable(name, table_source, registry_path, yes=False):
             all_sources.update(sources)
         
         source_names = "\n  ".join(sorted(all_sources))
+        if dry_run:
+            print(f"\n[DRY RUN] Would remove from registry and from CSVs:")
+            print(f"  Variables: {', '.join(variable_names)}")
+            print(f"  Table sources: {source_names}")
+            print("  No files were modified.")
+            return
+
         if len(variable_names) == 1:
             print(
                 f"\nVariable will be removed from registry, and {variable_names[0]} column will be removed from the following CSVs:\n  {source_names}"

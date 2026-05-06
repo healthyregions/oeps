@@ -1,20 +1,8 @@
 **Metadata Name**:   Social Capital Index
-
 **Date Added**:   October 30, 2025
-
 **Author**: Catherine Discenza  
-
 **Last Modified By**: Catherine Discenza
-
 **Date Last Modified**: December 8, 2025
-
-### Theme
-
-Social, Composite
-
-### Data Location
-
-You can find the variables described in this document in the CSV files [here](/data_final/full_tables). CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2018 will be found in C_2000.csv.
 
 ### Data Source(s) Description
 
@@ -81,23 +69,6 @@ The following variables were included from **2023 5-year ACS B25026**:
 * **Social Capital Index** was calculated as : LngTermP, LibPerCap, RlgPerCap all standardized to a z-score, equally weighted and summed *=0.33(LngTermPZ) + 0.33(LibPerCapZ) + 0.33RlgPerCapZ)*
 
 Note: Unpopulated census tracts removed from dataset.
-
-### Key Variables and Definitions
-
-- **Variable** -- title of variable
-- **Variable ID** -- exact name of variable in datasets
-- **Description** -- Short description of variable
-- **Years** -- years for which data exists for this variable
-- **Spatial Scale** -- the variable exists for these levels of spatial scale
-
-| Variable | Variable ID | Description | Years Available | Spatial Scale |
-|:--|:--|:--|:--|:--|
-| Housing Tenure | MedHsgTen | Median time period occupant moved into housing unit by tract | 2018, 2023 | Tract |
-| Long-Term Occupancy | LngTermP | Percentage of population who moved into their current housing approximately more than 20 years ago | 2018, 2023 | Tract|
-| Libraries per Capita | LibPerCap | Libraries per capita | 2025 | Tract |
-| Religious Institutions per Capita| RlgPerCap | Religious institutions per capita | 2025 | Tract |
-| Social Capital Index| SocCapInd | Composite index of LngTermP, LibPerCap, and RlgPerCap | 2018, 2023 | Tract |
-
 
 ### Data Limitations
 

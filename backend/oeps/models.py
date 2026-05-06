@@ -10,6 +10,7 @@ from .utils import load_json, write_json
 
 class GeographyLevelModel(BaseModel):
     name: str
+    title: str
     code: str
     geoid_length: int
     allowed_id_columns: list[str]
@@ -17,24 +18,28 @@ class GeographyLevelModel(BaseModel):
 GEOGRAPHY_LOOKUP = {
     "state": GeographyLevelModel(
         name="state",
+        title="State",
         code="040",
         geoid_length=2,
         allowed_id_columns=["HEROP_ID","GEOID", "GEO ID", "GEO_ID", "FIPS", "STATEFP"]
     ),
     "county": GeographyLevelModel(
         name="county",
+        title="County",
         code="050",
         geoid_length=5,
         allowed_id_columns=["HEROP_ID","GEOID", "GEO ID", "GEO_ID", "FIPS", "COUNTYFP"]
     ),
     "tract": GeographyLevelModel(
         name="tract",
+        title="Tract",
         code="140",
         geoid_length=11,
         allowed_id_columns=["HEROP_ID","GEOID", "GEO ID", "GEO_ID", "FIPS", "TRACTCE"]
     ),
     "zcta": GeographyLevelModel(
         name="zcta",
+        title="ZCTA",
         code="860",
         geoid_length=5,
         allowed_id_columns=["HEROP_ID","GEOID", "GEO ID", "GEO_ID", "ZCTA5", "ZIP"]
@@ -114,12 +119,15 @@ class VariableModel(BaseModel):
     description: str
     longitudinal: bool = False
     analysis: bool = False
-    table_sources: list[str]
+    table_sources: list[str] = []
     metadata: str
 
     @classmethod
     def from_json_file(cls, path: Path) -> "VariableModel":
         data = load_entry(path)
+        # PagesCMS stores metadata with .json suffix; registry expects base name only
+        if data.get("metadata", "").endswith(".json"):
+            data["metadata"] = data["metadata"][: -len(".json")]
         return cls(**data)
 
     def to_json_file(self, registry_path: Path):

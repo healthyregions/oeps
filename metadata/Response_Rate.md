@@ -1,20 +1,8 @@
 **Metadata Name**:   Response Rate
-
 **Date Added**:   December 8, 2025
-
 **Author**: Catherine Discenza  
-
 **Last Modified By**: Catherine Discenza
-
 **Date Last Modified**: December 8, 2025
-
-### Theme
-
-Social
-
-### Data Location
-
-You can find the variables described in this document in the CSV files [here](/data_final/full_tables). CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2018 will be found in C_2000.csv.
 
 ### Data Source(s) Description
 
@@ -34,19 +22,6 @@ The following variables were included from **B98021**:
 ---------- 
 
 Note: Unpopulated census tracts removed from dataset.
-
-### Key Variables and Definitions
-
-- **Variable** -- title of variable
-- **Variable ID** -- exact name of variable in datasets
-- **Description** -- Short description of variable
-- **Years** -- years for which data exists for this variable
-- **Spatial Scale** -- the variable exists for these levels of spatial scale
-
-| Variable | Variable ID | Description | Years Available | Spatial Scale |
-|:--|:--|:--|:--|:--|
-| Response Rate| RspRt | Percent of units interviewed from total units intended for interview | 2018, 2023 | County |
-
 
 ### Data Limitations
 

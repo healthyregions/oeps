@@ -6,3 +6,6 @@
 .DS_Store
 
 tech-note/
+
+# Credentials - never commit service account keys
+credentials/

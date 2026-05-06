@@ -3,8 +3,6 @@
 **Date Last Modified**: December 9, 2024
 **Author**: Adam Cox
 
-### Data Location
-
 #### 2010 Geographic Boundaries
 
 Use for all OEPS data from 1980 to 2010.
@@ -46,26 +44,7 @@ We have a backend ETL pipeline set up to create these files. The following steps
 - Export to GeoJSON, SHP, and PMTiles derivatives.
 - Upload exports to AWS S3 for storage
 
-
-### Key Variable and Definitions:
-
-_note, some fields below may not be present across all geographies._
-
-| Variable | Type | Description |
-|:---------|:------------|:---|
-| HEROP_ID | string | Unique identifier across all census geographies (see below for details) |
-| GEOID fo r Census Tract | GEOID |	Unique id within a given geography level |
-| minx | float | Min X coordinate |
-| miny | float | Min Y coordinate |
-| maxx | float | Max X coordinate |
-| maxy | float | Max Y coordinate |
-| BBOX | string | Concatenation of {minx},{miny},{maxx},{maxy} |
-| LABEL | Display label for this geography |
-| COUNTYFP | integer | 5-digit County code (state + county) |
-| ZCTA | ZCTA |	5-digit assigned ZCTA |
-| TRACTCE | 	| 6-digit Census Tract designation |
-
-#### HEROP_ID
+### HEROP_ID
 
 The <strong>HEROP_ID</strong> is a slight variation on the commonly used standard <strong>GEOID</strong>. Our format is similar to what the American FactFinder used (now data.census.gov). 
 

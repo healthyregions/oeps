@@ -1,0 +1,13 @@
+{
+  "name": "FqhcCtTmDr2",
+  "title": "Count of Tracts within 30-min drive of Federally Qualified Health Center (FQHC), with Impedance factor",
+  "type": "integer",
+  "example": "1359",
+  "description": "Number of tracts with Federally Qualified Health Center within a 30-min driving range, with Impedance factor",
+  "longitudinal": false,
+  "analysis": false,
+  "metadata": "Access_FQHCs",
+  "table_sources": [
+    "county-2025"
+  ]
+}

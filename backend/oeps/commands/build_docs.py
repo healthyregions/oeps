@@ -3,7 +3,7 @@ import subprocess
 
 import click
 
-from ..clients.bigquery import BigQuery
+from ..clients.bigquery import generate_reference_doc
 from ..clients.data_dictionary import create_data_dictionary
 from ..handlers import Registry
 from ..config import TEMP_DIR
@@ -64,17 +64,16 @@ def build_docs(bq_only:bool, cli_only: bool, registry_only: bool, data_dictionar
     full = not any(ops.values())
 
     if ops["bq"] or full:
-        client = BigQuery()
         registry = Registry.create_from_directory(registry_path)
 
         outfile = Path("../docs/src/reference/bigquery/tables.md").absolute().resolve()
-        client.generate_reference_doc(registry.table_sources.values(), outfile)
+        generate_reference_doc(registry.table_sources.values(), outfile)
 
     if ops["cli"] or full:
         out_file = Path("../docs/src/reference/cli/command-line-reference.md")
 
         temp_docs_dir = TEMP_DIR / "cli-docs"
-        temp_docs_dir.mkdir(exist_ok=True)
+        temp_docs_dir.mkdir(parents=True, exist_ok=True)
         for p in temp_docs_dir.glob("*.md"):
             p.unlink()
 
@@ -103,12 +102,7 @@ def build_docs(bq_only:bool, cli_only: bool, registry_only: bool, data_dictionar
                 for line in lines:
                     for n in reversed(range(1, 7)):
                         old_head, new_head = "#"*n, "#"*(n+1)
-                        if "data-dictionaries" in line:
-                            print(old_head, new_head)
-                            print(line)
                         line = line.replace(old_head, new_head)
-                        if "data-dictionaries" in line:
-                            print(line)
                     outlines.append(line)
 
         with open(out_file, "w") as o:

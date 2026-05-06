@@ -4,14 +4,6 @@
 **Date Last Modified**: August 26, 2025  
 **Last Modified By**:  Mahjabin Kabir Adrita  
 
-### Theme: 
-Outcome
-
-### Data Location: 
-You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/).  
-
-CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
-
 ### Data Source(s) Description:  
 
 Opioid indicators -- opioid prescription rates and drug overdose mortality rates --  were sourced from [HepVu](https://hepvu.org/data-methods/). 
@@ -35,21 +27,6 @@ For more information, see [HepVu's Data Methods](https://hepvu.org/data-methods/
 ### Description of Data Processing: 
 
 Data was cleaned and variables were renamed to shorter, abbreviated labels. The average drug overdose mortality rate variable (*OdMortRtAv*) was calculated by taking the 5-year average from 2015 to 2019).
-
-### Key Variable and Definitions:
-
-- **Variable** -- title of variable
-- **Variable ID** -- exact name of variable in datasets
-- **Description** -- Short description of variable
-- **Years** -- years for which data exists for this variable
-- **Spatial Scale** -- the variable exists for these levels of spatial scale
-
-| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
-|:---------|:--------------------|:------------|:----------------|:--------------|
-| Opioid prescription rate | OpRxRt | Opioid prescription rate in a specific year | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022| County, State |
-| Overdose mortality rate | OdMortRt | Death of persons from narcotic overdose per 100,000 persons from individual years | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022 | County, State |
-| Average overdose mortality rate | OdMortRtAv | Average narcotic overdose mortality rates | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022 | County, State |
-| Pain reliever misuse percent | PrMsuseP | Percent of persons who self-report misusing prescription pain relief medication in a specific year | 2020, 2022 | State |
 
 ### Data Limitations:
 Note that pain reliever misuse data is only available for State-level data. Overdose mortality data for county level is vailable for 2021.

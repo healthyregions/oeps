@@ -1,26 +1,22 @@
 **Meta Data Name**: Jail Incarceration Variables  
 **Date Added**: September 11, 2020  
 **Author**: Marynia Kolak, Qinyun Lin, Yilin Lyu  
-**Date Last Modified**: October 23, 2025  
+**Date Last Modified**: April 28, 2026  
 **Last Modified By**: Yilin Lyu  
 
-### Theme: 
-Social  
-
-### Data Location: 
-You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions.org/download).  
-
-CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.  
-
 ### Data Source(s) Description:  
-Variables were obtained from the Vera Institute of Justice. Raw data and more details can be found at https://github.com/vera-institute/incarceration_trends. Raw data is downloaded in the folder of data_raw, named "incarceration_trends.xlsx". 
 
-OEPS includes version 1 of Vera Institute's data, or county-level measures available from 2017. As of May 2025, an updated version
-of the data at county and state level is available for 2024 at [Vera Institute's Github Page](https://github.com/vera-institute/incarceration-trends). 
-This will be updated in OEPS by fall 2025.
+#### Resources
+Jail incarceration variables were obtained from the Vera Institute of Justice, which maintains the Incarceration Trends dataset documenting prison and jail populations across the United States.
+
+Raw data and documentation are publicly available through the Vera Institute’s GitHub repository. OEPS uses Version 1 of the Vera data for county-level prison measures beginning in 2017. As of May 2025, updated county- and state-level prison data through 2024 are available at  [Vera Institute's Github Page](https://github.com/vera-institute/incarceration-trends). 
+
+#### Geographic Boundaries
+State and County boundary files were sourced from the [US Census Bureau, TIGER/Line Shapefiles 2018, 2020](https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html). 
+A copy of the geographic boundary files used can be found at the [HEROP GeoData Web Archive](https://geodata.healthyregions.org/).
 
 ### Description of Data Processing: 
-The following variables were included from the source data:
+The Vera Institute prison dataset includes annual state-level and county-level measures derived from administrative correctional records. The following prison-related variables are included in OEPS:
 1. Total jail population rate;
 2. Total jail admission rate;
 3. Pretrial jail population rate;
@@ -28,43 +24,26 @@ The following variables were included from the source data:
 5. Total jail admission count;
 6. Pretrial jail population count. 
  
-These rates were calculated using base rate of county population aged 15-64 and the unit is per 100K people. They argue that "youth under age 15 and adults over 64 are age groups at very low risk of jail incarceration and because the proportion of these groups varies greatly by county." Also, note that these rates are jail population relative to the total county population. For example, the female jail population rate is calculated as the jail female population divided by the female population (aged 15–64) in that county (multiplied by 100,000). 
+Rates are calculated by the Vera Institute using the county population aged 15–64 as the denominator. This age range is used because populations under 15 and over 64 have a very low risk of incarceration, and their proportions vary substantially across counties.
 
-### Key Variable and Definitions:
+Note that these rates are jail population relative to the total county population. For example, the female jail population rate is calculated as the jail female population divided by the female population (aged 15–64) in that county (multiplied by 100,000).
 
-- **Variable** -- title of variable
-- **Variable ID** -- exact name of variable in datasets
-- **Description** -- Short description of variable
-- **Years Available** -- years for which data exists for this variable
-- **Spatial Scale** -- the variable exists for these levels of spatial scale
 
-#### County
-| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
-|:---------|:--------------------|:------------|:----------------|:--------------|
-| Total jail population rate | TtlJlPpr | Total Jail Population Rate, ASJ/COJ Data | 1970-2024 | County |
-| Total jail admission rate | TtlJlAdmr | Total Jail Admissions Rate, ASJ/COJ Data | 1970-2024 | County |
-| Pretrial jail population rate | TtlJlPrtr | Pretrial Jail Population Rate | 1970-2024 | County |
-| Total jail population count | TtlJlPp | Total Jail Population Count, ASJ/COJ Data | 1970-2024 | County |
-| Total jail admission count | TtlJlAdm | Total Jail Admissions Count, ASJ/COJ Data | 1970-2024 | County |
-| Pretrial jail population count | TtlJlPrt | Pretrial Jail Population Count | 1970-2024 | County |
+State Map:
 
-#### State
-| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
-|:---------|:--------------------|:------------|:----------------|:--------------|
-| Total jail population rate | TtlJlPpr | Total Jail Population Rate, ASJ/COJ Data | 1970-2023 | State |
-| Total jail admission rate | TtlJlAdmr | Total Jail Admissions Rate, ASJ/COJ Data | 1978-2022 | State |
-| Pretrial jail population rate | TtlJlPrtr | Pretrial Jail Population Rate | 1970-2023 | State |
-| Total jail population count | TtlJlPp | Total Jail Population Count, ASJ/COJ Data | 1970-2023 | State |
-| Total jail admission count | TtlJlAdm | Total Jail Admissions Count, ASJ/COJ Data | 1978-2022 | State |
-| Pretrial jail population count | TtlJlPrt | Pretrial Jail Population Count | 1970-2023 | State |
+<img width="778" height="487" alt="State Map_Jail_2023_Natural Break" src="https://github.com/user-attachments/assets/2cf23d18-5007-4786-8efc-7f663ad9b315" />
+
+County Map:
+
+<img width="778" height="487" alt="County Map_Jail_2024Q1_Natural Break" src="https://github.com/user-attachments/assets/3d27ed20-044d-426e-8b53-ec5f26ae4a10" />
 
 ### Data Limitations:
 - There is missing data in many counties.
-- Most state-level data are available for consistent ranges as shown above, but some states differ. Alaska (AK), Connecticut (CT), Delaware (DE), Rhode Island (RI) miss data from 1970-1977. Hawaii (HI) and Vermont (VT) miss data from 1971-1977.
-- See the Vera Insitute's documentation for details on additional limitations.
-
-### Comments/Notes:
-- The latest county-level data extend to 2024, but it only includes Quarter 1. Also, pretrial jail population rate and count are largely unavailable; only some counties in Virginia and West Virginia report them.
-- County-level data are reported quarterly, with estimates provided for four reference dates each year (March 31, June 30, September 30, and December 31).
+- State 2023 was excluded because total jail admission count and rate weren't available for that year.
+- County-level data are reported quarterly, with estimates provided for four reference dates each year (March 31, June 30, September 30, and December 31). The latest county-level data extend to 2024, but it only includes Quarter 1.
+- Pretrial jail population rate and count are largely unavailable; only some counties in Virginia and West Virginia report them.
 - Many states use regional or multi-county jail systems (e.g., WV statewide system, VA regional jails), so counties sharing the same jail receive identical jail population values. These repeated values reflect jail system structure, not actual similarities across counties.
 - Some jail counts may be fractional because linear interpolation has been used to replace missing data and apportions regional jail populations across counties based on population share. These estimation steps naturally create non-integer counts.
+
+### Comments/Notes:
+- This dataset includes year from 2017 to 2024, please see the Vera Institute’s raw data and documentation for data before that.

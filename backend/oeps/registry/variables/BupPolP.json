@@ -1,0 +1,14 @@
+{
+  "name": "BupPolP",
+  "title": "Buprenorphine Policy Proportion",
+  "type": "number",
+  "example": "0.382",
+  "description": "Proportion of Year with State-Level Buprenorphine Policy in Effect",
+  "longitudinal": false,
+  "analysis": false,
+  "metadata": "Bup_Policy_Proportion",
+  "table_sources": [
+    "state-2023",
+    "state-2024"
+  ]
+}

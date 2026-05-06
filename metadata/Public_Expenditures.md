@@ -4,14 +4,6 @@
 **Date Last Modified**: September 9, 2025
 **Last Modified By**: Adam Cox
 
-### Theme:
-Policy
-
-### Data Location: 
-You can find the variables described in this document in the CSV files [here](https://oeps.healthyregions/download).
-
-CSV files are organized by **year** and **spatial scale**. For example, county-level variables from 2000 will be found in C_2000.csv.
-
 ### Data Source(s) Description:  
 
 This data was sourced from the [U.S. Census Bureau Annual Survey of State and Local Government Finances](https://www.census.gov/programs-surveys/gov-finances.html) and accessed via Urban Institute & Tax Policy Center's [State and Local Finance Data Finder](https://state-local-finance-data.taxpolicycenter.org/pages.cfm).
@@ -41,21 +33,6 @@ The data source table included the following variables for state and local gover
 ### Description of Data Processing: 
 
 Data was downloaded, cleaned, and prepared for analysis. The expenditure variables listed above were aggregated by category (police and fire, corrections, public health, and public welfare) to create variables represented category totals for combined state and local spending for each state. These variables were then merged into the final dataset, which includes all finance variables for state and D.C.
-
-### Key Variable and Definitions:
-
-- **Variable** -- title of variable
-- **Variable ID** -- exact name of variable in datasets
-- **Description** -- Short description of variable
-- **Years Available** -- years for which data exists for this variable
-- **Spatial Scale** -- the variable exists for these levels of spatial scale
-
-| Variable | Variable ID in .csv | Description | Years Available | Spatial Scale |
-|:---------|:--------------------|:------------|:----------------|:--------------|
-| Police & fire expenditures | PlcFyrExp | Total expenditures on police and fire protection| 2019-2022 | State |
-| Corrections expenditures | CrrctExp | Total expenditures on corrections system and operations | 2019-2022 | State |
-| Public health expenditures | HlthExp | Total expenditures on public health and hospitals | 2019-2022 | State |
-| Public welfare expenditures | WlfrExp | Total expenditures on public welfare programs | 2019-2022 | State |
 
 ### Data Limitations: 
 
