@@ -4,9 +4,9 @@
   "type": "number",
   "example": "1.23",
   "description": "Opioid Treatment Provider access 60 minutes (RAAM)",
-  "metadata": "Access_MOUDs",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_MOUDs",
   "table_sources": [
     "tract-2025"
   ]
