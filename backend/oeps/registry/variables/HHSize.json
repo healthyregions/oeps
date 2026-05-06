@@ -3,7 +3,7 @@
   "title": "Average household size",
   "type": "number",
   "example": "60.0",
-  "description": "Percent male population aged 15 and over who are widowed",
+  "description": "Average number of persons per household",
   "metadata": "Household_Characteristics",
   "longitudinal": false,
   "analysis": false,
