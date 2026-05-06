@@ -9,6 +9,7 @@
   "analysis": true,
   "table_sources": [
     "tract-2020",
+    "tract-2025",
     "zcta-2020"
   ]
 }
