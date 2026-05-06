@@ -4,7 +4,8 @@
   "type": "number",
   "example": "83.75",
   "description": "Driving time in minutes from origin census tract centroid to census tract centroid of nearest SSP and back to origin census tract centroid",
-  "metadata": "accessssp.json",
+  "metadata": "Access_SSP",
   "longitudinal": false,
-  "analysis": false
+  "analysis": false,
+  "table_sources": []
 }
