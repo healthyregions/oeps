@@ -45,7 +45,7 @@ This analysis was conducted using a Python Computational notebook. The script is
 In addition, an **impedance factor** was introduced in 2025 access metrics. Raw travel time measures assume pristine conditions in a best-case-scenario. 
 An impedance approach instead multiples the estimated travel time by a factor, in this case a factor of 2, better approximating actual travel time due to traffic, congestion, etc.
 
- ![Choropleth map of travel time to substance use treatment by census tract.](images/Travel_Time_to_Substance_Use_Treatment_by_Census_Tract.png)
+ ![Choropleth map of travel time to substance use treatment by census tract.](images/SSP_Choropleth.png)
 
 
 ### Data Limitations:   
@@ -56,7 +56,7 @@ An impedance approach instead multiples the estimated travel time by a factor, i
 - Unlike most U.S. states, Connecticut’s traditional eight counties do not function as active government units and have not been used for statistical reporting for decades. More recently, the U.S. Census Bureau replaced Connecticut’s eight historical counties with nine planning regions as official county-equivalent geographies, effective in Census Bureau products beginning in 2022, with full adoption in federal data products through 2023–2024. Because this redefinition means that county FIPS codes and county-level boundaries no longer align consistently with the definitions used elsewhere in our dataset (which assume stable county geographies), some Connecticut tracts may appear as empty or missing in the county summary table. This is especially true where tract identifiers include legacy county codes that no longer match current county-equivalent definitions.
 - Note that Alaska travel times may reflect the data technically, but due to the geographic complexities of the state, we don't recommend using measures for that state at this time. Tracts are very large, and while there may be an SSP location within the tract -- giving it a travel time of zero -- the physical size of the tract boundary makes that actual time a bit unreasonable. Please proceed with caution in frontier locations.
 
-![Limitations of Alaska travel times due to tract boundary size and approach utilized](https://github.com/user-attachments/assets/b9ea8e36-6643-4851-9f9a-62ea9b9dd72b)
+![Limitations of Alaska travel times due to tract boundary size and approach utilized](images/FqhcAvTmDr2_Alaska_2025.png)
 *Limitations of Alaska travel times due to tract boundary size and approach utilized*
 
 ### Comments/Notes:  
