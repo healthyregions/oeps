@@ -554,6 +554,20 @@
         "Years": "2018, 2022"
       }
     ],
+    "Spatial access to Syringe Services Programs": [
+      {
+        "Variable Construct": "Spatial access to Syringe Services Programs",
+        "Variable Proxy": "Travel time to Syringe Services Programs",
+        "Variables": [
+          "Driving time to nearest SSP",
+          "Round trip driving time to nearest SSP"
+        ],
+        "Source": "NASEN",
+        "Metadata": "Access_SSP",
+        "Spatial Scale": "Tract",
+        "Years": "2025"
+      }
+    ],
     "Spatial access to Federally Qualified Health Centers (FQHCs)": [
       {
         "Variable Construct": "Spatial access to Federally Qualified Health Centers (FQHCs)",

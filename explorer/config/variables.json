@@ -1428,6 +1428,13 @@
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HIVTesting.md"
   },
   {
+    "variable": "Driving time to nearest SSP",
+    "numerator": "tract-2025",
+    "nProperty": "SspTmDr",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/nasen_ssp/metadata/Access_SSP.md"
+  },
+  {
     "variable": "Driving time to nearest telehealth buprenorphine provider",
     "numerator": "county-2025__tract-2025",
     "nProperty": "TlBupTmDr",
@@ -2238,6 +2245,13 @@
     "nProperty": "RspRt",
     "theme": "Social",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/232-add-social-capital-metadata-and-registry-files-prep-for-index/metadata/Social_Capital.md"
+  },
+  {
+    "variable": "Round trip driving time to nearest SSP",
+    "numerator": "tract-2025",
+    "nProperty": "SspTmDr2",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/nasen_ssp/metadata/Access_SSP.md"
   },
   {
     "variable": "Secondary RUCA Code",

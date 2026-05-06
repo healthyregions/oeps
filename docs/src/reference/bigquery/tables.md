@@ -2573,7 +2573,7 @@ WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated coun
 
 ID: `oeps-391119.tabular.tract-2025`
 
-86 columns in this table.
+88 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
@@ -2631,6 +2631,7 @@ OtpRm30|NUMERIC|Opioid Treatment Provider access 30 minutes (RAAM)
 MetMinDis|NUMERIC|Euclidean distance (miles) to nearest methadone provider
 BupRm60|NUMERIC|Buprenorphine access 60 minutes (RAAM)
 BupCntDr60|NUMERIC|Count of buprenorphine providers in 60 minute drive time threshold
+SspTmDr|NUMERIC|Driving time in minutes from origin census tract centroid to census tract centroid of nearest SSP
 BupMinDis|NUMERIC|Euclidean distance (miles) to nearest buprenorphine provider
 MetCntBk30|INTEGER|Count of methadone providers in 30 minute biking time threshold
 MetRm30|NUMERIC|Methadone access 30 minutes (RAAM)
@@ -2654,6 +2655,7 @@ NaltMinDis|NUMERIC|Euclidean distance (miles) to nearest naltrexone/Vivitrol pro
 HcvCntDr|INTEGER|Number of HCV testing providers within a 30-minute drive
 NaltTmWk|NUMERIC|Walking time (minutes) to nearest naltrexone provider
 NaltCntWk30|INTEGER|Count of naltrexone providers in 30 minute walking time threshold
+SspTmDr2|NUMERIC|Driving time in minutes from origin census tract centroid to census tract centroid of nearest SSP and back to origin census tract centroid
 MoudMinDis|NUMERIC|Euclidean distance (miles) to nearest MOUD (all types)
 TlBupCntBk30|INTEGER|Total number of providers offering buprenorphine treatment via telemedicine/telehealth located within a 30-minute biking time threshold
 FqhcTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes

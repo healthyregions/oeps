@@ -3611,6 +3611,34 @@
       }
     ]
   },
+  "Access_SSP": {
+    "theme": "Environment",
+    "construct": "Spatial access to Syringe Services Programs",
+    "variables": [
+      {
+        "title": "Driving time to nearest SSP",
+        "name": "SspTmDr",
+        "description": "Driving time in minutes from origin census tract centroid to census tract centroid of nearest SSP",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Round trip driving time to nearest SSP",
+        "name": "SspTmDr2",
+        "description": "Driving time in minutes from origin census tract centroid to census tract centroid of nearest SSP and back to origin census tract centroid",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      }
+    ]
+  },
   "Residential_Segregation": {
     "theme": "Social",
     "construct": "Residential Segregation Measures",
