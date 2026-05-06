@@ -68,8 +68,8 @@ from ._common_opts import (
     "--skip-foreign-keys",
     is_flag=True,
     default=False,
-    help="Don't define foreign keys in the output data package. This is needed to avoid validation errors that "
-    "occur when Shapefiles are used in foreign keys.",
+    help="Don't define foreign keys in the output data package and omit geography-keys CSV resources. "
+    "By default, FKs reference a tabular geography-keys file (not the shapefile) so validation can run.",
 )
 @click.option(
     "--skip-validation",
@@ -106,8 +106,7 @@ def create_data_package(
 
     The resulting package will be validated against the `frictionless` standard using that Python library.
 
-    `--skip-foreign-keys` to skip the creation of foreign keys--useful because foreign keys to shapefiles break
-    validation.
+    `--skip-foreign-keys` to omit foreign keys and geography-keys tables (packages without relational metadata).
 
     `--skip-validation` to skip the final step of running validation on the output package.
     """
