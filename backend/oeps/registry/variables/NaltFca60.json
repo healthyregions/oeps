@@ -2,11 +2,11 @@
   "name": "NaltFca60",
   "title": "Two-step floating catchment area (2SFCA) measure of access to Naltrexone within a 60-minute drive",
   "type": "number",
-  "example": "0.0005",
+  "example": "0.0000005",
   "description": "Two-step floating catchment area (2SFCA) measure of access to Naltrexone within a 60-minute drive",
+  "metadata": "Access_MOUDs",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Access_MOUDs",
   "table_sources": [
     "tract-2025"
   ]
