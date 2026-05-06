@@ -3,10 +3,10 @@
   "title": "% Married-couple household With children under 18 years",
   "type": "number",
   "example": "60.0",
-  "description": "",
+  "description": "Percent married-couple household With children under 18 years",
+  "metadata": "Household_Characteristics",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Household_Characteristics",
   "table_sources": [
     "county-2020",
     "county-2023",
