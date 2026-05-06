@@ -2573,7 +2573,7 @@ WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated coun
 
 ID: `oeps-391119.tabular.tract-2025`
 
-78 columns in this table.
+86 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
@@ -2584,6 +2584,7 @@ OtpCntDr|INTEGER|Count of OTPs within a 30-minute driving threshold
 HospTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip hospital destination centroid, in minutes
 OtpMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles
 BupTmWk|NUMERIC|Walking time (minutes) to nearest buprenorphine provider
+NaltFca60|NUMERIC|Two-step floating catchment area (2SFCA) measure of access to Naltrexone within a 60-minute drive
 HcvTmDr2|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip HCV Testing Facility with impedance destination centroid, in minutes
 RxTmDr2|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip pharmacy destination centroid with impedance factor, in minutes
 SutMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest SUT service location, in miles
@@ -2591,6 +2592,7 @@ TlBupMinDis|NUMERIC|Euclidean distance (in miles) to the nearest provider offeri
 BupCntBk30|INTEGER|Count of buprenorphine providers in 30 minute biking time threshold
 BupCntDr30|INTEGER|Count of Buprenorphine providers in 30 minute drive time threshold
 TlBupTmDr|NUMERIC|Estimated driving time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services
+NaltRm30|NUMERIC|Naltrexone access 30 minutes (RAAM)
 BupTmDr|NUMERIC|Driving time (minutes) to nearest buprenorphine provider
 TlBupCntDr60|INTEGER|Total number of providers offering buprenorphine treatment via telemedicine/telehealth located within a 60-minute driving time threshold
 FqhcMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest Federally Qualified Health Centers (FQHC), in miles
@@ -2604,6 +2606,7 @@ FqhcCntDr|INTEGER|Count of Federally Qualified Health Centers (FQHCs) within a 3
 NaltCntDr30|INTEGER|Count of naltrexone providers in 30 minute drive time threshold
 NaltTmBk|NUMERIC|Biking time (minutes) to nearest naltrexone provider
 MetFca30|NUMERIC|Two-step floating catchment area (2SFCA) measure of access to Methadone within a 30-minute drive
+BupFca30|NUMERIC|Two-step floating catchment area (2SFCA) measure of access to Buprenorphine within a 30-minute drive
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 BupCntWk60|INTEGER|Count of buprenorphine providers in 60 minute walking time threshold
 MetTmWk|NUMERIC|Walking time (minutes) to nearest methadone provider
@@ -2613,17 +2616,20 @@ MetCntDr60|NUMERIC|Count of methadone providers in 60 minute drive time threshol
 OtpTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes
 TlBupTmWk|NUMERIC|Estimated walking time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services
 HivTmDr|NUMERIC|Driving time from origin to nearest HIV testing provider (minutes)
+BupRm30|NUMERIC|Buprenorphine access 30 minutes (RAAM)
 TlBupTmBk|NUMERIC|Estimated biking time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services
 MetCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold
 MhMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest mental health provider, in miles
 OtpRm60|NUMERIC|Opioid Treatment Provider access 60 minutes (RAAM)
 NaltCntBk30|INTEGER|Count of naltrexone providers in 30 minute biking time threshold
 TlBupCntDr30|INTEGER|Total number of providers offering buprenorphine treatment via telemedicine/telehealth located within a 30-minute driving time threshold
+BupFca60|NUMERIC|Two-step floating catchment area (2SFCA) measure of access to Buprenorphine within a 30-minute drive
 BupCntWk30|INTEGER|Count of buprenorphine providers in 30 minute walking time threshold
 BupTmBk|NUMERIC|Biking time (minutes) to nearest buprenorphine provider
 MhTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip mental health provider destination centroid, in minutes
 OtpRm30|NUMERIC|Opioid Treatment Provider access 30 minutes (RAAM)
 MetMinDis|NUMERIC|Euclidean distance (miles) to nearest methadone provider
+BupRm60|NUMERIC|Buprenorphine access 60 minutes (RAAM)
 BupCntDr60|NUMERIC|Count of buprenorphine providers in 60 minute drive time threshold
 BupMinDis|NUMERIC|Euclidean distance (miles) to nearest buprenorphine provider
 MetCntBk30|INTEGER|Count of methadone providers in 30 minute biking time threshold
@@ -2634,11 +2640,13 @@ HivMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest HIV tes
 NaltCntDr60|NUMERIC|Count of naltrexone providers in 60 minute drive time threshold
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 HivCntDr|INTEGER|Number of HIV testing providers within a 30-minute drive
+NaltRm60|NUMERIC|Naltrexone access 60 minutes (RAAM)
 MetFca60|NUMERIC|Two-step floating catchment area (2SFCA) measure of access to Methadone within a 60-minute drive
 NaltTmDr|NUMERIC|Driving time (minutes) to nearest naltrexone provider
 NaltCntBk60|INTEGER|Count of naltrexone providers in 60 minute biking time threshold
 FqhcTmDr2|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes, with Impedance factor
 SutTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip SUT destination centroid, in minutes
+NaltFca30|NUMERIC|Two-step floating catchment area (2SFCA) measure of access to Naltrexone within a 30-minute drive
 NaltCntWk60|INTEGER|Count of naltrexone providers in 60 minute walking time threshold
 HcvTmDr|NUMERIC|Driving time from origin to nearest HCV testing provider (minutes)
 OtpFca60|NUMERIC|Two-step floating catchment area (2SFCA) measure of access to opioid treatment programs within a 60-minute drive

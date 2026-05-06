@@ -56,10 +56,12 @@ BupCntWk60,Count of Buprenorphine Providers (60-min walk),integer,2,Count of bup
 BupCtTmBk,Tracts with Buprenorphine Provider within 30-min (biking),integer,287,Number of tracts with buprenorphine provider within a 30-min biking range,"county-2020, county-2025",Access_MOUDs,False,False
 BupCtTmDr,Tracts with Buprenorphine Provider within 30-min (driving),integer,288,Number of tracts with buprenorphine provider within a 30-min driving range,"county-2020, county-2025",Access_MOUDs,False,False
 BupCtTmWk,Tracts with Buprenorphine Provider within 30-min (walking),integer,287,Number of tracts with buprenorphine provider within a 30-min walking range,"county-2020, county-2025",Access_MOUDs,False,False
+BupFca30,Two-step floating catchment area (2SFCA) measure of access to Buprenorphine within a 30-minute drive,number,0.0001,Two-step floating catchment area (2SFCA) measure of access to Buprenorphine within a 30-minute drive,tract-2025,Access_MOUDs,False,False
+BupFca60,Two-step floating catchment area (2SFCA) measure of access to Buprenorphine within a 60-minute drive,number,0.0004,Two-step floating catchment area (2SFCA) measure of access to Buprenorphine within a 30-minute drive,tract-2025,Access_MOUDs,False,False
 BupMinDis,Distance (mi) to nearest Buprenorphine Provider,number,0.81,Euclidean distance (miles) to nearest buprenorphine provider,"tract-2020, tract-2025, zcta-2020",Access_MOUDs,False,False
 BupPolP,Buprenorphine Policy Proportion,number,0.382,Proportion of Year with State-Level Buprenorphine Policy in Effect,"state-2023, state-2024",Bup_Policy_Proportion,False,False
-BupRm30,Buprenorphine access 30 minutes (RAAM),number,1.232,Buprenorphine access 30 minutes (RAAM),tract-2020,Access_MOUDs,False,False
-BupRm60,Buprenorphine access 60 minutes (RAAM),number,1.232,Buprenorphine access 60 minutes (RAAM),tract-2020,Access_MOUDs,False,False
+BupRm30,Buprenorphine access 30 minutes (RAAM),number,1.232,Buprenorphine access 30 minutes (RAAM),"tract-2020, tract-2025",Access_MOUDs,False,False
+BupRm60,Buprenorphine access 60 minutes (RAAM),number,1.232,Buprenorphine access 60 minutes (RAAM),"tract-2020, tract-2025",Access_MOUDs,False,False
 BupRm90,Buprenorphine access 90 minutes (RAAM),number,1.232,Buprenorphine access 90 minutes (RAAM),tract-2020,Access_MOUDs,False,False
 BupTmBk,Biking Time (min) to nearest Buprenorphine Provider,number,0,Biking time (minutes) to nearest buprenorphine provider,"county-2025, tract-2020, tract-2025, zcta-2020",Access_MOUDs,False,True
 BupTmBkP,% Tracts With Buprenorphine Provider (30-min bike),number,1,Percent of tracts with buprenorphine provider within a 30-min biking range,"county-2020, county-2025",Access_MOUDs,False,False
@@ -240,9 +242,11 @@ NaltCntWk60,Count of Naltrexone Providers (60-min walk),integer,0,Count of naltr
 NaltCtTmBk,Tracts with Naltrexone Provider within 30-min (biking),integer,287,Number of tracts with naltrexone provider within a 30-min biking range,"county-2020, county-2025",Access_MOUDs,False,False
 NaltCtTmDr,Tracts with Naltrexone Provider within 30-min (driving),integer,288,Number of tracts with naltrexone provider within a 30-min driving range,"county-2020, county-2025",Access_MOUDs,False,False
 NaltCtTmWk,Tracts with Naltrexone Provider within 30-min (walking),integer,287,Number of tracts with naltrexone provider within a 30-min walking range,"county-2020, county-2025",Access_MOUDs,False,False
+NaltFca30,Two-step floating catchment area (2SFCA) measure of access to Naltrexone within a 30-minute drive,number,0.0003,Two-step floating catchment area (2SFCA) measure of access to Naltrexone within a 30-minute drive,tract-2025,Access_MOUDs,False,False
+NaltFca60,Two-step floating catchment area (2SFCA) measure of access to Naltrexone within a 60-minute drive,number,0.0005,Two-step floating catchment area (2SFCA) measure of access to Naltrexone within a 60-minute drive,tract-2025,Access_MOUDs,False,False
 NaltMinDis,Distance (mi) to nearest Naltrexone Provider,number,18.04,Euclidean distance (miles) to nearest naltrexone/Vivitrol provider,"tract-2020, tract-2025, zcta-2020",Access_MOUDs,False,False
-NaltRm30,Naltrexone access 30 minutes (RAAM),number,1.232,Naltrexone access 30 minutes (RAAM),tract-2020,Access_MOUDs,False,False
-NaltRm60,Naltrexone access 60 minutes (RAAM),number,1.232,Naltrexone access 60 minutes (RAAM),tract-2020,Access_MOUDs,False,False
+NaltRm30,Naltrexone access 30 minutes (RAAM),number,1.232,Naltrexone access 30 minutes (RAAM),"tract-2020, tract-2025",Access_MOUDs,False,False
+NaltRm60,Naltrexone access 60 minutes (RAAM),number,1.232,Naltrexone access 60 minutes (RAAM),"tract-2020, tract-2025",Access_MOUDs,False,False
 NaltRm90,Naltrexone access 90 minutes (RAAM),number,1.232,Naltrexone access 90 minutes (RAAM),tract-2020,Access_MOUDs,False,False
 NaltTmBk,Biking Time (min) to nearest Naltrexone Provider,number,165.18,Biking time (minutes) to nearest naltrexone provider,"county-2025, tract-2020, tract-2025, zcta-2020",Access_MOUDs,False,True
 NaltTmBkP,% Tracts With Naltrexone Provider (30-min bike),number,1,Percent of tracts with naltrexone provider within a 30-min biking range,"county-2020, county-2025",Access_MOUDs,False,False

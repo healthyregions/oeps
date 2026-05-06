@@ -743,14 +743,14 @@
   },
   {
     "variable": "Buprenorphine access 30 minutes (RAAM)",
-    "numerator": "tract-2020",
+    "numerator": "tract-2025",
     "nProperty": "BupRm30",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Buprenorphine access 60 minutes (RAAM)",
-    "numerator": "tract-2020",
+    "numerator": "tract-2025",
     "nProperty": "BupRm60",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
@@ -1919,14 +1919,14 @@
   },
   {
     "variable": "Naltrexone access 30 minutes (RAAM)",
-    "numerator": "tract-2020",
+    "numerator": "tract-2025",
     "nProperty": "NaltRm30",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Naltrexone access 60 minutes (RAAM)",
-    "numerator": "tract-2020",
+    "numerator": "tract-2025",
     "nProperty": "NaltRm60",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
@@ -2786,6 +2786,20 @@
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Medical_Expenditures.md"
   },
   {
+    "variable": "Two-step floating catchment area (2SFCA) measure of access to Buprenorphine within a 30-minute drive",
+    "numerator": "tract-2025",
+    "nProperty": "BupFca30",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Two-step floating catchment area (2SFCA) measure of access to Buprenorphine within a 60-minute drive",
+    "numerator": "tract-2025",
+    "nProperty": "BupFca60",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
+  },
+  {
     "variable": "Two-step floating catchment area (2SFCA) measure of access to Methadone within a 30-minute drive",
     "numerator": "tract-2025",
     "nProperty": "MetFca30",
@@ -2796,6 +2810,20 @@
     "variable": "Two-step floating catchment area (2SFCA) measure of access to Methadone within a 60-minute drive",
     "numerator": "tract-2025",
     "nProperty": "MetFca60",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Two-step floating catchment area (2SFCA) measure of access to Naltrexone within a 30-minute drive",
+    "numerator": "tract-2025",
+    "nProperty": "NaltFca30",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Two-step floating catchment area (2SFCA) measure of access to Naltrexone within a 60-minute drive",
+    "numerator": "tract-2025",
+    "nProperty": "NaltFca60",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
