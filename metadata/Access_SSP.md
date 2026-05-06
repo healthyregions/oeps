@@ -45,7 +45,7 @@ This analysis was conducted using a Python Computational notebook. The script is
 In addition, an **impedance factor** was introduced in 2025 access metrics. Raw travel time measures assume pristine conditions in a best-case-scenario. 
 An impedance approach instead multiples the estimated travel time by a factor, in this case a factor of 2, better approximating actual travel time due to traffic, congestion, etc.
 
- ![Choropleth map of travel time to substance use treatment by census tract.](images/Travel_Time_to_Substance_Use_Treatment_by_Census_Tract.png)
+ ![Choropleth map of travel time to substance use treatment by census tract.](images/SSP_Choropleth.png)
 
 
 ### Data Limitations:   
