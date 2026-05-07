@@ -23,10 +23,11 @@ class TableSource(TableSourceModel):
         """Write table CSV using fixed-point float formatting.
 
         This avoids scientific notation (e.g. 3.28e-06) in canonical table files.
-        Integer-typed registry variables are written as integers. State-level
-        tables use two decimal places for floats (aggregate metrics); tract and
-        other tables keep nine so very small values (e.g. some FCA metrics) are
-        not rounded to zero.
+        Integer-typed registry variables are written as integers. Any float column
+        whose non-null values are all whole numbers is written as integer (applies
+        to all table sources). State-level tables use two decimal places for
+        remaining floats; tract and other tables use nine so very small values
+        (e.g. some FCA metrics) are not rounded to zero.
         """
         out = df.copy()
         for v in self.variables:
@@ -47,22 +48,21 @@ class TableSource(TableSourceModel):
                 out["FIPS"] = out["FIPS"].round().astype("Int64")
             except (ValueError, TypeError, pd.errors.IntCastingNaNError):
                 pass
+        for c in out.columns:
+            if c == "HEROP_ID":
+                continue
+            s = out[c]
+            if not pd.api.types.is_float_dtype(s):
+                continue
+            non_null = s.dropna()
+            if non_null.empty:
+                continue
+            if (non_null == non_null.round()).all():
+                try:
+                    out[c] = s.round().astype("Int64")
+                except (ValueError, TypeError, pd.errors.IntCastingNaNError):
+                    pass
         float_fmt = "%.2f" if self.name.startswith("state-") else "%.9f"
-        if self.name.startswith("state-"):
-            for c in out.columns:
-                if c == "HEROP_ID":
-                    continue
-                s = out[c]
-                if not pd.api.types.is_float_dtype(s):
-                    continue
-                non_null = s.dropna()
-                if non_null.empty:
-                    continue
-                if (non_null == non_null.round()).all():
-                    try:
-                        out[c] = s.round().astype("Int64")
-                    except (ValueError, TypeError, pd.errors.IntCastingNaNError):
-                        pass
         out.to_csv(self.full_path, index=False, float_format=float_fmt)
 
     def load_dataframe(self) -> pd.DataFrame:
