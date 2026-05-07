@@ -9,3 +9,6 @@ tech-note/
 
 # Credentials - never commit service account keys
 credentials/
+
+# Cursor IDE — keep rules local only
+.cursor/
