@@ -1,7 +1,7 @@
 **Meta Data Name**: Jail Incarceration Variables  
 **Date Added**: September 11, 2020  
 **Author**: Marynia Kolak, Qinyun Lin, Yilin Lyu  
-**Date Last Modified**: April 28, 2026  
+**Date Last Modified**: May 7, 2026  
 **Last Modified By**: Yilin Lyu  
 
 ### Data Source(s) Description:  
@@ -31,11 +31,11 @@ Note that these rates are jail population relative to the total county populatio
 
 State Map:
 
-<img width="778" height="487" alt="State Map_Jail_2023_Natural Break" src="https://github.com/user-attachments/assets/2cf23d18-5007-4786-8efc-7f663ad9b315" />
+![state map](images/TtlJlPpr_State_2023.png)
 
 County Map:
 
-<img width="778" height="487" alt="County Map_Jail_2024Q1_Natural Break" src="https://github.com/user-attachments/assets/3d27ed20-044d-426e-8b53-ec5f26ae4a10" />
+![county map](images/TtlJlPpr_County_2024Q1.png)
 
 ### Data Limitations:
 - There is missing data in many counties.
