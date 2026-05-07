@@ -1114,7 +1114,8 @@
         "name": "BupRm30",
         "description": "Buprenorphine access 30 minutes (RAAM)",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract"
@@ -1125,7 +1126,8 @@
         "name": "BupRm60",
         "description": "Buprenorphine access 60 minutes (RAAM)",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract"
@@ -1746,7 +1748,8 @@
         "name": "NaltRm30",
         "description": "Naltrexone access 30 minutes (RAAM)",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract"
@@ -1757,7 +1760,8 @@
         "name": "NaltRm60",
         "description": "Naltrexone access 60 minutes (RAAM)",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract"
@@ -1995,6 +1999,28 @@
         ]
       },
       {
+        "title": "Two-step floating catchment area (2SFCA) measure of access to Buprenorphine within a 30-minute drive",
+        "name": "BupFca30",
+        "description": "Two-step floating catchment area (2SFCA) measure of access to Buprenorphine within a 30-minute drive",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Two-step floating catchment area (2SFCA) measure of access to Buprenorphine within a 60-minute drive",
+        "name": "BupFca60",
+        "description": "Two-step floating catchment area (2SFCA) measure of access to Buprenorphine within a 30-minute drive",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
         "title": "Two-step floating catchment area (2SFCA) measure of access to Methadone within a 30-minute drive",
         "name": "MetFca30",
         "description": "Two-step floating catchment area (2SFCA) measure of access to Methadone within a 30-minute drive",
@@ -2009,6 +2035,28 @@
         "title": "Two-step floating catchment area (2SFCA) measure of access to Methadone within a 60-minute drive",
         "name": "MetFca60",
         "description": "Two-step floating catchment area (2SFCA) measure of access to Methadone within a 60-minute drive",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Two-step floating catchment area (2SFCA) measure of access to Naltrexone within a 30-minute drive",
+        "name": "NaltFca30",
+        "description": "Two-step floating catchment area (2SFCA) measure of access to Naltrexone within a 30-minute drive",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Two-step floating catchment area (2SFCA) measure of access to Naltrexone within a 60-minute drive",
+        "name": "NaltFca60",
+        "description": "Two-step floating catchment area (2SFCA) measure of access to Naltrexone within a 60-minute drive",
         "years": [
           "2025"
         ],
@@ -3272,6 +3320,7 @@
         "description": "Prison Prison Admissions Count",
         "years": [
           "2016",
+          "2019",
           "2022"
         ],
         "geographies": [
@@ -3285,6 +3334,7 @@
         "description": "Prison Prison Admissions Rate",
         "years": [
           "2016",
+          "2019",
           "2022"
         ],
         "geographies": [
@@ -3298,6 +3348,7 @@
         "description": "Total Prison Population Count",
         "years": [
           "2016",
+          "2019",
           "2022",
           "2024"
         ],
@@ -3312,6 +3363,7 @@
         "description": "Total Prison Population Rate",
         "years": [
           "2016",
+          "2019",
           "2022",
           "2024"
         ],
@@ -3555,6 +3607,34 @@
         "geographies": [
           "County",
           "State"
+        ]
+      }
+    ]
+  },
+  "Access_SSP": {
+    "theme": "Environment",
+    "construct": "Spatial access to Syringe Services Programs",
+    "variables": [
+      {
+        "title": "Driving time to nearest SSP",
+        "name": "SspTmDr",
+        "description": "Driving time in minutes from origin census tract centroid to census tract centroid of nearest SSP",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Round trip driving time to nearest SSP",
+        "name": "SspTmDr2",
+        "description": "Driving time in minutes from origin census tract centroid to census tract centroid of nearest SSP and back to origin census tract centroid",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
         ]
       }
     ]

@@ -1,0 +1,13 @@
+{
+  "name": "SspTmDr",
+  "title": "Driving time to nearest SSP",
+  "type": "number",
+  "example": "83.75",
+  "description": "Driving time in minutes from origin census tract centroid to census tract centroid of nearest SSP",
+  "longitudinal": false,
+  "analysis": false,
+  "metadata": "Access_SSP",
+  "table_sources": [
+    "tract-2025"
+  ]
+}
