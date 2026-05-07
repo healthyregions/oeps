@@ -4,7 +4,10 @@
   "type": "number",
   "example": "33",
   "description": "Percent of tracts with Naltrexone Provider within a 30-min driving range, with Impedance factor",
-  "metadata": "Access_MOUDs.json",
   "longitudinal": false,
-  "analysis": false
+  "analysis": false,
+  "metadata": "Access_MOUDs",
+  "table_sources": [
+    "state-2025"
+  ]
 }

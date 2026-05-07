@@ -4,7 +4,10 @@
   "type": "number",
   "example": "22",
   "description": "Number of tracts with Substance Use Treatment Provider within a 30-min driving range, with Impedance factor",
-  "metadata": "Access_SubstanceUseTreatment",
   "longitudinal": false,
-  "analysis": false
+  "analysis": false,
+  "metadata": "Access_SubstanceUseTreatment",
+  "table_sources": [
+    "state-2025"
+  ]
 }
