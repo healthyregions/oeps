@@ -69,10 +69,10 @@ We calculated RAAM access metrics for census tracts using tract centroids as dem
 
 A null value indicates that a RAAM score was not available for that geography in the current release. This may reflect no reachable provider within the modeled travel-time threshold, missing required inputs, or a value not produced during processing or integration.
 
-![Methadone RAAM Measure (30 Minutes)](https://raw.githubusercontent.com/healthyregions/oeps/main/metadata/images/MetRm30.png)
+![Methadone RAAM Measure (30 Minutes)](https://github.com/healthyregions/oeps/blob/293_Methadone_OTP_2025_RAAM/metadata/images/MetRm30.png)
 Methadone RAAM Measure (30 Minutes)
 
-![Opioid Treatment Provider RAAM Measure (30 Minutes)](https://raw.githubusercontent.com/healthyregions/oeps/main/metadata/images/OtpRm30.png)
+![Opioid Treatment Provider RAAM Measure (30 Minutes)](https://github.com/healthyregions/oeps/blob/293_Methadone_OTP_2025_RAAM/metadata/images/OtpRm30.png)
 Opioid Treatment Provider RAAM Measure (30 Minutes
 
 #### County and State 
