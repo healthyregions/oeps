@@ -1,7 +1,7 @@
 **Meta Data Name**: Prison Incarceration Variables  
 **Date Added**: September 11, 2020  
 **Author**: Marynia Kolak, Qinyun Lin, Yilin Lyu  
-**Date Last Modified**: May 5, 2026  
+**Date Last Modified**: May 7, 2026  
 **Last Modified By**: Yilin Lyu  
 
 ### Data Source(s) Description:  
@@ -27,11 +27,11 @@ Rates are calculated by the Vera Institute using the county population aged 15â€
 
 State Map:
 
-![Screenshot](https://github.com/user-attachments/assets/e40788bf-f5ec-4614-8446-840ecd7a3934)
+![state map](images/TtlPrPpr_State_2024.png)
 
 County Map:
 
-![Screenshot](https://github.com/user-attachments/assets/e40d41f5-ffeb-4af5-8855-e5b72fecee3f)
+![county map](images/TtlPrPpr_County_2019.png)
 
 ### Data Limitations:
 - There are missing data in many counties.
