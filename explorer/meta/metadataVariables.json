@@ -888,7 +888,8 @@
           "2025"
         ],
         "geographies": [
-          "County"
+          "County",
+          "State"
         ]
       },
       {
@@ -924,7 +925,8 @@
           "2025"
         ],
         "geographies": [
-          "County"
+          "County",
+          "State"
         ]
       },
       {
@@ -960,7 +962,8 @@
           "2025"
         ],
         "geographies": [
-          "County"
+          "County",
+          "State"
         ]
       },
       {
@@ -1016,6 +1019,94 @@
         "description": "Percent of tracts with naltrexone provider within a 30-min driving range",
         "years": [
           "2020"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "% Tracts within 30-min drive of Buprenorphine Provider(BUP), with Impedance factor",
+        "name": "BupTmDrP2",
+        "description": "Percent of tracts with Buprenorphine Provider within a 30-min driving range, with Impedance factor",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "% Tracts within 30-min drive of Methadone Provider(MET), with Impedance factor",
+        "name": "MetTmDrP2",
+        "description": "Percent of tracts with Methadone Providerwithin a 30-min driving range, with Impedance factor",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "% Tracts within 30-min drive of Naltrexone Provider (NALT), with Impedance factor",
+        "name": "NaltTmDrP2",
+        "description": "Percent of tracts with Naltrexone Provider within a 30-min driving range, with Impedance factor",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "% Tracts within 30-min drive of Opioid Treatment Provider (Otp), with Impedance factor",
+        "name": "OtpTmDrP2",
+        "description": "Percent of tracts with Opioid Treatment Provider within a 30-min driving range, with Impedance factor",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Average driving time to nearest Buprenorphine Provider(BUP), with Impedance factor",
+        "name": "BupAvTmDr2",
+        "description": "Average driving time (minutes) across tracts in state to nearest Buprenorphine Provider (BUP), with Impedance factor",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Average driving time to nearest Methadone Provider(MET), with Impedance factor",
+        "name": "MetAvTmDr2",
+        "description": "Average driving time (minutes) across tracts in state to nearest Methadone Provider(MET), with Impedance factor",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Average driving time to nearest Naltrexone Provider (NALT), with Impedance factor",
+        "name": "NaltAvTmDr2",
+        "description": "Average driving time (minutes) across tracts in state to nearest Naltrexone Provider (NALT), with Impedance factor",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Average driving time to nearest Opioid Treatment Provider (Otp), with Impedance factor",
+        "name": "OtpAvTmDr2",
+        "description": "Average driving time (minutes) across tracts in state to nearest Opioid Treatment Provider (Otp), with Impedance factor",
+        "years": [
+          "2025"
         ],
         "geographies": [
           "State"
@@ -1114,7 +1205,8 @@
         "name": "BupRm30",
         "description": "Buprenorphine access 30 minutes (RAAM)",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract"
@@ -1125,7 +1217,8 @@
         "name": "BupRm60",
         "description": "Buprenorphine access 60 minutes (RAAM)",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract"
@@ -1338,6 +1431,50 @@
         ]
       },
       {
+        "title": "Count of Tracts within 30-min drive of Buprenorphine Provider, with Impedance factor",
+        "name": "BupCtTmDr2",
+        "description": "Number of tracts with Buprenorphine Provider within a 30-min driving range, with Impedance factor",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Count of Tracts within 30-min drive of Methadone Provider, with Impedance factor",
+        "name": "MetCtTmDr2",
+        "description": "Number of tracts with Methadone Providerwithin a 30-min driving range, with Impedance factor",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Count of Tracts within 30-min drive of Naltrexone Provider, with Impedance factor",
+        "name": "NaltCtTmDr2",
+        "description": "Number of tracts with Naltrexone Provider within a 30-min driving range, with Impedance factor",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "Count of Tracts within 30-min drive of Opioid Treatment Provider, with Impedance factor",
+        "name": "OtpCtTmDr2",
+        "description": "Number of tracts with Opioid Treatment Provider within a 30-min driving range, with Impedance factor",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
         "title": "Count of buprenorphine providers (drive)",
         "name": "BupCntDr60",
         "description": "Count of buprenorphine providers in 60 minute drive time threshold",
@@ -1541,10 +1678,12 @@
         "name": "BupAvTmDr",
         "description": "Average driving time (minutes) across tracts in county to nearest buprenorphine provider",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
-          "County"
+          "County",
+          "State"
         ]
       },
       {
@@ -1552,10 +1691,12 @@
         "name": "MetAvTmDr",
         "description": "Average driving time (minutes) across tracts in county to nearest methadone provider",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
-          "County"
+          "County",
+          "State"
         ]
       },
       {
@@ -1563,10 +1704,12 @@
         "name": "NaltAvTmDr",
         "description": "Average driving time (minutes) across tracts in county to nearest naltrexone provider",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
-          "County"
+          "County",
+          "State"
         ]
       },
       {
@@ -1746,7 +1889,8 @@
         "name": "NaltRm30",
         "description": "Naltrexone access 30 minutes (RAAM)",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract"
@@ -1757,7 +1901,8 @@
         "name": "NaltRm60",
         "description": "Naltrexone access 60 minutes (RAAM)",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "Tract"
@@ -1872,7 +2017,8 @@
           "2025"
         ],
         "geographies": [
-          "County"
+          "County",
+          "State"
         ]
       },
       {
@@ -1919,7 +2065,8 @@
           "2025"
         ],
         "geographies": [
-          "County"
+          "County",
+          "State"
         ]
       },
       {
@@ -1966,7 +2113,8 @@
           "2025"
         ],
         "geographies": [
-          "County"
+          "County",
+          "State"
         ]
       },
       {
@@ -1995,6 +2143,28 @@
         ]
       },
       {
+        "title": "Two-step floating catchment area (2SFCA) measure of access to Buprenorphine within a 30-minute drive",
+        "name": "BupFca30",
+        "description": "Two-step floating catchment area (2SFCA) measure of access to Buprenorphine within a 30-minute drive",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Two-step floating catchment area (2SFCA) measure of access to Buprenorphine within a 60-minute drive",
+        "name": "BupFca60",
+        "description": "Two-step floating catchment area (2SFCA) measure of access to Buprenorphine within a 30-minute drive",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
         "title": "Two-step floating catchment area (2SFCA) measure of access to Methadone within a 30-minute drive",
         "name": "MetFca30",
         "description": "Two-step floating catchment area (2SFCA) measure of access to Methadone within a 30-minute drive",
@@ -2009,6 +2179,28 @@
         "title": "Two-step floating catchment area (2SFCA) measure of access to Methadone within a 60-minute drive",
         "name": "MetFca60",
         "description": "Two-step floating catchment area (2SFCA) measure of access to Methadone within a 60-minute drive",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Two-step floating catchment area (2SFCA) measure of access to Naltrexone within a 30-minute drive",
+        "name": "NaltFca30",
+        "description": "Two-step floating catchment area (2SFCA) measure of access to Naltrexone within a 30-minute drive",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Two-step floating catchment area (2SFCA) measure of access to Naltrexone within a 60-minute drive",
+        "name": "NaltFca60",
+        "description": "Two-step floating catchment area (2SFCA) measure of access to Naltrexone within a 60-minute drive",
         "years": [
           "2025"
         ],
@@ -3563,6 +3755,34 @@
       }
     ]
   },
+  "Access_SSP": {
+    "theme": "Environment",
+    "construct": "Spatial access to Syringe Services Programs",
+    "variables": [
+      {
+        "title": "Driving time to nearest SSP",
+        "name": "SspTmDr",
+        "description": "Driving time in minutes from origin census tract centroid to census tract centroid of nearest SSP",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
+        "title": "Round trip driving time to nearest SSP",
+        "name": "SspTmDr2",
+        "description": "Driving time in minutes from origin census tract centroid to census tract centroid of nearest SSP and back to origin census tract centroid",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      }
+    ]
+  },
   "Residential_Segregation": {
     "theme": "Social",
     "construct": "Residential Segregation Measures",
@@ -4154,6 +4374,28 @@
     "construct": "Spatial Access to Substance Use Treatment Providers",
     "variables": [
       {
+        "title": "% Tracts within 30-min drive of Substance Use Treatment Provider (Sut), with Impedance factor",
+        "name": "SutTmDrP2",
+        "description": "Percent of tracts with Substance Use Treatment Provider within a 30-min driving range, with Impedance factor",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
+        "title": "% tracts with Substance Use Treatment program (30-min drive)",
+        "name": "SutTmDrP",
+        "description": "Percent of tracts with Substance Use Treatment program within a 30-minute driving range.",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
         "title": "% tracts with Substance Use Treatment program (30-min drive)",
         "name": "SutpTmDrP",
         "description": "Percent of tracts with Substance Use Treatment program within a 30-minute driving range.",
@@ -4162,6 +4404,17 @@
         ],
         "geographies": [
           "County",
+          "State"
+        ]
+      },
+      {
+        "title": "Average driving time to nearest Substance Use Treatment Provider (Sut), with Impedance factor",
+        "name": "SutAvTmDr2",
+        "description": " Average driving time (minutes) across tracts in state to nearestSubstance Use Treatment Provider (Sut), with Impedance factor",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
           "State"
         ]
       },
@@ -4179,6 +4432,17 @@
         ]
       },
       {
+        "title": "Count of Tracts within 30-min drive of Substance Use Treatment Provider, with Impedance factor",
+        "name": "SutCtTmDr2",
+        "description": "Number of tracts with Substance Use Treatment Provider within a 30-min driving range, with Impedance factor",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "State"
+        ]
+      },
+      {
         "title": "Distance (mi) to Substance Use Treatment (SUT) facility",
         "name": "SutMinDis",
         "description": "Euclidean distance* from tract/zip centroid to nearest SUT service location, in miles",
@@ -4189,6 +4453,17 @@
         "geographies": [
           "Tract",
           "ZCTA"
+        ]
+      },
+      {
+        "title": "Driving Time (min) to nearest Substance Use Treatment program",
+        "name": "SutAvTmDr",
+        "description": "Average driving time (minutes) across tracts in state to nearest Substance Use Treatment program.",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "State"
         ]
       },
       {
@@ -4225,6 +4500,17 @@
         ],
         "geographies": [
           "County",
+          "State"
+        ]
+      },
+      {
+        "title": "Tracts with Substance Use Treatment (SUT) program (30-min drive)",
+        "name": "SutCtTmDr",
+        "description": "Number of tracts with Substance Use Treatment within a 30-min driving range.",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
           "State"
         ]
       }

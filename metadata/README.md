@@ -29,7 +29,16 @@ The OEPS docs page renders metadata markdown with ReactMarkdown, which does **no
    ![Short description of what the figure shows](images/My_Map_Title.png)
    ```
 
-The path `images/...` is relative to the markdown file in `metadata/`, so it resolves to `metadata/images/` when the docs site builds.
+### Image URLs and the OEPS docs site
+
+The explorer loads markdown from  
+`https://raw.githubusercontent.com/healthyregions/oeps/main/metadata/{slug}.md`  
+(the `main` branch). For images:
+
+- **Relative paths** under the metadata folder, e.g. `images/your-file.png`, are rewritten when rendering on [oeps.healthyregions.org/docs/...](https://oeps.healthyregions.org/docs) so they load from the same raw base (`.../metadata/images/your-file.png`). Without that rewrite, the browser would request the wrong host and the image would break.
+- **Absolute URLs** (`http://` or `https://`) are used as-is if you must link an external image; prefer repo files under `metadata/images/` for anything shipped with OEPS metadata.
+- **Stable assets:** Commit files under `metadata/images/` and link them with a relative `images/...` path or a `raw.githubusercontent.com/.../metadata/images/...` URL so links stay tied to the branch and do not rely on expiring signed URLs.
+- **Avoid** `https://github.com/.../blob/...` as the image URL in markdown: that is an HTML page, not a direct image, and may not display reliably in an `<img>` on the docs site. Use `raw.githubusercontent.com/...` or a relative `images/...` path instead.
 
 ### HTML vs Markdown (use Markdown)
 
@@ -39,7 +48,7 @@ When you drop or paste an image into GitHub's markdown editor, it may insert an 
 |-------------------------------------------|----------------------------------------|
 | `<img width="1492" height="657" alt="Screenshot" src="images/My_Map_Title.png" />` | `![Screenshot](images/My_Map_Title.png)` |
 
-Replace any auto-generated `<img>` with the `![alt](path)` form.
+Replace any auto-generated `<img>` with the `![alt](path)` form (or a relative `images/...` link if the file lives in `metadata/images/`).
 
 ### Optional: absolute URL to `main`
 
@@ -50,6 +59,8 @@ If you need a full URL (for example in external docs), you can point at the file
 ```
 
 Prefer the **relative** `images/...` form in metadata markdown so links stay correct on branches and after merge.
+
+While developing on a **feature branch**, you can use a branch-specific raw URL (replace `main` with your branch name) until the PR is merged. After merge, use `main` in that URL or keep the relative `images/...` path.
 
 ### Avoid relying on GitHub-only image hosts
 

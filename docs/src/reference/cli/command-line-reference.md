@@ -15,7 +15,7 @@ Usage: validate-registry [OPTIONS]
 ###### Options
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f2c072f37d0>
+    * Type: <click.types.Path object at 0x7f42ef1e3550>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -111,7 +111,7 @@ Usage: build-docs [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f21b8ccf6d0>
+    * Type: <click.types.Path object at 0x7f3de9aef510>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -204,7 +204,7 @@ Usage: create-table-source [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7fcb55cf3750>
+    * Type: <click.types.Path object at 0x7ff65facb690>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -303,7 +303,7 @@ Usage: remove-variable [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f560a0c5bd0>
+    * Type: <click.types.Path object at 0x7fc2bc3df690>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -405,7 +405,7 @@ Usage: move-variable [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f57809d75d0>
+    * Type: <click.types.Path object at 0x7fdc768e3610>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -466,7 +466,7 @@ Usage: build-explorer [OPTIONS]
 ###### Options
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7fa13b2db8d0>
+    * Type: <click.types.Path object at 0x7f25bd7dfbd0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -475,7 +475,7 @@ Usage: build-explorer [OPTIONS]
 
 
 * `explorer_path`:
-    * Type: <click.types.Path object at 0x7fa13b2db510>
+    * Type: <click.types.Path object at 0x7f25bd7df810>
     * Default: `../explorer`
     * Usage: `--explorer-path`
 
@@ -609,7 +609,7 @@ Usage: bigquery-upload [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7fc6d80c14d0>
+    * Type: <click.types.Path object at 0x7f9469d03e50>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -745,7 +745,7 @@ Usage: clean-explorer-bucket [OPTIONS]
 
 
 * `explorer_path`:
-    * Type: <click.types.Path object at 0x7fc2b3cc6f90>
+    * Type: <click.types.Path object at 0x7f3a96bf6b10>
     * Default: `../explorer`
     * Usage: `--explorer-path`
 
@@ -790,8 +790,7 @@ Generates a Frictionless data package from the Data Resource definitions in this
 
     The resulting package will be validated against the `frictionless` standard using that Python library.
 
-    `--skip-foreign-keys` to skip the creation of foreign keys--useful because foreign keys to shapefiles break
-    validation.
+    `--skip-foreign-keys` to omit foreign keys and geography-keys tables (packages without relational metadata).
 
     `--skip-validation` to skip the final step of running validation on the output package.
     
@@ -808,7 +807,7 @@ Usage: create-data-package [OPTIONS]
 ###### Options
 
 * `destination`:
-    * Type: <click.types.Path object at 0x7f0e6816ee90>
+    * Type: <click.types.Path object at 0x7fab58c77bd0>
     * Default: `.temp/data-packages`
     * Usage: `--destination
 -d`
@@ -877,7 +876,7 @@ Usage: create-data-package [OPTIONS]
     * Default: `False`
     * Usage: `--skip-foreign-keys`
 
-    Don't define foreign keys in the output data package. This is needed to avoid validation errors that occur when Shapefiles are used in foreign keys.
+    Don't define foreign keys in the output data package and omit geography-keys CSV resources. By default, FKs reference a tabular geography-keys file (not the shapefile) so validation can run.
 
 
 
@@ -909,7 +908,7 @@ Usage: create-data-package [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f0e68ddb8d0>
+    * Type: <click.types.Path object at 0x7fab598d7bd0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -918,7 +917,7 @@ Usage: create-data-package [OPTIONS]
 
 
 * `data_dir_path`:
-    * Type: <click.types.Path object at 0x7f0e68ddb810>
+    * Type: <click.types.Path object at 0x7fab598d7b10>
     * Default: `oeps/data`
     * Usage: `--data-dir-path`
 
@@ -956,8 +955,8 @@ Usage: create-data-package [OPTIONS]
   The resulting package will be validated against the `frictionless` standard
   using that Python library.
 
-  `--skip-foreign-keys` to skip the creation of foreign keys--useful because
-  foreign keys to shapefiles break validation.
+  `--skip-foreign-keys` to omit foreign keys and geography-keys tables
+  (packages without relational metadata).
 
   `--skip-validation` to skip the final step of running validation on the
   output package.
@@ -977,9 +976,10 @@ Options:
   --no-cache              Force re-download of any remote files.
   --check-rules           Only check the rules file, don't create any
                           dataframes or output files.
-  --skip-foreign-keys     Don't define foreign keys in the output data
-                          package. This is needed to avoid validation errors
-                          that occur when Shapefiles are used in foreign keys.
+  --skip-foreign-keys     Don't define foreign keys in the output data package
+                          and omit geography-keys CSV resources. By default,
+                          FKs reference a tabular geography-keys file (not the
+                          shapefile) so validation can run.
   --skip-validation       Don't run data package validation on the final
                           output.
   --stable-name           Use a stable output name without date (e.g. oeps-
@@ -1048,7 +1048,7 @@ Usage: merge-csv [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f13054f3fd0>
+    * Type: <click.types.Path object at 0x7fdc5a5dbc10>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 

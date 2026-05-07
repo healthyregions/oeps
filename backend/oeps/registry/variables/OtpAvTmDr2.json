@@ -1,0 +1,13 @@
+{
+  "name": "OtpAvTmDr2",
+  "title": "Average driving time to nearest Opioid Treatment Provider (Otp), with Impedance factor",
+  "type": "number",
+  "example": "22",
+  "description": "Average driving time (minutes) across tracts in state to nearest Opioid Treatment Provider (Otp), with Impedance factor",
+  "longitudinal": false,
+  "analysis": false,
+  "metadata": "Access_MOUDs",
+  "table_sources": [
+    "state-2025"
+  ]
+}

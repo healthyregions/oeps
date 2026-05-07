@@ -330,7 +330,15 @@
           "% Tracts within 30-min Drive of Buprenorphine Provider",
           "% Tracts within 30-min Drive of Methadone Provider",
           "% Tracts within 30-min Drive of Naltrexone Provider",
+          "% Tracts within 30-min drive of Buprenorphine Provider(BUP), with Impedance factor",
+          "% Tracts within 30-min drive of Methadone Provider(MET), with Impedance factor",
+          "% Tracts within 30-min drive of Naltrexone Provider (NALT), with Impedance factor",
+          "% Tracts within 30-min drive of Opioid Treatment Provider (Otp), with Impedance factor",
           "Average biking time to nearest telehealth buprenorphine provider",
+          "Average driving time to nearest Buprenorphine Provider(BUP), with Impedance factor",
+          "Average driving time to nearest Methadone Provider(MET), with Impedance factor",
+          "Average driving time to nearest Naltrexone Provider (NALT), with Impedance factor",
+          "Average driving time to nearest Opioid Treatment Provider (Otp), with Impedance factor",
           "Average driving time to nearest telehealth buprenorphine provider",
           "Average walking time to nearest telehealth buprenorphine provider",
           "Biking Time (min) to Nearest Buprenorphine Provider",
@@ -358,6 +366,10 @@
           "Count of Naltrexone Providers (60-min bike)",
           "Count of Naltrexone Providers (60-min walk)",
           "Count of Opioid Treatment Programs (OTP) (30-min drive)",
+          "Count of Tracts within 30-min drive of Buprenorphine Provider, with Impedance factor",
+          "Count of Tracts within 30-min drive of Methadone Provider, with Impedance factor",
+          "Count of Tracts within 30-min drive of Naltrexone Provider, with Impedance factor",
+          "Count of Tracts within 30-min drive of Opioid Treatment Provider, with Impedance factor",
           "Count of buprenorphine providers (drive)",
           "Count of methadone providers (30-min bike)",
           "Count of methadone providers (drive)",
@@ -417,8 +429,12 @@
           "Tracts with Naltrexone Provider within 30-min (driving)",
           "Tracts with Naltrexone Provider within 30-min (walking)",
           "Tracts with Opioid Treatment Program (OTP) (30-min drive)",
+          "Two-step floating catchment area (2SFCA) measure of access to Buprenorphine within a 30-minute drive",
+          "Two-step floating catchment area (2SFCA) measure of access to Buprenorphine within a 60-minute drive",
           "Two-step floating catchment area (2SFCA) measure of access to Methadone within a 30-minute drive",
           "Two-step floating catchment area (2SFCA) measure of access to Methadone within a 60-minute drive",
+          "Two-step floating catchment area (2SFCA) measure of access to Naltrexone within a 30-minute drive",
+          "Two-step floating catchment area (2SFCA) measure of access to Naltrexone within a 60-minute drive",
           "Two-step floating catchment area (2SFCA) measure of access to opioid treatment programs within a 30-minute drive",
           "Two-step floating catchment area (2SFCA) measure of access to opioid treatment programs within a 60-minute drive",
           "Walking Time (min) to Nearest Buprenorphine Provider",
@@ -550,6 +566,20 @@
         "Years": "2018, 2022"
       }
     ],
+    "Spatial access to Syringe Services Programs": [
+      {
+        "Variable Construct": "Spatial access to Syringe Services Programs",
+        "Variable Proxy": "Travel time to Syringe Services Programs",
+        "Variables": [
+          "Driving time to nearest SSP",
+          "Round trip driving time to nearest SSP"
+        ],
+        "Source": "NASEN",
+        "Metadata": "Access_SSP",
+        "Spatial Scale": "Tract",
+        "Years": "2025"
+      }
+    ],
     "Spatial access to Federally Qualified Health Centers (FQHCs)": [
       {
         "Variable Construct": "Spatial access to Federally Qualified Health Centers (FQHCs)",
@@ -579,8 +609,11 @@
         "Variable Construct": "Spatial Access to Substance Use Treatment Providers",
         "Variable Proxy": "Spatial access metrics to Substance Use Treatment Providers (Distance, Travel Time, Count Within Threshold)",
         "Variables": [
+          "% Tracts within 30-min drive of Substance Use Treatment Provider (Sut), with Impedance factor",
           "% tracts with Substance Use Treatment program (30-min drive)",
+          "Average driving time to nearest Substance Use Treatment Provider (Sut), with Impedance factor",
           "Count of Substance Use Treatment (SUT) facility (30-min drive)",
+          "Count of Tracts within 30-min drive of Substance Use Treatment Provider, with Impedance factor",
           "Distance (mi) to Substance Use Treatment (SUT) facility",
           "Driving Time (min) to nearest Substance Use Treatment program",
           "Driving time (min) to Substance Use Treatment (SUT) facility",

@@ -1,7 +1,7 @@
 **Meta Data Name**: Smoking Population Variables  
 **Date Added**: October 30, 2025  
 **Author**: Yilin Lyu  
-**Date Last Modified**: April 28, 2026  
+**Date Last Modified**: May 7, 2026  
 **Last Modified By**: Yilin Lyu  
 
 ### Data Source(s) Description:  
@@ -26,11 +26,11 @@ This measure was derived from the Behavioral Risk Factor Surveillance System (BR
 
 State Map:
 
-<img width="628" height="487" alt="State Map_Smoking_Natural Break" src="https://github.com/user-attachments/assets/33f5f353-83da-4679-8fe4-149e8473552d" />
+![state map](images/SmokeP_State_2025.png)
 
 County Map:
 
-<img width="628" height="487" alt="County Map_Smoking_ Natural Break" src="https://github.com/user-attachments/assets/5d1c002a-270b-4736-b697-af341b7d4b97" />
+![county map](images/SmokeP_County_2025.png)
 
 ### Data Limitations:
 - The BRFSS only surveys adults (age 18 and older), lacking data on adolescent smoking. The Youth Behavioral Risk Factor Survey attempts to fill this gap, but it currently does not provide enough data to estimate county-level smoking prevalence among youth.
