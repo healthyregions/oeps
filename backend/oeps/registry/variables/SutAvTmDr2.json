@@ -4,7 +4,7 @@
   "type": "number",
   "example": "22",
   "description": " Average driving time (minutes) across tracts in state to nearestSubstance Use Treatment Provider (Sut), with Impedance factor",
-  "metadata": "Access_SubstanceUseTreatment.json",
+  "metadata": "Access_SubstanceUseTreatment",
   "longitudinal": false,
   "analysis": false
 }
