@@ -1483,16 +1483,46 @@ TotPopHh|INTEGER|Total number of people in households
 
 ID: `oeps-391119.tabular.state-2025`
 
-6 columns in this table.
+36 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
+SutAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest Substance Use Treatment program.
+NaltTmDrP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min driving range
+SutTmDrP|NUMERIC|Percent of tracts with Substance Use Treatment program within a 30-minute driving range.
+NaltCtTmDr|INTEGER|Number of tracts with naltrexone provider within a 30-min driving range
+MetTmDrP|NUMERIC|Percent of tracts with methadone provider within a 30-min driving range
+OtpTmDrP|NUMERIC|Percent of tracts within a 30-minute drive time of an opioid treatment program.
 TotTracts|INTEGER|Total number of census tracts within the state.
+SutCtTmDr2|NUMERIC|Number of tracts with Substance Use Treatment Provider within a 30-min driving range, with Impedance factor
+OtpCtTmDr2|NUMERIC|Number of tracts with Opioid Treatment Provider within a 30-min driving range, with Impedance factor
+OtpTmDrP2|NUMERIC|Percent of tracts with Opioid Treatment Provider within a 30-min driving range, with Impedance factor
+NaltAvTmDr2|NUMERIC|Average driving time (minutes) across tracts in state to nearest Naltrexone Provider (NALT), with Impedance factor
+BupCtTmDr2|NUMERIC|Number of tracts with Buprenorphine Provider within a 30-min driving range, with Impedance factor
+BupTmDrP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min driving range
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 TlBupTmWk|NUMERIC|Estimated walking time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services
+SutCtTmDr|INTEGER|Number of tracts with Substance Use Treatment within a 30-min driving range.
+OtpAvTmDr|NUMERIC|Average driving time (minutes) across tracts to nearest opioid treatment program.
 TlBupTmBk|NUMERIC|Estimated biking time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services
+MetCtTmDr|INTEGER|Number of tracts with methadone provider within a 30-min driving range
+OtpCtTmDr|INTEGER|Number of tracts within 30-min of opioid treatment program driving range
+BupAvTmDr2|NUMERIC|Average driving time (minutes) across tracts in state to nearest Buprenorphine Provider (BUP), with Impedance factor
+NaltAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest naltrexone provider
+MetAvTmDr2|NUMERIC|Average driving time (minutes) across tracts in state to nearest Methadone Provider(MET), with Impedance factor
+SutTmDrP2|NUMERIC|Percent of tracts with Substance Use Treatment Provider within a 30-min driving range, with Impedance factor
+MetAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest methadone provider
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+OtpAvTmDr2|NUMERIC|Average driving time (minutes) across tracts in state to nearest Opioid Treatment Provider (Otp), with Impedance factor
+NaltCtTmDr2|NUMERIC|Number of tracts with Naltrexone Provider within a 30-min driving range, with Impedance factor
+NaltTmDrP2|NUMERIC|Percent of tracts with Naltrexone Provider within a 30-min driving range, with Impedance factor
+BupTmDrP2|NUMERIC|Percent of tracts with Buprenorphine Provider within a 30-min driving range, with Impedance factor
+BupAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest buprenorphine provider
+MetCtTmDr2|NUMERIC|Number of tracts with Methadone Providerwithin a 30-min driving range, with Impedance factor
 SmokeP|NUMERIC|Percentage of Smoking Population
+MetTmDrP2|NUMERIC|Percent of tracts with Methadone Providerwithin a 30-min driving range, with Impedance factor
+BupCtTmDr|INTEGER|Number of tracts with buprenorphine provider within a 30-min driving range
+SutAvTmDr2|NUMERIC| Average driving time (minutes) across tracts in state to nearestSubstance Use Treatment Provider (Sut), with Impedance factor
 
 ### tract-2010
 

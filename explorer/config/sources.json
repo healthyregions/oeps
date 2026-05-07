@@ -12,152 +12,157 @@
       ],
       "tables": {
         "state-2024__county-2019": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_C8F7FE.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_4F52A9.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2018__county-2023__zcta-2023__tract-2023": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_5ECDC3.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_82F8EB.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
-        "state-2017": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_630180.csv",
-          "type": "characteristic",
-          "join": "HEROP_ID"
-        },
-        "state-2023__county-2023__zcta-2023__tract-2023": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_C800DE.csv",
-          "type": "characteristic",
-          "join": "HEROP_ID"
-        },
-        "state-2020__county-2025": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_BB7915.csv",
-          "type": "characteristic",
-          "join": "HEROP_ID"
-        },
-        "state-2022__county-2024": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_D02D8F.csv",
-          "type": "characteristic",
-          "join": "HEROP_ID"
-        },
-        "state-2018__county-2018__zcta-2018__tract-2018": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_2D7D70.csv",
-          "type": "characteristic",
-          "join": "HEROP_ID"
-        },
-        "state-2018__county-2018__tract-2018": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_9B7667.csv",
-          "type": "characteristic",
-          "join": "HEROP_ID"
-        },
-        "state-2022": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_2E8F34.csv",
-          "type": "characteristic",
-          "join": "HEROP_ID"
-        },
-        "state-2020": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_92671E.csv",
-          "type": "characteristic",
-          "join": "HEROP_ID"
-        },
-        "state-2020__county-2020": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_0EC0E3.csv",
-          "type": "characteristic",
-          "join": "HEROP_ID"
-        },
-        "state-2021__county-2025": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_21921E.csv",
-          "type": "characteristic",
-          "join": "HEROP_ID"
-        },
-        "state-2023__county-2023__zcta-2023": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_20EE0B.csv",
-          "type": "characteristic",
-          "join": "HEROP_ID"
-        },
-        "state-providers-2010__county-providers-2010__tract-providers-2010": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_BE280B.csv",
+        "state-2025": {
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_438E01.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2025__county-2025": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_3D546C.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_864674.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2017": {
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_F45FD3.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2023__county-2023__zcta-2023__tract-2023": {
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_6B7E53.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2020__county-2025": {
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_F953DD.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2022__county-2024": {
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_8BD8AE.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2018__county-2018__zcta-2018__tract-2018": {
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_AAF3A0.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2018__county-2018__tract-2018": {
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_0B0ED8.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2022": {
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_2FC883.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2020": {
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_AEFF37.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2020__county-2020": {
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_47065E.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2023__county-2023__zcta-2023": {
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_2F8F0B.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-providers-2010__county-providers-2010__tract-providers-2010": {
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_2690C8.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2024": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_203B00.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_FE94FF.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2019__county-2025": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_377A9C.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_A8C1A6.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2023": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_94E766.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_115A66.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2019": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_EDF938.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_752ECA.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2021": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_C539F9.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_FA3EBA.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-providers-2010__county-providers-2010__tract-sdoh-2014": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_ECB61D.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_8A3426.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2023__county-2024": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_9ECF96.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_807E76.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2025__county-2025__tract-2025": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_1A1D4E.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_F7D837.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2023__county-2018__zcta-2018__tract-2018": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_454E29.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_009FDE.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2022__county-2019": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_AC920E.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_57CAFF.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2025__county-2020": {
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_E75A3F.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2022__county-2022": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_EE05AE.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_A3E6AC.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2018": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_F69257.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_8150A8.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2022__county-2021": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_48160C.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_1EBAC7.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2023__county-2023__zcta-2018__tract-2023": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_852144.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_456AD7.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2019__county-2019__zcta-2019__tract-2019": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_0F1F70.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_FAF003.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         }
@@ -176,172 +181,172 @@
       ],
       "tables": {
         "state-2024__county-2019": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_A9A6C1.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_126B4E.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "county-2025__zcta-2020__tract-2025": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_63E9A5.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_F08123.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2018__county-2023__zcta-2023__tract-2023": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_520944.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_51DB01.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "county-2018": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_8AE072.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_D72AE2.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "county-2023": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_7957F8.csv",
-          "type": "characteristic",
-          "join": "HEROP_ID"
-        },
-        "county-2025": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_2EBC86.csv",
-          "type": "characteristic",
-          "join": "HEROP_ID"
-        },
-        "county-2023__zcta-2023__tract-2023": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_029D98.csv",
-          "type": "characteristic",
-          "join": "HEROP_ID"
-        },
-        "state-2023__county-2023__zcta-2023__tract-2023": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_FD90C4.csv",
-          "type": "characteristic",
-          "join": "HEROP_ID"
-        },
-        "state-2020__county-2025": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_80B16F.csv",
-          "type": "characteristic",
-          "join": "HEROP_ID"
-        },
-        "state-2022__county-2024": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_E2173B.csv",
-          "type": "characteristic",
-          "join": "HEROP_ID"
-        },
-        "state-2018__county-2018__zcta-2018__tract-2018": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_3887A4.csv",
-          "type": "characteristic",
-          "join": "HEROP_ID"
-        },
-        "state-2018__county-2018__tract-2018": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_ADC512.csv",
-          "type": "characteristic",
-          "join": "HEROP_ID"
-        },
-        "state-2020__county-2020": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_4E0065.csv",
-          "type": "characteristic",
-          "join": "HEROP_ID"
-        },
-        "county-2025__tract-2025": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_6B7484.csv",
-          "type": "characteristic",
-          "join": "HEROP_ID"
-        },
-        "county-2015": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_F9AD31.csv",
-          "type": "characteristic",
-          "join": "HEROP_ID"
-        },
-        "state-2021__county-2025": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_19F5BA.csv",
-          "type": "characteristic",
-          "join": "HEROP_ID"
-        },
-        "state-2023__county-2023__zcta-2023": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_5020DB.csv",
-          "type": "characteristic",
-          "join": "HEROP_ID"
-        },
-        "state-providers-2010__county-providers-2010__tract-providers-2010": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_D26484.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_0FE42F.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2025__county-2025": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_7D3524.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_574CC4.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "county-2023__zcta-2023__tract-2023": {
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_A7944E.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "county-2025": {
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_92132D.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2023__county-2023__zcta-2023__tract-2023": {
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_85C0EF.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2020__county-2025": {
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_D2456E.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2022__county-2024": {
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_379C6E.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2018__county-2018__zcta-2018__tract-2018": {
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_645B95.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2018__county-2018__tract-2018": {
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_A651E2.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2020__county-2020": {
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_E270BB.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "county-2025__tract-2025": {
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_1BA307.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "county-2015": {
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_CFA7B1.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2023__county-2023__zcta-2023": {
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_9B755F.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-providers-2010__county-providers-2010__tract-providers-2010": {
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_5E89BC.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2019__county-2025": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_2B2C95.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_201D1C.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "county-providers-2010__tract-providers-2010": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_74F1C9.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_A65754.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "county-2022__zcta-2022__tract-2022": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_25DDB9.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_882036.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "county-2020": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_D3E6F9.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_0E496A.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-providers-2010__county-providers-2010__tract-sdoh-2014": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_7A1B5B.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_4D72AC.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2023__county-2024": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_6C2AC8.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_2DD3D2.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2025__county-2025__tract-2025": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_9759DA.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_54D934.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2023__county-2018__zcta-2018__tract-2018": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_632B54.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_DFA475.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2022__county-2019": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_21EB56.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_2FBE6C.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "county-2017": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_16B33D.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_A6B030.csv",
+          "type": "characteristic",
+          "join": "HEROP_ID"
+        },
+        "state-2025__county-2020": {
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_710583.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2022__county-2022": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_A55C44.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_3BCC44.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2022__county-2021": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_CC1938.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_38FB3A.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "county-2000": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_9D2871.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_B1DF67.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2023__county-2023__zcta-2018__tract-2023": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_D4B013.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_DCE103.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2019__county-2019__zcta-2019__tract-2019": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_56BD87.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_8AA9EC.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         }
@@ -361,87 +366,87 @@
       ],
       "tables": {
         "county-2025__zcta-2020__tract-2025": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_25D32B.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_015EB5.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2018__county-2023__zcta-2023__tract-2023": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_2CC9BB.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_A782F5.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "zcta-2020__tract-2025": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_4F2A84.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_093196.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "county-2023__zcta-2023__tract-2023": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_EA5290.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_8032EC.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "zcta-2021__tract-2025": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_77BC92.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_CBF3BA.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2023__county-2023__zcta-2023__tract-2023": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_386757.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_95D408.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2018__county-2018__zcta-2018__tract-2018": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_7AB88A.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_C48810.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "zcta-ruca-2010__tract-ruca-2010": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_B4AF19.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_2F0D84.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2023__county-2023__zcta-2023": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_28CAA0.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_DE317A.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "zcta-2019__tract-2025": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_EC4798.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_2B7DE7.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "zcta-2025__tract-2025": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_6417EF.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_E9B7BE.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "county-2022__zcta-2022__tract-2022": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_B96C6D.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_8B5290.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2023__county-2018__zcta-2018__tract-2018": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_08617E.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_2B1BE9.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "zcta-2019__tract-2019": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_119CFB.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_4723A7.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "zcta-ruca-2010": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_69C095.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_4F88B7.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2023__county-2023__zcta-2018__tract-2023": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_2A7DF3.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_C99D60.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2019__county-2019__zcta-2019__tract-2019": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_369DC5.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_4DB2F0.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         }
@@ -461,127 +466,127 @@
       ],
       "tables": {
         "county-2025__zcta-2020__tract-2025": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_42B309.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_8BDD38.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2018__county-2023__zcta-2023__tract-2023": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_B59A40.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_5D5917.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "tract-2025": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_C1C033.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_3271B0.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "zcta-2020__tract-2025": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_B94498.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_1A5705.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "county-2023__zcta-2023__tract-2023": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_B3743D.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_604240.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "zcta-2021__tract-2025": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_D1900E.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_E64E17.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2023__county-2023__zcta-2023__tract-2023": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_1D40FC.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_1C2606.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2018__county-2018__zcta-2018__tract-2018": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_29BE00.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_D255AC.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2018__county-2018__tract-2018": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_437EB6.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_D01078.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "county-2025__tract-2025": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_3A906D.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_805DB1.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "tract-2023": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_66D7AA.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_E78A2C.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "zcta-ruca-2010__tract-ruca-2010": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_98C66B.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_25D0F0.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-providers-2010__county-providers-2010__tract-providers-2010": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_085D2C.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_76379D.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "tract-sdoh-2014": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_935141.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_07BE2E.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "tract-2020": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_34FFAD.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_3F4946.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "county-providers-2010__tract-providers-2010": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_252434.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_1E7E0A.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "zcta-2019__tract-2025": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_E8583B.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_CE1143.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "zcta-2025__tract-2025": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_6FD4A2.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_EDBEDF.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "county-2022__zcta-2022__tract-2022": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_E4C0CC.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_7CE08B.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-providers-2010__county-providers-2010__tract-sdoh-2014": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_574F65.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_9F44D7.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2025__county-2025__tract-2025": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_FB52E9.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_64EDC8.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2023__county-2018__zcta-2018__tract-2018": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_A01C91.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_BA4E36.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "zcta-2019__tract-2019": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_15DDA8.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_E3DA5E.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2023__county-2023__zcta-2018__tract-2023": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_8F64CF.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_87789B.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         },
         "state-2019__county-2019__zcta-2019__tract-2019": {
-          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_D46219.csv",
+          "file": "https://herop-geodata.s3.us-east-2.amazonaws.com/explorer/csvs/_3BDF84.csv",
           "type": "characteristic",
           "join": "HEROP_ID"
         }
