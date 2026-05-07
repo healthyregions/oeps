@@ -1,0 +1,13 @@
+{
+  "name": "BupAvTmDr2",
+  "title": "Average driving time to nearest Buprenorphine Provider(BUP), with Impedance factor",
+  "type": "number",
+  "example": "33",
+  "description": "Average driving time (minutes) across tracts in state to nearest Buprenorphine Provider (BUP), with Impedance factor",
+  "longitudinal": false,
+  "analysis": false,
+  "metadata": "Access_MOUDs",
+  "table_sources": [
+    "state-2025"
+  ]
+}

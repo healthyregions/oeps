@@ -1,0 +1,13 @@
+{
+  "name": "NaltAvTmDr2",
+  "title": "Average driving time to nearest Naltrexone Provider (NALT), with Impedance factor",
+  "type": "number",
+  "example": "32",
+  "description": "Average driving time (minutes) across tracts in state to nearest Naltrexone Provider (NALT), with Impedance factor",
+  "longitudinal": false,
+  "analysis": false,
+  "metadata": "Access_MOUDs",
+  "table_sources": [
+    "state-2025"
+  ]
+}

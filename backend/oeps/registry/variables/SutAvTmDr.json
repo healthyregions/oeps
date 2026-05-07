@@ -1,0 +1,13 @@
+{
+  "name": "SutAvTmDr",
+  "title": "Driving Time (min) to nearest Substance Use Treatment program",
+  "type": "number",
+  "example": "50.48",
+  "description": "Average driving time (minutes) across tracts in state to nearest Substance Use Treatment program.",
+  "longitudinal": false,
+  "analysis": false,
+  "metadata": "Access_SubstanceUseTreatment",
+  "table_sources": [
+    "state-2025"
+  ]
+}
