@@ -23,8 +23,47 @@ class TableSource(TableSourceModel):
         """Write table CSV using fixed-point float formatting.
 
         This avoids scientific notation (e.g. 3.28e-06) in canonical table files.
+        Integer-typed registry variables are written as integers. State-level
+        tables use two decimal places for floats (aggregate metrics); tract and
+        other tables keep nine so very small values (e.g. some FCA metrics) are
+        not rounded to zero.
         """
-        df.to_csv(self.full_path, index=False, float_format="%.9f")
+        out = df.copy()
+        for v in self.variables:
+            if v.name not in out.columns or v.type != "integer":
+                continue
+            s = out[v.name]
+            if not pd.api.types.is_numeric_dtype(s):
+                continue
+            try:
+                out[v.name] = s.round().astype("Int64")
+            except (ValueError, TypeError, pd.errors.IntCastingNaNError):
+                warn(
+                    message=f"Could not coerce {v.name} to integer before CSV write; leaving column as-is."
+                )
+        # FIPS often loads as float; write whole-number codes without a decimal part.
+        if "FIPS" in out.columns and pd.api.types.is_float_dtype(out["FIPS"]):
+            try:
+                out["FIPS"] = out["FIPS"].round().astype("Int64")
+            except (ValueError, TypeError, pd.errors.IntCastingNaNError):
+                pass
+        float_fmt = "%.2f" if self.name.startswith("state-") else "%.9f"
+        if self.name.startswith("state-"):
+            for c in out.columns:
+                if c == "HEROP_ID":
+                    continue
+                s = out[c]
+                if not pd.api.types.is_float_dtype(s):
+                    continue
+                non_null = s.dropna()
+                if non_null.empty:
+                    continue
+                if (non_null == non_null.round()).all():
+                    try:
+                        out[c] = s.round().astype("Int64")
+                    except (ValueError, TypeError, pd.errors.IntCastingNaNError):
+                        pass
+        out.to_csv(self.full_path, index=False, float_format=float_fmt)
 
     def load_dataframe(self) -> pd.DataFrame:
         """Load this TableSource's CSV data into a pandas DataFrame"""
