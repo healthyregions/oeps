@@ -55,10 +55,10 @@ Count of providers within a travel threshold (30 minutes and/or 60 minutes) were
 
 This analysis was conducted in Python. The scripts are available in code/AccessMetrics - MOUDs. Some of the scripts are available in [code/AccessMetrics - MOUDs.](https://github.com/GeoDaCenter/opioid-policy-scan/tree/fc3d94053dd1941a96a5945d73cc6f4845453484/code/Access%20Metrics%20-%20MOUD), with complete computational notebooks which can be found in [scripts/Calculate_Access_Metrics.ipynb](https://github.com/healthyregions/oeps/blob/main/scripts/Calculate_Access_Metrics.ipynb) 
 
-![Travel Time to Opioid Treatment Programme](https://github.com/user-attachments/assets/98ccd48e-e3a8-40a7-bd64-f6e9251cca45)
+![Travel Time to Opioid Treatment Programme](images/Travel_Time_to_Opioid_Treatment_Programme_by_Census_Tract.png)
 Travel Time to Opioid Treatment Programme (OtpTmDr)
 
-![Travel Time to Buprenorphine Provider (BupTmDr)](https://github.com/user-attachments/assets/6af05683-365c-4cc7-9ff4-938bcb22786d)
+![Travel Time to Buprenorphine Provider (BupTmDr)](images/Travel_Time_to_Buprenorphine_by_Census_Tract.png)
 Travel Time to Buprenorphine Provider (BupTmDr)
 
 #### MOUD types within 30-min drive (impedance-adjusted)
@@ -69,10 +69,10 @@ We calculated RAAM access metrics for census tracts using tract centroids as dem
 
 A null value indicates that a RAAM score was not available for that geography in the current release. This may reflect no reachable provider within the modeled travel-time threshold, missing required inputs, or a value not produced during processing or integration.
 
-![Methadone RAAM Measure (30 Minutes)](https://github.com/healthyregions/oeps/blob/293_Methadone_OTP_2025_RAAM/metadata/images/MetRm30.png)
+![Methadone RAAM Measure (30 Minutes)](images/MetRm30.png)
 Methadone RAAM Measure (30 Minutes)
 
-![Opioid Treatment Provider RAAM Measure (30 Minutes)](https://github.com/healthyregions/oeps/blob/293_Methadone_OTP_2025_RAAM/metadata/images/OtpRm30.png)
+![Opioid Treatment Provider RAAM Measure (30 Minutes)](images/OtpRm30.png)
 Opioid Treatment Provider RAAM Measure (30 Minutes
 
 #### County and State 

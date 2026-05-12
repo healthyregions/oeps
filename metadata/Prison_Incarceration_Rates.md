@@ -27,11 +27,11 @@ Rates are calculated by the Vera Institute using the county population aged 15â€
 
 State Map:
 
-![state map](images/TtlPrPpr_State_2024.png)
+![State Map_Prison_2024_Natural Break](images/TtlPrPpr_State_2024.png)
 
 County Map:
 
-![county map](images/TtlPrPpr_County_2019.png)
+![County Map_Prison_2019_Natural Break](images/TtlPrPpr_County_2019.png)
 
 ### Data Limitations:
 - There are missing data in many counties.

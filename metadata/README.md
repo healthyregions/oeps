@@ -19,6 +19,16 @@
 
 The OEPS docs page renders metadata markdown with ReactMarkdown, which does **not** render raw HTML. Use **Markdown image syntax** so images show correctly on the OEPS docs page.
 
+### Recommended: store files in `metadata/images/` and link with a relative path
+
+1. Add your image file under **`metadata/images/`** in this repo (for example `metadata/images/My_Map_Title.png`).
+2. Use a **short, stable filename**: letters, numbers, and underscores only (no spaces); use underscores instead of spaces.
+3. In your metadata `.md` file in `metadata/`, reference it like this:
+
+   ```markdown
+   ![Short description of what the figure shows](images/My_Map_Title.png)
+   ```
+
 ### Image URLs and the OEPS docs site
 
 The explorer loads markdown from  
@@ -32,29 +42,26 @@ The explorer loads markdown from
 
 ### HTML vs Markdown (use Markdown)
 
-When you drop or paste an image into GitHub’s markdown editor, it may insert an HTML `<img>` tag. That works when viewing the file on GitHub, but **the OEPS docs page will not render it**—the image will not show. Use Markdown syntax instead.
+When you drop or paste an image into GitHub's markdown editor, it may insert an HTML `<img>` tag. That can look fine on GitHub, but **the OEPS docs page will not render it**—use Markdown instead.
 
-| Don’t use (HTML – won’t show on OEPS docs) | Do use (Markdown – works on OEPS docs) |
+| Don't use (HTML – won't show on OEPS docs) | Do use (Markdown – works on OEPS docs) |
 |-------------------------------------------|----------------------------------------|
-| `<img width="1492" height="657" alt="Screenshot" src="https://raw.githubusercontent.com/healthyregions/oeps/main/metadata/images/example.png" />` | `![Screenshot](https://raw.githubusercontent.com/healthyregions/oeps/main/metadata/images/example.png)` |
+| `<img width="1492" height="657" alt="Screenshot" src="images/My_Map_Title.png" />` | `![Screenshot](images/My_Map_Title.png)` |
 
-Same image URL; only the syntax changes. Replace any auto-generated `<img>` with the `![alt](url)` form (or a relative `images/...` link if the file lives in `metadata/images/`).
+Replace any auto-generated `<img>` with the `![alt](path)` form (or a relative `images/...` link if the file lives in `metadata/images/`).
 
-### Use `metadata/images/`
+### Optional: absolute URL to `main`
 
-1. Add your image file to the `metadata/images/` folder in the repo (create the folder if needed).
-2. In your metadata `.md` file, use **either** form (both work on the OEPS docs site once the file is on `main`):
+If you need a full URL (for example in external docs), you can point at the file on `main`:
 
-   **Relative (rewritten on the docs site to raw GitHub):**
+```markdown
+![Short description](https://raw.githubusercontent.com/healthyregions/oeps/main/metadata/images/My_Map_Title.png)
+```
 
-   ```markdown
-   ![Short description of the image](images/your-filename.png)
-   ```
+Prefer the **relative** `images/...` form in metadata markdown so links stay correct on branches and after merge.
 
-   **Explicit raw URL (same file; also works in GitHub’s UI and other viewers):**
+While developing on a **feature branch**, you can use a branch-specific raw URL (replace `main` with your branch name) until the PR is merged. After merge, use `main` in that URL or keep the relative `images/...` path.
 
-   ```markdown
-   ![Short description of the image](https://raw.githubusercontent.com/healthyregions/oeps/main/metadata/images/your-filename.png)
-   ```
+### Avoid relying on GitHub-only image hosts
 
-3. The examples above point at `main`. If you add an image on a feature branch, use a branch-specific raw URL while developing (replace `main` with your branch name). After the PR is merged, use `main` (or keep the relative `images/...` path).
+Do **not** depend on pasted **issue/PR** image URLs (`github.com/user-attachments/...`) or temporary **private** image links as the only copy of an asset. Those are easy to lose track of and may not match what lives in the repo. Put the canonical image in **`metadata/images/`** and link it from the `.md` file as above.
