@@ -1,0 +1,10 @@
+{
+  "name": "SutTmDr2",
+  "title": "Driving time (min) to Substance Use Treatment (SUT) facility with impedance",
+  "type": "number",
+  "example": "23.44",
+  "description": "Driving time from tract/zip origin centroid to the nearest tract/zip SUT destination centroid with impedance, in minutes",
+  "metadata": "Access_SubstanceUseTreatment.json",
+  "longitudinal": false,
+  "analysis": false
+}
