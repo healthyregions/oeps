@@ -51,8 +51,8 @@ An impedance approach instead multiples the estimated travel time by a factor, i
 #### County and State 
 County and state-level variables include the **count** of Census tracts and the **percent** of Census tracts located within a 30 minute driving threshold of hospital, as well as the mean (average) driving time in minutes from Census tracts within the county or state. 
 
-For 2025 measures, the tract to county conversion were completed using R code, and can be found
-[scripts/HospitalTract2County.R.](https://github.com/healthyregions/oeps/tree/main/scripts).
+For 2025 measures, the tract to county and state conversion were completed using R code, and can be found in the corresponding *scripts* folder on our Github Repository (for example, see:
+[scripts/HospitalTract2County.R.](https://github.com/healthyregions/oeps/tree/main/scripts)).
 
 ![Screenshot](https://github.com/user-attachments/assets/83538524-1153-43ac-8b64-14fbecf0af10)
 
