@@ -1,4 +1,104 @@
 # Command Line Reference
+## merge-csv
+
+Merge data from an external CSV into the canonical CSVs in OEPS.
+
+    ARGUMENTS:
+
+    -s / --source: Path to CSV to be merged in.
+
+    -t / --table-source: name of table_source to merge this CSV into. Table source
+    must already exist in the registry.
+
+    --dry-run: load and stage the CSV but alter no files.
+    
+
+###### Usage
+
+```
+Usage: merge-csv [OPTIONS]
+```
+
+###### Arguments
+
+
+###### Options
+
+* `source`:
+    * Type: STRING
+    * Default: `Sentinel.UNSET`
+    * Usage: `--source
+-s`
+
+    Path to CSV that will be merged into the data registry.
+
+
+
+* `table_source`:
+    * Type: STRING
+    * Default: `Sentinel.UNSET`
+    * Usage: `--table-source
+-t`
+
+    Name of the table source this input will be joined to.
+
+
+
+* `dry_run`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--dry-run`
+
+    Stage and prepare the import but alter no registry or data files.
+
+
+
+* `registry_path`:
+    * Type: <click.types.Path object at 0x7fb77d8fc550>
+    * Default: `oeps/registry`
+    * Usage: `--registry-path`
+
+    Optional override for the registry directory.
+
+
+
+* `help`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--help`
+
+    Show this message and exit.
+
+
+
+###### CLI Help
+
+```
+Usage: merge-csv [OPTIONS]
+
+  Merge data from an external CSV into the canonical CSVs in OEPS.
+
+  ARGUMENTS:
+
+  -s / --source: Path to CSV to be merged in.
+
+  -t / --table-source: name of table_source to merge this CSV into. Table
+  source must already exist in the registry.
+
+  --dry-run: load and stage the CSV but alter no files.
+
+Options:
+  -s, --source TEXT        Path to CSV that will be merged into the data
+                           registry.
+  -t, --table-source TEXT  Name of the table source this input will be joined
+                           to.
+  --dry-run                Stage and prepare the import but alter no registry
+                           or data files.
+  --registry-path PATH     Optional override for the registry directory.
+  --help                   Show this message and exit.
+```
+
+
 ## bigquery-export
 
 Runs a SQL statement, which must be provided in a .sql file, and the results are printed to the console
@@ -60,6 +160,273 @@ Options:
 ```
 
 
+## create-data-package
+
+Generates a Frictionless data package from the Data Resource definitions in this backend. This export
+    process was developed specifically to support integration of the OEPS data warehouse into the JCOIN commons.
+
+    The resulting package will be validated against the `frictionless` standard using that Python library.
+
+    `--skip-foreign-keys` to omit foreign keys and geography-keys tables (packages without relational metadata).
+
+    `--skip-validation` to skip the final step of running validation on the output package.
+    
+
+###### Usage
+
+```
+Usage: create-data-package [OPTIONS]
+```
+
+###### Arguments
+
+
+###### Options
+
+* `destination`:
+    * Type: <click.types.Path object at 0x7fb44e5ee910>
+    * Default: `.temp/data-packages`
+    * Usage: `--destination
+-d`
+
+    Output location for export directory. The package will be placed within this directory and given a name generated from the current date and time.
+
+
+
+* `config`:
+    * Type: STRING
+    * Default: `Sentinel.UNSET`
+    * Usage: `--config
+-c`
+
+    Name of folder in data/package_rules that holds configs for the export.
+
+
+
+* `make_all`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--make-all`
+
+    Create data packages from all configs in the package_rules directory.
+
+
+
+* `zip_`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--zip`
+
+    Zip the output data package.
+
+
+
+* `upload`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--upload`
+
+    Upload the zipped data package to S3. Bucket is determined by `AWS_BUCKET_NAME` environment variable.
+
+
+
+* `no_cache`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--no-cache`
+
+    Force re-download of any remote files.
+
+
+
+* `check_rules`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--check-rules`
+
+    Only check the rules file, don't create any dataframes or output files.
+
+
+
+* `skip_foreign_keys`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--skip-foreign-keys`
+
+    Don't define foreign keys in the output data package and omit geography-keys CSV resources. By default, FKs reference a tabular geography-keys file (not the shapefile) so validation can run.
+
+
+
+* `skip_validation`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--skip-validation`
+
+    Don't run data package validation on the final output.
+
+
+
+* `stable_name`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--stable-name`
+
+    Use a stable output name without date (e.g. oeps-DSuite2018.zip). Use with --upload so download page links never need updating.
+
+
+
+* `overwrite`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--overwrite`
+
+    Overwrite output content if it already exists.
+
+
+
+* `registry_path`:
+    * Type: <click.types.Path object at 0x7fb44ed04b50>
+    * Default: `oeps/registry`
+    * Usage: `--registry-path`
+
+    Optional override for the registry directory.
+
+
+
+* `data_dir_path`:
+    * Type: <click.types.Path object at 0x7fb44ed04a90>
+    * Default: `oeps/data`
+    * Usage: `--data-dir-path`
+
+    Optional override for the data directory path.
+
+
+
+* `verbose`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--verbose`
+
+    Enable verbose logging.
+
+
+
+* `help`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--help`
+
+    Show this message and exit.
+
+
+
+###### CLI Help
+
+```
+Usage: create-data-package [OPTIONS]
+
+  Generates a Frictionless data package from the Data Resource definitions in
+  this backend. This export process was developed specifically to support
+  integration of the OEPS data warehouse into the JCOIN commons.
+
+  The resulting package will be validated against the `frictionless` standard
+  using that Python library.
+
+  `--skip-foreign-keys` to omit foreign keys and geography-keys tables
+  (packages without relational metadata).
+
+  `--skip-validation` to skip the final step of running validation on the
+  output package.
+
+Options:
+  -d, --destination PATH  Output location for export directory. The package
+                          will be placed within this directory and given a
+                          name generated from the current date and time.
+  -c, --config TEXT       Name of folder in data/package_rules that holds
+                          configs for the export.
+  --make-all              Create data packages from all configs in the
+                          package_rules directory.
+  --zip                   Zip the output data package.
+  --upload                Upload the zipped data package to S3. Bucket is
+                          determined by `AWS_BUCKET_NAME` environment
+                          variable.
+  --no-cache              Force re-download of any remote files.
+  --check-rules           Only check the rules file, don't create any
+                          dataframes or output files.
+  --skip-foreign-keys     Don't define foreign keys in the output data package
+                          and omit geography-keys CSV resources. By default,
+                          FKs reference a tabular geography-keys file (not the
+                          shapefile) so validation can run.
+  --skip-validation       Don't run data package validation on the final
+                          output.
+  --stable-name           Use a stable output name without date (e.g. oeps-
+                          DSuite2018.zip). Use with --upload so download page
+                          links never need updating.
+  --overwrite             Overwrite output content if it already exists.
+  --registry-path PATH    Optional override for the registry directory.
+  --data-dir-path PATH    Optional override for the data directory path.
+  --verbose               Enable verbose logging.
+  --help                  Show this message and exit.
+```
+
+
+## validate-registry
+
+Runs a series of validation processes against the current registry content.
+
+###### Usage
+
+```
+Usage: validate-registry [OPTIONS]
+```
+
+###### Arguments
+
+
+###### Options
+
+* `registry_path`:
+    * Type: <click.types.Path object at 0x7f5db7ed4810>
+    * Default: `oeps/registry`
+    * Usage: `--registry-path`
+
+    Optional override for the registry directory.
+
+
+
+* `sync_table_sources`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--sync-table-sources`
+
+    Updates all variable table_sources values directly from CSV data.
+
+
+
+* `help`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--help`
+
+    Show this message and exit.
+
+
+
+###### CLI Help
+
+```
+Usage: validate-registry [OPTIONS]
+
+  Runs a series of validation processes against the current registry content.
+
+Options:
+  --registry-path PATH  Optional override for the registry directory.
+  --sync-table-sources  Updates all variable table_sources values directly
+                        from CSV data.
+  --help                Show this message and exit.
+```
+
+
 ## move-variable
 
 Move a variable from one table to another. This command is primarily meant to
@@ -118,7 +485,7 @@ Usage: move-variable [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7fbcaba03950>
+    * Type: <click.types.Path object at 0x7f58824d8690>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -156,14 +523,16 @@ Options:
 ```
 
 
-## validate-registry
+## create-table-source
 
-Runs a series of validation processes against the current registry content.
+Creates a new blank table source and generates an accompanying
+    CSV with only relevant keys.
+    
 
 ###### Usage
 
 ```
-Usage: validate-registry [OPTIONS]
+Usage: create-table-source [OPTIONS]
 ```
 
 ###### Arguments
@@ -171,21 +540,51 @@ Usage: validate-registry [OPTIONS]
 
 ###### Options
 
+* `name`:
+    * Type: STRING
+    * Default: `Sentinel.UNSET`
+    * Usage: `--name
+-n`
+
+    Name (id) of new table source. This will be used for the CSV file name.
+
+
+
+* `data_year`:
+    * Type: STRING
+    * Default: `Sentinel.UNSET`
+    * Usage: `--data-year
+-y`
+
+    Year of data that this table source will hold.
+
+
+
+* `geodata_source`:
+    * Type: STRING
+    * Default: `Sentinel.UNSET`
+    * Usage: `--geodata-source
+-g`
+
+    Name of the geodata source that this table source will be joined to.
+
+
+
+* `dry_run`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--dry-run`
+
+    Stage and prepare new table source but don't save.
+
+
+
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f8d117139d0>
+    * Type: <click.types.Path object at 0x7ff880cecc50>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
     Optional override for the registry directory.
-
-
-
-* `sync_table_sources`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--sync-table-sources`
-
-    Updates all variable table_sources values directly from CSV data.
 
 
 
@@ -201,14 +600,95 @@ Usage: validate-registry [OPTIONS]
 ###### CLI Help
 
 ```
-Usage: validate-registry [OPTIONS]
+Usage: create-table-source [OPTIONS]
 
-  Runs a series of validation processes against the current registry content.
+  Creates a new blank table source and generates an accompanying CSV with only
+  relevant keys.
 
 Options:
-  --registry-path PATH  Optional override for the registry directory.
-  --sync-table-sources  Updates all variable table_sources values directly
-                        from CSV data.
+  -n, --name TEXT            Name (id) of new table source. This will be used
+                             for the CSV file name.
+  -y, --data-year TEXT       Year of data that this table source will hold.
+  -g, --geodata-source TEXT  Name of the geodata source that this table source
+                             will be joined to.
+  --dry-run                  Stage and prepare new table source but don't
+                             save.
+  --registry-path PATH       Optional override for the registry directory.
+  --help                     Show this message and exit.
+```
+
+
+## clean-explorer-bucket
+
+Deletes all files from the S3 bucket which are not mentioned in the local
+    explorer/config/sources.json file. If no sources.json file exists, optionally
+    deletes all uploaded files (interactive only).
+    
+
+###### Usage
+
+```
+Usage: clean-explorer-bucket [OPTIONS]
+```
+
+###### Arguments
+
+
+###### Options
+
+* `non_interactive`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--non-interactive`
+
+    Fail immediately if explorer/config/sources.json is missing (for CI). Without this flag, a missing file triggers an interactive confirmation.
+
+
+
+* `dry_run`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--dry-run`
+
+    Print S3 keys that would be deleted without deleting them.
+
+
+
+* `explorer_path`:
+    * Type: <click.types.Path object at 0x7f26130a4190>
+    * Default: `../explorer`
+    * Usage: `--explorer-path`
+
+    Optional override for the root directory of the explorer.
+
+
+
+* `help`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--help`
+
+    Show this message and exit.
+
+
+
+###### CLI Help
+
+```
+Usage: clean-explorer-bucket [OPTIONS]
+
+  Deletes all files from the S3 bucket which are not mentioned in the local
+  explorer/config/sources.json file. If no sources.json file exists,
+  optionally deletes all uploaded files (interactive only).
+
+Options:
+  --non-interactive     Fail immediately if explorer/config/sources.json is
+                        missing (for CI). Without this flag, a missing file
+                        triggers an interactive confirmation.
+  --dry-run             Print S3 keys that would be deleted without deleting
+                        them.
+  --explorer-path PATH  Optional override for the root directory of the
+                        explorer.
   --help                Show this message and exit.
 ```
 
@@ -236,7 +716,7 @@ Usage: build-explorer [OPTIONS]
 ###### Options
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f1b5f40b510>
+    * Type: <click.types.Path object at 0x7f572aaf8690>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -245,7 +725,7 @@ Usage: build-explorer [OPTIONS]
 
 
 * `explorer_path`:
-    * Type: <click.types.Path object at 0x7f1b5f40b150>
+    * Type: <click.types.Path object at 0x7f572aaf82d0>
     * Default: `../explorer`
     * Usage: `--explorer-path`
 
@@ -316,181 +796,6 @@ Options:
 ```
 
 
-## clean-explorer-bucket
-
-Deletes all files from the S3 bucket which are not mentioned in the local
-    explorer/config/sources.json file. If no sources.json file exists, optionally
-    deletes all uploaded files (interactive only).
-    
-
-###### Usage
-
-```
-Usage: clean-explorer-bucket [OPTIONS]
-```
-
-###### Arguments
-
-
-###### Options
-
-* `non_interactive`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--non-interactive`
-
-    Fail immediately if explorer/config/sources.json is missing (for CI). Without this flag, a missing file triggers an interactive confirmation.
-
-
-
-* `dry_run`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--dry-run`
-
-    Print S3 keys that would be deleted without deleting them.
-
-
-
-* `explorer_path`:
-    * Type: <click.types.Path object at 0x7f493f1ff850>
-    * Default: `../explorer`
-    * Usage: `--explorer-path`
-
-    Optional override for the root directory of the explorer.
-
-
-
-* `help`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--help`
-
-    Show this message and exit.
-
-
-
-###### CLI Help
-
-```
-Usage: clean-explorer-bucket [OPTIONS]
-
-  Deletes all files from the S3 bucket which are not mentioned in the local
-  explorer/config/sources.json file. If no sources.json file exists,
-  optionally deletes all uploaded files (interactive only).
-
-Options:
-  --non-interactive     Fail immediately if explorer/config/sources.json is
-                        missing (for CI). Without this flag, a missing file
-                        triggers an interactive confirmation.
-  --dry-run             Print S3 keys that would be deleted without deleting
-                        them.
-  --explorer-path PATH  Optional override for the root directory of the
-                        explorer.
-  --help                Show this message and exit.
-```
-
-
-## merge-csv
-
-Merge data from an external CSV into the canonical CSVs in OEPS.
-
-    ARGUMENTS:
-
-    -s / --source: Path to CSV to be merged in.
-
-    -t / --table-source: name of table_source to merge this CSV into. Table source
-    must already exist in the registry.
-
-    --dry-run: load and stage the CSV but alter no files.
-    
-
-###### Usage
-
-```
-Usage: merge-csv [OPTIONS]
-```
-
-###### Arguments
-
-
-###### Options
-
-* `source`:
-    * Type: STRING
-    * Default: `Sentinel.UNSET`
-    * Usage: `--source
--s`
-
-    Path to CSV that will be merged into the data registry.
-
-
-
-* `table_source`:
-    * Type: STRING
-    * Default: `Sentinel.UNSET`
-    * Usage: `--table-source
--t`
-
-    Name of the table source this input will be joined to.
-
-
-
-* `dry_run`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--dry-run`
-
-    Stage and prepare the import but alter no registry or data files.
-
-
-
-* `registry_path`:
-    * Type: <click.types.Path object at 0x7f38a860ba10>
-    * Default: `oeps/registry`
-    * Usage: `--registry-path`
-
-    Optional override for the registry directory.
-
-
-
-* `help`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--help`
-
-    Show this message and exit.
-
-
-
-###### CLI Help
-
-```
-Usage: merge-csv [OPTIONS]
-
-  Merge data from an external CSV into the canonical CSVs in OEPS.
-
-  ARGUMENTS:
-
-  -s / --source: Path to CSV to be merged in.
-
-  -t / --table-source: name of table_source to merge this CSV into. Table
-  source must already exist in the registry.
-
-  --dry-run: load and stage the CSV but alter no files.
-
-Options:
-  -s, --source TEXT        Path to CSV that will be merged into the data
-                           registry.
-  -t, --table-source TEXT  Name of the table source this input will be joined
-                           to.
-  --dry-run                Stage and prepare the import but alter no registry
-                           or data files.
-  --registry-path PATH     Optional override for the registry directory.
-  --help                   Show this message and exit.
-```
-
-
 ## remove-variable
 
 Remove variable(s) from the registry and all of their columns from table source CSVs.
@@ -552,7 +857,7 @@ Usage: remove-variable [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7fb208203ad0>
+    * Type: <click.types.Path object at 0x7f62923ec910>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -659,7 +964,7 @@ Usage: bigquery-upload [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f2f7d0ffdd0>
+    * Type: <click.types.Path object at 0x7fe201df4bd0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -694,216 +999,6 @@ Options:
   --overwrite           Overwrite output content if it already exists.
   --registry-path PATH  Optional override for the registry directory.
   --help                Show this message and exit.
-```
-
-
-## create-data-package
-
-Generates a Frictionless data package from the Data Resource definitions in this backend. This export
-    process was developed specifically to support integration of the OEPS data warehouse into the JCOIN commons.
-
-    The resulting package will be validated against the `frictionless` standard using that Python library.
-
-    `--skip-foreign-keys` to omit foreign keys and geography-keys tables (packages without relational metadata).
-
-    `--skip-validation` to skip the final step of running validation on the output package.
-    
-
-###### Usage
-
-```
-Usage: create-data-package [OPTIONS]
-```
-
-###### Arguments
-
-
-###### Options
-
-* `destination`:
-    * Type: <click.types.Path object at 0x7f552c5fc950>
-    * Default: `.temp/data-packages`
-    * Usage: `--destination
--d`
-
-    Output location for export directory. The package will be placed within this directory and given a name generated from the current date and time.
-
-
-
-* `config`:
-    * Type: STRING
-    * Default: `Sentinel.UNSET`
-    * Usage: `--config
--c`
-
-    Name of folder in data/package_rules that holds configs for the export.
-
-
-
-* `make_all`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--make-all`
-
-    Create data packages from all configs in the package_rules directory.
-
-
-
-* `zip_`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--zip`
-
-    Zip the output data package.
-
-
-
-* `upload`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--upload`
-
-    Upload the zipped data package to S3. Bucket is determined by `AWS_BUCKET_NAME` environment variable.
-
-
-
-* `no_cache`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--no-cache`
-
-    Force re-download of any remote files.
-
-
-
-* `check_rules`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--check-rules`
-
-    Only check the rules file, don't create any dataframes or output files.
-
-
-
-* `skip_foreign_keys`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--skip-foreign-keys`
-
-    Don't define foreign keys in the output data package and omit geography-keys CSV resources. By default, FKs reference a tabular geography-keys file (not the shapefile) so validation can run.
-
-
-
-* `skip_validation`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--skip-validation`
-
-    Don't run data package validation on the final output.
-
-
-
-* `stable_name`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--stable-name`
-
-    Use a stable output name without date (e.g. oeps-DSuite2018.zip). Use with --upload so download page links never need updating.
-
-
-
-* `overwrite`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--overwrite`
-
-    Overwrite output content if it already exists.
-
-
-
-* `registry_path`:
-    * Type: <click.types.Path object at 0x7f552cd03cd0>
-    * Default: `oeps/registry`
-    * Usage: `--registry-path`
-
-    Optional override for the registry directory.
-
-
-
-* `data_dir_path`:
-    * Type: <click.types.Path object at 0x7f552cd03c10>
-    * Default: `oeps/data`
-    * Usage: `--data-dir-path`
-
-    Optional override for the data directory path.
-
-
-
-* `verbose`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--verbose`
-
-    Enable verbose logging.
-
-
-
-* `help`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--help`
-
-    Show this message and exit.
-
-
-
-###### CLI Help
-
-```
-Usage: create-data-package [OPTIONS]
-
-  Generates a Frictionless data package from the Data Resource definitions in
-  this backend. This export process was developed specifically to support
-  integration of the OEPS data warehouse into the JCOIN commons.
-
-  The resulting package will be validated against the `frictionless` standard
-  using that Python library.
-
-  `--skip-foreign-keys` to omit foreign keys and geography-keys tables
-  (packages without relational metadata).
-
-  `--skip-validation` to skip the final step of running validation on the
-  output package.
-
-Options:
-  -d, --destination PATH  Output location for export directory. The package
-                          will be placed within this directory and given a
-                          name generated from the current date and time.
-  -c, --config TEXT       Name of folder in data/package_rules that holds
-                          configs for the export.
-  --make-all              Create data packages from all configs in the
-                          package_rules directory.
-  --zip                   Zip the output data package.
-  --upload                Upload the zipped data package to S3. Bucket is
-                          determined by `AWS_BUCKET_NAME` environment
-                          variable.
-  --no-cache              Force re-download of any remote files.
-  --check-rules           Only check the rules file, don't create any
-                          dataframes or output files.
-  --skip-foreign-keys     Don't define foreign keys in the output data package
-                          and omit geography-keys CSV resources. By default,
-                          FKs reference a tabular geography-keys file (not the
-                          shapefile) so validation can run.
-  --skip-validation       Don't run data package validation on the final
-                          output.
-  --stable-name           Use a stable output name without date (e.g. oeps-
-                          DSuite2018.zip). Use with --upload so download page
-                          links never need updating.
-  --overwrite             Overwrite output content if it already exists.
-  --registry-path PATH    Optional override for the registry directory.
-  --data-dir-path PATH    Optional override for the data directory path.
-  --verbose               Enable verbose logging.
-  --help                  Show this message and exit.
 ```
 
 
@@ -962,7 +1057,7 @@ Usage: build-docs [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f7e42d13f90>
+    * Type: <click.types.Path object at 0x7fa217ef0610>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -995,101 +1090,6 @@ Options:
   --data-dictionaries-only  Only build the data dictionaries.
   --registry-path PATH      Optional override for the registry directory.
   --help                    Show this message and exit.
-```
-
-
-## create-table-source
-
-Creates a new blank table source and generates an accompanying
-    CSV with only relevant keys.
-    
-
-###### Usage
-
-```
-Usage: create-table-source [OPTIONS]
-```
-
-###### Arguments
-
-
-###### Options
-
-* `name`:
-    * Type: STRING
-    * Default: `Sentinel.UNSET`
-    * Usage: `--name
--n`
-
-    Name (id) of new table source. This will be used for the CSV file name.
-
-
-
-* `data_year`:
-    * Type: STRING
-    * Default: `Sentinel.UNSET`
-    * Usage: `--data-year
--y`
-
-    Year of data that this table source will hold.
-
-
-
-* `geodata_source`:
-    * Type: STRING
-    * Default: `Sentinel.UNSET`
-    * Usage: `--geodata-source
--g`
-
-    Name of the geodata source that this table source will be joined to.
-
-
-
-* `dry_run`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--dry-run`
-
-    Stage and prepare new table source but don't save.
-
-
-
-* `registry_path`:
-    * Type: <click.types.Path object at 0x7f0679507e50>
-    * Default: `oeps/registry`
-    * Usage: `--registry-path`
-
-    Optional override for the registry directory.
-
-
-
-* `help`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--help`
-
-    Show this message and exit.
-
-
-
-###### CLI Help
-
-```
-Usage: create-table-source [OPTIONS]
-
-  Creates a new blank table source and generates an accompanying CSV with only
-  relevant keys.
-
-Options:
-  -n, --name TEXT            Name (id) of new table source. This will be used
-                             for the CSV file name.
-  -y, --data-year TEXT       Year of data that this table source will hold.
-  -g, --geodata-source TEXT  Name of the geodata source that this table source
-                             will be joined to.
-  --dry-run                  Stage and prepare new table source but don't
-                             save.
-  --registry-path PATH       Optional override for the registry directory.
-  --help                     Show this message and exit.
 ```
 
 !!! note

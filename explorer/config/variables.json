@@ -268,14 +268,14 @@
   {
     "variable": "% Population: Age 15-44",
     "numerator": "state-2018__county-2018__zcta-2018__tract-2018",
-    "nProperty": "Age15_44P",
+    "nProperty": "Age15_44",
     "theme": "Social",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Demographic_Characteristics.md"
   },
   {
     "variable": "% Population: Age 15-44",
     "numerator": "state-2018__county-2018__zcta-2018__tract-2018",
-    "nProperty": "Age15_44",
+    "nProperty": "Age15_44P",
     "theme": "Social",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Demographic_Characteristics.md"
   },
@@ -386,7 +386,7 @@
   },
   {
     "variable": "% Tracts with Mental Health Provider (30-min drive)",
-    "numerator": "state-2020__county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "MhTmDrP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Mental_Health.md"
@@ -407,35 +407,35 @@
   },
   {
     "variable": "% Tracts within 30-min Drive of HCV Testing Facility with impedance",
-    "numerator": "county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "HcvTmDrP2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
   },
   {
     "variable": "% Tracts within 30-min Drive of HIV Testing Facility with impedance",
-    "numerator": "county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "HivTmDrP2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HIVTesting.md"
   },
   {
     "variable": "% Tracts within 30-min Drive of Hospital",
-    "numerator": "state-2020__county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "HospTmDrP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Hospitals.md"
   },
   {
     "variable": "% Tracts within 30-min Drive of Hospital with Impedance Factor",
-    "numerator": "county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "HospTmDrP2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Hospitals.md"
   },
   {
     "variable": "% Tracts within 30-min Drive of Mental Health Provider with impedence",
-    "numerator": "county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "MhTmDrP2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Mental_Health.md"
@@ -463,14 +463,14 @@
   },
   {
     "variable": "% Tracts within 30-min drive of Federally Qualified Health Center (FQHC)",
-    "numerator": "state-2020__county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "FqhcTmDrP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_FQHCs.md"
   },
   {
     "variable": "% Tracts within 30-min drive of Federally Qualified Health Center (FQHC), with Impedance factor",
-    "numerator": "county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "FqhcTmDrP2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_FQHCs.md"
@@ -519,14 +519,14 @@
   },
   {
     "variable": "% tracts with Pharmacy (30-min drive)",
-    "numerator": "state-2019__county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "RxTmDrP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Pharmacies.md"
   },
   {
     "variable": "% tracts with Pharmacy (30-min drive) with Impedance Factor",
-    "numerator": "county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "RxTmDrP2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Pharmacies.md"
@@ -645,14 +645,14 @@
   },
   {
     "variable": "Average driving time to nearest Federally Qualified Health Center (FQHC)",
-    "numerator": "state-2020__county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "FqhcAvTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_FQHCs.md"
   },
   {
     "variable": "Average driving time to nearest Federally Qualified Health Center (FQHC), with Impedance factor",
-    "numerator": "county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "FqhcAvTmDr2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_FQHCs.md"
@@ -701,63 +701,63 @@
   },
   {
     "variable": "Average time drive to nearest HCV testing provider",
-    "numerator": "county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "HcvAvTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
   },
   {
     "variable": "Average time drive to nearest HIV provider",
-    "numerator": "county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "HivAvTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HIVTesting.md"
   },
   {
     "variable": "Avg. Driving Time (min) to nearest Pharmacy ",
-    "numerator": "state-2019__county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "RxAvTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Pharmacies.md"
   },
   {
     "variable": "Avg. Driving Time (min) to nearest Pharmacy with Impedance Factor",
-    "numerator": "county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "RxAvTmDr2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Pharmacies.md"
   },
   {
     "variable": "Avg. Driving Time to nearest HCV Testing Facility with impedance",
-    "numerator": "county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "HcvAvTmDr2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
   },
   {
     "variable": "Avg. Driving Time to nearest HIV Testing Facility with impedance",
-    "numerator": "county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "HivAvTmDr2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HIVTesting.md"
   },
   {
     "variable": "Avg. Driving Time to nearest Hospital",
-    "numerator": "state-2020__county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "HospAvTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Hospitals.md"
   },
   {
     "variable": "Avg. Driving Time to nearest Hospital with Impedance Factor",
-    "numerator": "county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "HospAvTmDr2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Hospitals.md"
   },
   {
     "variable": "Avg. Driving Time to nearest Mental Health Provider with impedance",
-    "numerator": "county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "MhAvTmDr2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Mental_Health.md"
@@ -1100,14 +1100,14 @@
   },
   {
     "variable": "Count of Tracts within 30-min drive of Federally Qualified Health Center (FQHC)",
-    "numerator": "state-2020__county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "FqhcCtTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_FQHCs.md"
   },
   {
     "variable": "Count of Tracts within 30-min drive of Federally Qualified Health Center (FQHC), with Impedance factor",
-    "numerator": "county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "FqhcCtTmDr2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_FQHCs.md"
@@ -1205,14 +1205,14 @@
   },
   {
     "variable": "Count of tracts with an HCV testing provider within 30-min driving range",
-    "numerator": "county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "HcvCtTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
   },
   {
     "variable": "Count of tracts with an HIV testing provider within 30-min driving range",
-    "numerator": "county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "HivCtTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HIVTesting.md"
@@ -1366,7 +1366,7 @@
   },
   {
     "variable": "Driving Time (min) to nearest Mental Health Provider",
-    "numerator": "state-2020__county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "MhAvTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Mental_Health.md"
@@ -1415,15 +1415,15 @@
   },
   {
     "variable": "Driving Time (min) to nearest Substance Use Treatment program",
-    "numerator": "state-2020__county-2020",
-    "nProperty": "SutpAvTmDr",
+    "numerator": "state-2025",
+    "nProperty": "SutAvTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_SubstanceUseTreatment.md"
   },
   {
     "variable": "Driving Time (min) to nearest Substance Use Treatment program",
-    "numerator": "state-2025",
-    "nProperty": "SutAvTmDr",
+    "numerator": "state-2020__county-2020",
+    "nProperty": "SutpAvTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_SubstanceUseTreatment.md"
   },
@@ -2129,14 +2129,14 @@
   },
   {
     "variable": "Percent of tracts with an HCV testing provider within 30-min driving range",
-    "numerator": "county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "HcvTmDrP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
   },
   {
     "variable": "Percent of tracts with an HIV testing provider within 30-min driving range",
-    "numerator": "county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "HivTmDrP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HIVTesting.md"
@@ -2724,42 +2724,42 @@
   },
   {
     "variable": "Tracts with HCV Testing Facility (30-min drive) with impedance",
-    "numerator": "county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "HcvCtTmDr2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
   },
   {
     "variable": "Tracts with HIV Testing Facility (30-min drive) with impedance",
-    "numerator": "county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "HivCtTmDr2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HIVTesting.md"
   },
   {
     "variable": "Tracts with Hospital (30-min drive)",
-    "numerator": "state-2020__county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "HospCtTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Hospitals.md"
   },
   {
     "variable": "Tracts with Hospitals (30-min drive) with impedance",
-    "numerator": "county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "HospCtTmDr2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Hospitals.md"
   },
   {
     "variable": "Tracts with Mental Health Provider (30-min drive)",
-    "numerator": "state-2020__county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "MhCtTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Mental_Health.md"
   },
   {
     "variable": "Tracts with Mental Health Provider (30-min drive) with impedance",
-    "numerator": "county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "MhCtTmDr2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Mental_Health.md"
@@ -2829,14 +2829,14 @@
   },
   {
     "variable": "Tracts with Pharmacy (30-min drive)",
-    "numerator": "state-2019__county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "RxCtTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Pharmacies.md"
   },
   {
     "variable": "Tracts with Pharmacy (30-min drive) with impedance factor",
-    "numerator": "county-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "RxCtTmDr2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Pharmacies.md"
