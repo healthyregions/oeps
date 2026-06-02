@@ -4,7 +4,10 @@
   "type": "number",
   "example": "1.21",
   "description": "Driving time (minutes) from the tract centroid to the nearest Substance Use Treatment provider, with the impedance factor applied.",
-  "metadata": "Access_SubstanceUseTreatment.json",
+  "metadata": "Access_SubstanceUseTreatment",
   "longitudinal": false,
-  "analysis": false
+  "analysis": false,
+  "table_sources": [
+    "tract-2025"
+  ]
 }
