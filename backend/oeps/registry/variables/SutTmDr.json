@@ -4,9 +4,9 @@
   "type": "number",
   "example": "17.76",
   "description": "Driving time (min) to nearest  Substance Use Treatment (SUT) facility",
-  "metadata": "Access_SubstanceUseTreatment",
   "longitudinal": false,
   "analysis": true,
+  "metadata": "Access_SubstanceUseTreatment",
   "table_sources": [
     "tract-2020",
     "tract-2025",
