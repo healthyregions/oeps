@@ -1,18 +1,13 @@
 # Command Line Reference
-## remove-variable
+## bigquery-export
 
-Remove variable(s) from the registry and all of their columns from table source CSVs.
-    Optionally remove variables only from one table source.
-    
-    Can remove multiple variables at once by providing comma-separated names.
-    Example (single): flask remove-variable -n Var1 -t county-2025
-    Example (multiple): flask remove-variable -n "Var1,Var2,Var3" -t county-2025 --yes
-    
+Runs a SQL statement, which must be provided in a .sql file, and the results are printed to the console
+    or saved to a CSV or SHP output file, based on the destination argument.
 
 ###### Usage
 
 ```
-Usage: remove-variable [OPTIONS]
+Usage: bigquery-export [OPTIONS]
 ```
 
 ###### Arguments
@@ -20,51 +15,22 @@ Usage: remove-variable [OPTIONS]
 
 ###### Options
 
-* `name`:
+* `output`:
     * Type: STRING
     * Default: `Sentinel.UNSET`
-    * Usage: `--name
--n`
+    * Usage: `--output
+-o`
 
-    Name of variable(s) to remove. For multiple variables, use comma-separated values (e.g., -n 'Var1,Var2,Var3').
+    Output file for export. Must end with .csv for CSV or .shp for ESRI Shapefile.
 
 
 
-* `table_source`:
+* `sql_file`:
     * Type: STRING
     * Default: `Sentinel.UNSET`
-    * Usage: `--table-source
--t`
+    * Usage: `--sql-file`
 
-    Name of single table source from which the variable will be removed.
-
-
-
-* `yes`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--yes
--y`
-
-    Skip confirmation prompts. Useful for batch operations.
-
-
-
-* `dry_run`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--dry-run`
-
-    Show what would be removed without changing any files.
-
-
-
-* `registry_path`:
-    * Type: <click.types.Path object at 0x7fba4b6a2410>
-    * Default: `oeps/registry`
-    * Usage: `--registry-path`
-
-    Optional override for the registry directory.
+    Path to file with SQL SELECT statement to run.
 
 
 
@@ -80,79 +46,17 @@ Usage: remove-variable [OPTIONS]
 ###### CLI Help
 
 ```
-Usage: remove-variable [OPTIONS]
+Usage: bigquery-export [OPTIONS]
 
-  Remove variable(s) from the registry and all of their columns from table
-  source CSVs. Optionally remove variables only from one table source.
-
-  Can remove multiple variables at once by providing comma-separated names.
-  Example (single): flask remove-variable -n Var1 -t county-2025 Example
-  (multiple): flask remove-variable -n "Var1,Var2,Var3" -t county-2025 --yes
+  Runs a SQL statement, which must be provided in a .sql file, and the results
+  are printed to the console or saved to a CSV or SHP output file, based on
+  the destination argument.
 
 Options:
-  -n, --name TEXT          Name of variable(s) to remove. For multiple
-                           variables, use comma-separated values (e.g., -n
-                           'Var1,Var2,Var3').
-  -t, --table-source TEXT  Name of single table source from which the variable
-                           will be removed.
-  -y, --yes                Skip confirmation prompts. Useful for batch
-                           operations.
-  --dry-run                Show what would be removed without changing any
-                           files.
-  --registry-path PATH     Optional override for the registry directory.
-  --help                   Show this message and exit.
-```
-
-
-## clean-explorer-bucket
-
-Deletes all files from the S3 bucket which are not mentioned in the local
-    explorer/configs/sources.json file. If no sources.json file exists, optionally
-    deletes all uploaded files.
-    
-
-###### Usage
-
-```
-Usage: clean-explorer-bucket [OPTIONS]
-```
-
-###### Arguments
-
-
-###### Options
-
-* `explorer_path`:
-    * Type: <click.types.Path object at 0x7f11486a1e90>
-    * Default: `../explorer`
-    * Usage: `--explorer-path`
-
-    Optional override for the root directory of the explorer.
-
-
-
-* `help`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--help`
-
-    Show this message and exit.
-
-
-
-###### CLI Help
-
-```
-Usage: clean-explorer-bucket [OPTIONS]
-
-  Deletes all files from the S3 bucket which are not mentioned in the local
-  explorer/configs/sources.json file. If no sources.json file exists,
-  optionally deletes all uploaded files.
-
-Options:
-  --explorer-path PATH  Optional override for the root directory of the
-                        explorer.
-  --help                Show this message and exit.
+  -o, --output TEXT  Output file for export. Must end with .csv for CSV or
+                     .shp for ESRI Shapefile.
+  --sql-file TEXT    Path to file with SQL SELECT statement to run.
+  --help             Show this message and exit.
 ```
 
 
@@ -214,7 +118,7 @@ Usage: move-variable [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7fe41d8a9f10>
+    * Type: <click.types.Path object at 0x7fbcaba03950>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -252,192 +156,6 @@ Options:
 ```
 
 
-## create-table-source
-
-Creates a new blank table source and generates an accompanying
-    CSV with only relevant keys.
-    
-
-###### Usage
-
-```
-Usage: create-table-source [OPTIONS]
-```
-
-###### Arguments
-
-
-###### Options
-
-* `name`:
-    * Type: STRING
-    * Default: `Sentinel.UNSET`
-    * Usage: `--name
--n`
-
-    Name (id) of new table source. This will be used for the CSV file name.
-
-
-
-* `data_year`:
-    * Type: STRING
-    * Default: `Sentinel.UNSET`
-    * Usage: `--data-year
--y`
-
-    Year of data that this table source will hold.
-
-
-
-* `geodata_source`:
-    * Type: STRING
-    * Default: `Sentinel.UNSET`
-    * Usage: `--geodata-source
--g`
-
-    Name of the geodata source that this table source will be joined to.
-
-
-
-* `dry_run`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--dry-run`
-
-    Stage and prepare new table source but don't save.
-
-
-
-* `registry_path`:
-    * Type: <click.types.Path object at 0x7f0d52bd2ad0>
-    * Default: `oeps/registry`
-    * Usage: `--registry-path`
-
-    Optional override for the registry directory.
-
-
-
-* `help`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--help`
-
-    Show this message and exit.
-
-
-
-###### CLI Help
-
-```
-Usage: create-table-source [OPTIONS]
-
-  Creates a new blank table source and generates an accompanying CSV with only
-  relevant keys.
-
-Options:
-  -n, --name TEXT            Name (id) of new table source. This will be used
-                             for the CSV file name.
-  -y, --data-year TEXT       Year of data that this table source will hold.
-  -g, --geodata-source TEXT  Name of the geodata source that this table source
-                             will be joined to.
-  --dry-run                  Stage and prepare new table source but don't
-                             save.
-  --registry-path PATH       Optional override for the registry directory.
-  --help                     Show this message and exit.
-```
-
-
-## build-docs
-
-Generates various documentation pages based on the data content.
-
-    Optionally only generate one of the types of docs.
-    
-
-###### Usage
-
-```
-Usage: build-docs [OPTIONS]
-```
-
-###### Arguments
-
-
-###### Options
-
-* `bq_only`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--bq-only`
-
-    Only build the BigQuery reference docs.
-
-
-
-* `cli_only`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--cli-only`
-
-    Only build the CLI docs.
-
-
-
-* `registry_only`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--registry-only`
-
-    Only build the registry summary docs.
-
-
-
-* `data_dictionaries_only`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--data-dictionaries-only`
-
-    Only build the data dictionaries.
-
-
-
-* `registry_path`:
-    * Type: <click.types.Path object at 0x7f46fdc9e5d0>
-    * Default: `oeps/registry`
-    * Usage: `--registry-path`
-
-    Optional override for the registry directory.
-
-
-
-* `help`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--help`
-
-    Show this message and exit.
-
-
-
-###### CLI Help
-
-```
-Usage: build-docs [OPTIONS]
-
-  Generates various documentation pages based on the data content.
-
-  Optionally only generate one of the types of docs.
-
-Options:
-  --bq-only                 Only build the BigQuery reference docs.
-  --cli-only                Only build the CLI docs.
-  --registry-only           Only build the registry summary docs.
-  --data-dictionaries-only  Only build the data dictionaries.
-  --registry-path PATH      Optional override for the registry directory.
-  --help                    Show this message and exit.
-```
-
-
 ## validate-registry
 
 Runs a series of validation processes against the current registry content.
@@ -454,7 +172,7 @@ Usage: validate-registry [OPTIONS]
 ###### Options
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7fddb43b23d0>
+    * Type: <click.types.Path object at 0x7f8d117139d0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -491,6 +209,184 @@ Options:
   --registry-path PATH  Optional override for the registry directory.
   --sync-table-sources  Updates all variable table_sources values directly
                         from CSV data.
+  --help                Show this message and exit.
+```
+
+
+## build-explorer
+
+Builds all static data content needed to power the frontend OEPS Explorer application.
+    
+    Optionally only build data for the map, or for the /docs page (theme, construct, and source data)
+    
+    Use --upload-map-data to make a production update for the map. Without this argument, CSV data
+    files for the map will just be stored locally in .cache/explorer/csvs and the frontend running locally
+    will read them from there.
+    
+
+###### Usage
+
+```
+Usage: build-explorer [OPTIONS]
+```
+
+###### Arguments
+
+
+###### Options
+
+* `registry_path`:
+    * Type: <click.types.Path object at 0x7f1b5f40b510>
+    * Default: `oeps/registry`
+    * Usage: `--registry-path`
+
+    Optional override for the registry directory.
+
+
+
+* `explorer_path`:
+    * Type: <click.types.Path object at 0x7f1b5f40b150>
+    * Default: `../explorer`
+    * Usage: `--explorer-path`
+
+    Optional override for the root directory of the explorer.
+
+
+
+* `map_only`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--map-only`
+
+    Only build static content to drive the map.
+
+
+
+* `docs_only`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--docs-only`
+
+    Only build static content to drive the docs page.
+
+
+
+* `upload_map_data`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--upload-map-data`
+
+    Upload the output map data CSV files to S3 bucket.
+
+
+
+* `help`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--help`
+
+    Show this message and exit.
+
+
+
+###### CLI Help
+
+```
+Usage: build-explorer [OPTIONS]
+
+  Builds all static data content needed to power the frontend OEPS Explorer
+  application.
+
+  Optionally only build data for the map, or for the /docs page (theme,
+  construct, and source data)
+
+  Use --upload-map-data to make a production update for the map. Without this
+  argument, CSV data files for the map will just be stored locally in
+  .cache/explorer/csvs and the frontend running locally will read them from
+  there.
+
+Options:
+  --registry-path PATH  Optional override for the registry directory.
+  --explorer-path PATH  Optional override for the root directory of the
+                        explorer.
+  --map-only            Only build static content to drive the map.
+  --docs-only           Only build static content to drive the docs page.
+  --upload-map-data     Upload the output map data CSV files to S3 bucket.
+  --help                Show this message and exit.
+```
+
+
+## clean-explorer-bucket
+
+Deletes all files from the S3 bucket which are not mentioned in the local
+    explorer/config/sources.json file. If no sources.json file exists, optionally
+    deletes all uploaded files (interactive only).
+    
+
+###### Usage
+
+```
+Usage: clean-explorer-bucket [OPTIONS]
+```
+
+###### Arguments
+
+
+###### Options
+
+* `non_interactive`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--non-interactive`
+
+    Fail immediately if explorer/config/sources.json is missing (for CI). Without this flag, a missing file triggers an interactive confirmation.
+
+
+
+* `dry_run`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--dry-run`
+
+    Print S3 keys that would be deleted without deleting them.
+
+
+
+* `explorer_path`:
+    * Type: <click.types.Path object at 0x7f493f1ff850>
+    * Default: `../explorer`
+    * Usage: `--explorer-path`
+
+    Optional override for the root directory of the explorer.
+
+
+
+* `help`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--help`
+
+    Show this message and exit.
+
+
+
+###### CLI Help
+
+```
+Usage: clean-explorer-bucket [OPTIONS]
+
+  Deletes all files from the S3 bucket which are not mentioned in the local
+  explorer/config/sources.json file. If no sources.json file exists,
+  optionally deletes all uploaded files (interactive only).
+
+Options:
+  --non-interactive     Fail immediately if explorer/config/sources.json is
+                        missing (for CI). Without this flag, a missing file
+                        triggers an interactive confirmation.
+  --dry-run             Print S3 keys that would be deleted without deleting
+                        them.
+  --explorer-path PATH  Optional override for the root directory of the
+                        explorer.
   --help                Show this message and exit.
 ```
 
@@ -550,7 +446,7 @@ Usage: merge-csv [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7fec8d4aea10>
+    * Type: <click.types.Path object at 0x7f38a860ba10>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -595,15 +491,20 @@ Options:
 ```
 
 
-## bigquery-export
+## remove-variable
 
-Runs a SQL statement, which must be provided in a .sql file, and the results are printed to the console
-    or saved to a CSV or SHP output file, based on the destination argument.
+Remove variable(s) from the registry and all of their columns from table source CSVs.
+    Optionally remove variables only from one table source.
+    
+    Can remove multiple variables at once by providing comma-separated names.
+    Example (single): flask remove-variable -n Var1 -t county-2025
+    Example (multiple): flask remove-variable -n "Var1,Var2,Var3" -t county-2025 --yes
+    
 
 ###### Usage
 
 ```
-Usage: bigquery-export [OPTIONS]
+Usage: remove-variable [OPTIONS]
 ```
 
 ###### Arguments
@@ -611,22 +512,51 @@ Usage: bigquery-export [OPTIONS]
 
 ###### Options
 
-* `output`:
+* `name`:
     * Type: STRING
     * Default: `Sentinel.UNSET`
-    * Usage: `--output
--o`
+    * Usage: `--name
+-n`
 
-    Output file for export. Must end with .csv for CSV or .shp for ESRI Shapefile.
+    Name of variable(s) to remove. For multiple variables, use comma-separated values (e.g., -n 'Var1,Var2,Var3').
 
 
 
-* `sql_file`:
+* `table_source`:
     * Type: STRING
     * Default: `Sentinel.UNSET`
-    * Usage: `--sql-file`
+    * Usage: `--table-source
+-t`
 
-    Path to file with SQL SELECT statement to run.
+    Name of single table source from which the variable will be removed.
+
+
+
+* `yes`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--yes
+-y`
+
+    Skip confirmation prompts. Useful for batch operations.
+
+
+
+* `dry_run`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--dry-run`
+
+    Show what would be removed without changing any files.
+
+
+
+* `registry_path`:
+    * Type: <click.types.Path object at 0x7fb208203ad0>
+    * Default: `oeps/registry`
+    * Usage: `--registry-path`
+
+    Optional override for the registry directory.
 
 
 
@@ -642,17 +572,27 @@ Usage: bigquery-export [OPTIONS]
 ###### CLI Help
 
 ```
-Usage: bigquery-export [OPTIONS]
+Usage: remove-variable [OPTIONS]
 
-  Runs a SQL statement, which must be provided in a .sql file, and the results
-  are printed to the console or saved to a CSV or SHP output file, based on
-  the destination argument.
+  Remove variable(s) from the registry and all of their columns from table
+  source CSVs. Optionally remove variables only from one table source.
+
+  Can remove multiple variables at once by providing comma-separated names.
+  Example (single): flask remove-variable -n Var1 -t county-2025 Example
+  (multiple): flask remove-variable -n "Var1,Var2,Var3" -t county-2025 --yes
 
 Options:
-  -o, --output TEXT  Output file for export. Must end with .csv for CSV or
-                     .shp for ESRI Shapefile.
-  --sql-file TEXT    Path to file with SQL SELECT statement to run.
-  --help             Show this message and exit.
+  -n, --name TEXT          Name of variable(s) to remove. For multiple
+                           variables, use comma-separated values (e.g., -n
+                           'Var1,Var2,Var3').
+  -t, --table-source TEXT  Name of single table source from which the variable
+                           will be removed.
+  -y, --yes                Skip confirmation prompts. Useful for batch
+                           operations.
+  --dry-run                Show what would be removed without changing any
+                           files.
+  --registry-path PATH     Optional override for the registry directory.
+  --help                   Show this message and exit.
 ```
 
 
@@ -719,7 +659,7 @@ Usage: bigquery-upload [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f9ff4dc2490>
+    * Type: <click.types.Path object at 0x7f2f7d0ffdd0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -764,8 +704,7 @@ Generates a Frictionless data package from the Data Resource definitions in this
 
     The resulting package will be validated against the `frictionless` standard using that Python library.
 
-    `--skip-foreign-keys` to skip the creation of foreign keys--useful because foreign keys to shapefiles break
-    validation.
+    `--skip-foreign-keys` to omit foreign keys and geography-keys tables (packages without relational metadata).
 
     `--skip-validation` to skip the final step of running validation on the output package.
     
@@ -782,7 +721,7 @@ Usage: create-data-package [OPTIONS]
 ###### Options
 
 * `destination`:
-    * Type: <click.types.Path object at 0x7faa02a39890>
+    * Type: <click.types.Path object at 0x7f552c5fc950>
     * Default: `.temp/data-packages`
     * Usage: `--destination
 -d`
@@ -851,7 +790,7 @@ Usage: create-data-package [OPTIONS]
     * Default: `False`
     * Usage: `--skip-foreign-keys`
 
-    Don't define foreign keys in the output data package. This is needed to avoid validation errors that occur when Shapefiles are used in foreign keys.
+    Don't define foreign keys in the output data package and omit geography-keys CSV resources. By default, FKs reference a tabular geography-keys file (not the shapefile) so validation can run.
 
 
 
@@ -883,7 +822,7 @@ Usage: create-data-package [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7faa034aa650>
+    * Type: <click.types.Path object at 0x7f552cd03cd0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -892,7 +831,7 @@ Usage: create-data-package [OPTIONS]
 
 
 * `data_dir_path`:
-    * Type: <click.types.Path object at 0x7faa034aa590>
+    * Type: <click.types.Path object at 0x7f552cd03c10>
     * Default: `oeps/data`
     * Usage: `--data-dir-path`
 
@@ -930,8 +869,8 @@ Usage: create-data-package [OPTIONS]
   The resulting package will be validated against the `frictionless` standard
   using that Python library.
 
-  `--skip-foreign-keys` to skip the creation of foreign keys--useful because
-  foreign keys to shapefiles break validation.
+  `--skip-foreign-keys` to omit foreign keys and geography-keys tables
+  (packages without relational metadata).
 
   `--skip-validation` to skip the final step of running validation on the
   output package.
@@ -951,9 +890,10 @@ Options:
   --no-cache              Force re-download of any remote files.
   --check-rules           Only check the rules file, don't create any
                           dataframes or output files.
-  --skip-foreign-keys     Don't define foreign keys in the output data
-                          package. This is needed to avoid validation errors
-                          that occur when Shapefiles are used in foreign keys.
+  --skip-foreign-keys     Don't define foreign keys in the output data package
+                          and omit geography-keys CSV resources. By default,
+                          FKs reference a tabular geography-keys file (not the
+                          shapefile) so validation can run.
   --skip-validation       Don't run data package validation on the final
                           output.
   --stable-name           Use a stable output name without date (e.g. oeps-
@@ -967,21 +907,17 @@ Options:
 ```
 
 
-## build-explorer
+## build-docs
 
-Builds all static data content needed to power the frontend OEPS Explorer application.
-    
-    Optionally only build data for the map, or for the /docs page (theme, construct, and source data)
-    
-    Use --upload-map-data to make a production update for the map. Without this argument, CSV data
-    files for the map will just be stored locally in .cache/explorer/csvs and the frontend running locally
-    will read them from there.
+Generates various documentation pages based on the data content.
+
+    Optionally only generate one of the types of docs.
     
 
 ###### Usage
 
 ```
-Usage: build-explorer [OPTIONS]
+Usage: build-docs [OPTIONS]
 ```
 
 ###### Arguments
@@ -989,48 +925,48 @@ Usage: build-explorer [OPTIONS]
 
 ###### Options
 
+* `bq_only`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--bq-only`
+
+    Only build the BigQuery reference docs.
+
+
+
+* `cli_only`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--cli-only`
+
+    Only build the CLI docs.
+
+
+
+* `registry_only`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--registry-only`
+
+    Only build the registry summary docs.
+
+
+
+* `data_dictionaries_only`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--data-dictionaries-only`
+
+    Only build the data dictionaries.
+
+
+
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f9b619baa10>
+    * Type: <click.types.Path object at 0x7f7e42d13f90>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
     Optional override for the registry directory.
-
-
-
-* `explorer_path`:
-    * Type: <click.types.Path object at 0x7f9b619ba650>
-    * Default: `../explorer`
-    * Usage: `--explorer-path`
-
-    Optional override for the root directory of the explorer.
-
-
-
-* `map_only`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--map-only`
-
-    Only build static content to drive the map.
-
-
-
-* `docs_only`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--docs-only`
-
-    Only build static content to drive the docs page.
-
-
-
-* `upload_map_data`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--upload-map-data`
-
-    Upload the output map data CSV files to S3 bucket.
 
 
 
@@ -1046,27 +982,114 @@ Usage: build-explorer [OPTIONS]
 ###### CLI Help
 
 ```
-Usage: build-explorer [OPTIONS]
+Usage: build-docs [OPTIONS]
 
-  Builds all static data content needed to power the frontend OEPS Explorer
-  application.
+  Generates various documentation pages based on the data content.
 
-  Optionally only build data for the map, or for the /docs page (theme,
-  construct, and source data)
-
-  Use --upload-map-data to make a production update for the map. Without this
-  argument, CSV data files for the map will just be stored locally in
-  .cache/explorer/csvs and the frontend running locally will read them from
-  there.
+  Optionally only generate one of the types of docs.
 
 Options:
-  --registry-path PATH  Optional override for the registry directory.
-  --explorer-path PATH  Optional override for the root directory of the
-                        explorer.
-  --map-only            Only build static content to drive the map.
-  --docs-only           Only build static content to drive the docs page.
-  --upload-map-data     Upload the output map data CSV files to S3 bucket.
-  --help                Show this message and exit.
+  --bq-only                 Only build the BigQuery reference docs.
+  --cli-only                Only build the CLI docs.
+  --registry-only           Only build the registry summary docs.
+  --data-dictionaries-only  Only build the data dictionaries.
+  --registry-path PATH      Optional override for the registry directory.
+  --help                    Show this message and exit.
+```
+
+
+## create-table-source
+
+Creates a new blank table source and generates an accompanying
+    CSV with only relevant keys.
+    
+
+###### Usage
+
+```
+Usage: create-table-source [OPTIONS]
+```
+
+###### Arguments
+
+
+###### Options
+
+* `name`:
+    * Type: STRING
+    * Default: `Sentinel.UNSET`
+    * Usage: `--name
+-n`
+
+    Name (id) of new table source. This will be used for the CSV file name.
+
+
+
+* `data_year`:
+    * Type: STRING
+    * Default: `Sentinel.UNSET`
+    * Usage: `--data-year
+-y`
+
+    Year of data that this table source will hold.
+
+
+
+* `geodata_source`:
+    * Type: STRING
+    * Default: `Sentinel.UNSET`
+    * Usage: `--geodata-source
+-g`
+
+    Name of the geodata source that this table source will be joined to.
+
+
+
+* `dry_run`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--dry-run`
+
+    Stage and prepare new table source but don't save.
+
+
+
+* `registry_path`:
+    * Type: <click.types.Path object at 0x7f0679507e50>
+    * Default: `oeps/registry`
+    * Usage: `--registry-path`
+
+    Optional override for the registry directory.
+
+
+
+* `help`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--help`
+
+    Show this message and exit.
+
+
+
+###### CLI Help
+
+```
+Usage: create-table-source [OPTIONS]
+
+  Creates a new blank table source and generates an accompanying CSV with only
+  relevant keys.
+
+Options:
+  -n, --name TEXT            Name (id) of new table source. This will be used
+                             for the CSV file name.
+  -y, --data-year TEXT       Year of data that this table source will hold.
+  -g, --geodata-source TEXT  Name of the geodata source that this table source
+                             will be joined to.
+  --dry-run                  Stage and prepare new table source but don't
+                             save.
+  --registry-path PATH       Optional override for the registry directory.
+  --help                     Show this message and exit.
 ```
 
 !!! note

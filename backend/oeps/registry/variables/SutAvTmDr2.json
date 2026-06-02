@@ -1,0 +1,13 @@
+{
+  "name": "SutAvTmDr2",
+  "title": "Average driving time to nearest Substance Use Treatment Provider (Sut), with Impedance factor",
+  "type": "number",
+  "example": "22",
+  "description": " Average driving time (minutes) across tracts in state to nearestSubstance Use Treatment Provider (Sut), with Impedance factor",
+  "longitudinal": false,
+  "analysis": false,
+  "metadata": "Access_SubstanceUseTreatment",
+  "table_sources": [
+    "state-2025"
+  ]
+}

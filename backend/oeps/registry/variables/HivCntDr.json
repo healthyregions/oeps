@@ -6,7 +6,7 @@
   "description": "Number of HIV testing providers within a 30-minute drive",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Access_HCVTesting",
+  "metadata": "Access_HIVTesting",
   "table_sources": [
     "tract-2025"
   ]

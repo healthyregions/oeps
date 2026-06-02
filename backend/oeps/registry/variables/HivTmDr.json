@@ -6,7 +6,7 @@
   "description": "Driving time from origin to nearest HIV testing provider (minutes)",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Access_HCVTesting",
+  "metadata": "Access_HIVTesting",
   "table_sources": [
     "tract-2025"
   ]
