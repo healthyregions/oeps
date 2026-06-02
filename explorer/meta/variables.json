@@ -636,9 +636,10 @@
           "Distance (mi) to Substance Use Treatment (SUT) facility",
           "Driving Time (min) to nearest Substance Use Treatment program",
           "Driving time (min) to Substance Use Treatment (SUT) facility",
+          "Driving time to nearest Substance Use Treatment Provider (with impedance)",
           "Tracts with Substance Use Treatment (SUT) program (30-min drive)"
         ],
-        "Source": "SAMHSA 2020",
+        "Source": "SAMHSA 2020, 2025; OSM 2019 & 2025; Census TIGER 2018 & 2020",
         "Metadata": "Access_SubstanceUseTreatment",
         "Spatial Scale": "Tract, Zip, County, State",
         "Years": "2020, 2025"

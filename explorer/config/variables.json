@@ -498,7 +498,7 @@
   },
   {
     "variable": "% Tracts within 30-min drive of Substance Use Treatment Provider (Sut), with Impedance factor",
-    "numerator": "state-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "SutTmDrP2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_SubstanceUseTreatment.md"
@@ -533,7 +533,7 @@
   },
   {
     "variable": "% tracts with Substance Use Treatment program (30-min drive)",
-    "numerator": "state-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "SutTmDrP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_SubstanceUseTreatment.md"
@@ -680,7 +680,7 @@
   },
   {
     "variable": "Average driving time to nearest Substance Use Treatment Provider (Sut), with Impedance factor",
-    "numerator": "state-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "SutAvTmDr2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_SubstanceUseTreatment.md"
@@ -1135,7 +1135,7 @@
   },
   {
     "variable": "Count of Tracts within 30-min drive of Substance Use Treatment Provider, with Impedance factor",
-    "numerator": "state-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "SutCtTmDr2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_SubstanceUseTreatment.md"
@@ -1415,7 +1415,7 @@
   },
   {
     "variable": "Driving Time (min) to nearest Substance Use Treatment program",
-    "numerator": "state-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "SutAvTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_SubstanceUseTreatment.md"
@@ -1524,6 +1524,13 @@
     "nProperty": "SspTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/nasen_ssp/metadata/Access_SSP.md"
+  },
+  {
+    "variable": "Driving time to nearest Substance Use Treatment Provider (with impedance)",
+    "numerator": "tract-2025",
+    "nProperty": "SutTmDr2",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_SubstanceUseTreatment.md"
   },
   {
     "variable": "Driving time to nearest telehealth buprenorphine provider",
@@ -2843,7 +2850,7 @@
   },
   {
     "variable": "Tracts with Substance Use Treatment (SUT) program (30-min drive)",
-    "numerator": "state-2025",
+    "numerator": "state-2025__county-2025",
     "nProperty": "SutCtTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_SubstanceUseTreatment.md"

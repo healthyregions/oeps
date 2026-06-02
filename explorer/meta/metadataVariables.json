@@ -4576,6 +4576,7 @@
           "2025"
         ],
         "geographies": [
+          "County",
           "State"
         ]
       },
@@ -4587,6 +4588,7 @@
           "2025"
         ],
         "geographies": [
+          "County",
           "State"
         ]
       },
@@ -4610,6 +4612,7 @@
           "2025"
         ],
         "geographies": [
+          "County",
           "State"
         ]
       },
@@ -4634,6 +4637,7 @@
           "2025"
         ],
         "geographies": [
+          "County",
           "State"
         ]
       },
@@ -4658,6 +4662,7 @@
           "2025"
         ],
         "geographies": [
+          "County",
           "State"
         ]
       },
@@ -4676,7 +4681,7 @@
       {
         "title": "Driving time (min) to Substance Use Treatment (SUT) facility",
         "name": "SutTmDr",
-        "description": "Driving time from tract/zip origin centroid to the nearest tract/zip SUT destination centroid, in minutes",
+        "description": "Driving time (min) to nearest  Substance Use Treatment (SUT) facility",
         "years": [
           "2020",
           "2025"
@@ -4687,6 +4692,17 @@
         ]
       },
       {
+        "title": "Driving time to nearest Substance Use Treatment Provider (with impedance)",
+        "name": "SutTmDr2",
+        "description": "Driving time (minutes) from the tract centroid to the nearest Substance Use Treatment provider, with the impedance factor applied.",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
         "title": "Tracts with Substance Use Treatment (SUT) program (30-min drive)",
         "name": "SutCtTmDr",
         "description": "Number of tracts with Substance Use Treatment within a 30-min driving range.",
@@ -4694,6 +4710,7 @@
           "2025"
         ],
         "geographies": [
+          "County",
           "State"
         ]
       },

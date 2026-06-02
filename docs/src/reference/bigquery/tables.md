@@ -697,7 +697,7 @@ FIPS|STRING|Federal Information Processing Standard code designated by the NIST;
 SutMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest SUT service location, in miles
 MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
 DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
-SutTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip SUT destination centroid, in minutes
+SutTmDr|NUMERIC|Driving time (min) to nearest  Substance Use Treatment (SUT) facility
 RetailP|NUMERIC|Percentage of population employed in retail trade industry
 NaltTmWk|NUMERIC|Walking time (minutes) to nearest naltrexone provider
 Ovr21P|NUMERIC|
@@ -2157,7 +2157,7 @@ MetTmDr|NUMERIC|Driving time (minutes) to nearest methadone provider
 SutMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest SUT service location, in miles
 MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
 DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
-SutTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip SUT destination centroid, in minutes
+SutTmDr|NUMERIC|Driving time (min) to nearest  Substance Use Treatment (SUT) facility
 RetailP|NUMERIC|Percentage of population employed in retail trade industry
 NaltTmWk|NUMERIC|Walking time (minutes) to nearest naltrexone provider
 Ovr21P|NUMERIC|
@@ -2434,7 +2434,7 @@ HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic 
 
 ID: `oeps-391119.tabular.county-2025`
 
-55 columns in this table.
+61 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
@@ -2446,13 +2446,17 @@ FqhcCtTmDr|INTEGER|Number of tracts with Federally Qualified Health Center withi
 HcvAvTmDr|NUMERIC|Mean driving time (minutes) from tracts to nearest HCV testing provider
 HivCtTmDr2|NUMERIC|Number of tracts with HIV Testing Facility within a 30-min driving range, with impedance
 HcvAvTmDr2|NUMERIC|Average driving time (minutes) across tracts in state to nearest HCV Testing Facility, with impedance
+SutTmDrP|NUMERIC|Percent of tracts with Substance Use Treatment program within a 30-minute driving range.
 HivAvTmDr2|NUMERIC|Average driving time (minutes) across tracts in state to nearest HIV Testing Facility, with impedance
+SutCtTmDr|INTEGER|Number of tracts with Substance Use Treatment within a 30-min driving range.
 TlBupMinDis|NUMERIC|Euclidean distance (in miles) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services
 HivCtTmDr|INTEGER|Number of tracts with an HIV testing provider within a 30-minute driving range
 TotTracts|INTEGER|Total number of census tracts within the state.
 BupTmBk|NUMERIC|Biking time (minutes) to nearest buprenorphine provider
+SutAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest Substance Use Treatment program.
 MetTmWk|NUMERIC|Walking time (minutes) to nearest methadone provider
 TlBupTmBk|NUMERIC|Estimated biking time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services
+SutAvTmDr2|NUMERIC| Average driving time (minutes) across tracts in state to nearestSubstance Use Treatment Provider (Sut), with Impedance factor
 HivTmDrP|NUMERIC|Percent of tracts within 30-minute drive to an HIV testing provider
 MhCtTmDr|INTEGER|Number of tracts with a mental health provider within a 30-min driving range.
 MhTmDrP|NUMERIC|Percent of tracts with a mental health provider within a 30-min driving range.
@@ -2470,8 +2474,10 @@ BupTmDr|NUMERIC|Driving time (minutes) to nearest buprenorphine provider
 RxCtTmDr2|INTEGER|Number of tracts with pharmacy within a 30-min driving range with impedance factor
 BupTmWk|NUMERIC|Walking time (minutes) to nearest buprenorphine provider
 MhAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest mental health provider.
+SutCtTmDr2|NUMERIC|Number of tracts with Substance Use Treatment Provider within a 30-min driving range, with Impedance factor
 RxTmDrP2|NUMERIC|Percent of tracts with pharmacy within a 30-min driving range with impedance factor
 NaltTmBk|NUMERIC|Biking time (minutes) to nearest naltrexone provider
+SutTmDrP2|NUMERIC|Percent of tracts with Substance Use Treatment Provider within a 30-min driving range, with Impedance factor
 RxTmDrP|NUMERIC|Percent of tracts with pharmacy within a 30-min driving range
 TlBupTmDr|NUMERIC|Estimated driving time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services
 HcvTmDrP2|NUMERIC|Percent of tracts with HCV Testing Facility within a 30-mini driving range, with impedance
@@ -2600,7 +2606,7 @@ HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic 
 
 ID: `oeps-391119.tabular.tract-2025`
 
-88 columns in this table.
+89 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
@@ -2654,6 +2660,7 @@ HcvCntDr|INTEGER|Number of HCV testing providers within a 30-minute drive
 MoudMinDis|NUMERIC|Euclidean distance (miles) to nearest MOUD (all types)
 OtpRm30|NUMERIC|Opioid Treatment Provider access 30 minutes (RAAM)
 BupCntWk60|INTEGER|Count of buprenorphine providers in 60 minute walking time threshold
+SutTmDr2|NUMERIC|Driving time (minutes) from the tract centroid to the nearest Substance Use Treatment provider, with the impedance factor applied.
 HospTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip hospital destination centroid, in minutes
 MetCntDr60|NUMERIC|Count of methadone providers in 60 minute drive time threshold
 NaltCntWk60|INTEGER|Count of naltrexone providers in 60 minute walking time threshold
@@ -2683,7 +2690,7 @@ HivCntDr|INTEGER|Number of HIV testing providers within a 30-minute drive
 HivTmDr2|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip HIV Testing Facility with impedance destination centroid, in minutes
 BupFca60|NUMERIC|Two-step floating catchment area (2SFCA) measure of access to Buprenorphine within a 30-minute drive
 TlBupTmWk|NUMERIC|Estimated walking time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services
-SutTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip SUT destination centroid, in minutes
+SutTmDr|NUMERIC|Driving time (min) to nearest  Substance Use Treatment (SUT) facility
 NaltTmWk|NUMERIC|Walking time (minutes) to nearest naltrexone provider
 SspTmDr|NUMERIC|Driving time in minutes from origin census tract centroid to census tract centroid of nearest SSP
 RxTmDr2|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip pharmacy destination centroid with impedance factor, in minutes
