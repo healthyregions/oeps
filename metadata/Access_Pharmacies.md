@@ -52,8 +52,8 @@ In addition, an impedance factor was introduced in 2025 access metrics. Raw trav
 #### County and State 
 County and state-level variables include the **count** of Census tracts and the **percent** of Census tracts located within a 30 minute driving threshold of pharmacy, as well as the mean (average) driving time in minutes from Census tracts within the county or state. 
 
-For 2025 measures, the tract to county conversion were completed using R code, and can be found in
-[scripts](https://github.com/healthyregions/oeps/tree/main/scripts).
+
+For 2025 measures, the tract to county and state conversions were completed using R code, and can be found in the corresponding [scripts](https://github.com/healthyregions/oeps/tree/main/scripts) folder on our Github Repository.
 
 ### Data Limitations:
 - Euclidean distance or straight-line distance is a simple approximation of distance or travel time from an origin centroid to the nearest health center. It is not a precise calculation of real travel times or distances. 
