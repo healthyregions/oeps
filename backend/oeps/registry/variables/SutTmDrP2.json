@@ -1,0 +1,13 @@
+{
+  "name": "SutTmDrP2",
+  "title": "% Tracts within 30-min drive of Substance Use Treatment Provider (Sut), with Impedance factor",
+  "type": "number",
+  "example": "22",
+  "description": "Percent of tracts with Substance Use Treatment Provider within a 30-min driving range, with Impedance factor",
+  "longitudinal": false,
+  "analysis": false,
+  "metadata": "Access_SubstanceUseTreatment",
+  "table_sources": [
+    "state-2025"
+  ]
+}

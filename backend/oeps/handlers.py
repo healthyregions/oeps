@@ -19,6 +19,52 @@ from .models import (
 
 class TableSource(TableSourceModel):
 
+    def _write_csv(self, df: pd.DataFrame):
+        """Write table CSV using fixed-point float formatting.
+
+        This avoids scientific notation (e.g. 3.28e-06) in canonical table files.
+        Integer-typed registry variables are written as integers. Any float column
+        whose non-null values are all whole numbers is written as integer (applies
+        to all table sources). State-level tables use two decimal places for
+        remaining floats; tract and other tables use nine so very small values
+        (e.g. some FCA metrics) are not rounded to zero.
+        """
+        out = df.copy()
+        for v in self.variables:
+            if v.name not in out.columns or v.type != "integer":
+                continue
+            s = out[v.name]
+            if not pd.api.types.is_numeric_dtype(s):
+                continue
+            try:
+                out[v.name] = s.round().astype("Int64")
+            except (ValueError, TypeError, pd.errors.IntCastingNaNError):
+                warn(
+                    message=f"Could not coerce {v.name} to integer before CSV write; leaving column as-is."
+                )
+        # FIPS often loads as float; write whole-number codes without a decimal part.
+        if "FIPS" in out.columns and pd.api.types.is_float_dtype(out["FIPS"]):
+            try:
+                out["FIPS"] = out["FIPS"].round().astype("Int64")
+            except (ValueError, TypeError, pd.errors.IntCastingNaNError):
+                pass
+        for c in out.columns:
+            if c == "HEROP_ID":
+                continue
+            s = out[c]
+            if not pd.api.types.is_float_dtype(s):
+                continue
+            non_null = s.dropna()
+            if non_null.empty:
+                continue
+            if (non_null == non_null.round()).all():
+                try:
+                    out[c] = s.round().astype("Int64")
+                except (ValueError, TypeError, pd.errors.IntCastingNaNError):
+                    pass
+        float_fmt = "%.2f" if self.name.startswith("state-") else "%.9f"
+        out.to_csv(self.full_path, index=False, float_format=float_fmt)
+
     def load_dataframe(self) -> pd.DataFrame:
         """Load this TableSource's CSV data into a pandas DataFrame"""
         self.df = read_csv_robust(self.full_path)
@@ -34,7 +80,7 @@ class TableSource(TableSourceModel):
         if self.df is None:
             self.load_dataframe()
         self.df.drop(name, axis=1, inplace=True)
-        self.df.to_csv(self.full_path, index=False)
+        self._write_csv(self.df)
 
     def merge_df(self, incoming_df: pd.DataFrame, overwrite: bool = False):
         if self.df is None:
@@ -51,7 +97,7 @@ class TableSource(TableSourceModel):
 
         merged_df = pd.merge(self.df, incoming_df, how="left", on="HEROP_ID")
 
-        merged_df.to_csv(self.full_path, index=False)
+        self._write_csv(merged_df)
 
     def to_frictionless_resource(self):
 
@@ -366,8 +412,24 @@ class Registry(BaseModel):
         ## set all data types in the dataframe (according to attributes in the registry)
         prep_df = self.set_data_types(prep_df)
 
-        ## round all values to 2 decimals
-        prep_df = prep_df.round(2)
+        ## Round per-column:
+        ## - default is 2 decimals (existing behavior)
+        ## - use 9 decimals for columns that contain very small non-zero values,
+        ##   so metrics like FCA are not collapsed to 0.00
+        for mc in matched_cols:
+            if mc not in prep_df.columns:
+                continue
+            series = prep_df[mc]
+            if not pd.api.types.is_numeric_dtype(series):
+                continue
+
+            non_null = series.dropna()
+            if non_null.empty:
+                continue
+
+            has_tiny_nonzero = ((non_null != 0) & (non_null.abs() < 0.01)).any()
+            precision = 9 if has_tiny_nonzero else 2
+            prep_df[mc] = series.round(precision)
 
         ## trim all unneeded columns, leave only join field and matched columns.
         prep_df = prep_df[["HEROP_ID"] + matched_cols]

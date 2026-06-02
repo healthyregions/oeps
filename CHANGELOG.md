@@ -16,7 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 - Sortable "Key Variables and Definitions" table on metadata docs pages ([#303](https://github.com/healthyregions/oeps/issues/303)). Default sort by Variable ID; clickable column headers for Variable, Variable ID, Years Available, and Spatial Scale with ↑/↓ indicators.
 
-- "Adding images" section in `metadata/README.md`: HTML vs Markdown comparison, Option 1 (GitHub paste/drop), Option 2 (`metadata/images/`), and examples so images render correctly on the OEPS docs page ([#317](https://github.com/healthyregions/oeps/issues/317)).
+- "Adding images" section in `metadata/README.md`: HTML vs Markdown, storing figures under `metadata/images/`, relative `images/...` links, and avoiding GitHub-only attachment URLs so images render reliably on the OEPS docs page ([#317](https://github.com/healthyregions/oeps/issues/317)).
 
 - GitHub Action **Clean explorer S3 bucket** (`workflow_dispatch`) to remove stale map CSVs under `explorer/csv` using `explorer/config/sources.json`, with optional dry-run input ([#280](https://github.com/healthyregions/oeps/issues/280)).
 
@@ -34,6 +34,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 - Smoking (`SmokeP`) and incarceration (prison/jail) variables and canonical table data refreshed for county-2019 and state/county 2022–2025 using `remove-variable` and `merge-csv` with updated source CSVs ([#261](https://github.com/healthyregions/oeps/issues/261)).
 
+- Metadata docs for access measures (FQHCs, HCV/HIV testing, hospitals, mental health, MOUDs, pharmacies), jail/prison maps, and related README guidance: figures stored in `metadata/images/` with stable underscore filenames; markdown uses relative `images/...` links instead of `user-attachments` or branch `blob` URLs ([#317](https://github.com/healthyregions/oeps/issues/317)).
+
 ### Fixed
+
+- Explorer map: legend bin labels and polygon hover tooltips use magnitude-aware numeric formatting so very small non-zero values are not shown as `0` ([#366](https://github.com/healthyregions/oeps/issues/366)).
 
 - Frictionless data package validation no longer fails when CSV foreign keys pointed at shapefile resources (`FileResource` / `row_stream`) ([#311](https://github.com/healthyregions/oeps/issues/311)).
