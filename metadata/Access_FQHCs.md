@@ -49,8 +49,8 @@ An impedance approach instead multiples the estimated travel time by a factor, i
 #### County and State 
 County and state-level variables include the **count** of Census tracts and the **percent** of Census tracts located within a 30 minute driving threshold of an FQHC, as well as the mean (average) driving time in minutes from Census tracts within the county or state. 
 
-For 2025 measures, the tract to county conversion were completed using R code, and can be found
-[scripts/fqhc-tract2county.R.](https://github.com/healthyregions/oeps/tree/main/scripts).
+For 2025 measures, the tract to county and state conversion were completed using R code, and can be found in the corresponding *scripts* folder on our Github Repository (for example, see:
+[scripts/fqhc-tract2county.R](https://github.com/healthyregions/oeps/tree/main/scripts)).
 
 ![FqhcAvTmDr2_2025](https://github.com/user-attachments/assets/a1572118-06b9-4af6-9de9-9e00838e706d)
 *Average drive time to nearest FQHC, with Impedance (FqhcAvTmDr2)*
