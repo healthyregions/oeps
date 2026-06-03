@@ -93,6 +93,10 @@ content:
         label: Title
         type: string
         required: true
+      - name: slug
+        label: Slug
+        type: string
+        required: true
       - name: date
         label: Date
         type: date
@@ -112,10 +116,6 @@ content:
     fields:
       - name: slug
         type: string
-      - name: title
-        type: string
-      - name: date
-        type: date
       - name: tags
         type: string
         list: true
