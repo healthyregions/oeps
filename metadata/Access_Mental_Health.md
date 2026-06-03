@@ -1,6 +1,6 @@
 **Meta Data Name**: Access to Mental Health Providers  
 **Date Added**: January 9, 2021  
-**Author**: Mahjabin Kabir Adrita, Marynia Kolak Wataru Morioka, Susan Paykin    
+**Author**: Mahjabin Kabir Adrita, Marynia Kolak, Wataru Morioka, Susan Paykin    
 **Date Last Modified**: June 6, 2026  
 **Last Modified By**: Mahjabin Kabir Adrita
 
