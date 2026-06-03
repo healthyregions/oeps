@@ -642,7 +642,7 @@ HhldMC|NUMERIC|
 MhMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest mental health provider, in miles
 FqhcTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes
 MetMinDis|NUMERIC|Euclidean distance (miles) to nearest methadone provider
-MhCntDr|INTEGER|Count of MH providers within a 30-minute driving threshold
+MhCntDr|INTEGER|Count of mental health providers within a 30-minute driving threshold
 AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
 HhldMS|NUMERIC|
 HHSize|NUMERIC|
@@ -2105,7 +2105,7 @@ HhldMC|NUMERIC|
 MhMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest mental health provider, in miles
 FqhcTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes
 MetMinDis|NUMERIC|Euclidean distance (miles) to nearest methadone provider
-MhCntDr|INTEGER|Count of MH providers within a 30-minute driving threshold
+MhCntDr|INTEGER|Count of mental health providers within a 30-minute driving threshold
 AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
 HhldMS|NUMERIC|
 HHSize|NUMERIC|
@@ -2606,12 +2606,13 @@ HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic 
 
 ID: `oeps-391119.tabular.tract-2025`
 
-89 columns in this table.
+90 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
 OtpTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes
 BupCntWk30|INTEGER|Count of buprenorphine providers in 30 minute walking time threshold
+RxMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest pharmacy, in miles
 MetCntWk60|INTEGER|Count of methadone providers in 30 minute walking time threshold
 MetCntBk30|INTEGER|Count of methadone providers in 30 minute biking time threshold
 NaltCntWk30|INTEGER|Count of naltrexone providers in 30 minute walking time threshold
@@ -2647,7 +2648,7 @@ MhMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest mental h
 TlBupCntWk30|INTEGER|Total number of providers offering buprenorphine treatment via telemedicine/telehealth located within a 30-minute walking time threshold
 FqhcTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes
 MetMinDis|NUMERIC|Euclidean distance (miles) to nearest methadone provider
-MhCntDr|INTEGER|Count of MH providers within a 30-minute driving threshold
+MhCntDr|INTEGER|Count of mental health providers within a 30-minute driving threshold
 MetTmBk|NUMERIC|Biking time (minutes) to nearest methadone provider
 BupMinDis|NUMERIC|Euclidean distance (miles) to nearest buprenorphine provider
 SutCntDr|INTEGER|Count of SUT services within a 30-minute driving threshold

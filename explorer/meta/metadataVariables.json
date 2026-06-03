@@ -3055,7 +3055,8 @@
         "name": "RxMinDis",
         "description": "Euclidean distance* from tract/zip centroid to nearest pharmacy, in miles",
         "years": [
-          "2019"
+          "2019",
+          "2025"
         ],
         "geographies": [
           "Tract",
@@ -4196,7 +4197,7 @@
       {
         "title": "Count of Mental Health Providers (30-min drive)",
         "name": "MhCntDr",
-        "description": "Count of MH providers within a 30-minute driving threshold",
+        "description": "Count of mental health providers within a 30-minute driving threshold",
         "years": [
           "2020",
           "2025"

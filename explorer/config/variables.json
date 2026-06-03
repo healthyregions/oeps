@@ -1296,7 +1296,7 @@
   },
   {
     "variable": "Distance (mi) to nearest Pharmacy",
-    "numerator": "zcta-2019__tract-2019",
+    "numerator": "zcta-2019__tract-2025",
     "nProperty": "RxMinDis",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Pharmacies.md"
