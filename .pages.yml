@@ -90,10 +90,13 @@ content:
     path: _posts # Adjust to match where you store your news files
     fields:
       - name: title
+        label: Title
         type: string
         required: true
       - name: date
+        label: Date
         type: date
         required: true
       - name: body
+        label: Body
         type: rich-text # Or "markdown" if you prefer
