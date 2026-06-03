@@ -100,3 +100,22 @@ content:
       - name: body
         label: Body
         type: rich-text # Or "markdown" if you prefer
+        
+  # Editors use this to register metadata for the JSON array index
+  # Adding to this collection is effectively "publishing" our post
+  - name: posts_metadata
+    label: Posts Directory (JSON Index)
+    type: file
+    path: explorer/content/posts.json
+    format: json
+    list: true
+    fields:
+      - name: slug
+        type: string
+      - name: title
+        type: string
+      - name: date
+        type: date
+      - name: tags
+        type: string
+        list: true
