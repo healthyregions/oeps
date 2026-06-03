@@ -84,3 +84,34 @@ content:
         description: "DO NOT EDIT this list in PagesCMS. These are the CSVs that this variable appears in. Edits must be made in the backend."
         type: string
         list: true
+  - name: posts
+    label: Posts
+    type: collection
+    path: explorer/content/posts   # Adjust to match where to store news files
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: body
+        label: Body
+        type: rich-text # Or "markdown" if you prefer
+        
+  # Editors use this to register metadata for the JSON array index
+  # Adding to this collection is effectively "publishing" our post
+  - name: posts_metadata
+    label: Posts Directory (JSON Index)
+    type: file
+    path: explorer/content/posts.json
+    format: json
+    list: true
+    fields:
+      - name: slug
+        type: string
+      - name: tags
+        type: string
+        list: true

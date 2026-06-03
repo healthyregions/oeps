@@ -2,6 +2,13 @@ import { useState, useEffect } from 'react';
 import styles from "./MainMap.module.css";
 import { useSelector } from "react-redux";
 import { handleLoadData } from '../../_webgeoda/utils/data'
+import { formatMapNumeric } from '../../_webgeoda/utils/formatMapNumeric'
+
+const formatTooltipValue = (value) => {
+  if (value === null || value === undefined || value === '') return value
+  const n = Number(value)
+  return Number.isFinite(n) ? formatMapNumeric(n) : String(value)
+}
 
 const pad = (val, len, padChar) => `${val}`.length >= len ? ''+val : pad(`${padChar}${val}`, len, padChar)
 
@@ -80,11 +87,7 @@ export default function MapTooltip() {
       {currentHoverTarget.data.map((entry, idx) => (
         <p key={`tooltip-${entry.value}-${idx}`}>
 
-          <b>{entry.name}</b>: {
-            +entry.value
-              ? Math.round(entry.value * 100) / 100
-              : entry.value
-            }
+          <b>{entry.name}</b>: {formatTooltipValue(entry.value)}
         </p>
       ))}
     </div>

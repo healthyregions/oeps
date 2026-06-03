@@ -1,0 +1,54 @@
+# Remove stale explorer map CSVs from S3 (see https://github.com/healthyregions/oeps/issues/280).
+# Uses repo explorer/config/sources.json on the checked-out ref to decide which keys to keep.
+name: Clean explorer S3 bucket
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "If true, only list keys that would be deleted"
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  clean_explorer_csv:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install backend dependencies
+        working-directory: backend
+        run: |
+          pip install --upgrade pip
+          pip install -e .
+
+      - name: Create .env file
+        working-directory: backend
+        run: echo "FLASK_APP=oeps" > .env
+
+      - name: Clean explorer/csv on S3 (dry run)
+        if: inputs.dry_run == true
+        working-directory: backend
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_BUCKET_NAME: ${{ secrets.AWS_BUCKET_NAME }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+        run: flask clean-explorer-bucket --non-interactive --dry-run
+
+      - name: Clean explorer/csv on S3
+        if: inputs.dry_run != true
+        working-directory: backend
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_BUCKET_NAME: ${{ secrets.AWS_BUCKET_NAME }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+        run: flask clean-explorer-bucket --non-interactive

@@ -4,10 +4,11 @@
   "type": "integer",
   "example": "345",
   "description": "Number of tracts with pharmacy within a 30-min driving range with impedance factor",
-  "metadata": "Access_Pharmacies",
   "longitudinal": false,
   "analysis": false,
+  "metadata": "Access_Pharmacies",
   "table_sources": [
-    "county-2025"
+    "county-2025",
+    "state-2025"
   ]
 }

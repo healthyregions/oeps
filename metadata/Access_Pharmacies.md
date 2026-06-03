@@ -1,8 +1,8 @@
 **Meta Data Name**: Access to Pharmacies  
 **Date Added**: January 6, 2021  
 **Author**: Mahjabin Kabir Adrita, Wataru Morioka, Susan Paykin  
-**Date Last Modified**: January 11, 2026  
-**Last Modified By**: Mahjabin Kabir Adrita  
+**Date Last Modified**: June 2, 2026  
+**Last Modified By**: Marynia Kolak
 
 ### Data Source(s) Description: 
 
@@ -52,8 +52,7 @@ In addition, an impedance factor was introduced in 2025 access metrics. Raw trav
 #### County and State 
 County and state-level variables include the **count** of Census tracts and the **percent** of Census tracts located within a 30 minute driving threshold of pharmacy, as well as the mean (average) driving time in minutes from Census tracts within the county or state. 
 
-For 2025 measures, the tract to county conversion were completed using R code, and can be found in
-[scripts](https://github.com/healthyregions/oeps/tree/main/scripts).
+For 2025 measures, the tract to county and state conversions were completed using R code, and can be found in the corresponding [scripts](https://github.com/healthyregions/oeps/tree/main/scripts) folder on our Github Repository.
 
 ### Data Limitations:
 - Euclidean distance or straight-line distance is a simple approximation of distance or travel time from an origin centroid to the nearest health center. It is not a precise calculation of real travel times or distances. 
@@ -68,7 +67,7 @@ understanding of potential spatial access.
 - All nearest distance calculations are in miles. 
 - All nearest travel time calculations are in minutes.
 - Null values correspond to the worst access, where travel takes over 90 minutes in optimal conditions, or 180 minutes in normal conditions.
-![Screenshot](https://github.com/user-attachments/assets/6ce05309-c07c-40bb-b1ae-73d5e19f970c)
+![Screenshot](images/Travel_Time_to_Pharmacy_Service_by_Census_Tract.png)
 
 - Not all metrics are available for U.S. places beyond the continental States; we recommend exploring the data on the OEPS Explorer web map to examine in more depth.
 - While a different time travel calculation was performed in 2025, the street network topology original source (Open Street Map) remained the same.

@@ -46,9 +46,5 @@ jobs:
           for dir in oeps/data/package_rules/*/; do
             name=$(basename "$dir")
             echo "Creating data package: $name"
-            extra=""
-            if [ "$name" = "DSuite2023" ]; then
-              extra="--skip-foreign-keys"
-            fi
-            flask create-data-package -c "$name" --zip --upload --skip-validation --stable-name $extra --overwrite
+            flask create-data-package -c "$name" --zip --upload --stable-name --overwrite
           done

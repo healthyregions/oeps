@@ -1,0 +1,13 @@
+{
+  "name": "BupCtTmDr2",
+  "title": "Count of Tracts within 30-min drive of Buprenorphine Provider, with Impedance factor",
+  "type": "number",
+  "example": "3.4",
+  "description": "Number of tracts with Buprenorphine Provider within a 30-min driving range, with Impedance factor",
+  "longitudinal": false,
+  "analysis": false,
+  "metadata": "Access_MOUDs",
+  "table_sources": [
+    "state-2025"
+  ]
+}
