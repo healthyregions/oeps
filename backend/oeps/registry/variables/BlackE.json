@@ -1,12 +1,12 @@
 {
   "name": "BlackE",
-  "title": "Count Black/African American Populationw",
+  "title": "Count Black/African American Population",
   "type": "number",
   "example": "14.81",
   "description": "Count population with race identified as Black or African American alone. Estimated count in non-decennial years.",
+  "metadata": "Race_Ethnicity",
   "longitudinal": true,
   "analysis": false,
-  "metadata": "Race_Ethnicity",
   "table_sources": [
     "county-1980",
     "county-1990",
