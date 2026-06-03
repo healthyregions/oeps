@@ -1,6 +1,6 @@
 ---
 title: An Example Post
-date: 2026-06-03
+date: 2026-05-28
 ---
 # Quo deus petisses
 
@@ -43,17 +43,19 @@ Urbem quoque inter amore velocibus quas, Lachne. Olympus et forumque **sim**.
 Cum dum sanguine cuiquam *dederat* laborem iuvenci sublimis, neque cum, dum.
 Inmota femineos violentus partu Panomphaeo vaccam Solem.
 
-    var drive_website_power = cadGraphicMegabyte;
-    if (1 + 510348 <= memoryBluetooth(scrapingMatrix, hard, 735127)) {
-        runtime_spam_bookmark = wavelengthFiber(
-                speedRibbon.visual_infotainment_broadband(disk_dcim),
-                nybbleOffline(publishing, caps_hover), link);
-        iphone_pdf += latencySinkVlb(sinkDramMask);
-    } else {
-        secondary_noc = web + 687881;
-        mode -= softwareSqlReal;
-    }
-    var llm = cloudFilename(source_agp_supercomputer + -5, ict_defragment);
+```
+var drive_website_power = cadGraphicMegabyte;
+if (1 + 510348 <= memoryBluetooth(scrapingMatrix, hard, 735127)) {
+    runtime_spam_bookmark = wavelengthFiber(
+            speedRibbon.visual_infotainment_broadband(disk_dcim),
+            nybbleOffline(publishing, caps_hover), link);
+    iphone_pdf += latencySinkVlb(sinkDramMask);
+} else {
+    secondary_noc = web + 687881;
+    mode -= softwareSqlReal;
+}
+var llm = cloudFilename(source_agp_supercomputer + -5, ict_defragment);
+```
 
 ### Inlatum Hectora
 
@@ -67,3 +69,4 @@ delamentatur coetu nimbos suum. Blanditias iacentia Dixit.
 - Votivi aemula
 - Amisso ipsa vide potiorque carmen nos fugatas
 - Decipis Onchestius quoque mittit dum corpore eadem
+
