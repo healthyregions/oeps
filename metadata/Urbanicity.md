@@ -1,18 +1,16 @@
-**Meta Data Name**: Urbanicity
-**Date Added**: March 20, 2020
-**Author**: Wataru Morioka, Moksha Menghaney, Susan Paykin
-**Date Last Modified**: January 3, 2024
-**Last Modified By**: Wataru Morioka
+**Meta Data Name**: Urbanicity  
+**Date Added**: March 20, 2020  
+**Author**: Mahjabin Kabir Adrita, Wataru Morioka, Moksha Menghaney, Susan Paykin  
+**Date Last Modified**: June, 2026  
+**Last Modified By**: Mahjabin Kabir Adrita  
 
 ### Data Source(s) Description:
 
-#### Counties
+#### Resources
 
-Percentage of rural and urban population is sourced from the Census Bureau. Raw data and more details can be found [here](https://www.census.gov/programs-surveys/geography/guidance/geo-areas/urban-rural.html).
+-For 2010, Percentage of rural and urban population at the county level is sourced from the Census Bureau. Raw data and more details can be found [here](https://www.census.gov/programs-surveys/geography/guidance/geo-areas/urban-rural.html).
 
-#### Census Tracts & Zipcodes
-
-Tract and ZCTA level classifications were calculated using the [Rural-Urban Commuting Area Codes (RUCA codes)](https://www.ers.usda.gov/data-products/rural-urban-commuting-area-codes.aspx). These codes classify U.S. census tracts using measures of population density, urbanization, and daily commuting. A second dataset then applies the 2010 RUCA classifications to ZIP code areas by transferring RUCA values from the census tracts that comprise them.
+-For 2010 and 2020, Tract and ZCTA level classifications were calculated using the [Rural-Urban Commuting Area Codes (RUCA codes)](https://www.ers.usda.gov/data-products/rural-urban-commuting-area-codes.aspx). These codes classify U.S. census tracts using measures of population density, urbanization, and daily commuting. A second dataset then applies the 2010 RUCA classifications to ZIP code areas by transferring RUCA values from the census tracts that comprise them.
 
 ### Description of Data Source Tables:
 
@@ -44,7 +42,7 @@ Secondary codes utilize the second largest share of commuting patterns to furthe
 
 For each county, from the census data, the percentage of population living in non-urban areas is identified as percentage rurality.
 
-For each county, the percentage of tracts classified as urban/suburban/rural, using the RUCA code definitions were calculated. Details on the classification methodology can be found [here](Policy_Scan/data_final/metadata/Rural_Urban_Classification_T_Z.md).
+For each county, the percentage of tracts classified as urban/suburban/rural, using the RUCA code definitions were calculated. Details on the classification methodology can be found [here](https://github.com/healthyregions/oeps/tree/main/scripts)
 
 #### Census Tracts & Zipcodes
 
@@ -55,7 +53,8 @@ Classified as:
 * All other RUCA2 codes were classified as Rural.
 
 ### Data Limitations:
-n/a
+- Unlike most U.S. states, Connecticut’s traditional eight counties do not function as active government units and have not been used for statistical reporting for decades. More recently, the U.S. Census Bureau replaced Connecticut’s eight historical counties with nine planning regions as official county-equivalent geographies, effective in Census Bureau products beginning in 2022, with full adoption in federal data products through 2023–2024. Because this redefinition means that county FIPS codes and county-level boundaries no longer align consistently with the definitions used elsewhere in our dataset (which assume stable county geographies), some Connecticut tracts may appear as empty or missing in the county summary table. This is especially true where tract identifiers include legacy county codes that no longer match current county-equivalent definitions.
 
 ### Comments/Notes:
-The datasets come from two different sources. As a result, there might have some gaps or mismatches in the rurality categorization. Furthermore, for Census rurality, there are additional notes included for certain counties, e.g. changes in FIPS codes. These can be found under the `note` column.
+- The datasets come from two different sources. As a result, there might have some gaps or mismatches in the rurality categorization. 
+- Furthermore, for Census rurality, there are additional notes included for certain counties, e.g. changes in FIPS codes. These can be found under the `note` column.
