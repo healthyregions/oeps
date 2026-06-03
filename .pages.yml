@@ -84,3 +84,16 @@ content:
         description: "DO NOT EDIT this list in PagesCMS. These are the CSVs that this variable appears in. Edits must be made in the backend."
         type: string
         list: true
+  - name: Posts
+    label: posts
+    type: collection
+    path: _posts # Adjust to match where you store your news files
+    fields:
+      - name: title
+        type: string
+        required: true
+      - name: date
+        type: date
+        required: true
+      - name: body
+        type: rich-text # Or "markdown" if you prefer
