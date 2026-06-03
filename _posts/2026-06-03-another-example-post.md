@@ -1,6 +1,6 @@
 ---
 title: Another Example Post
-date: 2026-06-05
+date: 2026-06-03
 ---
 # Dixit mea sed ardere
 
