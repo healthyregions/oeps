@@ -13,6 +13,13 @@ import metadataVariables from '../../meta/metadataVariables.json';
 const BASE_DOCS_URL = 'https://raw.githubusercontent.com/healthyregions/oeps/main/metadata/'
 const fetchMarkdown = async (url) => await fetch(url).then(r => r.text()).then(r => r.replace('[here](/data_final).', '[here](/download).'))
 
+/** Relative image paths in metadata .md are resolved against this site URL and 404 unless rewritten. */
+function resolveMetadataImageSrc(src) {
+  if (!src || /^https?:\/\//i.test(src)) return src
+  const base = BASE_DOCS_URL.replace(/\/?$/, '/')
+  return base + String(src).replace(/^\.\//, '')
+}
+
 function sortVariables(list, sortKey, sortAsc) {
   if (!list?.length) return list
   const dir = sortAsc ? 1 : -1
@@ -78,7 +85,16 @@ export default function MarkdownDocs() {
             <strong>Theme:</strong> {theme}<br/>
             <strong>Construct:</strong> {construct}
           </p>
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdownText}</ReactMarkdown>
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            components={{
+              img: ({ src, alt, ...props }) => (
+                <img alt={alt ?? ''} src={resolveMetadataImageSrc(src)} {...props} />
+              ),
+            }}
+          >
+            {markdownText}
+          </ReactMarkdown>
         </div>
         <Gutter em={5} />
         <h2 id="variables">

@@ -1,0 +1,39 @@
+# Runs registry consistency checks on pull requests that touch registry or table data.
+# See: https://github.com/healthyregions/oeps/issues/262
+name: Validate registry
+
+on:
+  pull_request:
+    paths:
+      - 'backend/oeps/registry/**'
+      - 'backend/oeps/data/**'
+      - '.github/workflows/validate_registry.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate_registry:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install backend dependencies
+        working-directory: backend
+        run: |
+          pip install --upgrade pip
+          pip install -e .
+
+      - name: Validate registry
+        working-directory: backend
+        env:
+          FLASK_APP: oeps
+        run: flask validate-registry

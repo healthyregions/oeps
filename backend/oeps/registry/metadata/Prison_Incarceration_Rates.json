@@ -2,8 +2,8 @@
   "name": "Prison_Incarceration_Rates",
   "theme": "Social",
   "construct": "Incarceration",
-  "proxy": "Total Prison Population Rate, Total Prison Admission Rate, Total Prison Population Count, Prison Prison Admissions Count",
+  "proxy": "Total Prison Population Rate, Total Prison Admission Rate, Total Prison Population Count, Total Prison Admissions Count",
   "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Prison_Incarceration_Rates.md",
-  "source": "Vera Institute of Justice 2025",
-  "source_long": "Vera Institute of Justice, 2025"
+  "source": "Vera 2016, 2019, 2022, 2024",
+  "source_long": "Vera Institute of Justice 2016, 2019, 2022, 2024"
 }

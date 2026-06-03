@@ -44,7 +44,7 @@ This travel time analysis was conducted using a Python Computational notebook.
 
 - The updated 2025 notebook will be released in late January 2026, due to some refinements and updates.
 
-![Screenshot](https://github.com/user-attachments/assets/5ddfff63-9eb8-4943-af77-4068c57d3111)
+![Screenshot](images/Travel_Time_to_HCV_testing_facility_by_Census_Tract.png)
 
 
 In addition, an **impedance factor** was introduced in 2025 access metrics. Raw travel time measures assume pristine conditions in a best-case-scenario. 
@@ -53,8 +53,9 @@ An impedance approach instead multiples the estimated travel time by a factor, i
 #### County and State 
 County and state-level variables include the **count** of Census tracts and the **percent** of Census tracts located within a 30 minute driving threshold of an HCV Testing Facility, as well as the mean (average) driving time in minutes from Census tracts within the county or state. 
 
-For 2025 measures, the tract to county conversion were completed using R code, and can be found
-[scripts/HCV-tract2county.R.](https://github.com/healthyregions/oeps/tree/main/scripts). 
+
+For 2025 measures, the tract to county and state conversions were completed using R code, and can be found in the corresponding *scripts* folder on our Github Repository (for example, see:
+[scripts/HCV-tract2county.R](https://github.com/healthyregions/oeps/tree/main/scripts)).
 
 ### Data Limitations:  
 - Euclidean distance or straight-line distance is a simple approximation of distance or travel time from an origin centroid to the nearest health center. It is not a precise calculation of real travel times or distances. 

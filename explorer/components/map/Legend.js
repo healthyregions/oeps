@@ -1,4 +1,5 @@
 import styles from "./MainMap.module.css";
+import { formatLegendLabel } from "../../_webgeoda/utils/formatMapNumeric";
 
 export default function Legend(props) {
   return (
@@ -17,7 +18,7 @@ export default function Legend(props) {
         </div>
         <div className={`${styles.legendLabels} ${props.ordinal && styles.categoricalLegendLabels}`}>
           {props.bins?.map((bin, i) => (
-            <span key={`legend-label-${i}`}>{bin?.toLocaleString("en")}</span>
+            <span key={`legend-label-${i}`}>{formatLegendLabel(bin)}</span>
           ))}
         </div>
       </div>
