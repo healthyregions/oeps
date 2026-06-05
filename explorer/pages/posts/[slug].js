@@ -23,7 +23,7 @@ export const PostLayout = ({ post }) => {
     mounted ? <div className={styles.container}>
       <MainNav />
       <main className={styles.main} style={{ alignItems: 'start'}}>
-        <a href={'/posts'}>&larr; All Posts</a>
+        <a href={'/posts'}>&larr; All News</a>
         <h1>{post?.title} <small>({new Date(post?.date)?.toLocaleDateString()})</small></h1>
         <summary>Summary: {post?.summary}</summary>
         <br />
