@@ -93,6 +93,10 @@ content:
         label: Title
         type: string
         required: true
+      - name: description
+        label: Description
+        type: string
+        required: true
       - name: date
         label: Date
         type: date
@@ -104,7 +108,7 @@ content:
   # Editors use this to register metadata for the JSON array index
   # Adding to this collection is effectively "publishing" our post
   - name: posts_metadata
-    label: Posts Directory (JSON Index)
+    label: Published Posts (JSON Index)
     type: file
     path: explorer/content/posts.json
     format: json
