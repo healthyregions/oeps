@@ -1,9 +1,15 @@
 import Head from "next/head";
 import Link from 'next/link';
 import styles from "../styles/Home.module.css";
-import { Gutter } from "../components/layout/Gutter";
-import MainNav from "../components/layout/MainNav";
-import Footer from "../components/layout/Footer";
+import { Gutter } from "@components/layout/Gutter";
+import MainNav from "@components/layout/MainNav";
+import Footer from "@components/layout/Footer";
+import {Grid} from "@mui/material";
+import postsMetadata from '../content/posts.json';
+import {getPostBySlug} from "../lib/markdown";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+
 
 // const diagram = [
 //   {
@@ -12,7 +18,23 @@ import Footer from "../components/layout/Footer";
 //   }
 // ]
 
-export default function Home() {
+// This gets called on every request
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const posts = [];
+
+  for (const metadata of postsMetadata) {
+    const post = await getPostBySlug(metadata.slug);
+    posts.push(post);
+  }
+
+  // Pass data to the page via props
+  return { props: { posts } }
+}
+
+export default function Home({ posts }) {
+  console.log("Posts:", posts);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -34,14 +56,30 @@ export default function Home() {
           impacting opioid use and health outcomes across the United States.
           </p>
           <br></br>
-                    <hr></hr>
-          <p>
-          <em><strong>Updates:</strong></em> We recently identified some errors in 2025 travel time metrics. The corrected,
-          updated metrics will be released with Version 2.3, scheduled for the end January 2026. We apologize for any inconvenience caused. 
-          Please contact us with any questions; we are happy to share an updated file with individuals sooner, as needed. You are also invited 
-          to join the <b><a href="https://gccp.healthyregions.org/">GCCP</a></b>, where future updates to the OEPS platform will be shared 
-          via newsletter. <i>Posted: 12/23/2025</i> </p>
-          
+          <hr></hr>
+
+          <Grid container spacing={0}>
+            <Grid xs={8} item>
+              <em><strong>News:</strong></em>
+              {
+                posts?.sort((a, b) => a?.date?.localeCompare(b?.date))?.slice(0,3)?.map(p => <div key={'post-'+p.slug}>
+                  <h4>{p?.title}</h4>
+                  <ReactMarkdown plugins={[remarkGfm]}>{p?.content?.substring(0, 150)}</ReactMarkdown>
+                </div>)
+              }
+            </Grid>
+            <Grid xs={4} item>
+              <em><strong>Updates:</strong></em>
+              <div>
+                We recently identified some errors in 2025 travel time metrics. The corrected,
+                updated metrics will be released with Version 2.3, scheduled for the end January 2026. We apologize for any inconvenience caused.
+                Please contact us with any questions; we are happy to share an updated file with individuals sooner, as needed. You are also invited
+                to join the <b><a href="https://gccp.healthyregions.org/">GCCP</a></b>, where future updates to the OEPS platform will be shared
+                via newsletter. <i>Posted: 12/23/2025</i>
+              </div>
+            </Grid>
+          </Grid>
+
           </div>
         </div>
 
@@ -109,14 +147,14 @@ export default function Home() {
               <p></p>
           </div>
         </div>
- 
+
         <Gutter em={3} />
         <div className="row rules center-xs">
           <div className="col-xs-12 col-md-12 col-lg-10">
                            <hr></hr>
             <p className={styles.description}>
             The OEPS data ecosystem was designed to support research seeking to study environments impacting and impacted by opioid use and opioid use disorder (OUD),
-            inform public policy, and reduce harm in communities nationwide. It provides access 
+            inform public policy, and reduce harm in communities nationwide. It provides access
             to data at multiple spatial scales and time periods, already cleaned, merged, and documented. Read more <Link href="/about">about the project</Link>,
             our <Link href="/methods"> methodology</Link>, and <Link href="/insights">insights</Link>.
             </p>
@@ -134,3 +172,22 @@ export default function Home() {
     </div>
   );
 }
+
+// const postsPerPage = 10;
+// export const getStaticProps = async ({ params }) => {
+//   const page = parseInt(params?.page);
+//   const posts = listPostContent(page, postsPerPage);
+//   //const tags = listNewsTags();
+//
+//   return {
+//     props: {
+//       page,
+//       posts,
+//       tags: [],   // TODO: support tags?
+//       pagination: {
+//         current: page,
+//         pages: Math.ceil(countPosts() / postsPerPage),
+//       },
+//     },
+//   };
+// };
