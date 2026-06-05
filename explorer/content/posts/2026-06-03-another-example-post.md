@@ -1,5 +1,8 @@
 ---
 title: Another Example Post
+summary: This is a different summary for a different article. This text will
+  appear beneath the post on the homepage and offer a link to read the full
+  text.
 date: 2026-06-03
 ---
 # Dixit mea sed ardere
