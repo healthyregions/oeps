@@ -1,5 +1,7 @@
 ---
 title: An Example Post
+summary: This is an example summary for the article below. This is the text that
+  will appear on the homepage under the "News" section.
 date: 2026-05-28
 ---
 # Quo deus petisses

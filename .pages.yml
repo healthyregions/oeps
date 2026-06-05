@@ -93,9 +93,9 @@ content:
         label: Title
         type: string
         required: true
-      - name: description
-        label: Description
-        type: string
+      - name: summary
+        label: Summary
+        type: rich-text
         required: true
       - name: date
         label: Date
