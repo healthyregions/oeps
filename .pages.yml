@@ -95,7 +95,7 @@ content:
         required: true
       - name: summary
         label: Summary
-        type: string
+        type: rich-text
         required: true
       - name: date
         label: Date
