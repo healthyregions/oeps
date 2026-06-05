@@ -93,8 +93,8 @@ content:
         label: Title
         type: string
         required: true
-      - name: description
-        label: Description
+      - name: summary
+        label: Summary
         type: string
         required: true
       - name: date
