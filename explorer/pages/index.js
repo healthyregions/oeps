@@ -9,6 +9,7 @@ import postsMetadata from '../content/posts.json';
 import {getPostBySlug} from "../lib/markdown";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import {useEffect, useState} from "react";
 
 
 // const diagram = [
@@ -33,10 +34,15 @@ export async function getServerSideProps() {
 }
 
 export default function Home({ posts }) {
-  console.log("Posts:", posts);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    // Waits for server-side props above before first render
+    setMounted(true);
+  }, []);
 
   return (
-    <div className={styles.container}>
+    mounted ? <div className={styles.container}>
       <Head>
         <title>OEPS Explorer</title>
       </Head>
@@ -59,12 +65,20 @@ export default function Home({ posts }) {
           <hr></hr>
 
           <Grid container spacing={0}>
-            <Grid xs={8} item>
-              <em><strong>News:</strong></em>
+            <Grid xs={8} item alignItems={'center'}>
+              <em><strong>News:</strong></em> <a href={'/posts'}>See All</a>
               {
-                posts?.sort((a, b) => a?.date?.localeCompare(b?.date))?.slice(0,3)?.map(p => <div key={'post-'+p.slug}>
-                  <h4>{p?.title}</h4>
-                  <ReactMarkdown plugins={[remarkGfm]}>{p?.content?.substring(0, 150)}</ReactMarkdown>
+                posts?.sort((a, b) => b?.date?.localeCompare(a?.date))?.slice(0,3)?.map(p => <div key={'post-'+p.slug}>
+                  <Grid container spacing={0} alignItems={'end'}>
+                    <Grid xs={9} item><h4 style={{ marginBottom: 0 }}>{p?.title}</h4></Grid>
+                    <Grid xs={3} item>{new Date(p?.date)?.toLocaleDateString()}</Grid>
+                  </Grid>
+                  <Grid container spacing={0}>
+                    <Grid xs={12} item>
+                      <ReactMarkdown plugins={[remarkGfm]}>{p?.summary}</ReactMarkdown>
+                      <a href={`/posts/${p?.slug}`}>Read more &rarr;</a>
+                    </Grid>
+                  </Grid>
                 </div>)
               }
             </Grid>
@@ -89,7 +103,7 @@ export default function Home({ posts }) {
             <img src="images/data.svg" alt="Data Documentation and download." className={styles.threeUpIcon} />
             <h1 className={styles.subhead}>Data</h1>
             <p>
-              Access data by theme or spatial scale and explore our methdology.
+              Access data by theme or spatial scale and explore our methodology.
             </p>
             <p>
             <Link
@@ -169,7 +183,7 @@ export default function Home({ posts }) {
 
       </main>
       <Footer />
-    </div>
+    </div> : <></>
   );
 }
 

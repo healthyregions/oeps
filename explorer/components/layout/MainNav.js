@@ -42,6 +42,9 @@ export default function MainNav() {
             <MenuLink as="a" href="/insights">
               Insights
             </MenuLink>
+            <MenuLink as="a" href="/posts">
+              News
+            </MenuLink>
           </MenuList>
         </Menu>
       </nav>
