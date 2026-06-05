@@ -64,14 +64,14 @@ export default function Home({ posts }) {
           <br></br>
           <hr></hr>
 
-          <Grid container spacing={0}>
-            <Grid xs={8} item alignItems={'center'}>
+          <Grid container spacing={2}>
+            <Grid xs={12} md={8} item alignItems={'center'}>
               <em><strong>News:</strong></em> <a href={'/posts'}>See All</a>
               {
                 posts?.sort((a, b) => b?.date?.localeCompare(a?.date))?.slice(0,3)?.map(p => <div key={'post-'+p.slug}>
                   <Grid container spacing={0} alignItems={'end'}>
-                    <Grid xs={9} item><h4 style={{ marginBottom: 0 }}>{p?.title}</h4></Grid>
-                    <Grid xs={3} item>{new Date(p?.date)?.toLocaleDateString()}</Grid>
+                    <Grid xs={10} item><h4 style={{ marginBottom: 0 }}>{p?.title}</h4></Grid>
+                    <Grid xs={2} item>{new Date(p?.date)?.toLocaleDateString()}</Grid>
                   </Grid>
                   <Grid container spacing={0}>
                     <Grid xs={12} item>
@@ -82,7 +82,7 @@ export default function Home({ posts }) {
                 </div>)
               }
             </Grid>
-            <Grid xs={4} item>
+            <Grid xs={12} md={4} item>
               <em><strong>Updates:</strong></em>
               <div>
                 We recently identified some errors in 2025 travel time metrics. The corrected,
