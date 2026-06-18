@@ -88,7 +88,7 @@ div [data-reach-menu-item] {
 div [data-reach-listbox-list] {
   max-height: 75vh;
   overflow-y: scroll;
-  
+
 }
 
 
@@ -100,13 +100,13 @@ div [data-reach-listbox-list]::-webkit-scrollbar {
 div [data-reach-listbox-list]::-webkit-scrollbar-track {
   background: var(--light-gray);
 }
- 
+
 /* Handle */
 div [data-reach-listbox-list]::-webkit-scrollbar-thumb {
   background: url('/icons/grip.png'), var(--medium-gray);
   background-position: center center;
   background-repeat: no-repeat, no-repeat;
-  background-size: 50%, 100%; 
+  background-size: 50%, 100%;
   transition:125ms all;
 }
 
@@ -115,7 +115,7 @@ div [data-reach-listbox-list]::-webkit-scrollbar-thumb:hover {
   background: url('/icons/grip.png'), var(--selected-color-light);
   background-position: center center;
   background-repeat: no-repeat, no-repeat;
-  background-size: 50%, 100%; 
+  background-size: 50%, 100%;
 }
 
 div [data-reach-listbox-group-label] {
@@ -142,4 +142,9 @@ div [data-reach-listbox-option][data-current-selected]:hover {
 
 div [data-reach-menu-item][data-selected] {
   background: var(--selected-color);
+}
+
+
+.pt-1 {
+    padding-top: 1rem;
 }
