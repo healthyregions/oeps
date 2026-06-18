@@ -1,22 +1,15 @@
 # Command Line Reference
-## merge-csv
+## clean-explorer-bucket
 
-Merge data from an external CSV into the canonical CSVs in OEPS.
-
-    ARGUMENTS:
-
-    -s / --source: Path to CSV to be merged in.
-
-    -t / --table-source: name of table_source to merge this CSV into. Table source
-    must already exist in the registry.
-
-    --dry-run: load and stage the CSV but alter no files.
+Deletes all files from the S3 bucket which are not mentioned in the local
+    explorer/config/sources.json file. If no sources.json file exists, optionally
+    deletes all uploaded files (interactive only).
     
 
 ###### Usage
 
 ```
-Usage: merge-csv [OPTIONS]
+Usage: clean-explorer-bucket [OPTIONS]
 ```
 
 ###### Arguments
@@ -24,23 +17,12 @@ Usage: merge-csv [OPTIONS]
 
 ###### Options
 
-* `source`:
-    * Type: STRING
-    * Default: `Sentinel.UNSET`
-    * Usage: `--source
--s`
+* `non_interactive`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--non-interactive`
 
-    Path to CSV that will be merged into the data registry.
-
-
-
-* `table_source`:
-    * Type: STRING
-    * Default: `Sentinel.UNSET`
-    * Usage: `--table-source
--t`
-
-    Name of the table source this input will be joined to.
+    Fail immediately if explorer/config/sources.json is missing (for CI). Without this flag, a missing file triggers an interactive confirmation.
 
 
 
@@ -49,12 +31,107 @@ Usage: merge-csv [OPTIONS]
     * Default: `False`
     * Usage: `--dry-run`
 
-    Stage and prepare the import but alter no registry or data files.
+    Print S3 keys that would be deleted without deleting them.
+
+
+
+* `explorer_path`:
+    * Type: <click.types.Path object at 0x7fcedfb58450>
+    * Default: `../explorer`
+    * Usage: `--explorer-path`
+
+    Optional override for the root directory of the explorer.
+
+
+
+* `help`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--help`
+
+    Show this message and exit.
+
+
+
+###### CLI Help
+
+```
+Usage: clean-explorer-bucket [OPTIONS]
+
+  Deletes all files from the S3 bucket which are not mentioned in the local
+  explorer/config/sources.json file. If no sources.json file exists,
+  optionally deletes all uploaded files (interactive only).
+
+Options:
+  --non-interactive     Fail immediately if explorer/config/sources.json is
+                        missing (for CI). Without this flag, a missing file
+                        triggers an interactive confirmation.
+  --dry-run             Print S3 keys that would be deleted without deleting
+                        them.
+  --explorer-path PATH  Optional override for the root directory of the
+                        explorer.
+  --help                Show this message and exit.
+```
+
+
+## create-table-source
+
+Creates a new blank table source and generates an accompanying
+    CSV with only relevant keys.
+    
+
+###### Usage
+
+```
+Usage: create-table-source [OPTIONS]
+```
+
+###### Arguments
+
+
+###### Options
+
+* `name`:
+    * Type: STRING
+    * Default: `Sentinel.UNSET`
+    * Usage: `--name
+-n`
+
+    Name (id) of new table source. This will be used for the CSV file name.
+
+
+
+* `data_year`:
+    * Type: STRING
+    * Default: `Sentinel.UNSET`
+    * Usage: `--data-year
+-y`
+
+    Year of data that this table source will hold.
+
+
+
+* `geodata_source`:
+    * Type: STRING
+    * Default: `Sentinel.UNSET`
+    * Usage: `--geodata-source
+-g`
+
+    Name of the geodata source that this table source will be joined to.
+
+
+
+* `dry_run`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--dry-run`
+
+    Stage and prepare new table source but don't save.
 
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f3d30128950>
+    * Type: <click.types.Path object at 0x7f9c1a258c90>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -74,28 +151,124 @@ Usage: merge-csv [OPTIONS]
 ###### CLI Help
 
 ```
-Usage: merge-csv [OPTIONS]
+Usage: create-table-source [OPTIONS]
 
-  Merge data from an external CSV into the canonical CSVs in OEPS.
-
-  ARGUMENTS:
-
-  -s / --source: Path to CSV to be merged in.
-
-  -t / --table-source: name of table_source to merge this CSV into. Table
-  source must already exist in the registry.
-
-  --dry-run: load and stage the CSV but alter no files.
+  Creates a new blank table source and generates an accompanying CSV with only
+  relevant keys.
 
 Options:
-  -s, --source TEXT        Path to CSV that will be merged into the data
-                           registry.
-  -t, --table-source TEXT  Name of the table source this input will be joined
-                           to.
-  --dry-run                Stage and prepare the import but alter no registry
-                           or data files.
-  --registry-path PATH     Optional override for the registry directory.
-  --help                   Show this message and exit.
+  -n, --name TEXT            Name (id) of new table source. This will be used
+                             for the CSV file name.
+  -y, --data-year TEXT       Year of data that this table source will hold.
+  -g, --geodata-source TEXT  Name of the geodata source that this table source
+                             will be joined to.
+  --dry-run                  Stage and prepare new table source but don't
+                             save.
+  --registry-path PATH       Optional override for the registry directory.
+  --help                     Show this message and exit.
+```
+
+
+## build-explorer
+
+Builds all static data content needed to power the frontend OEPS Explorer application.
+    
+    Optionally only build data for the map, or for the /docs page (theme, construct, and source data)
+    
+    Use --upload-map-data to make a production update for the map. Without this argument, CSV data
+    files for the map will just be stored locally in .cache/explorer/csvs and the frontend running locally
+    will read them from there.
+    
+
+###### Usage
+
+```
+Usage: build-explorer [OPTIONS]
+```
+
+###### Arguments
+
+
+###### Options
+
+* `registry_path`:
+    * Type: <click.types.Path object at 0x7fcf9dd4d090>
+    * Default: `oeps/registry`
+    * Usage: `--registry-path`
+
+    Optional override for the registry directory.
+
+
+
+* `explorer_path`:
+    * Type: <click.types.Path object at 0x7fcf9dd4ccd0>
+    * Default: `../explorer`
+    * Usage: `--explorer-path`
+
+    Optional override for the root directory of the explorer.
+
+
+
+* `map_only`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--map-only`
+
+    Only build static content to drive the map.
+
+
+
+* `docs_only`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--docs-only`
+
+    Only build static content to drive the docs page.
+
+
+
+* `upload_map_data`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--upload-map-data`
+
+    Upload the output map data CSV files to S3 bucket.
+
+
+
+* `help`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--help`
+
+    Show this message and exit.
+
+
+
+###### CLI Help
+
+```
+Usage: build-explorer [OPTIONS]
+
+  Builds all static data content needed to power the frontend OEPS Explorer
+  application.
+
+  Optionally only build data for the map, or for the /docs page (theme,
+  construct, and source data)
+
+  Use --upload-map-data to make a production update for the map. Without this
+  argument, CSV data files for the map will just be stored locally in
+  .cache/explorer/csvs and the frontend running locally will read them from
+  there.
+
+Options:
+  --registry-path PATH  Optional override for the registry directory.
+  --explorer-path PATH  Optional override for the root directory of the
+                        explorer.
+  --map-only            Only build static content to drive the map.
+  --docs-only           Only build static content to drive the docs page.
+  --upload-map-data     Upload the output map data CSV files to S3 bucket.
+  --help                Show this message and exit.
 ```
 
 
@@ -160,6 +333,403 @@ Options:
 ```
 
 
+## build-docs
+
+Generates various documentation pages based on the data content.
+
+    Optionally only generate one of the types of docs.
+    
+
+###### Usage
+
+```
+Usage: build-docs [OPTIONS]
+```
+
+###### Arguments
+
+
+###### Options
+
+* `bq_only`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--bq-only`
+
+    Only build the BigQuery reference docs.
+
+
+
+* `cli_only`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--cli-only`
+
+    Only build the CLI docs.
+
+
+
+* `registry_only`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--registry-only`
+
+    Only build the registry summary docs.
+
+
+
+* `data_dictionaries_only`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--data-dictionaries-only`
+
+    Only build the data dictionaries.
+
+
+
+* `registry_path`:
+    * Type: <click.types.Path object at 0x7f8e89c65350>
+    * Default: `oeps/registry`
+    * Usage: `--registry-path`
+
+    Optional override for the registry directory.
+
+
+
+* `help`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--help`
+
+    Show this message and exit.
+
+
+
+###### CLI Help
+
+```
+Usage: build-docs [OPTIONS]
+
+  Generates various documentation pages based on the data content.
+
+  Optionally only generate one of the types of docs.
+
+Options:
+  --bq-only                 Only build the BigQuery reference docs.
+  --cli-only                Only build the CLI docs.
+  --registry-only           Only build the registry summary docs.
+  --data-dictionaries-only  Only build the data dictionaries.
+  --registry-path PATH      Optional override for the registry directory.
+  --help                    Show this message and exit.
+```
+
+
+## remove-variable
+
+Remove variable(s) from the registry and all of their columns from table source CSVs.
+    Optionally remove variables only from one table source.
+    
+    Can remove multiple variables at once by providing comma-separated names.
+    Example (single): flask remove-variable -n Var1 -t county-2025
+    Example (multiple): flask remove-variable -n "Var1,Var2,Var3" -t county-2025 --yes
+    
+
+###### Usage
+
+```
+Usage: remove-variable [OPTIONS]
+```
+
+###### Arguments
+
+
+###### Options
+
+* `name`:
+    * Type: STRING
+    * Default: `Sentinel.UNSET`
+    * Usage: `--name
+-n`
+
+    Name of variable(s) to remove. For multiple variables, use comma-separated values (e.g., -n 'Var1,Var2,Var3').
+
+
+
+* `table_source`:
+    * Type: STRING
+    * Default: `Sentinel.UNSET`
+    * Usage: `--table-source
+-t`
+
+    Name of single table source from which the variable will be removed.
+
+
+
+* `yes`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--yes
+-y`
+
+    Skip confirmation prompts. Useful for batch operations.
+
+
+
+* `dry_run`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--dry-run`
+
+    Show what would be removed without changing any files.
+
+
+
+* `registry_path`:
+    * Type: <click.types.Path object at 0x7f9e8c454e50>
+    * Default: `oeps/registry`
+    * Usage: `--registry-path`
+
+    Optional override for the registry directory.
+
+
+
+* `help`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--help`
+
+    Show this message and exit.
+
+
+
+###### CLI Help
+
+```
+Usage: remove-variable [OPTIONS]
+
+  Remove variable(s) from the registry and all of their columns from table
+  source CSVs. Optionally remove variables only from one table source.
+
+  Can remove multiple variables at once by providing comma-separated names.
+  Example (single): flask remove-variable -n Var1 -t county-2025 Example
+  (multiple): flask remove-variable -n "Var1,Var2,Var3" -t county-2025 --yes
+
+Options:
+  -n, --name TEXT          Name of variable(s) to remove. For multiple
+                           variables, use comma-separated values (e.g., -n
+                           'Var1,Var2,Var3').
+  -t, --table-source TEXT  Name of single table source from which the variable
+                           will be removed.
+  -y, --yes                Skip confirmation prompts. Useful for batch
+                           operations.
+  --dry-run                Show what would be removed without changing any
+                           files.
+  --registry-path PATH     Optional override for the registry directory.
+  --help                   Show this message and exit.
+```
+
+
+## merge-csv
+
+Merge data from an external CSV into the canonical CSVs in OEPS.
+
+    ARGUMENTS:
+
+    -s / --source: Path to CSV to be merged in.
+
+    -t / --table-source: name of table_source to merge this CSV into. Table source
+    must already exist in the registry.
+
+    --dry-run: load and stage the CSV but alter no files.
+    
+
+###### Usage
+
+```
+Usage: merge-csv [OPTIONS]
+```
+
+###### Arguments
+
+
+###### Options
+
+* `source`:
+    * Type: STRING
+    * Default: `Sentinel.UNSET`
+    * Usage: `--source
+-s`
+
+    Path to CSV that will be merged into the data registry.
+
+
+
+* `table_source`:
+    * Type: STRING
+    * Default: `Sentinel.UNSET`
+    * Usage: `--table-source
+-t`
+
+    Name of the table source this input will be joined to.
+
+
+
+* `dry_run`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--dry-run`
+
+    Stage and prepare the import but alter no registry or data files.
+
+
+
+* `registry_path`:
+    * Type: <click.types.Path object at 0x7f531cb50e90>
+    * Default: `oeps/registry`
+    * Usage: `--registry-path`
+
+    Optional override for the registry directory.
+
+
+
+* `help`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--help`
+
+    Show this message and exit.
+
+
+
+###### CLI Help
+
+```
+Usage: merge-csv [OPTIONS]
+
+  Merge data from an external CSV into the canonical CSVs in OEPS.
+
+  ARGUMENTS:
+
+  -s / --source: Path to CSV to be merged in.
+
+  -t / --table-source: name of table_source to merge this CSV into. Table
+  source must already exist in the registry.
+
+  --dry-run: load and stage the CSV but alter no files.
+
+Options:
+  -s, --source TEXT        Path to CSV that will be merged into the data
+                           registry.
+  -t, --table-source TEXT  Name of the table source this input will be joined
+                           to.
+  --dry-run                Stage and prepare the import but alter no registry
+                           or data files.
+  --registry-path PATH     Optional override for the registry directory.
+  --help                   Show this message and exit.
+```
+
+
+## bigquery-upload
+
+Load a data resource to a big query table. The data resource schema should provide all field
+    and table configuration information that is needed to create the table and load data into it.
+
+###### Usage
+
+```
+Usage: bigquery-upload [OPTIONS]
+```
+
+###### Arguments
+
+
+###### Options
+
+* `name`:
+    * Type: STRING
+    * Default: `Sentinel.UNSET`
+    * Usage: `--name
+-n`
+
+    Name can be provided to load a single Data Resource to Big Query (instead of everything in the registry)
+
+
+
+* `table_only`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--table-only`
+
+    Only create the new table, don't load data into it.
+
+
+
+* `dry_run`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--dry-run`
+
+    Mock operation and perform no create/delete actions.
+
+
+
+* `check_credentials`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--check-credentials`
+
+    Checks local credentials and exits.
+
+
+
+* `overwrite`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--overwrite`
+
+    Overwrite output content if it already exists.
+
+
+
+* `registry_path`:
+    * Type: <click.types.Path object at 0x7f7742074890>
+    * Default: `oeps/registry`
+    * Usage: `--registry-path`
+
+    Optional override for the registry directory.
+
+
+
+* `help`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--help`
+
+    Show this message and exit.
+
+
+
+###### CLI Help
+
+```
+Usage: bigquery-upload [OPTIONS]
+
+  Load a data resource to a big query table. The data resource schema should
+  provide all field and table configuration information that is needed to
+  create the table and load data into it.
+
+Options:
+  -n, --name TEXT       Name can be provided to load a single Data Resource to
+                        Big Query (instead of everything in the registry)
+  --table-only          Only create the new table, don't load data into it.
+  --dry-run             Mock operation and perform no create/delete actions.
+  --check-credentials   Checks local credentials and exits.
+  --overwrite           Overwrite output content if it already exists.
+  --registry-path PATH  Optional override for the registry directory.
+  --help                Show this message and exit.
+```
+
+
 ## create-data-package
 
 Generates a Frictionless data package from the Data Resource definitions in this backend. This export
@@ -184,7 +754,7 @@ Usage: create-data-package [OPTIONS]
 ###### Options
 
 * `destination`:
-    * Type: <click.types.Path object at 0x7f672e53c590>
+    * Type: <click.types.Path object at 0x7f656f850810>
     * Default: `.temp/data-packages`
     * Usage: `--destination
 -d`
@@ -285,7 +855,7 @@ Usage: create-data-package [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f672ee57110>
+    * Type: <click.types.Path object at 0x7f6570154d50>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -294,7 +864,7 @@ Usage: create-data-package [OPTIONS]
 
 
 * `data_dir_path`:
-    * Type: <click.types.Path object at 0x7f672ee57050>
+    * Type: <click.types.Path object at 0x7f6572fa41d0>
     * Default: `oeps/data`
     * Usage: `--data-dir-path`
 
@@ -386,7 +956,7 @@ Usage: validate-registry [OPTIONS]
 ###### Options
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f8ec2a3c7d0>
+    * Type: <click.types.Path object at 0x7f196a72aa50>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -485,7 +1055,7 @@ Usage: move-variable [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7fd876c34910>
+    * Type: <click.types.Path object at 0x7f53f6f48ed0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -520,576 +1090,6 @@ Options:
   --overwrite           Overwrite output content if it already exists.
   --registry-path PATH  Optional override for the registry directory.
   --help                Show this message and exit.
-```
-
-
-## create-table-source
-
-Creates a new blank table source and generates an accompanying
-    CSV with only relevant keys.
-    
-
-###### Usage
-
-```
-Usage: create-table-source [OPTIONS]
-```
-
-###### Arguments
-
-
-###### Options
-
-* `name`:
-    * Type: STRING
-    * Default: `Sentinel.UNSET`
-    * Usage: `--name
--n`
-
-    Name (id) of new table source. This will be used for the CSV file name.
-
-
-
-* `data_year`:
-    * Type: STRING
-    * Default: `Sentinel.UNSET`
-    * Usage: `--data-year
--y`
-
-    Year of data that this table source will hold.
-
-
-
-* `geodata_source`:
-    * Type: STRING
-    * Default: `Sentinel.UNSET`
-    * Usage: `--geodata-source
--g`
-
-    Name of the geodata source that this table source will be joined to.
-
-
-
-* `dry_run`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--dry-run`
-
-    Stage and prepare new table source but don't save.
-
-
-
-* `registry_path`:
-    * Type: <click.types.Path object at 0x7f4e85536a50>
-    * Default: `oeps/registry`
-    * Usage: `--registry-path`
-
-    Optional override for the registry directory.
-
-
-
-* `help`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--help`
-
-    Show this message and exit.
-
-
-
-###### CLI Help
-
-```
-Usage: create-table-source [OPTIONS]
-
-  Creates a new blank table source and generates an accompanying CSV with only
-  relevant keys.
-
-Options:
-  -n, --name TEXT            Name (id) of new table source. This will be used
-                             for the CSV file name.
-  -y, --data-year TEXT       Year of data that this table source will hold.
-  -g, --geodata-source TEXT  Name of the geodata source that this table source
-                             will be joined to.
-  --dry-run                  Stage and prepare new table source but don't
-                             save.
-  --registry-path PATH       Optional override for the registry directory.
-  --help                     Show this message and exit.
-```
-
-
-## clean-explorer-bucket
-
-Deletes all files from the S3 bucket which are not mentioned in the local
-    explorer/config/sources.json file. If no sources.json file exists, optionally
-    deletes all uploaded files (interactive only).
-    
-
-###### Usage
-
-```
-Usage: clean-explorer-bucket [OPTIONS]
-```
-
-###### Arguments
-
-
-###### Options
-
-* `non_interactive`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--non-interactive`
-
-    Fail immediately if explorer/config/sources.json is missing (for CI). Without this flag, a missing file triggers an interactive confirmation.
-
-
-
-* `dry_run`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--dry-run`
-
-    Print S3 keys that would be deleted without deleting them.
-
-
-
-* `explorer_path`:
-    * Type: <click.types.Path object at 0x7efd3ca38ad0>
-    * Default: `../explorer`
-    * Usage: `--explorer-path`
-
-    Optional override for the root directory of the explorer.
-
-
-
-* `help`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--help`
-
-    Show this message and exit.
-
-
-
-###### CLI Help
-
-```
-Usage: clean-explorer-bucket [OPTIONS]
-
-  Deletes all files from the S3 bucket which are not mentioned in the local
-  explorer/config/sources.json file. If no sources.json file exists,
-  optionally deletes all uploaded files (interactive only).
-
-Options:
-  --non-interactive     Fail immediately if explorer/config/sources.json is
-                        missing (for CI). Without this flag, a missing file
-                        triggers an interactive confirmation.
-  --dry-run             Print S3 keys that would be deleted without deleting
-                        them.
-  --explorer-path PATH  Optional override for the root directory of the
-                        explorer.
-  --help                Show this message and exit.
-```
-
-
-## build-explorer
-
-Builds all static data content needed to power the frontend OEPS Explorer application.
-    
-    Optionally only build data for the map, or for the /docs page (theme, construct, and source data)
-    
-    Use --upload-map-data to make a production update for the map. Without this argument, CSV data
-    files for the map will just be stored locally in .cache/explorer/csvs and the frontend running locally
-    will read them from there.
-    
-
-###### Usage
-
-```
-Usage: build-explorer [OPTIONS]
-```
-
-###### Arguments
-
-
-###### Options
-
-* `registry_path`:
-    * Type: <click.types.Path object at 0x7fa5dc47add0>
-    * Default: `oeps/registry`
-    * Usage: `--registry-path`
-
-    Optional override for the registry directory.
-
-
-
-* `explorer_path`:
-    * Type: <click.types.Path object at 0x7fa5df3f4050>
-    * Default: `../explorer`
-    * Usage: `--explorer-path`
-
-    Optional override for the root directory of the explorer.
-
-
-
-* `map_only`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--map-only`
-
-    Only build static content to drive the map.
-
-
-
-* `docs_only`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--docs-only`
-
-    Only build static content to drive the docs page.
-
-
-
-* `upload_map_data`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--upload-map-data`
-
-    Upload the output map data CSV files to S3 bucket.
-
-
-
-* `help`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--help`
-
-    Show this message and exit.
-
-
-
-###### CLI Help
-
-```
-Usage: build-explorer [OPTIONS]
-
-  Builds all static data content needed to power the frontend OEPS Explorer
-  application.
-
-  Optionally only build data for the map, or for the /docs page (theme,
-  construct, and source data)
-
-  Use --upload-map-data to make a production update for the map. Without this
-  argument, CSV data files for the map will just be stored locally in
-  .cache/explorer/csvs and the frontend running locally will read them from
-  there.
-
-Options:
-  --registry-path PATH  Optional override for the registry directory.
-  --explorer-path PATH  Optional override for the root directory of the
-                        explorer.
-  --map-only            Only build static content to drive the map.
-  --docs-only           Only build static content to drive the docs page.
-  --upload-map-data     Upload the output map data CSV files to S3 bucket.
-  --help                Show this message and exit.
-```
-
-
-## remove-variable
-
-Remove variable(s) from the registry and all of their columns from table source CSVs.
-    Optionally remove variables only from one table source.
-    
-    Can remove multiple variables at once by providing comma-separated names.
-    Example (single): flask remove-variable -n Var1 -t county-2025
-    Example (multiple): flask remove-variable -n "Var1,Var2,Var3" -t county-2025 --yes
-    
-
-###### Usage
-
-```
-Usage: remove-variable [OPTIONS]
-```
-
-###### Arguments
-
-
-###### Options
-
-* `name`:
-    * Type: STRING
-    * Default: `Sentinel.UNSET`
-    * Usage: `--name
--n`
-
-    Name of variable(s) to remove. For multiple variables, use comma-separated values (e.g., -n 'Var1,Var2,Var3').
-
-
-
-* `table_source`:
-    * Type: STRING
-    * Default: `Sentinel.UNSET`
-    * Usage: `--table-source
--t`
-
-    Name of single table source from which the variable will be removed.
-
-
-
-* `yes`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--yes
--y`
-
-    Skip confirmation prompts. Useful for batch operations.
-
-
-
-* `dry_run`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--dry-run`
-
-    Show what would be removed without changing any files.
-
-
-
-* `registry_path`:
-    * Type: <click.types.Path object at 0x7ffb12b5a910>
-    * Default: `oeps/registry`
-    * Usage: `--registry-path`
-
-    Optional override for the registry directory.
-
-
-
-* `help`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--help`
-
-    Show this message and exit.
-
-
-
-###### CLI Help
-
-```
-Usage: remove-variable [OPTIONS]
-
-  Remove variable(s) from the registry and all of their columns from table
-  source CSVs. Optionally remove variables only from one table source.
-
-  Can remove multiple variables at once by providing comma-separated names.
-  Example (single): flask remove-variable -n Var1 -t county-2025 Example
-  (multiple): flask remove-variable -n "Var1,Var2,Var3" -t county-2025 --yes
-
-Options:
-  -n, --name TEXT          Name of variable(s) to remove. For multiple
-                           variables, use comma-separated values (e.g., -n
-                           'Var1,Var2,Var3').
-  -t, --table-source TEXT  Name of single table source from which the variable
-                           will be removed.
-  -y, --yes                Skip confirmation prompts. Useful for batch
-                           operations.
-  --dry-run                Show what would be removed without changing any
-                           files.
-  --registry-path PATH     Optional override for the registry directory.
-  --help                   Show this message and exit.
-```
-
-
-## bigquery-upload
-
-Load a data resource to a big query table. The data resource schema should provide all field
-    and table configuration information that is needed to create the table and load data into it.
-
-###### Usage
-
-```
-Usage: bigquery-upload [OPTIONS]
-```
-
-###### Arguments
-
-
-###### Options
-
-* `name`:
-    * Type: STRING
-    * Default: `Sentinel.UNSET`
-    * Usage: `--name
--n`
-
-    Name can be provided to load a single Data Resource to Big Query (instead of everything in the registry)
-
-
-
-* `table_only`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--table-only`
-
-    Only create the new table, don't load data into it.
-
-
-
-* `dry_run`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--dry-run`
-
-    Mock operation and perform no create/delete actions.
-
-
-
-* `check_credentials`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--check-credentials`
-
-    Checks local credentials and exits.
-
-
-
-* `overwrite`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--overwrite`
-
-    Overwrite output content if it already exists.
-
-
-
-* `registry_path`:
-    * Type: <click.types.Path object at 0x7fc85ec6b010>
-    * Default: `oeps/registry`
-    * Usage: `--registry-path`
-
-    Optional override for the registry directory.
-
-
-
-* `help`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--help`
-
-    Show this message and exit.
-
-
-
-###### CLI Help
-
-```
-Usage: bigquery-upload [OPTIONS]
-
-  Load a data resource to a big query table. The data resource schema should
-  provide all field and table configuration information that is needed to
-  create the table and load data into it.
-
-Options:
-  -n, --name TEXT       Name can be provided to load a single Data Resource to
-                        Big Query (instead of everything in the registry)
-  --table-only          Only create the new table, don't load data into it.
-  --dry-run             Mock operation and perform no create/delete actions.
-  --check-credentials   Checks local credentials and exits.
-  --overwrite           Overwrite output content if it already exists.
-  --registry-path PATH  Optional override for the registry directory.
-  --help                Show this message and exit.
-```
-
-
-## build-docs
-
-Generates various documentation pages based on the data content.
-
-    Optionally only generate one of the types of docs.
-    
-
-###### Usage
-
-```
-Usage: build-docs [OPTIONS]
-```
-
-###### Arguments
-
-
-###### Options
-
-* `bq_only`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--bq-only`
-
-    Only build the BigQuery reference docs.
-
-
-
-* `cli_only`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--cli-only`
-
-    Only build the CLI docs.
-
-
-
-* `registry_only`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--registry-only`
-
-    Only build the registry summary docs.
-
-
-
-* `data_dictionaries_only`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--data-dictionaries-only`
-
-    Only build the data dictionaries.
-
-
-
-* `registry_path`:
-    * Type: <click.types.Path object at 0x7fecefd24690>
-    * Default: `oeps/registry`
-    * Usage: `--registry-path`
-
-    Optional override for the registry directory.
-
-
-
-* `help`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--help`
-
-    Show this message and exit.
-
-
-
-###### CLI Help
-
-```
-Usage: build-docs [OPTIONS]
-
-  Generates various documentation pages based on the data content.
-
-  Optionally only generate one of the types of docs.
-
-Options:
-  --bq-only                 Only build the BigQuery reference docs.
-  --cli-only                Only build the CLI docs.
-  --registry-only           Only build the registry summary docs.
-  --data-dictionaries-only  Only build the data dictionaries.
-  --registry-path PATH      Optional override for the registry directory.
-  --help                    Show this message and exit.
 ```
 
 !!! note

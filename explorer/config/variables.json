@@ -268,21 +268,14 @@
   {
     "variable": "% Population: Age 15-44",
     "numerator": "state-2018__county-2018__zcta-2018__tract-2018",
-    "nProperty": "Age15_44",
+    "nProperty": "Age15_44P",
     "theme": "Social",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Demographic_Characteristics.md"
   },
   {
     "variable": "% Population: Age 15-44",
     "numerator": "state-2018__county-2018__zcta-2018__tract-2018",
-    "nProperty": "Age15_44P",
-    "theme": "Social",
-    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Demographic_Characteristics.md"
-  },
-  {
-    "variable": "% Population: Age 65+",
-    "numerator": "state-2023__county-2023__zcta-2023__tract-2023",
-    "nProperty": "Ovr65",
+    "nProperty": "Age15_44",
     "theme": "Social",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Demographic_Characteristics.md"
   },
@@ -290,6 +283,13 @@
     "variable": "% Population: Age 65+",
     "numerator": "state-2023__county-2023__zcta-2023__tract-2023",
     "nProperty": "Ovr65P",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Demographic_Characteristics.md"
+  },
+  {
+    "variable": "% Population: Age 65+",
+    "numerator": "state-2023__county-2023__zcta-2023__tract-2023",
+    "nProperty": "Ovr65",
     "theme": "Social",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Demographic_Characteristics.md"
   },
@@ -1359,15 +1359,15 @@
   },
   {
     "variable": "Driving Time (min) to nearest Mental Health Provider",
-    "numerator": "zcta-2020__tract-2025",
-    "nProperty": "MhTmDr",
+    "numerator": "state-2025__county-2025",
+    "nProperty": "MhAvTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Mental_Health.md"
   },
   {
     "variable": "Driving Time (min) to nearest Mental Health Provider",
-    "numerator": "state-2025__county-2025",
-    "nProperty": "MhAvTmDr",
+    "numerator": "zcta-2020__tract-2025",
+    "nProperty": "MhTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Mental_Health.md"
   },
@@ -1415,15 +1415,15 @@
   },
   {
     "variable": "Driving Time (min) to nearest Substance Use Treatment program",
-    "numerator": "state-2025__county-2025",
-    "nProperty": "SutAvTmDr",
+    "numerator": "state-2020__county-2020",
+    "nProperty": "SutpAvTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_SubstanceUseTreatment.md"
   },
   {
     "variable": "Driving Time (min) to nearest Substance Use Treatment program",
-    "numerator": "state-2020__county-2020",
-    "nProperty": "SutpAvTmDr",
+    "numerator": "state-2025__county-2025",
+    "nProperty": "SutAvTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_SubstanceUseTreatment.md"
   },
