@@ -41,12 +41,6 @@ export default function Home({posts}) {
     setMounted(true);
   }, []);
 
-  const sections = [{
-    name: 'Data',
-
-  }];
-
-
   return (
     mounted ? <div className={styles.container}>
       <Head>
