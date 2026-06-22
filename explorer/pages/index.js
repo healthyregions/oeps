@@ -173,7 +173,7 @@ export default function Home({posts}) {
             <hr></hr>
             <br></br>
             <Grid container spacing={2} className={'row rules'}>
-              <Grid xs={12} md={8} item alignItems={'center'}>
+              <Grid xs={12} md={12} item alignItems={'center'}>
                 <em><strong>News:</strong></em> <a href={'/posts'}>See All</a>
                 {
                   posts?.sort((a, b) => b?.date?.localeCompare(a?.date))?.slice(0, 3)?.map(p => <div
@@ -190,19 +190,6 @@ export default function Home({posts}) {
                     </Grid>
                   </div>)
                 }
-              </Grid>
-              <Grid xs={12} md={4} item>
-                <em><strong>Updates:</strong></em>
-                <div>
-                  We recently identified some errors in 2025 travel time metrics. The corrected,
-                  updated metrics will be released with Version 2.3, scheduled for the end January 2026. We apologize
-                  for any inconvenience caused.
-                  Please contact us with any questions; we are happy to share an updated file with individuals sooner,
-                  as needed. You are also invited
-                  to join the <b><a href="https://gccp.healthyregions.org/">GCCP</a></b>, where future updates to the
-                  OEPS platform will be shared
-                  via newsletter. <i>Posted: 12/23/2025</i>
-                </div>
               </Grid>
             </Grid>
           </div>
