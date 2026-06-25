@@ -2,29 +2,47 @@ import { useState, useEffect } from 'react';
 import styles from "./MainMap.module.css";
 import { useSelector } from "react-redux";
 import { handleLoadData } from '../../_webgeoda/utils/data'
+import { formatMapNumeric } from '../../_webgeoda/utils/formatMapNumeric'
+
+const formatTooltipValue = (value) => {
+  if (value === null || value === undefined || value === '') return value
+  const n = Number(value)
+  return Number.isFinite(n) ? formatMapNumeric(n) : String(value)
+}
 
 const pad = (val, len, padChar) => `${val}`.length >= len ? ''+val : pad(`${padChar}${val}`, len, padChar)
 
+/** GEOID suffix from HEROP_ID (e.g. 860US61801 → 61801); passthrough for legacy numeric ids. */
+const geoidFromId = (id) => {
+  if (id === null || id === undefined || id === '') return null
+  const s = String(id)
+  if (/^\d{3}US/.test(s) && s.length > 5) return s.slice(5)
+  return s
+}
+
 const findTractStateAndCounty = ({countyDict, id}) => {
-  const idVal = pad(id, 11, 0)
-  const county = countyDict[+idVal.slice(0,5)]
+  const idVal = pad(geoidFromId(id), 11, 0)
+  const county = countyDict[+idVal.slice(0, 5)]
   return county?.Name + ' County, ' + county?.State
 }
 
 const TooltipTitle = ({currentData, stateDict, countyDict, id}) => {
   if (!currentData) return null
+  const geoid = geoidFromId(id)
   const text = currentData.includes('state')
-    ? stateDict[id]?.State
+    ? stateDict[geoid]?.State ?? stateDict[+geoid]?.State ?? stateDict[id]?.State
     : currentData.includes('count')
-    ? countyDict[id]?.Name + ', ' + countyDict[id]?.State
+    ? (countyDict[geoid]?.Name ?? countyDict[+geoid]?.Name ?? countyDict[id]?.Name) +
+      ', ' +
+      (countyDict[geoid]?.State ?? countyDict[+geoid]?.State ?? countyDict[id]?.State)
     : currentData.includes('Zip')
-    ? 'Zip Code: ' + pad(id, 5, 0)
+    ? 'Zip Code: ' + pad(geoid, 5, 0)
     : findTractStateAndCounty({countyDict, id})
-    
+
   if (text === undefined || (typeof text === 'string' && text.includes('undefined'))) return null
   return <span>
     <h2 className="tooltip-header">{text}</h2>
-    {currentData.includes('Tract') && <h4>Tract# {pad(id, 11, 0)}</h4>}
+    {currentData.includes('Tract') && <h4>Tract# {pad(geoid, 11, 0)}</h4>}
     </span>
 }
 
@@ -80,11 +98,7 @@ export default function MapTooltip() {
       {currentHoverTarget.data.map((entry, idx) => (
         <p key={`tooltip-${entry.value}-${idx}`}>
 
-          <b>{entry.name}</b>: {
-            +entry.value
-              ? Math.round(entry.value * 100) / 100
-              : entry.value
-            }
+          <b>{entry.name}</b>: {formatTooltipValue(entry.value)}
         </p>
       ))}
     </div>

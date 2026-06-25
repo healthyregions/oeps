@@ -1,0 +1,13 @@
+{
+  "name": "BupFca30",
+  "title": "Two-step floating catchment area (2SFCA) measure of access to Buprenorphine within a 30-minute drive",
+  "type": "number",
+  "example": "0.000001",
+  "description": "Two-step floating catchment area (2SFCA) measure of access to Buprenorphine within a 30-minute drive",
+  "longitudinal": false,
+  "analysis": false,
+  "metadata": "Access_MOUDs",
+  "table_sources": [
+    "tract-2025"
+  ]
+}

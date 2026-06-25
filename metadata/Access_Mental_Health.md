@@ -1,8 +1,8 @@
 **Meta Data Name**: Access to Mental Health Providers  
 **Date Added**: January 9, 2021  
-**Author**: Susan Paykin, Wataru Morioka, Mahjabin Kabir Adrita  
-**Date Last Modified**: February 11    
-**Last Modified By**: Mahjabin Kabir Adrita  
+**Author**: Mahjabin Kabir Adrita, Wataru Morioka, Susan Paykin  
+**Date Last Modified**: June 2, 2026  
+**Last Modified By**: Marynia Kolak
 
 ### Data Source(s) Description:  
 For the 2025 measure, Mental health provider data was sourced from [Substance Abuse and Mental Health Services Administration (SAMSHA)](https://www.samhsa.gov/) through its [Treatment Services Locator Tool](https://findtreatment.samhsa.gov/locator). 
@@ -40,33 +40,23 @@ We calculated travel-network access metrics for the driving travel time to the n
 
 This travel time analysis was conducted using a Python Computational notebook. 
 
-- The updated 2025 notebook will be released in late January 2026, due to some refinements and updates.
+Count of providers within a travel threshold (30 minutes and/or 60 minutes) were also calculated for three modes of transit: driving, walking, and biking at the tract level, with corresponding average of overlapping tracts at the ZCTA scale. This analysis was conducted in Python.
 
-![Screenshot](https://github.com/user-attachments/assets/49d241c3-9fe3-4c0a-b43c-1ee5ed836245)
-
-In addition, an **impedance factor** was introduced in 2025 access metrics. Raw travel time measures assume pristine conditions in a best-case-scenario. 
-An impedance approach instead multiples the estimated travel time by a factor, in this case a factor of 2, better approximating actual travel time due to traffic, congestion, etc.
+In addition, an impedance factor was introduced in 2025 access metrics. Raw travel time measures assume pristine conditions in a best-case-scenario. An impedance approach instead multiples the estimated travel time by a factor, in this case a factor of 2, better approximating actual travel time due to traffic, congestion, etc.
 
 #### County and State 
-County and state-level variables include the **count** of Census tracts and the **percent** of Census tracts located within a 30-minute driving threshold of a Mental Health Provider Facility, as well as the mean (average) driving time in minutes from Census tracts within the county or state. 
+County and state-level variables include the **count** of Census tracts and the **percent** of Census tracts located within a 30-minute driving threshold of a mental health provider, as well as the mean (average) driving time in minutes from Census tracts within the county or state. 
 
-![Screenshot](https://github.com/user-attachments/assets/a6cc665d-8244-4554-8410-04a6a418be9a)
+For 2025 measures, the tract to county and state conversions were completed using R code, and can be found in the corresponding [scripts](https://github.com/healthyregions/oeps/tree/main/scripts) folder on our Github Repository.
 
-For 2025 measures, the tract to county conversion was completed using R code, and can be found in
-[scripts](https://github.com/healthyregions/oeps/tree/main/scripts). 
+### Data Limitations:
+*Euclidean or straight-line distance is a simple approximation of access or travel from an origin centroid to the nearest hospital. It is not a precise calculation of real travel times or distances. The travel times are capped at a 90-minute threshold; any data exceeding this limit is left blank. 
 
-### Data Limitations:  
-- Euclidean distance or straight-line distance is a simple approximation of distance or travel time from an origin centroid to the nearest health center. It is not a precise calculation of real travel times or distances. 
-- The travel times are capped at a 90-minute threshold (or 180 minutes, with impedance factors) were not calculated, as they were deemed too far = no access. 
-- Missing data and Travel Times that were capped both show up as blank on the data table.  
-- Travel times are calculated from centroid to centroid of each census tract, meaning that the travel time will equal zero if there is a resource in the census tract. Thus, travel times must be considered approximations, and best suited for relative understanding of potential spatial access.
-- Unlike most U.S. states, Connecticut’s traditional eight counties do not function as active government units and have not been used for statistical reporting for decades. More recently, the U.S. Census Bureau replaced Connecticut’s eight historical counties with nine planning regions as official county-equivalent geographies, effective in Census Bureau products beginning in 2022, with full adoption in federal data products through 2023–2024. Because this redefinition means that county FIPS codes and county-level boundaries no longer align consistently with the definitions used elsewhere in our dataset (which assume stable county geographies), some Connecticut tracts may appear as empty or missing in the county summary table. This is especially true where tract identifiers include legacy county codes that no longer match current county-equivalent definitions.
-- Note that Alaska travel times may reflect the data technically, but due to the geographic complexities of the state, we don't recommend using measures for that state at this time. Tracts are very large, and while there may
-be a Mental Health Provider Facility location within the tract -- giving it a travel time of zero -- the physical size of the tract boundary makes that actual time a bit unreasonable. Please proceed with caution in frontier locations.
+### Comments/Notes:
+* All nearest distance calculations are in miles. 
+* All nearest travel time calculations are in minutes.
+* Not all metrics are available for U.S. places beyond the continental States; we recommend exploring the data on the OEPS Explorer web map to examine in more depth.
+* While a different time travel calculation was performed in 2025, the street network topology original source (Open Street Map) remained the same.
+* The zip code calculation was updated in 2025 to an average of overlapping tract-level metrics, rather than distance from the center of a zip code area. Because zip code areas are large, when compared to census tracts, distance from the geometric center was deemed less meaningful. A detailed notebook comparing the differences will be shared in 2026.
+* During the crosswalk process, we used the total ratio from the HUD USPS Crosswalk Files. This ratio represents the proportion of total addresses in a given geographic unit (e.g., census tract) that fall within a corresponding target geographic unit (e.g., ZIP Code). The total ratio was used as a weighting factor to allocate counts and measures proportionally between geographies.
 
-### Comments/Notes:  
-- All nearest distance calculations are in miles. 
-- All nearest travel time calculations are in minutes.
-- Null values correspond to the worst access, where travel takes over 90 minutes in optimal conditions, or 180 minutes in normal conditions.
-- Not all metrics are available for U.S. places beyond the continental States; we recommend exploring the data on the OEPS Explorer web map to examine in more depth.
-- While a different time travel calculation was performed in 2025, the street network topology original source (Open Street Map) remained the same.
