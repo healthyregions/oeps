@@ -10,6 +10,7 @@
   "table_sources": [
     "county-2019",
     "county-2025",
-    "state-2019"
+    "state-2019",
+    "state-2025"
   ]
 }
