@@ -5,6 +5,7 @@
 **Last Modified By**: Mahjabin Kabir Adrita
 
 ### Data Source(s) Description:
+This dataset covers access metrics for Medication for Opioid Use Disorder (MOUD) providers specifically. For access metrics covering all Substance Use Treatment (SUT) facility types, see the [Access SUT metadata file](https://github.com/healthyregions/oeps/blob/main/metadata/Access_SubstanceUseTreatment.md).
 
 #### Medications for Opioid Overuse Disorder (MOUDs)
 Data on providers prescribing Medications for Opioid Overuse Disorder (MOUDs) and their locations were sourced from the [U.S. Substance Abuse and Mental Health Services Administration (SAMHSA) Treatment Locator](https://findtreatment.samhsa.gov/locator) for all time periods. 
