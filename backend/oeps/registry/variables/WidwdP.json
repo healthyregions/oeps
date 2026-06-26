@@ -3,10 +3,10 @@
   "title": "% Population aged 15 and over who are widowed",
   "type": "number",
   "example": "60.0",
-  "description": "",
+  "description": "Percent male population aged 15 and over who are widowed",
+  "metadata": "Marital_Status",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Marital_Status",
   "table_sources": [
     "county-2020",
     "county-2023",

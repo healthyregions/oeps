@@ -8,6 +8,7 @@
   "analysis": false,
   "metadata": "Access_Hospitals",
   "table_sources": [
-    "tract-2025"
+    "tract-2025",
+    "zcta-2025"
   ]
 }

@@ -3,10 +3,10 @@
   "title": "Tracts with Hospitals (30-min drive) with impedance",
   "type": "number",
   "example": "23",
-  "description": "Number of tracts with Hospitals within a 30-min driving range, with impedance",
+  "description": "Number of tracts with hospitals within a 30-min driving range, with impedance",
+  "metadata": "Access_Hospitals",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Access_Hospitals",
   "table_sources": [
     "county-2025",
     "state-2025"
