@@ -4,7 +4,7 @@ import styles from "../styles/Home.module.css";
 import {Gutter} from "@components/layout/Gutter";
 import MainNav from "@components/layout/MainNav";
 import Footer from "@components/layout/Footer";
-import {Button, Grid} from "@mui/material";
+import {Grid} from "@mui/material";
 import postsMetadata from '../content/posts.json';
 import {getPostBySlug} from "../lib/markdown";
 import ReactMarkdown from "react-markdown";
@@ -163,8 +163,8 @@ export default function Home({posts}) {
         <ActionsSection>
           <Grid container spacing={2}>
             {
-              actionSections?.map(s =>
-                <Grid item xs={12} md={12} lg={4}>
+              actionSections?.map((s, indexOuter) =>
+                <Grid item xs={12} md={12} lg={4} key={`actions-section-${indexOuter}`}>
                   <ActionsHeader>
                     <ActionsHeaderIcon src={s?.img} alt={s?.imgAlt}></ActionsHeaderIcon>
                     <h1 className={styles.subhead}>{s?.label}</h1>
@@ -174,8 +174,8 @@ export default function Home({posts}) {
                   </ActionsSubheader>
                   <ActionsButtons>
                     {
-                      s?.actions?.map(a =>
-                        <ActionsButton className={styles.docsLink} href={a?.link}>{a?.label}</ActionsButton>
+                      s?.actions?.map((a, indexInner) =>
+                        <ActionsButton key={`actions-${indexInner}`} className={styles.docsLink} href={a?.link}>{a?.label}</ActionsButton>
                       )
                     }
                   </ActionsButtons>
