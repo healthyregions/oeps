@@ -14,11 +14,11 @@ ID: `oeps-391119.tabular.state-2010`
 
 Name|Data Type|Description
 -|-|-|-
-GradSclP|NUMERIC|
+GradSclP|NUMERIC|Percent population aged 25 years and over with a graduate or professional degree
 PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
 AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
-BachelorsP|NUMERIC|
-TwoRaceP|NUMERIC|
+BachelorsP|NUMERIC|Percent persons aged 25 years and over with a bachelor’s degree as their highest level of education
+TwoRaceP|NUMERIC|Percent of population identifying as two or more races
 UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
 TotUnits|INTEGER|Count of total occupied housing units
 PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
@@ -28,11 +28,11 @@ WhiteP|NUMERIC|Percentage of population with race identified as white alone
 AsianP|NUMERIC|Percentage of population with race identified as Asian alone
 OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
 HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
-Ovr16P|NUMERIC|
+Ovr16P|NUMERIC|Percent of population over age 16
 SRatio65|NUMERIC|
 MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
 TotVetPop|INTEGER|Total Veteran population
-FemP|NUMERIC|
+FemP|NUMERIC|Percent of population that is female
 SRatio|NUMERIC|
 AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
 AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
@@ -43,21 +43,21 @@ VetP|NUMERIC|Percent of population that are veterans
 PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone
 Ovr65P|NUMERIC|Percentage of population over 65
 Age15_44|INTEGER|Total population between age 15-44
-SomeCollegeP|NUMERIC|
+SomeCollegeP|NUMERIC|Percent population 25 years and over with some college, but no degree
 GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
-EduNoHsP|NUMERIC|
-Ovr18P|NUMERIC|
+EduNoHsP|NUMERIC|Percent population aged 25 years and over with less than a high school diploma
+Ovr18P|NUMERIC|Percent of population over age 18
 OtherE|NUMERIC|Count of Population with race not mentioned in any of the options above (includes two race or more races). Estimated count in non-decennial years.
 PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
-MaleP|NUMERIC|
-Ovr21P|NUMERIC|
+MaleP|NUMERIC|Percent of population that is male
+Ovr21P|NUMERIC|Percent of population over age 21
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 TwoRaceE|NUMERIC|Count persons identifying as two or more races. Estimated count in non-decennial years.
 TotPop|INTEGER|Total population
 VacantP|NUMERIC|Percentage of vacant housing units
 DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
-EduHsP|NUMERIC|
+EduHsP|NUMERIC|	Percent population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)
 WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
 
 ### state-2015
@@ -239,7 +239,7 @@ MhMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest mental h
 MetRm60|NUMERIC|Methadone access 60 minutes (RAAM)
 HospMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest hospital, in miles
 TlBupCntDr30|INTEGER|Total number of providers offering buprenorphine treatment via telemedicine/telehealth located within a 30-minute driving time threshold
-MhTmDr2|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip Mental Health Provider with impedance destination centroid, in minutes
+MhTmDr2|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip mental health provider destination centroid with impedance, in minutes
 MetCntDr60|NUMERIC|Count of methadone providers in 60 minute drive time threshold
 OtpMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles
 FqhcTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes
@@ -288,9 +288,9 @@ ID: `oeps-391119.tabular.state-2000`
 
 Name|Data Type|Description
 -|-|-|-
-GradSclP|NUMERIC|
+GradSclP|NUMERIC|Percent population aged 25 years and over with a graduate or professional degree
 AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
-BachelorsP|NUMERIC|
+BachelorsP|NUMERIC|Percent persons aged 25 years and over with a bachelor’s degree as their highest level of education
 UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
 TotUnits|INTEGER|Count of total occupied housing units
 PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
@@ -300,10 +300,10 @@ WhiteP|NUMERIC|Percentage of population with race identified as white alone
 AsianP|NUMERIC|Percentage of population with race identified as Asian alone
 OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
 HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
-Ovr16P|NUMERIC|
+Ovr16P|NUMERIC|Percent of population over age 16
 SRatio65|NUMERIC|
 ChildrenP|NUMERIC|Percentage of population under age 18
-FemP|NUMERIC|
+FemP|NUMERIC|Percent of population that is female
 SRatio|NUMERIC|
 AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
 AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
@@ -315,21 +315,21 @@ PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian 
 Ovr16|NUMERIC|
 Ovr65P|NUMERIC|Percentage of population over 65
 Age15_44|INTEGER|Total population between age 15-44
-SomeCollegeP|NUMERIC|
+SomeCollegeP|NUMERIC|Percent population 25 years and over with some college, but no degree
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 Ovr18|NUMERIC|
 Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
-EduNoHsP|NUMERIC|
-HisP|NUMERIC|
-Ovr18P|NUMERIC|
+EduNoHsP|NUMERIC|Percent population aged 25 years and over with less than a high school diploma
+HisP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
+Ovr18P|NUMERIC|Percent of population over age 18
 PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
-MaleP|NUMERIC|
-Ovr21P|NUMERIC|
+MaleP|NUMERIC|Percent of population that is male
+Ovr21P|NUMERIC|Percent of population over age 21
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 TotPop|INTEGER|Total population
 VacantP|NUMERIC|Percentage of vacant housing units
 DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
-EduHsP|NUMERIC|
+EduHsP|NUMERIC|	Percent population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)
 WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
 
 ### tract-1990
@@ -340,9 +340,9 @@ ID: `oeps-391119.tabular.tract-1990`
 
 Name|Data Type|Description
 -|-|-|-
-GradSclP|NUMERIC|
+GradSclP|NUMERIC|Percent population aged 25 years and over with a graduate or professional degree
 AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
-BachelorsP|NUMERIC|
+BachelorsP|NUMERIC|Percent persons aged 25 years and over with a bachelor’s degree as their highest level of education
 MetRm30|NUMERIC|Methadone access 30 minutes (RAAM)
 UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
 TotUnits|INTEGER|Count of total occupied housing units
@@ -353,11 +353,11 @@ WhiteP|NUMERIC|Percentage of population with race identified as white alone
 AsianP|NUMERIC|Percentage of population with race identified as Asian alone
 OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
 HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
-Ovr16P|NUMERIC|
+Ovr16P|NUMERIC|Percent of population over age 16
 SRatio65|NUMERIC|
 MetRm90|NUMERIC|Methadone access 90 minutes (RAAM)
 ChildrenP|NUMERIC|Percentage of population under age 18
-FemP|NUMERIC|
+FemP|NUMERIC|Percent of population that is female
 SRatio|NUMERIC|
 AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
 AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
@@ -370,20 +370,20 @@ MetRm60|NUMERIC|Methadone access 60 minutes (RAAM)
 Ovr16|NUMERIC|
 Ovr65P|NUMERIC|Percentage of population over 65
 Age15_44|INTEGER|Total population between age 15-44
-SomeCollegeP|NUMERIC|
+SomeCollegeP|NUMERIC|Percent population 25 years and over with some college, but no degree
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 Ovr18|NUMERIC|
 Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
-EduNoHsP|NUMERIC|
-HisP|NUMERIC|
-Ovr18P|NUMERIC|
+EduNoHsP|NUMERIC|Percent population aged 25 years and over with less than a high school diploma
+HisP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
+Ovr18P|NUMERIC|Percent of population over age 18
 PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
-MaleP|NUMERIC|
-Ovr21P|NUMERIC|
+MaleP|NUMERIC|Percent of population that is male
+Ovr21P|NUMERIC|Percent of population over age 21
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 TotPop|INTEGER|Total population
 VacantP|NUMERIC|Percentage of vacant housing units
-EduHsP|NUMERIC|
+EduHsP|NUMERIC|	Percent population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)
 WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
 
 ### state-2014
@@ -417,9 +417,9 @@ ID: `oeps-391119.tabular.county-2000`
 
 Name|Data Type|Description
 -|-|-|-
-GradSclP|NUMERIC|
+GradSclP|NUMERIC|Percent population aged 25 years and over with a graduate or professional degree
 AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
-BachelorsP|NUMERIC|
+BachelorsP|NUMERIC|Percent persons aged 25 years and over with a bachelor’s degree as their highest level of education
 UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
 TotUnits|INTEGER|Count of total occupied housing units
 PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
@@ -429,10 +429,10 @@ WhiteP|NUMERIC|Percentage of population with race identified as white alone
 AsianP|NUMERIC|Percentage of population with race identified as Asian alone
 OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
 HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
-Ovr16P|NUMERIC|
+Ovr16P|NUMERIC|Percent of population over age 16
 SRatio65|NUMERIC|
 ChildrenP|NUMERIC|Percentage of population under age 18
-FemP|NUMERIC|
+FemP|NUMERIC|Percent of population that is female
 SRatio|NUMERIC|
 AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
 AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
@@ -444,22 +444,22 @@ PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian 
 Ovr16|NUMERIC|
 Ovr65P|NUMERIC|Percentage of population over 65
 Age15_44|INTEGER|Total population between age 15-44
-SomeCollegeP|NUMERIC|
+SomeCollegeP|NUMERIC|Percent population 25 years and over with some college, but no degree
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 Ovr18|NUMERIC|
 Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
-EduNoHsP|NUMERIC|
-HisP|NUMERIC|
+EduNoHsP|NUMERIC|Percent population aged 25 years and over with less than a high school diploma
+HisP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
 DmyBlckBlt|BOOLEAN|Dummy variable for whether county is in the Southern Black Belt region
-Ovr18P|NUMERIC|
+Ovr18P|NUMERIC|Percent of population over age 18
 PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
-MaleP|NUMERIC|
-Ovr21P|NUMERIC|
+MaleP|NUMERIC|Percent of population that is male
+Ovr21P|NUMERIC|Percent of population over age 21
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 TotPop|INTEGER|Total population
 VacantP|NUMERIC|Percentage of vacant housing units
 DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
-EduHsP|NUMERIC|
+EduHsP|NUMERIC|	Percent population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)
 WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
 
 ### state-1990
@@ -470,9 +470,9 @@ ID: `oeps-391119.tabular.state-1990`
 
 Name|Data Type|Description
 -|-|-|-
-GradSclP|NUMERIC|
+GradSclP|NUMERIC|Percent population aged 25 years and over with a graduate or professional degree
 AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
-BachelorsP|NUMERIC|
+BachelorsP|NUMERIC|Percent persons aged 25 years and over with a bachelor’s degree as their highest level of education
 UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
 TotUnits|INTEGER|Count of total occupied housing units
 PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
@@ -482,10 +482,10 @@ WhiteP|NUMERIC|Percentage of population with race identified as white alone
 AsianP|NUMERIC|Percentage of population with race identified as Asian alone
 OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
 HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
-Ovr16P|NUMERIC|
+Ovr16P|NUMERIC|Percent of population over age 16
 SRatio65|NUMERIC|
 ChildrenP|NUMERIC|Percentage of population under age 18
-FemP|NUMERIC|
+FemP|NUMERIC|Percent of population that is female
 SRatio|NUMERIC|
 AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
 AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
@@ -497,20 +497,20 @@ PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian 
 Ovr16|NUMERIC|
 Ovr65P|NUMERIC|Percentage of population over 65
 Age15_44|INTEGER|Total population between age 15-44
-SomeCollegeP|NUMERIC|
+SomeCollegeP|NUMERIC|Percent population 25 years and over with some college, but no degree
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 Ovr18|NUMERIC|
 Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
-EduNoHsP|NUMERIC|
-HisP|NUMERIC|
-Ovr18P|NUMERIC|
+EduNoHsP|NUMERIC|Percent population aged 25 years and over with less than a high school diploma
+HisP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
+Ovr18P|NUMERIC|Percent of population over age 18
 PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
-MaleP|NUMERIC|
-Ovr21P|NUMERIC|
+MaleP|NUMERIC|Percent of population that is male
+Ovr21P|NUMERIC|Percent of population over age 21
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 TotPop|INTEGER|Total population
 VacantP|NUMERIC|Percentage of vacant housing units
-EduHsP|NUMERIC|
+EduHsP|NUMERIC|	Percent population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)
 WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
 
 ### state-2023
@@ -522,11 +522,11 @@ ID: `oeps-391119.tabular.state-2023`
 Name|Data Type|Description
 -|-|-|-
 AnyPdmphDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: Horowitz et al., 2018, Table 2, column 1.
-GradSclP|NUMERIC|
+GradSclP|NUMERIC|Percent population aged 25 years and over with a graduate or professional degree
 IsoBlk|NUMERIC|Isolation index for Black and non-Hispanic White residents
 AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
-BachelorsP|NUMERIC|
-TwoRaceP|NUMERIC|
+BachelorsP|NUMERIC|Percent persons aged 25 years and over with a bachelor’s degree as their highest level of education
+TwoRaceP|NUMERIC|Percent of population identifying as two or more races
 ExpnFedExp|INTEGER|Expansion Group - Federal Spending
 PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
 BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone
@@ -536,16 +536,16 @@ AsianP|NUMERIC|Percentage of population with race identified as Asian alone
 MdMarijLaw|BOOLEAN|Dummy variable, indicating whether state has a law authorizing adults to use medical marijuana (0=no, 1=yes)
 OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
 MsAcPdmpFr|NUMERIC|Fraction of year that state has any legislation requiring Prescribers to access PDMP before prescribing (as interpreted by PDAPS) enacted.
-Ovr16P|NUMERIC|
+Ovr16P|NUMERIC|Percent of population over age 16
 SRatio65|NUMERIC|
 EdBupPolP|NUMERIC|Proportion of Entire Data Period with State-Level Buprenorphine Policy in Effect
 ElcPdmpFr|NUMERIC|Fraction of year that state has an electronic PDMP system operating.
 TradFedExp|INTEGER|Traditional medicaid - federal spending
 OpPdmpFr|NUMERIC|Fraction of year that state has a “modern system” operational and users could access (as determined by Horowitz et al., 2018).
-FemP|NUMERIC|
+FemP|NUMERIC|Percent of population that is female
 ExpnSttExp|INTEGER|Expansion Group - State Spending
 SRatio|NUMERIC|
-EngProf|NUMERIC|
+EngProf|NUMERIC|Proportion of the population aged 18+ who speak a language other than English at home but are proficient in English
 AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
 AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
 TradSttExp|INTEGER|Traditional medicaid - state spending
@@ -564,7 +564,7 @@ Ovr16|NUMERIC|
 IsoAs|NUMERIC|Isolation index for Asian and non-Hispanic White residents
 Ovr65P|NUMERIC|Percentage of population over 65
 PerImpBupP|STRING|Periods of Implementation of State-Level Buprenorphine Policy (Associated Date Ranges)
-SomeCollegeP|NUMERIC|
+SomeCollegeP|NUMERIC|Percent population 25 years and over with some college, but no degree
 TtlJlPp|NUMERIC|Total Jail Population Count, ASJ/COJ Data
 IntrBlkWht|NUMERIC|Interaction index for Black and non-Hispanic White residents
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
@@ -572,23 +572,23 @@ DsmAs|NUMERIC|Dissimilarity index for Asian and non-Hispanic White residents
 Ovr18|NUMERIC|
 OpPdmpDt|DATE|Date when a “modern system” became operational and users could access. Source: Horowitz et al., 2018, Table 2, column 4. This definition includes specific caveats adopted by Horowitz et al., 2018, described further below in Notes.
 Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
-EduNoHsP|NUMERIC|
-HisP|NUMERIC|
+EduNoHsP|NUMERIC|Percent population aged 25 years and over with less than a high school diploma
+HisP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
 AnyPdmpFr|NUMERIC|Fraction of year that state has any prescription drug monitoring program operating.
 AnyPdmphFr|NUMERIC|Fraction of year that state has prescription drug monitoring program enabling legislation for any type of prescription drug monitoring program in effect ,including paper-based systems (as determined by Horowitz et al., 2018) enacted
-Ovr18P|NUMERIC|
+Ovr18P|NUMERIC|Percent of population over age 18
 OtherE|NUMERIC|Count of Population with race not mentioned in any of the options above (includes two race or more races). Estimated count in non-decennial years.
 BupPolP|NUMERIC|Proportion of Year with State-Level Buprenorphine Policy in Effect
 MedPolProp|NUMERIC|Proportion of given year for which Medicaid Expansion was implemented / in effect
-MaleP|NUMERIC|
-Ovr21P|NUMERIC|
+MaleP|NUMERIC|Percent of population that is male
+Ovr21P|NUMERIC|Percent of population over age 21
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 IsoHsp|NUMERIC|Isolation index for Hispanic and non-Hispanic White residents
 TwoRaceE|NUMERIC|Count persons identifying as two or more races. Estimated count in non-decennial years.
 TotPop|INTEGER|Total population
 DsmHsp|NUMERIC|Dissimilarity index for Hispanic and non-Hispanic White residents
 IntrHspWht|NUMERIC|Interaction index for Hispanic and non-Hispanic White residents
-EduHsP|NUMERIC|
+EduHsP|NUMERIC|	Percent population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)
 TtlJlPrtr|NUMERIC|Pretrial Jail Population Rate
 MedcdExp|INTEGER|Total medicaid spending
 WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
@@ -705,10 +705,10 @@ WhiteP|NUMERIC|Percentage of population with race identified as white alone
 AsianP|NUMERIC|Percentage of population with race identified as Asian alone
 OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
 HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
-Ovr16P|NUMERIC|
+Ovr16P|NUMERIC|Percent of population over age 16
 SRatio65|NUMERIC|
 ChildrenP|NUMERIC|Percentage of population under age 18
-FemP|NUMERIC|
+FemP|NUMERIC|Percent of population that is female
 SRatio|NUMERIC|
 AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
 AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
@@ -720,20 +720,20 @@ PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian 
 Ovr16|NUMERIC|
 Ovr65P|NUMERIC|Percentage of population over 65
 Age15_44|INTEGER|Total population between age 15-44
-SomeCollegeP|NUMERIC|
+SomeCollegeP|NUMERIC|Percent population 25 years and over with some college, but no degree
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 Ovr18|NUMERIC|
 Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
-EduNoHsP|NUMERIC|
-HisP|NUMERIC|
-Ovr18P|NUMERIC|
+EduNoHsP|NUMERIC|Percent population aged 25 years and over with less than a high school diploma
+HisP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
+Ovr18P|NUMERIC|Percent of population over age 18
 PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
-MaleP|NUMERIC|
-Ovr21P|NUMERIC|
+MaleP|NUMERIC|Percent of population that is male
+Ovr21P|NUMERIC|Percent of population over age 21
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 TotPop|INTEGER|Total population
 VacantP|NUMERIC|Percentage of vacant housing units
-EduHsP|NUMERIC|
+EduHsP|NUMERIC|	Percent population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)
 WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
 
 ### zcta-2023
@@ -745,14 +745,14 @@ ID: `oeps-391119.tabular.zcta-2023`
 Name|Data Type|Description
 -|-|-|-
 ZCTA5|STRING|Census Bureau designated zip code tabulation area, or the rough area that contains five digit zip codes.
-GradSclP|NUMERIC|
+GradSclP|NUMERIC|Percent population aged 25 years and over with a graduate or professional degree
 IsoBlk|NUMERIC|Isolation index for Black and non-Hispanic White residents
 PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
 AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
-BachelorsP|NUMERIC|
-TwoRaceP|NUMERIC|
-HsdTot|NUMERIC|
-SepartedP|NUMERIC|
+BachelorsP|NUMERIC|Percent persons aged 25 years and over with a bachelor’s degree as their highest level of education
+TwoRaceP|NUMERIC|Percent of population identifying as two or more races
+HsdTot|NUMERIC|Total households
+SepartedP|NUMERIC|Percent males aged 15 years and over who are separated from their spouse
 UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
 TotUnits|INTEGER|Count of total occupied housing units
 PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
@@ -761,22 +761,22 @@ WhiteP|NUMERIC|Percentage of population with race identified as white alone
 IntrAsWht|NUMERIC|Area (in square meters) of park or green space in a state).
 OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
 RentalP|NUMERIC|Percentage of occupied housing units that are rented
-Ovr16P|NUMERIC|
+Ovr16P|NUMERIC|Percent of population over age 16
 SRatio65|NUMERIC|
 EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.
 NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are not related
-CrowdHsng|NUMERIC|
+CrowdHsng|NUMERIC|Proportion of occupied housing units that are considered crowded (more than 1 person per room)
 MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
-MrrdP|NUMERIC|
+MrrdP|NUMERIC|Percent males aged 15 or older who are married and living with their spouse
 TotVetPop|INTEGER|Total Veteran population
-FemP|NUMERIC|
+FemP|NUMERIC|Percent of population that is female
 SRatio|NUMERIC|
-EngProf|NUMERIC|
-HhldFC|NUMERIC|
+EngProf|NUMERIC|Proportion of the population aged 18+ who speak a language other than English at home but are proficient in English
+HhldFC|NUMERIC|Percent female householder with no spouse/partner living with children under 18 years
 AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
 AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
 DsmBlk|NUMERIC|Dissimilarity index for Black and non-Hispanic White residents
-HhldFA|NUMERIC|
+HhldFA|NUMERIC|Percent female householder with no spouse/partner living alone
 RetailP|NUMERIC|Percentage of population employed in retail trade industry
 SRatio18|NUMERIC|
 Ovr21|NUMERIC|
@@ -787,51 +787,51 @@ Ovr16|NUMERIC|
 IsoAs|NUMERIC|Isolation index for Asian and non-Hispanic White residents
 Ovr65P|NUMERIC|Percentage of population over 65
 HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities
-SomeCollegeP|NUMERIC|
+SomeCollegeP|NUMERIC|Percent population 25 years and over with some college, but no degree
 MedAge|NUMERIC|
 GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)
-HsdTypM|NUMERIC|
-HhldFS|NUMERIC|
-HhldMA|NUMERIC|
+HsdTypM|NUMERIC|Percent married-couple household
+HhldFS|NUMERIC|Percent female householder 65 years and over living alone
+HhldMA|NUMERIC|Percent male householder with no spouse/partner living alone
 LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago
 IntrBlkWht|NUMERIC|Interaction index for Black and non-Hispanic White residents
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 DsmAs|NUMERIC|Dissimilarity index for Asian and non-Hispanic White residents
 Ovr18|NUMERIC|
-OccupantP|NUMERIC|
+OccupantP|NUMERIC|Percent occupied housing units
 NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family
 Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
-EduNoHsP|NUMERIC|
-FamSize|NUMERIC|
-HisP|NUMERIC|
+EduNoHsP|NUMERIC|Percent population aged 25 years and over with less than a high school diploma
+FamSize|NUMERIC|Average number of persons per family
+HisP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
 UnitDens|NUMERIC|Number of housing units per square mile of land area
-Ovr18P|NUMERIC|
+Ovr18P|NUMERIC|Percent of population over age 18
 TotPopHh|INTEGER|Total number of people in households
-HHSize|NUMERIC|
-NvMrrdP|NUMERIC|
+HHSize|NUMERIC|Average number of persons per household
+NvMrrdP|NUMERIC|Percent males aged 15 or older who never got married
 OtherE|NUMERIC|Count of Population with race not mentioned in any of the options above (includes two race or more races). Estimated count in non-decennial years.
-HhldMC|NUMERIC|
+HhldMC|NUMERIC|Percent married-couple household With children under 18 years
 PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
-MaleP|NUMERIC|
-HsdTypCo|NUMERIC|
-Ovr21P|NUMERIC|
+MaleP|NUMERIC|Percent of population that is male
+HsdTypCo|NUMERIC|Percent cohabiting couple household
+Ovr21P|NUMERIC|Percent of population over age 21
 IsoHsp|NUMERIC|Isolation index for Hispanic and non-Hispanic White residents
 TwoRaceE|NUMERIC|Count persons identifying as two or more races. Estimated count in non-decennial years.
-DivrcdP|NUMERIC|
+DivrcdP|NUMERIC|Percent males 15 years and over who are divorced
 TotPop|INTEGER|Total population
-Und18P|NUMERIC|
+Und18P|NUMERIC|Percent of population under age 18
 DsmHsp|NUMERIC|Dissimilarity index for Hispanic and non-Hispanic White residents
-Ovr62P|NUMERIC|
+Ovr62P|NUMERIC|Percent of population over age 62
 VacantP|NUMERIC|Percentage of vacant housing units
 MobileP|NUMERIC|Percentage of total housing units categorized as mobile housing structures
-HhldMS|NUMERIC|
-WidwdP|NUMERIC|
+HhldMS|NUMERIC|Percent male householder 65 years and over living alone
+WidwdP|NUMERIC|Percent male population aged 15 and over who are widowed
 IntrHspWht|NUMERIC|Interaction index for Hispanic and non-Hispanic White residents
 TotWrkE|INTEGER|Estimated count of working population
 DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
 HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries
-EduHsP|NUMERIC|
-HsdTypMC|NUMERIC|
+EduHsP|NUMERIC|	Percent population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)
+HsdTypMC|NUMERIC|Percent married-couple household With children under 18 years
 WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
 
 ### county-2018
@@ -842,11 +842,11 @@ ID: `oeps-391119.tabular.county-2018`
 
 Name|Data Type|Description
 -|-|-|-
-GradSclP|NUMERIC|
+GradSclP|NUMERIC|Percent population aged 25 years and over with a graduate or professional degree
 IsoBlk|NUMERIC|Isolation index for Black and non-Hispanic White residents
 PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
 AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
-BachelorsP|NUMERIC|
+BachelorsP|NUMERIC|Percent persons aged 25 years and over with a bachelor’s degree as their highest level of education
 UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
 ForDqTot|NUMERIC|Estimated number of mortgages to start foreclosure process or be seriously delinquent during the 2008 Recession
 TotUnits|INTEGER|Count of total occupied housing units
@@ -861,7 +861,7 @@ OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the op
 HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
 RentalP|NUMERIC|Percentage of occupied housing units that are rented
 SviTh2|NUMERIC|SVI Ranking, Theme 2: Household Composition & Disability
-Ovr16P|NUMERIC|
+Ovr16P|NUMERIC|Percent of population over age 16
 SRatio65|NUMERIC|
 ChildrenP|NUMERIC|Percentage of population under age 18
 EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.
@@ -869,10 +869,10 @@ NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are n
 SviTh1|NUMERIC|SVI Ranking, Theme 1: Socioeconomic
 MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
 TotVetPop|INTEGER|Total Veteran population
-FemP|NUMERIC|
+FemP|NUMERIC|Percent of population that is female
 RspRt|NUMERIC|Percent of units interviewed from total units intended for interview
 SRatio|NUMERIC|
-EngProf|NUMERIC|
+EngProf|NUMERIC|Proportion of the population aged 18+ who speak a language other than English at home but are proficient in English
 AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
 AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
 BlackE|NUMERIC|Count population with race identified as Black or African American alone. Estimated count in non-decennial years.
@@ -891,7 +891,7 @@ Ndvi|NUMERIC|Average normalized difference vegetation index, a measure of greenn
 HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities
 Age15_44|INTEGER|Total population between age 15-44
 RcaUrbanP|NUMERIC|Percent census tracts in the county classified as Urban using RUCA codes
-SomeCollegeP|NUMERIC|
+SomeCollegeP|NUMERIC|Percent population 25 years and over with some college, but no degree
 TotTracts|INTEGER|Total number of census tracts within the state.
 GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)
 AlcPerCap|NUMERIC|Number of alcohol outlets per capita
@@ -904,19 +904,19 @@ DsmAs|NUMERIC|Dissimilarity index for Asian and non-Hispanic White residents
 Ovr18|NUMERIC|
 NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family
 Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
-EduNoHsP|NUMERIC|
+EduNoHsP|NUMERIC|Percent population aged 25 years and over with less than a high school diploma
 OdMortRt|NUMERIC|Overdose mortality rate
 RcaRuralP|NUMERIC|Percent census tracts in the county classified as Rural using RUCA codes
 RcaSubrbP|NUMERIC|Percent census tracts in the county classified as Suburban using RUCA codes
 UnitDens|NUMERIC|Number of housing units per square mile of land area
-Ovr18P|NUMERIC|
+Ovr18P|NUMERIC|Percent of population over age 18
 EssnWrkE|INTEGER|Estimated count of population employed in essential occupations.
 SviTh4|NUMERIC|SVI Ranking, Theme 4: Housing Type & Transportation
 TotPopHh|INTEGER|Total number of people in households
 OtherE|NUMERIC|Count of Population with race not mentioned in any of the options above (includes two race or more races). Estimated count in non-decennial years.
 PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
-MaleP|NUMERIC|
-Ovr21P|NUMERIC|
+MaleP|NUMERIC|Percent of population that is male
+Ovr21P|NUMERIC|Percent of population over age 21
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 IsoHsp|NUMERIC|Isolation index for Hispanic and non-Hispanic White residents
 CenFlags|STRING|Three different values indicating three things:
@@ -934,7 +934,7 @@ IntrHspWht|NUMERIC|Interaction index for Hispanic and non-Hispanic White residen
 TotWrkE|INTEGER|Estimated count of working population
 DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
 HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries
-EduHsP|NUMERIC|
+EduHsP|NUMERIC|	Percent population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)
 WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
 
 ### state-2025
@@ -953,7 +953,7 @@ OtpTmDrP2|NUMERIC|Percent of tracts with Opioid Treatment Provider within a 30-m
 NaltCtTmDr2|NUMERIC|Number of tracts with Naltrexone Provider within a 30-min driving range, with Impedance factor
 MetAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest methadone provider
 HivAvTmDr2|NUMERIC|Average driving time (minutes) across tracts in state to nearest HIV Testing Facility, with impedance
-MhCtTmDr2|NUMERIC|Number of tracts with Mental Health Provider within a 30-min driving range, with impedance
+MhCtTmDr2|NUMERIC|Number of tracts with mental health provider within a 30-min driving range, with impedance
 HivCtTmDr2|NUMERIC|Number of tracts with HIV Testing Facility within a 30-min driving range, with impedance
 BupTmDrP2|NUMERIC|Percent of tracts with Buprenorphine Provider within a 30-min driving range, with Impedance factor
 HcvTmDrP|NUMERIC|Percent of tracts within 30-minute drive to an HCV testing provider
@@ -961,12 +961,12 @@ MhTmDrP|NUMERIC|Percent of tracts with a mental health provider within a 30-min 
 HcvTmDrP2|NUMERIC|Percent of tracts with HCV Testing Facility within a 30-mini driving range, with impedance
 FqhcCtTmDr|INTEGER|Number of tracts with Federally Qualified Health Center within a 30-min driving range
 TlBupTmBk|NUMERIC|Estimated biking time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services
-MhTmDrP2|NUMERIC|Percent of tracts with Mental Health Provider within a 30-mini driving range, with impedence
+MhTmDrP2|NUMERIC|Percent of tracts with a mental health provider within a 30-min driving range, with impedance
 RxAvTmDr2|NUMERIC|Average driving time (minutes) across tracts in state to nearest pharmacy with Impedance Factor
 FqhcTmDrP2|NUMERIC|Percent of tracts with Federally Qualified Health Center within a 30-min driving range, with Impedance factor
 RxCtTmDr|INTEGER|Number of tracts with pharmacy within a 30-min driving range
 HospCtTmDr|INTEGER|Number of tracts with hospital within a 30-min driving range
-MhAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest mental health provider.
+MhAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest mental health provider
 HcvCtTmDr|INTEGER|Number of tracts with an HCV testing provider within a 30-minute driving range
 SmokeP|NUMERIC|Percentage of Smoking Population
 RxTmDrP|NUMERIC|Percent of tracts with pharmacy within a 30-min driving range
@@ -975,16 +975,16 @@ SutTmDrP|NUMERIC|Percent of tracts with Substance Use Treatment program within a
 FqhcTmDrP|NUMERIC|Percent of tracts with Federally Qualified Health Center within a 30-min driving range.
 HcvAvTmDr|NUMERIC|Mean driving time (minutes) from tracts to nearest HCV testing provider
 HospAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest hospital.
-MhAvTmDr2|NUMERIC|Average driving time (minutes) across tracts in state to nearest Mental Health Provider, with impedance
+MhAvTmDr2|NUMERIC|Average driving time (minutes) across tracts in state to nearest mental health provider, with impedance
 TotTracts|INTEGER|Total number of census tracts within the state.
 OtpCtTmDr2|NUMERIC|Number of tracts with Opioid Treatment Provider within a 30-min driving range, with Impedance factor
 MhCtTmDr|INTEGER|Number of tracts with a mental health provider within a 30-min driving range.
-HospTmDrP2|NUMERIC|Percent of tracts with hospital within a 30-mini driving range with Impedance Factor
+HospTmDrP2|NUMERIC|Percent of tracts with hospital within a 30-min driving range with impedance factor
 HivAvTmDr|NUMERIC|Mean driving time (minutes) from tracts to nearest HIV testing provider
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 HivTmDrP|NUMERIC|Percent of tracts within 30-minute drive to an HIV testing provider
 HivCtTmDr|INTEGER|Number of tracts with an HIV testing provider within a 30-minute driving range
-HospTmDrP|NUMERIC|Percent of tracts with hospital within a 30-mini driving range
+HospTmDrP|NUMERIC|Percent of tracts with hospital within a 30-min driving range
 BupCtTmDr2|NUMERIC|Number of tracts with Buprenorphine Provider within a 30-min driving range, with Impedance factor
 HcvAvTmDr2|NUMERIC|Average driving time (minutes) across tracts in state to nearest HCV Testing Facility, with impedance
 RxCtTmDr2|INTEGER|Number of tracts with pharmacy within a 30-min driving range with impedance factor
@@ -1008,7 +1008,7 @@ BupAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to near
 HivTmDrP2|NUMERIC|Percent of tracts with HIV Testing Facility within a 30-mini driving range, with impedance
 SutAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest Substance Use Treatment program.
 NaltTmDrP2|NUMERIC|Percent of tracts with Naltrexone Provider within a 30-min driving range, with Impedance factor
-HospCtTmDr2|NUMERIC|Number of tracts with Hospitals within a 30-min driving range, with impedance
+HospCtTmDr2|NUMERIC|Number of tracts with hospitals within a 30-min driving range, with impedance
 OtpCtTmDr|INTEGER|Number of tracts within 30-min of opioid treatment program driving range
 
 ### zcta-2022
@@ -1051,9 +1051,9 @@ ID: `oeps-391119.tabular.county-1990`
 
 Name|Data Type|Description
 -|-|-|-
-GradSclP|NUMERIC|
+GradSclP|NUMERIC|Percent population aged 25 years and over with a graduate or professional degree
 AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
-BachelorsP|NUMERIC|
+BachelorsP|NUMERIC|Percent persons aged 25 years and over with a bachelor’s degree as their highest level of education
 UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
 TotUnits|INTEGER|Count of total occupied housing units
 PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
@@ -1063,10 +1063,10 @@ WhiteP|NUMERIC|Percentage of population with race identified as white alone
 AsianP|NUMERIC|Percentage of population with race identified as Asian alone
 OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
 HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
-Ovr16P|NUMERIC|
+Ovr16P|NUMERIC|Percent of population over age 16
 SRatio65|NUMERIC|
 ChildrenP|NUMERIC|Percentage of population under age 18
-FemP|NUMERIC|
+FemP|NUMERIC|Percent of population that is female
 SRatio|NUMERIC|
 AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
 AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
@@ -1078,20 +1078,20 @@ PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian 
 Ovr16|NUMERIC|
 Ovr65P|NUMERIC|Percentage of population over 65
 Age15_44|INTEGER|Total population between age 15-44
-SomeCollegeP|NUMERIC|
+SomeCollegeP|NUMERIC|Percent population 25 years and over with some college, but no degree
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 Ovr18|NUMERIC|
 Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
-EduNoHsP|NUMERIC|
-HisP|NUMERIC|
-Ovr18P|NUMERIC|
+EduNoHsP|NUMERIC|Percent population aged 25 years and over with less than a high school diploma
+HisP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
+Ovr18P|NUMERIC|Percent of population over age 18
 PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
-MaleP|NUMERIC|
-Ovr21P|NUMERIC|
+MaleP|NUMERIC|Percent of population that is male
+Ovr21P|NUMERIC|Percent of population over age 21
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 TotPop|INTEGER|Total population
 VacantP|NUMERIC|Percentage of vacant housing units
-EduHsP|NUMERIC|
+EduHsP|NUMERIC|	Percent population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)
 WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
 
 ### state-2016
@@ -1127,14 +1127,14 @@ Name|Data Type|Description
 -|-|-|-
 NalxPrStDt|DATE|Date (MY) Naloxone law allowing distribution through a standing or protocol order effective
 AnyPdmphDt|DATE|Date when PDMP enabling legislation was first enacted for any type of PDMP in effect (including paper-based systems). Source: Horowitz et al., 2018, Table 2, column 1.
-GradSclP|NUMERIC|
+GradSclP|NUMERIC|Percent population aged 25 years and over with a graduate or professional degree
 IsoBlk|NUMERIC|Isolation index for Black and non-Hispanic White residents
 NalxPrStFr|NUMERIC|Fraction of year state has an effective Naloxone law allowing distribution through a standing or protocol order
 PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
 AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
-BachelorsP|NUMERIC|
+BachelorsP|NUMERIC|Percent persons aged 25 years and over with a bachelor’s degree as their highest level of education
 NhPiHcvD|NUMERIC|
-TwoRaceP|NUMERIC|
+TwoRaceP|NUMERIC|Percent of population identifying as two or more races
 AnyNalxDt|DATE|Date (MY) any type of Naloxone law effective
 ExpnFedExp|INTEGER|Expansion Group - Federal Spending
 UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
@@ -1155,7 +1155,7 @@ RentalP|NUMERIC|Percentage of occupied housing units that are rented
 MsAcPdmpFr|NUMERIC|Fraction of year that state has any legislation requiring Prescribers to access PDMP before prescribing (as interpreted by PDAPS) enacted.
 AnyNalxFr|NUMERIC|Fraction of year any type of Naloxone law is effective
 WhtHcvD|NUMERIC|
-Ovr16P|NUMERIC|
+Ovr16P|NUMERIC|Percent of population over age 16
 SRatio65|NUMERIC|
 ChildrenP|NUMERIC|Percentage of population under age 18
 MulHcvD|NUMERIC|
@@ -1168,10 +1168,10 @@ AsHcvD|NUMERIC|
 MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
 OpPdmpFr|NUMERIC|Fraction of year that state has a “modern system” operational and users could access (as determined by Horowitz et al., 2018).
 TotVetPop|INTEGER|Total Veteran population
-FemP|NUMERIC|
+FemP|NUMERIC|Percent of population that is female
 ExpnSttExp|INTEGER|Expansion Group - State Spending
 SRatio|NUMERIC|
-EngProf|NUMERIC|
+EngProf|NUMERIC|Proportion of the population aged 18+ who speak a language other than English at home but are proficient in English
 AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
 AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
 TradSttExp|INTEGER|Traditional medicaid - state spending
@@ -1195,7 +1195,7 @@ Ovr65P|NUMERIC|Percentage of population over 65
 Ndvi|NUMERIC|Average normalized difference vegetation index, a measure of greenness used to determine the amount of vegetation in an area, value from all pixel values in each Census tract
 HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities
 Age15_44|INTEGER|Total population between age 15-44
-SomeCollegeP|NUMERIC|
+SomeCollegeP|NUMERIC|Percent population 25 years and over with some college, but no degree
 TotTracts|INTEGER|Total number of census tracts within the state.
 GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)
 FlHcvD|INTEGER|Hepatitis C deaths among women
@@ -1213,22 +1213,22 @@ AmInHcvD|INTEGER|Hepatitis C deaths among American Indian populations
 NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family
 OpPdmpDt|DATE|Date when a “modern system” became operational and users could access. Source: Horowitz et al., 2018, Table 2, column 4. This definition includes specific caveats adopted by Horowitz et al., 2018, described further below in Notes.
 Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
-EduNoHsP|NUMERIC|
+EduNoHsP|NUMERIC|Percent population aged 25 years and over with less than a high school diploma
 OdMortRt|NUMERIC|Overdose mortality rate
-HisP|NUMERIC|
+HisP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
 A50_74HcvD|INTEGER|Hepatitis C deaths among populations between 50 and 74 years of age
 AnyPdmpFr|NUMERIC|Fraction of year that state has any prescription drug monitoring program operating.
 AnyPdmphFr|NUMERIC|Fraction of year that state has prescription drug monitoring program enabling legislation for any type of prescription drug monitoring program in effect ,including paper-based systems (as determined by Horowitz et al., 2018) enacted
 UnitDens|NUMERIC|Number of housing units per square mile of land area
-Ovr18P|NUMERIC|
+Ovr18P|NUMERIC|Percent of population over age 18
 EssnWrkE|INTEGER|Estimated count of population employed in essential occupations.
 TotPopHh|INTEGER|Total number of people in households
 OtherE|NUMERIC|Count of Population with race not mentioned in any of the options above (includes two race or more races). Estimated count in non-decennial years.
 HcvD|INTEGER|Total Hepatitis C deaths
 MedPolProp|NUMERIC|Proportion of given year for which Medicaid Expansion was implemented / in effect
 PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
-MaleP|NUMERIC|
-Ovr21P|NUMERIC|
+MaleP|NUMERIC|Percent of population that is male
+Ovr21P|NUMERIC|Percent of population over age 21
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 IsoHsp|NUMERIC|Isolation index for Hispanic and non-Hispanic White residents
 TwoRaceE|NUMERIC|Count persons identifying as two or more races. Estimated count in non-decennial years.
@@ -1241,7 +1241,7 @@ IntrHspWht|NUMERIC|Interaction index for Hispanic and non-Hispanic White residen
 TotWrkE|INTEGER|Estimated count of working population
 DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
 HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries
-EduHsP|NUMERIC|
+EduHsP|NUMERIC|	Percent population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)
 MedcdExp|INTEGER|Total medicaid spending
 WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
 BlkHcvD|INTEGER|Hepatitis C deaths among Black population
@@ -1259,7 +1259,7 @@ NaltTmBk|NUMERIC|Biking time (minutes) to nearest naltrexone provider
 FqhcAvTmDr2|NUMERIC|Average driving time (minutes) across tracts in state to nearest Federally Qualified Health Center, with Impedance factor
 TlBupTmDr|NUMERIC|Estimated driving time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services
 HivAvTmDr2|NUMERIC|Average driving time (minutes) across tracts in state to nearest HIV Testing Facility, with impedance
-MhCtTmDr2|NUMERIC|Number of tracts with Mental Health Provider within a 30-min driving range, with impedance
+MhCtTmDr2|NUMERIC|Number of tracts with mental health provider within a 30-min driving range, with impedance
 HivCtTmDr2|NUMERIC|Number of tracts with HIV Testing Facility within a 30-min driving range, with impedance
 NaltTmWk|NUMERIC|Walking time (minutes) to nearest naltrexone provider
 BupTmWk|NUMERIC|Walking time (minutes) to nearest buprenorphine provider
@@ -1270,7 +1270,7 @@ HcvTmDrP2|NUMERIC|Percent of tracts with HCV Testing Facility within a 30-mini d
 FqhcCtTmDr|INTEGER|Number of tracts with Federally Qualified Health Center within a 30-min driving range
 TlBupTmBk|NUMERIC|Estimated biking time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services
 BupTmDr|NUMERIC|Driving time (minutes) to nearest buprenorphine provider
-MhTmDrP2|NUMERIC|Percent of tracts with Mental Health Provider within a 30-mini driving range, with impedence
+MhTmDrP2|NUMERIC|Percent of tracts with a mental health provider within a 30-min driving range, with impedance
 RxAvTmDr2|NUMERIC|Average driving time (minutes) across tracts in state to nearest pharmacy with Impedance Factor
 NaltTmDr|NUMERIC|Driving time (minutes) to nearest naltrexone provider
 FqhcTmDrP2|NUMERIC|Percent of tracts with Federally Qualified Health Center within a 30-min driving range, with Impedance factor
@@ -1278,7 +1278,7 @@ TlBupMinDis|NUMERIC|Euclidean distance (in miles) to the nearest provider offeri
 BupTmBk|NUMERIC|Biking time (minutes) to nearest buprenorphine provider
 RxCtTmDr|INTEGER|Number of tracts with pharmacy within a 30-min driving range
 HospCtTmDr|INTEGER|Number of tracts with hospital within a 30-min driving range
-MhAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest mental health provider.
+MhAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest mental health provider
 HcvCtTmDr|INTEGER|Number of tracts with an HCV testing provider within a 30-minute driving range
 SmokeP|NUMERIC|Percentage of Smoking Population
 MetTmDr|NUMERIC|Driving time (minutes) to nearest methadone provider
@@ -1288,15 +1288,15 @@ SutTmDrP|NUMERIC|Percent of tracts with Substance Use Treatment program within a
 FqhcTmDrP|NUMERIC|Percent of tracts with Federally Qualified Health Center within a 30-min driving range.
 HcvAvTmDr|NUMERIC|Mean driving time (minutes) from tracts to nearest HCV testing provider
 HospAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest hospital.
-MhAvTmDr2|NUMERIC|Average driving time (minutes) across tracts in state to nearest Mental Health Provider, with impedance
+MhAvTmDr2|NUMERIC|Average driving time (minutes) across tracts in state to nearest mental health provider, with impedance
 TotTracts|INTEGER|Total number of census tracts within the state.
 MhCtTmDr|INTEGER|Number of tracts with a mental health provider within a 30-min driving range.
-HospTmDrP2|NUMERIC|Percent of tracts with hospital within a 30-mini driving range with Impedance Factor
+HospTmDrP2|NUMERIC|Percent of tracts with hospital within a 30-min driving range with impedance factor
 HivAvTmDr|NUMERIC|Mean driving time (minutes) from tracts to nearest HIV testing provider
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 HivTmDrP|NUMERIC|Percent of tracts within 30-minute drive to an HIV testing provider
 HivCtTmDr|INTEGER|Number of tracts with an HIV testing provider within a 30-minute driving range
-HospTmDrP|NUMERIC|Percent of tracts with hospital within a 30-mini driving range
+HospTmDrP|NUMERIC|Percent of tracts with hospital within a 30-min driving range
 HcvAvTmDr2|NUMERIC|Average driving time (minutes) across tracts in state to nearest HCV Testing Facility, with impedance
 RxCtTmDr2|INTEGER|Number of tracts with pharmacy within a 30-min driving range with impedance factor
 RxTmDrP2|NUMERIC|Percent of tracts with pharmacy within a 30-min driving range with impedance factor
@@ -1313,7 +1313,7 @@ OtpAvTmDr|NUMERIC|Average driving time (minutes) across tracts to nearest opioid
 FqhcAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest Federally Qualified Health Center
 HivTmDrP2|NUMERIC|Percent of tracts with HIV Testing Facility within a 30-mini driving range, with impedance
 SutAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest Substance Use Treatment program.
-HospCtTmDr2|NUMERIC|Number of tracts with Hospitals within a 30-min driving range, with impedance
+HospCtTmDr2|NUMERIC|Number of tracts with hospitals within a 30-min driving range, with impedance
 OtpCtTmDr|INTEGER|Number of tracts within 30-min of opioid treatment program driving range
 
 ### county-2015
@@ -1337,13 +1337,13 @@ ID: `oeps-391119.tabular.tract-2023`
 
 Name|Data Type|Description
 -|-|-|-
-GradSclP|NUMERIC|
+GradSclP|NUMERIC|Percent population aged 25 years and over with a graduate or professional degree
 PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
 AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
-BachelorsP|NUMERIC|
-TwoRaceP|NUMERIC|
-HsdTot|NUMERIC|
-SepartedP|NUMERIC|
+BachelorsP|NUMERIC|Percent persons aged 25 years and over with a bachelor’s degree as their highest level of education
+TwoRaceP|NUMERIC|Percent of population identifying as two or more races
+HsdTot|NUMERIC|Total households
+SepartedP|NUMERIC|Percent males aged 15 years and over who are separated from their spouse
 UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
 TotUnits|INTEGER|Count of total occupied housing units
 PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
@@ -1351,22 +1351,22 @@ BlackP|NUMERIC|Percentage of population with race identified as Black or African
 WhiteP|NUMERIC|Percentage of population with race identified as white alone
 OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
 RentalP|NUMERIC|Percentage of occupied housing units that are rented
-Ovr16P|NUMERIC|
+Ovr16P|NUMERIC|Percent of population over age 16
 SRatio65|NUMERIC|
 EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.
 NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are not related
-CrowdHsng|NUMERIC|
+CrowdHsng|NUMERIC|Proportion of occupied housing units that are considered crowded (more than 1 person per room)
 MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
-MrrdP|NUMERIC|
+MrrdP|NUMERIC|Percent males aged 15 or older who are married and living with their spouse
 TotVetPop|INTEGER|Total Veteran population
-FemP|NUMERIC|
+FemP|NUMERIC|Percent of population that is female
 SRatio|NUMERIC|
-EngProf|NUMERIC|
-HhldFC|NUMERIC|
+EngProf|NUMERIC|Proportion of the population aged 18+ who speak a language other than English at home but are proficient in English
+HhldFC|NUMERIC|Percent female householder with no spouse/partner living with children under 18 years
 AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
 AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
 BlackE|NUMERIC|Count population with race identified as Black or African American alone. Estimated count in non-decennial years.
-HhldFA|NUMERIC|
+HhldFA|NUMERIC|Percent female householder with no spouse/partner living alone
 RetailP|NUMERIC|Percentage of population employed in retail trade industry
 SRatio18|NUMERIC|
 Ovr21|NUMERIC|
@@ -1378,62 +1378,85 @@ LibPerCap|NUMERIC|Libraries per capita by census tract
 Ovr65P|NUMERIC|Percentage of population over 65
 HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities
 MedHsgTen|STRING|Median time period occupant moved into housing unit by tract
-SomeCollegeP|NUMERIC|
+SomeCollegeP|NUMERIC|Percent population 25 years and over with some college, but no degree
 MedAge|NUMERIC|
 GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)
-HsdTypM|NUMERIC|
-HhldFS|NUMERIC|
-HhldMA|NUMERIC|
+HsdTypM|NUMERIC|Percent married-couple household
+HhldFS|NUMERIC|Percent female householder 65 years and over living alone
+HhldMA|NUMERIC|Percent male householder with no spouse/partner living alone
 LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago
 SocCapInd|NUMERIC|Composite index of LngTermP, LibPerCap, RlgPerCap
 RlgPerCap|NUMERIC|Religious institutions per capita by census tract
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 Ovr18|NUMERIC|
-OccupantP|NUMERIC|
+OccupantP|NUMERIC|Percent occupied housing units
 NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family
 Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
-EduNoHsP|NUMERIC|
-FamSize|NUMERIC|
-HisP|NUMERIC|
+EduNoHsP|NUMERIC|Percent population aged 25 years and over with less than a high school diploma
+FamSize|NUMERIC|Average number of persons per family
+HisP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
 UnitDens|NUMERIC|Number of housing units per square mile of land area
-Ovr18P|NUMERIC|
+Ovr18P|NUMERIC|Percent of population over age 18
 TotPopHh|INTEGER|Total number of people in households
-HHSize|NUMERIC|
-NvMrrdP|NUMERIC|
+HHSize|NUMERIC|Average number of persons per household
+NvMrrdP|NUMERIC|Percent males aged 15 or older who never got married
 OtherE|NUMERIC|Count of Population with race not mentioned in any of the options above (includes two race or more races). Estimated count in non-decennial years.
-HhldMC|NUMERIC|
+HhldMC|NUMERIC|Percent married-couple household With children under 18 years
 PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
-MaleP|NUMERIC|
-HsdTypCo|NUMERIC|
-Ovr21P|NUMERIC|
+MaleP|NUMERIC|Percent of population that is male
+HsdTypCo|NUMERIC|Percent cohabiting couple household
+Ovr21P|NUMERIC|Percent of population over age 21
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 TwoRaceE|NUMERIC|Count persons identifying as two or more races. Estimated count in non-decennial years.
-DivrcdP|NUMERIC|
+DivrcdP|NUMERIC|Percent males 15 years and over who are divorced
 TotPop|INTEGER|Total population
-Und18P|NUMERIC|
-Ovr62P|NUMERIC|
+Und18P|NUMERIC|Percent of population under age 18
+Ovr62P|NUMERIC|Percent of population over age 62
 VacantP|NUMERIC|Percentage of vacant housing units
 MobileP|NUMERIC|Percentage of total housing units categorized as mobile housing structures
-HhldMS|NUMERIC|
-WidwdP|NUMERIC|
+HhldMS|NUMERIC|Percent male householder 65 years and over living alone
+WidwdP|NUMERIC|Percent male population aged 15 and over who are widowed
 TotWrkE|INTEGER|Estimated count of working population
 DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
 HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries
-EduHsP|NUMERIC|
-HsdTypMC|NUMERIC|
+EduHsP|NUMERIC|	Percent population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)
+HsdTypMC|NUMERIC|Percent married-couple household With children under 18 years
 WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
 
 ### zcta-2025
 
 ID: `oeps-391119.tabular.zcta-2025`
 
-3 columns in this table.
+26 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
 ZCTA5|STRING|Census Bureau designated zip code tabulation area, or the rough area that contains five digit zip codes.
+RxTmDr2|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip pharmacy destination centroid with impedance factor, in minutes
+RxMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest pharmacy, in miles
+HcvCntDr|INTEGER|Number of HCV testing providers within a 30-minute drive
+HivTmDr|NUMERIC|Driving time from origin to nearest HIV testing provider (minutes)
+MhCntDr|INTEGER|Count of mental health providers within a 30-minute driving threshold
+HospCntDr|INTEGER|Count of hospitals within a 30-minute driving threshold
+RxCntDr|INTEGER|Count of pharmacies within a 30-minute driving threshold
+HospTmDr2|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip hospital destination centroid, in minutes with Impedance factor
 FqhcCntDr|INTEGER|Count of Federally Qualified Health Centers (FQHCs) within a 30-minute driving threshold
+FqhcTmDr2|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes, with Impedance factor
+MhMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest mental health provider, in miles
+HospMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest hospital, in miles
+MhTmDr2|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip mental health provider destination centroid with impedance, in minutes
+FqhcTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes
+FqhcMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest Federally Qualified Health Centers (FQHC), in miles
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+MhTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip mental health provider destination centroid, in minutes
+HcvTmDr2|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip HCV Testing Facility with impedance destination centroid, in minutes
+HcvMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest HCV testing provider (miles)
+HcvTmDr|NUMERIC|Driving time from origin to nearest HCV testing provider (minutes)
+HivMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest HIV testing provider (miles)
+HospTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip hospital destination centroid, in minutes
+HivCntDr|INTEGER|Number of HIV testing providers within a 30-minute drive
+RxTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip pharmacy destination centroid, in minutes
+HivTmDr2|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip HIV Testing Facility with impedance destination centroid, in minutes
 
 ### county-2023
 
@@ -1445,15 +1468,15 @@ Name|Data Type|Description
 -|-|-|-
 TtlJlAdmQ1|NUMERIC|Total Jail Admissions Count (Q1), ASJ/COJ Data
 TtlJlAdmQ3|NUMERIC|Total Jail Admissions Count (Q3), ASJ/COJ Data
-GradSclP|NUMERIC|
+GradSclP|NUMERIC|Percent population aged 25 years and over with a graduate or professional degree
 IsoBlk|NUMERIC|Isolation index for Black and non-Hispanic White residents
 PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
 AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
-BachelorsP|NUMERIC|
-TwoRaceP|NUMERIC|
-HsdTot|NUMERIC|
+BachelorsP|NUMERIC|Percent persons aged 25 years and over with a bachelor’s degree as their highest level of education
+TwoRaceP|NUMERIC|Percent of population identifying as two or more races
+HsdTot|NUMERIC|Total households
 TtlJlPrtrQ4|NUMERIC|Pretrial Jail Population Rate (Q4)
-SepartedP|NUMERIC|
+SepartedP|NUMERIC|Percent males aged 15 years and over who are separated from their spouse
 UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
 TotUnits|INTEGER|Count of total occupied housing units
 PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
@@ -1464,29 +1487,29 @@ IntrAsWht|NUMERIC|Area (in square meters) of park or green space in a state).
 OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
 TtlJlPprQ3|NUMERIC|Total Jail Population Rate (Q3), ASJ/COJ Data
 RentalP|NUMERIC|Percentage of occupied housing units that are rented
-Ovr16P|NUMERIC|
+Ovr16P|NUMERIC|Percent of population over age 16
 SRatio65|NUMERIC|
 TtlJlPprQ4|NUMERIC|Total Jail Population Rate (Q4), ASJ/COJ Data
 EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.
 NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are not related
-CrowdHsng|NUMERIC|
+CrowdHsng|NUMERIC|Proportion of occupied housing units that are considered crowded (more than 1 person per room)
 MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
-MrrdP|NUMERIC|
+MrrdP|NUMERIC|Percent males aged 15 or older who are married and living with their spouse
 TtlJlPrtrQ1|NUMERIC|Pretrial Jail Population Rate (Q1)
 TotVetPop|INTEGER|Total Veteran population
 TtlJlAdmrQ4|NUMERIC|Total Jail Admissions Rate (Q4), ASJ/COJ Data
-FemP|NUMERIC|
+FemP|NUMERIC|Percent of population that is female
 RspRt|NUMERIC|Percent of units interviewed from total units intended for interview
 SRatio|NUMERIC|
-EngProf|NUMERIC|
+EngProf|NUMERIC|Proportion of the population aged 18+ who speak a language other than English at home but are proficient in English
 TtlJlAdmQ2|NUMERIC|Total Jail Admissions Count (Q2), ASJ/COJ Data
-HhldFC|NUMERIC|
+HhldFC|NUMERIC|Percent female householder with no spouse/partner living with children under 18 years
 AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
 AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
 BlackE|NUMERIC|Count population with race identified as Black or African American alone. Estimated count in non-decennial years.
 DsmBlk|NUMERIC|Dissimilarity index for Black and non-Hispanic White residents
 TtlJlPpQ3|NUMERIC|Total Jail Population Count (Q3), ASJ/COJ Data
-HhldFA|NUMERIC|
+HhldFA|NUMERIC|Percent female householder with no spouse/partner living alone
 RetailP|NUMERIC|Percentage of population employed in retail trade industry
 TtlJlPpQ4|NUMERIC|Total Jail Population Count (Q4), ASJ/COJ Data
 SRatio18|NUMERIC|
@@ -1501,61 +1524,61 @@ TtlJlPrtQ3|NUMERIC|Pretrial Jail Population Count (Q3)
 Ovr65P|NUMERIC|Percentage of population over 65
 HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities
 TtlJlAdmrQ2|NUMERIC|Total Jail Admissions Rate (Q2), ASJ/COJ Data
-SomeCollegeP|NUMERIC|
+SomeCollegeP|NUMERIC|Percent population 25 years and over with some college, but no degree
 MedAge|NUMERIC|
 GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)
-HsdTypM|NUMERIC|
-HhldFS|NUMERIC|
+HsdTypM|NUMERIC|Percent married-couple household
+HhldFS|NUMERIC|Percent female householder 65 years and over living alone
 TtlJlAdmrQ3|NUMERIC|Total Jail Admissions Rate (Q3), ASJ/COJ Data
-HhldMA|NUMERIC|
+HhldMA|NUMERIC|Percent male householder with no spouse/partner living alone
 LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago
 IntrBlkWht|NUMERIC|Interaction index for Black and non-Hispanic White residents
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 DsmAs|NUMERIC|Dissimilarity index for Asian and non-Hispanic White residents
 Ovr18|NUMERIC|
-OccupantP|NUMERIC|
+OccupantP|NUMERIC|Percent occupied housing units
 NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family
 Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
-EduNoHsP|NUMERIC|
-FamSize|NUMERIC|
-HisP|NUMERIC|
+EduNoHsP|NUMERIC|Percent population aged 25 years and over with less than a high school diploma
+FamSize|NUMERIC|Average number of persons per family
+HisP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
 TtlJlPrtrQ3|NUMERIC|Pretrial Jail Population Rate (Q3)
 TtlJlPpQ1|NUMERIC|Total Jail Population Count (Q1), ASJ/COJ Data
 UnitDens|NUMERIC|Number of housing units per square mile of land area
 TtlJlPrtQ4|NUMERIC|Pretrial Jail Population Count (Q4)
-Ovr18P|NUMERIC|
+Ovr18P|NUMERIC|Percent of population over age 18
 TotPopHh|INTEGER|Total number of people in households
-HHSize|NUMERIC|
-NvMrrdP|NUMERIC|
+HHSize|NUMERIC|Average number of persons per household
+NvMrrdP|NUMERIC|Percent males aged 15 or older who never got married
 OtherE|NUMERIC|Count of Population with race not mentioned in any of the options above (includes two race or more races). Estimated count in non-decennial years.
-HhldMC|NUMERIC|
+HhldMC|NUMERIC|Percent married-couple household With children under 18 years
 PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
-MaleP|NUMERIC|
-HsdTypCo|NUMERIC|
-Ovr21P|NUMERIC|
+MaleP|NUMERIC|Percent of population that is male
+HsdTypCo|NUMERIC|Percent cohabiting couple household
+Ovr21P|NUMERIC|Percent of population over age 21
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 IsoHsp|NUMERIC|Isolation index for Hispanic and non-Hispanic White residents
 TwoRaceE|NUMERIC|Count persons identifying as two or more races. Estimated count in non-decennial years.
-DivrcdP|NUMERIC|
+DivrcdP|NUMERIC|Percent males 15 years and over who are divorced
 TotPop|INTEGER|Total population
-Und18P|NUMERIC|
+Und18P|NUMERIC|Percent of population under age 18
 DsmHsp|NUMERIC|Dissimilarity index for Hispanic and non-Hispanic White residents
 TtlJlPpQ2|NUMERIC|Total Jail Population Count (Q2), ASJ/COJ Data
 TtlJlPrtrQ2|NUMERIC|Pretrial Jail Population Rate (Q2)
-Ovr62P|NUMERIC|
+Ovr62P|NUMERIC|Percent of population over age 62
 VacantP|NUMERIC|Percentage of vacant housing units
 MobileP|NUMERIC|Percentage of total housing units categorized as mobile housing structures
-HhldMS|NUMERIC|
-WidwdP|NUMERIC|
+HhldMS|NUMERIC|Percent male householder 65 years and over living alone
+WidwdP|NUMERIC|Percent male population aged 15 and over who are widowed
 IntrHspWht|NUMERIC|Interaction index for Hispanic and non-Hispanic White residents
 TotWrkE|INTEGER|Estimated count of working population
 DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
 HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries
-EduHsP|NUMERIC|
+EduHsP|NUMERIC|	Percent population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)
 TtlJlPprQ2|NUMERIC|Total Jail Population Rate (Q2), ASJ/COJ Data
 TtlJlAdmQ4|NUMERIC|Total Jail Admissions Count (Q4), ASJ/COJ Data
 TtlJlAdmrQ1|NUMERIC|Total Jail Admissions Rate (Q1), ASJ/COJ Data
-HsdTypMC|NUMERIC|
+HsdTypMC|NUMERIC|Percent married-couple household With children under 18 years
 TtlJlPprQ1|NUMERIC|Total Jail Population Rate (Q1), ASJ/COJ Data
 WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
 
@@ -1630,14 +1653,14 @@ ID: `oeps-391119.tabular.county-2020`
 Name|Data Type|Description
 -|-|-|-
 MetCtTmBk|INTEGER|Number of tracts with methadone provider within a 30-min biking range
-GradSclP|NUMERIC|
+GradSclP|NUMERIC|Percent population aged 25 years and over with a graduate or professional degree
 OpRxRt|NUMERIC|Opioid prescription rate
 PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
 AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
-BachelorsP|NUMERIC|
-TwoRaceP|NUMERIC|
-HsdTot|NUMERIC|
-SepartedP|NUMERIC|
+BachelorsP|NUMERIC|Percent persons aged 25 years and over with a bachelor’s degree as their highest level of education
+TwoRaceP|NUMERIC|Percent of population identifying as two or more races
+HsdTot|NUMERIC|Total households
+SepartedP|NUMERIC|Percent males aged 15 years and over who are separated from their spouse
 UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
 TotUnits|INTEGER|Count of total occupied housing units
 BlackP|NUMERIC|Percentage of population with race identified as Black or African American alone
@@ -1650,7 +1673,7 @@ RentalP|NUMERIC|Percentage of occupied housing units that are rented
 NaltAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest naltrexone provider
 SviTh2|NUMERIC|SVI Ranking, Theme 2: Household Composition & Disability
 MhTmDrP|NUMERIC|Percent of tracts with a mental health provider within a 30-min driving range.
-Ovr16P|NUMERIC|
+Ovr16P|NUMERIC|Percent of population over age 16
 SRatio65|NUMERIC|
 FqhcCtTmDr|INTEGER|Number of tracts with Federally Qualified Health Center within a 30-min driving range
 BupTmDrP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min driving range
@@ -1658,24 +1681,24 @@ EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.
 NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are not related
 SviTh1|NUMERIC|SVI Ranking, Theme 1: Socioeconomic
 NaltTmBkP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min biking range
-CrowdHsng|NUMERIC|
+CrowdHsng|NUMERIC|Proportion of occupied housing units that are considered crowded (more than 1 person per room)
 MetTmWkP|NUMERIC|Percent of tracts with methadone provider within a 30-min walking range
 MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
-MrrdP|NUMERIC|
+MrrdP|NUMERIC|Percent males aged 15 or older who are married and living with their spouse
 TotVetPop|INTEGER|Total Veteran population
 BupCtTmWk|INTEGER|Number of tracts with buprenorphine provider within a 30-min walking range
 HospCtTmDr|INTEGER|Number of tracts with hospital within a 30-min driving range
-FemP|NUMERIC|
-MhAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest mental health provider.
+FemP|NUMERIC|Percent of population that is female
+MhAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest mental health provider
 MetAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest methadone provider
 SRatio|NUMERIC|
-EngProf|NUMERIC|
-HhldFC|NUMERIC|
+EngProf|NUMERIC|Proportion of the population aged 18+ who speak a language other than English at home but are proficient in English
+HhldFC|NUMERIC|Percent female householder with no spouse/partner living with children under 18 years
 NaltCtTmBk|INTEGER|Number of tracts with naltrexone provider within a 30-min biking range
 MetTmBkP|NUMERIC|Percent of tracts with methadone provider within a 30-min biking range
 SutpAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest Substance Use Treatment program.
 NaltCtTmDr|INTEGER|Number of tracts with naltrexone provider within a 30-min driving range
-HhldFA|NUMERIC|
+HhldFA|NUMERIC|Percent female householder with no spouse/partner living alone
 RetailP|NUMERIC|Percentage of population employed in retail trade industry
 SRatio18|NUMERIC|
 VetP|NUMERIC|Percent of population that are veterans
@@ -1685,66 +1708,66 @@ MetAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to near
 HospAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest hospital.
 Ovr65P|NUMERIC|Percentage of population over 65
 HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities
-SomeCollegeP|NUMERIC|
+SomeCollegeP|NUMERIC|Percent population 25 years and over with some college, but no degree
 MedAge|NUMERIC|
 GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)
-HsdTypM|NUMERIC|
-HhldFS|NUMERIC|
+HsdTypM|NUMERIC|Percent married-couple household
+HhldFS|NUMERIC|Percent female householder 65 years and over living alone
 MhCtTmDr|INTEGER|Number of tracts with a mental health provider within a 30-min driving range.
 MetCtTmWk|INTEGER|Number of tracts with methadone provider within a 30-min walking range
 MetTmDrP|NUMERIC|Percent of tracts with methadone provider within a 30-min driving range
 NaltTmWkP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min walking range
-HhldMA|NUMERIC|
+HhldMA|NUMERIC|Percent male householder with no spouse/partner living alone
 BupAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest buprenorphine provider
 LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago
 NaltTmDrP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min driving range
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
-OccupantP|NUMERIC|
+OccupantP|NUMERIC|Percent occupied housing units
 NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family
-HospTmDrP|NUMERIC|Percent of tracts with hospital within a 30-mini driving range
+HospTmDrP|NUMERIC|Percent of tracts with hospital within a 30-min driving range
 MetCtTmDr|INTEGER|Number of tracts with methadone provider within a 30-min driving range
-EduNoHsP|NUMERIC|
-FamSize|NUMERIC|
+EduNoHsP|NUMERIC|Percent population aged 25 years and over with less than a high school diploma
+FamSize|NUMERIC|Average number of persons per family
 OdMortRt|NUMERIC|Overdose mortality rate
-HisP|NUMERIC|
+HisP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
 BupCtTmDr|INTEGER|Number of tracts with buprenorphine provider within a 30-min driving range
 UnitDens|NUMERIC|Number of housing units per square mile of land area
-Ovr18P|NUMERIC|
+Ovr18P|NUMERIC|Percent of population over age 18
 SviTh4|NUMERIC|SVI Ranking, Theme 4: Housing Type & Transportation
 TotPopHh|INTEGER|Total number of people in households
 SutpTmDrP|NUMERIC|Percent of tracts with Substance Use Treatment program within a 30-minute driving range.
-HHSize|NUMERIC|
-NvMrrdP|NUMERIC|
-HhldMC|NUMERIC|
+HHSize|NUMERIC|Average number of persons per household
+NvMrrdP|NUMERIC|Percent males aged 15 or older who never got married
+HhldMC|NUMERIC|Percent married-couple household With children under 18 years
 NaltCtTmWk|INTEGER|Number of tracts with naltrexone provider within a 30-min walking range
 BupAvTmWk|NUMERIC|Average walking time (minutes) across tracts in county to nearest buprenorphine provider
 PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
-MaleP|NUMERIC|
+MaleP|NUMERIC|Percent of population that is male
 NaltAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest naltrexone provider
-HsdTypCo|NUMERIC|
+HsdTypCo|NUMERIC|Percent cohabiting couple household
 BupTmBkP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min biking range
 SutpCtTmDr|INTEGER|Number of tracts with Substance Use Treatment within a 30-min driving range.
-Ovr21P|NUMERIC|
+Ovr21P|NUMERIC|Percent of population over age 21
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 NaltAvTmBk|NUMERIC|Average biking time (minutes) across tracts in county to nearest naltrexone provider
-DivrcdP|NUMERIC|
+DivrcdP|NUMERIC|Percent males 15 years and over who are divorced
 TotPop|INTEGER|Total population
-Und18P|NUMERIC|
+Und18P|NUMERIC|Percent of population under age 18
 BupCtTmBk|INTEGER|Number of tracts with buprenorphine provider within a 30-min biking range
 SviSmryRnk|NUMERIC|Overall summary ranking
-Ovr62P|NUMERIC|
+Ovr62P|NUMERIC|Percent of population over age 62
 VacantP|NUMERIC|Percentage of vacant housing units
 MobileP|NUMERIC|Percentage of total housing units categorized as mobile housing structures
 FqhcAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest Federally Qualified Health Center
-HhldMS|NUMERIC|
+HhldMS|NUMERIC|Percent male householder 65 years and over living alone
 BupAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest buprenorphine provider
-WidwdP|NUMERIC|
+WidwdP|NUMERIC|Percent male population aged 15 and over who are widowed
 TotWrkE|INTEGER|Estimated count of working population
 DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
 HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries
-EduHsP|NUMERIC|
+EduHsP|NUMERIC|	Percent population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)
 BupTmWkP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min walking range
-HsdTypMC|NUMERIC|
+HsdTypMC|NUMERIC|Percent married-couple household With children under 18 years
 
 ### tract-2020
 
@@ -1757,17 +1780,17 @@ Name|Data Type|Description
 NaltCntBk60|INTEGER|Count of naltrexone providers in 60 minute biking time threshold
 MetCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold
 NaltTmBk|NUMERIC|Biking time (minutes) to nearest naltrexone provider
-GradSclP|NUMERIC|
+GradSclP|NUMERIC|Percent population aged 25 years and over with a graduate or professional degree
 SutTmDr|NUMERIC|Driving time (min) to nearest  Substance Use Treatment (SUT) facility
 PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
 AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
-BachelorsP|NUMERIC|
+BachelorsP|NUMERIC|Percent persons aged 25 years and over with a bachelor’s degree as their highest level of education
 MetCntBk60|INTEGER|Count of methadone providers in 60 minute biking time threshold
 MetRm30|NUMERIC|Methadone access 30 minutes (RAAM)
-TwoRaceP|NUMERIC|
+TwoRaceP|NUMERIC|Percent of population identifying as two or more races
 MetCntWk30|INTEGER|Count of methadone providers in 60 minute walking time threshold
-HsdTot|NUMERIC|
-SepartedP|NUMERIC|
+HsdTot|NUMERIC|Total households
+SepartedP|NUMERIC|Percent males aged 15 years and over who are separated from their spouse
 UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
 TotUnits|INTEGER|Count of total occupied housing units
 NaltCntDr30|INTEGER|Count of naltrexone providers in 30 minute drive time threshold
@@ -1783,7 +1806,7 @@ NaltTmWk|NUMERIC|Walking time (minutes) to nearest naltrexone provider
 BupTmWk|NUMERIC|Walking time (minutes) to nearest buprenorphine provider
 SviTh2|NUMERIC|SVI Ranking, Theme 2: Household Composition & Disability
 MetTmBk|NUMERIC|Biking time (minutes) to nearest methadone provider
-Ovr16P|NUMERIC|
+Ovr16P|NUMERIC|Percent of population over age 16
 SRatio65|NUMERIC|
 MetRm90|NUMERIC|Methadone access 90 minutes (RAAM)
 EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.
@@ -1793,25 +1816,25 @@ BupCntWk30|INTEGER|Count of buprenorphine providers in 30 minute walking time th
 MetCntBk30|INTEGER|Count of methadone providers in 30 minute biking time threshold
 SviTh1|NUMERIC|SVI Ranking, Theme 1: Socioeconomic
 BupTmDr|NUMERIC|Driving time (minutes) to nearest buprenorphine provider
-CrowdHsng|NUMERIC|
+CrowdHsng|NUMERIC|Proportion of occupied housing units that are considered crowded (more than 1 person per room)
 SutMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest SUT service location, in miles
 SutCntDr|INTEGER|Count of SUT services within a 30-minute driving threshold
 MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
-MrrdP|NUMERIC|
+MrrdP|NUMERIC|Percent males aged 15 or older who are married and living with their spouse
 NaltTmDr|NUMERIC|Driving time (minutes) to nearest naltrexone provider
 BupRm60|NUMERIC|Buprenorphine access 60 minutes (RAAM)
 TotVetPop|INTEGER|Total Veteran population
 BupCntWk60|INTEGER|Count of buprenorphine providers in 60 minute walking time threshold
 BupTmBk|NUMERIC|Biking time (minutes) to nearest buprenorphine provider
 BupCntBk60|INTEGER|Count of buprenorphine providers in 60 minute biking time threshold
-FemP|NUMERIC|
+FemP|NUMERIC|Percent of population that is female
 SRatio|NUMERIC|
-EngProf|NUMERIC|
-HhldFC|NUMERIC|
+EngProf|NUMERIC|Proportion of the population aged 18+ who speak a language other than English at home but are proficient in English
+HhldFC|NUMERIC|Percent female householder with no spouse/partner living with children under 18 years
 NaltMinDis|NUMERIC|Euclidean distance (miles) to nearest naltrexone/Vivitrol provider
 NaltRm90|NUMERIC|Naltrexone access 90 minutes (RAAM)
 BupCntDr30|INTEGER|Count of Buprenorphine providers in 30 minute drive time threshold
-HhldFA|NUMERIC|
+HhldFA|NUMERIC|Percent female householder with no spouse/partner living alone
 RetailP|NUMERIC|Percentage of population employed in retail trade industry
 SRatio18|NUMERIC|
 MetTmDr|NUMERIC|Driving time (minutes) to nearest methadone provider
@@ -1823,60 +1846,60 @@ MetRm60|NUMERIC|Methadone access 60 minutes (RAAM)
 HospMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest hospital, in miles
 Ovr65P|NUMERIC|Percentage of population over 65
 HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities
-SomeCollegeP|NUMERIC|
+SomeCollegeP|NUMERIC|Percent population 25 years and over with some college, but no degree
 MedAge|NUMERIC|
 GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)
-HsdTypM|NUMERIC|
-HhldFS|NUMERIC|
+HsdTypM|NUMERIC|Percent married-couple household
+HhldFS|NUMERIC|Percent female householder 65 years and over living alone
 FqhcTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes
-HhldMA|NUMERIC|
+HhldMA|NUMERIC|Percent male householder with no spouse/partner living alone
 FqhcMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest Federally Qualified Health Centers (FQHC), in miles
 LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
-OccupantP|NUMERIC|
+OccupantP|NUMERIC|Percent occupied housing units
 NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family
-EduNoHsP|NUMERIC|
-FamSize|NUMERIC|
-HisP|NUMERIC|
+EduNoHsP|NUMERIC|Percent population aged 25 years and over with less than a high school diploma
+FamSize|NUMERIC|Average number of persons per family
+HisP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
 NaltCntWk30|INTEGER|Count of naltrexone providers in 30 minute walking time threshold
 MoudMinDis|NUMERIC|Euclidean distance (miles) to nearest MOUD (all types)
 UnitDens|NUMERIC|Number of housing units per square mile of land area
-Ovr18P|NUMERIC|
+Ovr18P|NUMERIC|Percent of population over age 18
 SviTh4|NUMERIC|SVI Ranking, Theme 4: Housing Type & Transportation
 BupMinDis|NUMERIC|Euclidean distance (miles) to nearest buprenorphine provider
 TotPopHh|INTEGER|Total number of people in households
-HHSize|NUMERIC|
-NvMrrdP|NUMERIC|
-HhldMC|NUMERIC|
+HHSize|NUMERIC|Average number of persons per household
+NvMrrdP|NUMERIC|Percent males aged 15 or older who never got married
+HhldMC|NUMERIC|Percent married-couple household With children under 18 years
 MhTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip mental health provider destination centroid, in minutes
 BupCntBk30|INTEGER|Count of buprenorphine providers in 30 minute biking time threshold
 PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
-MaleP|NUMERIC|
+MaleP|NUMERIC|Percent of population that is male
 NaltCntWk60|INTEGER|Count of naltrexone providers in 60 minute walking time threshold
-HsdTypCo|NUMERIC|
-Ovr21P|NUMERIC|
+HsdTypCo|NUMERIC|Percent cohabiting couple household
+Ovr21P|NUMERIC|Percent of population over age 21
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 MetMinDis|NUMERIC|Euclidean distance (miles) to nearest methadone provider
 BupRm90|NUMERIC|Buprenorphine access 90 minutes (RAAM)
 MetTmWk|NUMERIC|Walking time (minutes) to nearest methadone provider
-DivrcdP|NUMERIC|
+DivrcdP|NUMERIC|Percent males 15 years and over who are divorced
 TotPop|INTEGER|Total population
-Und18P|NUMERIC|
+Und18P|NUMERIC|Percent of population under age 18
 SviSmryRnk|NUMERIC|Overall summary ranking
 NaltRm60|NUMERIC|Naltrexone access 60 minutes (RAAM)
-Ovr62P|NUMERIC|
+Ovr62P|NUMERIC|Percent of population over age 62
 VacantP|NUMERIC|Percentage of vacant housing units
 MobileP|NUMERIC|Percentage of total housing units categorized as mobile housing structures
-HhldMS|NUMERIC|
-WidwdP|NUMERIC|
+HhldMS|NUMERIC|Percent male householder 65 years and over living alone
+WidwdP|NUMERIC|Percent male population aged 15 and over who are widowed
 TotWrkE|INTEGER|Estimated count of working population
 HospTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip hospital destination centroid, in minutes
 DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
 HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries
-EduHsP|NUMERIC|
+EduHsP|NUMERIC|	Percent population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)
 NaltRm30|NUMERIC|Naltrexone access 30 minutes (RAAM)
 MetCntWk60|INTEGER|Count of methadone providers in 30 minute walking time threshold
-HsdTypMC|NUMERIC|
+HsdTypMC|NUMERIC|Percent married-couple household With children under 18 years
 
 ### state-1980
 
@@ -1896,10 +1919,10 @@ WhiteP|NUMERIC|Percentage of population with race identified as white alone
 AsianP|NUMERIC|Percentage of population with race identified as Asian alone
 OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
 HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
-Ovr16P|NUMERIC|
+Ovr16P|NUMERIC|Percent of population over age 16
 SRatio65|NUMERIC|
 ChildrenP|NUMERIC|Percentage of population under age 18
-FemP|NUMERIC|
+FemP|NUMERIC|Percent of population that is female
 SRatio|NUMERIC|
 AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
 AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
@@ -1911,20 +1934,20 @@ PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian 
 Ovr16|NUMERIC|
 Ovr65P|NUMERIC|Percentage of population over 65
 Age15_44|INTEGER|Total population between age 15-44
-SomeCollegeP|NUMERIC|
+SomeCollegeP|NUMERIC|Percent population 25 years and over with some college, but no degree
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 Ovr18|NUMERIC|
 Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
-EduNoHsP|NUMERIC|
-HisP|NUMERIC|
-Ovr18P|NUMERIC|
+EduNoHsP|NUMERIC|Percent population aged 25 years and over with less than a high school diploma
+HisP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
+Ovr18P|NUMERIC|Percent of population over age 18
 PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
-MaleP|NUMERIC|
-Ovr21P|NUMERIC|
+MaleP|NUMERIC|Percent of population that is male
+Ovr21P|NUMERIC|Percent of population over age 21
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 TotPop|INTEGER|Total population
 VacantP|NUMERIC|Percentage of vacant housing units
-EduHsP|NUMERIC|
+EduHsP|NUMERIC|	Percent population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)
 WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
 
 ### zcta-2021
@@ -1949,12 +1972,12 @@ ID: `oeps-391119.tabular.tract-2010`
 
 Name|Data Type|Description
 -|-|-|-
-GradSclP|NUMERIC|
+GradSclP|NUMERIC|Percent population aged 25 years and over with a graduate or professional degree
 PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
 AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
-BachelorsP|NUMERIC|
+BachelorsP|NUMERIC|Percent persons aged 25 years and over with a bachelor’s degree as their highest level of education
 MetRm30|NUMERIC|Methadone access 30 minutes (RAAM)
-TwoRaceP|NUMERIC|
+TwoRaceP|NUMERIC|Percent of population identifying as two or more races
 UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
 TotUnits|INTEGER|Count of total occupied housing units
 PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
@@ -1964,12 +1987,12 @@ WhiteP|NUMERIC|Percentage of population with race identified as white alone
 AsianP|NUMERIC|Percentage of population with race identified as Asian alone
 OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
 HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
-Ovr16P|NUMERIC|
+Ovr16P|NUMERIC|Percent of population over age 16
 SRatio65|NUMERIC|
 MetRm90|NUMERIC|Methadone access 90 minutes (RAAM)
 MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
 TotVetPop|INTEGER|Total Veteran population
-FemP|NUMERIC|
+FemP|NUMERIC|Percent of population that is female
 SRatio|NUMERIC|
 AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
 AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
@@ -1981,21 +2004,21 @@ PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian 
 MetRm60|NUMERIC|Methadone access 60 minutes (RAAM)
 Ovr65P|NUMERIC|Percentage of population over 65
 Age15_44|INTEGER|Total population between age 15-44
-SomeCollegeP|NUMERIC|
+SomeCollegeP|NUMERIC|Percent population 25 years and over with some college, but no degree
 GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
-EduNoHsP|NUMERIC|
-Ovr18P|NUMERIC|
+EduNoHsP|NUMERIC|Percent population aged 25 years and over with less than a high school diploma
+Ovr18P|NUMERIC|Percent of population over age 18
 OtherE|NUMERIC|Count of Population with race not mentioned in any of the options above (includes two race or more races). Estimated count in non-decennial years.
 PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
-MaleP|NUMERIC|
-Ovr21P|NUMERIC|
+MaleP|NUMERIC|Percent of population that is male
+Ovr21P|NUMERIC|Percent of population over age 21
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 TwoRaceE|NUMERIC|Count persons identifying as two or more races. Estimated count in non-decennial years.
 TotPop|INTEGER|Total population
 VacantP|NUMERIC|Percentage of vacant housing units
 DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
-EduHsP|NUMERIC|
+EduHsP|NUMERIC|	Percent population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)
 WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
 
 ### zcta-2018
@@ -2007,11 +2030,11 @@ ID: `oeps-391119.tabular.zcta-2018`
 Name|Data Type|Description
 -|-|-|-
 ZCTA5|STRING|Census Bureau designated zip code tabulation area, or the rough area that contains five digit zip codes.
-GradSclP|NUMERIC|
+GradSclP|NUMERIC|Percent population aged 25 years and over with a graduate or professional degree
 IsoBlk|NUMERIC|Isolation index for Black and non-Hispanic White residents
 PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
 AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
-BachelorsP|NUMERIC|
+BachelorsP|NUMERIC|Percent persons aged 25 years and over with a bachelor’s degree as their highest level of education
 UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
 TotUnits|INTEGER|Count of total occupied housing units
 PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
@@ -2025,7 +2048,7 @@ OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the op
 HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
 RentalP|NUMERIC|Percentage of occupied housing units that are rented
 SviTh2|NUMERIC|SVI Ranking, Theme 2: Household Composition & Disability
-Ovr16P|NUMERIC|
+Ovr16P|NUMERIC|Percent of population over age 16
 SRatio65|NUMERIC|
 ChildrenP|NUMERIC|Percentage of population under age 18
 EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.
@@ -2033,9 +2056,9 @@ NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are n
 SviTh1|NUMERIC|SVI Ranking, Theme 1: Socioeconomic
 MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
 TotVetPop|INTEGER|Total Veteran population
-FemP|NUMERIC|
+FemP|NUMERIC|Percent of population that is female
 SRatio|NUMERIC|
-EngProf|NUMERIC|
+EngProf|NUMERIC|Proportion of the population aged 18+ who speak a language other than English at home but are proficient in English
 AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
 AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
 BlackE|NUMERIC|Count population with race identified as Black or African American alone. Estimated count in non-decennial years.
@@ -2053,7 +2076,7 @@ Ovr65P|NUMERIC|Percentage of population over 65
 Ndvi|NUMERIC|Average normalized difference vegetation index, a measure of greenness used to determine the amount of vegetation in an area, value from all pixel values in each Census tract
 HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities
 Age15_44|INTEGER|Total population between age 15-44
-SomeCollegeP|NUMERIC|
+SomeCollegeP|NUMERIC|Percent population 25 years and over with some college, but no degree
 GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)
 AlcPerCap|NUMERIC|Number of alcohol outlets per capita
 LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago
@@ -2064,16 +2087,16 @@ DsmAs|NUMERIC|Dissimilarity index for Asian and non-Hispanic White residents
 Ovr18|NUMERIC|
 NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family
 Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
-EduNoHsP|NUMERIC|
+EduNoHsP|NUMERIC|Percent population aged 25 years and over with less than a high school diploma
 UnitDens|NUMERIC|Number of housing units per square mile of land area
-Ovr18P|NUMERIC|
+Ovr18P|NUMERIC|Percent of population over age 18
 EssnWrkE|INTEGER|Estimated count of population employed in essential occupations.
 SviTh4|NUMERIC|SVI Ranking, Theme 4: Housing Type & Transportation
 TotPopHh|INTEGER|Total number of people in households
 OtherE|NUMERIC|Count of Population with race not mentioned in any of the options above (includes two race or more races). Estimated count in non-decennial years.
 PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
-MaleP|NUMERIC|
-Ovr21P|NUMERIC|
+MaleP|NUMERIC|Percent of population that is male
+Ovr21P|NUMERIC|Percent of population over age 21
 IsoHsp|NUMERIC|Isolation index for Hispanic and non-Hispanic White residents
 TwoRaceE|NUMERIC|Count persons identifying as two or more races. Estimated count in non-decennial years.
 TotPop|INTEGER|Total population
@@ -2086,7 +2109,7 @@ IntrHspWht|NUMERIC|Interaction index for Hispanic and non-Hispanic White residen
 TotWrkE|INTEGER|Estimated count of working population
 DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
 HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries
-EduHsP|NUMERIC|
+EduHsP|NUMERIC|	Percent population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)
 WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
 
 ### zcta-2019
@@ -2217,7 +2240,7 @@ AsHcvD|NUMERIC|
 OpPdmpFr|NUMERIC|Fraction of year that state has a “modern system” operational and users could access (as determined by Horowitz et al., 2018).
 PctBupT|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min driving range
 HospCtTmDr|INTEGER|Number of tracts with hospital within a 30-min driving range
-MhAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest mental health provider.
+MhAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest mental health provider
 AvNaltTime|NUMERIC|Average driving time (minutes) across tracts in state to nearest naltrexone provider.
 GslArrDt|DATE|Date (DMY) that Good Samaritan Law providing protection from arrest for controlled substance possession laws is effective
 SutpAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest Substance Use Treatment program.
@@ -2238,7 +2261,7 @@ U50HcvD|INTEGER|Hepatitis C deaths in populations under 50 years of age
 MlHcvD|INTEGER|Hepatitis C deaths among men
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 AmInHcvD|INTEGER|Hepatitis C deaths among American Indian populations
-HospTmDrP|NUMERIC|Percent of tracts with hospital within a 30-mini driving range
+HospTmDrP|NUMERIC|Percent of tracts with hospital within a 30-min driving range
 OpPdmpDt|DATE|Date when a “modern system” became operational and users could access. Source: Horowitz et al., 2018, Table 2, column 4. This definition includes specific caveats adopted by Horowitz et al., 2018, described further below in Notes.
 OdMortRt|NUMERIC|Overdose mortality rate
 AvBupTime|NUMERIC|Average driving time (minutes) across tracts in state to nearest buprenorphine provider.
@@ -2409,10 +2432,10 @@ ID: `oeps-391119.tabular.tract-2018`
 
 Name|Data Type|Description
 -|-|-|-
-GradSclP|NUMERIC|
+GradSclP|NUMERIC|Percent population aged 25 years and over with a graduate or professional degree
 PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
 AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
-BachelorsP|NUMERIC|
+BachelorsP|NUMERIC|Percent persons aged 25 years and over with a bachelor’s degree as their highest level of education
 UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
 ForDqTot|NUMERIC|Estimated number of mortgages to start foreclosure process or be seriously delinquent during the 2008 Recession
 TotUnits|INTEGER|Count of total occupied housing units
@@ -2426,7 +2449,7 @@ OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the op
 HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
 RentalP|NUMERIC|Percentage of occupied housing units that are rented
 SviTh2|NUMERIC|SVI Ranking, Theme 2: Household Composition & Disability
-Ovr16P|NUMERIC|
+Ovr16P|NUMERIC|Percent of population over age 16
 SRatio65|NUMERIC|
 ChildrenP|NUMERIC|Percentage of population under age 18
 EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.
@@ -2434,9 +2457,9 @@ NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are n
 SviTh1|NUMERIC|SVI Ranking, Theme 1: Socioeconomic
 MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
 TotVetPop|INTEGER|Total Veteran population
-FemP|NUMERIC|
+FemP|NUMERIC|Percent of population that is female
 SRatio|NUMERIC|
-EngProf|NUMERIC|
+EngProf|NUMERIC|Proportion of the population aged 18+ who speak a language other than English at home but are proficient in English
 AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
 AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
 BlackE|NUMERIC|Count population with race identified as Black or African American alone. Estimated count in non-decennial years.
@@ -2454,7 +2477,7 @@ Ndvi|NUMERIC|Average normalized difference vegetation index, a measure of greenn
 HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities
 Age15_44|INTEGER|Total population between age 15-44
 MedHsgTen|STRING|Median time period occupant moved into housing unit by tract
-SomeCollegeP|NUMERIC|
+SomeCollegeP|NUMERIC|Percent population 25 years and over with some college, but no degree
 GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)
 AlcPerCap|NUMERIC|Number of alcohol outlets per capita
 LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago
@@ -2466,16 +2489,16 @@ HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic uni
 Ovr18|NUMERIC|
 NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family
 Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
-EduNoHsP|NUMERIC|
+EduNoHsP|NUMERIC|Percent population aged 25 years and over with less than a high school diploma
 UnitDens|NUMERIC|Number of housing units per square mile of land area
-Ovr18P|NUMERIC|
+Ovr18P|NUMERIC|Percent of population over age 18
 EssnWrkE|INTEGER|Estimated count of population employed in essential occupations.
 SviTh4|NUMERIC|SVI Ranking, Theme 4: Housing Type & Transportation
 TotPopHh|INTEGER|Total number of people in households
 OtherE|NUMERIC|Count of Population with race not mentioned in any of the options above (includes two race or more races). Estimated count in non-decennial years.
 PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
-MaleP|NUMERIC|
-Ovr21P|NUMERIC|
+MaleP|NUMERIC|Percent of population that is male
+Ovr21P|NUMERIC|Percent of population over age 21
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 TwoRaceE|NUMERIC|Count persons identifying as two or more races. Estimated count in non-decennial years.
 TotPop|INTEGER|Total population
@@ -2486,7 +2509,7 @@ AlcTot|INTEGER|Total number of alcohol outlets
 TotWrkE|INTEGER|Estimated count of working population
 DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
 HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries
-EduHsP|NUMERIC|
+EduHsP|NUMERIC|	Percent population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)
 WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
 
 ### zcta-2020
@@ -2501,16 +2524,16 @@ ZCTA5|STRING|Census Bureau designated zip code tabulation area, or the rough are
 NaltCntBk60|INTEGER|Count of naltrexone providers in 60 minute biking time threshold
 MetCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold
 NaltTmBk|NUMERIC|Biking time (minutes) to nearest naltrexone provider
-GradSclP|NUMERIC|
+GradSclP|NUMERIC|Percent population aged 25 years and over with a graduate or professional degree
 SutTmDr|NUMERIC|Driving time (min) to nearest  Substance Use Treatment (SUT) facility
 PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
 AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
-BachelorsP|NUMERIC|
+BachelorsP|NUMERIC|Percent persons aged 25 years and over with a bachelor’s degree as their highest level of education
 MetCntBk60|INTEGER|Count of methadone providers in 60 minute biking time threshold
-TwoRaceP|NUMERIC|
+TwoRaceP|NUMERIC|Percent of population identifying as two or more races
 MetCntWk30|INTEGER|Count of methadone providers in 60 minute walking time threshold
-HsdTot|NUMERIC|
-SepartedP|NUMERIC|
+HsdTot|NUMERIC|Total households
+SepartedP|NUMERIC|Percent males aged 15 years and over who are separated from their spouse
 UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
 TotUnits|INTEGER|Count of total occupied housing units
 NaltCntDr30|INTEGER|Count of naltrexone providers in 30 minute drive time threshold
@@ -2524,30 +2547,30 @@ RentalP|NUMERIC|Percentage of occupied housing units that are rented
 NaltTmWk|NUMERIC|Walking time (minutes) to nearest naltrexone provider
 BupTmWk|NUMERIC|Walking time (minutes) to nearest buprenorphine provider
 MetTmBk|NUMERIC|Biking time (minutes) to nearest methadone provider
-Ovr16P|NUMERIC|
+Ovr16P|NUMERIC|Percent of population over age 16
 SRatio65|NUMERIC|
 EssnWrkP|NUMERIC|Percentage of population employed in essential occupations.
 NonRelNfhhP|NUMERIC|Percent of people living in non-family households that are not related
 BupCntWk30|INTEGER|Count of buprenorphine providers in 30 minute walking time threshold
 MetCntBk30|INTEGER|Count of methadone providers in 30 minute biking time threshold
 BupTmDr|NUMERIC|Driving time (minutes) to nearest buprenorphine provider
-CrowdHsng|NUMERIC|
+CrowdHsng|NUMERIC|Proportion of occupied housing units that are considered crowded (more than 1 person per room)
 SutMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest SUT service location, in miles
 SutCntDr|INTEGER|Count of SUT services within a 30-minute driving threshold
 MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
-MrrdP|NUMERIC|
+MrrdP|NUMERIC|Percent males aged 15 or older who are married and living with their spouse
 NaltTmDr|NUMERIC|Driving time (minutes) to nearest naltrexone provider
 TotVetPop|INTEGER|Total Veteran population
 BupCntWk60|INTEGER|Count of buprenorphine providers in 60 minute walking time threshold
 BupTmBk|NUMERIC|Biking time (minutes) to nearest buprenorphine provider
 BupCntBk60|INTEGER|Count of buprenorphine providers in 60 minute biking time threshold
-FemP|NUMERIC|
+FemP|NUMERIC|Percent of population that is female
 SRatio|NUMERIC|
-EngProf|NUMERIC|
-HhldFC|NUMERIC|
+EngProf|NUMERIC|Proportion of the population aged 18+ who speak a language other than English at home but are proficient in English
+HhldFC|NUMERIC|Percent female householder with no spouse/partner living with children under 18 years
 NaltMinDis|NUMERIC|Euclidean distance (miles) to nearest naltrexone/Vivitrol provider
 BupCntDr30|INTEGER|Count of Buprenorphine providers in 30 minute drive time threshold
-HhldFA|NUMERIC|
+HhldFA|NUMERIC|Percent female householder with no spouse/partner living alone
 RetailP|NUMERIC|Percentage of population employed in retail trade industry
 SRatio18|NUMERIC|
 MetTmDr|NUMERIC|Driving time (minutes) to nearest methadone provider
@@ -2558,54 +2581,54 @@ PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian 
 HospMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest hospital, in miles
 Ovr65P|NUMERIC|Percentage of population over 65
 HghRskP|NUMERIC|Percentage of population employed in following industries: agriculture, forestry, fishing and hunting, mining, quarrying, oil and gas extraction, construction, manufacturing, utilities
-SomeCollegeP|NUMERIC|
+SomeCollegeP|NUMERIC|Percent population 25 years and over with some college, but no degree
 MedAge|NUMERIC|
 GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)
-HsdTypM|NUMERIC|
-HhldFS|NUMERIC|
+HsdTypM|NUMERIC|Percent married-couple household
+HhldFS|NUMERIC|Percent female householder 65 years and over living alone
 FqhcTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes
-HhldMA|NUMERIC|
+HhldMA|NUMERIC|Percent male householder with no spouse/partner living alone
 FqhcMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest Federally Qualified Health Centers (FQHC), in miles
 LngTermP|NUMERIC|Percentage of population who moved into their current housing more than 20 years ago
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
-OccupantP|NUMERIC|
+OccupantP|NUMERIC|Percent occupied housing units
 NonRelFhhP|NUMERIC|Percent of people living in family households that are not related to family
-EduNoHsP|NUMERIC|
-FamSize|NUMERIC|
-HisP|NUMERIC|
+EduNoHsP|NUMERIC|Percent population aged 25 years and over with less than a high school diploma
+FamSize|NUMERIC|Average number of persons per family
+HisP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
 NaltCntWk30|INTEGER|Count of naltrexone providers in 30 minute walking time threshold
 MoudMinDis|NUMERIC|Euclidean distance (miles) to nearest MOUD (all types)
 UnitDens|NUMERIC|Number of housing units per square mile of land area
-Ovr18P|NUMERIC|
+Ovr18P|NUMERIC|Percent of population over age 18
 BupMinDis|NUMERIC|Euclidean distance (miles) to nearest buprenorphine provider
 TotPopHh|INTEGER|Total number of people in households
-HHSize|NUMERIC|
-NvMrrdP|NUMERIC|
-HhldMC|NUMERIC|
+HHSize|NUMERIC|Average number of persons per household
+NvMrrdP|NUMERIC|Percent males aged 15 or older who never got married
+HhldMC|NUMERIC|Percent married-couple household With children under 18 years
 MhTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip mental health provider destination centroid, in minutes
 BupCntBk30|INTEGER|Count of buprenorphine providers in 30 minute biking time threshold
 PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
-MaleP|NUMERIC|
+MaleP|NUMERIC|Percent of population that is male
 NaltCntWk60|INTEGER|Count of naltrexone providers in 60 minute walking time threshold
-HsdTypCo|NUMERIC|
-Ovr21P|NUMERIC|
+HsdTypCo|NUMERIC|Percent cohabiting couple household
+Ovr21P|NUMERIC|Percent of population over age 21
 MetMinDis|NUMERIC|Euclidean distance (miles) to nearest methadone provider
 MetTmWk|NUMERIC|Walking time (minutes) to nearest methadone provider
-DivrcdP|NUMERIC|
+DivrcdP|NUMERIC|Percent males 15 years and over who are divorced
 TotPop|INTEGER|Total population
-Und18P|NUMERIC|
-Ovr62P|NUMERIC|
+Und18P|NUMERIC|Percent of population under age 18
+Ovr62P|NUMERIC|Percent of population over age 62
 VacantP|NUMERIC|Percentage of vacant housing units
 MobileP|NUMERIC|Percentage of total housing units categorized as mobile housing structures
-HhldMS|NUMERIC|
-WidwdP|NUMERIC|
+HhldMS|NUMERIC|Percent male householder 65 years and over living alone
+WidwdP|NUMERIC|Percent male population aged 15 and over who are widowed
 TotWrkE|INTEGER|Estimated count of working population
 HospTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip hospital destination centroid, in minutes
 DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
 HltCrP|NUMERIC|Percentage of population employed in health care and social assistance industries
-EduHsP|NUMERIC|
+EduHsP|NUMERIC|	Percent population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)
 MetCntWk60|INTEGER|Count of methadone providers in 30 minute walking time threshold
-HsdTypMC|NUMERIC|
+HsdTypMC|NUMERIC|Percent married-couple household With children under 18 years
 
 ### county-2022
 
@@ -2643,11 +2666,11 @@ ID: `oeps-391119.tabular.county-2010`
 
 Name|Data Type|Description
 -|-|-|-
-GradSclP|NUMERIC|
+GradSclP|NUMERIC|Percent population aged 25 years and over with a graduate or professional degree
 PciE|INTEGER|Per capita income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
 AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
-BachelorsP|NUMERIC|
-TwoRaceP|NUMERIC|
+BachelorsP|NUMERIC|Percent persons aged 25 years and over with a bachelor’s degree as their highest level of education
+TwoRaceP|NUMERIC|Percent of population identifying as two or more races
 UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
 TotUnits|INTEGER|Count of total occupied housing units
 PacIsE|NUMERIC|Count population with race identified as Native Hawaiian and Other Pacific Islander alone. Estimated count in non-decennial years.
@@ -2657,12 +2680,12 @@ WhiteP|NUMERIC|Percentage of population with race identified as white alone
 AsianP|NUMERIC|Percentage of population with race identified as Asian alone
 OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
 HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
-Ovr16P|NUMERIC|
+Ovr16P|NUMERIC|Percent of population over age 16
 SRatio65|NUMERIC|
 ChildrenP|NUMERIC|Percentage of population under age 18
 MedInc|INTEGER|Median income for individuals in the past 12 months (in 2018 inflation-adjusted dollars)
 TotVetPop|INTEGER|Total Veteran population
-FemP|NUMERIC|
+FemP|NUMERIC|Percent of population that is female
 SRatio|NUMERIC|
 AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
 AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
@@ -2673,21 +2696,21 @@ VetP|NUMERIC|Percent of population that are veterans
 PacIsP|NUMERIC|Percentage of population with race identified as Native Hawaiian and Other Pacific Islander alone
 Ovr65P|NUMERIC|Percentage of population over 65
 Age15_44|INTEGER|Total population between age 15-44
-SomeCollegeP|NUMERIC|
+SomeCollegeP|NUMERIC|Percent population 25 years and over with some college, but no degree
 GiniCoeff|NUMERIC|Income Inequality (Gini Coefficient)
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
-EduNoHsP|NUMERIC|
-Ovr18P|NUMERIC|
+EduNoHsP|NUMERIC|Percent population aged 25 years and over with less than a high school diploma
+Ovr18P|NUMERIC|Percent of population over age 18
 OtherE|NUMERIC|Count of Population with race not mentioned in any of the options above (includes two race or more races). Estimated count in non-decennial years.
 PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
-MaleP|NUMERIC|
-Ovr21P|NUMERIC|
+MaleP|NUMERIC|Percent of population that is male
+Ovr21P|NUMERIC|Percent of population over age 21
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 TwoRaceE|NUMERIC|Count persons identifying as two or more races. Estimated count in non-decennial years.
 TotPop|INTEGER|Total population
 VacantP|NUMERIC|Percentage of vacant housing units
 DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
-EduHsP|NUMERIC|
+EduHsP|NUMERIC|	Percent population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)
 WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
 
 ### tract-1980
@@ -2709,11 +2732,11 @@ WhiteP|NUMERIC|Percentage of population with race identified as white alone
 AsianP|NUMERIC|Percentage of population with race identified as Asian alone
 OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
 HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
-Ovr16P|NUMERIC|
+Ovr16P|NUMERIC|Percent of population over age 16
 SRatio65|NUMERIC|
 MetRm90|NUMERIC|Methadone access 90 minutes (RAAM)
 ChildrenP|NUMERIC|Percentage of population under age 18
-FemP|NUMERIC|
+FemP|NUMERIC|Percent of population that is female
 SRatio|NUMERIC|
 AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
 AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
@@ -2726,19 +2749,19 @@ MetRm60|NUMERIC|Methadone access 60 minutes (RAAM)
 Ovr16|NUMERIC|
 Ovr65P|NUMERIC|Percentage of population over 65
 Age15_44|INTEGER|Total population between age 15-44
-SomeCollegeP|NUMERIC|
+SomeCollegeP|NUMERIC|Percent population 25 years and over with some college, but no degree
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 Ovr18|NUMERIC|
 Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
-EduNoHsP|NUMERIC|
-Ovr18P|NUMERIC|
+EduNoHsP|NUMERIC|Percent population aged 25 years and over with less than a high school diploma
+Ovr18P|NUMERIC|Percent of population over age 18
 PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
-MaleP|NUMERIC|
-Ovr21P|NUMERIC|
+MaleP|NUMERIC|Percent of population that is male
+Ovr21P|NUMERIC|Percent of population over age 21
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 TotPop|INTEGER|Total population
 VacantP|NUMERIC|Percentage of vacant housing units
-EduHsP|NUMERIC|
+EduHsP|NUMERIC|	Percent population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)
 WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
 
 ### county-2014
@@ -2779,9 +2802,9 @@ ID: `oeps-391119.tabular.tract-2000`
 
 Name|Data Type|Description
 -|-|-|-
-GradSclP|NUMERIC|
+GradSclP|NUMERIC|Percent population aged 25 years and over with a graduate or professional degree
 AmIndP|NUMERIC|Percentage of population with race identified as Native American or Alaska Native alone
-BachelorsP|NUMERIC|
+BachelorsP|NUMERIC|Percent persons aged 25 years and over with a bachelor’s degree as their highest level of education
 MetRm30|NUMERIC|Methadone access 30 minutes (RAAM)
 UnempP|NUMERIC|The number of unemployed individuals as a percentage of the civilian labor force
 TotUnits|INTEGER|Count of total occupied housing units
@@ -2792,11 +2815,11 @@ WhiteP|NUMERIC|Percentage of population with race identified as white alone
 AsianP|NUMERIC|Percentage of population with race identified as Asian alone
 OtherP|NUMERIC|Percentage of Population with race not mentioned in any of the options above (includes two race or more races)
 HispP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
-Ovr16P|NUMERIC|
+Ovr16P|NUMERIC|Percent of population over age 16
 SRatio65|NUMERIC|
 MetRm90|NUMERIC|Methadone access 90 minutes (RAAM)
 ChildrenP|NUMERIC|Percentage of population under age 18
-FemP|NUMERIC|
+FemP|NUMERIC|Percent of population that is female
 SRatio|NUMERIC|
 AmIndE|NUMERIC|Count population with race identified as Native American or Alaska Native alone. Estimated count in non-decennial years.
 AsianE|NUMERIC|Count population with race identified as Asian alone. Estimated count in non-decennial years.
@@ -2809,20 +2832,20 @@ MetRm60|NUMERIC|Methadone access 60 minutes (RAAM)
 Ovr16|NUMERIC|
 Ovr65P|NUMERIC|Percentage of population over 65
 Age15_44|INTEGER|Total population between age 15-44
-SomeCollegeP|NUMERIC|
+SomeCollegeP|NUMERIC|Percent population 25 years and over with some college, but no degree
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 Ovr18|NUMERIC|
 Ovr65|NUMERIC|Percentage of population between ages of 15 & 24
-EduNoHsP|NUMERIC|
-HisP|NUMERIC|
-Ovr18P|NUMERIC|
+EduNoHsP|NUMERIC|Percent population aged 25 years and over with less than a high school diploma
+HisP|NUMERIC|Percentage of population with ethnicity identified as of Hispanic or Latinx origin
+Ovr18P|NUMERIC|Percent of population over age 18
 PovP|NUMERIC|Number of individuals earning below the poverty income threshold as a percentage of the total population
-MaleP|NUMERIC|
-Ovr21P|NUMERIC|
+MaleP|NUMERIC|Percent of population that is male
+Ovr21P|NUMERIC|Percent of population over age 21
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 TotPop|INTEGER|Total population
 VacantP|NUMERIC|Percentage of vacant housing units
 DisbP|NUMERIC|Percentage of civilian non institutionalized population with a disability
-EduHsP|NUMERIC|
+EduHsP|NUMERIC|	Percent population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)
 WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated count in non-decennial years.
 

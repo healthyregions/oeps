@@ -322,7 +322,7 @@
       {
         "title": "% Tracts within 30-min Drive of Hospital",
         "name": "HospTmDrP",
-        "description": "Percent of tracts with hospital within a 30-mini driving range",
+        "description": "Percent of tracts with hospital within a 30-min driving range",
         "years": [
           "2020",
           "2025"
@@ -335,7 +335,7 @@
       {
         "title": "% Tracts within 30-min Drive of Hospital with Impedance Factor",
         "name": "HospTmDrP2",
-        "description": "Percent of tracts with hospital within a 30-mini driving range with Impedance Factor",
+        "description": "Percent of tracts with hospital within a 30-min driving range with impedance factor",
         "years": [
           "2025"
         ],
@@ -416,7 +416,8 @@
           "2025"
         ],
         "geographies": [
-          "Tract"
+          "Tract",
+          "ZCTA"
         ]
       },
       {
@@ -435,7 +436,7 @@
       {
         "title": "Tracts with Hospitals (30-min drive) with impedance",
         "name": "HospCtTmDr2",
-        "description": "Number of tracts with Hospitals within a 30-min driving range, with impedance",
+        "description": "Number of tracts with hospitals within a 30-min driving range, with impedance",
         "years": [
           "2025"
         ],
@@ -834,7 +835,8 @@
           "2025"
         ],
         "geographies": [
-          "Tract"
+          "Tract",
+          "ZCTA"
         ]
       },
       {
@@ -857,7 +859,8 @@
           "2025"
         ],
         "geographies": [
-          "Tract"
+          "Tract",
+          "ZCTA"
         ]
       },
       {
@@ -868,7 +871,8 @@
           "2025"
         ],
         "geographies": [
-          "Tract"
+          "Tract",
+          "ZCTA"
         ]
       },
       {
@@ -879,7 +883,8 @@
           "2025"
         ],
         "geographies": [
-          "Tract"
+          "Tract",
+          "ZCTA"
         ]
       },
       {
@@ -1579,7 +1584,8 @@
           "2025"
         ],
         "geographies": [
-          "Tract"
+          "Tract",
+          "ZCTA"
         ]
       },
       {
@@ -3421,7 +3427,8 @@
           "2025"
         ],
         "geographies": [
-          "Tract"
+          "Tract",
+          "ZCTA"
         ]
       },
       {
@@ -3444,7 +3451,8 @@
           "2025"
         ],
         "geographies": [
-          "Tract"
+          "Tract",
+          "ZCTA"
         ]
       },
       {
@@ -3455,7 +3463,8 @@
           "2025"
         ],
         "geographies": [
-          "Tract"
+          "Tract",
+          "ZCTA"
         ]
       },
       {
@@ -3466,7 +3475,8 @@
           "2025"
         ],
         "geographies": [
-          "Tract"
+          "Tract",
+          "ZCTA"
         ]
       },
       {
@@ -3500,9 +3510,9 @@
     "construct": "Educational Characteristics",
     "variables": [
       {
-        "title": "% Persons aged 25 years and over with a bachelor\u2019s degree as their highest level of education",
+        "title": "% Bachelor's degree",
         "name": "BachelorsP",
-        "description": "",
+        "description": "Percent persons aged 25 years and over with a bachelor\u2019s degree as their highest level of education",
         "years": [
           "1990",
           "2000",
@@ -3519,89 +3529,89 @@
         ]
       },
       {
-        "title": "% Population 25 years and over with some college, but no degree",
-        "name": "SomeCollegeP",
-        "description": "",
-        "years": [
-          "1980",
-          "1990",
-          "2000",
-          "2010",
-          "2018",
-          "2020",
-          "2023"
-        ],
-        "geographies": [
-          "County",
-          "State",
-          "Tract",
-          "ZCTA"
-        ]
-      },
-      {
-        "title": "% Population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)",
-        "name": "EduHsP",
-        "description": "",
-        "years": [
-          "1980",
-          "1990",
-          "2000",
-          "2010",
-          "2018",
-          "2020",
-          "2023"
-        ],
-        "geographies": [
-          "County",
-          "State",
-          "Tract",
-          "ZCTA"
-        ]
-      },
-      {
-        "title": "% Population aged 25 years and over with a graduate or professional degree",
-        "name": "GradSclP",
-        "description": "",
-        "years": [
-          "1990",
-          "2000",
-          "2010",
-          "2018",
-          "2020",
-          "2023"
-        ],
-        "geographies": [
-          "County",
-          "State",
-          "Tract",
-          "ZCTA"
-        ]
-      },
-      {
-        "title": "% Population aged 25 years and over with less than a high school diploma",
-        "name": "EduNoHsP",
-        "description": "",
-        "years": [
-          "1980",
-          "1990",
-          "2000",
-          "2010",
-          "2018",
-          "2020",
-          "2023"
-        ],
-        "geographies": [
-          "County",
-          "State",
-          "Tract",
-          "ZCTA"
-        ]
-      },
-      {
-        "title": "Proportion of the population aged 5+ who speak a language other than English at home but are proficient in English",
+        "title": "% English Proficiency ",
         "name": "EngProf",
-        "description": "",
+        "description": "Proportion of the population aged 18+ who speak a language other than English at home but are proficient in English",
         "years": [
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Graduate or Professional Degree",
+        "name": "GradSclP",
+        "description": "Percent population aged 25 years and over with a graduate or professional degree",
+        "years": [
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% High School Graduate",
+        "name": "EduHsP",
+        "description": "\tPercent population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% No High School Diploma",
+        "name": "EduNoHsP",
+        "description": "Percent population aged 25 years and over with less than a high school diploma",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
+          "2018",
+          "2020",
+          "2023"
+        ],
+        "geographies": [
+          "County",
+          "State",
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "% Some College, but No Degree",
+        "name": "SomeCollegeP",
+        "description": "Percent population 25 years and over with some college, but no degree",
+        "years": [
+          "1980",
+          "1990",
+          "2000",
+          "2010",
           "2018",
           "2020",
           "2023"
@@ -3646,7 +3656,7 @@
       {
         "title": "% Males 15 years and over who are divorced",
         "name": "DivrcdP",
-        "description": "",
+        "description": "Percent males 15 years and over who are divorced",
         "years": [
           "2020",
           "2023"
@@ -3660,7 +3670,7 @@
       {
         "title": "% Males aged 15 or older who are married and living with their spouse",
         "name": "MrrdP",
-        "description": "",
+        "description": "Percent males aged 15 or older who are married and living with their spouse",
         "years": [
           "2020",
           "2023"
@@ -3674,7 +3684,7 @@
       {
         "title": "% Males aged 15 or older who never got married",
         "name": "NvMrrdP",
-        "description": "",
+        "description": "Percent males aged 15 or older who never got married",
         "years": [
           "2020",
           "2023"
@@ -3688,7 +3698,7 @@
       {
         "title": "% Males aged 15 years and over who are separated from their spouse",
         "name": "SepartedP",
-        "description": "",
+        "description": "Percent males aged 15 years and over who are separated from their spouse",
         "years": [
           "2020",
           "2023"
@@ -3702,7 +3712,7 @@
       {
         "title": "% Population aged 15 and over who are widowed",
         "name": "WidwdP",
-        "description": "",
+        "description": "Percent male population aged 15 and over who are widowed",
         "years": [
           "2020",
           "2023"
@@ -3722,7 +3732,7 @@
       {
         "title": "% Cohabiting couple household",
         "name": "HsdTypCo",
-        "description": "",
+        "description": "Percent cohabiting couple household",
         "years": [
           "2020",
           "2023"
@@ -3736,7 +3746,7 @@
       {
         "title": "% Female householder 65 years and over living alone",
         "name": "HhldFS",
-        "description": "",
+        "description": "Percent female householder 65 years and over living alone",
         "years": [
           "2020",
           "2023"
@@ -3750,7 +3760,7 @@
       {
         "title": "% Female householder with no spouse/partner living alone",
         "name": "HhldFA",
-        "description": "",
+        "description": "Percent female householder with no spouse/partner living alone",
         "years": [
           "2020",
           "2023"
@@ -3764,7 +3774,7 @@
       {
         "title": "% Female householder with no spouse/partner living with children under 18 years",
         "name": "HhldFC",
-        "description": "",
+        "description": "Percent female householder with no spouse/partner living with children under 18 years",
         "years": [
           "2020",
           "2023"
@@ -3778,7 +3788,7 @@
       {
         "title": "% Male householder 65 years and over living alone",
         "name": "HhldMS",
-        "description": "",
+        "description": "Percent male householder 65 years and over living alone",
         "years": [
           "2020",
           "2023"
@@ -3792,7 +3802,7 @@
       {
         "title": "% Male householder with no spouse/partner living alone",
         "name": "HhldMA",
-        "description": "",
+        "description": "Percent male householder with no spouse/partner living alone",
         "years": [
           "2020",
           "2023"
@@ -3806,7 +3816,7 @@
       {
         "title": "% Male householder with no spouse/partner living with children under 18 years",
         "name": "HhldMC",
-        "description": "",
+        "description": "Percent married-couple household With children under 18 years",
         "years": [
           "2020",
           "2023"
@@ -3820,7 +3830,7 @@
       {
         "title": "% Married-couple household ",
         "name": "HsdTypM",
-        "description": "",
+        "description": "Percent married-couple household",
         "years": [
           "2020",
           "2023"
@@ -3834,7 +3844,7 @@
       {
         "title": "% Married-couple household With children under 18 years",
         "name": "HsdTypMC",
-        "description": "",
+        "description": "Percent married-couple household With children under 18 years",
         "years": [
           "2020",
           "2023"
@@ -3880,7 +3890,7 @@
       {
         "title": "% Occupied housing units",
         "name": "OccupantP",
-        "description": "",
+        "description": "Percent occupied housing units",
         "years": [
           "2020",
           "2023"
@@ -3894,7 +3904,7 @@
       {
         "title": "Average family size",
         "name": "FamSize",
-        "description": "",
+        "description": "Average number of persons per family",
         "years": [
           "2020",
           "2023"
@@ -3908,7 +3918,7 @@
       {
         "title": "Average household size",
         "name": "HHSize",
-        "description": "",
+        "description": "Average number of persons per household",
         "years": [
           "2020",
           "2023"
@@ -3920,9 +3930,9 @@
         ]
       },
       {
-        "title": "Proportion of occupied housing units that are considered crowded (more than 1 person per room)",
+        "title": "Crowded Housing",
         "name": "CrowdHsng",
-        "description": "",
+        "description": "Proportion of occupied housing units that are considered crowded (more than 1 person per room)",
         "years": [
           "2020",
           "2023"
@@ -3952,7 +3962,7 @@
       {
         "title": "Total households",
         "name": "HsdTot",
-        "description": "",
+        "description": "Total households",
         "years": [
           "2020",
           "2023"
@@ -3985,7 +3995,7 @@
       {
         "title": "% Tracts within 30-min Drive of Mental Health Provider with impedence",
         "name": "MhTmDrP2",
-        "description": "Percent of tracts with Mental Health Provider within a 30-mini driving range, with impedence",
+        "description": "Percent of tracts with a mental health provider within a 30-min driving range, with impedance",
         "years": [
           "2025"
         ],
@@ -3997,7 +4007,7 @@
       {
         "title": "Avg. Driving Time to nearest Mental Health Provider with impedance",
         "name": "MhAvTmDr2",
-        "description": "Average driving time (minutes) across tracts in state to nearest Mental Health Provider, with impedance",
+        "description": "Average driving time (minutes) across tracts in state to nearest mental health provider, with impedance",
         "years": [
           "2025"
         ],
@@ -4035,7 +4045,7 @@
       {
         "title": "Driving Time (min) to nearest Mental Health Provider",
         "name": "MhAvTmDr",
-        "description": "Average driving time (minutes) across tracts in state to nearest mental health provider.",
+        "description": "Average driving time (minutes) across tracts in state to nearest mental health provider",
         "years": [
           "2020",
           "2025"
@@ -4061,12 +4071,13 @@
       {
         "title": "Driving time (min) to nearest Mental Health Provider with impedance",
         "name": "MhTmDr2",
-        "description": "Driving time from tract/zip origin centroid to the nearest tract/zip Mental Health Provider with impedance destination centroid, in minutes",
+        "description": "Driving time from tract/zip origin centroid to the nearest tract/zip mental health provider destination centroid with impedance, in minutes",
         "years": [
           "2025"
         ],
         "geographies": [
-          "Tract"
+          "Tract",
+          "ZCTA"
         ]
       },
       {
@@ -4085,7 +4096,7 @@
       {
         "title": "Tracts with Mental Health Provider (30-min drive) with impedance",
         "name": "MhCtTmDr2",
-        "description": "Number of tracts with Mental Health Provider within a 30-min driving range, with impedance",
+        "description": "Number of tracts with mental health provider within a 30-min driving range, with impedance",
         "years": [
           "2025"
         ],
@@ -4567,7 +4578,7 @@
       {
         "title": "% Population identifying as two or more races",
         "name": "TwoRaceP",
-        "description": "",
+        "description": "Percent of population identifying as two or more races",
         "years": [
           "2010",
           "2018",
@@ -4584,7 +4595,7 @@
       {
         "title": "% Population with ethnicity identified as of Hispanic or Latinx origin",
         "name": "HisP",
-        "description": "",
+        "description": "Percentage of population with ethnicity identified as of Hispanic or Latinx origin",
         "years": [
           "1980",
           "1990",
@@ -4775,7 +4786,7 @@
       {
         "title": "% Population over 16 years",
         "name": "Ovr16P",
-        "description": "",
+        "description": "Percent of population over age 16",
         "years": [
           "1980",
           "1990",
@@ -4795,7 +4806,7 @@
       {
         "title": "% Population over 18 years",
         "name": "Ovr18P",
-        "description": "",
+        "description": "Percent of population over age 18",
         "years": [
           "1980",
           "1990",
@@ -4815,7 +4826,7 @@
       {
         "title": "% Population over 21 years",
         "name": "Ovr21P",
-        "description": "",
+        "description": "Percent of population over age 21",
         "years": [
           "1980",
           "1990",
@@ -4835,7 +4846,7 @@
       {
         "title": "% Population over 62 years",
         "name": "Ovr62P",
-        "description": "",
+        "description": "Percent of population over age 62",
         "years": [
           "2020",
           "2023"
@@ -4849,7 +4860,7 @@
       {
         "title": "% Population that is Female",
         "name": "FemP",
-        "description": "",
+        "description": "Percent of population that is female",
         "years": [
           "1980",
           "1990",
@@ -4869,7 +4880,7 @@
       {
         "title": "% Population that is Male",
         "name": "MaleP",
-        "description": "",
+        "description": "Percent of population that is male",
         "years": [
           "1980",
           "1990",
@@ -4889,7 +4900,7 @@
       {
         "title": "% Population under 18 years old",
         "name": "Und18P",
-        "description": "",
+        "description": "Percent of population under age 18",
         "years": [
           "2020",
           "2023"
@@ -5487,7 +5498,8 @@
           "2025"
         ],
         "geographies": [
-          "Tract"
+          "Tract",
+          "ZCTA"
         ]
       },
       {

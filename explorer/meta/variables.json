@@ -110,12 +110,12 @@
         "Variable Construct": "Educational Characteristics",
         "Variable Proxy": "Population percentage with or without varying levels of educational attainment, further grouped by age",
         "Variables": [
-          "% Persons aged 25 years and over with a bachelor\u2019s degree as their highest level of education",
-          "% Population 25 years and over with some college, but no degree",
-          "% Population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)",
-          "% Population aged 25 years and over with a graduate or professional degree",
-          "% Population aged 25 years and over with less than a high school diploma",
-          "Proportion of the population aged 5+ who speak a language other than English at home but are proficient in English"
+          "% Bachelor's degree",
+          "% English Proficiency ",
+          "% Graduate or Professional Degree",
+          "% High School Graduate",
+          "% No High School Diploma",
+          "% Some College, but No Degree"
         ],
         "Source": "ACS 2020, 2023",
         "Metadata": "Educational_Characteristics",
@@ -170,7 +170,7 @@
           "% Occupied housing units",
           "Average family size",
           "Average household size",
-          "Proportion of occupied housing units that are considered crowded (more than 1 person per room)",
+          "Crowded Housing",
           "Total Population in Households",
           "Total households"
         ],
@@ -417,7 +417,7 @@
         ],
         "Source": "SAMHSA 2025; OSM 2025; Census TIGER 2020",
         "Metadata": "Access_HIVTesting",
-        "Spatial Scale": "Tract, County, State",
+        "Spatial Scale": "Tract, Zip, County, State",
         "Years": "2025"
       }
     ],
@@ -635,7 +635,7 @@
         ],
         "Source": "SAMHSA 2025; OSM 2025; Census TIGER 2020",
         "Metadata": "Access_HCVTesting",
-        "Spatial Scale": "Tract, County, State",
+        "Spatial Scale": "Tract, Zip, County, State",
         "Years": "2025"
       }
     ],
