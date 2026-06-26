@@ -4,12 +4,13 @@ import styles from "../styles/Home.module.css";
 import {Gutter} from "@components/layout/Gutter";
 import MainNav from "@components/layout/MainNav";
 import Footer from "@components/layout/Footer";
-import {Grid} from "@mui/material";
+import {Button, Grid} from "@mui/material";
 import postsMetadata from '../content/posts.json';
 import {getPostBySlug} from "../lib/markdown";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import {useEffect, useState} from "react";
+import styled from "styled-components";
 
 
 // const diagram = [
@@ -33,6 +34,61 @@ export async function getServerSideProps() {
   return {props: {posts}}
 }
 
+const sectionPadding = '0 12.5vw';
+
+const HeroSection = styled.div`
+    padding: ${sectionPadding};
+`;
+
+
+const NewsSection = styled.div`
+    background-color: #d6aed822;
+    width: 100%;
+    margin-top: 1rem;
+    padding: ${sectionPadding};
+    display: flex;
+    justify-content: center;
+`;
+
+const DescriptionAndAcknowledgmentsSection = styled.div`
+    margin: 1rem 0;
+    display: flex;
+    padding: ${sectionPadding};
+    align-items: center;
+`;
+
+const ActionsSection = styled.div`
+    display: flex;
+    padding: ${sectionPadding};
+    align-items: center;
+`;
+
+const ActionsHeader = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: start;
+`;
+
+const ActionsHeaderIcon = styled.img`
+    margin: 0 1.25rem;
+    width: 40px;
+`;
+
+const ActionsSubheader = styled.div`
+    margin: 0 5.75rem;
+`;
+
+const ActionsButtons = styled.div`
+    display: flex;
+    margin: 0.5rem 5.75rem;
+    flex-direction: column;
+    align-items: flex-start;
+`;
+
+const ActionsButton = styled(Link)`
+  
+`;
+
 export default function Home({posts}) {
   const [mounted, setMounted] = useState(false);
 
@@ -41,159 +97,120 @@ export default function Home({posts}) {
     setMounted(true);
   }, []);
 
+  const actionSections = [
+    {
+      label: 'Data',
+      description: 'Access data by theme or spatial scale and explore our methodology.',
+      img: 'images/data.svg',
+      imgAlt: 'Data Documentation and download.',
+      actions: [
+        { label: 'Data Access & Download >', link: '/download' },
+        { label: 'Documentation >', link: '/docs' },
+        { label: 'Methodology >', link: '/methods' },
+      ]
+    },
+    {
+      label: 'Map',
+      description: 'Visualize data with our interactive web map.',
+      img: 'images/map.svg',
+      imgAlt: 'Map and explore data.',
+      actions: [
+        { label: 'Start Mapping >', link: '/map' },
+      ]
+    },
+    {
+      label: 'Insights',
+      description: 'Learn about the OEPS, code resources, and research insights.',
+      img: 'images/insights.svg',
+      imgAlt: 'Data findings and further information.',
+      actions: [
+        { label: 'About >', link: '/about' },
+        { label: 'Code Resources >', link: '/codeResources' },
+        { label: 'Insights >', link: '/insights' },
+      ]
+    },
+  ];
+
   return (
-    mounted ? <div className={styles.container}>
+    mounted ? <>
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>OEPS Explorer</title>
       </Head>
       <MainNav/>
-      <main className={styles.main}>
-        <div className="row" style={{display: 'flex', alignItems: 'center'}}>
-          <div className="col-xs-12 col-md-5 col-lg-4">
-            <img src="images/logo-factors.png" className={styles.titleDiagram} alt={''}/>
+      <main>
+        <HeroSection>
+          <Grid container alignItems={'center'}>
+            <Grid item padding={'2rem'} xs={12} md={5} lg={4}>
+              <img src="images/logo-factors.png" className={styles.titleDiagram} alt={''}/>
+            </Grid>
             <Gutter em={3}/>
-          </div>
-          <div className="col-xs-12 col-md-7 col-lg-8">
-            <h1 className={styles.title}>
-              Opioid Environment Policy Scan
-            </h1>
-            <p className={styles.description}>
-              An open data warehouse, mapping platform, and data ecosystem that explores the multi-dimensional risk
-              environment, from neighborhoods to states,
-              impacting opioid use and health outcomes across the United States.
-            </p>
-
-          </div>
-        </div>
-
-
-        <Gutter em={3}/>
-        <div className="row rules" style={{ paddingBottom: '1rem' }}>
-          <div className="col-xs-12 col-md-12 col-lg-4">
-
-
-
-            <Grid container style={{ alignItems: 'center'}}>
-              <Grid item xs={1} style={{ marginRight: '16px' }}>
-                <img src="images/data.svg" alt="Data Documentation and download." width={40}
-                     />
+              <Grid item xs={12} md={7} lg={8}>
+                <h1 className={styles.title}>
+                  Opioid Environment Policy Scan
+                </h1>
+                <p className={styles.description}>
+                  An open data warehouse, mapping platform, and data ecosystem that explores the multi-dimensional risk
+                  environment, from neighborhoods to states,
+                  impacting opioid use and health outcomes across the United States.
+                </p>
               </Grid>
+          </Grid>
+        </HeroSection>
 
-              <Grid item xs={10}>
-                <h1 className={styles.subhead}>Data</h1>
-              </Grid>
-              <Grid container>
-                <Grid item xs={1} style={{ marginRight: '16px' }}></Grid>
-                <Grid item xs={10}>
-                  Access data by theme or spatial scale and explore our methodology.
-                  <div className={'pt-1'}>
-                    <Link
-                      className={styles.docsLink}
-                      href="/download"
-                    >
-                      Data Access & Download &gt;
-                    </Link>
-                  </div>
-                  <div className={'pt-1'}>
-                    <Link className={styles.docsLink} href="/docs">
-                      Documentation &gt;
-                    </Link>
-                  </div>
-                  <div className={'pt-1'}>
-                    <Link className={styles.docsLink} href="/methods">
-                      Methodology &gt;
-                    </Link>
-                  </div>
+        <Gutter rem={3}/>
+
+        <ActionsSection>
+          <Grid container spacing={2}>
+            {
+              actionSections?.map(s =>
+                <Grid item xs={12} md={12} lg={4}>
+                  <ActionsHeader>
+                    <ActionsHeaderIcon src={s?.img} alt={s?.imgAlt}></ActionsHeaderIcon>
+                    <h1 className={styles.subhead}>{s?.label}</h1>
+                  </ActionsHeader>
+                  <ActionsSubheader>
+                    {s?.description}
+                  </ActionsSubheader>
+                  <ActionsButtons>
+                    {
+                      s?.actions?.map(a =>
+                        <ActionsButton className={styles.docsLink} href={a?.link}>{a?.label}</ActionsButton>
+                      )
+                    }
+                  </ActionsButtons>
                 </Grid>
-              </Grid>
-            </Grid>
+              )
+            }
+          </Grid>
+        </ActionsSection>
 
-
-          </div>
-
-          <div className="col-xs-12 col-md-12 col-lg-4">
-
-            <Grid container style={{ alignItems: 'center'}}>
-              <Grid item xs={1} style={{ marginRight: '16px' }}>
-                <img src="images/map.svg" alt="Map and explore data." width={40} style={{marginRight: '1rem'}}/>
-              </Grid>
-              <Grid item xs={10}>
-                <h1 className={styles.subhead}>Map</h1>
-              </Grid>
-            </Grid>
-            <Grid container>
-              <Grid item xs={1} style={{ marginRight: '16px' }}></Grid>
-              <Grid item xs={10}>
-                Visualize data with our interactive web map.
-
-                <div className={'pt-1'}>
-                  <Link className={styles.docsLink} href="/map"> Start Mapping &gt;</Link>
-                </div>
-              </Grid>
-            </Grid>
-          </div>
-
-          <div className="col-xs-12 col-md-12 col-lg-4 ">
-            <Grid container style={{ alignItems: 'center'}}>
-              <Grid item xs={1} style={{ marginRight: '16px' }}>
-              <img src="images/insights.svg" alt="Data findings and further information." width={40}
-                   style={{marginRight: '1rem'}}/>
-              </Grid>
-              <Grid item xs={10}>
-              <h1 className={styles.subhead}>Insights</h1>
-              </Grid>
-            </Grid>
-            <Grid container>
-              <Grid item xs={1} style={{ marginRight: '16px' }}></Grid>
-              <Grid item xs={10}>
-                Learn about the OEPS, code resources, and research insights.
-                <div className={'pt-1'}>
-                  <Link className={styles.docsLink} href="/about ">About &gt;</Link>
-                </div>
-                <div className={'pt-1'}>
-                  <Link className={styles.docsLink} href="/codeResources ">Code Resources &gt;</Link>
-                </div>
-                <div className={'pt-1'}>
-                  <Link className={styles.docsLink} href="/insights">Insights &gt;</Link>
-                </div>
-              </Grid>
-            </Grid>
-          </div>
-        </div>
-
-        <div className="row rules">
-          <div className="col-xs-12 col-md-12 col-lg-12">
-            <br></br>
-            <hr></hr>
-            <br></br>
-            <Grid container spacing={2} className={'row rules'}>
-              <Grid xs={12} md={12} item alignItems={'center'}>
-                <em><strong>News:</strong></em> <a href={'/posts'}>See All</a>
-                {
-                  posts?.sort((a, b) => b?.date?.localeCompare(a?.date))?.slice(0, 3)?.map(p => <div
-                    key={'post-' + p.slug}>
-                    <Grid container spacing={0} alignItems={'end'}>
-                      <Grid xs={10} item><h4 style={{marginBottom: 0}}>{p?.title}</h4></Grid>
-                      <Grid xs={2} item>{new Date(p?.date)?.toLocaleDateString()}</Grid>
+        <NewsSection>
+          <Grid container padding={'2rem'}>
+            <Grid xs={12} md={12} item alignItems={'center'}>
+              <h2 style={{ marginBottom: '0.75rem' }}>Recent News</h2>
+              <a href={'/posts'}>See All</a>
+              {
+                posts?.sort((a, b) => b?.date?.localeCompare(a?.date))?.slice(0, 3)?.map(p => <div
+                  key={'post-' + p.slug}>
+                  <Grid container alignItems={'end'}>
+                    <Grid xs={10} item><h4 style={{marginBottom: 0}}>{p?.title}</h4></Grid>
+                    <Grid xs={2} item textAlign={'right'}>{new Date(p?.date)?.toLocaleDateString()}</Grid>
+                  </Grid>
+                  <Grid container>
+                    <Grid xs={12} item>
+                      <ReactMarkdown plugins={[remarkGfm]}>{p?.summary}</ReactMarkdown>
+                      <a href={`/posts/${p?.slug}`}>Read more &rarr;</a>
                     </Grid>
-                    <Grid container spacing={0}>
-                      <Grid xs={12} item>
-                        <ReactMarkdown plugins={[remarkGfm]}>{p?.summary}</ReactMarkdown>
-                        <a href={`/posts/${p?.slug}`}>Read more &rarr;</a>
-                      </Grid>
-                    </Grid>
-                  </div>)
-                }
-              </Grid>
+                  </Grid>
+                </div>)
+              }
             </Grid>
-          </div>
-        </div>
+          </Grid>
+        </NewsSection>
 
-
-        <Gutter em={3}/>
-        <div className="row rules center-xs">
+        <DescriptionAndAcknowledgmentsSection>
           <div className="col-xs-12 col-md-12 col-lg-12">
-            <hr></hr>
             <p className={styles.description}>
               The OEPS data ecosystem was designed to support research seeking to study environments impacting and
               impacted by opioid use and opioid use disorder (OUD),
@@ -202,7 +219,7 @@ export default function Home({posts}) {
               more <Link href="/about">about the project</Link>,
               our <Link href="/methods"> methodology</Link>, and <Link href="/insights">insights</Link>.
             </p>
-            <p>
+            <p style={{ textAlign: 'center'}}>
               OEPS is led by the <a href="https://healthyregions.org/">Healthy Regions and Policies Lab</a>, based at
               the
               Department of Geography & GIScience at the University of Illinois at Urbana-Champaign. It was developed
@@ -212,12 +229,12 @@ export default function Home({posts}) {
               of Chicago.
             </p>
           </div>
-        </div>
+        </DescriptionAndAcknowledgmentsSection>
 
 
       </main>
       <Footer/>
-    </div> : <></>
+    </> : <></>
   );
 }
 
