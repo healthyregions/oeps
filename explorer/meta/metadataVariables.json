@@ -1904,7 +1904,8 @@
         "name": "BupTmDrP",
         "description": "Percent of tracts with buprenorphine provider within a 30-min driving range",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "County"
@@ -1937,7 +1938,8 @@
         "name": "MetTmDrP",
         "description": "Percent of tracts with methadone provider within a 30-min driving range",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "County"
@@ -1970,7 +1972,8 @@
         "name": "NaltTmDrP",
         "description": "Percent of tracts with naltrexone provider within a 30-min driving range",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "County"
@@ -1992,7 +1995,8 @@
         "name": "OtpTmDrP",
         "description": "Percent of tracts within a 30-minute drive time of an opioid treatment program.",
         "years": [
-          "2021"
+          "2021",
+          "2025"
         ],
         "geographies": [
           "County",
@@ -2040,6 +2044,7 @@
           "2025"
         ],
         "geographies": [
+          "County",
           "State"
         ]
       },
@@ -2051,6 +2056,7 @@
           "2025"
         ],
         "geographies": [
+          "County",
           "State"
         ]
       },
@@ -2062,6 +2068,7 @@
           "2025"
         ],
         "geographies": [
+          "County",
           "State"
         ]
       },
@@ -2073,6 +2080,7 @@
           "2025"
         ],
         "geographies": [
+          "County",
           "State"
         ]
       },
@@ -2084,6 +2092,7 @@
           "2025"
         ],
         "geographies": [
+          "County",
           "State"
         ]
       },
@@ -2095,6 +2104,7 @@
           "2025"
         ],
         "geographies": [
+          "County",
           "State"
         ]
       },
@@ -2106,6 +2116,7 @@
           "2025"
         ],
         "geographies": [
+          "County",
           "State"
         ]
       },
@@ -2117,6 +2128,7 @@
           "2025"
         ],
         "geographies": [
+          "County",
           "State"
         ]
       },
@@ -2446,6 +2458,7 @@
           "2025"
         ],
         "geographies": [
+          "County",
           "State"
         ]
       },
@@ -2457,6 +2470,7 @@
           "2025"
         ],
         "geographies": [
+          "County",
           "State"
         ]
       },
@@ -2468,6 +2482,7 @@
           "2025"
         ],
         "geographies": [
+          "County",
           "State"
         ]
       },
@@ -2479,6 +2494,7 @@
           "2025"
         ],
         "geographies": [
+          "County",
           "State"
         ]
       },
@@ -2976,7 +2992,8 @@
         "name": "BupCtTmDr",
         "description": "Number of tracts with buprenorphine provider within a 30-min driving range",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "County"
@@ -3020,7 +3037,8 @@
         "name": "MetCtTmDr",
         "description": "Number of tracts with methadone provider within a 30-min driving range",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "County"
@@ -3064,7 +3082,8 @@
         "name": "NaltCtTmDr",
         "description": "Number of tracts with naltrexone provider within a 30-min driving range",
         "years": [
-          "2020"
+          "2020",
+          "2025"
         ],
         "geographies": [
           "County"

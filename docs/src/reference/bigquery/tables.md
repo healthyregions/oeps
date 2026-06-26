@@ -1250,17 +1250,23 @@ BlkHcvD|INTEGER|Hepatitis C deaths among Black population
 
 ID: `oeps-391119.tabular.county-2025`
 
-61 columns in this table.
+83 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
 SutAvTmDr2|NUMERIC| Average driving time (minutes) across tracts in state to nearestSubstance Use Treatment Provider (Sut), with Impedance factor
 NaltTmBk|NUMERIC|Biking time (minutes) to nearest naltrexone provider
+OtpAvTmDr2|NUMERIC|Average driving time (minutes) across tracts in state to nearest Opioid Treatment Provider (Otp), with Impedance factor
+MetCtTmDr2|NUMERIC|Number of tracts with Methadone Providerwithin a 30-min driving range, with Impedance factor
 FqhcAvTmDr2|NUMERIC|Average driving time (minutes) across tracts in state to nearest Federally Qualified Health Center, with Impedance factor
+OtpTmDrP2|NUMERIC|Percent of tracts with Opioid Treatment Provider within a 30-min driving range, with Impedance factor
 TlBupTmDr|NUMERIC|Estimated driving time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services
+NaltCtTmDr2|NUMERIC|Number of tracts with Naltrexone Provider within a 30-min driving range, with Impedance factor
+MetAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest methadone provider
 HivAvTmDr2|NUMERIC|Average driving time (minutes) across tracts in state to nearest HIV Testing Facility, with impedance
 MhCtTmDr2|NUMERIC|Number of tracts with mental health provider within a 30-min driving range, with impedance
 HivCtTmDr2|NUMERIC|Number of tracts with HIV Testing Facility within a 30-min driving range, with impedance
+BupTmDrP2|NUMERIC|Percent of tracts with Buprenorphine Provider within a 30-min driving range, with Impedance factor
 NaltTmWk|NUMERIC|Walking time (minutes) to nearest naltrexone provider
 BupTmWk|NUMERIC|Walking time (minutes) to nearest buprenorphine provider
 HcvTmDrP|NUMERIC|Percent of tracts within 30-minute drive to an HCV testing provider
@@ -1268,6 +1274,7 @@ MhTmDrP|NUMERIC|Percent of tracts with a mental health provider within a 30-min 
 MetTmBk|NUMERIC|Biking time (minutes) to nearest methadone provider
 HcvTmDrP2|NUMERIC|Percent of tracts with HCV Testing Facility within a 30-mini driving range, with impedance
 FqhcCtTmDr|INTEGER|Number of tracts with Federally Qualified Health Center within a 30-min driving range
+BupTmDrP|NUMERIC|Percent of tracts with buprenorphine provider within a 30-min driving range
 TlBupTmBk|NUMERIC|Estimated biking time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services
 BupTmDr|NUMERIC|Driving time (minutes) to nearest buprenorphine provider
 MhTmDrP2|NUMERIC|Percent of tracts with a mental health provider within a 30-min driving range, with impedance
@@ -1281,6 +1288,7 @@ HospCtTmDr|INTEGER|Number of tracts with hospital within a 30-min driving range
 MhAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest mental health provider
 HcvCtTmDr|INTEGER|Number of tracts with an HCV testing provider within a 30-minute driving range
 SmokeP|NUMERIC|Percentage of Smoking Population
+NaltCtTmDr|INTEGER|Number of tracts with naltrexone provider within a 30-min driving range
 MetTmDr|NUMERIC|Driving time (minutes) to nearest methadone provider
 RxTmDrP|NUMERIC|Percent of tracts with pharmacy within a 30-min driving range
 SutTmDrP2|NUMERIC|Percent of tracts with Substance Use Treatment Provider within a 30-min driving range, with Impedance factor
@@ -1290,29 +1298,43 @@ HcvAvTmDr|NUMERIC|Mean driving time (minutes) from tracts to nearest HCV testing
 HospAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest hospital.
 MhAvTmDr2|NUMERIC|Average driving time (minutes) across tracts in state to nearest mental health provider, with impedance
 TotTracts|INTEGER|Total number of census tracts within the state.
+OtpCtTmDr2|NUMERIC|Number of tracts with Opioid Treatment Provider within a 30-min driving range, with Impedance factor
 MhCtTmDr|INTEGER|Number of tracts with a mental health provider within a 30-min driving range.
+MetTmDrP|NUMERIC|Percent of tracts with methadone provider within a 30-min driving range
 HospTmDrP2|NUMERIC|Percent of tracts with hospital within a 30-min driving range with impedance factor
 HivAvTmDr|NUMERIC|Mean driving time (minutes) from tracts to nearest HIV testing provider
+NaltTmDrP|NUMERIC|Percent of tracts with naltrexone provider within a 30-min driving range
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+OtpTmDrP|NUMERIC|Percent of tracts within a 30-minute drive time of an opioid treatment program.
 HivTmDrP|NUMERIC|Percent of tracts within 30-minute drive to an HIV testing provider
 HivCtTmDr|INTEGER|Number of tracts with an HIV testing provider within a 30-minute driving range
 HospTmDrP|NUMERIC|Percent of tracts with hospital within a 30-min driving range
+MetCtTmDr|INTEGER|Number of tracts with methadone provider within a 30-min driving range
+BupCtTmDr2|NUMERIC|Number of tracts with Buprenorphine Provider within a 30-min driving range, with Impedance factor
 HcvAvTmDr2|NUMERIC|Average driving time (minutes) across tracts in state to nearest HCV Testing Facility, with impedance
 RxCtTmDr2|INTEGER|Number of tracts with pharmacy within a 30-min driving range with impedance factor
+MetTmDrP2|NUMERIC|Percent of tracts with Methadone Providerwithin a 30-min driving range, with Impedance factor
+BupCtTmDr|INTEGER|Number of tracts with buprenorphine provider within a 30-min driving range
 RxTmDrP2|NUMERIC|Percent of tracts with pharmacy within a 30-min driving range with impedance factor
 RxAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest pharmacy.
 SutCtTmDr2|NUMERIC|Number of tracts with Substance Use Treatment Provider within a 30-min driving range, with Impedance factor
 SutCtTmDr|INTEGER|Number of tracts with Substance Use Treatment within a 30-min driving range.
 FqhcCtTmDr2|INTEGER|Number of tracts with Federally Qualified Health Center within a 30-min driving range, with Impedance factor
 HospAvTmDr2|NUMERIC|Average driving time (minutes) across tracts in state to nearest hospital with Impedance factor
+NaltAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest naltrexone provider
 HcvCtTmDr2|NUMERIC|Number of tracts with HCV Testing Facility within a 30-min driving range, with impedance
+BupAvTmDr2|NUMERIC|Average driving time (minutes) across tracts in state to nearest Buprenorphine Provider (BUP), with Impedance factor
 FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
 MetTmWk|NUMERIC|Walking time (minutes) to nearest methadone provider
+NaltAvTmDr2|NUMERIC|Average driving time (minutes) across tracts in state to nearest Naltrexone Provider (NALT), with Impedance factor
+MetAvTmDr2|NUMERIC|Average driving time (minutes) across tracts in state to nearest Methadone Provider(MET), with Impedance factor
 TlBupTmWk|NUMERIC|Estimated walking time (in minutes) to the nearest provider offering buprenorphine treatment via telemedicine/telehealth services
 OtpAvTmDr|NUMERIC|Average driving time (minutes) across tracts to nearest opioid treatment program.
 FqhcAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest Federally Qualified Health Center
+BupAvTmDr|NUMERIC|Average driving time (minutes) across tracts in county to nearest buprenorphine provider
 HivTmDrP2|NUMERIC|Percent of tracts with HIV Testing Facility within a 30-mini driving range, with impedance
 SutAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to nearest Substance Use Treatment program.
+NaltTmDrP2|NUMERIC|Percent of tracts with Naltrexone Provider within a 30-min driving range, with Impedance factor
 HospCtTmDr2|NUMERIC|Number of tracts with hospitals within a 30-min driving range, with impedance
 OtpCtTmDr|INTEGER|Number of tracts within 30-min of opioid treatment program driving range
 
