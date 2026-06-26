@@ -53,6 +53,7 @@ const NewsSection = styled.div`
 const DescriptionAndAcknowledgmentsSection = styled.div`
     margin: 1rem 0;
     display: flex;
+    justify-content: center;
     padding: ${sectionPadding};
     align-items: center;
 `;
@@ -210,7 +211,7 @@ export default function Home({posts}) {
         </NewsSection>
 
         <DescriptionAndAcknowledgmentsSection>
-          <div className="col-xs-12 col-md-12 col-lg-12">
+          <Grid item xs={12} maxWidth={'85%'} align={'center'}>
             <p className={styles.description}>
               The OEPS data ecosystem was designed to support research seeking to study environments impacting and
               impacted by opioid use and opioid use disorder (OUD),
@@ -219,7 +220,7 @@ export default function Home({posts}) {
               more <Link href="/about">about the project</Link>,
               our <Link href="/methods"> methodology</Link>, and <Link href="/insights">insights</Link>.
             </p>
-            <p style={{ textAlign: 'center'}}>
+            <p style={{ textAlign: 'center', maxWidth: '85%', justifyContent: 'center'}}>
               OEPS is led by the <a href="https://healthyregions.org/">Healthy Regions and Policies Lab</a>, based at
               the
               Department of Geography & GIScience at the University of Illinois at Urbana-Champaign. It was developed
@@ -228,7 +229,7 @@ export default function Home({posts}) {
               a NIH HEAL Initiative, as part of the Methodology and Advanced Analytics Resource Center at the University
               of Chicago.
             </p>
-          </div>
+          </Grid>
         </DescriptionAndAcknowledgmentsSection>
 
 
