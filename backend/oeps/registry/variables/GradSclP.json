@@ -1,12 +1,12 @@
 {
   "name": "GradSclP",
-  "title": "% Population aged 25 years and over with a graduate or professional degree",
+  "title": "% Graduate or Professional Degree",
   "type": "number",
   "example": "60.0",
-  "description": "",
+  "description": "Percent population aged 25 years and over with a graduate or professional degree",
+  "metadata": "Educational_Characteristics",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Educational_Characteristics",
   "table_sources": [
     "county-1990",
     "county-2000",
