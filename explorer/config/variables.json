@@ -7,6 +7,13 @@
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Race_Ethnicity.md"
   },
   {
+    "variable": "% Bachelor's degree",
+    "numerator": "state-2023__county-2023__zcta-2023__tract-2023",
+    "nProperty": "BachelorsP",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Educational_Characteristics.md"
+  },
+  {
     "variable": "% Black/African American Populationw",
     "numerator": "state-2023__county-2023__zcta-2023__tract-2023",
     "nProperty": "BlackP",
@@ -19,6 +26,13 @@
     "nProperty": "HsdTypCo",
     "theme": "Social",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Household_Characteristics.md"
+  },
+  {
+    "variable": "% English Proficiency ",
+    "numerator": "state-2023__county-2023__zcta-2023__tract-2023",
+    "nProperty": "EngProf",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Educational_Characteristics.md"
   },
   {
     "variable": "% Female householder 65 years and over living alone",
@@ -40,6 +54,20 @@
     "nProperty": "HhldFC",
     "theme": "Social",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Household_Characteristics.md"
+  },
+  {
+    "variable": "% Graduate or Professional Degree",
+    "numerator": "state-2023__county-2023__zcta-2023__tract-2023",
+    "nProperty": "GradSclP",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Educational_Characteristics.md"
+  },
+  {
+    "variable": "% High School Graduate",
+    "numerator": "state-2023__county-2023__zcta-2023__tract-2023",
+    "nProperty": "EduHsP",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Educational_Characteristics.md"
   },
   {
     "variable": "% Hispanic/Latinx Population",
@@ -126,6 +154,13 @@
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Race_Ethnicity.md"
   },
   {
+    "variable": "% No High School Diploma",
+    "numerator": "state-2023__county-2023__zcta-2023__tract-2023",
+    "nProperty": "EduNoHsP",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Educational_Characteristics.md"
+  },
+  {
     "variable": "% Nonrelatives in Family Households",
     "numerator": "state-2018__county-2023__zcta-2023__tract-2023",
     "nProperty": "NonRelFhhP",
@@ -154,46 +189,11 @@
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Race_Ethnicity.md"
   },
   {
-    "variable": "% Persons aged 25 years and over with a bachelor\u2019s degree as their highest level of education",
-    "numerator": "state-2023__county-2023__zcta-2023__tract-2023",
-    "nProperty": "BachelorsP",
-    "theme": "Social",
-    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Educational_Characteristics.md"
-  },
-  {
-    "variable": "% Population 25 years and over with some college, but no degree",
-    "numerator": "state-2023__county-2023__zcta-2023__tract-2023",
-    "nProperty": "SomeCollegeP",
-    "theme": "Social",
-    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Educational_Characteristics.md"
-  },
-  {
     "variable": "% Population aged 15 and over who are widowed",
     "numerator": "county-2023__zcta-2023__tract-2023",
     "nProperty": "WidwdP",
     "theme": "Social",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Marital_Status.md"
-  },
-  {
-    "variable": "% Population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)",
-    "numerator": "state-2023__county-2023__zcta-2023__tract-2023",
-    "nProperty": "EduHsP",
-    "theme": "Social",
-    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Educational_Characteristics.md"
-  },
-  {
-    "variable": "% Population aged 25 years and over with a graduate or professional degree",
-    "numerator": "state-2023__county-2023__zcta-2023__tract-2023",
-    "nProperty": "GradSclP",
-    "theme": "Social",
-    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Educational_Characteristics.md"
-  },
-  {
-    "variable": "% Population aged 25 years and over with less than a high school diploma",
-    "numerator": "state-2023__county-2023__zcta-2023__tract-2023",
-    "nProperty": "EduNoHsP",
-    "theme": "Social",
-    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Educational_Characteristics.md"
   },
   {
     "variable": "% Population identifying as two or more races",
@@ -299,6 +299,13 @@
     "nProperty": "PrMsuseP",
     "theme": "Outcome",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Opioid_Outcomes.md"
+  },
+  {
+    "variable": "% Some College, but No Degree",
+    "numerator": "state-2023__county-2023__zcta-2023__tract-2023",
+    "nProperty": "SomeCollegeP",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Educational_Characteristics.md"
   },
   {
     "variable": "% Tracts Rural (RUCA)",
@@ -967,28 +974,28 @@
   },
   {
     "variable": "Count of HCV Providers",
-    "numerator": "tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "HcvCntDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
   },
   {
     "variable": "Count of HIV Providers",
-    "numerator": "tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "HivCntDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HIVTesting.md"
   },
   {
     "variable": "Count of Hospitals (30-min drive)",
-    "numerator": "zcta-2020__tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "HospCntDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Hospitals.md"
   },
   {
     "variable": "Count of Mental Health Providers (30-min drive)",
-    "numerator": "zcta-2020__tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "MhCntDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Mental_Health.md"
@@ -1065,7 +1072,7 @@
   },
   {
     "variable": "Count of Pharmacies (30-min drive)",
-    "numerator": "zcta-2019__tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "RxCntDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Pharmacies.md"
@@ -1239,6 +1246,13 @@
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Demographic_Characteristics.md"
   },
   {
+    "variable": "Crowded Housing",
+    "numerator": "county-2023__zcta-2023__tract-2023",
+    "nProperty": "CrowdHsng",
+    "theme": "Social",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Household_Characteristics.md"
+  },
+  {
     "variable": "Distance (mi) to Substance Use Treatment (SUT) facility",
     "numerator": "zcta-2020__tract-2025",
     "nProperty": "SutMinDis",
@@ -1254,14 +1268,14 @@
   },
   {
     "variable": "Distance (mi) to nearest Federally Qualified Health Centers (FQHC)",
-    "numerator": "zcta-2020__tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "FqhcMinDis",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_FQHCs.md"
   },
   {
     "variable": "Distance (mi) to nearest Hospital",
-    "numerator": "zcta-2020__tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "HospMinDis",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Hospitals.md"
@@ -1275,7 +1289,7 @@
   },
   {
     "variable": "Distance (mi) to nearest Mental Health Provider",
-    "numerator": "zcta-2020__tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "MhMinDis",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Mental_Health.md"
@@ -1296,21 +1310,21 @@
   },
   {
     "variable": "Distance (mi) to nearest Pharmacy",
-    "numerator": "zcta-2019__tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "RxMinDis",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Pharmacies.md"
   },
   {
     "variable": "Distance to nearest HCV Provider",
-    "numerator": "tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "HcvMinDis",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
   },
   {
     "variable": "Distance to nearest HIV Provider",
-    "numerator": "tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "HivMinDis",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HIVTesting.md"
@@ -1366,7 +1380,7 @@
   },
   {
     "variable": "Driving Time (min) to nearest Mental Health Provider",
-    "numerator": "zcta-2020__tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "MhTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Mental_Health.md"
@@ -1401,14 +1415,14 @@
   },
   {
     "variable": "Driving Time (min) to nearest Pharmacy",
-    "numerator": "zcta-2019__tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "RxTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Pharmacies.md"
   },
   {
     "variable": "Driving Time (min) to nearest Pharmacy with Impedance Factor",
-    "numerator": "tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "RxTmDr2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Pharmacies.md"
@@ -1457,63 +1471,63 @@
   },
   {
     "variable": "Driving time (min) to nearest Federally Qualified Health Centers (FQHC)",
-    "numerator": "zcta-2020__tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "FqhcTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_FQHCs.md"
   },
   {
     "variable": "Driving time (min) to nearest Federally Qualified Health Centers (FQHC), with Impedance factor",
-    "numerator": "tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "FqhcTmDr2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_FQHCs.md"
   },
   {
     "variable": "Driving time (min) to nearest HCV Testing Facility with impedance",
-    "numerator": "tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "HcvTmDr2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
   },
   {
     "variable": "Driving time (min) to nearest HIV Testing Facility, with impedance",
-    "numerator": "tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "HivTmDr2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HIVTesting.md"
   },
   {
     "variable": "Driving time (min) to nearest Hospital",
-    "numerator": "zcta-2020__tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "HospTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Hospitals.md"
   },
   {
     "variable": "Driving time (min) to nearest Hospital with Impedance Factor",
-    "numerator": "tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "HospTmDr2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Hospitals.md"
   },
   {
     "variable": "Driving time (min) to nearest Mental Health Provider with impedance",
-    "numerator": "tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "MhTmDr2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Mental_Health.md"
   },
   {
     "variable": "Driving time to nearest HCV Provider",
-    "numerator": "tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "HcvTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HCVTesting.md"
   },
   {
     "variable": "Driving time to nearest HIV Provider",
-    "numerator": "tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "HivTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HIVTesting.md"
@@ -2266,20 +2280,6 @@
     "nProperty": "TtlPrAPp",
     "theme": "Social",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Prison_Incarceration_Rates.md"
-  },
-  {
-    "variable": "Proportion of occupied housing units that are considered crowded (more than 1 person per room)",
-    "numerator": "county-2023__zcta-2023__tract-2023",
-    "nProperty": "CrowdHsng",
-    "theme": "Social",
-    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Household_Characteristics.md"
-  },
-  {
-    "variable": "Proportion of the population aged 5+ who speak a language other than English at home but are proficient in English",
-    "numerator": "state-2023__county-2023__zcta-2023__tract-2023",
-    "nProperty": "EngProf",
-    "theme": "Social",
-    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Educational_Characteristics.md"
   },
   {
     "variable": "Public health expenditures",

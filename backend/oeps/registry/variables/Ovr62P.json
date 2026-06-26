@@ -3,10 +3,10 @@
   "title": "% Population over 62 years",
   "type": "number",
   "example": "60.0",
-  "description": "",
+  "description": "Percent of population over age 62",
+  "metadata": "Demographic_Characteristics",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Demographic_Characteristics",
   "table_sources": [
     "county-2020",
     "county-2023",

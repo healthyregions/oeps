@@ -3,10 +3,10 @@
   "title": "% Males aged 15 years and over who are separated from their spouse",
   "type": "number",
   "example": "60.0",
-  "description": "",
+  "description": "Percent males aged 15 years and over who are separated from their spouse",
+  "metadata": "Marital_Status",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Marital_Status",
   "table_sources": [
     "county-2020",
     "county-2023",
