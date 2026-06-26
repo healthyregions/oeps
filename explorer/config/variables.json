@@ -932,7 +932,7 @@
   },
   {
     "variable": "Count of Buprenorphine Providers (30-min drive)",
-    "numerator": "zcta-2020__tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "BupCntDr30",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
@@ -1002,7 +1002,7 @@
   },
   {
     "variable": "Count of Methadone Providers (30-min drive)",
-    "numerator": "zcta-2020__tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "MetCntDr30",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
@@ -1037,7 +1037,7 @@
   },
   {
     "variable": "Count of Naltrexone Providers (30-min drive)",
-    "numerator": "zcta-2020__tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "NaltCntDr30",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
@@ -1065,7 +1065,7 @@
   },
   {
     "variable": "Count of Opioid Treatment Programs (OTP) (30-min drive)",
-    "numerator": "zcta-2021__tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "OtpCntDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
@@ -1093,7 +1093,7 @@
   },
   {
     "variable": "Count of Substance Use Treatment (SUT) facility (30-min drive)",
-    "numerator": "zcta-2020__tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "SutCntDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_SubstanceUseTreatment.md"
@@ -1254,14 +1254,14 @@
   },
   {
     "variable": "Distance (mi) to Substance Use Treatment (SUT) facility",
-    "numerator": "zcta-2020__tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "SutMinDis",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_SubstanceUseTreatment.md"
   },
   {
     "variable": "Distance (mi) to nearest Buprenorphine Provider",
-    "numerator": "zcta-2020__tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "BupMinDis",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
@@ -1296,14 +1296,14 @@
   },
   {
     "variable": "Distance (mi) to nearest Methadone Provider",
-    "numerator": "zcta-2020__tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "MetMinDis",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Distance (mi) to nearest Naltrexone Provider",
-    "numerator": "zcta-2020__tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "NaltMinDis",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
@@ -1331,7 +1331,7 @@
   },
   {
     "variable": "Distance to nearest OTP",
-    "numerator": "zcta-2021__tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "OtpMinDis",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
@@ -1366,7 +1366,7 @@
   },
   {
     "variable": "Driving Time (min) to nearest Buprenorphine Provider",
-    "numerator": "county-2025__zcta-2020__tract-2025",
+    "numerator": "county-2025__zcta-2025__tract-2025",
     "nProperty": "BupTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
@@ -1387,21 +1387,21 @@
   },
   {
     "variable": "Driving Time (min) to nearest Methadone Provider",
-    "numerator": "county-2025__zcta-2020__tract-2025",
+    "numerator": "county-2025__zcta-2025__tract-2025",
     "nProperty": "MetTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Driving Time (min) to nearest Naltrexone Provider",
-    "numerator": "county-2025__zcta-2020__tract-2025",
+    "numerator": "county-2025__zcta-2025__tract-2025",
     "nProperty": "NaltTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Driving Time (min) to nearest Opioid Treatment Program (OTP)",
-    "numerator": "zcta-2021__tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "OtpTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
@@ -1464,7 +1464,7 @@
   },
   {
     "variable": "Driving time (min) to Substance Use Treatment (SUT) facility",
-    "numerator": "zcta-2020__tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "SutTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_SubstanceUseTreatment.md"
@@ -1533,6 +1533,13 @@
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_HIVTesting.md"
   },
   {
+    "variable": "Driving time to nearest OTP (impedance-adjusted)",
+    "numerator": "zcta-2025",
+    "nProperty": "OtpTmDr2",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
+  },
+  {
     "variable": "Driving time to nearest SSP",
     "numerator": "tract-2025",
     "nProperty": "SspTmDr",
@@ -1541,10 +1548,31 @@
   },
   {
     "variable": "Driving time to nearest Substance Use Treatment Provider (with impedance)",
-    "numerator": "tract-2025",
+    "numerator": "zcta-2025__tract-2025",
     "nProperty": "SutTmDr2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_SubstanceUseTreatment.md"
+  },
+  {
+    "variable": "Driving time to nearest buprenorphine provider (with impedance)",
+    "numerator": "zcta-2025",
+    "nProperty": "BupTmDr2",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Driving time to nearest methadone provider (with impedance)",
+    "numerator": "zcta-2025",
+    "nProperty": "MetTmDr2",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
+  },
+  {
+    "variable": "Driving time to nearest naltrexone provider (with impedance)",
+    "numerator": "zcta-2025",
+    "nProperty": "NaltTmDr2",
+    "theme": "Environment",
+    "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Driving time to nearest telehealth buprenorphine provider",

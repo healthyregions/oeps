@@ -281,12 +281,13 @@
       {
         "title": "Driving time to nearest Substance Use Treatment Provider (with impedance)",
         "name": "SutTmDr2",
-        "description": "Driving time (minutes) from the tract centroid to the nearest Substance Use Treatment provider, with the impedance factor applied.",
+        "description": "Driving time (minutes) from the tract/zip centroid to the nearest Substance Use Treatment provider, with the impedance factor applied.",
         "years": [
           "2025"
         ],
         "geographies": [
-          "Tract"
+          "Tract",
+          "ZCTA"
         ]
       },
       {
@@ -2774,6 +2775,50 @@
         ],
         "geographies": [
           "State"
+        ]
+      },
+      {
+        "title": "Driving time to nearest OTP (impedance-adjusted)",
+        "name": "OtpTmDr2",
+        "description": "Driving time in minutes from the tract centroid to the nearest opioid treatment program, using impedance-adjusted travel time.",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Driving time to nearest buprenorphine provider (with impedance)",
+        "name": "BupTmDr2",
+        "description": "Driving time (minutes) from the tract centroid to the nearest buprenorphine provider, with the impedance factor applied.",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Driving time to nearest methadone provider (with impedance)",
+        "name": "MetTmDr2",
+        "description": "Driving time in minutes from the tract centroid to the nearest methadone provider, with the impedance factor applied.",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Driving time to nearest naltrexone provider (with impedance)",
+        "name": "NaltTmDr2",
+        "description": "Driving time in minutes from the tract centroid to the nearest naltrexone provider, with the impedance factor applied.",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "ZCTA"
         ]
       },
       {

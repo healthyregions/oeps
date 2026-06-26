@@ -244,7 +244,7 @@ MetCntDr60|NUMERIC|Count of methadone providers in 60 minute drive time threshol
 OtpMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles
 FqhcTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes
 BupCntDr60|NUMERIC|Count of buprenorphine providers in 60 minute drive time threshold
-SutTmDr2|NUMERIC|Driving time (minutes) from the tract centroid to the nearest Substance Use Treatment provider, with the impedance factor applied.
+SutTmDr2|NUMERIC|Driving time (minutes) from the tract/zip centroid to the nearest Substance Use Treatment provider, with the impedance factor applied.
 FqhcMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest Federally Qualified Health Centers (FQHC), in miles
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 OtpFca30|NUMERIC|Two-step floating catchment area (2SFCA) measure of access to opioid treatment programs within a 30-minute drive
@@ -1427,34 +1427,54 @@ WhiteE|NUMERIC|Count persons with race identified as white alone. Estimated coun
 
 ID: `oeps-391119.tabular.zcta-2025`
 
-26 columns in this table.
+46 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
 ZCTA5|STRING|Census Bureau designated zip code tabulation area, or the rough area that contains five digit zip codes.
+MetCntDr30|INTEGER|Count of methadone providers in 30 minute drive time threshold
+SutTmDr|NUMERIC|Driving time (min) to nearest  Substance Use Treatment (SUT) facility
 RxTmDr2|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip pharmacy destination centroid with impedance factor, in minutes
 RxMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest pharmacy, in miles
 HcvCntDr|INTEGER|Number of HCV testing providers within a 30-minute drive
 HivTmDr|NUMERIC|Driving time from origin to nearest HIV testing provider (minutes)
+NaltCntDr30|INTEGER|Count of naltrexone providers in 30 minute drive time threshold
 MhCntDr|INTEGER|Count of mental health providers within a 30-minute driving threshold
 HospCntDr|INTEGER|Count of hospitals within a 30-minute driving threshold
+OtpTmDr2|NUMERIC|Driving time in minutes from the tract centroid to the nearest opioid treatment program, using impedance-adjusted travel time.
 RxCntDr|INTEGER|Count of pharmacies within a 30-minute driving threshold
 HospTmDr2|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip hospital destination centroid, in minutes with Impedance factor
+BupTmDr|NUMERIC|Driving time (minutes) to nearest buprenorphine provider
+SutMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest SUT service location, in miles
+SutCntDr|INTEGER|Count of SUT services within a 30-minute driving threshold
+NaltTmDr|NUMERIC|Driving time (minutes) to nearest naltrexone provider
+NaltMinDis|NUMERIC|Euclidean distance (miles) to nearest naltrexone/Vivitrol provider
+BupCntDr30|INTEGER|Count of Buprenorphine providers in 30 minute drive time threshold
+MetTmDr|NUMERIC|Driving time (minutes) to nearest methadone provider
 FqhcCntDr|INTEGER|Count of Federally Qualified Health Centers (FQHCs) within a 30-minute driving threshold
 FqhcTmDr2|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes, with Impedance factor
 MhMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest mental health provider, in miles
 HospMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest hospital, in miles
 MhTmDr2|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip mental health provider destination centroid with impedance, in minutes
+BupTmDr2|NUMERIC|Driving time (minutes) from the tract centroid to the nearest buprenorphine provider, with the impedance factor applied.
+MetTmDr2|NUMERIC|Driving time in minutes from the tract centroid to the nearest methadone provider, with the impedance factor applied.
+OtpMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles
 FqhcTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes
+SutTmDr2|NUMERIC|Driving time (minutes) from the tract/zip centroid to the nearest Substance Use Treatment provider, with the impedance factor applied.
 FqhcMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest Federally Qualified Health Centers (FQHC), in miles
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+OtpCntDr|INTEGER|Count of OTPs within a 30-minute driving threshold
+BupMinDis|NUMERIC|Euclidean distance (miles) to nearest buprenorphine provider
 MhTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip mental health provider destination centroid, in minutes
 HcvTmDr2|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip HCV Testing Facility with impedance destination centroid, in minutes
 HcvMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest HCV testing provider (miles)
+OtpTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes
+MetMinDis|NUMERIC|Euclidean distance (miles) to nearest methadone provider
 HcvTmDr|NUMERIC|Driving time from origin to nearest HCV testing provider (minutes)
 HivMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest HIV testing provider (miles)
 HospTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip hospital destination centroid, in minutes
 HivCntDr|INTEGER|Number of HIV testing providers within a 30-minute drive
+NaltTmDr2|NUMERIC|Driving time in minutes from the tract centroid to the nearest naltrexone provider, with the impedance factor applied.
 RxTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip pharmacy destination centroid, in minutes
 HivTmDr2|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip HIV Testing Facility with impedance destination centroid, in minutes
 
