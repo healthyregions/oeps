@@ -1,12 +1,12 @@
 {
   "name": "SomeCollegeP",
-  "title": "% Population 25 years and over with some college, but no degree",
+  "title": "% Some College, but No Degree",
   "type": "number",
   "example": "60.0",
-  "description": "",
+  "description": "Percent population 25 years and over with some college, but no degree",
+  "metadata": "Educational_Characteristics",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Educational_Characteristics",
   "table_sources": [
     "county-1980",
     "county-1990",
