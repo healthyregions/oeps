@@ -186,29 +186,33 @@ export default function Home({posts}) {
           </Grid>
         </ActionsSection>
 
-        <NewsSection>
-          <Grid container padding={'2rem'}>
-            <Grid xs={12} md={12} item alignItems={'center'}>
-              <h2 style={{ marginBottom: '0.75rem' }}>Recent News</h2>
-              <a href={'/posts'}>See All</a>
-              {
-                posts?.sort((a, b) => b?.date?.localeCompare(a?.date))?.slice(0, 3)?.map(p => <div
-                  key={'post-' + p.slug}>
-                  <Grid container alignItems={'end'}>
-                    <Grid xs={10} item><h4 style={{marginBottom: 0}}>{p?.title}</h4></Grid>
-                    <Grid xs={2} item textAlign={'right'}>{new Date(p?.date)?.toLocaleDateString()}</Grid>
-                  </Grid>
-                  <Grid container>
-                    <Grid xs={12} item>
-                      <ReactMarkdown plugins={[remarkGfm]}>{p?.summary}</ReactMarkdown>
-                      <a href={`/posts/${p?.slug}`}>Read more &rarr;</a>
+        {/* if there are any Published Posts, display them here */}
+        {
+          posts?.length && <NewsSection>
+            <Grid container padding={'2rem'}>
+              <Grid xs={12} md={12} item alignItems={'center'}>
+                <h2 style={{ marginBottom: '0.75rem' }}>Recent News</h2>
+                <a href={'/posts'}>See All</a>
+                {
+                  posts?.sort((a, b) => b?.date?.localeCompare(a?.date))?.slice(0, 3)?.map((p, index) => <div
+                    key={`post-${index}-${p.slug}`}>
+                    <Grid container alignItems={'end'}>
+                      <Grid xs={10} item><h4 style={{marginBottom: 0}}>{p?.title}</h4></Grid>
+                      <Grid xs={2} item textAlign={'right'}>{new Date(p?.date)?.toLocaleDateString()}</Grid>
                     </Grid>
-                  </Grid>
-                </div>)
-              }
+                    <Grid container>
+                      <Grid xs={12} item>
+                        <ReactMarkdown plugins={[remarkGfm]}>{p?.summary}</ReactMarkdown>
+                        <a href={`/posts/${p?.slug}`}>Read more &rarr;</a>
+                      </Grid>
+                    </Grid>
+                  </div>)
+                }
+              </Grid>
             </Grid>
-          </Grid>
-        </NewsSection>
+          </NewsSection>
+        }
+
 
         <DescriptionAndAcknowledgmentsSection>
           <Grid item xs={12} maxWidth={'85%'} align={'center'}>
