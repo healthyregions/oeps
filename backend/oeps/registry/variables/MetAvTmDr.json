@@ -1,12 +1,12 @@
 {
   "name": "MetAvTmDr",
-  "title": "Driving Time (min) to Nearest Methadone Provider",
+  "title": "Average Driving Time (min) to Nearest Methadone Provider",
   "type": "number",
   "example": "2.6",
   "description": "Average driving time (minutes) across tracts in county to nearest methadone provider",
+  "metadata": "Access_MOUDs",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Access_MOUDs",
   "table_sources": [
     "county-2020",
     "county-2025",
