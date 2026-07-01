@@ -188,7 +188,7 @@ export default function Home({posts}) {
 
         {/* if there are any Published Posts, display them here */}
         {
-          posts?.length && <NewsSection>
+          (posts !== '' && Array.isArray(posts) && posts?.length > 0) && <NewsSection>
             <Grid container padding={'2rem'}>
               <Grid xs={12} md={12} item alignItems={'center'}>
                 <h2 style={{ marginBottom: '0.75rem' }}>Recent News</h2>
@@ -216,6 +216,9 @@ export default function Home({posts}) {
 
         <DescriptionAndAcknowledgmentsSection>
           <Grid item xs={12} maxWidth={'85%'} align={'center'}>
+            {/* if there are no Published Posts, insert a horizontal line above this section */}
+            { (!posts === '' || Array.isArray(posts) || posts?.length === 0) && <hr /> }
+
             <p className={styles.description}>
               The OEPS data ecosystem was designed to support research seeking to study environments impacting and
               impacted by opioid use and opioid use disorder (OUD),
