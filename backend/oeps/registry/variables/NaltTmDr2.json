@@ -1,12 +1,12 @@
 {
   "name": "NaltTmDr2",
-  "title": "Driving time to nearest naltrexone provider (with impedance)",
+  "title": "Driving Time (min) to nearest Naltrexone Provider (with impedance)",
   "type": "number",
   "example": "22.3",
   "description": "Driving time in minutes from the tract centroid to the nearest naltrexone provider, with the impedance factor applied.",
+  "metadata": "Access_MOUDs",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Access_MOUDs",
   "table_sources": [
     "zcta-2025"
   ]
