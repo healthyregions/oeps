@@ -1,12 +1,12 @@
 {
   "name": "NaltTmDrP",
-  "title": "% Tracts With Naltrexone Provider (30-min drive)",
+  "title": "% Tracts within 30-min drive of Naltrexone Provider (NALT)",
   "type": "number",
   "example": "1",
   "description": "Percent of tracts with naltrexone provider within a 30-min driving range",
+  "metadata": "Access_MOUDs",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Access_MOUDs",
   "table_sources": [
     "county-2020",
     "county-2025"
