@@ -241,27 +241,39 @@ class Registry(BaseModel):
             theme_tree=theme_tree,
         )
 
-    def validate(self):
+    def validate(
+        self,
+        *,
+        check_columns: bool = False,
+        check_duplicate_titles: bool = False,
+        check_geography_rules: bool = False,
+        duplicate_titles_as_error: bool = False,
+    ):
+        from .registry_validation import (
+            RegistryValidationError,
+            print_validation_result,
+            run_registry_validation,
+        )
 
         print("\n-- checking variables...")
-        for k, v in self.variables.items():
-            if v.metadata not in self.metadata:
-                print(f"{k} | Invalid metadata name: {v.metadata} ")
-            for t in v.table_sources:
-                if t not in self.table_sources:
-                    print(f"{k} | Invalid table source name: {t} ")
-
         print("\n-- checking table sources...")
-        for k, v in self.table_sources.items():
-            if v.geodata_source not in self.geodata_sources:
-                print(f"{k} | Invalid geodata_source: {v.geodata_source} ")
-            pathpath = Path(v.full_path)
-            if pathpath.stem != v.name:
-                print(f"{k} | CSV file name must match table_source name: {pathpath.stem}")
-            if not pathpath.is_file():
-                print(f"{k} | CSV not found: {v.full_path}")
 
-        print("\nall checks complete.")
+        result = run_registry_validation(
+            self,
+            check_columns=check_columns,
+            check_duplicate_titles=check_duplicate_titles,
+            check_geography_rules=check_geography_rules,
+            duplicate_titles_as_error=duplicate_titles_as_error,
+        )
+        print_validation_result(result)
+
+        if result.ok:
+            print("\nall checks complete.")
+        else:
+            print(f"\nvalidation failed with {len(result.errors)} error(s).")
+            raise RegistryValidationError(
+                f"registry validation failed with {len(result.errors)} error(s)"
+            )
 
     def reload_variables(self):
         self.variables = self._load_variables(self.path)
