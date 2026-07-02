@@ -36,7 +36,7 @@ Usage: clean-explorer-bucket [OPTIONS]
 
 
 * `explorer_path`:
-    * Type: <click.types.Path object at 0x7f3744885ed0>
+    * Type: <click.types.Path object at 0x7f930ac7ded0>
     * Default: `../explorer`
     * Usage: `--explorer-path`
 
@@ -131,7 +131,7 @@ Usage: create-table-source [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f9a7505de10>
+    * Type: <click.types.Path object at 0x7f66d5372150>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -192,7 +192,7 @@ Usage: build-explorer [OPTIONS]
 ###### Options
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f339a069cd0>
+    * Type: <click.types.Path object at 0x7ff7fa572250>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -201,7 +201,7 @@ Usage: build-explorer [OPTIONS]
 
 
 * `explorer_path`:
-    * Type: <click.types.Path object at 0x7f339a069910>
+    * Type: <click.types.Path object at 0x7ff7fed517d0>
     * Default: `../explorer`
     * Usage: `--explorer-path`
 
@@ -388,7 +388,7 @@ Usage: build-docs [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f4660f2fd50>
+    * Type: <click.types.Path object at 0x7fd036c1fbd0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -485,7 +485,7 @@ Usage: remove-variable [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7fc94db56110>
+    * Type: <click.types.Path object at 0x7f5dea93ff50>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -584,7 +584,7 @@ Usage: merge-csv [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f297ab39e90>
+    * Type: <click.types.Path object at 0x7f975eb766d0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -692,7 +692,7 @@ Usage: bigquery-upload [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f5d02256310>
+    * Type: <click.types.Path object at 0x7f0d04c82690>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -754,7 +754,7 @@ Usage: create-data-package [OPTIONS]
 ###### Options
 
 * `destination`:
-    * Type: <click.types.Path object at 0x7f7850c1d250>
+    * Type: <click.types.Path object at 0x7f7f923ee810>
     * Default: `.temp/data-packages`
     * Usage: `--destination
 -d`
@@ -855,7 +855,7 @@ Usage: create-data-package [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f7851871d90>
+    * Type: <click.types.Path object at 0x7f7f92e5e610>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -864,7 +864,7 @@ Usage: create-data-package [OPTIONS]
 
 
 * `data_dir_path`:
-    * Type: <click.types.Path object at 0x7f7851871cd0>
+    * Type: <click.types.Path object at 0x7f7f92e5e2d0>
     * Default: `oeps/data`
     * Usage: `--data-dir-path`
 
@@ -942,7 +942,7 @@ Options:
 
 ## validate-registry
 
-Runs a series of validation processes against the current registry content.
+Runs validation processes against the current registry content.
 
 ###### Usage
 
@@ -956,7 +956,7 @@ Usage: validate-registry [OPTIONS]
 ###### Options
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f6773e62210>
+    * Type: <click.types.Path object at 0x7f8a88166310>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -970,6 +970,51 @@ Usage: validate-registry [OPTIONS]
     * Usage: `--sync-table-sources`
 
     Updates all variable table_sources values directly from CSV data.
+
+
+
+* `check_columns`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--check-columns`
+
+    Fail if a variable table_sources entry has no matching column in that CSV.
+
+
+
+* `check_duplicate_titles`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--check-duplicate-titles`
+
+    Report variables that share the same display title.
+
+
+
+* `duplicate_titles_as_error`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--duplicate-titles-as-error`
+
+    Treat duplicate titles as errors (use with --check-duplicate-titles).
+
+
+
+* `check_geography_rules`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--check-geography-rules`
+
+    Enforce MOUD/access geography rules for table_sources.
+
+
+
+* `strict`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--strict`
+
+    Enable --check-columns, --check-duplicate-titles, and --check-geography-rules.
 
 
 
@@ -987,13 +1032,23 @@ Usage: validate-registry [OPTIONS]
 ```
 Usage: validate-registry [OPTIONS]
 
-  Runs a series of validation processes against the current registry content.
+  Runs validation processes against the current registry content.
 
 Options:
-  --registry-path PATH  Optional override for the registry directory.
-  --sync-table-sources  Updates all variable table_sources values directly
-                        from CSV data.
-  --help                Show this message and exit.
+  --registry-path PATH         Optional override for the registry directory.
+  --sync-table-sources         Updates all variable table_sources values
+                               directly from CSV data.
+  --check-columns              Fail if a variable table_sources entry has no
+                               matching column in that CSV.
+  --check-duplicate-titles     Report variables that share the same display
+                               title.
+  --duplicate-titles-as-error  Treat duplicate titles as errors (use with
+                               --check-duplicate-titles).
+  --check-geography-rules      Enforce MOUD/access geography rules for
+                               table_sources.
+  --strict                     Enable --check-columns, --check-duplicate-
+                               titles, and --check-geography-rules.
+  --help                       Show this message and exit.
 ```
 
 
@@ -1055,7 +1110,7 @@ Usage: move-variable [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f6820d45d90>
+    * Type: <click.types.Path object at 0x7f589402fc50>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 

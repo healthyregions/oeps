@@ -67,8 +67,8 @@ BupRm60,Buprenorphine access 60 minutes (RAAM),number,1.232,Buprenorphine access
 BupRm90,Buprenorphine access 90 minutes (RAAM),number,1.232,Buprenorphine access 90 minutes (RAAM),tract-2020,Access_MOUDs,False,False
 BupTmBk,Biking Time (min) to nearest Buprenorphine Provider,number,0,Biking time (minutes) to nearest buprenorphine provider,"county-2025, tract-2020, tract-2025, zcta-2020",Access_MOUDs,False,True
 BupTmBkP,% Tracts With Buprenorphine Provider (30-min bike),number,1,Percent of tracts with buprenorphine provider within a 30-min biking range,county-2020,Access_MOUDs,False,False
-BupTmDr,Driving Time (min) to nearest Buprenorphine Provider,number,10.12,Driving time (minutes) to nearest buprenorphine provider,"county-2025, tract-2020, tract-2025, zcta-2020, zcta-2025",Access_MOUDs,False,True
-BupTmDr2,Driving time to nearest buprenorphine provider (with impedance),number,53.24,"Driving time (minutes) from the tract centroid to the nearest buprenorphine provider, with the impedance factor applied.",zcta-2025,Access_MOUDs,False,True
+BupTmDr,Driving Time (min) to nearest Buprenorphine Provider,number,10.12,Driving time (minutes) to nearest buprenorphine provider,"tract-2020, tract-2025, zcta-2020, zcta-2025",Access_MOUDs,False,True
+BupTmDr2,Driving time to nearest buprenorphine provider (with impedance),number,53.24,"Driving time (minutes) from the tract centroid to the nearest buprenorphine provider, with the impedance factor applied.","tract-2025, zcta-2025",Access_MOUDs,False,True
 BupTmDrP,% Tracts With Buprenorphine Provider (30-min drive),number,1,Percent of tracts with buprenorphine provider within a 30-min driving range,"county-2020, county-2025",Access_MOUDs,False,False
 BupTmDrP2,"% Tracts within 30-min drive of Buprenorphine Provider(BUP), with Impedance factor",number,5,"Percent of tracts with Buprenorphine Provider within a 30-min driving range, with Impedance factor","county-2025, state-2025",Access_MOUDs,False,False
 BupTmWk,Walking Time (min) to nearest Buprenorphine Provider,number,0,Walking time (minutes) to nearest buprenorphine provider,"county-2025, tract-2020, tract-2025, zcta-2020",Access_MOUDs,False,True
@@ -210,8 +210,8 @@ MetRm60,Methadone access 60 minutes (RAAM),number,1.232,Methadone access 60 minu
 MetRm90,Methadone access 90 minutes (RAAM),number,1.232,Methadone access 90 minutes (RAAM),"tract-1980, tract-1990, tract-2000, tract-2010, tract-2020",Access_MOUDs,False,False
 MetTmBk,Biking Time (min) to nearest Methadone Provider,number,148.18,Biking time (minutes) to nearest methadone provider,"county-2025, tract-2020, tract-2025, zcta-2020",Access_MOUDs,False,True
 MetTmBkP,% Tracts With Methadone Provider (30-min bike),number,0.99,Percent of tracts with methadone provider within a 30-min biking range,county-2020,Access_MOUDs,False,False
-MetTmDr,Driving Time (min) to nearest Methadone Provider,number,27.39,Driving time (minutes) to nearest methadone provider,"county-2025, tract-2020, tract-2025, zcta-2020, zcta-2025",Access_MOUDs,False,True
-MetTmDr2,Driving time to nearest methadone provider (with impedance),number,33.4,"Driving time in minutes from the tract centroid to the nearest methadone provider, with the impedance factor applied.",zcta-2025,Access_MOUDs,False,True
+MetTmDr,Driving Time (min) to nearest Methadone Provider,number,27.39,Driving time (minutes) to nearest methadone provider,"tract-2020, tract-2025, zcta-2020, zcta-2025",Access_MOUDs,False,True
+MetTmDr2,Driving time to nearest methadone provider (with impedance),number,33.4,"Driving time in minutes from the tract centroid to the nearest methadone provider, with the impedance factor applied.","tract-2025, zcta-2025",Access_MOUDs,False,True
 MetTmDrP,% Tracts With Methadone Provider (30-min drive),number,1,Percent of tracts with methadone provider within a 30-min driving range,"county-2020, county-2025",Access_MOUDs,False,False
 MetTmDrP2,"% Tracts within 30-min drive of Methadone Provider(MET), with Impedance factor",number,3.5,"Percent of tracts with Methadone Providerwithin a 30-min driving range, with Impedance factor","county-2025, state-2025",Access_MOUDs,False,False
 MetTmWk,Walking Time (min) to nearest Methadone Provider,number,1744.66,Walking time (minutes) to nearest methadone provider,"county-2025, tract-2020, tract-2025, zcta-2020",Access_MOUDs,False,True
@@ -258,8 +258,8 @@ NaltRm60,Naltrexone access 60 minutes (RAAM),number,1.232,Naltrexone access 60 m
 NaltRm90,Naltrexone access 90 minutes (RAAM),number,1.232,Naltrexone access 90 minutes (RAAM),tract-2020,Access_MOUDs,False,False
 NaltTmBk,Biking Time (min) to nearest Naltrexone Provider,number,165.18,Biking time (minutes) to nearest naltrexone provider,"county-2025, tract-2020, tract-2025, zcta-2020",Access_MOUDs,False,True
 NaltTmBkP,% Tracts With Naltrexone Provider (30-min bike),number,1,Percent of tracts with naltrexone provider within a 30-min biking range,county-2020,Access_MOUDs,False,False
-NaltTmDr,Driving Time (min) to nearest Naltrexone Provider,number,35.34,Driving time (minutes) to nearest naltrexone provider,"county-2025, tract-2020, tract-2025, zcta-2020, zcta-2025",Access_MOUDs,False,True
-NaltTmDr2,Driving time to nearest naltrexone provider (with impedance),number,22.3,"Driving time in minutes from the tract centroid to the nearest naltrexone provider, with the impedance factor applied.",zcta-2025,Access_MOUDs,False,False
+NaltTmDr,Driving Time (min) to nearest Naltrexone Provider,number,35.34,Driving time (minutes) to nearest naltrexone provider,"tract-2020, tract-2025, zcta-2020, zcta-2025",Access_MOUDs,False,True
+NaltTmDr2,Driving time to nearest naltrexone provider (with impedance),number,22.3,"Driving time in minutes from the tract centroid to the nearest naltrexone provider, with the impedance factor applied.","tract-2025, zcta-2025",Access_MOUDs,False,False
 NaltTmDrP,% Tracts With Naltrexone Provider (30-min drive),number,1,Percent of tracts with naltrexone provider within a 30-min driving range,"county-2020, county-2025",Access_MOUDs,False,False
 NaltTmDrP2,"% Tracts within 30-min drive of Naltrexone Provider (NALT), with Impedance factor",number,33,"Percent of tracts with Naltrexone Provider within a 30-min driving range, with Impedance factor","county-2025, state-2025",Access_MOUDs,False,False
 NaltTmWk,Walking Time (min) to nearest Naltrexone Provider,number,,Walking time (minutes) to nearest naltrexone provider,"county-2025, tract-2020, tract-2025, zcta-2020",Access_MOUDs,False,True
@@ -299,7 +299,7 @@ OtpMinDis,Distance to nearest OTP,number,121.0,"Euclidean distance* from tract/z
 OtpRm30,Opioid Treatment Provider access 30 minutes (RAAM),number,1.22,Opioid Treatment Provider access 30 minutes (RAAM),tract-2025,Access_MOUDs,False,False
 OtpRm60,Opioid Treatment Provider access 60 minutes (RAAM),number,1.23,Opioid Treatment Provider access 60 minutes (RAAM),tract-2025,Access_MOUDs,False,False
 OtpTmDr,Driving Time (min) to nearest Opioid Treatment Program (OTP),number,27.39,"Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes","tract-2021, tract-2025, zcta-2021, zcta-2025",Access_MOUDs,False,True
-OtpTmDr2,Driving time to nearest OTP (impedance-adjusted),number,22.45,"Driving time in minutes from the tract centroid to the nearest opioid treatment program, using impedance-adjusted travel time.",zcta-2025,Access_MOUDs,False,False
+OtpTmDr2,Driving time to nearest OTP (impedance-adjusted),number,22.45,"Driving time in minutes from the tract centroid to the nearest opioid treatment program, using impedance-adjusted travel time.","tract-2025, zcta-2025",Access_MOUDs,False,False
 OtpTmDrP,% Tracts with Opioid Treatment Program (OTP) (30-min drive),number,0.75,Percent of tracts within a 30-minute drive time of an opioid treatment program.,"county-2021, county-2025, state-2021",Access_MOUDs,False,False
 OtpTmDrP2,"% Tracts within 30-min drive of Opioid Treatment Provider (Otp), with Impedance factor",number,33,"Percent of tracts with Opioid Treatment Provider within a 30-min driving range, with Impedance factor","county-2025, state-2025",Access_MOUDs,False,False
 Ov75Hcv,Yearly Hepatitis C cases - Over 75 years old (2013-2016),number,1600,Mean yearly Hepatitis C cases in people over 75 years of age from 2013-2016,state-2017,HepatitisC_Rates,False,False
