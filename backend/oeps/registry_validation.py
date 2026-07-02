@@ -38,6 +38,10 @@ def _table_summary_level(registry: Registry, table_source_name: str) -> str | No
     return gs.summary_level.name
 
 
+def _is_remote_table_path(path: str) -> bool:
+    return path.startswith("http://") or path.startswith("https://")
+
+
 def validate_registry_structure(registry: Registry) -> ValidationResult:
     """Checks that were previously print-only in Registry.validate()."""
     result = ValidationResult()
@@ -52,6 +56,8 @@ def validate_registry_structure(registry: Registry) -> ValidationResult:
     for k, v in registry.table_sources.items():
         if v.geodata_source not in registry.geodata_sources:
             result.errors.append(f"{k} | invalid geodata_source: {v.geodata_source}")
+        if _is_remote_table_path(v.full_path):
+            continue
         pathpath = Path(v.full_path)
         if pathpath.stem != v.name:
             result.errors.append(

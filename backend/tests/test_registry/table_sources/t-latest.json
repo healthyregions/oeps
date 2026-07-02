@@ -1,6 +1,6 @@
 {
     "name": "t-latest",
-    "path": "https://raw.githubusercontent.com/GeoDaCenter/opioid-policy-scan/main/data_final/full_tables/T_Latest.csv",
+    "path": "../../tests/test_registry/csv/t-latest.csv",
     "format": "csv",
     "mediatype": "text/csv",
     "title": "OEPS Data Aggregated by Census Tract (latest)",
