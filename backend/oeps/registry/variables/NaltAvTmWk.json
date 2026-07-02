@@ -1,6 +1,6 @@
 {
   "name": "NaltAvTmWk",
-  "title": "Walking Time (min) to Nearest Naltrexone Provider",
+  "title": "Walking Time (min) to nearest Naltrexone Provider (state/county average)",
   "type": "number",
   "example": "7.40684027777778",
   "description": "Average walking time (minutes) across tracts in county to nearest naltrexone provider",

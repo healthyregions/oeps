@@ -1,6 +1,6 @@
 {
   "name": "MetTmDr",
-  "title": "Driving Time (min) to nearest Methadone Provider",
+  "title": "Driving Time (min) to nearest Methadone Provider (tract/ZIP)",
   "type": "number",
   "example": "27.39",
   "description": "Driving time (minutes) to nearest methadone provider",

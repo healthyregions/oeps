@@ -105,6 +105,41 @@ def test_validate_fails_on_missing_csv_column(runner):
         bad_var.unlink(missing_ok=True)
 
 
+def test_validate_fails_on_duplicate_titles(runner):
+    registry_path = Path(runner.app.config["TEST_REGISTRY_DIR"])
+    dup_var = registry_path / "variables" / "DupTitleVar.json"
+    dup_var.write_text(
+        json.dumps(
+            {
+                "name": "DupTitleVar",
+                "title": "TotPop",
+                "type": "number",
+                "example": "1",
+                "description": "test",
+                "longitudinal": False,
+                "analysis": False,
+                "metadata": "Demographic_Characteristics",
+                "table_sources": ["t-latest"],
+            }
+        ),
+        encoding="utf-8",
+    )
+    try:
+        result = runner.invoke(
+            args=[
+                "validate-registry",
+                "--registry-path",
+                str(registry_path),
+                "--check-duplicate-titles",
+                "--duplicate-titles-as-error",
+            ]
+        )
+        assert result.exit_code != 0
+        assert "duplicate title" in result.output.lower()
+    finally:
+        dup_var.unlink(missing_ok=True)
+
+
 def test_registry_validation_error_is_raised():
     from oeps.handlers import Registry
 

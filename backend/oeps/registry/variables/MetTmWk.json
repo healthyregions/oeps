@@ -1,6 +1,6 @@
 {
   "name": "MetTmWk",
-  "title": "Walking Time (min) to nearest Methadone Provider",
+  "title": "Walking Time (min) to nearest Methadone Provider (tract/ZIP)",
   "type": "number",
   "example": "1744.66",
   "description": "Walking time (minutes) to nearest methadone provider",

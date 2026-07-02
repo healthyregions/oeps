@@ -1,6 +1,6 @@
 {
   "name": "NaltAvTmDr",
-  "title": "Driving Time (min) to Nearest Naltrexone Provider",
+  "title": "Driving Time (min) to nearest Naltrexone Provider (state/county average)",
   "type": "number",
   "example": "1.61",
   "description": "Average driving time (minutes) across tracts in county to nearest naltrexone provider",

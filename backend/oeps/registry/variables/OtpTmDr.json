@@ -1,6 +1,6 @@
 {
   "name": "OtpTmDr",
-  "title": "Driving Time (min) to nearest Opioid Treatment Program (OTP)",
+  "title": "Driving Time (min) to nearest Opioid Treatment Program (OTP) (tract/ZIP)",
   "type": "number",
   "example": "27.39",
   "description": "Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes",

@@ -1,6 +1,6 @@
 {
   "name": "NaltTmWk",
-  "title": "Walking Time (min) to nearest Naltrexone Provider",
+  "title": "Walking Time (min) to nearest Naltrexone Provider (tract/ZIP)",
   "type": "number",
   "example": "",
   "description": "Walking time (minutes) to nearest naltrexone provider",
