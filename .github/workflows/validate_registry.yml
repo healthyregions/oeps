@@ -36,4 +36,4 @@ jobs:
         working-directory: backend
         env:
           FLASK_APP: oeps
-        run: flask validate-registry
+        run: flask validate-registry --check-columns --check-geography-rules --check-duplicate-titles
