@@ -112,7 +112,7 @@ def test_validate_fails_on_duplicate_titles(runner):
         json.dumps(
             {
                 "name": "DupTitleVar",
-                "title": "TotPop",
+                "title": "Total Population",
                 "type": "number",
                 "example": "1",
                 "description": "test",
