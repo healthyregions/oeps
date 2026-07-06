@@ -4543,7 +4543,7 @@
         ]
       },
       {
-        "title": "% Black/African American Populationw",
+        "title": "% Black/African American Population",
         "name": "BlackP",
         "description": "Percentage of population with race identified as Black or African American alone",
         "years": [
@@ -4716,7 +4716,7 @@
         ]
       },
       {
-        "title": "Count Black/African American Populationw",
+        "title": "Count Black/African American Population",
         "name": "BlackE",
         "description": "Count population with race identified as Black or African American alone. Estimated count in non-decennial years.",
         "years": [
@@ -5599,7 +5599,7 @@
     "construct": "Hepatitis C Rates",
     "variables": [
       {
-        "title": "Average Ages between 50 to 74 Hepitatis C virus Deaths",
+        "title": "Average Ages between 50 to 74 Hepatitis C virus Deaths",
         "name": "AvA50_74HcvD",
         "description": "Mean yearly Hepatitis C deaths among people between 50 and 74 years of age from 2013-2017, 2018-2022",
         "years": [

@@ -14,7 +14,7 @@
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Educational_Characteristics.md"
   },
   {
-    "variable": "% Black/African American Populationw",
+    "variable": "% Black/African American Population",
     "numerator": "state-2023__county-2023__zcta-2023__tract-2023",
     "nProperty": "BlackP",
     "theme": "Social",
@@ -623,7 +623,7 @@
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/PDMP_Presence.md"
   },
   {
-    "variable": "Average Ages between 50 to 74 Hepitatis C virus Deaths",
+    "variable": "Average Ages between 50 to 74 Hepatitis C virus Deaths",
     "numerator": "state-2022",
     "nProperty": "AvA50_74HcvD",
     "theme": "Outcome",
@@ -875,7 +875,7 @@
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Race_Ethnicity.md"
   },
   {
-    "variable": "Count Black/African American Populationw",
+    "variable": "Count Black/African American Population",
     "numerator": "state-2023__county-2023__zcta-2018__tract-2023",
     "nProperty": "BlackE",
     "theme": "Social",

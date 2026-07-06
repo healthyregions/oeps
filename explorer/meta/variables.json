@@ -208,7 +208,7 @@
         "Variable Proxy": "Population percentages by race and ethnicity",
         "Variables": [
           "% Asian Population",
-          "% Black/African American Populationw",
+          "% Black/African American Population",
           "% Hispanic/Latinx Population",
           "% Native American/Alaska Native Population",
           "% Native Hawaiian & Other PI Population",
@@ -217,7 +217,7 @@
           "% Population with ethnicity identified as of Hispanic or Latinx origin",
           "% White Population",
           "Count Asian Population",
-          "Count Black/African American Populationw",
+          "Count Black/African American Population",
           "Count Hispanic/Latinx Population",
           "Count Native American/Alaska Native Population",
           "Count Native Hawaiian & Other PI Population",
@@ -914,7 +914,7 @@
         "Variable Construct": "Hepatitis C Rates",
         "Variable Proxy": "Rates of Hep C cases by age and demographics",
         "Variables": [
-          "Average Ages between 50 to 74 Hepitatis C virus Deaths",
+          "Average Ages between 50 to 74 Hepatitis C virus Deaths",
           "Average Hepitatis C virus Deaths (5-Year Averages)",
           "Average White Hepitatis C virus Deaths",
           "Hepatitis C Deaths",
