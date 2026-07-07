@@ -1,12 +1,12 @@
 {
   "name": "BupAvTmDr",
-  "title": "Driving Time (min) to nearest Buprenorphine Provider (state/county average)",
+  "title": "Average Driving Time (min) to Nearest Buprenorphine Provider(state/county average)",
   "type": "number",
   "example": "0.42",
   "description": "Average driving time (minutes) across tracts in county to nearest buprenorphine provider",
+  "metadata": "Access_MOUDs",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Access_MOUDs",
   "table_sources": [
     "county-2020",
     "county-2025",
