@@ -1,6 +1,6 @@
 {
   "name": "MhAvTmDr",
-  "title": "Driving Time (min) to nearest Mental Health Provider",
+  "title": "Driving Time (min) to nearest Mental Health Provider (state/county average)",
   "type": "number",
   "example": "11.42",
   "description": "Average driving time (minutes) across tracts in state to nearest mental health provider",

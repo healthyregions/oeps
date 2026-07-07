@@ -1,6 +1,6 @@
 {
   "name": "NaltAvTmBk",
-  "title": "Biking Time (min) to Nearest Naltrexone Provider",
+  "title": "Biking Time (min) to nearest Naltrexone Provider (state/county average)",
   "type": "number",
   "example": "3.80180555555556",
   "description": "Average biking time (minutes) across tracts in county to nearest naltrexone provider",

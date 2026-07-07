@@ -1,6 +1,6 @@
 {
   "name": "NaltTmDr",
-  "title": "Driving Time (min) to nearest Naltrexone Provider",
+  "title": "Driving Time (min) to nearest Naltrexone Provider (tract/ZIP)",
   "type": "number",
   "example": "35.34",
   "description": "Driving time (minutes) to nearest naltrexone provider",

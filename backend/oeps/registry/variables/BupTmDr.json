@@ -1,6 +1,6 @@
 {
   "name": "BupTmDr",
-  "title": "Driving Time (min) to nearest Buprenorphine Provider",
+  "title": "Driving Time (min) to nearest Buprenorphine Provider (tract/ZIP)",
   "type": "number",
   "example": "10.12",
   "description": "Driving time (minutes) to nearest buprenorphine provider",

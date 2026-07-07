@@ -1,6 +1,6 @@
 {
   "name": "MetTmBk",
-  "title": "Biking Time (min) to nearest Methadone Provider",
+  "title": "Biking Time (min) to nearest Methadone Provider (tract/ZIP)",
   "type": "number",
   "example": "148.18",
   "description": "Biking time (minutes) to nearest methadone provider",

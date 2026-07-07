@@ -1,6 +1,6 @@
 {
   "name": "BupTmWk",
-  "title": "Walking Time (min) to nearest Buprenorphine Provider",
+  "title": "Walking Time (min) to nearest Buprenorphine Provider (tract/ZIP)",
   "type": "number",
   "example": "0",
   "description": "Walking time (minutes) to nearest buprenorphine provider",

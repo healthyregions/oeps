@@ -1,6 +1,6 @@
 {
   "name": "Ovr65P",
-  "title": "% Population: Age 65+",
+  "title": "% Population: Age 65+ (percent)",
   "type": "number",
   "example": "15.77",
   "description": "Percentage of population over 65",
