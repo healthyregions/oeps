@@ -1,12 +1,12 @@
 {
   "name": "BupTmDrP",
-  "title": "% Tracts With Buprenorphine Provider (30-min drive)",
+  "title": "% Tracts with Buprenorphine Provider (30-min drive)",
   "type": "number",
   "example": "1",
   "description": "Percent of tracts with buprenorphine provider within a 30-min driving range",
+  "metadata": "Access_MOUDs",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Access_MOUDs",
   "table_sources": [
     "county-2020",
     "county-2025"
