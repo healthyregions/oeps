@@ -192,6 +192,30 @@
         ]
       },
       {
+        "title": "Average Driving Time (min) to nearest Substance Use Treatment program (2020)",
+        "name": "SutpAvTmDr",
+        "description": "Average driving time (minutes) across tracts in state to nearest Substance Use Treatment program.",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      },
+      {
+        "title": "Average Driving Time (min) to nearest Substance Use Treatment program (2025)",
+        "name": "SutAvTmDr",
+        "description": "Average driving time (minutes) across tracts in state to nearest Substance Use Treatment program.",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      },
+      {
         "title": "Average driving time to nearest Substance Use Treatment Provider (Sut), with Impedance factor",
         "name": "SutAvTmDr2",
         "description": " Average driving time (minutes) across tracts in state to nearestSubstance Use Treatment Provider (Sut), with Impedance factor",
@@ -239,30 +263,6 @@
         "geographies": [
           "Tract",
           "ZCTA"
-        ]
-      },
-      {
-        "title": "Driving Time (min) to nearest Substance Use Treatment program (2020)",
-        "name": "SutpAvTmDr",
-        "description": "Average driving time (minutes) across tracts in state to nearest Substance Use Treatment program.",
-        "years": [
-          "2020"
-        ],
-        "geographies": [
-          "County",
-          "State"
-        ]
-      },
-      {
-        "title": "Driving Time (min) to nearest Substance Use Treatment program (2025)",
-        "name": "SutAvTmDr",
-        "description": "Average driving time (minutes) across tracts in state to nearest Substance Use Treatment program.",
-        "years": [
-          "2025"
-        ],
-        "geographies": [
-          "County",
-          "State"
         ]
       },
       {
@@ -1900,18 +1900,6 @@
         ]
       },
       {
-        "title": "% Tracts With Buprenorphine Provider (30-min drive)",
-        "name": "BupTmDrP",
-        "description": "Percent of tracts with buprenorphine provider within a 30-min driving range",
-        "years": [
-          "2020",
-          "2025"
-        ],
-        "geographies": [
-          "County"
-        ]
-      },
-      {
         "title": "% Tracts With Buprenorphine Provider (30-min walk)",
         "name": "BupTmWkP",
         "description": "Percent of tracts with buprenorphine provider within a 30-min walking range",
@@ -1943,6 +1931,18 @@
         ],
         "geographies": [
           "County"
+        ]
+      },
+      {
+        "title": "% Tracts With Methadone Provider (30-min drive), with Impedance Factor",
+        "name": "MetTmDrP2",
+        "description": "Percent of tracts with Methadone Providerwithin a 30-min driving range, with Impedance factor",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "County",
+          "State"
         ]
       },
       {
@@ -1988,6 +1988,42 @@
         ],
         "geographies": [
           "County"
+        ]
+      },
+      {
+        "title": "% Tracts with Buprenorphine Provider (30-min drive)",
+        "name": "BupTmDrP",
+        "description": "Percent of tracts with buprenorphine provider within a 30-min driving range",
+        "years": [
+          "2020",
+          "2025"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "% Tracts with Buprenorphine Provider (30-min driving range), with Impedance Factor",
+        "name": "BupTmDrP2",
+        "description": "Percent of tracts with Buprenorphine Provider within a 30-min driving range, with Impedance factor",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      },
+      {
+        "title": "% Tracts with Naltrexone Provider (30-min drive), with Impedance factor",
+        "name": "NaltTmDrP2",
+        "description": "Percent of tracts with Naltrexone Provider within a 30-min driving range, with Impedance factor",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "County",
+          "State"
         ]
       },
       {
@@ -2037,42 +2073,6 @@
         ]
       },
       {
-        "title": "% Tracts within 30-min drive of Buprenorphine Provider(BUP), with Impedance factor",
-        "name": "BupTmDrP2",
-        "description": "Percent of tracts with Buprenorphine Provider within a 30-min driving range, with Impedance factor",
-        "years": [
-          "2025"
-        ],
-        "geographies": [
-          "County",
-          "State"
-        ]
-      },
-      {
-        "title": "% Tracts within 30-min drive of Methadone Provider(MET), with Impedance factor",
-        "name": "MetTmDrP2",
-        "description": "Percent of tracts with Methadone Providerwithin a 30-min driving range, with Impedance factor",
-        "years": [
-          "2025"
-        ],
-        "geographies": [
-          "County",
-          "State"
-        ]
-      },
-      {
-        "title": "% Tracts within 30-min drive of Naltrexone Provider (NALT), with Impedance factor",
-        "name": "NaltTmDrP2",
-        "description": "Percent of tracts with Naltrexone Provider within a 30-min driving range, with Impedance factor",
-        "years": [
-          "2025"
-        ],
-        "geographies": [
-          "County",
-          "State"
-        ]
-      },
-      {
         "title": "% Tracts within 30-min drive of Opioid Treatment Provider (Otp), with Impedance factor",
         "name": "OtpTmDrP2",
         "description": "Percent of tracts with Opioid Treatment Provider within a 30-min driving range, with Impedance factor",
@@ -2085,9 +2085,68 @@
         ]
       },
       {
-        "title": "Average driving time to nearest Buprenorphine Provider(BUP), with Impedance factor",
-        "name": "BupAvTmDr2",
-        "description": "Average driving time (minutes) across tracts in state to nearest Buprenorphine Provider (BUP), with Impedance factor",
+        "title": "Average Biking Time (min) to Nearest Buprenorphine Provider (state/county average)",
+        "name": "BupAvTmBk",
+        "description": "Average biking time (minutes) across tracts in county to nearest buprenorphine provider",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Average Biking Time (min) to Nearest Naltrexone Provider (state/county average)",
+        "name": "NaltAvTmBk",
+        "description": "Average biking time (minutes) across tracts in county to nearest naltrexone provider",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Average Biking Time (min) to nearest Methadone Provider (state/county average)",
+        "name": "MetAvTmBk",
+        "description": "Average biking time (minutes) across tracts in county to nearest methadone provider",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Average Driving Time (min) to Nearest Buprenorphine Provider(state/county average)",
+        "name": "BupAvTmDr",
+        "description": "Average driving time (minutes) across tracts in county to nearest buprenorphine provider",
+        "years": [
+          "2020",
+          "2025"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      },
+      {
+        "title": "Average Driving Time (min) to Nearest Methadone Provider (state/county average)",
+        "name": "MetAvTmDr",
+        "description": "Average driving time (minutes) across tracts in county to nearest methadone provider",
+        "years": [
+          "2020",
+          "2025"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      },
+      {
+        "title": "Average Driving Time (min) to Nearest Methadone Provider (state/county average) with Impedance factor",
+        "name": "MetAvTmDr2",
+        "description": "Average driving time (minutes) across tracts in state to nearest Methadone Provider(MET), with Impedance factor",
         "years": [
           "2025"
         ],
@@ -2097,9 +2156,68 @@
         ]
       },
       {
-        "title": "Average driving time to nearest Methadone Provider(MET), with Impedance factor",
-        "name": "MetAvTmDr2",
-        "description": "Average driving time (minutes) across tracts in state to nearest Methadone Provider(MET), with Impedance factor",
+        "title": "Average Driving Time (min) to Nearest Naltrexone Provider (state/county average)",
+        "name": "NaltAvTmDr",
+        "description": "Average driving time (minutes) across tracts in county to nearest naltrexone provider",
+        "years": [
+          "2020",
+          "2025"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      },
+      {
+        "title": "Average Driving Time (min) to Nearest Opioid Treatment Program (OTP) (state/county average)",
+        "name": "OtpAvTmDr",
+        "description": "Average driving time (minutes) across tracts to nearest opioid treatment program.",
+        "years": [
+          "2021",
+          "2025"
+        ],
+        "geographies": [
+          "County",
+          "State"
+        ]
+      },
+      {
+        "title": "Average Walking Time (min) to Nearest Buprenorphine Provider (state/county average)",
+        "name": "BupAvTmWk",
+        "description": "Average walking time (minutes) across tracts in county to nearest buprenorphine provider",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Average Walking Time (min) to Nearest Naltrexone Provider (state/county average)",
+        "name": "NaltAvTmWk",
+        "description": "Average walking time (minutes) across tracts in county to nearest naltrexone provider",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Average Walking Time (min) to nearest Methadone Provider (state/county average)",
+        "name": "MetAvTmWk",
+        "description": "Average walking time (minutes) across tracts in county to nearest methadone provider",
+        "years": [
+          "2020"
+        ],
+        "geographies": [
+          "County"
+        ]
+      },
+      {
+        "title": "Average driving time to nearest Buprenorphine Provider(BUP), with Impedance factor",
+        "name": "BupAvTmDr2",
+        "description": "Average driving time (minutes) across tracts in state to nearest Buprenorphine Provider (BUP), with Impedance factor",
         "years": [
           "2025"
         ],
@@ -2133,17 +2251,6 @@
         ]
       },
       {
-        "title": "Biking Time (min) to nearest Buprenorphine Provider (state/county average)",
-        "name": "BupAvTmBk",
-        "description": "Average biking time (minutes) across tracts in county to nearest buprenorphine provider",
-        "years": [
-          "2020"
-        ],
-        "geographies": [
-          "County"
-        ]
-      },
-      {
         "title": "Biking Time (min) to nearest Buprenorphine Provider (tract/ZIP)",
         "name": "BupTmBk",
         "description": "Biking time (minutes) to nearest buprenorphine provider",
@@ -2158,17 +2265,6 @@
         ]
       },
       {
-        "title": "Biking Time (min) to nearest Methadone Provider (state/county average)",
-        "name": "MetAvTmBk",
-        "description": "Average biking time (minutes) across tracts in county to nearest methadone provider",
-        "years": [
-          "2020"
-        ],
-        "geographies": [
-          "County"
-        ]
-      },
-      {
         "title": "Biking Time (min) to nearest Methadone Provider (tract/ZIP)",
         "name": "MetTmBk",
         "description": "Biking time (minutes) to nearest methadone provider",
@@ -2180,17 +2276,6 @@
           "County",
           "Tract",
           "ZCTA"
-        ]
-      },
-      {
-        "title": "Biking Time (min) to nearest Naltrexone Provider (state/county average)",
-        "name": "NaltAvTmBk",
-        "description": "Average biking time (minutes) across tracts in county to nearest naltrexone provider",
-        "years": [
-          "2020"
-        ],
-        "geographies": [
-          "County"
         ]
       },
       {
@@ -2654,16 +2739,39 @@
         ]
       },
       {
-        "title": "Driving Time (min) to nearest Buprenorphine Provider (state/county average)",
-        "name": "BupAvTmDr",
-        "description": "Average driving time (minutes) across tracts in county to nearest buprenorphine provider",
+        "title": "Driving Time (min) to Nearest Buprenorphine Provider (with impedance)",
+        "name": "BupTmDr2",
+        "description": "Driving time (minutes) from the tract centroid to the nearest buprenorphine provider, with the impedance factor applied.",
         "years": [
-          "2020",
           "2025"
         ],
         "geographies": [
-          "County",
-          "State"
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Driving Time (min) to Nearest Methadone Provider (with impedance)",
+        "name": "MetTmDr2",
+        "description": "Driving time in minutes from the tract centroid to the nearest methadone provider, with the impedance factor applied.",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Driving Time (min) to Nearest Naltrexone Provider (with impedance)",
+        "name": "NaltTmDr2",
+        "description": "Driving time in minutes from the tract centroid to the nearest naltrexone provider, with the impedance factor applied.",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
         ]
       },
       {
@@ -2680,19 +2788,6 @@
         ]
       },
       {
-        "title": "Driving Time (min) to nearest Methadone Provider (state/county average)",
-        "name": "MetAvTmDr",
-        "description": "Average driving time (minutes) across tracts in county to nearest methadone provider",
-        "years": [
-          "2020",
-          "2025"
-        ],
-        "geographies": [
-          "County",
-          "State"
-        ]
-      },
-      {
         "title": "Driving Time (min) to nearest Methadone Provider (tract/ZIP)",
         "name": "MetTmDr",
         "description": "Driving time (minutes) to nearest methadone provider",
@@ -2703,19 +2798,6 @@
         "geographies": [
           "Tract",
           "ZCTA"
-        ]
-      },
-      {
-        "title": "Driving Time (min) to nearest Naltrexone Provider (state/county average)",
-        "name": "NaltAvTmDr",
-        "description": "Average driving time (minutes) across tracts in county to nearest naltrexone provider",
-        "years": [
-          "2020",
-          "2025"
-        ],
-        "geographies": [
-          "County",
-          "State"
         ]
       },
       {
@@ -2732,24 +2814,23 @@
         ]
       },
       {
-        "title": "Driving Time (min) to nearest Opioid Treatment Program (OTP) (state/county average)",
-        "name": "OtpAvTmDr",
-        "description": "Average driving time (minutes) across tracts to nearest opioid treatment program.",
-        "years": [
-          "2021",
-          "2025"
-        ],
-        "geographies": [
-          "County",
-          "State"
-        ]
-      },
-      {
         "title": "Driving Time (min) to nearest Opioid Treatment Program (OTP) (tract/ZIP)",
         "name": "OtpTmDr",
         "description": "Driving time from tract/zip origin centroid to the nearest tract/zip OTP destination centroid, in minutes",
         "years": [
           "2021",
+          "2025"
+        ],
+        "geographies": [
+          "Tract",
+          "ZCTA"
+        ]
+      },
+      {
+        "title": "Driving Time (min) to nearest Opioid Treatment Program (OTP), with impedance",
+        "name": "OtpTmDr2",
+        "description": "Driving time in minutes from the tract centroid to the nearest opioid treatment program, using impedance-adjusted travel time.",
+        "years": [
           "2025"
         ],
         "geographies": [
@@ -2788,54 +2869,6 @@
         ],
         "geographies": [
           "State"
-        ]
-      },
-      {
-        "title": "Driving time to nearest OTP (impedance-adjusted)",
-        "name": "OtpTmDr2",
-        "description": "Driving time in minutes from the tract centroid to the nearest opioid treatment program, using impedance-adjusted travel time.",
-        "years": [
-          "2025"
-        ],
-        "geographies": [
-          "Tract",
-          "ZCTA"
-        ]
-      },
-      {
-        "title": "Driving time to nearest buprenorphine provider (with impedance)",
-        "name": "BupTmDr2",
-        "description": "Driving time (minutes) from the tract centroid to the nearest buprenorphine provider, with the impedance factor applied.",
-        "years": [
-          "2025"
-        ],
-        "geographies": [
-          "Tract",
-          "ZCTA"
-        ]
-      },
-      {
-        "title": "Driving time to nearest methadone provider (with impedance)",
-        "name": "MetTmDr2",
-        "description": "Driving time in minutes from the tract centroid to the nearest methadone provider, with the impedance factor applied.",
-        "years": [
-          "2025"
-        ],
-        "geographies": [
-          "Tract",
-          "ZCTA"
-        ]
-      },
-      {
-        "title": "Driving time to nearest naltrexone provider (with impedance)",
-        "name": "NaltTmDr2",
-        "description": "Driving time in minutes from the tract centroid to the nearest naltrexone provider, with the impedance factor applied.",
-        "years": [
-          "2025"
-        ],
-        "geographies": [
-          "Tract",
-          "ZCTA"
         ]
       },
       {
@@ -3203,17 +3236,6 @@
         ]
       },
       {
-        "title": "Walking Time (min) to nearest Buprenorphine Provider (state/county average)",
-        "name": "BupAvTmWk",
-        "description": "Average walking time (minutes) across tracts in county to nearest buprenorphine provider",
-        "years": [
-          "2020"
-        ],
-        "geographies": [
-          "County"
-        ]
-      },
-      {
         "title": "Walking Time (min) to nearest Buprenorphine Provider (tract/ZIP)",
         "name": "BupTmWk",
         "description": "Walking time (minutes) to nearest buprenorphine provider",
@@ -3228,17 +3250,6 @@
         ]
       },
       {
-        "title": "Walking Time (min) to nearest Methadone Provider (state/county average)",
-        "name": "MetAvTmWk",
-        "description": "Average walking time (minutes) across tracts in county to nearest methadone provider",
-        "years": [
-          "2020"
-        ],
-        "geographies": [
-          "County"
-        ]
-      },
-      {
         "title": "Walking Time (min) to nearest Methadone Provider (tract/ZIP)",
         "name": "MetTmWk",
         "description": "Walking time (minutes) to nearest methadone provider",
@@ -3250,17 +3261,6 @@
           "County",
           "Tract",
           "ZCTA"
-        ]
-      },
-      {
-        "title": "Walking Time (min) to nearest Naltrexone Provider (state/county average)",
-        "name": "NaltAvTmWk",
-        "description": "Average walking time (minutes) across tracts in county to nearest naltrexone provider",
-        "years": [
-          "2020"
-        ],
-        "geographies": [
-          "County"
         ]
       },
       {
