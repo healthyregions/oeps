@@ -1,12 +1,12 @@
 {
   "name": "BupAvTmBk",
-  "title": "Biking Time (min) to nearest Buprenorphine Provider (state/county average)",
+  "title": "Average Biking Time (min) to Nearest Buprenorphine Provider (state/county average)",
   "type": "number",
   "example": "1.12569444444444",
   "description": "Average biking time (minutes) across tracts in county to nearest buprenorphine provider",
+  "metadata": "Access_MOUDs",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Access_MOUDs",
   "table_sources": [
     "county-2020"
   ]

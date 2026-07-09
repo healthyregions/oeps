@@ -1,12 +1,12 @@
 {
   "name": "BupAvTmWk",
-  "title": "Walking Time (min) to nearest Buprenorphine Provider (state/county average)",
+  "title": "Average Walking Time (min) to Nearest Buprenorphine Provider (state/county average)",
   "type": "number",
   "example": "1.87725694444444",
   "description": "Average walking time (minutes) across tracts in county to nearest buprenorphine provider",
+  "metadata": "Access_MOUDs",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Access_MOUDs",
   "table_sources": [
     "county-2020"
   ]

@@ -1,12 +1,12 @@
 {
   "name": "NaltTmDrP2",
-  "title": "% Tracts within 30-min drive of Naltrexone Provider (NALT), with Impedance factor",
+  "title": "% Tracts with Naltrexone Provider (30-min drive), with Impedance factor",
   "type": "number",
   "example": "33",
   "description": "Percent of tracts with Naltrexone Provider within a 30-min driving range, with Impedance factor",
+  "metadata": "Access_MOUDs",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Access_MOUDs",
   "table_sources": [
     "county-2025",
     "state-2025"

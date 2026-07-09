@@ -1,12 +1,12 @@
 {
   "name": "MetAvTmDr2",
-  "title": "Average driving time to nearest Methadone Provider(MET), with Impedance factor",
+  "title": "Average Driving Time (min) to Nearest Methadone Provider (state/county average) with Impedance factor",
   "type": "number",
   "example": "2.3",
   "description": "Average driving time (minutes) across tracts in state to nearest Methadone Provider(MET), with Impedance factor",
+  "metadata": "Access_MOUDs",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Access_MOUDs",
   "table_sources": [
     "county-2025",
     "state-2025"
