@@ -185,7 +185,7 @@ TtlPrPp|INTEGER|Total Prison Population Count
 
 ID: `oeps-391119.tabular.tract-2025`
 
-94 columns in this table.
+95 columns in this table.
 
 Name|Data Type|Description
 -|-|-|-
@@ -243,6 +243,7 @@ TlBupCntDr30|INTEGER|Total number of providers offering buprenorphine treatment 
 MhTmDr2|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip mental health provider destination centroid with impedance, in minutes
 MetCntDr60|NUMERIC|Count of methadone providers in 60 minute drive time threshold
 BupTmDr2|NUMERIC|Driving time (minutes) from the tract centroid to the nearest buprenorphine provider, with the impedance factor applied.
+MoudTyp|INTEGER|Count (0-3) of distinct MOUD provider types (buprenorphine, methadone, naltrexone) within a 30-minute impedance-adjusted driving time.
 MetTmDr2|NUMERIC|Driving time in minutes from the tract centroid to the nearest methadone provider, with the impedance factor applied.
 OtpMinDis|NUMERIC|Euclidean distance* from tract/zip centroid to nearest OTP service location, in miles
 FqhcTmDr|NUMERIC|Driving time from tract/zip origin centroid to the nearest tract/zip FQHC destination centroid, in minutes

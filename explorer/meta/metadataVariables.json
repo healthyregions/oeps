@@ -2884,6 +2884,17 @@
         ]
       },
       {
+        "title": "MOUD Types Within 30-Min Drive (impedance, adjusted)",
+        "name": "MoudTyp",
+        "description": "Count (0-3) of distinct MOUD provider types (buprenorphine, methadone, naltrexone) within a 30-minute impedance-adjusted driving time.",
+        "years": [
+          "2025"
+        ],
+        "geographies": [
+          "Tract"
+        ]
+      },
+      {
         "title": "Methadone access 30 minutes (RAAM)",
         "name": "MetRm30",
         "description": "Methadone access 30 minutes (RAAM)",

@@ -36,7 +36,7 @@ Usage: clean-explorer-bucket [OPTIONS]
 
 
 * `explorer_path`:
-    * Type: <click.types.Path object at 0x7fbd2b1b4310>
+    * Type: <click.types.Path object at 0x7ff4c72c4fd0>
     * Default: `../explorer`
     * Usage: `--explorer-path`
 
@@ -131,7 +131,7 @@ Usage: create-table-source [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7fd1dd67d810>
+    * Type: <click.types.Path object at 0x7f48250b9250>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -192,7 +192,7 @@ Usage: build-explorer [OPTIONS]
 ###### Options
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7fcb845cff90>
+    * Type: <click.types.Path object at 0x7fe19b2e5410>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -201,7 +201,7 @@ Usage: build-explorer [OPTIONS]
 
 
 * `explorer_path`:
-    * Type: <click.types.Path object at 0x7fcb8633ea50>
+    * Type: <click.types.Path object at 0x7fe19b2e5050>
     * Default: `../explorer`
     * Usage: `--explorer-path`
 
@@ -388,7 +388,7 @@ Usage: build-docs [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f63682ac590>
+    * Type: <click.types.Path object at 0x7fe67a08ae90>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -485,7 +485,7 @@ Usage: remove-variable [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7fd66d3b8690>
+    * Type: <click.types.Path object at 0x7fab2e6d5450>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -584,7 +584,7 @@ Usage: merge-csv [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f2db63d7d10>
+    * Type: <click.types.Path object at 0x7f4ca25d5810>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -692,7 +692,7 @@ Usage: bigquery-upload [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f0ab989c510>
+    * Type: <click.types.Path object at 0x7f29817dd3d0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -754,7 +754,7 @@ Usage: create-data-package [OPTIONS]
 ###### Options
 
 * `destination`:
-    * Type: <click.types.Path object at 0x7f775068a850>
+    * Type: <click.types.Path object at 0x7f7a678643d0>
     * Default: `.temp/data-packages`
     * Usage: `--destination
 -d`
@@ -855,7 +855,7 @@ Usage: create-data-package [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f7750f89e50>
+    * Type: <click.types.Path object at 0x7f7a6848af10>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -864,7 +864,7 @@ Usage: create-data-package [OPTIONS]
 
 
 * `data_dir_path`:
-    * Type: <click.types.Path object at 0x7f7750fa8410>
+    * Type: <click.types.Path object at 0x7f7a684bd310>
     * Default: `oeps/data`
     * Usage: `--data-dir-path`
 
@@ -956,7 +956,7 @@ Usage: validate-registry [OPTIONS]
 ###### Options
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7fddb47a3ed0>
+    * Type: <click.types.Path object at 0x7f851c1c97d0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -978,7 +978,7 @@ Usage: validate-registry [OPTIONS]
     * Default: `False`
     * Usage: `--check-columns`
 
-    Fail if a variable table_sources entry has no matching column in that CSV.
+    Fail if table_sources miss CSV columns, or if table_sources is empty but the variable name exists as a column in a CSV.
 
 
 
@@ -1038,8 +1038,9 @@ Options:
   --registry-path PATH         Optional override for the registry directory.
   --sync-table-sources         Updates all variable table_sources values
                                directly from CSV data.
-  --check-columns              Fail if a variable table_sources entry has no
-                               matching column in that CSV.
+  --check-columns              Fail if table_sources miss CSV columns, or if
+                               table_sources is empty but the variable name
+                               exists as a column in a CSV.
   --check-duplicate-titles     Report variables that share the same display
                                title.
   --duplicate-titles-as-error  Treat duplicate titles as errors (use with
@@ -1110,7 +1111,7 @@ Usage: move-variable [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f8452381850>
+    * Type: <click.types.Path object at 0x7f8bb9ecd2d0>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
