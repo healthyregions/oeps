@@ -42,13 +42,25 @@ from ._common_opts import (
     "--check-geography-rules",
     is_flag=True,
     default=False,
-    help="Enforce MOUD/access geography rules for table_sources.",
+    help="Enforce pattern-based geography rules for table_sources.",
+)
+@click.option(
+    "--check-csv-orphans",
+    is_flag=True,
+    default=False,
+    help="Warn when a registry variable column exists in a CSV but is not linked.",
+)
+@click.option(
+    "--csv-orphans-as-error",
+    is_flag=True,
+    default=False,
+    help="Treat CSV orphan column warnings as errors (use with --check-csv-orphans).",
 )
 @click.option(
     "--strict",
     is_flag=True,
     default=False,
-    help="Enable --check-columns, --check-duplicate-titles, and --check-geography-rules.",
+    help="Enable --check-columns, --check-csv-orphans, --check-duplicate-titles, and --check-geography-rules.",
 )
 def validate_registry(
     registry_path: Path,
@@ -57,12 +69,15 @@ def validate_registry(
     check_duplicate_titles: bool,
     duplicate_titles_as_error: bool,
     check_geography_rules: bool,
+    check_csv_orphans: bool,
+    csv_orphans_as_error: bool,
     strict: bool,
 ):
     """Runs validation processes against the current registry content."""
 
     if strict:
         check_columns = True
+        check_csv_orphans = True
         check_duplicate_titles = True
         check_geography_rules = True
 
@@ -77,7 +92,9 @@ def validate_registry(
             check_columns=check_columns,
             check_duplicate_titles=check_duplicate_titles,
             check_geography_rules=check_geography_rules,
+            check_csv_orphans=check_csv_orphans,
             duplicate_titles_as_error=duplicate_titles_as_error,
+            csv_orphans_as_error=csv_orphans_as_error,
         )
     except RegistryValidationError as exc:
         raise click.ClickException(str(exc)) from exc

@@ -1,0 +1,18 @@
+# Exceptions to generic registry validation rules.
+# Prefer fixing registry/CSV data; use this only when an exception is intentional.
+
+geography_table_sources: []
+
+csv_orphan_columns:
+  - variable: TlBupTmDr
+    table_source: county-2025
+    reason: Stale county column after registry unlink (pending CSV cleanup).
+  - variable: MetTmDr
+    table_source: county-2025
+    reason: Stale county column; registry no longer links county (pending CSV cleanup).
+  - variable: BupTmDr
+    table_source: county-2025
+    reason: Stale county column; registry no longer links county (pending CSV cleanup).
+  - variable: NaltTmDr
+    table_source: county-2025
+    reason: Stale county column; registry no longer links county (pending CSV cleanup).
