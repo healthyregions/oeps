@@ -70,7 +70,12 @@ def validate_registry_structure(registry: Registry) -> ValidationResult:
 
 
 def validate_registry_csv_columns(registry: Registry) -> ValidationResult:
-    """Every table_sources entry must have the variable column in that CSV."""
+    """Check table_sources ↔ CSV column wiring both directions.
+
+    - Forward: every table_sources entry must have the variable column in that CSV.
+    - Reverse (empty links): if table_sources is empty but the variable name
+      appears as a column in any local CSV, fail (map will omit real data).
+    """
     result = ValidationResult()
     table_columns: dict[str, set[str]] = {}
 
@@ -90,6 +95,19 @@ def validate_registry_csv_columns(registry: Registry) -> ValidationResult:
                 result.errors.append(
                     f"{var_name} | column missing from {ts_name} CSV "
                     f"(listed in table_sources but not in file)"
+                )
+
+        if not variable.table_sources:
+            tables_with_col = sorted(
+                ts_name
+                for ts_name, cols in table_columns.items()
+                if var_name in cols
+            )
+            if tables_with_col:
+                result.errors.append(
+                    f"{var_name} | empty table_sources but column exists in "
+                    f"{', '.join(tables_with_col)}; link the table or remove "
+                    f"the orphan column"
                 )
 
     return result

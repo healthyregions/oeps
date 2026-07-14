@@ -105,6 +105,49 @@ def test_validate_fails_on_missing_csv_column(runner):
         bad_var.unlink(missing_ok=True)
 
 
+def test_validate_fails_on_empty_table_sources_with_csv_column(runner):
+    """CSV column exists but registry variable has empty table_sources (MoudTyp case)."""
+    registry_path = Path(runner.app.config["TEST_REGISTRY_DIR"])
+    csv_path = registry_path / "csv" / "t-latest.csv"
+    original_csv = csv_path.read_text(encoding="utf-8")
+    unlinked_var = registry_path / "variables" / "UnlinkedVar.json"
+    unlinked_var.write_text(
+        json.dumps(
+            {
+                "name": "UnlinkedVar",
+                "title": "Unlinked variable",
+                "type": "number",
+                "example": "1",
+                "description": "test",
+                "longitudinal": False,
+                "analysis": False,
+                "metadata": "Demographic_Characteristics",
+                "table_sources": [],
+            }
+        ),
+        encoding="utf-8",
+    )
+    lines = original_csv.splitlines()
+    lines[0] = lines[0] + ",UnlinkedVar"
+    lines[1] = lines[1] + ",9"
+    csv_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    try:
+        result = runner.invoke(
+            args=[
+                "validate-registry",
+                "--registry-path",
+                str(registry_path),
+                "--check-columns",
+            ]
+        )
+        assert result.exit_code != 0
+        assert "empty table_sources" in result.output.lower()
+        assert "unlinkedvar" in result.output.lower()
+    finally:
+        unlinked_var.unlink(missing_ok=True)
+        csv_path.write_text(original_csv, encoding="utf-8")
+
+
 def test_validate_fails_on_duplicate_titles(runner):
     registry_path = Path(runner.app.config["TEST_REGISTRY_DIR"])
     dup_var = registry_path / "variables" / "DupTitleVar.json"

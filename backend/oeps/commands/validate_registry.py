@@ -21,7 +21,10 @@ from ._common_opts import (
     "--check-columns",
     is_flag=True,
     default=False,
-    help="Fail if a variable table_sources entry has no matching column in that CSV.",
+    help=(
+        "Fail if table_sources miss CSV columns, or if table_sources is empty "
+        "but the variable name exists as a column in a CSV."
+    ),
 )
 @click.option(
     "--check-duplicate-titles",
