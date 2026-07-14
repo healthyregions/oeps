@@ -28,6 +28,7 @@ dependencies = [
     'python-dotenv',
     'natsort',
     'pydantic',
+    'PyYAML',
 ]
 
 
