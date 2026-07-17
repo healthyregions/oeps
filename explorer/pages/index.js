@@ -22,15 +22,15 @@ import styled from "styled-components";
 
 // This gets called on every request
 export async function getServerSideProps() {
-  // Fetch data from external API
   const posts = [];
 
   for (const metadata of postsMetadata) {
     const post = await getPostBySlug(metadata.slug);
-    posts.push(post);
+    if (post) {
+      posts.push(post);
+    }
   }
 
-  // Pass data to the page via props
   return {props: {posts}}
 }
 

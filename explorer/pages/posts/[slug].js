@@ -8,8 +8,11 @@ import styles from "@styles/Home.module.css";
 
 
 export async function getServerSideProps(context) {
-  // Pass data to the page via props
-  return { props: { post: (await getPostBySlug(context.params.slug)) } }
+  const post = await getPostBySlug(context.params.slug);
+  if (!post) {
+    return { notFound: true };
+  }
+  return { props: { post } };
 }
 export const PostLayout = ({ post }) => {
   const [mounted, setMounted] = useState(false);
