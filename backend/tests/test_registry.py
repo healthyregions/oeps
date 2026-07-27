@@ -183,6 +183,113 @@ def test_validate_fails_on_duplicate_titles(runner):
         dup_var.unlink(missing_ok=True)
 
 
+def test_validate_geography_rules_generic_point_tmdr(runner):
+    registry_path = Path(runner.app.config["TEST_REGISTRY_DIR"])
+    bad_var = registry_path / "variables" / "BadPointTmDr.json"
+    bad_var.write_text(
+        json.dumps(
+            {
+                "name": "BadPointTmDr",
+                "title": "Bad point driving time",
+                "type": "number",
+                "example": "1",
+                "description": "test",
+                "longitudinal": False,
+                "analysis": False,
+                "metadata": "Demographic_Characteristics",
+                "table_sources": ["c-2010"],
+            }
+        ),
+        encoding="utf-8",
+    )
+    try:
+        result = runner.invoke(
+            args=[
+                "validate-registry",
+                "--registry-path",
+                str(registry_path),
+                "--check-geography-rules",
+            ]
+        )
+        assert result.exit_code != 0
+        assert "badpointtmdr" in result.output.lower()
+    finally:
+        bad_var.unlink(missing_ok=True)
+
+
+def test_validate_geography_rules_impedance_tmdr2_missing_tract(runner):
+    registry_path = Path(runner.app.config["TEST_REGISTRY_DIR"])
+    bad_var = registry_path / "variables" / "BadTmDr2.json"
+    bad_var.write_text(
+        json.dumps(
+            {
+                "name": "BadTmDr2",
+                "title": "Bad impedance driving time",
+                "type": "number",
+                "example": "1",
+                "description": "test",
+                "longitudinal": False,
+                "analysis": False,
+                "metadata": "Demographic_Characteristics",
+                "table_sources": ["c-2010"],
+            }
+        ),
+        encoding="utf-8",
+    )
+    try:
+        result = runner.invoke(
+            args=[
+                "validate-registry",
+                "--registry-path",
+                str(registry_path),
+                "--check-geography-rules",
+            ]
+        )
+        assert result.exit_code != 0
+        assert "badtmdr2" in result.output.lower()
+    finally:
+        bad_var.unlink(missing_ok=True)
+
+
+def test_validate_csv_orphans_warns(runner):
+    registry_path = Path(runner.app.config["TEST_REGISTRY_DIR"])
+    result = runner.invoke(
+        args=[
+            "validate-registry",
+            "--registry-path",
+            str(registry_path),
+            "--check-csv-orphans",
+        ]
+    )
+    assert result.exit_code == 0
+    assert "mettmdr" in result.output.lower()
+    assert "warning" in result.output.lower()
+
+
+def test_pattern_helpers():
+    from oeps.registry_validation import (
+        is_average_tmdr,
+        is_impedance_point_tmdr,
+        is_point_tmdr,
+        is_rollup_tmdr,
+    )
+
+    assert is_point_tmdr("MetTmDr")
+    assert is_point_tmdr("TlBupTmDr")
+    assert not is_point_tmdr("MetAvTmDr")
+    assert not is_point_tmdr("MetTmDrP")
+    assert not is_point_tmdr("MetCtTmDr")
+    assert not is_point_tmdr("MetTmDr2")
+
+    assert is_impedance_point_tmdr("MetTmDr2")
+    assert not is_impedance_point_tmdr("MetCtTmDr2")
+    assert not is_impedance_point_tmdr("MetAvTmDr2")
+
+    assert is_rollup_tmdr("MetTmDrP")
+    assert is_rollup_tmdr("MetCtTmDr")
+    assert is_average_tmdr("MetAvTmDr")
+
+
 def test_registry_validation_error_is_raised():
     from oeps.handlers import Registry
 

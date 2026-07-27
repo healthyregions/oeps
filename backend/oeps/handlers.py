@@ -245,9 +245,11 @@ class Registry(BaseModel):
         self,
         *,
         check_columns: bool = False,
+        check_csv_orphans: bool = False,
         check_duplicate_titles: bool = False,
         check_geography_rules: bool = False,
         duplicate_titles_as_error: bool = False,
+        csv_orphans_as_error: bool = False,
     ):
         from .registry_validation import (
             RegistryValidationError,
@@ -261,9 +263,11 @@ class Registry(BaseModel):
         result = run_registry_validation(
             self,
             check_columns=check_columns,
+            check_csv_orphans=check_csv_orphans,
             check_duplicate_titles=check_duplicate_titles,
             check_geography_rules=check_geography_rules,
             duplicate_titles_as_error=duplicate_titles_as_error,
+            csv_orphans_as_error=csv_orphans_as_error,
         )
         print_validation_result(result)
 

@@ -1583,7 +1583,7 @@
   },
   {
     "variable": "Driving time to nearest telehealth buprenorphine provider",
-    "numerator": "county-2025__tract-2025",
+    "numerator": "tract-2025",
     "nProperty": "TlBupTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
