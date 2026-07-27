@@ -27,13 +27,17 @@ class Explorer:
         config_dir = Path(self.root_dir, "config")
         config_dir.mkdir(parents=True, exist_ok=True)
 
-        # begin by creating a lookup for all geodata sources that will be used in the explorer.
-        # only source files with an "explorer_config" entry will be used
+        # Lookup of explorer-enabled geodata sources, keyed by registry name.
+        # Multiple vintages per summary level are allowed (e.g. 2018 + 2020 tracts).
         geodata_lookup = {}
         for id, data in self.registry.geodata_sources.items():
             if data.explorer_config:
-                data.explorer_config["summary_level"] = data.summary_level.name
-                geodata_lookup[data.explorer_config["summary_level"]] = data.explorer_config
+                cfg = {
+                    **data.explorer_config,
+                    "summary_level": data.summary_level.name,
+                    "tables": {},
+                }
+                geodata_lookup[id] = cfg
 
         # iterate all variables and create a lookup for all combinations of data sources
         # in which each variable has a value
@@ -90,8 +94,28 @@ class Explorer:
                     "type": "characteristic",
                     "join": "HEROP_ID",
                 }
-                geodata_source = self.registry.geodata_sources[ts.geodata_source]
-                geodata_lookup[geodata_source.summary_level.name]["tables"][k] = table_entry
+                # Attach CSV to the matching geography vintage when possible.
+                # Fall back to any explorer-enabled source at the same summary level
+                # (legacy behavior for tables whose geodata has no explorer_config).
+                target_cfg = geodata_lookup.get(ts.geodata_source)
+                if target_cfg is None:
+                    geodata_source = self.registry.geodata_sources[ts.geodata_source]
+                    level = geodata_source.summary_level.name
+                    target_cfg = next(
+                        (
+                            cfg
+                            for cfg in geodata_lookup.values()
+                            if cfg["summary_level"] == level
+                        ),
+                        None,
+                    )
+                if target_cfg is None:
+                    print(
+                        f"WARNING: no explorer geodata for table source {ds} "
+                        f"(geodata_source={ts.geodata_source}); skipping map table"
+                    )
+                    continue
+                target_cfg["tables"][k] = table_entry
 
         out_variables = {
             k: {
@@ -105,8 +129,8 @@ class Explorer:
             if k in variables_to_ds_combos
         }
 
-        # hacky method for creating the output geodata source list in descending order of
-        # spatial resolution
+        # Emit all explorer-enabled sources, coarsest to finest; stable name order
+        # within each summary level (keeps US Tracts (2020) before US Tracts (2018)).
         s_geodata = [
             i for i in geodata_lookup.values() if i["summary_level"] == "state"
         ]
@@ -119,8 +143,8 @@ class Explorer:
         ]
         out_sources = {"sources": []}
         for sorted_src_list in [s_geodata, c_geodata, z_geodata, t_geodata]:
-            if len(sorted_src_list) > 0:
-                out_sources["sources"].append(sorted_src_list[0])
+            for src in sorted(sorted_src_list, key=lambda x: x.get("name", "")):
+                out_sources["sources"].append(src)
 
         if upload:
             prefix = "explorer/csvs"
