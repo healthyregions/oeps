@@ -1,4 +1,166 @@
 # Command Line Reference
+## bigquery-upload
+
+Load a data resource to a big query table. The data resource schema should provide all field
+    and table configuration information that is needed to create the table and load data into it.
+
+###### Usage
+
+```
+Usage: bigquery-upload [OPTIONS]
+```
+
+###### Arguments
+
+
+###### Options
+
+* `name`:
+    * Type: STRING
+    * Default: `Sentinel.UNSET`
+    * Usage: `--name
+-n`
+
+    Name can be provided to load a single Data Resource to Big Query (instead of everything in the registry)
+
+
+
+* `table_only`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--table-only`
+
+    Only create the new table, don't load data into it.
+
+
+
+* `dry_run`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--dry-run`
+
+    Mock operation and perform no create/delete actions.
+
+
+
+* `check_credentials`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--check-credentials`
+
+    Checks local credentials and exits.
+
+
+
+* `overwrite`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--overwrite`
+
+    Overwrite output content if it already exists.
+
+
+
+* `registry_path`:
+    * Type: <click.types.Path object at 0x7f79394c9390>
+    * Default: `oeps/registry`
+    * Usage: `--registry-path`
+
+    Optional override for the registry directory.
+
+
+
+* `help`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--help`
+
+    Show this message and exit.
+
+
+
+###### CLI Help
+
+```
+Usage: bigquery-upload [OPTIONS]
+
+  Load a data resource to a big query table. The data resource schema should
+  provide all field and table configuration information that is needed to
+  create the table and load data into it.
+
+Options:
+  -n, --name TEXT       Name can be provided to load a single Data Resource to
+                        Big Query (instead of everything in the registry)
+  --table-only          Only create the new table, don't load data into it.
+  --dry-run             Mock operation and perform no create/delete actions.
+  --check-credentials   Checks local credentials and exits.
+  --overwrite           Overwrite output content if it already exists.
+  --registry-path PATH  Optional override for the registry directory.
+  --help                Show this message and exit.
+```
+
+
+## bigquery-export
+
+Runs a SQL statement, which must be provided in a .sql file, and the results are printed to the console
+    or saved to a CSV or SHP output file, based on the destination argument.
+
+###### Usage
+
+```
+Usage: bigquery-export [OPTIONS]
+```
+
+###### Arguments
+
+
+###### Options
+
+* `output`:
+    * Type: STRING
+    * Default: `Sentinel.UNSET`
+    * Usage: `--output
+-o`
+
+    Output file for export. Must end with .csv for CSV or .shp for ESRI Shapefile.
+
+
+
+* `sql_file`:
+    * Type: STRING
+    * Default: `Sentinel.UNSET`
+    * Usage: `--sql-file`
+
+    Path to file with SQL SELECT statement to run.
+
+
+
+* `help`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--help`
+
+    Show this message and exit.
+
+
+
+###### CLI Help
+
+```
+Usage: bigquery-export [OPTIONS]
+
+  Runs a SQL statement, which must be provided in a .sql file, and the results
+  are printed to the console or saved to a CSV or SHP output file, based on
+  the destination argument.
+
+Options:
+  -o, --output TEXT  Output file for export. Must end with .csv for CSV or
+                     .shp for ESRI Shapefile.
+  --sql-file TEXT    Path to file with SQL SELECT statement to run.
+  --help             Show this message and exit.
+```
+
+
 ## clean-explorer-bucket
 
 Deletes all files from the S3 bucket which are not mentioned in the local
@@ -36,7 +198,7 @@ Usage: clean-explorer-bucket [OPTIONS]
 
 
 * `explorer_path`:
-    * Type: <click.types.Path object at 0x7ff4c72c4fd0>
+    * Type: <click.types.Path object at 0x7fc1f82d9f90>
     * Default: `../explorer`
     * Usage: `--explorer-path`
 
@@ -74,101 +236,6 @@ Options:
 ```
 
 
-## create-table-source
-
-Creates a new blank table source and generates an accompanying
-    CSV with only relevant keys.
-    
-
-###### Usage
-
-```
-Usage: create-table-source [OPTIONS]
-```
-
-###### Arguments
-
-
-###### Options
-
-* `name`:
-    * Type: STRING
-    * Default: `Sentinel.UNSET`
-    * Usage: `--name
--n`
-
-    Name (id) of new table source. This will be used for the CSV file name.
-
-
-
-* `data_year`:
-    * Type: STRING
-    * Default: `Sentinel.UNSET`
-    * Usage: `--data-year
--y`
-
-    Year of data that this table source will hold.
-
-
-
-* `geodata_source`:
-    * Type: STRING
-    * Default: `Sentinel.UNSET`
-    * Usage: `--geodata-source
--g`
-
-    Name of the geodata source that this table source will be joined to.
-
-
-
-* `dry_run`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--dry-run`
-
-    Stage and prepare new table source but don't save.
-
-
-
-* `registry_path`:
-    * Type: <click.types.Path object at 0x7f48250b9250>
-    * Default: `oeps/registry`
-    * Usage: `--registry-path`
-
-    Optional override for the registry directory.
-
-
-
-* `help`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--help`
-
-    Show this message and exit.
-
-
-
-###### CLI Help
-
-```
-Usage: create-table-source [OPTIONS]
-
-  Creates a new blank table source and generates an accompanying CSV with only
-  relevant keys.
-
-Options:
-  -n, --name TEXT            Name (id) of new table source. This will be used
-                             for the CSV file name.
-  -y, --data-year TEXT       Year of data that this table source will hold.
-  -g, --geodata-source TEXT  Name of the geodata source that this table source
-                             will be joined to.
-  --dry-run                  Stage and prepare new table source but don't
-                             save.
-  --registry-path PATH       Optional override for the registry directory.
-  --help                     Show this message and exit.
-```
-
-
 ## build-explorer
 
 Builds all static data content needed to power the frontend OEPS Explorer application.
@@ -192,7 +259,7 @@ Usage: build-explorer [OPTIONS]
 ###### Options
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7fe19b2e5410>
+    * Type: <click.types.Path object at 0x7f2b13fd9890>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -201,7 +268,7 @@ Usage: build-explorer [OPTIONS]
 
 
 * `explorer_path`:
-    * Type: <click.types.Path object at 0x7fe19b2e5050>
+    * Type: <click.types.Path object at 0x7f2b147edd50>
     * Default: `../explorer`
     * Usage: `--explorer-path`
 
@@ -272,15 +339,16 @@ Options:
 ```
 
 
-## bigquery-export
+## create-table-source
 
-Runs a SQL statement, which must be provided in a .sql file, and the results are printed to the console
-    or saved to a CSV or SHP output file, based on the destination argument.
+Creates a new blank table source and generates an accompanying
+    CSV with only relevant keys.
+    
 
 ###### Usage
 
 ```
-Usage: bigquery-export [OPTIONS]
+Usage: create-table-source [OPTIONS]
 ```
 
 ###### Arguments
@@ -288,22 +356,51 @@ Usage: bigquery-export [OPTIONS]
 
 ###### Options
 
-* `output`:
+* `name`:
     * Type: STRING
     * Default: `Sentinel.UNSET`
-    * Usage: `--output
--o`
+    * Usage: `--name
+-n`
 
-    Output file for export. Must end with .csv for CSV or .shp for ESRI Shapefile.
+    Name (id) of new table source. This will be used for the CSV file name.
 
 
 
-* `sql_file`:
+* `data_year`:
     * Type: STRING
     * Default: `Sentinel.UNSET`
-    * Usage: `--sql-file`
+    * Usage: `--data-year
+-y`
 
-    Path to file with SQL SELECT statement to run.
+    Year of data that this table source will hold.
+
+
+
+* `geodata_source`:
+    * Type: STRING
+    * Default: `Sentinel.UNSET`
+    * Usage: `--geodata-source
+-g`
+
+    Name of the geodata source that this table source will be joined to.
+
+
+
+* `dry_run`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--dry-run`
+
+    Stage and prepare new table source but don't save.
+
+
+
+* `registry_path`:
+    * Type: <click.types.Path object at 0x7f693a7d1150>
+    * Default: `oeps/registry`
+    * Usage: `--registry-path`
+
+    Optional override for the registry directory.
 
 
 
@@ -319,17 +416,21 @@ Usage: bigquery-export [OPTIONS]
 ###### CLI Help
 
 ```
-Usage: bigquery-export [OPTIONS]
+Usage: create-table-source [OPTIONS]
 
-  Runs a SQL statement, which must be provided in a .sql file, and the results
-  are printed to the console or saved to a CSV or SHP output file, based on
-  the destination argument.
+  Creates a new blank table source and generates an accompanying CSV with only
+  relevant keys.
 
 Options:
-  -o, --output TEXT  Output file for export. Must end with .csv for CSV or
-                     .shp for ESRI Shapefile.
-  --sql-file TEXT    Path to file with SQL SELECT statement to run.
-  --help             Show this message and exit.
+  -n, --name TEXT            Name (id) of new table source. This will be used
+                             for the CSV file name.
+  -y, --data-year TEXT       Year of data that this table source will hold.
+  -g, --geodata-source TEXT  Name of the geodata source that this table source
+                             will be joined to.
+  --dry-run                  Stage and prepare new table source but don't
+                             save.
+  --registry-path PATH       Optional override for the registry directory.
+  --help                     Show this message and exit.
 ```
 
 
@@ -388,7 +489,7 @@ Usage: build-docs [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7fe67a08ae90>
+    * Type: <click.types.Path object at 0x7fb4f3eb9350>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -485,7 +586,7 @@ Usage: remove-variable [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7fab2e6d5450>
+    * Type: <click.types.Path object at 0x7f11171b9610>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -584,7 +685,7 @@ Usage: merge-csv [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f4ca25d5810>
+    * Type: <click.types.Path object at 0x7f6add08cf10>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -629,15 +730,14 @@ Options:
 ```
 
 
-## bigquery-upload
+## validate-registry
 
-Load a data resource to a big query table. The data resource schema should provide all field
-    and table configuration information that is needed to create the table and load data into it.
+Runs validation processes against the current registry content.
 
 ###### Usage
 
 ```
-Usage: bigquery-upload [OPTIONS]
+Usage: validate-registry [OPTIONS]
 ```
 
 ###### Arguments
@@ -645,58 +745,84 @@ Usage: bigquery-upload [OPTIONS]
 
 ###### Options
 
-* `name`:
-    * Type: STRING
-    * Default: `Sentinel.UNSET`
-    * Usage: `--name
--n`
-
-    Name can be provided to load a single Data Resource to Big Query (instead of everything in the registry)
-
-
-
-* `table_only`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--table-only`
-
-    Only create the new table, don't load data into it.
-
-
-
-* `dry_run`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--dry-run`
-
-    Mock operation and perform no create/delete actions.
-
-
-
-* `check_credentials`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--check-credentials`
-
-    Checks local credentials and exits.
-
-
-
-* `overwrite`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--overwrite`
-
-    Overwrite output content if it already exists.
-
-
-
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f29817dd3d0>
+    * Type: <click.types.Path object at 0x7f1c544c1390>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
     Optional override for the registry directory.
+
+
+
+* `sync_table_sources`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--sync-table-sources`
+
+    Updates all variable table_sources values directly from CSV data.
+
+
+
+* `check_columns`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--check-columns`
+
+    Fail if table_sources miss CSV columns, or if table_sources is empty but the variable name exists as a column in a CSV.
+
+
+
+* `check_duplicate_titles`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--check-duplicate-titles`
+
+    Report variables that share the same display title.
+
+
+
+* `duplicate_titles_as_error`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--duplicate-titles-as-error`
+
+    Treat duplicate titles as errors (use with --check-duplicate-titles).
+
+
+
+* `check_geography_rules`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--check-geography-rules`
+
+    Enforce pattern-based geography rules for table_sources.
+
+
+
+* `check_csv_orphans`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--check-csv-orphans`
+
+    Warn when a registry variable column exists in a CSV but is not linked.
+
+
+
+* `csv_orphans_as_error`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--csv-orphans-as-error`
+
+    Treat CSV orphan column warnings as errors (use with --check-csv-orphans).
+
+
+
+* `strict`:
+    * Type: BOOL
+    * Default: `False`
+    * Usage: `--strict`
+
+    Enable --check-columns, --check-csv-orphans, --check-duplicate-titles, and --check-geography-rules.
 
 
 
@@ -712,21 +838,31 @@ Usage: bigquery-upload [OPTIONS]
 ###### CLI Help
 
 ```
-Usage: bigquery-upload [OPTIONS]
+Usage: validate-registry [OPTIONS]
 
-  Load a data resource to a big query table. The data resource schema should
-  provide all field and table configuration information that is needed to
-  create the table and load data into it.
+  Runs validation processes against the current registry content.
 
 Options:
-  -n, --name TEXT       Name can be provided to load a single Data Resource to
-                        Big Query (instead of everything in the registry)
-  --table-only          Only create the new table, don't load data into it.
-  --dry-run             Mock operation and perform no create/delete actions.
-  --check-credentials   Checks local credentials and exits.
-  --overwrite           Overwrite output content if it already exists.
-  --registry-path PATH  Optional override for the registry directory.
-  --help                Show this message and exit.
+  --registry-path PATH         Optional override for the registry directory.
+  --sync-table-sources         Updates all variable table_sources values
+                               directly from CSV data.
+  --check-columns              Fail if table_sources miss CSV columns, or if
+                               table_sources is empty but the variable name
+                               exists as a column in a CSV.
+  --check-duplicate-titles     Report variables that share the same display
+                               title.
+  --duplicate-titles-as-error  Treat duplicate titles as errors (use with
+                               --check-duplicate-titles).
+  --check-geography-rules      Enforce pattern-based geography rules for
+                               table_sources.
+  --check-csv-orphans          Warn when a registry variable column exists in
+                               a CSV but is not linked.
+  --csv-orphans-as-error       Treat CSV orphan column warnings as errors (use
+                               with --check-csv-orphans).
+  --strict                     Enable --check-columns, --check-csv-orphans,
+                               --check-duplicate-titles, and --check-
+                               geography-rules.
+  --help                       Show this message and exit.
 ```
 
 
@@ -754,7 +890,7 @@ Usage: create-data-package [OPTIONS]
 ###### Options
 
 * `destination`:
-    * Type: <click.types.Path object at 0x7f7a678643d0>
+    * Type: <click.types.Path object at 0x7f6c48f45610>
     * Default: `.temp/data-packages`
     * Usage: `--destination
 -d`
@@ -855,7 +991,7 @@ Usage: create-data-package [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f7a6848af10>
+    * Type: <click.types.Path object at 0x7f6c49be1710>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
@@ -864,7 +1000,7 @@ Usage: create-data-package [OPTIONS]
 
 
 * `data_dir_path`:
-    * Type: <click.types.Path object at 0x7f7a684bd310>
+    * Type: <click.types.Path object at 0x7f6c49be1650>
     * Default: `oeps/data`
     * Usage: `--data-dir-path`
 
@@ -940,119 +1076,6 @@ Options:
 ```
 
 
-## validate-registry
-
-Runs validation processes against the current registry content.
-
-###### Usage
-
-```
-Usage: validate-registry [OPTIONS]
-```
-
-###### Arguments
-
-
-###### Options
-
-* `registry_path`:
-    * Type: <click.types.Path object at 0x7f851c1c97d0>
-    * Default: `oeps/registry`
-    * Usage: `--registry-path`
-
-    Optional override for the registry directory.
-
-
-
-* `sync_table_sources`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--sync-table-sources`
-
-    Updates all variable table_sources values directly from CSV data.
-
-
-
-* `check_columns`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--check-columns`
-
-    Fail if table_sources miss CSV columns, or if table_sources is empty but the variable name exists as a column in a CSV.
-
-
-
-* `check_duplicate_titles`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--check-duplicate-titles`
-
-    Report variables that share the same display title.
-
-
-
-* `duplicate_titles_as_error`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--duplicate-titles-as-error`
-
-    Treat duplicate titles as errors (use with --check-duplicate-titles).
-
-
-
-* `check_geography_rules`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--check-geography-rules`
-
-    Enforce MOUD/access geography rules for table_sources.
-
-
-
-* `strict`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--strict`
-
-    Enable --check-columns, --check-duplicate-titles, and --check-geography-rules.
-
-
-
-* `help`:
-    * Type: BOOL
-    * Default: `False`
-    * Usage: `--help`
-
-    Show this message and exit.
-
-
-
-###### CLI Help
-
-```
-Usage: validate-registry [OPTIONS]
-
-  Runs validation processes against the current registry content.
-
-Options:
-  --registry-path PATH         Optional override for the registry directory.
-  --sync-table-sources         Updates all variable table_sources values
-                               directly from CSV data.
-  --check-columns              Fail if table_sources miss CSV columns, or if
-                               table_sources is empty but the variable name
-                               exists as a column in a CSV.
-  --check-duplicate-titles     Report variables that share the same display
-                               title.
-  --duplicate-titles-as-error  Treat duplicate titles as errors (use with
-                               --check-duplicate-titles).
-  --check-geography-rules      Enforce MOUD/access geography rules for
-                               table_sources.
-  --strict                     Enable --check-columns, --check-duplicate-
-                               titles, and --check-geography-rules.
-  --help                       Show this message and exit.
-```
-
-
 ## move-variable
 
 Move a variable from one table to another. This command is primarily meant to
@@ -1111,7 +1134,7 @@ Usage: move-variable [OPTIONS]
 
 
 * `registry_path`:
-    * Type: <click.types.Path object at 0x7f8bb9ecd2d0>
+    * Type: <click.types.Path object at 0x7f58a5be1610>
     * Default: `oeps/registry`
     * Usage: `--registry-path`
 
