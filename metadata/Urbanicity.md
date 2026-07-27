@@ -1,7 +1,7 @@
 **Meta Data Name**: Urbanicity  
 **Date Added**: March 20, 2020  
-**Author**: Mahjabin Kabir Adrita, Wataru Morioka, Moksha Menghaney, Susan Paykin  
-**Date Last Modified**: June, 2026  
+**Author**: Mahjabin Kabir Adrita, Marynia Kolak, Wataru Morioka, Moksha Menghaney, Susan Paykin  
+**Date Last Modified**: June 2026  
 **Last Modified By**: Mahjabin Kabir Adrita  
 
 ### Data Source(s) Description:
@@ -46,7 +46,7 @@ For each county, the percentage of tracts classified as urban/suburban/rural, us
 
 #### Census Tracts & Zipcodes
 
-Classified as:
+We use the following methodology to differentiate urban, suburban, and rural areas, with more details provided in this [Research Breief](https://www.researchgate.net/publication/354451057_Rural_Suburban_Urban_Classification_for_Small_Area_Analysis). Areas are classified as:
 
 * Urban, if their RUCA2 codes were 1.0 and 1.1 
 * Suburban, if their RUCA2 codes were 2.0, 2.1, 4.0, and 4.1 
