@@ -4,6 +4,6 @@
   "construct": "Urban/Suburban/Rural Classification",
   "proxy": "Primary RUCA Code, Secondary RUCA Code by County",
   "url": "https://github.com/healthyregions/oeps/blob/main/metadata/Urbanicity.md",
-  "source": "USDA-ERS 2010; ACS 2018",
+  "source": "USDA-ERS 2010; ACS 2018, USDA-ERS 2020; ACS 2023",
   "source_long": "United States Department of Agriculture Economic Research Service, 2010; American Community Survey 2014-2018 5-Year Estimate"
 }
