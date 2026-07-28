@@ -142,20 +142,20 @@ export default function Home({posts}) {
       <main>
         <HeroSection>
           <Grid container alignItems={'center'}>
-            <Grid item padding={'2rem'} xs={12} md={5} lg={4}>
+            <Grid size={{ xs:12, md:5, lg:4 }} style={{paddingTop:'2rem'}}>
               <img src="images/logo-factors.png" className={styles.titleDiagram} alt={''}/>
             </Grid>
             <Gutter em={3}/>
-              <Grid item xs={12} md={7} lg={8}>
-                <h1 className={styles.title}>
-                  Opioid Environment Policy Scan
-                </h1>
-                <p className={styles.description}>
-                  An open data warehouse, mapping platform, and data ecosystem that explores the multi-dimensional risk
-                  environment, from neighborhoods to states,
-                  impacting opioid use and health outcomes across the United States.
-                </p>
-              </Grid>
+            <Grid size={{ xs:12, md:7, lg:8 }} style={{paddingTop:'8rem'}} >
+              <h1 className={styles.title}>
+                Opioid Environment Policy Scan
+              </h1>
+              <p className={styles.description}>
+                An open data warehouse, mapping platform, and data ecosystem that explores the multi-dimensional risk
+                environment, from neighborhoods to states,
+                impacting opioid use and health outcomes across the United States.
+              </p>
+            </Grid>
           </Grid>
         </HeroSection>
 
@@ -165,7 +165,7 @@ export default function Home({posts}) {
           <Grid container spacing={2}>
             {
               actionSections?.map((s, indexOuter) =>
-                <Grid item xs={12} md={12} lg={4} key={`actions-section-${indexOuter}`}>
+                <Grid size={{ xs:12, md:12, lg:4 }} key={`actions-section-${indexOuter}`}>
                   <ActionsHeader>
                     <ActionsHeaderIcon src={s?.img} alt={s?.imgAlt}></ActionsHeaderIcon>
                     <h1 className={styles.subhead}>{s?.label}</h1>
@@ -189,19 +189,19 @@ export default function Home({posts}) {
         {/* if there are any Published Posts, display them here */}
         {
           (posts !== '' && Array.isArray(posts) && posts?.length > 0) && <NewsSection>
-            <Grid container padding={'2rem'}>
-              <Grid xs={12} md={12} item alignItems={'center'}>
+            <Grid container style={{padding: '2rem', width:'100%'}}>
+              <Grid size={{ xs:12, md:12 }} alignItems={'center'}>
                 <h2 style={{ marginBottom: '0.75rem' }}>Recent News</h2>
                 <a href={'/posts'}>See All</a>
                 {
                   posts?.sort((a, b) => b?.date?.localeCompare(a?.date))?.slice(0, 3)?.map((p, index) => <div
                     key={`post-${index}-${p.slug}`}>
                     <Grid container alignItems={'end'}>
-                      <Grid xs={10} item><h4 style={{marginBottom: 0}}>{p?.title}</h4></Grid>
-                      <Grid xs={2} item textAlign={'right'}>{new Date(p?.date)?.toLocaleDateString()}</Grid>
+                      <Grid size={{ xs:10 }}><h4 style={{marginBottom: 0}}>{p?.title}</h4></Grid>
+                      <Grid size={{ xs:2 }} textAlign={'right'}>{new Date(p?.date)?.toLocaleDateString()}</Grid>
                     </Grid>
                     <Grid container>
-                      <Grid xs={12} item>
+                      <Grid size={{ xs:12 }}>
                         <ReactMarkdown plugins={[remarkGfm]}>{p?.summary}</ReactMarkdown>
                         <a href={`/posts/${p?.slug}`}>Read more &rarr;</a>
                       </Grid>
@@ -215,7 +215,7 @@ export default function Home({posts}) {
 
 
         <DescriptionAndAcknowledgmentsSection>
-          <Grid item xs={12} maxWidth={'85%'} align={'center'}>
+          <Grid size={{ xs:12 }} maxWidth={'85%'} align={'center'}>
             {/* if there are no Published Posts, insert a horizontal line above this section */}
             { (!posts === '' || Array.isArray(posts) || posts?.length === 0) && <hr /> }
 
