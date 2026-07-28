@@ -41,6 +41,7 @@ export function MenuRoot(props) {
 const StyledTrigger = styled(Button)(({ theme }) => ({
   paddingInline: theme.spacing(2),
   color: (theme.vars || theme).palette.text.secondary,
+  fontFamily: 'Montserrat',
   fontWeight: 500,
   transition: 'none',
   textTransform: 'capitalize',

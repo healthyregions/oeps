@@ -21,7 +21,7 @@ export default function MainNav() {
       <h3 className={styles.mastheadTitle} color='black'>
         <Link href="/">OEPS Ecosystem</Link>
       </h3>
-      <nav>
+      <nav className={styles.mainNav}>
         <Menubar>
 
           <MenuRoot>
