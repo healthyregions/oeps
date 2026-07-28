@@ -1,11 +1,14 @@
 # Metadata Writing Guidelines
 
+!!! note
+    The full contributor-facing guide lives on the docs site: **[Metadata Guidelines](https://healthyregions.github.io/oeps/guides/metadata-guidelines/)**. This README keeps short tips and image-rendering rules for files in `metadata/`.
+
 ## Overview 
 
 - When any dataset is updated, edited, or added to OEPS, a corresponding metadata document must be generated or updated.
 - When generating a new document from scratch, use the template document to start.
 - In addition, you must update the registry file at: https://app.pagescms.org/healthyregions/oeps/main/collection/metadata
-    - Learn more about this process here: https://healthyregions.github.io/oeps/guides/adding-data-to-oeps/#create-a-new-metadata-entry
+    - Learn more about this process here: https://healthyregions.github.io/oeps/guides/creating-metadata-and-variables/
 
 ### Tips
 

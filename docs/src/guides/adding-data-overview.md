@@ -5,6 +5,7 @@ Getting new data into the OEPS data ecosystem requires a few steps.
 - Download data from original source, and process as needed
 - Prepare a CSV with the new data
 - Update metadata document
+    - Follow the [Metadata Guidelines](metadata-guidelines.md) for required sections and quality checks
     - For new variables, you will need to create a [new metadata document](creating-metadata-and-variables.md), via PagesCMS
 - Add new variables to the registry via PagesCMS
 
