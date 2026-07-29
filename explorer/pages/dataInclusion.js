@@ -7,7 +7,8 @@ import {
   AccordionSummary,
   Box,
   Button,
-  Checkbox, Container,
+  Checkbox,
+  Container,
   FormControlLabel,
   Radio,
   RadioGroup,
@@ -82,45 +83,34 @@ export default function DataInclusion() {
                   <br/>
                   The behavior to submit the form details can be wired up once we know all the fields and the process for submission.
                 </Typography>
-                  {/* Example: Checkbox */}
-                  <FormControlLabel control={<Checkbox defaultChecked color={'secondary'} />} label="Example Checkbox" />
+                <hr/>
 
-                  <hr/>
+                {/* Example: Checkbox */}
+                <FormControlLabel control={<Checkbox defaultChecked color={'secondary'} />} label="Example Checkbox" />
 
-                  {/* Example: RadioGroup (aka radio buttons) */}
-                  <Typography>Example RadioGroup</Typography>
-                  <RadioGroup
-                    defaultValue="hello"
-                  >
-                    <FormControlLabel value="hello" control={<Radio color={'secondary'} />} label="Hello" />
-                    <FormControlLabel value="world" control={<Radio color={'secondary'} />} label="World" />
-                    <FormControlLabel value="other" control={<Radio color={'secondary'} />} label="Other" />
-                  </RadioGroup>
+                <hr/>
+
+                {/* Example: RadioGroup (aka radio buttons) */}
+                <Typography>Example RadioGroup</Typography>
+                <RadioGroup
+                  defaultValue="hello"
+                >
+                  <FormControlLabel value="hello" control={<Radio color={'secondary'} />} label="Hello" />
+                  <FormControlLabel value="world" control={<Radio color={'secondary'} />} label="World" />
+                  <FormControlLabel value="other" control={<Radio color={'secondary'} />} label="Other" />
+                </RadioGroup>
 
 
-                  <hr/>
+                <hr/>
 
-                  {/* Example: Switch (aka toggle) */}
-                  <FormControlLabel value="hello" control={<Switch color={'secondary'} />} label="Example Switch" />
+                {/* Example: Switch (aka toggle) */}
+                <FormControlLabel value="hello" control={<Switch color={'secondary'} />} label="Example Switch" />
 
-                  <hr/>
+                <hr/>
 
-                  <TextField label="Example TextField" variant="outlined" color={'secondary'} placeholder={'Placeholder text...'}></TextField>
+                <TextField label="Example TextField" variant="outlined" color={'secondary'} placeholder={'Placeholder text...'}></TextField>
 
-                  {/* Example: Select (aka dropdown menu) */}
-                  {/*<FormControl fullWidth>*/}
-                  {/*  <InputLabel id="demo-simple-select-label">Age</InputLabel>*/}
-                  {/*  <Select*/}
-                  {/*    variant={'contained'}*/}
-                  {/*    labelId="demo-simple-select-label"*/}
-                  {/*    id="demo-simple-select"*/}
-                  {/*  >*/}
-                  {/*    <MenuItem value={10}>Ten</MenuItem>*/}
-                  {/*    <MenuItem value={20}>Twenty</MenuItem>*/}
-                  {/*    <MenuItem value={30}>Thirty</MenuItem>*/}
-                  {/*  </Select>*/}
-                  {/*</FormControl>*/}
-
+                <hr/>
 
               </AccordionDetails>
             </Accordion>
