@@ -22,10 +22,50 @@ export default function Contact() {
 
   // Form state
   const [form, setForm] = useState({ type: 'General', name: '', email: '', phone: '', message: '' });
-
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    const propName = e.target.name;
+    const propValue = e.target.value;
+    setForm({ ...form, [propName]: propValue });
+    validate(form, propName, propValue);
   };
+
+  const [error, setError] = useState({ type: '', name: '', email: '', phone: '', message: '' });
+  const validate = (formState, propName, propValue) => {
+    switch(propName) {
+      case 'name':
+        if (!propValue) {
+          setError({ ...error, name: 'Name is required' });
+        } else {
+          setError({ ...error, name: '' });
+        }
+        break;
+      case 'email':
+        if (!propValue) {
+          setError({ ...error, email: 'Email is required' });
+        } else if (!emailRegexPattern.test(propValue)) {
+          setError({ ...error, email: 'Must be a valid email address' });
+        } else {
+          setError({ ...error, email: '' });
+        }
+        break;
+      case 'phone':
+        if (!phoneRegexPattern.test(propValue)) {
+          setError({ ...error, phone: 'Must be a valid phone number' });
+        } else {
+          setError({ ...error, phone: '' });
+        }
+        break;
+      case 'message':
+        if (!propValue) {
+          setError({ ...error, message: 'Please enter your message' });
+        } else {
+          setError({ ...error, message: '' });
+        }
+        break;
+      default:
+        break;
+    }
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -36,7 +76,6 @@ export default function Contact() {
   // Validation patterns:
   const emailRegexPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const phoneRegexPattern = /^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
-  const phoneRegexPatternUsaOnly = /^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/;
 
   return (
     <div className={styles.container}>
@@ -53,13 +92,17 @@ export default function Contact() {
         <Container maxWidth="sm">
           <Box component="form" onSubmit={handleSubmit} sx={{ mt: 4, display: 'flex', flexDirection: 'column', gap: 2 }}>
             <FormControl fullWidth>
-              <InputLabel id="message-type-select-label">Message Type</InputLabel>
+              <InputLabel color={'secondary'} id="message-type-select-label">Message Type</InputLabel>
               <Select
                 variant={'filled'}
+                color={'secondary'}
                 labelId="message-type-select-label"
                 id="message-type-select"
-                value={form.type}
                 label="Message Type"
+                name="type"
+                value={form.type}
+                error={error.type}
+                helperText={error.type}
                 onChange={handleChange}
               >
                 {messageTypes?.map((type, index) =>
@@ -68,10 +111,10 @@ export default function Contact() {
               </Select>
             </FormControl>
 
-            <TextField label="Name" name="name" placeholder="Your Name" value={form.name} onChange={handleChange} required fullWidth />
-            <TextField label="Email" name="email" type="email" placeholder="greetings@you.com" value={form.email} onChange={handleChange} required fullWidth />
-            <TextField label="Phone" name="phone" type="phone" placeholder="111-876-5309" value={form.phone} onChange={handleChange} fullWidth />
-            <TextField label="Message" name="message" value={form.message} placeholder="Your message..." onChange={handleChange} multiline minRows={5} maxRows={10} required fullWidth />
+            <TextField color={'secondary'} label="Name" name="name" error={error.name} helperText={error.name} placeholder="Your Name" value={form.name} onChange={handleChange} required fullWidth />
+            <TextField color={'secondary'} label="Email" name="email" error={error.email} helperText={error.email} type="email" placeholder="greetings@you.com" value={form.email} onChange={handleChange} required fullWidth />
+            <TextField color={'secondary'} label="Phone" name="phone" error={error.phone} helperText={error.phone} type="phone" placeholder="111-867-5309" value={form.phone} onChange={handleChange} fullWidth />
+            <TextField color={'secondary'} label="Message" name="message" error={error.message} helperText={error.message} value={form.message} placeholder="Your message..." onChange={handleChange} multiline minRows={5} maxRows={10} required fullWidth />
 
             <Button type="submit" variant="contained" color="secondary">Send</Button>
           </Box>
