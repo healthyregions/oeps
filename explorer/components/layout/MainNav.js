@@ -10,7 +10,7 @@ import {
   MenuPortal,
   MenuPositioner,
   MenuPopup,
-  MenuItem,
+  MenuItem, MenuSubmenuRoot, MenuSubmenuTrigger,
 } from './Menubar';
 
 export default function MainNav() {
@@ -53,24 +53,23 @@ export default function MainNav() {
             </MenuPortal>
           </MenuRoot>
 
-          <MenuRoot>
+          <MenuRoot modal={false}>
             <MenuTrigger>Documentation</MenuTrigger>
             <MenuPortal>
               <MenuPositioner alignOffset={-4}>
                 <MenuPopup>
                   <MenuItem onClick={() => router.push('/docs')}>Metadata</MenuItem>
-                  <MenuItem onClick={() => router.push('/methods')}>Methods</MenuItem>
-                  {/*<MenuSubmenuRoot>*/}
-                  {/*  <MenuSubmenuTrigger>Methodology</MenuSubmenuTrigger>*/}
-                  {/*  <MenuPortal>*/}
-                  {/*    <MenuPositioner alignOffset={-4}>*/}
-                  {/*      <MenuPopup>*/}
-                  {/*        <MenuItem onClick={() => router.push('/methods')}>Methods</MenuItem>*/}
-                  {/*        <MenuItem onClick={() => router.push('/dataInclusion')}>Data Inclusion</MenuItem>*/}
-                  {/*      </MenuPopup>*/}
-                  {/*    </MenuPositioner>*/}
-                  {/*  </MenuPortal>*/}
-                  {/*</MenuSubmenuRoot>*/}
+                  <MenuSubmenuRoot>
+                    <MenuSubmenuTrigger>Methodology</MenuSubmenuTrigger>
+                    <MenuPortal>
+                      <MenuPositioner alignOffset={-4}>
+                        <MenuPopup>
+                          <MenuItem onClick={() => router.push('/methods')}>Methods</MenuItem>
+                          <MenuItem onClick={() => router.push('/dataInclusion')}>Data Inclusion</MenuItem>
+                        </MenuPopup>
+                      </MenuPositioner>
+                    </MenuPortal>
+                  </MenuSubmenuRoot>
                 </MenuPopup>
               </MenuPositioner>
             </MenuPortal>
@@ -89,9 +88,9 @@ export default function MainNav() {
             </MenuPortal>
           </MenuRoot>
 
-          {/*<MenuRoot>*/}
-          {/*  <MenuTrigger onClick={() => router.push('/contact')}>Contact</MenuTrigger>*/}
-          {/*</MenuRoot>*/}
+          <MenuRoot>
+            <MenuTrigger onClick={() => router.push('/contact')}>Contact</MenuTrigger>
+          </MenuRoot>
         </Menubar>
       </nav>
     </div>

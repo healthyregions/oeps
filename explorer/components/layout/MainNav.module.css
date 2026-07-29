@@ -3,7 +3,7 @@
   height: 3rem;
   display: flex;
   align-items: center;
-  position: relative;
+  position: sticky;
   padding: 0 1rem;
   margin: 0;
   border-bottom: 1px solid var(--medium-gray);
