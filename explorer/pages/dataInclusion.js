@@ -17,6 +17,7 @@ import {
 import {useId, useState} from "react";
 import {ExpandMore} from "@mui/icons-material";
 import TextField from "@mui/material/TextField";
+import Footer from "@components/layout/Footer";
 
 export default function DataInclusion() {
   const id = useId();
@@ -127,6 +128,8 @@ export default function DataInclusion() {
           </Box>
         </Container>
       </main>
+
+      <Footer position={'fixed'} bottom={0} />
     </div>
   );
 }

@@ -7,6 +7,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import {useState} from "react";
 import TextField from "@mui/material/TextField";
+import Footer from "@components/layout/Footer";
 
 export default function Contact() {
   const messageTypes = [
@@ -60,8 +61,8 @@ export default function Contact() {
                 label="Message Type"
                 onChange={handleChange}
               >
-                {messageTypes?.map(type =>
-                  <MenuItem value={type}>{type}</MenuItem>
+                {messageTypes?.map((type, index) =>
+                  <MenuItem key={`select-option-${index}`} value={type}>{type}</MenuItem>
                 )}
               </Select>
             </FormControl>
@@ -74,8 +75,9 @@ export default function Contact() {
             <Button type="submit" variant="contained" color="secondary">Send</Button>
           </Box>
         </Container>
-
       </main>
+
+      <Footer position={'fixed'} bottom={0} />
     </div>
   );
 }
