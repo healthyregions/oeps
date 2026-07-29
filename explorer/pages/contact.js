@@ -8,6 +8,7 @@ import FormControl from '@mui/material/FormControl';
 import {useState} from "react";
 import TextField from "@mui/material/TextField";
 import Footer from "@components/layout/Footer";
+import {Gutter} from "@components/layout/Gutter";
 
 export default function Contact() {
   const messageTypes = [
@@ -76,6 +77,8 @@ export default function Contact() {
           </Box>
         </Container>
       </main>
+
+      <Gutter rem={8} />
 
       <Footer position={'fixed'} bottom={0} />
     </div>
