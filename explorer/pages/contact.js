@@ -50,8 +50,6 @@ export default function Contact() {
 
         <Container maxWidth="sm">
           <Box component="form" onSubmit={handleSubmit} sx={{ mt: 4, display: 'flex', flexDirection: 'column', gap: 2 }}>
-            <Typography variant="h5">Contact Us</Typography>
-
             <FormControl fullWidth>
               <InputLabel id="message-type-select-label">Message Type</InputLabel>
               <Select
