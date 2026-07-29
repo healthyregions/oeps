@@ -15,7 +15,7 @@ import {
   Switch,
   Typography
 } from "@mui/material";
-import {useId, useState} from "react";
+import {useId} from "react";
 import {ExpandMore} from "@mui/icons-material";
 import TextField from "@mui/material/TextField";
 import Footer from "@components/layout/Footer";
@@ -25,16 +25,16 @@ export default function DataInclusion() {
   const id = useId();
 
   // TODO: Form state
-  const [form, setForm] = useState({ /* ... */ });
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
+  //const [form, setForm] = useState({ /* ... */ });
+  // const handleChange = (e) => {
+  //   setForm({ ...form, [e.target.name]: e.target.value });
+  // };
 
   // TODO: Form submission logic
   const handleSubmit = (e) => {
     e.preventDefault();
     alert('Form was not actually submitted!');
-    setForm({ /* ... */ });
+    //setForm({ /* ... */ });
   };
 
   return (

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import MainNav from "@components/layout/MainNav";
 import styles from "@styles/About.module.css";
-import {Box, Button, Container, Grid, InputLabel, Select, Typography} from "@mui/material";
+import {Box, Button, Container, InputLabel, Select} from "@mui/material";
 
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
