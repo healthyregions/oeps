@@ -82,7 +82,7 @@ export default function MainNav() {
               <MenuPositioner alignOffset={-4}>
                 <MenuPopup>
                   <MenuItem onClick={() => router.push('/codeResources')}>Notebooks</MenuItem>
-                  {/*<MenuItem onClick={() => router.push('/workshops')}>Workshops</MenuItem>*/}
+                  <MenuItem onClick={() => window.open('https://gccp.healthyregions.org', '_blank')}>Workshops</MenuItem>
                   <MenuItem onClick={() => window.open('https://healthyregions.github.io/oeps/', '_blank')}>For Developers<br/>(OEPS Data Ecosystem)</MenuItem>
                 </MenuPopup>
               </MenuPositioner>
