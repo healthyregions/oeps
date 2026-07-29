@@ -41,7 +41,6 @@
     "gray-matter": "^4.0.3",
     "grommet": "^2.19.1",
     "jszip": "^3.7.1",
-    "mui-nested-menu": "^4.0.3",
     "next": "14",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",

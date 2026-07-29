@@ -11,7 +11,7 @@ import TextField from "@mui/material/TextField";
 export default function DataInclusion() {
   const id = useId();
   return (
-    <>
+    <div className={styles.container}>
       <Head>
         <title>Data Inclusion</title>
       </Head>
@@ -63,6 +63,6 @@ export default function DataInclusion() {
           </AccordionDetails>
         </Accordion>
       </main>
-    </>
+    </div>
   );
 }
