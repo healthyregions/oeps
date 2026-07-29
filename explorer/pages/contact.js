@@ -27,7 +27,7 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Form submitted!');
+    alert('Form was not actually submitted!');
     setForm({ type: 'General', name: '', email: '', message: '', phone: '' });
   };
 

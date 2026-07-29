@@ -53,7 +53,7 @@ export default function MainNav() {
             </MenuPortal>
           </MenuRoot>
 
-          <MenuRoot modal={false}>
+          <MenuRoot>
             <MenuTrigger>Documentation</MenuTrigger>
             <MenuPortal>
               <MenuPositioner alignOffset={-4}>
