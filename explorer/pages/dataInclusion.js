@@ -115,7 +115,8 @@ export default function DataInclusion() {
               </AccordionDetails>
             </Accordion>
 
-            <Button type="submit" variant="contained" color="secondary">Submit</Button>
+            {/* No submit button here (yet?) */}
+            {/*<Button type="submit" variant="contained" color="secondary">Submit</Button>*/}
           </Box>
         </Container>
       </main>
