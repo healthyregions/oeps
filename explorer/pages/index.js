@@ -40,9 +40,17 @@ const HeroSection = styled.div`
     padding: ${sectionPadding};
 `;
 
+const QuickStartSection = styled.div`
+    background-color: #d6aed822;
+    padding: ${sectionPadding};
+    width: 100%;
+    margin-top: 1rem;
+    padding: ${sectionPadding};
+    display: flex;
+    justify-content: center;
+`;
 
 const NewsSection = styled.div`
-    background-color: #d6aed822;
     width: 100%;
     margin-top: 1rem;
     padding: ${sectionPadding};
@@ -100,34 +108,36 @@ export default function Home({posts}) {
 
   const actionSections = [
     {
-      label: 'Data',
-      description: 'Access data by theme or spatial scale and explore our methodology.',
-      img: 'images/data.svg',
-      imgAlt: 'Data Documentation and download.',
-      actions: [
-        { label: 'Data Access & Download >', link: '/download' },
-        { label: 'Documentation >', link: '/docs' },
-        { label: 'Methodology >', link: '/methods' },
-      ]
-    },
-    {
-      label: 'Map',
-      description: 'Visualize data with our interactive web map.',
+      label: 'About',
+      description: 'Learn about our curation approach & standards.',
       img: 'images/map.svg',
       imgAlt: 'Map and explore data.',
       actions: [
-        { label: 'Start Mapping >', link: '/map' },
+        { label: 'About OEPS >', link: '/about' },
+        { label: 'Methodology >', link: '/methods' },
+        { label: 'Data Standards >', link: '/datainclusion' },
+      ]
+    },
+      {
+      label: 'Data',
+      description: 'Access data by theme or spatial scale and explore our methodology.',
+      img: 'images/data.svg',
+      imgAlt: 'Explore Data',
+      actions: [
+        { label: 'Data Inventory >', link: '/docs' },
+        { label: 'Explore via Map>', link: '/map' },
+        { label: 'Data Download >', link: '/download' },
       ]
     },
     {
       label: 'Insights',
-      description: 'Learn about the OEPS, code resources, and research insights.',
+      description: 'Dive into code resources & research insights.',
       img: 'images/insights.svg',
       imgAlt: 'Data findings and further information.',
       actions: [
-        { label: 'About >', link: '/about' },
         { label: 'Code Resources >', link: '/codeResources' },
         { label: 'Insights >', link: '/insights' },
+        { label: 'For Developers >', link: 'https://healthyregions.github.io/oeps' },
       ]
     },
   ];
@@ -151,9 +161,13 @@ export default function Home({posts}) {
                 Opioid Environment Policy Scan
               </h1>
               <p className={styles.description}>
-                An open data warehouse, mapping platform, and data ecosystem that explores the multi-dimensional risk
+                A free open data warehouse, mapping platform, and data ecosystem that models the multi-dimensional risk
                 environment, from neighborhoods to states,
                 impacting opioid use and health outcomes across the United States.
+              </p>
+              <p className={styles.description}>
+                With over three hundred variables spanning four decades, OEPS continues to grow and be improved
+                over time. Check back regularly for updates. 
               </p>
             </Grid>
           </Grid>
@@ -186,12 +200,22 @@ export default function Home({posts}) {
           </Grid>
         </ActionsSection>
 
+        <QuickStartSection>
+          <Grid container style={{padding: '2rem', width:'100%'}}>
+              <h1> Quick Start Guide</h1>
+              <Grid size={{ xs:12, md:3 }} alignItems={'center'}>
+              stuff
+              </Grid>
+              <Grid size={{ xs:12, md:9 }} alignItems={'center'}>stuff here </Grid>
+          </Grid>
+        </QuickStartSection>
+
         {/* if there are any Published Posts, display them here */}
         {
           (posts !== '' && Array.isArray(posts) && posts?.length > 0) && <NewsSection>
             <Grid container style={{padding: '2rem', width:'100%'}}>
               <Grid size={{ xs:12, md:12 }} alignItems={'center'}>
-                <h2 style={{ marginBottom: '0.75rem' }}>Recent News</h2>
+                <h1 className={styles.subhead}>Recent News</h1>
                 <a href={'/posts'}>See All</a>
                 {
                   posts?.sort((a, b) => b?.date?.localeCompare(a?.date))?.slice(0, 3)?.map((p, index) => <div
@@ -219,18 +243,9 @@ export default function Home({posts}) {
             {/* if there are no Published Posts, insert a horizontal line above this section */}
             { (!posts === '' || Array.isArray(posts) || posts?.length === 0) && <hr /> }
 
-            <p className={styles.description}>
-              The OEPS data ecosystem was designed to support research seeking to study environments impacting and
-              impacted by opioid use and opioid use disorder (OUD),
-              inform public policy, and reduce harm in communities nationwide. It provides access
-              to data at multiple spatial scales and time periods, already cleaned, merged, and documented. Read
-              more <Link href="/about">about the project</Link>,
-              our <Link href="/methods"> methodology</Link>, and <Link href="/insights">insights</Link>.
-            </p>
             <p style={{ textAlign: 'center', maxWidth: '85%', justifyContent: 'center'}}>
               OEPS is led by the <a href="https://healthyregions.org/">Healthy Regions and Policies Lab</a>, based at
-              the
-              Department of Geography & GIScience at the University of Illinois at Urbana-Champaign. It was developed
+              the University of Illinois at Urbana-Champaign. It was developed
               for the <a href="https://heal.nih.gov/research/research-to-practice/jcoin">Justice Community Overdose
               Innovation Network (JCOIN)</a>,
               a NIH HEAL Initiative, as part of the Methodology and Advanced Analytics Resource Center at the University

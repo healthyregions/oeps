@@ -13,9 +13,16 @@ body {
   font-size: small;
 }
 
+h1 {
+    font-family: Montserrat, Arial, sans-serif;;
+  line-height: 1.35;
+  font-size: 2.5rem;
+}
+
 p {
     font-family: Montserrat, Arial, sans-serif;;
   line-height: 1.35;
+  font-size: 1.5rem;
 }
 
 button {
@@ -54,7 +61,7 @@ a {
 
 nav [data-reach-menu-button] {
   font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1rem;
+  font-size: 2rem;
   background: none;
   border: none;
   cursor: pointer;
