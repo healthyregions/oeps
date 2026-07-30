@@ -3,6 +3,14 @@
     "title": "Census Tract Boundaries, 2018",
     "description": "Shapefile of census tract boundaries from the US Census Bureau, 2018.",
     "path": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/tract-2018-500k-shp.zip",
+    "explorer_config": {
+        "name": "US Tracts (2018)",
+        "geodata": "Tracts 2018 [tiles]",
+        "tiles": "herop-lab.0eeozlm3",
+        "id": "HEROP_ID",
+        "bounds": [-125.109215, -66.925621, 25.043926, 49.295128],
+        "tables": {}
+    },
     "format": "shp",
     "mediatype": "application/vnd.shp",
     "summary_level": "tract",
