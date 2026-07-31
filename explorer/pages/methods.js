@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from 'next/link';
-import styles from "../styles/Docs.module.css";
+import styles from "../styles/About.module.css";
 import { Gutter } from "../components/layout/Gutter";
 import MainNav from "../components/layout/MainNav";
 import Footer from "../components/layout/Footer";
@@ -9,7 +9,7 @@ export default function About() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Methods :: OEPS</title>
+        <title>Methods</title>
       </Head>
       <MainNav />
       <main className={styles.main}>
@@ -104,7 +104,7 @@ export default function About() {
 
     <div className="row">
         <div className="col-xs-12 col-md-4 col-lg-3">
-        <h2>Data Standards</h2>
+        <h2>Data Usage Specifics</h2>
         </div>
         <div className="col-xs-12 col-md-8 col-lg-9">
         <p><strong>&quot;No data&quot; values</strong> our CSVs will simply have a blank entry. This means that for a given variable and geographic unit there is no value in the source dataset. Keep in mind that &quot;0&quot; is a valid value for many different measures and should not be treated as &quot;no data&quot;.</p>

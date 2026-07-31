@@ -63,21 +63,36 @@ export default function About() {
             </p>
           </div>
         </div>
+
+        <div className="row">
+          <div className="col-xs-12 col-md-4 col-lg-3">
+            <h2>Citation</h2>
+          </div>
+          <div className="col-xs-12 col-md-8 col-lg-9">
+          <p>
+            Yong Wook Kim, Adam Cox, Mahjabin Kabir Adrita, Mallikarjun Bhusnoor, Ashlynn Wimer, Sara Lambert, Susan Paykin, Dylan Halpern, Qinyun Lin, Moksha Menghaney, Angela Li,
+            Rachel Vigil, Margot Bolanos Gamez, Alexa Jin, Ally Muszynski, and Marynia Kolak. (2026).
+            healthyregions/oeps: Opioid Environment Policy Scan (OEPS) Data Ecosystem (v3.0). Zenodo.
+            <a href= ""> https://doi.org/10.5281/zenodo.5842465</a>
+            </p>
+          </div>
+        </div>
+
         <div className="row">
           <div className="col-xs-12 col-md-4 col-lg-3">
             <h2>Releases</h2>
           </div>
           <div className="col-xs-12 col-md-8 col-lg-9">
             <ul>
-              <li><strong>v2.3</strong> (planned) July, 2026</li>
-              <li><strong>v2.2</strong> (current) September, 2025 [<Link href="https://github.com/healthyregions/oeps/releases/tag/v2.2">release notes</Link>]</li>
-              <li><strong>v2.1</strong> June, 2025 [<Link href="https://github.com/healthyregions/oeps/releases/tag/v2.1">release notes</Link>]</li>
-              <li><strong>v2.0</strong> December, 2024 [<Link href="https://github.com/GeoDaCenter/opioid-policy-scan/releases/tag/v2.0">release notes</Link>]</li>
-              <li><strong>v1.0</strong> January, 2022 [<Link href="https://github.com/GeoDaCenter/opioid-policy-scan/releases/tag/v1.0">release notes</Link>]</li>
+              <li><strong>v2.3</strong> (current) July 2026 [<Link href="https://github.com/healthyregions/oeps/releases/tag/v3.0">release notes</Link>]</li>
+              <li><strong>v2.2</strong> September 2025 [<Link href="https://github.com/healthyregions/oeps/releases/tag/v2.2">release notes</Link>]</li>
+              <li><strong>v2.1</strong> June 2025 [<Link href="https://github.com/healthyregions/oeps/releases/tag/v2.1">release notes</Link>]</li>
+              <li><strong>v2.0</strong> December 2024 [<Link href="https://github.com/GeoDaCenter/opioid-policy-scan/releases/tag/v2.0">release notes</Link>]</li>
+              <li><strong>v1.0</strong> January 2022 [<Link href="https://github.com/GeoDaCenter/opioid-policy-scan/releases/tag/v1.0">release notes</Link>]</li>
             </ul>
           </div>
         </div>
-        <Gutter em={2} />
+        <Gutter em={1} />
             <div className="row">
           <div className="col-xs-12 col-md-4 col-lg-3">
             <h2>Open Source</h2>
@@ -96,7 +111,7 @@ export default function About() {
         <Gutter em={2} />
         <div className="row">
           <div className="col-xs-12 col-md-4 col-lg-3">
-            <h2>Team</h2> <a id="team"></a>
+            <h2>Core Team</h2> <a id="team"></a>
           </div>
           <div className="col-xs-12 col-md-8 col-lg-9">
             <div className={"row " + styles.contributorsContainer}>
@@ -129,35 +144,21 @@ export default function About() {
         <Gutter em={2} />
         <div className="row">
           <div className="col-xs-12 col-md-4 col-lg-3">
-            <h2>Contact</h2>
+            <h2>Funding Acknowledgement</h2>
           </div>
           <div className="col-xs-12 col-md-8 col-lg-9">
             <p>
-            Submit an issue on <a href="https://github.com/healthyregions/oeps">GitHub</a>,
-            or email <a href="mailto:mkolak@illinois.edu">Marynia Kolak</a> with any questions.
+            This research was supported by the National Institute on Drug Abuse, National Institutes of Health,
+            through the NIH HEAL Initiative under award numbers 5UM1DA050098-03 (MAARC 2.0), UG3DA123456 (MAARC 1.0), 
+            and 1R37DA060183-01A1 (the LOUD Stud). It is also a featured dataset on the SDOH & Place Project, 
+            funded in part by the Robert Wood Johnson Foundation (RWJF).
+            The contents of this publication are solely the responsibility of the authors and do not necessarily represent
+            the official views of the NIH, the Initiative, RWJF, or participating sites.
             </p>
           </div>
         </div>
         <Gutter em={2} />
-        <div className="row">
-          <div className="col-xs-12 col-md-4 col-lg-3">
-            <h2>Citation</h2>
-          </div>
-          <div className="col-xs-12 col-md-8 col-lg-9">
-          <p>
-            Adam Cox, Ashlynn Wimer, Sara Lambert, Susan Paykin, Dylan Halpern, Qinyun Lin, Moksha Menghaney, Angela Li,
-            Rachel Vigil, Margot Bolanos Gamez, Alexa Jin, Ally Muszynski, and Marynia Kolak. (2024).
-            healthyregions/oeps: Opioid Environment Policy Scan (OEPS) Data Warehouse (v2.0). Zenodo.
-            <a href= "https://zenodo.org/record/5842465#.YeHj8H3MKHF"> https://doi.org/10.5281/zenodo.5842465</a>
-            </p>
-            <p>
-            <i>This research was supported by the National Institute on Drug Abuse, National Institutes of Health,
-            through the NIH HEAL Initiative under award numbers 5UM1DA050098-03 (MAARC 2.0) and UG3DA123456 (MAARC 1.0).
-            The contents of this publication are solely the responsibility of the authors and do not necessarily represent
-            the official views of the NIH, the Initiative, or the participating sites.</i>
-            </p>
-          </div>
-        </div>
+
       </main>
       <Footer />
     </div>

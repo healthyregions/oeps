@@ -225,6 +225,11 @@ export default function Download() {
               <p>Looking for historical data, or years outside of what is included in the data packages above? Use the individual CSVs listed below to find what you need. CSVs are grouped by geography (<Link href="#state-csvs">state</Link>, <Link href="#county-csvs">county</Link>, <Link href="#tract-csvs">tract</Link>, <Link href="#zcta-csvs">zcta</Link>), and tend to be consolidated one-per-year. However, you may see some exceptions to this where data from the same year must be joined to different <Link href="#geography-files">geography files</Link>.</p>
               <p>We have generated a data dictionary for each geography level that summarizes what variables and which years are available.</p>
               
+              <p> <b> Caution!!</b> Some data are multi-year averages. They will be included in the final year of release,
+              for example: the Social Vulnerability Index from 2018 actually includes Census data from five years (2013-2018). 
+              In social science & demographcis research, using multi-year averages often provide the most stable data results,
+               with final data corresponding to actual phenomena and not measurement errors. We strongly recommend
+              using Data Suite Packages that have been carefully curated for your research needs!</p>
               <h4 id="state-csvs">State</h4>
               <ul>
                 <li> <Link href="https://github.com/healthyregions/oeps/raw/refs/heads/main/docs/src/reference/data-dictionaries/S_Dict.xlsx">Download data dictionary</Link></li>
@@ -349,7 +354,9 @@ export default function Download() {
           </div>
           <div className="col-xs-12 col-md-8 col-lg-9">
             <h3 id="oeps-data-package"><Link href="https://oepsdata.healthyregions.org">oepsData &mdash; R Package</Link></h3>
-              <p>We maintain a small R package called <Link href="https://oepsdata.healthyregions.org">oepsData</Link>. This package is the best way for researchers who use R to load and analyze OEPS data directly, without the need to download CSVs or Shapefiles and worry about joins.</p>
+              <p>We maintain a small R package called <Link href="https://oepsdata.healthyregions.org">oepsData</Link>. 
+              We currently only include data from 2021 and prior (corresponding to 2018/2010 Census Vintage) at this time, with an updated planned 
+              in the next year. This package is the best way for researchers who use R to load and analyze OEPS data directly, without the need to download CSVs or Shapefiles and worry about joins.</p>
               <ul>
                 <li><Link href="https://oepsdata.healthyregions.org">Documentation</Link>: Learn how to install and use the package.</li>
                 <li><Link href="https://oepsdata.healthyregions.org/examples.html">Usage examples</Link>: Within the package docs we have a few examples of what it looks like to load and use OEPS data.</li>
@@ -361,12 +368,14 @@ export default function Download() {
               <ul>
                 <li><Link href="https://oepsdata.healthyregions.org/getting-oeps-data-from-bigquery.html">Introduction to OEPS in Google BigQuery</Link>: The oepsData documentation includes a detailed overview that is relevant no matter what client you use.</li>
                 <li><Link href="https://oepsdata.healthyregions.org/getting-oeps-data-from-bigquery.html#setting-up-bigquery">Setting up BigQuery in R</Link>: The oepsData documentation also has a walkthrough guide illustrating how R users can connect directly to our data in BigQuery.</li>
-                <li><Link href="https://github.com/healthyregions/oeps/blob/main/docs/reference/big-query-tables.md">Database Table Reference</Link>: Full reference document, provides the project id and the names of all tables and columns.</li>
               </ul>
           </div>
         </div>
 
-        {/* <Gutter em={5} />
+        {/*  <li><Link href="https://github.com/healthyregions/oeps/blob/main/docs/reference/big-query-tables.md">Database Table Reference</Link>: Full reference document, provides the project id and the names of all tables and columns.</li>
+
+
+         <Gutter em={5} />
 
         <h2>Filter Data and Download</h2>
 

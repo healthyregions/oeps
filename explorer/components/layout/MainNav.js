@@ -10,7 +10,7 @@ import {
   MenuPortal,
   MenuPositioner,
   MenuPopup,
-  MenuItem, MenuSubmenuRoot, MenuSubmenuTrigger,
+  MenuItem
 } from './Menubar';
 
 export default function MainNav() {
@@ -33,9 +33,10 @@ export default function MainNav() {
             <MenuPortal>
               <MenuPositioner alignOffset={-4}>
                 <MenuPopup>
-                  <MenuItem onClick={() => router.push('/about')}>Teams</MenuItem>
-                  <MenuItem onClick={() => router.push('/insights')}>Insights</MenuItem>
-                  <MenuItem onClick={() => router.push('/posts')}>News</MenuItem>
+                  <MenuItem onClick={() => router.push('/about')}>About OEPS</MenuItem>
+                   <MenuItem onClick={() => router.push('/posts')}>News & Updates</MenuItem>
+                   <MenuItem onClick={() => router.push('/methods')}>Methodology</MenuItem>
+                   <MenuItem onClick={() => router.push('/dataInclusion')}>Data Inclusion Criteria</MenuItem>
                 </MenuPopup>
               </MenuPositioner>
             </MenuPortal>
@@ -46,30 +47,19 @@ export default function MainNav() {
             <MenuPortal>
               <MenuPositioner alignOffset={-4}>
                 <MenuPopup>
-                  <MenuItem onClick={() => router.push('/map')}>Map</MenuItem>
-                  <MenuItem onClick={() => router.push('/download')}>Data</MenuItem>
+                  <MenuItem onClick={() => router.push('/docs')}>Data Inventory</MenuItem>
+                  <MenuItem onClick={() => router.push('/map')}>Map Explorer</MenuItem>
                 </MenuPopup>
               </MenuPositioner>
             </MenuPortal>
           </MenuRoot>
 
           <MenuRoot>
-            <MenuTrigger>Documentation</MenuTrigger>
+            <MenuTrigger>Data Access</MenuTrigger>
             <MenuPortal>
               <MenuPositioner alignOffset={-4}>
                 <MenuPopup>
-                  <MenuItem onClick={() => router.push('/docs')}>Metadata</MenuItem>
-                  <MenuSubmenuRoot>
-                    <MenuSubmenuTrigger>Methodology</MenuSubmenuTrigger>
-                    <MenuPortal>
-                      <MenuPositioner alignOffset={-4}>
-                        <MenuPopup>
-                          <MenuItem onClick={() => router.push('/methods')}>Methods</MenuItem>
-                          <MenuItem onClick={() => router.push('/dataInclusion')}>Data Inclusion</MenuItem>
-                        </MenuPopup>
-                      </MenuPositioner>
-                    </MenuPortal>
-                  </MenuSubmenuRoot>
+                  <MenuItem onClick={() => router.push('/download')}>Download</MenuItem>
                 </MenuPopup>
               </MenuPositioner>
             </MenuPortal>
@@ -80,8 +70,10 @@ export default function MainNav() {
             <MenuPortal>
               <MenuPositioner alignOffset={-4}>
                 <MenuPopup>
-                  <MenuItem onClick={() => router.push('/codeResources')}>Notebooks</MenuItem>
-                  <MenuItem onClick={() => window.open('https://gccp.healthyregions.org', '_blank')}>Workshops</MenuItem>
+                  <MenuItem onClick={() => router.push('/codeResources')}>Code & Analytic Resources</MenuItem>
+                  <MenuItem onClick={() => router.push('/insights')}>Research Insights</MenuItem>
+                  <MenuItem onClick={() => window.open('https://gccp.healthyregions.org', '_blank')}>GCCP Community</MenuItem>
+                  <MenuItem onClick={() => window.open('https://www.jcoinctc.org/tta/', '_blank')}>TA Support</MenuItem>
                   <MenuItem onClick={() => window.open('https://healthyregions.github.io/oeps/', '_blank')}>For Developers<br/>(OEPS Data Ecosystem)</MenuItem>
                 </MenuPopup>
               </MenuPositioner>

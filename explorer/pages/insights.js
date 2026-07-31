@@ -14,7 +14,7 @@ export default function About() {
       <main className={styles.main}>
         <h1 className={styles.title}>Insights</h1>
         <p className={styles.description}>
-        Research, data tools, and extensions of OEPS data.
+        Research and extensions of OEPS data.
         </p>
 
         <Gutter em={2} />
@@ -30,9 +30,21 @@ export default function About() {
         </p>
         </div>
 
-        <p className={styles.description}>
-        <b>Research Completed Using OEPS</b>
-        </p>
+        <h4>Research Completed Using OEPS</h4>
+
+        <div className="row">
+          <div className="col-xs-12 col-md-4 col-lg-3">
+            <h2> 2026</h2>
+          </div>
+          <div className="col-xs-12 col-md-8 col-lg-9">
+           <p>
+            Han, B., Compton, W.M., Jones, C.M., Stimson, D.T., Barfield, E.T., Bellgowan, J.F., Hobin, J.A. and Volkow, N.D., 2026. County-level variation in substance use disorder service utilization by insurance payers and self-pay in the United States. The Journal of clinical psychiatry, 87(3), p.26m16340.
+           </p>
+           <p>
+           Zhang, Z., Kim, S., Zhang, X., Fleckman, J.M., Harrell, K.N., Tatum, D.M., McGinness, C.L., Zhang, J., Theall, K.P. and Taghavi, S., 2026. Mass Shootings in Major US Cities: The Limited Role of Mental Health and Substance Use Treatment Access Compared to Structural Factors. The American Surgeon™, 92(4), pp.1153-1161. 
+           </p>
+           </div>
+        </div>
 
         <div className="row">
           <div className="col-xs-12 col-md-4 col-lg-3">
@@ -43,6 +55,12 @@ export default function About() {
             Balawajder, E.F., Ducharme, L., Taylor, B.G., Lamuda, P.A., Kolak, M., Friedmann, P.D., Pollack, H.A. and Schneider, J.A., 
             2025. Barriers to Universal Availability of Medications for Opioid Use Disorder in US Jails. <i>JAMA network open</i>, 8(4),
              pp.e255340-e255340.
+           </p>
+           <p>
+            Alam, I.Z., Diprete, B.L., Pence, B.W., Planey, A.M., Marshall, S.W., Fulcher, N. and Ranapurwala, S.I., 2025. Sociogeographic determinants of rapid opioid reduction or discontinuation among patients on high-dose long-term opioid therapy in North Carolina, 2006–2018. Pain Medicine, 26(2), pp.63-69.
+           </p>
+           <p>
+            Yanovitzky, I., Stahlman, G. and Senteio, C., Advancing the Science and Practice of Actionable Public Health Data Dashboards: Forum Proceedings.
            </p>
            </div>
         </div>
@@ -99,43 +117,6 @@ export default function About() {
       </div>
       <Gutter em={3} />
 
-      <div className="row">
-          <div className="col-xs-12 col-md-4 col-lg-3">
-            <p className={styles.description}>
-            <b> Additional Resources</b></p>
-          </div>
-          <div className="col-xs-12 col-md-8 col-lg-9">
-          <h3> Geospatial Consortium & Community of Practice (GCCP) </h3>
-            <p>
-            The GCCP, launched in 2025, is a collaboration of researchers and practitioners that 
-            meet regularly to share, discuss, and learn how geospatial methods, tools, and models 
-            can be used to build understanding and develop resources for the opioid epidemic. As part 
-            of the JCOIN Community, we focus on justice populations, though we’ll also be seeking how 
-            to measure and model multiple communities & places across the U.S. To do that, we’ll be 
-            linking fields across epidemiology, medicine, geography, GIS, data science, and more. 
-            Learn more and sign up at the <a href="http://gccp.healthyregions.org">GCCP Website</a>.
-            </p>
-          <h3> Opioid Environment Toolkit </h3>
-            <p>
-            The <a href="https://geodacenter.github.io/opioid-environment-toolkit/index.html">Opioid Environment Toolkit</a> provides an introduction to GIS and spatial analysis in R for opioid environment
-            applications that will allow researchers, analysts, and practitioners to support their communities with better
-            data analytics and visualization services. Chapters include Introduction to Spatial Data, Geocoding Resource Locations,
-            Thematic Mapping, and Nearest Resource Analysis.
-            </p>
-            <h3> US COVID Atlas </h3>
-            <p>
-            For historical Pandemic data, resources have been moved to the <a href="https://www.uscovidatlas.org">US COVID Atlas</a>,
-            a historic, interactive data visualization platform and archive. The Atlas worked to understand,
-            represent, and share stories of the often unequal impact of the COVID-19 pandemic in the United States, 
-            from January 2020 through the end of 2023.
-            Data includes daily and weekly case counts, vaccination rates, and community health contexts.
-            Read more and explore at <a href="https://www.uscovidatlas.org">USCovidAtlas.org</a>.
-            </p>
-
-          </div>
-        </div>
-
-        <Gutter em={2} />
 
 {/* <div className="row">
     <div className="col-xs-12 col-md-4 col-lg-3">

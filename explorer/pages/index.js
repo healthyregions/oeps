@@ -38,7 +38,9 @@ const sectionPadding = '0 12.5vw';
 
 const HeroSection = styled.div`
     padding: ${sectionPadding};
+    margin-top: 1rem;
 `;
+
 
 const QuickStartSection = styled.div`
     background-color: #d6aed822;
@@ -47,7 +49,7 @@ const QuickStartSection = styled.div`
     margin-top: 1rem;
     padding: ${sectionPadding};
     display: flex;
-    justify-content: center;
+    justify-content: left;
 `;
 
 const NewsSection = styled.div`
@@ -109,7 +111,7 @@ export default function Home({posts}) {
   const actionSections = [
     {
       label: 'About',
-      description: 'Learn about our curation approach & standards.',
+      description: 'Learn about our team, curation approach, & standards.',
       img: 'images/map.svg',
       imgAlt: 'Map and explore data.',
       actions: [
@@ -120,7 +122,7 @@ export default function Home({posts}) {
     },
       {
       label: 'Data',
-      description: 'Access data by theme or spatial scale and explore our methodology.',
+      description: 'Explore & access data for your needs.',
       img: 'images/data.svg',
       imgAlt: 'Explore Data',
       actions: [
@@ -151,21 +153,22 @@ export default function Home({posts}) {
       <MainNav/>
       <main>
         <HeroSection>
-          <Grid container alignItems={'center'}>
-            <Grid size={{ xs:12, md:5, lg:4 }} style={{paddingTop:'2rem'}}>
+          <Grid container style={{padding: '2rem', width:'100%'}}>
+            <Grid size={{ xs:12, md:12, lg:4 }} style={{paddingTop:'2rem'}}>
               <img src="images/logo-factors.png" className={styles.titleDiagram} alt={''}/>
             </Grid>
-            <Gutter em={3}/>
-            <Grid size={{ xs:12, md:7, lg:8 }} style={{paddingTop:'8rem'}} >
-              <h1 className={styles.title}>
-                Opioid Environment Policy Scan
+            <Gutter em={2}/>
+            <Grid size={{ xs:12, md:12, lg:7 }} style={{paddingTop:'8rem'}} >
+              <h1>
+                OEPS: the Opioid Environment Policy Scan Data Ecosystem
               </h1>
-              <p className={styles.description}>
+              <p>
                 A free open data warehouse, mapping platform, and data ecosystem that models the multi-dimensional risk
                 environment, from neighborhoods to states,
                 impacting opioid use and health outcomes across the United States.
               </p>
-              <p className={styles.description}>
+              {/* <p className={styles.description}> */}
+              <p>
                 With over three hundred variables spanning four decades, OEPS continues to grow and be improved
                 over time. Check back regularly for updates. 
               </p>
@@ -182,7 +185,7 @@ export default function Home({posts}) {
                 <Grid size={{ xs:12, md:12, lg:4 }} key={`actions-section-${indexOuter}`}>
                   <ActionsHeader>
                     <ActionsHeaderIcon src={s?.img} alt={s?.imgAlt}></ActionsHeaderIcon>
-                    <h1 className={styles.subhead}>{s?.label}</h1>
+                    <h3 className={styles.subhead}>{s?.label}</h3>
                   </ActionsHeader>
                   <ActionsSubheader>
                     {s?.description}
@@ -200,14 +203,39 @@ export default function Home({posts}) {
           </Grid>
         </ActionsSection>
 
+
         <QuickStartSection>
           <Grid container style={{padding: '2rem', width:'100%'}}>
+
+            <Grid size={{ xs:12, md:12, lg:8 }} style={{paddingTop:'2rem'}} alignItems={'left'}>
               <h1> Quick Start Guide</h1>
-              <Grid size={{ xs:12, md:3 }} alignItems={'center'}>
-              stuff
-              </Grid>
-              <Grid size={{ xs:12, md:9 }} alignItems={'center'}>stuff here </Grid>
+              <img src="images/start.png" className={styles.title1Diagram} alt={''}/>
+            </Grid>
+      
+            <Grid size={{ xs:12, md:12, lg:4 }} style={{paddingTop:'2rem'}}>
+              <h3> Usage Tips</h3>    
+                <p2>Data packages will include data across five years: stable census measures are often
+                    multi-year averages, whereas access metrics may correspond to one year. </p2>
+                    <br></br><br></br>
+                <p2>We use 5-digit ZCTAs, or Zip Code Tabulation Areas, to represent zips. </p2>
+                <br></br><br></br>
+                 <p2>Seeking data on Connecticut? Due to changes in their boundaries after 2020, the 
+                    most recent Census data may not be available in OEPS. </p2>
+                    <br></br><br></br>
+
+             <p2>
+              Get more tips at the Data Standards Section of our <a href=""> Methods </a>page, or 
+              learn more about the <a href="">Data Inclusion</a> criteria we use.
+            </p2>
+
+            <h4> Citation </h4>
+            <p2> Yong Wook Kim, Adam Cox, Mahjabin Kabir Adrita, Mallikarjun Bhusnoor, Ashlynn Wimer, Sara Lambert, Susan Paykin, Dylan Halpern, Qinyun Lin, Moksha Menghaney, Angela Li, Rachel Vigil, Margot Bolanos Gamez, Alexa Jin, Ally Muszynski, and Marynia Kolak. (2026). healthyregions/oeps: Opioid Environment Policy Scan (OEPS) Data Ecosystem (v3.0). Zenodo. https://doi.org/10.5281/zenodo.5842465
+            </p2>
+
+            </Grid>
+
           </Grid>
+
         </QuickStartSection>
 
         {/* if there are any Published Posts, display them here */}
@@ -215,7 +243,7 @@ export default function Home({posts}) {
           (posts !== '' && Array.isArray(posts) && posts?.length > 0) && <NewsSection>
             <Grid container style={{padding: '2rem', width:'100%'}}>
               <Grid size={{ xs:12, md:12 }} alignItems={'center'}>
-                <h1 className={styles.subhead}>Recent News</h1>
+                <h1 className={styles.subhead}>Latest Updates</h1>
                 <a href={'/posts'}>See All</a>
                 {
                   posts?.sort((a, b) => b?.date?.localeCompare(a?.date))?.slice(0, 3)?.map((p, index) => <div
@@ -243,14 +271,14 @@ export default function Home({posts}) {
             {/* if there are no Published Posts, insert a horizontal line above this section */}
             { (!posts === '' || Array.isArray(posts) || posts?.length === 0) && <hr /> }
 
-            <p style={{ textAlign: 'center', maxWidth: '85%', justifyContent: 'center'}}>
+            <p2 style={{ textAlign: 'center', maxWidth: '85%', justifyContent: 'center'}}>
               OEPS is led by the <a href="https://healthyregions.org/">Healthy Regions and Policies Lab</a>, based at
               the University of Illinois at Urbana-Champaign. It was developed
               for the <a href="https://heal.nih.gov/research/research-to-practice/jcoin">Justice Community Overdose
               Innovation Network (JCOIN)</a>,
               a NIH HEAL Initiative, as part of the Methodology and Advanced Analytics Resource Center at the University
               of Chicago.
-            </p>
+            </p2>
           </Grid>
         </DescriptionAndAcknowledgmentsSection>
 
