@@ -117,7 +117,7 @@ export default function Home({posts}) {
       actions: [
         { label: 'About OEPS >', link: '/about' },
         { label: 'Methodology >', link: '/methods' },
-        { label: 'Data Standards >', link: '/datainclusion' },
+        { label: 'Data Standards >', link: '/dataInclusion' },
       ]
     },
       {
@@ -213,19 +213,19 @@ export default function Home({posts}) {
             </Grid>
       
             <Grid size={{ xs:12, md:12, lg:4 }} style={{paddingTop:'2rem'}}>
-              <h3> Usage Tips</h3>    
-                <p2>Data packages will include data across five years: stable census measures are often
+              <h3> Usage Tips</h3>
+                <p2>✔ Data packages will include data across five years: stable census measures are often
                     multi-year averages, whereas access metrics may correspond to one year. </p2>
                     <br></br><br></br>
-                <p2>We use 5-digit ZCTAs, or Zip Code Tabulation Areas, to represent zips. </p2>
+                <p2>✔ We use 5-digit ZCTAs, or Zip Code Tabulation Areas, to represent zips. </p2>
                 <br></br><br></br>
-                 <p2>Seeking data on Connecticut? Due to changes in their boundaries after 2020, the 
+                 <p2>✔ Seeking data on Connecticut? Due to changes in their boundaries after 2020, the
                     most recent Census data may not be available in OEPS. </p2>
                     <br></br><br></br>
 
              <p2>
-              Get more tips at the Data Standards Section of our <a href=""> Methods </a>page, or 
-              learn more about the <a href="">Data Inclusion</a> criteria we use.
+              Get more tips at the Data Standards Section of our <a href="/methods"> Methods </a>page, or
+              learn more about the <a href="/dataInclusion">Data Inclusion</a> criteria we use.
             </p2>
 
             <h4> Citation </h4>
