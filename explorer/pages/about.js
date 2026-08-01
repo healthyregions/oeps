@@ -70,10 +70,9 @@ export default function About() {
           </div>
           <div className="col-xs-12 col-md-8 col-lg-9">
           <p>
-            Yong Wook Kim, Adam Cox, Mahjabin Kabir Adrita, Mallikarjun Bhusnoor, Yilin Lyu, Ashlynn Wimer, Sara Lambert, Susan Paykin, Dylan Halpern, Qinyun Lin, Moksha Menghaney, Angela Li,
-            Rachel Vigil, Margot Bolanos Gamez, Alexa Jin, Ally Muszynski, and Marynia Kolak. (2026).
-            healthyregions/oeps: Opioid Environment Policy Scan (OEPS) Data Ecosystem (v3.0). Zenodo.
-            <a href= ""> https://doi.org/10.5281/zenodo.5842465</a>
+            Kim, Y. W. , Cox, A., Kabir Adrita, M., Lambert, S., Wimer, A., M., Halpern, D., Paykin, S., Lin, Q. & Kolak, M. (2026). 
+            OEPS: Opioid Environment Policy Scan Data Ecosytem (v3.0) 
+            [Dataset]. Zenodo. <a href= "https://doi.org/10.5281/zenodo.21747292">https://doi.org/10.5281/zenodo.21747292</a> 
             </p>
           </div>
         </div>
@@ -84,11 +83,21 @@ export default function About() {
           </div>
           <div className="col-xs-12 col-md-8 col-lg-9">
             <ul>
-              <li><strong>v2.3</strong> (current) July 2026 [<Link href="https://github.com/healthyregions/oeps/releases/tag/v3.0">release notes</Link>]</li>
-              <li><strong>v2.2</strong> September 2025 [<Link href="https://github.com/healthyregions/oeps/releases/tag/v2.2">release notes</Link>]</li>
+              <li><strong>v3.0</strong> July 2026 [<Link href="https://github.com/healthyregions/oeps/releases/tag/v3.0">release notes </Link>] 
+              [<Link href="https://zenodo.org/records/21747292">citation</Link>]</li>
+
+              <li><strong>v2.2</strong> September 2025 [<Link href="https://github.com/healthyregions/oeps/releases/tag/v2.2">release notes </Link>] 
+              [<Link href="https://zenodo.org/records/21747292">citation</Link>]</li>
+
               <li><strong>v2.1</strong> June 2025 [<Link href="https://github.com/healthyregions/oeps/releases/tag/v2.1">release notes</Link>]</li>
+
               <li><strong>v2.0</strong> December 2024 [<Link href="https://github.com/GeoDaCenter/opioid-policy-scan/releases/tag/v2.0">release notes</Link>]</li>
+
               <li><strong>v1.0</strong> January 2022 [<Link href="https://github.com/GeoDaCenter/opioid-policy-scan/releases/tag/v1.0">release notes</Link>]</li>
+
+              <li><strong>v0.3</strong> November 2020 [<Link href="https://zenodo.org/records/21747292">citation</Link>]</li>
+
+              <li><strong>vAlpha</strong> October 2020 [<Link href="https://zenodo.org/records/4074222">citation</Link>]</li>
             </ul>
           </div>
         </div>
@@ -133,8 +142,8 @@ export default function About() {
             before moving to UIUC in 2022.
             </p>
             <p>
-              Past contributors include Mallikarjun Bhansoor, Adam Cox, Yilin Lyu, Ashlynn Wimer, Susan Paykin, Dylan Halpern, Qinyun Lin, Moksha Menghaney, and Angela Lin, as well as Research Assistants (RAs)
-              Margot Bolanos Gamez, Alexa Jin, Ally Muszynski, and Rachel Vigil.
+              Recent Data Contributors include Mallikarjun Bhansoor, Mandela Gadri, Yilin Lyu. OEPS ecosystem collaborators from prior years include Ashlynn Wimer, Susan Paykin, Dylan Halpern, Qinyun Lin. 
+              Past Contributors include Moksha Menghaney, Angela Li, Margot Bolanos Gamez, Alexa Jin, Ally Muszynski, and Rachel Vigil.
             </p>
             <p>
               <a href="https://www.healthyregions.org/team">Learn more</a> about the current HEROP team.
