@@ -70,7 +70,7 @@ export default function About() {
           </div>
           <div className="col-xs-12 col-md-8 col-lg-9">
           <p>
-            Yong Wook Kim, Adam Cox, Mahjabin Kabir Adrita, Mallikarjun Bhusnoor, Ashlynn Wimer, Sara Lambert, Susan Paykin, Dylan Halpern, Qinyun Lin, Moksha Menghaney, Angela Li,
+            Yong Wook Kim, Adam Cox, Mahjabin Kabir Adrita, Mallikarjun Bhusnoor, Yilin Lyu, Ashlynn Wimer, Sara Lambert, Susan Paykin, Dylan Halpern, Qinyun Lin, Moksha Menghaney, Angela Li,
             Rachel Vigil, Margot Bolanos Gamez, Alexa Jin, Ally Muszynski, and Marynia Kolak. (2026).
             healthyregions/oeps: Opioid Environment Policy Scan (OEPS) Data Ecosystem (v3.0). Zenodo.
             <a href= ""> https://doi.org/10.5281/zenodo.5842465</a>
@@ -133,7 +133,7 @@ export default function About() {
             before moving to UIUC in 2022.
             </p>
             <p>
-              Past contributors include Mallikarjun Bhansoor, Adam Cox, Ashlynn Wimer, Susan Paykin, Dylan Halpern, Qinyun Lin, Moksha Menghaney, and Angela Lin, as well as Research Assistants (RAs)
+              Past contributors include Mallikarjun Bhansoor, Adam Cox, Yilin Lyu, Ashlynn Wimer, Susan Paykin, Dylan Halpern, Qinyun Lin, Moksha Menghaney, and Angela Lin, as well as Research Assistants (RAs)
               Margot Bolanos Gamez, Alexa Jin, Ally Muszynski, and Rachel Vigil.
             </p>
             <p>

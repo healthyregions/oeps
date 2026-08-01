@@ -229,7 +229,7 @@ export default function Home({posts}) {
             </p2>
 
             <h4> Citation </h4>
-            <p2> Yong Wook Kim, Adam Cox, Mahjabin Kabir Adrita, Mallikarjun Bhusnoor, Ashlynn Wimer, Sara Lambert, Susan Paykin, Dylan Halpern, Qinyun Lin, Moksha Menghaney, Angela Li, Rachel Vigil, Margot Bolanos Gamez, Alexa Jin, Ally Muszynski, and Marynia Kolak. (2026). healthyregions/oeps: Opioid Environment Policy Scan (OEPS) Data Ecosystem (v3.0). Zenodo. https://doi.org/10.5281/zenodo.5842465
+            <p2> Yong Wook Kim, Adam Cox, Mahjabin Kabir Adrita, Mallikarjun Bhusnoor, Yilin Lyu, Ashlynn Wimer, Sara Lambert, Susan Paykin, Dylan Halpern, Qinyun Lin, Moksha Menghaney, Angela Li, Rachel Vigil, Margot Bolanos Gamez, Alexa Jin, Ally Muszynski, and Marynia Kolak. (2026). healthyregions/oeps: Opioid Environment Policy Scan (OEPS) Data Ecosystem (v3.0). Zenodo. https://doi.org/10.5281/zenodo.5842465
             </p2>
 
             </Grid>
