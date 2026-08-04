@@ -116,6 +116,9 @@ export default function Contact() {
         );
         return valid;
       }
+      case 'Category': {
+        return !!propValue;
+      }
       case 'Contact_Name': {
         return isValidName(propValue);
       }
@@ -196,9 +199,9 @@ export default function Contact() {
                 labelId="message-type-select-label"
                 id="message-type-select"
                 label="Message Type"
-                name="type"
+                name="Category"
                 value={formData.Category}
-                error={!!formErrors.Category}
+                //error={!!formErrors.Category}
                 //helperText={formErrors.type}
                 onChange={handleChange}
               >
