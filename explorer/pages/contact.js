@@ -10,7 +10,6 @@ import TextField from "@mui/material/TextField";
 import Footer from "@components/layout/Footer";
 import {Gutter} from "@components/layout/Gutter";
 import Snackbar from "@mui/material/Snackbar";
-import {Spinner} from "grommet";
 
 export default function Contact() {
 
@@ -106,7 +105,7 @@ export default function Contact() {
   const isValid = (formState, propName, propValue) => {
     switch(propName) {
       // If no propName is provided, then we validate entire form
-      default:
+      default: {
         let valid = true;
         ['Contact_Name', 'Contact_Email', 'Contact_Phone', 'Message'].forEach((propName) => {
             const propValue = formState[propName];
@@ -116,16 +115,20 @@ export default function Contact() {
           }
         );
         return true;
-      case 'Contact_Name':
+      }
+      case 'Contact_Name': {
         return isValidName(propValue);
-      case 'Contact_Email':
+      }
+      case 'Contact_Email': {
         return isValidEmail(propValue);
-      case 'Contact_Phone':
+      }
+      case 'Contact_Phone': {
         return isValidPhone(propValue);
-      case 'Message':
+      }
+      case 'Message': {
         return isValidMessage(propValue);
+      }
     }
-    return true;
   }
 
   const generateURL = async (data, googleFormUrl) => {
