@@ -158,7 +158,7 @@ export default function Home({posts}) {
               <img src="images/logo-factors.png" className={styles.titleDiagram} alt={''}/>
             </Grid>
             <Gutter em={2}/>
-            <Grid size={{ xs:12, md:12, lg:7 }} style={{paddingTop:'8rem'}} >
+            <Grid size={{ xs:12, md:12, lg:7 }} style={{paddingTop:'4rem'}} >
               <h1>
                 OEPS: the Opioid Environment Policy Scan Data Ecosystem
               </h1>
@@ -170,7 +170,7 @@ export default function Home({posts}) {
               {/* <p className={styles.description}> */}
               <p>
                 With over three hundred variables spanning four decades, OEPS continues to grow and be improved
-                over time. Check back regularly for updates. 
+                over time. Check back regularly for updates.
               </p>
             </Grid>
           </Grid>
@@ -211,7 +211,7 @@ export default function Home({posts}) {
               <h1> Quick Start Guide</h1>
               <img src="images/start.png" className={styles.title1Diagram} alt={''}/>
             </Grid>
-      
+
             <Grid size={{ xs:12, md:12, lg:4 }} style={{paddingTop:'2rem'}}>
               <h3> Usage Tips</h3>
                 <p2>✔ Data packages will include data across five years: stable census measures are often
@@ -229,10 +229,10 @@ export default function Home({posts}) {
             </p2>
 
             <h4> Citation </h4>
-            <p2> 
-            Kim, Y. W. , Cox, A., Kabir Adrita, M., Lambert, S., Wimer, A., M., Halpern, D., Paykin, S., Lin, Q. & Kolak, M. (2025). 
-            OEPS: Opioid Environment Policy Scan Data Ecosytem (v3.0) 
-            [Dataset]. Zenodo. <a href= "https://doi.org/10.5281/zenodo.21747292">https://doi.org/10.5281/zenodo.21747292</a>            
+            <p2>
+            Kim, Y. W. , Cox, A., Kabir Adrita, M., Lambert, S., Wimer, A., M., Halpern, D., Paykin, S., Lin, Q. & Kolak, M. (2025).
+            OEPS: Opioid Environment Policy Scan Data Ecosytem (v3.0)
+            [Dataset]. Zenodo. <a href= "https://doi.org/10.5281/zenodo.21747292">https://doi.org/10.5281/zenodo.21747292</a>
             </p2>
 
             </Grid>
