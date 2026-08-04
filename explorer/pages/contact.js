@@ -9,6 +9,8 @@ import {useState} from "react";
 import TextField from "@mui/material/TextField";
 import Footer from "@components/layout/Footer";
 import {Gutter} from "@components/layout/Gutter";
+import Snackbar from "@mui/material/Snackbar";
+import {Spinner} from "grommet";
 
 export default function Contact() {
 
@@ -38,6 +40,14 @@ export default function Contact() {
     setFormData({ ...formData, [propName]: propValue });
     isValid(formData, propName, propValue);
   };
+
+  // Success confirmation
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const handleClose = () => {
+    setSubmitted(false);
+    setSubmitting(false);
+  }
 
   // Error state + Validation
   const emailRegexPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -72,7 +82,11 @@ export default function Contact() {
   }
 
   const isValidPhone = (propValue) => {
-    if (!phoneRegexPattern.test(propValue)) {
+    if (!propValue) {
+      // Empty is a valid case for phone (which is optional)
+      setFormErrors({...formErrors, Contact_Phone: ''});
+      return true;
+    } else if (!phoneRegexPattern.test(propValue)) {
       setFormErrors({...formErrors, Contact_Phone: 'Must be a valid phone number'});
       return false;
     }
@@ -124,25 +138,36 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (isValid(formData)) {
+      try {
+        setSubmitting(true);
 
-      const gSheetURL = await generateURL(formData, googleFormUrl);
-      await fetch(gSheetURL, { method: 'GET' });
+        // Send feedback to Google Sheet
+        const gSheetURL = await generateURL(formData, googleFormUrl);
+        await fetch(gSheetURL, {method: 'GET'});
 
-      let slackText = `Submission from ${window.location.href}`
-      slackText += `\n*Name:* ${formData.Contact_Name}`
-      slackText += `\n*Email:* ${formData.Contact_Email}`
-      slackText += `\n*Phone:* ${formData.Contact_Phone}`
-      slackText += `\n*Message Category:* ${formData.Category}`
-      slackText += `\n---\n${formData.Message}`
-      await fetch(slackFormUrl, {
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        method: 'POST',
-        body: JSON.stringify({text: slackText})
-      });
-      //alert('Form was not actually submitted!');
-      //setForm({ Category: 'General', Contact_Name: '', Contact_Email: '', Message: '', Contact_Phone: '' });
+        // Send feedback notification to Slack channel
+        let slackText = `Submission from ${window.location.href}`
+        slackText += `\n*Name:* ${formData.Contact_Name}`
+        slackText += `\n*Email:* ${formData.Contact_Email}`
+        slackText += `\n*Phone:* ${formData.Contact_Phone}`
+        slackText += `\n*Message Category:* ${formData.Category}`
+        slackText += `\n---\n${formData.Message}`
+        await fetch(slackFormUrl, {
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+          },
+          method: 'POST',
+          body: JSON.stringify({text: slackText})
+        });
+
+        // Clear out the form and notify the user
+        setFormData({Category: 'General', Contact_Name: '', Contact_Email: '', Message: '', Contact_Phone: ''});
+
+        // Notify the user of success
+        setSubmitted(true);
+      } finally {
+        setSubmitting(false);
+      }
     }
   };
 
@@ -185,8 +210,16 @@ export default function Contact() {
             <TextField color={'secondary'} label="Phone (optional)" name="Contact_Phone" type="phone" placeholder="111-867-5309" error={!!formErrors.Contact_Phone} helperText={formErrors.Contact_Phone} value={formData.Contact_Phone} onChange={handleChange} fullWidth />
             <TextField color={'secondary'} label="Message" name="Message" placeholder="Your message..." error={!!formErrors.Message} helperText={formErrors.Message} value={formData.Message} onChange={handleChange} multiline minRows={5} maxRows={10} required fullWidth />
 
-            <Button type="submit" variant="contained" color="secondary">Send</Button>
+            <Button type="submit" variant="contained" color="secondary" loading={submitting}>Send</Button>
           </Box>
+
+          <Snackbar
+            open={submitted}
+            anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+            autoHideDuration={6000}
+            onClose={handleClose}
+            message="Feedback has been sent"
+          />
         </Container>
       </main>
 
