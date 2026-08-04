@@ -295,21 +295,21 @@
   },
   {
     "variable": "% Tracts Rural (RUCA)",
-    "numerator": "county-2018",
+    "numerator": "county-ruca-2020",
     "nProperty": "RcaRuralP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Urbanicity.md"
   },
   {
     "variable": "% Tracts Suburban (RUCA)",
-    "numerator": "county-2018",
+    "numerator": "county-ruca-2020",
     "nProperty": "RcaSubrbP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Urbanicity.md"
   },
   {
     "variable": "% Tracts Urban (RUCA)",
-    "numerator": "county-2018",
+    "numerator": "county-ruca-2020",
     "nProperty": "RcaUrbanP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Urbanicity.md"
@@ -1660,7 +1660,7 @@
   },
   {
     "variable": "Federal Information Processing Standard code",
-    "numerator": "state-providers-2010__county-providers-2010__tract-sdoh-2014",
+    "numerator": "state-providers-2010__county-ruca-2020__tract-sdoh-2014",
     "nProperty": "FIPS",
     "theme": "Geography",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/GeographicBoundaries.md"
@@ -2325,7 +2325,7 @@
   },
   {
     "variable": "Primary RUCA Code",
-    "numerator": "zcta-ruca-2010__tract-ruca-2010",
+    "numerator": "zcta-ruca-2010__tract-ruca-2020",
     "nProperty": "Ruca1",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Urbanicity.md"
@@ -2381,7 +2381,7 @@
   },
   {
     "variable": "Secondary RUCA Code",
-    "numerator": "zcta-ruca-2010__tract-ruca-2010",
+    "numerator": "zcta-ruca-2010__tract-ruca-2020",
     "nProperty": "Ruca2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Urbanicity.md"
@@ -3004,7 +3004,7 @@
   },
   {
     "variable": "Urban-Suburban-Rural",
-    "numerator": "zcta-ruca-2010__tract-ruca-2010",
+    "numerator": "zcta-ruca-2010__tract-ruca-2020",
     "nProperty": "Rurality",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Urbanicity.md"

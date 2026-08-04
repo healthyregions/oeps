@@ -25,6 +25,7 @@
     "county-2024",
     "county-2025",
     "county-providers-2010",
+    "county-ruca-2020",
     "state-1980",
     "state-1990",
     "state-2000",
@@ -57,6 +58,7 @@
     "tract-2025",
     "tract-providers-2010",
     "tract-ruca-2010",
+    "tract-ruca-2020",
     "tract-sdoh-2014"
   ]
 }
