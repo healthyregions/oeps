@@ -11,6 +11,10 @@ import Footer from "@components/layout/Footer";
 import {Gutter} from "@components/layout/Gutter";
 
 export default function Contact() {
+
+  const googleFormUrl = `${process.env.NEXT_PUBLIC_EMAIL_FORM_URL}`
+  const slackFormUrl = `${process.env.NEXT_PUBLIC_SLACK_FORM_SUBMISSION_URL}`
+
   const messageTypes = [
     'General',
     'Bug Report or Error',
@@ -21,61 +25,126 @@ export default function Contact() {
   ];
 
   // Form state
-  const [form, setForm] = useState({ type: 'General', name: '', email: '', phone: '', message: '' });
+  const [formData, setFormData] = useState({
+    Category: 'General',
+    Contact_Name: '',
+    Contact_Email: '',
+    Contact_Phone: '',
+    Message: ''
+  });
   const handleChange = (e) => {
     const propName = e.target.name;
     const propValue = e.target.value;
-    setForm({ ...form, [propName]: propValue });
-    validate(form, propName, propValue);
+    setFormData({ ...formData, [propName]: propValue });
+    isValid(formData, propName, propValue);
   };
 
-  const [error, setError] = useState({ type: '', name: '', email: '', phone: '', message: '' });
-  const validate = (formState, propName, propValue) => {
-    switch(propName) {
-      case 'name':
-        if (!propValue) {
-          setError({ ...error, name: 'Name is required' });
-        } else {
-          setError({ ...error, name: '' });
-        }
-        break;
-      case 'email':
-        if (!propValue) {
-          setError({ ...error, email: 'Email is required' });
-        } else if (!emailRegexPattern.test(propValue)) {
-          setError({ ...error, email: 'Must be a valid email address' });
-        } else {
-          setError({ ...error, email: '' });
-        }
-        break;
-      case 'phone':
-        if (!phoneRegexPattern.test(propValue)) {
-          setError({ ...error, phone: 'Must be a valid phone number' });
-        } else {
-          setError({ ...error, phone: '' });
-        }
-        break;
-      case 'message':
-        if (!propValue) {
-          setError({ ...error, message: 'Please enter your message' });
-        } else {
-          setError({ ...error, message: '' });
-        }
-        break;
-      default:
-        break;
-    }
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert('Form was not actually submitted!');
-    setForm({ type: 'General', name: '', email: '', message: '', phone: '' });
-  };
-
-  // Validation patterns:
+  // Error state + Validation
   const emailRegexPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const phoneRegexPattern = /^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
+  const [formErrors, setFormErrors] = useState({
+    Category: '',
+    Contact_Name: '',
+    Contact_Email: '',
+    Contact_Phone: '',
+    Message: ''
+  });
+
+  const isValidName = (propValue) => {
+    if (!propValue) {
+      setFormErrors({ ...formErrors, Contact_Name: 'Name is required' });
+      return false;
+    }
+    setFormErrors({ ...formErrors, Contact_Name: '' });
+    return true;
+  }
+
+  const isValidEmail = (propValue) => {
+    if (!propValue) {
+      setFormErrors({...formErrors, Contact_Email: 'Email is required'});
+      return false;
+    } else if (!emailRegexPattern.test(propValue)) {
+      setFormErrors({...formErrors, Contact_Email: 'Must be a valid email address'});
+      return false;
+    }
+    setFormErrors({...formErrors, Contact_Email: ''});
+    return true;
+  }
+
+  const isValidPhone = (propValue) => {
+    if (!phoneRegexPattern.test(propValue)) {
+      setFormErrors({...formErrors, Contact_Phone: 'Must be a valid phone number'});
+      return false;
+    }
+    setFormErrors({...formErrors, Contact_Phone: ''});
+    return true;
+  }
+
+  const isValidMessage = (propValue) => {
+    if (!propValue) {
+      setFormErrors({...formErrors, Message: 'Please enter your message'});
+      return false;
+    }
+    setFormErrors({...formErrors, Message: ''});
+    return true;
+  }
+
+  const isValid = (formState, propName, propValue) => {
+    switch(propName) {
+      // If no propName is provided, then we validate entire form
+      default:
+        let valid = true;
+        ['Contact_Name', 'Contact_Email', 'Contact_Phone', 'Message'].forEach((propName) => {
+            const propValue = formState[propName];
+            if (!isValid(formState, propName, propValue)) {
+              valid = false;
+            }
+          }
+        );
+        return true;
+      case 'Contact_Name':
+        return isValidName(propValue);
+      case 'Contact_Email':
+        return isValidEmail(propValue);
+      case 'Contact_Phone':
+        return isValidPhone(propValue);
+      case 'Message':
+        return isValidMessage(propValue);
+    }
+    return true;
+  }
+
+  const generateURL = async (data, googleFormUrl) => {
+    let returnURL = `${googleFormUrl}?Date=${encodeURIComponent(new Date().toISOString().slice(0,10))}`
+    for (const property in data){
+      returnURL += `&${encodeURIComponent(property)}=${encodeURIComponent(data[property])}`
+    }
+    return returnURL
+  }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (isValid(formData)) {
+
+      const gSheetURL = await generateURL(formData, googleFormUrl);
+      await fetch(gSheetURL, { method: 'GET' });
+
+      let slackText = `Submission from ${window.location.href}`
+      slackText += `\n*Name:* ${formData.Contact_Name}`
+      slackText += `\n*Email:* ${formData.Contact_Email}`
+      slackText += `\n*Phone:* ${formData.Contact_Phone}`
+      slackText += `\n*Message Category:* ${formData.Category}`
+      slackText += `\n---\n${formData.Message}`
+      await fetch(slackFormUrl, {
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        method: 'POST',
+        body: JSON.stringify({text: slackText})
+      });
+      //alert('Form was not actually submitted!');
+      //setForm({ Category: 'General', Contact_Name: '', Contact_Email: '', Message: '', Contact_Phone: '' });
+    }
+  };
 
   return (
     <div className={styles.container}>
@@ -100,9 +169,9 @@ export default function Contact() {
                 id="message-type-select"
                 label="Message Type"
                 name="type"
-                value={form.type}
-                error={error.type}
-                helperText={error.type}
+                value={formData.Category}
+                error={!!formErrors.Category}
+                //helperText={formErrors.type}
                 onChange={handleChange}
               >
                 {messageTypes?.map((type, index) =>
@@ -111,10 +180,10 @@ export default function Contact() {
               </Select>
             </FormControl>
 
-            <TextField color={'secondary'} label="Name" name="name" error={error.name} helperText={error.name} placeholder="Your Name" value={form.name} onChange={handleChange} required fullWidth />
-            <TextField color={'secondary'} label="Email" name="email" error={error.email} helperText={error.email} type="email" placeholder="greetings@you.com" value={form.email} onChange={handleChange} required fullWidth />
-            <TextField color={'secondary'} label="Phone" name="phone" error={error.phone} helperText={error.phone} type="phone" placeholder="111-867-5309" value={form.phone} onChange={handleChange} fullWidth />
-            <TextField color={'secondary'} label="Message" name="message" error={error.message} helperText={error.message} value={form.message} placeholder="Your message..." onChange={handleChange} multiline minRows={5} maxRows={10} required fullWidth />
+            <TextField color={'secondary'} label="Name" name="Contact_Name" placeholder="Your Name" error={!!formErrors.Contact_Name} helperText={formErrors.Contact_Name} value={formData.Contact_Name} onChange={handleChange} required fullWidth />
+            <TextField color={'secondary'} label="Email" name="Contact_Email" type="email" placeholder="greetings@you.com" error={!!formErrors.Contact_Email} helperText={formErrors.Contact_Email} value={formData.Contact_Email} onChange={handleChange} required fullWidth />
+            <TextField color={'secondary'} label="Phone (optional)" name="Contact_Phone" type="phone" placeholder="111-867-5309" error={!!formErrors.Contact_Phone} helperText={formErrors.Contact_Phone} value={formData.Contact_Phone} onChange={handleChange} fullWidth />
+            <TextField color={'secondary'} label="Message" name="Message" placeholder="Your message..." error={!!formErrors.Message} helperText={formErrors.Message} value={formData.Message} onChange={handleChange} multiline minRows={5} maxRows={10} required fullWidth />
 
             <Button type="submit" variant="contained" color="secondary">Send</Button>
           </Box>
