@@ -114,7 +114,7 @@ export default function Contact() {
             }
           }
         );
-        return true;
+        return valid;
       }
       case 'Contact_Name': {
         return isValidName(propValue);
