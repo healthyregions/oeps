@@ -302,21 +302,21 @@
   },
   {
     "variable": "% Tracts Rural (RUCA)",
-    "numerator": "county-2018",
+    "numerator": "county-ruca-2020",
     "nProperty": "RcaRuralP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Urbanicity.md"
   },
   {
     "variable": "% Tracts Suburban (RUCA)",
-    "numerator": "county-2018",
+    "numerator": "county-ruca-2020",
     "nProperty": "RcaSubrbP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Urbanicity.md"
   },
   {
     "variable": "% Tracts Urban (RUCA)",
-    "numerator": "county-2018",
+    "numerator": "county-ruca-2020",
     "nProperty": "RcaUrbanP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Urbanicity.md"
@@ -533,15 +533,15 @@
   },
   {
     "variable": "% tracts with Substance Use Treatment program (30-min drive)",
-    "numerator": "state-2025__county-2025",
-    "nProperty": "SutTmDrP",
+    "numerator": "state-2020__county-2020",
+    "nProperty": "SutpTmDrP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_SubstanceUseTreatment.md"
   },
   {
     "variable": "% tracts with Substance Use Treatment program (30-min drive)",
-    "numerator": "state-2020__county-2020",
-    "nProperty": "SutpTmDrP",
+    "numerator": "state-2025__county-2025",
+    "nProperty": "SutTmDrP",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_SubstanceUseTreatment.md"
   },
@@ -1359,15 +1359,15 @@
   },
   {
     "variable": "Driving Time (min) to nearest Mental Health Provider",
-    "numerator": "zcta-2020__tract-2025",
-    "nProperty": "MhTmDr",
+    "numerator": "state-2025__county-2025",
+    "nProperty": "MhAvTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Mental_Health.md"
   },
   {
     "variable": "Driving Time (min) to nearest Mental Health Provider",
-    "numerator": "state-2025__county-2025",
-    "nProperty": "MhAvTmDr",
+    "numerator": "zcta-2020__tract-2025",
+    "nProperty": "MhTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_Mental_Health.md"
   },
@@ -1387,15 +1387,15 @@
   },
   {
     "variable": "Driving Time (min) to nearest Opioid Treatment Program (OTP)",
-    "numerator": "zcta-2021__tract-2025",
-    "nProperty": "OtpTmDr",
+    "numerator": "state-2025__county-2025",
+    "nProperty": "OtpAvTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
   {
     "variable": "Driving Time (min) to nearest Opioid Treatment Program (OTP)",
-    "numerator": "state-2025__county-2025",
-    "nProperty": "OtpAvTmDr",
+    "numerator": "zcta-2021__tract-2025",
+    "nProperty": "OtpTmDr",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Access_MOUDs.md"
   },
@@ -1611,7 +1611,7 @@
   },
   {
     "variable": "Federal Information Processing Standard code",
-    "numerator": "state-providers-2010__county-providers-2010__tract-sdoh-2014",
+    "numerator": "state-providers-2010__county-ruca-2020__tract-sdoh-2014",
     "nProperty": "FIPS",
     "theme": "Geography",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/GeographicBoundaries.md"
@@ -2255,7 +2255,7 @@
   },
   {
     "variable": "Primary RUCA Code",
-    "numerator": "zcta-ruca-2010__tract-ruca-2010",
+    "numerator": "zcta-ruca-2010__tract-ruca-2020",
     "nProperty": "Ruca1",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Urbanicity.md"
@@ -2325,7 +2325,7 @@
   },
   {
     "variable": "Secondary RUCA Code",
-    "numerator": "zcta-ruca-2010__tract-ruca-2010",
+    "numerator": "zcta-ruca-2010__tract-ruca-2020",
     "nProperty": "Ruca2",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Urbanicity.md"
@@ -2948,7 +2948,7 @@
   },
   {
     "variable": "Urban-Suburban-Rural",
-    "numerator": "zcta-ruca-2010__tract-ruca-2010",
+    "numerator": "zcta-ruca-2010__tract-ruca-2020",
     "nProperty": "Rurality",
     "theme": "Environment",
     "metadataUrl": "https://github.com/healthyregions/oeps/blob/main/metadata/Urbanicity.md"

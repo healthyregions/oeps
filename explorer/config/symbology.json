@@ -689,7 +689,28 @@
       "Suburban",
       "Urban"
     ],
-    "colorScale": "Spectral"
+    "fixedLabels": [
+      "Rural",
+      "Suburban",
+      "Urban"
+    ],
+    "colorScale": [
+      [
+        153,
+        213,
+        148
+      ],
+      [
+        255,
+        255,
+        191
+      ],
+      [
+        252,
+        141,
+        89
+      ]
+    ]
   },
   "MoudMinDis": {
     "binning": "naturalBreaks",

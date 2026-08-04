@@ -8,6 +8,7 @@
   "analysis": false,
   "metadata": "Urbanicity",
   "table_sources": [
-    "county-2018"
+    "county-2018",
+    "county-ruca-2020"
   ]
 }

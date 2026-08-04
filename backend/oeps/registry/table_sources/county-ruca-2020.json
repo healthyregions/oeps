@@ -1,0 +1,8 @@
+{
+  "name": "county-ruca-2020",
+  "title": "county-ruca-2020",
+  "path": "tables/county-ruca-2020.csv",
+  "description": "This CSV aggregates OEPS RUCA data values from 2020 at the county level.",
+  "data_year": "2020",
+  "geodata_source": "geo-2020-county"
+}

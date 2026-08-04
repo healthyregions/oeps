@@ -1,0 +1,8 @@
+{
+  "name": "tract-ruca-2020",
+  "title": "tract-ruca-2020",
+  "path": "tables/tract-ruca-2020.csv",
+  "description": "This CSV aggregates OEPS RUCA data values from 2020 at the tract level.",
+  "data_year": "2020",
+  "geodata_source": "geo-2020-tract"
+}

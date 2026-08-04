@@ -9,6 +9,7 @@
   "metadata": "Urbanicity",
   "table_sources": [
     "tract-ruca-2010",
+    "tract-ruca-2020",
     "zcta-ruca-2010"
   ]
 }
