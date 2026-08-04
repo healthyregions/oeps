@@ -3,10 +3,10 @@
   "title": "% Population identifying as two or more races",
   "type": "number",
   "example": "60.0",
-  "description": "",
+  "description": "Percent of population identifying as two or more races",
+  "metadata": "Race_Ethnicity",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Race_Ethnicity",
   "table_sources": [
     "county-2010",
     "county-2020",

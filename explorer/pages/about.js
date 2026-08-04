@@ -7,20 +7,25 @@ import Footer from "../components/layout/Footer";
 
 const contributors = [
   {
-    name:'Adam Cox',
-    photo: 'adam.jpg',
-    link: 'https://github.com/mradamcox'
-  },
-  {
-    name:'Sara Lambert',
-    photo: 'sara.jpg',
-    link: 'https://github.com/bodom0015'
+    name:'Yong Wook Kim',
+    photo: 'ywkim.png',
+    link: 'https://experts.illinois.edu/en/persons/yong-wook-kim/'
   },
   {
     name:'Marynia Kolak',
     photo: 'marynia.jpg',
-    link: 'https://github.com/Makosak'
+    link: 'https://ggis.illinois.edu/directory/profile/mkolak'
   },
+  {
+    name:'Sara Lambert',
+    photo: 'sara.jpg',
+    link: 'https://www.linkedin.com/in/sara-lambert-b4602b8a'
+  },
+  {
+    name:'Mahjabin Kabir Adrita',
+    photo: 'adrita.png',
+    link: 'https://ggis.illinois.edu/directory/profile/mk122'
+  }
 ]
 
 export default function About() {
@@ -64,7 +69,7 @@ export default function About() {
           </div>
           <div className="col-xs-12 col-md-8 col-lg-9">
             <ul>
-              <li><strong>v2.3</strong> (planned) January, 2026</li>
+              <li><strong>v2.3</strong> (planned) July, 2026</li>
               <li><strong>v2.2</strong> (current) September, 2025 [<Link href="https://github.com/healthyregions/oeps/releases/tag/v2.2">release notes</Link>]</li>
               <li><strong>v2.1</strong> June, 2025 [<Link href="https://github.com/healthyregions/oeps/releases/tag/v2.1">release notes</Link>]</li>
               <li><strong>v2.0</strong> December, 2024 [<Link href="https://github.com/GeoDaCenter/opioid-policy-scan/releases/tag/v2.0">release notes</Link>]</li>
@@ -113,7 +118,7 @@ export default function About() {
             before moving to UIUC in 2022.
             </p>
             <p>
-              Past contributors include Ashlynn Wimer, Susan Paykin, Dylan Halpern, Qinyun Lin, Moksha Menghaney, and Angela Lin, as well as Research Assistants (RAs)
+              Past contributors include Mallikarjun Bhansoor, Adam Cox, Ashlynn Wimer, Susan Paykin, Dylan Halpern, Qinyun Lin, Moksha Menghaney, and Angela Lin, as well as Research Assistants (RAs)
               Margot Bolanos Gamez, Alexa Jin, Ally Muszynski, and Rachel Vigil.
             </p>
             <p>

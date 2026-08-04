@@ -1,12 +1,12 @@
 {
   "name": "CrowdHsng",
-  "title": "Proportion of occupied housing units that are considered crowded (more than 1 person per room)",
+  "title": "Crowded Housing",
   "type": "number",
   "example": "60.0",
-  "description": "",
+  "description": "Proportion of occupied housing units that are considered crowded (more than 1 person per room)",
+  "metadata": "Household_Characteristics",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Household_Characteristics",
   "table_sources": [
     "county-2020",
     "county-2023",

@@ -3,10 +3,10 @@
   "title": "% Occupied housing units",
   "type": "number",
   "example": "60.0",
-  "description": "",
+  "description": "Percent occupied housing units",
+  "metadata": "Household_Characteristics",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Household_Characteristics",
   "table_sources": [
     "county-2020",
     "county-2023",

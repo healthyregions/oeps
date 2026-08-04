@@ -1,12 +1,12 @@
 {
   "name": "EduHsP",
-  "title": "% Population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)",
+  "title": "% High School Graduate",
   "type": "number",
   "example": "60.0",
-  "description": "",
+  "description": "\tPercent population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)",
+  "metadata": "Educational_Characteristics",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Educational_Characteristics",
   "table_sources": [
     "county-1980",
     "county-1990",

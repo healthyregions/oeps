@@ -1,10 +1,12 @@
 **Meta Data Name**: Access to Mental Health Providers  
 **Date Added**: January 9, 2021  
-**Author**: Mahjabin Kabir Adrita, Wataru Morioka, Susan Paykin  
-**Date Last Modified**: June 2, 2026  
-**Last Modified By**: Marynia Kolak
+**Author**: Mahjabin Kabir Adrita, Marynia Kolak, Wataru Morioka, Susan Paykin    
+**Date Last Modified**: June 6, 2026  
+**Last Modified By**: Mahjabin Kabir Adrita
 
 ### Data Source(s) Description:  
+
+#### Resources
 For the 2025 measure, Mental health provider data was sourced from [Substance Abuse and Mental Health Services Administration (SAMSHA)](https://www.samhsa.gov/) through its [Treatment Services Locator Tool](https://findtreatment.samhsa.gov/locator). 
 
 #### Street Network Topology & Travel Time Matrices
@@ -38,7 +40,8 @@ The zip code calculation was updated in 2025 to an average of overlapping tract-
 ##### Travel Time and Count Within Threshold
 We calculated travel-network access metrics for the driving travel time to the nearest Mental Health Provider Facility location and count of Mental Health Provider Facilities within a 30 minute driving threshold. We calculated travel-network access metrics for every census tract centroid to the census tract centroid of nearest provider type. For *zip code tabulation areas*, overlapping tract-level measures were averaged, weighted by proportion of the overlapping tract, using the corresponding HUD tract-to-zip code crosswalks. 
 
-This travel time analysis was conducted using a Python Computational notebook. 
+This travel time analysis was conducted using a Python Computational notebook. The updated 2025 notebook will be released in late January 2026, due to some refinements and updates.
+![Screenshot](https://github.com/user-attachments/assets/49d241c3-9fe3-4c0a-b43c-1ee5ed836245)
 
 Count of providers within a travel threshold (30 minutes and/or 60 minutes) were also calculated for three modes of transit: driving, walking, and biking at the tract level, with corresponding average of overlapping tracts at the ZCTA scale. This analysis was conducted in Python.
 
@@ -47,10 +50,18 @@ In addition, an impedance factor was introduced in 2025 access metrics. Raw trav
 #### County and State 
 County and state-level variables include the **count** of Census tracts and the **percent** of Census tracts located within a 30-minute driving threshold of a mental health provider, as well as the mean (average) driving time in minutes from Census tracts within the county or state. 
 
+![Screenshot](https://github.com/user-attachments/assets/a6cc665d-8244-4554-8410-04a6a418be9a)
+
 For 2025 measures, the tract to county and state conversions were completed using R code, and can be found in the corresponding [scripts](https://github.com/healthyregions/oeps/tree/main/scripts) folder on our Github Repository.
 
 ### Data Limitations:
-*Euclidean or straight-line distance is a simple approximation of access or travel from an origin centroid to the nearest hospital. It is not a precise calculation of real travel times or distances. The travel times are capped at a 90-minute threshold; any data exceeding this limit is left blank. 
+- Euclidean distance or straight-line distance is a simple approximation of distance or travel time from an origin centroid to the nearest health center. It is not a precise calculation of real travel times or distances. 
+- The travel times are capped at a 90-minute threshold (or 180 minutes, with impedance factors) were not calculated, as they were deemed too far = no access. 
+- Missing data and Travel Times that were capped both show up as blank on the data table.  
+- Travel times are calculated from centroid to centroid of each census tract, meaning that the travel time will equal zero if there is a resource in the census tract. Thus, travel times must be considered approximations, and best suited for relative understanding of potential spatial access.
+- Unlike most U.S. states, Connecticut’s traditional eight counties do not function as active government units and have not been used for statistical reporting for decades. More recently, the U.S. Census Bureau replaced Connecticut’s eight historical counties with nine planning regions as official county-equivalent geographies, effective in Census Bureau products beginning in 2022, with full adoption in federal data products through 2023–2024. Because this redefinition means that county FIPS codes and county-level boundaries no longer align consistently with the definitions used elsewhere in our dataset (which assume stable county geographies), some Connecticut tracts may appear as empty or missing in the county summary table. This is especially true where tract identifiers include legacy county codes that no longer match current county-equivalent definitions.
+- Note that Alaska travel times may reflect the data technically, but due to the geographic complexities of the state, we don't recommend using measures for that state at this time. Tracts are very large, and while there may
+be a Mental Health Provider Facility location within the tract -- giving it a travel time of zero -- the physical size of the tract boundary makes that actual time a bit unreasonable. Please proceed with caution in frontier locations. 
 
 ### Comments/Notes:
 * All nearest distance calculations are in miles. 

@@ -1,6 +1,6 @@
 {
   "name": "BupTmBk",
-  "title": "Biking Time (min) to nearest Buprenorphine Provider",
+  "title": "Biking Time (min) to nearest Buprenorphine Provider (tract/ZIP)",
   "type": "number",
   "example": "0",
   "description": "Biking time (minutes) to nearest buprenorphine provider",

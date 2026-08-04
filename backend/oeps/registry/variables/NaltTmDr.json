@@ -1,6 +1,6 @@
 {
   "name": "NaltTmDr",
-  "title": "Driving Time (min) to nearest Naltrexone Provider",
+  "title": "Driving Time (min) to nearest Naltrexone Provider (tract/ZIP)",
   "type": "number",
   "example": "35.34",
   "description": "Driving time (minutes) to nearest naltrexone provider",
@@ -8,9 +8,9 @@
   "analysis": true,
   "metadata": "Access_MOUDs",
   "table_sources": [
-    "county-2025",
     "tract-2020",
     "tract-2025",
-    "zcta-2020"
+    "zcta-2020",
+    "zcta-2025"
   ]
 }

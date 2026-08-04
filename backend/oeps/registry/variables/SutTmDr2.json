@@ -3,11 +3,12 @@
   "title": "Driving time to nearest Substance Use Treatment Provider (with impedance)",
   "type": "number",
   "example": "1.21",
-  "description": "Driving time (minutes) from the tract centroid to the nearest Substance Use Treatment provider, with the impedance factor applied.",
+  "description": "Driving time (minutes) from the tract/zip centroid to the nearest Substance Use Treatment provider, with the impedance factor applied.",
   "longitudinal": false,
   "analysis": false,
   "metadata": "Access_SubstanceUseTreatment",
   "table_sources": [
-    "tract-2025"
+    "tract-2025",
+    "zcta-2025"
   ]
 }

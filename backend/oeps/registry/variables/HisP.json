@@ -3,10 +3,10 @@
   "title": "% Population with ethnicity identified as of Hispanic or Latinx origin",
   "type": "number",
   "example": "60.0",
-  "description": "",
+  "description": "Percentage of population with ethnicity identified as of Hispanic or Latinx origin",
+  "metadata": "Race_Ethnicity",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Race_Ethnicity",
   "table_sources": [
     "county-1980",
     "county-1990",

@@ -6,6 +6,7 @@ nav:
   - Data Contributors:
     - guides/adding-data-overview.md
     - guides/preparing-csv-data.md
+    - guides/metadata-guidelines.md
     - guides/creating-metadata-and-variables.md
   - OEPS Explorer:
     - guides/install-explorer.md

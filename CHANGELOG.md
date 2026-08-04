@@ -38,6 +38,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Fixed
 
+- Explorer map: Zip Code and tract hover tooltips now show the correct ZIP code and tract FIPS from `HEROP_ID` instead of a blank or invalid label ([#237](https://github.com/healthyregions/oeps/issues/237)).
+
 - Explorer map: legend bin labels and polygon hover tooltips use magnitude-aware numeric formatting so very small non-zero values are not shown as `0` ([#366](https://github.com/healthyregions/oeps/issues/366)).
 
 - Frictionless data package validation no longer fails when CSV foreign keys pointed at shapefile resources (`FileResource` / `row_stream`) ([#311](https://github.com/healthyregions/oeps/issues/311)).

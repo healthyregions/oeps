@@ -1,8 +1,11 @@
 # Creating Metadata and Variables
 
+!!! tip
+    For content quality standards, required sections, limitations vs comments, and a submission checklist, see [Metadata Guidelines](metadata-guidelines.md).
+
 ## Creating a new metadata entry
 
-To add a new metadata entry, you should begin the process in GitHub by creating a new branch and added a new markdown file to in this directory: https://github.com/healthyregions/oeps/tree/main/metadata. Create your file based on [metadata-template](https://github.com/healthyregions/oeps/tree/main/metadata/metadata-template.md), and also review these [Metadata Writing Guidelines](https://github.com/healthyregions/oeps/tree/main/metadata/README.md).
+To add a new metadata entry, you should begin the process in GitHub by creating a new branch and added a new markdown file to in this directory: https://github.com/healthyregions/oeps/tree/main/metadata. Create your file based on [metadata-template](https://github.com/healthyregions/oeps/tree/main/metadata/metadata-template.md), and also review the [Metadata Guidelines](metadata-guidelines.md) and these [repo writing tips](https://github.com/healthyregions/oeps/tree/main/metadata/README.md).
 
 In `registry/metadata` there are individual JSON files for that represent each metadata markdown file. Instead of editing these files directly, we can edit them through PagesCMS (see ).
 

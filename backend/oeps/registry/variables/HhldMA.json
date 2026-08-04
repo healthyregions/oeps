@@ -3,10 +3,10 @@
   "title": "% Male householder with no spouse/partner living alone",
   "type": "number",
   "example": "60.0",
-  "description": "",
+  "description": "Percent male householder with no spouse/partner living alone",
+  "metadata": "Household_Characteristics",
   "longitudinal": false,
   "analysis": false,
-  "metadata": "Household_Characteristics",
   "table_sources": [
     "county-2020",
     "county-2023",

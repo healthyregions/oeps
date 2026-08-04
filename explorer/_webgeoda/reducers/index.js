@@ -512,20 +512,25 @@ export default function reducer(state = INITIAL_STATE, action) {
         typeof action.payload.id === "number" ||
         typeof action.payload.id === "string"
       ) {
-        tooltipData = parseTooltipData(+action.payload.id, state, dataPresets);
-      } 
+        tooltipData = parseTooltipData(action.payload.id, state, dataPresets);
+      }
+
+      const hoverId =
+        action.payload.id === null || action.payload.id === undefined
+          ? null
+          : action.payload.id;
 
       const currentHoverTarget = {
         x: action.payload.x,
         y: action.payload.y,
         data: tooltipData,
-        id: +action.payload.id,
+        id: hoverId,
       };
       
       return {
         ...state,
         currentHoverTarget,
-        currentHoverId: action.payload.layer?.includes("tiles") ? null : +action.payload.id
+        currentHoverId: action.payload.layer?.includes("tiles") ? null : hoverId
       };
     }
     case "FORMAT_WIDGET_DATA": {

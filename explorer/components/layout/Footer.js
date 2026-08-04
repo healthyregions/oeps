@@ -9,7 +9,7 @@ export default function Footer() {
         rel="noopener noreferrer"
       >
         {/* <span className={styles.logo}> */}
-          <img src="herop_light_logo.png" height={30}/>
+          <img src="/herop_light_logo.png" height={30}/>
         {/* </span> */}
 
       </a>

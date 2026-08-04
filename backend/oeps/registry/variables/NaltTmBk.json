@@ -1,6 +1,6 @@
 {
   "name": "NaltTmBk",
-  "title": "Biking Time (min) to nearest Naltrexone Provider",
+  "title": "Biking Time (min) to nearest Naltrexone Provider (tract/ZIP)",
   "type": "number",
   "example": "165.18",
   "description": "Biking time (minutes) to nearest naltrexone provider",

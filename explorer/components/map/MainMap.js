@@ -146,7 +146,7 @@ export default function MainMap() {
           0,
           0,
           0,
-          255 * (+d.properties[currentId] === currentHoverId),
+          255 * (d.properties[currentId] === currentHoverId),
         ],
         // getElevation: d => currentMapData[d.properties.GEOID].height,
         pickable: true,
@@ -208,7 +208,7 @@ export default function MainMap() {
       <div className={styles.attribution}>
         <a href="https://www.mapbox.com/about/maps/" target="_blank" rel="noopener noreferrer">© Mapbox</a>
         <a href="https://www.openstreetmap.org/about/" target="_blank" rel="noopener noreferrer">© OpenStreetMap</a>
-        <a href="https://www.mapbox.com/contribute/#/?owner=csds-hiplab&id=ckmuv80qn2b6o17ltels6z7ub&access_token=pk.eyJ1IjoiY3Nkcy1oaXBsYWIiLCJhIjoiY2tkcTdlYXNsMGRhNDJybXl1MWdpejdidSJ9.mgK9yXDfhFCLh5YQuz6r_g&utm_source=https%3A%2F%2Fchichives.com%2F&utm_medium=attribution_link&utm_campaign=referrer" target="_blank" rel="noopener noreferrer">Improve this Map</a>
+        <a href={`https://www.mapbox.com/contribute/#/?owner=csds-hiplab&id=ckmuv80qn2b6o17ltels6z7ub&access_token=${process.env.NEXT_PUBLIC_MAPBOX_TOKEN}&utm_source=https%3A%2F%2Fchichives.com%2F&utm_medium=attribution_link&utm_campaign=referrer`} target="_blank" rel="noopener noreferrer">Improve this Map</a>
       </div>
     </div>
   );
