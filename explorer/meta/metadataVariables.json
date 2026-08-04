@@ -4736,7 +4736,8 @@
         "name": "RcaRuralP",
         "description": "Percent census tracts in the county classified as Rural using RUCA codes",
         "years": [
-          "2018"
+          "2018",
+          "2020"
         ],
         "geographies": [
           "County"
@@ -4747,7 +4748,8 @@
         "name": "RcaSubrbP",
         "description": "Percent census tracts in the county classified as Suburban using RUCA codes",
         "years": [
-          "2018"
+          "2018",
+          "2020"
         ],
         "geographies": [
           "County"
@@ -4758,7 +4760,8 @@
         "name": "RcaUrbanP",
         "description": "Percent census tracts in the county classified as Urban using RUCA codes",
         "years": [
-          "2018"
+          "2018",
+          "2020"
         ],
         "geographies": [
           "County"
@@ -4780,7 +4783,8 @@
         "name": "Ruca1",
         "description": "Primary RUCA Code",
         "years": [
-          "2010"
+          "2010",
+          "2020"
         ],
         "geographies": [
           "Tract",
@@ -4792,7 +4796,8 @@
         "name": "Ruca2",
         "description": "Secondary RUCA Code",
         "years": [
-          "2010"
+          "2010",
+          "2020"
         ],
         "geographies": [
           "Tract",
@@ -4804,7 +4809,8 @@
         "name": "Rurality",
         "description": "Urban/Suburban/Rural",
         "years": [
-          "2010"
+          "2010",
+          "2020"
         ],
         "geographies": [
           "Tract",

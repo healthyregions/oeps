@@ -530,10 +530,10 @@
           "Secondary RUCA Code",
           "Urban-Suburban-Rural"
         ],
-        "Source": "USDA-ERS 2010; ACS 2018",
+        "Source": "USDA-ERS 2010; ACS 2018, USDA-ERS 2020",
         "Metadata": "Urbanicity",
         "Spatial Scale": "Tract, Zip, County",
-        "Years": "2010, 2018"
+        "Years": "2010, 2018, 2020"
       }
     ],
     "Spatial Access to MOUDs": [

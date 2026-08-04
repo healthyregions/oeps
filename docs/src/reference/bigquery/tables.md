@@ -4,7 +4,7 @@
 
 ## tabular
 
-58 tables in this dataset.
+60 tables in this dataset.
 
 ### state-1990
 
@@ -1337,6 +1337,20 @@ RxAvTmDr|NUMERIC|Average driving time (minutes) across tracts in state to neares
 ExpSsp|BOOLEAN|Dummy variable indicating whether the state has law that explicitly authorizes Syringe Service Programs (0=no, 1=yes)
 WhtHcvD|NUMERIC|
 
+### county-ruca-2020
+
+ID: `oeps-391119.tabular.county-ruca-2020`
+
+5 columns in this table.
+
+Name|Data Type|Description
+-|-|-|-
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+RcaUrbanP|NUMERIC|Percent census tracts in the county classified as Urban using RUCA codes
+RcaRuralP|NUMERIC|Percent census tracts in the county classified as Rural using RUCA codes
+RcaSubrbP|NUMERIC|Percent census tracts in the county classified as Suburban using RUCA codes
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+
 ### state-2024
 
 ID: `oeps-391119.tabular.state-2024`
@@ -1354,6 +1368,20 @@ MedPolProp|NUMERIC|Proportion of given year for which Medicaid Expansion was imp
 HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
 EdBupPolP|NUMERIC|Proportion of Entire Data Period with State-Level Buprenorphine Policy in Effect
 BupPolP|NUMERIC|Proportion of Year with State-Level Buprenorphine Policy in Effect
+
+### tract-ruca-2020
+
+ID: `oeps-391119.tabular.tract-ruca-2020`
+
+5 columns in this table.
+
+Name|Data Type|Description
+-|-|-|-
+FIPS|STRING|Federal Information Processing Standard code designated by the NIST; is two digits for states, five digits for counties, eleven digits for tracts.
+Ruca1|STRING|Primary RUCA Code
+HEROP_ID|STRING|A derived unique id corresponding to the relevant geographic unit.
+Ruca2|STRING|Secondary RUCA Code
+Rurality|STRING|Urban/Suburban/Rural
 
 ### state-2014
 

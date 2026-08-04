@@ -29,7 +29,9 @@ county-2022,county-2022,tables/county-2022.csv,This CSV aggregates all OEPS data
 county-2017,county-2017,tables/county-2017.csv,This CSV aggregates all OEPS data values from 2017 at the county level.,2017,geo-2018-county
 state-1980,state-1980,tables/state-1980.csv,This CSV aggregates all OEPS data values from 1980 at the state level.,1980,geo-2010-state
 state-2019,state-2019,tables/state-2019.csv,This CSV aggregates all OEPS data values from 2019 at the state level.,2019,geo-2018-state
+county-ruca-2020,county-ruca-2020,tables/county-ruca-2020.csv,This CSV aggregates OEPS RUCA data values from 2020 at the county level.,2020,geo-2020-county
 state-2024,state-2024,tables/state-2024.csv,This CSV aggregates OEPS data values from 2024 at the state level.,2024,geo-2020-state
+tract-ruca-2020,tract-ruca-2020,tables/tract-ruca-2020.csv,This CSV aggregates OEPS RUCA data values from 2020 at the tract level.,2020,geo-2020-tract
 state-2014,state-2014,tables/state-2014.csv,This CSV aggregates all OEPS data values from 2014 at the state level.,2014,geo-2018-state
 county-2020,county-2020,tables/county-2020.csv,This CSV aggregates all OEPS data values from 2020 at the county level.,2020,geo-2018-county
 state-2018,state-2018,tables/state-2018.csv,This CSV aggregates all OEPS data values from 2018 at the state level.,2018,geo-2018-state

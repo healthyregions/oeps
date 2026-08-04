@@ -206,6 +206,13 @@
       "geodata_name": "geo-2018-county"
     },
     {
+      "name": "county-ruca-2020.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/county-ruca-2020.csv",
+      "year": "2020",
+      "geodata_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/county-2020-500k-shp.zip",
+      "geodata_name": "geo-2020-county"
+    },
+    {
       "name": "county-2020.csv",
       "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/county-2020.csv",
       "year": "2020",
@@ -376,6 +383,13 @@
       "year": "2019",
       "geodata_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/tract-2018-500k-shp.zip",
       "geodata_name": "geo-2018-tract"
+    },
+    {
+      "name": "tract-ruca-2020.csv",
+      "url": "https://github.com/healthyregions/oeps/raw/refs/heads/main/backend/oeps/data/tables/tract-ruca-2020.csv",
+      "year": "2020",
+      "geodata_url": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/tract-2020-500k-shp.zip",
+      "geodata_name": "geo-2020-tract"
     },
     {
       "name": "tract-2020.csv",
