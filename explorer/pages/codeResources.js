@@ -22,72 +22,91 @@ export default function About() {
         <div className="row">
 
           <div className="col-xs-12 col-md-4 col-lg-3">
-            <h2> Notebooks and Sample Code </h2>
+            <h2> Computational Notebooks & Coding Resources </h2>
           </div>
           <div className="col-xs-12 col-md-8 col-lg-9">
-            <h3><a href="https://healthyregions.github.io/oeps">OEPS Documentation</a></h3>
-            <p>The full documentation site includes details about how OEPS is put together, and how the backend application can be used to manage data. This
-                documentation site is especially useful for developers who will be working on OEPS, or adding more data into the system.
-            </p>
-            <h3><a href="https://geodacenter.github.io/opioid-environment-toolkit/index.html">Opioid Environment Toolkit</a></h3>
-              <p>
-              The Opioid Environment Toolkit provides an <b>introduction to GIS and spatial analysis</b> for opioid environment applications.
+            <h3>Opioid Environment Toolkit in R-Spatial</h3>
+              <p> This toolkit provides an <b>introduction to GIS and spatial analysis</b> for opioid environment applications.
               This code toolkit supports researchers, analysts, and practitioners with learning open source spatial analytic and visualization services
-              in the R software environment. It includes geocoding MOUD resource locations, linking community contextual data,
-              conducting a nearest distance analysis calculating <b>straight line (Euclidean) distance metrics</b>, and more.
-            </p>
-            <h3><a href="https://colab.research.google.com/drive/1YoX5R6Qeb5gXPVmBSPwyMxw9zza2nFeA?usp=sharing">Calculating Advanced Spatial Access Metrics</a></h3>
+              in the R software environment. It includes geocoding MOUD resource locations, linking community contextual data, calculating new spatial variables, and 
+              conducting access analyses. All code, data, and workshops are free and open to public participation. </p>
+              
+              <h4><a href="https://healthyregions.github.io/opioid-environment-toolkit/">Opioid Environment Toolkit 2.0 (2026)</a></h4>
+              <p>The latest, refactored toolkit series includes an improved  experience, and will move from beginner to intermediate geocomputational and analytic examples. 
+              The first workshop, <a href="https://www.youtube.com/watch?v=SF5UumM1INk">Intro To Spatial Data in R </a>
+              was published in 2025, with updated modules to be published and shared in the <a href="https://gccp.healthyregions.org/">
+              GCCP workshop series </a> through 2027. </p>
+                
+            <h4><a href="https://geodacenter.github.io/opioid-environment-toolkit/index.html">Opioid Environment Toolkit 1.0 (2021)</a></h4>
+            <p> The original version of the toolkit was developed from 2020 to 2021, and may be used with corresponding series of recorded workshops including: 
+             <a href="https://www.youtube.com/watch?v=8JLm_sF7gaA&t=2940s"> (1) Introduction to Spatial Analysis for Opioid Risk Environments</a>, 
+             <a href="https://www.youtube.com/watch?v=dHfQAhXXwh0&t=14s"> (2) Geocoding and Linking Community Data</a>, and 
+             <a href="https://www.youtube.com/watch?v=SF5UumM1INk"> (3) Developing Custom Spatial Access Metrics</a>  </p>
+            
+              {/* //<a href="https://colab.research.google.com/drive/1YoX5R6Qeb5gXPVmBSPwyMxw9zza2nFeA?usp=sharing"></a> */}
+
+            <h3>Calculating Spatial Access Metrics in Py</h3>
             <p>
-            This Python notebook provides an overview of how to calculate two spatial access metrics, <b>travel time to the nearest resource </b>
-            (i.e. MOUD provider location), and <b>count of resources</b> within a customizable driving time range. Using this beginner-friendly script
-            available as a Google Colab notebook, calculate travel time access metrics for different modes of transit and spatial scales. We provide <a href="https://uchicago.box.com/s/ae2mtsw7f5tb4rhciczufdxd0owc23as">pre-computed travel time matrices </a>
-            for driving, walking, and biking travel networks, for all 2010 Census tracts and zip codes (ZCTA). <i>Note</i>: The code was revised in 2025 to update and clarify several parameters. Updated vintage files of 2020 boundaries and expanded metrics will be available over the summer of 2025.
-            </p>
-            <h3><a href="https://access.readthedocs.io/en/latest/index.html">Spatial Access for PySAL</a></h3>
-            <p>
-            Developed by CSDS researchers and colleagues, this Python Spatial Analysis Library (PySAL) package
-            implements a new spatial access measure, Rational Agent Access Model (RAAM), that simultaneously <b>accounts for travel time and congestion at the destination</b>.
-            This package also calculates <b>five classic spatial access models</b> for easy comparison, including Floating Catchment Areas (FCA), Two-Step FCAs, and Access Score.
-            </p>
+            We developed geocomputational notebooks using Python for calculating, visualizing, merging, and/or writing spatial access measures. This spatial feature engineering
+            was also used to generate many of the spatial access metrics available in OEPS. We include pre-computer travel time matrices for the country as key components 
+            to each approach, as well as sample data from OEPS for exploration and replication purposes. Both 2010 and 2020 Census vintage is supported. </p>
+            <ol>
+              <li><a href="https://drive.google.com/file/d/17ChX_4-EcX3XTjcn6RQOAWeGW_IWGfTf/view?usp=drive_link"><b>Calculate travel time to nearest resource: </b></a> 
+              This notebook provides an overview of how to calculate two spatial access metrics, travel time to the nearest resource and count of resources within a 
+              customizable driving time range. Using this beginner-friendly script
+            available as a Google Colab notebook, calculate travel time access metrics for different modes of transit and spatial scales.  </li><br></br>
+              <li><a href="https://drive.google.com/file/d/1X3cpz3Xuf73OQ2O1uAGHpMrP_KRhycrt/view?usp=sharing"><b>Calculate gravity model estimates for one state: </b></a>
+              Gravity model estimates incorporate both supply (resources) and demand (people), better accounting
+              for population distributions in varying service needs. This notebook can be calculated on Colab and most analytic machines.</li><br></br>
+              <li><a href=""><b>Calculate gravity model estimates for country: </b></a>To scale things up, this notebook can generate nation-wide estimates of gravity model measures
+              with the aid of high performance computing environment.</li>
+            </ol>
+          
           </div>
         </div>
 
       <Gutter em={2} />
 
+
+        <Gutter em={2} />
+
+
       <div className="row">
           <div className="col-xs-12 col-md-4 col-lg-3">
-            <h2> Workshops and Trainings</h2>
+            <h2> Additional Resources</h2>
           </div>
           <div className="col-xs-12 col-md-8 col-lg-9">
-          <h3>Spatial Dimensions of Opioid Risk Environments: Virtual Workshops</h3>
+          <h4> Geospatial Consortium & Community of Practice (GCCP) </h4>
             <p>
-            This <a href= "https://www.jcoinctc.org/maarc-virtual-workshop-series-summer-2021/">three-part workshop series </a> hosted by the MAARC is designed to help researchers, analysts, and practitioners develop stronger spatial
-            data analytic and visualization skills. Led by the Healthy Regions/CSDS MAARC team, these workshops introduce basic spatial
-            analytic functionalities using open source tools, mainly in R and GeoDa, using applied examples. The workshops were
-            originally hosted live and recorded in Summer 2021 for JCOIN partners. The complete recordings are available below.
+            The GCCP, launched in 2025, is a collaboration of researchers and practitioners that 
+            meet regularly to share, discuss, and learn how geospatial methods, tools, and models 
+            can be used to build understanding and develop resources for the opioid epidemic. As part 
+            of the JCOIN Community, we focus on justice populations, though we’ll also be seeking how 
+            to measure and model multiple communities & places across the U.S. To do that, we’ll be 
+            linking fields across epidemiology, medicine, geography, GIS, data science, and more. 
+            Learn more and sign up at the <a href="http://gccp.healthyregions.org">GCCP Website</a>.
+          </p>
+          <h4> SDOH & Place Project </h4>
+            <p>
+            Looking for even more coding resources and data options to better measure and understand the social determinants of health (SDOH)
+            and structural drivers of wellbeing? The <a href="http://sdohplace.org">SDOH & Place project</a> provides multiple resources and a 
+            community of practice. Learn how to develop your own spatial web mapping application or dashboard. Uncover dozens of new SDOH datasets
+            across multiple spatial scales at the Data Discovery Tool.
             </p>
-            <h4> Workshop 1: Introduction to Spatial Analysis for Opioid Risk Environments <a href="https://www.youtube.com/watch?v=8JLm_sF7gaA&t=2940s">[Recording]</a></h4>
+            <h4> US COVID Atlas </h4>
             <p>
-              This workshop introduces participants to the Opioid Environment Policy Scan (OEPS data warehouse, key concepts in spatial data analysis, and generating simple maps using the free spatial software
-              <a href="https://geodacenter.github.io/"> GeoDa</a>.
-            </p>
-            <h4> Workshop 2: Geocoding and Linking Community Data <a href="https://www.youtube.com/watch?v=dHfQAhXXwh0&t=14s">[Recording]</a></h4>
-            <p>
-            This workshop introduces open source methods for geocoding Medication for Opioid Use Disorder (MOUD) resource locations
-            and other address data, integrating community characteristics data using geographic identifiers, and generating maps for exploratory analysis.
-            </p>
-            <h4> Workshop 3: Developing Custom Spatial Access Metrics <a href="https://www.youtube.com/watch?v=SF5UumM1INk">[Recording]</a></h4>
-            <p>
-            This workshop instructs how to conduct a nearest resource analysis for MOUD resources at the community level,
-            calculate minimum distance access metrics, and generate maps overlaying resource locations and access metrics for further analysis.
+            For historical Pandemic data, resources have been moved to the <a href="https://www.uscovidatlas.org">US COVID Atlas</a>,
+            a historic, interactive data visualization platform and archive. The Atlas worked to understand,
+            represent, and share stories of the often unequal impact of the COVID-19 pandemic in the United States, 
+            from January 2020 through the end of 2023.
+            Data includes daily and weekly case counts, vaccination rates, and community health contexts.
+            Read more and explore at <a href="https://www.uscovidatlas.org">USCovidAtlas.org</a>.
             </p>
 
           </div>
         </div>
 
-        <Gutter em={2} />
-
-<div className="row">
+{/* <div className="row">
     <div className="col-xs-12 col-md-4 col-lg-3">
       <h2> Talks </h2>
     </div>
@@ -100,7 +119,7 @@ export default function About() {
       </p>
 
     </div>
-  </div>
+  </div> */}
 
   <Gutter em={2} />
 

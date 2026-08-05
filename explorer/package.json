@@ -12,6 +12,7 @@
     "build:netlify": "node context && npm run build"
   },
   "dependencies": {
+    "@base-ui/react": "^1.6.0",
     "@deck.gl/core": "8.5.8",
     "@deck.gl/extensions": "8.5.8",
     "@deck.gl/geo-layers": "8.5.8",
@@ -27,7 +28,8 @@
     "@loaders.gl/core": "^3.0.12",
     "@loaders.gl/csv": "^3.0.12",
     "@math.gl/web-mercator": "^3.5.5",
-    "@mui/material": "^5.6.3",
+    "@mui/icons-material": "^9.2.0",
+    "@mui/material": "^9.2.0",
     "@reach/listbox": "^0.15.0",
     "@reach/menu-button": "^0.15.1",
     "@reach/slider": "^0.15.0",
@@ -40,6 +42,7 @@
     "grommet": "^2.19.1",
     "jszip": "^3.7.1",
     "next": "14",
+    "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-map-gl": "6.1.15",

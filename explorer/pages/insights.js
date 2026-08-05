@@ -14,7 +14,7 @@ export default function About() {
       <main className={styles.main}>
         <h1 className={styles.title}>Insights</h1>
         <p className={styles.description}>
-        Research, data tools, and extensions of OEPS data.
+        Research and extensions of OEPS data.
         </p>
 
         <Gutter em={2} />
@@ -30,19 +30,44 @@ export default function About() {
         </p>
         </div>
 
-        <p className={styles.description}>
-        <b>Research Completed Using OEPS</b>
-        </p>
+        <h4>Research Completed Using OEPS</h4>
+
+        <div className="row">
+          <div className="col-xs-12 col-md-4 col-lg-3">
+            <h2> 2026</h2>
+          </div>
+          <div className="col-xs-12 col-md-8 col-lg-9">
+           <p>
+            Han, B., Compton, W.M., Jones, C.M., Stimson, D.T., Barfield, E.T., Bellgowan, J.F., Hobin, J.A. and Volkow, N.D., 2026. 
+            County-level variation in substance use disorder service utilization by insurance payers and self-pay in the United States. 
+            <i>The Journal of Clinical Psychiatry, </i>87(3), p.26m16340.
+           </p>
+           <p>
+           Zhang, Z., Kim, S., Zhang, X., Fleckman, J.M., Harrell, K.N., Tatum, D.M., McGinness, C.L., Zhang, J., Theall, K.P. and Taghavi, S., 
+           2026. Mass Shootings in Major US Cities: The Limited Role of Mental Health and Substance Use Treatment Access Compared to Structural 
+           Factors. <i>The American Surgeon™</i>, 92(4), pp.1153-1161. 
+           </p>
+           </div>
+        </div>
 
         <div className="row">
           <div className="col-xs-12 col-md-4 col-lg-3">
             <h2> 2025</h2>
           </div>
           <div className="col-xs-12 col-md-8 col-lg-9">
+            <p>
+            Alam, I.Z., Diprete, B.L., Pence, B.W., Planey, A.M., Marshall, S.W., Fulcher, N. and Ranapurwala, S.I., 2025. 
+            Sociogeographic determinants of rapid opioid reduction or discontinuation among patients on high-dose long-term opioid
+             therapy in North Carolina, 2006-2018. <i>Pain Medicine</i>, 26(2), pp.63-69.
+           </p>
            <p>
             Balawajder, E.F., Ducharme, L., Taylor, B.G., Lamuda, P.A., Kolak, M., Friedmann, P.D., Pollack, H.A. and Schneider, J.A., 
-            2025. Barriers to Universal Availability of Medications for Opioid Use Disorder in US Jails. <i>JAMA network open</i>, 8(4),
+            2025. Barriers to Universal Availability of Medications for Opioid Use Disorder in US Jails. <i>JAMA Network Open</i>, 8(4),
              pp.e255340-e255340.
+           </p>
+           <p>
+            Yanovitzky, I., Stahlman, G. and Senteio, C., <i>Advancing the Science and Practice of Actionable Public Health Data 
+            Dashboards: Forum Proceedings.</i> 
            </p>
            </div>
         </div>
@@ -56,17 +81,22 @@ export default function About() {
           <p>
             Aalsma, M.C., Bell, L.A., Schwartz, K., Ouyang, F., Kolak, M., Monahan, P.O., Mermelstein, S.P., Carson, I., Hulvershorn, 
             L.A. and Adams, Z.W., 2024. Clinician willingness to prescribe medications for opioid use disorder to adolescents in Indiana. 
-            <i>JAMA network open</i>, 7(9), pp.e2435416-e2435416.
+            <i>JAMA Network Open</i>, 7(9), pp.e2435416-e2435416.
            </p>
            <p>
             Balawajder, E.F., Ducharme, L., Taylor, B.G., Lamuda, P.A., Kolak, M., Friedmann, P.D., Pollack, H.A. and Schneider, J.A., 2024. 
-            Factors associated with the availability of medications for opioid use disorder in US jails. <i>JAMA network open</i>, 7(9), 
+            Factors associated with the availability of medications for opioid use disorder in US jails. <i>JAMA Network Open</i>, 7(9), 
             pp.e2434704-e2434704.
            </p>
+          <p>
+            Bluthenthal, R.N., Humphrey, J.L., Strack, C.N., Wenger, L.D., LaKosky, P., Patel, S.V., Kral, A.H. and Lambdin, B., 
+            2024. Racialized environments and syringe services program implementation: County-level factors. <i>Drug and Alcohol 
+            Dependence</i>, 263, p.112430.
+          </p>
            <p>
             Tatara, E., Lin, Q., Ozik, J., Kolak, M., Collier, N., Halpern, D., Anselin, L., Dahari, H., Boodram, B. and Schneider, J., 2024. 
             Spatial inequities in access to medications for treatment of opioid use disorder highlight scarcity of methadone providers 
-            under counterfactual scenarios. <i>PLoS computational biology</i>, 20(7), p.e1012307.
+            under counterfactual scenarios. <i>PLoS Computational Biology</i>, 20(7), p.e1012307.
            </p>
           </div>
         </div>
@@ -83,6 +113,20 @@ export default function About() {
          </div>
       </div>
 
+       <div className="row">
+          <div className="col-xs-12 col-md-4 col-lg-3">
+            <h2> 2022</h2>
+          </div>
+          <div className="col-xs-12 col-md-8 col-lg-9">
+           <p>
+          Scott, C.K., Grella, C.E., Dennis, M.L., Carnevale, J. and LaVallee, R., 2022. 
+          Availability of best practices for opioid use disorder in jails and related training and resource needs: 
+          findings from a national interview study of jails in heavily impacted counties in the US. 
+          <i>Health & Justice</i>, 10(1), p.36.
+           </p>
+         </div>
+      </div>
+
       <div className="row">
           <div className="col-xs-12 col-md-4 col-lg-3">
             <h2> 2021</h2>
@@ -91,7 +135,7 @@ export default function About() {
            <p>
             Schneider, J.A., Taylor, B.G., Hotton, A.L., Lamuda, P.A., Ozik, J., Lin, Q., Flanagan, E., Tuyet Pho, M., Kolak, M., 
             Brewer, R. and Pagkas-Bather, J., 2021. National variability in Americans’ COVID-19 protective behaviors: 
-            Implications for vaccine roll-out. <i>PloS one</i>, 16(11), p.e0259257.
+            Implications for vaccine roll-out. <i>PloS One</i>, 16(11), p.e0259257.
            </p>
          </div>
       </div>
@@ -99,43 +143,6 @@ export default function About() {
       </div>
       <Gutter em={3} />
 
-      <div className="row">
-          <div className="col-xs-12 col-md-4 col-lg-3">
-            <p className={styles.description}>
-            <b> Additional Resources</b></p>
-          </div>
-          <div className="col-xs-12 col-md-8 col-lg-9">
-          <h3> Geospatial Consortium & Community of Practice (GCCP) </h3>
-            <p>
-            The GCCP, launched in 2025, is a collaboration of researchers and practitioners that 
-            meet regularly to share, discuss, and learn how geospatial methods, tools, and models 
-            can be used to build understanding and develop resources for the opioid epidemic. As part 
-            of the JCOIN Community, we focus on justice populations, though we’ll also be seeking how 
-            to measure and model multiple communities & places across the U.S. To do that, we’ll be 
-            linking fields across epidemiology, medicine, geography, GIS, data science, and more. 
-            Learn more and sign up at the <a href="http://gccp.healthyregions.org">GCCP Website</a>.
-            </p>
-          <h3> Opioid Environment Toolkit </h3>
-            <p>
-            The <a href="https://geodacenter.github.io/opioid-environment-toolkit/index.html">Opioid Environment Toolkit</a> provides an introduction to GIS and spatial analysis in R for opioid environment
-            applications that will allow researchers, analysts, and practitioners to support their communities with better
-            data analytics and visualization services. Chapters include Introduction to Spatial Data, Geocoding Resource Locations,
-            Thematic Mapping, and Nearest Resource Analysis.
-            </p>
-            <h3> US COVID Atlas </h3>
-            <p>
-            For historical Pandemic data, resources have been moved to the <a href="https://www.uscovidatlas.org">US COVID Atlas</a>,
-            a historic, interactive data visualization platform and archive. The Atlas worked to understand,
-            represent, and share stories of the often unequal impact of the COVID-19 pandemic in the United States, 
-            from January 2020 through the end of 2023.
-            Data includes daily and weekly case counts, vaccination rates, and community health contexts.
-            Read more and explore at <a href="https://www.uscovidatlas.org">USCovidAtlas.org</a>.
-            </p>
-
-          </div>
-        </div>
-
-        <Gutter em={2} />
 
 {/* <div className="row">
     <div className="col-xs-12 col-md-4 col-lg-3">

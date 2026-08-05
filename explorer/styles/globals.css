@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+html {
+  scrollbar-gutter: stable;
+}
+
 html,
 body {
   padding: 0;
@@ -9,13 +13,52 @@ body {
   font-size: small;
 }
 
-p {
-    font-family: Montserrat, Arial, sans-serif;;
+h1 {
+  font-family: Montserrat, Arial, sans-serif;;
   line-height: 1.35;
+  font-size: 3.0rem;
+}
+
+h2 {
+  font-family: Montserrat, Arial, sans-serif;
+  line-height: 1.35;
+  font-size: 32px;
+}
+
+h3 {
+  font-family: Montserrat, Arial, sans-serif;
+  line-height: 1.35;
+  font-size: 28px;
+}
+
+h4 {
+  font-family: Montserrat, Arial, sans-serif;;
+  line-height: 1.35;
+  font-size: 24px;
+  color: #972569;
+}
+
+p {
+  font-family: Montserrat, Arial, sans-serif;;
+  line-height: 1.35;
+  font-size: 18px;
+}
+
+p2 {
+  font-family: Montserrat, Arial, sans-serif;;
+  line-height: 1.35;
+  font-size: 14px;
+}
+
+.li {
+  font-family: Montserrat, Arial, sans-serif;;
+  line-height: 1.35;
+  font-size: 16px;
 }
 
 button {
   font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
 }
 
 code {
@@ -50,7 +93,7 @@ a {
 
 nav [data-reach-menu-button] {
   font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1rem;
+  font-size: 2rem;
   background: none;
   border: none;
   cursor: pointer;

@@ -85,7 +85,7 @@ export default function VariablePanel(props) {
         }
       >
         <Grid container spacing={1}>
-          <Grid item xs={6} sm={6} md={12} lg={12}>
+          <Grid size={{ xs:6, sm:6, md:12, lg:12 }}>
             <Typography variant="h5" sx={{ py: 0, my: 0, mb:1 }} fontFamily="'Lato', Verdana, sans-serif;" fontWeight="bold">
               {dataParams.variable}
             </Typography>
@@ -111,7 +111,7 @@ export default function VariablePanel(props) {
               Search for variables
             </Button>
           </Grid>
-          <Grid item xs={6} sm={6} md={12} lg={12}>
+          <Grid size={{ xs:6, sm:6, md:12, lg:12 }}>
             {dataPresets.data.length > 1 && (
               <>
                 <p>Available Geographies</p>
