@@ -373,7 +373,9 @@ export default function Download() {
           </div>
         </div>
 
-         <Gutter em={5} />
+        {/*
+        
+        <Gutter em={5} />
 
         <h2>Filter Data and Download</h2>
 
@@ -395,7 +397,9 @@ export default function Download() {
               <span className={styles.progressBar} style={{width: `${zipPct}%`}}/>
             </div>}
         </div> : null}
-        <button className={`${downloadMessage.length !== 0 ? styles.passiveButton : ''} ${styles.downloadButton}`} onClick={handleDownload} disabled={downloadMessage.length !== 0}>Download Selected Data</button> */}
+        <button className={`${downloadMessage.length !== 0 ? styles.passiveButton : ''} ${styles.downloadButton}`} onClick={handleDownload} disabled={downloadMessage.length !== 0}>Download Selected Data</button>
+
+        */}
 
       </main>
       <Footer />
