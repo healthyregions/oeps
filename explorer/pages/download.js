@@ -372,7 +372,7 @@ export default function Download() {
           </div>
         </div>
 
-        {/*  <li><Link href="https://github.com/healthyregions/oeps/blob/main/docs/reference/big-query-tables.md">Database Table Reference</Link>: Full reference document, provides the project id and the names of all tables and columns.</li>
+        {/*  <li><Link href="https://github.com/healthyregions/oeps/blob/main/docs/src/reference/bigquery/tables.md">Database Table Reference</Link>: Full reference document, provides the project id and the names of all tables and columns.</li>
 
 
          <Gutter em={5} />
