@@ -230,7 +230,7 @@ export default function Home({posts}) {
 
             <h4> Citation </h4>
             <p2>
-            Kim, Y. W., Cox, A., Kabir Adrita, M., Lambert, S., Wimer, A., Halpern, D., Paykin, S., Lin, Q.& Kolak, M. (2026). 
+            Kim, Y. W., Cox, A., Kabir Adrita, M., Lambert, S., Wimer, A., Halpern, D., Paykin, S., Lin, Q. & Kolak, M. (2026). 
             OEPS: Opioid Environment Policy Scan Data Ecosystem (Version 3.0) [Dataset]. Zenodo. 
             https://doi.org/10.5281/zenodo.21909862
             </p2>
