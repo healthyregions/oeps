@@ -70,9 +70,9 @@ export default function About() {
           </div>
           <div className="col-xs-12 col-md-8 col-lg-9">
           <p>
-            Kim, Y. W. , Cox, A., Kabir Adrita, M., Lambert, S., Wimer, A., M., Halpern, D., Paykin, S., Lin, Q. & Kolak, M. (2026). 
-            OEPS: Opioid Environment Policy Scan Data Ecosytem (v3.0) 
-            [Dataset]. Zenodo. <a href= "https://doi.org/10.5281/zenodo.21747292">https://doi.org/10.5281/zenodo.21747292</a> 
+            Kim, Y. W., Cox, A., Kabir Adrita, M., Lambert, S., Wimer, A., Halpern, D., Paykin, S., Lin, Q. & Kolak, M. (2026). 
+            OEPS: Opioid Environment Policy Scan Data Ecosystem (Version 3.0) [Dataset]. Zenodo. 
+            <a href= "https://doi.org/10.5281/zenodo.21909862">https://doi.org/10.5281/zenodo.21909862</a> 
             </p>
           </div>
         </div>
