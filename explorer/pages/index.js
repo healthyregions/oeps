@@ -153,7 +153,7 @@ export default function Home({posts}) {
       <MainNav/>
       <main>
         <HeroSection>
-          <Grid container style={{padding: '2rem', width:'100%'}}>
+          <Grid spacing={3} container style={{padding: '2rem', width:'100%'}}>
             <Grid size={{ xs:12, md:12, lg:4 }} style={{paddingTop:'2rem'}}>
               <img src="images/logo-factors.png" className={styles.titleDiagram} alt={''}/>
             </Grid>
@@ -230,8 +230,8 @@ export default function Home({posts}) {
 
             <h4> Citation </h4>
             <p2>
-            Kim, Y. W., Cox, A., Kabir Adrita, M., Lambert, S., Wimer, A., Halpern, D., Paykin, S., Lin, Q. & Kolak, M. (2026). 
-            OEPS: Opioid Environment Policy Scan Data Ecosystem (Version 3.0) [Dataset]. Zenodo. 
+            Kim, Y. W., Cox, A., Kabir Adrita, M., Lambert, S., Wimer, A., Halpern, D., Paykin, S., Lin, Q. & Kolak, M. (2026).
+            OEPS: Opioid Environment Policy Scan Data Ecosystem (Version 3.0) [Dataset]. Zenodo.
             <a href="https://doi.org/10.5281/zenodo.21909862">https://doi.org/10.5281/zenodo.21909862</a>
             </p2>
 
