@@ -193,9 +193,9 @@ export default function Download() {
           </div>
           <div className="col-xs-12 col-md-8 col-lg-9">
             <h3 id="data-packages">Aggregated Data Packages</h3>
-            <p>OEPS contains data for 300+ variables split across 50+ CSV files, at 4 different geography levels (state, county, tract, and zip-code tabulation area). The scope of this content can make data access complex, so we have created two consolidated data packages (<Link href="#dsuite-2018">DSuite2018</Link> and <Link href="#dsuite-2023">DSuite2023</Link>) to make it as easy as possible to get started. Each package contains:</p>
+            <p>OEPS contains data for 300+ variables split across 50+ CSV files, at 4 different geography levels (state, county, tract, and zip-code tabulation area). The scope of this content can make data access complex, so we have created two consolidated data packages (<Link href="#dsuite-2018">DSuite2018</Link> and <Link href="#dsuite-2023">DSuite2023</Link>) to make it as easy as possible to get started. You can download an all-scales package or a smaller package for a single spatial scale. Each package contains:</p>
             <ul>
-              <li>Four data CSVs, one each for geography level.</li>
+              <li>One or more data CSVs (one per included geography level).</li>
               <li>A data dictionary (MS Excel format) summarizing which data year is included for each variable.</li>
               <li>A corresponding geometry file for each CSV (zipped shapefile).</li>
               <li>Markdown-formatted metadata documents for each variable.</li>
@@ -208,7 +208,19 @@ export default function Download() {
                 <Link href="https://github.com/healthyregions/oeps/raw/refs/heads/main/docs/src/reference/data-dictionaries/DSuite2018-data-dictionary.xlsx">Download DSuite2018 data dictionary</Link>
               </li>
               <li>
-                <Link href="https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/oeps-DSuite2018.zip">Download DSuite2018 data package (100mb+)</Link>
+                <Link href="https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/oeps-DSuite2018.zip">Download DSuite2018 data package — all scales (100mb+)</Link>
+              </li>
+              <li>
+                <Link href="https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/oeps-DSuite2018-state.zip">Download DSuite2018 — state only</Link>
+              </li>
+              <li>
+                <Link href="https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/oeps-DSuite2018-county.zip">Download DSuite2018 — county only</Link>
+              </li>
+              <li>
+                <Link href="https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/oeps-DSuite2018-tract.zip">Download DSuite2018 — tract only</Link>
+              </li>
+              <li>
+                <Link href="https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/oeps-DSuite2018-zcta.zip">Download DSuite2018 — ZCTA only</Link>
               </li>
             </ul>
             <h4 id="dsuite-2023">DSuite2023</h4>
@@ -218,7 +230,19 @@ export default function Download() {
                 <Link href="https://github.com/healthyregions/oeps/raw/refs/heads/main/docs/src/reference/data-dictionaries/DSuite2023-data-dictionary.xlsx">Download DSuite2023 data dictionary</Link>
               </li>
               <li>
-                <Link href="https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/oeps-DSuite2023.zip">Download DSuite2023 data package (100mb+)</Link>
+                <Link href="https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/oeps-DSuite2023.zip">Download DSuite2023 data package — all scales (100mb+)</Link>
+              </li>
+              <li>
+                <Link href="https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/oeps-DSuite2023-state.zip">Download DSuite2023 — state only</Link>
+              </li>
+              <li>
+                <Link href="https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/oeps-DSuite2023-county.zip">Download DSuite2023 — county only</Link>
+              </li>
+              <li>
+                <Link href="https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/oeps-DSuite2023-tract.zip">Download DSuite2023 — tract only</Link>
+              </li>
+              <li>
+                <Link href="https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/oeps-DSuite2023-zcta.zip">Download DSuite2023 — ZCTA only</Link>
               </li>
             </ul>
             <h3 id="csv-downloads">All data by year</h3>
