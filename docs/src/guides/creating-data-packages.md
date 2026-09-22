@@ -13,3 +13,11 @@ flask create-data-package
 
 Run on its own, this command will end in a `row_stream` error. This is because a validation check is attempted that doesn't support foreign keys to shapefiles, which is how we have the package configured. You can avoid this by using either the `--skip-foreign-keys` or `--skip-validation` flags as described in the CLI reference for this command.
 
+To build a package for a single spatial scale (for example tract only), use `--geography` / `-g`:
+
+```
+flask create-data-package -c DSuite2023 -g tract --zip --stable-name --overwrite
+```
+
+Valid values are `state`, `county`, `tract`, and `zcta`. With `--stable-name`, the output is named like `oeps-DSuite2023-tract.zip`. Omit `--geography` to include all scales in one package (for example `oeps-DSuite2023.zip`).
+

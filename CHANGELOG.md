@@ -14,6 +14,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 - `--stable-name` option for `flask create-data-package` so package filenames are fixed (e.g. `oeps-DSuite2018.zip`) and download links do not need updates ([#277](https://github.com/healthyregions/oeps/issues/277)).
 
+- `--geography` / `-g` option for `flask create-data-package` to build single-scale packages (state, county, tract, or zcta), with stable names like `oeps-DSuite2023-tract.zip`; download page lists per-scale links alongside the full packages ([#402](https://github.com/healthyregions/oeps/issues/402)).
+
 - Sortable "Key Variables and Definitions" table on metadata docs pages ([#303](https://github.com/healthyregions/oeps/issues/303)). Default sort by Variable ID; clickable column headers for Variable, Variable ID, Years Available, and Spatial Scale with ↑/↓ indicators.
 
 - "Adding images" section in `metadata/README.md`: HTML vs Markdown, storing figures under `metadata/images/`, relative `images/...` links, and avoiding GitHub-only attachment URLs so images render reliably on the OEPS docs page ([#317](https://github.com/healthyregions/oeps/issues/317)).
@@ -29,6 +31,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Create Data Packages GitHub Action: run Frictionless validation on each package (removed `--skip-validation`); DSuite2023 builds with foreign keys like other suites (removed `--skip-foreign-keys`) ([#311](https://github.com/healthyregions/oeps/issues/311)).
 
 - Data package links on the download page use stable S3 URLs (`oeps-DSuite2018.zip`, `oeps-DSuite2023.zip`) on `herop-geodata` ([#277](https://github.com/healthyregions/oeps/issues/277), [#311](https://github.com/healthyregions/oeps/issues/311)).
+
+- Create Data Packages GitHub Action also builds and uploads per-scale packages for each suite ([#402](https://github.com/healthyregions/oeps/issues/402)).
 
 - File size labels for data packages updated to "(100mb+)" on the download page ([#277](https://github.com/healthyregions/oeps/issues/277)).
 

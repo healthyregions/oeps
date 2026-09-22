@@ -67,9 +67,13 @@ class DataPackage:
         skip_foreign_keys: bool = False,
         run_validation: bool = True,
         verbose: bool = False,
+        geography: str = None,
     ):
         """Single command to generate an output data package, based on a set
-        of CSVs that hold inclusion rules for each variable."""
+        of CSVs that hold inclusion rules for each variable.
+
+        Pass `geography` (state|county|tract|zcta) to include only that spatial scale.
+        """
 
         self.registry = registry
         self.verbose = verbose
@@ -80,13 +84,16 @@ class DataPackage:
         d_path.mkdir(exist_ok=True)
 
         rules_name = rules_dir.name
+        package_label = f"{rules_name}-{geography}" if geography else rules_name
 
-        self.schema["name"] = f"oeps-{rules_name.lower()}"
-        self.schema["title"] = f"Opioid Environment Policy Scan (OEPS) - {rules_name}"
+        self.schema["name"] = f"oeps-{package_label.lower()}"
+        self.schema["title"] = f"Opioid Environment Policy Scan (OEPS) - {package_label}"
 
         geodata_sources = []
         for rules_file in rules_dir.glob("*.csv"):
             if rules_file.stem not in GEOGRAPHY_LOOKUP:
+                continue
+            if geography and rules_file.stem != geography:
                 continue
             print(f"processing {rules_file.name}")
             with open(rules_file, "r") as o:
