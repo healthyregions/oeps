@@ -249,19 +249,25 @@ class Explorer:
                     if v.metadata == m.name:
                         years = set()
                         geographies = set()
+                        availability = []
                         for ts_id in v.table_sources:
                             ts = self.registry.table_sources[ts_id]
                             years.add(ts.data_year)
 
                             gs = self.registry.geodata_sources[ts.geodata_source]
-                            geographies.add(gs.summary_level.title)
+                            scale = gs.summary_level.title
+                            geographies.add(scale)
+                            # Pair year with scale so docs do not imply a cartesian product
+                            # (e.g. 2022 County when only 2022 State exists). See #349.
+                            availability.append(f"{ts.data_year} {scale}")
 
                         entry["variables"].append({
                             "title": v.title,
                             "name": v.name,
                             "description": v.description,
-                            "years": sorted(list(years)),
+                            "years": natsorted(list(years)),
                             "geographies": sorted(list(geographies)),
+                            "availability": natsorted(list(set(availability))),
                         })
             entry["variables"].sort(key=lambda x: x['title'])
             metadata_entries[m.name] = entry

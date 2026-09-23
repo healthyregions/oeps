@@ -104,8 +104,7 @@ export default function MarkdownDocs() {
           <strong>Variable</strong> -- Title of variable<br/>
           <strong>Variable ID</strong> -- Exact name of variable column in datasets<br/>
           <strong>Description</strong> -- Description of variable<br/>
-          <strong>Years Available</strong> -- Data for this variable exists for these years<br/>
-          <strong>Spatial Scale</strong> -- The variable exists for these levels of spatial scale<br/>
+          <strong>Availability</strong> -- Year and spatial scale pairs where this variable exists (e.g. &quot;2016 County&quot;, &quot;2022 State&quot;). A year at one scale does not imply the same year at other scales.
         </p>
         <Gutter em={1} />
         <table className={styles.variableTable} style={{fontSize: '1.25em'}}>
@@ -122,14 +121,9 @@ export default function MarkdownDocs() {
                     </button>
                   </th>
                   <th style={{ width:"45%"}}>Description</th>
-                  <th style={{ width:"10%"}}>
-                    <button type="button" className={styles.sortableTh} onClick={() => handleSort('years')} title="Sort by Years Available">
-                      Years Available {sortKey === 'years' && (sortAsc ? '↑' : '↓')}
-                    </button>
-                  </th>
-                  <th style={{ width:"15%"}}>
-                    <button type="button" className={styles.sortableTh} onClick={() => handleSort('geographies')} title="Sort by Spatial Scale">
-                      Spatial Scale {sortKey === 'geographies' && (sortAsc ? '↑' : '↓')}
+                  <th style={{ width:"25%"}}>
+                    <button type="button" className={styles.sortableTh} onClick={() => handleSort('availability')} title="Sort by Availability">
+                      Availability {sortKey === 'availability' && (sortAsc ? '↑' : '↓')}
                     </button>
                   </th>
               </tr>
@@ -140,8 +134,7 @@ export default function MarkdownDocs() {
                   <td style={{ width:"20%"}}>{variable['title']}</td>
                   <td style={{ width:"10%"}}>{variable['name']}</td>
                   <td style={{ width:"45%"}}>{variable['description']}</td>
-                  <td style={{ width:"10%"}}>{variable['years'].join(", ")}</td>
-                  <td style={{ width:"15%"}}>{variable['geographies'].join(", ")}</td>
+                  <td style={{ width:"25%"}}>{(variable.availability || []).join(", ")}</td>
               </tr>
           })}
           </tbody>

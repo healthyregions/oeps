@@ -43,3 +43,5 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Explorer map: legend bin labels and polygon hover tooltips use magnitude-aware numeric formatting so very small non-zero values are not shown as `0` ([#366](https://github.com/healthyregions/oeps/issues/366)).
 
 - Frictionless data package validation no longer fails when CSV foreign keys pointed at shapefile resources (`FileResource` / `row_stream`) ([#311](https://github.com/healthyregions/oeps/issues/311)).
+
+- Metadata docs variable table shows year and spatial scale as paired availability (e.g. `2016 County`, `2022 State`) instead of separate columns that implied a cartesian product ([#349](https://github.com/healthyregions/oeps/issues/349)).
