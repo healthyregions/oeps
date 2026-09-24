@@ -381,6 +381,18 @@
     color: #fff;
 }
 
+.downloadError {
+    margin-top: 0.75em;
+    color: #a11313;
+    font-size: 90%;
+}
+
+.downloadSuccess {
+    margin-top: 0.75em;
+    color: #1a6b2c;
+    font-size: 90%;
+}
+
 .selectionSummary {
     margin-top: 1.5em;
     margin-bottom: 1em;
