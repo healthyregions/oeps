@@ -244,6 +244,228 @@
     align-items: center;
 }
 
+.filterRow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 0.75em;
+}
+
+.filterSectionTitle {
+    margin: 1.5em 0 0.5em;
+    font-size: 1.15em;
+}
+
+.rulesCallout {
+    margin: 0.75em 0 1em;
+    padding: 0.85em 1em;
+    border: 1px solid var(--medium-gray);
+    border-radius: 0.35em;
+    background: #fff;
+}
+
+.rulesCalloutTitle {
+    margin: 0 0 0.4em;
+    font-weight: 700;
+}
+
+.rulesList {
+    margin: 0;
+    padding-left: 1.25em;
+}
+
+.rulesList li {
+    margin: 0.35em 0;
+}
+
+.queryModeBanner {
+    margin: 0 0 1em;
+    padding: 0.85em 1em;
+    border-radius: 0.35em;
+    border: 2px solid var(--medium-gray);
+}
+
+.queryModeAll {
+    border-color: var(--medium-gray);
+    background: #f7f7f7;
+}
+
+.queryModeTheme {
+    border-color: var(--orange);
+    background: #fff6ee;
+}
+
+.queryModeVariables {
+    border-color: var(--selected-color);
+    background: var(--selected-color-light);
+}
+
+.queryModeLabel {
+    font-size: 80%;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #555;
+    font-weight: 600;
+}
+
+.queryModeValue {
+    font-size: 1.15em;
+    font-weight: 700;
+    margin: 0.15em 0;
+}
+
+.queryModeDetail {
+    margin: 0.25em 0 0;
+    font-size: 90%;
+}
+
+.filterPanel {
+    margin: 0 0 1em;
+    padding: 0.85em 1em 0.5em;
+    border-radius: 0.35em;
+    border: 1px solid var(--medium-gray);
+}
+
+.filterPanelBrowse {
+    background: #fafafa;
+}
+
+.filterPanelSelect {
+    background: #fff;
+}
+
+.filterPanelActive {
+    border-color: var(--selected-color);
+    box-shadow: inset 3px 0 0 var(--selected-color);
+}
+
+.filterPanelHeader {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5em;
+    margin-bottom: 0.25em;
+}
+
+.filterPanelHeader h4 {
+    margin: 0;
+}
+
+.filterPanelBadge,
+.filterPanelBadgeSelect {
+    display: inline-block;
+    font-size: 75%;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.15em 0.45em;
+    border-radius: 0.25em;
+    background: var(--light-gray);
+    color: #333;
+}
+
+.filterPanelBadgeSelect {
+    background: var(--selected-color);
+    color: #fff;
+}
+
+.winsPill {
+    display: inline-block;
+    font-size: 75%;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 0.15em 0.5em;
+    border-radius: 999px;
+    background: var(--selected-color);
+    color: #fff;
+}
+
+.selectionSummary {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    padding: 0.75em 1em;
+    border-left: 3px solid var(--selected-color);
+    background: var(--light-gray, #f5f5f5);
+}
+
+.selectionSummary ul {
+    margin: 0.5em 0;
+    padding-left: 1.25em;
+}
+
+.selectionHint {
+    margin: 0.5em 0 0;
+    font-size: 90%;
+    color: #555;
+}
+
+.downloadActions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5em;
+    margin-top: 1em;
+}
+
+.variableSearch {
+    width: 100%;
+    max-width: 28rem;
+    margin: 0.25em 0 0.75em;
+    padding: 0.4em 0.6em;
+    border: 1px solid var(--medium-gray);
+    border-radius: 0.35em;
+    font: inherit;
+}
+
+.variableList {
+    max-height: 18rem;
+    overflow: auto;
+    border: 1px solid var(--medium-gray);
+    border-radius: 0.35em;
+    background: white;
+    margin-bottom: 1em;
+}
+
+.variableOption {
+    display: flex;
+    gap: 0.6em;
+    align-items: flex-start;
+    padding: 0.45em 0.7em;
+    border-bottom: 1px solid var(--light-gray);
+    cursor: pointer;
+    margin: 0;
+}
+
+.variableOption:last-child {
+    border-bottom: none;
+}
+
+.variableOption:hover {
+    background: var(--selected-color-light);
+}
+
+.variableOptionSelected {
+    background: var(--selected-color-light);
+}
+
+.variableOption input {
+    margin-top: 0.2em;
+}
+
+.variableTitle {
+    font-weight: 600;
+}
+
+.variableMeta {
+    color: #555;
+    font-size: 90%;
+}
+
+.variableMeta code {
+    font-size: 95%;
+}
+
 @media (max-width:1024px){
     .main {
         font-size:125%;
