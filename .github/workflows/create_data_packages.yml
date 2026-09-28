@@ -47,4 +47,8 @@ jobs:
             name=$(basename "$dir")
             echo "Creating data package: $name"
             flask create-data-package -c "$name" --zip --upload --stable-name --overwrite
+            for g in state county tract zcta; do
+              echo "Creating data package: $name ($g)"
+              flask create-data-package -c "$name" -g "$g" --zip --upload --stable-name --overwrite
+            done
           done

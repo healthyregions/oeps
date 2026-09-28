@@ -8,6 +8,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- `--geography` / `-g` option for `flask create-data-package` to build single-scale packages (state, county, tract, or zcta), with stable names like `oeps-DSuite2023-tract.zip`; download page lists per-scale links alongside the full packages ([#402](https://github.com/healthyregions/oeps/issues/402)).
+
+### Changed
+
+- Create Data Packages GitHub Action also builds and uploads per-scale packages for each suite ([#402](https://github.com/healthyregions/oeps/issues/402)).
+
+## [3.0] - 2026-08-05
+
+### Added
+
 - GitHub Action **Validate registry** that runs `flask validate-registry` on pull requests when `backend/oeps/registry/**`, `backend/oeps/data/**`, or the workflow file changes, plus manual **`workflow_dispatch`** ([#262](https://github.com/healthyregions/oeps/issues/262)).
 
 - GitHub Action to create and upload Frictionless data packages when `backend/oeps/data/package_rules/**` changes ([#277](https://github.com/healthyregions/oeps/issues/277)).
