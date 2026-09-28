@@ -1,5 +1,6 @@
 from flask import Flask
 
+from oeps.api.interactive_download import bp as interactive_download_bp
 from oeps.commands.bigquery_export import bigquery_export
 from oeps.commands.bigquery_upload import bigquery_upload
 from oeps.commands.build_docs import build_docs
@@ -19,6 +20,9 @@ def create_app():
 
     # configure from config.py file
     app.config.from_object("oeps.config")
+
+    # HTTP API routes
+    app.register_blueprint(interactive_download_bp)
 
     # add all cli commands
     app.cli.add_command(bigquery_export)

@@ -102,6 +102,10 @@ export default function InteractiveDownloadFilters() {
     variable: [],
   });
   const [variableQuery, setVariableQuery] = useState("");
+  const [downloadState, setDownloadState] = useState({
+    status: "idle", // idle | loading | error | success
+    message: "",
+  });
 
   const handleFilter = (val, type) => {
     setActiveFilters((prev) => {
@@ -110,20 +114,39 @@ export default function InteractiveDownloadFilters() {
         [type]: toggleValue(prev[type], val),
       };
 
-      if (type === "theme" && next.theme.length) {
+      // Drop variable picks that are impossible for theme / year / scale.
+      if (type === "theme" || type === "year" || type === "scale") {
         next.variable = next.variable.filter((name) => {
           const variable = variablesByName.get(name);
-          return variable && next.theme.includes(variable.theme);
+          if (!variable) return false;
+          if (next.theme.length && !next.theme.includes(variable.theme)) {
+            return false;
+          }
+          if (
+            next.year.length &&
+            !next.year.some((year) => variable.years.includes(year))
+          ) {
+            return false;
+          }
+          if (
+            next.scale.length &&
+            !next.scale.some((scale) => variable.geographies.includes(scale))
+          ) {
+            return false;
+          }
+          return true;
         });
       }
 
       return next;
     });
+    setDownloadState({ status: "idle", message: "" });
   };
 
   const clearFilters = () => {
     setActiveFilters({ year: [], scale: [], theme: [], variable: [] });
     setVariableQuery("");
+    setDownloadState({ status: "idle", message: "" });
   };
 
   const visibleVariables = useMemo(() => {
@@ -174,14 +197,79 @@ export default function InteractiveDownloadFilters() {
     activeFilters.theme.length > 0 ||
     activeFilters.variable.length > 0;
 
+  const canDownload =
+    activeFilters.year.length === 1 &&
+    activeFilters.scale.length === 1 &&
+    (activeFilters.variable.length > 0 || activeFilters.theme.length > 0);
+
+  const downloadHint = !canDownload
+    ? "To download: select exactly one year, one scale, and either a theme or specific variables."
+    : "";
+
   const queryMode = getQueryMode(activeFilters);
   const variablesWin = queryMode.id === "variables";
+
+  const handleDownload = async () => {
+    if (!canDownload || downloadState.status === "loading") return;
+    setDownloadState({ status: "loading", message: "Running BigQuery…" });
+    try {
+      const response = await fetch("/api/interactive-download", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          years: activeFilters.year,
+          scales: activeFilters.scale,
+          themes: activeFilters.theme,
+          variables: activeFilters.variable,
+        }),
+      });
+      const contentType = response.headers.get("content-type") || "";
+      if (!response.ok) {
+        let message = `Download failed (${response.status})`;
+        if (contentType.includes("application/json")) {
+          const data = await response.json();
+          message = data.error || message;
+        } else {
+          message = (await response.text()) || message;
+        }
+        setDownloadState({ status: "error", message });
+        return;
+      }
+
+      const blob = await response.blob();
+      const disposition = response.headers.get("content-disposition") || "";
+      const match = /filename="?([^";]+)"?/i.exec(disposition);
+      const filename = match?.[1] || "oeps-subset.csv";
+      const url = URL.createObjectURL(blob);
+      const anchor = document.createElement("a");
+      anchor.href = url;
+      anchor.download = filename;
+      document.body.appendChild(anchor);
+      anchor.click();
+      anchor.remove();
+      URL.revokeObjectURL(url);
+
+      const rows = response.headers.get("x-oeps-row-count");
+      setDownloadState({
+        status: "success",
+        message: rows
+          ? `Downloaded ${filename} (${Number(rows).toLocaleString()} rows).`
+          : `Downloaded ${filename}.`,
+      });
+    } catch (err) {
+      setDownloadState({
+        status: "error",
+        message: err?.message || "Unexpected download error.",
+      });
+    }
+  };
 
   return (
     <div>
       <p>
         Choose when and where first, then decide <em>which</em> variables.
-        CSV export is not wired yet — this page previews the filter logic.
+        Download runs a constrained BigQuery query through the OEPS backend
+        (no free-form SQL).
       </p>
 
       <h3 className={styles.filterSectionTitle}>1. When &amp; where</h3>
@@ -331,10 +419,12 @@ export default function InteractiveDownloadFilters() {
                   />
                   <span>
                     <span className={styles.variableTitle}>{variable.title}</span>
-                    <span className={styles.variableMeta}>
-                      {" "}
-                      · <code>{variable.name}</code> · {variable.theme}
-                    </span>
+                  <span className={styles.variableMeta}>
+                    {" "}
+                    · <code>{variable.name}</code> · {variable.theme}
+                    {" · "}
+                    {variable.years.join(", ")}
+                  </span>
                   </span>
                 </label>
               );
@@ -373,20 +463,42 @@ export default function InteractiveDownloadFilters() {
       <div className={styles.downloadActions}>
         <button
           type="button"
-          className={`${styles.downloadButton} ${styles.passiveButton}`}
-          disabled
+          className={`${styles.downloadButton} ${
+            canDownload && downloadState.status !== "loading"
+              ? ""
+              : styles.passiveButton
+          }`}
+          disabled={!canDownload || downloadState.status === "loading"}
+          onClick={handleDownload}
         >
-          Download CSV (coming soon)
+          {downloadState.status === "loading"
+            ? "Downloading…"
+            : "Download CSV"}
         </button>
         <button
           type="button"
           className={styles.filterButton}
           onClick={clearFilters}
-          disabled={!hasSelection}
+          disabled={!hasSelection || downloadState.status === "loading"}
         >
           Clear filters
         </button>
       </div>
+      {downloadHint ? (
+        <p className={styles.selectionHint}>{downloadHint}</p>
+      ) : null}
+      {downloadState.message ? (
+        <p
+          className={
+            downloadState.status === "error"
+              ? styles.downloadError
+              : styles.downloadSuccess
+          }
+          role="status"
+        >
+          {downloadState.message}
+        </p>
+      ) : null}
     </div>
   );
 }
