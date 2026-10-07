@@ -84,6 +84,15 @@ from ._common_opts import (
     help="Use a stable output name without date (e.g. oeps-DSuite2018.zip). "
     "Use with --upload so download page links never need updating.",
 )
+@click.option(
+    "--geography",
+    "-g",
+    type=click.Choice(["state", "county", "tract", "zcta"], case_sensitive=False),
+    default=None,
+    help="Only include one spatial scale in the package (e.g. tract). "
+    "Omit to include all geographies defined in the package rules. "
+    "When set, the output name includes the scale (e.g. oeps-DSuite2023-tract.zip).",
+)
 @add_common_opts(overwrite_opt, registry_opt, data_dir_opt, verbose_opt)
 def create_data_package(
     destination,
@@ -95,6 +104,7 @@ def create_data_package(
     skip_foreign_keys,
     skip_validation,
     stable_name,
+    geography,
     check_rules,
     overwrite,
     registry_path,
@@ -109,6 +119,8 @@ def create_data_package(
     `--skip-foreign-keys` to omit foreign keys and geography-keys tables (packages without relational metadata).
 
     `--skip-validation` to skip the final step of running validation on the output package.
+
+    `--geography` to build a single-scale package (state, county, tract, or zcta).
     """
 
     package_rules_dir = Path(data_dir_path, "package_rules")
@@ -121,8 +133,12 @@ def create_data_package(
         print("Must include one of -c <config name> or --make_all")
         exit()
 
+    if geography:
+        geography = geography.lower()
+
     for config_name in config_names:
-        print(f"CREATE DATA PACKAGE: {config_name}\n----\n")
+        label = f"{config_name}-{geography}" if geography else config_name
+        print(f"CREATE DATA PACKAGE: {label}\n----\n")
         rules_dir = Path(package_rules_dir, config_name)
 
         if not rules_dir.is_dir():
@@ -130,10 +146,19 @@ def create_data_package(
             print(f"Expected path: {rules_dir.resolve()}")
             exit()
 
+        if geography:
+            rules_file = Path(rules_dir, f"{geography}.csv")
+            if not rules_file.is_file():
+                print(f"No rules file for geography '{geography}' in {config_name}")
+                print(f"Expected path: {rules_file.resolve()}")
+                exit()
+
         if stable_name:
             out_name = f"oeps-{config_name}"
         else:
             out_name = f"oeps-{config_name}_{datetime.now().date().isoformat()}"
+        if geography:
+            out_name = f"{out_name}-{geography}"
         out_name = out_name + "_no_foreign_keys" if skip_foreign_keys else out_name
         out_path = Path(destination, out_name)
 
@@ -156,4 +181,5 @@ def create_data_package(
             skip_foreign_keys=skip_foreign_keys,
             run_validation=not skip_validation,
             verbose=verbose,
+            geography=geography,
         )
