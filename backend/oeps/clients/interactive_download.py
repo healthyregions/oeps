@@ -9,6 +9,7 @@ from __future__ import annotations
 import io
 import os
 import re
+import zipfile
 from dataclasses import dataclass, field
 
 from google.cloud import bigquery
@@ -320,3 +321,13 @@ def run_download_query(plan: DownloadPlan) -> tuple[str, int]:
     buf = io.StringIO()
     df.to_csv(buf, index=False)
     return buf.getvalue(), len(df)
+
+
+def csv_text_as_zip(csv_text: str, csv_name: str) -> bytes:
+    """Wrap one CSV in a zip archive. Does not change row-limit handling."""
+    if not csv_name.endswith(".csv") or "/" in csv_name or "\\" in csv_name:
+        raise InteractiveDownloadError(f"Invalid CSV name: {csv_name}")
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, mode="w", compression=zipfile.ZIP_DEFLATED) as archive:
+        archive.writestr(csv_name, csv_text.encode("utf-8"))
+    return buf.getvalue()

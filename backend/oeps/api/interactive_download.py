@@ -5,6 +5,7 @@ from flask import Blueprint, Response, jsonify, request
 from oeps.clients.interactive_download import (
     InteractiveDownloadError,
     build_download_plan,
+    csv_text_as_zip,
     run_download_query,
 )
 
@@ -24,7 +25,7 @@ def _parse_body():
 
 @bp.post("/api/interactive-download")
 def interactive_download():
-    """POST JSON filters → CSV attachment (or dry-run plan JSON)."""
+    """POST JSON filters → zip attachment with one CSV (or dry-run plan JSON)."""
     try:
         body = _parse_body()
         plan = build_download_plan(
@@ -48,12 +49,13 @@ def interactive_download():
         csv_text, row_count = run_download_query(plan)
         year = plan.years[0]
         scale = plan.scales[0].lower()
-        filename = f"oeps-{scale}-{year}-subset.csv"
+        csv_name = f"oeps-{scale}-{year}-subset.csv"
+        zip_name = f"oeps-{scale}-{year}-subset.zip"
         return Response(
-            csv_text,
-            mimetype="text/csv; charset=utf-8",
+            csv_text_as_zip(csv_text, csv_name),
+            mimetype="application/zip",
             headers={
-                "Content-Disposition": f'attachment; filename="{filename}"',
+                "Content-Disposition": f'attachment; filename="{zip_name}"',
                 "X-OEPS-Row-Count": str(row_count),
                 "X-OEPS-Table-Count": str(len(plan.tables)),
             },

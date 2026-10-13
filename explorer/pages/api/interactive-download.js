@@ -34,19 +34,19 @@ export default async function handler(req, res) {
     return res.status(upstream.status).json(data);
   }
 
-  const text = await upstream.text();
+  const bytes = Buffer.from(await upstream.arrayBuffer());
   if (!upstream.ok) {
     return res.status(upstream.status).json({
-      error: text || `Backend returned ${upstream.status}`,
+      error: bytes.toString("utf8") || `Backend returned ${upstream.status}`,
     });
   }
 
   const disposition =
     upstream.headers.get("content-disposition") ||
-    'attachment; filename="oeps-subset.csv"';
-  res.setHeader("Content-Type", "text/csv; charset=utf-8");
+    'attachment; filename="oeps-subset.zip"';
+  res.setHeader("Content-Type", contentType || "application/zip");
   res.setHeader("Content-Disposition", disposition);
   const rowCount = upstream.headers.get("x-oeps-row-count");
   if (rowCount) res.setHeader("X-OEPS-Row-Count", rowCount);
-  return res.status(200).send(text);
+  return res.status(200).send(bytes);
 }
