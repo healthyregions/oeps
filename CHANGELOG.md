@@ -12,6 +12,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Changed
 
+- Interactive download still rejects results over 50,000 rows without creating a file, and the error tells users to select a state or use a per-scale zip on the Data Access page ([#428](https://github.com/healthyregions/oeps/issues/428)).
+
 - Create Data Packages GitHub Action also builds and uploads per-scale packages for each suite ([#402](https://github.com/healthyregions/oeps/issues/402)).
 
 ## [3.0] - 2026-08-05

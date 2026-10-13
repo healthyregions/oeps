@@ -46,6 +46,15 @@ MAX_ROWS = 50_000
 QUERY_TIMEOUT_SEC = 60
 
 
+def row_limit_error_message() -> str:
+    """User-facing error when a download is over MAX_ROWS. No file is created."""
+    return (
+        f"This selection has more than {MAX_ROWS:,} rows, so no file was created. "
+        "Select a state to narrow the download, or use a per-scale zip on the "
+        "Data Access page for a national file."
+    )
+
+
 class InteractiveDownloadError(Exception):
     def __init__(self, message: str, status_code: int = 400):
         super().__init__(message)
@@ -299,7 +308,7 @@ def run_download_query(plan: DownloadPlan) -> tuple[str, int]:
     df = result.to_dataframe()
     if len(df) > MAX_ROWS:
         raise InteractiveDownloadError(
-            f"Result exceeds row limit ({MAX_ROWS:,}). Narrow year, scale, or variables.",
+            row_limit_error_message(),
             status_code=413,
         )
     if df.empty:
