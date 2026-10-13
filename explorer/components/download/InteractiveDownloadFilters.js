@@ -239,7 +239,7 @@ export default function InteractiveDownloadFilters() {
       const blob = await response.blob();
       const disposition = response.headers.get("content-disposition") || "";
       const match = /filename="?([^";]+)"?/i.exec(disposition);
-      const filename = match?.[1] || "oeps-subset.csv";
+      const filename = match?.[1] || "oeps-subset.zip";
       const url = URL.createObjectURL(blob);
       const anchor = document.createElement("a");
       anchor.href = url;
