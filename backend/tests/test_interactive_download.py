@@ -6,6 +6,8 @@ import pytest
 import io
 import zipfile
 
+from google.api_core.exceptions import NotFound
+
 from oeps.clients.interactive_download import (
     MAX_ROWS,
     DownloadPlan,
@@ -141,6 +143,36 @@ def test_over_row_limit_returns_error_and_no_csv(monkeypatch):
     message = exc.value.message.lower()
     assert "select a state" in message
     assert "per-scale zip" in message
+
+
+def test_missing_table_returns_clear_error_without_raw_details(monkeypatch):
+    class _MissingTableClient:
+        def query(self, sql, job_config=None):
+            raise NotFound(
+                "404 Not found: Table oeps-391119:tabular.county-2023 was not found "
+                "in location US\nJob ID: 2e1eb33d-ce05-4c8a-84f0-6cef50c1e7e7"
+            )
+
+    monkeypatch.setattr(
+        "oeps.clients.interactive_download.get_client",
+        lambda: _MissingTableClient(),
+    )
+    plan = DownloadPlan(
+        years=["2023"],
+        scales=["County"],
+        variable_names=["MedInc"],
+        tables={"county-2023": ["MedInc"]},
+        sql="SELECT 1",
+    )
+    with pytest.raises(InteractiveDownloadError, match="no file was created") as exc:
+        run_download_query(plan)
+    assert exc.value.status_code == 404
+    message = exc.value.message
+    assert "2023 County" in message
+    assert "Data Access" in message
+    assert "oeps-391119" not in message
+    assert "2e1eb33d" not in message
+    assert "location US" not in message
 
 
 def test_under_row_limit_still_returns_csv(monkeypatch):

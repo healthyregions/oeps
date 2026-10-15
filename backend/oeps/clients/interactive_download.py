@@ -12,6 +12,7 @@ import re
 import zipfile
 from dataclasses import dataclass, field
 
+from google.api_core.exceptions import NotFound
 from google.cloud import bigquery
 
 from oeps.clients.bigquery import get_client
@@ -53,6 +54,16 @@ def row_limit_error_message() -> str:
         f"This selection has more than {MAX_ROWS:,} rows, so no file was created. "
         "Select a state to narrow the download, or use a per-scale zip on the "
         "Data Access page for a national file."
+    )
+
+
+def missing_table_error_message(plan: DownloadPlan) -> str:
+    """User-facing error when the year/scale table is not in BigQuery."""
+    year = plan.years[0] if plan.years else "the selected year"
+    scale = plan.scales[0] if plan.scales else "the selected scale"
+    return (
+        f"There is no BigQuery table for {year} {scale}, so no file was created. "
+        "Use a per-scale zip on the Data Access page to download this scale."
     )
 
 
@@ -300,6 +311,11 @@ def run_download_query(plan: DownloadPlan) -> tuple[str, int]:
     try:
         query_job = client.query(plan.sql, job_config=job_config)
         result = query_job.result(timeout=QUERY_TIMEOUT_SEC)
+    except NotFound as exc:
+        raise InteractiveDownloadError(
+            missing_table_error_message(plan),
+            status_code=404,
+        ) from exc
     except Exception as exc:  # noqa: BLE001 — surface as user-facing error
         raise InteractiveDownloadError(
             f"BigQuery query failed: {exc}",

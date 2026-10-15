@@ -12,6 +12,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Changed
 
+- Interactive download returns a short error, with no file, when the BigQuery table for the selected year and scale is missing ([#434](https://github.com/healthyregions/oeps/issues/434)).
+
 - Interactive download returns a `.zip` containing one CSV instead of a raw CSV. Results over 50,000 rows still return an error and no file ([#429](https://github.com/healthyregions/oeps/issues/429)).
 
 - Interactive download still rejects results over 50,000 rows without creating a file, and the error tells users to select a state or use a per-scale zip on the Data Access page ([#428](https://github.com/healthyregions/oeps/issues/428)).
