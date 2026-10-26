@@ -29,6 +29,14 @@ SCALE_TO_PREFIX = {
     "ZCTA": "zcta",
 }
 
+# State, county, and tract GEOIDs are FIPS. ZCTA GEOIDs are 5-digit ZIP codes.
+GEOGRAPHY_CODE_COLUMN = {
+    "state": "FIPS",
+    "county": "FIPS",
+    "tract": "FIPS",
+    "zcta": "ZCTA5",
+}
+
 ALLOWED_SCALES = frozenset(SCALE_TO_PREFIX.keys())
 ALLOWED_THEMES = frozenset(
     {
@@ -94,6 +102,36 @@ def _quote_column(name: str) -> str:
     if not SAFE_COLUMN.match(name):
         raise InteractiveDownloadError(f"Invalid column name: {name}")
     return f"`{name}`"
+
+
+def geography_code_column(scale: str) -> str:
+    """Column name for the code carried inside HEROP_ID at this scale."""
+    prefix = SCALE_TO_PREFIX.get(scale)
+    column = GEOGRAPHY_CODE_COLUMN.get(prefix or "")
+    if column is None:
+        raise InteractiveDownloadError(f"Unknown scale: {scale}")
+    return column
+
+
+def code_from_herop_id(value) -> str:
+    """Return the FIPS or ZIP stored after the ``###US`` prefix.
+
+    ``050US01001`` becomes ``01001``. Values without that prefix are kept
+    as text so a leading zero is not dropped.
+    """
+    if value is None:
+        return ""
+    try:
+        if value != value:  # NaN
+            return ""
+    except TypeError:
+        pass
+    text = str(value).strip()
+    if text.endswith(".0") and text[:-2].isdigit():
+        text = text[:-2]
+    if len(text) > 5 and text[3:5] == "US" and text[:3].isdigit():
+        return text[5:]
+    return text
 
 
 def _table_geography_prefix(table_name: str) -> str | None:
@@ -264,14 +302,25 @@ def build_download_plan(
     )
 
 
+def _geography_code_select(herop_expr: str, table_names: list[str]) -> str:
+    """Select the FIPS or ZIP inside HEROP_ID. No extra table is joined."""
+    prefixes = {_table_geography_prefix(name) for name in table_names}
+    prefixes.discard(None)
+    if len(prefixes) != 1:
+        raise InteractiveDownloadError("Download tables must share one scale.")
+    column = GEOGRAPHY_CODE_COLUMN[prefixes.pop()]
+    return f"SUBSTR({herop_expr}, 6) AS {_quote_column(column)}"
+
+
 def _build_join_sql(project_id: str, tables: dict[str, list[str]]) -> str:
-    """FULL OUTER JOIN tables on HEROP_ID; select HEROP_ID + requested columns."""
+    """FULL OUTER JOIN tables on HEROP_ID; select HEROP_ID, its FIPS or ZIP, and requested columns."""
     table_names = sorted(tables.keys())
     if len(table_names) == 1:
         t = table_names[0]
-        cols = [_quote_column("HEROP_ID")] + [
-            _quote_column(c) for c in sorted(tables[t])
-        ]
+        cols = [
+            _quote_column("HEROP_ID"),
+            _geography_code_select(_quote_column("HEROP_ID"), table_names),
+        ] + [_quote_column(c) for c in sorted(tables[t])]
         return (
             f"SELECT {', '.join(cols)}\n"
             f"FROM {_quote_table(project_id, t)}\n"
@@ -283,7 +332,11 @@ def _build_join_sql(project_id: str, tables: dict[str, list[str]]) -> str:
     first_alias = aliases[first]
 
     herop_parts = [f"{aliases[n]}.HEROP_ID" for n in table_names]
-    select_cols = [f"COALESCE({', '.join(herop_parts)}) AS HEROP_ID"]
+    herop_expr = f"COALESCE({', '.join(herop_parts)})"
+    select_cols = [
+        f"{herop_expr} AS HEROP_ID",
+        _geography_code_select(herop_expr, table_names),
+    ]
     for tname, cols in tables.items():
         alias = aliases[tname]
         for col in sorted(cols):
@@ -334,9 +387,22 @@ def run_download_query(plan: DownloadPlan) -> tuple[str, int]:
             status_code=404,
         )
 
+    df = _attach_geography_code(df, plan.scales[0] if plan.scales else "")
     buf = io.StringIO()
     df.to_csv(buf, index=False)
     return buf.getvalue(), len(df)
+
+
+def _attach_geography_code(df, scale: str):
+    """Write FIPS or ZCTA5 from HEROP_ID so leading zeros survive the CSV."""
+    if "HEROP_ID" not in df.columns or not scale:
+        return df
+    column = geography_code_column(scale)
+    out = df.copy()
+    out[column] = out["HEROP_ID"].map(code_from_herop_id)
+    front = ["HEROP_ID", column]
+    rest = [name for name in out.columns if name not in front]
+    return out[front + rest]
 
 
 def csv_text_as_zip(csv_text: str, csv_name: str) -> bytes:
