@@ -12,6 +12,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Changed
 
+- Interactive download keeps `HEROP_ID` and adds the FIPS code for state, county, and tract, or the 5-digit ZIP (`ZCTA5`) for ZCTA ([#443](https://github.com/healthyregions/oeps/issues/443)).
+
 - Interactive download returns a short error, with no file, when the BigQuery table for the selected year and scale is missing ([#434](https://github.com/healthyregions/oeps/issues/434)).
 
 - Interactive download returns a `.zip` containing one CSV instead of a raw CSV. Results over 50,000 rows still return an error and no file ([#429](https://github.com/healthyregions/oeps/issues/429)).

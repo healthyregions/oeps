@@ -12,7 +12,9 @@ from oeps.clients.interactive_download import (
     MAX_ROWS,
     DownloadPlan,
     InteractiveDownloadError,
+    _build_join_sql,
     build_download_plan,
+    code_from_herop_id,
     csv_text_as_zip,
     row_limit_error_message,
     run_download_query,
@@ -183,7 +185,7 @@ def test_under_row_limit_still_returns_csv(monkeypatch):
     )
     csv_text, row_count = run_download_query(_plan())
     assert row_count == 2
-    assert csv_text.startswith("HEROP_ID,MedInc")
+    assert csv_text.startswith("HEROP_ID,FIPS,MedInc")
     assert "14017001" in csv_text
 
 
@@ -253,3 +255,76 @@ def test_over_row_limit_route_returns_json_error(monkeypatch):
     assert response.status_code == 413
     assert response.is_json
     assert "no file was created" in response.get_json()["error"]
+
+
+def test_county_sql_adds_fips_beside_herop_id():
+    sql = _build_join_sql("oeps-test", {"county-2023": ["MedInc"]})
+    assert sql.startswith("SELECT `HEROP_ID`, SUBSTR(`HEROP_ID`, 6) AS `FIPS`, `MedInc`")
+    assert "ZCTA5" not in sql
+
+
+def test_zcta_sql_adds_zip_column_instead_of_fips():
+    sql = _build_join_sql("oeps-test", {"zcta-2023": ["MedInc"]})
+    assert "SUBSTR(`HEROP_ID`, 6) AS `ZCTA5`" in sql
+    assert "`FIPS`" not in sql
+
+
+def test_state_and_tract_sql_add_fips():
+    state_sql = _build_join_sql("oeps-test", {"state-2023": ["Pop"]})
+    tract_sql = _build_join_sql("oeps-test", {"tract-2020": ["MedInc"]})
+    assert "AS `FIPS`" in state_sql
+    assert "AS `FIPS`" in tract_sql
+
+
+def test_joined_tables_add_one_geography_code():
+    sql = _build_join_sql(
+        "oeps-test",
+        {"county-2023": ["MedInc"], "county-2018": ["Pop"]},
+    )
+    assert sql.count("AS `FIPS`") == 1
+    assert "SUBSTR(COALESCE(t0.HEROP_ID, t1.HEROP_ID), 6) AS `FIPS`" in sql
+    assert "JOIN" in sql
+
+
+def test_code_from_herop_id_keeps_leading_zero():
+    assert code_from_herop_id("050US01001") == "01001"
+    assert code_from_herop_id("040US17") == "17"
+    assert code_from_herop_id("140US17019005900") == "17019005900"
+    assert code_from_herop_id("860US00601") == "00601"
+
+
+def test_csv_writes_fips_with_leading_zero(monkeypatch):
+    frame = pd.DataFrame({"HEROP_ID": ["050US01001"], "MedInc": [34898]})
+    monkeypatch.setattr(
+        "oeps.clients.interactive_download.get_client",
+        lambda: _FakeClient(frame),
+    )
+    plan = DownloadPlan(
+        years=["2023"],
+        scales=["County"],
+        variable_names=["MedInc"],
+        tables={"county-2023": ["MedInc"]},
+        sql="SELECT 1",
+    )
+    csv_text, row_count = run_download_query(plan)
+    assert row_count == 1
+    assert csv_text.splitlines()[0] == "HEROP_ID,FIPS,MedInc"
+    assert "050US01001,01001,34898" in csv_text
+
+
+def test_csv_writes_zcta_zip(monkeypatch):
+    frame = pd.DataFrame({"HEROP_ID": ["860US00601"], "MedInc": [1]})
+    monkeypatch.setattr(
+        "oeps.clients.interactive_download.get_client",
+        lambda: _FakeClient(frame),
+    )
+    plan = DownloadPlan(
+        years=["2023"],
+        scales=["ZCTA"],
+        variable_names=["MedInc"],
+        tables={"zcta-2023": ["MedInc"]},
+        sql="SELECT 1",
+    )
+    csv_text, _row_count = run_download_query(plan)
+    assert csv_text.splitlines()[0] == "HEROP_ID,ZCTA5,MedInc"
+    assert "860US00601,00601,1" in csv_text
