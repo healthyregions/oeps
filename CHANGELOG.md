@@ -12,6 +12,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Changed
 
+- Interactive download can be limited to one or more states. Leaving the control empty still downloads the whole United States. ZCTA uses a Census state crosswalk ([#430](https://github.com/healthyregions/oeps/issues/430)).
+
 - Interactive download keeps `HEROP_ID` and adds the FIPS code for state, county, and tract, or the 5-digit ZIP (`ZCTA5`) for ZCTA ([#443](https://github.com/healthyregions/oeps/issues/443)).
 
 - Interactive download returns a short error, with no file, when the BigQuery table for the selected year and scale is missing ([#434](https://github.com/healthyregions/oeps/issues/434)).

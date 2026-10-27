@@ -19,6 +19,7 @@ def _parse_body():
         "scales": data.get("scales") or [],
         "themes": data.get("themes") or [],
         "variables": data.get("variables") or [],
+        "states": data.get("states") or [],
         "dry_run": bool(data.get("dry_run")),
     }
 
@@ -33,12 +34,14 @@ def interactive_download():
             scales=body["scales"],
             themes=body["themes"],
             variables=body["variables"],
+            states=body["states"],
         )
         if body["dry_run"]:
             return jsonify(
                 {
                     "years": plan.years,
                     "scales": plan.scales,
+                    "states": plan.states,
                     "variables": plan.variable_names,
                     "tables": plan.tables,
                     "sql": plan.sql,
