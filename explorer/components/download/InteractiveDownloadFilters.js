@@ -5,6 +5,62 @@ import metadataVariables from "../../meta/metadataVariables.json";
 
 const SCALES = ["State", "County", "Tract", "ZCTA"];
 
+const STATES = [
+  ["01", "AL", "Alabama"],
+  ["02", "AK", "Alaska"],
+  ["04", "AZ", "Arizona"],
+  ["05", "AR", "Arkansas"],
+  ["06", "CA", "California"],
+  ["08", "CO", "Colorado"],
+  ["09", "CT", "Connecticut"],
+  ["10", "DE", "Delaware"],
+  ["11", "DC", "District of Columbia"],
+  ["12", "FL", "Florida"],
+  ["13", "GA", "Georgia"],
+  ["15", "HI", "Hawaii"],
+  ["16", "ID", "Idaho"],
+  ["17", "IL", "Illinois"],
+  ["18", "IN", "Indiana"],
+  ["19", "IA", "Iowa"],
+  ["20", "KS", "Kansas"],
+  ["21", "KY", "Kentucky"],
+  ["22", "LA", "Louisiana"],
+  ["23", "ME", "Maine"],
+  ["24", "MD", "Maryland"],
+  ["25", "MA", "Massachusetts"],
+  ["26", "MI", "Michigan"],
+  ["27", "MN", "Minnesota"],
+  ["28", "MS", "Mississippi"],
+  ["29", "MO", "Missouri"],
+  ["30", "MT", "Montana"],
+  ["31", "NE", "Nebraska"],
+  ["32", "NV", "Nevada"],
+  ["33", "NH", "New Hampshire"],
+  ["34", "NJ", "New Jersey"],
+  ["35", "NM", "New Mexico"],
+  ["36", "NY", "New York"],
+  ["37", "NC", "North Carolina"],
+  ["38", "ND", "North Dakota"],
+  ["39", "OH", "Ohio"],
+  ["40", "OK", "Oklahoma"],
+  ["41", "OR", "Oregon"],
+  ["42", "PA", "Pennsylvania"],
+  ["44", "RI", "Rhode Island"],
+  ["45", "SC", "South Carolina"],
+  ["46", "SD", "South Dakota"],
+  ["47", "TN", "Tennessee"],
+  ["48", "TX", "Texas"],
+  ["49", "UT", "Utah"],
+  ["50", "VT", "Vermont"],
+  ["51", "VA", "Virginia"],
+  ["53", "WA", "Washington"],
+  ["54", "WV", "West Virginia"],
+  ["55", "WI", "Wisconsin"],
+  ["56", "WY", "Wyoming"],
+]
+  .map(([fips, abbr, name]) => ({ fips, abbr, name }))
+  .sort((a, b) => a.name.localeCompare(b.name));
+
 function buildFilterOptions() {
   const years = [
     ...new Set(
@@ -98,6 +154,7 @@ export default function InteractiveDownloadFilters() {
   const [activeFilters, setActiveFilters] = useState({
     year: [],
     scale: [],
+    state: [],
     theme: [],
     variable: [],
   });
@@ -111,7 +168,12 @@ export default function InteractiveDownloadFilters() {
     setActiveFilters((prev) => {
       const next = {
         ...prev,
-        [type]: toggleValue(prev[type], val),
+        [type]:
+          type === "scale"
+            ? prev.scale[0] === val
+              ? []
+              : [val]
+            : toggleValue(prev[type], val),
       };
 
       // Drop variable picks that are impossible for theme / year / scale.
@@ -144,7 +206,7 @@ export default function InteractiveDownloadFilters() {
   };
 
   const clearFilters = () => {
-    setActiveFilters({ year: [], scale: [], theme: [], variable: [] });
+    setActiveFilters({ year: [], scale: [], state: [], theme: [], variable: [] });
     setVariableQuery("");
     setDownloadState({ status: "idle", message: "" });
   };
@@ -194,6 +256,7 @@ export default function InteractiveDownloadFilters() {
   const hasSelection =
     activeFilters.year.length > 0 ||
     activeFilters.scale.length > 0 ||
+    activeFilters.state.length > 0 ||
     activeFilters.theme.length > 0 ||
     activeFilters.variable.length > 0;
 
@@ -219,6 +282,7 @@ export default function InteractiveDownloadFilters() {
         body: JSON.stringify({
           years: activeFilters.year,
           scales: activeFilters.scale,
+          states: activeFilters.state,
           themes: activeFilters.theme,
           variables: activeFilters.variable,
         }),
@@ -291,6 +355,7 @@ export default function InteractiveDownloadFilters() {
       </div>
 
       <h4>Spatial scale</h4>
+      <p className={styles.selectionHint}>Choose one. Selecting another replaces the current scale.</p>
       <div className={styles.filterRow}>
         {SCALES.map((scale) => (
           <button
@@ -303,6 +368,28 @@ export default function InteractiveDownloadFilters() {
             aria-pressed={activeFilters.scale.includes(scale)}
           >
             {scale}
+          </button>
+        ))}
+      </div>
+
+      <h4>State</h4>
+      <p className={styles.selectionHint}>
+        Optional. Nothing selected means the whole United States. You can
+        select more than one.
+      </p>
+      <div className={styles.filterRow}>
+        {STATES.map((state) => (
+          <button
+            key={state.fips}
+            type="button"
+            title={state.name}
+            onClick={() => handleFilter(state.fips, "state")}
+            className={`${styles.filterButton} ${
+              activeFilters.state.includes(state.fips) ? styles.activeDownload : ""
+            }`}
+            aria-pressed={activeFilters.state.includes(state.fips)}
+          >
+            {state.abbr}
           </button>
         ))}
       </div>
@@ -443,6 +530,17 @@ export default function InteractiveDownloadFilters() {
           <li>
             <strong>Scales:</strong>{" "}
             {formatList(activeFilters.scale, "any (not limited)")}
+          </li>
+          <li>
+            <strong>States:</strong>{" "}
+            {activeFilters.state.length
+              ? activeFilters.state
+                  .map(
+                    (fips) =>
+                      STATES.find((state) => state.fips === fips)?.name || fips
+                  )
+                  .join(", ")
+              : "Whole United States"}
           </li>
           <li>
             <strong>Theme (browse / whole-theme fallback):</strong>{" "}
