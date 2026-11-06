@@ -1,9 +1,16 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import styles from "../../styles/Docs.module.css";
 import csvDownloads from "../../meta/csvDownloads.json";
 import metadataVariables from "../../meta/metadataVariables.json";
 
 const SCALES = ["State", "County", "Tract", "ZCTA"];
+
+const SCALE_CSV_KEY = {
+  State: "state",
+  County: "county",
+  Tract: "tract",
+  ZCTA: "zcta",
+};
 
 const STATES = [
   ["01", "AL", "Alabama"],
@@ -62,14 +69,6 @@ const STATES = [
   .sort((a, b) => a.name.localeCompare(b.name));
 
 function buildFilterOptions() {
-  const years = [
-    ...new Set(
-      Object.values(csvDownloads)
-        .flat()
-        .map((row) => String(row.year))
-    ),
-  ].sort((a, b) => Number(a) - Number(b));
-
   const themes = [
     ...new Set(
       Object.values(metadataVariables)
@@ -93,7 +92,27 @@ function buildFilterOptions() {
   }
   variables.sort((a, b) => a.title.localeCompare(b.title));
 
-  return { years, themes, variables };
+  return { themes, variables };
+}
+
+function catalogYearsForScale(scale) {
+  const key = SCALE_CSV_KEY[scale];
+  const rows = key ? csvDownloads[key] || [] : Object.values(csvDownloads).flat();
+  return new Set(rows.map((row) => String(row.year)));
+}
+
+function yearsOnVariable(variable, scale) {
+  if (Array.isArray(variable.availability) && variable.availability.length) {
+    return variable.availability
+      .map((item) => {
+        const match = /^(\d{4})\s+(.+)$/.exec(String(item));
+        return match ? { year: match[1], scale: match[2] } : null;
+      })
+      .filter((item) => item && (!scale || item.scale === scale))
+      .map((item) => item.year);
+  }
+  if (scale && !(variable.geographies || []).includes(scale)) return [];
+  return (variable.years || []).map(String);
 }
 
 function toggleValue(list, value) {
@@ -145,7 +164,7 @@ function getQueryMode(activeFilters) {
 }
 
 export default function InteractiveDownloadFilters() {
-  const { years, themes, variables } = useMemo(buildFilterOptions, []);
+  const { themes, variables } = useMemo(buildFilterOptions, []);
   const variablesByName = useMemo(
     () => new Map(variables.map((variable) => [variable.name, variable])),
     [variables]
@@ -164,15 +183,49 @@ export default function InteractiveDownloadFilters() {
     message: "",
   });
 
+  const availableYears = useMemo(() => {
+    const scale = activeFilters.scale[0] || "";
+    const catalog = catalogYearsForScale(scale);
+    const picked = activeFilters.variable
+      .map((name) => variablesByName.get(name))
+      .filter(Boolean);
+    const pool = picked.length
+      ? picked
+      : activeFilters.theme.length
+        ? variables.filter((variable) => activeFilters.theme.includes(variable.theme))
+        : [];
+    let yearSet = catalog;
+    if (pool.length) {
+      const contentYears = new Set(
+        pool.flatMap((variable) => yearsOnVariable(variable, scale))
+      );
+      yearSet = new Set([...catalog].filter((year) => contentYears.has(year)));
+    }
+    return [...yearSet].sort((a, b) => Number(a) - Number(b));
+  }, [
+    activeFilters.scale,
+    activeFilters.theme,
+    activeFilters.variable,
+    variables,
+    variablesByName,
+  ]);
+
+  useEffect(() => {
+    setActiveFilters((prev) => {
+      if (!prev.year.length || availableYears.includes(prev.year[0])) return prev;
+      return { ...prev, year: [] };
+    });
+  }, [availableYears]);
+
   const handleFilter = (val, type) => {
     setActiveFilters((prev) => {
       const next = {
         ...prev,
         [type]:
-          type === "scale"
-            ? prev.scale[0] === val
-              ? []
-              : [val]
+          type === "scale" || type === "year"
+            ? val
+              ? [val]
+              : []
             : toggleValue(prev[type], val),
       };
 
@@ -266,7 +319,7 @@ export default function InteractiveDownloadFilters() {
     (activeFilters.variable.length > 0 || activeFilters.theme.length > 0);
 
   const downloadHint = !canDownload
-    ? "To download: select exactly one year, one scale, and either a theme or specific variables."
+    ? "To download: select one scale, either a theme or specific variables, and one year."
     : "";
 
   const queryMode = getQueryMode(activeFilters);
@@ -331,46 +384,27 @@ export default function InteractiveDownloadFilters() {
   return (
     <div>
       <p>
-        Choose when and where first, then decide <em>which</em> variables.
-        Download runs a constrained BigQuery query through the OEPS backend
-        (no free-form SQL).
+        Choose a scale and the variables first. The year list then shows only
+        years that exist for that selection. Download runs a constrained
+        BigQuery query through the OEPS backend (no free-form SQL).
       </p>
 
-      <h3 className={styles.filterSectionTitle}>1. When &amp; where</h3>
-      <h4>Year</h4>
-      <div className={styles.filterRow}>
-        {years.map((year) => (
-          <button
-            key={year}
-            type="button"
-            onClick={() => handleFilter(year, "year")}
-            className={`${styles.filterButton} ${
-              activeFilters.year.includes(year) ? styles.activeDownload : ""
-            }`}
-            aria-pressed={activeFilters.year.includes(year)}
-          >
-            {year}
-          </button>
-        ))}
-      </div>
-
-      <h4>Spatial scale</h4>
-      <p className={styles.selectionHint}>Choose one. Selecting another replaces the current scale.</p>
-      <div className={styles.filterRow}>
+      <h3 className={styles.filterSectionTitle}>1. Where</h3>
+      <h4 id="download-scale-label">Spatial scale</h4>
+      <select
+        id="download-scale"
+        aria-labelledby="download-scale-label"
+        className={styles.filterSelect}
+        value={activeFilters.scale[0] || ""}
+        onChange={(event) => handleFilter(event.target.value, "scale")}
+      >
+        <option value="">Select a scale</option>
         {SCALES.map((scale) => (
-          <button
-            key={scale}
-            type="button"
-            onClick={() => handleFilter(scale, "scale")}
-            className={`${styles.filterButton} ${
-              activeFilters.scale.includes(scale) ? styles.activeDownload : ""
-            }`}
-            aria-pressed={activeFilters.scale.includes(scale)}
-          >
+          <option key={scale} value={scale}>
             {scale}
-          </button>
+          </option>
         ))}
-      </div>
+      </select>
 
       <h4>State</h4>
       <p className={styles.selectionHint}>
@@ -520,16 +554,32 @@ export default function InteractiveDownloadFilters() {
         </div>
       </section>
 
+      <h3 className={styles.filterSectionTitle}>3. When</h3>
+      <h4 id="download-year-label">Year</h4>
+      <p className={styles.selectionHint}>
+        Only years with data for the current scale and variables are listed.
+      </p>
+      <select
+        id="download-year"
+        aria-labelledby="download-year-label"
+        className={styles.filterSelect}
+        value={activeFilters.year[0] || ""}
+        onChange={(event) => handleFilter(event.target.value, "year")}
+      >
+        <option value="">Select a year</option>
+        {availableYears.map((year) => (
+          <option key={year} value={year}>
+            {year}
+          </option>
+        ))}
+      </select>
+
       <div className={styles.selectionSummary} aria-live="polite">
         <h4>Current selection</h4>
         <ul>
           <li>
-            <strong>Years:</strong>{" "}
-            {formatList(activeFilters.year, "any (not limited)")}
-          </li>
-          <li>
-            <strong>Scales:</strong>{" "}
-            {formatList(activeFilters.scale, "any (not limited)")}
+            <strong>Spatial scale:</strong>{" "}
+            {formatList(activeFilters.scale, "none selected")}
           </li>
           <li>
             <strong>States:</strong>{" "}
@@ -549,6 +599,10 @@ export default function InteractiveDownloadFilters() {
           <li>
             <strong>Variables (precise columns — win if any):</strong>{" "}
             {formatVariableSummary(activeFilters.variable, variablesByName)}
+          </li>
+          <li>
+            <strong>Year:</strong>{" "}
+            {formatList(activeFilters.year, "none selected")}
           </li>
         </ul>
         <p className={styles.selectionHint}>

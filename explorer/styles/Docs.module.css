@@ -251,6 +251,22 @@
     margin-bottom: 0.75em;
 }
 
+.filterSelect {
+    display: block;
+    margin: 0.25em 0 0.75em;
+    min-width: 12rem;
+    padding: 0.45em 0.65em;
+    font-size: 1.125rem;
+    border: 1px solid var(--medium-gray);
+    border-radius: 0.35em;
+    background: white;
+    color: black;
+}
+
+.filterSelect option {
+    font-size: 1.125rem;
+}
+
 .filterSectionTitle {
     margin: 1.5em 0 0.5em;
     font-size: 1.15em;
