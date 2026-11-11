@@ -16,6 +16,12 @@ from google.api_core.exceptions import NotFound
 from google.cloud import bigquery
 
 from oeps.clients.bigquery import get_client
+from oeps.clients.state_filter import (
+    ZCTA_VINTAGE_BY_GEODATA,
+    allowlisted_state_fips,
+    state_names,
+    zcta_codes_for_states,
+)
 from oeps.config import REGISTRY_DIR
 from oeps.handlers import Registry
 
@@ -89,6 +95,7 @@ class DownloadPlan:
     variable_names: list[str]
     tables: dict[str, list[str]]  # table_name -> columns (excluding HEROP_ID)
     sql: str
+    states: list[str] = field(default_factory=list)
     notes: list[str] = field(default_factory=list)
 
 
@@ -201,6 +208,7 @@ def build_download_plan(
     scales: list[str],
     themes: list[str] | None = None,
     variables: list[str] | None = None,
+    states: list[str] | None = None,
     registry: Registry | None = None,
     project_id: str | None = None,
 ) -> DownloadPlan:
@@ -285,19 +293,45 @@ def build_download_plan(
     else:
         notes.append("Mode: whole theme(s) expanded to variables available for this year/scale.")
 
+    selected_states = allowlisted_state_fips(states)
+    zcta_ids: list[str] = []
+    if selected_states and scale == "ZCTA":
+        vintages = []
+        for table_name in tables:
+            geo = registry.table_sources[table_name].geodata_source
+            vintage = ZCTA_VINTAGE_BY_GEODATA.get(geo, "2010")
+            if vintage not in vintages:
+                vintages.append(vintage)
+        zcta_ids = zcta_codes_for_states(selected_states, vintages)
+        if not zcta_ids:
+            raise InteractiveDownloadError(
+                "No ZCTAs match the selected states, so no file was created."
+            )
+    if selected_states:
+        notes.append(f"States: {', '.join(state_names(selected_states))}.")
+    else:
+        notes.append("States: whole United States.")
+
     project_id = project_id or os.getenv("BQ_PROJECT_ID")
     if not project_id:
         raise InteractiveDownloadError(
             "BQ_PROJECT_ID is not configured on the server.",
             status_code=503,
         )
-    sql = _build_join_sql(project_id, tables)
+    sql = _build_join_sql(
+        project_id,
+        tables,
+        scale=scale,
+        state_fips=selected_states,
+        zcta_ids=zcta_ids,
+    )
     return DownloadPlan(
         years=[year],
         scales=[scale],
         variable_names=available,
         tables=tables,
         sql=sql,
+        states=selected_states,
         notes=notes,
     )
 
@@ -312,20 +346,56 @@ def _geography_code_select(herop_expr: str, table_names: list[str]) -> str:
     return f"SUBSTR({herop_expr}, 6) AS {_quote_column(column)}"
 
 
-def _build_join_sql(project_id: str, tables: dict[str, list[str]]) -> str:
+def _sql_literal(value: str) -> str:
+    if not re.fullmatch(r"[0-9]{3}US[0-9]+", value):
+        raise InteractiveDownloadError("Invalid geography id.")
+    return f"'{value}'"
+
+
+def _state_where(scale: str, herop_expr: str, state_fips: list[str], zcta_ids: list[str]) -> str | None:
+    """Allowlisted state limit. Empty means the whole United States."""
+    if not state_fips:
+        return None
+    if scale == "ZCTA":
+        literals = ", ".join(_sql_literal(f"860US{code}") for code in zcta_ids)
+        return f"{herop_expr} IN ({literals})"
+    summary = {"State": "040", "County": "050", "Tract": "140"}[scale]
+    if scale == "State":
+        literals = ", ".join(_sql_literal(f"{summary}US{fips}") for fips in state_fips)
+        return f"{herop_expr} IN ({literals})"
+    parts = [
+        f"STARTS_WITH({herop_expr}, '{summary}US{fips}')" for fips in state_fips
+    ]
+    return "(" + " OR ".join(parts) + ")"
+
+
+def _build_join_sql(
+    project_id: str,
+    tables: dict[str, list[str]],
+    scale: str | None = None,
+    state_fips: list[str] | None = None,
+    zcta_ids: list[str] | None = None,
+) -> str:
     """FULL OUTER JOIN tables on HEROP_ID; select HEROP_ID, its FIPS or ZIP, and requested columns."""
     table_names = sorted(tables.keys())
+    state_fips = state_fips or []
+    zcta_ids = zcta_ids or []
     if len(table_names) == 1:
         t = table_names[0]
+        herop_expr = _quote_column("HEROP_ID")
         cols = [
-            _quote_column("HEROP_ID"),
-            _geography_code_select(_quote_column("HEROP_ID"), table_names),
+            herop_expr,
+            _geography_code_select(herop_expr, table_names),
         ] + [_quote_column(c) for c in sorted(tables[t])]
-        return (
-            f"SELECT {', '.join(cols)}\n"
-            f"FROM {_quote_table(project_id, t)}\n"
-            f"LIMIT {MAX_ROWS + 1}"
-        )
+        lines = [
+            f"SELECT {', '.join(cols)}",
+            f"FROM {_quote_table(project_id, t)}",
+        ]
+        where = _state_where(scale or "", herop_expr, state_fips, zcta_ids) if scale else None
+        if where:
+            lines.append(f"WHERE {where}")
+        lines.append(f"LIMIT {MAX_ROWS + 1}")
+        return "\n".join(lines)
 
     aliases = {name: f"t{i}" for i, name in enumerate(table_names)}
     first = table_names[0]
@@ -353,6 +423,9 @@ def _build_join_sql(project_id: str, tables: dict[str, list[str]]) -> str:
             f"FULL OUTER JOIN {_quote_table(project_id, tname)} AS {alias} "
             f"ON {first_alias}.HEROP_ID = {alias}.HEROP_ID"
         )
+    where = _state_where(scale or "", herop_expr, state_fips, zcta_ids) if scale else None
+    if where:
+        sql_parts.append(f"WHERE {where}")
     sql_parts.append(f"LIMIT {MAX_ROWS + 1}")
     return "\n".join(sql_parts)
 

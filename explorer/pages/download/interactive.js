@@ -20,13 +20,13 @@ export default function InteractiveDownload() {
         <h1 className={styles.title}>Interactive Download</h1>
         <Gutter em={1} />
         <p>
-          Build a filtered OEPS subset by year, spatial scale, and theme or
-          variables, then download a zip containing one CSV from a constrained
+          Build a filtered OEPS subset by spatial scale, theme or variables,
+          and year, then download a zip containing one CSV from a constrained
           BigQuery query. For full packages and individual CSVs, use{" "}
           <Link href="/download">Data Access</Link>.
         </p>
         <Gutter em={1} />
-        <h2>Filter by year, scale, and theme</h2>
+        <h2>Filter by scale, variables, and year</h2>
         <InteractiveDownloadFilters />
       </main>
       <Footer />

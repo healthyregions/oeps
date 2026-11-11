@@ -312,6 +312,95 @@ def test_csv_writes_fips_with_leading_zero(monkeypatch):
     assert "050US01001,01001,34898" in csv_text
 
 
+def test_no_state_keeps_a_national_query(registry, monkeypatch):
+    monkeypatch.setenv("BQ_PROJECT_ID", "oeps-test")
+    plan = build_download_plan(
+        years=["2023"],
+        scales=["County"],
+        variables=["MedInc"],
+        states=[],
+        registry=registry,
+        project_id="oeps-test",
+    )
+    assert plan.states == []
+    assert "WHERE" not in plan.sql
+    assert "States: whole United States." in plan.notes
+    assert "LIMIT 50001" in plan.sql
+
+
+def test_county_state_filter_uses_fips_prefix(registry, monkeypatch):
+    monkeypatch.setenv("BQ_PROJECT_ID", "oeps-test")
+    plan = build_download_plan(
+        years=["2023"],
+        scales=["County"],
+        variables=["MedInc"],
+        states=["17", "99", "17'; DROP TABLE"],
+        registry=registry,
+        project_id="oeps-test",
+    )
+    assert plan.states == ["17"]
+    assert "STARTS_WITH(`HEROP_ID`, '050US17')" in plan.sql
+    assert "DROP" not in plan.sql
+    assert "99" not in plan.sql
+
+
+def test_two_states_are_combined(registry, monkeypatch):
+    monkeypatch.setenv("BQ_PROJECT_ID", "oeps-test")
+    plan = build_download_plan(
+        years=["2023"],
+        scales=["County"],
+        variables=["MedInc"],
+        states=["17", "06"],
+        registry=registry,
+        project_id="oeps-test",
+    )
+    assert "050US17" in plan.sql
+    assert "050US06" in plan.sql
+    assert " OR " in plan.sql
+
+
+def test_state_scale_matches_full_herop_id(registry, monkeypatch):
+    monkeypatch.setenv("BQ_PROJECT_ID", "oeps-test")
+    plan = build_download_plan(
+        years=["2018"],
+        scales=["State"],
+        variables=["MedInc"],
+        states=["17"],
+        registry=registry,
+        project_id="oeps-test",
+    )
+    assert "IN ('040US17')" in plan.sql
+    assert "STARTS_WITH" not in plan.sql
+
+
+def test_tract_without_a_state_has_no_state_filter(registry, monkeypatch):
+    monkeypatch.setenv("BQ_PROJECT_ID", "oeps-test")
+    plan = build_download_plan(
+        years=["2020"],
+        scales=["Tract"],
+        variables=["MedInc"],
+        registry=registry,
+        project_id="oeps-test",
+    )
+    assert "WHERE" not in plan.sql
+    assert "LIMIT 50001" in plan.sql
+
+
+def test_zcta_state_filter_uses_crosswalk_not_a_prefix(registry, monkeypatch):
+    monkeypatch.setenv("BQ_PROJECT_ID", "oeps-test")
+    plan = build_download_plan(
+        years=["2023"],
+        scales=["ZCTA"],
+        variables=["MedInc"],
+        states=["17"],
+        registry=registry,
+        project_id="oeps-test",
+    )
+    assert "'860US61801'" in plan.sql
+    assert "STARTS_WITH(`HEROP_ID`, '860US17')" not in plan.sql
+    assert "States: Illinois." in plan.notes
+
+
 def test_csv_writes_zcta_zip(monkeypatch):
     frame = pd.DataFrame({"HEROP_ID": ["860US00601"], "MedInc": [1]})
     monkeypatch.setattr(
