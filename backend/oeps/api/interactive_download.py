@@ -7,6 +7,7 @@ from oeps.clients.interactive_download import (
     build_download_plan,
     csv_text_as_zip,
     run_download_query,
+    subset_basename,
 )
 
 bp = Blueprint("interactive_download", __name__)
@@ -43,17 +44,16 @@ def interactive_download():
                     "scales": plan.scales,
                     "states": plan.states,
                     "variables": plan.variable_names,
-                    "tables": plan.tables,
+                    "tables": plan.tables_for_json(),
                     "sql": plan.sql,
                     "notes": plan.notes,
                 }
             )
 
         csv_text, row_count = run_download_query(plan)
-        year = plan.years[0]
-        scale = plan.scales[0].lower()
-        csv_name = f"oeps-{scale}-{year}-subset.csv"
-        zip_name = f"oeps-{scale}-{year}-subset.zip"
+        base = subset_basename(plan.scales[0], plan.years)
+        csv_name = f"{base}.csv"
+        zip_name = f"{base}.zip"
         return Response(
             csv_text_as_zip(csv_text, csv_name),
             mimetype="application/zip",

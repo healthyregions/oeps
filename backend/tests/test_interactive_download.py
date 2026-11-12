@@ -11,13 +11,16 @@ from google.api_core.exceptions import NotFound
 from oeps.clients.interactive_download import (
     MAX_ROWS,
     DownloadPlan,
+    ExportColumn,
     InteractiveDownloadError,
     _build_join_sql,
     build_download_plan,
     code_from_herop_id,
     csv_text_as_zip,
+    export_column_name,
     row_limit_error_message,
     run_download_query,
+    subset_basename,
 )
 from oeps.config import REGISTRY_DIR
 from oeps.handlers import Registry
@@ -41,24 +44,51 @@ def test_plan_single_variable_single_table(registry, monkeypatch):
     assert plan.scales == ["County"]
     assert plan.variable_names == ["MedInc"]
     assert "county-2023" in plan.tables
-    assert "MedInc" in plan.tables["county-2023"]
+    exports = [col.export for col in plan.tables["county-2023"]]
+    assert exports == ["MedInc23"]
     assert "HEROP_ID" in plan.sql
     assert "`oeps-test.tabular.county-2023`" in plan.sql
-    assert "MedInc" in plan.sql
+    assert "`MedInc` AS `MedInc23`" in plan.sql
     # No free-form injection surface: only allowlisted identifiers
     assert ";" not in plan.sql
 
 
-def test_rejects_multiple_years(registry, monkeypatch):
+def test_allows_multiple_years_with_suffixes(registry, monkeypatch):
     monkeypatch.setenv("BQ_PROJECT_ID", "oeps-test")
-    with pytest.raises(InteractiveDownloadError, match="exactly one year"):
-        build_download_plan(
-            years=["2022", "2023"],
-            scales=["County"],
-            variables=["MedInc"],
-            registry=registry,
-            project_id="oeps-test",
-        )
+    plan = build_download_plan(
+        years=["2018", "2023"],
+        scales=["County"],
+        variables=["MedInc"],
+        registry=registry,
+        project_id="oeps-test",
+    )
+    assert plan.years == ["2018", "2023"]
+    assert "county-2018" in plan.tables
+    assert "county-2023" in plan.tables
+    assert [col.export for col in plan.tables["county-2018"]] == ["MedInc18"]
+    assert [col.export for col in plan.tables["county-2023"]] == ["MedInc23"]
+    assert "`MedInc` AS `MedInc18`" in plan.sql
+    assert "`MedInc` AS `MedInc23`" in plan.sql
+    assert "JOIN" in plan.sql
+
+
+def test_empty_years_uses_all_available_table_years(registry, monkeypatch):
+    monkeypatch.setenv("BQ_PROJECT_ID", "oeps-test")
+    plan = build_download_plan(
+        years=[],
+        scales=["County"],
+        variables=["MedInc"],
+        registry=registry,
+        project_id="oeps-test",
+    )
+    assert plan.years == ["2010", "2018", "2020", "2023"]
+    assert {col.export for cols in plan.tables.values() for col in cols} == {
+        "MedInc10",
+        "MedInc18",
+        "MedInc20",
+        "MedInc23",
+    }
+    assert any("all available" in note for note in plan.notes)
 
 
 def test_rejects_unknown_variable(registry, monkeypatch):
@@ -128,7 +158,11 @@ def _plan():
         years=["2020"],
         scales=["Tract"],
         variable_names=["MedInc"],
-        tables={"tract-2020": ["MedInc"]},
+        tables={
+            "tract-2020": [
+                ExportColumn(source="MedInc", export="MedInc20", year="2020")
+            ]
+        },
         sql="SELECT 1",
     )
 
@@ -163,7 +197,11 @@ def test_missing_table_returns_clear_error_without_raw_details(monkeypatch):
         years=["2023"],
         scales=["County"],
         variable_names=["MedInc"],
-        tables={"county-2023": ["MedInc"]},
+        tables={
+            "county-2023": [
+                ExportColumn(source="MedInc", export="MedInc23", year="2023")
+            ]
+        },
         sql="SELECT 1",
     )
     with pytest.raises(InteractiveDownloadError, match="no file was created") as exc:
@@ -258,20 +296,46 @@ def test_over_row_limit_route_returns_json_error(monkeypatch):
 
 
 def test_county_sql_adds_fips_beside_herop_id():
-    sql = _build_join_sql("oeps-test", {"county-2023": ["MedInc"]})
-    assert sql.startswith("SELECT `HEROP_ID`, SUBSTR(`HEROP_ID`, 6) AS `FIPS`, `MedInc`")
+    sql = _build_join_sql(
+        "oeps-test",
+        {
+            "county-2023": [
+                ExportColumn(source="MedInc", export="MedInc23", year="2023")
+            ]
+        },
+    )
+    assert sql.startswith(
+        "SELECT `HEROP_ID`, SUBSTR(`HEROP_ID`, 6) AS `FIPS`, `MedInc` AS `MedInc23`"
+    )
     assert "ZCTA5" not in sql
 
 
 def test_zcta_sql_adds_zip_column_instead_of_fips():
-    sql = _build_join_sql("oeps-test", {"zcta-2023": ["MedInc"]})
+    sql = _build_join_sql(
+        "oeps-test",
+        {
+            "zcta-2023": [
+                ExportColumn(source="MedInc", export="MedInc23", year="2023")
+            ]
+        },
+    )
     assert "SUBSTR(`HEROP_ID`, 6) AS `ZCTA5`" in sql
     assert "`FIPS`" not in sql
 
 
 def test_state_and_tract_sql_add_fips():
-    state_sql = _build_join_sql("oeps-test", {"state-2023": ["Pop"]})
-    tract_sql = _build_join_sql("oeps-test", {"tract-2020": ["MedInc"]})
+    state_sql = _build_join_sql(
+        "oeps-test",
+        {"state-2023": [ExportColumn(source="Pop", export="Pop23", year="2023")]},
+    )
+    tract_sql = _build_join_sql(
+        "oeps-test",
+        {
+            "tract-2020": [
+                ExportColumn(source="MedInc", export="MedInc20", year="2020")
+            ]
+        },
+    )
     assert "AS `FIPS`" in state_sql
     assert "AS `FIPS`" in tract_sql
 
@@ -279,11 +343,25 @@ def test_state_and_tract_sql_add_fips():
 def test_joined_tables_add_one_geography_code():
     sql = _build_join_sql(
         "oeps-test",
-        {"county-2023": ["MedInc"], "county-2018": ["Pop"]},
+        {
+            "county-2023": [
+                ExportColumn(source="MedInc", export="MedInc23", year="2023")
+            ],
+            "county-2018": [ExportColumn(source="Pop", export="Pop18", year="2018")],
+        },
     )
     assert sql.count("AS `FIPS`") == 1
     assert "SUBSTR(COALESCE(t0.HEROP_ID, t1.HEROP_ID), 6) AS `FIPS`" in sql
     assert "JOIN" in sql
+    assert "`MedInc` AS `MedInc23`" in sql
+    assert "`Pop` AS `Pop18`" in sql
+
+
+def test_export_column_name_and_subset_basename():
+    assert export_column_name("MedInc", "2023") == "MedInc23"
+    assert subset_basename("County", ["2023"]) == "oeps-county-2023-subset"
+    assert subset_basename("County", ["2018", "2023"]) == "oeps-county-2018-2023-subset"
+    assert subset_basename("ZCTA", []) == "oeps-zcta-subset"
 
 
 def test_code_from_herop_id_keeps_leading_zero():
@@ -303,7 +381,11 @@ def test_csv_writes_fips_with_leading_zero(monkeypatch):
         years=["2023"],
         scales=["County"],
         variable_names=["MedInc"],
-        tables={"county-2023": ["MedInc"]},
+        tables={
+            "county-2023": [
+                ExportColumn(source="MedInc", export="MedInc23", year="2023")
+            ]
+        },
         sql="SELECT 1",
     )
     csv_text, row_count = run_download_query(plan)
@@ -411,7 +493,11 @@ def test_csv_writes_zcta_zip(monkeypatch):
         years=["2023"],
         scales=["ZCTA"],
         variable_names=["MedInc"],
-        tables={"zcta-2023": ["MedInc"]},
+        tables={
+            "zcta-2023": [
+                ExportColumn(source="MedInc", export="MedInc23", year="2023")
+            ]
+        },
         sql="SELECT 1",
     )
     csv_text, _row_count = run_download_query(plan)

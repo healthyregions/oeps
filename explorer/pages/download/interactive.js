@@ -21,8 +21,9 @@ export default function InteractiveDownload() {
         <Gutter em={1} />
         <p>
           Build a filtered OEPS subset by spatial scale, theme or variables,
-          and year, then download a zip containing one CSV from a constrained
-          BigQuery query. For full packages and individual CSVs, use{" "}
+          and optional years, then download a zip containing one CSV from a
+          constrained BigQuery query. Variable columns are labeled with a
+          2-digit table-year suffix. For full packages and individual CSVs, use{" "}
           <Link href="/download">Data Access</Link>.
         </p>
         <Gutter em={1} />

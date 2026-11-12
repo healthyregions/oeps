@@ -212,8 +212,9 @@ export default function InteractiveDownloadFilters() {
 
   useEffect(() => {
     setActiveFilters((prev) => {
-      if (!prev.year.length || availableYears.includes(prev.year[0])) return prev;
-      return { ...prev, year: [] };
+      const nextYears = prev.year.filter((year) => availableYears.includes(year));
+      if (nextYears.length === prev.year.length) return prev;
+      return { ...prev, year: nextYears };
     });
   }, [availableYears]);
 
@@ -222,7 +223,7 @@ export default function InteractiveDownloadFilters() {
       const next = {
         ...prev,
         [type]:
-          type === "scale" || type === "year"
+          type === "scale"
             ? val
               ? [val]
               : []
@@ -314,12 +315,11 @@ export default function InteractiveDownloadFilters() {
     activeFilters.variable.length > 0;
 
   const canDownload =
-    activeFilters.year.length === 1 &&
     activeFilters.scale.length === 1 &&
     (activeFilters.variable.length > 0 || activeFilters.theme.length > 0);
 
   const downloadHint = !canDownload
-    ? "To download: select one scale, either a theme or specific variables, and one year."
+    ? "To download: select one scale and either a theme or specific variables. Year is optional."
     : "";
 
   const queryMode = getQueryMode(activeFilters);
@@ -384,8 +384,11 @@ export default function InteractiveDownloadFilters() {
   return (
     <div>
       <p>
-        Choose a scale and the variables first. The year list then shows only
-        years that exist for that selection. Download runs a constrained
+        Choose a scale and the variables first. Years are optional: leave them
+        empty to include every available table year for that selection, or
+        narrow to one or more years. Variable columns in the CSV use a 2-digit
+        year suffix (for example <code>MedInc23</code>). Missing years are
+        omitted; no new averages are computed. Download runs a constrained
         BigQuery query through the OEPS backend (no free-form SQL).
       </p>
 
@@ -557,22 +560,35 @@ export default function InteractiveDownloadFilters() {
       <h3 className={styles.filterSectionTitle}>3. When</h3>
       <h4 id="download-year-label">Year</h4>
       <p className={styles.selectionHint}>
-        Only years with data for the current scale and variables are listed.
+        Optional. Only years with data for the current scale and variables are
+        listed. Nothing selected means every available year. Selecting years
+        limits the download to those years only. You can select more than one.
       </p>
-      <select
-        id="download-year"
+      <div
+        className={styles.filterRow}
+        role="group"
         aria-labelledby="download-year-label"
-        className={styles.filterSelect}
-        value={activeFilters.year[0] || ""}
-        onChange={(event) => handleFilter(event.target.value, "year")}
       >
-        <option value="">Select a year</option>
-        {availableYears.map((year) => (
-          <option key={year} value={year}>
-            {year}
-          </option>
-        ))}
-      </select>
+        {availableYears.length === 0 ? (
+          <p className={styles.selectionHint}>
+            No years match the current scale and variables.
+          </p>
+        ) : (
+          availableYears.map((year) => (
+            <button
+              key={year}
+              type="button"
+              onClick={() => handleFilter(year, "year")}
+              className={`${styles.filterButton} ${
+                activeFilters.year.includes(year) ? styles.activeDownload : ""
+              }`}
+              aria-pressed={activeFilters.year.includes(year)}
+            >
+              {year}
+            </button>
+          ))
+        )}
+      </div>
 
       <div className={styles.selectionSummary} aria-live="polite">
         <h4>Current selection</h4>
@@ -601,8 +617,13 @@ export default function InteractiveDownloadFilters() {
             {formatVariableSummary(activeFilters.variable, variablesByName)}
           </li>
           <li>
-            <strong>Year:</strong>{" "}
-            {formatList(activeFilters.year, "none selected")}
+            <strong>Years:</strong>{" "}
+            {formatList(
+              activeFilters.year,
+              availableYears.length
+                ? `all available (${availableYears.join(", ")})`
+                : "none available"
+            )}
           </li>
         </ul>
         <p className={styles.selectionHint}>
