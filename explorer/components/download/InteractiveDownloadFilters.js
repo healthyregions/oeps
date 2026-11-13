@@ -1,16 +1,31 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import styles from "../../styles/Docs.module.css";
-import csvDownloads from "../../meta/csvDownloads.json";
 import metadataVariables from "../../meta/metadataVariables.json";
 
 const SCALES = ["State", "County", "Tract", "ZCTA"];
 
-const SCALE_CSV_KEY = {
-  State: "state",
-  County: "county",
-  Tract: "tract",
-  ZCTA: "zcta",
-};
+// Eras: Historic + Data Suite (Marynia). Suite eras include a few
+// out-of-zip years (2013 with DSuite2018, 2024 with DSuite2023) for now.
+const DATA_PACKAGES = [
+  {
+    id: "Historic",
+    label: "Historic (1980–2000)",
+    yearMin: 1980,
+    yearMax: 2000,
+  },
+  {
+    id: "DSuite2018",
+    label: "2013–2018 (DSuite2018)",
+    yearMin: 2010,
+    yearMax: 2021,
+  },
+  {
+    id: "DSuite2023",
+    label: "2019–2024 (DSuite2023)",
+    yearMin: 2019,
+    yearMax: 2025,
+  },
+];
 
 const STATES = [
   ["01", "AL", "Alabama"],
@@ -95,24 +110,20 @@ function buildFilterOptions() {
   return { themes, variables };
 }
 
-function catalogYearsForScale(scale) {
-  const key = SCALE_CSV_KEY[scale];
-  const rows = key ? csvDownloads[key] || [] : Object.values(csvDownloads).flat();
-  return new Set(rows.map((row) => String(row.year)));
+function variableMatchesPackages(variable, packageIds) {
+  if (!packageIds.length) return true;
+  const years = (variable.years || []).map(Number);
+  return packageIds.some((id) => {
+    const pkg = DATA_PACKAGES.find((item) => item.id === id);
+    if (!pkg) return false;
+    return years.some((year) => year >= pkg.yearMin && year <= pkg.yearMax);
+  });
 }
 
-function yearsOnVariable(variable, scale) {
-  if (Array.isArray(variable.availability) && variable.availability.length) {
-    return variable.availability
-      .map((item) => {
-        const match = /^(\d{4})\s+(.+)$/.exec(String(item));
-        return match ? { year: match[1], scale: match[2] } : null;
-      })
-      .filter((item) => item && (!scale || item.scale === scale))
-      .map((item) => item.year);
-  }
-  if (scale && !(variable.geographies || []).includes(scale)) return [];
-  return (variable.years || []).map(String);
+function packageLabels(packageIds) {
+  return packageIds.map(
+    (id) => DATA_PACKAGES.find((item) => item.id === id)?.label || id
+  );
 }
 
 function toggleValue(list, value) {
@@ -171,7 +182,7 @@ export default function InteractiveDownloadFilters() {
   );
 
   const [activeFilters, setActiveFilters] = useState({
-    year: [],
+    package: [],
     scale: [],
     state: [],
     theme: [],
@@ -183,64 +194,27 @@ export default function InteractiveDownloadFilters() {
     message: "",
   });
 
-  const availableYears = useMemo(() => {
-    const scale = activeFilters.scale[0] || "";
-    const catalog = catalogYearsForScale(scale);
-    const picked = activeFilters.variable
-      .map((name) => variablesByName.get(name))
-      .filter(Boolean);
-    const pool = picked.length
-      ? picked
-      : activeFilters.theme.length
-        ? variables.filter((variable) => activeFilters.theme.includes(variable.theme))
-        : [];
-    let yearSet = catalog;
-    if (pool.length) {
-      const contentYears = new Set(
-        pool.flatMap((variable) => yearsOnVariable(variable, scale))
-      );
-      yearSet = new Set([...catalog].filter((year) => contentYears.has(year)));
-    }
-    return [...yearSet].sort((a, b) => Number(a) - Number(b));
-  }, [
-    activeFilters.scale,
-    activeFilters.theme,
-    activeFilters.variable,
-    variables,
-    variablesByName,
-  ]);
-
-  useEffect(() => {
-    setActiveFilters((prev) => {
-      if (!prev.year.length || availableYears.includes(prev.year[0])) return prev;
-      return { ...prev, year: [] };
-    });
-  }, [availableYears]);
-
   const handleFilter = (val, type) => {
     setActiveFilters((prev) => {
       const next = {
         ...prev,
         [type]:
-          type === "scale" || type === "year"
+          type === "scale" || type === "package"
             ? val
               ? [val]
               : []
             : toggleValue(prev[type], val),
       };
 
-      // Drop variable picks that are impossible for theme / year / scale.
-      if (type === "theme" || type === "year" || type === "scale") {
+      // Drop variable picks that are impossible for theme / package / scale.
+      if (type === "theme" || type === "package" || type === "scale") {
         next.variable = next.variable.filter((name) => {
           const variable = variablesByName.get(name);
           if (!variable) return false;
           if (next.theme.length && !next.theme.includes(variable.theme)) {
             return false;
           }
-          if (
-            next.year.length &&
-            !next.year.some((year) => variable.years.includes(year))
-          ) {
+          if (!variableMatchesPackages(variable, next.package)) {
             return false;
           }
           if (
@@ -259,7 +233,13 @@ export default function InteractiveDownloadFilters() {
   };
 
   const clearFilters = () => {
-    setActiveFilters({ year: [], scale: [], state: [], theme: [], variable: [] });
+    setActiveFilters({
+      package: [],
+      scale: [],
+      state: [],
+      theme: [],
+      variable: [],
+    });
     setVariableQuery("");
     setDownloadState({ status: "idle", message: "" });
   };
@@ -275,10 +255,7 @@ export default function InteractiveDownloadFilters() {
         return false;
       }
 
-      if (
-        activeFilters.year.length &&
-        !activeFilters.year.some((year) => variable.years.includes(year))
-      ) {
+      if (!variableMatchesPackages(variable, activeFilters.package)) {
         return false;
       }
 
@@ -301,25 +278,25 @@ export default function InteractiveDownloadFilters() {
   }, [
     variables,
     activeFilters.theme,
-    activeFilters.year,
+    activeFilters.package,
     activeFilters.scale,
     variableQuery,
   ]);
 
   const hasSelection =
-    activeFilters.year.length > 0 ||
+    activeFilters.package.length > 0 ||
     activeFilters.scale.length > 0 ||
     activeFilters.state.length > 0 ||
     activeFilters.theme.length > 0 ||
     activeFilters.variable.length > 0;
 
   const canDownload =
-    activeFilters.year.length === 1 &&
+    activeFilters.package.length === 1 &&
     activeFilters.scale.length === 1 &&
     (activeFilters.variable.length > 0 || activeFilters.theme.length > 0);
 
   const downloadHint = !canDownload
-    ? "To download: select one scale, either a theme or specific variables, and one year."
+    ? "To download: select a package era, one scale, and either a theme or specific variables."
     : "";
 
   const queryMode = getQueryMode(activeFilters);
@@ -333,7 +310,7 @@ export default function InteractiveDownloadFilters() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          years: activeFilters.year,
+          packages: activeFilters.package,
           scales: activeFilters.scale,
           states: activeFilters.state,
           themes: activeFilters.theme,
@@ -384,12 +361,39 @@ export default function InteractiveDownloadFilters() {
   return (
     <div>
       <p>
-        Choose a scale and the variables first. The year list then shows only
-        years that exist for that selection. Download runs a constrained
-        BigQuery query through the OEPS backend (no free-form SQL).
+        Start with a year era (Historic, DSuite2018, or DSuite2023), then
+        choose scale and variables. Suite eras follow published package table
+        sources, plus a few nearby years (2013 / 2024) until packages are
+        cleaned up.
+        Variable columns in the CSV use a 2-digit table-year suffix (for example{" "}
+        <code>MedInc23</code>). Missing pairs are omitted; no new averages are
+        computed. Download runs a constrained BigQuery query through the OEPS
+        backend (no free-form SQL).
       </p>
 
-      <h3 className={styles.filterSectionTitle}>1. Where</h3>
+      <h3 className={styles.filterSectionTitle}>1. When</h3>
+      <h4 id="download-package-label">Data package era</h4>
+      <p className={styles.selectionHint}>
+        Required. Historic covers 1980–2000. Suite options follow the Data
+        Suite packages (with 2013 folded into DSuite2018 and 2024 into
+        DSuite2023 for now).
+      </p>
+      <select
+        id="download-package"
+        aria-labelledby="download-package-label"
+        className={styles.filterSelect}
+        value={activeFilters.package[0] || ""}
+        onChange={(event) => handleFilter(event.target.value, "package")}
+      >
+        <option value="">Select a package era</option>
+        {DATA_PACKAGES.map((pkg) => (
+          <option key={pkg.id} value={pkg.id}>
+            {pkg.label}
+          </option>
+        ))}
+      </select>
+
+      <h3 className={styles.filterSectionTitle}>2. Where</h3>
       <h4 id="download-scale-label">Spatial scale</h4>
       <select
         id="download-scale"
@@ -428,7 +432,7 @@ export default function InteractiveDownloadFilters() {
         ))}
       </div>
 
-      <h3 className={styles.filterSectionTitle}>2. Which variables</h3>
+      <h3 className={styles.filterSectionTitle}>3. Which variables</h3>
 
       <div className={styles.rulesCallout} role="note">
         <p className={styles.rulesCalloutTitle}>How theme and variables work together</p>
@@ -554,29 +558,13 @@ export default function InteractiveDownloadFilters() {
         </div>
       </section>
 
-      <h3 className={styles.filterSectionTitle}>3. When</h3>
-      <h4 id="download-year-label">Year</h4>
-      <p className={styles.selectionHint}>
-        Only years with data for the current scale and variables are listed.
-      </p>
-      <select
-        id="download-year"
-        aria-labelledby="download-year-label"
-        className={styles.filterSelect}
-        value={activeFilters.year[0] || ""}
-        onChange={(event) => handleFilter(event.target.value, "year")}
-      >
-        <option value="">Select a year</option>
-        {availableYears.map((year) => (
-          <option key={year} value={year}>
-            {year}
-          </option>
-        ))}
-      </select>
-
       <div className={styles.selectionSummary} aria-live="polite">
         <h4>Current selection</h4>
         <ul>
+          <li>
+            <strong>Data package era:</strong>{" "}
+            {formatList(packageLabels(activeFilters.package), "none selected")}
+          </li>
           <li>
             <strong>Spatial scale:</strong>{" "}
             {formatList(activeFilters.scale, "none selected")}
@@ -599,10 +587,6 @@ export default function InteractiveDownloadFilters() {
           <li>
             <strong>Variables (precise columns — win if any):</strong>{" "}
             {formatVariableSummary(activeFilters.variable, variablesByName)}
-          </li>
-          <li>
-            <strong>Year:</strong>{" "}
-            {formatList(activeFilters.year, "none selected")}
           </li>
         </ul>
         <p className={styles.selectionHint}>
