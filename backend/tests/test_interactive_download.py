@@ -72,23 +72,98 @@ def test_allows_multiple_years_with_suffixes(registry, monkeypatch):
     assert "JOIN" in plan.sql
 
 
-def test_empty_years_uses_all_available_table_years(registry, monkeypatch):
+def test_empty_packages_uses_all_eras(registry, monkeypatch):
     monkeypatch.setenv("BQ_PROJECT_ID", "oeps-test")
     plan = build_download_plan(
-        years=[],
+        packages=[],
         scales=["County"],
         variables=["MedInc"],
         registry=registry,
         project_id="oeps-test",
     )
-    assert plan.years == ["2010", "2018", "2020", "2023"]
-    assert {col.export for cols in plan.tables.values() for col in cols} == {
-        "MedInc10",
+    assert plan.packages == ["Historic", "DSuite2018", "DSuite2023"]
+    assert "2018" in plan.years
+    assert "2023" in plan.years
+    assert {col.export for cols in plan.tables.values() for col in cols} >= {
         "MedInc18",
-        "MedInc20",
         "MedInc23",
     }
-    assert any("all available" in note for note in plan.notes)
+    assert any("Data package eras" in note for note in plan.notes)
+
+
+def test_historic_era_uses_1980_2000_years(registry, monkeypatch):
+    monkeypatch.setenv("BQ_PROJECT_ID", "oeps-test")
+    plan = build_download_plan(
+        packages=["Historic"],
+        scales=["County"],
+        variables=["BlackP"],
+        registry=registry,
+        project_id="oeps-test",
+    )
+    assert plan.packages == ["Historic"]
+    assert plan.years == ["1980", "1990", "2000"]
+    assert "county-1980" in plan.tables
+    assert "BlackP80" in [col.export for col in plan.tables["county-1980"]]
+
+
+def test_dsuite2018_package_uses_package_rules_table(registry, monkeypatch):
+    monkeypatch.setenv("BQ_PROJECT_ID", "oeps-test")
+    plan = build_download_plan(
+        packages=["DSuite2018"],
+        scales=["Tract"],
+        variables=["MetCntDr30"],
+        registry=registry,
+        project_id="oeps-test",
+    )
+    assert plan.packages == ["DSuite2018"]
+    assert plan.years == ["2020"]
+    assert "tract-2020" in plan.tables
+    assert [col.export for col in plan.tables["tract-2020"]] == ["MetCntDr3020"]
+
+
+def test_dsuite2018_includes_extra_2013_year(registry, monkeypatch):
+    monkeypatch.setenv("BQ_PROJECT_ID", "oeps-test")
+    plan = build_download_plan(
+        packages=["DSuite2018"],
+        scales=["State"],
+        variables=["HcvD"],
+        registry=registry,
+        project_id="oeps-test",
+    )
+    assert plan.packages == ["DSuite2018"]
+    assert "2013" in plan.years
+    assert "state-2013" in plan.tables
+    assert "HcvD13" in [col.export for col in plan.tables["state-2013"]]
+
+
+def test_dsuite2023_includes_extra_2024_year(registry, monkeypatch):
+    monkeypatch.setenv("BQ_PROJECT_ID", "oeps-test")
+    plan = build_download_plan(
+        packages=["DSuite2023"],
+        scales=["County"],
+        variables=["TtlJlAdm"],
+        registry=registry,
+        project_id="oeps-test",
+    )
+    assert plan.packages == ["DSuite2023"]
+    assert "2024" in plan.years
+    assert "county-2024" in plan.tables
+    assert "TtlJlAdm24" in [col.export for col in plan.tables["county-2024"]]
+
+
+def test_dsuite2023_package_poverty_uses_2023_table(registry, monkeypatch):
+    monkeypatch.setenv("BQ_PROJECT_ID", "oeps-test")
+    plan = build_download_plan(
+        packages=["DSuite2023"],
+        scales=["County"],
+        variables=["PovP"],
+        registry=registry,
+        project_id="oeps-test",
+    )
+    assert plan.packages == ["DSuite2023"]
+    assert plan.years == ["2023"]
+    assert "county-2023" in plan.tables
+    assert [col.export for col in plan.tables["county-2023"]] == ["PovP23"]
 
 
 def test_rejects_unknown_variable(registry, monkeypatch):
@@ -362,6 +437,20 @@ def test_export_column_name_and_subset_basename():
     assert subset_basename("County", ["2023"]) == "oeps-county-2023-subset"
     assert subset_basename("County", ["2018", "2023"]) == "oeps-county-2018-2023-subset"
     assert subset_basename("ZCTA", []) == "oeps-zcta-subset"
+    assert (
+        subset_basename("County", ["2018"], packages=["DSuite2018"])
+        == "oeps-county-2013-2018-subset"
+    )
+    assert (
+        subset_basename("County", ["1980"], packages=["Historic"])
+        == "oeps-county-1980-2000-subset"
+    )
+    assert (
+        subset_basename(
+            "County", ["2018", "2023"], packages=["DSuite2018", "DSuite2023"]
+        )
+        == "oeps-county-2013-2018_2019-2024-subset"
+    )
 
 
 def test_code_from_herop_id_keeps_leading_zero():

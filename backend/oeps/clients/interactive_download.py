@@ -6,11 +6,13 @@ No free-form user SQL is accepted.
 
 from __future__ import annotations
 
+import csv
 import io
 import os
 import re
 import zipfile
 from dataclasses import dataclass, field
+from functools import lru_cache
 
 from google.api_core.exceptions import NotFound
 from google.cloud import bigquery
@@ -22,7 +24,7 @@ from oeps.clients.state_filter import (
     state_names,
     zcta_codes_for_states,
 )
-from oeps.config import REGISTRY_DIR
+from oeps.config import DATA_DIR, REGISTRY_DIR
 from oeps.handlers import Registry
 
 SAFE_COLUMN = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
@@ -55,6 +57,21 @@ ALLOWED_THEMES = frozenset(
         "Composite",
     }
 )
+
+# Interactive download eras (Marynia): Historic + Data Suite packages.
+# Suite eras also pull a few out-of-zip table years until packages are cleaned up.
+ALLOWED_PACKAGES = ("Historic", "DSuite2018", "DSuite2023")
+PACKAGE_LABELS = {
+    "Historic": "1980-2000",
+    "DSuite2018": "2013-2018",
+    "DSuite2023": "2019-2024",
+}
+RULES_PACKAGES = frozenset({"DSuite2018", "DSuite2023"})
+HISTORIC_YEARS = frozenset({"1980", "1990", "2000"})
+PACKAGE_EXTRA_YEARS = {
+    "DSuite2018": frozenset({"2013"}),
+    "DSuite2023": frozenset({"2024"}),
+}
 
 # Safeguards
 MAX_VARIABLES = 50
@@ -97,14 +114,45 @@ def export_column_name(variable_name: str, year: str) -> str:
     return name
 
 
-def subset_basename(scale: str, years: list[str]) -> str:
-    """Zip/CSV basename from scale and resolved years."""
+def subset_basename(
+    scale: str,
+    years: list[str],
+    packages: list[str] | None = None,
+) -> str:
+    """Zip/CSV basename from scale and package eras or resolved years."""
     scale_key = scale.lower()
+    if packages:
+        labels = [PACKAGE_LABELS.get(name, name) for name in packages]
+        return f"oeps-{scale_key}-{'_'.join(labels)}-subset"
     if len(years) == 1:
         return f"oeps-{scale_key}-{years[0]}-subset"
     if len(years) > 1:
         return f"oeps-{scale_key}-{years[0]}-{years[-1]}-subset"
     return f"oeps-{scale_key}-subset"
+
+
+@lru_cache(maxsize=16)
+def _package_variable_tables(package: str, scale: str) -> dict[str, str]:
+    """Map variable name → table_source from package_rules for one scale."""
+    prefix = SCALE_TO_PREFIX[scale]
+    path = DATA_DIR / "package_rules" / package / f"{prefix}.csv"
+    if not path.is_file():
+        raise InteractiveDownloadError(
+            f"Package rules missing for {package} {scale}."
+        )
+    mapping: dict[str, str] = {}
+    with path.open(newline="", encoding="utf-8") as handle:
+        for row in csv.DictReader(handle):
+            name = (row.get("name") or "").strip()
+            table_source = (row.get("table_source") or "").strip()
+            if name and table_source:
+                mapping[name] = table_source
+    return mapping
+
+
+def package_era_label(packages: list[str]) -> str:
+    """Human-readable package era list, e.g. ``2014-2018, 2019-2023``."""
+    return ", ".join(PACKAGE_LABELS.get(name, name) for name in packages)
 
 
 class InteractiveDownloadError(Exception):
@@ -132,6 +180,7 @@ class DownloadPlan:
     sql: str
     states: list[str] = field(default_factory=list)
     notes: list[str] = field(default_factory=list)
+    packages: list[str] = field(default_factory=list)
 
     def tables_for_json(self) -> dict[str, list[dict[str, str]]]:
         """Serialize table columns for dry-run JSON."""
@@ -249,7 +298,8 @@ def _resolve_variable_names(
 
 def build_download_plan(
     *,
-    years: list[str],
+    years: list[str] | None = None,
+    packages: list[str] | None = None,
     scales: list[str],
     themes: list[str] | None = None,
     variables: list[str] | None = None,
@@ -259,13 +309,17 @@ def build_download_plan(
 ) -> DownloadPlan:
     """Validate filters and build a single allowlisted SELECT statement.
 
-    Empty ``years`` means every table year where the selected variables exist
-    for the chosen scale. Export columns are suffixed with the table year
-    (``MedInc`` in 2023 → ``MedInc23``). Missing year×variable pairs are
-    omitted; no new averages are computed.
+    Interactive download uses eras ``Historic`` (1980–2000), ``DSuite2018``
+    (package rules + 2013), and ``DSuite2023`` (package rules + 2024). Empty
+    ``packages`` (and empty ``years``) means all eras. Explicit ``years``
+    keeps calendar-year filtering for tests and older callers. Export columns
+    are suffixed with the table year (``MedInc`` in 2023 → ``MedInc23``).
+    Missing pairs are omitted; no new averages are computed.
     """
     themes = themes or []
     variables = variables or []
+    years = years or []
+    packages = packages or []
     registry = registry or Registry.create_from_directory(REGISTRY_DIR)
 
     if not scales or len(scales) != 1:
@@ -273,8 +327,27 @@ def build_download_plan(
             "Select exactly one spatial scale for download."
         )
 
-    selected_years: set[str] | None
-    if years:
+    scale = scales[0]
+    if scale not in ALLOWED_SCALES:
+        raise InteractiveDownloadError(f"Invalid scale: {scale}")
+    prefix = SCALE_TO_PREFIX[scale]
+
+    selected_packages: list[str] = []
+    selected_years: set[str] | None = None
+    if packages:
+        if years:
+            raise InteractiveDownloadError(
+                "Use package eras or calendar years, not both."
+            )
+        seen_pkg: set[str] = set()
+        for raw in packages:
+            name = str(raw)
+            if name not in ALLOWED_PACKAGES:
+                raise InteractiveDownloadError(f"Invalid package: {name}")
+            if name not in seen_pkg:
+                seen_pkg.add(name)
+                selected_packages.append(name)
+    elif years:
         selected_years = set()
         for raw in years:
             year = str(raw)
@@ -282,12 +355,7 @@ def build_download_plan(
                 raise InteractiveDownloadError(f"Invalid year: {year}")
             selected_years.add(year)
     else:
-        selected_years = None
-
-    scale = scales[0]
-    if scale not in ALLOWED_SCALES:
-        raise InteractiveDownloadError(f"Invalid scale: {scale}")
-    prefix = SCALE_TO_PREFIX[scale]
+        selected_packages = list(ALLOWED_PACKAGES)
 
     variable_names = _resolve_variable_names(registry, themes, variables)
 
@@ -297,42 +365,78 @@ def build_download_plan(
     export_seen: set[str] = set()
     resolved_years: set[str] = set()
 
+    package_maps = {
+        package: _package_variable_tables(package, scale)
+        for package in selected_packages
+        if package in RULES_PACKAGES
+    }
+
+    def _add_column(var_name: str, ts_name: str) -> bool:
+        ts = registry.table_sources.get(ts_name)
+        if not ts:
+            return False
+        year = str(ts.data_year)
+        if selected_years is not None and year not in selected_years:
+            return False
+        if _table_geography_prefix(ts.name) != prefix:
+            return False
+        if not SAFE_TABLE.match(ts.name):
+            return False
+        export = export_column_name(var_name, year)
+        if export in export_seen:
+            return False
+        tables.setdefault(ts.name, [])
+        if any(col.source == var_name for col in tables[ts.name]):
+            return False
+        tables[ts.name].append(
+            ExportColumn(source=var_name, export=export, year=year)
+        )
+        export_seen.add(export)
+        resolved_years.add(year)
+        return True
+
+    def _add_years_for_variable(var_name: str, year_set: set[str] | frozenset[str]) -> bool:
+        matched_any = False
+        var = registry.variables[var_name]
+        for ts_name in var.table_sources:
+            ts = registry.table_sources.get(ts_name)
+            if not ts or str(ts.data_year) not in year_set:
+                continue
+            if _add_column(var_name, ts_name):
+                matched_any = True
+        return matched_any
+
     for var_name in variable_names:
         var = registry.variables[var_name]
         matched = False
-        for ts_name in var.table_sources:
-            ts = registry.table_sources.get(ts_name)
-            if not ts:
-                continue
-            year = str(ts.data_year)
-            if selected_years is not None and year not in selected_years:
-                continue
-            if _table_geography_prefix(ts.name) != prefix:
-                continue
-            if not SAFE_TABLE.match(ts.name):
-                continue
-            export = export_column_name(var_name, year)
-            if export in export_seen:
-                continue
-            tables.setdefault(ts.name, [])
-            if any(col.source == var_name for col in tables[ts.name]):
-                continue
-            tables[ts.name].append(
-                ExportColumn(source=var_name, export=export, year=year)
-            )
-            export_seen.add(export)
-            resolved_years.add(year)
-            matched = True
+        if selected_packages:
+            for package in selected_packages:
+                if package == "Historic":
+                    if _add_years_for_variable(var_name, HISTORIC_YEARS):
+                        matched = True
+                    continue
+                ts_name = package_maps.get(package, {}).get(var_name)
+                if ts_name and ts_name in var.table_sources:
+                    if _add_column(var_name, ts_name):
+                        matched = True
+                extra = PACKAGE_EXTRA_YEARS.get(package)
+                if extra and _add_years_for_variable(var_name, extra):
+                    matched = True
+        else:
+            for ts_name in var.table_sources:
+                if _add_column(var_name, ts_name):
+                    matched = True
         if matched:
             available.append(var_name)
         else:
             missing.append(var_name)
 
-    year_label = (
-        ", ".join(sorted(selected_years))
-        if selected_years is not None
-        else f"any available {scale}"
-    )
+    if selected_packages:
+        year_label = package_era_label(selected_packages)
+    elif selected_years is not None:
+        year_label = ", ".join(sorted(selected_years))
+    else:
+        year_label = f"any available {scale}"
 
     # Explicit variable picks must match at least one selected/available year.
     if variables and missing:
@@ -353,7 +457,7 @@ def build_download_plan(
     if export_count > MAX_VARIABLES:
         raise InteractiveDownloadError(
             f"This selection expands to {export_count} year-suffixed columns "
-            f"(max {MAX_VARIABLES}). Pick fewer variables or fewer years."
+            f"(max {MAX_VARIABLES}). Pick fewer variables or fewer package eras."
         )
 
     sorted_years = sorted(resolved_years)
@@ -363,7 +467,12 @@ def build_download_plan(
         "Variable columns use a 2-digit table-year suffix (for example MedInc23). "
         "Missing year×variable combinations are omitted; no new averages are computed.",
     ]
-    if selected_years is None:
+    if selected_packages:
+        notes.append(
+            f"Data package eras: {year_label} "
+            f"(table years used: {', '.join(sorted_years)})."
+        )
+    elif selected_years is None:
         notes.append(
             f"Years: all available for this selection ({', '.join(sorted_years)})."
         )
@@ -381,7 +490,7 @@ def build_download_plan(
     else:
         notes.append(
             "Mode: whole theme(s) expanded to variables available for this "
-            "scale and year selection."
+            "scale and package / year selection."
         )
 
     selected_states = allowlisted_state_fips(states)
@@ -424,6 +533,7 @@ def build_download_plan(
         sql=sql,
         states=selected_states,
         notes=notes,
+        packages=selected_packages,
     )
 
 

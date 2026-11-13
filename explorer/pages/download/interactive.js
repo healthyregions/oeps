@@ -20,14 +20,16 @@ export default function InteractiveDownload() {
         <h1 className={styles.title}>Interactive Download</h1>
         <Gutter em={1} />
         <p>
-          Build a filtered OEPS subset by spatial scale, theme or variables,
-          and optional years, then download a zip containing one CSV from a
-          constrained BigQuery query. Variable columns are labeled with a
-          2-digit table-year suffix. For full packages and individual CSVs, use{" "}
+          Build a filtered OEPS subset by year era (Historic 1980–2000,
+          DSuite2018, or DSuite2023), spatial scale, and theme or variables,
+          then download a zip containing one CSV from a constrained BigQuery
+          query.
+          Variable columns are labeled with a 2-digit table-year suffix. For
+          full packages and individual CSVs, use{" "}
           <Link href="/download">Data Access</Link>.
         </p>
         <Gutter em={1} />
-        <h2>Filter by scale, variables, and year</h2>
+        <h2>Filter by package era, scale, and variables</h2>
         <InteractiveDownloadFilters />
       </main>
       <Footer />

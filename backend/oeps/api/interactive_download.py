@@ -17,6 +17,7 @@ def _parse_body():
     data = request.get_json(silent=True) or {}
     return {
         "years": data.get("years") or [],
+        "packages": data.get("packages") or [],
         "scales": data.get("scales") or [],
         "themes": data.get("themes") or [],
         "variables": data.get("variables") or [],
@@ -32,6 +33,7 @@ def interactive_download():
         body = _parse_body()
         plan = build_download_plan(
             years=body["years"],
+            packages=body["packages"],
             scales=body["scales"],
             themes=body["themes"],
             variables=body["variables"],
@@ -41,6 +43,7 @@ def interactive_download():
             return jsonify(
                 {
                     "years": plan.years,
+                    "packages": plan.packages,
                     "scales": plan.scales,
                     "states": plan.states,
                     "variables": plan.variable_names,
@@ -51,7 +54,7 @@ def interactive_download():
             )
 
         csv_text, row_count = run_download_query(plan)
-        base = subset_basename(plan.scales[0], plan.years)
+        base = subset_basename(plan.scales[0], plan.years, plan.packages)
         csv_name = f"{base}.csv"
         zip_name = f"{base}.zip"
         return Response(
