@@ -24,6 +24,10 @@ def create_app():
     # HTTP API routes
     app.register_blueprint(interactive_download_bp)
 
+    @app.get("/")
+    def health():
+        return "ok"
+
     # add all cli commands
     app.cli.add_command(bigquery_export)
     app.cli.add_command(bigquery_upload)

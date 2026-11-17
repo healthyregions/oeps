@@ -76,11 +76,15 @@ def get_credentials():
 
     # if no local file, attempt to get all credential info from environment
     if credentials is None:
+        private_key = os.getenv("BQ_CREDENTIALS_PRIVATE_KEY")
+        if private_key:
+            # ECS stores the PEM as one line, with the two characters \n.
+            private_key = private_key.replace("\\n", "\n")
         json_crendentials = {
             "type": "service_account",
             "project_id": os.getenv("BQ_PROJECT_ID"),
             "private_key_id": os.getenv("BQ_CREDENTIALS_PRIVATE_KEY_ID"),
-            "private_key": os.getenv("BQ_CREDENTIALS_PRIVATE_KEY"),
+            "private_key": private_key,
             "client_email": os.getenv("BQ_CREDENTIALS_CLIENT_EMAIL"),
             "client_id": os.getenv("BQ_CREDENTIALS_CLIENT_ID"),
             "auth_uri": os.getenv("BQ_CREDENTIALS_AUTH_URI"),
