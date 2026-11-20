@@ -7,20 +7,20 @@
 
 Use for all OEPS data from 1980 to 2010.
 
-* State: [GeoJSON](https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2010-500k.geojson) | [Shapefile](https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2010-500k-shp.zip) | [PMTiles](https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2010-500k.pmtiles)
-* County: [GeoJSON](https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2010-500k.geojson) | [Shapefile](https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2010-500k-shp.zip) | [PMTiles](https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2010-500k.pmtiles)
-* Tract: [GeoJSON](https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2010-500k.geojson) | [Shapefile](https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2010-500k-shp.zip) | [PMTiles](https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2010-500k.pmtiles)
-* Block Group: [GeoJSON](https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2010-500k.geojson) | [Shapefile](https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2010-500k-shp.zip) | [PMTiles](https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2010-500k.pmtiles)
+* State: [GeoJSON](https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/state-2010-500k.geojson) | [Shapefile](https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/state-2010-500k-shp.zip) | [PMTiles](https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/state-2010-500k.pmtiles)
+* County: [GeoJSON](https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/county-2010-500k.geojson) | [Shapefile](https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/county-2010-500k-shp.zip) | [PMTiles](https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/county-2010-500k.pmtiles)
+* Tract: [GeoJSON](https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2010-500k.geojson) | [Shapefile](https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2010-500k-shp.zip) | [PMTiles](https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2010-500k.pmtiles)
+* Block Group: [GeoJSON](https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2010-500k.geojson) | [Shapefile](https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2010-500k-shp.zip) | [PMTiles](https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2010-500k.pmtiles)
 
 #### 2018 Geographic Boundaries
 
 Use for latest OEPS data (2018).
 
-* State: [GeoJSON](https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2018-500k.geojson) | [Shapefile](https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2018-500k-shp.zip) | [PMTiles](https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2018-500k.pmtiles)
-* County: [GeoJSON](https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018-500k.geojson) | [Shapefile](https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018-500k-shp.zip) | [PMTiles](https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018-500k.pmtiles)
-* Tract: [GeoJSON](https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2018-500k.geojson) | [Shapefile](https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2018-500k-shp.zip) | [PMTiles](https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2018-500k.pmtiles)
-* ZIP Code (ZCTA): [GeoJSON](https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2018-500k.geojson) | [Shapefile](https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2018-500k-shp.zip) | [PMTiles](https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2018-500k.pmtiles)
-* Block Group: [GeoJSON](https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2018-500k.geojson) | [Shapefile](https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2018-500k-shp.zip) | [PMTiles](https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2018-500k.pmtiles)
+* State: [GeoJSON](https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/state-2018-500k.geojson) | [Shapefile](https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/state-2018-500k-shp.zip) | [PMTiles](https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/state-2018-500k.pmtiles)
+* County: [GeoJSON](https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018-500k.geojson) | [Shapefile](https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018-500k-shp.zip) | [PMTiles](https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018-500k.pmtiles)
+* Tract: [GeoJSON](https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2018-500k.geojson) | [Shapefile](https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2018-500k-shp.zip) | [PMTiles](https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2018-500k.pmtiles)
+* ZIP Code (ZCTA): [GeoJSON](https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2018-500k.geojson) | [Shapefile](https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2018-500k-shp.zip) | [PMTiles](https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2018-500k.pmtiles)
+* Block Group: [GeoJSON](https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2018-500k.geojson) | [Shapefile](https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2018-500k-shp.zip) | [PMTiles](https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2018-500k.pmtiles)
 
 ### Data Source(s) Description:
 

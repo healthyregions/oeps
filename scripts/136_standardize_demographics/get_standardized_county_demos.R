@@ -24,7 +24,7 @@ cty_ed_data <- read.csv("temp_data/1980/nhgis0037_ds107_1980_county.csv")
 
 cntySbdv_pop_data <- read.csv("temp_data/1980/nhgis0039_ds104_1980_cty_sub.csv")
 cnty1980 <- st_read("temp_data/shapes/US_county_1980_conflated.shp")
-cnty2010 <- st_read("/vsizip//vsicurl/https://herop-geodata.s3.us-east-2.amazonaws.com/census/county-2010-500k-shp.zip") # nolint: line_length_linter.
+cnty2010 <- st_read("/vsizip//vsicurl/https://oeps-geodata.s3.us-east-2.amazonaws.com/census/county-2010-500k-shp.zip") # nolint: line_length_linter.
 cntySbdv1980 <- st_read("temp_data/shapes/US_mcd_1980.shp") # nolint: line_length_linter.
 
 cntySbdv1980 <- fix_geom(cntySbdv1980)
@@ -188,7 +188,7 @@ cnty_full_data <-   read.csv("temp_data/1990/nhgis0037_ds120_1990_county.csv")
 cnty_sample_data <- read.csv("temp_data/1990/nhgis0037_ds123_1990_county.csv")
 trct_demos <- read.csv("temp_data/1990/nhgis0020_ds120_1990_tract.csv")
 cnty1990 <- st_read("temp_data/shapes/US_county_1990_conflated.shp")
-cnty2010 <- st_read("/vsizip//vsicurl/https://herop-geodata.s3.us-east-2.amazonaws.com/census/county-2010-500k-shp.zip") # nolint: line_length_linter.
+cnty2010 <- st_read("/vsizip//vsicurl/https://oeps-geodata.s3.us-east-2.amazonaws.com/census/county-2010-500k-shp.zip") # nolint: line_length_linter.
 trct1990 <- st_read("temp_data/shapes/US_tract_1990_conflated.shp")
 
 cnty1990 <- fix_geom(cnty1990)
@@ -419,7 +419,7 @@ cnty_sample_data <- read.csv("temp_data/2000/nhgis0040_ds151_2000_county.csv")
 block_group_data <- read.csv("temp_data/2000/nhgis0037_ds147_2000_blck_grp.csv")
 trct_demos <- read.csv("temp_data/2000/nhgis0020_ds146_2000_tract.csv")
 cnty2000 <- st_read("temp_data/shapes/US_county_2000_conflated.shp")
-cnty2010 <- st_read("/vsizip//vsicurl/https://herop-geodata.s3.us-east-2.amazonaws.com/census/county-2010-500k-shp.zip") # nolint: line_length_linter.
+cnty2010 <- st_read("/vsizip//vsicurl/https://oeps-geodata.s3.us-east-2.amazonaws.com/census/county-2010-500k-shp.zip") # nolint: line_length_linter.
 trct2000 <- st_read("temp_data/shapes/US_tract_2000_conflated.shp")
 
 cnty2000 <- fix_geom(cnty2000)

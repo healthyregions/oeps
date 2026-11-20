@@ -12,7 +12,7 @@ library(dplyr)
 
 # 1. Read tract level geojson
 
-Boundary <- st_read("https://herop-geodata.s3.us-east-2.amazonaws.com/census/tract-2020-500k.geojson")
+Boundary <- st_read("https://oeps-geodata.s3.us-east-2.amazonaws.com/census/tract-2020-500k.geojson")
 
 # Transform tracts to Illinois State Plane (Meters)
 Boundary <- st_transform(Boundary, 5070)
