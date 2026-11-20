@@ -41,7 +41,7 @@ fqhc_counties25$HEROP_ID <- paste0("050US",fqhc_counties25$CountyFIPS)
 glimpse(fqhc_counties25)
 
 library(sf)
-county.sf <- st_read("https://herop-geodata.s3.us-east-2.amazonaws.com/census/county-2020-500k.geojson")
+county.sf <- st_read("https://oeps-geodata.s3.us-east-2.amazonaws.com/census/county-2020-500k.geojson")
 head(county.sf)
 
 county.sf2 <- select(county.sf,HEROP_ID,NAMELSAD, STUSPS,GEOID )

@@ -36,8 +36,8 @@ county_data <- read.csv("Smoking Population_county_level_2025.csv", stringsAsFac
 
 # OEPS Geographic Boundaries: https://geodata.healthyregions.org/
 library(sf)
-state_boundary <- read_sf('/vsizip//vsicurl/https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2018-500k-shp.zip')
-county_boundary <- read_sf('/vsizip//vsicurl/https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018-500k-shp.zip')
+state_boundary <- read_sf('/vsizip//vsicurl/https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/state-2018-500k-shp.zip')
+county_boundary <- read_sf('/vsizip//vsicurl/https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018-500k-shp.zip')
 
 # Add libraries
 library(dplyr)

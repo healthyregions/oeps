@@ -57,7 +57,7 @@ Hcv_states25$HEROP_ID <- paste0("040US", Hcv_states25$StateFIPS)
 glimpse(Hcv_states25)
 
 # Read state GeoJSON 
-state.sf <- st_read("https://herop-geodata.s3.us-east-2.amazonaws.com/census/state-2020-500k.geojson")
+state.sf <- st_read("https://oeps-geodata.s3.us-east-2.amazonaws.com/census/state-2020-500k.geojson")
 
 glimpse(state.sf)
 names(state.sf)

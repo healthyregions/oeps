@@ -157,11 +157,11 @@ matrices = {
 ## lookup for all geography file options
 geographies = {
   2010: {
-    'tract': 'https://herop-geodata.s3.us-east-2.amazonaws.com/census/tract-2010-500k-shp.zip',
+    'tract': 'https://oeps-geodata.s3.us-east-2.amazonaws.com/census/tract-2010-500k-shp.zip',
 
   },
   2020: {
-    'tract': 'https://herop-geodata.s3.us-east-2.amazonaws.com/census/tract-2020-500k-shp.zip',
+    'tract': 'https://oeps-geodata.s3.us-east-2.amazonaws.com/census/tract-2020-500k-shp.zip',
   }
 }
 

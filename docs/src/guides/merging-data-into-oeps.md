@@ -80,7 +80,7 @@ To create a new geodata source in the registry, add a new JSON file named `<summ
     "name": "counties-2010",
     "title": "County Boundaries, 2010",
     "description": "Shapefile of county boundaries from the US Census Bureau, 2010.",
-    "path": "https://herop-geodata.s3.us-east-2.amazonaws.com/census/county-2010-500k-shp.zip",
+    "path": "https://oeps-geodata.s3.us-east-2.amazonaws.com/census/county-2010-500k-shp.zip",
     "format": "shp",
     "mediatype": "application/vnd.shp",
     "summary_level": "county",
