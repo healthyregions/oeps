@@ -150,6 +150,14 @@ Characteristics of geodata source shapefiles:
 - Has a `HEROP_ID` field which will be used by all CSV files for joins.
 - Stored as zip file in AWS S3, not locally in the repository.
 
+!!! important "Two S3 prefixes: `census/` and `oeps/`"
+    Public boundary files live in bucket `oeps-geodata` under **two** prefixes that must stay in sync:
+
+    - **`census/`** — canonical for this registry, Explorer download links, and data packages. Geodata source `path` values always use `…/census/{level}-{year}-500k-shp.zip`.
+    - **`oeps/`** — public download alias used by [`metadata/Geographic_Boundaries.md`](https://github.com/healthyregions/oeps/blob/main/metadata/Geographic_Boundaries.md) and SDOH Metadata Manager coverage URLs (`…/oeps/{level}-{year}-500k-shp.zip`, including block group). Same objects (shp zip, geojson, pmtiles), different key prefix.
+
+    Do **not** retarget registry/Explorer paths from `census/` to `oeps/`. When regenerating or uploading geography (usually via [healthyregions/geodata](https://github.com/healthyregions/geodata)), publish under `census/` **and** copy/publish the matching keys under `oeps/` (including `bg-*`). Updating only `census/` will break docs and Metadata Manager.
+
 Each geodata source is defined by the following attributes:
 
 Property|Description|Comment

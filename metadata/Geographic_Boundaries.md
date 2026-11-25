@@ -3,6 +3,8 @@
 **Date Last Modified**: December 9, 2024
 **Author**: Adam Cox
 
+> **Ops note (S3 prefixes):** Links below use the `oeps/` prefix on `oeps-geodata`. OEPS registry/Explorer use the parallel `census/` prefix for the same geometries. When boundary files are regenerated, keep both prefixes updated (copy `census/{level}-{year}-500k.*` → `oeps/{level}-{year}-500k.*`, including block group). Do not switch this doc to `census/` for URL consistency with Metadata Manager.
+
 #### 2010 Geographic Boundaries
 
 Use for all OEPS data from 1980 to 2010.
