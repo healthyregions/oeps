@@ -73,6 +73,9 @@ Listed here in logical order, though often only the later steps will be needed.
 
 A [geodata source](../registry/data-model.md#geodata-sources) is a JSON file that points to one of the zipped shapefiles we have in our [geodata.healthyregions.org](https://geodata.healthyregions.org) S3 storage system. If you need a new geography level and/or vintage that is not already in S3, see [github.com/healthyregions/geodata](https://github.com/healthyregions/geodata) to learn how to create and add it to the bucket.
 
+!!! important "Keep `census/` and `oeps/` prefixes in sync"
+    Registry and Explorer use the **`census/`** prefix. `Geographic_Boundaries.md` and SDOH Metadata Manager use the **`oeps/`** prefix (same files, including block group). After any upload or rebuild under `census/`, also copy or publish the matching objects under `oeps/` (shp zip, geojson, pmtiles). Do not point registry `path` at `oeps/` instead of `census/`. See [geodata sources](../registry/data-model.md#geodata-sources).
+
 To create a new geodata source in the registry, add a new JSON file named `<summary level>-<year>.json`. Using 2010 county boundaries as an example, name the file `counties-2010.json` and its content will look like this:
 
 ```
